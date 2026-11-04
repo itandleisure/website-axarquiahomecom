@@ -1,0 +1,7 @@
+---
+// Zichtbare plek voor inhoud die nog van het bouwbedrijf moet komen.
+// Wordt alleen getoond zolang de site niet live is (launchReady = false).
+import { site } from '../data/site';
+interface Props { label: string; }
+---
+{!site.launchReady && <div class="todo" role="note"><strong>Nog aanleveren:</strong> {Astro.props.label}</div>}

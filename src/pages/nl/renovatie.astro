@@ -1,0 +1,104 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Wat kost een huis renoveren in de Axarquía?',
+    a: `Dat hangt sterk af van de staat van het huis. Een opfrisbeurt van een appartement kost een paar duizend euro, een volledige renovatie van een oude finca kan oplopen tot boven de € 100.000. De meeste renovaties die wij doen liggen tussen ${prices.renovatieTotaal}. Na een bezoek krijgt u een offerte per onderdeel.`,
+  },
+  {
+    q: 'Heb ik een vergunning nodig om te verbouwen in Spanje?',
+    a: 'Bijna altijd. Voor kleine werken volstaat meestal een melding bij de gemeente (declaración responsable of licencia de obra menor). Voor grotere verbouwingen of uitbreidingen is een bouwvergunning met een project van een architect nodig. Wij zoeken per project uit wat er nodig is en regelen de aanvraag.',
+  },
+  {
+    q: 'Kan ik verbouwen terwijl ik in Nederland ben?',
+    a: 'Ja, de meeste van onze klanten zijn tijdens de verbouwing niet in Spanje. U krijgt een vaste projectleider, elke week foto’s en video’s, en we overleggen per telefoon of videogesprek. Betalen gaat in termijnen na afgeronde onderdelen.',
+  },
+  {
+    q: 'Hoe lang duurt een renovatie?',
+    a: 'Een badkamer of keuken duurt meestal enkele weken. Een volledige renovatie van een woning duurt doorgaans drie tot zes maanden, afhankelijk van de vergunning en de omvang. In de offerte staat een planning.',
+  },
+  {
+    q: 'Mag ik mijn finca uitbreiden?',
+    a: 'Dat hangt af van de status van het huis en het bestemmingsplan. Bij landelijke woningen met AFO-status is uitbreiden meestal niet toegestaan. Laat dit vóór de aankoop uitzoeken. Wij werken samen met een architect die per woning advies geeft.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Renovatie en verbouwing',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en'],
+};
+---
+<Base
+  title="Huis renoveren in Spanje met een Nederlandse aannemer"
+  description="Verbouwen in de Axarquía met een Nederlands bouwbedrijf: complete renovaties, badkamers, keukens en fincas in Nerja, Cómpeta, Torrox en omgeving. Duidelijke offerte, vaste projectleider."
+  path="/nl/renovatie/"
+  jsonLd={[service]}
+>
+  <Breadcrumbs items={[{ name: 'Renovatie en verbouwing', href: '/nl/renovatie/' }]} />
+  <Hero
+    eyebrow="Renovatie en verbouwing"
+    title="Verbouwen in Spanje, <em>met een Nederlandse aannemer</em>"
+    lead="U heeft een huis in de Axarquía gekocht, of u gaat dat doen, en het moet worden opgeknapt. Wij nemen het hele traject uit handen: van ontwerp en vergunning tot de laatste tegel."
+    cta="Vraag een offerte aan"
+    ctaHref="/nl/aanvraag/?dienst=renovatie"
+  />
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>Wat we renoveren</h2>
+        <p>De meeste huizen die buitenlanders in de Axarquía kopen, zijn ouder dan dertig jaar. Dorpshuizen in Cómpeta en Frigiliana met dikke muren en kleine ramen, appartementen aan de kust in Torre del Mar en Nerja, en fincas in de heuvels met een eigen waterput. Elk type heeft zijn eigen problemen, en die kennen we.</p>
+        <ul class="checks">
+          <li><strong>Complete renovatie</strong>: leidingen, elektra, isolatie, indeling en afwerking.</li>
+          <li><strong>Badkamer en keuken</strong>: ontwerp, sloop, installatie en afwerking.</li>
+          <li><strong>Finca opknappen</strong>: vocht, daken, terrassen, water en afvoer.</li>
+          <li><strong>Ramen en isolatie</strong>: geen koude winters meer achter enkel glas.</li>
+          <li><strong>Terras, overkapping en pergola</strong>: meer buitenleven, ook in juli.</li>
+        </ul>
+        <h2>Waar buitenlandse kopers tegenaan lopen</h2>
+        <p>Vocht in de muren, verouderde elektra zonder aarding, daken die na de eerste regen lekken, of een aanbouw zonder vergunning. Het zijn de dingen die je bij een bezichtiging in de zomer niet ziet. Wij lopen ze met u door, vertellen wat urgent is en wat kan wachten, en geven per onderdeel een prijs.</p>
+      </div>
+      <div class="box">
+        <h3>Prijsindicaties</h3>
+        <table class="prices">
+          <tbody>
+            <tr><td>Complete renovatie woning</td><td>{prices.renovatieTotaal}</td></tr>
+            <tr><td>Renovatie per m²</td><td>{prices.renovatiePerM2}</td></tr>
+            <tr><td>Nieuwe badkamer</td><td>{prices.badkamer}</td></tr>
+            <tr><td>Nieuwe keuken</td><td>{prices.keuken}</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Indicaties inclusief materiaal en arbeid, exclusief btw (IVA). De echte prijs hangt af van de staat van het huis en uw wensen. U krijgt altijd eerst een offerte.</p>
+        <Todo label="prijzen per m² en keuken van het bouwbedrijf, en bevestiging van de andere bedragen." />
+        <a class="btn" href="/nl/aanvraag/?dienst=renovatie">Offerte aanvragen</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    title="Zo verloopt een renovatie"
+    steps={[
+      { t: 'Kennismaking', d: 'U vertelt via de keuzehulp wat u wilt. We bellen binnen 24 uur terug.' },
+      { t: 'Bezoek en opname', d: 'We meten op, maken foto’s en bespreken uw wensen, ter plekke of per video.' },
+      { t: 'Offerte en vergunning', d: 'Een offerte per onderdeel en een planning. Wij regelen de vergunning bij de gemeente.' },
+      { t: 'Bouwen en opleveren', d: 'Eén projectleider, wekelijkse foto-updates en betalen per afgerond onderdeel.' },
+    ]}
+  />
+
+  <Faq items={faq} />
+  <Cta dienst="renovatie" title="Plannen voor uw huis?" />
+  <Services exclude="renovatie" title="Ook interessant" />
+</Base>

@@ -1,0 +1,20 @@
+---
+import { services } from '../data/site';
+interface Props { exclude?: string; title?: string; }
+const { exclude, title = 'Wat we voor u doen' } = Astro.props;
+const list = services.filter((s) => s.slug !== exclude);
+---
+<section class="section">
+  <div class="wrap">
+    <h2>{title}</h2>
+    <div class="cards">
+      {list.map((s) => (
+        <a class="card" href={`/nl/${s.slug}/`}>
+          <h3>{s.title}</h3>
+          <p>{s.text}</p>
+          <span class="more">Meer over {s.title.toLowerCase()} →</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

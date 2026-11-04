@@ -1,0 +1,18 @@
+---
+interface Props { title?: string; text?: string; dienst?: string; }
+const {
+  title = 'Vertel ons wat u van plan bent',
+  text = 'Beantwoord een paar korte vragen. Binnen 24 uur neemt een Nederlandstalige collega contact met u op, zonder verplichtingen.',
+  dienst,
+} = Astro.props;
+const href = dienst ? `/nl/aanvraag/?dienst=${dienst}` : '/nl/aanvraag/';
+---
+<section class="cta">
+  <div class="wrap cta-inner">
+    <div>
+      <h2>{title}</h2>
+      <p>{text}</p>
+    </div>
+    <a class="btn btn-light" href={href}>Start de keuzehulp</a>
+  </div>
+</section>

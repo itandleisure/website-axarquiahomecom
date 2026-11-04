@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Todo from '../../components/Todo.astro';
+import { site } from '../../data/site';
+const o = site.operator;
+const c = site.company;
+---
+<Base
+  title="Privacy en voorwaarden"
+  description="Hoe Axarquía Home omgaat met uw gegevens als u een aanvraag doet, en met wie we die delen."
+  path="/nl/privacy/"
+>
+  <Breadcrumbs items={[{ name: 'Privacy en voorwaarden', href: '/nl/privacy/' }]} />
+  <section class="section">
+    <div class="wrap prose">
+      <h1>Privacy en voorwaarden</h1>
+      <Todo label="gegevens van de onderneming van Frans en het bouwbedrijf. Laat deze tekst één keer nakijken door een AVG-jurist." />
+      <p>Laatst bijgewerkt: 4 november 2026.</p>
+
+      <h2>Wie zijn wij</h2>
+      <p>De website {site.domain} wordt beheerd door {o.name}, {o.address}, ingeschreven bij de Kamer van Koophandel onder nummer {o.kvk} (hierna “Axarquía Home”). U bereikt ons via <a href={`mailto:${o.email}`}>{o.email}</a>.</p>
+      <p>Axarquía Home voert zelf geen bouwwerkzaamheden uit. Opdrachten worden uitgevoerd door ons vaste partnerbedrijf {c.legalName}, {c.cif}, {c.street}, {c.postalCode} {c.town}, Spanje (hierna “het bouwbedrijf”).</p>
+
+      <h2>Welke gegevens we verwerken</h2>
+      <p>Als u de keuzehulp invult, verwerken we de gegevens die u zelf opgeeft: uw naam, e-mailadres, telefoonnummer, het adres of de plaats van de woning, de omschrijving van uw plannen, uw budget en planning, en eventuele foto’s. We slaan ook de datum en de pagina op waarvandaan u de aanvraag deed.</p>
+
+      <h2>Waarom en op welke grond</h2>
+      <p>We gebruiken deze gegevens alleen om uw aanvraag te behandelen: u terugbellen of mailen, een bezoek plannen en een offerte maken. De grondslag is uw toestemming (artikel 6 lid 1 sub a AVG), die u geeft door het vakje onder het formulier aan te vinken, en de voorbereiding van een overeenkomst met u (sub b).</p>
+
+      <h2>Met wie we uw gegevens delen</h2>
+      <p>Uw aanvraag wordt automatisch doorgestuurd naar het bouwbedrijf, dat contact met u opneemt en de offerte maakt. Valt uw vraag buiten wat het bouwbedrijf doet (bijvoorbeeld zonnepanelen, airco of een verhuizing), dan sturen we uw aanvraag alleen door naar één andere partner als u daar in het formulier toestemming voor geeft.</p>
+      <p>De aanvragen worden opgeslagen in Google Workspace (Google Sheets en Google Drive) van Axarquía Home. Google verwerkt deze gegevens als verwerker. We verkopen uw gegevens niet en gebruiken ze niet voor nieuwsbrieven zonder uw aparte toestemming.</p>
+
+      <h2>Hoelang we gegevens bewaren</h2>
+      <p>We bewaren aanvragen maximaal 24 maanden na het laatste contact, of langer als dat nodig is voor de administratie van een opdracht (de wettelijke bewaartermijn voor facturen is 7 jaar in Nederland).</p>
+
+      <h2>Uw rechten</h2>
+      <p>U kunt ons altijd vragen welke gegevens we van u hebben, ze laten corrigeren of verwijderen, of uw toestemming intrekken. Stuur een e-mail naar <a href={`mailto:${o.email}`}>{o.email}</a>. U heeft ook het recht een klacht in te dienen bij de Autoriteit Persoonsgegevens of de Spaanse Agencia Española de Protección de Datos.</p>
+
+      <h2>Cookies en statistieken</h2>
+      <p>Deze website plaatst geen tracking- of advertentiecookies. We gebruiken Google Search Console om te zien hoe de site in Google wordt gevonden; daarbij worden geen cookies op uw apparaat geplaatst.</p>
+
+      <h2>Voorwaarden</h2>
+      <p>De informatie op deze website is algemeen en met zorg samengesteld, maar geen juridisch, fiscaal of bouwkundig advies voor uw specifieke situatie. Prijzen op de site zijn indicaties; alleen een schriftelijke offerte van het bouwbedrijf is bindend. Voor de uitvoering, garantie en eventuele klachten over werkzaamheden is het bouwbedrijf verantwoordelijk.</p>
+      <p>Over legalisatie (AFO) en vergunningen geven we algemene uitleg. Het oordeel over een specifieke woning komt van een architect of advocaat.</p>
+    </div>
+  </section>
+</Base>

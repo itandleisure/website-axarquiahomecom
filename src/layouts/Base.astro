@@ -1,0 +1,144 @@
+---
+import '../styles/global.css';
+import { site, nav, isFilled } from '../data/site';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Pad van deze pagina, bijv. "/nl/renovatie/" */
+  path: string;
+  lang?: 'nl' | 'en' | 'de';
+  /** Vertalingen van deze pagina: { en: '/en/renovation/' } */
+  alternates?: Partial<Record<'nl' | 'en' | 'de', string>>;
+  jsonLd?: object[];
+  noindex?: boolean;
+}
+
+const { title, description, path, lang = 'nl', alternates = {}, jsonLd = [], noindex = false } = Astro.props;
+const canonical = new URL(path, site.url).href;
+const allAlternates = { ...alternates, [lang]: path };
+const robots = !site.launchReady || noindex ? 'noindex, nofollow' : 'index, follow';
+const fullTitle = path === '/nl/' ? title : `${title} | ${site.brand}`;
+
+const c = site.company;
+const organization: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': 'HomeAndConstructionBusiness',
+  '@id': `${site.url}/#bedrijf`,
+  name: site.brand,
+  url: site.url,
+  areaServed: site.villages.map((v) => ({ '@type': 'Place', name: `${v}, Málaga, España` })),
+  knowsLanguage: ['nl', 'en', 'es'],
+};
+if (isFilled(c.phone)) organization.telephone = c.phone;
+if (isFilled(c.email)) organization.email = c.email;
+if (isFilled(c.street) && isFilled(c.town)) {
+  organization.address = {
+    '@type': 'PostalAddress',
+    streetAddress: c.street,
+    postalCode: isFilled(c.postalCode) ? c.postalCode : undefined,
+    addressLocality: c.town,
+    addressRegion: 'Málaga',
+    addressCountry: 'ES',
+  };
+}
+const schemas = [organization, ...jsonLd];
+const current = Astro.url.pathname;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <link rel="canonical" href={canonical} />
+    {Object.entries(allAlternates).map(([l, p]) => (
+      <link rel="alternate" hreflang={l} href={new URL(p!, site.url).href} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={new URL(allAlternates.en ?? allAlternates.nl ?? path, site.url).href} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#b5532f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.brand} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={lang === 'nl' ? 'nl_NL' : lang === 'en' ? 'en_GB' : 'de_DE'} />
+    {schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+  </head>
+  <body>
+    <a class="skip" href="#inhoud">Naar de inhoud</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a href="/nl/" class="logo" aria-label={`${site.brand}, naar de homepage`}>
+          <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M4 15 16 5l12 10v12a1 1 0 0 1-1 1h-7v-8h-8v8H5a1 1 0 0 1-1-1z" fill="currentColor"/><circle cx="24" cy="8" r="3" fill="#e9a23b"/></svg>
+          <span>Axarquía<b>Home</b></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="hoofdmenu" aria-label="Menu openen">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="hoofdmenu" class="menu" aria-label="Hoofdmenu">
+          <ul>
+            {nav.map((n) => (
+              <li><a href={n.href} aria-current={current === n.href ? 'page' : undefined}>{n.label}</a></li>
+            ))}
+          </ul>
+          <a class="btn btn-small" href="/nl/aanvraag/">Gratis aanvraag</a>
+        </nav>
+        <script>
+          const b = document.querySelector('.menu-toggle');
+          const m = document.getElementById('hoofdmenu');
+          b?.addEventListener('click', () => {
+            const open = m?.classList.toggle('open');
+            b.setAttribute('aria-expanded', String(!!open));
+          });
+        </script>
+      </div>
+    </header>
+
+    <main id="inhoud">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <p class="footer-brand">Axarquía<b>Home</b></p>
+          <p>Het Nederlandstalige team voor kopen, verbouwen en beheren in de Axarquía, van Rincón de la Victoria tot Nerja.</p>
+        </div>
+        <div>
+          <p class="footer-title">Diensten</p>
+          <ul>
+            <li><a href="/nl/renovatie/">Renovatie en verbouwing</a></li>
+            <li><a href="/nl/sleutelbeheer/">Sleutelbeheer</a></li>
+            <li><a href="/nl/aankoopkeuring/">Aankoopkeuring</a></li>
+            <li><a href="/nl/zwembad/">Zwembad</a></li>
+            <li><a href="/nl/onderhoud/">Onderhoud en reparaties</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <ul>
+            <li><a href="/nl/aanvraag/">Aanvraag doen</a></li>
+            {isFilled(c.whatsapp) && <li><a href={`https://wa.me/${c.whatsapp}`}>WhatsApp</a></li>}
+            {isFilled(c.phone) && <li><a href={`tel:${c.phone.replace(/\s/g, '')}`}>{c.phone}</a></li>}
+            <li><a href={`mailto:${site.operator.email}`}>{site.operator.email}</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Over</p>
+          <ul>
+            <li><a href="/nl/over-ons/">Over ons</a></li>
+            <li><a href="/nl/projecten/">Projecten</a></li>
+            <li><a href="/nl/privacy/">Privacy en voorwaarden</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <p>© {new Date().getFullYear()} {site.brand}. Uitvoering door {isFilled(c.name) ? c.name : 'ons vaste Nederlandse bouwbedrijf'} in de Axarquía.</p>
+      </div>
+    </footer>
+  </body>
+</html>

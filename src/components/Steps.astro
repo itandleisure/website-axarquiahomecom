@@ -1,0 +1,12 @@
+---
+interface Props { title?: string; steps: { t: string; d: string }[]; }
+const { title = 'Zo werkt het', steps } = Astro.props;
+---
+<section class="section alt">
+  <div class="wrap">
+    <h2>{title}</h2>
+    <ol class="steps">
+      {steps.map((s) => (<li><h3>{s.t}</h3><p>{s.d}</p></li>))}
+    </ol>
+  </div>
+</section>

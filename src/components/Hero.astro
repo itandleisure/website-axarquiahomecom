@@ -1,0 +1,16 @@
+---
+interface Props { eyebrow?: string; title: string; lead: string; cta?: string; ctaHref?: string; secondary?: string; secondaryHref?: string; }
+const { eyebrow, title, lead, cta = 'Gratis aanvraag', ctaHref = '/nl/aanvraag/', secondary, secondaryHref } = Astro.props;
+---
+<section class="hero">
+  <div class="wrap">
+    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+    <h1 set:html={title} />
+    <p class="lead">{lead}</p>
+    <div class="hero-actions">
+      <a class="btn" href={ctaHref}>{cta}</a>
+      {secondary && secondaryHref && <a class="btn btn-ghost" href={secondaryHref}>{secondary}</a>}
+    </div>
+    <slot />
+  </div>
+</section>

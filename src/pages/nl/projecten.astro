@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Cta from '../../components/Cta.astro';
+import Todo from '../../components/Todo.astro';
+import { projects } from '../../data/projects';
+---
+<Base
+  title="Projecten: renovaties voor en na in de Axarquía"
+  description="Bekijk renovaties, badkamers, zwembaden en fincas die we voor Nederlandse en Engelse eigenaren in de Axarquía hebben gedaan, met plaats, prijsklasse en doorlooptijd."
+  path="/nl/projecten/"
+>
+  <Breadcrumbs items={[{ name: 'Projecten', href: '/nl/projecten/' }]} />
+  <Hero
+    eyebrow="Projecten"
+    title="Voor en na: <em>ons werk in de Axarquía</em>"
+    lead="Elke woning is anders. Hier ziet u een selectie van projecten, met waar het was, wat het ongeveer kostte en hoe lang het duurde."
+  />
+  <section class="section">
+    <div class="wrap">
+      {projects.length === 0 && (
+        <Todo label="5 tot 10 projecten met voor- en na-foto’s, plaats, prijsklasse en doorlooptijd. Zet ze in src/data/projects.ts en de foto’s in public/projecten/." />
+      )}
+      <div class="cards">
+        {projects.map((p) => (
+          <article class="card">
+            {p.after && <img src={p.after} alt={`${p.title} in ${p.place}, na de renovatie`} loading="lazy" width="640" height="420" />}
+            <h3>{p.title}</h3>
+            <p>{p.summary}</p>
+            <p class="note">{p.place} · {p.budget} · {p.duration}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Cta title="Zo’n resultaat voor uw huis?" />
+</Base>

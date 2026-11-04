@@ -1,0 +1,121 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site } from '../../data/site';
+
+const p = prices.sleutelbeheer;
+const packages = [
+  {
+    name: 'Basis',
+    price: p.basis,
+    items: ['Controle van de woning elke 2 weken', 'Ramen openen en luchten', 'Controle op lekkage, vocht en inbraak', 'Kort verslag met foto’s', 'Sleutel veilig bewaard'],
+  },
+  {
+    name: 'Plus',
+    price: p.plus,
+    featured: true,
+    items: ['Alles uit Basis, maar wekelijks', 'Na storm of zware regen extra controle', 'Post ophalen en doorsturen', 'Huis klaarzetten voor uw komst', 'Kleine reparaties direct geregeld'],
+  },
+  {
+    name: 'Compleet',
+    price: p.compleet,
+    items: ['Alles uit Plus', 'Zwembad en tuin bijhouden', 'Ontvangst van monteurs en leveranciers', 'Schoonmaak voor en na uw verblijf', 'Vaste contactpersoon via WhatsApp'],
+  },
+];
+
+const faq = [
+  {
+    q: 'Wat is sleutelbeheer precies?',
+    a: 'Wij bewaren een sleutel van uw huis en controleren het regelmatig als u er niet bent. We kijken naar lekkages, vocht, stroomstoringen en inbraak, luchten het huis en sturen u een kort verslag met foto’s. Bij een probleem lossen we het meteen op, na overleg met u.',
+  },
+  {
+    q: 'Wat kost sleutelbeheer in Spanje?',
+    a: 'Een eenvoudig pakket met een controle per twee weken kost doorgaans enkele tientallen euro’s per maand. Uitgebreidere pakketten met tuin, zwembad en schoonmaak liggen hoger. Hierboven ziet u onze pakketten; reparaties en schoonmaak buiten het pakket rekenen we apart af na uw akkoord.',
+  },
+  {
+    q: 'Is mijn sleutel veilig?',
+    a: 'Sleutels bewaren we gecodeerd, zonder adres erop, in een afgesloten kluis. Alleen vaste medewerkers hebben toegang en elk bezoek wordt vastgelegd.',
+  },
+  {
+    q: 'Wat als er iets kapot is?',
+    a: 'Kleine dingen lossen we direct op en u ziet de kosten op de maandfactuur. Bij grotere reparaties sturen we eerst foto’s en een prijs. Omdat we ook een bouwbedrijf zijn, hoeft u niet zelf vakmensen te zoeken.',
+  },
+  {
+    q: 'Kan ik maandelijks opzeggen?',
+    a: 'Ja, sleutelbeheer is per maand opzegbaar. Veel overwinteraars kiezen alleen voor de maanden dat ze in Nederland zijn.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Sleutelbeheer en woningtoezicht',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en'],
+};
+---
+<Base
+  title="Sleutelbeheer in Spanje: uw huis in de Axarquía onder toezicht"
+  description="Sleutelbeheer en woningtoezicht in Nerja, Cómpeta, Torrox en de hele Axarquía. Vaste controles, foto-verslagen en direct actie bij lekkage of storm. Nederlandstalig, per maand opzegbaar."
+  path="/nl/sleutelbeheer/"
+  jsonLd={[service]}
+>
+  <Breadcrumbs items={[{ name: 'Sleutelbeheer', href: '/nl/sleutelbeheer/' }]} />
+  <Hero
+    eyebrow="Sleutelbeheer en woningtoezicht"
+    title="Met een gerust hart <em>terug naar Nederland</em>"
+    lead="Uw huis in Spanje staat een groot deel van het jaar leeg. Wij houden het in de gaten, sturen u foto’s en grijpen in als er iets mis is, voordat een kleine lekkage een grote schade wordt."
+    cta="Sleutelbeheer aanvragen"
+    ctaHref="/nl/aanvraag/?dienst=sleutelbeheer"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Onze pakketten</h2>
+      <p class="section-intro">Kies wat bij u past. Alle pakketten zijn per maand opzegbaar en kunnen alleen voor de maanden dat u weg bent.</p>
+      <Todo label="pakketten en maandprijzen van het bouwbedrijf (de inhoud hieronder is een voorstel)." />
+      <div class="packages">
+        {packages.map((pk) => (
+          <div class={`package${pk.featured ? ' featured' : ''}`}>
+            <h3>{pk.name}</h3>
+            <p class="price">{pk.price}</p>
+            <ul class="checks">{pk.items.map((i) => <li>{i}</li>)}</ul>
+            <a class={`btn${pk.featured ? '' : ' btn-ghost'}`} href={`/nl/aanvraag/?dienst=sleutelbeheer&pakket=${pk.name.toLowerCase()}`}>Kies {pk.name}</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>Waarom sleutelbeheer in de Axarquía zo belangrijk is</h2>
+        <p>Een leegstaand huis aan de Costa del Sol krijgt het zwaar. In de winter zorgt de regen voor lekkages en vocht, in de zomer zorgt de hitte voor problemen met zwembad, tuin en dak. Na een storm ligt er puin op het terras of is de stroom uitgevallen, waardoor de vriezer ontdooit.</p>
+        <p>Zonder iemand ter plaatse merkt u dat pas als u terugkomt. Met sleutelbeheer zien wij het binnen een week of twee, en vaak sneller na zwaar weer.</p>
+        <h2>Meer dan een sleutel bewaren</h2>
+        <p>Omdat wij ook het bouwbedrijf zijn, kunnen we problemen meteen oplossen. Geen gezoek naar een loodgieter die Nederlands spreekt, geen drie offertes vanuit Nederland. U krijgt foto’s, een prijs, en na uw akkoord is het geregeld.</p>
+      </div>
+      <div class="box">
+        <h3>Wat u na elk bezoek krijgt</h3>
+        <ul class="checks">
+          <li>Datum en tijd van het bezoek</li>
+          <li>Foto’s van elke ruimte en de buitenkant</li>
+          <li>Meterstanden water en stroom</li>
+          <li>Wat ons opviel en wat we hebben gedaan</li>
+          <li>Advies als er iets moet gebeuren</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <Faq items={faq} />
+  <Cta dienst="sleutelbeheer" title="Uw huis in goede handen terwijl u weg bent" />
+  <Services exclude="sleutelbeheer" title="Ook interessant" />
+</Base>

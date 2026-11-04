@@ -1,0 +1,99 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Services from '../../components/Services.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Spreken jullie echt Nederlands?',
+    a: 'Ja. Het bouwbedrijf achter Axarquía Home is Nederlands en werkt al jaren in de regio. U spreekt met Nederlandstalige mensen, van de eerste vraag tot de oplevering. Met Spaanse instanties en vakmensen regelen wij het contact.',
+  },
+  {
+    q: 'In welke dorpen werken jullie?',
+    a: `In de hele Axarquía en het oosten van de Costa del Sol, onder andere in ${site.villages.join(', ')}. Ook fincas in het binnenland vallen binnen ons werkgebied.`,
+  },
+  {
+    q: 'Ik woon nog in Nederland. Kunnen jullie het werk zonder mij uitvoeren?',
+    a: 'Dat is juist waar we goed in zijn. U krijgt een offerte op afstand op basis van foto’s en een bezoek van ons, daarna houden we u met foto’s en video’s op de hoogte. U hoeft alleen te komen als u dat zelf wilt.',
+  },
+  {
+    q: 'Wat kost een aanvraag?',
+    a: 'Niets. Een aanvraag, het eerste gesprek en een bezoek voor een offerte zijn gratis en zonder verplichtingen.',
+  },
+  {
+    q: 'Ik wil een huis kopen. Kunnen jullie eerst meekijken?',
+    a: 'Ja. Met een aankoopkeuring ziet u vóór het tekenen wat de staat van het huis is, wat er moet gebeuren en wat dat ongeveer kost. Zo onderhandelt u met de juiste informatie.',
+  },
+];
+---
+<Base
+  title="Nederlandse aannemer in de Axarquía | Renovatie, sleutelbeheer en keuring"
+  description="Huis kopen, verbouwen of laten beheren in de Axarquía? Het Nederlandstalige team voor renovatie, aankoopkeuring, sleutelbeheer en onderhoud in Nerja, Cómpeta, Torrox en omgeving."
+  path="/nl/"
+>
+  <Hero
+    eyebrow="Kopen · Verbouwen · Beheren"
+    title="Uw huis in de Axarquía, in <em>vertrouwde handen</em>"
+    lead="Wij zijn het Nederlandse bouwbedrijf voor buitenlandse eigenaren en kopers aan de oostkust van Málaga. Van de keuring vóór de aankoop tot de renovatie en het beheer als u er niet bent."
+    secondary="Bekijk onze diensten"
+    secondaryHref="#diensten"
+  >
+    <ul class="trust">
+      <li>Nederlandstalig team</li>
+      <li>Reactie binnen 24 uur</li>
+      <li>Vaste prijs in de offerte</li>
+      <li>Foto-updates als u weg bent</li>
+    </ul>
+  </Hero>
+
+  <div id="diensten"><Services /></div>
+
+  <section class="section alt">
+    <div class="wrap split">
+      <div>
+        <h2>Waarom een Nederlands team in Spanje?</h2>
+        <p>Wie in Spanje een huis koopt of verbouwt, loopt tegen dezelfde dingen aan: offertes die niet kloppen, aannemers die niet terugbellen, regels die anders zijn dan thuis en een taal die net te lastig is voor een gesprek over leidingen en vergunningen.</p>
+        <p>Wij werken zoals u dat uit Nederland gewend bent: duidelijke afspraken, een offerte op papier, vaste contactpersonen en een planning waar we ons aan houden. Tegelijk kennen we de regio, de bouwstijl van de witte dorpen, de Spaanse vakmensen en de gemeentes.</p>
+        <p>Omdat we ook sleutelbeheer en onderhoud doen, blijven we na de oplevering bereikbaar. We zien het eerst als het dak lekt of het zwembad groen wordt, en we lossen het op voordat u het merkt.</p>
+      </div>
+      <div class="box">
+        <h3>Eén aanspreekpunt voor alles</h3>
+        <ul class="checks">
+          <li>Keuring vóór de aankoop</li>
+          <li>Renovatie, badkamer en keuken</li>
+          <li>Zwembad bouwen en onderhouden</li>
+          <li>Daken, terrassen en lekkages</li>
+          <li>Sleutelbeheer en woningtoezicht</li>
+          <li>Perceel en tuin bijhouden</li>
+        </ul>
+        <a class="btn" href="/nl/aanvraag/">Vertel ons uw plan</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    steps={[
+      { t: 'Aanvraag', d: 'Beantwoord een paar vragen in de keuzehulp. Foto’s helpen, maar zijn niet nodig.' },
+      { t: 'Contact', d: 'Binnen 24 uur belt of mailt een Nederlandstalige collega om uw plannen te bespreken.' },
+      { t: 'Bezoek en offerte', d: 'We komen langs (ook als u er zelf niet bent) en u krijgt een duidelijke offerte.' },
+      { t: 'Uitvoering', d: 'Eén vaste projectleider, wekelijkse foto’s en een vaste planning.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Ons werkgebied</h2>
+      <p class="section-intro">Van de kust tot de bergdorpen: we werken in de hele Axarquía, inclusief fincas op het platteland waar water, toegang en vergunningen extra aandacht vragen.</p>
+      <ul class="villages">
+        {site.villages.map((v) => <li>{v}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <Faq items={faq} />
+  <Cta />
+</Base>

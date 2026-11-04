@@ -1,0 +1,92 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Wat kost een zwembad bouwen in Spanje?',
+    a: `Een gemetseld of betonnen zwembad van gemiddelde grootte kost inclusief techniek en afwerking meestal tussen ${prices.zwembadNieuw}. De prijs hangt af van de grootte, de bereikbaarheid van het perceel, grondwerk op een helling en extra’s zoals verwarming of een zoutsysteem.`,
+  },
+  {
+    q: 'Heb ik een vergunning nodig voor een zwembad?',
+    a: 'Ja. Voor een nieuw zwembad is een vergunning van de gemeente nodig, en op landelijke grond gelden extra regels. Bij woningen met AFO-status mag vaak niet meer worden bijgebouwd. Wij zoeken dit vooraf voor u uit.',
+  },
+  {
+    q: 'Mag ik mijn zwembad weer vullen?',
+    a: 'De waterbeperkingen in de Axarquía, waaronder het verbod op het vullen van zwembaden, zijn in het voorjaar van 2026 opgeheven na een natte winter. Controleer altijd de actuele regels van uw gemeente; wij helpen u daarbij.',
+  },
+  {
+    q: 'Mijn zwembad heeft twee jaar stilgestaan. Wat nu?',
+    a: 'Na een lange periode zonder water zien we vaak scheuren in de afwerking, losse tegels, uitgedroogde voegen en pompen die vastzitten. We beginnen met een inspectie en een lektest, en geven daarna een prijs voor herstel.',
+  },
+  {
+    q: 'Kunnen jullie het zwembad bijhouden als ik er niet ben?',
+    a: 'Ja, als los onderhoudsabonnement of als onderdeel van ons pakket sleutelbeheer Compleet. We controleren het water, maken het bad schoon en houden de techniek in de gaten.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Zwembad bouwen, renoveren en onderhouden',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en'],
+};
+---
+<Base
+  title="Zwembad bouwen, renoveren en onderhoud in de Axarquía"
+  description="Nieuw zwembad bouwen, een oud zwembad renoveren of vast onderhoud terwijl u weg bent. Nederlandstalig bouwbedrijf in Nerja, Cómpeta, Torrox en de hele Axarquía."
+  path="/nl/zwembad/"
+  jsonLd={[service]}
+>
+  <Breadcrumbs items={[{ name: 'Zwembad', href: '/nl/zwembad/' }]} />
+  <Hero
+    eyebrow="Zwembad"
+    title="Uw zwembad <em>weer klaar voor de zomer</em>"
+    lead="Een nieuw zwembad op uw perceel, een oud bad dat na de droogte weer moet werken, of vast onderhoud zodat het water helder is als u aankomt."
+    cta="Zwembad aanvragen"
+    ctaHref="/nl/aanvraag/?dienst=zwembad"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h3>Nieuw zwembad bouwen</h3>
+          <p>Ontwerp, vergunning, grondwerk, bouw en techniek. Ook op hellende percelen, zoals bij veel fincas in de Axarquía.</p>
+          <p><strong>{prices.zwembadNieuw}</strong></p>
+        </div>
+        <div class="card">
+          <h3>Zwembad renoveren</h3>
+          <p>Lekkage opsporen, nieuwe afwerking, tegels en voegen, pomp en filter vervangen. Na jaren droogte zijn veel baden toe aan herstel.</p>
+          <p><strong>Prijs na inspectie</strong></p>
+        </div>
+        <div class="card">
+          <h3>Onderhoud</h3>
+          <p>Vaste beurten voor water, filter en techniek, ook als u in Nederland bent. U krijgt na elk bezoek een foto.</p>
+          <p><strong>{prices.zwembadOnderhoud}</strong></p>
+        </div>
+      </div>
+      <Todo label="prijs zwembadonderhoud per maand en bevestiging prijs nieuwbouw." />
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Na de droogte: wat er met zwembaden gebeurt</h2>
+      <p>Tussen 2023 en begin 2026 mochten zwembaden in de Axarquía vaak niet worden gevuld. Een zwembad dat lang leeg staat, krijgt het zwaar: de zon droogt de afwerking uit, voegen laten los, en de grond rond het bad kan bewegen. Wie het bad nu weer vult zonder inspectie, loopt kans op lekkage.</p>
+      <p>Wij beginnen daarom met een inspectie en een lektest. Daarna weet u precies wat er moet gebeuren en wat het kost, voordat er water in gaat.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} />
+  <Cta dienst="zwembad" title="Plannen voor een zwembad?" />
+  <Services exclude="zwembad" title="Ook interessant" />
+</Base>

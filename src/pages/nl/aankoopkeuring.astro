@@ -1,0 +1,104 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Is een bouwkundige keuring gebruikelijk in Spanje?',
+    a: 'Nee, en daarom is het juist verstandig. In Spanje koopt u een huis meestal “zoals het is”. Gebreken die u na de koop ontdekt, zijn bijna altijd voor uw rekening. Een keuring vóór het tekenen van het voorlopig koopcontract (contrato de arras) voorkomt dure verrassingen.',
+  },
+  {
+    q: 'Wat kost een aankoopkeuring?',
+    a: `De meeste keuringen kosten tussen ${prices.keuring}, afhankelijk van de grootte van de woning en of het om een appartement, dorpshuis of finca gaat. U krijgt vooraf een vaste prijs.`,
+  },
+  {
+    q: 'Controleren jullie ook of het huis legaal is?',
+    a: 'We kijken of wat er staat overeenkomt met wat er geregistreerd is (kadaster en eigendomsregister) en of er aanwijzingen zijn voor bouwwerken zonder vergunning. Het juridische oordeel over de legaliteit, bijvoorbeeld bij een AFO-procedure, komt van de architect of advocaat waarmee we samenwerken.',
+  },
+  {
+    q: 'Hoe snel kan de keuring plaatsvinden?',
+    a: 'Meestal binnen een week na uw aanvraag, vaak sneller. U hoeft er niet zelf bij te zijn: we maken een afspraak met de makelaar of verkoper en u krijgt het rapport digitaal.',
+  },
+  {
+    q: 'Krijg ik ook een prijs voor de verbouwing?',
+    a: 'Ja, dat is het grote voordeel van een keuring door een bouwbedrijf. In het rapport staat per gebrek een prijsindicatie voor het herstel, zodat u weet wat het huis u werkelijk gaat kosten en daarover kunt onderhandelen.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Bouwkundige aankoopkeuring',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en'],
+};
+---
+<Base
+  title="Aankoopkeuring huis in Spanje: weet wat u koopt"
+  description="Bouwkundige keuring vóór de aankoop van een huis of finca in de Axarquía. Rapport in het Nederlands met foto’s, gebreken en wat het herstel kost. Ook als u zelf niet in Spanje bent."
+  path="/nl/aankoopkeuring/"
+  jsonLd={[service]}
+>
+  <Breadcrumbs items={[{ name: 'Aankoopkeuring', href: '/nl/aankoopkeuring/' }]} />
+  <Hero
+    eyebrow="Aankoopkeuring"
+    title="Laat het huis keuren <em>voordat u tekent</em>"
+    lead="Een huis in Spanje koopt u zoals het is. Wij keuren de woning vóór de aankoop en vertellen u in begrijpelijk Nederlands wat er goed is, wat er mis is en wat het opknappen kost."
+    cta="Keuring aanvragen"
+    ctaHref="/nl/aanvraag/?dienst=aankoopkeuring"
+  />
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>Wat we controleren</h2>
+        <ul class="checks">
+          <li><strong>Constructie</strong>: scheuren, verzakking, draagmuren en balken.</li>
+          <li><strong>Dak en terrassen</strong>: lekkages, isolatie en afwatering.</li>
+          <li><strong>Vocht</strong>: optrekkend vocht, condens en schimmel.</li>
+          <li><strong>Elektra</strong>: aarding, groepenkast en of de installatie aan de norm voldoet.</li>
+          <li><strong>Water en afvoer</strong>: leidingen, druk, boiler, septische put of riool.</li>
+          <li><strong>Zwembad en buitenruimte</strong>: lekkage, techniek en muren.</li>
+          <li><strong>Registratie</strong>: komt wat er staat overeen met het kadaster?</li>
+        </ul>
+        <h2>Speciaal bij fincas</h2>
+        <p>Bij een landelijke woning in de Axarquía is meer te controleren dan bij een appartement. Hoe komt het water binnen, en is dat legaal? Is de toegangsweg openbaar of loopt hij over het land van de buren? Zijn de aanbouw en het zwembad vergund? En is er een septische put die aan de regels voldoet? Wij lopen dat systematisch na en schakelen waar nodig onze architect in.</p>
+      </div>
+      <div class="box">
+        <h3>Wat u krijgt</h3>
+        <ul class="checks">
+          <li>Rapport in het Nederlands, met foto’s</li>
+          <li>Per gebrek: hoe ernstig en wat het herstel kost</li>
+          <li>Advies over wat u in de onderhandeling kunt meenemen</li>
+          <li>Gesprek per telefoon of video om alles door te nemen</li>
+        </ul>
+        <p class="price" style="font-family:var(--serif);font-size:1.4rem;color:var(--terra-dark);margin:0.4em 0">{prices.keuring}</p>
+        <p class="note">Vaste prijs vooraf, afhankelijk van type en grootte van de woning.</p>
+        <Todo label="bevestiging prijs en naam van de partner-aparejador of architect." />
+        <a class="btn" href="/nl/aanvraag/?dienst=aankoopkeuring">Keuring aanvragen</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    title="Van aanvraag tot rapport"
+    steps={[
+      { t: 'Aanvraag', d: 'Stuur ons de link van de woning en uw vragen.' },
+      { t: 'Afspraak', d: 'Wij plannen het bezoek met de makelaar of verkoper.' },
+      { t: 'Keuring', d: 'Een grondige inspectie van binnen en buiten, met foto’s en metingen.' },
+      { t: 'Rapport en gesprek', d: 'U krijgt het rapport binnen enkele dagen en we lopen het samen door.' },
+    ]}
+  />
+
+  <Faq items={faq} />
+  <Cta dienst="aankoopkeuring" title="Een huis op het oog?" text="Stuur ons de link of het adres. We laten binnen 24 uur weten wanneer we kunnen keuren en wat het kost." />
+  <Services exclude="aankoopkeuring" title="Na de aankoop" />
+</Base>

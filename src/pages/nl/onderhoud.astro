@@ -1,0 +1,91 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import { prices, site } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Mijn dak lekt en ik ben in Nederland. Wat nu?',
+    a: 'Stuur ons via de keuzehulp of WhatsApp een bericht met het adres en, als u die heeft, een foto. Heeft u nog geen sleutelbeheer bij ons, dan spreken we af hoe we binnen kunnen komen. We dichten de lekkage zo snel mogelijk tijdelijk af en geven daarna een prijs voor definitief herstel.',
+  },
+  {
+    q: 'Waarom lekken platte daken en terrassen in Spanje zo vaak?',
+    a: 'Veel huizen in de Axarquía hebben platte daken (azoteas) en terrassen boven woonruimte. Door grote temperatuurverschillen gaan de waterdichte laag en de voegen na verloop van tijd scheuren. Na een droge periode komt dat bij de eerste zware regen aan het licht. Een nieuwe waterdichte laag (impermeabilización) lost dat meestal op.',
+  },
+  {
+    q: 'Is het schoonmaken van mijn perceel verplicht?',
+    a: 'In Andalusië moeten eigenaren van percelen in of bij bos- en natuurgebied het terrein vrijhouden van brandbaar materiaal, zeker in de zomer. Ook gemeentes kunnen eisen stellen. Wij maken uw perceel eenmalig of elk jaar vóór de zomer schoon.',
+  },
+  {
+    q: 'Doen jullie ook kleine klussen?',
+    a: 'Ja. Een kraan die lekt, een deur die klemt, een stopcontact dat niet werkt. Voor klanten met sleutelbeheer lossen we het meteen op bij het volgende bezoek.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Onderhoud en reparaties',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en'],
+};
+---
+<Base
+  title="Onderhoud en reparaties aan uw huis in Spanje"
+  description="Daklekkage, terrassen waterdicht maken, perceel schoonmaken en kleine reparaties in de Axarquía. Nederlandstalig bouwbedrijf, ook als u zelf niet in Spanje bent."
+  path="/nl/onderhoud/"
+  jsonLd={[service]}
+>
+  <Breadcrumbs items={[{ name: 'Onderhoud en reparaties', href: '/nl/onderhoud/' }]} />
+  <Hero
+    eyebrow="Onderhoud en reparaties"
+    title="Lekkage, schade of achterstallig onderhoud? <em>Wij lossen het op.</em>"
+    lead="Daken, terrassen, perceel en tuin, en alle kleine klussen in en om het huis. Ook als u in Nederland bent en het alleen hoort van de buren."
+    cta="Reparatie aanvragen"
+    ctaHref="/nl/aanvraag/?dienst=onderhoud"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h3>Daken en lekkages</h3>
+          <p>Lekkende daken, platte daken en terrassen opnieuw waterdicht maken, dakgoten en afvoer.</p>
+          <p><strong>{prices.daken}</strong></p>
+        </div>
+        <div class="card">
+          <h3>Perceel en tuin</h3>
+          <p>Perceel schoonmaken tegen brandgevaar, snoeien, irrigatie, kunstgras en tuinaanleg.</p>
+          <p><strong>{prices.perceel}</strong></p>
+        </div>
+        <div class="card">
+          <h3>Vocht en schilderwerk</h3>
+          <p>Vochtproblemen aanpakken, muren herstellen en het huis buiten en binnen opnieuw schilderen.</p>
+          <p><strong>Prijs na inspectie</strong></p>
+        </div>
+        <div class="card">
+          <h3>Kleine klussen</h3>
+          <p>Loodgieterswerk, elektra, deuren, ramen, sloten en alles wat verder kapot gaat.</p>
+          <p><strong>Op uurbasis</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Onderhoud zonder dat u er hoeft te zijn</h2>
+      <p>De meeste eigenaren voor wie we werken, wonen een groot deel van het jaar in Nederland. Daarom werken we met foto’s: vóór, tijdens en na het werk. U geeft akkoord op de prijs, wij voeren het uit, en u ziet het resultaat op uw telefoon.</p>
+      <p>Wilt u niet steeds zelf hoeven bellen? Met <a href="/nl/sleutelbeheer/">sleutelbeheer</a> houden we het huis vast in de gaten en zien we problemen vaak voordat ze schade geven.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} />
+  <Cta dienst="onderhoud" title="Iets kapot aan uw huis in Spanje?" />
+  <Services exclude="onderhoud" title="Ook interessant" />
+</Base>
