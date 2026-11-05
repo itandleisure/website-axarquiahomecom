@@ -259,6 +259,29 @@ export const guides: GuideMeta[] = [
     minutes: 12,
     published: '2026-11-05',
   },
+  // Verhuurgids. Achteraan in nl/en/de, zelfde volgorde.
+  {
+    slug: 'woning-verhuren-spanje',
+    title: 'Uw woning verhuren in Spanje: vakantieverhuur of langdurig, regels en belasting',
+    seoTitle: 'Huis verhuren in Spanje (Andalusië): vergunning, belasting en rendement 2026',
+    short: 'Woning verhuren',
+    description: 'Uw huis in de Axarquía verhuren? Vakantieverhuur (VFT-registratie, vereniging van eigenaars) of langdurig (huurcontract, borg), belasting voor niet-inwoners en een rekenvoorbeeld.',
+    lead: 'Een huis in de Axarquía staat vaak maanden leeg. Verhuren kan de kosten dekken of meer opleveren, maar de regels zijn de laatste jaren flink veranderd. Zo kiest u tussen vakantieverhuur en langdurige verhuur, en zo regelt u het op afstand.',
+    keyword: 'huis verhuren spanje',
+    minutes: 12,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'belastingkalender-spanje',
+    title: 'Belastingkalender voor eigenaars die niet in Spanje wonen',
+    seoTitle: 'Belastingen huis in Spanje als niet-resident: kalender IBI, 210 en betalen (2026)',
+    short: 'Belastingkalender',
+    description: 'Wanneer betaalt u IBI en afvalheffing in de Axarquía, wanneer doet u aangifte met formulier 210, en hoe betaalt u vanuit het buitenland? De jaarlijkse kalender voor niet-inwoners.',
+    lead: 'Wie een huis in Spanje heeft maar er niet woont, krijgt elk jaar te maken met belastingen van de gemeente en de Spaanse fiscus. Een gemiste brief kost al snel een toeslag. Deze kalender zet alles op een rij.',
+    keyword: 'belasting huis spanje niet resident',
+    minutes: 7,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesEn: GuideMeta[] = [
@@ -498,6 +521,29 @@ export const guidesEn: GuideMeta[] = [
     minutes: 12,
     published: '2026-11-05',
   },
+  // Letting guide. Last in nl/en/de, same order.
+  {
+    slug: 'renting-out-property-in-spain',
+    title: 'Renting out your property in Spain: holiday or long-term lets, rules and tax',
+    seoTitle: 'Renting out property in Spain (Andalusia): licence, tax and returns 2026',
+    short: 'Renting out your home',
+    description: 'Letting your home in the Axarquía? Holiday lets (VFT registration, community approval) or long-term (tenancy, deposit), non-resident tax and a worked example.',
+    lead: 'A home in the Axarquía often stands empty for months. Letting can cover the costs or earn more, but the rules have changed a lot in recent years. Here is how to choose between holiday and long-term lets, and how to manage it from abroad.',
+    keyword: 'renting out property in spain',
+    minutes: 12,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'spanish-property-tax-calendar',
+    title: 'Tax calendar for owners who don’t live in Spain',
+    seoTitle: 'Spanish property taxes for non-residents: IBI, form 210 and paying from abroad (2026)',
+    short: 'Tax calendar',
+    description: 'When do you pay IBI and rubbish tax in the Axarquía, when do you file form 210, and how do you pay from abroad? The annual calendar for non-resident owners.',
+    lead: 'If you own a home in Spain but don’t live there, taxes from the town hall and the Spanish tax office come round every year. One missed letter soon costs a surcharge. This calendar sets it all out.',
+    keyword: 'spanish property tax non resident',
+    minutes: 7,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesDe: GuideMeta[] = [
@@ -735,6 +781,29 @@ export const guidesDe: GuideMeta[] = [
     lead: 'Ein altes Dorfhaus kaufen, herrichten und mit Gewinn verkaufen: Das klingt einfach. In der Praxis geht zwischen Kauf und Verkauf ein großer Teil der Marge für Steuern und Kosten drauf. Hier steht alles, woran Sie denken müssen.',
     keyword: 'immobilien flippen spanien',
     minutes: 12,
+    published: '2026-11-05',
+  },
+  // Vermietungsratgeber. Hinten in nl/en/de, gleiche Reihenfolge.
+  {
+    slug: 'immobilie-in-spanien-vermieten',
+    title: 'Ihre Immobilie in Spanien vermieten: Ferien- oder Langzeitmiete, Regeln und Steuern',
+    seoTitle: 'Immobilie in Spanien vermieten (Andalusien): Lizenz, Steuern, Rendite 2026',
+    short: 'Immobilie vermieten',
+    description: 'Ihr Haus in der Axarquía vermieten? Ferienvermietung (VFT-Registrierung, Eigentümergemeinschaft) oder Langzeitmiete (Vertrag, Kaution), Steuern für Nichtresidenten und ein Rechenbeispiel.',
+    lead: 'Ein Haus in der Axarquía steht oft monatelang leer. Vermieten kann die Kosten decken oder mehr einbringen, aber die Regeln haben sich in den letzten Jahren stark verändert. So wählen Sie zwischen Ferien- und Langzeitmiete und organisieren alles aus der Ferne.',
+    keyword: 'immobilie in spanien vermieten',
+    minutes: 12,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'steuerkalender-spanien',
+    title: 'Steuerkalender für Eigentümer, die nicht in Spanien wohnen',
+    seoTitle: 'Steuern für Immobilien in Spanien als Nichtresident: IBI, Formular 210, Zahlung (2026)',
+    short: 'Steuerkalender',
+    description: 'Wann zahlen Sie IBI und Müllgebühr in der Axarquía, wann geben Sie Formular 210 ab, und wie zahlen Sie aus dem Ausland? Der Jahreskalender für Nichtresidenten.',
+    lead: 'Wer eine Immobilie in Spanien besitzt, aber nicht dort wohnt, hat jedes Jahr mit Steuern von Gemeinde und spanischem Finanzamt zu tun. Ein verpasster Brief kostet schnell einen Zuschlag. Dieser Kalender stellt alles zusammen.',
+    keyword: 'steuern immobilie spanien nichtresident',
+    minutes: 7,
     published: '2026-11-05',
   },
 ];
