@@ -1,0 +1,77 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'ueberblick', label: 'Alle Möglichkeiten im Überblick' },
+  { id: 'trockenheit', label: 'Ein trockenheitsresistenter Garten' },
+  { id: 'bewaesserung', label: 'Tropfbewässerung' },
+  { id: 'zaun', label: 'Zaun und Mauer' },
+  { id: 'tor', label: 'Automatisches Tor' },
+  { id: 'grundstueck', label: 'Grundstück sauber und brandsicher' },
+];
+
+const faq = [
+  {
+    q: 'Kann ich in der Axarquía einen Rasen haben?',
+    a: 'Ja, aber echter Rasen braucht im Sommer jeden Tag Wasser, und in trockenen Jahren ist das Bewässern manchmal eingeschränkt. Besser ist ein kleines Stück mit trockenheitsresistentem Gras oder Kunstrasen dort, wo Sie ihn wirklich nutzen, und Kies und mediterrane Pflanzen für den Rest.',
+  },
+  {
+    q: 'Was passiert mit meinem Garten, wenn ich monatelang weg bin?',
+    a: 'Mit Tropfbewässerung am Steuergerät und trockenheitsresistenten Pflanzen übersteht ein Garten den Sommer gut ohne Sie. Lassen Sie aber ein paar Mal im Jahr prüfen, ob die Leitungen dicht sind und das Steuergerät läuft; ein defekter Tropfer kostet in wenigen Wochen eine Pflanze oder viel Wasser.',
+  },
+  {
+    q: 'Brauche ich eine Genehmigung für Zaun oder Mauer?',
+    a: 'Meist ist eine Anzeige oder kleine Baugenehmigung bei der Gemeinde nötig, vor allem für eine gemauerte Wand oder einen Zaun an der Straße. Auf ländlichem Grund (suelo rústico) gelten strengere Regeln für Höhe und Material. Fragen Sie vorher nach.',
+  },
+];
+---
+<Guide slug="garten-und-grundstueck-spanien" lang="de" toc={toc} faq={faq} dienst="onderhoud" ctaTitle="Hilfe bei Garten oder Grundstück?" ctaText="Sagen Sie uns, was Sie möchten: einen Garten, der wenig Wasser braucht, Bewässerung, einen Zaun oder ein Tor, oder das Grundstück aufräumen. Mit ein paar Fotos können wir schnell mitdenken.">
+  <h2 id="ueberblick">Alle Möglichkeiten im Überblick</h2>
+  <p>Je mehr Eurozeichen, desto teurer im Vergleich zu den anderen Möglichkeiten. So sehen Sie schnell, was es gibt und wo das Geld hingeht.</p>
+  <table class="prices">
+    <thead><tr><th>Möglichkeit</th><th>Preisklasse</th><th>Gut zu wissen</th></tr></thead>
+    <tbody>
+      <tr><td>Kies und mediterrane Pflanzen</td><td>€</td><td>Wenig Wasser und Pflege, das ganze Jahr schön</td></tr>
+      <tr><td>Rollrasen oder gesäter Rasen</td><td>€</td><td>Günstig anzulegen, teuer an Wasser und Pflege</td></tr>
+      <tr><td>Kunstrasen</td><td>€€</td><td>Kein Wasser, aber heiß in der Sommersonne</td></tr>
+      <tr><td>Tropfbewässerung mit Zeitschaltuhr</td><td>€</td><td>Spart viel Wasser und Arbeit; teils selbst zu verlegen</td></tr>
+      <tr><td>Bewässerung mit WLAN-Steuergerät und mehreren Zonen</td><td>€€</td><td>Aus der Ferne von zu Hause steuern</td></tr>
+      <tr><td>Maschendrahtzaun (<em>malla</em>)</td><td>€</td><td>Abgrenzung, hält Hunde drin und Wildschweine draußen; kein Sichtschutz</td></tr>
+      <tr><td>Zaun aus Paneelen oder Stäben</td><td>€€</td><td>Stabiler und ordentlicher, teils mit Durchblick</td></tr>
+      <tr><td>Gemauerte, verputzte Mauer</td><td>€€€</td><td>Sichtschutz und Stabilität; oft genehmigungspflichtig</td></tr>
+      <tr><td>Drehtor mit Motor</td><td>€€€</td><td>Öffnen per Fernbedienung oder Handy; braucht Platz zum Aufschwenken</td></tr>
+      <tr><td>Schiebetor mit Motor</td><td>€€€€</td><td>Ideal am Hang oder bei kurzer Einfahrt</td></tr>
+      <tr><td>Grundstück säubern und schneiden</td><td>€ bis €€</td><td>Jedes Jahr nötig, vor allem vor dem Sommer</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="trockenheit">Ein trockenheitsresistenter Garten</h2>
+  <p>Die Spanier nennen es <em>xerojardinería</em>: ein Garten, der den größten Teil des Jahres mit wenig oder ohne zusätzliches Wasser auskommt. Er passt zum Klima der Axarquía, wo es von Mai bis Oktober kaum regnet und in trockenen Jahren Einschränkungen für das Bewässern von Gärten und Füllen von Pools gelten.</p>
+  <ul>
+    <li><strong>Pflanzen</strong>: Olive, Johannisbrotbaum, Lavendel, Rosmarin, Salbei, Oleander, Bougainvillea, Bleiwurz, Agave, Aloe und Sukkulenten. Sie vertragen Sonne, Wind und Trockenheit.</li>
+    <li><strong>Kies oder Rinde</strong> um die Pflanzen hält den Boden kühl und feucht und Unkraut fern. Legen Sie Unkrautvlies darunter.</li>
+    <li><strong>Gruppieren</strong> Sie Pflanzen mit gleichem Wasserbedarf, damit Sie nur die durstigen Stellen gießen.</li>
+    <li><strong>Pflanzen Sie im Herbst</strong>: Dann kommt der Regen, und die Wurzeln können sich vor dem Sommer etablieren.</li>
+    <li><strong>Achtung</strong>: Palmen sind anfällig für den Roten Palmrüssler (<em>picudo rojo</em>). Lassen Sie Palmen vorbeugend behandeln.</li>
+  </ul>
+
+  <h2 id="bewaesserung">Tropfbewässerung</h2>
+  <p>Mit Tropfbewässerung (<em>riego por goteo</em>) bekommt jede Pflanze genau das Wasser, das sie braucht, direkt an der Wurzel, und kaum etwas verdunstet. Eine Zeitschaltuhr oder ein Steuergerät startet die Anlage nachts oder früh morgens. Mit einem WLAN-Steuergerät passen Sie sie von Deutschland aus an, etwa nach einer Hitzewelle oder nach Regen.</p>
+  <p>Ein einfaches System am Wasserhahn können Sie selbst verlegen. Bei einem größeren Garten mit mehreren Zonen, Wassertank oder Pumpe lohnt sich eine Planung, damit der Druck überall stimmt. Haben Sie Tank oder Brunnen, lesen Sie auch über <a href="/de/ratgeber/finca-kaufen-spanien/">Wasser auf einer Finca</a>.</p>
+
+  <h2 id="zaun">Zaun und Mauer</h2>
+  <p>Ein Zaun hält Hunde drin und Wildschweine, Ziegen und ungebetene Gäste draußen. Die Wahl hängt davon ab, was Sie möchten: nur abgrenzen (Maschendraht), stabil und ordentlich (Paneele oder Stäbe) oder Sichtschutz (gemauerte Wand, eventuell mit Zaun darauf). Am Hang muss eine Mauer oft auch Erde halten; dann ist es eine Stützmauer, die ein gutes Fundament und Entwässerung braucht.</p>
+  <p>Regeln: Für Mauer oder Zaun an einer öffentlichen Straße verlangt die Gemeinde fast immer eine Anzeige oder Genehmigung. Auf ländlichem Grund (<em>suelo rústico</em>) gibt es oft eine Höchsthöhe für den gemauerten Teil und einen offenen oberen Teil, damit Tiere und Wasser durchkommen. Siehe die Regeln <a href="/de/orte/">Ihrer Gemeinde</a>.</p>
+
+  <h2 id="tor">Automatisches Tor</h2>
+  <p>Ein Tor mit Motor ist auf einer Finca oder Villa ein großer Komfort: kein Aussteigen an der steilen Einfahrt, und das Tor ist immer zu. Es gibt zwei Arten:</p>
+  <ul>
+    <li><strong>Drehtor</strong>: ein oder zwei Flügel, die aufschwenken. Günstiger, braucht aber Platz und ist am Hang schwierig.</li>
+    <li><strong>Schiebetor</strong>: gleitet seitlich am Zaun entlang. Teurer, aber ideal am Hang oder bei kurzer Einfahrt.</li>
+  </ul>
+  <p>Wählen Sie einen Motor mit Notentriegelung und Akku für Stromausfälle. An einem Haus ohne Netzstrom kann das Tor mit einem Solarmodul laufen. Öffnen per Handy ist praktisch, wenn jemand für Sie aufmachen muss, etwa die Reinigungskraft oder die <a href="/de/hausbetreuung/">Hausbetreuung</a>.</p>
+
+  <h2 id="grundstueck">Grundstück sauber und brandsicher</h2>
+  <p>Im Sommer ist Feuer in den Hügeln der Axarquía ein echtes Risiko. Andalusien verpflichtet Eigentümer von Häusern in oder nahe Wald- und Naturgebieten, das Grundstück brandsicher zu halten: trockenes Unkraut und Gestrüpp entfernen, Äste über dem Dach zurückschneiden und keinen brennbaren Abfall liegen lassen. Wie breit der Streifen um das Haus sein muss, hängt von der Lage ab; fragen Sie bei der Gemeinde nach.</p>
+  <p>Lassen Sie das Grundstück im Frühjahr (April, Mai) säubern, vor der Trockenzeit. So verhindern Sie auch, dass Unkraut aussamt und im nächsten Jahr alles wieder zuwächst. Kombinieren Sie das mit anderer <a href="/de/instandhaltung/">Instandhaltung</a> am Haus.</p>
+</Guide>

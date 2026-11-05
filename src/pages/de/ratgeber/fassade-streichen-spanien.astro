@@ -1,0 +1,84 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kalk-oder-farbe', label: 'Kalk oder Fassadenfarbe?' },
+  { id: 'preise', label: 'Was kostet es?' },
+  { id: 'wie-oft', label: 'Wie oft neu?' },
+  { id: 'regeln', label: 'Vorgaben der Gemeinde' },
+  { id: 'vorgehen', label: 'So arbeitet ein guter Maler' },
+  { id: 'selbst-oder-machen-lassen', label: 'Selbst machen oder machen lassen?' },
+];
+
+const faq = [
+  {
+    q: 'Kann ich Kalk über eine gestrichene Wand auftragen?',
+    a: 'Nicht ohne Weiteres. Kalk haftet schlecht auf Kunststoff-Fassadenfarbe und blättert schnell ab. Die Farbe muss zuerst runter, oder Sie brauchen eine spezielle Haftgrundierung. Umgekehrt geht es: Auf alten Kalk kann nach gründlicher Reinigung eine atmungsaktive Silikat- oder Silikonfarbe.',
+  },
+  {
+    q: 'Warum blättert meine Fassade immer wieder ab?',
+    a: 'Meist steckt Feuchtigkeit in der Wand, die nicht entweichen kann: aufsteigende Feuchte, eine undichte Dachrinne oder nicht atmungsaktive Farbe auf einer alten Steinmauer. Zuerst die Ursache beheben, sonst blättert auch der neue Anstrich innerhalb eines Jahres ab.',
+  },
+  {
+    q: 'Wann lässt man am besten streichen?',
+    a: 'Im Frühjahr (März bis Juni) oder Herbst (September bis November). Im Juli und August trocknen Kalk und Farbe in der prallen Sonne zu schnell, in den Regenwochen des Winters trocknen sie nicht richtig. Planen Sie früh: Vor dem Sommer und vor Ostern sind Maler ausgebucht.',
+  },
+];
+---
+<Guide slug="fassade-streichen-spanien" lang="de" toc={toc} faq={faq} dienst="onderhoud" ctaTitle="Fassade kalken oder streichen lassen?" ctaText="Schicken Sie uns ein paar Fotos der Fassade und die Maße. Sie erhalten einen Preis, inklusive Reparatur von Rissen und feuchten Stellen.">
+  <h2 id="kalk-oder-farbe">Kalk oder Fassadenfarbe?</h2>
+  <p>In der Axarquía sehen Sie zwei Arten von Fassaden: die traditionell gekalkten Mauern der weißen Dörfer und neuere Häuser mit glattem Zementputz und Farbe. Welcher Anstrich passt, hängt vor allem von der Wand darunter ab.</p>
+  <table class="prices">
+    <thead><tr><th></th><th>Kalk (<em>cal</em>)</th><th>Elastische Fassadenfarbe (<em>pintura elástica</em>)</th></tr></thead>
+    <tbody>
+      <tr><td>Passt zu</td><td>Alten Mauern aus Naturstein, Lehm oder Kalkmörtel</td><td>Neueren Wänden mit Zementputz, Beton oder Ziegel</td></tr>
+      <tr><td>Atmungsaktiv</td><td>Ja, Feuchtigkeit kann entweichen</td><td>Kaum; schließt Feuchtigkeit in alten Mauern ein</td></tr>
+      <tr><td>Haarrisse</td><td>Füllt kleine Risse, überbrückt sie aber nicht</td><td>Dehnt sich und überbrückt Haarrisse</td></tr>
+      <tr><td>Optik</td><td>Matt, weiches Weiß, der echte Dorfcharakter</td><td>Glatt und gleichmäßig, auch farbig</td></tr>
+      <tr><td>Haltbarkeit</td><td>1 bis 3 Jahre, dann neu kalken</td><td>8 bis 12 Jahre</td></tr>
+      <tr><td>Material</td><td>Günstig</td><td>Teurer pro m²</td></tr>
+    </tbody>
+  </table>
+  <p>Dazwischen liegen <strong>Silikat- und Silikonfarben</strong>: Sie sind atmungsaktiv und halten länger als Kalk. Eine gute Wahl für eine alte Mauer, die Sie nicht alle zwei Jahre streichen möchten.</p>
+  <p>Faustregel: Streichen Sie ein altes Steinhaus nie mit Kunststoff-Fassadenfarbe. Die Feuchtigkeit kann dann nicht mehr entweichen und kommt innen als <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit und Schimmel</a> zum Vorschein.</p>
+
+  <h2 id="preise">Was ist günstig und was teuer?</h2>
+  <p>Keine Beträge, aber ein ehrlicher Vergleich. Je mehr Eurozeichen, desto teurer ist die Arbeit im Vergleich zu den anderen Möglichkeiten.</p>
+  <table class="prices">
+    <thead><tr><th>Möglichkeit</th><th>Preisklasse</th><th>Gut zu wissen</th></tr></thead>
+    <tbody>
+      <tr><td>Fassade kalken</td><td>€</td><td>Günstig pro Anstrich, aber alle 1 bis 3 Jahre wieder fällig</td></tr>
+      <tr><td>Elastische Fassadenfarbe</td><td>€€</td><td>Teurer pro Auftrag, hält 8 bis 12 Jahre</td></tr>
+      <tr><td>Silikat- oder Silikonfarbe</td><td>€€€</td><td>Atmungsaktiv und langlebig; die beste Wahl für alte Mauern, die Sie selten streichen möchten</td></tr>
+      <tr><td>Alte Schichten entfernen und Risse ausbessern</td><td>€ bis €€€</td><td>Hängt ganz vom Zustand der Wand ab; oft der größte Posten</td></tr>
+      <tr><td>Gerüst</td><td>€€</td><td>Ab dem ersten Stock nötig; auf der Straße kommt eine Gebühr der Gemeinde dazu</td></tr>
+    </tbody>
+  </table>
+  <p>Was den Preis vor allem bestimmt: der Zustand der Wand, die Höhe (Gerüst oder nicht) und die Zugänglichkeit. Ein Dorfhaus in einer engen Gasse kostet mehr Zeit als eine Villa, an die ein Hubsteiger heranfährt.</p>
+
+  <h2 id="wie-oft">Wie oft neu?</h2>
+  <p>Traditionell kalken Andalusier ihr Haus jedes Frühjahr vor Ostern. So oft muss es nicht sein, aber Kalk nutzt sich ab: Nach ein bis drei Jahren sehen Sie graue Streifen unter Fensterbänken und Flecken, wo Regenwasser herunterläuft. Mauern am Meer und auf der Westseite (Wind und Regen) verschleißen am schnellsten.</p>
+  <p>Eine gestrichene Fassade hält acht bis zwölf Jahre. Lassen Sie sie trotzdem jedes Jahr auf Risse prüfen, vor allem nach den Herbstregen. Ein früh geschlossener Riss verhindert Feuchteschäden innen. Siehe auch <a href="/de/probleme/risse-in-waenden/">Risse in Wänden</a>.</p>
+
+  <h2 id="regeln">Vorgaben der Gemeinde</h2>
+  <ul>
+    <li><strong>Farbe</strong>: In den historischen Ortskernen u. a. von Frigiliana, Cómpeta und Nerja schreibt die Gemeinde Weiß vor, teils mit festen Farben für Sockel und Rahmen. Eine abweichende Farbe kann ein Bußgeld und Neuanstrich bedeuten.</li>
+    <li><strong>Anzeige</strong>: Streichen ohne Eingriff in die Bausubstanz ist kleine Instandhaltung. Viele Gemeinden verlangen trotzdem eine Anzeige (<em>declaración responsable</em>) oder eine kleine Baugenehmigung (<em>licencia de obra menor</em>), vor allem in geschützten Ortsteilen.</li>
+    <li><strong>Gerüst auf der Straße</strong>: Für Gerüst oder Container auf öffentlichem Grund zahlen Sie eine Gebühr (<em>ocupación de vía pública</em>).</li>
+    <li><strong>Wohnung</strong>: In einem Gebäude mit Eigentümergemeinschaft (<em>comunidad de propietarios</em>) gehört die Fassade allen. Darüber entscheidet die Gemeinschaft, nicht Sie allein.</li>
+  </ul>
+  <p>Fragen Sie im Zweifel bei der Gemeinde nach oder lassen Sie den Maler das regeln. Die Regeln pro Ort finden Sie unter <a href="/de/orte/">Orte</a>.</p>
+
+  <h2 id="vorgehen">So arbeitet ein guter Maler</h2>
+  <ol>
+    <li>Sucht zuerst, woher Feuchtigkeit kommt: Dachrinne, Dachkante, Fensterbank, aufsteigende Feuchte. Das wird zuerst behoben.</li>
+    <li>Entfernt lose Farbe und Kalk und reinigt die Wand, bei Bedarf mit dem Hochdruckreiniger.</li>
+    <li>Bessert Risse und losen Putz mit passendem Mörtel aus (Kalkmörtel auf alten Mauern).</li>
+    <li>Trägt eine zum Anstrich passende Grundierung auf.</li>
+    <li>Arbeitet im Schatten, nicht bei starkem Wind oder drohendem Regen, und feuchtet die Wand vor dem Kalken an.</li>
+    <li>Streicht Dachkanten, Schornstein und Mäuerchen auf der Dachterrasse mit: Dort dringt oft Wasser ein.</li>
+  </ol>
+
+  <h2 id="selbst-oder-machen-lassen">Selbst machen oder machen lassen?</h2>
+  <p>Eine niedrige Fassade oder Gartenmauer zu kalken, können Sie gut selbst. Lassen Sie es machen, wenn Sie ein Gerüst brauchen, wenn Risse oder feuchte Stellen da sind oder wenn Sie nicht vor Ort sind. Ein Fachmann sieht auch sofort, ob unter dem alten Anstrich etwas nicht stimmt. Kombinieren Sie den Anstrich mit anderer <a href="/de/instandhaltung/">Instandhaltung</a> wie Dachrinnen und Dachterrasse, dann steht das Gerüst nur einmal.</p>
+</Guide>

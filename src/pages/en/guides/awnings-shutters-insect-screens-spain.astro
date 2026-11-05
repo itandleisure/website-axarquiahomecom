@@ -1,0 +1,76 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'overview', label: 'All the options at a glance' },
+  { id: 'toldos', label: 'Awnings and pergolas' },
+  { id: 'persianas', label: 'Roller shutters and louvred shutters' },
+  { id: 'screens', label: 'Fly screens against mosquitoes' },
+  { id: 'wind', label: 'Wind, sun and salt' },
+  { id: 'rules', label: 'Do you need permission?' },
+];
+
+const faq = [
+  {
+    q: 'Does an awning need a wind sensor?',
+    a: 'For an electric awning we strongly recommend one. The terral (hot land wind) and the levante (east wind) can blow hard and unexpectedly in the Axarquía. A wind sensor retracts the awning automatically, even when you are not home. An awning left open in a gust can be wrecked within minutes.',
+  },
+  {
+    q: 'My roller shutter will not go up. Does the whole thing need replacing?',
+    a: 'Hardly ever. Usually the pull strap (cinta) is worn or broken, or a few slats have come out of line. That is quick and cheap to replace. If a motor fails, only the motor is replaced.',
+  },
+  {
+    q: 'Which fly screen works best for a sliding door to the terrace?',
+    a: 'A pleated screen door. It folds sideways like an accordion, has a low threshold you will not trip over and stays where you leave it. A roller screen across a wide door blows out of its guides more easily.',
+  },
+];
+---
+<Guide slug="awnings-shutters-insect-screens-spain" lang="en" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Need awnings, shutters or fly screens?" ctaText="Tell us which windows and doors it is about, with a few photos. We will come and measure up and advise what suits your house.">
+  <h2 id="overview">All the options at a glance</h2>
+  <p>The more euro signs, the more expensive compared with the other options. That way you quickly see what exists and what fits your budget.</p>
+  <table class="prices">
+    <thead><tr><th>Option</th><th>Price level</th><th>What for</th></tr></thead>
+    <tbody>
+      <tr><td>Drop-arm awning or canopy over a window</td><td>€</td><td>Keeping sun off a window or balcony</td></tr>
+      <tr><td>Folding-arm awning (<em>toldo</em>), manual</td><td>€€</td><td>Shade on a terrace or balcony</td></tr>
+      <tr><td>Folding-arm awning, electric with wind sensor</td><td>€€€</td><td>The same, but retracts itself in wind</td></tr>
+      <tr><td>Pergola with sliding canopy</td><td>€€€</td><td>A large fixed shady spot on the terrace</td></tr>
+      <tr><td>Louvred pergola (<em>pérgola bioclimática</em>)</td><td>€€€€</td><td>Shade, ventilation and dry in the rain, all year</td></tr>
+      <tr><td>Roller shutter (<em>persiana</em>) with strap</td><td>€</td><td>Keeping out sun, heat and prying eyes, extra security</td></tr>
+      <tr><td>Roller shutter with motor</td><td>€€</td><td>The same, with a switch, remote or app</td></tr>
+      <tr><td>Aluminium louvred shutters (<em>mallorquinas</em>)</td><td>€€</td><td>Light and air in, sun out; the Andalusian look</td></tr>
+      <tr><td>Zip screen for a window</td><td>€€€</td><td>Sun out, view kept; also keeps insects out</td></tr>
+      <tr><td>Fixed or roller fly screen (<em>mosquitera</em>)</td><td>€</td><td>Keeping mosquitoes out at windows</td></tr>
+      <tr><td>Pleated fly screen door</td><td>€€</td><td>Keeping mosquitoes out at a terrace or sliding door</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="toldos">Awnings and pergolas</h2>
+  <p>A <strong>folding-arm awning</strong> is the classic: fabric that unfolds over the terrace on two arms. Choose UV-resistant acrylic fabric: cheap polyester fades in the Andalusian sun within a few summers. A <strong>cassette awning</strong> encloses the fabric when rolled up, keeping out dust and birds and making it last longer.</p>
+  <p>A <strong>pergola</strong> gives a fixed shady spot. With a sliding canopy it is an affordable middle way; an aluminium <strong>louvred pergola</strong> tilts its slats for sun or shade and closes in the rain. It is the most expensive but also the most complete choice for a terrace you use all year. You can combine it with an <a href="/en/costs/outdoor-kitchen/">outdoor kitchen</a>.</p>
+
+  <h2 id="persianas">Roller shutters and louvred shutters</h2>
+  <p>Almost every Spanish house has <strong>roller shutters</strong> (<em>persianas</em>): PVC, aluminium or, in newer houses, insulated aluminium. They keep heat out in summer, warmth in during winter and make breaking in harder. Closed shutters also signal an empty house; with a motor and timer you can open and close them at varying times. Read more about <a href="/en/guides/home-security-spain/">securing your house</a>.</p>
+  <p><strong>Louvred shutters</strong> (<em>mallorquinas</em>, with tilting slats) suit village houses and fincas. They let air through while keeping the sun out, and come in wood (beautiful, but needs upkeep) and wood-look aluminium (practically maintenance-free).</p>
+  <p>Replacing your windows anyway? Build roller shutters into the new frames straight away; that is cheaper than adding them later. See also <a href="/en/renovation/">renovation</a>.</p>
+
+  <h2 id="screens">Fly screens against mosquitoes</h2>
+  <p>The Axarquía has mosquitoes, and for some years now also the tiger mosquito, which bites during the day. Fly screens are no luxury. There are roughly three types:</p>
+  <ul>
+    <li><strong>Fixed screen</strong> in a frame clipped into or in front of the window: cheap and simple, but the window is harder to open.</li>
+    <li><strong>Roller screen</strong>: rolls up into a cassette above the window. Handy for windows you open often.</li>
+    <li><strong>Pleated</strong>: folds sideways like an accordion. Ideal for terrace doors and sliding doors.</li>
+  </ul>
+  <p>Want to do it yourself? A fixed or roller screen is easy to fit with a drill; DIY stores sell cut-to-size kits. Measure carefully: Spanish window frames are rarely square.</p>
+
+  <h2 id="wind">Wind, sun and salt</h2>
+  <ul>
+    <li><strong>Wind</strong>: always retract awnings when you go out. Fit a wind sensor on electric awnings, and for a house left empty consider an awning you pack away completely when you leave.</li>
+    <li><strong>Sun</strong>: choose fabric, plastics and motors made for Southern Europe. Cheap screens and plastic parts turn brittle in the sun.</li>
+    <li><strong>Salt</strong>: on the coast (Nerja, Torrox Costa, Torre del Mar) anything not made of lacquered aluminium or stainless steel rusts. Ask for marine-grade versions.</li>
+    <li><strong>Maintenance</strong>: rinse fabric and guides once or twice a year and check the fixings in the wall. You only notice a loosened anchor when the awning is torn off.</li>
+  </ul>
+
+  <h2 id="rules">Do you need permission?</h2>
+  <p>For a detached house usually not. In an apartment or townhouse with an owners’ association (<em>comunidad de propietarios</em>) the association often decides the colour and model of awnings, because they change how the building looks. Ask first what is allowed. In the historic centres of the white villages the town hall may have rules on the colour and material of shutters and awnings. A fixed pergola may need a notification or permit; see <a href="/en/places/">your municipality</a>.</p>
+</Guide>

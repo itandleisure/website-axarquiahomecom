@@ -684,7 +684,14 @@ export const guidesSv: GuideMeta[] = [
 ];
 
 import type { Lang } from '../i18n';
-export const guidesBy: Record<Lang, GuideMeta[]> = { nl: guides, en: guidesEn, de: guidesDe, sv: guidesSv };
+import { huisEnTuinNl, huisEnTuinEn, huisEnTuinDe } from './guides-huis-en-tuin';
+// Gidsen uit eigen bestanden komen achter de lijsten hierboven, in elke taal op dezelfde positie.
+export const guidesBy: Record<Lang, GuideMeta[]> = {
+  nl: [...guides, ...huisEnTuinNl],
+  en: [...guidesEn, ...huisEnTuinEn],
+  de: [...guidesDe, ...huisEnTuinDe],
+  sv: guidesSv,
+};
 export const guideBase: Record<Lang, string> = { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/', sv: '/sv/guider/' };
 export const guideHref = (lang: Lang, g: GuideMeta) => g.path ?? `${guideBase[lang]}${g.slug}/`;
 /** Gidsen die in het gidsenoverzicht staan (zonder regiopagina's) */

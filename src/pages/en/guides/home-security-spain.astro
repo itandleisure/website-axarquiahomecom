@@ -1,0 +1,89 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'overview', label: 'All the options at a glance' },
+  { id: 'alarm', label: 'Alarms: monitored or not' },
+  { id: 'cameras', label: 'Cameras and privacy rules' },
+  { id: 'rejas', label: 'Grilles, door and locks' },
+  { id: 'empty', label: 'A house that stands empty' },
+  { id: 'combination', label: 'Which combination suits you?' },
+];
+
+const faq = [
+  {
+    q: 'Will the police come if my alarm goes off?',
+    a: 'Not automatically. In Spain the monitoring centre of a licensed security company only sends the police or Guardia Civil once the alarm is verified, for example with images, sound or several sensors going off. A standalone alarm without monitoring just makes noise and sends you a message.',
+  },
+  {
+    q: 'Can my camera film the street?',
+    a: 'No, only your own property. A small strip of street or the approach to your front door is allowed where unavoidable, but a camera covering the public road or the neighbours’ property breaks privacy law. Also put up a “zona videovigilada” sign.',
+  },
+  {
+    q: 'Do I get an insurance discount with an alarm?',
+    a: 'Often yes, and some insurers even require an alarm or grilles if the house stands empty part of the year. Ask your insurer.',
+  },
+];
+---
+<Guide slug="home-security-spain" lang="en" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Want better security for your house?" ctaText="Tell us about your house and how often you are there. We will look at its weak points and what gives you the most: grilles, a better door, an alarm or someone who checks regularly.">
+  <h2 id="overview">All the options at a glance</h2>
+  <p>The more euro signs, the more expensive compared with the other options. For a subscription it is about the cost over a few years.</p>
+  <table class="prices">
+    <thead><tr><th>Option</th><th>Price level</th><th>What it does</th></tr></thead>
+    <tbody>
+      <tr><td>Better (anti-burglary) lock cylinder</td><td>€</td><td>Makes forcing the door much harder</td></tr>
+      <tr><td>Smart alarm without monitoring (DIY)</td><td>€</td><td>Siren and a message on your phone; you have to send someone yourself</td></tr>
+      <tr><td>Wi-Fi cameras you fit yourself</td><td>€</td><td>Remote viewing; only works with a good internet connection</td></tr>
+      <tr><td>Window grilles (<em>rejas</em>)</td><td>€€</td><td>Stops burglars on the ground floor; no subscription</td></tr>
+      <tr><td>Camera system with recorder, installed</td><td>€€</td><td>Reliable footage, even if the internet drops</td></tr>
+      <tr><td>Monitored alarm (subscription)</td><td>€€€</td><td>Watched 24 hours; the centre calls you and the police if needed</td></tr>
+      <tr><td>Security door (<em>puerta de seguridad / acorazada</em>)</td><td>€€€</td><td>The front door becomes the strongest point instead of the weakest</td></tr>
+      <tr><td>Motorised roller shutters with timer</td><td>€€</td><td>House looks lived in; an extra barrier at the window</td></tr>
+      <tr><td>Key holding: someone who checks regularly</td><td>€€</td><td>Sees what an alarm cannot: leaks, storm damage, post, a broken lock</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="alarm">Alarms: monitored or not</h2>
+  <p>There are two kinds of alarm, and the difference is big:</p>
+  <ul>
+    <li><strong>Monitored</strong> (<em>alarma conectada a central receptora</em>): a licensed security company watches the house 24 hours a day. When the alarm goes off, the centre checks the images or sound, calls you and sends the police or a guard if needed. Only a company registered with the Ministry of the Interior may connect such an alarm. You are usually tied to a contract of a few years.</li>
+    <li><strong>Unmonitored</strong>: a smart alarm with sensors and a siren that sends you a message. Cheap and without a subscription, but if you are in the UK you have to find someone to go and look.</li>
+  </ul>
+  <p>On a finca: without a fixed internet connection you need an alarm that works over the mobile network (4G), with a battery for power cuts. On an off-grid house this matters even more.</p>
+
+  <h2 id="cameras">Cameras and privacy rules</h2>
+  <p>Cameras let you look in remotely, and footage helps afterwards with the police report and insurance. A camera does not stop a break-in by itself, but visible cameras do deter. Follow the Spanish privacy rules (the regulator is the AEPD):</p>
+  <ul>
+    <li>Film only your own property, not the street or the neighbours.</li>
+    <li>Put up a “<em>zona videovigilada</em>” sign at the entrance.</li>
+    <li>Do not keep footage longer than needed (the guideline is a month at most).</li>
+  </ul>
+  <p>DIY Wi-Fi cameras are cheap but drop out when the Wi-Fi does. A wired system with a recorder (NVR) in the house is more reliable.</p>
+
+  <h2 id="rejas">Grilles, door and locks</h2>
+  <p>Most burglars get in through a ground-floor window or a weak door. That is why these measures often give the most effect per euro:</p>
+  <ul>
+    <li><strong>Grilles</strong> (<em>rejas</em>): very common in Andalusia, and in wrought iron they suit a village house or finca. For windows that are also an escape route, choose grilles you can open from inside.</li>
+    <li><strong>Security door</strong>: a door with a steel core, multi-point locking and a good cylinder.</li>
+    <li><strong>Cylinder</strong>: many Spanish doors have a basic cylinder that opens in seconds with “bumping”. An anti-bump cylinder is a small change with a big effect.</li>
+    <li><strong>Terrace and sliding doors</strong>: an extra lock or bar in the track.</li>
+  </ul>
+  <p>Grilles and a security door combine well with other work on the house, such as new windows or <a href="/en/guides/awnings-shutters-insect-screens-spain/">roller shutters</a>.</p>
+
+  <h2 id="empty">A house that stands empty</h2>
+  <p>A house closed up for months stands out: shutters down, a full letterbox, an overgrown garden. What helps:</p>
+  <ul>
+    <li>Shutters and lights on a timer, at varying times.</li>
+    <li>Someone who calls in regularly, clears the post and checks everything is intact. That is exactly what <a href="/en/key-holding/">key holding</a> does.</li>
+    <li>Good contact with the neighbours, with their number in your phone.</li>
+    <li>No social media posts saying you are away.</li>
+  </ul>
+  <p>Worried about squatters (<em>okupas</em>)? Read what you can do in <a href="/en/problems/burglary-and-squatters/">burglary and squatters in an empty house</a>.</p>
+
+  <h2 id="combination">Which combination suits you?</h2>
+  <ul>
+    <li><strong>Apartment in a complex</strong>, you are there often: a better cylinder and an unmonitored smart alarm are often enough.</li>
+    <li><strong>Village house</strong>, empty part of the year: grilles on the ground floor, a good door and key holding.</li>
+    <li><strong>Detached villa or finca</strong>, empty for months: grilles or security shutters, a monitored alarm over 4G, a few cameras and key holding.</li>
+  </ul>
+</Guide>
