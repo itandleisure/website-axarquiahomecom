@@ -14,7 +14,7 @@ export const diyNl: Topic[] = [
     keyword: 'zelf zwembad aanleggen',
     dienst: 'zwembad',
     onderwerp: 'Ik wil een zwembad aanleggen en zoek hulp bij (een deel van) het werk.',
-    answer: 'Een <strong>opzetbad</strong> zet u helemaal zelf neer. Een ingegraven bad van <strong>betonblokken met een liner</strong> of een <strong>prefab polyester kuip</strong> kunt u grotendeels zelf bouwen, als u het graafwerk, de elektra en eventueel de kraan uitbesteedt. Voor elk ingegraven bad heeft u in Andalusië een <strong>bouwvergunning met een project</strong> nodig. Reken op € 5.000 tot € 14.000 aan materiaal voor een bad van ongeveer 8 × 4 meter.',
+    answer: 'Een <strong>opzetbad</strong> zet u helemaal zelf neer. Een ingegraven bad van <strong>betonblokken met een liner</strong> of een <strong>prefab polyester kuip</strong> kunt u grotendeels zelf bouwen, als u het graafwerk, de elektra en eventueel de kraan uitbesteedt. Voor elk ingegraven bad heeft u in Andalusië een <strong>bouwvergunning met een project</strong> nodig.',
     sections: [
       {
         id: 'mag-het',
@@ -31,15 +31,15 @@ export const diyNl: Topic[] = [
         id: 'kiezen',
         h: 'Welk zwembad kunt u zelf bouwen?',
         table: {
-          head: ['Type', 'Zelf te doen?', 'Materiaal (indicatie)'],
+          head: ['Type', 'Zelf te doen?', 'Prijsklasse'],
           rows: [
-            ['Opzetbad van staal of hars, op een betonplaat', 'Helemaal', '€ 1.000 – € 6.000'],
-            ['Bouwpakket van betonblokken (<em>bloques de encofrado</em>) met liner', 'Grotendeels, graafwerk en elektra uitbesteden', '€ 5.000 – € 10.000'],
-            ['Betonblokken met gresite-mozaïek', 'Ja, met ervaring in metsel- en tegelwerk', '€ 7.000 – € 12.000'],
-            ['Prefab polyester kuip', 'Deels: graven en plaatsen met een kraan', '€ 6.000 – € 14.000 (kuip)'],
-            ['Gespoten beton (gunite)', 'Nee, vraagt een gespecialiseerd bedrijf', 'zie <a href="/nl/kosten/zwembad-laten-bouwen/">kosten zwembad</a>'],
+            ['Opzetbad van staal of hars, op een betonplaat', 'Helemaal', '€'],
+            ['Bouwpakket van betonblokken (<em>bloques de encofrado</em>) met liner', 'Grotendeels, graafwerk en elektra uitbesteden', '€€'],
+            ['Betonblokken met gresite-mozaïek', 'Ja, met ervaring in metsel- en tegelwerk', '€€€'],
+            ['Prefab polyester kuip', 'Deels: graven en plaatsen met een kraan', '€€€'],
+            ['Gespoten beton (gunite)', 'Nee, vraagt een gespecialiseerd bedrijf', '€€€€'],
           ],
-          note: 'Bedragen voor een bad van ongeveer 8 × 4 meter, inclusief filter en pomp, zonder graafwerk, terras en vergunning.',
+          note: '€ is het goedkoopst, €€€€ het duurst. Graafwerk, terras en vergunning komen er bij elk type bij.',
         },
         after: '<p>Op een finca met een smalle bergweg is een prefab kuip vaak geen optie: de vrachtwagen en de kraan komen er niet. Een blokkenbad kunt u overal bouwen, want alles komt in kleine delen aan.</p>',
       },
@@ -133,16 +133,16 @@ export const diyNl: Topic[] = [
         id: 'zelf',
         h: 'Wat kunt u zelf doen?',
         table: {
-          head: ['Klus', 'Zelf?', 'Materiaal (indicatie)'],
+          head: ['Klus', 'Zelf?', 'Prijsklasse'],
           rows: [
             ['Goten en afvoeren schoonmaken', 'Ja, elk najaar', '—'],
-            ['Gebroken of verschoven pan vervangen', 'Ja', '€ 1 – € 3 per pan, oude pannen vaak duurder'],
-            ['Naden en aansluitingen kitten of afplakken', 'Ja', '€ 10 – € 30 voor kit of bitumenband'],
-            ['Dakterras coaten met vloeibaar rubber (<em>membrana líquida</em>)', 'Ja', '€ 8 – € 15 per m²'],
-            ['Een deel van het dak opnieuw pannen', 'Met ervaring', 'pannen, mortel en onderlaag'],
-            ['Balken, dakplaat of hele dak vernieuwen', 'Nee', 'zie <a href="/nl/kosten/dak-en-dakterras/">kosten dak</a>'],
+            ['Gebroken of verschoven pan vervangen', 'Ja', '€'],
+            ['Naden en aansluitingen kitten of afplakken', 'Ja', '€'],
+            ['Dakterras coaten met vloeibaar rubber (<em>membrana líquida</em>)', 'Ja', '€€'],
+            ['Een deel van het dak opnieuw pannen', 'Met ervaring', '€€'],
+            ['Balken, dakplaat of hele dak vernieuwen', 'Nee', '€€€€'],
           ],
-          note: 'Materiaalprijzen inclusief btw, zoals in de bouwmarkt.',
+          note: '€ is goedkoop, €€€€ is een grote uitgave.',
         },
       },
       {
@@ -215,19 +215,19 @@ export const diyNl: Topic[] = [
     keyword: 'ramen vervangen spanje',
     dienst: 'renovatie',
     onderwerp: 'Ik wil mijn ramen laten vervangen.',
-    answer: 'De meeste eigenaren in de Axarquía kiezen <strong>aluminium met thermische onderbreking</strong> (<em>RPT</em>) of <strong>PVC</strong>, met <strong>dubbel glas</strong> en zonwerend glas aan de zuid- en westkant. U laat ze op maat maken door een lokale <em>carpintería</em> en kunt ze zelf plaatsen als de opening gelijk blijft. Reken op € 250 tot € 700 per raam van 120 × 120 cm, zonder montage.',
+    answer: 'De meeste eigenaren in de Axarquía kiezen <strong>aluminium met thermische onderbreking</strong> (<em>RPT</em>) of <strong>PVC</strong>, met <strong>dubbel glas</strong> en zonwerend glas aan de zuid- en westkant. U laat ze op maat maken door een lokale <em>carpintería</em> en kunt ze zelf plaatsen als de opening gelijk blijft.',
     sections: [
       {
         id: 'materiaal',
         h: 'Aluminium, PVC of hout?',
         table: {
-          head: ['Materiaal', 'Voordelen', 'Nadelen', 'Per raam (indicatie)'],
+          head: ['Materiaal', 'Voordelen', 'Nadelen', 'Prijsklasse'],
           rows: [
-            ['Aluminium met thermische onderbreking (RPT)', 'Sterk, slank profiel, bestand tegen zon en zeelucht, veel kleuren', 'Iets minder isolerend dan PVC', '€ 350 – € 700'],
-            ['PVC', 'Isoleert het best, goedkoper', 'Donkere kleuren kunnen in felle zon vervormen; dikker profiel', '€ 250 – € 550'],
-            ['Hout', 'Mooi en passend bij oude huizen', 'Veel onderhoud in zon en regen; duurder', '€ 500 – € 1.000'],
+            ['Aluminium met thermische onderbreking (RPT)', 'Sterk, slank profiel, bestand tegen zon en zeelucht, veel kleuren', 'Iets minder isolerend dan PVC', '€€'],
+            ['PVC', 'Isoleert het best, goedkoper', 'Donkere kleuren kunnen in felle zon vervormen; dikker profiel', '€'],
+            ['Hout', 'Mooi en passend bij oude huizen', 'Veel onderhoud in zon en regen; duurder', '€€€'],
           ],
-          note: 'Raam van ongeveer 120 × 120 cm met dubbel glas, op maat gemaakt, inclusief btw en zonder montage.',
+          note: '€ is het goedkoopst, €€€ het duurst. Ramen op maat zijn altijd duurder dan standaardmaten.',
         },
       },
       {
@@ -305,19 +305,19 @@ export const diyNl: Topic[] = [
     keyword: 'houtkachel plaatsen spanje',
     dienst: 'renovatie',
     onderwerp: 'Ik wil een houtkachel of pelletkachel laten plaatsen.',
-    answer: 'Een <strong>houtkachel</strong> of <strong>inzethaard</strong> plaatst u zelf als u een <strong>dubbelwandig geïsoleerd rookkanaal</strong> gebruikt, de afstanden van de fabrikant aanhoudt en de dakdoorvoer goed waterdicht maakt. Reken op € 400 tot € 2.000 voor de kachel en € 80 tot € 150 per meter rookkanaal. Bewaar de facturen en laat de installatie controleren: uw verzekeraar kan erom vragen.',
+    answer: 'Een <strong>houtkachel</strong> of <strong>inzethaard</strong> plaatst u zelf als u een <strong>dubbelwandig geïsoleerd rookkanaal</strong> gebruikt, de afstanden van de fabrikant aanhoudt en de dakdoorvoer goed waterdicht maakt. Bewaar de facturen en laat de installatie controleren: uw verzekeraar kan erom vragen.',
     sections: [
       {
         id: 'kiezen',
         h: 'Welke kachel kiest u?',
         table: {
-          head: ['Type', 'Geschikt voor', 'Indicatie'],
+          head: ['Type', 'Geschikt voor', 'Prijsklasse'],
           rows: [
-            ['Houtkachel (<em>estufa de leña</em>)', 'Woonkamer, huis zonder vaste stroom, de sfeer van vuur', '€ 400 – € 2.000'],
-            ['Inzethaard (<em>insert</em> of <em>cassette</em>)', 'Een bestaande open haard die vooral warmte naar buiten stookt', '€ 800 – € 2.500'],
-            ['Pelletkachel (<em>estufa de pellets</em>)', 'Wie gemak wil: thermostaat, timer, op afstand aan te zetten', '€ 900 – € 3.000'],
+            ['Houtkachel (<em>estufa de leña</em>)', 'Woonkamer, huis zonder vaste stroom, de sfeer van vuur', '€ – €€'],
+            ['Inzethaard (<em>insert</em> of <em>cassette</em>)', 'Een bestaande open haard die vooral warmte naar buiten stookt', '€€'],
+            ['Pelletkachel (<em>estufa de pellets</em>)', 'Wie gemak wil: thermostaat, timer, op afstand aan te zetten', '€€€'],
           ],
-          note: 'Prijzen inclusief btw, zonder rookkanaal en plaatsing. Een pelletkachel heeft stroom nodig en werkt dus niet bij een stroomstoring.',
+          note: '€ is het goedkoopst, €€€ het duurst, zonder rookkanaal. Een pelletkachel heeft stroom nodig en werkt dus niet bij een stroomstoring.',
         },
         after: '<p>Een open haard verwarmt vooral de schoorsteen: tot 80% van de warmte gaat verloren. Een inzethaard in dezelfde haard geeft drie tot vier keer meer warmte met hetzelfde hout.</p>',
       },
@@ -391,7 +391,7 @@ export const diyNl: Topic[] = [
     keyword: 'gevel witten kalk',
     dienst: 'onderhoud',
     onderwerp: 'Ik wil mijn gevel laten witten of schilderen.',
-    answer: 'Voor oude muren van steen en kalkmortel kiest u <strong>kalk</strong> (<em>cal</em>): die ademt, zodat vocht eruit kan. Gevelverf sluit vocht op en bladdert dan af. U brengt drie of vier <strong>dunne lagen</strong> aan op een vochtige muur, niet in de volle zon. Een emmer kalkpasta van 20 kilo kost € 10 tot € 25 en is genoeg voor zo’n 20 tot 30 m² per laag.',
+    answer: 'Voor oude muren van steen en kalkmortel kiest u <strong>kalk</strong> (<em>cal</em>): die ademt, zodat vocht eruit kan. Gevelverf sluit vocht op en bladdert dan af. U brengt drie of vier <strong>dunne lagen</strong> aan op een vochtige muur, niet in de volle zon. Kalk is bovendien het goedkoopst.',
     sections: [
       {
         id: 'kiezen',
@@ -402,7 +402,7 @@ export const diyNl: Topic[] = [
             ['Geschikt voor', 'Oude muren van steen, leem en kalkmortel', 'Nieuwe muren van baksteen en cement'],
             ['Vocht', 'Ademt: vocht kan eruit', 'Sluit af: vocht blijft achter de verf'],
             ['Duurzaamheid', 'Elke één tot drie jaar een nieuwe laag', 'Vijf tot tien jaar'],
-            ['Prijs', 'Laag', 'Hoger'],
+            ['Prijsklasse', '€', '€€'],
           ],
         },
         after: '<p>Zit er al gevelverf op een oude muur en bladdert die af, haal hem dan zo veel mogelijk weg voordat u gaat witten. Kalk hecht niet goed op verf.</p>',

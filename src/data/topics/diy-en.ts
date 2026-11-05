@@ -14,7 +14,7 @@ export const diyEn: Topic[] = [
     keyword: 'diy swimming pool spain',
     dienst: 'zwembad',
     onderwerp: 'I want to build a pool and am looking for help with (part of) the work.',
-    answer: 'An <strong>above-ground pool</strong> you can install entirely yourself. An in-ground pool built from <strong>concrete blocks with a liner</strong>, or a <strong>prefabricated fibreglass shell</strong>, you can largely build yourself if you hand over the digging, the electrics and, where needed, the crane. Every in-ground pool in Andalusia needs a <strong>building permit with a project</strong>. Allow € 5,000 to € 14,000 for materials for a pool of about 8 × 4 metres.',
+    answer: 'An <strong>above-ground pool</strong> you can install entirely yourself. An in-ground pool built from <strong>concrete blocks with a liner</strong>, or a <strong>prefabricated fibreglass shell</strong>, you can largely build yourself if you hand over the digging, the electrics and, where needed, the crane. Every in-ground pool in Andalusia needs a <strong>building permit with a project</strong>.',
     sections: [
       {
         id: 'allowed',
@@ -31,15 +31,15 @@ export const diyEn: Topic[] = [
         id: 'choose',
         h: 'Which pool can you build yourself?',
         table: {
-          head: ['Type', 'DIY?', 'Materials (guide)'],
+          head: ['Type', 'DIY?', 'Price range'],
           rows: [
-            ['Steel or resin above-ground pool on a concrete slab', 'Entirely', '€ 1,000 – € 6,000'],
-            ['Concrete block kit (<em>bloques de encofrado</em>) with liner', 'Mostly; hand over digging and electrics', '€ 5,000 – € 10,000'],
-            ['Concrete blocks with gresite mosaic', 'Yes, with bricklaying and tiling experience', '€ 7,000 – € 12,000'],
-            ['Prefabricated fibreglass shell', 'Partly: digging and placing with a crane', '€ 6,000 – € 14,000 (shell)'],
-            ['Sprayed concrete (gunite)', 'No, needs a specialist company', 'see <a href="/en/costs/building-a-swimming-pool/">pool costs</a>'],
+            ['Steel or resin above-ground pool on a concrete slab', 'Entirely', '€'],
+            ['Concrete block kit (<em>bloques de encofrado</em>) with liner', 'Mostly; hand over digging and electrics', '€€'],
+            ['Concrete blocks with gresite mosaic', 'Yes, with bricklaying and tiling experience', '€€€'],
+            ['Prefabricated fibreglass shell', 'Partly: digging and placing with a crane', '€€€'],
+            ['Sprayed concrete (gunite)', 'No, needs a specialist company', '€€€€'],
           ],
-          note: 'Figures for a pool of about 8 × 4 metres, including filter and pump, excluding digging, terrace and permit.',
+          note: '€ is the cheapest, €€€€ the most expensive. Digging, terrace and permit come on top for every type.',
         },
         after: '<p>On a finca with a narrow mountain track a fibreglass shell is often not an option: the lorry and the crane cannot get there. A block pool can be built anywhere, because everything arrives in small pieces.</p>',
       },
@@ -133,16 +133,16 @@ export const diyEn: Topic[] = [
         id: 'diy',
         h: 'What can you do yourself?',
         table: {
-          head: ['Job', 'DIY?', 'Materials (guide)'],
+          head: ['Job', 'DIY?', 'Price range'],
           rows: [
             ['Clear gutters and outlets', 'Yes, every autumn', '—'],
-            ['Replace a broken or slipped tile', 'Yes', '€ 1 – € 3 per tile, old tiles often more'],
-            ['Seal joints and flashings', 'Yes', '€ 10 – € 30 for sealant or bitumen tape'],
-            ['Recoat a roof terrace with liquid rubber (<em>membrana líquida</em>)', 'Yes', '€ 8 – € 15 per m²'],
-            ['Re-tile part of the roof', 'With experience', 'tiles, mortar and underlay'],
-            ['Renew beams, roof slab or the whole roof', 'No', 'see <a href="/en/costs/roof-and-roof-terrace/">roof costs</a>'],
+            ['Replace a broken or slipped tile', 'Yes', '€'],
+            ['Seal joints and flashings', 'Yes', '€'],
+            ['Recoat a roof terrace with liquid rubber (<em>membrana líquida</em>)', 'Yes', '€€'],
+            ['Re-tile part of the roof', 'With experience', '€€'],
+            ['Renew beams, roof slab or the whole roof', 'No', '€€€€'],
           ],
-          note: 'Material prices including VAT, as at a DIY store.',
+          note: '€ is cheap, €€€€ is a major expense.',
         },
       },
       {
@@ -215,19 +215,19 @@ export const diyEn: Topic[] = [
     keyword: 'replacing windows spain',
     dienst: 'renovatie',
     onderwerp: 'I would like my windows replaced.',
-    answer: 'Most owners in the Axarquía choose <strong>thermally broken aluminium</strong> (<em>RPT</em>) or <strong>uPVC</strong>, with <strong>double glazing</strong> and solar control glass on the south and west sides. You have them made to measure by a local <em>carpintería</em>, and you can fit them yourself if the opening stays the same. Allow € 250 to € 700 per 120 × 120 cm window, excluding fitting.',
+    answer: 'Most owners in the Axarquía choose <strong>thermally broken aluminium</strong> (<em>RPT</em>) or <strong>uPVC</strong>, with <strong>double glazing</strong> and solar control glass on the south and west sides. You have them made to measure by a local <em>carpintería</em>, and you can fit them yourself if the opening stays the same.',
     sections: [
       {
         id: 'material',
         h: 'Aluminium, uPVC or wood?',
         table: {
-          head: ['Material', 'Pros', 'Cons', 'Per window (guide)'],
+          head: ['Material', 'Pros', 'Cons', 'Price range'],
           rows: [
-            ['Thermally broken aluminium (RPT)', 'Strong, slim frame, stands up to sun and sea air, many colours', 'Slightly less insulating than uPVC', '€ 350 – € 700'],
-            ['uPVC', 'Best insulation, cheaper', 'Dark colours can warp in strong sun; thicker frame', '€ 250 – € 550'],
-            ['Wood', 'Beautiful and suits old houses', 'A lot of maintenance in sun and rain; more expensive', '€ 500 – € 1,000'],
+            ['Thermally broken aluminium (RPT)', 'Strong, slim frame, stands up to sun and sea air, many colours', 'Slightly less insulating than uPVC', '€€'],
+            ['uPVC', 'Best insulation, cheaper', 'Dark colours can warp in strong sun; thicker frame', '€'],
+            ['Wood', 'Beautiful and suits old houses', 'A lot of maintenance in sun and rain; more expensive', '€€€'],
           ],
-          note: 'Window of about 120 × 120 cm with double glazing, made to measure, including VAT and excluding fitting.',
+          note: '€ is the cheapest, €€€ the most expensive. Made-to-measure windows always cost more than standard sizes.',
         },
       },
       {
@@ -305,19 +305,19 @@ export const diyEn: Topic[] = [
     keyword: 'wood burner spain',
     dienst: 'renovatie',
     onderwerp: 'I would like a wood burner or pellet stove installed.',
-    answer: 'You can fit a <strong>wood burner</strong> or <strong>fireplace insert</strong> yourself if you use an <strong>insulated twin-wall flue</strong>, keep to the manufacturer’s clearances and make the roof outlet properly watertight. Allow € 400 to € 2,000 for the stove and € 80 to € 150 per metre of flue. Keep the invoices and have the installation checked: your insurer may ask.',
+    answer: 'You can fit a <strong>wood burner</strong> or <strong>fireplace insert</strong> yourself if you use an <strong>insulated twin-wall flue</strong>, keep to the manufacturer’s clearances and make the roof outlet properly watertight. Keep the invoices and have the installation checked: your insurer may ask.',
     sections: [
       {
         id: 'choose',
         h: 'Which stove to choose',
         table: {
-          head: ['Type', 'Suits', 'Guide price'],
+          head: ['Type', 'Suits', 'Price range'],
           rows: [
-            ['Wood burner (<em>estufa de leña</em>)', 'Living room, house without reliable power, the feel of a real fire', '€ 400 – € 2,000'],
-            ['Fireplace insert (<em>insert</em> or <em>cassette</em>)', 'An existing open fire that mostly heats the sky', '€ 800 – € 2,500'],
-            ['Pellet stove (<em>estufa de pellets</em>)', 'Convenience: thermostat, timer, remote start', '€ 900 – € 3,000'],
+            ['Wood burner (<em>estufa de leña</em>)', 'Living room, house without reliable power, the feel of a real fire', '€ – €€'],
+            ['Fireplace insert (<em>insert</em> or <em>cassette</em>)', 'An existing open fire that mostly heats the sky', '€€'],
+            ['Pellet stove (<em>estufa de pellets</em>)', 'Convenience: thermostat, timer, remote start', '€€€'],
           ],
-          note: 'Prices including VAT, excluding flue and installation. A pellet stove needs electricity, so it does not work during a power cut.',
+          note: '€ is the cheapest, €€€ the most expensive, excluding the flue. A pellet stove needs electricity, so it does not work during a power cut.',
         },
         after: '<p>An open fire mainly heats the chimney: up to 80% of the heat is lost. An insert in the same fireplace gives three to four times more heat from the same wood.</p>',
       },
@@ -391,7 +391,7 @@ export const diyEn: Topic[] = [
     keyword: 'limewash house spain',
     dienst: 'onderhoud',
     onderwerp: 'I would like my façade limewashed or painted.',
-    answer: 'For old walls of stone and lime mortar choose <strong>lime</strong> (<em>cal</em>): it breathes, so moisture can get out. Masonry paint traps moisture and then peels. Apply three or four <strong>thin coats</strong> to a damp wall, not in full sun. A 20 kg tub of lime putty costs € 10 to € 25 and covers around 20 to 30 m² per coat.',
+    answer: 'For old walls of stone and lime mortar choose <strong>lime</strong> (<em>cal</em>): it breathes, so moisture can get out. Masonry paint traps moisture and then peels. Apply three or four <strong>thin coats</strong> to a damp wall, not in full sun. Lime is also the cheapest option.',
     sections: [
       {
         id: 'choose',
@@ -402,7 +402,7 @@ export const diyEn: Topic[] = [
             ['Suits', 'Old walls of stone, earth and lime mortar', 'New walls of brick and cement'],
             ['Moisture', 'Breathes: moisture can get out', 'Seals: moisture stays behind the paint'],
             ['Durability', 'A new coat every one to three years', 'Five to ten years'],
-            ['Price', 'Low', 'Higher'],
+            ['Price range', '€', '€€'],
           ],
         },
         after: '<p>If an old wall already has masonry paint on it and it is peeling, remove as much as you can before limewashing. Lime does not bond well to paint.</p>',
