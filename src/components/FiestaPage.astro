@@ -6,7 +6,8 @@ import Breadcrumbs from './Breadcrumbs.astro';
 import Hero from './Hero.astro';
 import Faq from './Faq.astro';
 import Cta from './Cta.astro';
-import { places, placeHref, type Place, type PlacePage } from '../data/places';
+import { places, placeHref, type Place } from '../data/places';
+import { placeTabs } from '../data/place-tabs';
 import { placeContent } from '../data/place-content';
 import { fiestas, fiestaHref, fiestaCalendar, fiestaSub } from '../data/fiestas';
 import { nameOf, monthName, type FLang, type FiestaEvent } from '../data/fiestas/types';
@@ -156,14 +157,7 @@ const T = {
 
 const self = fiestaHref(lang, place.slug);
 const alternates = Object.fromEntries((['nl', 'en', 'de', 'sv'] as FLang[]).map((l) => [l, fiestaHref(l, place.slug)]));
-const tabs: { href: string; label: string; current?: boolean }[] = c
-  ? [
-      { href: placeHref(lang, place), label: T.overview },
-      ...(c.see ? [{ href: placeHref(lang, place, 'see' as PlacePage), label: T.see }] : []),
-      ...(c.living ? [{ href: placeHref(lang, place, 'living' as PlacePage), label: T.living }] : []),
-      { href: self, label: T.feesten, current: true },
-    ]
-  : [];
+const tabs = placeTabs(lang, place).map((t) => ({ ...t, current: t.page === 'fiestas' }));
 const crumbs = [
   { name: T.places, href: route(lang, 'places') },
   { name: n, href: c ? placeHref(lang, place) : route(lang, 'places') },

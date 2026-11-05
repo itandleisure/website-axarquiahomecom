@@ -1,0 +1,105 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
+
+const toc = [
+  { id: 'drei', label: 'Drei Arten von Häusern' },
+  { id: 'vergleich', label: 'Vergleich in einer Tabelle' },
+  { id: 'erreichbarkeit', label: 'Erreichbarkeit' },
+  { id: 'versorgung', label: 'Versorgung' },
+  { id: 'unterhalt', label: 'Unterhalt und laufende Kosten' },
+  { id: 'renovierung', label: 'Renovierungskosten' },
+  { id: 'legal', label: 'Rechtlicher Status (AFO)' },
+  { id: 'vermietung', label: 'Ferienvermietung und Lizenz' },
+  { id: 'zielgruppe', label: 'Was passt zu Ihnen?' },
+];
+
+const faq = [
+  {
+    q: 'Ist eine Finca im Unterhalt teurer als eine Wohnung?',
+    a: 'Meistens ja. Bei einer Wohnung teilen Sie die Kosten für Dach, Fassade, Aufzug und Pool über das monatliche Hausgeld mit den anderen Eigentümern. Bei einer Finca zahlen Sie alles selbst: das Grundstück, die Zufahrt, die Klärgrube, die Wasserversorgung und oft einen Pool. Rechnen Sie bei einer Finca mit Land mit einigen tausend Euro Unterhalt pro Jahr, ohne größere Reparaturen.',
+  },
+  {
+    q: 'Darf ich meine Finca an Touristen vermieten?',
+    a: 'Das hängt von der Einstufung des Bodens und vom Status des Hauses ab. Die übliche Regelung für Ferienwohnungen in Andalusien (vivienda con fines turísticos) gilt für Wohnungen auf Wohnbauland. Für Häuser auf ländlichem Boden gelten die Regeln für ländlichen Tourismus mit eigenen Anforderungen, und ein Haus mit AFO-Status lässt sich nicht immer vermieten. Lassen Sie es vor dem Kauf prüfen.',
+  },
+  {
+    q: 'Kann die Eigentümergemeinschaft Ferienvermietung in meiner Wohnung verbieten?',
+    a: 'Seit April 2025 braucht ein Eigentümer, der eine Wohnung neu touristisch vermieten will, die vorherige Zustimmung der Eigentümergemeinschaft mit einer Mehrheit von drei Fünfteln. Lesen Sie deshalb vor dem Kauf die Satzung und die Protokolle der letzten Versammlungen, wenn Sie vermieten wollen.',
+  },
+  {
+    q: 'Ist ein Dorfhaus ein guter Kompromiss?',
+    a: 'Oft ja. Sie wohnen in Gehweite von Bäcker, Bar und Arzt, auf städtischem Boden, wo Umbauen einfacher ist als auf dem Land, und ohne Hausgeld. Die Kehrseite: wenig Außenfläche außer einer Dachterrasse, Treppen, Nachbarn hinter der Wand und Gassen, in die Sie nicht immer mit dem Auto kommen.',
+  },
+];
+---
+<Guide lang="de" slug="finca-wohnung-oder-dorfhaus" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Sie schwanken zwischen zwei Häusern?" ctaText="Wir sehen uns beide an und sagen Ihnen, was an jedem Haus zu tun ist und was es kostet. Dann vergleichen Sie mehr als nur den Kaufpreis.">
+  <h2 id="drei">Drei Arten von Häusern</h2>
+  <p>In der Axarquía wählen die meisten ausländischen Käufer zwischen drei Haustypen. Sie unterscheiden sich nicht nur im Charakter, sondern auch darin, wie Sie dort leben, was der Unterhalt kostet und was rechtlich erlaubt ist.</p>
+  <ul>
+    <li><strong>Die Finca</strong>: ein Landhaus mit Grundstück, oft mit Oliven-, Mandel-, Avocado- oder Mangobäumen. Rechtlich steht es auf ländlichem Boden (<em>suelo rústico</em>). Viel Platz und Ruhe, aber Sie sind für alles selbst verantwortlich. Lesen Sie auch unseren Ratgeber <a href="/de/ratgeber/finca-kaufen-spanien/">Finca kaufen</a>.</li>
+    <li><strong>Die Wohnung</strong>: meist an der Küste, in Torre del Mar, Nerja, Torrox Costa oder Rincón de la Victoria, oder in einer Anlage an den Hängen darüber. Oft mit Gemeinschaftspool. Die Eigentümergemeinschaft (<em>comunidad de propietarios</em>) kümmert sich um die Gemeinschaftsflächen.</li>
+    <li><strong>Das Dorfhaus</strong> (<em>casa de pueblo</em>): ein schmales, hohes Haus in einem weißen Dorf wie Cómpeta, Frigiliana oder Canillas de Albaida. Dicke Mauern, eine Dachterrasse, alles zu Fuß erreichbar. Es steht auf städtischem Boden.</li>
+  </ul>
+  <p>Daneben gibt es Villen an den Hängen über der Küste. Sie liegen dazwischen: Privatsphäre und eigener Pool wie bei einer Finca, aber oft auf städtischem Boden und an einer asphaltierten Straße.</p>
+
+  <h2 id="vergleich">Vergleich in einer Tabelle</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th></th><th>Finca</th><th>Wohnung</th><th>Dorfhaus</th></tr></thead>
+    <tbody>
+      <tr><td>Erreichbarkeit</td><td>Auto nötig, manchmal Schotterpiste</td><td>Gut, oft nahe der A-7</td><td>Dorf gut erreichbar, das Haus selbst nicht immer mit dem Auto</td></tr>
+      <tr><td>Versorgung</td><td>Für alles fahren</td><td>Zu Fuß erreichbar</td><td>Zu Fuß erreichbar, weniger Auswahl als an der Küste</td></tr>
+      <tr><td>Platz und Privatsphäre</td><td>Viel</td><td>Wenig, Nachbarn über und neben Ihnen</td><td>Innen ordentlich, außen vor allem die Dachterrasse</td></tr>
+      <tr><td>Eigener Unterhalt</td><td>Viel: Grundstück, Zufahrt, Wasser, Abwasser, Pool</td><td>Wenig, die Gemeinschaft regelt vieles</td><td>Mittel: Dach, Fassade, Feuchtigkeit</td></tr>
+      <tr><td>Laufende Kosten</td><td>Hoch (Unterhalt, Wasser, evtl. Strom)</td><td>Hausgeld</td><td>Niedrig</td></tr>
+      <tr><td>Rechtlicher Status</td><td>Oft zu prüfen (AFO)</td><td>Meist einfach</td><td>Meist einfach, auf Anbauten achten</td></tr>
+      <tr><td>Ferienvermietung</td><td>Andere Regeln (ländlich)</td><td>Zustimmung der Gemeinschaft nötig</td><td>Meist möglich, bei der Gemeinde prüfen</td></tr>
+      <tr><td>Betreuung bei Abwesenheit</td><td>Wichtig</td><td>Weniger kritisch</td><td>Mittel</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Eine allgemeine Linie. Jedes Haus ist anders; die Fakten zu einer bestimmten Immobilie ergeben sich aus den Papieren und einem Gutachten.</p>
+
+  <h2 id="erreichbarkeit">Erreichbarkeit</h2>
+  <p>Eine Wohnung an der Küste liegt meist nahe der Autobahn A-7. Von Torre del Mar fahren Sie etwa 40 Minuten zum Flughafen Málaga. Busse fahren entlang der Küste und nach Vélez-Málaga und Málaga.</p>
+  <p>Ein Dorfhaus in den Bergen liegt weiter weg: Von Cómpeta oder Canillas de Albaida sind es gut eine Stunde zum Flughafen, über kurvige Straßen. Das Dorf hat eine Busverbindung, aber nur wenige Fahrten am Tag. Achten Sie auf das Haus selbst: In der Altstadt sind die Gassen oft zu schmal oder zu steil für ein Auto. Einkäufe, Koffer und Baumaterial gehen das letzte Stück zu Fuß oder mit der Schubkarre.</p>
+  <p>Eine Finca verlangt am meisten. Ohne Auto geht nichts, und oft brauchen Sie zwei, wenn zwei Personen arbeiten oder Kinder zur Schule müssen. Das letzte Stück ist häufig eine Schotterpiste über das Land der Nachbarn. Nach starkem Regen kann sie tagelang schlecht befahrbar sein. Fragen Sie, wer die Piste unterhält und ob das Wegerecht im Grundbuch steht. Fahren Sie sie am besten einmal selbst im Dunkeln.</p>
+
+  <h2 id="versorgung">Versorgung</h2>
+  <p>An der Küste haben Sie alles zu Fuß: Supermärkte, Ärzte, Apotheken, Restaurants und internationale Geschäfte. Das regionale Krankenhaus steht in Vélez-Málaga. In einem Dorf wie Cómpeta, Frigiliana oder Torrox gibt es ein Gesundheitszentrum (<em>centro de salud</em>), eine Apotheke, eine Grundschule, Bäckereien, Bars und einen kleinen Supermarkt. Für den Großeinkauf oder den Baumarkt fahren Sie an die Küste.</p>
+  <p>Von einer Finca aus fahren Sie für alles: Brot, Arzt, ein Abend im Restaurant. Im ersten Jahr fühlt sich das wie Urlaub an. Nach einigen Jahren, oder im Alter, kann es zur Last werden. Außerhalb der Dörfer läuft das Internet meist über 4G/5G oder Satellit; Glasfaser gibt es dort selten.</p>
+
+  <h2 id="unterhalt">Unterhalt und laufende Kosten</h2>
+  <p><strong>Wohnung.</strong> Sie zahlen monatlich Hausgeld an die Eigentümergemeinschaft. Davon werden Dach, Fassade, Aufzug, Garten und Pool unterhalten. In der Axarquía liegt das Hausgeld oft zwischen 50 und 250 € im Monat, je nach Anlage. Für größere Arbeiten kann die Gemeinschaft eine Sonderumlage (<em>derrama</em>) beschließen. Lassen Sie sich vor dem Kauf die Protokolle der letzten Versammlungen geben: Darin steht, was ansteht.</p>
+  <p><strong>Dorfhaus.</strong> Kein Hausgeld, aber Dach, Fassade und Dachterrasse unterhalten Sie selbst. Alte Dorfhäuser haben oft feuchte Wände, Holzbalken, die befallen sein können, und Flachdächer, die nach Jahren undicht werden. Gemeinsame Wände mit den Nachbarn machen manche Reparatur zum Gemeinschaftsprojekt.</p>
+  <p><strong>Finca.</strong> Hier steckt die meiste Arbeit. Das Grundstück muss gepflegt werden: Bäume schneiden, Unkraut entfernen und in bewaldeten Gebieten einen Brandschutzstreifen um das Haus freihalten. Dazu kommen die Zufahrt, die Wasseranlage oder der Brunnen, die Klärgrube, oft ein Pool und manchmal eine Solaranlage mit Batterien. Allein für das Grundstück rechnen wir schnell mit 300 bis 2.000 € pro Jahr. Wer das nicht selbst machen will, lagert es über <a href="/de/instandhaltung/">Instandhaltung</a> aus.</p>
+
+  <h2 id="renovierung">Renovierungskosten</h2>
+  <p>Der Preis pro Quadratmeter ist bei allen drei Typen ungefähr gleich: von 250 – 500 € für eine Auffrischung bis 1.000 – 1.600 € für eine Komplettsanierung. Siehe unseren Ratgeber <a href="/de/ratgeber/renovierungskosten-spanien/">Was kostet eine Renovierung</a>. Der Unterschied liegt in dem, was hinzukommt:</p>
+  <ul>
+    <li><strong>Wohnung</strong>: am wenigsten Arbeit, oft Bad, Küche und Fenster. Beachten Sie die Regeln der Gemeinschaft (Arbeitszeiten, Aufzug schützen, Schutt abfahren) und fragen Sie um Erlaubnis für alles, was an Fassade oder Terrasse sichtbar ist.</li>
+    <li><strong>Dorfhaus</strong>: oft Dach und Dachterrasse abdichten, Feuchtigkeit beheben, Elektrik erneuern. Wegen der engen Gassen ist der Materialtransport aufwendig, was den Preis erhöht. In geschützten Ortskernen gelten Regeln für Fassaden, Fenster und Dachziegel.</li>
+    <li><strong>Finca</strong>: neben dem Haus oft Wasser, Abwasser (3.000 – 10.000 € für eine neue Klärgrube oder Kläranlage), Strom und die Zufahrt. Und bei AFO-Status dürfen Sie nicht erweitern: Was Sie sehen, ist was Sie bekommen.</li>
+  </ul>
+  <p>Lassen Sie deshalb vor dem Kauf ein <a href="/de/immobiliengutachten/">Immobiliengutachten</a> mit Preis pro Mangel erstellen. Dann vergleichen Sie zwei Häuser nach dem, was sie wirklich kosten, und nicht nur nach dem Kaufpreis.</p>
+
+  <h2 id="legal">Rechtlicher Status (AFO)</h2>
+  <p>Bei einer <strong>Wohnung</strong> ist der rechtliche Status meist einfach: Das Gebäude wurde mit Genehmigung gebaut und hat eine Bewohnbarkeitsbescheinigung. Achten Sie aber auf geschlossene Terrassen oder ein zusätzliches Zimmer auf dem Dach, die ohne Genehmigung entstanden sein können.</p>
+  <p>Ein <strong>Dorfhaus</strong> steht auf städtischem Boden. Auch dort wurden manchmal ohne Genehmigung Etagen oder Dachzimmer aufgesetzt, aber auf städtischem Boden lässt sich das meist leichter regeln als auf dem Land. Vergleichen Sie die Fläche im Kataster und im Grundbuch mit dem, was tatsächlich steht.</p>
+  <p>Bei einer <strong>Finca</strong> ist das die wichtigste Frage. Auf ländlichem Boden ist Bauen in Andalusien stark eingeschränkt, und viele Fincas wurden (teilweise) ohne Genehmigung gebaut oder erweitert. Ist die Frist für behördliches Einschreiten abgelaufen, kann die Gemeinde erklären, dass das Haus <em>asimilado a fuera de ordenación</em> ist: der AFO-Status, dessen offizielle Erklärung auch DAFO heißt. Das Haus ist dann bewohnbar, verkäuflich und kann angeschlossen werden, darf aber nicht erweitert oder neu gebaut werden. Das betrifft auch Ihre Pläne: ein zusätzliches Schlafzimmer, ein Gästehaus oder einen Pool anbauen ist bei einer AFO-Immobilie meist nicht möglich. Mehr dazu in unserem Ratgeber <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>.</p>
+
+  <h2 id="vermietung">Ferienvermietung und Lizenz</h2>
+  <p>Wenn Sie das Haus (gelegentlich) an Touristen vermieten wollen, macht der Haustyp einen großen Unterschied.</p>
+  <ul>
+    <li><strong>Wohnung oder Dorfhaus auf Wohnbauland</strong>: In Andalusien fällt das unter die Regelung der <em>vivienda con fines turísticos</em> (VFT, oft VUT genannt). Sie melden die Immobilie mit einer Erklärung im Tourismusregister Andalusiens (<em>Registro de Turismo de Andalucía</em>) an und müssen Anforderungen erfüllen, unter anderem für Klimaanlage und Heizung, Ausstattung und ein Beschwerdeformular. Seit 2024 dürfen Gemeinden die Zahl der Ferienwohnungen begrenzen, und seit Juli 2025 brauchen Sie zusätzlich eine landesweite Registriernummer, um auf Vermietungsplattformen zu inserieren.</li>
+    <li><strong>Wohnung</strong>: Seit April 2025 brauchen Sie für eine neue Ferienvermietung die vorherige Zustimmung der Eigentümergemeinschaft mit drei Fünfteln der Stimmen. In vielen Anlagen ist das die größte Hürde.</li>
+    <li><strong>Finca auf ländlichem Boden</strong>: Die übliche VFT-Regelung gilt nur für Wohnungen auf Wohnbauland. Für Landhäuser gelten die Regeln für ländlichen Tourismus (<em>alojamiento rural</em>, etwa eine <em>casa rural</em>) mit eigenen Anforderungen. Ob ein Haus mit AFO-Status dafür infrage kommt, ist von Fall zu Fall verschieden.</li>
+  </ul>
+  <p>Die Regeln für touristische Vermietung ändern sich schnell. Lassen Sie die Möglichkeiten für ein bestimmtes Haus vor dem Kauf bei der Gemeinde oder einem spezialisierten Gestor oder Anwalt prüfen. Sie möchten ein B&amp;B eröffnen? Lesen Sie die Unterseite unten.</p>
+
+  <h2 id="zielgruppe">Was passt zu Ihnen?</h2>
+  <p>Die Abwägung hängt stark von Ihrer Situation ab. Für jede Zielgruppe haben wir die wichtigsten Punkte zusammengestellt:</p>
+  <GuideChildren lang="de" parent="finca-wohnung-oder-dorfhaus" />
+  <p>Kurz gesagt: Wer Ruhe und Platz sucht und gern selbst Hand anlegt oder den Unterhalt auslagert, wird mit einer Finca glücklich. Wer sorglos wohnen will, mit allem in Gehweite und wenig Unterhalt, wählt eine Wohnung. Das Dorfhaus liegt dazwischen: spanisches Dorfleben, Versorgung in der Nähe, kein Hausgeld, aber Treppen und ein altes Haus, das Aufmerksamkeit braucht.</p>
+  <p>Sie wohnen nicht das ganze Jahr dort? Denken Sie auch an <a href="/de/hausbetreuung/">Hausbetreuung</a>: jemand, der regelmäßig nach dem Rechten sieht, nach einem Sturm das Dach prüft und Garten und Pool pflegen lässt. Bei einer abgelegenen Finca ist das kein Luxus. Haben Sie ein Haus gefunden, an dem etwas zu tun ist? Wir erstellen gern ein Angebot für die <a href="/de/renovierung/">Renovierung</a>.</p>
+  <p class="note">Dieser Ratgeber bietet allgemeine Informationen und ist keine Rechts- oder Steuerberatung. Das Urteil über eine bestimmte Immobilie kommt von einem Anwalt, Architekten oder Gestor.</p>
+</Guide>

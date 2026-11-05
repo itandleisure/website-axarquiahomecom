@@ -1,0 +1,13 @@
+---
+import MunicipalPage from '../../../../../components/MunicipalPage.astro';
+import { places, type Place } from '../../../../../data/places';
+import { hasMunicipalPages } from '../../../../../data/place-tabs';
+
+export function getStaticPaths() {
+  return places
+    .filter((p) => hasMunicipalPages('nl', p))
+    .map((p) => ({ params: { slug: p.slug }, props: { place: p } }));
+}
+const { place } = Astro.props as { place: Place };
+---
+<MunicipalPage lang="nl" place={place} kind="practical" />

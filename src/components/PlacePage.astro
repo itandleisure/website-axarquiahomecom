@@ -11,6 +11,7 @@ import { placeContent } from '../data/place-content';
 import { services, path as route, type Lang } from '../i18n';
 import { site } from '../data/site';
 import { guidesBy, guideHref } from '../data/guides';
+import { placeTabs } from '../data/place-tabs';
 import { fiestaHref, fiestaSlugFor } from '../data/fiestas';
 
 interface Props { lang: Lang; place: Place; page: PlacePage; }
@@ -58,12 +59,8 @@ const order = place.setting === 'coast' ? [1, 0, 4, 3, 2] : place.setting === 'm
 const svcs = order.map((i) => ({ ...services[lang][i], key: svcKeys[i] }));
 const request = route(lang, 'request');
 
-const tabs: { page: PlacePage; label: string }[] = [
-  { page: 'overview', label: T.overview },
-  ...(c.see ? [{ page: 'see' as PlacePage, label: T.see }] : []),
-  ...(c.living ? [{ page: 'living' as PlacePage, label: T.living }] : []),
-];
-// Feestpagina: eigen pagina, of bij een kern die van de gemeente
+// Tabs, inclusief Bouwvergunning en Praktisch (bij een kern die van de gemeente)
+const tabs = placeTabs(lang, place);
 const fiestaSlug = fiestaSlugFor(place.slug, place.municipality);
 const fiestaLabel = { nl: 'Feesten', en: 'Fiestas', de: 'Feste', sv: 'Fester' }[lang];
 const self = placeHref(lang, place, page);
@@ -93,12 +90,11 @@ const placeLd = {
 <Base title={title} description={description} path={self} lang={lang} jsonLd={page === 'overview' ? [placeLd] : []}>
   <Breadcrumbs lang={lang} items={crumbs} />
   <Hero lang={lang} eyebrow={parent ? `${place.name} · ${parent.name}` : 'Axarquía'} title={h1} lead={lead} ctaHref={`${request}?plaats=${place.slug}`}>
-    {(tabs.length > 1 || fiestaSlug) && (
+    {tabs.length > 1 && (
       <nav class="place-tabs" aria-label={place.name}>
         {tabs.map((t) => (
-          <a href={placeHref(lang, place, t.page)} aria-current={t.page === page ? 'page' : undefined}>{t.label}</a>
+          <a href={t.href} aria-current={t.page === page ? 'page' : undefined}>{t.label}</a>
         ))}
-        {fiestaSlug && <a href={fiestaHref(lang, fiestaSlug)}>{fiestaSlug === place.slug ? fiestaLabel : `${fiestaLabel} (${placeBySlug(fiestaSlug)!.name})`}</a>}
       </nav>
     )}
   </Hero>
@@ -148,6 +144,7 @@ const placeLd = {
         <div class="box">
           <h3>{T.guides}</h3>
           <ul class="checks">
+            {tabs.filter((t) => t.page === 'permit' || t.page === 'practical').map((t) => <li><a href={t.href}>{t.label}</a></li>)}
             {buyerGuides.map((g) => <li><a href={guideHref(lang, g)}>{g.short}</a></li>)}
           </ul>
         </div>
