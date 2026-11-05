@@ -1,0 +1,79 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'welke', label: 'Welke verzekeringen heeft u nodig?' },
+  { id: 'leeg', label: 'Let op als het huis leegstaat' },
+  { id: 'consorcio', label: 'Storm en overstroming: het Consorcio' },
+  { id: 'niet', label: 'Wat meestal niet gedekt is' },
+  { id: 'melden', label: 'Schade melden: stap voor stap' },
+  { id: 'herstel', label: 'Herstel na schade' },
+];
+
+const faq = [
+  {
+    q: 'Is een opstalverzekering verplicht in Spanje?',
+    a: 'Voor een woning met een hypotheek eist de bank een opstalverzekering (seguro de hogar met continente). Zonder hypotheek is het niet verplicht, maar wel sterk aan te raden. In een appartementencomplex verzekert de comunidad het gebouw; u verzekert dan vooral uw inboedel en aansprakelijkheid.',
+  },
+  {
+    q: 'Wat kost een woonverzekering in Spanje?',
+    a: 'Voor een appartement of dorpshuis meestal € 150 tot € 400 per jaar, voor een villa of finca met zwembad € 300 tot € 800 of meer. Het hangt af van de herbouwwaarde, de inboedel, de ligging en de dekking.',
+  },
+  {
+    q: 'Dekt mijn Nederlandse verzekering mijn huis in Spanje?',
+    a: 'Meestal niet. Een Nederlandse opstal- of inboedelverzekering geldt voor een woning in Nederland. Voor een huis in Spanje sluit u een Spaanse polis af, of een internationale polis die Spanje uitdrukkelijk dekt.',
+  },
+  {
+    q: 'Moet ik vakantieverhuur melden bij de verzekeraar?',
+    a: 'Ja. Een gewone woonverzekering dekt vaak geen schade door huurders of aansprakelijkheid tegenover gasten. Voor verhuur heeft u een aangepaste polis nodig.',
+  },
+];
+---
+<Guide slug="verzekering-huis-spanje" toc={toc} faq={faq} dienst="onderhoud" ctaTitle="Schade aan uw huis in Spanje?" ctaText="Wij beoordelen de schade, maken foto’s en een offerte voor het herstel die u bij de verzekeraar kunt indienen.">
+  <p>Dit is algemene informatie, geen verzekeringsadvies. Lees altijd de voorwaarden van uw eigen polis en vraag bij twijfel een onafhankelijke adviseur.</p>
+
+  <h2 id="welke">Welke verzekeringen heeft u nodig?</h2>
+  <p>In Spanje heet de woonverzekering <em>seguro de hogar</em>. Die bestaat meestal uit drie delen:</p>
+  <ul>
+    <li><strong>Opstal (<em>continente</em>):</strong> het gebouw zelf, met dak, muren, vaste installaties, zwembad en tuinmuren.</li>
+    <li><strong>Inboedel (<em>contenido</em>):</strong> meubels, apparaten en spullen in huis.</li>
+    <li><strong>Aansprakelijkheid (<em>responsabilidad civil</em>):</strong> schade die u of uw huis bij anderen veroorzaakt, bijvoorbeeld een lekkage naar de buren.</li>
+  </ul>
+  <p>Woont u in een appartementencomplex, dan is het gebouw meestal verzekerd via de vereniging van eigenaren (<em>comunidad</em>). Vraag de polis op en kijk wat die dekt, zoals het dak en de gevel.</p>
+  <p>Verzeker de opstal op de <strong>herbouwwaarde</strong>, niet op de koopprijs. Bij een finca met lage grondprijs en dure herbouw kan dat flink verschillen. Bent u onderverzekerd, dan krijgt u bij schade naar verhouding minder uitgekeerd.</p>
+
+  <h2 id="leeg">Let op als het huis leegstaat</h2>
+  <p>Veel Spaanse polissen hebben een <strong>leegstandsclausule</strong>. Staat het huis langer dan een bepaalde periode leeg, vaak 30 tot 90 dagen achter elkaar, dan vervalt een deel van de dekking, bijvoorbeeld voor inbraak of waterschade. Lees dit goed na als u de winter of de zomer niet in Spanje bent.</p>
+  <p>Daarnaast verwachten verzekeraars dat u de schade beperkt. Een lekkage die maanden onopgemerkt doorgaat, wordt soms niet of maar deels vergoed. Regelmatige controles door <a href="/nl/sleutelbeheer/">sleutelbeheer</a>, met verslagen en foto’s, helpen bij een claim.</p>
+
+  <h2 id="consorcio">Storm en overstroming: het Consorcio</h2>
+  <p>Schade door uitzonderlijke natuurgebeurtenissen, zoals een overstroming, zware storm met windstoten boven 120 km/u of een aardbeving, wordt in Spanje niet door uw verzekeraar betaald maar door het <em>Consorcio de Compensación de Seguros</em>. Dat is een staatsfonds dat via een toeslag op elke polis wordt betaald.</p>
+  <ul>
+    <li>U heeft er alleen recht op als u een woonverzekering heeft.</li>
+    <li>U meldt de schade direct bij het Consorcio, online of telefonisch, niet bij uw verzekeraar.</li>
+    <li>Gewone regen- of stormschade onder die grens valt wel onder uw eigen polis, als die het dekt.</li>
+  </ul>
+
+  <h2 id="niet">Wat meestal niet gedekt is</h2>
+  <ul>
+    <li>Slijtage en slecht onderhoud, zoals een dakterras met oude, gescheurde tegels</li>
+    <li>Langzaam ontstane schade, zoals vocht of schimmel door condens</li>
+    <li>Termieten en ander ongedierte</li>
+    <li>Schade door bouwwerk zonder vergunning, of aan een deel van het huis dat niet legaal is</li>
+    <li>Een keermuur die bezwijkt door ontbrekende drainage</li>
+  </ul>
+  <p>Goed onderhoud is dus niet alleen goedkoper, maar maakt ook het verschil bij een claim. Zie de <a href="/nl/gidsen/huis-winterklaar-spanje/">checklists om uw huis winterklaar te maken</a>.</p>
+
+  <h2 id="melden">Schade melden: stap voor stap</h2>
+  <ol>
+    <li><strong>Beperk de schade:</strong> water afsluiten, stroom uit bij lekkage, dakterras afdekken.</li>
+    <li><strong>Maak foto’s en video’s</strong> van de schade en de oorzaak, met datum.</li>
+    <li><strong>Meld de schade binnen 7 dagen</strong> bij uw verzekeraar, of bij het Consorcio bij een uitzonderlijke gebeurtenis. Die termijn staat in de Spaanse verzekeringswet.</li>
+    <li><strong>Gooi niets weg</strong> voordat de expert (<em>perito</em>) is geweest, tenzij het gevaarlijk is.</li>
+    <li><strong>Vraag een offerte voor herstel</strong> en bewaar alle facturen.</li>
+  </ol>
+
+  <h2 id="herstel">Herstel na schade</h2>
+  <p>De verzekeraar stuurt meestal een eigen expert en soms ook een eigen herstelbedrijf. U mag vaak ook zelf een bedrijf kiezen en de offerte indienen. Bent u niet in Spanje, dan is het handig als iemand ter plaatse de expert ontvangt, de schade laat zien en het herstel begeleidt.</p>
+  <p>Wij maken na schade een rapport met foto’s en een offerte per onderdeel, die u bij de verzekeraar of het Consorcio kunt indienen, en voeren het herstel uit: van <a href="/nl/problemen/daklekkage/">daklekkage</a> en <a href="/nl/problemen/vocht-en-schimmel/">vocht</a> tot <a href="/nl/problemen/wateroverlast-en-keermuur/">wateroverlast en een ingestorte keermuur</a>.</p>
+</Guide>

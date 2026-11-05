@@ -25,8 +25,10 @@ export const site = {
     phone: `${TODO} telefoon, bijv. +34 600 000 000`,
     whatsapp: `${TODO} WhatsApp in internationaal formaat zonder +, bijv. 34600000000`,
     email: `${TODO} e-mail voor aanvragen`,
-    yearsInRegion: `${TODO} aantal`,
   },
+
+  // Jaren ervaring in de bouw (bevestigd door Frans), getoond op de Over ons-pagina
+  experienceYears: 20,
 
   // De beheerder van de site (Frans' onderneming), voor privacy en colofon
   operator: {

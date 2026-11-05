@@ -1,0 +1,10 @@
+---
+import WeatherPage from '../../../../components/WeatherPage.astro';
+import { monthSlugs } from '../../../../data/weather';
+
+export function getStaticPaths() {
+  return monthSlugs.en.map((maand, month) => ({ params: { maand }, props: { month } }));
+}
+const { month } = Astro.props as { month: number };
+---
+<WeatherPage lang="en" month={month} />

@@ -17,6 +17,7 @@ const { lang, place, kind } = Astro.props;
 
 const svc = services[lang];
 const g = guidesBy[lang];
+const permitGuideSlugs = ['vergunning-verbouwen-andalusie', 'building-permits-renovation-andalusia', 'baugenehmigung-umbau-andalusien'];
 const request = route(lang, 'request');
 const villages = places.filter((p) => p.municipality === place.slug).map((p) => p.name);
 for (const v of place.villages ?? []) if (!villages.includes(v)) villages.push(v);
@@ -29,6 +30,7 @@ const t = municipalText(kind, lang, place.slug, {
     renovation: svc[0].href, keyholding: svc[1].href, survey: svc[2].href, pool: svc[3].href, maintenance: svc[4].href,
     finca: guideHref(lang, g[1]), buyCosts: guideHref(lang, g[2]), renoCosts: guideHref(lang, g[3]), afo: guideHref(lang, g[7]),
     permit: placeHref(lang, place, 'permit'), practical: placeHref(lang, place, 'practical'),
+    permitGuide: guideHref(lang, g.find((x) => permitGuideSlugs.includes(x.slug))!),
   },
 });
 

@@ -1,0 +1,77 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'overview', label: 'All the options at a glance' },
+  { id: 'drought', label: 'A drought-tolerant garden' },
+  { id: 'irrigation', label: 'Drip irrigation' },
+  { id: 'fence', label: 'Fences and walls' },
+  { id: 'gate', label: 'Automatic gates' },
+  { id: 'plot', label: 'A clean, fire-safe plot' },
+];
+
+const faq = [
+  {
+    q: 'Can I have a lawn in the Axarquía?',
+    a: 'You can, but real grass needs water every day in summer, and in dry years watering is sometimes restricted. Better to have a small patch of a drought-tolerant grass, or artificial grass where you really use it, and gravel and Mediterranean plants for the rest.',
+  },
+  {
+    q: 'What happens to my garden when I am away for months?',
+    a: 'With drip irrigation on a controller and drought-tolerant plants, a garden survives the summer fine without you. Do have someone check a few times a year that the pipes are intact and the controller works; a broken dripper costs you a plant or a lot of water within weeks.',
+  },
+  {
+    q: 'Do I need permission for a fence or wall?',
+    a: 'Usually a notification or minor works licence from the town hall is needed, certainly for a masonry wall or a fence along the road. On rural land (suelo rústico) stricter rules apply to height and materials. Check beforehand.',
+  },
+];
+---
+<Guide slug="garden-and-plot-spain" lang="en" toc={toc} faq={faq} dienst="onderhoud" ctaTitle="Help with your garden or plot?" ctaText="Tell us what you would like: a garden that needs little water, irrigation, a fence or gate, or clearing the plot. With a few photos we can quickly think along with you.">
+  <h2 id="overview">All the options at a glance</h2>
+  <p>An overview of what exists and what it is for. Want to have this done? <a href="/en/request/">Tell us what you have in mind</a> and we will help you make it happen.</p>
+  <table class="prices">
+    <thead><tr><th>Option</th><th>Good to know</th></tr></thead>
+    <tbody>
+      <tr><td>Gravel and Mediterranean plants</td><td>Little water and upkeep, attractive all year</td></tr>
+      <tr><td>Turf or sown grass</td><td>Cheap to lay, expensive in water and upkeep</td></tr>
+      <tr><td>Artificial grass</td><td>No water, but hot in the summer sun</td></tr>
+      <tr><td>Drip irrigation with a timer</td><td>Saves a lot of water and work; partly DIY</td></tr>
+      <tr><td>Irrigation with a Wi-Fi controller and several zones</td><td>Adjust remotely from home</td></tr>
+      <tr><td>Wire mesh fence (<em>malla</em>)</td><td>Marks the boundary, keeps dogs in and wild boar out; no privacy</td></tr>
+      <tr><td>Panel or railing fence</td><td>Sturdier and neater, partly see-through</td></tr>
+      <tr><td>Rendered masonry wall</td><td>Privacy and strength; often needs a permit</td></tr>
+      <tr><td>Motorised swing gate</td><td>Open with a remote or phone; needs room to swing</td></tr>
+      <tr><td>Motorised sliding gate</td><td>Ideal on a slope or short driveway</td></tr>
+      <tr><td>Clearing and pruning the plot</td><td>Needed every year, especially before summer</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="drought">A drought-tolerant garden</h2>
+  <p>The Spanish call it <em>xerojardinería</em>: a garden that manages most of the year with little or no extra water. It suits the climate of the Axarquía, where it hardly rains from May to October and where in dry years there are restrictions on watering gardens and filling pools.</p>
+  <ul>
+    <li><strong>Plants</strong>: olive, carob, lavender, rosemary, sage, oleander, bougainvillea, plumbago, agave, aloe and succulents. They cope with sun, wind and drought.</li>
+    <li><strong>Gravel or bark</strong> around the plants keeps the soil cool and moist and weeds down. Put weed membrane underneath.</li>
+    <li><strong>Group</strong> plants with the same water needs, so you only water the thirsty spots.</li>
+    <li><strong>Plant in autumn</strong>: the rain comes and roots can establish before summer.</li>
+    <li><strong>Watch out</strong>: palms are vulnerable to the red palm weevil (<em>picudo rojo</em>). If you have palms, have them treated preventively.</li>
+  </ul>
+
+  <h2 id="irrigation">Drip irrigation</h2>
+  <p>With drip irrigation (<em>riego por goteo</em>) each plant gets exactly the water it needs, at the root, and almost nothing evaporates. A timer or irrigation controller runs the system at night or early in the morning. With a Wi-Fi controller you can adjust it from the UK, for instance after a heatwave or after rain.</p>
+  <p>A simple system on the tap is a DIY job. For a larger garden with several zones, a water tank or a pump, it is wise to have it designed so the pressure is right everywhere. If you have a tank or well, read also about <a href="/en/guides/buying-a-finca-in-spain/">water on a finca</a>.</p>
+
+  <h2 id="fence">Fences and walls</h2>
+  <p>A fence keeps dogs in and wild boar, goats and uninvited guests out. The choice depends on what you want: just a boundary (wire mesh), sturdy and neat (panels or railings) or privacy (a masonry wall, possibly with a fence on top). On a slope a wall often also has to hold back soil; then it is a retaining wall and needs proper foundations and drainage.</p>
+  <p>Rules: for a wall or fence along a public road the town hall almost always asks for a notification or permit. On rural land (<em>suelo rústico</em>) there is often a maximum height for the masonry part and an open top, so animals and water can pass. See the rules of <a href="/en/places/">your municipality</a>.</p>
+
+  <h2 id="gate">Automatic gates</h2>
+  <p>A motorised gate is a real convenience on a finca or villa: no getting out on a steep drive, and the gate is always shut. There are two kinds:</p>
+  <ul>
+    <li><strong>Swing gate</strong>: one or two leaves that swing open. Cheaper, but needs room to swing and is awkward on a slope.</li>
+    <li><strong>Sliding gate</strong>: slides sideways along the fence. More expensive, but ideal on a slope or short driveway.</li>
+  </ul>
+  <p>Choose a motor with an emergency release and a battery for power cuts. On a house without mains electricity the gate can run on a solar panel. Opening by phone is handy when someone has to let people in for you, such as the cleaner or your <a href="/en/key-holding/">key holder</a>.</p>
+
+  <h2 id="plot">A clean, fire-safe plot</h2>
+  <p>In summer fire is a real risk in the hills of the Axarquía. Andalusia requires owners of houses in or near woodland and natural areas to keep the plot fire-safe: clear dry weeds and scrub, prune branches overhanging the roof and leave no flammable waste. How wide that strip around the house must be depends on the location; ask the town hall.</p>
+  <p>Have the plot cleared in spring (April, May), before the dry season. That also stops weeds setting seed and everything growing over again next year. Combine it with other <a href="/en/maintenance/">maintenance</a> of the house.</p>
+</Guide>
