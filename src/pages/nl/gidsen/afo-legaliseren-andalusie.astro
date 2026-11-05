@@ -1,75 +1,151 @@
 ---
+// Bronnen (geraadpleegd 5 november 2026):
+// - LISTA, Ley 7/2021 (BOE-A-2022-1316): art. 151 (legalisatie), 152 (termijn herstelprocedure 1 jaar),
+//   153 (6 jaar, uitzonderingen), 173 (AFO-erkenning, 6 maanden, stilzwijgen = afwijzing, geen aansluitingen of werk vooraf),
+//   174 (gevolgen AFO: geen legalisatie, aansluitingen, nota marginal, 174.7 toegestane werken).
+// - Ley de Suelo, RDLeg 7/2015 art. 28.4 (inschrijving oud bouwwerk zonder mogelijkheid tot herstel).
+// - Decreto 28/2016 art. 1.3.d, zoals gewijzigd bij Decreto 31/2024 (geen VUT bij AFO zonder uitdrukkelijke toestemming).
+// - LOE art. 2.2, 10, 12, 13; RD 1000/2010 art. 2 (visado, ook bij legalisatie); Ley del Catastro art. 13.
+// - Nerja, ordenanza fiscal tasa AFO (transparencia.nerja.es): 3,5% van de bouwkosten, minimaal € 750.
 import Guide from '../../../components/Guide.astro';
 
 const toc = [
-  { id: 'wat', label: 'Wat betekent AFO?' },
-  { id: 'waarom', label: 'Waarom zoveel huizen geen vergunning hebben' },
-  { id: 'mag', label: 'Wat mag wel en niet' },
-  { id: 'procedure', label: 'De procedure in grote lijnen' },
-  { id: 'koper', label: 'Als koper: waar let u op' },
-  { id: 'eigenaar', label: 'Als eigenaar: verbouwen met AFO' },
+  { id: 'kort', label: 'Legaliseren of AFO?' },
+  { id: 'legaliseren', label: 'Echt legaliseren met een vergunning' },
+  { id: 'afo', label: 'AFO: erkenning na zes jaar' },
+  { id: 'mag', label: 'Wat mag wel en niet met AFO' },
+  { id: 'stappen', label: 'De stappen en wie u nodig hebt' },
+  { id: 'kosten', label: 'Kosten en doorlooptijd' },
+  { id: 'gevolgen', label: 'Een huis kopen zonder papieren: de gevolgen' },
+  { id: 'voordeel', label: 'Voordelen, risico’s en waarde' },
+  { id: 'koper', label: 'Checklist voor kopers' },
 ];
 
 const faq = [
   {
     q: 'Is een huis met AFO-status legaal?',
-    a: 'Niet in de zin dat het met vergunning is gebouwd. Wel erkent de gemeente dat er niet meer tegen kan worden opgetreden. Het huis mag worden bewoond, verkocht, ingeschreven en aangesloten op water en stroom. Uitbreiden of herbouwen mag in principe niet.',
+    a: 'Niet helemaal. AFO is geen legalisatie: de gemeente erkent alleen dat ze niet meer kan optreden omdat de termijn van zes jaar voorbij is. U mag er wonen, het verkopen, laten inschrijven en aansluiten op water en stroom. Groter maken mag niet.',
   },
   {
-    q: 'Kan ik een hypotheek krijgen op een huis met AFO?',
-    a: 'Soms. Banken zijn terughoudender dan bij een volledig vergund huis, en de voorwaarden verschillen per bank. Met een officiële AFO-verklaring en inschrijving in het register is de kans een stuk groter dan zonder.',
+    q: 'Kan ik een hypotheek krijgen op een huis zonder vergunning?',
+    a: 'Op een huis zonder enige papieren vrijwel niet: de taxateur van de bank waardeert alleen wat legaal en ingeschreven is, of keurt het af. Met een AFO-erkenning die in het register staat, gaat het beter, maar niet elke bank financiert dan, en vaak voor een lager bedrag. Vraag het vooraf na bij uw bank.',
+  },
+  {
+    q: 'Wat kost legaliseren?',
+    a: 'Het technisch rapport of project van de architect, de gemeentelijke leges, eventueel aanpassingen aan het huis, en notaris en register. De leges verschillen per gemeente. Nerja rekent voor AFO bijvoorbeeld 3,5% van de bouwkosten, met een minimum van € 750. Reken alles bij elkaar meestal op enkele duizenden euro’s, meer als er herstelwerk nodig is.',
   },
   {
     q: 'Hoelang duurt een AFO-procedure?',
-    a: 'Dat verschilt per gemeente. Reken op enkele maanden tot meer dan een jaar, afhankelijk van de drukte bij de gemeente en de volledigheid van het dossier.',
+    a: 'De gemeente moet binnen zes maanden beslissen. Doet ze dat niet, dan geldt de aanvraag als afgewezen. Met het verzamelen van bewijs en eventueel herstelwerk vooraf duurt het hele traject in de praktijk vaak een half jaar tot meer dan een jaar.',
   },
   {
-    q: 'Wat kost een AFO-procedure?',
-    a: 'De kosten bestaan uit het technisch rapport van een architect of aparejador, de gemeentelijke leges en eventueel inschrijving in het register. Samen loopt dat vaak op tot enkele duizenden euro’s, meer als er eerst herstelwerk nodig is.',
+    q: 'Mag ik een huis met AFO als vakantiewoning verhuren?',
+    a: 'Niet zonder meer. Sinds 2024 mag een woning met AFO-status in Andalusië alleen als vakantieverhuur (VUT) worden ingeschreven als de gemeente dat vooraf uitdrukkelijk toestaat. Langdurige verhuur mag wel.',
+  },
+  {
+    q: 'Wat is het verschil tussen AFO en DAFO?',
+    a: 'Geen. DAFO is de afkorting van de declaración van AFO, de verklaring van de gemeente. Onder de oude regels sprak men vaak van DAFO, nu meestal van de erkenning (reconocimiento) van AFO.',
   },
 ];
 ---
-<Guide slug="afo-legaliseren-andalusie" toc={toc} faq={faq} dienst="legalisatie" ctaTitle="Twijfels over de papieren van een huis?" ctaText="Wij kijken mee en brengen u in contact met de architect met wie we samenwerken.">
-  <h2 id="wat">Wat betekent AFO?</h2>
-  <p>AFO staat voor <em>asimilado a fuera de ordenación</em>, letterlijk “gelijkgesteld aan buiten de ordening”. Het is een status voor gebouwen die zonder (juiste) vergunning zijn gebouwd, maar waartegen de overheid niet meer kan optreden omdat de termijn daarvoor is verstreken. In Andalusië is die termijn voor de meeste gevallen zes jaar na het voltooien van het bouwwerk. De status is vastgelegd in de Andalusische ruimtelijke-ordeningswet LISTA (Ley 7/2021).</p>
-  <p>De gemeente stelt de status vast met een officiële verklaring. Daarna kan het huis worden ingeschreven in het eigendomsregister met vermelding van de AFO-situatie, en mag het worden aangesloten op water en stroom.</p>
+<Guide slug="afo-legaliseren-andalusie" toc={toc} faq={faq} dienst="legalisatie" ctaTitle="Een huis legaliseren of kopen zonder papieren?" ctaText="Vertel ons om welk huis het gaat. Wij zoeken uit wat er mogelijk is en regelen het hele traject met onze vaste architect en gestor.">
+  <h2 id="kort">Legaliseren of AFO?</h2>
+  <p>In de Axarquía staan veel huizen die (deels) zonder vergunning zijn gebouwd: een uitbouw, een extra verdieping, een zwembad of een schuur die woning werd. Zo’n huis is niet automatisch verloren. De Andalusische ruimtelijke-ordeningswet LISTA (Ley 7/2021) kent twee routes:</p>
+  <ul>
+    <li><strong>Legaliseren</strong> (<em>legalización</em>): als wat er staat past binnen het huidige bestemmingsplan, vraagt u alsnog de vergunning aan. Daarna is het huis volledig legaal, alsof het met vergunning was gebouwd.</li>
+    <li><strong>AFO</strong> (<em>asimilado a fuera de ordenación</em>): past het niet in het bestemmingsplan, maar is de termijn waarbinnen de gemeente mag optreden verstreken (meestal zes jaar), dan erkent de gemeente de status AFO. Het huis blijft dan staan en mag worden gebruikt, maar is niet gelegaliseerd.</li>
+  </ul>
+  <p>Kan geen van beide, dan kan de gemeente herstel eisen, tot en met afbraak. Wat er voor een bepaald huis mogelijk is, hangt af van het soort grond, het bestemmingsplan en de bouwdatum. Dat zoekt een architect uit.</p>
 
-  <h2 id="waarom">Waarom zoveel huizen geen vergunning hebben</h2>
-  <p>Op landelijke grond in Andalusië is bouwen altijd sterk beperkt geweest. Toch zijn er in de afgelopen decennia tienduizenden huizen gebouwd of uitgebreid zonder vergunning: een schuur die woning werd, een extra verdieping, een zwembad of een overdekt terras. Lang werd daar weinig tegen gedaan. Naar schatting staan er in Andalusië zo’n 300.000 woningen in deze situatie, veel daarvan in gebieden als de Axarquía.</p>
+  <h2 id="legaliseren">Echt legaliseren met een vergunning</h2>
+  <p>Legaliseren kan als het bouwwerk voldoet aan het bestemmingsplan (PGOU) zoals dat nu geldt. Bijvoorbeeld een uitbouw in de bebouwde kom die binnen de toegestane bebouwing blijft, maar waarvoor destijds nooit een vergunning is aangevraagd. U doorloopt dan dezelfde procedure als voor een nieuwe <a href="/nl/gidsen/vergunning-verbouwen-andalusie/">bouwvergunning</a>: een architect maakt een legalisatieproject met visado van het college, de gemeente beoordeelt het en u betaalt de bouwbelasting (ICIO) en de leges.</p>
+  <p>Het voordeel is groot: het huis is daarna gewoon legaal. U kunt de uitbreiding laten inschrijven bij notaris en register, later verder verbouwen, en banken en kopers zien geen probleem meer. Ook als de termijn van zes jaar nog loopt, is dit de enige manier om van het risico af te komen.</p>
 
-  <h2 id="mag">Wat mag wel en niet</h2>
+  <h2 id="afo">AFO: erkenning na zes jaar</h2>
+  <p>Is legaliseren niet mogelijk, dan kan de gemeente nog zes jaar na het voltooien van het bouwwerk optreden. Daarna kan de eigenaar de erkenning als AFO aanvragen. Voor sommige grond geldt die termijn niet en kan de gemeente altijd optreden. Dan is ook AFO uitgesloten:</p>
+  <ul>
+    <li>openbaar domein, zoals de kuststrook en oevers van rivieren;</li>
+    <li>landelijke grond met natuurlijke of andere risico’s, zoals overstromingsgebied;</li>
+    <li>landelijke grond in de invloedszone van de kust;</li>
+    <li>beschermd erfgoed en groenzones;</li>
+    <li>verkaveling (<em>parcelación</em>) van landelijke grond.</li>
+  </ul>
+  <p>Ook moet het huis voldoen aan minimale eisen voor veiligheid, gezondheid en bewoonbaarheid. Zo niet, dan kan de gemeente eerst aanpassingen eisen. Voordat de erkenning er is, mag u geen werk aan het huis doen en mag het niet worden aangesloten op water, stroom of riool.</p>
+
+  <h2 id="mag">Wat mag wel en niet met AFO</h2>
   <table class="prices">
     <thead><tr><th>Wel</th><th>Niet</th></tr></thead>
     <tbody>
-      <tr><td>Bewonen en verhuren (lange termijn)</td><td>Uitbreiden of extra verdieping</td></tr>
-      <tr><td>Verkopen en inschrijven in het register</td><td>Afbreken en herbouwen</td></tr>
-      <tr><td>Aansluiten op water en stroom (waar beschikbaar)</td><td>Nieuwe bijgebouwen of zwembad</td></tr>
-      <tr><td>Onderhoud en herstel (dak, leidingen, afwerking)</td><td>Werk dat de waarde of omvang wezenlijk vergroot</td></tr>
+      <tr><td>Bewonen, verkopen en langdurig verhuren</td><td>Uitbreiden of een extra verdieping</td></tr>
+      <tr><td>Inschrijven in het eigendomsregister, met een aantekening over de AFO-status</td><td>Nieuwe bijgebouwen of een zwembad</td></tr>
+      <tr><td>Aansluiten op water en stroom, waar dat beschikbaar is</td><td>Meer bebouwd oppervlak of volume</td></tr>
+      <tr><td>Onderhoud, renovatie en versteviging, ook van de constructie, met vergunning</td><td>Vakantieverhuur, tenzij de gemeente het uitdrukkelijk toestaat</td></tr>
+      <tr><td>Een ander gebruik, als dat past bij de regels</td><td>Werk zonder melding of vergunning</td></tr>
     </tbody>
   </table>
-  <p>Precies welke werken zijn toegestaan, verschilt per geval en per gemeente. Vraag altijd vooraf advies en een melding of vergunning aan.</p>
-  <p>Belangrijk: niet elk huis komt in aanmerking. Staat het in beschermd natuurgebied, in een overstromingsgebied, op openbare grond of in een zone met bijzondere risico’s, dan geldt de termijn vaak niet en kan de overheid nog steeds optreden.</p>
+  <p>U kunt een AFO-huis dus goed moderniseren: een nieuw dak, badkamer en keuken, isolatie, nieuwe elektra. Alleen groter maken kan niet. Zie <a href="/nl/renovatie/">renovatie en verbouwing</a>.</p>
 
-  <h2 id="procedure">De procedure in grote lijnen</h2>
+  <h2 id="stappen">De stappen en wie u nodig hebt</h2>
   <ol>
-    <li><strong>Onderzoek</strong>: een architect of aparejador stelt vast wat er staat, wanneer het is gebouwd en of het in aanmerking komt.</li>
-    <li><strong>Technisch rapport</strong>: met tekeningen, foto’s, bewijs van de bouwdatum (bijvoorbeeld luchtfoto’s of het kadaster) en een verklaring dat het gebouw veilig en bewoonbaar is.</li>
-    <li><strong>Aanvraag bij de gemeente</strong>: met het rapport en de leges.</li>
-    <li><strong>Eventueel herstelwerk</strong>: soms eist de gemeente eerst aanpassingen, bijvoorbeeld aan de septische put of de veiligheid.</li>
-    <li><strong>Verklaring en inschrijving</strong>: na de AFO-verklaring wordt de situatie ingeschreven in het eigendomsregister.</li>
+    <li><strong>Vooronderzoek</strong>: een architect vergelijkt wat er staat met de papieren (kadaster, eigendomsregister, oude vergunningen) en met het bestemmingsplan. Uitkomst: legaliseren, AFO, of geen van beide.</li>
+    <li><strong>Bewijs van de bouwdatum</strong>: bij AFO moet worden aangetoond dat het werk langer dan zes jaar klaar is, bijvoorbeeld met historische luchtfoto’s, het kadaster of oude rekeningen.</li>
+    <li><strong>Technisch rapport of project</strong>: met tekeningen, foto’s, een beschrijving van de constructie en de installaties, en een verklaring dat het huis veilig en bewoonbaar is. Voor legaliseren is een volledig project met visado nodig.</li>
+    <li><strong>Aanvraag bij de gemeente</strong>: met het rapport en de betaalde leges. Een gestor of de architect dient de aanvraag in.</li>
+    <li><strong>Eventuele aanpassingen</strong>: soms vraagt de gemeente eerst werk, zoals een goede septische put of veiligheidsmaatregelen.</li>
+    <li><strong>Besluit</strong>: de gemeente beslist. Bij AFO moet dat binnen zes maanden. Zonder besluit geldt de aanvraag als afgewezen.</li>
+    <li><strong>Kadaster, notaris en register</strong>: de werkelijke oppervlakte gaat naar het kadaster. Bij de notaris laat u het bouwwerk in de akte opnemen, en het eigendomsregister zet er een aantekening over de AFO-status bij.</li>
   </ol>
+  <p>Wie u nodig hebt: een <strong>architect</strong> of <strong>arquitecto técnico</strong> voor het onderzoek en het rapport, een <strong>gestor</strong> voor de aanvragen en het kadaster, een <strong>notaris</strong> en het <strong>eigendomsregister</strong>, en bij twijfel over de juridische situatie een <strong>advocaat</strong>. Wij regelen het hele traject met onze vaste architect en gestor, en eventueel ook een boekhouder voor de belastingkant.</p>
 
-  <h2 id="koper">Als koper: waar let u op</h2>
+  <h2 id="kosten">Kosten en doorlooptijd</h2>
+  <table class="prices">
+    <thead><tr><th>Kostenpost</th><th>Waar het van afhangt</th></tr></thead>
+    <tbody>
+      <tr><td>Architect of arquitecto técnico</td><td>Grootte van het huis en hoeveel er moet worden uitgezocht. Bij legaliseren een volledig project, bij AFO een technisch rapport.</td></tr>
+      <tr><td>Gemeentelijke leges voor AFO</td><td>Per gemeente. Nerja: 3,5% van de bouwkosten van wat zonder vergunning is gebouwd, minimaal € 750.</td></tr>
+      <tr><td>Bouwbelasting en leges bij legaliseren</td><td>Zoals bij een nieuwe vergunning: in de Axarquía 2% tot 4% ICIO over de bouwkosten, plus leges. Per gemeente op de pagina Bouwvergunning.</td></tr>
+      <tr><td>Aanpassingen aan het huis</td><td>Wat de gemeente eist, bijvoorbeeld een septische put, elektra of veiligheid.</td></tr>
+      <tr><td>Notaris en register</td><td>Akte voor het bouwwerk en inschrijving.</td></tr>
+      <tr><td>Kadaster en IBI</td><td>Een groter oppervlak in het kadaster verhoogt de jaarlijkse IBI. Het kadaster kan ook over voorgaande jaren navorderen.</td></tr>
+    </tbody>
+  </table>
+  <p>Een rekenvoorbeeld voor Nerja: een uitbouw met € 40.000 aan bouwkosten geeft € 1.400 aan AFO-leges. Alles bij elkaar komt een AFO-traject meestal uit op enkele duizenden euro’s, meer als er herstelwerk nodig is. Een legalisatie met project kost meer, maar levert ook meer op.</p>
+  <p>Doorlooptijd: het vooronderzoek en het rapport kosten enkele weken. De gemeente heeft voor AFO zes maanden om te beslissen. Met aanpassingen en inschrijving duurt het hele traject vaak een half jaar tot meer dan een jaar.</p>
+
+  <h2 id="gevolgen">Een huis kopen zonder papieren: de gevolgen</h2>
+  <p>Wat staat er in de praktijk op het spel als u een huis koopt waarvan een deel niet vergund of erkend is?</p>
   <ul>
-    <li>Vergelijk wat er staat met de beschrijving in het kadaster en het eigendomsregister. Elk verschil moet worden verklaard.</li>
-    <li>Vraag naar de AFO-verklaring van de gemeente, of naar de vergunningen. Een belofte van de verkoper is niet genoeg.</li>
-    <li>Ga uit van wat er nu staat: als u later wilt uitbreiden of een zwembad wilt bouwen, kan dat waarschijnlijk niet.</li>
-    <li>Laat een onafhankelijke advocaat en een architect meekijken, en neem de uitkomst op in het koopcontract (arras) als ontbindende voorwaarde.</li>
-    <li>Houd rekening met de waarde: een huis met AFO-status is bij verkoop vaak minder waard dan een vergelijkbaar vergund huis. Wilt u zelf verkopen? Lees <a href="/nl/gidsen/huis-verkopen-spanje/papieren/">welke papieren u nodig heeft</a>.</li>
+    <li><strong>Hypotheek</strong>: de bank laat het huis taxeren. De taxateur waardeert alleen wat legaal en ingeschreven is, of keurt het af. U leent dan minder of krijgt geen hypotheek. Met AFO in het register gaat het beter, maar niet bij elke bank.</li>
+    <li><strong>Notaris en register</strong>: een bouwwerk komt pas in de akte en het register met een vergunning, een AFO-erkenning of bewijs dat de termijn voorbij is. Zonder dat koopt u op papier minder dan er staat.</li>
+    <li><strong>Aansluitingen</strong>: een huis zonder vergunning of AFO mag niet worden aangesloten op water, stroom of riool. Bestaat de aansluiting al, dan kan een nieuw contract of meer vermogen lastig zijn.</li>
+    <li><strong>Verzekering</strong>: de verzekeraar gaat uit van het opgegeven oppervlak. Bij schade aan een niet-vergund deel kan er discussie ontstaan over de uitkering.</li>
+    <li><strong>Optreden van de gemeente</strong>: is de termijn van zes jaar nog niet voorbij, of ligt het huis op grond waarvoor geen termijn geldt, dan kan de gemeente herstel of afbraak eisen. Die verplichting gaat mee met het huis, dus naar u als nieuwe eigenaar.</li>
+    <li><strong>Verbouwen</strong>: voor de erkenning mag u niets doen. Erna alleen renoveren, niet uitbreiden.</li>
+    <li><strong>Vakantieverhuur</strong>: met AFO alleen met uitdrukkelijke toestemming van de gemeente, zonder papieren niet.</li>
+    <li><strong>Doorverkoop</strong>: de volgende koper loopt tegen dezelfde vragen aan. Dat drukt de prijs en verlengt de verkooptijd. Lees ook <a href="/nl/gidsen/huis-verkopen-spanje/papieren/">welke papieren u nodig hebt bij verkoop</a>.</li>
+  </ul>
+
+  <h2 id="voordeel">Voordelen, risico’s en waarde</h2>
+  <p>Een huis zonder papieren heeft ook een voordeel: de prijs. Verkopers en makelaars weten dat zo’n huis lastiger te verkopen is, en dat zie je in de vraagprijs. Voor een koper die betaalt zonder hypotheek, en die weet wat er mogelijk is, kan dat een kans zijn: u koopt onder de marktwaarde, legaliseert of laat AFO erkennen, en het huis wordt daarna meer waard en beter verkoopbaar.</p>
+  <table class="prices">
+    <thead><tr><th>Status</th><th>Wat het betekent voor waarde en verkoop</th></tr></thead>
+    <tbody>
+      <tr><td>Volledig vergund en ingeschreven</td><td>Volle marktwaarde, hypotheek mogelijk, uitbreiden mogelijk binnen het bestemmingsplan</td></tr>
+      <tr><td>AFO erkend en ingeschreven</td><td>Verkoopbaar en financierbaar bij een deel van de banken, maar niet uit te breiden. Meestal minder waard dan een vergelijkbaar vergund huis</td></tr>
+      <tr><td>Geen vergunning en geen AFO</td><td>Lastig te financieren en te verkopen, met risico op optreden. De laagste prijs, maar ook het grootste risico</td></tr>
+    </tbody>
+  </table>
+  <p>De kans is alleen echt een kans als vooraf vaststaat dat legaliseren of AFO haalbaar is. Ligt het huis in een zone waar geen termijn geldt, dan koopt u een probleem, geen kans. Laat het daarom eerst onderzoeken, en reken de kosten en de tijd van het traject mee in uw bod.</p>
+
+  <h2 id="koper">Checklist voor kopers</h2>
+  <ul>
+    <li>Vergelijk wat er staat met het kadaster en het eigendomsregister. Elk verschil in oppervlak of bijgebouw moet worden verklaard.</li>
+    <li>Vraag de vergunningen of de AFO-erkenning van de gemeente op. Een belofte van de verkoper is niet genoeg.</li>
+    <li>Laat een architect nagaan of legaliseren of AFO mogelijk is, en wat het kost. Een <a href="/nl/aankoopkeuring/">aankoopkeuring</a> laat zien of het huis aan de minimale eisen voldoet.</li>
+    <li>Vraag bij de gemeente na of er een procedure tegen het huis loopt.</li>
+    <li>Neem de uitkomst op in het koopcontract (<em>arras</em>), bijvoorbeeld als ontbindende voorwaarde, of laat de verkoper de AFO-erkenning vóór de overdracht regelen.</li>
+    <li>Wilt u later uitbreiden, een zwembad bouwen of aan toeristen verhuren? Ga ervan uit dat dat met AFO niet kan.</li>
   </ul>
   <p>Meer over het kopen van een landelijk huis leest u in de gids <a href="/nl/gidsen/finca-kopen-in-spanje/">finca kopen in Spanje</a>.</p>
-
-  <h2 id="eigenaar">Als eigenaar: verbouwen met AFO</h2>
-  <p>Ook met AFO-status kunt u uw huis goed onderhouden en moderniseren: een nieuw dak, een nieuwe badkamer en keuken, isolatie, nieuwe elektra. Wat niet mag, is het huis groter maken. Wij stemmen per project af wat er mag, en zorgen voor de juiste melding bij de gemeente. Zie <a href="/nl/renovatie/">renovatie en verbouwing</a>.</p>
-  <p class="note">Deze gids geeft algemene uitleg en is geen juridisch advies. Het oordeel over een specifieke woning komt van een architect of advocaat. Regels kunnen per gemeente verschillen en veranderen.</p>
+  <p class="note">Deze gids geeft algemene uitleg op basis van de Andalusische en Spaanse wetgeving zoals die gold op 5 november 2026 (LISTA art. 151–153 en 173–174, Ley de Suelo art. 28, Decreto 28/2016 zoals gewijzigd in 2024, LOE, RD 1000/2010, Ley del Catastro) en de belastingverordening van Nerja. Het is geen juridisch advies. Of een bepaald huis kan worden gelegaliseerd, beoordelen de architect, de advocaat en de gemeente.</p>
 </Guide>
