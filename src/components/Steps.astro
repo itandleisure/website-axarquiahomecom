@@ -1,6 +1,8 @@
 ---
-interface Props { title?: string; steps: { t: string; d: string }[]; }
-const { title = 'Zo werkt het', steps } = Astro.props;
+import { ui, type Lang } from '../i18n';
+interface Props { title?: string; steps: { t: string; d: string }[]; lang?: Lang; }
+const { steps, lang = 'nl' } = Astro.props;
+const title = Astro.props.title ?? ui[lang].stepsTitle;
 ---
 <section class="section alt">
   <div class="wrap">

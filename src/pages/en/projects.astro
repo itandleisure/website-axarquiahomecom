@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Cta from '../../components/Cta.astro';
+import Todo from '../../components/Todo.astro';
+import { projects } from '../../data/projects';
+import { enPrice } from '../../data/site';
+---
+<Base
+  title="Projects: before and after renovations in the Axarquía"
+  description="See renovations, bathrooms, pools and fincas we have completed for British, Dutch and other overseas owners in the Axarquía, with location, price range and timescale."
+  path="/en/projects/"
+  lang="en"
+>
+  <Breadcrumbs lang="en" items={[{ name: 'Projects', href: '/en/projects/' }]} />
+  <Hero
+    lang="en"
+    eyebrow="Projects"
+    title="Before and after: <em>our work in the Axarquía</em>"
+    lead="Every home is different. Here is a selection of projects, with where they were, roughly what they cost and how long they took."
+  />
+  <section class="section">
+    <div class="wrap">
+      {projects.length === 0 && <Todo label="projecten (zie src/data/projects.ts). Voeg per project ook een Engelse titel en omschrijving toe." />}
+      <div class="cards">
+        {projects.map((p) => (
+          <article class="card">
+            {p.after && <img src={p.after} alt={`${p.titleEn ?? p.title}, ${p.place}, after renovation`} loading="lazy" width="640" height="420" />}
+            <h3>{p.titleEn ?? p.title}</h3>
+            <p>{p.summaryEn ?? p.summary}</p>
+            <p class="note">{p.place} · {enPrice(p.budget)} · {p.durationEn ?? p.duration}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Cta lang="en" title="Want a result like this for your home?" />
+</Base>

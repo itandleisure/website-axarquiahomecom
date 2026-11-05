@@ -1,0 +1,107 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site, enPrice } from '../../data/site';
+
+const faq = [
+  {
+    q: 'How much does it cost to renovate a house in the Axarquía?',
+    a: `It depends a great deal on the condition of the property. Freshening up an apartment can cost a few thousand euros; a full renovation of an old finca can run to well over €100,000. Most of the renovations we carry out fall between ${enPrice(prices.renovatieTotaal)}. After a visit you get a quote broken down by item.`,
+  },
+  {
+    q: 'Do I need planning permission to renovate in Spain?',
+    a: 'Almost always. Minor works usually only need a notification to the town hall (declaración responsable or licencia de obra menor). Larger works or extensions need a building licence with a project drawn up by an architect. We check what each project needs and handle the application.',
+  },
+  {
+    q: 'Can the work be done while I am in the UK?',
+    a: 'Yes, most of our clients are not in Spain during the work. You get a named project manager, photos and videos every week, and we talk by phone or video call. You pay in stages as each part is completed.',
+  },
+  {
+    q: 'How long does a renovation take?',
+    a: 'A bathroom or kitchen usually takes a few weeks. A full renovation typically takes three to six months, depending on the licence and the scope. The quote includes a schedule.',
+  },
+  {
+    q: 'Can I extend my finca?',
+    a: 'That depends on the legal status of the house and the local plan. Country houses with AFO status generally cannot be extended. Have this checked before you buy. We work with an architect who can advise on each property.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Renovation and building work',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['en', 'nl'],
+};
+---
+<Base
+  title="House renovation in Spain with English-speaking builders"
+  description="Renovating in the Axarquía with English-speaking builders: full renovations, bathrooms, kitchens and fincas in Nerja, Cómpeta, Frigiliana, Torrox and nearby. Clear quotes and one project manager."
+  path="/en/renovation/"
+  lang="en"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="en" items={[{ name: 'Renovation', href: '/en/renovation/' }]} />
+  <Hero
+    lang="en"
+    eyebrow="Renovation and building work"
+    title="Renovating in Spain, <em>without the headaches</em>"
+    lead="You have bought a home in the Axarquía, or you are about to, and it needs work. We take care of the whole project, from design and permits to the last tile."
+    cta="Ask for a quote"
+    ctaHref="/en/request/?dienst=renovatie"
+  />
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>What we renovate</h2>
+        <p>Most homes that overseas buyers purchase in the Axarquía are more than thirty years old. Village houses in Cómpeta and Frigiliana with thick walls and small windows, apartments on the coast in Torre del Mar and Nerja, and fincas in the hills with their own well. Each type has its own issues, and we know them well.</p>
+        <ul class="checks">
+          <li><strong>Full renovation</strong>: plumbing, electrics, insulation, layout and finishes.</li>
+          <li><strong>Bathrooms and kitchens</strong>: design, strip-out, installation and finishing.</li>
+          <li><strong>Finca restoration</strong>: damp, roofs, terraces, water and drainage.</li>
+          <li><strong>Windows and insulation</strong>: no more cold winters behind single glazing.</li>
+          <li><strong>Terraces, pergolas and covered areas</strong>: more outdoor living, even in July.</li>
+        </ul>
+        <h2>What overseas buyers run into</h2>
+        <p>Damp in the walls, old wiring without an earth, roofs that leak after the first rain, or an extension built without permission. These are things you do not see on a viewing in summer. We go through them with you, tell you what is urgent and what can wait, and give you a price for each item.</p>
+      </div>
+      <div class="box">
+        <h3>Guide prices</h3>
+        <table class="prices">
+          <tbody>
+            <tr><td>Full renovation</td><td>{enPrice(prices.renovatieTotaal)}</td></tr>
+            <tr><td>Renovation per m²</td><td>{prices.renovatiePerM2}</td></tr>
+            <tr><td>New bathroom</td><td>{enPrice(prices.badkamer)}</td></tr>
+            <tr><td>New kitchen</td><td>{prices.keuken}</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Guide prices including materials and labour, excluding VAT (IVA). The real price depends on the condition of the property and your wishes. You always get a quote first.</p>
+        <Todo label="prijzen per m² en keuken van het bouwbedrijf, en bevestiging van de andere bedragen." />
+        <a class="btn" href="/en/request/?dienst=renovatie">Ask for a quote</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="en"
+    title="How a renovation works"
+    steps={[
+      { t: 'Getting to know you', d: 'Tell us what you want using our short form. We call you back within 24 hours.' },
+      { t: 'Visit and survey', d: 'We measure up, take photos and discuss what you want, on site or by video.' },
+      { t: 'Quote and licence', d: 'An itemised quote and a schedule. We apply for the licence at the town hall.' },
+      { t: 'Build and handover', d: 'One project manager, weekly photo updates and payment as each stage is completed.' },
+    ]}
+  />
+
+  <Faq items={faq} lang="en" />
+  <Cta lang="en" dienst="renovatie" title="Plans for your home?" />
+  <Services lang="en" exclude="renovation" title="You may also need" />
+</Base>

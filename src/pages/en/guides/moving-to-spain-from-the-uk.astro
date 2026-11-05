@@ -1,0 +1,93 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'why', label: 'Why the Axarquía and Costa del Sol' },
+  { id: 'brexit', label: 'What changed after Brexit' },
+  { id: 'visas', label: 'Visas for living in Spain' },
+  { id: 'papers', label: 'NIE, TIE and the padrón' },
+  { id: 'tax', label: 'Tax: where are you resident?' },
+  { id: 'health', label: 'Healthcare' },
+  { id: 'home', label: 'Finding a home: rent or buy' },
+  { id: 'renovate', label: 'Getting the house ready' },
+  { id: 'practical', label: 'Practical matters' },
+];
+
+const faq = [
+  {
+    q: 'How long can I stay in Spain without a visa?',
+    a: 'As a British citizen without Spanish residency you can stay in the Schengen area for up to 90 days in any rolling 180-day period. Owning a property in Spain does not change that. To stay longer you need a visa and residence permit.',
+  },
+  {
+    q: 'Which visa do most British retirees use?',
+    a: 'The non-lucrative visa, for people who can support themselves without working in Spain. You need to show sufficient income or savings and have private health insurance from an insurer authorised in Spain. The required amount is linked to a Spanish index (IPREM) and changes each year, so check the current figure with the Spanish consulate.',
+  },
+  {
+    q: 'Is the golden visa still available?',
+    a: 'No. Spain abolished the residence-by-investment (golden) visa for property purchases in April 2025. Buying a home no longer gives you a route to residency on its own.',
+  },
+  {
+    q: 'When do I become tax resident in Spain?',
+    a: 'Generally if you spend more than 183 days a year in Spain, or if your main economic interests are there. You then pay Spanish tax on your worldwide income. The UK–Spain double taxation treaty decides which country taxes which income; UK government service pensions, for example, are usually taxed in the UK. Get advice from a tax adviser who knows both systems.',
+  },
+  {
+    q: 'Can I use my UK driving licence?',
+    a: 'Visitors can drive on a UK licence. Once you are resident, you can exchange your UK licence for a Spanish one under the UK–Spain agreement; check the current time limit with the DGT, as you must do it within a set period after becoming resident.',
+  },
+];
+---
+<Guide lang="en" slug="moving-to-spain-from-the-uk" toc={toc} faq={faq} ctaTitle="Found a home that needs work?" ctaText="We survey it before you buy and give you a price for the renovation, in plain English.">
+  <h2 id="why">Why the Axarquía and the Costa del Sol?</h2>
+  <p>The Costa del Sol has been the favourite destination for Britons moving to Spain for decades. Its eastern end, the Axarquía, is quieter and less expensive than Marbella or Fuengirola, yet just as close to Málaga airport. From Nerja it is about an hour’s drive, from Rincón de la Victoria half an hour, and there are direct flights to most UK airports all year round.</p>
+  <p>The area has more than 300 days of sunshine a year and mild winters: in January daytime temperatures are often 16 to 18 degrees. Behind the coast rise the Sierra Tejeda and Almijara mountains, with white villages such as Cómpeta and Frigiliana. If you want to live by the sea, look at Torre del Mar, Torrox Costa or Nerja; if you want peace and space, consider a finca inland.</p>
+  <p>Notary data show that around a third of buyers in Málaga province are from abroad, and the British remain one of the largest groups. You will find an established English-speaking community in almost every town.</p>
+
+  <h2 id="brexit">What changed after Brexit</h2>
+  <p>Before 2021, Britons could live in Spain simply by registering, just like other EU citizens. That freedom has gone. If you were already resident before the end of 2020, your rights are protected under the Withdrawal Agreement. If you are moving now, you are treated as a non-EU national:</p>
+  <ul>
+    <li>Without residency you can stay for at most <strong>90 days in any 180</strong>. Your entries and exits are recorded electronically under the EU’s Entry/Exit System.</li>
+    <li>To live in Spain you need a <strong>visa</strong>, applied for at the Spanish consulate in the UK before you go.</li>
+    <li>Once in Spain you apply for a residence card, the <strong>TIE</strong>.</li>
+  </ul>
+
+  <h2 id="visas">Visas for living in Spain</h2>
+  <h3>Non-lucrative visa</h3>
+  <p>The most common route for retirees and people with savings. You may not work in Spain. You must show a regular income or savings above a threshold linked to the Spanish IPREM index (roughly four times IPREM for the main applicant, plus a further amount per family member), and take out comprehensive private health insurance with an insurer authorised in Spain. It is granted for a year at first and then renewed for longer periods.</p>
+  <h3>Digital nomad visa</h3>
+  <p>For people working remotely for employers or clients outside Spain. You need to show your work, qualifications or experience and a minimum income. It can lead to special tax treatment in some cases.</p>
+  <h3>Work and self-employment</h3>
+  <p>If you want to work for a Spanish employer or set up as self-employed (autónomo) in Spain, there are separate work and residence permits, which are harder to obtain.</p>
+  <p class="note">Visa conditions and amounts change regularly. Always check the current requirements with the Spanish consulate in London, Edinburgh or Manchester, or a specialist lawyer.</p>
+
+  <h2 id="papers">NIE, TIE and the padrón</h2>
+  <h3>NIE number</h3>
+  <p>The <em>Número de Identidad de Extranjero</em> (NIE) is your tax identification number in Spain. You need it to buy property, open a bank account, register a car and pay tax. You can apply through the Spanish consulate in the UK or at a police station in Spain. Appointments (cita previa) can take weeks, so start early. Many people use a gestor or lawyer.</p>
+  <h3>TIE residence card</h3>
+  <p>Once you arrive with your visa, you apply for the <em>Tarjeta de Identidad de Extranjero</em> (TIE) within a month. This is your residence card and shows your NIE.</p>
+  <h3>Padrón at the town hall</h3>
+  <p>You also register with the town hall where you live (<em>empadronamiento</em>). You need it for the health centre, schools and local services, and it is often required for the TIE. It is free and usually quick.</p>
+
+  <h2 id="tax">Tax: where are you resident?</h2>
+  <p>If you live in Spain for more than 183 days a year, or the centre of your life is there, you are tax resident in Spain and file a Spanish return (<em>IRPF</em>) on your worldwide income. The UK–Spain double taxation treaty sets out which country taxes which income, and you claim relief so you are not taxed twice. Spain also has a declaration of overseas assets above certain thresholds (Modelo 720).</p>
+  <p>If you stay under 183 days and remain UK resident, you are a non-resident for Spanish tax. You then pay non-resident income tax (<em>IRNR</em>) on your Spanish home every year, even if you do not let it out. As a non-EU resident the rate is currently 24% on a deemed income. Every owner also pays local property tax (<em>IBI</em>) to the town hall.</p>
+  <p>Tax rules change often and the stakes are high. Always have your situation reviewed by an adviser who knows both the UK and Spanish systems.</p>
+
+  <h2 id="health">Healthcare</h2>
+  <p>If you receive a UK State Pension, you may be entitled to an <strong>S1 form</strong> from the NHS Business Services Authority. Registering it in Spain gives you access to Spanish public healthcare, paid for by the UK. If you work in Spain, you are covered through Spanish social security. Others, including most non-lucrative visa holders, need private health insurance; after a year of residence you can often join the public system through a paid scheme (<em>convenio especial</em>).</p>
+  <p>The regional hospital for the Axarquía is in Vélez-Málaga, with the large hospitals of Málaga city for specialist care. There are private clinics with English-speaking doctors in Nerja, Torre del Mar and Málaga.</p>
+
+  <h2 id="home">Finding a home: rent or buy</h2>
+  <p>Renting first gives you time to learn whether you prefer the coast or the mountains, how busy it gets in summer and how cold a stone house can be in February. Long-term rentals in popular towns have become scarce and expensive, partly because of holiday lets, so start looking in good time.</p>
+  <p>If you buy, look beyond the photos. Many homes in the Axarquía are over thirty years old and need work: damp, old wiring, leaking roofs. Country properties raise questions about permits, water and access too. Read our guides to <a href="/en/guides/buying-a-finca-in-spain/">buying a finca</a> and <a href="/en/guides/buying-costs-in-spain/">buying costs</a>, and have the property <a href="/en/property-survey/">surveyed</a> before you sign.</p>
+
+  <h2 id="renovate">Getting the house ready</h2>
+  <p>Most people adapt their new home: a new bathroom and kitchen, insulation and double glazing for winter, air conditioning for summer, sometimes a pool. It makes a big difference to work with builders who speak your language and stay in touch while you are still in the UK. We work with an itemised fixed price, weekly photo updates and one point of contact. See <a href="/en/renovation/">renovation</a> and our guide <a href="/en/guides/renovation-costs-spain/">how much renovation costs in Spain</a>.</p>
+
+  <h2 id="practical">Practical matters</h2>
+  <ul>
+    <li><strong>Money</strong>: a Spanish bank account is needed for local taxes and utilities. A currency transfer specialist usually beats the banks on exchange rates for the purchase.</li>
+    <li><strong>Car</strong>: a UK-registered car used permanently in Spain must be re-registered on Spanish plates. Buying a car in Spain is often simpler.</li>
+    <li><strong>Internet</strong>: fibre is common on the coast. In the mountains you may only get 4G/5G or satellite; check before you buy.</li>
+    <li><strong>Pets</strong>: dogs and cats from Great Britain need a microchip, rabies vaccination and an animal health certificate from a vet, issued shortly before travel.</li>
+  </ul>
+</Guide>

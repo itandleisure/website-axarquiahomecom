@@ -1,0 +1,67 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'areas', label: 'The areas of Málaga province' },
+  { id: 'prices', label: 'What does a home cost?' },
+  { id: 'process', label: 'The buying process step by step' },
+  { id: 'pitfalls', label: 'Pitfalls for overseas buyers' },
+  { id: 'after', label: 'After you buy' },
+];
+
+const faq = [
+  {
+    q: 'Where is property cheapest in Málaga province?',
+    a: 'Inland and in the eastern Axarquía homes are cheapest per m². Prices are highest on the western Costa del Sol around Marbella and Estepona. Málaga city has also seen steep rises in recent years.',
+  },
+  {
+    q: 'Do I need an estate agent?',
+    a: 'In Spain the seller usually pays the agent’s commission, so the agent works for the seller. Instruct your own independent lawyer and have the property surveyed by someone who does not earn from the sale.',
+  },
+  {
+    q: 'How long does buying take?',
+    a: 'From signing the reservation contract (arras) to completion at the notary usually takes six to ten weeks. With a mortgage, or with a finca that raises legal questions, it can take longer.',
+  },
+];
+---
+<Guide lang="en" slug="buying-property-in-malaga" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Found a property?" ctaText="Have it surveyed before you sign the arras. You get a report in English on its condition and what it will cost to put right.">
+  <h2 id="areas">The areas of Málaga province</h2>
+  <h3>Western Costa del Sol</h3>
+  <p>From Torremolinos through Benalmádena, Fuengirola and Marbella to Estepona. Busy and international, with lots of new builds, golf courses and facilities. The highest prices in the province.</p>
+  <h3>Málaga city</h3>
+  <p>A vibrant city with culture, a university, a growing tech sector and the airport on the doorstep. Prices have risen sharply in recent years, and most of what is for sale are apartments.</p>
+  <h3>The Axarquía (eastern Costa del Sol)</h3>
+  <p>From Rincón de la Victoria to Nerja, plus the mountain villages behind. More traditionally Spanish, fewer high-rises and cheaper per m² than the west. Village houses, villas on the hillsides and fincas inland. See <a href="/en/guides/living-in-the-axarquia/">living in the Axarquía</a>.</p>
+  <h3>Inland</h3>
+  <p>Around Antequera, Ronda and Álora. Space, peace and lower prices, but further from the sea and the airport, and colder in winter.</p>
+
+  <h2 id="prices">What does a home cost?</h2>
+  <p>Prices vary a great deal by location and type. As a rough guide: a coastal apartment in the Axarquía starts at around €200,000, a village house in the hills from about €150,000, and villas and restored fincas with sea views quickly reach €400,000 to well over €1 million. Portals such as Idealista, Kyero and Rightmove’s overseas section give a current picture. Asking prices are often above what is finally paid.</p>
+  <p>On top of the price, budget around 10% for buying costs (see <a href="/en/guides/buying-costs-in-spain/">costs of buying in Spain</a>) and, for older homes, a renovation budget.</p>
+
+  <h2 id="process">The buying process step by step</h2>
+  <ol>
+    <li><strong>NIE number and bank account</strong>: you cannot buy without an NIE.</li>
+    <li><strong>Search and viewings</strong>: come several times, including out of season.</li>
+    <li><strong>Offer and reservation</strong>: once agreed, the agent may ask for a small reservation payment to take the property off the market.</li>
+    <li><strong>Due diligence</strong>: your lawyer checks the Land Registry, Catastro, licences, debts and any open proceedings. Have the <a href="/en/property-survey/">survey</a> done at this stage too.</li>
+    <li><strong>Contrato de arras</strong>: the reservation contract, usually with a 10% deposit. If you pull out you lose it; if the seller pulls out they repay double.</li>
+    <li><strong>Mortgage</strong> (if needed): valuation and bank approval.</li>
+    <li><strong>Escritura at the notary</strong>: you pay the balance, get the keys and become the owner.</li>
+    <li><strong>Registration and taxes</strong>: your lawyer or gestoría pays the ITP and registers the deed at the Land Registry.</li>
+  </ol>
+
+  <h2 id="pitfalls">Pitfalls for overseas buyers</h2>
+  <ul>
+    <li><strong>No lawyer of your own</strong>: the agent and the notary do not protect your interests.</li>
+    <li><strong>Illegal additions</strong>: an extra bedroom, a covered terrace or a pool without a licence. Especially with fincas; see <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation</a>.</li>
+    <li><strong>Debts on the property</strong>: unpaid IBI or community fees pass to the new owner. Have them checked.</li>
+    <li><strong>Hidden defects</strong>: a house viewed in July looks dry; in February it turns out the walls are damp.</li>
+    <li><strong>Holiday lets</strong>: if you plan to let, check first that the town hall and the community of owners allow it. Rules have tightened in recent years, and a national registration number has been required since 2025.</li>
+    <li><strong>Exchange rates</strong>: a move in sterling between agreeing the price and completion can cost thousands. Consider fixing the rate with a currency specialist.</li>
+  </ul>
+
+  <h2 id="after">After you buy</h2>
+  <p>Put water, electricity and local taxes in your name, ideally by direct debit. Plan the renovation, preferably before you move in. And arrange for someone to keep an eye on the house when you are in the UK. We help with all three: <a href="/en/renovation/">renovation</a>, <a href="/en/maintenance/">maintenance</a> and <a href="/en/key-holding/">key holding</a>.</p>
+  <p class="note">This guide gives general information and is not legal or financial advice.</p>
+</Guide>

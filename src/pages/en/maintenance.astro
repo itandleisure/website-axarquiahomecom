@@ -1,0 +1,93 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import { prices, site, enPrice } from '../../data/site';
+
+const faq = [
+  {
+    q: 'My roof is leaking and I am in the UK. What now?',
+    a: 'Send us a message through our form or WhatsApp with the address and, if you have one, a photo. If you do not have key holding with us yet, we will agree how to get in. We make a temporary repair as quickly as possible and then give you a price for a permanent fix.',
+  },
+  {
+    q: 'Why do flat roofs and terraces in Spain leak so often?',
+    a: 'Many houses in the Axarquía have flat roofs (azoteas) and terraces above living space. Large temperature swings crack the waterproof layer and joints over time. After a dry spell this shows up with the first heavy rain. A new waterproofing layer (impermeabilización) usually solves it.',
+  },
+  {
+    q: 'Do I have to clear my land?',
+    a: 'In Andalusia, owners of plots in or near woodland and natural areas must keep them clear of flammable material, especially in summer. Town halls can set requirements too. We clear your land once or every year before summer.',
+  },
+  {
+    q: 'Do you do small jobs?',
+    a: 'Yes. A dripping tap, a sticking door, a socket that does not work. For key holding clients we fix it on the next visit.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Property maintenance and repairs',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['en', 'nl'],
+};
+---
+<Base
+  title="Maintenance and repairs for your home in Spain"
+  description="Roof leaks, terrace waterproofing, land clearing and small repairs in the Axarquía. English-speaking builders, even when you are not in Spain."
+  path="/en/maintenance/"
+  lang="en"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="en" items={[{ name: 'Maintenance and repairs', href: '/en/maintenance/' }]} />
+  <Hero
+    lang="en"
+    eyebrow="Maintenance and repairs"
+    title="Leak, damage or overdue maintenance? <em>We will sort it.</em>"
+    lead="Roofs, terraces, land and gardens, and every small job in and around the house. Even when you are in the UK and only hear about it from the neighbours."
+    cta="Request a repair"
+    ctaHref="/en/request/?dienst=onderhoud"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h3>Roofs and leaks</h3>
+          <p>Leaking roofs, flat roofs and terraces re-waterproofed, gutters and drainage.</p>
+          <p><strong>{enPrice(prices.daken)}</strong></p>
+        </div>
+        <div class="card">
+          <h3>Land and gardens</h3>
+          <p>Clearing land against fire risk, pruning, irrigation, artificial grass and landscaping.</p>
+          <p><strong>{enPrice(prices.perceel)}</strong></p>
+        </div>
+        <div class="card">
+          <h3>Damp and decorating</h3>
+          <p>Treating damp, repairing walls and repainting the house inside and out.</p>
+          <p><strong>Price after inspection</strong></p>
+        </div>
+        <div class="card">
+          <h3>Small jobs</h3>
+          <p>Plumbing, electrics, doors, windows, locks and anything else that breaks.</p>
+          <p><strong>Hourly rate</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Maintenance without needing to be there</h2>
+      <p>Most of the owners we work for spend much of the year in the UK or elsewhere in Europe. So we work with photos: before, during and after the job. You approve the price, we carry out the work, and you see the result on your phone.</p>
+      <p>Rather not have to call us every time? With <a href="/en/key-holding/">key holding</a> we keep a regular eye on the house and often spot problems before they cause damage.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="en" />
+  <Cta lang="en" dienst="onderhoud" title="Something broken at your home in Spain?" />
+  <Services lang="en" exclude="maintenance" title="You may also need" />
+</Base>

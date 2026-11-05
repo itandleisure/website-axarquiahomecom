@@ -1,15 +1,20 @@
 ---
-// Root: doorsturen naar de Nederlandse versie. Later taalkeuze op basis van de browser.
+// Root: stuur bezoekers naar hun taal (Nederlands of anders Engels).
 ---
 <!doctype html>
-<html lang="nl">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Axarquía Home</title>
     <meta name="robots" content="noindex" />
-    <link rel="canonical" href="https://axarquiahome.com/nl/" />
-    <meta http-equiv="refresh" content="0; url=/nl/" />
-    <script>location.replace('/nl/');</script>
+    <link rel="alternate" hreflang="nl" href="https://axarquiahome.com/nl/" />
+    <link rel="alternate" hreflang="en" href="https://axarquiahome.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://axarquiahome.com/en/" />
+    <script is:inline>
+      var l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+      location.replace(/^(nl|be)/i.test(l) ? '/nl/' : '/en/');
+    </script>
+    <noscript><meta http-equiv="refresh" content="0; url=/en/" /></noscript>
   </head>
-  <body><a href="/nl/">Ga naar axarquiahome.com</a></body>
+  <body><p><a href="/nl/">Nederlands</a> · <a href="/en/">English</a></p></body>
 </html>

@@ -1,6 +1,8 @@
 ---
-interface Props { items: { q: string; a: string }[]; title?: string; }
-const { items, title = 'Veelgestelde vragen' } = Astro.props;
+import { ui, type Lang } from '../i18n';
+interface Props { items: { q: string; a: string }[]; title?: string; lang?: Lang; }
+const { items, lang = 'nl' } = Astro.props;
+const title = Astro.props.title ?? ui[lang].faq;
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',

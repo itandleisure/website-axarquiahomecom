@@ -1,0 +1,75 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'what', label: 'What does AFO mean?' },
+  { id: 'why', label: 'Why so many homes lack permission' },
+  { id: 'can', label: 'What you can and cannot do' },
+  { id: 'procedure', label: 'The procedure in outline' },
+  { id: 'buyer', label: 'As a buyer: what to watch for' },
+  { id: 'owner', label: 'As an owner: renovating with AFO' },
+];
+
+const faq = [
+  {
+    q: 'Is a house with AFO status legal?',
+    a: 'Not in the sense of having been built with a licence. But the town hall recognises that no action can be taken against it any more. The house can be lived in, sold, registered and connected to water and electricity. Extending or rebuilding it is generally not allowed.',
+  },
+  {
+    q: 'Can I get a mortgage on a house with AFO status?',
+    a: 'Sometimes. Banks are more cautious than with a fully licensed home, and conditions vary between banks. With an official AFO declaration recorded at the Land Registry your chances are much better than without.',
+  },
+  {
+    q: 'How long does an AFO procedure take?',
+    a: 'It varies by town hall. Expect several months to more than a year, depending on the workload and how complete the file is.',
+  },
+  {
+    q: 'What does an AFO procedure cost?',
+    a: 'The costs are an architect’s or surveyor’s technical report, the town hall fees and registration. Together these often come to several thousand euros, more if repairs are needed first.',
+  },
+];
+---
+<Guide lang="en" slug="afo-legalisation-andalusia" toc={toc} faq={faq} dienst="legalisatie" ctaTitle="Doubts about a property’s paperwork?" ctaText="We will take a look and put you in touch with the architect we work with.">
+  <h2 id="what">What does AFO mean?</h2>
+  <p>AFO stands for <em>asimilado a fuera de ordenación</em>, roughly “treated as outside the planning rules”. It is a status for buildings that were built without (the right) permission, but against which the authorities can no longer act because the time limit has passed. In Andalusia that limit is six years after completion in most cases. The status is set out in the Andalusian planning law LISTA (Ley 7/2021).</p>
+  <p>The town hall confirms the status with an official declaration. The house can then be recorded at the Land Registry with its AFO situation noted, and connected to water and electricity.</p>
+
+  <h2 id="why">Why so many homes lack permission</h2>
+  <p>Building on rural land in Andalusia has always been tightly restricted. Even so, over the past decades tens of thousands of homes were built or extended without permission: a barn turned into a house, an extra storey, a pool or a covered terrace. For a long time little was done about it. An estimated 300,000 homes in Andalusia are in this situation, many of them in areas such as the Axarquía.</p>
+
+  <h2 id="can">What you can and cannot do</h2>
+  <table class="prices">
+    <thead><tr><th>Allowed</th><th>Not allowed</th></tr></thead>
+    <tbody>
+      <tr><td>Live in it and let it long-term</td><td>Extend it or add a storey</td></tr>
+      <tr><td>Sell it and register it</td><td>Demolish and rebuild</td></tr>
+      <tr><td>Connect water and electricity (where available)</td><td>New outbuildings or a pool</td></tr>
+      <tr><td>Maintenance and repair (roof, pipes, finishes)</td><td>Work that substantially increases its size or value</td></tr>
+    </tbody>
+  </table>
+  <p>Exactly which works are allowed varies by case and by town hall. Always take advice and submit a notification or licence application first.</p>
+  <p>Important: not every house qualifies. If it is in a protected natural area, a flood zone, on public land or in a special-risk zone, the time limit often does not apply and the authorities can still take action.</p>
+
+  <h2 id="procedure">The procedure in outline</h2>
+  <ol>
+    <li><strong>Investigation</strong>: an architect or surveyor (aparejador) establishes what is there, when it was built and whether it qualifies.</li>
+    <li><strong>Technical report</strong>: with drawings, photos, evidence of the build date (such as aerial photos or Catastro records) and a statement that the building is safe and habitable.</li>
+    <li><strong>Application to the town hall</strong>: with the report and the fees.</li>
+    <li><strong>Any repairs</strong>: the town hall sometimes requires changes first, for example to the septic tank or for safety.</li>
+    <li><strong>Declaration and registration</strong>: after the AFO declaration, the situation is recorded at the Land Registry.</li>
+  </ol>
+
+  <h2 id="buyer">As a buyer: what to watch for</h2>
+  <ul>
+    <li>Compare what is there with the description in the Catastro and at the Land Registry. Every difference needs explaining.</li>
+    <li>Ask for the town hall’s AFO declaration, or the licences. A promise from the seller is not enough.</li>
+    <li>Buy on the basis of what is there now: if you later want to extend or build a pool, you probably cannot.</li>
+    <li>Have an independent lawyer and an architect check it, and make the outcome a condition in the arras contract.</li>
+    <li>Consider value: a house with AFO status is often worth less on resale than a comparable fully licensed one.</li>
+  </ul>
+  <p>Read more about buying a country property in our guide <a href="/en/guides/buying-a-finca-in-spain/">buying a finca in Spain</a>.</p>
+
+  <h2 id="owner">As an owner: renovating with AFO</h2>
+  <p>Even with AFO status you can maintain and modernise your home: a new roof, new bathroom and kitchen, insulation, new electrics. What you cannot do is make the house bigger. We agree with you, project by project, what is allowed and submit the right notification to the town hall. See <a href="/en/renovation/">renovation</a>.</p>
+  <p class="note">This guide gives a general explanation and is not legal advice. The opinion on a specific property comes from an architect or lawyer. Rules can differ between town halls and change over time.</p>
+</Guide>
