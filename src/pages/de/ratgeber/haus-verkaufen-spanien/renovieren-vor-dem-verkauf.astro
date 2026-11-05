@@ -1,0 +1,94 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'prinzip', label: 'Das Prinzip: keine Verhandlungspunkte' },
+  { id: 'tabelle', label: 'Was sich lohnt: Richtpreise' },
+  { id: 'maengel', label: 'Zuerst: Mängel beheben' },
+  { id: 'eindruck', label: 'Dann: der Eindruck' },
+  { id: 'lassen', label: 'Was Sie besser lassen' },
+  { id: 'genehmigung', label: 'Genehmigung für kleine Arbeiten' },
+  { id: 'vorgehen', label: 'Vorgehen und Zeitplan' },
+];
+
+const faq = [
+  {
+    q: 'Muss ich dem Käufer Mängel mitteilen?',
+    a: 'Mängel, die Sie kennen, sollten Sie angeben. Nach dem spanischen Zivilgesetzbuch haftet der Verkäufer für versteckte Mängel, und wer einen bekannten Mangel verschweigt, riskiert einen Anspruch. Die Behebung vor dem Verkauf ist deshalb oft die einfachste Lösung.',
+  },
+  {
+    q: 'Lohnt sich ein eigenes Gutachten vor dem Verkauf?',
+    a: 'Oft ja. Sie sehen, was ein Käufer finden wird, und können wählen: beheben oder angeben und im Preis berücksichtigen. Ein Gutachten mit Preis pro Mangel stärkt außerdem Ihre Position, wenn ein Käufer später mit einer eigenen Liste kommt.',
+  },
+  {
+    q: 'Kann ich renovieren lassen, während ich im Ausland bin?',
+    a: 'Ja. Wir erstellen einen Preis nach einem Besuch und Fotos und halten Sie während der Arbeiten mit Fotos auf dem Laufenden. Mit der Hausbetreuung kann derselbe Ansprechpartner danach die Besichtigungen für den Makler öffnen.',
+  },
+];
+---
+<Guide lang="de" slug="haus-verkaufen-spanien-renovieren" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Was braucht Ihr Haus vor dem Verkauf?" ctaText="Wir gehen mit den Augen eines Käufers durch das Haus und nennen Ihnen einen Preis pro Arbeit. Sie entscheiden, was gemacht wird.">
+  <h2 id="prinzip">Das Prinzip: keine Verhandlungspunkte</h2>
+  <p>Ein Käufer, der einen Feuchtigkeitsfleck, eine undichte Dachterrasse oder einen Riss sieht, rechnet selten mit den tatsächlichen Reparaturkosten. Er rechnet mit dem Risiko: Was steckt noch dahinter? Dieser Betrag geht von seinem Angebot ab. Ein Mangel, den Sie für ein paar hundert Euro beheben lassen könnten, kostet Sie in der Verhandlung schnell ein Vielfaches.</p>
+  <p>Die Regel ist also einfach: Beheben, was ein Käufer oder Gutachter findet, das Haus frisch und sauber machen und die großen Entscheidungen dem Käufer überlassen.</p>
+
+  <h2 id="tabelle">Was sich lohnt: Richtpreise</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Arbeit</th><th>Richtpreis</th><th>Lohnt es sich?</th></tr></thead>
+    <tbody>
+      <tr><td>Innen streichen (Haus von ca. 100 m²)</td><td>1.500 € – 3.500 €</td><td>Ja, fast immer</td></tr>
+      <tr><td>Fassade weißen</td><td>1.500 € – 5.000 €</td><td>Ja, prägt den ersten Eindruck und die Fotos</td></tr>
+      <tr><td>Feuchtigkeit und Ursache beheben</td><td>300 € – 3.000 €</td><td>Ja, Feuchtigkeit ist der größte Abschreckungsgrund</td></tr>
+      <tr><td>Dachterrasse neu abdichten</td><td>Siehe <a href="/de/kosten/dach-und-dachterrasse/">Kosten Dach und Dachterrasse</a></td><td>Ja, wenn sie undicht oder die Schicht verschlissen ist</td></tr>
+      <tr><td>Pool sauber, Pumpe und Filter funktionsfähig</td><td>150 € – 1.000 €</td><td>Ja, ein grüner Pool schreckt ab</td></tr>
+      <tr><td>Garten und Grundstück pflegen</td><td>200 € – 1.500 €</td><td>Ja, vor allem bei einer Finca</td></tr>
+      <tr><td>Kleine Reparaturen (Hähne, Klinken, Fliesen, Lampen)</td><td>200 € – 1.000 €</td><td>Ja</td></tr>
+      <tr><td>Küchenfronten und Arbeitsplatte ersetzen</td><td>2.000 € – 6.000 €</td><td>Manchmal, bei einer veraltet wirkenden, aber soliden Küche</td></tr>
+      <tr><td>Komplett neue Küche</td><td>Siehe <a href="/de/kosten/kueche-renovieren/">Kosten Küche</a></td><td>Selten</td></tr>
+      <tr><td>Komplett neues Bad</td><td>Siehe <a href="/de/kosten/bad-renovieren/">Kosten Bad</a></td><td>Selten, außer es ist defekt</td></tr>
+      <tr><td>Neuen Pool bauen</td><td>Siehe <a href="/de/kosten/pool-bauen/">Kosten Pool</a></td><td>Nein, nicht kurz vor dem Verkauf</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Richtpreise für die Axarquía, November 2026, ohne MwSt. Der tatsächliche Preis hängt vom Haus und der Zufahrt ab.</p>
+
+  <h2 id="maengel">Zuerst: Mängel beheben</h2>
+  <p>Beginnen Sie mit dem, was ein Gutachter in seinen Bericht schreiben würde. In der Axarquía sind das vor allem:</p>
+  <ul>
+    <li><strong>Feuchtigkeit und Schimmel</strong> in Wänden und Ecken, oft durch aufsteigende Feuchtigkeit oder eine undichte Dachterrasse. Überstreichen hilft nicht; ein Käufer oder Gutachter mit Feuchtigkeitsmesser findet es trotzdem. Siehe <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit und Schimmel</a>.</li>
+    <li><strong>Undichtigkeiten</strong> an Dach und Dachterrasse. Siehe <a href="/de/probleme/undichtes-dach/">undichtes Dach</a>.</li>
+    <li><strong>Risse</strong> in Wänden und Fassade. Lassen Sie klären, ob sie oberflächlich sind oder auf ein Fundamentproblem hindeuten. Siehe <a href="/de/probleme/risse-in-waenden/">Risse in Wänden</a>.</li>
+    <li><strong>Holzschäden</strong> an Balken, Rahmen und Türen, etwa durch <a href="/de/probleme/termiten/">Termiten</a>.</li>
+    <li><strong>Installationen</strong>: Elektrik ohne FI-Schalter, ein Warmwasserbereiter am Ende seiner Lebensdauer, eine volle Klärgrube, eine Poolpumpe, die nicht läuft.</li>
+  </ul>
+  <p>Bewahren Sie Rechnungen und Fotos der Arbeiten auf. Zeigen Sie sie dem Käufer; das schafft Vertrauen.</p>
+
+  <h2 id="eindruck">Dann: der Eindruck</h2>
+  <p>Danach geht es um den ersten Eindruck, bei der Besichtigung und auf den Fotos, mit denen Käufer aus dem Ausland suchen.</p>
+  <ul>
+    <li><strong>Streichen</strong>, innen und außen. Helle, neutrale Farben. Eine weiße Fassade gehört zur Axarquía und lässt das Haus sofort gepflegt wirken.</li>
+    <li><strong>Außenbereich</strong>. Terrasse sauber, kaputte Fliesen ersetzt, Garten gepflegt, Pool klar. Bei einer Finca: Wege begehbar, Unkraut entfernt und der Brandschutzstreifen um das Haus gepflegt.</li>
+    <li><strong>Aufräumen</strong>. Weniger Möbel und persönliche Dinge lassen Räume größer wirken. Käufer wollen sich ihr eigenes Leben im Haus vorstellen.</li>
+    <li><strong>Licht und Luft</strong>. Funktionierende Lampen, saubere Fenster, Läden offen. Ein Haus, das lange geschlossen war, riecht muffig; lassen Sie es vor Besichtigungen lüften.</li>
+  </ul>
+
+  <h2 id="lassen">Was Sie besser lassen</h2>
+  <ul>
+    <li><strong>Große Umbauten von Küche oder Bad</strong>. Käufer haben ihren eigenen Geschmack, und Sie holen die Kosten selten vollständig herein. Ist eine Küche wirklich verschlissen, denken Sie eher an neue Fronten und eine Arbeitsplatte als an eine komplette Küche.</li>
+    <li><strong>Erweitern ohne Genehmigung</strong>. Ein Anbau oder eine geschlossene Terrasse ohne Genehmigung macht das Haus schwerer verkäuflich, nicht besser. Bei AFO-Status dürfen Sie ohnehin nicht erweitern.</li>
+    <li><strong>Mängel verstecken statt beheben</strong>. Ein überstrichener Feuchtigkeitsfleck kommt wieder, und Verschweigen kann nach dem Verkauf zu einem Anspruch führen.</li>
+    <li><strong>Persönliche Entscheidungen</strong>: grelle Farben, ausgefallene Fliesen oder eine Themeneinrichtung.</li>
+  </ul>
+
+  <h2 id="genehmigung">Genehmigung für kleine Arbeiten</h2>
+  <p>Auch für kleinere Arbeiten brauchen Sie in Spanien oft etwas vom Rathaus: eine Anzeige (<em>declaración responsable</em>) oder eine Genehmigung für kleine Bauarbeiten (<em>licencia de obra menor</em>). Das gilt zum Beispiel für den Austausch von Bad oder Küche, die Neuabdichtung einer Dachterrasse oder die Sanierung der Fassade. Innen streichen fällt meist nicht darunter. Was genau nötig ist, ist je nach Gemeinde verschieden; bei den Arbeiten, die wir ausführen, regeln wir das mit. Arbeiten mit den richtigen Papieren können Sie beim Verkauf auch vorzeigen.</p>
+
+  <h2 id="vorgehen">Vorgehen und Zeitplan</h2>
+  <ol>
+    <li><strong>Das Haus durchgehen</strong> mit jemandem, der wie ein Käufer oder Gutachter hinschaut. Sie bekommen eine Mängelliste mit einem Preis pro Arbeit.</li>
+    <li><strong>Entscheiden</strong>: Was beheben Sie, was geben Sie an und berücksichtigen es im Preis?</li>
+    <li><strong>Ausführen</strong>, am besten außerhalb der Hochsaison. Rechnen Sie für eine Auffrischung mit einigen Wochen; nach einer Feuchtigkeitssanierung muss die Wand erst trocknen, bevor gestrichen werden kann.</li>
+    <li><strong>Fotos machen lassen</strong>, wenn alles fertig ist, an einem sonnigen Tag.</li>
+    <li><strong>Bis zum Verkauf pflegen</strong>: Garten, Pool und Lüften, damit das Haus bei jeder Besichtigung so aussieht wie auf den Fotos. Dafür gibt es <a href="/de/hausbetreuung/">Hausbetreuung</a> und <a href="/de/instandhaltung/">Instandhaltung</a>.</li>
+  </ol>
+  <p>Möchten Sie wissen, was Ihr Haus braucht? Fragen Sie ein <a href="/de/anfrage/?dienst=renovatie">Angebot für die Auffrischung</a> oder eine <a href="/de/anfrage/?dienst=onderhoud">Reparatur</a> an. Zurück zum Hauptratgeber: <a href="/de/ratgeber/haus-verkaufen-spanien/">Haus in Spanien verkaufen</a>.</p>
+  <p class="note">Geprüft am 5. November 2026. Richtpreise sind Anhaltswerte und kein Angebot. Ob sich eine Investition lohnt, hängt vom Haus, der Lage und dem Markt zum Zeitpunkt des Verkaufs ab.</p>
+</Guide>

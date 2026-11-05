@@ -1,0 +1,106 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'checklist', label: 'The checklist in one table' },
+  { id: 'ownership', label: 'Ownership: escritura and nota simple' },
+  { id: 'cadastre', label: 'Matching cadastre and registry' },
+  { id: 'occupancy', label: 'May the house be occupied?' },
+  { id: 'afo', label: 'Built without a permit: AFO' },
+  { id: 'energy', label: 'Energy certificate' },
+  { id: 'bills', label: 'IBI, community and bills' },
+  { id: 'tax', label: 'Plusvalía and the 3% retention' },
+  { id: 'sources', label: 'Sources' },
+];
+
+const faq = [
+  {
+    q: 'Do I need a cédula de habitabilidad to sell in Andalusia?',
+    a: 'No, it does not exist in Andalusia. Other regions, such as Catalonia and Valencia, do have such a habitation certificate. In Andalusia what counts is the town hall’s occupancy licence or declaration (ocupación or utilización). For older houses, proof that the house has existed for a long time is often enough.',
+  },
+  {
+    q: 'How long is an energy certificate valid?',
+    a: 'In principle ten years. If you have changed a lot in that time, such as new windows, insulation or a heat pump, a new certificate is often worth it because the house will score better.',
+  },
+  {
+    q: 'What happens if the floor area in the registry is wrong?',
+    a: 'The notary can often still execute the deed, but the buyer and their bank will ask questions. If it concerns an extension without a permit, the bank may refuse a mortgage or value the house lower. Put it right before selling with a declaration of new construction (declaración de obra nueva) and, where needed, legalisation.',
+  },
+  {
+    q: 'How do I claim back the 3% retention?',
+    a: 'With form 210 at the Spanish tax office. You enter the purchase price, the sale price and the costs. If the tax on your gain is lower than the 3% withheld, you get the difference back. That often takes a few months. A gestor or tax adviser can handle it for you.',
+  },
+];
+---
+<Guide lang="en" slug="selling-a-house-in-spain-paperwork" toc={toc} faq={faq} dienst="legalisatie" ctaTitle="Does your paperwork not match the house?" ctaText="We compare what is there with what the papers say, and put you in touch with the architect we work with for legalisation, AFO and energy certificates.">
+  <h2 id="checklist">The checklist in one table</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Document</th><th>Where to get it</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Title deed (<em>escritura</em>)</td><td>Your own files or the notary who executed it</td><td>Proof of ownership and purchase price</td></tr>
+      <tr><td><em>Nota simple</em></td><td>Registro de la Propiedad, online</td><td>Owner, floor area, mortgages and charges</td></tr>
+      <tr><td>Cadastral data (<em>referencia catastral</em>)</td><td>Sede Electrónica del Catastro</td><td>Must match the registry and reality</td></tr>
+      <tr><td>Occupancy licence or declaration</td><td>Town hall</td><td>Proof the house may be lived in</td></tr>
+      <tr><td>AFO declaration (if applicable)</td><td>Town hall</td><td>For houses built without a permit</td></tr>
+      <tr><td>Energy certificate</td><td>Registered technician, then lodged with the Junta de Andalucía</td><td>Required for advertising and sale</td></tr>
+      <tr><td>Latest IBI bill</td><td>Town hall or Málaga’s Patronato de Recaudación</td><td>Proof property tax is paid</td></tr>
+      <tr><td>Community certificate</td><td>Administrator of the <em>comunidad</em></td><td>For apartments: no arrears</td></tr>
+      <tr><td>Water, electricity, rubbish bills</td><td>Suppliers and town hall</td><td>Transfer to the buyer’s name</td></tr>
+      <tr><td>NIE and passport</td><td>You</td><td>Identification at the notary</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="ownership">Ownership: escritura and nota simple</h2>
+  <p>Find your title deed. Lost it? Ask the notary who executed the deed for a copy (<em>copia simple</em> or <em>copia autorizada</em>). Also order a recent <em>nota simple</em> from the land registry. You can do this online through the Registradores website for about € 10 to € 15. Check:</p>
+  <ul>
+    <li>that you (and your partner, if any) are listed as owners, and in what shares;</li>
+    <li>whether a mortgage is still registered. Even a paid-off mortgage stays on the registry until you have it cancelled (<em>cancelación registral</em>). Arrange this beforehand or have it handled at the notary;</li>
+    <li>whether there are any charges or embargoes;</li>
+    <li>which floor area and buildings are described.</li>
+  </ul>
+  <p>Has one of the owners died? Then the inheritance must first be settled and registered in Spain before you can sell. That often takes months.</p>
+
+  <h2 id="cadastre">Matching cadastre and registry</h2>
+  <p>Spain has two registers: the cadastre (<em>Catastro</em>), which describes land and buildings for tax purposes, and the land registry (<em>Registro de la Propiedad</em>), which records ownership. In the Axarquía they often do not match what is actually there, especially for older houses and fincas. An enclosed veranda, an extra bedroom, a garage or a pool may simply be missing.</p>
+  <p>For a buyer and their bank that is a red flag. Broadly there are two situations:</p>
+  <ul>
+    <li><strong>Built with a permit, but never registered.</strong> You have a declaration of new construction (<em>declaración de obra nueva</em>) drawn up at the notary with an architect’s certificate and registered. The cadastre is updated afterwards.</li>
+    <li><strong>Built without a permit.</strong> Then legalisation is needed or, if the enforcement period has expired, an AFO declaration. See below.</li>
+  </ul>
+
+  <h2 id="occupancy">May the house be occupied?</h2>
+  <p>Unlike some other regions, Andalusia has no <em>cédula de habitabilidad</em>. What counts is that the town hall accepts the house may be occupied. Since Andalusia’s planning act LISTA (Ley 7/2021), for most buildings this is done with an occupancy declaration (<em>declaración responsable de ocupación</em>) instead of a licence. Nerja and other towns in the Axarquía have forms for it, including for existing houses.</p>
+  <p>When an existing house is sold, the notary, the buyer or their bank often ask for the first occupancy licence (<em>licencia de primera ocupación</em>) or similar proof. For an old house an architect’s certificate of age (<em>certificado de antigüedad</em>) can be enough. Exactly which document is needed depends on the town hall and the year of construction, so check with the town hall or notary in advance. Without such proof, utility companies can also make it difficult to transfer water and electricity.</p>
+
+  <h2 id="afo">Built without a permit: AFO</h2>
+  <p>Many rural houses in the Axarquía were built wholly or partly without a permit. If the period in which the town hall can take action has expired, the town hall can declare that the house has <em>asimilado a fuera de ordenación</em> (AFO) status. With that declaration the house can be registered, connected to utilities and sold.</p>
+  <p>For a sale this makes a big difference. Without an AFO declaration there are few buyers and almost no banks willing to lend. With it, the house becomes an ordinary, if restricted, home. The application goes through an architect and often takes months, sometimes longer, so start well before you sell. How it works and what is and is not allowed is explained in our guide <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation in Andalusia</a>.</p>
+
+  <h2 id="energy">Energy certificate</h2>
+  <p>Since 2013 an energy certificate (<em>certificado de eficiencia energética</em>) has been mandatory when you sell or let a house. Under the current Real Decreto 390/2021 the rating must already appear in the advert, including on the agent’s website. A registered technician produces it after a visit, and it is then lodged with the Junta de Andalucía. It usually costs between € 80 and € 250, depending on the size of the house, and is valid for ten years.</p>
+  <p>A poor rating (E, F or G) is common for older houses in the Axarquía and no reason not to sell. If you have just fitted new windows, insulation, a <a href="/en/costs/air-conditioning-and-heat-pumps/">heat pump</a> or solar panels, have the certificate done afterwards.</p>
+
+  <h2 id="bills">IBI, community and bills</h2>
+  <ul>
+    <li><strong>IBI.</strong> Bring the latest paid property tax bill. In the province of Málaga the Patronato Provincial de Recaudación collects IBI for most towns. Unpaid IBI stays attached to the property, so the buyer wants certainty.</li>
+    <li><strong>Owners’ community.</strong> For an apartment or a house in a development you need a certificate from the administrator that you have no arrears. This is required by the property law (Ley 49/1960, article 9). Also disclose any planned special levies (<em>derramas</em>); the buyer will see them in the minutes anyway.</li>
+    <li><strong>Water, electricity, gas, internet.</strong> Have the latest bills and contract numbers ready. Agree with the buyer when contracts will be transferred, and only cancel your own contracts and direct debits after that.</li>
+    <li><strong>Municipal rubbish charge</strong> (<em>basura</em>): a separate bill in many towns. That too must be paid.</li>
+  </ul>
+
+  <h2 id="tax">Plusvalía and the 3% retention</h2>
+  <p><strong>Plusvalía municipal.</strong> The town hall taxes the increase in land value between purchase and sale. The seller pays, and you declare it to the town hall within thirty working days of the sale. Since Real Decreto-ley 26/2021 you can choose between two calculation methods, and you pay nothing if you can show the land did not rise in value (for example when selling at a loss). If you do not live in Spain, the buyer often withholds the amount at the notary and pays it on your behalf.</p>
+  <p><strong>Tax on the gain.</strong> A non-resident pays 19% non-resident income tax on the gain (sale price minus purchase price and costs). Because the tax office cannot easily reach you after the sale, the buyer must withhold 3% of the price and pay it to the tax office within a month (form 211). You then file your own return on form 210. If the tax is lower than the 3%, you get the difference back; if it is higher, you pay the balance.</p>
+  <p>If you are resident in Spain, the gain falls under ordinary income tax (IRPF), at rates of 19% to 30%, with exemptions, for example when reinvesting in a new main home or if you are 65 or over and it was your main residence. In either case have a gestor or tax adviser do the calculation.</p>
+
+  <h2 id="sources">Sources</h2>
+  <ul>
+    <li>Ley 7/2021 de impulso para la sostenibilidad del territorio de Andalucía (LISTA), article 138 and ninth additional provision (occupancy and deeds).</li>
+    <li>Real Decreto 390/2021 (BOE, 2 June 2021): energy certificate on sale and in adverts.</li>
+    <li>Real Decreto-ley 26/2021 (BOE, 9 November 2021): municipal plusvalía.</li>
+    <li>Real Decreto Legislativo 5/2004, article 25: 19% rate and 3% retention on sales by non-residents; forms 210 and 211 of the Agencia Tributaria.</li>
+    <li>Ley 49/1960 de Propiedad Horizontal, article 9: certificate from the owners’ community.</li>
+    <li>Nerja town hall: form for the declaración responsable de ocupación o utilización de edificaciones existentes (2023).</li>
+  </ul>
+  <p class="note">Checked on 5 November 2026. This page gives general information and is not legal or tax advice. Exactly which documents the notary asks for varies by town hall and by house. Have a lawyer or gestor assess your situation before you sign a sale contract.</p>
+</Guide>

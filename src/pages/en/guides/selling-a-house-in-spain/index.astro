@@ -1,0 +1,120 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
+
+const toc = [
+  { id: 'why', label: 'Why preparation pays' },
+  { id: 'steps', label: 'Five-stage plan' },
+  { id: 'paperwork', label: 'Paperwork and legalisation' },
+  { id: 'repairs', label: 'Repairs that pay off' },
+  { id: 'costs', label: 'Costs for the seller' },
+  { id: 'abroad', label: 'Selling from abroad' },
+  { id: 'more', label: 'Read more' },
+  { id: 'sources', label: 'Sources' },
+];
+
+const faq = [
+  {
+    q: 'How long does it take to sell a house in the Axarquía?',
+    a: 'It varies a lot. A well-priced apartment on the coast sometimes sells within a few months. A rural finca is often on the market for a year or more, especially if there are questions about its legal status. Allow another one to three months between the reservation contract (arras) and the notary.',
+  },
+  {
+    q: 'Should I renovate my house before selling?',
+    a: 'Usually not completely. What pays off is fixing visible defects (damp, leaks, cracks, broken systems) and a fresh look: paint, garden and pool in order. You rarely get the cost of a brand new kitchen or bathroom back. The page on repairs before selling explains what does and does not pay.',
+  },
+  {
+    q: 'Can I sell a house with AFO status?',
+    a: 'Yes. A house with an AFO declaration (DAFO) from the town hall can be sold and registered in the land registry. Without that declaration selling is harder: many buyers and banks walk away. Start the application well before you sell, as it often takes months.',
+  },
+  {
+    q: 'Who pays the plusvalía tax when selling?',
+    a: 'The municipal plusvalía (tax on the increase in land value) is in principle paid by the seller. Since November 2021 you pay nothing if you can show there was no increase in value, and you can choose the cheaper of two calculation methods.',
+  },
+  {
+    q: 'I do not live in Spain. Why does the buyer hold back 3%?',
+    a: 'If the seller is not tax resident in Spain, the buyer must withhold 3% of the price and pay it to the Spanish tax office as an advance on your tax on the gain. You then file your own return. If your tax was lower than the 3%, you can claim the difference back.',
+  },
+];
+---
+<Guide lang="en" slug="selling-a-house-in-spain" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Getting your house ready to sell?" ctaText="We look at your house, tell you which repairs pay off and carry them out, even while you are abroad. You get a price up front.">
+  <h2 id="why">Why preparation pays</h2>
+  <p>Buyers of houses in the Axarquía are often foreigners like you. They are cautious, because they have heard stories about houses without permits and hidden defects. Their lawyer checks the paperwork, and more and more buyers order a <a href="/en/property-survey/">property survey</a>. Every problem that turns up becomes a reason to lower the price or walk away.</p>
+  <p>Getting ahead of that has three advantages:</p>
+  <ul>
+    <li><strong>A faster sale.</strong> When the paperwork is ready, the buyer can go straight to the notary. A missing document or an AFO procedure easily takes months.</li>
+    <li><strong>A stronger negotiating position.</strong> A repaired defect is no longer a bargaining point. A damp patch that costs € 800 to fix often knocks thousands off the price in negotiation.</li>
+    <li><strong>Less risk afterwards.</strong> Under Spanish law the seller is liable for hidden defects. What you have repaired and honestly disclosed cannot become a claim later.</li>
+  </ul>
+
+  <h2 id="steps">Five-stage plan</h2>
+  <ol>
+    <li><strong>Six to twelve months before: check the paperwork.</strong> Order a nota simple from the land registry and compare it with the cadastre and with what is actually there. Are there extensions, an enclosed terrace or a pool without a permit? Then start legalising or applying for AFO now.</li>
+    <li><strong>Three to six months before: survey and repair.</strong> Have the house inspected as if you were the buyer. Fix what a buyer would find: leaks, damp, cracks, wiring that does not meet the rules. See <a href="/en/maintenance/">maintenance and repairs</a>.</li>
+    <li><strong>One to two months before: freshen up and present.</strong> Paint, garden and pool in order, broken things replaced, personal belongings cleared. Only then have photos taken.</li>
+    <li><strong>Put it on the market.</strong> Get the energy certificate (required as soon as you advertise), choose an agent and agree who handles viewings when you are not there.</li>
+    <li><strong>From offer to notary.</strong> Once agreed, you usually sign a reservation contract (<em>contrato de arras</em>) and receive a deposit, often 10%. The deed and payment follow at the notary. Make sure all documents, bills and keys are ready.</li>
+  </ol>
+
+  <h2 id="paperwork">Paperwork and legalisation</h2>
+  <p>Most of the work is in the paperwork. In short you need:</p>
+  <ul>
+    <li>Your title deed (<em>escritura</em>) and a recent <em>nota simple</em> from the land registry.</li>
+    <li>A description in the cadastre and registry that matches what is actually there.</li>
+    <li>Proof that the house may be occupied: an occupancy licence or declaration, or for an old house proof of age or the AFO declaration.</li>
+    <li>The energy certificate (<em>certificado de eficiencia energética</em>).</li>
+    <li>The latest property tax (IBI) bill and recent water and electricity bills.</li>
+    <li>For an apartment: a certificate from the owners’ community that you owe nothing.</li>
+  </ul>
+  <p>If the floor area in the papers does not match reality, or something was built without a permit, it has to be put right before the sale. On rural land this is often about AFO status; see our guide <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation</a>. The full list, with who issues what and what it costs, is on the page <a href="/en/guides/selling-a-house-in-spain/paperwork/">paperwork for the sale</a>.</p>
+
+  <h2 id="repairs">Repairs that pay off</h2>
+  <p>A house that looks cared for gets more viewings and better offers. That does not mean you have to renovate. In the Axarquía these pay off most:</p>
+  <ul>
+    <li><strong>Fixing defects</strong> a buyer or surveyor would find: <a href="/en/problems/damp-and-mould/">damp and mould</a>, <a href="/en/problems/roof-leaks/">roof leaks</a>, <a href="/en/problems/cracks-in-walls/">cracks</a>, a leaking pool.</li>
+    <li><strong>Painting</strong>, inside and out. A freshly whitewashed house instantly looks years younger.</li>
+    <li><strong>Outdoor space</strong>: roof terrace watertight and clean, garden tidied, pool clear.</li>
+    <li><strong>Small replacements</strong>: taps, door handles, lights, broken tiles, kitchen doors.</li>
+  </ul>
+  <p>You rarely get the cost of a big renovation just before selling back, as buyers often want to choose their own kitchen or bathroom. The exception is a house so dated that only renovators would consider it. The trade-offs and guide prices are on the page <a href="/en/guides/selling-a-house-in-spain/repairs-before-selling/">repairs before selling</a>.</p>
+
+  <h2 id="costs">Costs for the seller</h2>
+  <p>In a Spanish sale the buyer pays transfer tax and usually the notary and registry. As the seller you pay these:</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Cost</th><th>Guide amount</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Estate agent</td><td>Often 3% to 6% plus 21% VAT</td><td>Negotiable; 5% is common on the Costa del Sol</td></tr>
+      <tr><td>Plusvalía (town hall)</td><td>A few hundred to a few thousand euros</td><td>Tax on the rise in land value; nothing if you can show a loss</td></tr>
+      <tr><td>Tax on the gain</td><td>19% of the gain for non-residents</td><td>Spanish residents pay 19% to 30% through income tax</td></tr>
+      <tr><td>Energy certificate</td><td>Usually € 80 – € 250</td><td>Required when you put the house on the market</td></tr>
+      <tr><td>Nota simple</td><td>About € 10 – € 15</td><td>Order online from the registry</td></tr>
+      <tr><td>Paying off a mortgage</td><td>Depends on the bank</td><td>Including the cost of removing it from the registry</td></tr>
+      <tr><td>Legalisation or AFO</td><td>Varies widely</td><td>Architect, fees and any changes needed</td></tr>
+      <tr><td>Repairs and freshening up</td><td>Your choice</td><td>Budget up front, see the repairs page</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Guide amounts, checked on 5 November 2026. Taxes depend on your situation; ask a Spanish tax adviser or gestor for a calculation.</p>
+  <p>If you do not live in Spain, the buyer withholds 3% of the price and pays it to the Spanish tax office as an advance on your tax. Within a few months of the sale you file your own return (<em>modelo 210</em>) and claim back anything withheld in excess. If you live in the UK or elsewhere, also check how the sale is treated in your home country’s tax return.</p>
+
+  <h2 id="abroad">Selling from abroad</h2>
+  <p>Many owners in the Axarquía sell while living in the UK, Ireland, the Netherlands or elsewhere. That works well if you arrange a few things:</p>
+  <ul>
+    <li><strong>Someone with the key.</strong> Agents want to show the house. Someone has to open it beforehand, air it, switch on the air conditioning in summer and lock up afterwards. With <a href="/en/key-holding/">key holding</a> you have one fixed contact for this, even if you work with several agents.</li>
+    <li><strong>Make the house look lived in.</strong> A house that stands empty for months attracts burglars and sometimes squatters. See <a href="/en/problems/burglary-and-squatters/">burglary and squatters</a>.</li>
+    <li><strong>Keep up maintenance.</strong> A green pool or an overgrown garden on viewing day loses you a buyer. Keep the <a href="/en/swimming-pool/">pool</a> and garden maintained until handover.</li>
+    <li><strong>Power of attorney.</strong> You do not have to attend the notary yourself. With a power of attorney (<em>poder</em>) your lawyer can sign on your behalf. You sign it at a Spanish notary, or at a notary at home with an apostille.</li>
+  </ul>
+
+  <h2 id="more">Read more</h2>
+  <p>We cover the two most important parts on separate pages:</p>
+  <GuideChildren lang="en" parent="selling-a-house-in-spain" />
+  <p>Want to know first what your house needs? We look at it through a buyer’s eyes and give you a price for what needs doing. Then you decide what to have done. Request a <a href="/en/request/?dienst=renovatie">renovation quote</a> or a <a href="/en/request/?dienst=onderhoud">repair</a>, or see <a href="/en/renovation/">renovation</a> and <a href="/en/maintenance/">maintenance</a>.</p>
+
+  <h2 id="sources">Sources</h2>
+  <ul>
+    <li>Plusvalía: Real Decreto-ley 26/2021 (BOE, 9 November 2021), new calculation and exemption when there is no gain.</li>
+    <li>3% retention and 19% rate for non-residents: Real Decreto Legislativo 5/2004 (non-resident income tax act), article 25; forms 211 and 210 of the Agencia Tributaria.</li>
+    <li>Energy certificate: Real Decreto 390/2021 (BOE, 2 June 2021).</li>
+    <li>Occupancy in Andalusia: Ley 7/2021 (LISTA), article 138 and ninth additional provision.</li>
+  </ul>
+  <p class="note">Checked on 5 November 2026. This guide gives general information and is not legal or tax advice. Rules and rates can change; have your situation assessed by a lawyer, gestor or tax adviser.</p>
+</Guide>
