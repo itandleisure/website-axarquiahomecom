@@ -1,0 +1,92 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Det korta svaret' },
+  { id: 'skatt', label: 'Överlåtelseskatt eller moms' },
+  { id: 'notarie', label: 'Notarie, fastighetsregister och advokat' },
+  { id: 'exempel', label: 'Räkneexempel' },
+  { id: 'lopande', label: 'Löpande kostnader för ägare' },
+  { id: 'renovering', label: 'Renovering: den bortglömda posten' },
+  { id: 'tips', label: 'Så sparar du' },
+];
+
+const faq = [
+  {
+    q: 'Hur höga är köpkostnaderna i Andalusien?',
+    a: 'För en begagnad bostad räknar du med ungefär 9 till 11 % av priset: 7 % överlåtelseskatt (ITP) plus notarie, fastighetsregister, advokat och eventuella lånekostnader. För en nyproduktion från byggherren betalar du 10 % moms (IVA) plus 1,2 % stämpelskatt (AJD).',
+  },
+  {
+    q: 'Vem betalar plusvalía?',
+    a: 'Den kommunala skatten på markens värdeökning (plusvalía municipal) ska enligt lag betalas av säljaren. Se till att köpekontraktet inte lägger över den på dig.',
+  },
+  {
+    q: 'Vad är innehållandet på 3 %?',
+    a: 'Om du köper från en säljare som inte är bosatt i Spanien måste du hålla inne 3 % av priset och betala in det till den spanska skattemyndigheten för säljarens räkning. Din advokat eller notarien sköter det. Det är ingen extra kostnad för dig; beloppet dras från det du betalar säljaren.',
+  },
+  {
+    q: 'Kan jag som svensk få ett spanskt bolån?',
+    a: 'Ja, spanska banker lånar ut till icke-residenter, oftast upp till 60 till 70 % av värdet. Du behöver alltså en rejäl kontantinsats utöver köpkostnaderna.',
+  },
+];
+---
+<Guide lang="sv" slug="kopa-hus-i-spanien-kostnader" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Vill du veta vad bostaden verkligen kostar?" ctaText="Med en besiktning före köp får du ett pris på allt som behöver åtgärdas innan du skriver på.">
+  <h2 id="kort">Det korta svaret</h2>
+  <p>Köper du en begagnad bostad i Andalusien räknar du med <strong>ungefär 10 % utöver priset</strong> i skatter och avgifter. För ett hus för 300 000 € blir det omkring 30 000 €. Behöver bostaden åtgärdas, och för äldre hus i Axarquía är det snarare regel än undantag, tillkommer en renoveringsbudget.</p>
+
+  <h2 id="skatt">Överlåtelseskatt eller moms</h2>
+  <h3>Begagnad bostad: 7 % ITP</h3>
+  <p>När du köper en begagnad bostad betalar du överlåtelseskatten <em>Impuesto de Transmisiones Patrimoniales</em> (ITP). I Andalusien är den sedan 2021 en fast sats på 7 %. I vissa särskilda fall gäller en lägre sats; din advokat kan se om det gäller dig.</p>
+  <h3>Nyproduktion: 10 % IVA plus 1,2 % AJD</h3>
+  <p>Köper du nyproduktion direkt från byggherren betalar du i stället för ITP 10 % moms (<em>IVA</em>). Dessutom tillkommer stämpelskatten <em>Actos Jurídicos Documentados</em> (AJD), i Andalusien 1,2 %.</p>
+
+  <h2 id="notarie">Notarie, fastighetsregister och advokat</h2>
+  <table class="prices">
+    <thead><tr><th>Post</th><th>Riktvärde</th></tr></thead>
+    <tbody>
+      <tr><td>Notarie (escritura)</td><td>600 – 1 500 €</td></tr>
+      <tr><td>Fastighetsregister (Registro de la Propiedad)</td><td>400 – 1 000 €</td></tr>
+      <tr><td>Oberoende advokat</td><td>cirka 1 % + IVA</td></tr>
+      <tr><td>Gestoría (skattebetalningar och registrering)</td><td>300 – 600 €</td></tr>
+      <tr><td>Värdering och kostnader vid bolån</td><td>400 – 1 000 € + bankavgifter</td></tr>
+      <tr><td>NIE och bankkonto</td><td>0 – 200 €</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Riktvärden baserade på vanliga taxor i provinsen Málaga. De exakta beloppen beror på pris och komplexitet.</p>
+  <p>Den spanska notarien kontrollerar identitet och betalning, men inte om bostaden är laglig eller i gott skick. En egen, oberoende advokat är därför ingen lyx. Välj en som inte rekommenderats av mäklaren. Det finns ingen spansk motsvarighet till en svensk mäklare som opartisk mellanhand: mäklaren arbetar för säljaren, och betalningen sker oftast med bankcheck eller överföring vid notariebesöket.</p>
+
+  <h2 id="exempel">Räkneexempel: ett byhus för 250 000 €</h2>
+  <table class="prices">
+    <tbody>
+      <tr><td>Pris</td><td>250 000 €</td></tr>
+      <tr><td>ITP 7 %</td><td>17 500 €</td></tr>
+      <tr><td>Notarie och fastighetsregister</td><td>1 800 €</td></tr>
+      <tr><td>Advokat (1 % + IVA)</td><td>3 025 €</td></tr>
+      <tr><td>Gestoría och övrigt</td><td>700 €</td></tr>
+      <tr><td><strong>Köpkostnader totalt</strong></td><td><strong>23 025 € (9,2 %)</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Med bolån tillkommer värdering och bankavgifter.</p>
+
+  <h2 id="lopande">Löpande kostnader för ägare</h2>
+  <ul>
+    <li><strong>IBI</strong>: fastighetsskatten, en procentsats av taxeringsvärdet (valor catastral). Oftast några hundra euro per år.</li>
+    <li><strong>Sophämtning</strong> (basura): från några tiotals till över hundra euro per år.</li>
+    <li><strong>Inkomstskatt för icke-residenter (IRNR)</strong>: är du inte skattemässigt bosatt i Spanien betalar du varje år skatt på en schablonintäkt från ditt hus, även om du inte hyr ut det. För personer bosatta i EU eller EES (alltså även Sverige, Norge, Danmark och Finland) är skattesatsen 19 % på 1,1 % eller 2 % av taxeringsvärdet. Vid uthyrning gäller andra regler.</li>
+    <li><strong>Samfällighetsavgift</strong> (comunidad): för lägenheter och urbanisationer från 50 € till över 300 € i månaden.</li>
+    <li><strong>Försäkring, vatten, el och internet</strong>.</li>
+    <li><strong>Skötsel och tillsyn</strong>: ett tomt hus behöver uppmärksamhet. Se <a href="/sv/tillsyn/">tillsyn</a>.</li>
+  </ul>
+
+  <h2 id="renovering">Renovering: den bortglömda posten</h2>
+  <p>Många köpare räknar noga på köpkostnaderna och glömmer att även huset behöver åtgärdas. Ett trettio år gammalt badrum, el utan jordning, ett läckande tak: det är poster från några tusen till några tiotusentals euro. Låt göra en besiktning med priser för reparationer före köpet och läs vår guide om <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringskostnader i Spanien</a>.</p>
+
+  <h2 id="tips">Så sparar du</h2>
+  <ul>
+    <li>Låt besiktiga bostaden och använd felen i förhandlingen.</li>
+    <li>Kontrollera att taxeringsvärdet är rimligt; det styr dina årliga skatter.</li>
+    <li>Låt plusvalía ligga kvar hos säljaren, som lagen föreskriver.</li>
+    <li>Planera renoveringen innan du flyttar in: arbete i ett bebott hus blir dyrare och krångligare.</li>
+  </ul>
+  <p class="note">Den här guiden ger allmän information baserad på reglerna i Andalusien i november 2026. Skattesatser kan ändras. Den är inte skatte- eller juridisk rådgivning.</p>
+</Guide>

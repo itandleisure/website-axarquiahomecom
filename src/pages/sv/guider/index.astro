@@ -1,0 +1,36 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import Cta from '../../../components/Cta.astro';
+import { guideList, guideHref } from '../../../data/guides';
+---
+<Base
+  title="Guider: köpa, renovera och bo i Spanien"
+  description="Praktiska guider om att flytta till Spanien, köpa hus eller finca, kostnader vid köp, renovering och legalisering i Axarquía och resten av Andalusien."
+  path="/sv/guider/"
+  lang="sv"
+>
+  <Breadcrumbs lang="sv" items={[{ name: 'Guider', href: '/sv/guider/' }]} />
+  <Hero
+    lang="sv"
+    eyebrow="Guider"
+    title="Det här bör du veta <em>innan du köper eller renoverar</em>"
+    lead="Skrivna av folk som bor och bygger här. Inget säljprat, utan det som svenska och andra utländska ägare i Spanien faktiskt stöter på."
+    cta="Ställ en fråga"
+  />
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        {guideList('sv').map((g) => (
+          <a class="card" href={guideHref('sv', g)}>
+            <h3>{g.title}</h3>
+            <p>{g.description}</p>
+            <span class="more">Läs guiden ({g.minutes} min) →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Cta lang="sv" />
+</Base>

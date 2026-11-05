@@ -10,7 +10,7 @@ interface Props {
   path: string;
   lang?: Lang;
   /** Vertalingen van deze pagina: { en: '/en/renovation/' } */
-  alternates?: Partial<Record<'nl' | 'en' | 'de', string>>;
+  alternates?: Partial<Record<Lang, string>>;
   jsonLd?: object[];
   noindex?: boolean;
 }
@@ -24,6 +24,7 @@ const toolList = (and: string) => tools.join(` ${and} `);
 const cookieText = {
   nl: { text: `Mogen we met ${toolList('en')} bijhouden hoe u deze site gebruikt? Dat plaatst cookies en helpt ons de site te verbeteren.`, yes: 'Accepteren', no: 'Weigeren', more: 'Meer in de privacyverklaring', settings: 'Cookie-instellingen' },
   en: { text: `May we use ${toolList('and')} to see how you use this site? It places cookies and helps us improve the site.`, yes: 'Accept', no: 'Decline', more: 'More in the privacy statement', settings: 'Cookie settings' },
+  sv: { text: `Får vi använda ${toolList('och')} för att se hur du använder webbplatsen? Det sätter cookies och hjälper oss att förbättra sidan.`, yes: 'Godkänn', no: 'Avböj', more: 'Mer i integritetspolicyn', settings: 'Cookie-inställningar' },
   de: { text: `Dürfen wir mit ${toolList('und')} erfassen, wie Sie diese Website nutzen? Dabei werden Cookies gesetzt; es hilft uns, die Website zu verbessern.`, yes: 'Akzeptieren', no: 'Ablehnen', more: 'Mehr in der Datenschutzerklärung', settings: 'Cookie-Einstellungen' },
 }[lang];
 const nav = navs[lang];

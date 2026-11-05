@@ -6,6 +6,7 @@ import Hero from './Hero.astro';
 import Cta from './Cta.astro';
 import { places, placeHref, placeBySlug, settingLabels, type Setting } from '../data/places';
 import { path as route, type Lang } from '../i18n';
+import { placeContent } from '../data/place-content';
 
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
@@ -34,10 +35,19 @@ const T = {
     lead: 'Die Axarquía hat 31 Gemeinden, von belebten Küstenorten bis zu weißen Dörfern mit ein paar hundert Einwohnern. Hier finden Sie alle, mit dem, was Sie zum Wohnen, Kaufen oder Renovieren in jedem Ort wissen sollten.',
     partOf: 'gehört zu', also: 'Auch', soon: 'Seite folgt',
   },
+  sv: {
+    title: 'Orter i Axarquía: alla byar och kustorter',
+    description: 'Alla 31 kommuner i Axarquía, från Nerja och Torre del Mar vid havet till Cómpeta och Comares i bergen. Läge, karaktär och boende på varje ort.',
+    crumb: 'Orter', eyebrow: 'Orter',
+    h1: 'Från kusten <em>till bergsbyarna</em>',
+    lead: 'Axarquía har 31 kommuner, från livliga kustorter till vita byar med några hundra invånare. Här hittar du alla, med det du behöver veta för att bo, köpa eller renovera på varje ort.',
+    partOf: 'hör till', also: 'Även', soon: 'Sidan kommer snart',
+  },
 }[lang];
 const order: Setting[] = ['coast', 'hills', 'mountains', 'inland'];
 const groups = order.map((s) => ({ s, list: places.filter((p) => p.setting === s).sort((a, b) => a.name.localeCompare(b.name, 'es')) }));
 const self = route(lang, 'places');
+const ready = (p: { slug: string; built?: boolean }) => !!p.built && !!placeContent[p.slug]?.[lang];
 ---
 <Base title={T.title} description={T.description} path={self} lang={lang}>
   <Breadcrumbs lang={lang} items={[{ name: T.crumb, href: self }]} />
@@ -54,10 +64,10 @@ const self = route(lang, 'places');
                 <h3>{p.name}</h3>
                 {parent && <p class="note">{T.partOf} {parent.name}</p>}
                 {p.villages && <p class="note">{T.also}: {p.villages.join(', ')}</p>}
-                {!p.built && <p class="note soon">{T.soon}</p>}
+                {!ready(p) && <p class="note soon">{T.soon}</p>}
               </>
             );
-            return p.built ? <a class="card" href={placeHref(lang, p)}>{body}</a> : <div class="card">{body}</div>;
+            return ready(p) ? <a class="card" href={placeHref(lang, p)}>{body}</a> : <div class="card">{body}</div>;
           })}
         </div>
       </div>

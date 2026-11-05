@@ -1,0 +1,86 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'annorlunda', label: 'Varför en finca är annorlunda' },
+  { id: 'lagligt', label: 'Är huset lagligt?' },
+  { id: 'vatten', label: 'Vatten: brunn, nät eller tank' },
+  { id: 'vag', label: 'Tillfartsväg och grannar' },
+  { id: 'avlopp', label: 'Septiktank och avlopp' },
+  { id: 'el', label: 'El och internet' },
+  { id: 'skick', label: 'Byggnadens skick' },
+  { id: 'checklista', label: 'Checklista innan du skriver på' },
+];
+
+const faq = [
+  {
+    q: 'Vad är skillnaden mellan finca och cortijo?',
+    a: 'Finca betyder ordagrant ”fastighet” och används för alla lantställen med mark. En cortijo är ett traditionellt andalusiskt bondgårdshus, ofta med uthus. Juridiskt är det samma sak: ett hus på landsbygdsmark (suelo rústico), där mycket strängare byggregler gäller än inne i en ort.',
+  },
+  {
+    q: 'Kan jag köpa en finca som inte är helt laglig?',
+    a: 'Det kan du, men du måste veta exakt vad du köper. Ett hus med AFO-status är registrerat och beboeligt men får inte byggas ut. Ett hus utan tillstånd och utan AFO kan ge problem med bolån, anslutningar och vid försäljning. Låt en oberoende advokat och arkitekt kontrollera det först.',
+  },
+  {
+    q: 'Får jag bygga en pool vid min finca?',
+    a: 'Bara om detaljplanen och husets status tillåter det och du får tillstånd. Vid hus med AFO-status får i regel inget nytt byggas. En pool som redan finns utan tillstånd omfattas ofta av samma AFO-regler som huset.',
+  },
+  {
+    q: 'Vad kostar det att renovera en finca?',
+    a: 'Det varierar mycket. En bebodd, välskött finca behöver kanske bara ett nytt badrum och målning. En förfallen cortijo kan kosta mer än själva köpet. En besiktning före köp ger svaret i förväg. Se också vår guide om renoveringskostnader.',
+  },
+];
+---
+<Guide lang="sv" slug="kopa-finca-i-spanien" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Har du en finca i sikte?" ctaText="Vi besiktigar den innan du skriver på: stomme, vatten, avlopp, tillfartsväg och vad det kostar att åtgärda.">
+  <h2 id="annorlunda">Varför en finca är annorlunda</h2>
+  <p>En lägenhet vid kusten är relativt enkel: byggnaden har sina tillstånd, vatten och el kommer från nätet och samfälligheten sköter de gemensamma delarna. Med en finca ansvarar du för allt själv. Och eftersom många lantställen i Axarquía har byggts ut bit för bit genom åren utan att någon frågade efter tillstånd, finns det mer att kontrollera.</p>
+  <p>Det betyder inte att du ska avstå. Men det betyder att du bör låta kontrollera några saker noggrant innan du skriver under reservationsavtalet (<em>contrato de arras</em>). Då betalar du oftast 10 % i handpenning, som du förlorar om du drar dig ur efteråt.</p>
+
+  <h2 id="lagligt">Är huset lagligt?</h2>
+  <p>Det är den viktigaste frågan. På landsbygdsmark (<em>suelo no urbanizable</em> eller <em>suelo rústico</em>) är byggande i Andalusien starkt begränsat, och därför har många befintliga fincor helt eller delvis byggts eller byggts ut utan tillstånd.</p>
+  <p>Grovt finns det tre situationer:</p>
+  <ul>
+    <li><strong>Fullständigt tillstånd</strong>: huset med tillbyggnader, pool och uthus har rätt tillstånd och är registrerat så i Catastro och i fastighetsregistret (<em>Registro de la Propiedad</em>).</li>
+    <li><strong>AFO-status</strong>: huset byggdes utan tillstånd, men tiden då myndigheterna kan ingripa har gått ut. Det har en officiell förklaring ”asimilado a fuera de ordenación”. Det får bebos, säljas och anslutas, men inte byggas ut. Se vår guide om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.</li>
+    <li><strong>Inte legaliserat</strong>: varken tillstånd eller AFO-förklaring. Ibland går det fortfarande att ansöka, ibland inte (till exempel i ett naturskyddsområde eller översvämningsområde). Det är den största risken.</li>
+  </ul>
+  <p>Det här kontrollerar du: begär en <em>nota simple</em> från fastighetsregistret (ägare, belastningar, inteckningar, registrerad yta), jämför den med Catastro och med det som faktiskt står där, och fråga kommunen om pågående ärenden. Stämmer inte ytan på papperet med verkligheten har det nästan säkert byggts något utan tillstånd.</p>
+
+  <h2 id="vatten">Vatten: brunn, nät eller tank</h2>
+  <p>Axarquía har år av torka bakom sig. Från 2023 till början av 2026 gällde stränga restriktioner, som hävdes i mars 2026 efter en blöt vinter. Vatten är fortfarande en central fråga för varje finca. Möjliga källor:</p>
+  <ul>
+    <li><strong>Anslutning till det kommunala nätet</strong>: mest pålitligt, men långt ifrån tillgängligt överallt.</li>
+    <li><strong>Bevattningsvatten</strong> från en <em>comunidad de regantes</em>: jordbruksvatten, ofta en andel per skifte. Formellt inte avsett som dricksvatten.</li>
+    <li><strong>Egen brunn eller källa</strong>: bara lagligt om den är registrerad eller har tillstånd. Be att få se papperen och låt testa vattenkvaliteten.</li>
+    <li><strong>Tank som fylls med lastbil</strong>: fungerar, men kostar pengar och kräver planering.</li>
+  </ul>
+  <p>Fråga säljaren hur mycket vatten som funnits de senaste somrarna och om rätten till det juridiskt hör till fastigheten. En finca med drömutsikt men utan pålitligt vatten förlorar snabbt sin charm.</p>
+
+  <h2 id="vag">Tillfartsväg och grannar</h2>
+  <p>Hur kommer du till huset? Går vägen över allmän mark (<em>camino público</em>) eller över en grannes mark? I det senare fallet bör en vägrätt (<em>servidumbre de paso</em>) vara inskriven i fastighetsregistret. Fråga också vem som underhåller vägen. Efter skyfall kan grusvägar i bergen bli oframkomliga, och även en lastbil med byggmaterial eller en betongbil måste komma fram.</p>
+
+  <h2 id="avlopp">Septiktank och avlopp</h2>
+  <p>De flesta fincor är inte anslutna till kommunalt avlopp. De har en septiktank (<em>fosa séptica</em>) eller ett litet reningsverk. Äldre tankar läcker ibland ut i marken, vilket inte längre är tillåtet. Låt kontrollera var tanken ligger, i vilket skick den är och om den uppfyller reglerna. En ny tät tank eller ett reningsverk kostar lätt några tusen euro.</p>
+
+  <h2 id="el">El och internet</h2>
+  <p>Är huset anslutet till elnätet, och med vilken effekt? Vissa fincor drivs med solpaneler, batterier och generator. Det kan fungera bra, men kontrollera kapaciteten om du vill ha luftkonditionering, poolpump eller elbil. I bergen finns ofta ingen fiber; då är 4G/5G eller satellit lösningen. Testa mottagningen på plats.</p>
+
+  <h2 id="skick">Byggnadens skick</h2>
+  <p>Gamla fincor är ofta byggda av sten, lera och träbjälkar. Charmigt, men känsligt för fukt, trämask och sprickor där marken rör sig i sluttningen. Platta tak och terrasser börjar läcka med tiden, och elen uppfyller ofta inte dagens regler. En <a href="/sv/besiktning/">besiktning före köp</a> visar det, med ett pris för varje fel som du också kan använda i förhandlingen.</p>
+
+  <h2 id="checklista">Checklista innan du skriver på</h2>
+  <ul class="checks">
+    <li>Nota simple från fastighetsregistret beställd</li>
+    <li>Catastro och fastighetsregister jämförda med verkligheten</li>
+    <li>Tillstånd eller AFO-förklaring sedd, även för pool och tillbyggnader</li>
+    <li>Kommunen tillfrågad om pågående ärenden</li>
+    <li>Vattenkälla, rättigheter och papper klarlagda</li>
+    <li>Tillfartsväg och vägrätt kontrollerade</li>
+    <li>Septiktank kontrollerad</li>
+    <li>Elförsörjning och internet testade</li>
+    <li>Energideklaration (certificado energético) mottagen; den är obligatorisk vid försäljning</li>
+    <li>Byggteknisk besiktning med priser för reparationer</li>
+    <li>Oberoende advokat anlitad (inte den som mäklaren rekommenderar)</li>
+  </ul>
+  <p class="note">Den här guiden ger allmän information och är inte juridisk rådgivning. Bedömningen av en viss fastighet görs av en advokat eller arkitekt.</p>
+</Guide>

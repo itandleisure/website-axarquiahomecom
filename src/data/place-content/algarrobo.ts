@@ -194,5 +194,66 @@ const content: PlaceContent = {
       { q: 'Ist Algarrobo Costa ruhig?', a: 'Ja, ruhiger als Torre del Mar oder Torrox Costa. Im Sommer ist es durch Urlauber voller.' },
     ],
   },
+  sv: {
+    title: 'Algarrobo: bo och köpa mellan den vita byn och Algarrobo Costa',
+    description: 'Allt om Algarrobo: den vita byn, Algarrobo Costa och Mezquitilla, den feniciska historien, bostadspriser och vad du ska veta om köp och renovering.',
+    lead: 'Algarrobo är en liten kommun med två ansikten: en vit by bland avokadoträden och, tre kilometer bort, en lugn kust med lägenheter och strand.',
+    intro: [
+      'Algarrobo ligger mellan <a href="/sv/orter/torrox/">Torrox</a> och <a href="/sv/orter/velez-malaga/">Vélez-Málaga</a>. Själva byn ligger cirka tre och en halv kilometer inåt landet, med smala vita gränder och en kyrka på en kulle. Vid havet ligger Algarrobo Costa och fiskebyn Mezquitilla, alldeles intill <a href="/sv/orter/caleta-de-velez/">Caleta de Vélez</a> och dess hamn.',
+      'Kommunen har drygt 7 000 invånare. Algarrobo Costa lockar många som övervintrar och fritidshusägare; byn är främst spansk, med ett växande antal utländska invånare i husen runt omkring.',
+      'Vid Mezquitilla och Trayamar har viktiga feniciska fynd gjorts: resterna av en handelsplats och gravar som är nästan tretusen år gamla.',
+    ],
+    facts: [
+      ['Invånare', 'drygt 7 000 (2025)'],
+      ['Läge', 'kust och kullar'],
+      ['Byn till stranden', 'cirka 3,5 km'],
+      ['Málaga (flygplats)', 'cirka 45 minuter med bil'],
+      ['Hamn och sjukhus', 'Caleta och Vélez 5 till 10 minuter bort'],
+      ['Prisnivå', 'medel'],
+    ],
+    forWhom: 'För dig som vill bo lugnt vid havet, med servicen i Torre del Mar och Vélez-Málaga nära. Byn och kullarna runt omkring passar dig som söker en spansk by och utsikt, en kort bilresa från stranden.',
+    see: {
+      title: 'Se och göra i Algarrobo: fenicisk historia, stränder och Quema',
+      description: 'Vad du kan göra i Algarrobo: den vita byn, de feniciska fyndplatserna vid Mezquitilla och Trayamar, vakttornen vid kusten och fiestorna.',
+      lead: 'Algarrobo är litet, men har en av de äldsta historierna längs kusten.',
+      items: [
+        { name: 'Den vita byn', text: 'Smala gränder, små torg och kyrkan Santa Ana. Från de högre punkterna ser du ut över avokadoodlingarna mot havet.' },
+        { name: 'Feniciska fyndplatser', text: 'Morro de Mezquitilla var en fenicisk handelsplats, och gravarna i Trayamar hör till de viktigaste i västra Medelhavet. På plats finns lite att se; fynden finns på museer.' },
+        { name: 'Vakttornen vid kusten', text: 'Torre Ladeada (det lutande tornet) och Torre Derecha är vakttorn från 1500-talet som byggdes mot pirater.' },
+        { name: 'Stränder', text: 'Stranden vid Algarrobo Costa och Mezquitilla är lugn, med strandpromenad och strandbarer. Gå eller cykla längs kusten till Torre del Mar eller Torrox.' },
+      ],
+      fiestas: [
+        { name: 'San Sebastián', when: '20 januari', text: 'skyddshelgonets dag.' },
+        { name: 'Feria', when: 'första veckan i augusti', text: 'byns sommarfest.' },
+        { name: 'Quema de Algarrobo', when: 'tredje helgen i september', text: 'en fest med eld och musik som avslutar sommaren.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Algarrobo: lägenheter vid havet, byhus och villor',
+      description: 'Köpa bostad i Algarrobo eller Algarrobo Costa? Vilka bostäder som finns, vad de kostar, service och vad du ska tänka på vid köp och renovering.',
+      lead: 'Algarrobo är något billigare än Torrox och Nerja, med en kust som är lugnare än Torre del Mar.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'I Algarrobo Costa och Mezquitilla lägenheter och radhus i komplex, ofta med gemensam pool. I byn byhus. I kullarna villor med havsutsikt och hus på landet bland avokado- och mangoträden.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 3 450 € per m² för lägenheter och 2 400 € per m² för hus (RealAdvisor). Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a>.',
+        ] },
+        { h: 'Service', p: [
+          'I byn och vid kusten finns vårdcentral, livsmedelsbutiker, en grundskola och restauranger. Till sjukhuset, gymnasiet och de stora affärerna i Torre del Mar och Vélez-Málaga är det fem till tio minuter.',
+        ] },
+        { h: 'Se upp vid köp', p: [
+          'För hus på landet i kullarna, kontrollera den rättsliga statusen, tillfartsvägen och vattnet. För komplex vid kusten, byggnadens skick och avgifterna till samfälligheten. Läs också vår guide om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+        ] },
+        { h: 'Renovera i Algarrobo', p: [
+          'Vid kusten mest modernisering av lägenheter; i byn och kullarna tak, fukt, terrasser och pooler. Låt <a href="/sv/besiktning/">besiktiga</a> bostaden före köpet.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Vad är skillnaden mellan Algarrobo och Algarrobo Costa?', a: 'Algarrobo Pueblo är den gamla byn, cirka tre och en halv kilometer inåt landet. Algarrobo Costa är delen vid havet. Båda hör till samma kommun.' },
+      { q: 'Är Algarrobo Costa lugnt?', a: 'Ja, lugnare än Torre del Mar och Torrox Costa. På sommaren blir det livligare med semesterfirare.' },
+    ],
+  },
 };
 export default content;

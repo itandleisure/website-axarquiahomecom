@@ -131,6 +131,48 @@ const content: PlaceContent = {
         "a": "Stützmauern, Terrassen und Pools, die in Etappen angebaut wurden. Prüfen Sie, ob alles genehmigt ist, und lassen Sie die Konstruktion <a href=\"/de/immobiliengutachten/\">begutachten</a>."
       }
     ]
+  },
+  "sv": {
+    "title": "Benajarafe: lugnt vid havet mellan Málaga och Torre del Mar",
+    "description": "Allt om Benajarafe: stränder, läget mellan Málaga och Torre del Mar, villor och lägenheter på sluttningarna, och vad du ska veta om köp och renovering.",
+    "lead": "Benajarafe är en lugn kustort mellan Rincón de la Victoria och Torre del Mar, med en lång strand och villaområden på sluttningarna bakom.",
+    "intro": [
+      "Benajarafe hör till kommunen <a href=\"/sv/orter/velez-malaga/\">Vélez-Málaga</a> och har nästan 4 000 invånare. Det gamla vakttornet Torre Moya står vid stranden. Bakom kustvägen reser sig kullarna, med villor och bostadsområden med havsutsikt.",
+      "Läget är ett stort plus: till Málaga är det cirka tjugo minuter med bil, till <a href=\"/sv/orter/torre-del-mar/\">Torre del Mar</a> tio. I själva Benajarafe finns främst daglig service."
+    ],
+    "facts": [
+      [
+        "Kommun",
+        "Vélez-Málaga"
+      ],
+      [
+        "Invånare",
+        "nästan 4 000"
+      ],
+      [
+        "Läge",
+        "kust, kullar bakom"
+      ],
+      [
+        "Málaga (flygplats)",
+        "cirka 30 minuter"
+      ],
+      [
+        "Prisnivå",
+        "medel till hög"
+      ]
+    ],
+    "forWhom": "För dig som vill bo lugnt vid havet och ofta åker till Málaga eller flygplatsen. Villorna på sluttningarna ger utrymme och utsikt.",
+    "faq": [
+      {
+        "q": "Hör Benajarafe till Vélez-Málaga?",
+        "a": "Ja. Tillstånd går via Vélez-Málagas kommun."
+      },
+      {
+        "q": "Vad ska jag kontrollera med en villa i sluttning?",
+        "a": "Stödmurar, terrasser och pooler som byggts till i omgångar. Kontrollera att allt har tillstånd och låt <a href=\"/sv/besiktning/\">besiktiga</a> konstruktionen."
+      }
+    ]
   }
 };
 export default content;

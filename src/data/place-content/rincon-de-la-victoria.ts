@@ -199,5 +199,67 @@ const content: PlaceContent = {
       { q: 'Ist Rincón für Familien geeignet?', a: 'Ja. Es gibt viele Schulen und Sportanlagen, und viele Einwohner arbeiten in Málaga.' },
     ],
   },
+  sv: {
+    title: 'Rincón de la Victoria: bo och köpa vid havet, nära Málaga',
+    description: 'Allt om Rincón de la Victoria: stränder, Cueva del Tesoro, läget en kvart från Málaga, bostadspriser och vad du ska veta om köp och renovering.',
+    lead: 'Rincón de la Victoria är den första orten i Axarquía när du kör österut från Málaga: en kuststad med lång strandpromenad, en kvart från storstaden.',
+    intro: [
+      'Rincón ligger i västra utkanten av Axarquía, cirka sexton kilometer från Málagas centrum. Kommunen har över 52 000 invånare och har vuxit snabbt de senaste årtiondena, främst genom familjer som arbetar i Málaga. Vid kusten ligger <a href="/sv/orter/la-cala-del-moral/">La Cala del Moral</a>, själva Rincón och Torre de Benagalbón; i kullarna den gamla byn Benagalbón, som gav kommunen dess namn fram till 1949.',
+      'Andelen utländska invånare är lägre här än i östra Axarquía. I Rincón får du servicen i en medelstor spansk stad, med Málaga, flygplatsen, järnvägsstationen och sjukhusen inom bekvämt avstånd.',
+      'Den mest kända sevärdheten är Cueva del Tesoro, en grotta som havet har format och som är skyddad som kulturarv.',
+    ],
+    facts: [
+      ['Invånare', 'över 52 000 (2025)'],
+      ['Utländska invånare', 'relativt få'],
+      ['Läge', 'kust, kullar bakom'],
+      ['Strand', 'cirka 7 km kustlinje'],
+      ['Málaga (flygplats)', 'cirka 25 minuter med bil'],
+      ['Prisnivå', 'medel till hög'],
+    ],
+    forWhom: 'För dig som vill bo vid havet med Málaga nära, för arbete, skola, kultur eller flygplatsen. Populärt bland barnfamiljer och bland dem som ofta flyger fram och tillbaka.',
+    see: {
+      title: 'Se och göra i Rincón de la Victoria: Cueva del Tesoro, stränder och strandpromenaden',
+      description: 'Vad du kan göra i Rincón de la Victoria: Cueva del Tesoro, Casa Fuerte de Bezmiliana, stränderna och strandpromenaden med de gamla järnvägstunnlarna.',
+      lead: 'Rincón är en plats för strand och strandpromenad, med några sevärdheter som få känner till.',
+      items: [
+        { name: 'Cueva del Tesoro', text: 'En grotta som inte formats av regnvatten utan av havet, vilket är ovanligt. Enligt legenden gömde en morisk kung en skatt här. Du kan besöka den med guide.' },
+        { name: 'Casa Fuerte de Bezmiliana', text: 'Ett fort från 1700-talet som byggdes mot pirater vid kusten, i dag ett kulturhus med utställningar.' },
+        { name: 'Strandpromenaden och järnvägstunnlarna', text: 'Strandpromenaden går delvis genom tunnlarna på den gamla järnvägen mellan Málaga och Vélez-Málaga. Till fots eller på cykel passerar du alla kommunens stränder.' },
+        { name: 'Stränder', text: 'Stränderna i La Cala del Moral, Rincón, Torre de Benagalbón och Los Rubios, sammanlagt över sex kilometer. Längs strandpromenaden ligger många <em>chiringuitos</em>, kända för sardiner grillade på spett (<em>espetos</em>).' },
+      ],
+      fiestas: [
+        { name: 'Virgen del Carmen', when: '16 juli', text: 'procession till sjöss med fiskebåtarna.' },
+        { name: 'Virgen de la Victoria', when: 'september', text: 'Rincóns feria.' },
+        { name: 'Verdiales', when: 'hela året', text: 'i Benagalbón lever traktens gamla folkmusik kvar.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Rincón de la Victoria: lägenheter, radhus och villor',
+      description: 'Köpa bostad i Rincón de la Victoria? Vilka bostäder som finns, vad de kostar, service och vad du ska tänka på vid köp och renovering.',
+      lead: 'Rincón är eftertraktat eftersom Málaga ligger så nära. Det byggs mycket nytt, och priserna har stigit kraftigt de senaste åren.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'Längs strandpromenaden och i centrum lägenheter, från äldre hus till nya komplex med pool. I områden som Añoreta och mot kullarna radhus och villor, ofta med havsutsikt. Runt Benagalbón hus på landet med mark.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 3 900 € per m² för lägenheter och 3 050 € per m² för hus (RealAdvisor). Nyproduktion i första raden kostar betydligt mer. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a>.',
+        ] },
+        { h: 'Service', p: [
+          'Rincón har vårdcentraler, skolor upp till gymnasienivå, stora stormarknader och ett komplett utbud av affärer. Sjukhus, flygplats och höghastighetstågens station finns i Málaga.',
+        ] },
+        { h: 'Se upp vid köp', p: [
+          'För äldre komplex längs strandpromenaden gäller samma sak som på andra håll vid kusten: skicket på fasader, tak och rör och planerade kostnader i samfälligheten (<em>comunidad</em>). För hus i kullarna, kontrollera att tillbyggnader och pool har tillstånd.',
+        ] },
+        { h: 'Renovera i Rincón', p: [
+          'Många köpare moderniserar en lägenhet eller ett radhus: kök, badrum, golv, fönster och luftkonditionering. För villor på sluttningarna handlar det oftare om terrasser, stödmurar och pooler. Låt <a href="/sv/besiktning/">besiktiga</a> bostaden före köpet.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Hur långt är det från Rincón de la Victoria till Málaga?', a: 'Cirka sexton kilometer till centrum, femton till tjugo minuter med bil. Det går också stadsbussar.' },
+      { q: 'Hör Rincón de la Victoria till Axarquía?', a: 'Ja, det är Axarquías västligaste kustkommun, alldeles intill staden Málaga.' },
+      { q: 'Passar Rincón för barnfamiljer?', a: 'Ja. Här finns gott om skolor och idrottsanläggningar, och många invånare arbetar i Málaga.' },
+    ],
+  },
 };
 export default content;

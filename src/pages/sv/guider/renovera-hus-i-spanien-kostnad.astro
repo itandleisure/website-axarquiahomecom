@@ -1,0 +1,83 @@
+---
+import Guide from '../../../components/Guide.astro';
+import Todo from '../../../components/Todo.astro';
+
+const toc = [
+  { id: 'per-m2', label: 'Priser per m²' },
+  { id: 'poster', label: 'Priser per post' },
+  { id: 'faktorer', label: 'Vad som styr priset' },
+  { id: 'tillstand', label: 'Tillstånd och moms' },
+  { id: 'distans', label: 'Renovera på distans' },
+  { id: 'spara', label: 'Håll kostnaderna under kontroll' },
+];
+
+const faq = [
+  {
+    q: 'Är det billigare att renovera i Spanien än i Sverige?',
+    a: 'Arbetskostnaden i Andalusien är lägre än i Sverige, men material kostar ungefär lika mycket och ibland mer, särskilt om du vill ha nordiska märken. Totalt blir en renovering ofta billigare, men skillnaden är mindre än många tror.',
+  },
+  {
+    q: 'Hur mycket moms betalar jag på byggarbeten?',
+    a: 'Normalsatsen är 21 %. För renovering och reparation av en privat bostad gäller under vissa villkor en reducerad sats på 10 %, främst om materialet utgör högst 40 % av totalkostnaden. Ditt byggföretag ska tillämpa det korrekt.',
+  },
+  {
+    q: 'Måste jag betala i förskott?',
+    a: 'En handpenning vid start är vanligt, till exempel för material. Därefter betalar du helst i delar efter avslutade etapper, aldrig stora belopp för arbete som inte är gjort.',
+  },
+];
+---
+<Guide lang="sv" slug="renovera-hus-i-spanien-kostnad" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Vill du ha ett pris för ditt hus?" ctaText="Skicka foton och berätta vad du vill göra. Du får en specificerad offert och kan själv välja vad du gör först.">
+  <h2 id="per-m2">Priser per m²</h2>
+  <p>Som en första fingervisning arbetar vi med tre nivåer. Det är riktpriser för Axarquía 2026, inklusive material och arbete, exklusive moms.</p>
+  <table class="prices">
+    <thead><tr><th>Nivå</th><th>Det här ingår</th><th>Per m²</th></tr></thead>
+    <tbody>
+      <tr><td>Uppfräschning</td><td>Målning, nytt golv, små reparationer, nytt porslin</td><td>250 – 500 €</td></tr>
+      <tr><td>Mellanstor renovering</td><td>Nytt badrum och kök, delar av elen, fönster, ytskikt</td><td>600 – 1 000 €</td></tr>
+      <tr><td>Totalrenovering</td><td>Rivning: rör, el, isolering, planlösning, tak</td><td>1 000 – 1 600 €</td></tr>
+    </tbody>
+  </table>
+  <Todo label="bevestiging van deze bedragen door het bouwbedrijf." />
+  <p>Ett byhus på 120 m² där allt behöver göras kan alltså lätt kosta 120 000 till 190 000 €. Att fräscha upp en lägenhet på 80 m² med nytt badrum kostar bara en bråkdel av det.</p>
+
+  <h2 id="poster">Priser per post</h2>
+  <table class="prices">
+    <thead><tr><th>Post</th><th>Riktvärde</th></tr></thead>
+    <tbody>
+      <tr><td>Nytt badrum</td><td>6 000 – 25 000 €</td></tr>
+      <tr><td>Nytt kök</td><td>8 000 – 30 000 €</td></tr>
+      <tr><td>Ny el i hela huset</td><td>6 000 – 15 000 €</td></tr>
+      <tr><td>Nytt tätskikt på tak eller takterrass</td><td>1 500 – 20 000 €</td></tr>
+      <tr><td>Fönster med tvåglas</td><td>3 000 – 15 000 €</td></tr>
+      <tr><td>Ny pool</td><td>20 000 – 50 000 €</td></tr>
+      <tr><td>Luftkonditionering (flera rum)</td><td>3 000 – 10 000 €</td></tr>
+      <tr><td>Septiktank eller reningsverk</td><td>3 000 – 10 000 €</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Riktpriser exklusive moms. En offert efter besök är alltid mer exakt.</p>
+
+  <h2 id="faktorer">Vad som styr priset</h2>
+  <ul>
+    <li><strong>Åtkomst</strong>: ett byhus i en smal gränd i Frigiliana eller en finca vid en grusväg i bergen betyder att allt måste bäras dit för hand eller med små fordon. Det tar tid.</li>
+    <li><strong>Vad man hittar</strong>: i gamla hus syns skicket på bjälkar, rör och grund först när man river. Lägg till 10 till 15 % i reserv.</li>
+    <li><strong>Materialval</strong>: spanskt kakel och porslin är billigt och bra; nordiska märken och specialbeställningar kostar mer.</li>
+    <li><strong>Tillstånd</strong>: större arbeten kräver ett arkitektprojekt, med egna kostnader och ledtid.</li>
+    <li><strong>Årstid</strong>: många ägare vill vara klara före sommaren. Den som börjar på hösten har ofta fler tider att välja på.</li>
+  </ul>
+
+  <h2 id="tillstand">Tillstånd och moms</h2>
+  <p>För mindre arbeten utan konstruktiva ändringar kräver de flesta kommuner bara en anmälan (<em>declaración responsable</em>). Större renoveringar, tillbyggnader eller en pool kräver bygglov med arkitektprojekt. Kommunen tar ut en byggskatt (ICIO) på några procent av byggkostnaden.</p>
+  <p>För renovering av en bostad du själv använder gäller under vissa villkor den reducerade momsen på 10 % i stället för 21 %. Ditt byggföretag ska tillämpa det korrekt.</p>
+
+  <h2 id="distans">Renovera på distans</h2>
+  <p>De flesta av våra kunder är inte i Spanien under arbetet. Det fungerar bra när du har en tydlig, specificerad offert i förväg, en fast kontaktperson, foton varje vecka och betalning per etapp. Kom överens om hur tilläggsarbeten anmäls och godkänns: alltid skriftligt, med pris, innan de utförs.</p>
+
+  <h2 id="spara">Håll kostnaderna under kontroll</h2>
+  <ul>
+    <li>Låt besiktiga bostaden före köpet så att du vet vad som väntar.</li>
+    <li>Fatta dina beslut innan arbetet börjar: ändringar under arbetet är den största kostnadsdrivaren.</li>
+    <li>Kombinera arbeten: ett nytt badrum är rätt tillfälle att också byta rören.</li>
+    <li>Arbeta med fasta priser per post i stället för dagspriser.</li>
+    <li>Planera för hösten eller vintern, när orderböckerna är mindre fulla.</li>
+  </ul>
+</Guide>

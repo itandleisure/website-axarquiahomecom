@@ -1,0 +1,94 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site, svPrice } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Vad kostar en pool i Spanien?',
+    a: `En murad eller gjuten pool av medelstorlek kostar inklusive teknik och finish oftast mellan ${svPrice(prices.zwembadNieuw)}. Priset beror på storlek, åtkomst till tomten, markarbeten i sluttning och tillval som uppvärmning eller saltklorinator.`,
+  },
+  {
+    q: 'Behöver jag tillstånd för en pool?',
+    a: 'Ja. En ny pool kräver tillstånd från kommunen, och på landsbygdsmark gäller strängare regler. Vid hus med AFO-status får ofta inget nytt byggas. Vi kontrollerar det åt dig innan du bestämmer dig.',
+  },
+  {
+    q: 'Får jag fylla min pool igen?',
+    a: 'Vattenrestriktionerna i Axarquía, inklusive förbudet mot att fylla pooler, hävdes våren 2026 efter en blöt vinter. Kontrollera ändå alltid kommunens aktuella regler; vi hjälper dig med det.',
+  },
+  {
+    q: 'Min pool har stått tom i två år. Vad gör jag nu?',
+    a: 'Efter lång tid utan vatten hittar vi ofta sprickor i ytskiktet, lösa plattor, uttorkade fogar och pumpar som har fastnat. Vi börjar med en inspektion och ett täthetstest och ger dig sedan ett pris på reparationen.',
+  },
+  {
+    q: 'Kan ni sköta poolen medan jag är borta?',
+    a: 'Ja, som ett eget serviceavtal eller som en del av paketet Komplett i vår tillsyn. Vi kontrollerar vattnet, rengör poolen och håller koll på tekniken.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Poolbygge, poolrenovering och poolskötsel',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en', 'es'],
+};
+---
+<Base
+  title="Poolbygge, poolrenovering och poolskötsel i Axarquía"
+  description="Bygga en ny pool, få en gammal att fungera igen eller låta någon sköta den medan du är borta. I Nerja, Torrox, Cómpeta och hela Axarquía."
+  path="/sv/pool/"
+  lang="sv"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="sv" items={[{ name: 'Pool', href: '/sv/pool/' }]} />
+  <Hero
+    lang="sv"
+    eyebrow="Pool"
+    title="Din pool <em>redo för sommaren</em>"
+    lead="En ny pool på din tomt, en gammal som ska fungera igen efter torkan, eller regelbunden skötsel så att vattnet är klart när du kommer."
+    cta="Fråga om pool"
+    ctaHref="/sv/forfragan/?dienst=zwembad"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h3>Ny pool</h3>
+          <p>Ritning, tillstånd, markarbeten, bygge och teknik. Även på tomter i sluttning, som vid många fincor i Axarquía.</p>
+          <p><strong>{svPrice(prices.zwembadNieuw)}</strong></p>
+        </div>
+        <div class="card">
+          <h3>Poolrenovering</h3>
+          <p>Läcksökning, nytt ytskikt, plattor och fogar, ny pump och filter. Efter åren av torka behöver många pooler repareras.</p>
+          <p><strong>Pris efter inspektion</strong></p>
+        </div>
+        <div class="card">
+          <h3>Poolskötsel</h3>
+          <p>Regelbundna besök för vatten, filter och teknik, även medan du är i Sverige. Efter varje besök får du ett foto.</p>
+          <p><strong>{svPrice(prices.zwembadOnderhoud)}</strong></p>
+        </div>
+      </div>
+      <Todo label="prijs zwembadonderhoud per maand en bevestiging prijs nieuwbouw." />
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Efter torkan: vad som händer med pooler</h2>
+      <p>Mellan 2023 och början av 2026 fick pooler i Axarquía ofta inte fyllas. En pool som står tom länge tar skada: solen torkar ut ytskiktet, fogar släpper och marken runt poolen kan röra sig. Den som fyller den igen utan inspektion riskerar en läcka.</p>
+      <p>Därför börjar vi med en inspektion och ett täthetstest. Då vet du exakt vad som behöver göras och vad det kostar, innan vattnet kommer i.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="sv" />
+  <Cta lang="sv" dienst="zwembad" title="Funderar du på en pool?" />
+  <Services lang="sv" exclude="pool" title="Det här kan också vara intressant" />
+</Base>

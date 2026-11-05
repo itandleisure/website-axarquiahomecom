@@ -211,5 +211,71 @@ const content: PlaceContent = {
       { q: 'Wie weit ist Nerja vom Flughafen Málaga entfernt?', a: 'Gut eine Stunde mit dem Auto über die A-7, je nach Verkehr rund um Málaga. Es gibt auch einen Bus mit Umstieg in Málaga.' },
     ],
   },
+  sv: {
+    title: 'Nerja: bo, köpa och renovera på Axarquías populäraste kustort',
+    description: 'Allt om Nerja: läge, stämning, stränder, grottorna, bostadspriser och vad du behöver veta om du vill köpa eller renovera ett hus där.',
+    lead: 'Axarquías mest kända kustort: vita gränder kring Balcón de Europa, små vikar under klipporna och en stor internationell gemenskap som bor här året runt.',
+    intro: [
+      'Nerja ligger längst österut i provinsen Málaga, där bergen i Sierra Almijara når nästan ända ner till havet. Därför är kusten här klippig, med små stränder i vikar i stället för en lång strandpromenad. Den gamla stadskärnan kring <em>Balcón de Europa</em> är nästan bilfri, med uteserveringar, affärer och kyrkan El Salvador.',
+      'Med drygt 22 000 invånare är Nerja en riktig liten stad med all service. Ungefär var fjärde invånare har utländskt medborgarskap, och här bor fler svenskar än någon annanstans i Axarquía. Till skillnad från många badorter fortsätter livet som vanligt även på vintern.',
+      'Till kommunen hör också byn <a href="/sv/orter/maro/">Maro</a>, med de berömda grottorna, och det skyddade kustområdet vid Maros klippor. Sex kilometer inåt landet ligger <a href="/sv/orter/frigiliana/">Frigiliana</a>.',
+    ],
+    facts: [
+      ['Invånare', 'drygt 22 000 (2025)'],
+      ['Utländska invånare', 'cirka en fjärdedel'],
+      ['Läge', 'kust, östra Axarquía'],
+      ['Málaga (flygplats)', 'drygt en timme med bil'],
+      ['Sjukhus', 'Vélez-Málaga, cirka 30 minuter'],
+      ['Prisnivå', 'högst i Axarquía'],
+    ],
+    forWhom: 'För dig som vill bo vid havet med allt på gångavstånd: affärer, restauranger, läkare och en stor internationell gemenskap. Passar också om du inte vill vara beroende av bil. Söker du lugn och utrymme är byarna i kullarna bakom ett bättre val.',
+    see: {
+      title: 'Se och göra i Nerja: grottor, stränder och Balcón de Europa',
+      description: 'Det bästa att se i Nerja: Cueva de Nerja, Balcón de Europa, Burriana, klipporna vid Maro, Río Chíllar och fiestorna under året.',
+      lead: 'Grottor med kanske Europas äldsta målningar, en utsiktsplats över havet och en vandring genom en flod. Nerja räcker till mer än en långhelg.',
+      items: [
+        { name: 'Balcón de Europa', text: 'Utsiktsplatsen på en klippa mitt i centrum, med palmer, en gammal kanon och utsikt längs kusten långt västerut. Härifrån går trappor ner till de små stränderna Calahonda och El Salón.' },
+        { name: 'Cueva de Nerja', text: 'Ett enormt grottsystem vid <a href="/sv/orter/maro/">Maro</a>, upptäckt 1959 av fem pojkar och öppet för allmänheten sedan 1960. Förutom salarna med droppsten finns målningar av sälar som enligt vissa forskare är omkring 42 000 år gamla. På sommaren hålls konserter i grottan.' },
+        { name: 'Playa de Burriana', text: 'Nerjas största och livligaste strand, med strandbarer, vattensport och chiringuitornas berömda paella. Lugnare är de små vikarna som Carabeillo och El Chorrillo.' },
+        { name: 'Klipporna vid Maro-Cerro Gordo', text: 'Ett skyddat naturområde med branta klippor, vattenfall och små vikar öster om Maro. Vackrast från vattnet: med kajak eller på en SUP-tur från stranden i Burriana eller Maro.' },
+        { name: 'Río Chíllar', text: 'Från utkanten av Nerja går du i flodens vatten inåt landet, ända in i smala raviner (<em>cahorros</em>). Räkna med fyra till sex timmar fram och tillbaka och ta skor som tål att bli blöta.' },
+        { name: 'Gamla stan och Verano Azul', text: 'De smala gränderna kring Plaza de España och kyrkan El Salvador. I parken Verano Azul står båten från den spanska tv-serien som spelades in här kring 1980; för många spanjorer fortfarande anledningen att åka till Nerja.' },
+        { name: 'Acueducto del Águila', text: 'En akvedukt från 1800-talet med fyra rader valv, byggd för att leda vatten till en sockerfabrik. Den står längs den gamla vägen till Maro.' },
+      ],
+      fiestas: [
+        { name: 'Semana Santa', when: 'påsk', text: 'processioner genom gamla stan.' },
+        { name: 'Romería de San Isidro', when: 'mitten av maj', text: 'med dekorerade vagnar och hästar till picknickplatsen vid grottorna.' },
+        { name: 'Virgen del Carmen', when: '15 till 17 juli', text: 'fiskarnas skyddshelgon förs över havet till stranden Calahonda.' },
+        { name: 'Feria de Nerja', when: 'oktober', text: 'den stora årliga ferian med tivoli, musik och dans.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Nerja: bostäder, priser, områden och service',
+      description: 'Köpa hus i Nerja? Vilka bostäder som finns, vad de ungefär kostar, vilka områden som passar och vad du behöver veta om renovering och korttidsuthyrning.',
+      lead: 'Nerja är den dyraste orten i Axarquía, men också den där det är lättast att bo utan bil. En översikt för köpare och ägare.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'I och runt centrum mest lägenheter från 1970- till 1990-talet, ofta med gemensam pool, och här och där ett gammalt byhus i gränderna bakom Balcón de Europa. I utkanterna ligger urbanisationer med radhus och villor, till exempel vid Capistrano och Punta Lara, och på sluttningarna inåt landet villor och fincor med havsutsikt.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'Nerja är den dyraste orten i Axarquía. I oktober 2026 låg det genomsnittliga utgångspriset kring 5 200 € per m² för lägenheter och 4 400 € per m² för hus (RealAdvisor). En lägenhet med havsutsikt i centrum kostar alltså lätt mer än i Torre del Mar eller Torrox Costa. Räkna dessutom med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a>.',
+        ] },
+        { h: 'Service', p: [
+          'Allt finns: stormarknader, en veckomarknad, banker, en vårdcentral och privata kliniker med engelsktalande läkare. Regionsjukhuset ligger i Vélez-Málaga, ungefär en halvtimme bort. Det finns kommunala skolor och förskolor; för internationell skola åker familjer oftast till den västra delen av provinsen, där även de svenska skolorna på Costa del Sol ligger.',
+        ] },
+        { h: 'Korttidsuthyrning', p: [
+          'Många köpare vill hyra ut sin bostad en del av tiden. Sedan 2024 har Andalusien gett kommunerna mer utrymme att begränsa ny korttidsuthyrning, och samfälligheten i ett lägenhetskomplex kan också förbjuda det. Kontrollera detta innan du köper, och se om bostaden redan har ett registreringsnummer.',
+        ] },
+        { h: 'Renovera i Nerja', p: [
+          'De flesta lägenheter och hus är trettio år eller äldre. Vanliga arbeten: nytt badrum och kök, el som anpassas till dagens regler, nytt tätskikt på platta tak och terrasser och byte av enkelglas. I gamla stan är gatorna smala och parkering svår, vilket gör materialtransporter dyrare. Låt <a href="/sv/besiktning/">besiktiga</a> bostaden före köpet, så vet du i förväg vad som behöver göras.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Är det dyrt att bo i Nerja?', a: 'För att vara Axarquía, ja: bostäderna kostar mest per m². Vardagliga utgifter som mat och restaurangbesök är ungefär som i resten av regionen och lägre än i Sverige.' },
+      { q: 'Är Nerja öde på vintern?', a: 'Nej. Nerja har drygt 22 000 fasta invånare och många som övervintrar. Restauranger, affärer och marknaden håller öppet, även om det är klart lugnare på stränderna utanför sommaren.' },
+      { q: 'Hur långt är det från Nerja till Málagas flygplats?', a: 'Drygt en timme med bil på A-7, beroende på trafiken kring Málaga. Det går också buss, med byte i Málaga.' },
+    ],
+  },
 };
 export default content;

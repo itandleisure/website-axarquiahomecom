@@ -1,0 +1,75 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'vad', label: 'Vad betyder AFO?' },
+  { id: 'varfor', label: 'Varför så många hus saknar tillstånd' },
+  { id: 'tillatet', label: 'Vad som är tillåtet och inte' },
+  { id: 'process', label: 'Processen i korthet' },
+  { id: 'kopare', label: 'Som köpare: det här ska du tänka på' },
+  { id: 'agare', label: 'Som ägare: renovera med AFO' },
+];
+
+const faq = [
+  {
+    q: 'Är ett hus med AFO-status lagligt?',
+    a: 'Inte i den meningen att det byggdes med tillstånd. Men kommunen erkänner att man inte längre kan ingripa mot det. Huset får bebos, säljas, registreras och anslutas till vatten och el. Att bygga ut eller bygga nytt är i regel inte tillåtet.',
+  },
+  {
+    q: 'Kan jag få bolån på ett hus med AFO-status?',
+    a: 'Ibland. Bankerna är försiktigare än med en fastighet med fullständigt tillstånd, och villkoren skiljer sig mellan bankerna. Med en officiell AFO-förklaring inskriven i fastighetsregistret är chanserna betydligt bättre än utan.',
+  },
+  {
+    q: 'Hur lång tid tar en AFO-process?',
+    a: 'Det skiljer sig mellan kommunerna. Räkna med några månader till över ett år, beroende på arbetsbelastning och hur komplett ansökan är.',
+  },
+  {
+    q: 'Vad kostar en AFO-process?',
+    a: 'Kostnaderna är ett tekniskt utlåtande från en arkitekt eller byggnadsingenjör, kommunens avgifter och registreringen. Tillsammans blir det ofta några tusen euro, mer om reparationer krävs först.',
+  },
+];
+---
+<Guide lang="sv" slug="afo-andalusien" toc={toc} faq={faq} dienst="legalisatie" ctaTitle="Osäker på papperen till en bostad?" ctaText="Vi tittar på det och sätter dig i kontakt med arkitekten vi samarbetar med.">
+  <h2 id="vad">Vad betyder AFO?</h2>
+  <p>AFO står för <em>asimilado a fuera de ordenación</em>, ungefär ”likställd med utanför detaljplanen”. Det är en status för byggnader som byggts utan (rätt) tillstånd men som myndigheterna inte längre kan ingripa mot, eftersom tidsfristen har gått ut. I Andalusien är fristen i de flesta fall sex år efter att bygget blev klart. Statusen regleras i den andalusiska plan- och bygglagen LISTA (Ley 7/2021).</p>
+  <p>Kommunen bekräftar statusen med en officiell förklaring. Därefter kan huset skrivas in i fastighetsregistret med en anteckning om AFO-situationen och anslutas till vatten och el.</p>
+
+  <h2 id="varfor">Varför så många hus saknar tillstånd</h2>
+  <p>Byggande på landsbygdsmark har alltid varit starkt begränsat i Andalusien. Ändå har tiotusentals hus byggts eller byggts ut utan tillstånd under de senaste årtiondena: en lada som blev bostadshus, en extra våning, en pool eller en inbyggd terrass. Länge gjordes inte mycket åt det. Uppskattningsvis 300 000 hus i Andalusien är i den situationen, många av dem i områden som Axarquía.</p>
+
+  <h2 id="tillatet">Vad som är tillåtet och inte</h2>
+  <table class="prices">
+    <thead><tr><th>Tillåtet</th><th>Inte tillåtet</th></tr></thead>
+    <tbody>
+      <tr><td>Bo i huset och hyra ut långtids</td><td>Bygga till eller bygga på</td></tr>
+      <tr><td>Sälja och registrera</td><td>Riva och bygga nytt</td></tr>
+      <tr><td>Ansluta vatten och el (där det finns)</td><td>Nya uthus eller en pool</td></tr>
+      <tr><td>Underhåll och reparation (tak, rör, ytskikt)</td><td>Arbeten som väsentligt ökar storlek eller värde</td></tr>
+    </tbody>
+  </table>
+  <p>Exakt vilka arbeten som är tillåtna beror på fallet och på kommunen. Ta alltid råd och lämna in en anmälan eller ansökan om tillstånd i förväg.</p>
+  <p>Viktigt: alla hus kommer inte i fråga. Ligger huset i ett naturskyddsområde, ett översvämningsområde, på allmän mark eller i en särskild riskzon gäller fristen ofta inte, och myndigheterna kan fortfarande ingripa.</p>
+
+  <h2 id="process">Processen i korthet</h2>
+  <ol>
+    <li><strong>Utredning</strong>: en arkitekt eller byggnadsingenjör (aparejador) fastställer vad som finns, när det byggdes och om det kommer i fråga.</li>
+    <li><strong>Tekniskt utlåtande</strong>: med ritningar, foton, bevis för byggåret (till exempel flygfoton eller uppgifter från Catastro) och en förklaring att byggnaden är säker och beboelig.</li>
+    <li><strong>Ansökan hos kommunen</strong>: med utlåtandet och avgifterna.</li>
+    <li><strong>Eventuella reparationer</strong>: kommunen kräver ibland ändringar först, till exempel av septiktanken eller av säkerhetsskäl.</li>
+    <li><strong>Förklaring och registrering</strong>: efter AFO-förklaringen antecknas situationen i fastighetsregistret.</li>
+  </ol>
+
+  <h2 id="kopare">Som köpare: det här ska du tänka på</h2>
+  <ul>
+    <li>Jämför det som finns med beskrivningen i Catastro och fastighetsregistret. Varje skillnad måste förklaras.</li>
+    <li>Be att få se kommunens AFO-förklaring eller tillstånden. Säljarens löfte räcker inte.</li>
+    <li>Köp utifrån det som finns nu: vill du bygga till eller bygga en pool senare går det troligen inte.</li>
+    <li>Låt en oberoende advokat och en arkitekt granska och gör resultatet till ett villkor i arras-avtalet.</li>
+    <li>Tänk på värdet: ett hus med AFO-status är vid försäljning ofta mindre värt än ett jämförbart hus med fullständigt tillstånd.</li>
+  </ul>
+  <p>Mer om att köpa ett lantställe läser du i vår guide <a href="/sv/guider/kopa-finca-i-spanien/">Köpa finca i Spanien</a>.</p>
+
+  <h2 id="agare">Som ägare: renovera med AFO</h2>
+  <p>Även med AFO-status kan du underhålla och modernisera ditt hus: nytt tak, nytt badrum och kök, isolering, ny el. Det du inte får göra är att göra huset större. Vi stämmer av med dig vad som är tillåtet i varje projekt och lämnar in rätt anmälan till kommunen. Se <a href="/sv/renovering/">renovering</a>.</p>
+  <p class="note">Den här guiden ger en allmän förklaring och är inte juridisk rådgivning. Bedömningen av en viss fastighet görs av en arkitekt eller advokat. Reglerna kan skilja sig mellan kommuner och ändras över tid.</p>
+</Guide>

@@ -7,7 +7,7 @@ const pages = import.meta.glob('./{nl,en,de}/**/*.astro', { eager: false });
 export const GET: APIRoute = () => {
   const paths = Object.keys(pages)
     .map((f) => f.replace(/^\.\//, '/').replace(/index\.astro$/, '').replace(/\.astro$/, '/'))
-    .filter((p) => !/\/(bedankt|thank-you|danke)\//.test(p))
+    .filter((p) => !/\/(bedankt|thank-you|danke|tack)\//.test(p))
     .sort();
   const today = new Date().toISOString().slice(0, 10);
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

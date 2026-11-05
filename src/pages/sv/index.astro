@@ -1,0 +1,105 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Services from '../../components/Services.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Todo from '../../components/Todo.astro';
+import { site } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Vilka språk talar ni?',
+    a: 'Vårt team talar nederländska, engelska och spanska, och vi sköter kontakten med spanska leverantörer, hantverkare och kommunen åt dig. Du får en fast kontaktperson från första samtalet till överlämningen.',
+  },
+  {
+    q: 'Var arbetar ni?',
+    a: `I hela Axarquía och på östra Costa del Sol, bland annat i ${site.villages.join(', ')}. Även lantställen i inlandet ingår i vårt område.`,
+  },
+  {
+    q: 'Jag bor i Sverige. Kan ni göra jobbet medan jag är borta?',
+    a: 'Det är precis så de flesta av våra kunder arbetar. Vi tar fram en offert utifrån foton och ett besök på plats och håller dig uppdaterad med foton och filmer under arbetet. Du behöver bara komma om du vill.',
+  },
+  {
+    q: 'Vad kostar en förfrågan?',
+    a: 'Ingenting. Förfrågan, det första samtalet och ett besök för offerten är kostnadsfria och utan förpliktelser.',
+  },
+  {
+    q: 'Jag ska snart köpa. Kan ni titta på huset först?',
+    a: 'Ja. En besiktning före köp visar husets skick, vad som behöver göras och ungefär vad det kostar, innan du skriver på något. I Spanien köper du huset i befintligt skick, så det lönar sig.',
+  },
+];
+---
+<Base
+  title="Hantverkare i Axarquía | Renovering, tillsyn och besiktning vid Nerja"
+  description="Köpa, renovera eller låta någon sköta ditt hus i Axarquía? Ett team för renovering, besiktning före köp, tillsyn och underhåll i Nerja, Torrox, Frigiliana, Cómpeta och omgivningarna."
+  path="/sv/"
+  lang="sv"
+>
+  <Hero
+    lang="sv"
+    eyebrow="Köpa · Renovera · Sköta"
+    title="Ditt hus i Axarquía, <em>i goda händer</em>"
+    lead="Ett nederländskt byggföretag som arbetar för utländska ägare och köpare på kusten öster om Málaga. Från besiktning före köp och renovering till tillsyn av huset när du inte är där."
+    secondary="Våra tjänster"
+    secondaryHref="#tjanster"
+  >
+    <ul class="trust">
+      <li>En fast kontaktperson</li>
+      <li>Svar inom 24 timmar</li>
+      <li>Fast pris i offerten</li>
+      <li>Fotorapporter när du är borta</li>
+    </ul>
+  </Hero>
+
+  <div class="wrap"><Todo label="bevestiging of er een Zweedstalige contactpersoon is. Zo ja, dan zetten we dat op deze pagina." /></div>
+
+  <div id="tjanster"><Services lang="sv" /></div>
+
+  <section class="section alt">
+    <div class="wrap split">
+      <div>
+        <h2>Varför ett team från norra Europa?</h2>
+        <p>Den som köper eller renoverar i Spanien stöter på samma problem gång på gång: offerter som inte går ihop, hantverkare som slutar svara i telefon, regler som fungerar annorlunda än hemma och ett språk där ett samtal om rör och bygglov helt enkelt blir för svårt.</p>
+        <p>Vi arbetar som du är van vid: tydliga överenskommelser, en skriftlig offert, en fast kontaktperson och en tidsplan som vi håller. Samtidigt känner vi trakten, byggsättet i de vita byarna, de lokala hantverkarna och kommunerna.</p>
+        <p>Eftersom vi också erbjuder tillsyn och underhåll finns vi kvar efter överlämningen. Vi märker först om taket läcker eller poolen blir grön, och åtgärdar det innan det blir ett problem.</p>
+      </div>
+      <div class="box">
+        <h3>En kontaktperson för allt</h3>
+        <ul class="checks">
+          <li>Besiktning före köp</li>
+          <li>Renovering, badrum och kök</li>
+          <li>Poolbygge och poolskötsel</li>
+          <li>Tak, terrasser och läckor</li>
+          <li>Tillsyn och kontroller</li>
+          <li>Tomt och trädgård</li>
+        </ul>
+        <a class="btn" href="/sv/forfragan/">Berätta om dina planer</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="sv"
+    steps={[
+      { t: 'Förfrågan', d: 'Svara på några frågor i vårt korta formulär. Foton hjälper men behövs inte.' },
+      { t: 'Kontakt', d: 'Inom 24 timmar ringer eller skriver din kontaktperson till dig för att gå igenom dina planer.' },
+      { t: 'Besök och offert', d: 'Vi tittar på bostaden (även om du inte är på plats) och skickar en tydlig offert med alla delar specificerade.' },
+      { t: 'Utförande', d: 'En projektledare, foton varje vecka och en tidsplan som vi håller.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Här arbetar vi</h2>
+      <p class="section-intro">Från kusten till bergsbyarna: vi arbetar i hela Axarquía, även med lantställen där vatten, tillfartsväg och tillstånd kräver extra uppmärksamhet.</p>
+      <ul class="villages">
+        {site.villages.map((v) => <li>{v}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="sv" />
+  <Cta lang="sv" />
+</Base>
