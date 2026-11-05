@@ -209,6 +209,18 @@ export const guides: GuideMeta[] = [
     minutes: 7,
     published: '2026-11-05',
   },
+  // Verhuurgids. Achteraan in nl/en/de, zelfde volgorde.
+  {
+    slug: 'woning-verhuren-spanje',
+    title: 'Uw woning verhuren in Spanje: vakantieverhuur of langdurig, regels en belasting',
+    seoTitle: 'Huis verhuren in Spanje (Andalusië): vergunning, belasting en rendement 2026',
+    short: 'Woning verhuren',
+    description: 'Uw huis in de Axarquía verhuren? Vakantieverhuur (VFT-registratie, vereniging van eigenaars) of langdurig (huurcontract, borg), belasting voor niet-inwoners en een rekenvoorbeeld.',
+    lead: 'Een huis in de Axarquía staat vaak maanden leeg. Verhuren kan de kosten dekken of meer opleveren, maar de regels zijn de laatste jaren flink veranderd. Zo kiest u tussen vakantieverhuur en langdurige verhuur, en zo regelt u het op afstand.',
+    keyword: 'huis verhuren spanje',
+    minutes: 12,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesEn: GuideMeta[] = [
@@ -399,6 +411,18 @@ export const guidesEn: GuideMeta[] = [
     minutes: 7,
     published: '2026-11-05',
   },
+  // Letting guide. Last in nl/en/de, same order.
+  {
+    slug: 'renting-out-property-in-spain',
+    title: 'Renting out your property in Spain: holiday or long-term lets, rules and tax',
+    seoTitle: 'Renting out property in Spain (Andalusia): licence, tax and returns 2026',
+    short: 'Renting out your home',
+    description: 'Letting your home in the Axarquía? Holiday lets (VFT registration, community approval) or long-term (tenancy, deposit), non-resident tax and a worked example.',
+    lead: 'A home in the Axarquía often stands empty for months. Letting can cover the costs or earn more, but the rules have changed a lot in recent years. Here is how to choose between holiday and long-term lets, and how to manage it from abroad.',
+    keyword: 'renting out property in spain',
+    minutes: 12,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesDe: GuideMeta[] = [
@@ -587,6 +611,18 @@ export const guidesDe: GuideMeta[] = [
     lead: 'Käufer schauen zuerst mit den Augen und danach mit einem Gutachter. Kleine sichtbare Mängel kosten Sie bei der Verhandlung oft mehr als die Reparatur. Eine komplett neue Küche holen Sie selten wieder herein.',
     keyword: 'vor dem verkauf renovieren',
     minutes: 7,
+    published: '2026-11-05',
+  },
+  // Vermietungsratgeber. Hinten in nl/en/de, gleiche Reihenfolge.
+  {
+    slug: 'immobilie-in-spanien-vermieten',
+    title: 'Ihre Immobilie in Spanien vermieten: Ferien- oder Langzeitmiete, Regeln und Steuern',
+    seoTitle: 'Immobilie in Spanien vermieten (Andalusien): Lizenz, Steuern, Rendite 2026',
+    short: 'Immobilie vermieten',
+    description: 'Ihr Haus in der Axarquía vermieten? Ferienvermietung (VFT-Registrierung, Eigentümergemeinschaft) oder Langzeitmiete (Vertrag, Kaution), Steuern für Nichtresidenten und ein Rechenbeispiel.',
+    lead: 'Ein Haus in der Axarquía steht oft monatelang leer. Vermieten kann die Kosten decken oder mehr einbringen, aber die Regeln haben sich in den letzten Jahren stark verändert. So wählen Sie zwischen Ferien- und Langzeitmiete und organisieren alles aus der Ferne.',
+    keyword: 'immobilie in spanien vermieten',
+    minutes: 12,
     published: '2026-11-05',
   },
 ];

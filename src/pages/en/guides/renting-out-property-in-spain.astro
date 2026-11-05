@@ -1,0 +1,176 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'choose', label: 'Holiday let or long-term?' },
+  { id: 'holiday', label: 'Holiday lets: licence and rules' },
+  { id: 'longterm', label: 'Long-term lets: contract and deposit' },
+  { id: 'tax', label: 'Tax if you do not live in Spain' },
+  { id: 'insurance', label: 'Insurance' },
+  { id: 'ready', label: 'Getting your home ready to let' },
+  { id: 'distance', label: 'Letting from abroad' },
+  { id: 'example', label: 'What does it earn? A worked example' },
+  { id: 'steps', label: 'Step by step' },
+  { id: 'sources', label: 'Sources' },
+];
+
+const faq = [
+  {
+    q: 'Can I let my apartment in the Axarquía as a holiday home?',
+    a: 'Only if it is entered in the Andalusian tourism register and meets the requirements. If you want to start holiday letting in an apartment block after 3 April 2025, you need prior approval from three fifths of the community of owners. Also check that the community statutes do not already ban it, and ask the town hall whether any limits apply.',
+  },
+  {
+    q: 'Do I still need a national registration number?',
+    a: 'No. The national registration number required since 1 July 2025 was struck down by Spain’s Supreme Court on 19 May 2026. You advertise with the number from the Andalusian tourism register. Platforms must still pass data to the authorities, and the rules are still moving, so check the current position before you start.',
+  },
+  {
+    q: 'How much tax do I pay on rental income if I live in the UK?',
+    a: 'As a resident of a country outside the EU and EEA, you pay 24% Spanish non-resident tax on the gross rent, with no deduction for costs. EU and EEA residents pay 19% on the net rent. From rent earned in 2026 you file once a year, between 1 and 20 April. You will usually also need to declare the income in the UK, where a credit for Spanish tax prevents double taxation.',
+  },
+  {
+    q: 'Do I still have to lodge my tenant’s deposit with the Junta de Andalucía?',
+    a: 'Not for new contracts. Since 24 January 2026 the deposit (fianza) no longer has to be lodged with AVRA. The tenant still pays one month’s rent as a deposit, but you hold it yourself and return it at the end of the tenancy, minus any damage or arrears.',
+  },
+  {
+    q: 'Which earns more: holiday lets or long-term lets?',
+    a: 'Holiday lets bring in more gross rent, but also far more costs and work: cleaning, management, platform fees, energy and wear. For an ordinary apartment with paid management, a long-term let often leaves you with as much or more. Holiday letting wins mainly for a home with a pool or views that commands high prices, or if you want to use it yourself too.',
+  },
+  {
+    q: 'Is there a tourist tax in the Axarquía?',
+    a: 'No. Andalusia does not levy a tourist tax (as of November 2026), and no town in the Axarquía does either. It is being debated in Málaga, so keep an eye on it.',
+  },
+];
+---
+<Guide lang="en" slug="renting-out-property-in-spain" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Let your home without having to be there?" ctaText="We hold the keys, check the house between tenants and guests, deal with breakdowns and carry out repairs and maintenance. You get a price up front.">
+  <p>Many owners in the Axarquía let their home for part of the year, or even all year round. That can be as a holiday let, by the week or night, or long-term to a tenant who lives there. Each has its own rules, its own tax and its own workload. This guide sets it all out, with a worked example. Don’t have a home yet and wondering which type suits letting? Read our guide to a <a href="/en/guides/finca-apartment-or-village-house/holiday-home/">holiday home: finca, apartment or village house</a> first, and if you want to turn it into a business, the page on a <a href="/en/guides/finca-apartment-or-village-house/bed-and-breakfast/">B&amp;B</a>.</p>
+
+  <h2 id="choose">Holiday let or long-term?</h2>
+  <p>The first choice is the type of letting. It decides which licence you need, how much work it is and whether you can still stay there yourself.</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th></th><th>Holiday let</th><th>Long-term let</th></tr></thead>
+    <tbody>
+      <tr><td>Tenant</td><td>Tourists, by the night or week</td><td>One tenant, usually for years</td></tr>
+      <tr><td>Licence</td><td>Entry in the Andalusian tourism register</td><td>None; a tenancy agreement under Spanish tenancy law</td></tr>
+      <tr><td>Own use</td><td>Yes, in the weeks you do not let</td><td>No, while the contract runs</td></tr>
+      <tr><td>Gross income</td><td>Higher, but strongly seasonal</td><td>Lower, but the same every month</td></tr>
+      <tr><td>Costs and work</td><td>High: cleaning, changeovers, management, energy, wear</td><td>Low: mainly maintenance and fixed costs</td></tr>
+      <tr><td>Risk</td><td>Empty weeks, bad reviews, rules that keep tightening</td><td>A tenant who stops paying or will not leave</td></tr>
+      <tr><td>Suits</td><td>Homes with a pool, views, or close to beach and village</td><td>Ordinary apartments and village houses, owners who want little hassle</td></tr>
+    </tbody>
+  </table></div>
+  <p>There is also an in-between option: seasonal letting (<em>alquiler de temporada</em>), for example to winter visitors or people working in the area for a while. It falls under tenancy law rather than tourism rules, but only if the tenant has a genuine temporary reason. If a “seasonal” contract keeps being renewed, a court may treat it as an ordinary residential tenancy. Have such a contract drawn up by a lawyer.</p>
+
+  <h2 id="holiday">Holiday lets: licence and rules</h2>
+  <p>In Andalusia a holiday let is officially a <em>vivienda con fines turísticos</em> (VFT), often called a VUT. The rules are in a 2016 decree of the Junta de Andalucía, tightened considerably in 2024. In short:</p>
+  <ul>
+    <li><strong>Entry in the tourism register.</strong> You file a declaration online (<em>declaración responsable</em>) with the <em>Registro de Turismo de Andalucía</em>. You get a number starting with VFT/MA, which must appear in every advert. The Junta can then inspect, and homes that do not comply are removed; more than 2,400 have already been struck off across Andalusia.</li>
+    <li><strong>Requirements for the home.</strong> Among others: cooling and heating, windows to the outside, furniture and linen for the number of guests, a first-aid kit, guest information and complaint forms (<em>hojas de reclamaciones</em>). Since 2024 there are also minimum floor areas per guest and a maximum number of guests. The home must also be habitable on paper; a house without a first-occupation certificate or with unclear permits will get stuck.</li>
+    <li><strong>Residential land only.</strong> The VFT scheme applies to homes on urban land. A finca on rural land falls under the rules for rural tourism (<em>vivienda turística de alojamiento rural</em>), with requirements of its own. For a house with AFO status, tourist letting is not always possible. See our guide to <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation</a>.</li>
+    <li><strong>The town hall.</strong> Since 2024 Andalusian town halls may limit the number of holiday lets. Málaga city has done so: since July 2026 a three-year halt on new holiday lets applies there. We know of no similar halts in the Axarquía (November 2026), but numbers are rising fast: Nerja has over 2,700 holiday lets, Frigiliana over 400. Always check with the <em>ayuntamiento</em> before you invest.</li>
+    <li><strong>The community of owners.</strong> Since 3 April 2025 you need prior approval from three fifths of the owners to start holiday letting in an apartment block. Homes already legally let before then may continue. The community statutes can also ban letting.</li>
+    <li><strong>Guest registration.</strong> Since December 2024 you must pass detailed data on every guest to the police, through the SES.Hospedajes system. Many owners have their booking software or manager do this automatically.</li>
+    <li><strong>No national number any more.</strong> From 1 July 2025 a national registration number was required on top of the Andalusian one. Spain’s Supreme Court struck down that national register on 19 May 2026, because tourism is a regional matter. The Andalusian number remains compulsory. Andalusia is working on a new tourism law, so the rules may change again.</li>
+    <li><strong>Tourist tax.</strong> There is none in Andalusia (as of November 2026).</li>
+  </ul>
+  <p>If you offer hotel-type services, such as daily cleaning during the stay or breakfast, 21% VAT is due. Ordinary letting with a final clean does not count.</p>
+
+  <h2 id="longterm">Long-term lets: contract and deposit</h2>
+  <p>If you let to someone who will live in the home, Spanish tenancy law applies (<em>Ley de Arrendamientos Urbanos</em>, LAU). It protects tenants strongly. The key rules:</p>
+  <ul>
+    <li><strong>Term.</strong> You can sign for one year, but if you let as a private individual the tenant may renew each year up to five years. If nobody gives notice, it then extends by up to three more years. The tenant may leave after six months with one month’s notice.</li>
+    <li><strong>Wanting it back.</strong> Only if the contract says so can you end it after the first year because you or a close relative will live there. A holiday home you want to use now and then is therefore a poor fit for a long-term let.</li>
+    <li><strong>Deposit.</strong> The legal deposit (<em>fianza</em>) is one month’s rent. You may ask for up to two months’ extra security on top. Since 24 January 2026 you no longer have to lodge the deposit with the Junta (AVRA) in Andalusia; you hold it yourself. Deposits from older contracts stay with AVRA until the tenancy ends.</li>
+    <li><strong>Rent increases.</strong> Only if the contract provides for them, and for contracts since 2023 no more than the rental index of Spain’s statistics office (IRAV). Andalusia has not designated any “stressed housing markets”, so the extra rent caps the national housing law allows there do not apply here.</li>
+    <li><strong>Agent’s fees.</strong> If you use an agent to find a tenant, you pay. Since 2023 this may no longer be charged to the tenant.</li>
+    <li><strong>Energy certificate.</strong> Also compulsory for letting, and it must appear in the advert.</li>
+  </ul>
+  <p>The biggest risk is a tenant who stops paying. Eviction through the courts in Spain easily takes months. So check income and references, and consider rent-default insurance (<em>seguro de impago</em>). It usually costs around 3% to 5% of the annual rent.</p>
+
+  <h2 id="tax">Tax if you do not live in Spain</h2>
+  <p>If you live in the UK, Ireland or elsewhere, you pay Spanish non-resident income tax (<em>Impuesto sobre la Renta de no Residentes</em>, IRNR) on your rental income:</p>
+  <ul>
+    <li><strong>Residents of countries outside the EU and EEA, including the UK: 24%</strong> on the gross rent, with no deduction for costs.</li>
+    <li><strong>Residents of the EU, Iceland and Norway: 19%</strong> on the net income. You can deduct costs linked to the letting: mortgage interest, maintenance and repairs, IBI, community fees, insurance, management and cleaning, platform fees, energy you pay, and 3% a year depreciation on the value of the building (not the land). If you let for part of the year, fixed costs are deducted pro rata.</li>
+    <li><strong>Filing.</strong> You file form 210. From rent earned in 2026 you do this once a year, from 1 to 20 April of the following year. Previously it was quarterly.</li>
+    <li><strong>Weeks the home stands empty.</strong> For the days you do not let, you also pay tax on a deemed income: 1.1% or 2% of the cadastral value, pro rata to the number of days. That has its own return, from 1 April to 31 December of the following year.</li>
+  </ul>
+  <p>Spanish residents pay through ordinary income tax, and for long-term lets get a reduction on net rent that non-residents do not. In your home country you will usually also have to declare the property and the income; the tax treaty prevents double taxation. Have a gestor or tax adviser file your returns; it often costs a few hundred euros a year.</p>
+
+  <h2 id="insurance">Insurance</h2>
+  <p>Ordinary home insurance often does not cover letting. Tell your insurer that you let, and how. Watch out for:</p>
+  <ul>
+    <li><strong>Liability.</strong> If a guest slips by the pool or a leak damages the neighbours’ flat, you are liable as the landlord. Choose generous cover. Platforms sometimes offer their own guarantee, but it is no substitute for insurance.</li>
+    <li><strong>Damage by tenants or guests.</strong> Not every policy covers damage by the people you let to. Ask.</li>
+    <li><strong>Rent default.</strong> For long-term lets: the <em>seguro de impago</em>, see above.</li>
+    <li><strong>Empty periods.</strong> Some policies do not cover burglary or water damage if the home stands empty for long or is not checked regularly. Have it looked after, and keep the reports.</li>
+  </ul>
+
+  <h2 id="ready">Getting your home ready to let</h2>
+  <p>Tenants and guests are more critical than you are. What you put up with as an owner becomes a bad review or a complaint once you let. Plan for:</p>
+  <ul>
+    <li><strong>Air conditioning and heating</strong> in the living room and bedrooms. Cooling and heating are compulsory for a holiday let, and essential in July and August.</li>
+    <li><strong>Damp and leaks</strong> fixed first. A patch of mould in a photo costs bookings. See <a href="/en/problems/damp-and-mould/">damp and mould</a> and <a href="/en/problems/roof-leaks/">roof leaks</a>.</li>
+    <li><strong>A reliable pool</strong> and a garden that is kept up. See <a href="/en/swimming-pool/">swimming pool</a>.</li>
+    <li><strong>A bathroom and kitchen that can take a beating.</strong> Guests use them harder than you do. Renewing a dated bathroom before you start letting often pays off; see the <a href="/en/costs/calculator/">cost calculator</a> for a price guide.</li>
+    <li><strong>Electrics and wifi</strong> that can cope: a guest charges a car, runs three air conditioners and works remotely.</li>
+  </ul>
+  <p>For a holiday let it often pays to do the work in one go and only then have photos taken. We give you a price up front; see <a href="/en/renovation/">renovation</a> and <a href="/en/maintenance/">maintenance and repairs</a>.</p>
+
+  <h2 id="distance">Letting from abroad</h2>
+  <p>Most owners in the Axarquía do not live in Spain. Letting then only works if someone on the spot handles the practical side:</p>
+  <ul>
+    <li><strong>Keys and checks.</strong> Someone who holds the keys, checks the home after guests or tenants leave and acts when something goes wrong. With <a href="/en/key-holding/">key holding</a> you have one fixed point of contact.</li>
+    <li><strong>Fixing breakdowns fast.</strong> A broken air conditioner in August or a blocked drain must be fixed within a day, or the guest asks for a refund. Agree in advance who does this and up to what amount they may order repairs without asking.</li>
+    <li><strong>Cleaning and linen</strong> between guests, for holiday lets.</li>
+    <li><strong>Guest contact and bookings.</strong> You can do this yourself through the platforms, or hand it to a letting manager, who often charges 15% to 25% of the rental income.</li>
+    <li><strong>Year-round maintenance.</strong> Even when nobody is there: pool, garden, roof terrace before the autumn rains, and the air conditioners before summer. That stops a small problem turning into an empty week mid-season.</li>
+  </ul>
+
+  <h2 id="example">What does it earn? A worked example</h2>
+  <p>A two-bedroom apartment in Torre del Mar, owner living in an EU country. Building value (excluding land) €150,000, cadastral value €90,000. All figures are assumptions for illustration.</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Per year</th><th>Holiday let</th><th>Long-term let</th></tr></thead>
+    <tbody>
+      <tr><td>Rent</td><td>140 nights × €110 = €15,400</td><td>12 × €950 = €11,400</td></tr>
+      <tr><td>Letting management (20%) or agent</td><td>− €3,080</td><td>− €230 (one month’s rent every five years)</td></tr>
+      <tr><td>Cleaning and linen</td><td>− €1,500 (25 changeovers)</td><td>–</td></tr>
+      <tr><td>Electricity, water, internet</td><td>− €1,800</td><td>Paid by the tenant</td></tr>
+      <tr><td>Community fees</td><td>− €1,200</td><td>− €1,200</td></tr>
+      <tr><td>IBI and rubbish tax</td><td>− €450</td><td>− €450</td></tr>
+      <tr><td>Insurance</td><td>− €350</td><td>− €800 (including rent default)</td></tr>
+      <tr><td>Maintenance and wear</td><td>− €800</td><td>− €600</td></tr>
+      <tr><td>Gestor and returns</td><td>− €400</td><td>− €300</td></tr>
+      <tr><td><strong>Left before tax</strong></td><td><strong>€5,820</strong></td><td><strong>€7,820</strong></td></tr>
+      <tr><td>Spanish tax (19%, after costs and depreciation)</td><td>− €1,010</td><td>− €630</td></tr>
+      <tr><td>Tax on the empty days</td><td>− €115</td><td>–</td></tr>
+      <tr><td><strong>Left after Spanish tax</strong></td><td><strong>approx. €4,700</strong></td><td><strong>approx. €7,200</strong></td></tr>
+    </tbody>
+  </table></div>
+  <p>For the holiday let, fixed costs and depreciation are deducted pro rata for 140 let days (3% of €150,000 × 140/365). For the long-term let the whole year is deductible. If the owner lives in the UK, the gap is wider still: 24% on gross rent means roughly €3,840 tax on the holiday let against €2,740 on the long-term let.</p>
+  <p>What the example shows: for an ordinary apartment with paid management, a long-term let often leaves you with more, for much less work. Holiday letting pays mainly if you achieve higher prices, for example with a pool or sea views, if you do a lot yourself, or if you want to use the home yourself too. Your own weeks are not counted in this example.</p>
+  <p class="note">Worked example based on assumptions, prepared on 5 November 2026. Your result depends on location, prices, occupancy and your tax position. Have a gestor or tax adviser run the numbers with you.</p>
+
+  <h2 id="steps">Step by step</h2>
+  <ol>
+    <li><strong>Choose the type</strong>: holiday, seasonal or long-term. Run the numbers for both with your own figures.</li>
+    <li><strong>Check it is allowed</strong>: land classification, the home’s paperwork, the town hall, and for an apartment the statutes and community of owners.</li>
+    <li><strong>Get the home ready</strong>: fix defects, air conditioning, energy certificate, and the furnishing the rules require.</li>
+    <li><strong>Sort the paperwork</strong>: entry in the tourism register, or a sound tenancy agreement from a lawyer. Update your insurance.</li>
+    <li><strong>Arrange local management</strong>: keys, checks, cleaning, breakdowns and maintenance.</li>
+    <li><strong>Sort the tax</strong>: a gestor for form 210, and your return at home.</li>
+  </ol>
+  <p>Want to let your home and need someone on the spot? We take over key holding, check the home between tenants and guests, and carry out repairs, maintenance and any refresh. Request <a href="/en/request/?dienst=sleutelbeheer">key holding</a>, or a quote for <a href="/en/request/?dienst=renovatie">renovation</a> or <a href="/en/request/?dienst=onderhoud">maintenance</a>. Questions? Email <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+
+  <h2 id="sources">Sources</h2>
+  <ul>
+    <li>Holiday lets in Andalusia: Decreto 28/2016 of 2 February 2016, amended by Decreto 31/2024 of 29 January 2024 (Junta de Andalucía).</li>
+    <li>Community of owners approval: Ley Orgánica 1/2025 (BOE, 3 January 2025), amending article 17.12 of the Ley de Propiedad Horizontal, in force since 3 April 2025.</li>
+    <li>National register struck down: Tribunal Supremo, judgment 620/2026 of 19 May 2026, on Real Decreto 1312/2024; see idealista/news, 21 May 2026.</li>
+    <li>Guest registration: Real Decreto 933/2021, in force since 2 December 2024.</li>
+    <li>Tenancy law: Ley 29/1994 de Arrendamientos Urbanos, amended by Ley 12/2023 (housing law, BOE 25 May 2023).</li>
+    <li>Deposit no longer lodged with AVRA: Ley 5/2025 de Vivienda de Andalucía (BOJA, 24 December 2025), sixth additional provision, in force since 24 January 2026.</li>
+    <li>Non-resident tax: Real Decreto Legislativo 5/2004, articles 24 and 25; annual filing of rental income: Orden HAC/623/2026 (BOE, 23 June 2026).</li>
+    <li>Holiday let numbers in Nerja and Frigiliana: El Español Málaga, 25 June 2026. Halt in Málaga city: Málaga city council, July 2026.</li>
+  </ul>
+  <p class="note">Checked on 5 November 2026. This guide gives general information and is not legal or tax advice. Letting rules have changed fast in recent years; have your situation assessed by a lawyer, gestor or tax adviser before you start.</p>
+</Guide>
