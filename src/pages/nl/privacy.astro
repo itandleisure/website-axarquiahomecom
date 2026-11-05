@@ -4,7 +4,6 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Todo from '../../components/Todo.astro';
 import { site } from '../../data/site';
 const o = site.operator;
-const c = site.company;
 ---
 <Base
   title="Privacy en voorwaarden"
@@ -15,12 +14,12 @@ const c = site.company;
   <section class="section">
     <div class="wrap prose">
       <h1>Privacy en voorwaarden</h1>
-      <Todo label="gegevens van de onderneming van Frans en het bouwbedrijf. Laat deze tekst één keer nakijken door een AVG-jurist." />
+      <Todo label="gegevens van de onderneming van Frans. Laat deze tekst één keer nakijken door een AVG-jurist." />
       <p>Laatst bijgewerkt: 4 november 2026.</p>
 
       <h2>Wie zijn wij</h2>
       <p>De website {site.domain} wordt beheerd door {o.name}, {o.address}, ingeschreven bij de Kamer van Koophandel onder nummer {o.kvk} (hierna “Axarquía Home”). U bereikt ons via <a href={`mailto:${o.email}`}>{o.email}</a>.</p>
-      <p>Axarquía Home voert zelf geen bouwwerkzaamheden uit. Opdrachten worden uitgevoerd door ons vaste partnerbedrijf {c.legalName}, {c.cif}, {c.street}, {c.postalCode} {c.town}, Spanje (hierna “het bouwbedrijf”).</p>
+      <p>Axarquía Home voert zelf geen bouwwerkzaamheden uit. Opdrachten worden uitgevoerd door een zorgvuldig gekozen bouwbedrijf in de Axarquía waarmee wij samenwerken (hierna “het bouwbedrijf”). Wilt u weten welk bedrijf uw aanvraag behandelt, dan laten wij u dat op verzoek weten.</p>
 
       <h2>Welke gegevens we verwerken</h2>
       <p>Als u de keuzehulp invult, verwerken we de gegevens die u zelf opgeeft: uw naam, e-mailadres, telefoonnummer, het adres of de plaats van de woning, de omschrijving van uw plannen, uw budget en planning, en eventuele foto’s. We slaan ook de datum en de pagina op waarvandaan u de aanvraag deed.</p>
@@ -29,7 +28,7 @@ const c = site.company;
       <p>We gebruiken deze gegevens alleen om uw aanvraag te behandelen: u terugbellen of mailen, een bezoek plannen en een offerte maken. De grondslag is uw toestemming (artikel 6 lid 1 sub a AVG), die u geeft door het vakje onder het formulier aan te vinken, en de voorbereiding van een overeenkomst met u (sub b).</p>
 
       <h2>Met wie we uw gegevens delen</h2>
-      <p>Uw aanvraag wordt automatisch doorgestuurd naar het bouwbedrijf, dat contact met u opneemt en de offerte maakt. Valt uw vraag buiten wat het bouwbedrijf doet (bijvoorbeeld zonnepanelen, airco of een verhuizing), dan sturen we uw aanvraag alleen door naar één andere partner als u daar in het formulier toestemming voor geeft.</p>
+      <p>Uw aanvraag wordt automatisch doorgestuurd naar het bouwbedrijf, dat contact met u opneemt en de offerte maakt. Valt uw vraag buiten wat het bouwbedrijf doet (bijvoorbeeld zonnepanelen of een verhuizing), dan sturen we uw aanvraag alleen door naar één andere partner als u daar in het formulier toestemming voor geeft.</p>
       <p>De aanvragen worden opgeslagen in Google Workspace (Google Sheets en Google Drive) van Axarquía Home. Google verwerkt deze gegevens als verwerker. We verkopen uw gegevens niet en gebruiken ze niet voor nieuwsbrieven zonder uw aparte toestemming.</p>
 
       <h2>Hoelang we gegevens bewaren</h2>
@@ -41,6 +40,7 @@ const c = site.company;
       <h2>Cookies en statistieken</h2>
       <p>Deze website plaatst alleen cookies als u daar in de cookiebanner toestemming voor geeft. We gebruiken Google Search Console en Bing Webmaster Tools om te zien hoe de site in zoekmachines wordt gevonden; daarvoor wordt niets op uw apparaat opgeslagen. Uw keuze in de banner bewaren we in uw browser (localStorage), zodat we het niet bij elke pagina opnieuw vragen.</p>
       <p>Om de website te verbeteren gebruiken we Microsoft Clarity. Clarity laat ons zien hoe bezoekers de pagina’s gebruiken, bijvoorbeeld waar ze klikken en hoe ver ze scrollen, met heatmaps en anonieme opnames van een bezoek. Clarity wordt alleen geladen als u in de cookiebanner op Accepteren klikt. Het plaatst dan cookies van Microsoft (zoals _clck, _clsk en MUID) die maximaal een jaar bewaard blijven. Alles wat u in formulieren typt wordt afgeschermd. Microsoft verwerkt deze gegevens in onze opdracht; zie de <a href="https://privacy.microsoft.com/privacystatement" rel="noopener">privacyverklaring van Microsoft</a>. De grondslag is uw toestemming (artikel 6 lid 1 sub a AVG). U kunt die op elk moment intrekken via Cookie-instellingen onderaan elke pagina.</p>
+      <p>Daarnaast gebruiken we Google Analytics 4 om bezoekersaantallen te meten, bijvoorbeeld hoeveel mensen de site bezoeken, via welke zoekmachine en welke pagina’s ze lezen. Ook Google Analytics wordt alleen geladen als u in de cookiebanner op Accepteren klikt. Het plaatst dan cookies van Google (_ga en _ga_*) die maximaal twee jaar bewaard blijven. IP-adressen worden ingekort en we delen geen gegevens voor advertenties. Google verwerkt deze gegevens in onze opdracht; zie de <a href="https://policies.google.com/privacy" rel="noopener">privacyverklaring van Google</a>. De grondslag is uw toestemming (artikel 6 lid 1 sub a AVG), die u kunt intrekken via Cookie-instellingen onderaan elke pagina.</p>
 
       <h2>Voorwaarden</h2>
       <p>De informatie op deze website is algemeen en met zorg samengesteld, maar geen juridisch, fiscaal of bouwkundig advies voor uw specifieke situatie. Prijzen op de site zijn indicaties; alleen een schriftelijke offerte van het bouwbedrijf is bindend. Voor de uitvoering, garantie en eventuele klachten over werkzaamheden is het bouwbedrijf verantwoordelijk.</p>

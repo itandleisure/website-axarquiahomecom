@@ -1,3 +1,4 @@
+import type { Lang } from '../../i18n';
 // Teksten per plaats en per taal. Elke plaats heeft een eigen bestand in deze map.
 // Schrijf eerst een feitenblad (bronnen staan onderaan elk bestand) en daaruit de teksten,
 // zodat de feiten in alle talen gelijk zijn. HTML in alinea's is toegestaan (links, <em>).
@@ -27,7 +28,7 @@ export interface PlaceText {
   faq?: { q: string; a: string }[];
 }
 
-export type PlaceContent = Partial<Record<'nl' | 'en' | 'de', PlaceText>> & {
+export type PlaceContent = Partial<Record<Lang, PlaceText>> & {
   /** Bronnen van het feitenblad, alleen voor onszelf */
   sources?: string[];
 };

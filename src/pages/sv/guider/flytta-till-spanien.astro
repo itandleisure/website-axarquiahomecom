@@ -1,0 +1,83 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'varfor', label: 'Varför Axarquía och Costa del Sol' },
+  { id: 'vistelse', label: 'Vistelse som EU-medborgare' },
+  { id: 'papper', label: 'NIE, registrering och padrón' },
+  { id: 'sverige', label: 'Det här ordnar du i Sverige' },
+  { id: 'skatt', label: 'Skatt: var är du bosatt?' },
+  { id: 'sjukvard', label: 'Sjukvård och försäkring' },
+  { id: 'boende', label: 'Hitta boende: hyra eller köpa' },
+  { id: 'renovera', label: 'Göra huset klart att bo i' },
+  { id: 'praktiskt', label: 'Praktiskt' },
+];
+
+const faq = [
+  {
+    q: 'Behöver jag visum för att flytta till Spanien?',
+    a: 'Nej. Som EU-medborgare får du bo och arbeta i Spanien. Stannar du längre än tre månader ska du registrera dig i det centrala utlänningsregistret och får då ett Certificado de Registro de Ciudadano de la UE. För norrmän gäller samma regler genom EES-avtalet.',
+  },
+  {
+    q: 'När blir jag skattskyldig i Spanien?',
+    a: 'I regel när du vistas mer än 183 dagar per kalenderår i Spanien eller har ditt ekonomiska centrum där. Då betalar du skatt i Spanien på hela din inkomst. Skatteavtalet mellan Sverige och Spanien avgör vilket land som får beskatta vilken inkomst. Låt en rådgivare som känner båda systemen gå igenom din situation.',
+  },
+  {
+    q: 'Hur fungerar sjukvården om jag flyttar?',
+    a: 'Det beror på din situation. Arbetar du i Spanien omfattas du oftast av det spanska systemet. Har du bara svensk pension kan du hos Försäkringskassan ansöka om intyget S1, som ger tillgång till den offentliga spanska vården. Många tecknar dessutom en privat sjukförsäkring.',
+  },
+  {
+    q: 'Måste jag byta mitt körkort?',
+    a: 'Nej, ett svenskt eller annat EU/EES-körkort gäller fortsatt i Spanien. När det går ut förnyar du det i Spanien som bosatt där.',
+  },
+];
+---
+<Guide lang="sv" slug="flytta-till-spanien" toc={toc} faq={faq} ctaTitle="Hittat ett hus som behöver fixas?" ctaText="Vi besiktigar det före köpet och ger dig ett pris på renoveringen.">
+  <h2 id="varfor">Varför Axarquía och Costa del Sol?</h2>
+  <p>Costa del Sol har i årtionden varit ett av de populäraste målen för svenskar, norrmän, danskar och finländare som vill bo i solen. Den östra delen, Axarquía, är lugnare och billigare än Marbella eller Fuengirola, men ligger lika nära Málagas flygplats. Från Nerja tar det ungefär en timme, från Rincón de la Victoria en halvtimme, och det går direktflyg året runt till bland annat Stockholm, Göteborg, Köpenhamn och Oslo.</p>
+  <p>Trakten har över 300 soldagar om året och milda vintrar: i januari ligger dagstemperaturen ofta på 16 till 18 grader. Bakom kusten reser sig Sierra Tejeda och Almijara med vita byar som Cómpeta och Frigiliana. Vill du bo vid havet tittar du på Nerja, Torre del Mar eller Torrox Costa; söker du lugn och utrymme, en finca i inlandet. I Nerja bor flest svenskar i hela Axarquía.</p>
+
+  <h2 id="vistelse">Vistelse som EU-medborgare</h2>
+  <p>Som EU-medborgare har du rätt att bo, arbeta och starta företag i Spanien. Du behöver inget visum. Stannar du längre än tre månader registrerar du dig i <em>Registro Central de Extranjeros</em>. Då visar du att du arbetar eller har tillräckliga medel och en sjukförsäkring. Du får sedan ett <em>Certificado de Registro de Ciudadano de la UE</em>, ett dokument med ditt NIE-nummer.</p>
+  <p>Norrmän och islänningar omfattas av EES-avtalet och följer samma förfarande.</p>
+
+  <h2 id="papper">NIE, registrering och padrón</h2>
+  <h3>NIE-nummer</h3>
+  <p><em>Número de Identidad de Extranjero</em> (NIE) är ditt skatte- och identifikationsnummer i Spanien. Du behöver det för att köpa hus, öppna bankkonto, registrera en bil och betala skatt. Du kan ansöka på det spanska konsulatet i Sverige eller hos polisen i Spanien. Det kan ta veckor att få en tid (<em>cita previa</em>), så börja i god tid. Många anlitar en gestoría eller advokat för det.</p>
+  <h3>Registrering som EU-medborgare</h3>
+  <p>När du bosätter dig i Spanien ansöker du om det gröna <em>Certificado de Registro</em> hos utlänningsmyndigheten (<em>Oficina de Extranjería</em>) eller polisen. Har du redan ett NIE behåller du samma nummer.</p>
+  <h3>Padrón i kommunen</h3>
+  <p>Du skriver dig också i kommunen där du bor (<em>empadronamiento</em>). Det behövs för vårdcentralen, skolor och lokala tjänster. Det är gratis och går oftast snabbt.</p>
+
+  <h2 id="sverige">Det här ordnar du i Sverige</h2>
+  <ul>
+    <li><strong>Flyttanmälan till Skatteverket</strong> om du ska bo i Spanien minst ett år. Då avregistreras du från folkbokföringen i Sverige.</li>
+    <li><strong>Pensionsmyndigheten och Försäkringskassan</strong>: meddela din nya adress, ansök om S1 om det gäller dig och tänk på att pensionärer utomlands årligen ska skicka in ett levnadsintyg.</li>
+    <li><strong>Skatt</strong>: ta reda på om du blir begränsat skattskyldig i Sverige, till exempel med särskild inkomstskatt för utomlands bosatta (SINK) på pension.</li>
+    <li><strong>Försäkringar, avtal och post</strong>: säg upp eller flytta dem.</li>
+  </ul>
+
+  <h2 id="skatt">Skatt: var är du bosatt?</h2>
+  <p>Bor du mer än 183 dagar om året i Spanien eller har ditt livscentrum där, är du skattemässigt bosatt i Spanien och lämnar en spansk deklaration (<em>IRPF</em>) för hela din inkomst. Skatteavtalet mellan Sverige och Spanien avgör vilket land som beskattar vad. Förenklat: allmän pension och privat tjänstepension beskattas i Spanien, med avräkning för den svenska skatten, medan offentlig tjänstepension (från stat, kommun eller region) beskattas i Sverige. SINK på pension är 22,5 % från 2026. Spanien har dessutom en anmälningsplikt för tillgångar utomlands över vissa belopp (<em>Modelo 720</em>).</p>
+  <p>Stannar du kortare än 183 dagar och behåller din bosättning i Sverige är du icke-resident i Spanien. Då betalar du varje år inkomstskatt för icke-residenter (<em>IRNR</em>) på ditt spanska hus, även om du inte hyr ut det. För EU/EES-medborgare är skattesatsen 19 % på en schablonintäkt. Alla ägare betalar också fastighetsskatt (<em>IBI</em>) till kommunen.</p>
+  <p>Skattereglerna ändras ofta och det handlar om mycket pengar. Låt en rådgivare som känner både det svenska och det spanska systemet gå igenom din situation, och kontrollera med Skatteverket.</p>
+
+  <h2 id="sjukvard">Sjukvård och försäkring</h2>
+  <p>Har du bara svensk pension kan du ofta få intyget <strong>S1</strong> från Försäkringskassan. Det ger dig tillgång till den offentliga spanska vården, medan kostnaden betalas av Sverige. Arbetar du i Spanien omfattas du av den spanska socialförsäkringen. Andra behöver en privat sjukförsäkring; efter ett års bosättning kan du ofta gå med i det offentliga systemet mot en avgift (<em>convenio especial</em>). Vid tillfälliga besök täcker det europeiska sjukförsäkringskortet nödvändig vård.</p>
+  <p>Axarquías sjukhus ligger i Vélez-Málaga, och för specialistvård finns de stora sjukhusen i Málaga. Privata kliniker med engelsktalande läkare finns bland annat i Nerja, Torre del Mar och Málaga.</p>
+
+  <h2 id="boende">Hitta boende: hyra eller köpa</h2>
+  <p>Den som hyr först lär sig i lugn och ro om kusten eller bergen passar bäst, hur trångt det blir på sommaren och hur kallt ett stenhus kan vara i februari. Långtidshyror har blivit få och dyra på populära orter, delvis på grund av korttidsuthyrning. Börja leta i tid.</p>
+  <p>När du köper ska du se förbi bilderna. Många hus i Axarquía är över trettio år gamla och behöver arbete: fukt, gammal el, läckande tak. Med lantställen tillkommer frågor om tillstånd, vatten och tillfartsväg. Läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">kostnader vid köp</a>, och låt <a href="/sv/besiktning/">besiktiga</a> bostaden innan du skriver på.</p>
+
+  <h2 id="renovera">Göra huset klart att bo i</h2>
+  <p>De flesta anpassar sitt nya hem: nytt badrum och kök, isolering och tvåglasfönster för vintern, luftkonditionering för sommaren, ibland en pool. Det gör stor skillnad att arbeta med ett team som håller dig uppdaterad medan du fortfarande är i Sverige. Vi arbetar med ett specificerat fast pris, foton varje vecka och en kontaktperson. Se <a href="/sv/renovering/">renovering</a> och vår guide om <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringskostnader i Spanien</a>.</p>
+
+  <h2 id="praktiskt">Praktiskt</h2>
+  <ul>
+    <li><strong>Pengar</strong>: du behöver ett spanskt bankkonto för skatter och räkningar. Med kronor tänk på valutarisken när du betalar köpeskillingen; en valutatjänst kan ge bättre kurs än banken.</li>
+    <li><strong>Bil</strong>: en svenskregistrerad bil som du använder permanent i Spanien ska registreras om på spanska skyltar när du har bosatt dig. Ofta är det enklare att köpa bil i Spanien.</li>
+    <li><strong>Internet</strong>: vid kusten är fiber vanligt. I bergen finns ibland bara 4G/5G eller satellit; kontrollera det före köpet.</li>
+    <li><strong>Husdjur</strong>: hundar och katter reser med EU-pass för sällskapsdjur, chip och giltig rabiesvaccination.</li>
+  </ul>
+</Guide>

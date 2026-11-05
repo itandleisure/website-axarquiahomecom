@@ -45,17 +45,22 @@ export const site = {
   // Leeg laten om Clarity uit te zetten.
   clarityId: 'z8rraji52s',
   // Google Analytics 4 Measurement ID (G-...). Laadt ook pas na toestemming. Leeg = uit.
-  gaId: '',
+  gaId: 'G-YSBXSHM7SS',
 
+  // Voorbeelden van plaatsen in het werkgebied: de hele Axarquía, niet gebonden aan één bouwbedrijf.
   villages: [
     'Nerja',
-    'Cómpeta',
     'Frigiliana',
     'Torrox',
+    'Cómpeta',
     'Torre del Mar',
     'Vélez-Málaga',
     'Rincón de la Victoria',
     'Algarrobo',
+    'Viñuela',
+    'Comares',
+    'Canillas de Aceituno',
+    'Periana',
   ],
 };
 
@@ -91,3 +96,9 @@ export const dePrice = (s: string) =>
   s.startsWith(TODO)
     ? s
     : s.replace(/€ ([\d.]+)/g, '$1 €').replace(' per jaar', ' pro Jahr').replace(' per maand', ' pro Monat');
+
+/** Prijs in Zweedse notatie: "€ 20.000" wordt "20 000 €". */
+export const svPrice = (s: string) =>
+  s.startsWith(TODO)
+    ? s
+    : s.replace(/€ ([\d.]+)/g, (_, n: string) => `${n.replace(/\./g, ' ')} €`).replace(' per jaar', ' per år').replace(' per maand', ' per månad');

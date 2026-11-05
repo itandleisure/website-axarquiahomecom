@@ -239,3 +239,4 @@ a.card:hover { transform: translateY(-2px); border-color: var(--terra); color: v
 .cookie-actions .btn { padding: 0.55em 1.2em; }
 .link-btn { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
 .site-footer .link-btn { color: #f1e9df; text-decoration: none; text-align: left; } .site-footer .link-btn:hover { color: var(--sun); }
+.footer-note { font-size: 0.85rem; opacity: 0.8; margin-top: 0.6em; }

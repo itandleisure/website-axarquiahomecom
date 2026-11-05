@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Wizard from '../../components/Wizard.astro';
+---
+<Base
+  title="Gratis förfrågan: berätta vad du har för planer"
+  description="Gör en gratis förfrågan på två minuter: renovering, tillsyn, besiktning före köp, pool eller underhåll i Axarquía. Svar inom 24 timmar."
+  path="/sv/forfragan/"
+  lang="sv"
+>
+  <Breadcrumbs lang="sv" items={[{ name: 'Förfrågan', href: '/sv/forfragan/' }]} />
+  <section class="section" style="padding-top:28px">
+    <div class="wrap">
+      <h1>Din gratis förfrågan</h1>
+      <p class="lead" style="margin-bottom:28px">Sex korta frågor, ungefär två minuter. Inom 24 timmar hör vi av oss, på engelska eller nederländska. Du får gärna fylla i formuläret på svenska.</p>
+      <Wizard lang="sv" />
+    </div>
+  </section>
+</Base>

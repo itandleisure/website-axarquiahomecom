@@ -198,5 +198,67 @@ const content: PlaceContent = {
       { q: 'Leben viele Ausländer in Cómpeta?', a: 'Ja, fast die Hälfte der Einwohner hat eine ausländische Staatsangehörigkeit, darunter Briten, Niederländer, Belgier und Deutsche.' },
     ],
   },
+  sv: {
+    title: 'Cómpeta: bo och köpa i Axarquías bergsby',
+    description: 'Allt om Cómpeta: den vita bergsbyn på 640 meter, den stora internationella gemenskapen, Noche del Vino, bostadspriser och vad köp och renovering i bergen innebär.',
+    lead: 'På 640 meters höjd, vid foten av Sierra Almijara, ligger Cómpeta: en vit bergsby med vinodlingar, utsikt ner till havet och nästan hälften av invånarna från utlandet.',
+    intro: [
+      'Cómpeta ligger högt upp i östra Axarquía, mot bergen i naturparken Sierras de Tejeda, Almijara y Alhama. Från byn ser du ut över kullar med vinrankor och olivträd ända ner till havet. Kusten vid Torrox och Algarrobo når du på cirka en halvtimme längs en slingrig väg.',
+      'Byn har cirka 3 800 invånare, och nästan hälften har utländskt medborgarskap, en av de högsta andelarna i provinsen. Britter, nederländare, belgare, tyskar och skandinaver bor här året runt, vilket ger byn ett livligt socialt liv.',
+      'Hjärtat är Plaza Almijara med kyrkan Asunción och dess höga mudéjartorn. Trakten är känd för moscatelvin och russin.',
+    ],
+    facts: [
+      ['Invånare', 'cirka 3 800 (2025)'],
+      ['Utländska invånare', 'nästan hälften'],
+      ['Läge', 'berg, cirka 640 m'],
+      ['Till kusten', 'cirka 30 minuter'],
+      ['Málaga (flygplats)', 'cirka en timme med bil'],
+      ['Prisnivå', 'medel, under kusten'],
+    ],
+    forWhom: 'För dig som söker lugn, natur och utsikt och inte har något emot att köra en halvtimme till stranden. Cómpeta lockar dem som bor här året runt: allt finns nära i byn och det finns en stor internationell gemenskap.',
+    see: {
+      title: 'Se och göra i Cómpeta: vin, berg och Noche del Vino',
+      description: 'Vad du kan göra i Cómpeta: Plaza Almijara, vandra upp på La Maroma och i Sierra Almijara, vingårdarna och Noche del Vino den 15 augusti.',
+      lead: 'Cómpeta är en bas för bergen, och en plats där du sätter dig på torget med ett glas av det lokala söta vinet.',
+      items: [
+        { name: 'Plaza Almijara och kyrkan', text: 'Torget framför 1500-talskyrkan Nuestra Señora de la Asunción, med sitt slanka torn i mudéjarstil, är byns hjärta, omgivet av uteserveringar och smala vita gränder.' },
+        { name: 'Vin och russin', text: 'Runt Cómpeta odlas moscateldruvor för sött vin och russin. I och runt byn kan du provsmaka och köpa på små vingårdar.' },
+        { name: 'La Maroma', text: 'Traktens högsta topp, 2 065 meter, kan bestigas från trakten kring Cómpeta och Canillas de Albaida. Det är en lång och tung vandring; ta med gott om vatten och undvik sommarhettan.' },
+        { name: 'Vandra i Sierra Almijara', text: 'Många stigar går från byn upp i bergen, bland annat till Puerto de Cómpeta och mot Canillas de Albaida och Árchez.' },
+      ],
+      fiestas: [
+        { name: 'Cruces de Mayo', when: '3 maj', text: 'med kors av blommor runt om i byn.' },
+        { name: 'Sommarferian', when: 'juli', text: 'byns feria.' },
+        { name: 'Noche del Vino', when: '15 augusti', text: 'den stora vinfesten sedan 1973, med gratis vin, flamenco och traditionell druvtrampning på torget.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Cómpeta: byhus, villor, fincor och priser',
+      description: 'Köpa hus i Cómpeta? Vilka bostäder som finns, vad de kostar, service i byn och vad du ska tänka på med hus i bergen.',
+      lead: 'I Cómpeta får du mer utrymme för pengarna än vid kusten. Det du ska väga in: körtiden, vintrarna på höjd och skicket på äldre hus.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'I byn traditionella byhus, ofta med takterrass och utsikt. I utkanterna och på sluttningarna villor med pool. På landsbygden fincor och <em>cortijos</em> med vinrankor, olivträd och ibland en egen vattenkälla.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 2 000 € per m² för lägenheter och 2 500 € per m² för hus (RealAdvisor), klart under <a href="/sv/orter/nerja/">Nerja</a> och <a href="/sv/orter/frigiliana/">Frigiliana</a>. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a> och en renoveringsbudget.',
+        ] },
+        { h: 'Service', p: [
+          'Cómpeta har vårdcentral, apotek, livsmedelsbutiker, banker, en grundskola och gott om restauranger. För gymnasium, stora stormarknader och sjukhuset åker du till Torrox, Torre del Mar eller Vélez-Málaga.',
+        ] },
+        { h: 'Se upp i bergen', p: [
+          'På 640 meters höjd kan vintrarna vara kalla och fuktiga; god isolering och uppvärmning är ingen lyx. För fincor utanför byn är tillfartsvägen, vatten och el och husets rättsliga status det viktigaste. Läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+        ] },
+        { h: 'Renovera i Cómpeta', p: [
+          'Många hus i och runt Cómpeta är gamla och har byggts ut steg för steg genom åren. Typiska jobb är att täta tak och terrasser, åtgärda fuktiga väggar, isolera och installera värme. Byns gränder är smala, vilket gör leveranser svårare. Låt <a href="/sv/besiktning/">besiktiga</a> huset före köpet.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Hur långt är det från Cómpeta till stranden?', a: 'Cirka en halvtimme längs en slingrig bergsväg till kusten vid Torrox Costa eller Algarrobo Costa.' },
+      { q: 'Är det kallt i Cómpeta på vintern?', a: 'Dagarna är oftast soliga och milda, men nätterna på 640 meter kan bli kyliga. God isolering och uppvärmning behövs.' },
+      { q: 'Bor det många utlänningar i Cómpeta?', a: 'Ja, nästan hälften av invånarna har utländskt medborgarskap, bland annat britter, nederländare, belgare, tyskar och skandinaver.' },
+    ],
+  },
 };
 export default content;

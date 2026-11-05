@@ -131,6 +131,48 @@ const content: PlaceContent = {
         "a": "Ja, vor allem Wohnungen und Reihenhäuser. Bei einem Neubau ist eine Abnahmeprüfung sinnvoll; siehe <a href=\"/de/immobiliengutachten/\">Gutachten</a>."
       }
     ]
+  },
+  "sv": {
+    "title": "La Cala del Moral: vid havet, en kvart från Málaga",
+    "description": "Allt om La Cala del Moral: stranden, Cueva del Tesoro, läget nära Málaga, bostäder och vad du ska veta om köp och renovering.",
+    "lead": "La Cala del Moral är den första kustorten i Axarquía när du kommer från Málaga: en strand, en strandpromenad och storstaden tio minuter bort.",
+    "intro": [
+      "La Cala del Moral hör till kommunen <a href=\"/sv/orter/rincon-de-la-victoria/\">Rincón de la Victoria</a>. Stranden är drygt en kilometer lång och fortsätter längs strandpromenaden till Rincón. I La Cala ligger också Cueva del Tesoro, en grotta som havet har format.",
+      "Många invånare arbetar i Málaga. Det byggs mycket nytt, främst lägenheter och radhus på sluttningarna med havsutsikt."
+    ],
+    "facts": [
+      [
+        "Kommun",
+        "Rincón de la Victoria"
+      ],
+      [
+        "Läge",
+        "kust, kullar bakom"
+      ],
+      [
+        "Málaga centrum",
+        "cirka 10 kilometer"
+      ],
+      [
+        "Málaga (flygplats)",
+        "cirka 20 minuter"
+      ],
+      [
+        "Prisnivå",
+        "medel till hög"
+      ]
+    ],
+    "forWhom": "För dig som vill bo vid havet och behöver vara i Málaga dagligen eller ofta, eller som flyger mycket.",
+    "faq": [
+      {
+        "q": "Hör La Cala del Moral till Málaga?",
+        "a": "Nej, den hör till Rincón de la Victoria och därmed till Axarquía."
+      },
+      {
+        "q": "Byggs det nytt i La Cala?",
+        "a": "Ja, främst lägenheter och radhus. Vid nyproduktion är en besiktning vid tillträdet klok; se <a href=\"/sv/besiktning/\">besiktning</a>."
+      }
+    ]
   }
 };
 export default content;

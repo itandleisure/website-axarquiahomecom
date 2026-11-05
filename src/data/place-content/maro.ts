@@ -124,6 +124,45 @@ const content: PlaceContent = {
         "a": "Nur begrenzt. Wegen des Naturschutzes und der Flächenwidmung ist ein Anbau oft nicht oder nur teilweise möglich. Lassen Sie das vor dem Kauf prüfen."
       }
     ]
+  },
+  "sv": {
+    "title": "Maro: bo i den lugnaste kustbyn vid Nerja",
+    "description": "Allt om Maro vid Nerja: klipporna vid Maro-Cerro Gordo, Cueva de Nerja, vikarna, det begränsade bostadsutbudet och vad du ska veta om köp och renovering.",
+    "lead": "Maro är en liten vit by på en platå ovanför havet, fyra kilometer öster om Nerja, omgiven av gamla sockerrörsterrasser, avokadoträd och skyddade klippor.",
+    "intro": [
+      "Maro hör till kommunen <a href=\"/sv/orter/nerja/\">Nerja</a>. Byn har bara några hundra invånare och är påfallande lugn, samtidigt som Nerjas centrum ligger fem minuter bort med bil. Alldeles intill byn ligger Cueva de Nerja, den kända droppstensgrottan.",
+      "Kusten vid Maro ingår i naturskyddsområdet Acantilados de Maro-Cerro Gordo: branta klippor, små vikar med klart vatten och en av de vackraste kuststräckorna i Andalusien. Strax utanför byn står akvedukten Puente del Águila från 1800-talet.",
+      "På grund av skyddet byggs nästan inget nytt. Hus kommer sällan ut till försäljning och är eftertraktade."
+    ],
+    "facts": [
+      [
+        "Kommun",
+        "Nerja"
+      ],
+      [
+        "Läge",
+        "kust, på en platå ovanför havet"
+      ],
+      [
+        "Nerja centrum",
+        "cirka 4 km"
+      ],
+      [
+        "Bostadsutbud",
+        "litet, stor efterfrågan"
+      ]
+    ],
+    "forWhom": "För dig som söker lugn och natur, nära servicen i Nerja. Ett hus i Maro är sällsynt; den som hittar ett köper oftast ett byhus eller ett hus på landet på terrasserna runt omkring.",
+    "faq": [
+      {
+        "q": "Hör Maro till Nerja?",
+        "a": "Ja, Maro är en del av kommunen Nerja, cirka fyra kilometer öster om centrum."
+      },
+      {
+        "q": "Kan man renovera eller bygga ut i Maro?",
+        "a": "Bara i begränsad omfattning. På grund av naturskyddet och markens användning går det ofta inte att bygga ut, eller bara delvis. Låt utreda det före köpet."
+      }
+    ]
   }
 };
 export default content;

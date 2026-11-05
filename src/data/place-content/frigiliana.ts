@@ -204,5 +204,69 @@ const content: PlaceContent = {
       { q: 'Ist Frigiliana überlaufen?', a: 'Tagsüber, vor allem im Sommer, kommen viele Tagesgäste. Abends und außerhalb der Hochsaison ist es ein ruhiges Dorf mit einer festen internationalen Gemeinschaft.' },
     ],
   },
+  sv: {
+    title: 'Frigiliana: bo och köpa i Axarquías mest kända vita by',
+    description: 'Allt om Frigiliana: det moriska kvarteret, läget ovanför Nerja, bostadspriser, byhus och fincor och vad du ska veta om köp och renovering.',
+    lead: 'Vita hus på en brant sluttning, kullerstensgränder med blomkrukor och havet sex kilometer bort. Frigiliana är byn på Axarquías vykort.',
+    intro: [
+      'Frigiliana ligger på cirka 300 meters höjd i utkanten av naturparken Sierras de Tejeda, Almijara y Alhama, sex kilometer inåt landet från <a href="/sv/orter/nerja/">Nerja</a>. Den gamla delen, det moriska eller mudéjarkvarteret, består av branta trappgränder dit ingen bil kommer. Kakelplattor på husväggarna berättar historien om moriskernas uppror och slaget vid Peñón de Frigiliana 1569.',
+      'Byn har drygt 3 300 invånare, och ungefär en tredjedel har utländskt medborgarskap. Det ger en livlig internationell gemenskap, med restauranger och affärer som är öppna året runt. På dagen kommer många besökare; på kvällen och utanför säsongen är det en lugn by.',
+      'Runt byn ligger villor på sluttningarna och fincor på landsbygden (<em>campo</em>), ofta med utsikt ända ner till havet.',
+    ],
+    facts: [
+      ['Invånare', 'drygt 3 300 (2025)'],
+      ['Utländska invånare', 'cirka en tredjedel'],
+      ['Läge', 'kullar, cirka 300 m'],
+      ['Nerja och stranden', '6 km, cirka 10 minuter'],
+      ['Málaga (flygplats)', 'drygt en timme med bil'],
+      ['Prisnivå', 'hög, näst dyrast efter Nerja'],
+    ],
+    forWhom: 'För dig som söker en riktig andalusisk by, med havet och Nerjas service nära. Ett byhus i gamla kvarteret passar om du älskar stämning och inte behöver bilen utanför dörren; vill du ha utrymme och pool tittar du på villorna och fincorna runt byn.',
+    see: {
+      title: 'Se och göra i Frigiliana: moriska kvarteret, fiestor och vandringar',
+      description: 'Vad du kan göra i Frigiliana: mudéjarkvarteret, El Ingenio, festivalen 3 Culturas, vandringar i naturparken och en tur till El Acebuchal.',
+      lead: 'Frigiliana är litet men fyller lätt en dag: först gamla kvarteret, sedan en uteservering och därefter upp i bergen.',
+      items: [
+        { name: 'Mudéjarkvarteret', text: 'Det gamla moriska kvarteret med branta, vitkalkade gränder och trappor, prydda med blomkrukor. Följ kakeltavlorna på husväggarna: tillsammans berättar de historien om upproret 1569.' },
+        { name: 'El Ingenio', text: 'Grevarna av Frigilianas palats från 1500-talet vid infarten till byn. Senare tillverkades här sockerrörssirap (<em>miel de caña</em>), en produkt som hör till trakten.' },
+        { name: 'Kyrkan San Antonio och Fuente Vieja', text: 'Kyrkan från 1676 och den gamla fontänen från 1600-talet är två självklara stopp på en promenad genom byn.' },
+        { name: 'Castillo de Lízar', text: 'Ovanför byn ligger resterna av den moriska borgen, som förstördes efter upproret 1569. Utsikten över byn och kusten är värd klättringen.' },
+        { name: 'Vandring i naturparken', text: 'Från Frigiliana går stigar in i naturparken, bland annat längs Río Higuerón och till El Acebuchal, en by i bergen som byggts upp igen efter år av övergivenhet och är ett populärt mål för vandrare.' },
+      ],
+      fiestas: [
+        { name: 'San Sebastián', when: '20 januari', text: 'skyddshelgonets dag.' },
+        { name: 'Día de la Cruz', when: '3 maj', text: 'med kors av blommor i gränderna.' },
+        { name: 'San Antonio', when: 'kring 13 juni', text: 'byns feria, med en romería.' },
+        { name: 'Festival Frigiliana 3 Culturas', when: 'slutet av augusti', text: 'musik, marknader och mat kring byns judiska, muslimska och kristna historia.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Frigiliana: byhus, villor, fincor och priser',
+      description: 'Köpa hus i Frigiliana? Vilka bostäder som finns, vad de kostar, vad du ska tänka på i gamla kvarteret och på landsbygden, och vad renovering innebär här.',
+      lead: 'Efter Nerja är Frigiliana den dyraste orten i Axarquía. Det du får: stämning, utsikt och havet nära. Det du ska se upp med: åtkomst och tillstånd.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'I gamla kvarteret smala, höga byhus med tjocka murar och takterrass, ofta bara nåbara till fots. I byns utkanter nyare hus och lägenheter med parkering. På sluttningarna runt omkring villor med pool och på landsbygden fincor med mark, oliv- och avokadoträd.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 3 800 € per m² för lägenheter och 3 900 € per m² för hus (RealAdvisor). Ett renoverat byhus med takterrass och havsutsikt kostar snabbt mer än genomsnittet. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a> och, för äldre hus, en renoveringsbudget.',
+        ] },
+        { h: 'Service', p: [
+          'I byn finns vårdcentral, apotek, små livsmedelsbutiker, banker, en grundskola och många restauranger. För större inköp, gymnasium och specialister åker du till Nerja (tio minuter) eller till Vélez-Málaga och Torre del Mar.',
+        ] },
+        { h: 'Se upp på landsbygden', p: [
+          'Många fincor runt Frigiliana har byggts ut genom åren utan tillstånd. Kontrollera husets status, tillfartsvägen och vattenkällan när du köper. Läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+        ] },
+        { h: 'Renovera i Frigiliana', p: [
+          'I gamla kvarteret är allt handarbete: material bärs in med små vagnar eller på axeln, och en container utanför dörren går ofta inte. Det gör en renovering här dyrare och långsammare än vid kusten. Gamla byhus har ofta fukt i väggarna, träbjälkar som måste bytas och tak eller terrasser som läcker. Låt <a href="/sv/besiktning/">besiktiga</a> bostaden före köpet.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Kan man köra bil in i gamla Frigiliana?', a: 'Inte in i mudéjarkvarteret: gränderna är för branta och smala. De boende parkerar i garagen och på parkeringarna i utkanten av den gamla byn.' },
+      { q: 'Hur långt är det från Frigiliana till stranden?', a: 'Ungefär sex kilometer, cirka tio minuter med bil till Nerjas stränder. Det går också buss mellan Frigiliana och Nerja.' },
+      { q: 'Är det mycket folk i Frigiliana?', a: 'På dagen, särskilt på sommaren, kommer många dagsbesökare. På kvällen och utanför högsäsong är det en lugn by med en fast internationell gemenskap.' },
+    ],
+  },
 };
 export default content;

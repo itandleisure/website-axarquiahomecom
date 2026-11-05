@@ -1,0 +1,110 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site, svPrice } from '../../data/site';
+
+const p = prices.sleutelbeheer;
+const packages = [
+  { name: 'Bas', price: svPrice(p.basis), items: ['Kontroll varannan vecka', 'Öppna fönster och vädra', 'Koll på läckor, fukt och inbrott', 'Kort rapport med foton', 'Säker förvaring av nycklar'] },
+  { name: 'Plus', price: svPrice(p.plus), featured: true, items: ['Allt i Bas, men varje vecka', 'Extra kontroll efter storm eller skyfall', 'Hämta och vidarebefordra post', 'Förbereda huset inför din ankomst', 'Små reparationer åtgärdas direkt'] },
+  { name: 'Komplett', price: svPrice(p.compleet), items: ['Allt i Plus', 'Pool- och trädgårdsskötsel', 'Släppa in hantverkare och leveranser', 'Städning före och efter din vistelse', 'Fast kontaktperson via WhatsApp'] },
+];
+
+const faq = [
+  {
+    q: 'Vad är tillsyn?',
+    a: 'Vi förvarar en nyckel till ditt hus och kontrollerar det regelbundet medan du är borta. Vi letar efter läckor, fukt, strömavbrott och inbrott, vädrar huset och skickar en kort rapport med foton. Om det finns ett problem åtgärdar vi det direkt efter att ha stämt av med dig.',
+  },
+  {
+    q: 'Vad kostar tillsyn av hus i Spanien?',
+    a: 'Ett enkelt paket med kontroll varannan vecka kostar oftast några tiotals euro i månaden. Större paket med trädgård, pool och städning kostar mer. Våra paket ser du ovan; reparationer och städning utanför paketet debiteras bara separat efter ditt godkännande.',
+  },
+  {
+    q: 'Är min nyckel säker?',
+    a: 'Nycklarna förvaras kodade, utan adress, i ett låst kassaskåp. Bara fast personal har tillgång, och varje besök loggas.',
+  },
+  {
+    q: 'Vad händer om något går sönder?',
+    a: 'Småsaker åtgärdar vi direkt, och kostnaden syns på månadsfakturan. Vid större reparationer skickar vi först foton och ett pris. Eftersom vi också är ett byggföretag behöver du inte leta efter hantverkare.',
+  },
+  {
+    q: 'Kan jag säga upp tjänsten månadsvis?',
+    a: 'Ja, tillsynen kan sägas upp per månad. Många ägare använder den bara de månader de är i Sverige.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Tillsyn och nyckelservice',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en', 'es'],
+};
+---
+<Base
+  title="Tillsyn av hus i Spanien: ditt hus i Axarquía kontrolleras när du är borta"
+  description="Tillsyn och nyckelservice i Nerja, Torrox, Frigiliana, Cómpeta och hela Axarquía. Regelbundna kontroller, fotorapporter och snabb hjälp efter storm eller vattenskada. Uppsägning per månad."
+  path="/sv/tillsyn/"
+  lang="sv"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="sv" items={[{ name: 'Tillsyn', href: '/sv/tillsyn/' }]} />
+  <Hero
+    lang="sv"
+    eyebrow="Tillsyn och nyckelservice"
+    title="Åk hem <em>med lugnt sinne</em>"
+    lead="Ditt hus i Spanien står tomt en stor del av året. Vi håller koll på det, skickar foton och ingriper om något inte stämmer, innan en liten läcka blir en stor reparation."
+    cta="Begär tillsyn"
+    ctaHref="/sv/forfragan/?dienst=sleutelbeheer"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Våra paket</h2>
+      <p class="section-intro">Välj det som passar dig. Alla paket kan sägas upp per månad och kan begränsas till de månader du inte är där.</p>
+      <Todo label="pakketten en maandprijzen van het bouwbedrijf (de inhoud hieronder is een voorstel)." />
+      <div class="packages">
+        {packages.map((pk) => (
+          <div class={`package${pk.featured ? ' featured' : ''}`}>
+            <h3>{pk.name}</h3>
+            <p class="price">{pk.price}</p>
+            <ul class="checks">{pk.items.map((i) => <li>{i}</li>)}</ul>
+            <a class={`btn${pk.featured ? '' : ' btn-ghost'}`} href={`/sv/forfragan/?dienst=sleutelbeheer&pakket=${pk.name.toLowerCase()}`}>Välj {pk.name}</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>Varför tillsyn är viktigt i Axarquía</h2>
+        <p>Ett tomt hus på Costa del Sol har det inte lätt. På vintern ger regnet läckor och fukt, på sommaren ställer värmen till problem med pool, trädgård och tak. Efter en storm ligger grenar på terrassen, eller ett strömavbrott får frysen att tina.</p>
+        <p>Om ingen är på plats märker du det först när du kommer tillbaka. Med tillsyn ser vi det inom en till två veckor, efter oväder ofta tidigare.</p>
+        <h2>Mer än bara en nyckel</h2>
+        <p>Eftersom vi också är byggföretaget kan vi åtgärda problem direkt. Du behöver inte leta efter en rörmokare som förstår dig eller ta in tre offerter på distans. Du får foton och ett pris, och efter ditt godkännande blir det fixat.</p>
+      </div>
+      <div class="box">
+        <h3>Det här får du efter varje besök</h3>
+        <ul class="checks">
+          <li>Datum och tid för besöket</li>
+          <li>Foton av varje rum och utomhus</li>
+          <li>Mätarställning för vatten och el</li>
+          <li>Vad vi har sett och vad vi har gjort</li>
+          <li>Råd om något behöver göras</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="sv" />
+  <Cta lang="sv" dienst="sleutelbeheer" title="Ditt hus i goda händer medan du är borta" />
+  <Services lang="sv" exclude="tillsyn" title="Det här kan också vara intressant" />
+</Base>

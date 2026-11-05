@@ -1,0 +1,79 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'region', label: 'Var ligger Axarquía?' },
+  { id: 'orter', label: 'Orterna jämförda' },
+  { id: 'klimat', label: 'Klimat och årstider' },
+  { id: 'kostnader', label: 'Levnadskostnader' },
+  { id: 'sjukvard', label: 'Sjukvård och service' },
+  { id: 'resor', label: 'Resor' },
+  { id: 'hus', label: 'Vilka hus som finns' },
+];
+
+const faq = [
+  {
+    q: 'Vilken är den vackraste byn i Axarquía?',
+    a: 'Det beror på vad du söker. Frigiliana brukar kallas den vackraste vita byn, Cómpeta är populär bland utlänningar för stämningen och bergen, och Nerja kombinerar stränder med all service. Besök orterna under olika årstider innan du bestämmer dig.',
+  },
+  {
+    q: 'Är Axarquía billigare än resten av Costa del Sol?',
+    a: 'I allmänhet ja. Hus i Torre del Mar, Torrox eller bergsbyarna kostar mindre per m² än i Marbella, Estepona eller Benalmádena. Nerja och de populäraste lägena i Frigiliana har dock blivit betydligt dyrare.',
+  },
+  {
+    q: 'Hur är vattensituationen efter torkan?',
+    a: 'Axarquía hade en svår torka mellan 2023 och början av 2026 med vattenrestriktioner. De hävdes i mars 2026 efter en blöt vinter. Kranvattnet vid kusten och i byarna är pålitligt; för fincor i inlandet bör vattenförsörjningen kontrolleras noga.',
+  },
+];
+
+const orter = [
+  { n: 'Nerja', t: 'Kust', d: 'Livlig badort med stränder, Balcón de Europa och all service. Den ort i Axarquía där flest svenskar bor. Den dyraste orten i Axarquía.' },
+  { n: 'Frigiliana', t: 'By i kullarna, 6 km från havet', d: 'Vit by på en sluttning med branta gränder och havsutsikt. Många utländska invånare och dagsbesökare.' },
+  { n: 'Cómpeta', t: 'Bergsby, 650 m över havet', d: 'Livlig by med stor internationell gemenskap, svalare på sommaren och många fincor runt omkring. Känd för sitt söta vin.' },
+  { n: 'Torrox', t: 'Kust och by', d: 'Torrox Costa vid havet med lägenheter och lång strandpromenad, och Torrox Pueblo, en vit by en bit in i landet. Stor nordeuropeisk gemenskap.' },
+  { n: 'Torre del Mar', t: 'Kust', d: 'Avslappnad badort med lång strandpromenad, populär bland spanska semesterfirare. Bra värde för pengarna.' },
+  { n: 'Vélez-Málaga', t: 'Regionens huvudort', d: 'En riktig spansk stad med sjukhus, marknad och affärer. Få turister, men allt du behöver.' },
+  { n: 'Rincón de la Victoria', t: 'Kust, nära Málaga', d: 'Nära staden, perfekt om du ofta åker till Málaga eller flygplatsen. Många spanska familjer.' },
+  { n: 'Algarrobo', t: 'Kust och by', d: 'Litet och lugnt, med Algarrobo Costa vid havet och Mezquitilla. Prisvärt och genuint.' },
+];
+---
+<Guide lang="sv" slug="bo-i-axarquia" toc={toc} faq={faq} ctaTitle="Har du ett hus i Axarquía i sikte?" ctaText="Vi känner varje ort och varje byggsätt. Låt besiktiga huset eller be om ett pris på renoveringen.">
+  <h2 id="region">Var ligger Axarquía?</h2>
+  <p>Axarquía är den östra delen av provinsen Málaga, mellan staden Málaga och gränsen mot Granada. Den sträcker sig från kusten vid Rincón de la Victoria och Nerja upp i bergen Sierra Tejeda och Almijara, som når över 2 000 meter. Den består av 31 kommuner, från badorter till små bergsbyar med några hundra invånare.</p>
+  <p>Landskapet är grönt för att vara Andalusien: på sluttningarna växer avokado, mango, oliver och vin. Det traditionella spanska bylivet lever fortfarande, sida vid sida med en stor internationell gemenskap.</p>
+
+  <h2 id="orter">Orterna jämförda</h2>
+  <div class="cards" style="margin-bottom:1.5em">
+    {orter.map((d) => (
+      <div class="card">
+        <h3>{d.n}</h3>
+        <p class="note" style="margin-top:-0.4em">{d.t}</p>
+        <p>{d.d}</p>
+      </div>
+    ))}
+  </div>
+  <p>Alla orter hittar du på <a href="/sv/orter/">Orter i Axarquía</a>.</p>
+
+  <h2 id="klimat">Klimat och årstider</h2>
+  <p>Axarquía har ett av Europas mildaste klimat. Bergen skyddar mot kalla nordliga vindar. På vintern ligger dagstemperaturen vid kusten oftast på 15 till 19 grader, på natten runt åtta grader. I bergsbyarna är det några grader svalare, och ett oisolerat stenhus kan kännas kallt. I juli och augusti når kusten runt 30 grader; ibland blåser den heta <em>terral</em>-vinden från inlandet och driver upp temperaturen rejält under några dagar.</p>
+  <p>Regnet faller mest mellan oktober och april, ibland i korta, kraftiga skurar. Det är då läckor i tak och terrasser visar sig.</p>
+
+  <h2 id="kostnader">Levnadskostnader</h2>
+  <p>Mat, restaurangbesök och tjänster är märkbart billigare i Axarquía än i Sverige. En dagens rätt (<em>menú del día</em>) kostar ofta fortfarande 12 till 15 € i en by. Energi är ungefär lika dyrt eller något billigare, men luftkonditioneringen kan höja räkningen på sommaren. Hyrorna har stigit kraftigt de senaste åren på grund av efterfrågan från utländska köpare och korttidsuthyrning.</p>
+  <p>Som ägare har du fasta kostnader som fastighetsskatt (IBI), sophämtning, försäkring och, för lägenheter, avgift till samfälligheten. Icke-residenter betalar dessutom en årlig inkomstskatt för icke-residenter. En översikt finns i vår guide om <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">kostnader vid husköp</a>.</p>
+
+  <h2 id="sjukvard">Sjukvård och service</h2>
+  <p>Varje större ort har en vårdcentral (<em>centro de salud</em>). Regionens sjukhus ligger i Vélez-Málaga, och för specialistvård åker du till sjukhusen i Málaga. Det finns också privata kliniker med engelsktalande läkare, till exempel i Nerja, Torre del Mar och Málaga. Stormarknader, byggvaruhus och större affärer finns i Vélez-Málaga, Torre del Mar och Nerja.</p>
+
+  <h2 id="resor">Resor</h2>
+  <p>Motorvägen A-7 går längs kusten och förbinder Axarquía med Málaga och Granada. Från Torre del Mar tar det cirka 40 minuter till Málagas flygplats, från Nerja en timme och från Cómpeta drygt en timme. Málaga har direktflyg året runt till bland annat Stockholm, Göteborg, Köpenhamn och Oslo. Kollektivtrafiken består av bussar; för bergsbyarna behöver du bil.</p>
+
+  <h2 id="hus">Vilka hus som finns</h2>
+  <ul>
+    <li><strong>Lägenheter vid kusten</strong>, ofta från 1970- till 1990-talet, med gemensam pool.</li>
+    <li><strong>Byhus</strong> i de vita byarna: smala och höga, med tjocka murar, en takterrass och ibland knappt nåbara med bil.</li>
+    <li><strong>Villor</strong> på sluttningarna ovanför kusten, med trädgård och pool.</li>
+    <li><strong>Fincor och cortijos</strong> i inlandet, med mark, oliv- eller avokadoträd och ibland utan anslutning till elnätet. Läs vår guide om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> först.</li>
+  </ul>
+  <p>De flesta hus är över trettio år gamla. Räkna med arbeten på badrum, kök, el eller tak när du köper. Vi hjälper till i hela regionen med <a href="/sv/besiktning/">besiktning</a>, <a href="/sv/renovering/">renovering</a> och <a href="/sv/tillsyn/">tillsyn</a>.</p>
+</Guide>

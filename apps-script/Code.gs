@@ -132,7 +132,11 @@ function mailKlant_(d) {
     },
     de: {
       subject: 'Wir haben Ihre Anfrage erhalten',
-      body: `<p>Guten Tag ${esc_(d.naam)},</p><p>vielen Dank für Ihre Anfrage. Innerhalb von 24 Stunden meldet sich jemand aus unserem Team bei Ihnen, um den nächsten Schritt zu besprechen.</p><p>Mit freundlichen Grüßen<br>Axarquía Home</p>`,
+      body: `<p>Guten Tag ${esc_(d.naam)},</p><p>vielen Dank für Ihre Anfrage. Innerhalb von 24 Stunden meldet sich jemand aus unserem Team bei Ihnen, um den nächsten Schritt zu besprechen. Wir antworten auf Englisch oder Niederländisch.</p><p>Mit freundlichen Grüßen<br>Axarquía Home</p>`,
+    },
+    sv: {
+      subject: 'Vi har tagit emot din förfrågan',
+      body: `<p>Hej ${esc_(d.naam)},</p><p>Tack för din förfrågan. Inom 24 timmar hör någon från vårt team av sig för att gå igenom nästa steg. Vi svarar på engelska eller nederländska.</p><p>Vänliga hälsningar<br>Axarquía Home</p>`,
     },
   };
   const m = teksten[d.taal] || teksten.nl;

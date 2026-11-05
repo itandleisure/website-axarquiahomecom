@@ -66,10 +66,10 @@ export const places: Place[] = [
 
 export type PlacePage = 'overview' | 'see' | 'living';
 export const placeSub: Record<Exclude<PlacePage, 'overview'>, Record<Lang, string>> = {
-  see: { nl: 'zien-en-doen', en: 'things-to-do', de: 'sehenswuerdigkeiten' },
-  living: { nl: 'wonen', en: 'living', de: 'wohnen' },
+  see: { nl: 'zien-en-doen', en: 'things-to-do', de: 'sehenswuerdigkeiten', sv: 'se-och-gora' },
+  living: { nl: 'wonen', en: 'living', de: 'wohnen', sv: 'bo' },
 };
-export const placeBase: Record<Lang, string> = { nl: '/nl/plaatsen/', en: '/en/places/', de: '/de/orte/' };
+export const placeBase: Record<Lang, string> = { nl: '/nl/plaatsen/', en: '/en/places/', de: '/de/orte/', sv: '/sv/orter/' };
 export const placeHref = (lang: Lang, p: Place, page: PlacePage = 'overview') =>
   `${placeBase[lang]}${p.slug}/${page === 'overview' ? '' : `${placeSub[page][lang]}/`}`;
 export const placeBySlug = (slug: string) => places.find((p) => p.slug === slug);
@@ -78,4 +78,5 @@ export const settingLabels: Record<Lang, Record<Setting, string>> = {
   nl: { coast: 'Aan de kust', hills: 'In de heuvels', mountains: 'In de bergen', inland: 'In het binnenland' },
   en: { coast: 'On the coast', hills: 'In the hills', mountains: 'In the mountains', inland: 'Inland' },
   de: { coast: 'An der Küste', hills: 'In den Hügeln', mountains: 'In den Bergen', inland: 'Im Hinterland' },
+  sv: { coast: 'Vid kusten', hills: 'I kullarna', mountains: 'I bergen', inland: 'I inlandet' },
 };

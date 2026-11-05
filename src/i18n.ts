@@ -2,26 +2,26 @@
 import { guides, guidesBy, guideHref } from './data/guides';
 import { places, placeHref, type PlacePage } from './data/places';
 import { placeContent } from './data/place-content';
-export type Lang = 'nl' | 'en' | 'de';
-export const langs: Lang[] = ['nl', 'en', 'de'];
-export const langNames: Record<Lang, string> = { nl: 'Nederlands', en: 'English', de: 'Deutsch' };
+export type Lang = 'nl' | 'en' | 'de' | 'sv';
+export const langs: Lang[] = ['nl', 'en', 'de', 'sv'];
+export const langNames: Record<Lang, string> = { nl: 'Nederlands', en: 'English', de: 'Deutsch', sv: 'Svenska' };
 
 /** Elke pagina met haar vertalingen. Gebruikt voor hreflang en de taalwissel. */
 export const routes: Partial<Record<Lang, string>>[] = [
-  { nl: '/nl/', en: '/en/', de: '/de/' },
-  { nl: '/nl/renovatie/', en: '/en/renovation/', de: '/de/renovierung/' },
-  { nl: '/nl/sleutelbeheer/', en: '/en/key-holding/', de: '/de/hausbetreuung/' },
-  { nl: '/nl/aankoopkeuring/', en: '/en/property-survey/', de: '/de/immobiliengutachten/' },
-  { nl: '/nl/zwembad/', en: '/en/swimming-pool/', de: '/de/pool/' },
-  { nl: '/nl/onderhoud/', en: '/en/maintenance/', de: '/de/instandhaltung/' },
-  { nl: '/nl/projecten/', en: '/en/projects/', de: '/de/projekte/' },
-  { nl: '/nl/over-ons/', en: '/en/about-us/', de: '/de/ueber-uns/' },
-  { nl: '/nl/aanvraag/', en: '/en/request/', de: '/de/anfrage/' },
-  { nl: '/nl/privacy/', en: '/en/privacy/', de: '/de/datenschutz/' },
-  { nl: '/nl/bedankt/', en: '/en/thank-you/', de: '/de/danke/' },
-  { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/' },
-  { nl: '/nl/plaatsen/', en: '/en/places/', de: '/de/orte/' },
-  { nl: '/nl/zien-en-doen/', en: '/en/things-to-do/', de: '/de/sehenswuerdigkeiten/' },
+  { nl: '/nl/', en: '/en/', de: '/de/', sv: '/sv/' },
+  { nl: '/nl/renovatie/', en: '/en/renovation/', de: '/de/renovierung/', sv: '/sv/renovering/' },
+  { nl: '/nl/sleutelbeheer/', en: '/en/key-holding/', de: '/de/hausbetreuung/', sv: '/sv/tillsyn/' },
+  { nl: '/nl/aankoopkeuring/', en: '/en/property-survey/', de: '/de/immobiliengutachten/', sv: '/sv/besiktning/' },
+  { nl: '/nl/zwembad/', en: '/en/swimming-pool/', de: '/de/pool/', sv: '/sv/pool/' },
+  { nl: '/nl/onderhoud/', en: '/en/maintenance/', de: '/de/instandhaltung/', sv: '/sv/underhall/' },
+  { nl: '/nl/projecten/', en: '/en/projects/', de: '/de/projekte/', sv: '/sv/projekt/' },
+  { nl: '/nl/over-ons/', en: '/en/about-us/', de: '/de/ueber-uns/', sv: '/sv/om-oss/' },
+  { nl: '/nl/aanvraag/', en: '/en/request/', de: '/de/anfrage/', sv: '/sv/forfragan/' },
+  { nl: '/nl/privacy/', en: '/en/privacy/', de: '/de/datenschutz/', sv: '/sv/integritet/' },
+  { nl: '/nl/bedankt/', en: '/en/thank-you/', de: '/de/danke/', sv: '/sv/tack/' },
+  { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/', sv: '/sv/guider/' },
+  { nl: '/nl/plaatsen/', en: '/en/places/', de: '/de/orte/', sv: '/sv/orter/' },
+  { nl: '/nl/zien-en-doen/', en: '/en/things-to-do/', de: '/de/sehenswuerdigkeiten/', sv: '/sv/se-och-gora/' },
   // Gidsen staan in alle talen in dezelfde volgorde (zie src/data/guides.ts)
   ...guides.map((_, i) =>
     Object.fromEntries(langs.filter((l) => guidesBy[l][i]).map((l) => [l, guideHref(l, guidesBy[l][i])])),
@@ -93,6 +93,19 @@ export const nav: Record<Lang, NavItem[]> = {
     { href: '/de/sehenswuerdigkeiten/', label: 'Sehenswertes' },
     { href: '/de/ratgeber/', label: 'Ratgeber' },
   ],
+  sv: [
+    { href: '/sv/#tjanster', label: 'Tjänster', children: [
+      { href: '/sv/renovering/', label: 'Renovering' },
+      { href: '/sv/tillsyn/', label: 'Tillsyn' },
+      { href: '/sv/besiktning/', label: 'Besiktning' },
+      { href: '/sv/pool/', label: 'Pool' },
+      { href: '/sv/underhall/', label: 'Underhåll' },
+    ] },
+    { href: '/sv/orter/', label: 'Orter' },
+    { href: '/sv/bo/', label: 'Bo' },
+    { href: '/sv/se-och-gora/', label: 'Se och göra' },
+    { href: '/sv/guider/', label: 'Guider' },
+  ],
 };
 
 export const services: Record<Lang, { href: string; title: string; text: string }[]> = {
@@ -116,6 +129,13 @@ export const services: Record<Lang, { href: string; title: string; text: string 
     { href: '/de/immobiliengutachten/', title: 'Gutachten vor dem Kauf', text: 'Lassen Sie das Haus prüfen, bevor Sie unterschreiben. Sie wissen, was Sie kaufen und was die Sanierung kostet.' },
     { href: '/de/pool/', title: 'Poolbau und Poolpflege', text: 'Ein neuer Pool, ein alter, der wieder funktionieren soll, oder die regelmäßige Pflege, während Sie weg sind.' },
     { href: '/de/instandhaltung/', title: 'Instandhaltung und Reparaturen', text: 'Dächer, Undichtigkeiten, Terrassen, Grundstück und Garten. Auch wenn Sie nicht in Spanien sind.' },
+  ],
+  sv: [
+    { href: '/sv/renovering/', title: 'Renovering och ombyggnad', text: 'Från ett slitet byhus till en finca som behöver göras om från grunden. Ett team, en kontaktperson.' },
+    { href: '/sv/tillsyn/', title: 'Tillsyn och nyckelservice', text: 'Vi håller koll på ditt hus när du inte är där. Regelbundna besök, foton och snabb hjälp om något händer.' },
+    { href: '/sv/besiktning/', title: 'Besiktning före köp', text: 'Låt besiktiga huset innan du skriver på. Då vet du vad du köper och vad det kostar att åtgärda.' },
+    { href: '/sv/pool/', title: 'Poolbygge och poolskötsel', text: 'En ny pool, en gammal som ska fungera igen eller regelbunden skötsel medan du är borta.' },
+    { href: '/sv/underhall/', title: 'Underhåll och reparationer', text: 'Tak, läckor, terrasser, tomt och trädgård. Även när du inte är i Spanien.' },
   ],
 };
 
@@ -186,7 +206,7 @@ export const ui = {
     cta: 'Kostenlose Anfrage',
     ctaWizard: 'Anfrage starten',
     ctaTitle: 'Erzählen Sie uns von Ihrem Vorhaben',
-    ctaText: 'Beantworten Sie ein paar kurze Fragen. Innerhalb von 24 Stunden meldet sich ein deutschsprachiger Ansprechpartner bei Ihnen, unverbindlich.',
+    ctaText: 'Beantworten Sie ein paar kurze Fragen. Innerhalb von 24 Stunden melden wir uns bei Ihnen, unverbindlich und auf Englisch oder Niederländisch.',
     faq: 'Häufige Fragen',
     servicesTitle: 'Was wir für Sie tun',
     more: 'Mehr zu',
@@ -206,5 +226,34 @@ export const ui = {
     guide: 'Ratgeber', minRead: 'Minuten Lesezeit', updated: 'Aktualisiert am', inGuide: 'In diesem Ratgeber', askAdvice: 'Beratung anfragen',
     readAlso: 'Weiterlesen', readGuide: 'Zum Ratgeber', guidesCrumb: 'Ratgeber', dateLocale: 'de-DE',
     langLabel: 'Sprache', readIn: 'Diese Seite lesen auf',
+  },
+  sv: {
+    skip: 'Till innehållet',
+    toHome: 'till startsidan',
+    menuOpen: 'Öppna menyn',
+    mainMenu: 'Huvudmeny',
+    cta: 'Gratis förfrågan',
+    ctaWizard: 'Starta förfrågan',
+    ctaTitle: 'Berätta vad du har för planer',
+    ctaText: 'Svara på några korta frågor. Inom 24 timmar hör vi av oss, utan förpliktelser.',
+    faq: 'Vanliga frågor',
+    servicesTitle: 'Det här gör vi för dig',
+    more: 'Mer om',
+    stepsTitle: 'Så går det till',
+    crumbs: 'Brödsmulor',
+    tagline: 'Teamet för köp, renovering och tillsyn av bostäder i Axarquía, från Rincón de la Victoria till Nerja.',
+    fServices: 'Tjänster',
+    fContact: 'Kontakt',
+    fAbout: 'Om',
+    fRequest: 'Gör en förfrågan',
+    fAboutUs: 'Om oss',
+    fProjects: 'Projekt',
+    fGuides: 'Guider',
+    fPrivacy: 'Integritet och villkor',
+    builtBy: (n: string) => `Arbetet utförs av ${n} i Axarquía.`,
+    builtByDefault: 'vårt nederländska samarbetsföretag inom bygg',
+    guide: 'Guide', minRead: 'minuters läsning', updated: 'Uppdaterad', inGuide: 'I den här guiden', askAdvice: 'Be om råd',
+    readAlso: 'Läs också', readGuide: 'Läs guiden', guidesCrumb: 'Guider', dateLocale: 'sv-SE',
+    langLabel: 'Språk', readIn: 'Läs sidan på',
   },
 } as const;

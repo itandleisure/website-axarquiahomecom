@@ -132,6 +132,48 @@ const content: PlaceContent = {
         "a": "Ja, mit der <a href=\"/de/hausbetreuung/\">Hausbetreuung</a> kontrolliert eine feste Person Ihre Wohnung, auch nach Unwetter oder Stromausfall."
       }
     ]
+  },
+  "sv": {
+    "title": "Torrox Costa: lägenheter vid havet och sol året runt",
+    "description": "Allt om Torrox Costa: strandpromenaden, stränderna och de romerska lämningarna, den internationella gemenskapen, lägenheter och vad du ska tänka på med äldre komplex.",
+    "lead": "Torrox Costa är kustdelen av Torrox: en lång strandpromenad, breda stränder och gott om lägenheter, populärt bland dem som övervintrar från hela norra Europa.",
+    "intro": [
+      "Torrox Costa hör till kommunen <a href=\"/sv/orter/torrox/\">Torrox</a>. Längs strandpromenaden och på sluttningarna bakom ligger lägenhetskomplex, ofta med gemensam trädgård och pool. Vid fyren finns resterna av romerska Caviclum.",
+      "Här bor många tyskar, nederländare, belgare och skandinaver, en del året runt och en del bara på vintern. Affärer, restauranger och läkare är inställda på dem."
+    ],
+    "facts": [
+      [
+        "Kommun",
+        "Torrox"
+      ],
+      [
+        "Läge",
+        "kust"
+      ],
+      [
+        "Torrox Pueblo",
+        "cirka 4 km"
+      ],
+      [
+        "Málaga (flygplats)",
+        "cirka 50 minuter"
+      ],
+      [
+        "Prisnivå",
+        "medel"
+      ]
+    ],
+    "forWhom": "För dig som söker en lägenhet vid havet att övervintra eller bo i, med allt på gångavstånd och en stor internationell gemenskap.",
+    "faq": [
+      {
+        "q": "Vad ska jag kontrollera med en lägenhet i Torrox Costa?",
+        "a": "Många komplex är fyrtio år eller äldre. Fråga om byggnadens skick och planerade kostnader i samfälligheten, och låt <a href=\"/sv/besiktning/\">besiktiga</a> lägenheten."
+      },
+      {
+        "q": "Kan någon titta till min lägenhet när jag är borta?",
+        "a": "Ja, med <a href=\"/sv/tillsyn/\">tillsyn</a> kontrollerar en fast kontaktperson din bostad regelbundet, även efter oväder eller strömavbrott."
+      }
+    ]
   }
 };
 export default content;

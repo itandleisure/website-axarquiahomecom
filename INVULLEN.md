@@ -25,13 +25,15 @@ en op de pagina's in een geel blok "Nog aanleveren". Zodra alles klopt, zet je
 - [ ] Engelse titels en teksten bij projecten (`titleEn`, `summaryEn`, `durationEn`) en teamleden (`roleEn`, `bioEn`)
 
 ## Analyse en cookies
-- [ ] Google Analytics: Measurement ID (G-...) invullen bij `gaId` in `src/data/site.ts`
+- [x] Google Analytics: Measurement ID G-YSBXSHM7SS ingevuld
 - [ ] Clarity: onder Settings › Setup › Advanced settings Masking op Strict zetten
 
 ## Zweedse en Franse versie (volgen na de plaatsnaampagina's)
-- [ ] Bevestigen of het bouwbedrijf iemand heeft die Zweeds en Frans spreekt, of dat we die klanten in het Engels helpen
+- [x] Zweeds en Frans: contact in het Engels of Nederlands (besluit Frans)
 
 ## Duitse versie
-- [ ] Bevestigen dat er een Duitstalige contactpersoon is (de Duitse site belooft een "deutschsprachiger Ansprechpartner" en een aankoopkeuringsrapport in het Duits)
+- [x] Talen bouwbedrijf: Nederlands, Engels en Spaans. Duitse, Zweedse en Franse pagina's zeggen dat het contact in het Engels of Nederlands gaat.
+- [ ] Het gekozen bouwbedrijf: bevestigen welke diensten het zelf doet (o.a. nieuwe zwembaden, aankoopkeuring, buitenkeukens, airco/warmtepomp)
+- [ ] Projectfoto's van het gekozen bouwbedrijf (met toestemming), met plaats per project
 - [ ] Duitse titels en teksten bij projecten (`titleDe`, `summaryDe`, `durationDe`) en teamleden (`roleDe`, `bioDe`)
 - [ ] Impressum op /de/datenschutz/ laten nakijken (gegevens van Frans' onderneming en het bouwbedrijf)

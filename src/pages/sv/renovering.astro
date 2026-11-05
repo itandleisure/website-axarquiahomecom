@@ -1,0 +1,110 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site, svPrice } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Vad kostar det att renovera ett hus i Axarquía?',
+    a: `Det beror helt på bostadens skick. Att fräscha upp en lägenhet kan kosta några tusen euro, en totalrenovering av en gammal finca långt över 100 000 €. De flesta renoveringar vi gör ligger mellan ${svPrice(prices.renovatieTotaal)}. Efter ett besök får du en offert där varje del är specificerad.`,
+  },
+  {
+    q: 'Behöver jag tillstånd för att renovera i Spanien?',
+    a: 'Nästan alltid. För mindre arbeten räcker oftast en anmälan till kommunen (declaración responsable eller licencia de obra menor). Större arbeten eller tillbyggnader kräver bygglov med ett projekt av en arkitekt. Vi tar reda på vad ditt projekt behöver och sköter ansökan.',
+  },
+  {
+    q: 'Kan arbetet göras medan jag är i Sverige?',
+    a: 'Ja, de flesta av våra kunder är inte i Spanien under arbetet. Du har en fast projektledare, får foton och filmer varje vecka och vi pratar via telefon eller videosamtal. Du betalar i delar, efter varje avslutad etapp.',
+  },
+  {
+    q: 'Hur lång tid tar en renovering?',
+    a: 'Ett badrum eller kök tar oftast några veckor. En totalrenovering tar normalt tre till sex månader, beroende på tillstånd och omfattning. Offerten innehåller en tidsplan.',
+  },
+  {
+    q: 'Kan jag bygga ut min finca?',
+    a: 'Det beror på husets rättsliga status och detaljplanen. Lantställen med AFO-status får i regel inte byggas ut. Låt kontrollera det före köpet. Vi samarbetar med en arkitekt som kan bedöma varje fastighet.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Renovering och ombyggnad',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en', 'es'],
+};
+---
+<Base
+  title="Renovera hus i Spanien: Axarquía, Nerja och omgivningarna"
+  description="Renovering i Axarquía: totalrenovering, badrum, kök och fincor i Nerja, Torrox, Frigiliana, Cómpeta och omgivningarna. Tydliga offerter och en fast projektledare."
+  path="/sv/renovering/"
+  lang="sv"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="sv" items={[{ name: 'Renovering', href: '/sv/renovering/' }]} />
+  <Hero
+    lang="sv"
+    eyebrow="Renovering och ombyggnad"
+    title="Renovera i Spanien, <em>utan huvudvärk</em>"
+    lead="Du har köpt ett hus i Axarquía, eller tänker göra det, och något behöver göras. Vi tar hand om hela projektet, från planering och tillstånd till sista kakelplattan."
+    cta="Begär offert"
+    ctaHref="/sv/forfragan/?dienst=renovatie"
+  />
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>Det här renoverar vi</h2>
+        <p>De flesta hus som utländska köpare köper i Axarquía är över trettio år gamla. Byhus i Cómpeta och Frigiliana med tjocka murar och små fönster, lägenheter vid kusten i Torre del Mar och Nerja, fincor i kullarna med egen brunn. Varje typ har sina svaga punkter, och vi känner dem väl.</p>
+        <ul class="checks">
+          <li><strong>Totalrenovering</strong>: rör, el, isolering, planlösning och ytskikt.</li>
+          <li><strong>Badrum och kök</strong>: ritning, rivning, installation och finish.</li>
+          <li><strong>Utekök</strong>: murat utekök med grill, bänkskiva och diskho, i Ibiza- eller andalusisk stil.</li>
+          <li><strong>Luftkonditionering och värmepump</strong>: svalt på sommaren, billig uppvärmning på vintern, el ingår.</li>
+          <li><strong>Kakel och natursten</strong>: golv, väggar, terrasser och väggar i natursten.</li>
+          <li><strong>Renovering av finca</strong>: fukt, tak, terrasser, vatten och avlopp.</li>
+          <li><strong>Fönster och isolering</strong>: inga fler kalla vintrar bakom enkelglas.</li>
+          <li><strong>Terrasser, pergolor och tak över uteplatsen</strong>: mer liv utomhus, även i juli.</li>
+        </ul>
+        <h2>Det här stöter utländska köpare på</h2>
+        <p>Fuktiga väggar, gammal el utan jordning, tak som läcker vid första regnet eller en tillbyggnad utan tillstånd. Det syns inte vid en visning på sommaren. Vi går igenom det med dig, säger vad som är bråttom och vad som kan vänta, och sätter ett pris på varje del.</p>
+      </div>
+      <div class="box">
+        <h3>Riktpriser</h3>
+        <table class="prices">
+          <tbody>
+            <tr><td>Totalrenovering</td><td>{svPrice(prices.renovatieTotaal)}</td></tr>
+            <tr><td>Renovering per m²</td><td>{prices.renovatiePerM2}</td></tr>
+            <tr><td>Nytt badrum</td><td>{svPrice(prices.badkamer)}</td></tr>
+            <tr><td>Nytt kök</td><td>{prices.keuken}</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Riktpriser inklusive material och arbete, exklusive moms (IVA). Det faktiska priset beror på bostadens skick och dina önskemål. Du får alltid en offert först.</p>
+        <Todo label="prijzen per m² en keuken van het bouwbedrijf, en bevestiging van de andere bedragen." />
+        <a class="btn" href="/sv/forfragan/?dienst=renovatie">Begär offert</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="sv"
+    title="Så går en renovering till"
+    steps={[
+      { t: 'Första kontakt', d: 'Berätta i vårt korta formulär vad du har för planer. Vi hör av oss inom 24 timmar.' },
+      { t: 'Besök', d: 'Vi mäter, fotograferar och går igenom dina önskemål, på plats eller via video.' },
+      { t: 'Offert och tillstånd', d: 'En specificerad offert och en tidsplan. Vi söker tillståndet hos kommunen.' },
+      { t: 'Bygge och överlämning', d: 'En projektledare, fotorapporter varje vecka och betalning per etapp.' },
+    ]}
+  />
+
+  <Faq items={faq} lang="sv" />
+  <Cta lang="sv" dienst="renovatie" title="Planer för ditt hus?" />
+  <Services lang="sv" exclude="renovering" title="Det här kan också vara intressant" />
+</Base>

@@ -3,9 +3,9 @@ import { site } from '../data/site';
 import { places, placeBase, placeHref, type PlacePage } from '../data/places';
 import { placeContent } from '../data/place-content';
 
-// Alle .astro-pagina's onder /nl/, /en/ en /de/, behalve bedankt.
+// Alle .astro-pagina's onder /nl/, /en/, /de/ en /sv/, behalve bedankt.
 // Dynamische routes ([slug]) komen er niet vanzelf in; de plaatspagina's voegen we hieronder toe vanuit de plaatsenlijst.
-const pages = import.meta.glob('./{nl,en,de}/**/*.astro', { eager: false });
+const pages = import.meta.glob('./{nl,en,de,sv}/**/*.astro', { eager: false });
 
 type PlaceLang = keyof typeof placeBase;
 
@@ -24,7 +24,7 @@ export const GET: APIRoute = () => {
   const staticPaths = Object.keys(pages)
     .filter((f) => !f.includes('['))
     .map((f) => f.replace(/^\.\//, '/').replace(/index\.astro$/, '').replace(/\.astro$/, '/'))
-    .filter((p) => !/\/(bedankt|thank-you|danke)\//.test(p));
+    .filter((p) => !/\/(bedankt|thank-you|danke|tack)\//.test(p));
   const paths = [...new Set([...staticPaths, ...placePaths])].sort();
   const today = new Date().toISOString().slice(0, 10);
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
