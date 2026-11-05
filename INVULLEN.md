@@ -32,6 +32,8 @@ en op de pagina's in een geel blok "Nog aanleveren". Zodra alles klopt, zet je
 - [ ] Bevestigen of het bouwbedrijf iemand heeft die Zweeds en Frans spreekt, of dat we die klanten in het Engels helpen
 
 ## Duitse versie
-- [ ] Bevestigen dat er een Duitstalige contactpersoon is (de Duitse site belooft een "deutschsprachiger Ansprechpartner" en een aankoopkeuringsrapport in het Duits)
+- [x] Talen bouwbedrijf: Nederlands, Engels en Spaans. Duitse, Zweedse en Franse pagina's zeggen dat het contact in het Engels of Nederlands gaat.
+- [ ] Bouwbedrijf (Axarquia Property Services, Cómpeta): bevestigen of ze nieuwe zwembaden bouwen en aankoopkeuringen doen; op hun eigen site staan die niet
+- [ ] Toestemming om projectfoto's van axarquiapropertyservices.com/projects te gebruiken, met plaats per project
 - [ ] Duitse titels en teksten bij projecten (`titleDe`, `summaryDe`, `durationDe`) en teamleden (`roleDe`, `bioDe`)
 - [ ] Impressum op /de/datenschutz/ laten nakijken (gegevens van Frans' onderneming en het bouwbedrijf)

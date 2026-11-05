@@ -47,15 +47,23 @@ export const site = {
   // Google Analytics 4 Measurement ID (G-...). Laadt ook pas na toestemming. Leeg = uit.
   gaId: 'G-YSBXSHM7SS',
 
+  // Werkgebied volgens de site van het bouwbedrijf (basis Cómpeta); verder weg in overleg.
   villages: [
     'Nerja',
-    'Cómpeta',
     'Frigiliana',
     'Torrox',
+    'Cómpeta',
     'Torre del Mar',
     'Vélez-Málaga',
-    'Rincón de la Victoria',
     'Algarrobo',
+    'Sayalonga',
+    'Canillas de Albaida',
+    'Árchez',
+    'Sedella',
+    'Canillas de Aceituno',
+    'Salares',
+    'Alcaucín',
+    'Arenas',
   ],
 };
 
