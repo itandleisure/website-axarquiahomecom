@@ -3,7 +3,7 @@ import Guide from '../../../components/Guide.astro';
 
 const toc = [
   { id: 'choice', label: 'Shower, bath or both?' },
-  { id: 'comparison', label: 'All options compared, with prices' },
+  { id: 'comparison', label: 'All options compared' },
   { id: 'walk-in', label: 'Walk-in shower' },
   { id: 'rain', label: 'Rain shower' },
   { id: 'tray', label: 'Shower tray with glass screen' },
@@ -29,31 +29,32 @@ const faq = [
   },
   {
     q: 'What does it cost to replace a bath with a shower?',
-    a: 'Taking out the bath and fitting a walk-in shower with a glass screen is a medium-sized job (€€€), including new tiles in the shower area. A complete new bathroom costs roughly twice as much. You get a fixed price in the quote; what a whole bathroom costs is on the costs page.',
+    a: 'That depends on the size, the drain and the tiles and glass screen you choose. It is a lot less work than a complete new bathroom, because only the shower area is redone. Want it done? We take the whole job off your hands.',
   },
 ];
 ---
-<Guide lang="en" slug="bathroom-shower-or-bath" toc={toc} faq={faq} dienst="badkamer-keuken" ctaTitle="Renewing your bathroom?" ctaText="Send us a few photos and the measurements of your bathroom. You will get advice on shower or bath and a price, even if you are not in Spain.">
+<Guide lang="en" slug="bathroom-shower-or-bath" toc={toc} faq={faq} dienst="badkamer-keuken" ctaTitle="Want your bathroom redone?" ctaText="Tell us what you want: a walk-in shower, a rain shower or a bath. We handle the whole job, from stripping out to handover, even while you are not in Spain.">
   <h2 id="choice">Shower, bath or both?</h2>
   <p>Anyone renovating a bathroom in the Axarquía faces the same question: keep the bath, go for a walk-in shower, or add a rain shower? The answer depends on who uses the bathroom. Do you live there yourself, let to holiday guests or run a B&B? And how much water and space do you have?</p>
   <p>Spanish homes from the 1970s to 2000s often have a small bath with a shower head above it. That is the bathroom most buyers tackle first. Below we put all the options side by side.</p>
 
-  <h2 id="comparison">All options compared, with prices</h2>
-  <p>The price class runs from € (cheap) to €€€€ (expensive), including fitting. You get a price for your bathroom in the quote.</p>
+  <h2 id="comparison">All options compared</h2>
+  <p>Below, for each option, the water use and what it is good at.</p>
   <div class="table-scroll">
   <table class="prices">
-    <thead><tr><th>Option</th><th>Price class</th><th>Water use</th><th>Good at</th></tr></thead>
+    <thead><tr><th>Option</th><th>Water use</th><th>Good at</th></tr></thead>
     <tbody>
-      <tr><td>Shower tray with glass screen</td><td class="pk">€</td><td>6 – 9 l per minute</td><td>Affordable, fits almost anywhere</td></tr>
-      <tr><td>Level-access walk-in shower</td><td class="pk">€€€</td><td>6 – 9 l per minute</td><td>Spacious, modern, easy to clean, also for later</td></tr>
-      <tr><td>Rain shower (set, added to a shower)</td><td class="pk">€ – €€</td><td>9 – 20 l per minute</td><td>Comfort and a sense of luxury</td></tr>
-      <tr><td>Replacing a bath with shower screen</td><td class="pk">€€</td><td>150 – 200 l per bath</td><td>Families with small children</td></tr>
-      <tr><td>Freestanding bath</td><td class="pk">€€€</td><td>200 – 300 l per bath</td><td>Atmosphere, luxury suite, photos</td></tr>
-      <tr><td>Bath out, walk-in shower in</td><td class="pk">€€€</td><td>Saves water</td><td>The most requested renovation</td></tr>
-      <tr><td>Complete bathroom (4 – 6 m²)</td><td class="pk">€€€€</td><td>-</td><td>Everything new, including pipes</td></tr>
+      <tr><td>Shower tray with glass screen</td><td>6 – 9 l per minute</td><td>Affordable, fits almost anywhere</td></tr>
+      <tr><td>Level-access walk-in shower</td><td>6 – 9 l per minute</td><td>Spacious, modern, easy to clean, also for later</td></tr>
+      <tr><td>Rain shower (set, added to a shower)</td><td>9 – 20 l per minute</td><td>Comfort and a sense of luxury</td></tr>
+      <tr><td>Replacing a bath with shower screen</td><td>150 – 200 l per bath</td><td>Families with small children</td></tr>
+      <tr><td>Freestanding bath</td><td>200 – 300 l per bath</td><td>Atmosphere, luxury suite, photos</td></tr>
+      <tr><td>Bath out, walk-in shower in</td><td>Saves water</td><td>The most requested renovation</td></tr>
+      <tr><td>Complete bathroom (4 – 6 m²)</td><td>-</td><td>Everything new, including pipes</td></tr>
     </tbody>
   </table>
   </div>
+  <div class="box"><p><strong>Want your bathroom redone?</strong> We do the whole job: stripping out, plumbing, tiling and fittings, even while you are not in Spain. Tell us what you would like done.</p><a class="btn" href="/en/request/?dienst=badkamer-keuken">Tell us your plan</a></div>
   <p>More on what a whole bathroom costs: <a href="/en/costs/bathroom-renovation/">bathroom renovation costs</a>.</p>
 
   <h2 id="walk-in">Walk-in shower</h2>
@@ -67,8 +68,8 @@ const faq = [
   <h2 id="rain">Rain shower</h2>
   <p>A rain shower (<em>ducha efecto lluvia</em> or <em>rociador</em>) is a large, flat shower head of 25 to 40 cm above your head. The water falls like gentle rain. It is not a separate type of shower but a head you choose for a walk-in shower or tray.</p>
   <ul>
-    <li><strong>Surface-mounted set:</strong> a riser rail with rain head, hand shower and thermostatic mixer on the wall (€). Works in an existing shower.</li>
-    <li><strong>Concealed:</strong> the valves sit inside the wall and the rain head comes from the ceiling or wall. Sleek, but the wall has to be opened (€€).</li>
+    <li><strong>Surface-mounted set:</strong> a riser rail with rain head, hand shower and thermostatic mixer on the wall. Works in an existing shower.</li>
+    <li><strong>Concealed:</strong> the valves sit inside the wall and the rain head comes from the ceiling or wall. Sleek, but the wall has to be opened.</li>
     <li><strong>Always combine it with a hand shower.</strong> It makes cleaning the shower easy and means you do not have to wet your hair every time.</li>
     <li><strong>Limescale:</strong> the water in the Axarquía is hard. Choose a head with rubber nozzles you can rub clean, and consider a water softener or scale filter.</li>
   </ul>

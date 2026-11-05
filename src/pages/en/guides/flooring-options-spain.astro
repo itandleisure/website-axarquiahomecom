@@ -3,7 +3,7 @@ import Guide from '../../../components/Guide.astro';
 
 const toc = [
   { id: 'spanish', label: 'Why floors are different in Spain' },
-  { id: 'comparison', label: 'All floors compared, with prices' },
+  { id: 'comparison', label: 'All floors compared' },
   { id: 'tiles', label: 'Porcelain tiles (gres porcelánico)' },
   { id: 'microcement', label: 'Microcement' },
   { id: 'terrazzo', label: 'Terrazzo and old cement tiles' },
@@ -39,31 +39,32 @@ const faq = [
   },
 ];
 ---
-<Guide lang="en" slug="flooring-options-spain" toc={toc} faq={faq} dienst="renovatie" ctaTitle="A new floor for your home?" ctaText="Send us photos of the current floor and the number of square metres. You will get advice on the best floor for your home and a price including laying.">
+<Guide lang="en" slug="flooring-options-spain" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Want a new floor laid?" ctaText="Tell us which rooms you want done and the floor you have in mind. We handle the whole job, from lifting the old floor to the last skirting, even while you are not in Spain.">
   <h2 id="spanish">Why floors are different in Spain</h2>
   <p>A floor in the Axarquía has to cope with different things than one in the UK or Northern Europe. It has to stay cool in summer, it gets sand and water from the beach or the pool, and in old village houses and fincas the floor often sits directly on the ground with no crawl space. Damp from the ground then rises. That is why almost every Spanish home has a stone or ceramic floor (<em>suelo</em> or <em>solería</em>).</p>
   <p>Still, there is more choice than the standard beige tile. Below we compare all common floors: what they cost, what they are good at and where they do not fit.</p>
 
-  <h2 id="comparison">All floors compared, with prices</h2>
-  <p>The price class runs from € (cheap) to €€€€ (expensive), per m² including laying. You get a price for your home in the quote. Removing an old floor and levelling the base come on top (see <a href="#extras">what else to budget for</a>).</p>
+  <h2 id="comparison">All floors compared</h2>
+  <p>Below, for each floor, what it is good at and where it falls short. Removing an old floor and levelling the base come on top (see <a href="#extras">what else to budget for</a>).</p>
   <div class="table-scroll">
   <table class="prices">
-    <thead><tr><th>Floor</th><th>Price class</th><th>Good at</th><th>Less good at</th></tr></thead>
+    <thead><tr><th>Floor</th><th>Good at</th><th>Less good at</th></tr></thead>
     <tbody>
-      <tr><td>Porcelain tile (gres porcelánico)</td><td class="pk">€€</td><td>Strong, waterproof, cool, no maintenance</td><td>Cold in winter, grout lines</td></tr>
-      <tr><td>Large-format tiles (e.g. 120 × 60 cm or bigger)</td><td class="pk">€€€</td><td>Sleek, few joints, feels spacious</td><td>Needs a very flat base and skilled laying</td></tr>
-      <tr><td>Microcement</td><td class="pk">€€€</td><td>Seamless, over old tiles, also on walls</td><td>Scratches, skilled work, resealing every few years</td></tr>
-      <tr><td>Restoring old terrazzo (grinding and polishing)</td><td class="pk">€</td><td>Cheap, character, lasts decades more</td><td>Broken tiles are hard to match</td></tr>
-      <tr><td>New terrazzo</td><td class="pk">€€€€</td><td>Almost indestructible, beautiful</td><td>Price, weight</td></tr>
-      <tr><td>Barro / terracotta (handmade)</td><td class="pk">€€</td><td>Warm, authentic look</td><td>Porous, stains, needs treating</td></tr>
-      <tr><td>Marble and natural stone</td><td class="pk">€€€€</td><td>Luxurious, cool, long-lasting</td><td>Price, sensitive to lemon and vinegar</td></tr>
-      <tr><td>Polished or poured concrete</td><td class="pk">€€</td><td>Industrial look, strong</td><td>Hairline cracks, needs a good base</td></tr>
-      <tr><td>Click vinyl (SPC/LVT)</td><td class="pk">€</td><td>Quick, waterproof, over tiles, warmer and quieter</td><td>Gets hot in direct sun, less durable than tiles</td></tr>
-      <tr><td>Laminate</td><td class="pk">€</td><td>Cheap, wood look</td><td>Swells with damp, not for old houses</td></tr>
-      <tr><td>Parquet or solid wood</td><td class="pk">€€€</td><td>Warm and cosy</td><td>Damp, sun and sand, moves with the seasons</td></tr>
+      <tr><td>Porcelain tile (gres porcelánico)</td><td>Strong, waterproof, cool, no maintenance</td><td>Cold in winter, grout lines</td></tr>
+      <tr><td>Large-format tiles (e.g. 120 × 60 cm or bigger)</td><td>Sleek, few joints, feels spacious</td><td>Needs a very flat base and skilled laying</td></tr>
+      <tr><td>Microcement</td><td>Seamless, over old tiles, also on walls</td><td>Scratches, skilled work, resealing every few years</td></tr>
+      <tr><td>Restoring old terrazzo (grinding and polishing)</td><td>Cheap, character, lasts decades more</td><td>Broken tiles are hard to match</td></tr>
+      <tr><td>New terrazzo</td><td>Almost indestructible, beautiful</td><td>Price, weight</td></tr>
+      <tr><td>Barro / terracotta (handmade)</td><td>Warm, authentic look</td><td>Porous, stains, needs treating</td></tr>
+      <tr><td>Marble and natural stone</td><td>Luxurious, cool, long-lasting</td><td>Price, sensitive to lemon and vinegar</td></tr>
+      <tr><td>Polished or poured concrete</td><td>Industrial look, strong</td><td>Hairline cracks, needs a good base</td></tr>
+      <tr><td>Click vinyl (SPC/LVT)</td><td>Quick, waterproof, over tiles, warmer and quieter</td><td>Gets hot in direct sun, less durable than tiles</td></tr>
+      <tr><td>Laminate</td><td>Cheap, wood look</td><td>Swells with damp, not for old houses</td></tr>
+      <tr><td>Parquet or solid wood</td><td>Warm and cosy</td><td>Damp, sun and sand, moves with the seasons</td></tr>
     </tbody>
   </table>
   </div>
+  <div class="box"><p><strong>Want a new floor laid?</strong> We do the whole job: the old floor out, the base put right and the new floor in, even while you are not in Spain. Tell us what you would like done.</p><a class="btn" href="/en/request/?dienst=renovatie">Tell us your plan</a></div>
   <p>Small areas, stairs and lots of cutting push the price per m² up. Also allow for a matching skirting (<em>rodapié</em>).</p>
 
   <h2 id="tiles">Porcelain tiles (gres porcelánico)</h2>
@@ -86,13 +87,13 @@ const faq = [
   <h2 id="terrazzo">Terrazzo and old cement tiles</h2>
   <p>Many apartments from the 1960s to 1980s and old village houses have <em>terrazo</em> or <em>granito</em>: cement tiles with marble chips. Or the famous patterned cement tiles (<em>baldosa hidráulica</em>). Many buyers want them out, but that is often a shame.</p>
   <ul>
-    <li><strong>Restoring:</strong> grinding, filling and polishing makes a dull terrazzo floor look new again (€). Far cheaper than a new floor and no rubble.</li>
+    <li><strong>Restoring:</strong> grinding, filling and polishing makes a dull terrazzo floor look new again. Far cheaper than a new floor and no rubble.</li>
     <li><strong>Patterned cement tiles</strong> are sought after today. If you cannot keep them throughout, reuse them in a hallway or as a ‘rug’ in the living room.</li>
     <li><strong>Note:</strong> broken terrazzo tiles are hard to match. Keep a few intact tiles aside during any renovation.</li>
   </ul>
 
   <h2 id="barro">Barro and terracotta</h2>
-  <p>Handmade fired-clay tiles, from red to sand-coloured, suit a finca or cortijo. New <em>barro</em> is mid-range (€€). Cleaning and resealing an old barro floor is much cheaper (€).</p>
+  <p>Handmade fired-clay tiles, from red to sand-coloured, suit a finca or cortijo. Cleaning and resealing an old barro floor is much cheaper than laying a new one.</p>
   <ul>
     <li><strong>Pros:</strong> warm, authentic atmosphere; every tile is different; ages beautifully.</li>
     <li><strong>Cons:</strong> porous, so oil and wine stains soak in if the floor is not properly treated; needs regular re-treating with oil or wax; less practical in a kitchen.</li>
@@ -100,7 +101,7 @@ const faq = [
   </ul>
 
   <h2 id="stone">Marble and natural stone</h2>
-  <p>Andalusia has its own marble: white marble from Macael (Almería) is found in many villas and on many staircases. Natural stone is luxurious, cool and lasts for generations, but it is expensive (€€€€) and sensitive: acids such as lemon, vinegar and some cleaning products etch polished marble. A honed or brushed finish is less slippery and less vulnerable than high gloss.</p>
+  <p>Andalusia has its own marble: white marble from Macael (Almería) is found in many villas and on many staircases. Natural stone is luxurious, cool and lasts for generations, but it is expensive and sensitive: acids such as lemon, vinegar and some cleaning products etch polished marble. A honed or brushed finish is less slippery and less vulnerable than high gloss.</p>
 
   <h2 id="vinyl">Vinyl, laminate and wood</h2>
   <ul>
@@ -122,8 +123,8 @@ const faq = [
   <h2 id="underfloor">Underfloor heating</h2>
   <p>The biggest downside of a stone floor is that it is cold in winter. Underfloor heating solves that, and tiles and microcement conduct heat very well.</p>
   <ul>
-    <li><strong>Electric heating mat</strong> under the tiles (€€): affordable for a bathroom or one room, but more expensive to run.</li>
-    <li><strong>Water-based underfloor heating with a heat pump (aerotermia):</strong> €€€ to €€€€, because a heat pump comes with it. Efficient and comfortable for the whole house, especially when the floor is up anyway during a major renovation.</li>
+    <li><strong>Electric heating mat</strong> under the tiles: affordable for a bathroom or one room, but more expensive to run.</li>
+    <li><strong>Water-based underfloor heating with a heat pump (aerotermia):</strong> a bigger investment, because a heat pump comes with it. Efficient and comfortable for the whole house, especially when the floor is up anyway during a major renovation.</li>
   </ul>
   <p>A heat pump heats and cools; see <a href="/en/costs/air-conditioning-and-heat-pumps/">air conditioning and heat pumps</a> for prices.</p>
 

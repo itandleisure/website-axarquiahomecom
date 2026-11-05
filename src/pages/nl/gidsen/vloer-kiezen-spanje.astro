@@ -3,7 +3,7 @@ import Guide from '../../../components/Guide.astro';
 
 const toc = [
   { id: 'spaans', label: 'Waarom vloeren in Spanje anders zijn' },
-  { id: 'vergelijking', label: 'Alle vloeren vergeleken met prijzen' },
+  { id: 'vergelijking', label: 'Alle vloeren vergeleken' },
   { id: 'tegels', label: 'Tegels (gres porcelánico)' },
   { id: 'microcement', label: 'Microcement' },
   { id: 'terrazzo', label: 'Terrazzo en oude cementtegels' },
@@ -39,31 +39,32 @@ const faq = [
   },
 ];
 ---
-<Guide slug="vloer-kiezen-spanje" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Een nieuwe vloer in uw huis?" ctaText="Stuur ons foto’s van de huidige vloer en het aantal m². U krijgt advies over de beste vloer voor uw huis en een prijs inclusief leggen.">
+<Guide slug="vloer-kiezen-spanje" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Een nieuwe vloer laten leggen?" ctaText="Vertel ons welke ruimtes u wilt aanpakken en welke vloer u voor ogen heeft. Wij regelen het hele werk, van de oude vloer eruit tot de laatste plint, ook als u niet in Spanje bent.">
   <h2 id="spaans">Waarom vloeren in Spanje anders zijn</h2>
   <p>Een vloer in de Axarquía moet tegen andere dingen kunnen dan in Nederland of Duitsland. In de zomer moet hij koel blijven, er komt zand en water van het strand of het zwembad op, en in oude dorpshuizen en fincas ligt de vloer vaak direct op de grond, zonder kruipruimte. Vocht uit de grond trekt dan omhoog. Daarom heeft bijna elk Spaans huis een stenen of keramische vloer (<em>suelo</em> of <em>solería</em>).</p>
   <p>Toch is er meer keuze dan alleen de standaard beige tegel. Hieronder vergelijken we alle gangbare vloeren: wat ze kosten, waar ze goed in zijn en waar ze niet passen.</p>
 
-  <h2 id="vergelijking">Alle vloeren vergeleken met prijzen</h2>
-  <p>De prijsklasse loopt van € (goedkoop) tot €€€€ (duur), per m² inclusief leggen. Het slopen van een oude vloer en het egaliseren van de ondergrond komen erbij (zie <a href="#kosten">wat komt er nog bij</a>). Een prijs voor uw huis krijgt u in de offerte.</p>
+  <h2 id="vergelijking">Alle vloeren vergeleken</h2>
+  <p>Hieronder per vloer waar hij sterk in is en waar niet. Het slopen van een oude vloer en het egaliseren van de ondergrond komen erbij (zie <a href="#kosten">wat komt er nog bij</a>).</p>
   <div class="table-scroll">
   <table class="prices">
-    <thead><tr><th>Vloer</th><th>Prijsklasse</th><th>Sterk in</th><th>Minder goed in</th></tr></thead>
+    <thead><tr><th>Vloer</th><th>Sterk in</th><th>Minder goed in</th></tr></thead>
     <tbody>
-      <tr><td>Keramische tegel (gres porcelánico)</td><td class="pk">€€</td><td>Sterk, waterbestendig, koel, onderhoudsvrij</td><td>Koud in de winter, voegen</td></tr>
-      <tr><td>Grote tegels (bijv. 120 × 60 cm of groter)</td><td class="pk">€€€</td><td>Strak, weinig voegen, ruimtelijk</td><td>Vraagt een heel vlakke ondergrond en vakwerk</td></tr>
-      <tr><td>Microcement</td><td class="pk">€€€</td><td>Naadloos, over oude tegels, ook op wanden</td><td>Krassen, vakwerk, om de paar jaar aflakken</td></tr>
-      <tr><td>Oude terrazzo opknappen (schuren en polijsten)</td><td class="pk">€</td><td>Goedkoop, karakter, gaat nog decennia mee</td><td>Beschadigde tegels zijn lastig te vervangen</td></tr>
-      <tr><td>Nieuwe terrazzo</td><td class="pk">€€€€</td><td>Bijna onverwoestbaar, mooi</td><td>Prijs, gewicht</td></tr>
-      <tr><td>Barro / terracotta (handgemaakt)</td><td class="pk">€€</td><td>Warme, authentieke uitstraling</td><td>Poreus, vlekt, moet behandeld worden</td></tr>
-      <tr><td>Marmer en natuursteen</td><td class="pk">€€€€</td><td>Luxe, koel, lang mee</td><td>Prijs, gevoelig voor citroen en azijn</td></tr>
-      <tr><td>Gepolijst of gietbeton</td><td class="pk">€€</td><td>Industriële look, sterk</td><td>Haarscheurtjes, vraagt goede ondergrond</td></tr>
-      <tr><td>PVC-klikvloer (SPC/LVT)</td><td class="pk">€</td><td>Snel, waterbestendig, over tegels, warmer en stiller</td><td>Wordt warm in de zon, minder duurzaam dan tegels</td></tr>
-      <tr><td>Laminaat</td><td class="pk">€</td><td>Goedkoop, houtlook</td><td>Zwelt bij vocht, niet voor oude huizen</td></tr>
-      <tr><td>Parket of massief hout</td><td class="pk">€€€</td><td>Warm en sfeervol</td><td>Vocht, zon en zand, werkt in een droog/nat klimaat</td></tr>
+      <tr><td>Keramische tegel (gres porcelánico)</td><td>Sterk, waterbestendig, koel, onderhoudsvrij</td><td>Koud in de winter, voegen</td></tr>
+      <tr><td>Grote tegels (bijv. 120 × 60 cm of groter)</td><td>Strak, weinig voegen, ruimtelijk</td><td>Vraagt een heel vlakke ondergrond en vakwerk</td></tr>
+      <tr><td>Microcement</td><td>Naadloos, over oude tegels, ook op wanden</td><td>Krassen, vakwerk, om de paar jaar aflakken</td></tr>
+      <tr><td>Oude terrazzo opknappen (schuren en polijsten)</td><td>Goedkoop, karakter, gaat nog decennia mee</td><td>Beschadigde tegels zijn lastig te vervangen</td></tr>
+      <tr><td>Nieuwe terrazzo</td><td>Bijna onverwoestbaar, mooi</td><td>Prijs, gewicht</td></tr>
+      <tr><td>Barro / terracotta (handgemaakt)</td><td>Warme, authentieke uitstraling</td><td>Poreus, vlekt, moet behandeld worden</td></tr>
+      <tr><td>Marmer en natuursteen</td><td>Luxe, koel, lang mee</td><td>Prijs, gevoelig voor citroen en azijn</td></tr>
+      <tr><td>Gepolijst of gietbeton</td><td>Industriële look, sterk</td><td>Haarscheurtjes, vraagt goede ondergrond</td></tr>
+      <tr><td>PVC-klikvloer (SPC/LVT)</td><td>Snel, waterbestendig, over tegels, warmer en stiller</td><td>Wordt warm in de zon, minder duurzaam dan tegels</td></tr>
+      <tr><td>Laminaat</td><td>Goedkoop, houtlook</td><td>Zwelt bij vocht, niet voor oude huizen</td></tr>
+      <tr><td>Parket of massief hout</td><td>Warm en sfeervol</td><td>Vocht, zon en zand, werkt in een droog/nat klimaat</td></tr>
     </tbody>
   </table>
   </div>
+  <div class="box"><p><strong>Wilt u een nieuwe vloer laten leggen?</strong> Wij doen het hele werk: de oude vloer eruit, de ondergrond in orde en de nieuwe vloer erin, ook als u niet in Spanje bent. Vertel ons wat u wilt laten doen.</p><a class="btn" href="/nl/aanvraag/?dienst=renovatie">Vertel ons uw plan</a></div>
   <p>Voor kleinere oppervlakken, trappen en veel snijwerk ligt de prijs per m² hoger. Reken ook op een nette plint (<em>rodapié</em>) langs de muren.</p>
 
   <h2 id="tegels">Tegels (gres porcelánico)</h2>
@@ -86,13 +87,13 @@ const faq = [
   <h2 id="terrazzo">Terrazzo en oude cementtegels</h2>
   <p>In veel appartementen uit de jaren 60 tot 80 en in oude dorpshuizen ligt <em>terrazo</em> of <em>granito</em>: tegels van cement met stukjes marmer. Of de beroemde gekleurde cementtegels met patroon (<em>baldosa hidráulica</em>). Veel kopers willen die eruit, maar dat is vaak zonde.</p>
   <ul>
-    <li><strong>Opknappen:</strong> schuren, plamuren en polijsten maakt een doffe terrazzovloer weer als nieuw (€). Veel goedkoper dan een nieuwe vloer en zonder puin.</li>
+    <li><strong>Opknappen:</strong> schuren, plamuren en polijsten maakt een doffe terrazzovloer weer als nieuw. Veel goedkoper dan een nieuwe vloer en zonder puin.</li>
     <li><strong>Cementtegels met patroon</strong> zijn tegenwoordig gewild. Kunt u ze niet in het hele huis houden, hergebruik ze dan in een hal of als ‘kleed’ in de woonkamer.</li>
     <li><strong>Let op:</strong> gebroken terrazzotegels zijn moeilijk na te maken. Bewaar bij een verbouwing een paar heel gebleven tegels.</li>
   </ul>
 
   <h2 id="barro">Barro en terracotta</h2>
-  <p>Handgemaakte tegels van gebakken klei, rood tot zandkleurig, passen bij een finca of cortijo. Nieuwe <em>barro</em> valt in de middenklasse (€€). Een oude barrovloer schoonmaken en opnieuw impregneren is veel goedkoper (€).</p>
+  <p>Handgemaakte tegels van gebakken klei, rood tot zandkleurig, passen bij een finca of cortijo. Een oude barrovloer schoonmaken en opnieuw impregneren is veel goedkoper dan een nieuwe leggen.</p>
   <ul>
     <li><strong>Voordelen:</strong> warme, authentieke sfeer; elke tegel is anders; slijt mooi.</li>
     <li><strong>Nadelen:</strong> poreus, dus vlekken van olie en wijn trekken erin als de vloer niet goed is behandeld; moet regelmatig opnieuw worden behandeld met olie of was; in de keuken minder praktisch.</li>
@@ -100,7 +101,7 @@ const faq = [
   </ul>
 
   <h2 id="natuursteen">Marmer en natuursteen</h2>
-  <p>Andalusië heeft zijn eigen marmer: het witte marmer uit Macael (Almería) ligt in veel villa’s en op veel trappen. Natuursteen is luxe, koel en gaat generaties mee, maar is ook duur (€€€€) en gevoelig: zuur zoals citroen, azijn en sommige schoonmaakmiddelen tast gepolijst marmer aan. Een gezoete of geschuurde afwerking is minder glad en minder kwetsbaar dan hoogglans.</p>
+  <p>Andalusië heeft zijn eigen marmer: het witte marmer uit Macael (Almería) ligt in veel villa’s en op veel trappen. Natuursteen is luxe, koel en gaat generaties mee, maar is ook duur en gevoelig: zuur zoals citroen, azijn en sommige schoonmaakmiddelen tast gepolijst marmer aan. Een gezoete of geschuurde afwerking is minder glad en minder kwetsbaar dan hoogglans.</p>
 
   <h2 id="pvc">PVC, laminaat en hout</h2>
   <ul>
@@ -122,8 +123,8 @@ const faq = [
   <h2 id="vloerverwarming">Vloerverwarming</h2>
   <p>Het grootste nadeel van een stenen vloer is dat hij in de winter koud is. Vloerverwarming lost dat op, en tegels en microcement geleiden de warmte juist heel goed.</p>
   <ul>
-    <li><strong>Elektrische verwarmingsmat</strong> onder de tegels (€€): betaalbaar voor een badkamer of één kamer, maar duurder in gebruik.</li>
-    <li><strong>Watergedragen vloerverwarming met een warmtepomp (aerotermia):</strong> €€€ tot €€€€, omdat er ook een warmtepomp bij komt. Zuinig en comfortabel voor het hele huis, vooral als de vloer toch al open ligt bij een grote verbouwing.</li>
+    <li><strong>Elektrische verwarmingsmat</strong> onder de tegels: betaalbaar voor een badkamer of één kamer, maar duurder in gebruik.</li>
+    <li><strong>Watergedragen vloerverwarming met een warmtepomp (aerotermia):</strong> een grotere investering, omdat er ook een warmtepomp bij komt. Zuinig en comfortabel voor het hele huis, vooral als de vloer toch al open ligt bij een grote verbouwing.</li>
   </ul>
   <p>Een warmtepomp verwarmt en koelt; wat dat kost leest u bij <a href="/nl/kosten/airco-en-warmtepomp/">airco en warmtepomp</a>.</p>
 

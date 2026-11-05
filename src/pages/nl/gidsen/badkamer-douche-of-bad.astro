@@ -3,7 +3,7 @@ import Guide from '../../../components/Guide.astro';
 
 const toc = [
   { id: 'keuze', label: 'Douche, bad of allebei?' },
-  { id: 'vergelijking', label: 'Alle opties vergeleken met prijzen' },
+  { id: 'vergelijking', label: 'Alle opties vergeleken' },
   { id: 'inloopdouche', label: 'Inloopdouche' },
   { id: 'regendouche', label: 'Regendouche' },
   { id: 'douchebak', label: 'Douchebak met glazen wand' },
@@ -29,31 +29,32 @@ const faq = [
   },
   {
     q: 'Wat kost het om het bad te vervangen door een douche?',
-    a: 'Bad eruit en een inloopdouche met glazen wand erin is een middelgrote klus (€€€), inclusief nieuwe tegels in de douchehoek. Een complete nieuwe badkamer is ongeveer twee keer zo duur. Een vaste prijs krijgt u in de offerte; wat een hele badkamer kost staat op de kostenpagina.',
+    a: 'Dat hangt af van de maten, de afvoer en de tegels en de glazen wand die u kiest. Het is wel een stuk minder werk dan een complete nieuwe badkamer, omdat alleen de douchehoek nieuw wordt. Wilt u het laten doen? Wij nemen het hele werk uit handen.',
   },
 ];
 ---
-<Guide slug="badkamer-douche-of-bad" toc={toc} faq={faq} dienst="badkamer-keuken" ctaTitle="Uw badkamer vernieuwen?" ctaText="Stuur ons een paar foto’s en de maten van uw badkamer. U krijgt advies over douche of bad en een prijs, ook als u niet in Spanje bent.">
+<Guide slug="badkamer-douche-of-bad" toc={toc} faq={faq} dienst="badkamer-keuken" ctaTitle="Uw badkamer laten verbouwen?" ctaText="Vertel ons wat u wilt: een inloopdouche, een regendouche of een bad. Wij regelen het hele werk, van slopen tot oplevering, ook als u niet in Spanje bent.">
   <h2 id="keuze">Douche, bad of allebei?</h2>
   <p>Wie in de Axarquía een badkamer vernieuwt, staat bijna altijd voor dezelfde vraag: houd ik het bad, kies ik een inloopdouche, of wordt het een regendouche? Het antwoord hangt af van wie de badkamer gebruikt. Woont u er zelf, verhuurt u aan vakantiegasten of runt u een B&B? En hoeveel water en ruimte heeft u?</p>
   <p>In Spaanse huizen uit de jaren 70 tot 2000 zit vaak een klein bad met een douchekop erboven. Dat is de badkamer die de meeste kopers als eerste aanpakken. Hieronder zetten we alle opties naast elkaar.</p>
 
-  <h2 id="vergelijking">Alle opties vergeleken met prijzen</h2>
-  <p>De prijsklasse loopt van € (goedkoop) tot €€€€ (duur), inclusief plaatsen. Een prijs voor uw badkamer krijgt u in de offerte.</p>
+  <h2 id="vergelijking">Alle opties vergeleken</h2>
+  <p>Hieronder per optie het waterverbruik en waar hij sterk in is.</p>
   <div class="table-scroll">
   <table class="prices">
-    <thead><tr><th>Optie</th><th>Prijsklasse</th><th>Waterverbruik</th><th>Sterk in</th></tr></thead>
+    <thead><tr><th>Optie</th><th>Waterverbruik</th><th>Sterk in</th></tr></thead>
     <tbody>
-      <tr><td>Douchebak met glazen wand</td><td class="pk">€</td><td>6 – 9 l per minuut</td><td>Betaalbaar, past bijna overal</td></tr>
-      <tr><td>Inloopdouche op vloerniveau</td><td class="pk">€€€</td><td>6 – 9 l per minuut</td><td>Ruim, modern, makkelijk schoon, ook voor later</td></tr>
-      <tr><td>Regendouche (set, extra op een douche)</td><td class="pk">€ – €€</td><td>9 – 20 l per minuut</td><td>Comfort en luxe gevoel</td></tr>
-      <tr><td>Bad met douchewand vervangen</td><td class="pk">€€</td><td>150 – 200 l per bad</td><td>Gezinnen met kleine kinderen</td></tr>
-      <tr><td>Vrijstaand bad</td><td class="pk">€€€</td><td>200 – 300 l per bad</td><td>Sfeer, luxe suite, foto’s</td></tr>
-      <tr><td>Bad eruit, inloopdouche erin</td><td class="pk">€€€</td><td>Bespaart water</td><td>De meest gevraagde verbouwing</td></tr>
-      <tr><td>Complete badkamer (4 – 6 m²)</td><td class="pk">€€€€</td><td>-</td><td>Alles nieuw, ook leidingen</td></tr>
+      <tr><td>Douchebak met glazen wand</td><td>6 – 9 l per minuut</td><td>Betaalbaar, past bijna overal</td></tr>
+      <tr><td>Inloopdouche op vloerniveau</td><td>6 – 9 l per minuut</td><td>Ruim, modern, makkelijk schoon, ook voor later</td></tr>
+      <tr><td>Regendouche (set, extra op een douche)</td><td>9 – 20 l per minuut</td><td>Comfort en luxe gevoel</td></tr>
+      <tr><td>Bad met douchewand vervangen</td><td>150 – 200 l per bad</td><td>Gezinnen met kleine kinderen</td></tr>
+      <tr><td>Vrijstaand bad</td><td>200 – 300 l per bad</td><td>Sfeer, luxe suite, foto’s</td></tr>
+      <tr><td>Bad eruit, inloopdouche erin</td><td>Bespaart water</td><td>De meest gevraagde verbouwing</td></tr>
+      <tr><td>Complete badkamer (4 – 6 m²)</td><td>-</td><td>Alles nieuw, ook leidingen</td></tr>
     </tbody>
   </table>
   </div>
+  <div class="box"><p><strong>Wilt u uw badkamer laten verbouwen?</strong> Wij doen het hele werk: slopen, leidingen, tegels en sanitair, ook als u niet in Spanje bent. Vertel ons wat u wilt laten doen.</p><a class="btn" href="/nl/aanvraag/?dienst=badkamer-keuken">Vertel ons uw plan</a></div>
   <p>Meer over wat een hele badkamer kost staat op <a href="/nl/kosten/badkamer-renoveren/">kosten badkamer renoveren</a>.</p>
 
   <h2 id="inloopdouche">Inloopdouche</h2>
@@ -67,8 +68,8 @@ const faq = [
   <h2 id="regendouche">Regendouche</h2>
   <p>Een regendouche (<em>ducha efecto lluvia</em> of <em>rociador</em>) is een grote, platte douchekop van 25 tot 40 cm boven uw hoofd. Het water valt als een zachte regenbui over u heen. Het is geen apart soort douche, maar een kop die u bij een inloopdouche of douchebak kiest.</p>
   <ul>
-    <li><strong>Opbouwset:</strong> een stang met regendouche, handdouche en thermostaatkraan op de muur (€). Kan in een bestaande douche.</li>
-    <li><strong>Inbouw:</strong> de kranen zitten in de muur en de regendouche komt uit het plafond of de wand. Strak, maar de muur moet open (€€).</li>
+    <li><strong>Opbouwset:</strong> een stang met regendouche, handdouche en thermostaatkraan op de muur. Kan in een bestaande douche.</li>
+    <li><strong>Inbouw:</strong> de kranen zitten in de muur en de regendouche komt uit het plafond of de wand. Strak, maar de muur moet open.</li>
     <li><strong>Kies altijd een combinatie met een handdouche.</strong> Dat is handig om de douche schoon te maken en om niet elke keer uw haar nat te maken.</li>
     <li><strong>Kalk:</strong> het water in de Axarquía is hard. Kies een douchekop met rubberen sproeigaatjes die u schoon kunt wrijven, en overweeg een waterontharder of kalkfilter.</li>
   </ul>
