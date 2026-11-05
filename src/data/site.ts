@@ -38,7 +38,7 @@ export const site = {
 
   // URL van de Google Apps Script web-app (zie apps-script/README.md).
   // Zolang dit niet is ingevuld, toont de keuzehulp een melding in plaats van te versturen.
-  leadEndpoint: `${TODO} Apps Script URL`,
+  leadEndpoint: 'https://script.google.com/macros/s/AKfycbyyOE8lTxFgFYaHyr7P4ebh_bxp5dal77rUdwcBO46O2Lu6Ic4Bz8GFvCpbC7LZhwGSnw/exec',
 
   villages: [
     'Nerja',
