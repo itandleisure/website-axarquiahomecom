@@ -17,6 +17,10 @@ const CONFIG = {
   FOTOMAP: 'Aanvragen axarquiahome.com - foto\'s',
   // Afzendernaam van de e-mails
   AFZENDER: 'Axarquía Home',
+  // Afzenderadres. Werkt alleen als dit adres in Gmail als alias is toegevoegd
+  // (Gmail > Instellingen > Accounts > "E-mail verzenden als"). Anders gaat de mail
+  // vanaf het Google-account en staat dit adres als antwoordadres (reply-to).
+  AFZENDER_ADRES: 'info@axarquiahome.com',
 };
 
 const KOLOMMEN = [
@@ -105,7 +109,7 @@ function mailBouwbedrijf_(d, fotoLinks, rijNummer) {
     ${fotoLinks.length ? `<p>Foto's:<br>${fotoLinks.map((u, i) => `<a href="${u}">Foto ${i + 1}</a>`).join('<br>')}</p>` : ''}
     <p>Graag binnen 24 uur contact opnemen en daarna de status invullen in de sheet:<br>
     <a href="${SpreadsheetApp.getActiveSpreadsheet().getUrl()}">Open de sheet</a></p>`;
-  MailApp.sendEmail({
+  send_({
     to: CONFIG.MAIL_BOUWBEDRIJF,
     cc: CONFIG.MAIL_KOPIE,
     replyTo: d.email,
@@ -117,7 +121,7 @@ function mailBouwbedrijf_(d, fotoLinks, rijNummer) {
 
 function mailKlant_(d) {
   const en = d.taal === 'en';
-  MailApp.sendEmail({
+  send_({
     to: d.email,
     replyTo: CONFIG.MAIL_KOPIE,
     name: CONFIG.AFZENDER,
@@ -126,6 +130,15 @@ function mailKlant_(d) {
       ? `<p>Dear ${esc_(d.naam)},</p><p>Thank you for your request. One of our team will contact you within 24 hours to discuss the next step.</p><p>Kind regards,<br>Axarquía Home</p>`
       : `<p>Beste ${esc_(d.naam)},</p><p>Bedankt voor uw aanvraag. Een Nederlandstalige collega neemt binnen 24 uur contact met u op om de volgende stap te bespreken.</p><p>Met vriendelijke groet,<br>Axarquía Home</p>`,
   });
+}
+
+/** Verstuurt via de info@-alias als die bestaat, anders via het Google-account. */
+function send_(o) {
+  const alias = GmailApp.getAliases().indexOf(CONFIG.AFZENDER_ADRES) !== -1;
+  const opts = { htmlBody: o.htmlBody, name: o.name, replyTo: o.replyTo || CONFIG.AFZENDER_ADRES };
+  if (o.cc) opts.cc = o.cc;
+  if (alias) opts.from = CONFIG.AFZENDER_ADRES;
+  GmailApp.sendEmail(o.to, o.subject, '', opts);
 }
 
 function esc_(s) {
@@ -140,5 +153,6 @@ function json_(obj) {
 function setup() {
   sheet_();
   DriveApp.getRootFolder();
+  GmailApp.getAliases();
   MailApp.getRemainingDailyQuota();
 }

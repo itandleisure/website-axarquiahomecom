@@ -22,6 +22,21 @@ mailt het bouwbedrijf (met Frans in cc) en stuurt de klant een bevestiging.
 8. Deel de sheet met het bouwbedrijf (rechten: bewerken), zodat zij de status en
    bedragen per aanvraag kunnen invullen. Dat is meteen de basis voor de commissie.
 
+## Mail versturen vanaf info@axarquiahome.com (optioneel)
+
+Apps Script verstuurt mail vanaf het Google-account waar de sheet onder valt. Klanten die
+op de bevestiging antwoorden, komen altijd bij info@axarquiahome.com uit (reply-to).
+Wil je dat de mail ook *van* info@ komt, voeg het adres dan toe als alias:
+
+1. Gmail > Instellingen (tandwiel) > Alle instellingen > **Accounts en import**.
+2. Bij **E-mail verzenden als**: klik "Nog een e-mailadres toevoegen".
+3. Naam `Axarquía Home`, adres `info@axarquiahome.com`, vinkje "Behandelen als alias" aan.
+4. Vul de SMTP-gegevens van Vimexx in (server en poort staan in je Vimexx-mailinstellingen,
+   gebruikersnaam is het volledige e-mailadres, met het wachtwoord van de mailbox).
+5. Bevestig met de code die Gmail naar info@ stuurt.
+
+Het script ziet de alias daarna vanzelf en gebruikt hem als afzender.
+
 ## Wijzigingen later
 
 Pas `Code.gs` aan, en kies daarna **Implementeren > Implementaties beheren > bewerken >
