@@ -1,5 +1,6 @@
 ---
-import Guide from '../../../components/Guide.astro';
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
 
 const toc = [
   { id: 'overview', label: 'The steps at a glance' },
@@ -10,6 +11,7 @@ const toc = [
   { id: 'notary', label: 'Phase 5: the notary' },
   { id: 'after', label: 'Phase 6: after completion' },
   { id: 'abroad', label: 'Buying from abroad' },
+  { id: 'more', label: 'Checklist and buying a B&B' },
   { id: 'sources', label: 'Sources' },
 ];
 
@@ -81,7 +83,7 @@ const faq = [
 
   <h2 id="search">Phase 2: searching and making an offer</h2>
   <h3>Step 5: searching and viewing</h3>
-  <p>Most homes in the Axarquía are listed on portals such as Idealista, Fotocasa and Kyero, often with several agents at once and sometimes at different prices. Visit a property more than once if you can, including in winter or after rain: that is when you see damp, leaks and the state of the access road. Drive the route to the nearest supermarket, health centre and the coast. Compare the towns on our <a href="/en/places/">places pages</a>.</p>
+  <p>Most homes in the Axarquía are listed on portals such as Idealista, Fotocasa and Kyero, often with several agents at once and sometimes at different prices. Visit a property more than once if you can, including in winter or after rain: that is when you see damp, leaks and the state of the access road. Drive the route to the nearest supermarket, health centre and the coast. Compare the towns on our <a href="/en/places/">places pages</a>. Take our <a href="/en/guides/buying-a-house-in-spain/checklist/">checklist with questions in Spanish</a> to the viewing.</p>
   <h3>Step 6: offer and reservation</h3>
   <p>Offers go through the agent. Once a price is agreed, the agent often asks for a small reservation payment, for example €3,000 to €6,000, to take the house off the market. Have your lawyer read the paperwork first and make sure it says you get the money back if the legal checks or the survey turn up problems. Pay into your lawyer’s client account rather than straight to the seller.</p>
 
@@ -156,6 +158,10 @@ const faq = [
     <li><strong>Someone on the ground.</strong> A surveyor or builder who inspects the house and keeps you updated with photos and video stops you relying on the agent’s pictures alone.</li>
   </ul>
   <p>Got a house in mind? We do the <a href="/en/property-survey/">property survey</a>, price the renovation and help after the purchase with <a href="/en/renovation/">renovation</a>, <a href="/en/maintenance/">maintenance</a> and <a href="/en/key-holding/">key holding</a>. Send your question through the <a href="/en/request/?dienst=aankoopkeuring">request form</a> or email <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+
+  <h2 id="more">Checklist and buying a B&amp;B</h2>
+  <p>Two parts have their own pages: a checklist of questions to ask at a viewing, with the Spanish sentence alongside, and a guide for anyone taking over a running B&amp;B.</p>
+  <GuideChildren lang="en" parent="buying-a-house-in-spain" />
 
   <h2 id="sources">Sources</h2>
   <ul>

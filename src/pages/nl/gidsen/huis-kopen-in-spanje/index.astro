@@ -1,5 +1,6 @@
 ---
-import Guide from '../../../components/Guide.astro';
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
 
 const toc = [
   { id: 'overzicht', label: 'Het stappenplan in één oogopslag' },
@@ -10,6 +11,7 @@ const toc = [
   { id: 'notaris', label: 'Fase 5: de notaris' },
   { id: 'na', label: 'Fase 6: na de overdracht' },
   { id: 'afstand', label: 'Kopen vanuit het buitenland' },
+  { id: 'verder', label: 'Checklist en B&B kopen' },
   { id: 'bronnen', label: 'Bronnen' },
 ];
 
@@ -81,7 +83,7 @@ const faq = [
 
   <h2 id="zoeken">Fase 2: zoeken en bieden</h2>
   <h3>Stap 5: zoeken en bezichtigen</h3>
-  <p>De meeste huizen in de Axarquía staan op portalen als Idealista, Fotocasa en Kyero, vaak bij meerdere makelaars tegelijk en soms voor verschillende prijzen. Bezoek een huis bij voorkeur meer dan eens, ook in de winter of na regen: dan ziet u vocht, lekkages en de staat van de toegangsweg. Rijd de route naar de dichtstbijzijnde supermarkt, het gezondheidscentrum en de kust. Vergelijk de dorpen op onze <a href="/nl/plaatsen/">plaatsenpagina’s</a>.</p>
+  <p>De meeste huizen in de Axarquía staan op portalen als Idealista, Fotocasa en Kyero, vaak bij meerdere makelaars tegelijk en soms voor verschillende prijzen. Bezoek een huis bij voorkeur meer dan eens, ook in de winter of na regen: dan ziet u vocht, lekkages en de staat van de toegangsweg. Rijd de route naar de dichtstbijzijnde supermarkt, het gezondheidscentrum en de kust. Vergelijk de dorpen op onze <a href="/nl/plaatsen/">plaatsenpagina’s</a>. Neem de <a href="/nl/gidsen/huis-kopen-in-spanje/checklist/">checklist met vragen in het Spaans</a> mee naar de bezichtiging.</p>
   <h3>Stap 6: bod en reservering</h3>
   <p>Biedingen gaan via de makelaar. Bij een akkoord vraagt de makelaar vaak een kleine reserveringsbetaling, bijvoorbeeld € 3.000 tot € 6.000, om het huis van de markt te halen. Laat uw advocaat vooraf meelezen en zorg dat op papier staat dat u dit bedrag terugkrijgt als het juridisch onderzoek of de keuring problemen oplevert. Betaal bij voorkeur op de derdenrekening van uw advocaat, niet rechtstreeks aan de verkoper.</p>
 
@@ -156,6 +158,10 @@ const faq = [
     <li><strong>Iemand ter plaatse.</strong> Een keurder of bouwbedrijf dat het huis bekijkt en u met foto’s en video op de hoogte houdt, voorkomt dat u alleen op de foto’s van de makelaar vaart.</li>
   </ul>
   <p>Heeft u een huis op het oog? Wij doen de <a href="/nl/aankoopkeuring/">aankoopkeuring</a>, begroten de verbouwing en helpen na de aankoop met <a href="/nl/renovatie/">renovatie</a>, <a href="/nl/onderhoud/">onderhoud</a> en <a href="/nl/sleutelbeheer/">sleutelbeheer</a>. Stuur uw vraag via het <a href="/nl/aanvraag/?dienst=aankoopkeuring">aanvraagformulier</a> of mail naar <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+
+  <h2 id="verder">Checklist en B&amp;B kopen</h2>
+  <p>Twee onderdelen werken we uit op aparte pagina’s: een checklist met de vragen die u bij een bezichtiging stelt, met de Spaanse zin erbij, en een gids voor wie een lopende B&amp;B wil overnemen.</p>
+  <GuideChildren parent="huis-kopen-in-spanje" />
 
   <h2 id="bronnen">Bronnen</h2>
   <ul>

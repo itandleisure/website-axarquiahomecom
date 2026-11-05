@@ -1,5 +1,6 @@
 ---
-import Guide from '../../../components/Guide.astro';
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
 
 const toc = [
   { id: 'ueberblick', label: 'Der Ablauf auf einen Blick' },
@@ -10,6 +11,7 @@ const toc = [
   { id: 'notar', label: 'Phase 5: Beim Notar' },
   { id: 'danach', label: 'Phase 6: Nach der Übergabe' },
   { id: 'ausland', label: 'Kaufen aus dem Ausland' },
+  { id: 'mehr', label: 'Checkliste und Pension kaufen' },
   { id: 'quellen', label: 'Quellen' },
 ];
 
@@ -81,7 +83,7 @@ const faq = [
 
   <h2 id="suche">Phase 2: Suchen und Angebot</h2>
   <h3>Schritt 5: Suchen und besichtigen</h3>
-  <p>Die meisten Häuser in der Axarquía stehen auf Portalen wie Idealista, Fotocasa und Kyero, oft bei mehreren Maklern gleichzeitig und manchmal zu unterschiedlichen Preisen. Besichtigen Sie ein Haus möglichst mehr als einmal, auch im Winter oder nach Regen: Dann sehen Sie Feuchtigkeit, Undichtigkeiten und den Zustand der Zufahrt. Fahren Sie die Strecke zum nächsten Supermarkt, Gesundheitszentrum und zur Küste. Die Orte vergleichen Sie auf unseren <a href="/de/orte/">Ortsseiten</a>.</p>
+  <p>Die meisten Häuser in der Axarquía stehen auf Portalen wie Idealista, Fotocasa und Kyero, oft bei mehreren Maklern gleichzeitig und manchmal zu unterschiedlichen Preisen. Besichtigen Sie ein Haus möglichst mehr als einmal, auch im Winter oder nach Regen: Dann sehen Sie Feuchtigkeit, Undichtigkeiten und den Zustand der Zufahrt. Fahren Sie die Strecke zum nächsten Supermarkt, Gesundheitszentrum und zur Küste. Die Orte vergleichen Sie auf unseren <a href="/de/orte/">Ortsseiten</a>. Nehmen Sie die <a href="/de/ratgeber/haus-kaufen-spanien/checkliste/">Checkliste mit Fragen auf Spanisch</a> zur Besichtigung mit.</p>
   <h3>Schritt 6: Angebot und Reservierung</h3>
   <p>Angebote laufen über den Makler. Bei Einigung verlangt er oft eine kleine Reservierungszahlung, etwa 3.000 bis 6.000 €, um das Haus vom Markt zu nehmen. Lassen Sie Ihren Anwalt vorher mitlesen und halten Sie schriftlich fest, dass Sie das Geld zurückbekommen, falls die rechtliche Prüfung oder das Gutachten Probleme ergibt. Zahlen Sie möglichst auf das Treuhandkonto Ihres Anwalts, nicht direkt an den Verkäufer.</p>
 
@@ -156,6 +158,10 @@ const faq = [
     <li><strong>Jemand vor Ort.</strong> Ein Gutachter oder eine Baufirma, die das Haus ansieht und Sie mit Fotos und Videos auf dem Laufenden hält, bewahrt Sie davor, sich nur auf die Fotos des Maklers zu verlassen.</li>
   </ul>
   <p>Haben Sie ein Haus im Blick? Wir übernehmen das <a href="/de/immobiliengutachten/">Immobiliengutachten</a>, kalkulieren die Renovierung und helfen nach dem Kauf mit <a href="/de/renovierung/">Renovierung</a>, <a href="/de/instandhaltung/">Instandhaltung</a> und <a href="/de/hausbetreuung/">Hausbetreuung</a>. Senden Sie Ihre Frage über das <a href="/de/anfrage/?dienst=aankoopkeuring">Anfrageformular</a> oder per E-Mail an <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+
+  <h2 id="mehr">Checkliste und Pension kaufen</h2>
+  <p>Zwei Themen haben eigene Seiten: eine Checkliste mit den Fragen für die Besichtigung, jeweils mit dem spanischen Satz, und ein Ratgeber für alle, die eine laufende Pension übernehmen möchten.</p>
+  <GuideChildren lang="de" parent="haus-kaufen-spanien" />
 
   <h2 id="quellen">Quellen</h2>
   <ul>
