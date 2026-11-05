@@ -795,4 +795,156 @@ export const problemsEn: Topic[] = [
     minutes: 5,
     published: '2026-11-05',
   },
+  {
+    key: 'schoorsteen',
+    slug: 'smoking-chimney',
+    title: 'Chimney smoking back or drawing badly: cause and solution',
+    seoTitle: 'Smoking chimney or wood burner in Spain: causes and solutions',
+    short: 'Smoking chimney',
+    description: 'Is smoke coming into the room from your open fire or wood burner in the Axarquía? How to find the cause: cold flue, damp wood, too little air, wind or a dirty chimney. What you can do yourself and what the fix costs.',
+    lead: 'You light the fire and within minutes the room is full of smoke. It happens a lot in a house that has been closed up for months. There is usually one of five causes, and most are easy to fix.',
+    keyword: 'smoking chimney',
+    dienst: 'schoorsteen',
+    onderwerp: 'My chimney or stove is smoking back.',
+    answer: 'If the fire only smokes when you light it, the <strong>flue is still cold</strong>. If it smokes all the time, the chimney is often <strong>dirty or blocked</strong> by soot or a nest, there is <strong>too little air</strong> in the room, or <strong>the wind</strong> is pushing the smoke back. Have the chimney swept and checked first: it costs €60 to €120 and often solves it.',
+    sections: [
+      {
+        id: 'oorzaak',
+        h: 'Why does the chimney smoke back?',
+        table: {
+          head: ['What you see', 'Likely cause'],
+          rows: [
+            ['Smoke only when lighting', 'Cold flue, especially on an outside wall or after a long idle period'],
+            ['Smoke all the time, even with a good fire', 'Dirty or blocked flue: soot, tar, a nest or loose bricks'],
+            ['Better with a window ajar', 'Too little air: a well-sealed house or a cooker hood pulling air out'],
+            ['Only with wind from one direction', 'Wind pushing smoke back, from a taller neighbour, a slope or a chimney that is too short'],
+            ['Lots of smoke, hissing, black fire', 'Damp wood'],
+            ['Smell of smoke in another room or next door', 'Crack in the flue: have it checked straight away'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'What you can do yourself',
+        html: `<ul>
+<li><strong>Warm the flue first</strong> with a burning twist of newspaper at the bottom of the chimney, and start with small, dry kindling.</li>
+<li><strong>Open a window slightly</strong> in the room and switch off the kitchen cooker hood.</li>
+<li><strong>Burn dry wood</strong> with less than 20% moisture, such as olive or almond seasoned for a year.</li>
+<li><strong>Look up</strong> with a torch when the fire is cold: if you see no daylight, something is in the flue.</li>
+<li><strong>Fit a carbon monoxide alarm</strong> in the room with the fire or stove. It costs €25 to €50.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'Solutions and costs',
+        table: {
+          head: ['Solution', 'When', 'Indication'],
+          rows: [
+            ['Sweep and check the chimney', 'Always the first step', '€60 – €120'],
+            ['Wind cowl or draught cowl', 'For downdraught from wind', '€150 – €400'],
+            ['Extend the chimney', 'If it ends too low above the roof or ridge', '€300 – €1,200'],
+            ['Air vent or outside air supply', 'For too little air', '€100 – €400'],
+            ['Stainless steel liner', 'For a flue that is too wide, cracked or leaking', '€1,000 – €2,500'],
+          ],
+          note: 'More prices for sweeping, repair and a new stove: see <a href="/en/costs/chimney-and-wood-burner/">cost of chimney and wood burner</a>.',
+        },
+      },
+      {
+        id: 'gevaar',
+        h: 'When is it dangerous?',
+        html: '<p>Smoke in the house is a nuisance, but you cannot see or smell carbon monoxide. If you get a headache, feel dizzy or sick near the fire, go outside and do not light it again until the chimney has been checked. If you smell smoke in another room or next door, or see soot marks on a wall, the flue is probably cracked.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Why does the fire only smoke at the start of winter?', a: 'A flue that has been cold and damp for months draws badly until it warms up. A nest may also have been built in spring. Have the chimney swept in September or October.' },
+      { q: 'Does a wind cowl always help?', a: 'Only if wind is the cause. With a dirty flue or too little air a cowl does not help. So have the cause found first.' },
+      { q: 'Can a wood burner go into an old open fireplace?', a: 'Often, yes, with a stainless steel liner through the existing chimney. That solves most smoke problems straight away and gives much more heat.' },
+    ],
+    links: [
+      { href: '/en/costs/chimney-and-wood-burner/', label: 'Cost of chimney and wood burner' },
+      { href: '/en/guides/preparing-your-spanish-home-for-winter/', label: 'Guide: preparing your home for winter' },
+      { href: '/en/maintenance/', label: 'Maintenance and repairs' },
+    ],
+    related: ['costs:schoorsteen', 'problems:tocht', 'problems:vocht'],
+    sources: [
+      { name: 'BOE, RITE (heating installations)', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2007-15820' },
+    ],
+    ctaTitle: 'Chimney smoking back?',
+    ctaText: 'Send a photo of the fireplace or stove and of the chimney on the roof, and tell us when it happens. You get advice and a price.',
+    minutes: 4,
+    published: '2026-11-05',
+  },
+  {
+    key: 'tocht',
+    slug: 'draughts-and-condensation-at-windows',
+    title: 'Draughts and condensation at windows in your Spanish home: cause and solution',
+    seoTitle: 'Draughts, cold and condensation at windows in Spain: causes and solutions',
+    short: 'Draughts and condensation',
+    description: 'Do your windows stream in winter and is your house in the Axarquía draughty? Why single glazing and cold aluminium frames cause it, what you can do yourself and what new windows or glass cost.',
+    lead: 'Spanish houses are built for summer. In winter you sit behind single glazing in thin aluminium frames, with a cold draught along the floor and puddles on the windowsill in the morning. It is not only uncomfortable, it also leads to mould.',
+    keyword: 'condensation windows spain',
+    dienst: 'ramen',
+    onderwerp: 'I have draughts or condensation at my windows.',
+    answer: 'Condensation on windows is caused by <strong>humid indoor air on a cold surface</strong>: single glazing and aluminium frames without a thermal break. Draughts usually come from <strong>worn seals and gaps</strong> around frames and shutter boxes. Ventilating and sealing help a lot; the real fix is double glazing in an insulated frame, from about €400 per window.',
+    sections: [
+      {
+        id: 'oorzaak',
+        h: 'What causes it?',
+        table: {
+          head: ['What you see', 'Likely cause'],
+          rows: [
+            ['Droplets on the glass, especially in the morning', 'Single glazing and moist air from sleeping, cooking and showering'],
+            ['Water and black spots on the frame', 'Aluminium frame without a thermal break: the metal is ice cold'],
+            ['Draught along the window', 'Worn brushes or seals, gaps between frame and wall'],
+            ['Cold air from the shutter box', 'Uninsulated roller shutter box (cajón de persiana)'],
+            ['Mould in the corner around the window', 'Cold bridge in the wall and too little ventilation'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'What you can do yourself',
+        html: `<ul>
+<li><strong>Ventilate every day</strong> for ten minutes with windows open on opposite sides, also in winter.</li>
+<li><strong>Wipe off condensation in the morning</strong> so it does not soak into the frame or wall.</li>
+<li><strong>Use a dehumidifier</strong> in bedrooms and in a house that stands empty.</li>
+<li><strong>Replace the brushes and seals</strong> of sliding windows and seal gaps between frame and wall.</li>
+<li><strong>Insulate the shutter box</strong> with insulation board and draught strip.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'Solutions and costs',
+        table: {
+          head: ['Solution', 'Details', 'Indication'],
+          rows: [
+            ['Renew seals and sealant', 'Per window, brushes, seals and sealant', '€50 – €150'],
+            ['Insulate the shutter box', 'Per box', '€80 – €200'],
+            ['Double glazing in an existing frame', 'If the frame is sound and suitable', '€100 – €250 per m²'],
+            ['New double-glazed window', 'Aluminium RPT or uPVC, about 120 × 120 cm', '€350 – €800'],
+          ],
+          note: 'More on materials, glass and permits: see <a href="/en/costs/windows-and-frames/">cost of windows and frames</a>.',
+        },
+      },
+    ],
+    faq: [
+      { q: 'Is condensation on windows a problem?', a: 'A little condensation on a cold morning is normal. If it streams every day and the frame or wall turns black, mould develops. Then you need more ventilation or better glass.' },
+      { q: 'Does double glazing stop all condensation?', a: 'Most of it, because the inner pane stays warmer. If the air in the house is very humid, you still need to ventilate. See also damp and mould.' },
+      { q: 'Do new windows help in summer too?', a: 'Yes. With solar control double glazing and roller shutters the house stays cooler, so the air con has to work less.' },
+    ],
+    links: [
+      { href: '/en/costs/windows-and-frames/', label: 'Cost of windows and frames' },
+      { href: '/en/problems/damp-and-mould/', label: 'Damp and mould' },
+      { href: '/en/guides/preparing-your-spanish-home-for-winter/', label: 'Guide: preparing your home for winter' },
+    ],
+    related: ['costs:ramen', 'problems:vocht', 'costs:airco'],
+    sources: [
+      { name: 'Código Técnico de la Edificación, DB HE (energy saving)', url: 'https://www.codigotecnico.org/DocumentosCTE/AhorroEnergia.html' },
+      { name: 'IDAE, grants for energy saving in homes', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'Troubled by draughts or condensation?',
+    ctaText: 'Send photos of your windows and the spots with condensation or mould. You get advice and a price.',
+    minutes: 4,
+    published: '2026-11-05',
+  },
 ];

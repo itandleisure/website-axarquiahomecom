@@ -795,4 +795,156 @@ export const problemsDe: Topic[] = [
     minutes: 5,
     published: '2026-11-05',
   },
+  {
+    key: 'schoorsteen',
+    slug: 'kamin-raucht',
+    title: 'Kamin raucht zurück oder zieht schlecht: Ursache und Lösung',
+    seoTitle: 'Kamin oder Kaminofen raucht in Spanien: Ursachen und Lösungen',
+    short: 'Kamin raucht zurück',
+    description: 'Kommt Rauch aus Ihrem offenen Kamin oder Kaminofen in der Axarquía ins Zimmer? So finden Sie die Ursache: kaltes Rohr, feuchtes Holz, zu wenig Luft, Wind oder ein verschmutzter Schornstein. Was Sie selbst tun können und was die Lösung kostet.',
+    lead: 'Sie zünden den Kamin an und nach wenigen Minuten ist das Zimmer voller Rauch. In einem Haus, das monatelang geschlossen war, passiert das oft. Meist steckt eine von fünf Ursachen dahinter, und die meisten lassen sich einfach beheben.',
+    keyword: 'kamin raucht',
+    dienst: 'schoorsteen',
+    onderwerp: 'Mein Kamin oder Ofen raucht zurück.',
+    answer: 'Raucht der Kamin nur beim Anzünden, ist das <strong>Rohr noch kalt</strong>. Raucht er ständig, ist der Schornstein oft <strong>verschmutzt oder verstopft</strong> durch Ruß oder ein Nest, es kommt <strong>zu wenig Luft</strong> ins Zimmer, oder <strong>der Wind</strong> drückt den Rauch zurück. Lassen Sie den Schornstein zuerst fegen und prüfen: Das kostet 60 bis 120 € und löst es oft schon.',
+    sections: [
+      {
+        id: 'oorzaak',
+        h: 'Warum raucht der Kamin zurück?',
+        table: {
+          head: ['Was Sie sehen', 'Wahrscheinliche Ursache'],
+          rows: [
+            ['Rauch nur beim Anzünden', 'Kaltes Rauchrohr, vor allem an einer Außenwand oder nach langem Stillstand'],
+            ['Ständig Rauch, auch bei gutem Feuer', 'Verschmutztes oder verstopftes Rohr: Ruß, Teer, ein Nest oder lose Steine'],
+            ['Besser mit gekipptem Fenster', 'Zu wenig Luftzufuhr: ein dichtes Haus oder eine Dunstabzugshaube, die Luft absaugt'],
+            ['Nur bei Wind aus einer Richtung', 'Wind drückt den Rauch zurück, durch einen höheren Nachbarn, einen Hang oder einen zu kurzen Schornstein'],
+            ['Viel Rauch, zischendes, schwarzes Feuer', 'Feuchtes Holz'],
+            ['Rauchgeruch in einem anderen Raum oder beim Nachbarn', 'Riss im Rohr: sofort prüfen lassen'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'Was Sie selbst tun können',
+        html: `<ul>
+<li><strong>Rohr vorwärmen</strong> mit brennendem Zeitungspapier unten im Schornstein, und mit kleinem, trockenem Anzündholz beginnen.</li>
+<li><strong>Ein Fenster kippen</strong> und die Dunstabzugshaube in der Küche ausschalten.</li>
+<li><strong>Trockenes Holz verbrennen</strong> mit weniger als 20 % Feuchte, etwa Oliven- oder Mandelholz, das ein Jahr getrocknet ist.</li>
+<li><strong>Nach oben schauen</strong> mit einer Taschenlampe, wenn der Kamin kalt ist: Sehen Sie kein Licht, steckt etwas im Rohr.</li>
+<li><strong>Einen Kohlenmonoxidmelder</strong> im Raum mit Kamin oder Ofen anbringen. Er kostet 25 bis 50 €.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'Lösungen und Kosten',
+        table: {
+          head: ['Lösung', 'Wann', 'Richtwert'],
+          rows: [
+            ['Schornstein fegen und prüfen', 'Immer der erste Schritt', '60 – 120 €'],
+            ['Windhaube oder Zughaube', 'Bei Rückstau durch Wind', '150 – 400 €'],
+            ['Schornstein verlängern', 'Wenn er zu niedrig über Dach oder First endet', '300 – 1.200 €'],
+            ['Lüftungsgitter oder Außenluftanschluss', 'Bei zu wenig Luftzufuhr', '100 – 400 €'],
+            ['Edelstahl-Innenrohr', 'Bei einem zu weiten, gerissenen oder undichten Rohr', '1.000 – 2.500 €'],
+          ],
+          note: 'Mehr Preise für Fegen, Reparatur und einen neuen Ofen: siehe <a href="/de/kosten/schornstein-und-kaminofen/">Kosten Schornstein und Kaminofen</a>.',
+        },
+      },
+      {
+        id: 'gevaar',
+        h: 'Wann ist es gefährlich?',
+        html: '<p>Rauch im Haus ist lästig, aber Kohlenmonoxid können Sie weder sehen noch riechen. Bekommen Sie am Kamin Kopfschmerzen, Schwindel oder Übelkeit, gehen Sie nach draußen und heizen Sie nicht mehr, bis der Schornstein geprüft ist. Riechen Sie Rauch in einem anderen Raum oder beim Nachbarn, oder sehen Sie Rußflecken an einer Wand, ist das Rohr wahrscheinlich gerissen.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Warum raucht der Kamin nur zu Beginn des Winters?', a: 'Ein Rohr, das monatelang kalt und feucht war, zieht schlecht, bis es warm ist. Auch kann im Frühjahr ein Nest gebaut worden sein. Lassen Sie den Schornstein im September oder Oktober fegen.' },
+      { q: 'Hilft eine Windhaube immer?', a: 'Nur wenn der Wind die Ursache ist. Bei einem verschmutzten Rohr oder zu wenig Luft hilft sie nicht. Lassen Sie daher zuerst die Ursache feststellen.' },
+      { q: 'Kann ein Kaminofen in einen alten offenen Kamin?', a: 'Oft ja, mit einem Edelstahl-Innenrohr durch den bestehenden Schornstein. Das löst die meisten Rauchprobleme sofort und gibt viel mehr Wärme.' },
+    ],
+    links: [
+      { href: '/de/kosten/schornstein-und-kaminofen/', label: 'Kosten Schornstein und Kaminofen' },
+      { href: '/de/ratgeber/haus-winterfest-spanien/', label: 'Ratgeber: Haus winterfest machen' },
+      { href: '/de/instandhaltung/', label: 'Instandhaltung und Reparaturen' },
+    ],
+    related: ['costs:schoorsteen', 'problems:tocht', 'problems:vocht'],
+    sources: [
+      { name: 'BOE, RITE (Heizungsanlagen)', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2007-15820' },
+    ],
+    ctaTitle: 'Kamin raucht zurück?',
+    ctaText: 'Schicken Sie ein Foto von Kamin oder Ofen und vom Schornstein auf dem Dach, und sagen Sie, wann es passiert. Sie erhalten Rat und einen Preis.',
+    minutes: 4,
+    published: '2026-11-05',
+  },
+  {
+    key: 'tocht',
+    slug: 'zugluft-und-kondenswasser-an-fenstern',
+    title: 'Zugluft und Kondenswasser an Fenstern in Ihrem Haus in Spanien: Ursache und Lösung',
+    seoTitle: 'Zugluft, Kälte und Kondenswasser an Fenstern in Spanien: Ursachen und Lösungen',
+    short: 'Zugluft und Kondenswasser',
+    description: 'Laufen Ihre Fenster im Winter an und zieht es in Ihrem Haus in der Axarquía? Warum Einfachglas und kalte Aluminiumrahmen das verursachen, was Sie selbst tun und was neue Fenster oder Glas kosten.',
+    lead: 'Spanische Häuser sind für den Sommer gebaut. Im Winter sitzen Sie hinter Einfachglas in dünnen Aluminiumrahmen, mit kalter Zugluft am Boden und morgens Pfützen auf der Fensterbank. Das ist nicht nur unangenehm, es führt auch zu Schimmel.',
+    keyword: 'kondenswasser fenster spanien',
+    dienst: 'ramen',
+    onderwerp: 'Ich habe Zugluft oder Kondenswasser an meinen Fenstern.',
+    answer: 'Kondenswasser an Fenstern entsteht durch <strong>feuchte Raumluft auf einer kalten Fläche</strong>: Einfachglas und Aluminiumrahmen ohne thermische Trennung. Zugluft kommt meist von <strong>verschlissenen Dichtungen und Fugen</strong> an Rahmen und Rollladenkästen. Lüften und Abdichten helfen viel; die eigentliche Lösung ist Doppelverglasung in einem gedämmten Rahmen, ab etwa 400 € pro Fenster.',
+    sections: [
+      {
+        id: 'oorzaak',
+        h: 'Woher kommt es?',
+        table: {
+          head: ['Was Sie sehen', 'Wahrscheinliche Ursache'],
+          rows: [
+            ['Tropfen auf dem Glas, vor allem morgens', 'Einfachglas und feuchte Luft vom Schlafen, Kochen und Duschen'],
+            ['Wasser und schwarze Punkte am Rahmen', 'Aluminiumrahmen ohne thermische Trennung: Das Metall ist eiskalt'],
+            ['Zugluft am Fenster', 'Verschlissene Bürsten oder Dichtungen, Fugen zwischen Rahmen und Wand'],
+            ['Kalte Luft aus dem Rollladenkasten', 'Ungedämmter Rollladenkasten (cajón de persiana)'],
+            ['Schimmel in der Ecke am Fenster', 'Wärmebrücke in der Wand und zu wenig Lüftung'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'Was Sie selbst tun können',
+        html: `<ul>
+<li><strong>Jeden Tag lüften</strong>, zehn Minuten Querlüften, auch im Winter.</li>
+<li><strong>Kondenswasser morgens abwischen</strong>, damit es nicht in Rahmen oder Wand zieht.</li>
+<li><strong>Einen Luftentfeuchter verwenden</strong> in Schlafzimmern und in einem leerstehenden Haus.</li>
+<li><strong>Bürsten und Dichtungen</strong> von Schiebefenstern erneuern und Fugen zwischen Rahmen und Wand abdichten.</li>
+<li><strong>Den Rollladenkasten dämmen</strong> mit Dämmplatte und Dichtband.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'Lösungen und Kosten',
+        table: {
+          head: ['Lösung', 'Erläuterung', 'Richtwert'],
+          rows: [
+            ['Dichtungen und Fugen erneuern', 'Pro Fenster, Bürsten, Dichtungen und Fugenmasse', '50 – 150 €'],
+            ['Rollladenkasten dämmen', 'Pro Kasten', '80 – 200 €'],
+            ['Doppelverglasung im bestehenden Rahmen', 'Wenn der Rahmen gut und geeignet ist', '100 – 250 € pro m²'],
+            ['Neues doppelt verglastes Fenster', 'Aluminium RPT oder Kunststoff, etwa 120 × 120 cm', '350 – 800 €'],
+          ],
+          note: 'Mehr zu Material, Glas und Genehmigung: siehe <a href="/de/kosten/fenster-und-rahmen/">Kosten Fenster und Rahmen</a>.',
+        },
+      },
+    ],
+    faq: [
+      { q: 'Ist Kondenswasser an Fenstern schlimm?', a: 'Etwas Kondenswasser an einem kalten Morgen ist normal. Läuft es jeden Tag und wird der Rahmen oder die Wand schwarz, entsteht Schimmel. Dann braucht es mehr Lüftung oder besseres Glas.' },
+      { q: 'Verhindert Doppelverglasung jedes Kondenswasser?', a: 'Das meiste, weil die innere Scheibe wärmer bleibt. Ist die Luft im Haus sehr feucht, müssen Sie weiter lüften. Siehe auch Feuchtigkeit und Schimmel.' },
+      { q: 'Helfen neue Fenster auch im Sommer?', a: 'Ja. Mit Sonnenschutz-Doppelverglasung und Rollläden bleibt das Haus kühler, sodass die Klimaanlage weniger laufen muss.' },
+    ],
+    links: [
+      { href: '/de/kosten/fenster-und-rahmen/', label: 'Kosten Fenster und Rahmen' },
+      { href: '/de/probleme/feuchtigkeit-und-schimmel/', label: 'Feuchtigkeit und Schimmel' },
+      { href: '/de/ratgeber/haus-winterfest-spanien/', label: 'Ratgeber: Haus winterfest machen' },
+    ],
+    related: ['costs:ramen', 'problems:vocht', 'costs:airco'],
+    sources: [
+      { name: 'Código Técnico de la Edificación, DB HE (Energieeinsparung)', url: 'https://www.codigotecnico.org/DocumentosCTE/AhorroEnergia.html' },
+      { name: 'IDAE, Förderung für Energieeinsparung in Wohnungen', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'Probleme mit Zugluft oder Kondenswasser?',
+    ctaText: 'Schicken Sie Fotos Ihrer Fenster und der Stellen mit Kondenswasser oder Schimmel. Sie erhalten Rat und einen Preis.',
+    minutes: 4,
+    published: '2026-11-05',
+  },
 ];

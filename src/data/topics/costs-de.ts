@@ -64,6 +64,16 @@ export const costsDe: Topic[] = [
         h: 'Mehrwertsteuer, Genehmigung und Bezahlung',
         html: '<p>Für Renovierungsarbeiten an einer privat genutzten Wohnung gilt unter Bedingungen der ermäßigte Mehrwertsteuersatz von 10 % statt 21 %, wenn das Material nicht mehr als 40 % der Gesamtsumme ausmacht. Lassen Sie sich ein Angebot nach Posten geben und zahlen Sie in Raten nach Baufortschritt. Mehr dazu in unserem Ratgeber <a href="/de/ratgeber/renovierungskosten-spanien/">Renovierungskosten in Spanien</a>.</p>',
       },
+      {
+        id: 'maatwerk',
+        h: 'Bad nach Maß',
+        html: `<p>Kleine oder schiefe Bäder, Dachschrägen und Nischen in dicken Mauern: In der Axarquía passt ein Standardbad selten genau. Ein <strong>Bad nach Maß</strong> nutzt jeden Zentimeter: ein Waschtischmöbel, das genau in die Nische passt, eine bodengleiche Dusche über die ganze Breite, Regale in der Wand und fugenlose Wände aus Mikrozement oder großen Fliesen.</p>
+<ul>
+<li><strong>Preis:</strong> Ein Bad nach Maß mit 4 bis 6 m² kostet meist 12.000 bis 25.000 € zzgl. MwSt.</li>
+<li><strong>Beliebt:</strong> Mikrozement, Naturstein, eine bodengleiche Dusche, ein schwebendes Möbel und Fußbodenheizung für den Winter.</li>
+<li><strong>Dauer:</strong> drei bis fünf Wochen, länger, wenn Möbel oder Stein nach Maß gefertigt werden.</li>
+</ul>`,
+      },
     ],
     faq: [
       { q: 'Wie lange dauert ein neues Bad?', a: 'Ein komplettes Bad mittlerer Größe dauert meist zwei bis drei Wochen. Bei Maßanfertigungen oder wenn Fliesen oder Möbel bestellt werden müssen, etwas länger.' },
@@ -143,6 +153,16 @@ export const costsDe: Topic[] = [
         id: 'planung',
         h: 'Planung und Dauer',
         html: '<p>Rechnen Sie mit vier bis sechs Wochen Lieferzeit für Schränke und Arbeitsplatte (die Platte wird erst ausgemessen, wenn die Schränke stehen) und ein bis zwei Wochen Arbeit vor Ort. Während des Umbaus haben Sie keine Küche: Planen Sie ihn also am besten, wenn Sie nicht in Spanien sind.</p>',
+      },
+      {
+        id: 'maatwerk',
+        h: 'Küche nach Maß',
+        html: `<p>In einem alten Dorfhaus oder einer Finca ist keine Wand gerade und keine Nische gleich groß. Eine Standardküche lässt dann seltsame Lücken und verlorene Ecken. Eine <strong>Küche nach Maß</strong> wird aufgemessen und für Ihren Raum gebaut: Schränke bis zur Decke, eine Arbeitsplatte, die genau an einer schrägen Wand entlangläuft, eine Kochinsel, die zu Ihrer Art zu kochen passt, und Platz für einen großen Kühlschrank oder Weinklimaschrank.</p>
+<ul>
+<li><strong>Preis:</strong> Eine Küche nach Maß mit 8 bis 10 m² kostet meist 12.000 bis 30.000 € zzgl. MwSt. und Geräte.</li>
+<li><strong>Materialien:</strong> Massivholz, lackierte Fronten, Naturstein, Keramik oder Quarzkomposit. Wählen Sie Materialien, die Hitze und Feuchtigkeit vertragen.</li>
+<li><strong>Lieferzeit:</strong> nach dem Entwurf vier bis acht Wochen Fertigung, danach ein bis zwei Wochen Montage.</li>
+</ul>`,
       },
     ],
     faq: [
@@ -1027,6 +1047,151 @@ export const costsDe: Topic[] = [
     ],
     ctaTitle: 'Stromkosten automatisch senken?',
     ctaText: 'Sagen Sie uns, welche Module, welchen Speicher oder welche Wallbox Sie haben und welchen Stromtarif. Sie erhalten eine Beratung, was Sie einbinden können und was es bringt.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'schoorsteen',
+    slug: 'schornstein-und-kaminofen',
+    title: 'Was kosten Schornsteinfegen, Reparatur oder ein Kaminofen in Spanien?',
+    seoTitle: 'Schornstein fegen, reparieren und Kaminofen einbauen in Spanien: Kosten (2026)',
+    short: 'Schornstein und Kaminofen',
+    description: 'Was kostet es, den Schornstein fegen oder reparieren zu lassen oder einen Kaminofen oder Pelletofen einzubauen, in der Axarquía? Preise, wie oft fegen und worauf Sie achten.',
+    lead: 'Im Winter ist ein offener Kamin oder Kaminofen in der Axarquía herrlich, besonders in einem Dorfhaus mit dicken Mauern. Doch ein Schornstein, der jahrelang nicht gefegt wurde, zieht schlecht, ist bei Regen undicht und kann in Brand geraten. Was kosten Fegen, Reparatur oder ein neuer Ofen?',
+    keyword: 'schornsteinfeger spanien',
+    dienst: 'schoorsteen',
+    onderwerp: 'Ich möchte meinen Schornstein fegen oder prüfen lassen.',
+    answer: 'Schornsteinfegen kostet in der Axarquía meist <strong>60 bis 120 €</strong>, mit Kamerainspektion <strong>120 bis 250 €</strong>. Ein Kaminofen mit neuem Edelstahl-Rauchrohr kostet eingebaut <strong>2.500 bis 6.000 €</strong> zzgl. MwSt. Die Reparatur eines alten gemauerten Schornsteins reicht von einigen hundert Euro für eine Haube bis 3.000 € oder mehr.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Preise je Arbeit',
+        html: '<p>Richtwerte für 2026, mit Material und Arbeit, zzgl. MwSt.</p>',
+        table: {
+          head: ['Arbeit', 'Erläuterung', 'Richtwert'],
+          rows: [
+            ['Schornstein fegen', 'Offener Kamin oder Kaminofen, mit Kontrolle', '60 – 120 €'],
+            ['Fegen mit Kamerainspektion', 'Beim Kauf, nach langem Stillstand oder nach einem Schornsteinbrand', '120 – 250 €'],
+            ['Regenhaube oder Windhaube', 'Gegen Regen, Vögel und zurückschlagenden Rauch', '150 – 400 €'],
+            ['Anschluss am Dach reparieren', 'Undichtigkeit am Schornstein', '400 – 1.500 €'],
+            ['Gemauerten Schornstein reparieren', 'Verfugen, Putz, Kopf neu aufmauern', '800 – 3.000 €'],
+            ['Edelstahl-Innenrohr im bestehenden Schornstein', 'Für einen Ofen in einem alten oder undichten Schornstein', '1.000 – 2.500 €'],
+            ['Kaminofen mit neuem Rauchrohr', 'Ofen, doppelwandiges Edelstahlrohr und Dachdurchführung', '2.500 – 6.000 €'],
+            ['Pelletofen', 'Ofen und Rauchrohr, mit Thermostat und Zeitschaltuhr', '3.000 – 7.000 €'],
+          ],
+          note: 'Ist das Dach am Schornstein undicht? Siehe auch die Kosten für <a href="/de/kosten/dach-und-dachterrasse/">Dach und Dachterrasse</a>.',
+        },
+      },
+      {
+        id: 'vegen',
+        h: 'Wie oft muss der Schornstein gefegt werden?',
+        html: `<p>Heizen Sie regelmäßig, lassen Sie den Schornstein <strong>jedes Jahr</strong> fegen, am besten im September oder Oktober vor der Heizsaison. Heizen Sie nur einige Wochen im Jahr, reicht meist alle zwei Jahre, mit einer Kontrolle auf Nester und lose Steine.</p>
+<ul>
+<li><strong>Ruß und Teer:</strong> In der Axarquía wird viel Oliven- und Kiefernholz verbrannt. Kiefernholz und feuchtes Holz hinterlassen viel Teer (Glanzruß) im Rohr, die Hauptursache für Schornsteinbrände.</li>
+<li><strong>Nester:</strong> Ein Schornstein, der monatelang nicht benutzt wurde, ist im Frühjahr oft durch Vogelnester verstopft.</li>
+<li><strong>Versicherung:</strong> Manche Versicherer verlangen nach einem Brand einen Nachweis, dass der Schornstein gefegt wurde. Bewahren Sie die Rechnung auf.</li>
+</ul>`,
+      },
+      {
+        id: 'kachel',
+        h: 'Einen Kaminofen oder Pelletofen einbauen',
+        html: `<p>Ein geschlossener Kaminofen gibt aus demselben Holz drei- bis viermal so viel Wärme wie ein offener Kamin. Ein Pelletofen ist sauberer und arbeitet mit Thermostat und Zeitschaltuhr, praktisch, wenn Sie das Haus aus der Ferne vorheizen möchten. Achten Sie auf:</p>
+<ul>
+<li><strong>Das Rauchrohr</strong> muss zum Ofen passen und hoch genug über das Dach reichen. Ein alter gemauerter Schornstein bekommt oft ein Edelstahl-Innenrohr.</li>
+<li><strong>Abstand zu Holz</strong>, Balken und Schilfdecken (<em>cañizo</em>) ist wichtig. In alten Dorfhäusern führt das Rohr oft durch eine Holzdecke; dann ist eine isolierte Durchführung nötig.</li>
+<li><strong>In einer Wohnanlage</strong> brauchen Sie für ein Rohr durch Fassade oder Dach meist die Zustimmung der <em>comunidad</em>.</li>
+<li><strong>Heizen mit der Klimaanlage</strong> ist an der Küste oft günstiger. Ein Ofen ist vor allem in den Bergdörfern und für die Atmosphäre schön. Siehe <a href="/de/kosten/klimaanlage-und-waermepumpe/">Klimaanlage und Wärmepumpe</a>.</li>
+</ul>`,
+      },
+    ],
+    faq: [
+      { q: 'Kann ich den Schornstein selbst fegen?', a: 'Mit einem Kehrset geht das, aber ein Fachmann sieht auch Risse, lose Steine und Teerablagerungen und gibt Ihnen einen Nachweis für die Versicherung. Auf einem hohen oder steilen Dach ist Selbermachen nicht zu empfehlen.' },
+      { q: 'Woran erkenne ich einen Schornsteinbrand?', a: 'Ein dröhnendes Geräusch, viel Rauch oder Funken aus dem Schornstein und eine sehr heiße Schornsteinwand. Schließen Sie die Luftzufuhr des Ofens, gehen Sie nach draußen und rufen Sie 112. Lassen Sie den Schornstein prüfen, bevor Sie wieder heizen.' },
+      { q: 'Welches Holz brennt am besten?', a: 'Trockenes Hartholz wie Oliven- oder Mandelholz mit weniger als 20 % Feuchte. Lassen Sie frisches Holz mindestens ein Jahr trocknen. Kiefer und feuchtes Holz geben mehr Ruß und Teer.' },
+    ],
+    links: [
+      { href: '/de/probleme/kamin-raucht/', label: 'Kamin raucht zurück' },
+      { href: '/de/ratgeber/haus-winterfest-spanien/', label: 'Ratgeber: Haus winterfest machen' },
+      { href: '/de/instandhaltung/', label: 'Instandhaltung und Reparaturen' },
+    ],
+    related: ['problems:schoorsteen', 'costs:ramen', 'costs:airco'],
+    sources: [
+      { name: 'BOE, RITE (Heizungsanlagen), IT 1.3 und IT 3', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2007-15820' },
+    ],
+    ctaTitle: 'Schornstein fegen oder ein neuer Ofen?',
+    ctaText: 'Schicken Sie ein Foto Ihres Kamins oder Ofens und des Schornsteins auf dem Dach. Sie erhalten einen Preis für Fegen, Reparatur oder einen neuen Ofen.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'ramen',
+    slug: 'fenster-und-rahmen',
+    title: 'Was kosten neue Fenster und Rahmen in Spanien?',
+    seoTitle: 'Fenster austauschen in Spanien: Preise für Aluminium, Kunststoff und Doppelverglasung (2026)',
+    short: 'Fenster und Rahmen',
+    description: 'Was kosten neue Fenster in der Axarquía? Preise pro Fenster für thermisch getrenntes Aluminium, Kunststoff und Holz, Doppelverglasung, Schiebetüren, Rollläden und Fliegengitter, und welche Genehmigung Sie brauchen.',
+    lead: 'Viele Häuser in der Axarquía haben noch Einfachverglasung in dünnen Aluminiumrahmen. Im Sommer kommt die Hitze herein, im Winter ist es kalt und zugig und Kondenswasser läuft an den Scheiben herunter. Neue Fenster machen einen großen Unterschied bei Komfort und Stromrechnung.',
+    keyword: 'fenster austauschen spanien',
+    dienst: 'ramen',
+    onderwerp: 'Ich möchte ein Angebot für neue Fenster.',
+    answer: 'Ein neues Fenster von etwa 120 × 120 cm mit Doppelverglasung kostet eingebaut meist <strong>400 bis 800 €</strong> in thermisch getrenntem Aluminium und <strong>350 bis 700 €</strong> in Kunststoff, zzgl. MwSt. Eine Schiebetür zur Terrasse kostet <strong>1.200 bis 3.000 €</strong>. Für ein ganzes Haus mit acht bis zwölf Fenstern rechnen Sie mit 5.000 bis 12.000 €.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Preise pro Fenster',
+        html: '<p>Richtwerte für 2026 für ein Fenster von etwa 120 × 120 cm, mit Ausbau des alten Fensters, Einbau und Beiputzen, zzgl. MwSt.</p>',
+        table: {
+          head: ['Typ', 'Erläuterung', 'Richtwert'],
+          rows: [
+            ['Aluminium mit thermischer Trennung (RPT)', 'In Spanien am häufigsten, schlank und stabil', '400 – 800 €'],
+            ['Kunststoff (PVC)', 'Dämmt gut, wählen Sie eine sonnenfeste Qualität', '350 – 700 €'],
+            ['Holz oder Holz-Aluminium', 'Für ein Dorfhaus oder einen geschützten Ortskern', '700 – 1.400 €'],
+            ['Schiebetür zur Terrasse', '2 bis 3 Meter breit, doppelt verglast', '1.200 – 3.000 €'],
+            ['Nur das Glas tauschen', 'Doppelverglasung in einem guten bestehenden Rahmen', '100 – 250 € pro m²'],
+            ['Rollladen (persiana)', 'Aluminium, manuell oder elektrisch', '250 – 600 €'],
+            ['Fliegengitter (mosquitera)', 'Fest, Rollo oder Schiebe', '60 – 150 €'],
+          ],
+          note: 'Fenster lassen sich gut in eine größere Renovierung einplanen: siehe <a href="/de/renovierung/">Renovierung</a>.',
+        },
+      },
+      {
+        id: 'kiezen',
+        h: 'Welches Fenster und welches Glas?',
+        html: `<ul>
+<li><strong>Thermisch getrenntes Aluminium (<em>RPT</em>):</strong> Der Rahmen hat einen Dämmsteg, sodass die Innenseite nicht mehr kalt und nass wird. Wartungsfrei und in jeder Farbe.</li>
+<li><strong>Kunststoff:</strong> die beste Dämmung fürs Geld. Wählen Sie ein Profil für starke Sonne, sonst kann sich eine dunkle Farbe verziehen.</li>
+<li><strong>Glas:</strong> Doppelverglasung mit 12 bis 16 mm Scheibenzwischenraum ist Standard. Auf der Süd- und Westseite hilft Sonnenschutzglas (<em>control solar</em>) gegen Hitze. Im Erdgeschoss ist Verbundsicherheitsglas zu empfehlen.</li>
+<li><strong>Rollläden und Fliegengitter:</strong> Ein Rollladen hält im Sommer die Hitze draußen und gibt Sicherheit, wenn Sie weg sind. Fliegengitter sind in der Axarquía fast unverzichtbar.</li>
+</ul>`,
+      },
+      {
+        id: 'vergunning',
+        h: 'Genehmigung und Regeln',
+        html: `<ul>
+<li><strong>Fenster in gleicher Größe tauschen</strong> ist meist eine einfache Meldung bei der Gemeinde (<em>declaración responsable</em> oder <em>obra menor</em>).</li>
+<li><strong>In einem historischen Ortskern</strong>, etwa in Frigiliana oder Cómpeta, gelten oft Regeln für Farbe und Material, zum Beispiel Holz oder eine Holzfarbe.</li>
+<li><strong>In einer Wohnanlage</strong> muss die Fassade einheitlich bleiben. Fragen Sie die <em>comunidad</em>, welche Farbe und welches Modell erlaubt sind.</li>
+<li><strong>Förderung:</strong> Für energetische Sanierungen gibt es regelmäßig Programme und einen Abzug bei der Einkommensteuer (IRPF). Fragen Sie beim Angebot, was gerade läuft.</li>
+</ul>`,
+      },
+    ],
+    faq: [
+      { q: 'Wie lange dauert der Fenstertausch?', a: 'Die Fenster werden nach Maß gefertigt, das dauert meist drei bis sechs Wochen. Der Einbau dauert etwa einen halben Tag pro Fenster, ein ganzes Haus zwei bis vier Tage.' },
+      { q: 'Helfen neue Fenster gegen Kondenswasser und Schimmel?', a: 'Oft ja. Mit Doppelverglasung und gedämmtem Rahmen ist die Innenseite viel weniger kalt, sodass weniger Kondenswasser entsteht. Lüften Sie trotzdem weiter. Siehe Zugluft und Kondenswasser an Fenstern.' },
+      { q: 'Kann ich nur das Glas tauschen?', a: 'Wenn die Rahmen gut und tief genug für Doppelverglasung sind, ja. Bei alten dünnen Aluminiumrahmen ohne thermische Trennung bleibt der Rahmen kalt, dann lohnt ein neues Fenster mehr.' },
+    ],
+    links: [
+      { href: '/de/probleme/zugluft-und-kondenswasser-an-fenstern/', label: 'Zugluft und Kondenswasser an Fenstern' },
+      { href: '/de/probleme/feuchtigkeit-und-schimmel/', label: 'Feuchtigkeit und Schimmel' },
+      { href: '/de/renovierung/', label: 'Renovierung' },
+    ],
+    related: ['problems:tocht', 'costs:airco', 'problems:vocht'],
+    sources: [
+      { name: 'Código Técnico de la Edificación, DB HE (Energieeinsparung)', url: 'https://www.codigotecnico.org/DocumentosCTE/AhorroEnergia.html' },
+      { name: 'IDAE, Förderung für Energieeinsparung in Wohnungen', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'Neue Fenster für Ihr Haus?',
+    ctaText: 'Schicken Sie Fotos Ihrer Fenster und ungefähre Maße. Sie erhalten eine Beratung zu Material und Glas und einen Preis pro Fenster.',
     minutes: 5,
     published: '2026-11-05',
   },

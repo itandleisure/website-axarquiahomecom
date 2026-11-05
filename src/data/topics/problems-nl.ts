@@ -795,4 +795,156 @@ export const problemsNl: Topic[] = [
     minutes: 5,
     published: '2026-11-05',
   },
+  {
+    key: 'schoorsteen',
+    slug: 'schoorsteen-rookt-terug',
+    title: 'Schoorsteen rookt terug of trekt slecht: oorzaak en oplossing',
+    seoTitle: 'Schoorsteen of houtkachel rookt terug in Spanje: oorzaken en oplossingen',
+    short: 'Schoorsteen rookt terug',
+    description: 'Komt de rook de kamer in bij uw open haard of houtkachel in de Axarquía? Zo vindt u de oorzaak: koud kanaal, nat hout, te weinig lucht, wind of een vuile schoorsteen. Wat u zelf doet en wat de oplossing kost.',
+    lead: 'U steekt de haard aan en binnen een paar minuten hangt de kamer vol rook. Bij een huis dat maanden dicht heeft gezeten komt dat vaak voor. Meestal zit er een van vijf oorzaken achter, en de meeste zijn eenvoudig op te lossen.',
+    keyword: 'schoorsteen rookt terug',
+    dienst: 'schoorsteen',
+    onderwerp: 'Mijn schoorsteen of kachel rookt terug.',
+    answer: 'Rookt de haard alleen bij het aansteken, dan is het <strong>kanaal nog koud</strong>. Rookt hij steeds, dan is de schoorsteen vaak <strong>vuil of verstopt</strong> door roet of een nest, komt er <strong>te weinig lucht</strong> in de kamer, of <strong>blaast de wind</strong> de rook terug. Laat de schoorsteen eerst vegen en controleren: dat kost € 60 tot € 120 en lost het vaak al op.',
+    sections: [
+      {
+        id: 'oorzaak',
+        h: 'Waarom rookt de schoorsteen terug?',
+        table: {
+          head: ['Wat u ziet', 'Waarschijnlijke oorzaak'],
+          rows: [
+            ['Rook alleen bij het aansteken', 'Koud rookkanaal, vooral bij een buitenmuur of na lang stilstaan'],
+            ['Rook steeds, ook als het vuur goed brandt', 'Vuil of verstopt kanaal: roet, teer, een nest of losse stenen'],
+            ['Beter als er een raam op een kier staat', 'Te weinig luchttoevoer: een goed afgesloten huis of een afzuigkap die lucht wegzuigt'],
+            ['Alleen bij wind uit één richting', 'Wind die de rook terugdrukt, door een hogere buur, een helling of een te korte schoorsteen'],
+            ['Veel rook, sissend en zwart vuur', 'Nat hout'],
+            ['Rookgeur in een andere kamer of bij de buren', 'Scheur in het kanaal: laat dit direct controleren'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'Wat u zelf kunt doen',
+        html: `<ul>
+<li><strong>Warm het kanaal voor</strong> met een prop brandende krant onder in de schoorsteen, en begin met klein, droog aanmaakhout.</li>
+<li><strong>Zet een raam op een kier</strong> in de kamer en zet de afzuigkap in de keuken uit.</li>
+<li><strong>Stook droog hout</strong> met minder dan 20% vocht, zoals olijf- of amandelhout dat een jaar heeft gedroogd.</li>
+<li><strong>Kijk omhoog</strong> met een zaklamp als de haard koud is: ziet u geen licht, dan zit er iets in het kanaal.</li>
+<li><strong>Hang een koolmonoxidemelder</strong> op in de kamer met de haard of kachel. Die kost € 25 tot € 50.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'Oplossingen en kosten',
+        table: {
+          head: ['Oplossing', 'Wanneer', 'Indicatie'],
+          rows: [
+            ['Schoorsteen vegen en controleren', 'Altijd de eerste stap', '€ 60 – € 120'],
+            ['Windkap of trekkap plaatsen', 'Bij terugslag door wind', '€ 150 – € 400'],
+            ['Schoorsteen verlengen', 'Als de schoorsteen te laag boven het dak of de nok uitkomt', '€ 300 – € 1.200'],
+            ['Luchtrooster of buitenluchtaansluiting', 'Bij te weinig luchttoevoer', '€ 100 – € 400'],
+            ['Rvs-binnenbuis plaatsen', 'Bij een te wijd, gescheurd of lekkend kanaal', '€ 1.000 – € 2.500'],
+          ],
+          note: 'Meer prijzen voor vegen, herstel en een nieuwe kachel: zie <a href="/nl/kosten/schoorsteen-en-houtkachel/">kosten schoorsteen en houtkachel</a>.',
+        },
+      },
+      {
+        id: 'gevaar',
+        h: 'Wanneer is het gevaarlijk?',
+        html: '<p>Rook in huis is hinderlijk, maar koolmonoxide ziet en ruikt u niet. Krijgt u hoofdpijn, wordt u duizelig of misselijk bij de haard, ga dan naar buiten en stook niet meer tot de schoorsteen is gecontroleerd. Ruikt u rook in een andere kamer of bij de buren, of ziet u roetvlekken op een muur, dan is het kanaal waarschijnlijk gescheurd.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Waarom rookt de haard alleen in het begin van de winter?', a: 'Een kanaal dat maanden koud en vochtig is geweest, trekt slecht tot het opgewarmd is. Ook kan er in het voorjaar een nest in zijn gebouwd. Laat de schoorsteen in september of oktober vegen.' },
+      { q: 'Helpt een windkap altijd?', a: 'Alleen als de wind de oorzaak is. Bij een vuil kanaal of te weinig luchttoevoer helpt een windkap niet. Laat daarom eerst de oorzaak vaststellen.' },
+      { q: 'Kan een houtkachel in een oude open haard?', a: 'Ja, vaak wel, met een rvs-binnenbuis door de bestaande schoorsteen. Dat lost meteen de meeste rookproblemen op en geeft veel meer warmte.' },
+    ],
+    links: [
+      { href: '/nl/kosten/schoorsteen-en-houtkachel/', label: 'Kosten schoorsteen en houtkachel' },
+      { href: '/nl/gidsen/huis-winterklaar-spanje/', label: 'Gids: huis winterklaar maken' },
+      { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
+    ],
+    related: ['costs:schoorsteen', 'problems:tocht', 'problems:vocht'],
+    sources: [
+      { name: 'BOE, RITE (installaties voor verwarming)', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2007-15820' },
+    ],
+    ctaTitle: 'Schoorsteen rookt terug?',
+    ctaText: 'Stuur een foto van de haard of kachel en van de schoorsteen op het dak, en vertel wanneer het gebeurt. U krijgt advies en een prijs.',
+    minutes: 4,
+    published: '2026-11-05',
+  },
+  {
+    key: 'tocht',
+    slug: 'tocht-en-condens-bij-ramen',
+    title: 'Tocht en condens bij ramen in uw huis in Spanje: oorzaak en oplossing',
+    seoTitle: 'Tocht, kou en condens bij ramen in Spanje: oorzaken en oplossingen',
+    short: 'Tocht en condens bij ramen',
+    description: 'Druppelen uw ramen in de winter en tocht het in uw huis in de Axarquía? Zo komt het door enkel glas en koude aluminium kozijnen, wat u zelf doet en wat nieuwe ramen of glas kosten.',
+    lead: 'Spaanse huizen zijn gebouwd voor de zomer. In de winter zit u achter enkel glas in dunne aluminium kozijnen, met een koude tocht langs de vloer en ’s ochtends plassen water op de vensterbank. Dat is niet alleen onprettig, het leidt ook tot schimmel.',
+    keyword: 'condens ramen spanje',
+    dienst: 'ramen',
+    onderwerp: 'Ik heb last van tocht of condens bij mijn ramen.',
+    answer: 'Condens op ramen komt door <strong>vochtige binnenlucht op een koud oppervlak</strong>: enkel glas en aluminium kozijnen zonder thermische onderbreking. Tocht komt meestal door <strong>versleten afdichting en kieren</strong> rond kozijnen en rolluikkasten. Ventileren en kitten helpen een eind; de echte oplossing is dubbel glas in een geïsoleerd kozijn, vanaf ongeveer € 400 per raam.',
+    sections: [
+      {
+        id: 'oorzaak',
+        h: 'Waar komt het door?',
+        table: {
+          head: ['Wat u ziet', 'Waarschijnlijke oorzaak'],
+          rows: [
+            ['Druppels op het glas, vooral ’s ochtends', 'Enkel glas en vochtige lucht van slapen, koken en douchen'],
+            ['Water en zwarte plekjes op het kozijn', 'Aluminium kozijn zonder thermische onderbreking: het metaal is ijskoud'],
+            ['Tocht langs het raam', 'Versleten borstels of rubbers, kieren tussen kozijn en muur'],
+            ['Koude lucht uit de rolluikkast', 'Ongeïsoleerde rolluikkast (cajón de persiana)'],
+            ['Schimmel in de hoek rond het raam', 'Koudebrug in de muur en te weinig ventilatie'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'Wat u zelf kunt doen',
+        html: `<ul>
+<li><strong>Ventileer elke dag</strong> tien minuten met de ramen tegen elkaar open, ook in de winter.</li>
+<li><strong>Veeg condens ’s ochtends weg</strong> zodat het niet in het kozijn of de muur trekt.</li>
+<li><strong>Gebruik een ontvochtiger</strong> in slaapkamers en in een huis dat leegstaat.</li>
+<li><strong>Vervang tochtborstels en rubbers</strong> van schuiframen en kit kieren tussen kozijn en muur.</li>
+<li><strong>Isoleer de rolluikkast</strong> met isolatieplaat en tochtstrip.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'Oplossingen en kosten',
+        table: {
+          head: ['Oplossing', 'Toelichting', 'Indicatie'],
+          rows: [
+            ['Afdichting en kitwerk vernieuwen', 'Per raam, borstels, rubbers en kit', '€ 50 – € 150'],
+            ['Rolluikkast isoleren', 'Per kast', '€ 80 – € 200'],
+            ['Dubbel glas in bestaand kozijn', 'Als het kozijn nog goed en geschikt is', '€ 100 – € 250 per m²'],
+            ['Nieuw raam met dubbel glas', 'Aluminium RPT of PVC, ongeveer 120 × 120 cm', '€ 350 – € 800'],
+          ],
+          note: 'Meer over materialen, glas en vergunning: zie <a href="/nl/kosten/ramen-en-kozijnen/">kosten ramen en kozijnen</a>.',
+        },
+      },
+    ],
+    faq: [
+      { q: 'Is condens op ramen erg?', a: 'Een beetje condens op een koude ochtend is normaal. Druppelt het elke dag en wordt het kozijn of de muur zwart, dan ontstaat schimmel. Dan is meer ventilatie of beter glas nodig.' },
+      { q: 'Lost dubbel glas alle condens op?', a: 'Het meeste wel, omdat het glas aan de binnenkant warmer blijft. Is de lucht in huis heel vochtig, dan blijft ventileren nodig. Zie ook vocht en schimmel.' },
+      { q: 'Helpen nieuwe ramen ook in de zomer?', a: 'Ja. Met zonwerend dubbel glas en rolluiken blijft het huis koeler, zodat de airco minder hoeft te draaien.' },
+    ],
+    links: [
+      { href: '/nl/kosten/ramen-en-kozijnen/', label: 'Kosten ramen en kozijnen' },
+      { href: '/nl/problemen/vocht-en-schimmel/', label: 'Vocht en schimmel' },
+      { href: '/nl/gidsen/huis-winterklaar-spanje/', label: 'Gids: huis winterklaar maken' },
+    ],
+    related: ['costs:ramen', 'problems:vocht', 'costs:airco'],
+    sources: [
+      { name: 'Código Técnico de la Edificación, DB HE (energiebesparing)', url: 'https://www.codigotecnico.org/DocumentosCTE/AhorroEnergia.html' },
+      { name: 'IDAE, subsidies voor energiebesparing in woningen', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'Last van tocht of condens?',
+    ctaText: 'Stuur foto’s van uw ramen en de plekken met condens of schimmel. U krijgt advies en een prijs.',
+    minutes: 4,
+    published: '2026-11-05',
+  },
 ];

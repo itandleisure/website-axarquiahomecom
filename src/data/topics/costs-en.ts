@@ -64,6 +64,16 @@ export const costsEn: Topic[] = [
         h: 'VAT, permits and payment',
         html: '<p>Renovation work on a private home can qualify for the reduced VAT rate of 10% instead of 21%, provided materials make up no more than 40% of the total. Ask for a quote broken down by item and pay in stages as each part is finished. More in our guide to <a href="/en/guides/renovation-costs-spain/">renovation costs in Spain</a>.</p>',
       },
+      {
+        id: 'maatwerk',
+        h: 'Bespoke bathroom',
+        html: `<p>Small or crooked bathrooms, sloping roofs and alcoves in thick walls: in the Axarquía a standard bathroom rarely fits exactly. A <strong>bespoke bathroom</strong> makes use of every centimetre: a vanity unit that fits the alcove exactly, a full-width walk-in shower without a step, shelves built into the wall and seamless walls in microcement or large tiles.</p>
+<ul>
+<li><strong>Price:</strong> a bespoke bathroom of 4 to 6 m² usually costs €12,000 to €25,000, excluding VAT.</li>
+<li><strong>Popular:</strong> microcement, natural stone, a walk-in shower, a floating vanity and underfloor heating for winter.</li>
+<li><strong>Lead time:</strong> three to five weeks, longer if furniture or stone is made to measure.</li>
+</ul>`,
+      },
     ],
     faq: [
       { q: 'How long does a new bathroom take?', a: 'A complete bathroom of average size usually takes two to three weeks. A little longer for bespoke work or when tiles or furniture have to be ordered.' },
@@ -143,6 +153,16 @@ export const costsEn: Topic[] = [
         id: 'planning',
         h: 'Planning and lead times',
         html: '<p>Allow four to six weeks for units and worktop to be delivered (the worktop is templated once the units are in) and one to two weeks of work on site. You will be without a kitchen during the work, so it is best planned for when you are not in Spain.</p>',
+      },
+      {
+        id: 'maatwerk',
+        h: 'Bespoke kitchen',
+        html: `<p>In an old village house or a finca no wall is straight and no alcove the same size. A standard kitchen then leaves odd gaps and wasted corners. A <strong>bespoke kitchen</strong> is measured and made for your space: units up to the ceiling, a worktop that follows a sloping wall exactly, an island that suits how you cook and room for a large fridge or wine cooler.</p>
+<ul>
+<li><strong>Price:</strong> a bespoke kitchen of 8 to 10 m² usually costs €12,000 to €30,000, excluding VAT and appliances.</li>
+<li><strong>Materials:</strong> solid wood, lacquered fronts, natural stone, ceramic or composite. Choose materials that can handle heat and moisture.</li>
+<li><strong>Lead time:</strong> four to eight weeks of production after the design, then one to two weeks to fit.</li>
+</ul>`,
       },
     ],
     faq: [
@@ -1027,6 +1047,151 @@ export const costsEn: Topic[] = [
     ],
     ctaTitle: 'Lower your energy bill automatically?',
     ctaText: 'Tell us which panels, battery or charger you have and your electricity tariff. You get advice on what you can connect and what it saves.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'schoorsteen',
+    slug: 'chimney-and-wood-burner',
+    title: 'What does chimney sweeping, repair or a wood burner cost in Spain?',
+    seoTitle: 'Chimney sweeping, repair and wood burner installation in Spain: costs (2026)',
+    short: 'Chimney and wood burner',
+    description: 'What does it cost to have your chimney swept or repaired, or a wood burner or pellet stove installed in the Axarquía? Prices, how often to sweep and what to watch out for.',
+    lead: 'In winter an open fire or wood burner in the Axarquía is lovely, especially in a village house with thick walls. But a chimney that has not been swept for years draws badly, leaks in the rain and can catch fire. What does sweeping, repair or a new stove cost?',
+    keyword: 'chimney sweep spain',
+    dienst: 'schoorsteen',
+    onderwerp: 'I would like my chimney swept or checked.',
+    answer: 'Chimney sweeping in the Axarquía usually costs <strong>€60 to €120</strong>, or <strong>€120 to €250</strong> with a camera inspection. A wood burner with a new stainless steel flue costs <strong>€2,500 to €6,000</strong> installed, excluding VAT. Repairing an old masonry chimney ranges from a few hundred euros for a cowl to €3,000 or more.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Prices per job',
+        html: '<p>Indicative 2026 prices, including materials and labour, excluding VAT.</p>',
+        table: {
+          head: ['Job', 'Details', 'Indication'],
+          rows: [
+            ['Chimney sweep', 'Open fire or wood burner, including a check', '€60 – €120'],
+            ['Sweep with camera inspection', 'When buying, after a long idle period or after a chimney fire', '€120 – €250'],
+            ['Rain cowl or wind cowl', 'Against rain, birds and downdraught', '€150 – €400'],
+            ['Repair the roof flashing', 'Leaks around the chimney', '€400 – €1,500'],
+            ['Repair a masonry chimney', 'Repointing, render, rebuilding the top', '€800 – €3,000'],
+            ['Stainless steel liner in an existing chimney', 'For a stove in an old or leaking chimney', '€1,000 – €2,500'],
+            ['Wood burner with new flue', 'Stove, twin-wall stainless flue and roof outlet', '€2,500 – €6,000'],
+            ['Pellet stove', 'Stove and flue, with thermostat and timer', '€3,000 – €7,000'],
+          ],
+          note: 'Is the roof leaking around the chimney? See also the cost of <a href="/en/costs/roof-and-roof-terrace/">roof and roof terrace</a> repairs.',
+        },
+      },
+      {
+        id: 'vegen',
+        h: 'How often should the chimney be swept?',
+        html: `<p>If you use the fire regularly, have the chimney swept <strong>every year</strong>, ideally in September or October before the heating season. If you only use it a few weeks a year, every two years is usually enough, with a check for nests and loose bricks.</p>
+<ul>
+<li><strong>Soot and tar:</strong> in the Axarquía people burn a lot of olive and pine. Pine and damp wood leave a lot of tar (creosote) in the flue, the main cause of chimney fires.</li>
+<li><strong>Nests:</strong> a chimney that has not been used for months is often blocked by birds’ nests in spring.</li>
+<li><strong>Insurance:</strong> some insurers ask for proof the chimney was swept after a fire. Keep the invoice.</li>
+</ul>`,
+      },
+      {
+        id: 'kachel',
+        h: 'Installing a wood burner or pellet stove',
+        html: `<p>A closed wood burner gives three to four times as much heat as an open fire from the same wood. A pellet stove is cleaner and works with a thermostat and timer, handy if you want to warm the house remotely. Watch out for:</p>
+<ul>
+<li><strong>The flue</strong> must suit the stove and rise high enough above the roof. An old masonry chimney often gets a stainless steel liner.</li>
+<li><strong>Distance to wood</strong>, beams and reed ceilings (<em>cañizo</em>) matters. In old village houses the flue often passes through a wooden ceiling, which needs an insulated sleeve.</li>
+<li><strong>In an apartment block</strong> you usually need permission from the <em>comunidad</em> for a flue through the facade or roof.</li>
+<li><strong>Heating with air con</strong> is often cheaper on the coast. A stove is mostly lovely in the mountain villages and for the atmosphere. See <a href="/en/costs/air-conditioning-and-heat-pumps/">air con and heat pumps</a>.</li>
+</ul>`,
+      },
+    ],
+    faq: [
+      { q: 'Can I sweep the chimney myself?', a: 'With a sweeping kit you can, but a professional also spots cracks, loose bricks and tar build-up, and gives you proof for the insurer. On a high or steep roof it is not advisable to do it yourself.' },
+      { q: 'How do I recognise a chimney fire?', a: 'A roaring sound, lots of smoke or sparks from the chimney and a very hot chimney breast. Close the stove’s air supply, get outside and call 112. Have the chimney inspected before you light it again.' },
+      { q: 'Which wood burns best?', a: 'Dry hardwood, such as olive or almond, with less than 20% moisture. Let fresh wood dry for at least a year. Pine and damp wood give more soot and tar.' },
+    ],
+    links: [
+      { href: '/en/problems/smoking-chimney/', label: 'Smoking chimney' },
+      { href: '/en/guides/preparing-your-spanish-home-for-winter/', label: 'Guide: preparing your home for winter' },
+      { href: '/en/maintenance/', label: 'Maintenance and repairs' },
+    ],
+    related: ['problems:schoorsteen', 'costs:ramen', 'costs:airco'],
+    sources: [
+      { name: 'BOE, RITE (heating installations), IT 1.3 and IT 3', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2007-15820' },
+    ],
+    ctaTitle: 'Chimney sweep or a new stove?',
+    ctaText: 'Send a photo of your fireplace or stove and the chimney on the roof. You get a price for sweeping, repair or a new stove.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'ramen',
+    slug: 'windows-and-frames',
+    title: 'What do new windows and frames cost in Spain?',
+    seoTitle: 'Replacing windows in Spain: prices for aluminium, uPVC and double glazing (2026)',
+    short: 'Windows and frames',
+    description: 'What do new windows cost in the Axarquía? Prices per window for thermally broken aluminium, uPVC and timber, double glazing, sliding doors, roller shutters and fly screens, and which permit you need.',
+    lead: 'Many houses in the Axarquía still have single glazing in thin aluminium frames. In summer the heat comes in, in winter it is cold and draughty and condensation runs down the glass. New windows make a big difference to comfort and your electricity bill.',
+    keyword: 'replacement windows spain',
+    dienst: 'ramen',
+    onderwerp: 'I would like a price for new windows.',
+    answer: 'A new double-glazed window of about 120 by 120 cm usually costs <strong>€400 to €800</strong> installed in thermally broken aluminium and <strong>€350 to €700</strong> in uPVC, excluding VAT. A sliding door to the terrace costs <strong>€1,200 to €3,000</strong>. For a whole house with eight to twelve windows, allow €5,000 to €12,000.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Prices per window',
+        html: '<p>Indicative 2026 prices for a window of about 120 × 120 cm, including removing the old window, fitting and finishing, excluding VAT.</p>',
+        table: {
+          head: ['Type', 'Details', 'Indication'],
+          rows: [
+            ['Thermally broken aluminium (RPT)', 'Most common in Spain, slim and strong', '€400 – €800'],
+            ['uPVC', 'Insulates well, choose a grade made for strong sun', '€350 – €700'],
+            ['Timber or timber-aluminium', 'For a village house or a protected old town', '€700 – €1,400'],
+            ['Sliding door to the terrace', '2 to 3 metres wide, double glazed', '€1,200 – €3,000'],
+            ['Replace the glass only', 'Double glazing in a sound existing frame', '€100 – €250 per m²'],
+            ['Roller shutter (persiana)', 'Aluminium, manual or electric', '€250 – €600'],
+            ['Fly screen (mosquitera)', 'Fixed, roller or sliding', '€60 – €150'],
+          ],
+          note: 'Include windows in a larger project: see <a href="/en/renovation/">renovation</a>.',
+        },
+      },
+      {
+        id: 'kiezen',
+        h: 'Which window and which glass?',
+        html: `<ul>
+<li><strong>Thermally broken aluminium (<em>RPT</em>):</strong> the frame has an insulating strip, so the inside no longer gets cold and wet. Maintenance-free and available in any colour.</li>
+<li><strong>uPVC:</strong> the best insulation for the money. Choose a profile suited to strong sun, otherwise a dark colour can warp.</li>
+<li><strong>Glass:</strong> double glazing with a 12 to 16 mm cavity is standard. On the south and west sides solar control glass (<em>control solar</em>) helps against heat. On the ground floor laminated safety glass is advisable.</li>
+<li><strong>Shutters and screens:</strong> a roller shutter keeps the heat out in summer and adds security while you are away. Fly screens are almost essential in the Axarquía.</li>
+</ul>`,
+      },
+      {
+        id: 'vergunning',
+        h: 'Permits and rules',
+        html: `<ul>
+<li><strong>Replacing windows</strong> at the same size is usually a simple notification to the town hall (<em>declaración responsable</em> or <em>obra menor</em>).</li>
+<li><strong>In a historic centre</strong>, such as in Frigiliana or Cómpeta, there are often rules on colour and material, such as timber or a wood colour.</li>
+<li><strong>In an apartment block</strong> the facade must stay uniform. Ask the <em>comunidad</em> which colour and model are allowed.</li>
+<li><strong>Grants:</strong> there are regular schemes and an income tax (IRPF) deduction for energy-saving renovations. Ask what is available when you get a quote.</li>
+</ul>`,
+      },
+    ],
+    faq: [
+      { q: 'How long does it take to replace windows?', a: 'The windows are made to measure, which usually takes three to six weeks. Fitting takes about half a day per window, a whole house two to four days.' },
+      { q: 'Do new windows help against condensation and mould?', a: 'Often, yes. With double glazing and an insulated frame the inside of the window is much less cold, so less condensation forms. Do keep ventilating. See draughts and condensation at windows.' },
+      { q: 'Can I replace just the glass?', a: 'If the frames are sound and deep enough for double glazing, yes. With old thin aluminium frames without a thermal break the frame stays cold, so a new window is the better investment.' },
+    ],
+    links: [
+      { href: '/en/problems/draughts-and-condensation-at-windows/', label: 'Draughts and condensation at windows' },
+      { href: '/en/problems/damp-and-mould/', label: 'Damp and mould' },
+      { href: '/en/renovation/', label: 'Renovation' },
+    ],
+    related: ['problems:tocht', 'costs:airco', 'problems:vocht'],
+    sources: [
+      { name: 'Código Técnico de la Edificación, DB HE (energy saving)', url: 'https://www.codigotecnico.org/DocumentosCTE/AhorroEnergia.html' },
+      { name: 'IDAE, grants for energy saving in homes', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'New windows for your house?',
+    ctaText: 'Send photos of your windows and rough sizes. You get advice on material and glass, and a price per window.',
     minutes: 5,
     published: '2026-11-05',
   },

@@ -64,6 +64,16 @@ export const costsNl: Topic[] = [
         h: 'Btw, vergunning en betalen',
         html: '<p>Over renovatiewerk aan een woning voor particulier gebruik geldt onder voorwaarden het verlaagde btw-tarief van 10% in plaats van 21%, als de materialen niet meer dan 40% van het totaal uitmaken. Vraag om een offerte per onderdeel en betaal in termijnen per afgerond onderdeel. Lees meer in onze gids over <a href="/nl/gidsen/kosten-huis-renoveren-spanje/">de kosten van een huis renoveren</a>.</p>',
       },
+      {
+        id: 'maatwerk',
+        h: 'Badkamer op maat',
+        html: `<p>Kleine of scheve badkamers, schuine daken en nissen in dikke muren: in de Axarquía past een standaardbadkamer zelden precies. Een <strong>badkamer op maat</strong> maakt gebruik van elke centimeter: een badmeubel dat precies in de nis past, een inloopdouche zonder drempel over de hele breedte, ingebouwde planken in de muur en naadloze wanden van microcement of grote tegels.</p>
+<ul>
+<li><strong>Prijs:</strong> een badkamer op maat van 4 tot 6 m² kost meestal € 12.000 tot € 25.000, exclusief btw.</li>
+<li><strong>Populair:</strong> microcement, natuursteen, een inloopdouche, een zwevend meubel en vloerverwarming voor de winter.</li>
+<li><strong>Doorlooptijd:</strong> drie tot vijf weken, langer als meubels of steen op maat gemaakt worden.</li>
+</ul>`,
+      },
     ],
     faq: [
       { q: 'Hoelang duurt een nieuwe badkamer?', a: 'Een complete badkamer van gemiddelde grootte duurt meestal twee tot drie weken. Bij maatwerk of als er tegels of meubels besteld moeten worden, iets langer.' },
@@ -143,6 +153,16 @@ export const costsNl: Topic[] = [
         id: 'planning',
         h: 'Planning en doorlooptijd',
         html: '<p>Reken op vier tot zes weken levertijd voor kasten en werkblad (het werkblad wordt pas ingemeten als de kasten staan) en één tot twee weken werk op locatie. Tijdens de verbouwing heeft u geen keuken: plan het dus bij voorkeur als u niet in Spanje bent.</p>',
+      },
+      {
+        id: 'maatwerk',
+        h: 'Keuken op maat',
+        html: `<p>In een oud dorpshuis of een finca is geen muur recht en geen nis even groot. Een standaardkeuken laat dan rare kieren en verloren hoeken over. Een <strong>keuken op maat</strong> wordt ingemeten en gemaakt voor uw ruimte: kasten tot het plafond, een werkblad dat precies langs een schuine muur loopt, een kookeiland dat past bij hoe u kookt en een plek voor een grote koelkast of wijnklimaatkast.</p>
+<ul>
+<li><strong>Prijs:</strong> een keuken op maat van 8 tot 10 m² kost meestal € 12.000 tot € 30.000, exclusief btw en apparatuur.</li>
+<li><strong>Materialen:</strong> massief hout, gelakte fronten, natuursteen, keramiek of composiet. Kies materialen die tegen hitte en vocht kunnen.</li>
+<li><strong>Doorlooptijd:</strong> na het ontwerp vier tot acht weken voor de productie, daarna een tot twee weken voor de plaatsing.</li>
+</ul>`,
       },
     ],
     faq: [
@@ -1027,6 +1047,151 @@ export const costsNl: Topic[] = [
     ],
     ctaTitle: 'Uw energierekening automatisch omlaag?',
     ctaText: 'Vertel ons welke panelen, batterij of laadpaal u heeft en welk stroomcontract. U krijgt advies over wat u kunt koppelen en wat het oplevert.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'schoorsteen',
+    slug: 'schoorsteen-en-houtkachel',
+    title: 'Wat kost schoorsteen vegen, herstellen of een houtkachel in Spanje?',
+    seoTitle: 'Schoorsteen vegen, herstellen en houtkachel plaatsen in Spanje: kosten (2026)',
+    short: 'Schoorsteen en houtkachel',
+    description: 'Wat kost het om uw schoorsteen te laten vegen of herstellen, of een houtkachel of pelletkachel te laten plaatsen in de Axarquía? Prijzen, hoe vaak vegen en waar u op let.',
+    lead: 'In de winter is een open haard of houtkachel in de Axarquía heerlijk, zeker in een dorpshuis met dikke muren. Maar een schoorsteen die jaren niet geveegd is, trekt slecht, lekt bij regen en kan in brand vliegen. Wat kost vegen, herstellen of een nieuwe kachel?',
+    keyword: 'schoorsteen vegen spanje',
+    dienst: 'schoorsteen',
+    onderwerp: 'Ik wil graag mijn schoorsteen laten vegen of nakijken.',
+    answer: 'Schoorsteen vegen kost in de Axarquía meestal <strong>€ 60 tot € 120</strong>, met een camera-inspectie <strong>€ 120 tot € 250</strong>. Een houtkachel met een nieuw rvs-rookkanaal kost geplaatst <strong>€ 2.500 tot € 6.000</strong>, exclusief btw. Herstel van een oude gemetselde schoorsteen loopt van een paar honderd euro voor een kap tot € 3.000 of meer.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Prijzen per klus',
+        html: '<p>Indicaties voor 2026, inclusief materiaal en arbeid, exclusief btw.</p>',
+        table: {
+          head: ['Klus', 'Toelichting', 'Indicatie'],
+          rows: [
+            ['Schoorsteen vegen', 'Open haard of houtkachel, inclusief controle', '€ 60 – € 120'],
+            ['Vegen met camera-inspectie', 'Bij aankoop, na lang stilstaan of na een schoorsteenbrand', '€ 120 – € 250'],
+            ['Regenkap of windkap plaatsen', 'Tegen regen, vogels en terugslaande rook', '€ 150 – € 400'],
+            ['Aansluiting op het dak herstellen', 'Lekkage langs de schoorsteen', '€ 400 – € 1.500'],
+            ['Gemetselde schoorsteen herstellen', 'Voegen, pleisterwerk, bovenkant opnieuw opmetselen', '€ 800 – € 3.000'],
+            ['Rvs-binnenbuis in bestaande schoorsteen', 'Voor een kachel in een oude of lekkende schoorsteen', '€ 1.000 – € 2.500'],
+            ['Houtkachel met nieuw rookkanaal', 'Kachel, dubbelwandig rvs-kanaal en dakdoorvoer', '€ 2.500 – € 6.000'],
+            ['Pelletkachel', 'Kachel en rookkanaal, met thermostaat en timer', '€ 3.000 – € 7.000'],
+          ],
+          note: 'Lekt het dak langs de schoorsteen? Zie ook de kosten van <a href="/nl/kosten/dak-en-dakterras/">dak en dakterras</a>.',
+        },
+      },
+      {
+        id: 'vegen',
+        h: 'Hoe vaak moet de schoorsteen geveegd worden?',
+        html: `<p>Stookt u regelmatig, laat de schoorsteen dan <strong>elk jaar</strong> vegen, het liefst in september of oktober, voor het stookseizoen. Stookt u maar een paar weken per jaar, dan is eens per twee jaar meestal genoeg, met een controle op nesten en losse stenen.</p>
+<ul>
+<li><strong>Roet en teer:</strong> in de Axarquía stookt men veel olijfhout en dennenhout. Dennenhout en vochtig hout geven veel teer (creosoot) in het kanaal. Dat is de belangrijkste oorzaak van een schoorsteenbrand.</li>
+<li><strong>Nesten:</strong> een schoorsteen die maanden niet gebruikt is, zit in het voorjaar vaak dicht door vogelnesten.</li>
+<li><strong>Verzekering:</strong> sommige verzekeraars vragen na een brand om een bewijs dat de schoorsteen is geveegd. Bewaar de factuur.</li>
+</ul>`,
+      },
+      {
+        id: 'kachel',
+        h: 'Een houtkachel of pelletkachel plaatsen',
+        html: `<p>Een gesloten houtkachel geeft drie tot vier keer zoveel warmte als een open haard met hetzelfde hout. Een pelletkachel is schoner en werkt met een thermostaat en timer, handig als u het huis op afstand wilt voorverwarmen. Let op:</p>
+<ul>
+<li><strong>Het rookkanaal</strong> moet passen bij de kachel en hoog genoeg boven het dak uitkomen. Een oude gemetselde schoorsteen krijgt vaak een rvs-binnenbuis.</li>
+<li><strong>Afstand tot hout</strong>, balken en rieten plafonds (<em>cañizo</em>) is belangrijk. In oude dorpshuizen gaat het kanaal vaak door een houten plafond: dan is een geïsoleerde doorvoer nodig.</li>
+<li><strong>In een appartementencomplex</strong> heeft u voor een kanaal via de gevel of het dak meestal toestemming van de <em>comunidad</em> nodig.</li>
+<li><strong>Verwarmen met de airco</strong> is aan de kust vaak goedkoper. Een kachel is vooral fijn in de bergdorpen en voor de sfeer. Zie <a href="/nl/kosten/airco-en-warmtepomp/">airco en warmtepomp</a>.</li>
+</ul>`,
+      },
+    ],
+    faq: [
+      { q: 'Kan ik de schoorsteen zelf vegen?', a: 'Met een veegset kan het, maar een vakman ziet ook scheuren, losse stenen en teeraanslag, en geeft een bewijs voor de verzekering. Op een hoog of steil dak is zelf vegen af te raden.' },
+      { q: 'Hoe herken ik een schoorsteenbrand?', a: 'Een brullend geluid, veel rook of vonken uit de schoorsteen en een heel hete schoorsteenwand. Sluit de luchttoevoer van de kachel, ga naar buiten en bel 112. Laat de schoorsteen daarna inspecteren voordat u weer stookt.' },
+      { q: 'Welk hout stook ik het beste?', a: 'Droog hardhout, zoals olijf- of amandelhout, met minder dan 20% vocht. Laat vers hout minstens een jaar drogen. Dennenhout en vochtig hout geven meer roet en teer.' },
+    ],
+    links: [
+      { href: '/nl/problemen/schoorsteen-rookt-terug/', label: 'Schoorsteen rookt terug' },
+      { href: '/nl/gidsen/huis-winterklaar-spanje/', label: 'Gids: huis winterklaar maken' },
+      { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
+    ],
+    related: ['problems:schoorsteen', 'costs:ramen', 'costs:airco'],
+    sources: [
+      { name: 'BOE, RITE (installaties voor verwarming), IT 1.3 en IT 3', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2007-15820' },
+    ],
+    ctaTitle: 'Schoorsteen vegen of een kachel plaatsen?',
+    ctaText: 'Stuur een foto van uw haard of kachel en de schoorsteen op het dak. U krijgt een prijs voor vegen, herstel of een nieuwe kachel.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'ramen',
+    slug: 'ramen-en-kozijnen',
+    title: 'Wat kosten nieuwe ramen en kozijnen in Spanje?',
+    seoTitle: 'Ramen en kozijnen vervangen in Spanje: prijzen voor aluminium, PVC en dubbel glas (2026)',
+    short: 'Ramen en kozijnen',
+    description: 'Wat kosten nieuwe ramen in de Axarquía? Prijzen per raam voor aluminium met thermische onderbreking, PVC en hout, dubbel glas, schuifpuien, rolluiken en horren, en welke vergunning u nodig heeft.',
+    lead: 'Veel huizen in de Axarquía hebben nog enkel glas in dunne aluminium kozijnen. In de zomer komt de hitte binnen, in de winter is het koud en tochtig en druppelt condens van de ramen. Nieuwe ramen maken een groot verschil in comfort en stroomrekening.',
+    keyword: 'ramen vervangen spanje',
+    dienst: 'ramen',
+    onderwerp: 'Ik wil graag een prijs voor nieuwe ramen.',
+    answer: 'Een nieuw raam van ongeveer 120 bij 120 cm met dubbel glas kost geplaatst meestal <strong>€ 400 tot € 800</strong> in aluminium met thermische onderbreking en <strong>€ 350 tot € 700</strong> in PVC, exclusief btw. Een schuifpui naar het terras kost <strong>€ 1.200 tot € 3.000</strong>. Voor een heel huis met acht tot twaalf ramen rekent u op € 5.000 tot € 12.000.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Prijzen per raam',
+        html: '<p>Indicaties voor 2026 voor een raam van ongeveer 120 × 120 cm, inclusief demontage van het oude raam, plaatsen en afwerken, exclusief btw.</p>',
+        table: {
+          head: ['Type', 'Toelichting', 'Indicatie'],
+          rows: [
+            ['Aluminium met thermische onderbreking (RPT)', 'Meest gekozen in Spanje, slank en sterk', '€ 400 – € 800'],
+            ['PVC', 'Goed isolerend, kies een kwaliteit die tegen zon kan', '€ 350 – € 700'],
+            ['Hout of hout-aluminium', 'Voor een dorpshuis of beschermd centrum', '€ 700 – € 1.400'],
+            ['Schuifpui naar het terras', '2 tot 3 meter breed, dubbel glas', '€ 1.200 – € 3.000'],
+            ['Alleen het glas vervangen', 'Dubbel glas in een goed bestaand kozijn', '€ 100 – € 250 per m²'],
+            ['Rolluik (persiana)', 'Aluminium, handmatig of elektrisch', '€ 250 – € 600'],
+            ['Hor (mosquitera)', 'Vast, rol- of schuifhor', '€ 60 – € 150'],
+          ],
+          note: 'Laat ramen meenemen in een grotere verbouwing: zie <a href="/nl/renovatie/">renovatie en verbouwing</a>.',
+        },
+      },
+      {
+        id: 'kiezen',
+        h: 'Welk raam en welk glas?',
+        html: `<ul>
+<li><strong>Aluminium met thermische onderbreking (<em>RPT</em>):</strong> het kozijn heeft een isolerende strip, zodat het niet meer koud en nat wordt aan de binnenkant. Onderhoudsvrij en in elke kleur.</li>
+<li><strong>PVC:</strong> isoleert het best voor het geld. Kies een profiel dat geschikt is voor felle zon, anders kan een donkere kleur vervormen.</li>
+<li><strong>Glas:</strong> dubbel glas met een spouw van 12 tot 16 mm is de standaard. Aan de zuid- en westkant helpt zonwerend glas (<em>control solar</em>) tegen hitte. Op de begane grond is gelaagd veiligheidsglas aan te raden.</li>
+<li><strong>Rolluiken en horren:</strong> een rolluik houdt in de zomer de hitte buiten en geeft veiligheid als u weg bent. Horren zijn in de Axarquía bijna onmisbaar.</li>
+</ul>`,
+      },
+      {
+        id: 'vergunning',
+        h: 'Vergunning en regels',
+        html: `<ul>
+<li><strong>Ramen vervangen</strong> in dezelfde maat is meestal een kleine melding bij de gemeente (<em>declaración responsable</em> of <em>obra menor</em>).</li>
+<li><strong>In een historisch centrum</strong>, zoals in Frigiliana of Cómpeta, gelden vaak regels voor kleur en materiaal, bijvoorbeeld hout of een houtkleur.</li>
+<li><strong>In een appartementencomplex</strong> moet de gevel er hetzelfde uit blijven zien. Vraag de <em>comunidad</em> welke kleur en welk model is toegestaan.</li>
+<li><strong>Subsidie:</strong> voor energiebesparende renovaties zijn er regelmatig regelingen en een belastingaftrek in de IRPF. Vraag bij de offerte wat er loopt.</li>
+</ul>`,
+      },
+    ],
+    faq: [
+      { q: 'Hoelang duurt het om ramen te vervangen?', a: 'De ramen worden op maat gemaakt, dat duurt meestal drie tot zes weken. Het plaatsen zelf kost ongeveer een halve dag per raam, een heel huis in twee tot vier dagen.' },
+      { q: 'Helpen nieuwe ramen tegen condens en schimmel?', a: 'Ja, vaak wel. Met dubbel glas en een geïsoleerd kozijn is de binnenkant van het raam veel minder koud, zodat er minder condens ontstaat. Blijf wel ventileren. Zie tocht en condens bij ramen.' },
+      { q: 'Kan ik alleen het glas vervangen?', a: 'Als de kozijnen nog goed zijn en dik genoeg voor dubbel glas, ja. Bij oude dunne aluminium kozijnen zonder thermische onderbreking blijft het kozijn koud, dus dan loont een nieuw raam meer.' },
+    ],
+    links: [
+      { href: '/nl/problemen/tocht-en-condens-bij-ramen/', label: 'Tocht en condens bij ramen' },
+      { href: '/nl/problemen/vocht-en-schimmel/', label: 'Vocht en schimmel' },
+      { href: '/nl/renovatie/', label: 'Renovatie en verbouwing' },
+    ],
+    related: ['problems:tocht', 'costs:airco', 'problems:vocht'],
+    sources: [
+      { name: 'Código Técnico de la Edificación, DB HE (energiebesparing)', url: 'https://www.codigotecnico.org/DocumentosCTE/AhorroEnergia.html' },
+      { name: 'IDAE, subsidies voor energiebesparing in woningen', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'Nieuwe ramen voor uw huis?',
+    ctaText: 'Stuur foto’s van uw ramen en de maten ongeveer. U krijgt advies over materiaal en glas, en een prijs per raam.',
     minutes: 5,
     published: '2026-11-05',
   },
