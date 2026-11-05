@@ -881,6 +881,17 @@ export const costsDe: Topic[] = [
         },
       },
       {
+        id: 'leverancier',
+        h: 'Wallbox über Ihren Stromanbieter',
+        html: `<p>Viele spanische Stromanbieter verkaufen eine Wallbox als Paket, oft zum Festpreis oder in Monatsraten mit Ihrem Stromvertrag. Prüfen Sie, was die Standardinstallation enthält:</p>
+<ul>
+<li><strong>Eine begrenzte Kabellänge</strong>, meist 10 bis 15 Meter zwischen Sicherungskasten und Wallbox. Jeder weitere Meter kostet extra, oft 20 bis 40 € pro Meter.</li>
+<li><strong>Zusatzarbeiten</strong> wie Gräben, Wanddurchbrüche, ein eigener Zähler in der Tiefgarage oder eine höhere Anschlussleistung werden extra berechnet.</li>
+<li><strong>Ein Vertrag</strong>: Manchmal sind Sie ein oder zwei Jahre an den Anbieter gebunden, oder der günstige Preis gilt nur mit dessen Stromtarif.</li>
+</ul>
+<p>Steht das Auto weit vom Sicherungskasten entfernt, etwa auf einer Finca oder in einer Wohnanlage, wird das Paket oft teurer als gedacht. Holen Sie dann auch ein Angebot eines unabhängigen Installateurs ein und vergleichen Sie den Gesamtpreis.</p>`,
+      },
+      {
         id: 'zon',
         h: 'Laden mit Solaranlage und Batteriespeicher',
         html: `<p>Ein durchschnittliches Elektroauto verbraucht 15 bis 18 kWh pro 100 km. Bei 10.000 km im Jahr sind das etwa 1.500 bis 1.800 kWh. In der Axarquía erzeugt 1 kWp Module rund 1.600 kWh im Jahr, 1 bis 2 zusätzliche kWp decken also den Großteil.</p>

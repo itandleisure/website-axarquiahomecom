@@ -881,6 +881,17 @@ export const costsNl: Topic[] = [
         },
       },
       {
+        id: 'leverancier',
+        h: 'Laadpaal via uw energieleverancier',
+        html: `<p>Veel Spaanse energieleveranciers verkopen een laadpaal als pakket, vaak met een vaste prijs of in maandtermijnen bij uw stroomcontract. Let op wat er in de standaardinstallatie zit:</p>
+<ul>
+<li><strong>Een beperkt aantal meters kabel</strong>, meestal 10 tot 15 meter tussen meterkast en laadpaal. Elke meter extra kost bij, vaak € 20 tot € 40 per meter.</li>
+<li><strong>Extra werk</strong> zoals sleuven, doorboringen, een eigen meter in een parkeergarage of een hoger aansluitvermogen wordt apart gerekend.</li>
+<li><strong>Een contract</strong>: soms zit u een of twee jaar vast aan de leverancier, of geldt de lage prijs alleen bij hun stroomtarief.</li>
+</ul>
+<p>Staat de auto ver van de meterkast, zoals bij een finca of in een complex, dan valt het pakket vaak duurder uit dan gedacht. Vraag dan ook een offerte van een onafhankelijke installateur en vergelijk de totaalprijs.</p>`,
+      },
+      {
         id: 'zon',
         h: 'Laden op zonnepanelen en thuisbatterij',
         html: `<p>Een gemiddelde elektrische auto verbruikt 15 tot 18 kWh per 100 km. Rijdt u 10.000 km per jaar, dan is dat zo’n 1.500 tot 1.800 kWh. In de Axarquía levert 1 kWp aan panelen ongeveer 1.600 kWh per jaar, dus 1 tot 2 extra kWp dekt het grootste deel.</p>

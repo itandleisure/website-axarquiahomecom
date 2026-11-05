@@ -881,6 +881,17 @@ export const costsEn: Topic[] = [
         },
       },
       {
+        id: 'leverancier',
+        h: 'Charger through your energy supplier',
+        html: `<p>Many Spanish energy suppliers sell an EV charger as a package, often at a fixed price or in monthly instalments with your electricity contract. Check what the standard installation includes:</p>
+<ul>
+<li><strong>A limited length of cable</strong>, usually 10 to 15 metres between the consumer unit and the charger. Every extra metre costs more, often €20 to €40 a metre.</li>
+<li><strong>Extra work</strong> such as trenching, drilling through walls, a separate meter in a parking garage or higher contracted power is charged separately.</li>
+<li><strong>A contract</strong>: sometimes you are tied to the supplier for one or two years, or the low price only applies with their tariff.</li>
+</ul>
+<p>If the car is parked far from the consumer unit, as on a finca or in an apartment block, the package often costs more than expected. Then also get a quote from an independent installer and compare the total price.</p>`,
+      },
+      {
         id: 'zon',
         h: 'Charging from solar panels and a home battery',
         html: `<p>An average electric car uses 15 to 18 kWh per 100 km. At 10,000 km a year that is about 1,500 to 1,800 kWh. In the Axarquía 1 kWp of panels produces about 1,600 kWh a year, so 1 to 2 extra kWp covers most of it.</p>
