@@ -1,0 +1,51 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Todo from '../../components/Todo.astro';
+import { site } from '../../data/site';
+const o = site.operator;
+const c = site.company;
+---
+<Base
+  title="Impressum, Datenschutz und Bedingungen"
+  description="Wer hinter Axarquía Home steht, wie wir Ihre personenbezogenen Daten bei einer Anfrage verarbeiten und an wen wir sie weitergeben."
+  path="/de/datenschutz/"
+  lang="de"
+>
+  <Breadcrumbs lang="de" items={[{ name: 'Impressum und Datenschutz', href: '/de/datenschutz/' }]} />
+  <section class="section">
+    <div class="wrap prose">
+      <h1>Impressum, Datenschutz und Bedingungen</h1>
+      <Todo label="gegevens van de onderneming van Frans en het bouwbedrijf. Laat deze tekst één keer nakijken door een AVG-jurist." />
+      <p>Stand: 5. November 2026.</p>
+
+      <h2 id="impressum">Impressum</h2>
+      <p>Die Website {site.domain} wird betrieben von {o.name}, {o.address}, eingetragen bei der niederländischen Handelskammer (Kamer van Koophandel) unter der Nummer {o.kvk} („Axarquía Home“). E-Mail: <a href={`mailto:${o.email}`}>{o.email}</a>.</p>
+      <p>Axarquía Home führt selbst keine Bauarbeiten aus. Die Arbeiten führt unser fester Partner {c.legalName}, {c.cif}, {c.street}, {c.postalCode} {c.town}, Spanien („das Bauunternehmen“) aus.</p>
+
+      <h2>Welche Daten wir verarbeiten</h2>
+      <p>Wenn Sie unser Anfrageformular ausfüllen, verarbeiten wir die Angaben, die Sie machen: Name, E-Mail-Adresse, Telefonnummer, Adresse oder Ort der Immobilie, eine Beschreibung Ihres Vorhabens, Budget und Zeitrahmen sowie eventuelle Fotos. Außerdem speichern wir das Datum und die Seite, von der aus Sie angefragt haben.</p>
+
+      <h2>Zweck und Rechtsgrundlage</h2>
+      <p>Wir nutzen diese Daten nur, um Ihre Anfrage zu bearbeiten: um Sie anzurufen oder Ihnen zu schreiben, eine Besichtigung zu vereinbaren und ein Angebot zu erstellen. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie mit dem Häkchen im Formular geben, sowie die Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO).</p>
+
+      <h2>An wen wir Ihre Daten weitergeben</h2>
+      <p>Ihre Anfrage wird automatisch an das Bauunternehmen weitergeleitet, das sich bei Ihnen meldet und das Angebot erstellt. Gehört Ihre Anfrage nicht zu den Leistungen des Bauunternehmens (zum Beispiel Solaranlage, Klimaanlage oder Umzug), leiten wir sie nur dann an einen anderen Partner weiter, wenn Sie dem im Formular zugestimmt haben.</p>
+      <p>Anfragen werden im Google Workspace von Axarquía Home (Google Sheets und Google Drive) gespeichert. Google verarbeitet diese Daten in unserem Auftrag. Wir verkaufen Ihre Daten nicht und nutzen sie ohne Ihre gesonderte Einwilligung nicht für Newsletter.</p>
+
+      <h2>Speicherdauer</h2>
+      <p>Wir bewahren Anfragen bis zu 24 Monate nach dem letzten Kontakt auf, oder länger, soweit dies für die Unterlagen eines Auftrags nötig ist (die gesetzliche Aufbewahrungsfrist für Rechnungen beträgt in den Niederlanden 7 Jahre).</p>
+
+      <h2>Ihre Rechte</h2>
+      <p>Sie können jederzeit Auskunft über die zu Ihnen gespeicherten Daten verlangen, sie berichtigen oder löschen lassen oder Ihre Einwilligung widerrufen. Schreiben Sie an <a href={`mailto:${o.email}`}>{o.email}</a>. Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, etwa bei der niederländischen Autoriteit Persoonsgegevens, der spanischen Agencia Española de Protección de Datos oder der Aufsichtsbehörde Ihres Wohnsitzlandes.</p>
+
+      <h2>Cookies und Statistik</h2>
+      <p>Diese Website setzt Cookies nur, wenn Sie im Cookie-Banner zustimmen. Wir nutzen die Google Search Console und die Bing Webmaster Tools, um zu sehen, wie die Website in Suchmaschinen gefunden wird; dafür wird nichts auf Ihrem Gerät gespeichert. Ihre Auswahl im Banner speichern wir in Ihrem Browser (localStorage), damit wir nicht auf jeder Seite erneut fragen.</p>
+      <p>Um die Website zu verbessern, nutzen wir Microsoft Clarity. Clarity zeigt uns, wie Besucher die Seiten nutzen, etwa wo sie klicken und wie weit sie scrollen, mit Heatmaps und anonymen Aufzeichnungen eines Besuchs. Clarity wird nur geladen, wenn Sie im Cookie-Banner auf Akzeptieren klicken. Dann setzt es Cookies von Microsoft (etwa _clck, _clsk und MUID), die bis zu ein Jahr gespeichert bleiben. Alles, was Sie in Formulare eingeben, wird verdeckt. Microsoft verarbeitet diese Daten in unserem Auftrag; siehe die <a href="https://privacy.microsoft.com/privacystatement" rel="noopener">Datenschutzerklärung von Microsoft</a>. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Sie können sie jederzeit über die Cookie-Einstellungen unten auf jeder Seite widerrufen.</p>
+
+      <h2>Bedingungen</h2>
+      <p>Die Informationen auf dieser Website sind allgemein und sorgfältig zusammengestellt, aber keine Rechts-, Steuer- oder Bauberatung für Ihre konkrete Situation. Die Preise auf der Website sind Richtpreise; verbindlich ist nur ein schriftliches Angebot des Bauunternehmens. Das Bauunternehmen ist für die Ausführung der Arbeiten, Gewährleistung und eventuelle Beanstandungen der Arbeiten verantwortlich.</p>
+      <p>Zur Legalisierung (AFO) und zu Genehmigungen geben wir nur allgemeine Erläuterungen. Das Urteil über eine bestimmte Immobilie kommt von einem Architekten oder Anwalt.</p>
+    </div>
+  </section>
+</Base>

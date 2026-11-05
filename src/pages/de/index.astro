@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Services from '../../components/Services.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Sprechen Sie Deutsch?',
+    a: 'Ja. Sie haben einen deutschsprachigen Ansprechpartner vom ersten Gespräch bis zur Übergabe. Unser Team spricht außerdem Niederländisch, Englisch und Spanisch, und wir erledigen die Absprachen mit spanischen Lieferanten, Handwerkern und dem Rathaus für Sie.',
+  },
+  {
+    q: 'In welchen Orten arbeiten Sie?',
+    a: `In der ganzen Axarquía und an der östlichen Costa del Sol, unter anderem in ${site.villages.join(', ')}. Auch Landhäuser im Hinterland gehören zu unserem Gebiet.`,
+  },
+  {
+    q: 'Ich wohne in Deutschland. Können Sie die Arbeiten in meiner Abwesenheit ausführen?',
+    a: 'Genau so arbeiten die meisten unserer Kunden. Wir erstellen ein Angebot anhand von Fotos und einer Besichtigung vor Ort und halten Sie während der Arbeiten mit Fotos und Videos auf dem Laufenden. Sie müssen nur kommen, wenn Sie möchten.',
+  },
+  {
+    q: 'Was kostet eine Anfrage?',
+    a: 'Nichts. Die Anfrage, das erste Gespräch und eine Besichtigung für das Angebot sind kostenlos und unverbindlich.',
+  },
+  {
+    q: 'Ich will bald kaufen. Können Sie sich das Haus vorher ansehen?',
+    a: 'Ja. Ein Gutachten vor dem Kauf zeigt Ihnen den Zustand der Immobilie, was gemacht werden muss und was das ungefähr kostet, bevor Sie etwas unterschreiben. In Spanien kaufen Sie „wie gesehen“, deshalb lohnt sich das.',
+  },
+];
+---
+<Base
+  title="Deutschsprachige Handwerker in der Axarquía | Renovierung, Hausbetreuung, Gutachten"
+  description="Ein Haus in der Axarquía kaufen, renovieren oder betreuen lassen? Ein Team mit deutschsprachigem Ansprechpartner für Renovierung, Gutachten vor dem Kauf, Hausbetreuung und Instandhaltung in Nerja, Cómpeta, Frigiliana, Torrox und Umgebung."
+  path="/de/"
+  lang="de"
+>
+  <Hero
+    lang="de"
+    eyebrow="Kaufen · Renovieren · Betreuen"
+    title="Ihr Haus in der Axarquía, <em>in guten Händen</em>"
+    lead="Ein niederländisches Bauunternehmen mit deutschsprachigem Ansprechpartner, das für ausländische Eigentümer und Käufer an der Küste östlich von Málaga arbeitet. Vom Gutachten vor dem Kauf über die Renovierung bis zur Betreuung des Hauses, wenn Sie nicht da sind."
+    secondary="Unsere Leistungen"
+    secondaryHref="#leistungen"
+  >
+    <ul class="trust">
+      <li>Ansprechpartner auf Deutsch</li>
+      <li>Antwort innerhalb von 24 Stunden</li>
+      <li>Festpreis im Angebot</li>
+      <li>Fotoberichte, wenn Sie weg sind</li>
+    </ul>
+  </Hero>
+
+  <div id="leistungen"><Services lang="de" /></div>
+
+  <section class="section alt">
+    <div class="wrap split">
+      <div>
+        <h2>Warum ein Team, das Ihre Sprache spricht?</h2>
+        <p>Wer in Spanien kauft oder renoviert, stößt auf die immer gleichen Probleme: Angebote, die nicht aufgehen, Handwerker, die nicht mehr ans Telefon gehen, Vorschriften, die anders funktionieren als zu Hause, und eine Sprache, in der ein Gespräch über Rohrleitungen und Baugenehmigungen einfach zu schwierig ist.</p>
+        <p>Wir arbeiten so, wie Sie es gewohnt sind: klare Absprachen, ein schriftliches Angebot, ein fester Ansprechpartner und ein Zeitplan, den wir einhalten. Gleichzeitig kennen wir die Gegend, die Bauweise der weißen Dörfer, die örtlichen Handwerker und die Rathäuser.</p>
+        <p>Weil wir auch Hausbetreuung und Instandhaltung anbieten, sind wir nach der Übergabe weiter für Sie da. Wir merken als Erste, wenn das Dach undicht ist oder der Pool grün wird, und kümmern uns darum, bevor ein Problem daraus wird.</p>
+      </div>
+      <div class="box">
+        <h3>Ein Ansprechpartner für alles</h3>
+        <ul class="checks">
+          <li>Gutachten vor dem Kauf</li>
+          <li>Renovierung, Bäder und Küchen</li>
+          <li>Poolbau und Poolpflege</li>
+          <li>Dächer, Terrassen und Undichtigkeiten</li>
+          <li>Hausbetreuung und Kontrollen</li>
+          <li>Grundstückspflege und Garten</li>
+        </ul>
+        <a class="btn" href="/de/anfrage/">Erzählen Sie uns von Ihren Plänen</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="de"
+    steps={[
+      { t: 'Anfrage', d: 'Beantworten Sie ein paar Fragen in unserem kurzen Formular. Fotos helfen, sind aber nicht nötig.' },
+      { t: 'Kontakt', d: 'Innerhalb von 24 Stunden ruft Ihr deutschsprachiger Ansprechpartner an oder schreibt Ihnen, um Ihre Pläne zu besprechen.' },
+      { t: 'Besichtigung und Angebot', d: 'Wir sehen uns die Immobilie an (auch wenn Sie nicht da sind) und schicken Ihnen ein klares, aufgeschlüsseltes Angebot.' },
+      { t: 'Ausführung', d: 'Ein Projektleiter, wöchentliche Fotos und ein Zeitplan, den wir einhalten.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Wo wir arbeiten</h2>
+      <p class="section-intro">Von der Küste bis in die Bergdörfer: Wir sind in der ganzen Axarquía tätig, auch bei Landhäusern, bei denen Wasser, Zufahrt und Genehmigungen besondere Aufmerksamkeit brauchen.</p>
+      <ul class="villages">
+        {site.villages.map((v) => <li>{v}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="de" />
+  <Cta lang="de" />
+</Base>

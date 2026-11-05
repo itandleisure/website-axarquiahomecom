@@ -1,0 +1,69 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import Cta from '../../../components/Cta.astro';
+---
+<Base
+  title="Things to do in the Axarquía: caves, white villages, walks and fiestas"
+  description="The best things to see and do in the Axarquía: the Nerja caves, Frigiliana, the Maro cliffs, the Río Chíllar walk, La Maroma and the fiestas through the year."
+  path="/en/things-to-do/"
+  lang="en"
+>
+  <Breadcrumbs lang="en" items={[{ name: 'Things to do', href: '/en/things-to-do/' }]} />
+  <Hero
+    lang="en"
+    eyebrow="Things to do"
+    title="What not to miss <em>in the Axarquía</em>"
+    lead="Caves with prehistoric paintings, cliffs and hidden coves, white villages against the mountains and a walk up a river. An overview of what the area has to offer, whether you are on holiday or live here."
+    cta="Thinking of buying here? Ask us"
+  />
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Coast, caves and cliffs</h2>
+      <ul>
+        <li><strong>Cueva de Nerja</strong>: a vast cave system near Maro, discovered in 1959 by five boys. Besides the halls of stalactites there are prehistoric paintings, and in summer concerts are held inside the cave.</li>
+        <li><strong>Balcón de Europa</strong>: the viewpoint in the heart of Nerja, on a rock above the sea, with steps down to the small beaches below.</li>
+        <li><strong>Acantilados de Maro-Cerro Gordo</strong>: a protected natural area of cliffs and coves between Nerja and La Herradura. Best seen from the water, by kayak or with a snorkel.</li>
+        <li><strong>Cueva del Tesoro</strong> in Rincón de la Victoria: one of the few caves in Europe carved out by the sea, with tales of hidden Moorish treasure.</li>
+        <li><strong>The promenades</strong> of Torre del Mar and Torrox Costa: miles of seafront, with beach bars grilling sardines on skewers over a wood fire (<em>espetos</em>).</li>
+      </ul>
+
+      <h2>White villages</h2>
+      <ul>
+        <li><strong>Frigiliana</strong>: steep lanes of Moorish origin, cobbled and full of flowerpots, a few kilometres from Nerja.</li>
+        <li><strong>Cómpeta</strong>: a lively mountain village with a big square, views down to the sea and a long tradition of sweet wine.</li>
+        <li><strong>Comares</strong>: high on a hilltop, with the views that earned it the nickname “balcony of the Axarquía”.</li>
+        <li><strong>Árchez</strong>: a small village with a minaret from Moorish times, one of the best preserved in Andalusia.</li>
+        <li><strong>Macharaviaya</strong>: home of the Gálvez family, whose influence in the eighteenth century reached as far as America.</li>
+      </ul>
+
+      <h2>Walking and nature</h2>
+      <ul>
+        <li><strong>Río Chíllar</strong>: from Nerja you walk up the river itself into narrow gorges. Popular in summer; wear shoes that can get wet.</li>
+        <li><strong>La Maroma</strong>: at over 2,000 metres the highest peak in Málaga province, in the Sierra Tejeda. A full day’s hike, for example from Canillas de Aceituno or Sedella.</li>
+        <li><strong>El Saltillo</strong>: a route near Canillas de Aceituno with a suspension bridge over a gorge.</li>
+        <li><strong>Gran Senda de Málaga</strong>: the long-distance trail around the whole province runs through the Axarquía over several stages.</li>
+        <li><strong>Embalse de La Viñuela</strong>: the reservoir inland, with paths and picnic spots along the shore.</li>
+      </ul>
+
+      <h2>Fiestas through the year</h2>
+      <p>Almost every village has its own fiesta. A few worth travelling for:</p>
+      <ul>
+        <li><strong>Semana Santa</strong> (Easter): processions in Vélez-Málaga, Nerja and many villages.</li>
+        <li><strong>Noche del Vino</strong> in Cómpeta on 15 August: music, flamenco and free wine on the square.</li>
+        <li><strong>Festival Frigiliana 3 Culturas</strong>, late August or early September, celebrating the village’s Jewish, Muslim and Christian history.</li>
+        <li><strong>Fiesta del Ajoblanco</strong> in Almáchar, early September, around the local cold almond soup.</li>
+        <li><strong>Día de la Pasa</strong> in El Borge, in September, the festival of the raisins that dry in the sun on the slopes here.</li>
+      </ul>
+      <p class="note">Dates can change from year to year. Check the town hall’s website for the exact programme.</p>
+
+      <h2>Routes through the villages</h2>
+      <p>The Axarquía has several tourist routes linking villages of a similar character: the <strong>Ruta del Sol y del Vino</strong> (wine and white villages, from Algarrobo to Cómpeta and Frigiliana), the <strong>Ruta Mudéjar</strong> (Moorish heritage in the mountain villages), the <strong>Ruta de la Pasa</strong> (raisins, around El Borge, Almáchar and Moclinejo) and the <strong>Ruta del Aceite y los Montes</strong> (olive oil, inland around Periana and Riogordo). By car each makes a good day or two.</p>
+
+      <h2>From holiday to home</h2>
+      <p>Many people who now live in the Axarquía first came here on holiday. Thinking of buying a home here? Start with <a href="/en/living/">Living in the Axarquía</a> and look through the <a href="/en/places/">places</a> one by one. We help with a <a href="/en/property-survey/">property survey</a>, the <a href="/en/renovation/">renovation</a> and <a href="/en/key-holding/">key holding</a> while you are away.</p>
+    </div>
+  </section>
+  <Cta lang="en" />
+</Base>

@@ -1,0 +1,93 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import { prices, site, dePrice } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Mein Dach ist undicht und ich bin in Deutschland. Was nun?',
+    a: 'Schicken Sie uns über das Formular oder per WhatsApp die Adresse und, wenn möglich, ein Foto. Haben Sie noch keine Hausbetreuung bei uns, vereinbaren wir, wie wir hineinkommen. Wir dichten so schnell wie möglich provisorisch ab und nennen Ihnen dann einen Preis für die dauerhafte Reparatur.',
+  },
+  {
+    q: 'Warum sind Flachdächer und Terrassen in Spanien so oft undicht?',
+    a: 'Viele Häuser in der Axarquía haben Flachdächer (azoteas) und Terrassen über Wohnräumen. Durch die großen Temperaturunterschiede reißen Abdichtung und Fugen mit der Zeit. Nach einer Trockenperiode zeigt sich das beim ersten Starkregen. Eine neue Abdichtung (impermeabilización) löst das Problem meist.',
+  },
+  {
+    q: 'Muss ich mein Grundstück freischneiden?',
+    a: 'In Andalusien müssen Eigentümer von Grundstücken in oder nahe Wald- und Naturgebieten diese frei von brennbarem Material halten, vor allem im Sommer. Auch Rathäuser können Auflagen machen. Wir schneiden Ihr Grundstück einmalig oder jedes Jahr vor dem Sommer frei.',
+  },
+  {
+    q: 'Übernehmen Sie auch kleine Arbeiten?',
+    a: 'Ja. Ein tropfender Wasserhahn, eine klemmende Tür, eine Steckdose ohne Strom. Für Kunden mit Hausbetreuung erledigen wir das beim nächsten Besuch.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Instandhaltung und Reparaturen',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['de', 'nl', 'en'],
+};
+---
+<Base
+  title="Instandhaltung und Reparaturen für Ihr Haus in Spanien"
+  description="Undichte Dächer, Terrassenabdichtung, Grundstückspflege und kleine Reparaturen in der Axarquía. Mit Ansprechpartner auf Deutsch, auch wenn Sie nicht in Spanien sind."
+  path="/de/instandhaltung/"
+  lang="de"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="de" items={[{ name: 'Instandhaltung und Reparaturen', href: '/de/instandhaltung/' }]} />
+  <Hero
+    lang="de"
+    eyebrow="Instandhaltung und Reparaturen"
+    title="Leck, Schaden oder überfällige Wartung? <em>Wir kümmern uns.</em>"
+    lead="Dächer, Terrassen, Grundstück und Garten, und jede kleine Arbeit in und um das Haus. Auch wenn Sie in Deutschland sind und es nur von den Nachbarn hören."
+    cta="Reparatur anfragen"
+    ctaHref="/de/anfrage/?dienst=onderhoud"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h3>Dächer und Undichtigkeiten</h3>
+          <p>Undichte Dächer, Flachdächer und Terrassen neu abdichten, Dachrinnen und Entwässerung.</p>
+          <p><strong>{dePrice(prices.daken)}</strong></p>
+        </div>
+        <div class="card">
+          <h3>Grundstück und Garten</h3>
+          <p>Freischneiden gegen Brandgefahr, Baumschnitt, Bewässerung, Kunstrasen und Gartengestaltung.</p>
+          <p><strong>{dePrice(prices.perceel)}</strong></p>
+        </div>
+        <div class="card">
+          <h3>Feuchtigkeit und Anstrich</h3>
+          <p>Feuchtigkeit behandeln, Wände ausbessern und das Haus innen und außen streichen.</p>
+          <p><strong>Preis nach Besichtigung</strong></p>
+        </div>
+        <div class="card">
+          <h3>Kleine Arbeiten</h3>
+          <p>Sanitär, Elektrik, Türen, Fenster, Schlösser und alles andere, was kaputtgeht.</p>
+          <p><strong>Stundensatz</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Instandhaltung, ohne vor Ort sein zu müssen</h2>
+      <p>Die meisten Eigentümer, für die wir arbeiten, verbringen einen großen Teil des Jahres in Deutschland, Österreich, der Schweiz oder anderswo in Europa. Deshalb arbeiten wir mit Fotos: vor, während und nach der Arbeit. Sie geben den Preis frei, wir führen die Arbeit aus, und Sie sehen das Ergebnis auf Ihrem Handy.</p>
+      <p>Sie möchten uns nicht jedes Mal anrufen müssen? Mit der <a href="/de/hausbetreuung/">Hausbetreuung</a> behalten wir das Haus regelmäßig im Blick und entdecken Probleme oft, bevor sie Schaden anrichten.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="de" />
+  <Cta lang="de" dienst="onderhoud" title="Etwas kaputt in Ihrem Haus in Spanien?" />
+  <Services lang="de" exclude="instandhaltung" title="Das könnte Sie auch interessieren" />
+</Base>

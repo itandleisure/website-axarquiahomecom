@@ -1,0 +1,67 @@
+---
+// Overzicht van alle plaatsen in de Axarquía, gegroepeerd naar ligging.
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Hero from './Hero.astro';
+import Cta from './Cta.astro';
+import { places, placeHref, placeBySlug, settingLabels, type Setting } from '../data/places';
+import { path as route, type Lang } from '../i18n';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const T = {
+  nl: {
+    title: 'Plaatsen in de Axarquía: alle dorpen en kustplaatsen',
+    description: 'Alle 31 gemeenten van de Axarquía op een rij, van Nerja en Torre del Mar aan zee tot Cómpeta en Comares in de bergen. Ligging, sfeer en wonen per plaats.',
+    crumb: 'Plaatsen', eyebrow: 'Plaatsen',
+    h1: 'Van de kust <em>tot de bergdorpen</em>',
+    lead: 'De Axarquía telt 31 gemeenten, van drukke kustplaatsen tot witte dorpen van een paar honderd inwoners. Hier vindt u ze allemaal, met per plaats wat u moet weten als u er wilt wonen, kopen of verbouwen.',
+    partOf: 'hoort bij', also: 'Ook', soon: 'Pagina volgt',
+  },
+  en: {
+    title: 'Towns and villages of the Axarquía',
+    description: 'All 31 municipalities of the Axarquía, from Nerja and Torre del Mar on the coast to Cómpeta and Comares in the mountains. Setting, character and living in each town.',
+    crumb: 'Places', eyebrow: 'Places',
+    h1: 'From the coast <em>to the mountain villages</em>',
+    lead: 'The Axarquía has 31 municipalities, from busy coastal towns to white villages of a few hundred people. Here you will find them all, with what you need to know about living, buying or renovating in each one.',
+    partOf: 'part of', also: 'Also', soon: 'Page coming soon',
+  },
+  de: {
+    title: 'Orte in der Axarquía: alle Dörfer und Küstenorte',
+    description: 'Alle 31 Gemeinden der Axarquía im Überblick, von Nerja und Torre del Mar am Meer bis Cómpeta und Comares in den Bergen. Lage, Charakter und Wohnen in jedem Ort.',
+    crumb: 'Orte', eyebrow: 'Orte',
+    h1: 'Von der Küste <em>bis in die Bergdörfer</em>',
+    lead: 'Die Axarquía hat 31 Gemeinden, von belebten Küstenorten bis zu weißen Dörfern mit ein paar hundert Einwohnern. Hier finden Sie alle, mit dem, was Sie zum Wohnen, Kaufen oder Renovieren in jedem Ort wissen sollten.',
+    partOf: 'gehört zu', also: 'Auch', soon: 'Seite folgt',
+  },
+}[lang];
+const order: Setting[] = ['coast', 'hills', 'mountains', 'inland'];
+const groups = order.map((s) => ({ s, list: places.filter((p) => p.setting === s).sort((a, b) => a.name.localeCompare(b.name, 'es')) }));
+const self = route(lang, 'places');
+---
+<Base title={T.title} description={T.description} path={self} lang={lang}>
+  <Breadcrumbs lang={lang} items={[{ name: T.crumb, href: self }]} />
+  <Hero lang={lang} eyebrow={T.eyebrow} title={T.h1} lead={T.lead} />
+  {groups.map((g) => (
+    <section class="section">
+      <div class="wrap">
+        <h2>{settingLabels[lang][g.s]}</h2>
+        <div class="cards place-cards">
+          {g.list.map((p) => {
+            const parent = p.municipality ? placeBySlug(p.municipality) : undefined;
+            const body = (
+              <>
+                <h3>{p.name}</h3>
+                {parent && <p class="note">{T.partOf} {parent.name}</p>}
+                {p.villages && <p class="note">{T.also}: {p.villages.join(', ')}</p>}
+                {!p.built && <p class="note soon">{T.soon}</p>}
+              </>
+            );
+            return p.built ? <a class="card" href={placeHref(lang, p)}>{body}</a> : <div class="card">{body}</div>;
+          })}
+        </div>
+      </div>
+    </section>
+  ))}
+  <Cta lang={lang} />
+</Base>

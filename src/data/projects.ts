@@ -9,6 +9,9 @@ export interface Project {
   titleEn?: string;
   summaryEn?: string;
   durationEn?: string; // bijv. '4 months'
+  titleDe?: string;
+  summaryDe?: string;
+  durationDe?: string; // bijv. '4 Monate'
   before?: string;
   after?: string;
 }

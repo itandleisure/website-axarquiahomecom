@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Wizard from '../../components/Wizard.astro';
+---
+<Base
+  title="Kostenlose Anfrage: erzählen Sie uns von Ihrem Vorhaben"
+  description="In zwei Minuten kostenlos anfragen: Renovierung, Hausbetreuung, Gutachten vor dem Kauf, Pool oder Instandhaltung in der Axarquía. Antwort innerhalb von 24 Stunden."
+  path="/de/anfrage/"
+  lang="de"
+>
+  <Breadcrumbs lang="de" items={[{ name: 'Anfrage', href: '/de/anfrage/' }]} />
+  <section class="section" style="padding-top:28px">
+    <div class="wrap">
+      <h1>Ihre kostenlose Anfrage</h1>
+      <p class="lead" style="margin-bottom:28px">Sechs kurze Fragen, etwa zwei Minuten. Innerhalb von 24 Stunden meldet sich ein deutschsprachiger Ansprechpartner bei Ihnen.</p>
+      <Wizard lang="de" />
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,83 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'warum', label: 'Warum die Axarquía und die Costa del Sol' },
+  { id: 'aufenthalt', label: 'Aufenthalt als EU-Bürger' },
+  { id: 'papiere', label: 'NIE, Registrierung und Padrón' },
+  { id: 'abmelden', label: 'Was Sie in Deutschland regeln' },
+  { id: 'steuern', label: 'Steuern: wo sind Sie ansässig?' },
+  { id: 'gesundheit', label: 'Krankenversicherung' },
+  { id: 'wohnen', label: 'Wohnung finden: mieten oder kaufen' },
+  { id: 'renovieren', label: 'Das Haus bezugsfertig machen' },
+  { id: 'praktisch', label: 'Praktisches' },
+];
+
+const faq = [
+  {
+    q: 'Brauche ich ein Visum, um nach Spanien auszuwandern?',
+    a: 'Nein. Als Bürger der EU (auch aus Österreich) dürfen Sie in Spanien wohnen und arbeiten. Bleiben Sie länger als drei Monate, müssen Sie sich im Zentralregister für Ausländer eintragen lassen und erhalten das Certificado de Registro de Ciudadano de la UE. Für Schweizer gilt über das Freizügigkeitsabkommen ein vergleichbares Verfahren.',
+  },
+  {
+    q: 'Wann bin ich in Spanien steuerpflichtig?',
+    a: 'In der Regel, wenn Sie sich mehr als 183 Tage im Kalenderjahr in Spanien aufhalten oder Ihr wirtschaftlicher Lebensmittelpunkt dort liegt. Sie zahlen dann in Spanien Steuern auf Ihr Welteinkommen. Das Doppelbesteuerungsabkommen zwischen Deutschland und Spanien regelt, welches Land welches Einkommen besteuern darf. Lassen Sie das von einem Steuerberater prüfen, der beide Systeme kennt.',
+  },
+  {
+    q: 'Wie bin ich in Spanien krankenversichert?',
+    a: 'Das hängt von Ihrer Situation ab. Arbeiten Sie in Spanien, sind Sie meist im spanischen System versichert. Beziehen Sie nur eine deutsche Rente und sind in der gesetzlichen Krankenversicherung, bekommen Sie über Ihre Krankenkasse oft das Formular S1 und damit Zugang zur spanischen öffentlichen Versorgung. Viele Auswanderer schließen zusätzlich eine private Versicherung ab.',
+  },
+  {
+    q: 'Muss ich meinen Führerschein umschreiben lassen?',
+    a: 'Nein, ein deutscher, österreichischer oder anderer EU-Führerschein gilt in Spanien weiter. Bei Ablauf erneuern Sie ihn als Resident in Spanien. Für Führerscheine aus der Schweiz gelten andere Regeln; fragen Sie bei der spanischen Verkehrsbehörde DGT nach.',
+  },
+];
+---
+<Guide lang="de" slug="auswandern-nach-spanien" toc={toc} faq={faq} ctaTitle="Ein Haus gefunden, an dem etwas zu tun ist?" ctaText="Wir begutachten es vor dem Kauf und nennen Ihnen einen Preis für die Renovierung, mit Ansprechpartner auf Deutsch.">
+  <h2 id="warum">Warum die Axarquía und die Costa del Sol?</h2>
+  <p>Die Costa del Sol ist seit Jahrzehnten eines der beliebtesten Ziele für Auswanderer aus Deutschland, Österreich und der Schweiz. Ihr östlicher Teil, die Axarquía, ist ruhiger und günstiger als Marbella oder Fuengirola, liegt aber genauso nah am Flughafen Málaga. Von Nerja sind es etwa eine Stunde, von Rincón de la Victoria eine halbe Stunde, und es gibt das ganze Jahr Direktflüge von vielen deutschen Flughäfen sowie aus Wien und Zürich.</p>
+  <p>Die Gegend hat über 300 Sonnentage im Jahr und milde Winter: Im Januar liegen die Tagestemperaturen oft bei 16 bis 18 Grad. Hinter der Küste erheben sich die Sierra Tejeda und Almijara mit weißen Dörfern wie Cómpeta und Frigiliana. Wer am Meer wohnen will, schaut sich Torre del Mar, Torrox Costa oder Nerja an; wer Ruhe und Platz sucht, eine Finca im Hinterland. In Torrox gibt es eine besonders große deutsche Gemeinschaft.</p>
+
+  <h2 id="aufenthalt">Aufenthalt als EU-Bürger</h2>
+  <p>Als EU-Bürger haben Sie das Recht, in Spanien zu wohnen, zu arbeiten und sich selbstständig zu machen. Ein Visum brauchen Sie nicht. Bleiben Sie länger als drei Monate, lassen Sie sich im <em>Registro Central de Extranjeros</em> eintragen. Dafür zeigen Sie, dass Sie arbeiten oder über ausreichende Mittel und eine Krankenversicherung verfügen. Sie bekommen dann das <em>Certificado de Registro de Ciudadano de la UE</em>, ein Dokument mit Ihrer NIE-Nummer.</p>
+  <p>Für Schweizer gilt das Freizügigkeitsabkommen zwischen der Schweiz und der EU, mit einem ähnlichen Verfahren.</p>
+
+  <h2 id="papiere">NIE, Registrierung und Padrón</h2>
+  <h3>NIE-Nummer</h3>
+  <p>Die <em>Número de Identidad de Extranjero</em> (NIE) ist Ihre Steuer- und Identifikationsnummer in Spanien. Sie brauchen sie für den Hauskauf, ein Bankkonto, die Zulassung eines Autos und für Steuern. Sie können sie beim spanischen Konsulat in Deutschland oder bei der Polizei in Spanien beantragen. Termine (<em>cita previa</em>) dauern manchmal Wochen, fangen Sie also früh an. Viele nutzen dafür eine Gestoría oder einen Anwalt.</p>
+  <h3>Registrierung als EU-Bürger</h3>
+  <p>Wenn Sie sich in Spanien niederlassen, beantragen Sie bei der Ausländerbehörde (<em>Oficina de Extranjería</em>) oder der Polizei das grüne <em>Certificado de Registro</em>. Haben Sie schon eine NIE, behalten Sie dieselbe Nummer.</p>
+  <h3>Padrón im Rathaus</h3>
+  <p>Außerdem melden Sie sich im Rathaus Ihres Wohnorts an (<em>empadronamiento</em>). Das brauchen Sie für das Gesundheitszentrum, Schulen und örtliche Dienste. Es ist kostenlos und geht meist schnell.</p>
+
+  <h2 id="abmelden">Was Sie in Deutschland regeln</h2>
+  <ul>
+    <li><strong>Abmeldung</strong> beim Einwohnermeldeamt, wenn Sie Ihren Wohnsitz in Deutschland aufgeben.</li>
+    <li><strong>Krankenkasse und Rentenversicherung</strong> informieren, damit Versicherung und Rentenzahlung ins Ausland weiterlaufen.</li>
+    <li><strong>Finanzamt</strong>: Klären Sie, ob Sie in Deutschland noch beschränkt steuerpflichtig bleiben, zum Beispiel für Ihre gesetzliche Rente oder Mieteinnahmen.</li>
+    <li><strong>Versicherungen, Verträge und Post</strong> kündigen oder umstellen.</li>
+  </ul>
+
+  <h2 id="steuern">Steuern: wo sind Sie ansässig?</h2>
+  <p>Wohnen Sie mehr als 183 Tage im Jahr in Spanien oder liegt Ihr Lebensmittelpunkt dort, sind Sie in Spanien steuerlich ansässig und geben eine spanische Steuererklärung (<em>IRPF</em>) über Ihr Welteinkommen ab. Das Doppelbesteuerungsabkommen zwischen Deutschland und Spanien legt fest, welches Land welches Einkommen besteuert. Renten aus der deutschen gesetzlichen Rentenversicherung können auch nach dem Umzug in Deutschland steuerpflichtig bleiben; zuständig ist dann in der Regel das Finanzamt Neubrandenburg. Spanien kennt außerdem eine Meldepflicht für Auslandsvermögen ab bestimmten Beträgen (<em>Modelo 720</em>).</p>
+  <p>Bleiben Sie unter 183 Tagen und behalten Ihren Wohnsitz in Deutschland, sind Sie in Spanien Nichtresident. Dann zahlen Sie für Ihr spanisches Haus jedes Jahr die Einkommensteuer für Nichtresidenten (<em>IRNR</em>), auch wenn Sie es nicht vermieten. Für EU-Bürger beträgt der Satz 19% auf ein fiktives Einkommen. Jeder Eigentümer zahlt außerdem die Grundsteuer (<em>IBI</em>) an die Gemeinde.</p>
+  <p>Steuerregeln ändern sich häufig, und es geht um viel Geld. Lassen Sie Ihre Situation von einem Berater prüfen, der das deutsche und das spanische System kennt.</p>
+
+  <h2 id="gesundheit">Krankenversicherung</h2>
+  <p>Beziehen Sie eine deutsche Rente und sind gesetzlich versichert, stellt Ihre Krankenkasse in vielen Fällen das Formular <strong>S1</strong> aus. Damit haben Sie Zugang zur spanischen öffentlichen Gesundheitsversorgung, während die Kosten weiter über Deutschland laufen. Arbeiten Sie in Spanien, sind Sie über die spanische Sozialversicherung versichert. Andere brauchen eine private Krankenversicherung; nach einem Jahr Wohnsitz ist oft auch ein Beitritt zum öffentlichen System gegen Beitrag möglich (<em>convenio especial</em>).</p>
+  <p>Das Kreiskrankenhaus der Axarquía steht in Vélez-Málaga, für Fachbehandlungen gibt es die großen Kliniken in Málaga. Privatkliniken mit deutsch- oder englischsprachigen Ärzten finden Sie unter anderem in Nerja, Torre del Mar und Málaga.</p>
+
+  <h2 id="wohnen">Wohnung finden: mieten oder kaufen</h2>
+  <p>Wer zuerst mietet, lernt in Ruhe, ob die Küste oder die Berge besser passen, wie voll es im Sommer wird und wie kalt ein Steinhaus im Februar sein kann. Langzeitmieten sind in beliebten Orten knapp und teuer geworden, auch wegen der Ferienvermietung. Beginnen Sie die Suche also rechtzeitig.</p>
+  <p>Beim Kauf sollten Sie über die Fotos hinausschauen. Viele Häuser in der Axarquía sind über dreißig Jahre alt und brauchen Arbeit: Feuchtigkeit, alte Elektrik, undichte Dächer. Bei Landhäusern kommen Fragen zu Genehmigungen, Wasser und Zufahrt dazu. Lesen Sie unsere Ratgeber <a href="/de/ratgeber/finca-kaufen-spanien/">Finca kaufen</a> und <a href="/de/ratgeber/kaufnebenkosten-spanien/">Kaufnebenkosten</a>, und lassen Sie die Immobilie vor der Unterschrift <a href="/de/immobiliengutachten/">begutachten</a>.</p>
+
+  <h2 id="renovieren">Das Haus bezugsfertig machen</h2>
+  <p>Die meisten passen ihr neues Zuhause an: neues Bad und neue Küche, Dämmung und Doppelverglasung für den Winter, Klimaanlage für den Sommer, manchmal ein Pool. Es macht einen großen Unterschied, mit einem Team zu arbeiten, das Ihre Sprache spricht und Sie auf dem Laufenden hält, während Sie noch in Deutschland sind. Wir arbeiten mit einem aufgeschlüsselten Festpreis, wöchentlichen Fotos und einem Ansprechpartner. Siehe <a href="/de/renovierung/">Renovierung</a> und unseren Ratgeber <a href="/de/ratgeber/renovierungskosten-spanien/">Renovierungskosten in Spanien</a>.</p>
+
+  <h2 id="praktisch">Praktisches</h2>
+  <ul>
+    <li><strong>Geld</strong>: Für Steuern und Nebenkosten brauchen Sie ein spanisches Bankkonto. Überweisungen in Euro innerhalb der EU sind einfach; Schweizer sollten beim Kaufpreis das Wechselkursrisiko bedenken.</li>
+    <li><strong>Auto</strong>: Ein Auto mit deutschem Kennzeichen, das Sie dauerhaft in Spanien nutzen, müssen Sie nach Begründung des Wohnsitzes auf spanische Kennzeichen ummelden. Oft ist ein Autokauf in Spanien einfacher.</li>
+    <li><strong>Internet</strong>: An der Küste ist Glasfaser verbreitet. In den Bergen gibt es manchmal nur 4G/5G oder Satellit; prüfen Sie das vor dem Kauf.</li>
+    <li><strong>Haustiere</strong>: Hunde und Katzen reisen mit dem EU-Heimtierausweis, Mikrochip und gültiger Tollwutimpfung.</li>
+  </ul>
+</Guide>

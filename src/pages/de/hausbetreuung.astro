@@ -1,0 +1,110 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site, dePrice } from '../../data/site';
+
+const p = prices.sleutelbeheer;
+const packages = [
+  { name: 'Basis', price: dePrice(p.basis), items: ['Kontrolle alle 2 Wochen', 'Fenster öffnen und lüften', 'Prüfung auf Undichtigkeiten, Feuchtigkeit und Einbruch', 'Kurzer Bericht mit Fotos', 'Sichere Schlüsselaufbewahrung'] },
+  { name: 'Plus', price: dePrice(p.plus), featured: true, items: ['Alles aus Basis, aber wöchentlich', 'Zusätzliche Kontrolle nach Sturm oder Starkregen', 'Post abholen und weiterleiten', 'Haus vor Ihrer Ankunft vorbereiten', 'Kleine Reparaturen sofort erledigt'] },
+  { name: 'Komplett', price: dePrice(p.compleet), items: ['Alles aus Plus', 'Pool- und Gartenpflege', 'Handwerker und Lieferungen hereinlassen', 'Reinigung vor und nach Ihrem Aufenthalt', 'Fester Ansprechpartner per WhatsApp'] },
+];
+
+const faq = [
+  {
+    q: 'Was ist Hausbetreuung?',
+    a: 'Wir verwahren einen Schlüssel zu Ihrem Haus und kontrollieren es regelmäßig, während Sie weg sind. Wir achten auf Undichtigkeiten, Feuchtigkeit, Stromausfälle und Einbrüche, lüften das Haus und schicken Ihnen einen kurzen Bericht mit Fotos. Gibt es ein Problem, kümmern wir uns nach Rücksprache mit Ihnen sofort darum.',
+  },
+  {
+    q: 'Was kostet Hausbetreuung in Spanien?',
+    a: 'Ein einfaches Paket mit einer Kontrolle alle zwei Wochen kostet meist einige zehn Euro im Monat. Größere Pakete mit Garten, Pool und Reinigung kosten mehr. Unsere Pakete sehen Sie oben; Reparaturen und Reinigung außerhalb des Pakets werden nur nach Ihrer Zustimmung gesondert berechnet.',
+  },
+  {
+    q: 'Ist mein Schlüssel sicher?',
+    a: 'Die Schlüssel werden codiert, ohne Adresse, in einem verschlossenen Tresor aufbewahrt. Nur feste Mitarbeiter haben Zugang, und jeder Besuch wird protokolliert.',
+  },
+  {
+    q: 'Was passiert, wenn etwas kaputt ist?',
+    a: 'Kleinigkeiten beheben wir sofort, die Kosten sehen Sie auf Ihrer Monatsrechnung. Bei größeren Reparaturen schicken wir zuerst Fotos und einen Preis. Weil wir auch ein Bauunternehmen sind, müssen Sie keine Handwerker suchen.',
+  },
+  {
+    q: 'Kann ich monatlich kündigen?',
+    a: 'Ja, die Hausbetreuung ist monatlich kündbar. Viele Eigentümer nutzen sie nur für die Monate, in denen sie in Deutschland sind.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Hausbetreuung und Schlüsselservice',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['de', 'nl', 'en'],
+};
+---
+<Base
+  title="Hausbetreuung in Spanien: Ihr Haus in der Axarquía, kontrolliert während Sie weg sind"
+  description="Hausbetreuung und Schlüsselservice in Nerja, Cómpeta, Frigiliana, Torrox und der ganzen Axarquía. Regelmäßige Kontrollen, Fotoberichte und schnelle Hilfe nach Unwetter oder Wasserschaden. Monatlich kündbar."
+  path="/de/hausbetreuung/"
+  lang="de"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="de" items={[{ name: 'Hausbetreuung', href: '/de/hausbetreuung/' }]} />
+  <Hero
+    lang="de"
+    eyebrow="Hausbetreuung und Schlüsselservice"
+    title="Beruhigt <em>nach Hause fahren</em>"
+    lead="Ihr Haus in Spanien steht einen großen Teil des Jahres leer. Wir behalten es im Blick, schicken Ihnen Fotos und greifen ein, wenn etwas nicht stimmt, bevor aus einem kleinen Leck eine große Reparatur wird."
+    cta="Hausbetreuung anfragen"
+    ctaHref="/de/anfrage/?dienst=sleutelbeheer"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Unsere Pakete</h2>
+      <p class="section-intro">Wählen Sie, was zu Ihnen passt. Alle Pakete sind monatlich kündbar und lassen sich auf die Monate beschränken, in denen Sie nicht da sind.</p>
+      <Todo label="pakketten en maandprijzen van het bouwbedrijf (de inhoud hieronder is een voorstel)." />
+      <div class="packages">
+        {packages.map((pk) => (
+          <div class={`package${pk.featured ? ' featured' : ''}`}>
+            <h3>{pk.name}</h3>
+            <p class="price">{pk.price}</p>
+            <ul class="checks">{pk.items.map((i) => <li>{i}</li>)}</ul>
+            <a class={`btn${pk.featured ? '' : ' btn-ghost'}`} href={`/de/anfrage/?dienst=sleutelbeheer&pakket=${pk.name.toLowerCase()}`}>{pk.name} wählen</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>Warum Hausbetreuung in der Axarquía wichtig ist</h2>
+        <p>Ein leerstehendes Haus an der Costa del Sol hat es schwer. Im Winter bringt der Regen Undichtigkeiten und Feuchtigkeit, im Sommer sorgt die Hitze für Probleme mit Pool, Garten und Dach. Nach einem Sturm liegen Äste auf der Terrasse, oder ein Stromausfall lässt die Gefriertruhe auftauen.</p>
+        <p>Ist niemand vor Ort, merken Sie das erst bei Ihrer Rückkehr. Mit Hausbetreuung sehen wir es innerhalb von ein bis zwei Wochen, nach Unwettern oft früher.</p>
+        <h2>Mehr als nur ein Schlüssel</h2>
+        <p>Weil wir auch das Bauunternehmen sind, können wir Probleme sofort beheben. Kein Suchen nach einem Klempner, der Sie versteht, kein Einholen von drei Angeboten aus der Ferne. Sie bekommen Fotos und einen Preis, und nach Ihrer Zustimmung wird es erledigt.</p>
+      </div>
+      <div class="box">
+        <h3>Was Sie nach jedem Besuch bekommen</h3>
+        <ul class="checks">
+          <li>Datum und Uhrzeit des Besuchs</li>
+          <li>Fotos von jedem Raum und vom Außenbereich</li>
+          <li>Zählerstände von Wasser und Strom</li>
+          <li>Was uns aufgefallen ist und was wir getan haben</li>
+          <li>Empfehlung, wenn etwas zu tun ist</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="de" />
+  <Cta lang="de" dienst="sleutelbeheer" title="Ihr Haus in guten Händen, während Sie weg sind" />
+  <Services lang="de" exclude="hausbetreuung" title="Das könnte Sie auch interessieren" />
+</Base>

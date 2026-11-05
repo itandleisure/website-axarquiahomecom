@@ -1,0 +1,83 @@
+---
+import Guide from '../../../components/Guide.astro';
+import Todo from '../../../components/Todo.astro';
+
+const toc = [
+  { id: 'pro-m2', label: 'Preise pro m²' },
+  { id: 'positionen', label: 'Preise pro Position' },
+  { id: 'faktoren', label: 'Was den Preis bestimmt' },
+  { id: 'genehmigung', label: 'Genehmigungen und Mehrwertsteuer' },
+  { id: 'ferne', label: 'Renovieren aus der Ferne' },
+  { id: 'sparen', label: 'Kosten im Griff behalten' },
+];
+
+const faq = [
+  {
+    q: 'Ist Renovieren in Spanien günstiger als in Deutschland?',
+    a: 'Die Lohnkosten in Andalusien sind niedriger als in Deutschland, Material kostet aber etwa gleich viel und manchmal mehr, vor allem wenn Sie deutsche Marken wollen. Insgesamt ist eine Renovierung oft etwas günstiger, der Unterschied ist aber kleiner, als viele erwarten.',
+  },
+  {
+    q: 'Wie viel Mehrwertsteuer zahle ich auf Bauarbeiten?',
+    a: 'Der Regelsatz beträgt 21%. Für Renovierungs- und Reparaturarbeiten an einer privat genutzten Wohnung gilt unter bestimmten Bedingungen ein ermäßigter Satz von 10%, vor allem wenn das Material höchstens 40% der Gesamtkosten ausmacht. Ihr Bauunternehmen sollte das korrekt anwenden.',
+  },
+  {
+    q: 'Muss ich im Voraus zahlen?',
+    a: 'Eine Anzahlung zum Start ist üblich, zum Beispiel für Material. Danach zahlen Sie am besten in Raten nach abgeschlossenen Bauabschnitten, nie große Beträge für Arbeit, die noch nicht erledigt ist.',
+  },
+];
+---
+<Guide lang="de" slug="renovierungskosten-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Einen Preis für Ihr Haus?" ctaText="Schicken Sie uns Fotos und erzählen Sie, was Sie möchten. Sie bekommen ein aufgeschlüsseltes Angebot und können entscheiden, was Sie zuerst machen.">
+  <h2 id="pro-m2">Preise pro m²</h2>
+  <p>Als erste Orientierung arbeiten wir mit drei Stufen. Es sind Richtpreise für die Axarquía im Jahr 2026, inklusive Material und Arbeit, ohne Mehrwertsteuer.</p>
+  <table class="prices">
+    <thead><tr><th>Stufe</th><th>Was dazugehört</th><th>Pro m²</th></tr></thead>
+    <tbody>
+      <tr><td>Auffrischen</td><td>Anstrich, neuer Boden, kleine Reparaturen, neue Sanitärobjekte</td><td>250 – 500 €</td></tr>
+      <tr><td>Mittlere Renovierung</td><td>Neues Bad und neue Küche, Teile der Elektrik, Fenster, Ausbau</td><td>600 – 1.000 €</td></tr>
+      <tr><td>Komplettsanierung</td><td>Rückbau: Leitungen, Elektrik, Dämmung, Grundriss, Dach</td><td>1.000 – 1.600 €</td></tr>
+    </tbody>
+  </table>
+  <Todo label="bevestiging van deze bedragen door het bouwbedrijf." />
+  <p>Ein Dorfhaus mit 120 m², an dem alles gemacht werden muss, kann also leicht 120.000 bis 190.000 € kosten. Eine 80-m²-Wohnung mit neuem Bad aufzufrischen kostet nur einen Bruchteil davon.</p>
+
+  <h2 id="positionen">Preise pro Position</h2>
+  <table class="prices">
+    <thead><tr><th>Position</th><th>Richtwert</th></tr></thead>
+    <tbody>
+      <tr><td>Neues Bad</td><td>6.000 – 25.000 €</td></tr>
+      <tr><td>Neue Küche</td><td>8.000 – 30.000 €</td></tr>
+      <tr><td>Elektrik komplett erneuern (Haus)</td><td>6.000 – 15.000 €</td></tr>
+      <tr><td>Dach oder Dachterrasse neu abdichten</td><td>1.500 – 20.000 €</td></tr>
+      <tr><td>Doppelt verglaste Fenster</td><td>3.000 – 15.000 €</td></tr>
+      <tr><td>Neuer Pool</td><td>20.000 – 50.000 €</td></tr>
+      <tr><td>Klimaanlage (mehrere Räume)</td><td>3.000 – 10.000 €</td></tr>
+      <tr><td>Klärgrube oder Kläranlage</td><td>3.000 – 10.000 €</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Richtpreise ohne Mehrwertsteuer. Ein Angebot nach Besichtigung ist immer genauer.</p>
+
+  <h2 id="faktoren">Was den Preis bestimmt</h2>
+  <ul>
+    <li><strong>Zugang</strong>: Ein Dorfhaus in einer engen Gasse in Frigiliana oder eine Finca an einem unbefestigten Bergweg heißt, dass alles von Hand oder mit kleinen Fahrzeugen hingebracht wird. Das kostet Zeit.</li>
+    <li><strong>Was man vorfindet</strong>: Bei alten Häusern zeigt sich der Zustand von Balken, Leitungen und Fundament erst beim Rückbau. Planen Sie 10 bis 15% Reserve ein.</li>
+    <li><strong>Materialwahl</strong>: Spanische Fliesen und Sanitärobjekte sind günstig und gut; deutsche Marken und Maßanfertigungen kosten mehr.</li>
+    <li><strong>Genehmigung</strong>: Größere Arbeiten brauchen ein Architektenprojekt, mit eigenen Kosten und Vorlaufzeit.</li>
+    <li><strong>Jahreszeit</strong>: Viele Eigentümer wollen vor dem Sommer fertig sein. Wer im Herbst beginnt, hat oft mehr Auswahl bei den Terminen.</li>
+  </ul>
+
+  <h2 id="genehmigung">Genehmigungen und Mehrwertsteuer</h2>
+  <p>Für kleinere Arbeiten ohne bauliche Änderungen verlangen die meisten Rathäuser nur eine Anzeige (<em>declaración responsable</em>). Größere Renovierungen, Anbauten oder ein Pool brauchen eine Baugenehmigung mit Architektenprojekt. Das Rathaus erhebt eine Bausteuer (ICIO) von einigen Prozent der Baukosten.</p>
+  <p>Für Renovierungsarbeiten an einer selbst genutzten Wohnung gilt unter bestimmten Bedingungen der ermäßigte Mehrwertsteuersatz von 10% statt 21%. Ihr Bauunternehmen sollte das korrekt anwenden.</p>
+
+  <h2 id="ferne">Renovieren aus der Ferne</h2>
+  <p>Die meisten unserer Kunden sind während der Arbeiten nicht in Spanien. Das funktioniert gut, wenn Sie vorab ein klares, aufgeschlüsseltes Angebot haben, einen festen Ansprechpartner, wöchentliche Fotos und Zahlung nach Bauabschnitten. Vereinbaren Sie, wie Zusatzarbeiten gemeldet und freigegeben werden: immer schriftlich, mit Preis, bevor sie ausgeführt werden.</p>
+
+  <h2 id="sparen">Kosten im Griff behalten</h2>
+  <ul>
+    <li>Lassen Sie die Immobilie vor dem Kauf begutachten, damit Sie wissen, woran Sie sind.</li>
+    <li>Treffen Sie Ihre Entscheidungen vor dem Start: Änderungen während der Arbeiten sind der größte Kostentreiber.</li>
+    <li>Kombinieren Sie Arbeiten: Ein neues Bad ist der richtige Moment, auch die Leitungen zu erneuern.</li>
+    <li>Arbeiten Sie mit Festpreisen pro Position statt mit Tagessätzen.</li>
+    <li>Planen Sie für Herbst oder Winter, wenn die Auftragsbücher weniger voll sind.</li>
+  </ul>
+</Guide>

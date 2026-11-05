@@ -1,0 +1,94 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site, dePrice } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Was kostet ein Pool in Spanien?',
+    a: `Ein gemauerter oder betonierter Pool mittlerer Größe kostet inklusive Technik und Fertigstellung meist zwischen ${dePrice(prices.zwembadNieuw)}. Der Preis hängt von der Größe, der Zufahrt zum Grundstück, Erdarbeiten am Hang und Extras wie Heizung oder Salzanlage ab.`,
+  },
+  {
+    q: 'Brauche ich eine Genehmigung für einen Pool?',
+    a: 'Ja. Ein neuer Pool braucht eine Genehmigung vom Rathaus, und auf ländlichem Grund gelten strengere Regeln. Bei Häusern mit AFO-Status darf oft nichts Neues gebaut werden. Wir prüfen das für Sie, bevor Sie sich festlegen.',
+  },
+  {
+    q: 'Darf ich meinen Pool wieder füllen?',
+    a: 'Die Wasserbeschränkungen in der Axarquía, einschließlich des Verbots, Pools zu füllen, wurden im Frühjahr 2026 nach einem nassen Winter aufgehoben. Prüfen Sie trotzdem immer die aktuellen Regeln Ihres Rathauses; wir helfen dabei.',
+  },
+  {
+    q: 'Mein Pool ist seit zwei Jahren leer. Was nun?',
+    a: 'Nach langer Zeit ohne Wasser finden wir oft Risse in der Beschichtung, lose Fliesen, ausgetrocknete Fugen und festgesessene Pumpen. Wir beginnen mit einer Inspektion und einer Dichtheitsprüfung und nennen Ihnen dann einen Preis für die Reparatur.',
+  },
+  {
+    q: 'Können Sie den Pool pflegen, während ich weg bin?',
+    a: 'Ja, als eigener Wartungsvertrag oder als Teil unseres Pakets Komplett in der Hausbetreuung. Wir prüfen das Wasser, reinigen den Pool und behalten die Technik im Blick.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Poolbau, Poolsanierung und Poolpflege',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['de', 'nl', 'en'],
+};
+---
+<Base
+  title="Poolbau, Poolsanierung und Poolpflege in der Axarquía"
+  description="Einen neuen Pool bauen, einen alten wieder in Betrieb nehmen oder ihn pflegen lassen, während Sie weg sind. In Nerja, Cómpeta, Torrox und der ganzen Axarquía, mit Ansprechpartner auf Deutsch."
+  path="/de/pool/"
+  lang="de"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="de" items={[{ name: 'Pool', href: '/de/pool/' }]} />
+  <Hero
+    lang="de"
+    eyebrow="Pool"
+    title="Ihr Pool <em>bereit für den Sommer</em>"
+    lead="Ein neuer Pool auf Ihrem Grundstück, ein alter, der nach der Dürre wieder funktionieren soll, oder regelmäßige Pflege, damit das Wasser bei Ihrer Ankunft klar ist."
+    cta="Pool anfragen"
+    ctaHref="/de/anfrage/?dienst=zwembad"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h3>Neuer Pool</h3>
+          <p>Planung, Genehmigung, Erdarbeiten, Bau und Technik. Auch auf Hanggrundstücken, wie bei vielen Fincas in der Axarquía.</p>
+          <p><strong>{dePrice(prices.zwembadNieuw)}</strong></p>
+        </div>
+        <div class="card">
+          <h3>Poolsanierung</h3>
+          <p>Lecksuche, neue Beschichtung, Fliesen und Fugen, neue Pumpe und Filter. Nach Jahren der Dürre müssen viele Pools repariert werden.</p>
+          <p><strong>Preis nach Inspektion</strong></p>
+        </div>
+        <div class="card">
+          <h3>Poolpflege</h3>
+          <p>Regelmäßige Besuche für Wasser, Filter und Technik, auch während Sie in Deutschland sind. Nach jedem Besuch bekommen Sie ein Foto.</p>
+          <p><strong>{dePrice(prices.zwembadOnderhoud)}</strong></p>
+        </div>
+      </div>
+      <Todo label="prijs zwembadonderhoud per maand en bevestiging prijs nieuwbouw." />
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Nach der Dürre: was mit Pools passiert</h2>
+      <p>Zwischen 2023 und Anfang 2026 durften Pools in der Axarquía oft nicht gefüllt werden. Ein Pool, der lange leer steht, leidet: Die Sonne trocknet die Beschichtung aus, Fugen lösen sich, und der Boden rund um den Pool kann sich bewegen. Wer ihn ohne Inspektion wieder füllt, riskiert ein Leck.</p>
+      <p>Deshalb beginnen wir mit einer Inspektion und einer Dichtheitsprüfung. Dann wissen Sie genau, was zu tun ist und was es kostet, bevor Wasser hineinkommt.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="de" />
+  <Cta lang="de" dienst="zwembad" title="Sie denken über einen Pool nach?" />
+  <Services lang="de" exclude="pool" title="Das könnte Sie auch interessieren" />
+</Base>

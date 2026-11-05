@@ -1,0 +1,36 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import Cta from '../../../components/Cta.astro';
+import { guideList, guideHref } from '../../../data/guides';
+---
+<Base
+  title="Ratgeber: Kaufen, Renovieren und Leben in Spanien"
+  description="Praktische Ratgeber auf Deutsch zum Auswandern nach Spanien, zum Kauf eines Hauses oder einer Finca, zu Kaufnebenkosten, Renovierung und Legalisierung in der Axarquía und im übrigen Andalusien."
+  path="/de/ratgeber/"
+  lang="de"
+>
+  <Breadcrumbs lang="de" items={[{ name: 'Ratgeber', href: '/de/ratgeber/' }]} />
+  <Hero
+    lang="de"
+    eyebrow="Ratgeber"
+    title="Was Sie wissen sollten, <em>bevor Sie kaufen oder renovieren</em>"
+    lead="Geschrieben von Leuten, die hier leben und bauen. Kein Verkaufsgerede, sondern das, worauf deutsche und andere ausländische Eigentümer in Spanien tatsächlich stoßen."
+    cta="Eine Frage stellen"
+  />
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        {guideList('de').map((g) => (
+          <a class="card" href={guideHref('de', g)}>
+            <h3>{g.title}</h3>
+            <p>{g.description}</p>
+            <span class="more">Zum Ratgeber ({g.minutes} Min.) →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Cta lang="de" />
+</Base>

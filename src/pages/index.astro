@@ -1,5 +1,5 @@
 ---
-// Root: stuur bezoekers naar hun taal (Nederlands of anders Engels).
+// Root: stuur bezoekers naar hun taal (Nederlands, Duits of anders Engels).
 ---
 <!doctype html>
 <html lang="en">
@@ -9,12 +9,13 @@
     <meta name="robots" content="noindex" />
     <link rel="alternate" hreflang="nl" href="https://axarquiahome.com/nl/" />
     <link rel="alternate" hreflang="en" href="https://axarquiahome.com/en/" />
+    <link rel="alternate" hreflang="de" href="https://axarquiahome.com/de/" />
     <link rel="alternate" hreflang="x-default" href="https://axarquiahome.com/en/" />
     <script is:inline>
       var l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
-      location.replace(/^(nl|be)/i.test(l) ? '/nl/' : '/en/');
+      location.replace(/^(nl|be)/i.test(l) ? '/nl/' : /^de/i.test(l) ? '/de/' : '/en/');
     </script>
     <noscript><meta http-equiv="refresh" content="0; url=/en/" /></noscript>
   </head>
-  <body><p><a href="/nl/">Nederlands</a> · <a href="/en/">English</a></p></body>
+  <body><p><a href="/nl/">Nederlands</a> · <a href="/en/">English</a> · <a href="/de/">Deutsch</a></p></body>
 </html>

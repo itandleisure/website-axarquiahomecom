@@ -40,6 +40,13 @@ export const site = {
   // Zolang dit niet is ingevuld, toont de keuzehulp een melding in plaats van te versturen.
   leadEndpoint: 'https://script.google.com/macros/s/AKfycbyyOE8lTxFgFYaHyr7P4ebh_bxp5dal77rUdwcBO46O2Lu6Ic4Bz8GFvCpbC7LZhwGSnw/exec',
 
+  // Microsoft Clarity (heatmaps en sessie-opnames). Laadt pas na toestemming via de cookiebanner.
+  // Zet in Clarity onder Settings › Setup › Advanced settings Masking op Strict.
+  // Leeg laten om Clarity uit te zetten.
+  clarityId: 'z8rraji52s',
+  // Google Analytics 4 Measurement ID (G-...). Laadt ook pas na toestemming. Leeg = uit.
+  gaId: '',
+
   villages: [
     'Nerja',
     'Cómpeta',
@@ -78,3 +85,9 @@ export const enPrice = (s: string) =>
   s.startsWith(TODO)
     ? s
     : s.replace(/(\d)\.(\d{3})/g, '$1,$2').replace(/€ /g, '€').replace(' per jaar', ' per year').replace(' per maand', ' per month');
+
+/** Zet een Nederlandse prijsnotatie om naar Duitse (€ 20.000 → 20.000 €). */
+export const dePrice = (s: string) =>
+  s.startsWith(TODO)
+    ? s
+    : s.replace(/€ ([\d.]+)/g, '$1 €').replace(' per jaar', ' pro Jahr').replace(' per maand', ' pro Monat');

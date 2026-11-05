@@ -1,12 +1,13 @@
 ---
 import { ui, path, type Lang } from '../i18n';
-interface Props { title?: string; text?: string; dienst?: string; lang?: Lang; }
-const { lang = 'nl', dienst } = Astro.props;
+interface Props { title?: string; text?: string; dienst?: string; plaats?: string; lang?: Lang; }
+const { lang = 'nl', dienst, plaats } = Astro.props;
 const t = ui[lang];
 const title = Astro.props.title ?? t.ctaTitle;
 const text = Astro.props.text ?? t.ctaText;
 const base = path(lang, 'request');
-const href = dienst ? `${base}?dienst=${dienst}` : base;
+const q = new URLSearchParams({ ...(dienst ? { dienst } : {}), ...(plaats ? { plaats } : {}) }).toString();
+const href = q ? `${base}?${q}` : base;
 ---
 <section class="cta">
   <div class="wrap cta-inner">

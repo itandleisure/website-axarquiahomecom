@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import { site, isFilled } from '../data/site';
-import { ui, nav as navs, services as svcs, alternatesFor, path as route, type Lang } from '../i18n';
+import { ui, nav as navs, services as svcs, alternatesFor, langs, langNames, path as route, type Lang } from '../i18n';
 
 interface Props {
   title: string;
@@ -19,11 +19,19 @@ const { title, description, path, lang = 'nl', alternates = {}, jsonLd = [], noi
 const canonical = new URL(path, site.url).href;
 const allAlternates: Partial<Record<string, string>> = { ...alternatesFor(path), ...alternates, [lang]: path };
 const t = ui[lang];
+const tools = [site.clarityId && 'Microsoft Clarity', site.gaId && 'Google Analytics'].filter(Boolean);
+const toolList = (and: string) => tools.join(` ${and} `);
+const cookieText = {
+  nl: { text: `Mogen we met ${toolList('en')} bijhouden hoe u deze site gebruikt? Dat plaatst cookies en helpt ons de site te verbeteren.`, yes: 'Accepteren', no: 'Weigeren', more: 'Meer in de privacyverklaring', settings: 'Cookie-instellingen' },
+  en: { text: `May we use ${toolList('and')} to see how you use this site? It places cookies and helps us improve the site.`, yes: 'Accept', no: 'Decline', more: 'More in the privacy statement', settings: 'Cookie settings' },
+  de: { text: `Dürfen wir mit ${toolList('und')} erfassen, wie Sie diese Website nutzen? Dabei werden Cookies gesetzt; es hilft uns, die Website zu verbessern.`, yes: 'Akzeptieren', no: 'Ablehnen', more: 'Mehr in der Datenschutzerklärung', settings: 'Cookie-Einstellungen' },
+}[lang];
 const nav = navs[lang];
-const other: Lang = lang === 'nl' ? 'en' : 'nl';
-const otherHref = allAlternates[other] ?? route(other, 'home');
+const others = langs
+  .filter((l) => l !== lang)
+  .map((l) => ({ l, href: allAlternates[l] ?? route(l, 'home') }));
 const robots = !site.launchReady || noindex ? 'noindex, nofollow' : 'index, follow';
-const fullTitle = path === '/nl/' || path === '/en/' ? title : `${title} | ${site.brand}`;
+const fullTitle = langs.some((l) => path === `/${l}/`) ? title : `${title} | ${site.brand}`;
 
 const c = site.company;
 const organization: Record<string, unknown> = {
@@ -33,7 +41,7 @@ const organization: Record<string, unknown> = {
   name: site.brand,
   url: site.url,
   areaServed: site.villages.map((v) => ({ '@type': 'Place', name: `${v}, Málaga, España` })),
-  knowsLanguage: ['nl', 'en', 'es'],
+  knowsLanguage: ['nl', 'en', 'de', 'es'],
 };
 if (isFilled(c.phone)) organization.telephone = c.phone;
 if (isFilled(c.email)) organization.email = c.email;
@@ -72,6 +80,29 @@ const current = Astro.url.pathname;
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={lang === 'nl' ? 'nl_NL' : lang === 'en' ? 'en_GB' : 'de_DE'} />
     {schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+    {(site.clarityId || site.gaId) && (
+      <script is:inline define:vars={{ id: site.clarityId, ga: site.gaId }}>
+        window.axhLoadClarity = function () {
+          if (ga && !window.gtag) {
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () { window.dataLayer.push(arguments); };
+            window.gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted' });
+            window.gtag('js', new Date());
+            window.gtag('config', ga, { anonymize_ip: true });
+            var g = document.createElement('script'); g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga;
+            document.head.appendChild(g);
+          }
+          if (!id || window.clarity) return;
+          (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+            t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+          })(window, document, 'clarity', 'script', id);
+          window.clarity('consent');
+        };
+        try { if (localStorage.getItem('axh-consent') === 'yes') window.axhLoadClarity(); } catch (e) {}
+      </script>
+    )}
   </head>
   <body>
     <a class="skip" href="#inhoud">{t.skip}</a>
@@ -85,12 +116,25 @@ const current = Astro.url.pathname;
           <span></span><span></span><span></span>
         </button>
         <nav id="hoofdmenu" class="menu" aria-label={t.mainMenu}>
-          <ul>
-            {nav.map((n) => (
-              <li><a href={n.href} aria-current={current === n.href ? 'page' : undefined}>{n.label}</a></li>
+          <ul class="nav-list">
+            {nav.map((n) => n.children ? (
+              <li class="has-sub">
+                <button type="button" class="sub-toggle" aria-expanded="false">{n.label}</button>
+                <ul class="sub">
+                  {n.children.map((c) => (
+                    <li><a href={c.href} aria-current={current === c.href ? 'page' : undefined}>{c.label}</a></li>
+                  ))}
+                </ul>
+              </li>
+            ) : (
+              <li><a href={n.href} aria-current={current.startsWith(n.href) ? 'page' : undefined}>{n.label}</a></li>
             ))}
           </ul>
-          <a class="lang-switch" href={otherHref} hreflang={other} lang={other} title={t.otherLangLabel}>{other.toUpperCase()}</a>
+          <ul class="lang-switch" aria-label={t.langLabel}>
+            {others.map((o) => (
+              <li><a href={o.href} hreflang={o.l} lang={o.l} title={`${ui[o.l].readIn} ${langNames[o.l]}`}>{o.l.toUpperCase()}</a></li>
+            ))}
+          </ul>
           <a class="btn btn-small" href={route(lang, 'request')}>{t.cta}</a>
         </nav>
         <script>
@@ -99,6 +143,18 @@ const current = Astro.url.pathname;
           b?.addEventListener('click', () => {
             const open = m?.classList.toggle('open');
             b.setAttribute('aria-expanded', String(!!open));
+          });
+          document.querySelectorAll<HTMLButtonElement>('.sub-toggle').forEach((t) => {
+            t.addEventListener('click', () => {
+              const open = t.getAttribute('aria-expanded') !== 'true';
+              t.setAttribute('aria-expanded', String(open));
+            });
+            t.parentElement?.addEventListener('focusout', (e) => {
+              if (!t.parentElement!.contains((e as FocusEvent).relatedTarget as Node)) t.setAttribute('aria-expanded', 'false');
+            });
+          });
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') document.querySelectorAll('.sub-toggle').forEach((t) => t.setAttribute('aria-expanded', 'false'));
           });
         </script>
       </div>
@@ -113,7 +169,7 @@ const current = Astro.url.pathname;
         <div>
           <p class="footer-brand">Axarquía<b>Home</b></p>
           <p>{t.tagline}</p>
-          <p><a href={otherHref} hreflang={other}>{t.otherLang}</a></p>
+          <p class="footer-langs">{others.map((o) => <a href={o.href} hreflang={o.l} lang={o.l}>{langNames[o.l]}</a>)}</p>
         </div>
         <div>
           <p class="footer-title">{t.fServices}</p>
@@ -134,9 +190,10 @@ const current = Astro.url.pathname;
           <p class="footer-title">{t.fAbout}</p>
           <ul>
             <li><a href={route(lang, 'guides')}>{t.fGuides}</a></li>
-            <li><a href={lang === 'nl' ? '/nl/over-ons/' : '/en/about-us/'}>{t.fAboutUs}</a></li>
-            <li><a href={lang === 'nl' ? '/nl/projecten/' : '/en/projects/'}>{t.fProjects}</a></li>
+            <li><a href={route(lang, 'about')}>{t.fAboutUs}</a></li>
+            <li><a href={route(lang, 'projects')}>{t.fProjects}</a></li>
             <li><a href={route(lang, 'privacy')}>{t.fPrivacy}</a></li>
+            {(site.clarityId || site.gaId) && <li><button type="button" class="link-btn" data-cookie-open>{cookieText.settings}</button></li>}
           </ul>
         </div>
       </div>
@@ -144,5 +201,43 @@ const current = Astro.url.pathname;
         <p>© {new Date().getFullYear()} {site.brand}. {t.builtBy(isFilled(c.name) ? c.name : t.builtByDefault)}</p>
       </div>
     </footer>
+    {(site.clarityId || site.gaId) && (
+      <div class="cookie-bar" role="region" aria-label={cookieText.settings} hidden>
+        <div class="wrap cookie-inner">
+          <p>{cookieText.text} <a href={route(lang, 'privacy')}>{cookieText.more}</a></p>
+          <div class="cookie-actions">
+            <button type="button" class="btn btn-ghost" data-cookie="no">{cookieText.no}</button>
+            <button type="button" class="btn" data-cookie="yes">{cookieText.yes}</button>
+          </div>
+        </div>
+      </div>
+      <script is:inline>
+        (function () {
+          var bar = document.querySelector('.cookie-bar');
+          var get = function () { try { return localStorage.getItem('axh-consent'); } catch (e) { return null; } };
+          var set = function (v) { try { localStorage.setItem('axh-consent', v); } catch (e) {} };
+          if (!get()) bar.hidden = false;
+          bar.addEventListener('click', function (e) {
+            var b = e.target.closest('[data-cookie]'); if (!b) return;
+            var v = b.getAttribute('data-cookie'), was = get();
+            set(v); bar.hidden = true;
+            if (v === 'yes') window.axhLoadClarity && window.axhLoadClarity();
+            else if (was === 'yes') {
+              if (window.clarity) window.clarity('consent', false);
+              if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'denied' });
+              document.cookie.split(';').forEach(function (c) {
+                var n = c.split('=')[0].trim();
+                if (/^_cl|^CLID$|^MUID$|^_ga/.test(n)) document.cookie = n + '=; Max-Age=0; path=/; domain=.' + location.hostname.replace(/^www\./, '');
+                document.cookie = n + '=; Max-Age=0; path=/';
+              });
+              location.reload();
+            }
+          });
+          document.addEventListener('click', function (e) {
+            if (e.target.closest('[data-cookie-open]')) { bar.hidden = false; bar.querySelector('[data-cookie="yes"]').focus(); }
+          });
+        })();
+      </script>
+    )}
   </body>
 </html>

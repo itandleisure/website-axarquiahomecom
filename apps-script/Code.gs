@@ -121,15 +121,27 @@ function mailBouwbedrijf_(d, fotoLinks, rijNummer) {
 }
 
 function mailKlant_(d) {
-  const en = d.taal === 'en';
+  const teksten = {
+    nl: {
+      subject: 'We hebben uw aanvraag ontvangen',
+      body: `<p>Beste ${esc_(d.naam)},</p><p>Bedankt voor uw aanvraag. Een Nederlandstalige collega neemt binnen 24 uur contact met u op om de volgende stap te bespreken.</p><p>Met vriendelijke groet,<br>Axarquía Home</p>`,
+    },
+    en: {
+      subject: 'We have received your request',
+      body: `<p>Dear ${esc_(d.naam)},</p><p>Thank you for your request. One of our team will contact you within 24 hours to discuss the next step.</p><p>Kind regards,<br>Axarquía Home</p>`,
+    },
+    de: {
+      subject: 'Wir haben Ihre Anfrage erhalten',
+      body: `<p>Guten Tag ${esc_(d.naam)},</p><p>vielen Dank für Ihre Anfrage. Innerhalb von 24 Stunden meldet sich jemand aus unserem Team bei Ihnen, um den nächsten Schritt zu besprechen.</p><p>Mit freundlichen Grüßen<br>Axarquía Home</p>`,
+    },
+  };
+  const m = teksten[d.taal] || teksten.nl;
   send_({
     to: d.email,
     replyTo: CONFIG.MAIL_KOPIE,
     name: CONFIG.AFZENDER,
-    subject: en ? 'We have received your request' : 'We hebben uw aanvraag ontvangen',
-    htmlBody: en
-      ? `<p>Dear ${esc_(d.naam)},</p><p>Thank you for your request. One of our team will contact you within 24 hours to discuss the next step.</p><p>Kind regards,<br>Axarquía Home</p>`
-      : `<p>Beste ${esc_(d.naam)},</p><p>Bedankt voor uw aanvraag. Een Nederlandstalige collega neemt binnen 24 uur contact met u op om de volgende stap te bespreken.</p><p>Met vriendelijke groet,<br>Axarquía Home</p>`,
+    subject: m.subject,
+    htmlBody: m.body,
   });
 }
 

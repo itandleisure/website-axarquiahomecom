@@ -1,0 +1,78 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'region', label: 'Wo liegt die Axarquía?' },
+  { id: 'orte', label: 'Die Orte im Vergleich' },
+  { id: 'klima', label: 'Klima und Jahreszeiten' },
+  { id: 'kosten', label: 'Lebenshaltungskosten' },
+  { id: 'gesundheit', label: 'Gesundheit und Versorgung' },
+  { id: 'anreise', label: 'Anreise' },
+  { id: 'haeuser', label: 'Welche Häuser es gibt' },
+];
+
+const faq = [
+  {
+    q: 'Welches ist das schönste Dorf der Axarquía?',
+    a: 'Das hängt davon ab, was Sie suchen. Frigiliana gilt oft als schönstes weißes Dorf, Cómpeta ist bei Ausländern wegen der Atmosphäre und der Berge beliebt, und Nerja verbindet Strände mit allen Einrichtungen. Besuchen Sie die Orte zu verschiedenen Jahreszeiten, bevor Sie sich entscheiden.',
+  },
+  {
+    q: 'Ist die Axarquía günstiger als der Rest der Costa del Sol?',
+    a: 'Im Allgemeinen ja. Häuser in Torre del Mar, Torrox oder den Bergdörfern kosten pro m² weniger als in Marbella, Estepona oder Benalmádena. Nerja und die beliebtesten Lagen in Frigiliana sind allerdings deutlich teurer geworden.',
+  },
+  {
+    q: 'Wie ist die Wasserlage nach der Dürre?',
+    a: 'Die Axarquía hatte zwischen 2023 und Anfang 2026 eine schwere Dürre mit Wasserbeschränkungen. Diese wurden im März 2026 nach einem nassen Winter aufgehoben. Das Leitungswasser an der Küste und in den Dörfern ist zuverlässig; bei Fincas im Hinterland sollte die Wasserversorgung genau geprüft werden.',
+  },
+];
+
+const orte = [
+  { n: 'Nerja', t: 'Küste', d: 'Lebhafter Badeort mit Stränden, dem Balcón de Europa und allen Einrichtungen. Bei Skandinaviern, Briten und Deutschen beliebt. Der teuerste Ort der Axarquía.' },
+  { n: 'Frigiliana', t: 'Hügeldorf, 6 km vom Meer', d: 'Weißes Dorf am Hang mit steilen Gassen und Meerblick. Viele ausländische Bewohner und Tagesbesucher.' },
+  { n: 'Cómpeta', t: 'Bergdorf, 650 m hoch', d: 'Belebtes Dorf mit großer internationaler Gemeinschaft, im Sommer kühler, mit vielen Fincas in der Umgebung. Bekannt für seinen süßen Wein.' },
+  { n: 'Torrox', t: 'Küste und Dorf', d: 'Torrox Costa am Meer mit Wohnungen und langer Promenade, Torrox Pueblo als weißes Dorf etwas im Hinterland. Hier lebt eine besonders große deutsche Gemeinschaft.' },
+  { n: 'Torre del Mar', t: 'Küste', d: 'Entspannter Badeort mit langer Promenade, bei spanischen Urlaubern beliebt. Gutes Preis-Leistungs-Verhältnis.' },
+  { n: 'Vélez-Málaga', t: 'Hauptort der Region', d: 'Eine echte spanische Stadt mit Krankenhaus, Markt und Geschäften. Wenige Touristen, aber alles, was Sie brauchen.' },
+  { n: 'Rincón de la Victoria', t: 'Küste, nah an Málaga', d: 'Nah an der Stadt, ideal, wenn Sie oft nach Málaga oder zum Flughafen fahren. Viele spanische Familien.' },
+  { n: 'Algarrobo', t: 'Küste und Dorf', d: 'Klein und ruhig, mit Algarrobo Costa am Meer und Mezquitilla. Bezahlbar und ursprünglich.' },
+];
+---
+<Guide lang="de" slug="leben-in-der-axarquia" toc={toc} faq={faq} ctaTitle="Ein Haus in der Axarquía im Auge?" ctaText="Wir kennen jeden Ort und jede Bauweise. Lassen Sie es begutachten oder fragen Sie nach einem Preis für die Renovierung.">
+  <h2 id="region">Wo liegt die Axarquía?</h2>
+  <p>Die Axarquía ist der östliche Zipfel der Provinz Málaga, zwischen der Stadt Málaga und der Grenze zu Granada. Sie reicht von der Küste bei Rincón de la Victoria und Nerja bis hinauf in die Berge der Sierra Tejeda und Almijara mit über 2.000 Metern. Sie umfasst 31 Gemeinden, von Badeorten bis zu kleinen Bergdörfern mit ein paar hundert Einwohnern.</p>
+  <p>Die Landschaft ist für andalusische Verhältnisse grün: An den Hängen wachsen Avocados, Mangos, Oliven und Wein. Das traditionelle spanische Dorfleben ist hier noch sehr lebendig, neben einer großen internationalen Gemeinschaft.</p>
+
+  <h2 id="orte">Die Orte im Vergleich</h2>
+  <div class="cards" style="margin-bottom:1.5em">
+    {orte.map((d) => (
+      <div class="card">
+        <h3>{d.n}</h3>
+        <p class="note" style="margin-top:-0.4em">{d.t}</p>
+        <p>{d.d}</p>
+      </div>
+    ))}
+  </div>
+
+  <h2 id="klima">Klima und Jahreszeiten</h2>
+  <p>Die Axarquía hat eines der mildesten Klimas Europas. Die Berge schützen sie vor kalten Nordwinden. Im Winter liegen die Tagestemperaturen an der Küste meist bei 15 bis 19 Grad, nachts um acht Grad. In den Bergdörfern ist es einige Grad kühler, und ein ungedämmtes Steinhaus kann sich kalt anfühlen. Im Juli und August erreicht die Küste um die 30 Grad; ab und zu weht der heiße <em>Terral</em> aus dem Landesinneren und treibt die Temperaturen für ein paar Tage deutlich höher.</p>
+  <p>Regen fällt vor allem zwischen Oktober und April, manchmal in kurzen, heftigen Schauern. Dann zeigen sich auch Undichtigkeiten an Dächern und Terrassen.</p>
+
+  <h2 id="kosten">Lebenshaltungskosten</h2>
+  <p>Lebensmittel, Restaurantbesuche und Dienstleistungen sind in der Axarquía spürbar günstiger als in Deutschland, Österreich oder der Schweiz. Ein Mittagsmenü (<em>menú del día</em>) kostet in einem Dorf oft noch 12 bis 15 €. Energie ist vergleichbar oder etwas günstiger, wobei die Klimaanlage im Sommer die Rechnung erhöhen kann. Die Mieten sind in den letzten Jahren durch die Nachfrage ausländischer Käufer und Ferienvermietung stark gestiegen.</p>
+  <p>Als Eigentümer rechnen Sie mit festen Kosten wie Grundsteuer (IBI), Müllabfuhr, Versicherung und bei Wohnungen Gemeinschaftskosten. Nichtresidenten zahlen außerdem jährlich eine Einkommensteuer für Nichtresidenten. Einen Überblick gibt unser Ratgeber <a href="/de/ratgeber/kaufnebenkosten-spanien/">Kaufnebenkosten</a>.</p>
+
+  <h2 id="gesundheit">Gesundheit und Versorgung</h2>
+  <p>Jeder größere Ort hat ein Gesundheitszentrum (<em>centro de salud</em>). Das Kreiskrankenhaus steht in Vélez-Málaga, für Fachbehandlungen fahren Sie in die Kliniken von Málaga. Es gibt außerdem Privatkliniken mit deutsch- oder englischsprachigen Ärzten, zum Beispiel in Nerja, Torre del Mar und Málaga. Supermärkte, Baumärkte und größere Geschäfte finden Sie in Vélez-Málaga, Torre del Mar und Nerja.</p>
+
+  <h2 id="anreise">Anreise</h2>
+  <p>Die Autobahn A-7 verläuft entlang der Küste und verbindet die Axarquía mit Málaga und Granada. Von Torre del Mar sind es etwa 40 Minuten zum Flughafen Málaga, von Nerja eine Stunde und von Cómpeta gut eine Stunde. Málaga hat das ganze Jahr Direktflüge zu vielen Flughäfen in Deutschland, Österreich und der Schweiz. Öffentliche Verkehrsmittel beschränken sich auf Busse; für die Bergdörfer brauchen Sie ein Auto.</p>
+
+  <h2 id="haeuser">Welche Häuser es gibt</h2>
+  <ul>
+    <li><strong>Wohnungen an der Küste</strong>, oft aus den 1970er bis 1990er Jahren, mit Gemeinschaftspool.</li>
+    <li><strong>Dorfhäuser</strong> in den weißen Dörfern: schmal und hoch, mit dicken Mauern, einer Dachterrasse und manchmal kaum mit dem Auto erreichbar.</li>
+    <li><strong>Villen</strong> an den Hängen über der Küste, mit Garten und Pool.</li>
+    <li><strong>Fincas und Cortijos</strong> im Hinterland, mit Land, Oliven- oder Avocadobäumen und manchmal ohne Netzanschluss. Lesen Sie vorher unseren Ratgeber <a href="/de/ratgeber/finca-kaufen-spanien/">Finca kaufen</a>.</li>
+  </ul>
+  <p>Die meisten Häuser sind über dreißig Jahre alt. Rechnen Sie beim Kauf mit Arbeiten an Bad, Küche, Elektrik oder Dach. Wir helfen in der ganzen Region mit <a href="/de/immobiliengutachten/">Gutachten</a>, <a href="/de/renovierung/">Renovierungen</a> und <a href="/de/hausbetreuung/">Hausbetreuung</a>.</p>
+</Guide>

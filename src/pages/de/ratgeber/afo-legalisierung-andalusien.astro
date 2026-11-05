@@ -1,0 +1,75 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'was', label: 'Was bedeutet AFO?' },
+  { id: 'warum', label: 'Warum so viele Häuser ohne Genehmigung sind' },
+  { id: 'erlaubt', label: 'Was erlaubt ist und was nicht' },
+  { id: 'verfahren', label: 'Das Verfahren im Überblick' },
+  { id: 'kaeufer', label: 'Als Käufer: worauf Sie achten sollten' },
+  { id: 'eigentuemer', label: 'Als Eigentümer: renovieren mit AFO' },
+];
+
+const faq = [
+  {
+    q: 'Ist ein Haus mit AFO-Status legal?',
+    a: 'Nicht in dem Sinne, dass es mit Genehmigung gebaut wurde. Das Rathaus erkennt aber an, dass dagegen nicht mehr vorgegangen werden kann. Das Haus darf bewohnt, verkauft, eingetragen und an Wasser und Strom angeschlossen werden. Erweitern oder neu bauen ist in der Regel nicht erlaubt.',
+  },
+  {
+    q: 'Bekomme ich eine Hypothek auf ein Haus mit AFO-Status?',
+    a: 'Manchmal. Banken sind vorsichtiger als bei einer vollständig genehmigten Immobilie, und die Bedingungen unterscheiden sich von Bank zu Bank. Mit einer offiziellen AFO-Erklärung, die im Grundbuch vermerkt ist, sind Ihre Chancen deutlich besser als ohne.',
+  },
+  {
+    q: 'Wie lange dauert ein AFO-Verfahren?',
+    a: 'Das ist von Rathaus zu Rathaus verschieden. Rechnen Sie mit einigen Monaten bis über einem Jahr, je nach Auslastung und Vollständigkeit der Unterlagen.',
+  },
+  {
+    q: 'Was kostet ein AFO-Verfahren?',
+    a: 'Die Kosten sind ein technisches Gutachten eines Architekten oder Bausachverständigen, die Gebühren des Rathauses und die Eintragung. Zusammen sind das oft einige tausend Euro, mehr, wenn vorher Reparaturen nötig sind.',
+  },
+];
+---
+<Guide lang="de" slug="afo-legalisierung-andalusien" toc={toc} faq={faq} dienst="legalisatie" ctaTitle="Zweifel an den Papieren einer Immobilie?" ctaText="Wir sehen uns das an und bringen Sie mit dem Architekten in Kontakt, mit dem wir zusammenarbeiten.">
+  <h2 id="was">Was bedeutet AFO?</h2>
+  <p>AFO steht für <em>asimilado a fuera de ordenación</em>, sinngemäß „gleichgestellt mit außerhalb der Planungsordnung“. Es ist ein Status für Gebäude, die ohne (die richtige) Genehmigung gebaut wurden, gegen die die Behörden aber nicht mehr vorgehen können, weil die Frist abgelaufen ist. In Andalusien beträgt diese Frist in den meisten Fällen sechs Jahre nach Fertigstellung. Geregelt ist der Status im andalusischen Raumordnungsgesetz LISTA (Ley 7/2021).</p>
+  <p>Das Rathaus bestätigt den Status mit einer offiziellen Erklärung. Danach kann das Haus mit Vermerk der AFO-Situation im Grundbuch eingetragen und an Wasser und Strom angeschlossen werden.</p>
+
+  <h2 id="warum">Warum so viele Häuser ohne Genehmigung sind</h2>
+  <p>Bauen auf ländlichem Boden war in Andalusien schon immer streng eingeschränkt. Trotzdem wurden in den letzten Jahrzehnten zehntausende Häuser ohne Genehmigung gebaut oder erweitert: eine Scheune, aus der ein Wohnhaus wurde, ein zusätzliches Stockwerk, ein Pool oder eine überdachte Terrasse. Lange wurde wenig dagegen unternommen. Schätzungsweise 300.000 Häuser in Andalusien sind in dieser Lage, viele davon in Gegenden wie der Axarquía.</p>
+
+  <h2 id="erlaubt">Was erlaubt ist und was nicht</h2>
+  <table class="prices">
+    <thead><tr><th>Erlaubt</th><th>Nicht erlaubt</th></tr></thead>
+    <tbody>
+      <tr><td>Bewohnen und langfristig vermieten</td><td>Anbauen oder aufstocken</td></tr>
+      <tr><td>Verkaufen und eintragen</td><td>Abreißen und neu bauen</td></tr>
+      <tr><td>Wasser und Strom anschließen (wo verfügbar)</td><td>Neue Nebengebäude oder ein Pool</td></tr>
+      <tr><td>Instandhaltung und Reparatur (Dach, Leitungen, Ausbau)</td><td>Arbeiten, die Größe oder Wert wesentlich erhöhen</td></tr>
+    </tbody>
+  </table>
+  <p>Welche Arbeiten genau erlaubt sind, hängt vom Einzelfall und vom Rathaus ab. Lassen Sie sich immer beraten und reichen Sie vorher eine Anzeige oder einen Genehmigungsantrag ein.</p>
+  <p>Wichtig: Nicht jedes Haus kommt infrage. Liegt es in einem Naturschutzgebiet, einem Überschwemmungsgebiet, auf öffentlichem Grund oder in einer besonderen Risikozone, gilt die Frist oft nicht, und die Behörden können weiterhin einschreiten.</p>
+
+  <h2 id="verfahren">Das Verfahren im Überblick</h2>
+  <ol>
+    <li><strong>Untersuchung</strong>: Ein Architekt oder Bausachverständiger (aparejador) stellt fest, was vorhanden ist, wann es gebaut wurde und ob es infrage kommt.</li>
+    <li><strong>Technisches Gutachten</strong>: mit Zeichnungen, Fotos, Nachweisen zum Baujahr (etwa Luftbilder oder Catastro-Daten) und einer Erklärung, dass das Gebäude sicher und bewohnbar ist.</li>
+    <li><strong>Antrag beim Rathaus</strong>: mit dem Gutachten und den Gebühren.</li>
+    <li><strong>Eventuelle Reparaturen</strong>: Das Rathaus verlangt manchmal vorher Änderungen, zum Beispiel an der Klärgrube oder aus Sicherheitsgründen.</li>
+    <li><strong>Erklärung und Eintragung</strong>: Nach der AFO-Erklärung wird die Situation im Grundbuch vermerkt.</li>
+  </ol>
+
+  <h2 id="kaeufer">Als Käufer: worauf Sie achten sollten</h2>
+  <ul>
+    <li>Vergleichen Sie das Vorhandene mit der Beschreibung im Catastro und im Grundbuch. Jeder Unterschied muss erklärt werden.</li>
+    <li>Lassen Sie sich die AFO-Erklärung des Rathauses oder die Genehmigungen zeigen. Ein Versprechen des Verkäufers reicht nicht.</li>
+    <li>Kaufen Sie auf Basis dessen, was jetzt da ist: Wollen Sie später anbauen oder einen Pool bauen, geht das wahrscheinlich nicht.</li>
+    <li>Lassen Sie einen unabhängigen Anwalt und einen Architekten prüfen und machen Sie das Ergebnis zur Bedingung im Arras-Vertrag.</li>
+    <li>Denken Sie an den Wert: Ein Haus mit AFO-Status ist beim Wiederverkauf oft weniger wert als ein vergleichbares, vollständig genehmigtes.</li>
+  </ul>
+  <p>Mehr zum Kauf eines Landhauses lesen Sie in unserem Ratgeber <a href="/de/ratgeber/finca-kaufen-spanien/">Finca kaufen in Spanien</a>.</p>
+
+  <h2 id="eigentuemer">Als Eigentümer: renovieren mit AFO</h2>
+  <p>Auch mit AFO-Status können Sie Ihr Haus instand halten und modernisieren: ein neues Dach, neues Bad und neue Küche, Dämmung, neue Elektrik. Was Sie nicht dürfen, ist das Haus vergrößern. Wir stimmen mit Ihnen pro Projekt ab, was erlaubt ist, und reichen die richtige Anzeige beim Rathaus ein. Siehe <a href="/de/renovierung/">Renovierung</a>.</p>
+  <p class="note">Dieser Ratgeber gibt eine allgemeine Erklärung und ist keine Rechtsberatung. Das Urteil über eine bestimmte Immobilie kommt von einem Architekten oder Anwalt. Die Regeln können sich zwischen Rathäusern unterscheiden und mit der Zeit ändern.</p>
+</Guide>
