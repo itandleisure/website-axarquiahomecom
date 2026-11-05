@@ -885,7 +885,7 @@ export const costsDe: Topic[] = [
         h: 'Wallbox über Ihren Stromanbieter',
         html: `<p>Viele spanische Stromanbieter verkaufen eine Wallbox als Paket, oft zum Festpreis oder in Monatsraten mit Ihrem Stromvertrag. Prüfen Sie, was die Standardinstallation enthält:</p>
 <ul>
-<li><strong>Eine begrenzte Kabellänge</strong>, meist 10 bis 15 Meter zwischen Sicherungskasten und Wallbox. Jeder weitere Meter kostet extra, oft 20 bis 40 € pro Meter.</li>
+<li><strong>Eine begrenzte Kabellänge</strong>, oft 15 bis 20 Meter zwischen Sicherungskasten und Wallbox. Jeder weitere Meter kostet extra, oft 20 bis 40 € pro Meter.</li>
 <li><strong>Zusatzarbeiten</strong> wie Gräben, Wanddurchbrüche, ein eigener Zähler in der Tiefgarage oder eine höhere Anschlussleistung werden extra berechnet.</li>
 <li><strong>Ein Vertrag</strong>: Manchmal sind Sie ein oder zwei Jahre an den Anbieter gebunden, oder der günstige Preis gilt nur mit dessen Stromtarif.</li>
 </ul>

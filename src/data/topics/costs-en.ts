@@ -885,7 +885,7 @@ export const costsEn: Topic[] = [
         h: 'Charger through your energy supplier',
         html: `<p>Many Spanish energy suppliers sell an EV charger as a package, often at a fixed price or in monthly instalments with your electricity contract. Check what the standard installation includes:</p>
 <ul>
-<li><strong>A limited length of cable</strong>, usually 10 to 15 metres between the consumer unit and the charger. Every extra metre costs more, often €20 to €40 a metre.</li>
+<li><strong>A limited length of cable</strong>, often 15 to 20 metres between the consumer unit and the charger. Every extra metre costs more, often €20 to €40 a metre.</li>
 <li><strong>Extra work</strong> such as trenching, drilling through walls, a separate meter in a parking garage or higher contracted power is charged separately.</li>
 <li><strong>A contract</strong>: sometimes you are tied to the supplier for one or two years, or the low price only applies with their tariff.</li>
 </ul>

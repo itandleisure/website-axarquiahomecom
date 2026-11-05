@@ -885,7 +885,7 @@ export const costsNl: Topic[] = [
         h: 'Laadpaal via uw energieleverancier',
         html: `<p>Veel Spaanse energieleveranciers verkopen een laadpaal als pakket, vaak met een vaste prijs of in maandtermijnen bij uw stroomcontract. Let op wat er in de standaardinstallatie zit:</p>
 <ul>
-<li><strong>Een beperkt aantal meters kabel</strong>, meestal 10 tot 15 meter tussen meterkast en laadpaal. Elke meter extra kost bij, vaak € 20 tot € 40 per meter.</li>
+<li><strong>Een beperkt aantal meters kabel</strong>, vaak 15 tot 20 meter tussen meterkast en laadpaal. Elke meter extra kost bij, vaak € 20 tot € 40 per meter.</li>
 <li><strong>Extra werk</strong> zoals sleuven, doorboringen, een eigen meter in een parkeergarage of een hoger aansluitvermogen wordt apart gerekend.</li>
 <li><strong>Een contract</strong>: soms zit u een of twee jaar vast aan de leverancier, of geldt de lage prijs alleen bij hun stroomtarief.</li>
 </ul>
