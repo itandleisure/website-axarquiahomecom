@@ -6,6 +6,9 @@ export interface Project {
   budget: string; // bijv. '€ 40.000 – € 60.000'
   duration: string; // bijv. '4 maanden'
   summary: string;
+  titleEn?: string;
+  summaryEn?: string;
+  durationEn?: string; // bijv. '4 months'
   before?: string;
   after?: string;
 }

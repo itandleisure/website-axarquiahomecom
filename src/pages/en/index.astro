@@ -1,0 +1,102 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Services from '../../components/Services.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import { site } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Do you speak English?',
+    a: 'Yes. Our team speaks English and Dutch, and we deal with Spanish suppliers, tradespeople and the town hall for you. You will have one English-speaking point of contact from the first call to handover.',
+  },
+  {
+    q: 'Which towns do you cover?',
+    a: `The whole of the Axarquía and the eastern Costa del Sol, including ${site.villages.join(', ')}. Country properties inland are part of our area too.`,
+  },
+  {
+    q: 'I live in the UK. Can you do the work while I am away?',
+    a: 'That is what most of our clients do. We can quote from photos and a site visit, and keep you updated with photos and videos while the work is under way. You only need to come out if you want to.',
+  },
+  {
+    q: 'What does a request cost?',
+    a: 'Nothing. The request, the first conversation and a site visit for a quote are free and come with no obligation.',
+  },
+  {
+    q: 'I am about to buy. Can you look at the property first?',
+    a: 'Yes. A pre-purchase survey tells you the condition of the property, what needs doing and roughly what it will cost, before you sign anything. In Spain you buy “as seen”, so this matters.',
+  },
+];
+---
+<Base
+  title="English-speaking builders in the Axarquía | Renovation, key holding and surveys"
+  description="Buying, renovating or looking after a home in the Axarquía? English-speaking builders for renovation, pre-purchase surveys, key holding and maintenance in Nerja, Cómpeta, Frigiliana, Torrox and nearby."
+  path="/en/"
+  lang="en"
+>
+  <Hero
+    lang="en"
+    eyebrow="Buy · Renovate · Look after"
+    title="Your home in the Axarquía, <em>in safe hands</em>"
+    lead="A Northern European building company with an English-speaking team, working for overseas owners and buyers on the coast east of Málaga. From the survey before you buy to the renovation, and looking after the house while you are away."
+    secondary="See our services"
+    secondaryHref="#services"
+  >
+    <ul class="trust">
+      <li>English-speaking team</li>
+      <li>Reply within 24 hours</li>
+      <li>Fixed price in the quote</li>
+      <li>Photo updates while you are away</li>
+    </ul>
+  </Hero>
+
+  <div id="services"><Services lang="en" /></div>
+
+  <section class="section alt">
+    <div class="wrap split">
+      <div>
+        <h2>Why choose a team that speaks your language?</h2>
+        <p>Anyone who buys or renovates in Spain runs into the same problems: quotes that do not add up, builders who stop answering the phone, rules that work differently from home, and a language that is just too hard for a conversation about pipework and planning permission.</p>
+        <p>We work the way you are used to: clear agreements, a written quote, a named contact and a schedule we stick to. At the same time we know the area, the way the white villages are built, the local tradespeople and the town halls.</p>
+        <p>Because we also do key holding and maintenance, we are still around after handover. We are the first to notice when the roof leaks or the pool turns green, and we deal with it before it becomes a problem.</p>
+      </div>
+      <div class="box">
+        <h3>One point of contact for everything</h3>
+        <ul class="checks">
+          <li>Survey before you buy</li>
+          <li>Renovation, bathrooms and kitchens</li>
+          <li>Building and maintaining pools</li>
+          <li>Roofs, terraces and leaks</li>
+          <li>Key holding and property checks</li>
+          <li>Land clearing and gardens</li>
+        </ul>
+        <a class="btn" href="/en/request/">Tell us your plans</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="en"
+    steps={[
+      { t: 'Request', d: 'Answer a few questions in our short form. Photos help, but are not essential.' },
+      { t: 'Contact', d: 'Within 24 hours a member of our English-speaking team calls or emails to talk through your plans.' },
+      { t: 'Visit and quote', d: 'We visit the property (even if you are not there) and send you a clear, itemised quote.' },
+      { t: 'The work', d: 'One project manager, weekly photos and a schedule we stick to.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Where we work</h2>
+      <p class="section-intro">From the coast to the mountain villages: we cover the whole Axarquía, including country properties where water, access and permits need extra attention.</p>
+      <ul class="villages">
+        {site.villages.map((v) => <li>{v}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="en" />
+  <Cta lang="en" />
+</Base>

@@ -1,0 +1,50 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Todo from '../../components/Todo.astro';
+import { site } from '../../data/site';
+const o = site.operator;
+const c = site.company;
+---
+<Base
+  title="Privacy and terms"
+  description="How Axarquía Home handles your personal data when you make a request, and who we share it with."
+  path="/en/privacy/"
+  lang="en"
+>
+  <Breadcrumbs lang="en" items={[{ name: 'Privacy and terms', href: '/en/privacy/' }]} />
+  <section class="section">
+    <div class="wrap prose">
+      <h1>Privacy and terms</h1>
+      <Todo label="gegevens van de onderneming van Frans en het bouwbedrijf. Laat deze tekst één keer nakijken door een AVG-jurist." />
+      <p>Last updated: 5 November 2026.</p>
+
+      <h2>Who we are</h2>
+      <p>The website {site.domain} is run by {o.name}, {o.address}, registered with the Netherlands Chamber of Commerce under number {o.kvk} (“Axarquía Home”). You can reach us at <a href={`mailto:${o.email}`}>{o.email}</a>.</p>
+      <p>Axarquía Home does not carry out building work itself. Work is carried out by our regular partner {c.legalName}, {c.cif}, {c.street}, {c.postalCode} {c.town}, Spain (“the building company”).</p>
+
+      <h2>What data we process</h2>
+      <p>When you fill in our request form we process the information you give us: your name, email address, phone number, the address or town of the property, a description of your plans, your budget and timescale, and any photos. We also record the date and the page you made the request from.</p>
+
+      <h2>Why, and on what legal basis</h2>
+      <p>We only use this data to deal with your request: to call or email you, arrange a visit and prepare a quote. The legal basis is your consent (Article 6(1)(a) GDPR), which you give by ticking the box on the form, and taking steps at your request before entering into a contract (Article 6(1)(b)).</p>
+
+      <h2>Who we share your data with</h2>
+      <p>Your request is automatically passed on to the building company, who will contact you and prepare the quote. If your request falls outside the building company’s work (for example solar panels, air conditioning or a removal), we only pass it on to one other partner if you have agreed to this on the form.</p>
+      <p>Requests are stored in Axarquía Home’s Google Workspace (Google Sheets and Google Drive). Google processes this data on our behalf. We do not sell your data and do not use it for newsletters without your separate consent.</p>
+
+      <h2>How long we keep data</h2>
+      <p>We keep requests for up to 24 months after our last contact, or longer where needed for the records of a contract (the statutory retention period for invoices in the Netherlands is 7 years).</p>
+
+      <h2>Your rights</h2>
+      <p>You can ask us at any time which data we hold about you, have it corrected or deleted, or withdraw your consent. Email <a href={`mailto:${o.email}`}>{o.email}</a>. You also have the right to complain to the Dutch Data Protection Authority (Autoriteit Persoonsgegevens), the Spanish Agencia Española de Protección de Datos or, if you live in the UK, the Information Commissioner’s Office.</p>
+
+      <h2>Cookies and statistics</h2>
+      <p>This website does not place tracking or advertising cookies. We use Google Search Console to see how the site is found in Google; this does not place any cookies on your device.</p>
+
+      <h2>Terms</h2>
+      <p>The information on this website is general and has been prepared with care, but it is not legal, tax or building advice for your specific situation. Prices on the site are guide prices; only a written quote from the building company is binding. The building company is responsible for carrying out the work, guarantees and any complaints about the work.</p>
+      <p>On legalisation (AFO) and permits we give general explanations only. The opinion on a specific property comes from an architect or lawyer.</p>
+    </div>
+  </section>
+</Base>

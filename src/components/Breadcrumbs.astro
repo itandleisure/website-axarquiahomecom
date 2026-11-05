@@ -1,14 +1,16 @@
 ---
 import { site } from '../data/site';
-interface Props { items: { name: string; href: string }[]; }
-const crumbs = [{ name: 'Home', href: '/nl/' }, ...Astro.props.items];
+import { ui, path, type Lang } from '../i18n';
+interface Props { items: { name: string; href: string }[]; lang?: Lang; }
+const lang = Astro.props.lang ?? 'nl';
+const crumbs = [{ name: 'Home', href: path(lang, 'home') }, ...Astro.props.items];
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: new URL(c.href, site.url).href })),
 };
 ---
-<nav class="crumbs wrap" aria-label="Kruimelpad">
+<nav class="crumbs wrap" aria-label={ui[lang].crumbs}>
   <ol>
     {crumbs.map((c, i) => (
       <li>{i < crumbs.length - 1 ? <a href={c.href}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</li>

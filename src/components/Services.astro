@@ -1,18 +1,20 @@
 ---
-import { services } from '../data/site';
-interface Props { exclude?: string; title?: string; }
-const { exclude, title = 'Wat we voor u doen' } = Astro.props;
-const list = services.filter((s) => s.slug !== exclude);
+import { services, ui, type Lang } from '../i18n';
+interface Props { exclude?: string; title?: string; lang?: Lang; }
+const { exclude, lang = 'nl' } = Astro.props;
+const t = ui[lang];
+const title = Astro.props.title ?? t.servicesTitle;
+const list = services[lang].filter((s) => !exclude || !s.href.includes(`/${exclude}/`));
 ---
 <section class="section">
   <div class="wrap">
     <h2>{title}</h2>
     <div class="cards">
       {list.map((s) => (
-        <a class="card" href={`/nl/${s.slug}/`}>
+        <a class="card" href={s.href}>
           <h3>{s.title}</h3>
           <p>{s.text}</p>
-          <span class="more">Meer over {s.title.toLowerCase()} →</span>
+          <span class="more">{t.more} {s.title.toLowerCase()} →</span>
         </a>
       ))}
     </div>

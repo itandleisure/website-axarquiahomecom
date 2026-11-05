@@ -1,11 +1,12 @@
 ---
-interface Props { title?: string; text?: string; dienst?: string; }
-const {
-  title = 'Vertel ons wat u van plan bent',
-  text = 'Beantwoord een paar korte vragen. Binnen 24 uur neemt een Nederlandstalige collega contact met u op, zonder verplichtingen.',
-  dienst,
-} = Astro.props;
-const href = dienst ? `/nl/aanvraag/?dienst=${dienst}` : '/nl/aanvraag/';
+import { ui, path, type Lang } from '../i18n';
+interface Props { title?: string; text?: string; dienst?: string; lang?: Lang; }
+const { lang = 'nl', dienst } = Astro.props;
+const t = ui[lang];
+const title = Astro.props.title ?? t.ctaTitle;
+const text = Astro.props.text ?? t.ctaText;
+const base = path(lang, 'request');
+const href = dienst ? `${base}?dienst=${dienst}` : base;
 ---
 <section class="cta">
   <div class="wrap cta-inner">
@@ -13,6 +14,6 @@ const href = dienst ? `/nl/aanvraag/?dienst=${dienst}` : '/nl/aanvraag/';
       <h2>{title}</h2>
       <p>{text}</p>
     </div>
-    <a class="btn btn-light" href={href}>Start de keuzehulp</a>
+    <a class="btn btn-light" href={href}>{t.ctaWizard}</a>
   </div>
 </section>

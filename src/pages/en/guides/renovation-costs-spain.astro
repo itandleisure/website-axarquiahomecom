@@ -1,0 +1,83 @@
+---
+import Guide from '../../../components/Guide.astro';
+import Todo from '../../../components/Todo.astro';
+
+const toc = [
+  { id: 'per-m2', label: 'Prices per m²' },
+  { id: 'items', label: 'Prices per item' },
+  { id: 'factors', label: 'What drives the price' },
+  { id: 'permits', label: 'Permits and VAT' },
+  { id: 'remote', label: 'Renovating from the UK' },
+  { id: 'save', label: 'Keeping costs under control' },
+];
+
+const faq = [
+  {
+    q: 'Is renovating in Spain cheaper than in the UK?',
+    a: 'Labour costs in Andalusia are lower than in most of the UK, but materials cost about the same and sometimes more, especially if you want Northern European brands. Overall renovation is often somewhat cheaper, but the difference is smaller than many people expect.',
+  },
+  {
+    q: 'How much VAT do I pay on building work?',
+    a: 'The standard rate is 21%. For renovation and repair work on a home for private use, a reduced rate of 10% applies under certain conditions, mainly that materials make up no more than 40% of the total. Your builder should apply this correctly.',
+  },
+  {
+    q: 'Should I pay in advance?',
+    a: 'A deposit at the start is normal, for example for materials. After that, ideally pay in stages as each part is completed, never large sums for work that has not been done.',
+  },
+];
+---
+<Guide lang="en" slug="renovation-costs-spain" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Want a price for your home?" ctaText="Send us photos and tell us what you want. You will get an itemised quote, so you can decide what to do first.">
+  <h2 id="per-m2">Prices per m²</h2>
+  <p>As a first guide we work with three levels. These are guide prices for the Axarquía in 2026, including materials and labour and excluding VAT.</p>
+  <table class="prices">
+    <thead><tr><th>Level</th><th>What it involves</th><th>Per m²</th></tr></thead>
+    <tbody>
+      <tr><td>Refresh</td><td>Decorating, new flooring, small repairs, replacing sanitaryware</td><td>€250 – €500</td></tr>
+      <tr><td>Medium renovation</td><td>New bathroom and kitchen, partial rewiring, windows, finishes</td><td>€600 – €1,000</td></tr>
+      <tr><td>Full renovation</td><td>Strip back: plumbing, electrics, insulation, layout, roof</td><td>€1,000 – €1,600</td></tr>
+    </tbody>
+  </table>
+  <Todo label="bevestiging van deze bedragen door het bouwbedrijf." />
+  <p>So a 120 m² village house that needs everything can easily cost €120,000 to €190,000. Freshening up an 80 m² apartment with a new bathroom can cost a fraction of that.</p>
+
+  <h2 id="items">Prices per item</h2>
+  <table class="prices">
+    <thead><tr><th>Item</th><th>Guide</th></tr></thead>
+    <tbody>
+      <tr><td>New bathroom</td><td>€6,000 – €25,000</td></tr>
+      <tr><td>New kitchen</td><td>€8,000 – €30,000</td></tr>
+      <tr><td>Full rewire (house)</td><td>€6,000 – €15,000</td></tr>
+      <tr><td>Re-waterproofing a roof or roof terrace</td><td>€1,500 – €20,000</td></tr>
+      <tr><td>Double-glazed windows</td><td>€3,000 – €15,000</td></tr>
+      <tr><td>New swimming pool</td><td>€20,000 – €50,000</td></tr>
+      <tr><td>Air conditioning (several rooms)</td><td>€3,000 – €10,000</td></tr>
+      <tr><td>Septic tank or treatment plant</td><td>€3,000 – €10,000</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Guide prices excluding VAT. A quote after a visit is always more accurate.</p>
+
+  <h2 id="factors">What drives the price</h2>
+  <ul>
+    <li><strong>Access</strong>: a village house in a narrow street in Frigiliana or a finca on an unmade mountain track means carrying everything in by hand or with small vehicles. That takes time.</li>
+    <li><strong>What you find</strong>: in old houses the state of beams, pipes and foundations only shows once you start stripping out. Keep a 10 to 15% contingency.</li>
+    <li><strong>Choice of materials</strong>: Spanish tiles and sanitaryware are affordable and good; Northern European brands and bespoke work cost more.</li>
+    <li><strong>Licence</strong>: larger works need an architect’s project, with its own fees and lead time.</li>
+    <li><strong>Season</strong>: many owners want to be finished before summer. Starting in autumn often gives you more choice of dates.</li>
+  </ul>
+
+  <h2 id="permits">Permits and VAT</h2>
+  <p>For minor works without structural changes most town halls only need a notification (<em>declaración responsable</em>). Larger renovations, extensions or a pool need a building licence with an architect’s project. The town hall charges a building tax (ICIO) of a few per cent of the build cost.</p>
+  <p>For renovation work on a home for your own use, the reduced VAT rate of 10% instead of 21% applies under certain conditions. Your builder should apply it correctly.</p>
+
+  <h2 id="remote">Renovating from the UK</h2>
+  <p>Most of our clients are not in Spain while the work is done. That works well if you have a clear itemised quote up front, one point of contact, weekly photos and payment as each stage is completed. Agree how extra work is reported and approved: always in writing, with a price, before it is carried out.</p>
+
+  <h2 id="save">Keeping costs under control</h2>
+  <ul>
+    <li>Have the property surveyed before you buy so you know what you are dealing with.</li>
+    <li>Make your choices before the start: changes during the work are the biggest cost.</li>
+    <li>Combine jobs: a new bathroom is the moment to replace the pipework too.</li>
+    <li>Work with a fixed price per item rather than day rates.</li>
+    <li>Plan for autumn or winter, when diaries are less full.</li>
+  </ul>
+</Guide>

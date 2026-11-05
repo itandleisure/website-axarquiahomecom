@@ -1,6 +1,9 @@
 ---
-interface Props { eyebrow?: string; title: string; lead: string; cta?: string; ctaHref?: string; secondary?: string; secondaryHref?: string; }
-const { eyebrow, title, lead, cta = 'Gratis aanvraag', ctaHref = '/nl/aanvraag/', secondary, secondaryHref } = Astro.props;
+import { ui, path, type Lang } from '../i18n';
+interface Props { lang?: Lang; eyebrow?: string; title: string; lead: string; cta?: string; ctaHref?: string; secondary?: string; secondaryHref?: string; }
+const { lang = 'nl', eyebrow, title, lead, secondary, secondaryHref } = Astro.props;
+const cta = Astro.props.cta ?? ui[lang].cta;
+const ctaHref = Astro.props.ctaHref ?? path(lang, 'request');
 ---
 <section class="hero">
   <div class="wrap">

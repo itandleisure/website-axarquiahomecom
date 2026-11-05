@@ -1,0 +1,78 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'region', label: 'Where is the Axarquía?' },
+  { id: 'towns', label: 'The towns compared' },
+  { id: 'climate', label: 'Climate and seasons' },
+  { id: 'costs', label: 'Cost of living' },
+  { id: 'health', label: 'Healthcare and services' },
+  { id: 'travel', label: 'Getting there' },
+  { id: 'homes', label: 'What kind of homes there are' },
+];
+
+const faq = [
+  {
+    q: 'What is the prettiest village in the Axarquía?',
+    a: 'It depends on what you are looking for. Frigiliana is often called the prettiest white village, Cómpeta is popular with overseas residents for its atmosphere and mountains, and Nerja combines beaches with every facility. Visit in different seasons before you choose.',
+  },
+  {
+    q: 'Is the Axarquía cheaper than the rest of the Costa del Sol?',
+    a: 'Generally yes. Homes in Torre del Mar, Torrox or the mountain villages cost less per m² than in Marbella, Estepona or Benalmádena. Nerja and the most popular parts of Frigiliana have risen considerably in price, though.',
+  },
+  {
+    q: 'What about water after the drought?',
+    a: 'The Axarquía had a severe drought and water restrictions between 2023 and early 2026. They were lifted in March 2026 after a wet winter. Mains water on the coast and in the villages is reliable; for fincas inland water needs careful checking.',
+  },
+];
+
+const towns = [
+  { n: 'Nerja', t: 'Coast', d: 'Lively seaside town with beaches, the Balcón de Europa and every facility. Popular with British and Scandinavian buyers. The most expensive place in the Axarquía.' },
+  { n: 'Frigiliana', t: 'Hill village, 6 km from the sea', d: 'White village on the hillside with steep lanes and sea views. Many overseas residents and day visitors.' },
+  { n: 'Cómpeta', t: 'Mountain village, 650 m up', d: 'Busy village with a large international community, cooler in summer, with many fincas around it. Known for its sweet wine.' },
+  { n: 'Torrox', t: 'Coast and village', d: 'Torrox Costa by the sea with apartments and a long promenade; Torrox Pueblo as a white village a little inland. Many German residents.' },
+  { n: 'Torre del Mar', t: 'Coast', d: 'Relaxed resort with a long promenade, popular with Spanish holidaymakers. Good value for money.' },
+  { n: 'Vélez-Málaga', t: 'The area’s main town', d: 'A real Spanish town with hospital, market and shops. Few tourists, but every service you need.' },
+  { n: 'Rincón de la Victoria', t: 'Coast, close to Málaga', d: 'Near the city, ideal if you often go to Málaga or the airport. Many Spanish families.' },
+  { n: 'Algarrobo', t: 'Coast and village', d: 'Small and quiet, with Algarrobo Costa by the sea and Mezquitilla. Affordable and authentic.' },
+];
+---
+<Guide lang="en" slug="living-in-the-axarquia" toc={toc} faq={faq} ctaTitle="Got your eye on a home in the Axarquía?" ctaText="We know every town and every type of house. Have it surveyed or ask us for a renovation price.">
+  <h2 id="region">Where is the Axarquía?</h2>
+  <p>The Axarquía is the eastern tip of Málaga province, between the city of Málaga and the border with Granada. It runs from the coast at Rincón de la Victoria and Nerja up into the mountains, as far as the Sierra Tejeda and Almijara at over 2,000 metres. It has 31 municipalities, from seaside resorts to small mountain villages of a few hundred people.</p>
+  <p>The landscape is green by Andalusian standards: avocados, mangoes, olives and vines grow on the slopes. Traditional Spanish village life is still very much alive here, alongside a large international community.</p>
+
+  <h2 id="towns">The towns compared</h2>
+  <div class="cards" style="margin-bottom:1.5em">
+    {towns.map((d) => (
+      <div class="card">
+        <h3>{d.n}</h3>
+        <p class="note" style="margin-top:-0.4em">{d.t}</p>
+        <p>{d.d}</p>
+      </div>
+    ))}
+  </div>
+
+  <h2 id="climate">Climate and seasons</h2>
+  <p>The Axarquía has one of the mildest climates in Europe. The mountains shelter it from cold northerly winds. In winter daytime temperatures on the coast are usually 15 to 19 degrees, falling to around eight at night. The mountain villages are a few degrees cooler, and an uninsulated stone house can feel chilly. In July and August the coast reaches around 30 degrees; now and then the hot <em>terral</em> wind blows from inland and pushes temperatures much higher for a few days.</p>
+  <p>Rain falls mainly between October and April, sometimes in short, heavy bursts. That is also when leaks in roofs and terraces show up.</p>
+
+  <h2 id="costs">Cost of living</h2>
+  <p>Groceries, eating out and services in the Axarquía are noticeably cheaper than in the UK. A menu del día in a village often still costs around €12 to €15. Energy is similar or a little cheaper, though air conditioning can push up summer bills. Rents have risen sharply in recent years because of demand from overseas buyers and holiday lets.</p>
+  <p>As an owner, allow for fixed costs such as local property tax (IBI), rubbish collection, insurance and, for apartments, community fees. Non-resident owners also pay an annual non-resident income tax. See our guide to <a href="/en/guides/buying-costs-in-spain/">buying costs</a> for an overview.</p>
+
+  <h2 id="health">Healthcare and services</h2>
+  <p>Every sizeable town has a health centre (<em>centro de salud</em>). The regional hospital is in Vélez-Málaga; for specialist care you go to the hospitals in Málaga city. There are also private clinics with English-speaking doctors, for example in Nerja, Torre del Mar and Málaga. Supermarkets, DIY stores and larger shops are in Vélez-Málaga, Torre del Mar and Nerja.</p>
+
+  <h2 id="travel">Getting there</h2>
+  <p>The A-7 motorway runs along the coast, linking the Axarquía with Málaga and Granada. From Torre del Mar it is about 40 minutes to Málaga airport, from Nerja an hour and from Cómpeta just over an hour. Málaga has direct flights all year round to most UK and Irish airports. Public transport is limited to buses; you need a car for the mountain villages.</p>
+
+  <h2 id="homes">What kind of homes there are</h2>
+  <ul>
+    <li><strong>Coastal apartments</strong>, often from the 1970s to the 1990s, with a communal pool.</li>
+    <li><strong>Village houses</strong> in the white villages: narrow and tall, with thick walls, a roof terrace and sometimes barely reachable by car.</li>
+    <li><strong>Villas</strong> on the hillsides above the coast, with garden and pool.</li>
+    <li><strong>Fincas and cortijos</strong> inland, with land, olive or avocado trees and sometimes off-grid. Read our guide to <a href="/en/guides/buying-a-finca-in-spain/">buying a finca</a> first.</li>
+  </ul>
+  <p>Most homes are more than thirty years old. When you buy, expect work on the bathroom, kitchen, electrics or roof. We help with <a href="/en/property-survey/">surveys</a>, <a href="/en/renovation/">renovations</a> and <a href="/en/key-holding/">key holding</a> across the area.</p>
+</Guide>

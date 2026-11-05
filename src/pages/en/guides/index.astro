@@ -1,0 +1,36 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import Cta from '../../../components/Cta.astro';
+import { guidesEn } from '../../../data/guides';
+---
+<Base
+  title="Guides: buying, renovating and living in Spain"
+  description="Practical guides in English on moving to Spain from the UK, buying a home or finca, buying costs, renovation and legalisation in the Axarquía and the rest of Andalusia."
+  path="/en/guides/"
+  lang="en"
+>
+  <Breadcrumbs lang="en" items={[{ name: 'Guides', href: '/en/guides/' }]} />
+  <Hero
+    lang="en"
+    eyebrow="Guides"
+    title="What to know <em>before you buy or renovate</em>"
+    lead="Written by people who live and build here. No sales talk, just the things British and other overseas owners actually run into in Spain."
+    cta="Ask a question"
+  />
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        {guidesEn.map((g) => (
+          <a class="card" href={`/en/guides/${g.slug}/`}>
+            <h3>{g.title}</h3>
+            <p>{g.description}</p>
+            <span class="more">Read the guide ({g.minutes} min) →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Cta lang="en" />
+</Base>

@@ -1,0 +1,107 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site, enPrice } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Are property surveys common in Spain?',
+    a: 'No, and that is exactly why one is worth having. In Spain you normally buy a property as seen. Defects you discover after completion are almost always your problem. A survey before you sign the reservation contract (contrato de arras) avoids expensive surprises.',
+  },
+  {
+    q: 'How much does a survey cost?',
+    a: `Most surveys cost between ${enPrice(prices.keuring)}, depending on the size of the property and whether it is an apartment, village house or finca. You get a fixed price up front.`,
+  },
+  {
+    q: 'Do you check whether the property is legal?',
+    a: 'We check whether what is there matches what is registered (Catastro and Land Registry) and look for signs of building work without permission. The legal opinion on legality, for example in an AFO procedure, comes from the architect or lawyer we work with.',
+  },
+  {
+    q: 'How quickly can you survey?',
+    a: 'Usually within a week of your request, often sooner. You do not need to be there: we arrange access with the agent or vendor and send you the report digitally.',
+  },
+  {
+    q: 'Will I also get a price for the work?',
+    a: 'Yes, that is the big advantage of a survey carried out by a building company. The report gives a guide price to put each defect right, so you know what the property will really cost you and can negotiate on that basis.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Pre-purchase property survey',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['en', 'nl'],
+};
+---
+<Base
+  title="Property survey in Spain: know what you are buying"
+  description="Pre-purchase survey for houses and fincas in the Axarquía. A report in English with photos, defects and what they cost to fix. Even if you are not in Spain."
+  path="/en/property-survey/"
+  lang="en"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="en" items={[{ name: 'Property survey', href: '/en/property-survey/' }]} />
+  <Hero
+    lang="en"
+    eyebrow="Pre-purchase survey"
+    title="Have it surveyed <em>before you sign</em>"
+    lead="In Spain you buy a property as seen. We survey it before you buy and tell you in plain English what is fine, what is wrong and what it will cost to put right."
+    cta="Book a survey"
+    ctaHref="/en/request/?dienst=aankoopkeuring"
+  />
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>What we check</h2>
+        <ul class="checks">
+          <li><strong>Structure</strong>: cracks, subsidence, load-bearing walls and beams.</li>
+          <li><strong>Roof and terraces</strong>: leaks, insulation and drainage.</li>
+          <li><strong>Damp</strong>: rising damp, condensation and mould.</li>
+          <li><strong>Electrics</strong>: earthing, the consumer unit and whether it meets current standards.</li>
+          <li><strong>Water and drainage</strong>: pipes, pressure, water heater, septic tank or mains sewer.</li>
+          <li><strong>Pool and outside areas</strong>: leaks, equipment and walls.</li>
+          <li><strong>Registration</strong>: does what is there match the Catastro?</li>
+        </ul>
+        <h2>Fincas need extra care</h2>
+        <p>A country property in the Axarquía has more to check than an apartment. Where does the water come from, and is it legal? Is the access road public or does it cross a neighbour’s land? Are the extension and the pool licensed? Is there a septic tank that meets the rules? We go through it all systematically and bring in our architect where needed.</p>
+      </div>
+      <div class="box">
+        <h3>What you get</h3>
+        <ul class="checks">
+          <li>A report in English, with photos</li>
+          <li>For each defect: how serious it is and what it costs to fix</li>
+          <li>Advice on what to raise in your negotiation</li>
+          <li>A phone or video call to go through it all</li>
+        </ul>
+        <p class="price" style="font-family:var(--serif);font-size:1.4rem;color:var(--terra-dark);margin:0.4em 0">{enPrice(prices.keuring)}</p>
+        <p class="note">Fixed price agreed up front, depending on the type and size of the property.</p>
+        <Todo label="bevestiging prijs en naam van de partner-aparejador of architect." />
+        <a class="btn" href="/en/request/?dienst=aankoopkeuring">Book a survey</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="en"
+    title="From request to report"
+    steps={[
+      { t: 'Request', d: 'Send us the listing link and your questions.' },
+      { t: 'Appointment', d: 'We arrange the visit with the agent or vendor.' },
+      { t: 'Survey', d: 'A thorough inspection inside and out, with photos and measurements.' },
+      { t: 'Report and call', d: 'You get the report within a few days and we go through it together.' },
+    ]}
+  />
+
+  <Faq items={faq} lang="en" />
+  <Cta lang="en" dienst="aankoopkeuring" title="Found a property?" text="Send us the link or address. Within 24 hours we will tell you when we can survey it and what it will cost." />
+  <Services lang="en" exclude="property-survey" title="After you buy" />
+</Base>

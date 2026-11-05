@@ -1,0 +1,358 @@
+---
+import { site, isFilled } from '../data/site';
+import { path, type Lang } from '../i18n';
+
+interface Props { lang?: Lang; }
+const lang = Astro.props.lang ?? 'nl';
+const endpoint = isFilled(site.leadEndpoint) ? site.leadEndpoint : '';
+
+const T = {
+  nl: {
+    step: 'Stap', of: 'van',
+    q1: 'Waarmee kunnen we u helpen?',
+    diensten: [
+      { v: 'renovatie', t: 'Renovatie of verbouwing', s: 'Hele woning of een deel' },
+      { v: 'badkamer-keuken', t: 'Badkamer of keuken', s: 'Vernieuwen of verbouwen' },
+      { v: 'sleutelbeheer', t: 'Sleutelbeheer', s: 'Toezicht als u weg bent' },
+      { v: 'aankoopkeuring', t: 'Aankoopkeuring', s: 'Keuring vóór de koop' },
+      { v: 'zwembad', t: 'Zwembad', s: 'Bouwen, herstellen of onderhoud' },
+      { v: 'onderhoud', t: 'Reparatie of onderhoud', s: 'Dak, lekkage, perceel, tuin' },
+      { v: 'legalisatie', t: 'Vergunning of legalisatie', s: 'AFO, aanbouw, energielabel' },
+      { v: 'anders', t: 'Iets anders', s: 'Zonnepanelen, airco, verhuizen…' },
+    ],
+    q2: 'Wat is uw situatie?',
+    situaties: [
+      { v: 'eigenaar', t: 'Ik heb al een huis in Spanje' },
+      { v: 'koper', t: 'Ik ga een huis kopen', s: 'Of ik heb er een op het oog' },
+      { v: 'orienterend', t: 'Ik oriënteer me nog' },
+    ],
+    typeLabel: 'Om wat voor woning gaat het?', typeChoose: 'Kies een type',
+    typen: ['Appartement', 'Dorpshuis', 'Villa', 'Finca of landhuis', 'Anders'],
+    q3: 'Waar staat de woning?', plaats: 'Plaats', plaatsChoose: 'Kies een plaats',
+    plaatsExtra: ['Andere plaats in de Axarquía', 'Elders in de provincie Málaga', 'Weet ik nog niet'],
+    adres: 'Adres of link naar de woning', optional: '(optioneel)', adresPh: 'Bijvoorbeeld een link van Idealista of Kyero',
+    q4: 'Wanneer en met welk budget?', planningLabel: 'Wanneer wilt u beginnen?', choose: 'Kies',
+    planning: ['Zo snel mogelijk', 'Binnen 3 maanden', 'Over 3 tot 6 maanden', 'Over meer dan 6 maanden', 'Weet ik nog niet'],
+    budgetLabel: 'Welk budget heeft u ongeveer in gedachten?', budgetChoose: 'Kies (optioneel)',
+    budgetten: ['Tot € 5.000', '€ 5.000 – € 20.000', '€ 20.000 – € 50.000', '€ 50.000 – € 100.000', 'Meer dan € 100.000', 'Weet ik nog niet'],
+    budgetHint: 'Dit helpt ons om u direct een realistisch voorstel te doen.',
+    q5: 'Vertel iets meer', omschrijving: 'Wat wilt u laten doen?',
+    omschrijvingPh: 'Bijvoorbeeld: badkamer en keuken vernieuwen, dakterras lekt, sleutelbeheer van oktober tot april…',
+    fotos: 'Foto’s', fotosOpt: '(optioneel, maximaal 5)', fotosHint: 'Foto’s helpen ons om sneller een prijs te geven.',
+    q6: 'Hoe kunnen we u bereiken?', naam: 'Naam', email: 'E-mail', telefoon: 'Telefoon', telPh: '+31 6 … of +34 …',
+    contact: 'Hoe wilt u benaderd worden?', contactOpts: ['Bellen', 'WhatsApp', 'E-mail'],
+    hp: 'Laat dit veld leeg',
+    consent: 'Ik geef toestemming dat mijn aanvraag wordt doorgestuurd naar het bouwbedrijf van Axarquía Home, dat contact met mij opneemt. Zie de',
+    privacy: 'privacyverklaring',
+    consentPartner: 'Als mijn vraag buiten het werk van het bouwbedrijf valt, mag mijn aanvraag naar één andere vakpartner.',
+    prev: 'Vorige', next: 'Volgende', submit: 'Verstuur aanvraag',
+    msgs: {
+      choose: 'Kies een van de opties om verder te gaan.',
+      consent: 'Geef toestemming om uw aanvraag door te sturen.',
+      fill: 'Vul {x} in.', thisField: 'dit veld',
+      notLinked: 'Het formulier is nog niet gekoppeld (testversie). Uw aanvraag is niet verstuurd.',
+      sending: 'Bezig met versturen…',
+      failed: 'Versturen is niet gelukt. Controleer uw internetverbinding of mail ons op info@axarquiahome.com.',
+      pakket: 'Interesse in sleutelbeheer, pakket {x}.',
+    },
+  },
+  en: {
+    step: 'Step', of: 'of',
+    q1: 'How can we help?',
+    diensten: [
+      { v: 'renovatie', t: 'Renovation or building work', s: 'The whole house or part of it' },
+      { v: 'badkamer-keuken', t: 'Bathroom or kitchen', s: 'Replace or remodel' },
+      { v: 'sleutelbeheer', t: 'Key holding', s: 'Property checks while you are away' },
+      { v: 'aankoopkeuring', t: 'Pre-purchase survey', s: 'Before you buy' },
+      { v: 'zwembad', t: 'Swimming pool', s: 'Build, repair or maintain' },
+      { v: 'onderhoud', t: 'Repairs or maintenance', s: 'Roof, leak, land, garden' },
+      { v: 'legalisatie', t: 'Permits or legalisation', s: 'AFO, extension, energy certificate' },
+      { v: 'anders', t: 'Something else', s: 'Solar panels, air con, removals…' },
+    ],
+    q2: 'What is your situation?',
+    situaties: [
+      { v: 'eigenaar', t: 'I already own a home in Spain' },
+      { v: 'koper', t: 'I am buying a home', s: 'Or I have one in mind' },
+      { v: 'orienterend', t: 'I am still looking around' },
+    ],
+    typeLabel: 'What type of property is it?', typeChoose: 'Choose a type',
+    typen: ['Apartment', 'Village house', 'Villa', 'Finca or country house', 'Other'],
+    q3: 'Where is the property?', plaats: 'Town', plaatsChoose: 'Choose a town',
+    plaatsExtra: ['Elsewhere in the Axarquía', 'Elsewhere in Málaga province', 'Not sure yet'],
+    adres: 'Address or link to the listing', optional: '(optional)', adresPh: 'For example a link from Idealista, Kyero or Rightmove',
+    q4: 'When, and what budget?', planningLabel: 'When would you like to start?', choose: 'Choose',
+    planning: ['As soon as possible', 'Within 3 months', 'In 3 to 6 months', 'In more than 6 months', 'Not sure yet'],
+    budgetLabel: 'Roughly what budget do you have in mind?', budgetChoose: 'Choose (optional)',
+    budgetten: ['Up to €5,000', '€5,000 – €20,000', '€20,000 – €50,000', '€50,000 – €100,000', 'Over €100,000', 'Not sure yet'],
+    budgetHint: 'This helps us come back to you with a realistic proposal.',
+    q5: 'Tell us a little more', omschrijving: 'What would you like done?',
+    omschrijvingPh: 'For example: new bathroom and kitchen, roof terrace leaking, key holding from October to April…',
+    fotos: 'Photos', fotosOpt: '(optional, up to 5)', fotosHint: 'Photos help us give you a price sooner.',
+    q6: 'How can we reach you?', naam: 'Name', email: 'Email', telefoon: 'Phone', telPh: '+44 7… or +34 …',
+    contact: 'How would you like us to contact you?', contactOpts: ['Phone call', 'WhatsApp', 'Email'],
+    hp: 'Leave this field empty',
+    consent: 'I agree that my request is passed on to the Axarquía Home building company, who will contact me. See the',
+    privacy: 'privacy policy',
+    consentPartner: 'If my request falls outside the building company’s work, it may be passed on to one other specialist partner.',
+    prev: 'Back', next: 'Next', submit: 'Send request',
+    msgs: {
+      choose: 'Please choose one of the options to continue.',
+      consent: 'Please give your consent so we can pass on your request.',
+      fill: 'Please fill in {x}.', thisField: 'this field',
+      notLinked: 'The form is not connected yet (test version). Your request has not been sent.',
+      sending: 'Sending…',
+      failed: 'Sending failed. Please check your connection or email us at info@axarquiahome.com.',
+      pakket: 'Interested in key holding, {x} package.',
+    },
+  },
+}[lang];
+const diensten = T.diensten;
+const situaties = T.situaties;
+const typen = T.typen;
+const planning = T.planning;
+const budgetten = T.budgetten;
+---
+      <form id="keuzehulp" class="wizard" data-endpoint={endpoint} data-thanks={path(lang, 'thanks')} data-msgs={JSON.stringify(T.msgs)} novalidate>
+        <div class="step-count" aria-live="polite">{T.step} <span data-current>1</span> {T.of} <span data-total>6</span></div>
+        <div class="progress" aria-hidden="true"><span></span></div>
+
+        <fieldset class="wstep" data-step="1">
+          <legend>{T.q1}</legend>
+          <div class="choices">
+            {diensten.map((d) => (
+              <label class="choice"><input type="radio" name="dienst" value={d.v} required /><span>{d.t}<small>{d.s}</small></span></label>
+            ))}
+          </div>
+        </fieldset>
+
+        <fieldset class="wstep" data-step="2" hidden>
+          <legend>{T.q2}</legend>
+          <div class="choices">
+            {situaties.map((d) => (
+              <label class="choice"><input type="radio" name="situatie" value={d.v} required /><span>{d.t}{d.s && <small>{d.s}</small>}</span></label>
+            ))}
+          </div>
+          <div class="field" style="margin-top:20px">
+            <label for="type">{T.typeLabel}</label>
+            <select id="type" name="type_woning">
+              <option value="">{T.typeChoose}</option>
+              {typen.map((t) => <option>{t}</option>)}
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset class="wstep" data-step="3" hidden>
+          <legend>{T.q3}</legend>
+          <div class="field">
+            <label for="plaats">{T.plaats}</label>
+            <select id="plaats" name="plaats" required>
+              <option value="">{T.plaatsChoose}</option>
+              {site.villages.map((v) => <option>{v}</option>)}
+              {T.plaatsExtra.map((p) => <option>{p}</option>)}
+            </select>
+          </div>
+          <div class="field">
+            <label for="adres">{T.adres} <span class="note">{T.optional}</span></label>
+            <input id="adres" name="adres" type="text" autocomplete="street-address" placeholder={T.adresPh} />
+          </div>
+        </fieldset>
+
+        <fieldset class="wstep" data-step="4" hidden>
+          <legend>{T.q4}</legend>
+          <div class="field">
+            <label for="planning">{T.planningLabel}</label>
+            <select id="planning" name="planning" required>
+              <option value="">{T.choose}</option>
+              {planning.map((p) => <option>{p}</option>)}
+            </select>
+          </div>
+          <div class="field" data-budget>
+            <label for="budget">{T.budgetLabel}</label>
+            <select id="budget" name="budget">
+              <option value="">{T.budgetChoose}</option>
+              {budgetten.map((b) => <option>{b}</option>)}
+            </select>
+            <p class="hint">{T.budgetHint}</p>
+          </div>
+        </fieldset>
+
+        <fieldset class="wstep" data-step="5" hidden>
+          <legend>{T.q5}</legend>
+          <div class="field">
+            <label for="omschrijving">{T.omschrijving}</label>
+            <textarea id="omschrijving" name="omschrijving" rows="5" placeholder={T.omschrijvingPh}></textarea>
+          </div>
+          <div class="field">
+            <label for="fotos">{T.fotos} <span class="note">{T.fotosOpt}</span></label>
+            <input id="fotos" type="file" accept="image/*" multiple />
+            <p class="hint">{T.fotosHint}</p>
+            <div class="thumbs" data-thumbs></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="wstep" data-step="6" hidden>
+          <legend>{T.q6}</legend>
+          <div class="row2">
+            <div class="field"><label for="naam">{T.naam}</label><input id="naam" name="naam" type="text" autocomplete="name" required /></div>
+            <div class="field"><label for="email">{T.email}</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+            <div class="field"><label for="telefoon">{T.telefoon}</label><input id="telefoon" name="telefoon" type="tel" autocomplete="tel" placeholder={T.telPh} required /></div>
+            <div class="field">
+              <label for="contact">{T.contact}</label>
+              <select id="contact" name="contactvoorkeur">
+                {T.contactOpts.map((o) => <option>{o}</option>)}
+              </select>
+            </div>
+          </div>
+          <div class="hp" aria-hidden="true"><label>{T.hp} <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+          <label class="consent"><input type="checkbox" name="toestemming" value="ja" required /><span>{T.consent} <a href={path(lang, 'privacy')} target="_blank">{T.privacy}</a>.</span></label>
+          <label class="consent"><input type="checkbox" name="toestemming_partner" value="ja" /><span>{T.consentPartner} <span class="note">{T.optional}</span></span></label>
+        </fieldset>
+
+        <p class="wizard-error" role="alert" data-error></p>
+        <div class="wizard-nav">
+          <button type="button" class="btn btn-ghost" data-prev hidden>{T.prev}</button>
+          <button type="button" class="btn" data-next style="margin-left:auto">{T.next}</button>
+          <button type="submit" class="btn" data-submit hidden style="margin-left:auto">{T.submit}</button>
+        </div>
+      </form>
+
+<script>
+  const form = document.getElementById('keuzehulp') as HTMLFormElement;
+  const steps = Array.from(form.querySelectorAll<HTMLFieldSetElement>('.wstep'));
+  const prev = form.querySelector<HTMLButtonElement>('[data-prev]')!;
+  const next = form.querySelector<HTMLButtonElement>('[data-next]')!;
+  const submit = form.querySelector<HTMLButtonElement>('[data-submit]')!;
+  const errorEl = form.querySelector<HTMLElement>('[data-error]')!;
+  const bar = form.querySelector<HTMLElement>('.progress span')!;
+  const cur = form.querySelector<HTMLElement>('[data-current]')!;
+  const fotoInput = form.querySelector<HTMLInputElement>('#fotos')!;
+  const thumbs = form.querySelector<HTMLElement>('[data-thumbs]')!;
+  let index = 0;
+  let photos: { name: string; type: string; data: string }[] = [];
+  const M = JSON.parse(form.dataset.msgs || '{}');
+
+  // Voorkeuze via ?dienst=…&pakket=…
+  const params = new URLSearchParams(location.search);
+  const pre = params.get('dienst');
+  if (pre) {
+    const r = form.querySelector<HTMLInputElement>(`input[name="dienst"][value="${CSS.escape(pre)}"]`);
+    if (r) r.checked = true;
+  }
+  const pakket = params.get('pakket');
+  if (pakket) {
+    const t = form.querySelector<HTMLTextAreaElement>('#omschrijving')!;
+    t.value = M.pakket.replace('{x}', pakket);
+  }
+
+  function show(i: number) {
+    index = i;
+    steps.forEach((s, n) => (s.hidden = n !== i));
+    prev.hidden = i === 0;
+    next.hidden = i === steps.length - 1;
+    submit.hidden = i !== steps.length - 1;
+    bar.style.width = `${((i + 1) / steps.length) * 100}%`;
+    cur.textContent = String(i + 1);
+    errorEl.textContent = '';
+    // Budget is niet relevant bij sleutelbeheer en keuring
+    const dienst = (form.elements.namedItem('dienst') as RadioNodeList).value;
+    const budget = form.querySelector<HTMLElement>('[data-budget]')!;
+    budget.hidden = dienst === 'sleutelbeheer' || dienst === 'aankoopkeuring';
+  }
+
+  function valid(i: number): boolean {
+    const fields = Array.from(steps[i].querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>('[required]'));
+    for (const f of fields) {
+      if (f instanceof HTMLInputElement && f.type === 'radio') {
+        if (!(form.elements.namedItem(f.name) as RadioNodeList).value) {
+          errorEl.textContent = M.choose;
+          return false;
+        }
+      } else if (f instanceof HTMLInputElement && f.type === 'checkbox') {
+        if (!f.checked) { errorEl.textContent = M.consent; return false; }
+      } else if (!f.value.trim() || !f.checkValidity()) {
+        const label = form.querySelector(`label[for="${f.id}"]`)?.textContent?.trim() ?? M.thisField;
+        errorEl.textContent = M.fill.replace('{x}', label.toLowerCase());
+        f.focus();
+        return false;
+      }
+    }
+    return true;
+  }
+
+  next.addEventListener('click', () => { if (valid(index)) show(index + 1); });
+  prev.addEventListener('click', () => show(index - 1));
+  form.addEventListener('change', (e) => {
+    const t = e.target as HTMLInputElement;
+    if (t.type === 'radio' && index < 2) setTimeout(() => valid(index) && show(index + 1), 180);
+  });
+
+  // Foto's verkleinen in de browser (max. 1600 px) zodat het versturen snel gaat
+  async function resize(file: File): Promise<{ name: string; type: string; data: string }> {
+    const img = await createImageBitmap(file);
+    const scale = Math.min(1, 1600 / Math.max(img.width, img.height));
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.round(img.width * scale);
+    canvas.height = Math.round(img.height * scale);
+    canvas.getContext('2d')!.drawImage(img, 0, 0, canvas.width, canvas.height);
+    const dataUrl = canvas.toDataURL('image/jpeg', 0.8);
+    return { name: file.name.replace(/\.[^.]+$/, '') + '.jpg', type: 'image/jpeg', data: dataUrl.split(',')[1] };
+  }
+  fotoInput.addEventListener('change', async () => {
+    const files = Array.from(fotoInput.files ?? []).slice(0, 5);
+    thumbs.innerHTML = '';
+    photos = [];
+    for (const f of files) {
+      try {
+        const p = await resize(f);
+        photos.push(p);
+        const im = document.createElement('img');
+        im.src = `data:image/jpeg;base64,${p.data}`;
+        im.alt = f.name;
+        thumbs.appendChild(im);
+      } catch { /* bestand overslaan als het geen bruikbare foto is */ }
+    }
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!valid(index)) return;
+    const endpoint = form.dataset.endpoint;
+    const data: Record<string, unknown> = Object.fromEntries(new FormData(form).entries());
+    if (data.website) return; // spam
+    delete data.website;
+    data.taal = document.documentElement.lang;
+    data.pagina = document.referrer || location.href;
+    data.utm = location.search;
+    data.fotos = photos;
+    // Uniek id: het script negeert een tweede inzending met hetzelfde id
+    data.id = (crypto.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}`);
+
+    if (!endpoint) {
+      errorEl.textContent = M.notLinked;
+      console.info('Aanvraag (niet verstuurd):', data);
+      return;
+    }
+    submit.disabled = true;
+    const label = submit.textContent;
+    submit.textContent = M.sending;
+    const body = JSON.stringify(data);
+    try {
+      // text/plain voorkomt een CORS-preflight bij Google Apps Script
+      const res = await fetch(endpoint, { method: 'POST', body, headers: { 'Content-Type': 'text/plain;charset=utf-8' } });
+      const json = await res.json().catch(() => ({ ok: res.ok }));
+      if (!json.ok) throw new Error(json.error || 'Versturen mislukt');
+      location.href = form.dataset.thanks!;
+    } catch {
+      try {
+        await fetch(endpoint, { method: 'POST', body, mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' } });
+        location.href = form.dataset.thanks!;
+      } catch {
+        submit.disabled = false;
+        submit.textContent = label;
+        errorEl.textContent = M.failed;
+      }
+    }
+  });
+
+  show(0);
+</script>

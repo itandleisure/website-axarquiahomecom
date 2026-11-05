@@ -5,10 +5,12 @@ import Breadcrumbs from './Breadcrumbs.astro';
 import Faq from './Faq.astro';
 import Cta from './Cta.astro';
 import { site } from '../data/site';
-import { guides } from '../data/guides';
+import { guides, guidesEn } from '../data/guides';
+import { ui, path as route, type Lang } from '../i18n';
 
 interface Props {
   slug: string;
+  lang?: Lang;
   toc: { id: string; label: string }[];
   faq?: { q: string; a: string }[];
   dienst?: string;
@@ -16,52 +18,59 @@ interface Props {
   ctaText?: string;
 }
 const { slug, toc, faq = [], dienst, ctaTitle, ctaText } = Astro.props;
-const g = guides.find((x) => x.slug === slug)!;
-const path = `/nl/gidsen/${slug}/`;
+const lang: Lang = Astro.props.lang ?? 'nl';
+const t = ui[lang];
+const list = lang === 'en' ? guidesEn : guides;
+const g = list.find((x) => x.slug === slug)!;
+const base = route(lang, 'guides');
+const path = `${base}${slug}/`;
+const otherLang: Lang = lang === 'en' ? 'nl' : 'en';
+const alternates = g.alt ? { [otherLang]: `${route(otherLang, 'guides')}${g.alt}/` } : {};
 const article = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: g.title,
   description: g.description,
-  inLanguage: 'nl',
+  inLanguage: lang,
   datePublished: g.published,
   dateModified: g.updated ?? g.published,
   author: { '@type': 'Organization', name: site.brand, url: site.url },
   publisher: { '@id': `${site.url}/#bedrijf` },
   mainEntityOfPage: new URL(path, site.url).href,
 };
-const related = guides.filter((x) => x.slug !== slug).slice(0, 3);
-const fmt = (d: string) => new Date(d).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' });
+const related = list.filter((x) => x.slug !== slug).slice(0, 3);
+const fmt = (d: string) => new Date(d).toLocaleDateString(t.dateLocale, { day: 'numeric', month: 'long', year: 'numeric' });
+const request = route(lang, 'request');
 ---
-<Base title={g.seoTitle ?? g.title} description={g.description} path={path} jsonLd={[article]}>
-  <Breadcrumbs items={[{ name: 'Gidsen', href: '/nl/gidsen/' }, { name: g.short, href: path }]} />
+<Base title={g.seoTitle ?? g.title} description={g.description} path={path} lang={lang} alternates={alternates} jsonLd={[article]}>
+  <Breadcrumbs lang={lang} items={[{ name: t.guidesCrumb, href: base }, { name: g.short, href: path }]} />
   <article class="section guide" style="padding-top:24px">
     <div class="wrap guide-grid">
       <div class="prose">
-        <p class="eyebrow">Gids · {g.minutes} minuten lezen</p>
+        <p class="eyebrow">{t.guide} · {g.minutes} {t.minRead}</p>
         <h1>{g.title}</h1>
         <p class="lead">{g.lead}</p>
-        <p class="note">Bijgewerkt op {fmt(g.updated ?? g.published)}</p>
+        <p class="note">{t.updated} {fmt(g.updated ?? g.published)}</p>
         <slot />
       </div>
       <aside class="toc">
-        <p class="footer-title" style="color:var(--ink)">In deze gids</p>
-        <ol>{toc.map((t) => <li><a href={`#${t.id}`}>{t.label}</a></li>)}</ol>
-        <a class="btn btn-small" href={dienst ? `/nl/aanvraag/?dienst=${dienst}` : '/nl/aanvraag/'}>Vraag advies aan</a>
+        <p class="footer-title" style="color:var(--ink)">{t.inGuide}</p>
+        <ol>{toc.map((x) => <li><a href={`#${x.id}`}>{x.label}</a></li>)}</ol>
+        <a class="btn btn-small" href={dienst ? `${request}?dienst=${dienst}` : request}>{t.askAdvice}</a>
       </aside>
     </div>
   </article>
-  {faq.length > 0 && <Faq items={faq} />}
-  <Cta dienst={dienst} title={ctaTitle} text={ctaText} />
+  {faq.length > 0 && <Faq items={faq} lang={lang} />}
+  <Cta lang={lang} dienst={dienst} title={ctaTitle} text={ctaText} />
   <section class="section">
     <div class="wrap">
-      <h2>Lees ook</h2>
+      <h2>{t.readAlso}</h2>
       <div class="cards">
         {related.map((r) => (
-          <a class="card" href={`/nl/gidsen/${r.slug}/`}>
+          <a class="card" href={`${base}${r.slug}/`}>
             <h3>{r.title}</h3>
             <p>{r.description}</p>
-            <span class="more">Lees de gids →</span>
+            <span class="more">{t.readGuide} →</span>
           </a>
         ))}
       </div>

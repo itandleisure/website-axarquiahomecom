@@ -1,13 +1,14 @@
 ---
 import '../styles/global.css';
-import { site, nav, isFilled } from '../data/site';
+import { site, isFilled } from '../data/site';
+import { ui, nav as navs, services as svcs, alternatesFor, path as route, type Lang } from '../i18n';
 
 interface Props {
   title: string;
   description: string;
   /** Pad van deze pagina, bijv. "/nl/renovatie/" */
   path: string;
-  lang?: 'nl' | 'en' | 'de';
+  lang?: Lang;
   /** Vertalingen van deze pagina: { en: '/en/renovation/' } */
   alternates?: Partial<Record<'nl' | 'en' | 'de', string>>;
   jsonLd?: object[];
@@ -16,9 +17,13 @@ interface Props {
 
 const { title, description, path, lang = 'nl', alternates = {}, jsonLd = [], noindex = false } = Astro.props;
 const canonical = new URL(path, site.url).href;
-const allAlternates = { ...alternates, [lang]: path };
+const allAlternates: Partial<Record<string, string>> = { ...alternatesFor(path), ...alternates, [lang]: path };
+const t = ui[lang];
+const nav = navs[lang];
+const other: Lang = lang === 'nl' ? 'en' : 'nl';
+const otherHref = allAlternates[other] ?? route(other, 'home');
 const robots = !site.launchReady || noindex ? 'noindex, nofollow' : 'index, follow';
-const fullTitle = path === '/nl/' ? title : `${title} | ${site.brand}`;
+const fullTitle = path === '/nl/' || path === '/en/' ? title : `${title} | ${site.brand}`;
 
 const c = site.company;
 const organization: Record<string, unknown> = {
@@ -69,23 +74,24 @@ const current = Astro.url.pathname;
     {schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
   </head>
   <body>
-    <a class="skip" href="#inhoud">Naar de inhoud</a>
+    <a class="skip" href="#inhoud">{t.skip}</a>
     <header class="site-header">
       <div class="wrap header-inner">
-        <a href="/nl/" class="logo" aria-label={`${site.brand}, naar de homepage`}>
+        <a href={route(lang, 'home')} class="logo" aria-label={`${site.brand}, ${t.toHome}`}>
           <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M4 15 16 5l12 10v12a1 1 0 0 1-1 1h-7v-8h-8v8H5a1 1 0 0 1-1-1z" fill="currentColor"/><circle cx="24" cy="8" r="3" fill="#e9a23b"/></svg>
           <span>Axarquía<b>Home</b></span>
         </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="hoofdmenu" aria-label="Menu openen">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="hoofdmenu" aria-label={t.menuOpen}>
           <span></span><span></span><span></span>
         </button>
-        <nav id="hoofdmenu" class="menu" aria-label="Hoofdmenu">
+        <nav id="hoofdmenu" class="menu" aria-label={t.mainMenu}>
           <ul>
             {nav.map((n) => (
               <li><a href={n.href} aria-current={current === n.href ? 'page' : undefined}>{n.label}</a></li>
             ))}
           </ul>
-          <a class="btn btn-small" href="/nl/aanvraag/">Gratis aanvraag</a>
+          <a class="lang-switch" href={otherHref} hreflang={other} lang={other} title={t.otherLangLabel}>{other.toUpperCase()}</a>
+          <a class="btn btn-small" href={route(lang, 'request')}>{t.cta}</a>
         </nav>
         <script>
           const b = document.querySelector('.menu-toggle');
@@ -106,39 +112,36 @@ const current = Astro.url.pathname;
       <div class="wrap footer-grid">
         <div>
           <p class="footer-brand">Axarquía<b>Home</b></p>
-          <p>Het Nederlandstalige team voor kopen, verbouwen en beheren in de Axarquía, van Rincón de la Victoria tot Nerja.</p>
+          <p>{t.tagline}</p>
+          <p><a href={otherHref} hreflang={other}>{t.otherLang}</a></p>
         </div>
         <div>
-          <p class="footer-title">Diensten</p>
+          <p class="footer-title">{t.fServices}</p>
           <ul>
-            <li><a href="/nl/renovatie/">Renovatie en verbouwing</a></li>
-            <li><a href="/nl/sleutelbeheer/">Sleutelbeheer</a></li>
-            <li><a href="/nl/aankoopkeuring/">Aankoopkeuring</a></li>
-            <li><a href="/nl/zwembad/">Zwembad</a></li>
-            <li><a href="/nl/onderhoud/">Onderhoud en reparaties</a></li>
+            {svcs[lang].map((s) => <li><a href={s.href}>{s.title}</a></li>)}
           </ul>
         </div>
         <div>
-          <p class="footer-title">Contact</p>
+          <p class="footer-title">{t.fContact}</p>
           <ul>
-            <li><a href="/nl/aanvraag/">Aanvraag doen</a></li>
+            <li><a href={route(lang, 'request')}>{t.fRequest}</a></li>
             {isFilled(c.whatsapp) && <li><a href={`https://wa.me/${c.whatsapp}`}>WhatsApp</a></li>}
             {isFilled(c.phone) && <li><a href={`tel:${c.phone.replace(/\s/g, '')}`}>{c.phone}</a></li>}
             <li><a href={`mailto:${site.operator.email}`}>{site.operator.email}</a></li>
           </ul>
         </div>
         <div>
-          <p class="footer-title">Over</p>
+          <p class="footer-title">{t.fAbout}</p>
           <ul>
-            <li><a href="/nl/gidsen/">Gidsen</a></li>
-            <li><a href="/nl/over-ons/">Over ons</a></li>
-            <li><a href="/nl/projecten/">Projecten</a></li>
-            <li><a href="/nl/privacy/">Privacy en voorwaarden</a></li>
+            <li><a href={route(lang, 'guides')}>{t.fGuides}</a></li>
+            <li><a href={lang === 'nl' ? '/nl/over-ons/' : '/en/about-us/'}>{t.fAboutUs}</a></li>
+            <li><a href={lang === 'nl' ? '/nl/projecten/' : '/en/projects/'}>{t.fProjects}</a></li>
+            <li><a href={route(lang, 'privacy')}>{t.fPrivacy}</a></li>
           </ul>
         </div>
       </div>
       <div class="wrap footer-bottom">
-        <p>© {new Date().getFullYear()} {site.brand}. Uitvoering door {isFilled(c.name) ? c.name : 'ons vaste Nederlandse bouwbedrijf'} in de Axarquía.</p>
+        <p>© {new Date().getFullYear()} {site.brand}. {t.builtBy(isFilled(c.name) ? c.name : t.builtByDefault)}</p>
       </div>
     </footer>
   </body>

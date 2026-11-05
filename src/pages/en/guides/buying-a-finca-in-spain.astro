@@ -1,0 +1,86 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'different', label: 'Why a finca is different' },
+  { id: 'legal', label: 'Is the house legal?' },
+  { id: 'water', label: 'Water: well, mains or tank' },
+  { id: 'access', label: 'Access roads and neighbours' },
+  { id: 'drainage', label: 'Septic tanks and drainage' },
+  { id: 'power', label: 'Power and internet' },
+  { id: 'condition', label: 'Structural condition' },
+  { id: 'checklist', label: 'Checklist before you sign' },
+];
+
+const faq = [
+  {
+    q: 'What is the difference between a finca and a cortijo?',
+    a: 'Finca literally means “plot of land” and is used for any country house with land. A cortijo is a traditional Andalusian farmhouse, often with outbuildings. Legally they are the same: a home on rural land (suelo rústico), where far stricter building rules apply than in a town.',
+  },
+  {
+    q: 'Can I buy a finca that is not fully legal?',
+    a: 'You can, but you must know exactly what you are buying. A house with AFO status is registered and can be lived in, but cannot be extended. A house without a licence and without AFO can cause problems with mortgages, utility connections and resale. Have it checked by an independent lawyer and architect before you commit.',
+  },
+  {
+    q: 'Can I add a pool to my finca?',
+    a: 'Only if the local plan and the status of the house allow it and you obtain a licence. Homes with AFO status generally cannot have anything new built. A pool that already exists without a licence is often covered by the same AFO rules as the house.',
+  },
+  {
+    q: 'How much does it cost to restore a finca?',
+    a: 'It varies enormously. A finca that is lived in and well maintained may only need a new bathroom and decorating. A ruined cortijo can cost more than the purchase itself. A pre-purchase survey tells you before you buy. See also our guide to renovation costs.',
+  },
+];
+---
+<Guide lang="en" slug="buying-a-finca-in-spain" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Got your eye on a finca?" ctaText="We survey it before you sign: structure, water, drainage, access and what it will cost to put right.">
+  <h2 id="different">Why a finca is different</h2>
+  <p>An apartment on the coast is relatively simple: the building has its licences, water and electricity come from the mains, and the community of owners looks after the shared areas. With a finca you are responsible for everything. And because many country houses in the Axarquía were extended bit by bit over the years without anyone asking about permits, there is more to check.</p>
+  <p>That does not mean you should not buy one. It does mean having a few things checked thoroughly before you sign the reservation contract (<em>contrato de arras</em>). You usually pay a 10% deposit when you sign it, which you lose if you pull out afterwards.</p>
+
+  <h2 id="legal">Is the house legal?</h2>
+  <p>This is the most important question. On rural land (<em>suelo no urbanizable</em> or <em>suelo rústico</em>) building is very restricted in Andalusia, so many existing fincas were built or extended wholly or partly without permission.</p>
+  <p>Broadly, there are three situations:</p>
+  <ul>
+    <li><strong>Fully licensed</strong>: the house, including extensions, pool and outbuildings, has the right licences and is recorded as such in the Catastro and the Land Registry (<em>Registro de la Propiedad</em>).</li>
+    <li><strong>AFO status</strong>: the house was built without a licence, but the period in which the authorities can act has expired. It has an official “asimilado a fuera de ordenación” declaration. It can be lived in, sold and connected to utilities, but not extended. See our guide to <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation</a>.</li>
+    <li><strong>Not regularised</strong>: no licence and no AFO declaration. Sometimes this can still be applied for, sometimes not (for example in a protected natural area or a flood zone). This is the biggest risk.</li>
+  </ul>
+  <p>What to check: obtain a <em>nota simple</em> from the Land Registry (owner, charges, mortgages, registered floor area), compare it with the Catastro and with what is actually there, and ask the town hall whether any proceedings are open. If the floor area on paper does not match reality, something was almost certainly built without permission.</p>
+
+  <h2 id="water">Water: well, mains or tank</h2>
+  <p>The Axarquía has been through years of drought. Strict restrictions applied from 2023 to early 2026 and were lifted in March 2026 after a wet winter. Water remains a key issue for any finca. There are several possible sources:</p>
+  <ul>
+    <li><strong>Mains connection</strong>: the most reliable, but far from available everywhere.</li>
+    <li><strong>Irrigation water</strong> from a <em>comunidad de regantes</em>: agricultural water, often a share per plot. Not formally intended as drinking water.</li>
+    <li><strong>Own well or spring</strong>: only legal if registered or covered by a concession. Ask for the paperwork and have the water quality tested.</li>
+    <li><strong>Tank filled by lorry</strong>: works, but costs money and needs planning.</li>
+  </ul>
+  <p>Ask the vendor how much water was available in recent summers, and whether the right to it legally belongs to the property. A finca with a stunning view but no reliable water soon loses its charm.</p>
+
+  <h2 id="access">Access roads and neighbours</h2>
+  <p>How do you reach the house? Does the track run over public land (<em>camino público</em>) or across a neighbour’s land? In the latter case a right of way (<em>servidumbre de paso</em>) should be recorded in the Land Registry. Ask who maintains the track too. After heavy rain, unmade mountain tracks can become impassable, and a lorry with building materials or a concrete mixer needs to get through as well.</p>
+
+  <h2 id="drainage">Septic tanks and drainage</h2>
+  <p>Most fincas are not connected to the mains sewer. They have a septic tank (<em>fosa séptica</em>) or a small treatment plant. Older tanks sometimes leak into the ground, which is no longer allowed. Have it checked where the tank is, what state it is in and whether it complies. A new sealed tank or treatment plant easily costs a few thousand euros.</p>
+
+  <h2 id="power">Power and internet</h2>
+  <p>Is the house connected to the grid, and with what capacity? Some fincas run on solar panels with batteries and a generator. That can work well, but check the capacity if you want air conditioning, a pool pump or an electric car. In the mountains there is often no fibre; 4G/5G or satellite internet is the answer. Test the signal on site.</p>
+
+  <h2 id="condition">Structural condition</h2>
+  <p>Old fincas are often built with stone, earth and timber beams. Charming, but prone to damp, woodworm and cracking where the ground moves on slopes. Flat roofs and terraces leak over time, and the electrics often do not meet current standards. A <a href="/en/property-survey/">pre-purchase survey</a> sets this out, with a repair price for each defect, which you can also use to negotiate.</p>
+
+  <h2 id="checklist">Checklist before you sign</h2>
+  <ul class="checks">
+    <li>Nota simple obtained from the Land Registry</li>
+    <li>Catastro and Land Registry compared with what is actually there</li>
+    <li>Licences or AFO declaration seen, including for pool and extensions</li>
+    <li>Town hall checked for open proceedings</li>
+    <li>Water source, rights and paperwork clear</li>
+    <li>Access track and right of way checked</li>
+    <li>Septic tank inspected</li>
+    <li>Power supply and internet tested</li>
+    <li>Energy performance certificate (certificado energético) received; it is compulsory on sale</li>
+    <li>Structural survey with repair prices</li>
+    <li>Independent lawyer instructed (not one recommended by the agent)</li>
+  </ul>
+  <p class="note">This guide gives general information and is not legal advice. The opinion on a specific property comes from a lawyer or architect.</p>
+</Guide>

@@ -1,0 +1,94 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'short', label: 'The short answer' },
+  { id: 'tax', label: 'Transfer tax or VAT' },
+  { id: 'notary', label: 'Notary, Land Registry and lawyer' },
+  { id: 'example', label: 'Worked example' },
+  { id: 'annual', label: 'Annual costs for owners' },
+  { id: 'renovation', label: 'Renovation: the forgotten cost' },
+  { id: 'tips', label: 'Ways to save money' },
+];
+
+const faq = [
+  {
+    q: 'What percentage are buying costs in Andalusia?',
+    a: 'For a resale home, budget about 9 to 11% of the price: 7% transfer tax (ITP) plus notary, Land Registry, lawyer and any mortgage costs. For a new build bought from the developer you pay 10% VAT (IVA) plus 1.2% stamp duty (AJD).',
+  },
+  {
+    q: 'Who pays the plusvalía?',
+    a: 'The municipal tax on the increase in land value (plusvalía municipal) is legally the seller’s responsibility. Make sure the purchase contract does not shift it to you.',
+  },
+  {
+    q: 'What is the 3% retention?',
+    a: 'If you buy from a seller who is not resident in Spain, you must withhold 3% of the price and pay it to the Spanish tax authority on the seller’s behalf. Your lawyer or the notary arranges this. It is not an extra cost to you, but it comes off the amount you pay the seller.',
+  },
+  {
+    q: 'Can a British buyer get a Spanish mortgage?',
+    a: 'Yes, Spanish banks lend to non-residents, usually up to 60 to 70% of the value. You will need a substantial deposit on top of the buying costs.',
+  },
+];
+---
+<Guide lang="en" slug="buying-costs-in-spain" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Want to know what the property will really cost?" ctaText="With a pre-purchase survey you get a price for everything that needs putting right, before you sign.">
+  <h2 id="short">The short answer</h2>
+  <p>If you buy a resale home in Andalusia, budget <strong>around 10% on top of the purchase price</strong> for taxes and fees. On a €300,000 house that is roughly €30,000. If the property needs work, and with older homes in the Axarquía that is more often the rule than the exception, add a renovation budget on top.</p>
+
+  <h2 id="tax">Transfer tax or VAT</h2>
+  <h3>Resale property: 7% ITP</h3>
+  <p>On a resale home you pay transfer tax, <em>Impuesto de Transmisiones Patrimoniales</em> (ITP). In Andalusia this has been a flat 7% since 2021. A lower rate applies in a few specific cases; your lawyer can check whether you qualify.</p>
+  <h3>New build: 10% IVA plus 1.2% AJD</h3>
+  <p>If you buy a new build directly from the developer you pay 10% VAT (<em>IVA</em>) instead of ITP, plus stamp duty (<em>Actos Jurídicos Documentados</em>, AJD), which is 1.2% in Andalusia.</p>
+
+  <h2 id="notary">Notary, Land Registry and lawyer</h2>
+  <table class="prices">
+    <thead><tr><th>Item</th><th>Guide</th></tr></thead>
+    <tbody>
+      <tr><td>Notary (escritura)</td><td>€600 – €1,500</td></tr>
+      <tr><td>Land Registry (Registro de la Propiedad)</td><td>€400 – €1,000</td></tr>
+      <tr><td>Independent lawyer</td><td>around 1% + IVA</td></tr>
+      <tr><td>Gestoría (tax payments and registration)</td><td>€300 – €600</td></tr>
+      <tr><td>Valuation and costs with a mortgage</td><td>€400 – €1,000 + bank fees</td></tr>
+      <tr><td>NIE and bank account</td><td>€0 – €200</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Guide figures based on typical rates in Málaga province. Exact amounts depend on the price and complexity of the purchase.</p>
+  <p>The Spanish notary checks identities and payment, but not whether the property is legal or sound. That is why your own independent lawyer is not a luxury. Choose one who has not been recommended by the estate agent.</p>
+  <p>Paying in pounds? A currency transfer specialist usually offers better rates than a high-street bank, and can fix a rate in advance for the completion date.</p>
+
+  <h2 id="example">Worked example: a €250,000 village house</h2>
+  <table class="prices">
+    <tbody>
+      <tr><td>Purchase price</td><td>€250,000</td></tr>
+      <tr><td>ITP 7%</td><td>€17,500</td></tr>
+      <tr><td>Notary and Land Registry</td><td>€1,800</td></tr>
+      <tr><td>Lawyer (1% + IVA)</td><td>€3,025</td></tr>
+      <tr><td>Gestoría and other</td><td>€700</td></tr>
+      <tr><td><strong>Total buying costs</strong></td><td><strong>€23,025 (9.2%)</strong></td></tr>
+    </tbody>
+  </table>
+  <p>With a mortgage, add valuation and bank fees.</p>
+
+  <h2 id="annual">Annual costs for owners</h2>
+  <ul>
+    <li><strong>IBI</strong>: local property tax, a percentage of the cadastral value. Usually a few hundred euros a year.</li>
+    <li><strong>Rubbish collection</strong> (basura): from a few tens to over a hundred euros a year.</li>
+    <li><strong>Non-resident income tax (IRNR)</strong>: if you are not tax resident in Spain you pay tax every year on a deemed income from your home, even if you do not let it. For UK residents the rate is currently 24% on 1.1% or 2% of the cadastral value. If you let the property, different rules apply.</li>
+    <li><strong>Community fees</strong> (comunidad): for apartments and urbanisations, from €50 to over €300 a month.</li>
+    <li><strong>Insurance, water, electricity and internet</strong>.</li>
+    <li><strong>Maintenance and checks</strong>: an empty house needs attention. See <a href="/en/key-holding/">key holding</a>.</li>
+  </ul>
+
+  <h2 id="renovation">Renovation: the forgotten cost</h2>
+  <p>Many buyers carefully add up the buying costs and forget that the property also needs work. A thirty-year-old bathroom, wiring without an earth, a leaking roof: these are items costing thousands to tens of thousands of euros. Ask for a survey with repair prices before you buy, and read our guide <a href="/en/guides/renovation-costs-spain/">how much renovation costs in Spain</a>.</p>
+
+  <h2 id="tips">Ways to save money</h2>
+  <ul>
+    <li>Have the property surveyed and use the defects in your negotiation.</li>
+    <li>Check the cadastral value is realistic; it determines your annual taxes.</li>
+    <li>Leave the plusvalía with the seller, as the law intends.</li>
+    <li>Plan the renovation before you move in: working on an occupied house is dearer and harder.</li>
+    <li>Use a currency specialist for the transfer from sterling.</li>
+  </ul>
+  <p class="note">This guide gives general information based on the rules in Andalusia in November 2026. Rates can change. It is not tax or legal advice.</p>
+</Guide>

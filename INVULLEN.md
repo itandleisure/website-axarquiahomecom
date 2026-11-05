@@ -19,3 +19,7 @@ en op de pagina's in een geel blok "Nog aanleveren". Zodra alles klopt, zet je
 - [ ] Apps Script web-app URL (zie `apps-script/README.md`)
 - [ ] E-mailadres info@axarquiahome.com laten doorsturen naar je eigen mailbox
 - [ ] Privacyverklaring één keer laten nakijken
+
+## Engelse versie
+- [ ] Bevestigen dat het bouwbedrijf Engelstalige klanten kan bedienen (de Engelse site belooft een "English-speaking team")
+- [ ] Engelse titels en teksten bij projecten (`titleEn`, `summaryEn`, `durationEn`) en teamleden (`roleEn`, `bioEn`)

@@ -71,45 +71,10 @@ export const prices = {
   },
 };
 
-export const nav = [
-  { href: '/nl/renovatie/', label: 'Renovatie' },
-  { href: '/nl/sleutelbeheer/', label: 'Sleutelbeheer' },
-  { href: '/nl/aankoopkeuring/', label: 'Aankoopkeuring' },
-  { href: '/nl/zwembad/', label: 'Zwembad' },
-  { href: '/nl/onderhoud/', label: 'Onderhoud' },
-  { href: '/nl/gidsen/', label: 'Gidsen' },
-  { href: '/nl/over-ons/', label: 'Over ons' },
-];
+// Menu en diensten staan in src/i18n.ts (per taal).
 
-export const services = [
-  {
-    slug: 'renovatie',
-    title: 'Renovatie en verbouwing',
-    text: 'Van een verouderd dorpshuis tot een finca die helemaal opnieuw moet. Eén Nederlandstalig team, één aanspreekpunt.',
-    value: 'renovatie',
-  },
-  {
-    slug: 'sleutelbeheer',
-    title: 'Sleutelbeheer en toezicht',
-    text: 'Wij houden uw huis in de gaten als u er niet bent. Vaste controles, foto’s en direct actie bij een probleem.',
-    value: 'sleutelbeheer',
-  },
-  {
-    slug: 'aankoopkeuring',
-    title: 'Aankoopkeuring',
-    text: 'Laat een huis keuren voordat u tekent. U weet wat u koopt en wat het opknappen gaat kosten.',
-    value: 'aankoopkeuring',
-  },
-  {
-    slug: 'zwembad',
-    title: 'Zwembad bouwen en onderhoud',
-    text: 'Een nieuw zwembad, een oud bad dat weer moet werken, of vast onderhoud terwijl u weg bent.',
-    value: 'zwembad',
-  },
-  {
-    slug: 'onderhoud',
-    title: 'Onderhoud en reparaties',
-    text: 'Daken, lekkages, terrassen, perceel en tuin. Ook als u zelf niet in Spanje bent.',
-    value: 'onderhoud',
-  },
-];
+/** Zet een Nederlandse prijsnotatie om naar Engelse (€ 20.000 → €20,000). */
+export const enPrice = (s: string) =>
+  s.startsWith(TODO)
+    ? s
+    : s.replace(/(\d)\.(\d{3})/g, '$1,$2').replace(/€ /g, '€').replace(' per jaar', ' per year').replace(' per maand', ' per month');
