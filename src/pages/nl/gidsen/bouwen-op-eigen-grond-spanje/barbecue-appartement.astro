@@ -1,0 +1,55 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Mag het?' },
+  { id: 'regels', label: 'Waar de regels staan' },
+  { id: 'vve', label: 'Wat de VvE kan doen' },
+  { id: 'uitzoeken', label: 'Zo zoekt u het uit' },
+  { id: 'alternatieven', label: 'Wat vaak wel mag' },
+];
+
+const faq = [
+  { q: 'Is barbecueën op een balkon in Spanje bij wet verboden?', a: 'Er is geen landelijke wet die het verbiedt. Het verbod staat meestal in de statuten of het huishoudelijk reglement van de comunidad, soms in een gemeentelijke verordening. Daarnaast mag u de buren geen hinder bezorgen, en dat geldt ook voor rook.' },
+  { q: 'Kan de VvE een barbecueverbod invoeren?', a: 'Ja. Een regel in het huishoudelijk reglement (normas de régimen interior) kan de vergadering met een gewone meerderheid aannemen. Een verbod in de statuten zelf vraagt in principe instemming van alle eigenaren.' },
+  { q: 'Wat gebeurt er als ik me niet aan het verbod houd?', a: 'De voorzitter van de comunidad kan u eerst schriftelijk vragen te stoppen. Helpt dat niet, dan kan de VvE naar de rechter. Die kan het gebruik verbieden, een schadevergoeding opleggen en bij ernstige gevallen zelfs het gebruik van de woning tijdelijk ontzeggen.' },
+  { q: 'Mag ik als huurder of vakantieganger barbecueën?', a: 'Huurders en gasten moeten zich aan dezelfde regels houden. Als eigenaar bent u verantwoordelijk, dus zet het in uw huisregels als u verhuurt.' },
+];
+---
+<Guide slug="bouwen-op-eigen-grond-barbecue-appartement" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Een appartement in een complex?" ctaText="Wij houden uw appartement in de gaten als u er niet bent, en weten hoe het bij de comunidad werkt.">
+  <h2 id="kort">Mag het?</h2>
+  <p>Dat hangt af van uw complex. In veel appartementencomplexen aan de Costa del Sol en in de Axarquía is een barbecue op het terras of balkon verboden, vooral een houtskoolbarbecue. Elders mag het wel, of alleen elektrisch. Er is geen landelijke wet die het regelt: het staat in de regels van de vereniging van eigenaren (<em>comunidad de propietarios</em>).</p>
+
+  <h2 id="regels">Waar de regels staan</h2>
+  <ul>
+    <li><strong>Statuten</strong> (<em>estatutos</em>): staan in de akte van de splitsing, vaak ingeschreven in het eigendomsregister. Wijzigen vraagt in principe alle eigenaren.</li>
+    <li><strong>Huishoudelijk reglement</strong> (<em>normas de régimen interior</em>): regels over het dagelijks gebruik, zoals zwembadtijden, huisdieren en barbecues. Die kan de vergadering met een meerderheid aannemen of wijzigen.</li>
+    <li><strong>De wet op de appartementsrechten</strong> (<em>Ley de Propiedad Horizontal</em>, art. 7.2): eigenaren en bewoners mogen geen activiteiten uitvoeren die de statuten verbieden of die hinderlijk, ongezond of gevaarlijk zijn voor de buren. Ook zonder uitdrukkelijk verbod kan veel rook dus een probleem zijn.</li>
+    <li><strong>Gemeente</strong>: sommige gemeenten hebben regels over rook en vuur in de bebouwde kom. In het brandseizoen kunnen extra beperkingen gelden.</li>
+  </ul>
+  <p>Ook een terras dat u alleen zelf gebruikt, is vaak juridisch gemeenschappelijk eigendom met privégebruik. U mag er dan niet zomaar iets op bouwen, zoals een gemetselde barbecue.</p>
+
+  <h2 id="vve">Wat de VvE kan doen</h2>
+  <p>Houdt een eigenaar of huurder zich niet aan de regels, dan vraagt de voorzitter eerst schriftelijk om te stoppen. Helpt dat niet, dan kan de vergadering besluiten naar de rechter te stappen (<em>acción de cesación</em>). De rechter kan het gebruik verbieden en een schadevergoeding opleggen. Het komt zelden zo ver, maar een slechte verstandhouding met de buren wilt u in een complex niet.</p>
+
+  <h2 id="uitzoeken">Zo zoekt u het uit</h2>
+  <ol>
+    <li>Vraag de <strong>statuten</strong> en het <strong>huishoudelijk reglement</strong> op bij de beheerder (<em>administrador de fincas</em>) of de voorzitter.</li>
+    <li>Vraag ook de <strong>notulen</strong> (<em>actas</em>) van de laatste vergaderingen: soms is er een besluit genomen dat nog niet in het reglement staat.</li>
+    <li>Kijkt u naar een appartement om te kopen? Laat de makelaar of uw advocaat deze stukken vóór de koop opvragen. Een buitenkeuken of barbecue op het terras is voor veel kopers een reden om voor een appartement te kiezen.</li>
+    <li>Wilt u de regels veranderen? Zet het op de agenda van de jaarvergadering. Een gezamenlijke barbecueplek bij het zwembad is vaak makkelijker te regelen dan een regel voor elk terras.</li>
+  </ol>
+
+  <h2 id="alternatieven">Wat vaak wel mag</h2>
+  <table class="prices plain">
+    <thead><tr><th>Optie</th><th>Goed om te weten</th></tr></thead>
+    <tbody>
+      <tr><td>Elektrische tafelgrill of plancha</td><td>Geen open vuur en weinig rook. Vaak toegestaan, check het reglement.</td></tr>
+      <tr><td>Elektrische terrasbarbecue</td><td>Echte grill zonder houtskool. Let op het vermogen van uw stroomaansluiting.</td></tr>
+      <tr><td>Gasbarbecue</td><td>In sommige complexen verboden vanwege de gasfles. Check het reglement en de verzekering.</td></tr>
+      <tr><td>Gezamenlijke barbecueplek van de comunidad</td><td>Besluit van de vergadering nodig, de kosten worden gedeeld.</td></tr>
+    </tbody>
+  </table>
+  <p>Hebt u een huis met eigen tuin? Lees dan <a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/buitenkeuken/">buitenkeuken en barbecue</a>, met de regels voor het brandseizoen.</p>
+  <p>Terug naar het overzicht: <a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/">bouwen op eigen grond</a>.</p>
+</Guide>

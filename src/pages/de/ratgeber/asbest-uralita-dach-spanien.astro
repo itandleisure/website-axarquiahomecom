@@ -1,0 +1,117 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Die kurze Antwort' },
+  { id: 'wo', label: 'Wo steckt Uralita im spanischen Haus?' },
+  { id: 'erkennen', label: 'Asbest erkennen' },
+  { id: 'gefahr', label: 'Wann ist es gefährlich?' },
+  { id: 'regeln', label: 'Die Regeln in Spanien und Andalusien' },
+  { id: 'optionen', label: 'Ihre Möglichkeiten im Überblick' },
+  { id: 'entfernen', label: 'So läuft die Entfernung ab' },
+  { id: 'kauf', label: 'Asbest beim Kauf oder Verkauf' },
+  { id: 'tipps', label: 'Tipps' },
+];
+
+const faq = [
+  {
+    q: 'Muss ich mein Uralita-Dach entfernen lassen?',
+    a: 'Für private Eigentümer gibt es derzeit keine allgemeine Frist. Das Abfallgesetz (Ley 7/2022) verpflichtet die Gemeinden jedoch, sämtlichen Asbest zu erfassen und einen Zeitplan für die Entfernung aufzustellen. Ist das Material beschädigt oder verwittert, kann die Gemeinde die Sanierung anordnen. Und wenn Sie bei Bauarbeiten das Material berühren, muss es nach den Vorschriften entfernt werden.',
+  },
+  {
+    q: 'Darf ich eine Uralita-Platte selbst abnehmen?',
+    a: 'Davon raten wir dringend ab. Die Arbeit ist Firmen vorbehalten, die im RERA-Register eingetragen sind und einen genehmigten Arbeitsplan haben. Ein kommunaler Wertstoffhof (punto limpio) nimmt Asbest meist nicht an, und illegales Entsorgen wird hart bestraft. Vor allem aber werden beim Brechen und Sägen die Fasern frei, die Sie einatmen.',
+  },
+  {
+    q: 'Kann ich das Dach nicht einfach überstreichen oder abdecken?',
+    a: 'Ein intaktes Dach mit einer Spezialbeschichtung zu versiegeln oder mit neuen Platten zu überdecken, ist in manchen Fällen erlaubt. Der Asbest bleibt dann aber, wo er ist. Bei einem späteren Umbau oder Verkauf kommt das Thema wieder auf den Tisch, und beim Überdecken dürfen die alten Platten nicht durchbohrt werden. Langfristig ist die Entfernung oft die bessere Wahl.',
+  },
+  {
+    q: 'Wie lange dauert eine Asbestsanierung?',
+    a: 'Die Arbeit selbst dauert bei einem Wohnhaus meist ein bis drei Tage. Die Vorbereitung dauert länger: Die Firma muss einen Arbeitsplan (plan de trabajo) von der Arbeitsbehörde der Junta de Andalucía genehmigen lassen. Rechnen Sie mit einigen Wochen zwischen Auftrag und Ausführung.',
+  },
+];
+---
+<Guide lang="de" slug="asbest-uralita-dach-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Uralita auf dem Dach oder am Wassertank?" ctaText="Wir lassen es begutachten und kümmern uns um eine zugelassene Firma, den Arbeitsplan und ein neues Dach.">
+  <h2 id="kurz">Die kurze Antwort</h2>
+  <p>In vielen spanischen Häusern, die vor 2002 gebaut wurden, steckt Asbest, vor allem in Wellplattendächern, Wassertanks und Rohren aus <em>Uralita</em> (Asbestzement). Solange das Material intakt ist und niemand daran arbeitet, ist das Risiko gering. Selbst abreißen dürfen Sie es aber nicht: Nur eine zugelassene Firma darf es entfernen, mit einem genehmigten Arbeitsplan. Muss das Dach ohnehin runter, verbinden Sie das am besten mit einer Dämmung oder einer Solaranlage.</p>
+
+  <h2 id="wo">Wo steckt Uralita im spanischen Haus?</h2>
+  <p><em>Uralita</em> ist der Markenname des größten spanischen Herstellers, wurde in Spanien aber zum gängigen Wort für Asbestzement (<em>fibrocemento</em>). Er wurde bis in die neunziger Jahre überall verbaut und 2002 verboten. In der Axarquía finden Sie ihn vor allem in:</p>
+  <ul>
+    <li><strong>Wellplattendächern</strong> von Garagen, Carports, Schuppen, Überdachungen und Anbauten, auf älteren Fincas manchmal auf dem ganzen Haus.</li>
+    <li><strong>Wassertanks auf dem Dach</strong> (<em>depósitos</em>): die grauen runden oder eckigen Behälter, die auf vielen Dorfhäusern und Fincas noch auf der Dachterrasse stehen.</li>
+    <li><strong>Abwasser- und Fallrohren</strong>, auch eingemauert oder im Boden verlegt.</li>
+    <li><strong>Rauchabzügen und Schornsteinrohren</strong>, Pflanzkübeln und Gartenmauern.</li>
+    <li>Seltener: <strong>Bodenfliesen</strong> (Vinyl aus den siebziger Jahren) und dem Kleber darunter.</li>
+  </ul>
+
+  <h2 id="erkennen">Asbest erkennen</h2>
+  <p>Mit bloßem Auge lässt es sich nicht sicher feststellen, aber das sind starke Hinweise:</p>
+  <ul>
+    <li>Das Haus oder der Anbau wurde <strong>vor 2002</strong> gebaut.</li>
+    <li>Graue, faserige Platten oder Rohre, oft mit einem feinen Wabenmuster auf der Unterseite.</li>
+    <li>Ein Stempel mit „Uralita“, „Rocalla“ oder einem Produktcode auf der Platte.</li>
+    <li>Das Material klingt hart und hohl und ist schwerer als Kunststoff.</li>
+  </ul>
+  <p>Gewissheit bringt eine <strong>Laboranalyse</strong> einer kleinen Probe, die ein Fachbetrieb sicher entnimmt.</p>
+
+  <h2 id="gefahr">Wann ist es gefährlich?</h2>
+  <p>Asbest ist gefährlich, wenn Fasern freigesetzt und eingeatmet werden. Das passiert nicht von selbst. Das Risiko steigt, wenn:</p>
+  <ul>
+    <li>die Platten <strong>gebrochen, gerissen oder stark verwittert</strong> sind: Nach vierzig Jahren Sonne wird die Oberfläche spröde und pulvrig;</li>
+    <li>Sie <strong>bohren, sägen, schleifen oder brechen</strong>;</li>
+    <li>jemand das Dach <strong>mit dem Hochdruckreiniger säubert</strong> (tun Sie das nie);</li>
+    <li>ein alter Wassertank leckt und aufgebrochen wird.</li>
+  </ul>
+  <p>Ein intaktes, unberührtes Carportdach ist also kein Grund zur Panik. Sie sollten es trotzdem nicht zu lange aufschieben: Das Material wird jedes Jahr schlechter, und damit auch die Entfernung schwieriger.</p>
+
+  <h2 id="regeln">Die Regeln in Spanien und Andalusien</h2>
+  <ul>
+    <li><strong>Verbot seit 2002.</strong> Asbest darf seit Juni 2002 weder verkauft noch verbaut werden. Was noch vorhanden ist, darf bis zum Ende seiner Lebensdauer bleiben.</li>
+    <li><strong>Nur zugelassene Firmen.</strong> Entfernen darf nur eine Firma, die im <em>Registro de Empresas con Riesgo por Amianto</em> (<strong>RERA</strong>) eingetragen ist, so steht es im Königlichen Dekret 396/2006.</li>
+    <li><strong>Ein genehmigter Arbeitsplan.</strong> Für jeden Auftrag reicht die Firma einen <em>plan de trabajo</em> bei der Arbeitsbehörde der Junta de Andalucía ein. Erst nach der Genehmigung darf die Arbeit beginnen.</li>
+    <li><strong>Entsorgung auf einer zugelassenen Deponie.</strong> Sie erhalten einen Nachweis über die korrekte Entsorgung. Heben Sie ihn auf, er hilft beim Verkauf.</li>
+    <li><strong>Die Gemeinden erfassen Asbest.</strong> Das Abfallgesetz <em>Ley 7/2022</em> verpflichtet die Gemeinden, ein Asbestregister und einen Zeitplan für die Entfernung zu führen. Öffentliche Gebäude haben Vorrang. Für private Wohnhäuser gibt es noch keine feste Frist, sie kann aber kommen.</li>
+    <li><strong>Genehmigung für das neue Dach.</strong> Für ein neues Dach brauchen Sie meist eine <em>licencia de obra menor</em> oder eine Anzeige (<em>declaración responsable</em>) bei der Gemeinde. Bei Häusern mit AFO-Status gelten zusätzliche Einschränkungen; siehe unseren Ratgeber <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>.</li>
+    <li><strong>Förderung.</strong> Über die EU-Wiederaufbaufonds gab es in Andalusien Programme, bei denen die Asbestentfernung zusätzlich gefördert wurde. Diese laufen aus. Fragen Sie vor der Beauftragung bei der Gemeinde nach; ein nachträglicher Antrag ist meist nicht möglich.</li>
+  </ul>
+
+  <h2 id="optionen">Ihre Möglichkeiten im Überblick</h2>
+  <table class="prices">
+    <thead><tr><th>Möglichkeit</th><th>Was dazugehört</th></tr></thead>
+    <tbody>
+      <tr><td>Belassen und kontrollieren</td><td>Nur bei einem intakten, unberührten Dach. Nicht betreten, nicht bohren, nicht abspritzen.</td></tr>
+      <tr><td>Mit Beschichtung versiegeln</td><td>Spezialfarbe, die die Fasern bindet. Der Asbest bleibt, das Problem wird verschoben.</td></tr>
+      <tr><td>Mit neuen Platten überdecken</td><td>Neues Dach über dem alten. Der Asbest bleibt; nicht immer erlaubt.</td></tr>
+      <tr><td>Entfernen und Sandwichpaneele</td><td>Zugelassene Entfernung, neues Dach aus gedämmten Paneelen. Üblich bei Carport, Garage und Schuppen.</td></tr>
+      <tr><td>Entfernen und Ziegeldach</td><td>Für das Wohnhaus: neues Dach mit Dämmung, Abdichtung und Ziegeln.</td></tr>
+      <tr><td>Uralita-Wassertank ersetzen</td><td>Alten Tank entsorgen lassen, neuen Kunststofftank aufstellen.</td></tr>
+      <tr><td>Abwasserrohr aus Asbestzement ersetzen</td><td>Oft zusammen mit einer Bad- oder Küchenrenovierung.</td></tr>
+    </tbody>
+  </table>
+  <p>Geht es um das Dach des Wohnhauses, lesen Sie auch <a href="/de/kosten/dach-und-dachterrasse/">Dach und Dachterrasse</a> und <a href="/de/ratgeber/haus-daemmen-spanien/">Haus dämmen</a>: Wenn das Dach ohnehin herunterkommt, ist das der beste Moment für eine gute Dämmung.</p>
+  <p><strong>Möchten Sie das Uralita entfernen lassen?</strong> Wir kümmern uns um alles, von der zugelassenen Firma und dem Arbeitsplan bis zum neuen Dach. <a href="/de/anfrage/?dienst=renovatie">Erzählen Sie uns, was auf Ihrem Dach liegt</a>, dann finden wir gemeinsam die beste Lösung.</p>
+
+  <h2 id="entfernen">So läuft die Entfernung ab</h2>
+  <ol>
+    <li><strong>Besichtigung.</strong> Die Firma sieht sich Dach, Zugang und die Folgearbeiten an.</li>
+    <li><strong>Arbeitsplan und Genehmigung.</strong> Der Arbeitsplan geht an die Junta, bei Bedarf die Anzeige an die Gemeinde.</li>
+    <li><strong>Absperren und vorbereiten.</strong> Der Arbeitsbereich wird abgesperrt, die Platten werden angefeuchtet, damit kein Staub entsteht.</li>
+    <li><strong>Im Ganzen abbauen.</strong> Die Platten werden abgeschraubt, nicht zerbrochen, und in Spezialsäcken (Big Bags) verpackt.</li>
+    <li><strong>Entsorgung und Nachweis.</strong> Der Abfall geht auf eine zugelassene Deponie, Sie erhalten die Unterlagen.</li>
+    <li><strong>Neues Dach.</strong> Meist direkt im Anschluss: gedämmte Sandwichpaneele oder ein Ziegeldach.</li>
+  </ol>
+
+  <h2 id="kauf">Asbest beim Kauf oder Verkauf</h2>
+  <p>Kaufen Sie eine ältere Finca oder ein Dorfhaus, gehen Sie davon aus, dass irgendwo Uralita steckt, und sei es nur ein alter Wassertank. Lassen Sie es im <a href="/de/immobiliengutachten/">Gutachten vor dem Kauf</a> aufnehmen und nutzen Sie es bei der Verhandlung. Verkaufen Sie, macht ein saniertes Dach mit Entsorgungsnachweis einen besseren Eindruck als ein verwittertes Wellplattendach. Siehe auch <a href="/de/ratgeber/haus-verkaufen-spanien/renovieren-vor-dem-verkauf/">Renovieren vor dem Verkauf</a>.</p>
+
+  <h2 id="tipps">Tipps</h2>
+  <ul>
+    <li>Lassen Sie sich immer die <strong>RERA-Nummer</strong> der Firma und eine Kopie des genehmigten Arbeitsplans geben.</li>
+    <li>Kombinieren Sie die Arbeiten: Asbest runter, Dämmung drauf und gleich eine Solaranlage. Dann zahlen Sie Gerüst und Anfahrt nur einmal.</li>
+    <li>Räumen Sie lose Bruchstücke nicht selbst weg; lassen Sie sie von der Firma anfeuchten und mitnehmen.</li>
+    <li>Lassen Sie Entfernung, Entsorgung und neues Dach im Angebot getrennt aufführen.</li>
+  </ul>
+  <p class="note">Dieser Ratgeber gibt allgemeine Informationen auf Grundlage der Regeln in Spanien und Andalusien im November 2026. Regeln können sich ändern. Er ersetzt keine Rechtsberatung.</p>
+</Guide>
