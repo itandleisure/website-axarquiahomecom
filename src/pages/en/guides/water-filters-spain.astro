@@ -1,0 +1,119 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'short', label: 'The short answer' },
+  { id: 'tapwater', label: 'Can you drink the tap water?' },
+  { id: 'test', label: 'Start with a water test' },
+  { id: 'types', label: 'Types of water filter' },
+  { id: 'compare', label: 'All filters compared' },
+  { id: 'well', label: 'Water from a well or tank' },
+  { id: 'advice', label: 'Which filter suits you?' },
+  { id: 'maintenance', label: 'Maintenance' },
+];
+
+const faq = [
+  {
+    q: 'Is reverse osmosis water healthy?',
+    a: 'Osmosis water is very pure, but it also contains almost no minerals. For anyone with a varied diet that is not a problem. Many systems have a remineralisation filter that adds back some calcium and magnesium, which also improves the taste.',
+  },
+  {
+    q: 'Does a reverse osmosis filter waste a lot of water?',
+    a: 'Older systems flushed away 3 to 4 litres for every litre of drinking water. Modern systems manage 1 to 2 litres, and some direct-flow models even less. On a finca with its own tank you can collect the waste water for the garden.',
+  },
+  {
+    q: 'Can I drink softened water?',
+    a: 'A softener replaces limescale with a small amount of sodium. That is fine for cooking and washing. As drinking water we advise against it for babies and anyone on a low-salt diet. The usual solution: a whole-house softener plus an osmosis tap in the kitchen for drinking water.',
+  },
+  {
+    q: 'Is a filter cheaper than bottled water?',
+    a: 'Usually, if you live there for much of the year. Two people easily buy over a thousand litres of bottled water a year, plus all the carrying and plastic. A reverse osmosis filter then pays for itself within a few years. For an apartment you use a few weeks a year, a filter jug is enough.',
+  },
+];
+---
+<Guide lang="en" slug="water-filters-spain" toc={toc} faq={faq} dienst="anders" ctaTitle="Clean drinking water from your own tap?" ctaText="We have your water tested and recommend a filter that suits your water, your house and how often you are there. Installation included.">
+  <h2 id="short">The short answer</h2>
+  <p>Many foreign residents in the Axarquía buy bottled water because the tap water tastes of chlorine, is hard or comes from their own well. A water filter is easier and cheaper in the long run. There are four levels: a <strong>filter jug</strong>, an <strong>under-sink filter</strong>, a <strong>reverse osmosis filter</strong> for pure drinking water and a <strong>whole-house system</strong> with a softener, plus a UV lamp for well water. Which one you need depends on where your water comes from.</p>
+
+  <h2 id="tapwater">Can you drink the tap water?</h2>
+  <p>It depends on the source:</p>
+  <ul>
+    <li><strong>Mains water</strong> is monitored and must meet Spain’s drinking water rules (RD 3/2023), so in principle it is drinkable. But it often tastes of chlorine and across much of the Axarquía it is <strong>hard</strong>, with a lot of limescale. After dry spells the taste can vary too.</li>
+    <li><strong>The last stretch</strong> is often the problem: old <a href="/en/guides/replacing-pipes-and-water-heater-spain/">iron or lead pipes</a>, or a rooftop tank that has not been cleaned for years. Then good water at the meter is no longer good at your tap.</li>
+    <li><strong>Water from your own well or spring</strong> (<em>pozo</em>) on a finca is checked by nobody. In a farming area like the Axarquía it may contain nitrates, bacteria or pesticides. Do not drink it without testing and treatment.</li>
+    <li><strong>Water from a tank</strong> filled by a water lorry (<em>cuba</em>) is usually drinking water on delivery, but its quality depends on the state of your tank.</li>
+  </ul>
+  <p>That is why many people drink bottled water. Understandable, but it means carrying packs of water every week and a mountain of plastic.</p>
+
+  <h2 id="test">Start with a water test</h2>
+  <p>Don’t buy a filter blind. A test shows what is in your water and therefore what the filter needs to do.</p>
+  <table class="prices">
+    <thead><tr><th>Test</th><th>What you learn</th></tr></thead>
+    <tbody>
+      <tr><td>Test strips or TDS meter</td><td>Hardness, dissolved solids, chlorine</td></tr>
+      <tr><td>Basic laboratory analysis</td><td>Hardness, nitrate, pH, bacteria (E. coli)</td></tr>
+      <tr><td>Extended analysis</td><td>Plus heavy metals (lead) and pesticides</td></tr>
+    </tbody>
+  </table>
+  <p>For mains water, a TDS meter and hardness test are often enough. For well water a laboratory analysis is a must, repeated once a year.</p>
+
+  <h2 id="types">Types of water filter</h2>
+  <h3>1. Filter jug</h3>
+  <p>A jug with a carbon filter in the lid. Fill it with tap water and a few minutes later it is filtered. It removes the chlorine taste and some limescale. <strong>It does not remove bacteria, nitrates or lead.</strong> Ideal to start with, or for an apartment you use a few weeks a year. You replace the cartridge roughly every month.</p>
+  <h3>2. Tap filter or under-sink filter</h3>
+  <p>A filter on the tap or, better, a carbon block filter in the kitchen cupboard with a separate drinking water tap on the worktop. It removes chlorine, odour, sediment and some lead and pesticides. You get filtered water instantly. The cartridge is replaced every 6 to 12 months.</p>
+  <h3>3. Reverse osmosis (ósmosis inversa)</h3>
+  <p>The most popular system in Spanish kitchens. Water passes through pre-filters and then a membrane with pores so fine that almost everything stays behind: limescale, salts, nitrates, lead, bacteria and viruses. The result tastes like bottled water. The unit sits in the kitchen cupboard with its own tap. There are simple models with a storage tank and more expensive direct-flow models without one that waste less water. Pre-filters are changed yearly, the membrane every 2 to 4 years.</p>
+  <h3>4. Whole-house system</h3>
+  <p>A unit on the mains, straight after the water meter or pump. All the water in the house is treated: shower, washing machine, water heater and taps. Such a system has one or more of these parts:</p>
+  <ul>
+    <li><strong>Sediment filter</strong>: catches sand, rust and dirt. Protects taps and appliances.</li>
+    <li><strong>Whole-house carbon filter</strong>: removes chlorine and odour from all water, including in the shower.</li>
+    <li><strong>Water softener</strong> (<em>descalcificador</em>): removes limescale with a resin bed that regenerates itself with salt. No more scale on tiles and taps, and your water heater, washing machine and dishwasher last longer. With the Axarquía’s hard water, one of the most useful investments. You top up the salt a few times a year.</li>
+    <li><strong>UV lamp</strong>: kills bacteria and viruses with ultraviolet light, without chemicals. Needed for well or spring water. The lamp is replaced every year.</li>
+  </ul>
+  <p>A popular combination: <strong>a whole-house softener plus a reverse osmosis filter in the kitchen</strong> for drinking water.</p>
+
+  <h2 id="compare">All filters compared</h2>
+  <p>More stars means cleaner water.</p>
+  <table class="prices">
+    <thead><tr><th>System</th><th>Removes</th><th>Purity</th></tr></thead>
+    <tbody>
+      <tr><td>Filter jug</td><td>Chlorine taste, some limescale</td><td>★</td></tr>
+      <tr><td>Under-sink filter (carbon)</td><td>Chlorine, odour, sediment, some lead</td><td>★★</td></tr>
+      <tr><td>Reverse osmosis</td><td>Almost everything, including nitrates and bacteria</td><td>★★★★</td></tr>
+      <tr><td>Whole-house sediment and carbon filter</td><td>Sand, rust, chlorine</td><td>★★</td></tr>
+      <tr><td>Whole-house water softener</td><td>Limescale</td><td>★ (protects the house)</td></tr>
+      <tr><td>UV lamp</td><td>Bacteria and viruses</td><td>★★★</td></tr>
+      <tr><td>Complete system for a finca with a well</td><td>Everything</td><td>★★★★</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Want a water filter installed?</strong> We have your water tested, recommend the filter that suits your water and your house and take care of the installation. <a href="/en/request/?dienst=anders">Tell us where your water comes from</a>.</p>
+
+  <h2 id="well">Water from a well or tank</h2>
+  <p>On many fincas the water comes from a private well, a spring, a shared irrigation pipe or a tank filled by a water lorry. Then filtering is no luxury. A safe system has four steps:</p>
+  <ol>
+    <li><strong>Sediment filter</strong> against sand and particles.</li>
+    <li><strong>Carbon filter</strong> against odour, taste and some chemicals.</li>
+    <li><strong>Softener</strong> if the water is hard.</li>
+    <li><strong>UV lamp</strong> as the last step against bacteria. For drinking water, add a reverse osmosis filter in the kitchen, especially if there are nitrates.</li>
+  </ol>
+  <p>Keep the tank itself clean: have it emptied and cleaned every year or two. An old <a href="/en/guides/asbestos-uralita-roof-spain/">uralita</a> tank is better replaced with a plastic one. More on tanks and wells in <a href="/en/costs/water-tank-and-septic-tank/">water tanks, boreholes and septic tanks</a>.</p>
+
+  <h2 id="advice">Which filter suits you?</h2>
+  <table class="prices">
+    <thead><tr><th>Your situation</th><th>Our advice</th></tr></thead>
+    <tbody>
+      <tr><td>Coastal apartment, a few weeks a year</td><td>Filter jug or tap filter</td></tr>
+      <tr><td>House on mains water, lived in (semi-)permanently</td><td>Reverse osmosis in the kitchen, possibly a whole-house softener</td></tr>
+      <tr><td>Lots of scale on tiles and taps, water heater fails early</td><td>Whole-house softener</td></tr>
+      <tr><td>Finca with its own well or spring</td><td>Lab test first, then sediment, carbon, softener, UV and reverse osmosis</td></tr>
+      <tr><td>Tank filled by water lorry</td><td>Sediment filter, UV lamp and reverse osmosis; clean the tank regularly</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="maintenance">Maintenance</h2>
+  <p>A filter that is not maintained is worse than no filter: bacteria grow in an old cartridge. Put the replacement dates in your diary, or have it taken care of. If the house stands empty for long, run all taps for a few minutes when you arrive and discard the first water from the osmosis tank. Flushing the taps and replacing filters can be part of <a href="/en/key-holding/">key holding</a>.</p>
+  <p class="note">This guide gives general information for the Axarquía in November 2026. It is not medical advice. If in doubt about your drinking water, always have a laboratory test done.</p>
+</Guide>

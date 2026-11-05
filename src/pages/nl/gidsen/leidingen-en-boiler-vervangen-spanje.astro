@@ -1,0 +1,119 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort antwoord' },
+  { id: 'leidingen', label: 'Welke leidingen zitten er in uw huis?' },
+  { id: 'signalen', label: 'Signalen dat het tijd is' },
+  { id: 'vervangen', label: 'Leidingen vervangen: zo gaat het' },
+  { id: 'boiler', label: 'Warm water: welke boiler?' },
+  { id: 'vergelijking', label: 'Boilers vergeleken' },
+  { id: 'kosten', label: 'Werk waarbij wij helpen' },
+  { id: 'tips', label: 'Tips voor een vakantiehuis' },
+];
+
+const faq = [
+  {
+    q: 'Zijn loden leidingen gevaarlijk?',
+    a: 'Ja. Lood komt in het drinkwater, vooral als het water lang in de leiding heeft gestaan. Sinds de nieuwe Spaanse drinkwaterregels (RD 3/2023) moeten loden leidingen worden uitgefaseerd. Ziet u grijze, zachte buizen die u met een sleutel kunt krassen, laat ze dan vervangen en drink tot die tijd geen kraanwater.',
+  },
+  {
+    q: 'Termo of warmtepompboiler: wat is goedkoper?',
+    a: 'In aanschaf is een elektrische termo veel goedkoper. In gebruik is een warmtepompboiler zo’n drie keer zuiniger. Woont u er het hele jaar, dan verdient hij zich in een aantal jaren terug. Voor een vakantiehuis dat een paar maanden per jaar wordt gebruikt, is een goede termo met een tijdklok of een slimme stekker vaak de verstandigste keuze.',
+  },
+  {
+    q: 'Hoe lang gaat een boiler mee?',
+    a: 'Een elektrische termo gaat in de Axarquía meestal 8 tot 12 jaar mee. Het harde water is de grootste vijand: kalk en een opgebruikte anode. Laat de anode om de 2 à 3 jaar controleren; dat kost weinig en verlengt de levensduur flink. Een warmtepompboiler gaat 15 jaar of langer mee.',
+  },
+  {
+    q: 'Moet de muur open om leidingen te vervangen?',
+    a: 'Meestal wel, voor de leidingen die in de muur liggen. Er worden sleuven (rozas) gefreesd, die na het werk worden dichtgezet en gestuct. Een alternatief is leidingen in het zicht of achter een plint of voorzetwand. Bij een badkamer- of keukenrenovatie gaat het in één moeite door.',
+  },
+];
+---
+<Guide slug="leidingen-en-boiler-vervangen-spanje" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Oude leidingen of een boiler die het begeeft?" ctaText="Wij beoordelen het leidingwerk en adviseren welke boiler bij uw gebruik past, met een vaste prijs.">
+  <h2 id="kort">Kort antwoord</h2>
+  <p>In veel oudere huizen in de Axarquía liggen nog <strong>gegalvaniseerde ijzeren of zelfs loden leidingen</strong>. Die roesten, verkalken en lekken. Vervangen door kunststof meerlagenbuis lost dat voor tientallen jaren op, en kan het best samen met een badkamer- of keukenrenovatie. Voor warm water kiest u tussen een goedkope <strong>elektrische termo</strong>, die veel stroom gebruikt, en een duurdere maar zuinige <strong>warmtepompboiler</strong> of <strong>zonneboiler</strong>.</p>
+
+  <h2 id="leidingen">Welke leidingen zitten er in uw huis?</h2>
+  <table class="prices">
+    <thead><tr><th>Materiaal</th><th>Herkennen</th><th>Advies</th></tr></thead>
+    <tbody>
+      <tr><td>Lood (<em>plomo</em>)</td><td>Dof grijs, zacht, krast makkelijk. Huizen van vóór ca. 1975.</td><td>Altijd vervangen</td></tr>
+      <tr><td>Gegalvaniseerd ijzer (<em>hierro galvanizado</em>)</td><td>Grijs, hard, met schroefdraad. Jaren 60 tot 80.</td><td>Vervangen, roest van binnenuit</td></tr>
+      <tr><td>Koper (<em>cobre</em>)</td><td>Roodbruin, gesoldeerd. Jaren 70 tot 2000.</td><td>Vaak nog goed; controleren op groene uitslag en lekjes</td></tr>
+      <tr><td>Kunststof (PEX, meerlagenbuis)</td><td>Wit, rood/blauw of grijs, met persfittingen. Na 2000.</td><td>Goed</td></tr>
+    </tbody>
+  </table>
+  <p>De afvoer is een apart verhaal. In oude huizen is die vaak van gietijzer, aardewerk of <a href="/nl/gidsen/asbest-uralita-dak-spanje/">asbestcement (uralita)</a>, met een te kleine diameter. Bij een badkamer- of keukenrenovatie vervangt u die meestal mee.</p>
+
+  <h2 id="signalen">Signalen dat het tijd is</h2>
+  <ul>
+    <li>Bruin of roestig water als u de kraan opendraait na een periode van afwezigheid.</li>
+    <li>Steeds minder waterdruk, vooral op de bovenverdieping. Zie ook <a href="/nl/problemen/geen-water-of-waterdruk/">geen water of weinig druk</a>.</li>
+    <li>Vochtplekken in muren of vloeren, of een waterrekening die ineens stijgt. Lees dan eerst <a href="/nl/gidsen/waterlekkage-spanje/">wat te doen bij een waterlekkage</a>.</li>
+    <li>Leidingen van lood, of u weet het niet en het huis is van vóór 1980.</li>
+    <li>De boiler maakt tikkende of borrelende geluiden, het water wordt minder heet of er zit roest onder.</li>
+  </ul>
+
+  <h2 id="vervangen">Leidingen vervangen: zo gaat het</h2>
+  <ol>
+    <li><strong>Inspectie</strong>: waar komt het water binnen, waar lopen de leidingen, wat is de staat van de afvoer?</li>
+    <li><strong>Plan</strong>: een nieuwe verdeler (<em>colector</em>) bij de hoofdkraan, met per ruimte een eigen leiding en afsluiter. Dan kunt u bij een lek één ruimte afsluiten.</li>
+    <li><strong>Leggen</strong>: meerlagenbuis in sleuven in de muur of in de vloer, of in het zicht. Warmwaterleidingen worden geïsoleerd.</li>
+    <li><strong>Drukproef</strong>: voordat de muren dicht gaan, wordt het systeem onder druk getest.</li>
+    <li><strong>Afwerken</strong>: sleuven dichtzetten, stucen, schilderen.</li>
+  </ol>
+  <p>Voor een appartement duurt het werk een tot twee weken, voor een huis twee tot drie weken. Het meeste kost niet de buis, maar het hak-, stuc- en tegelwerk eromheen. Daarom is het slim om leidingen te vervangen tijdens een <a href="/nl/kosten/badkamer-renoveren/">badkamer-</a> of <a href="/nl/kosten/keuken-renoveren/">keukenrenovatie</a>.</p>
+
+  <h2 id="boiler">Warm water: welke boiler?</h2>
+  <h3>Elektrische boiler (termo eléctrico)</h3>
+  <p>De standaard in Spanje: een tank van 50 tot 100 liter die het water met een element verwarmt. Goedkoop, eenvoudig en overal te repareren. Nadeel: hij gebruikt veel stroom en houdt het water de hele dag warm.</p>
+  <h3>Gasgeiser op butaan (calentador)</h3>
+  <p>Op fincas zonder gasaansluiting vaak aangesloten op butaanflessen. Direct warm water zonder tank, maar u moet flessen wisselen en de installatie moet regelmatig worden gekeurd. Steeds minder gekozen.</p>
+  <h3>Warmtepompboiler (termo aerotérmico)</h3>
+  <p>Een tank van 200 tot 300 liter met een kleine warmtepomp erop. Hij haalt warmte uit de lucht en gebruikt ongeveer een derde van de stroom van een gewone termo. Werkt in het milde klimaat van de Axarquía het hele jaar goed. Hij heeft wel ruimte nodig: een berging, garage of technische ruimte, of een aansluiting op buitenlucht.</p>
+  <h3>Zonneboiler (termosifón)</h3>
+  <p>Een collector met tank op het dak. Met meer dan 300 zonnige dagen per jaar levert hij het grootste deel van uw warm water gratis. Op een dorpsdak moet er wel plek en draagkracht zijn.</p>
+  <h3>Termo op eigen zonnestroom</h3>
+  <p>Heeft u <a href="/nl/kosten/zonnepanelen/">zonnepanelen</a>, dan kan een slimme regelaar het overschot aan stroom naar de termo sturen. Zo wordt de goedkope termo bijna gratis in gebruik, voor een kleine meerprijs.</p>
+
+  <h2 id="vergelijking">Boilers vergeleken</h2>
+  <p>Meer sterren betekent lagere energiekosten.</p>
+  <table class="prices">
+    <thead><tr><th>Systeem</th><th>Zuinigheid</th><th>Levensduur</th></tr></thead>
+    <tbody>
+      <tr><td>Elektrische termo</td><td>★</td><td>8 – 12 jaar</td></tr>
+      <tr><td>Gasgeiser op butaan</td><td>★★</td><td>10 – 15 jaar</td></tr>
+      <tr><td>Termo met zonnestroomregelaar</td><td>★★★★ (met panelen)</td><td>8 – 12 jaar</td></tr>
+      <tr><td>Zonneboiler (termosifón)</td><td>★★★★</td><td>15 – 20 jaar</td></tr>
+      <tr><td>Warmtepompboiler</td><td>★★★★</td><td>15 – 20 jaar</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Woont u er het hele jaar, dan loont een zuinig systeem. Gebruikt u het huis een paar maanden per jaar, dan is een goede termo met tijdklok vaak de verstandigste keuze.</p>
+  <p>Een warmtepompboiler past goed bij een huis met een <a href="/nl/kosten/airco-en-warmtepomp/">warmtepomp voor verwarming</a>. Meer over het hele energieplaatje leest u in <a href="/nl/gidsen/verwarmen-en-koelen-spanje/">verwarmen en koelen in Spanje</a>.</p>
+
+  <h2 id="kosten">Werk waarbij wij helpen</h2>
+  <p>Van een kleine reparatie tot een complete nieuwe waterleiding:</p>
+  <ul>
+    <li>Anode van de termo vervangen en ontkalken</li>
+    <li>Drukregelaar op de hoofdleiding</li>
+    <li>Nieuwe verdeler met afsluiter per ruimte</li>
+    <li>Hydrofoorpomp (grupo de presión)</li>
+    <li>Afvoer vernieuwen in badkamer of keuken</li>
+    <li>Waterleiding vernieuwen in een appartement</li>
+    <li>Waterleiding vernieuwen in een huis</li>
+  </ul>
+  <p class="note">Hoeveel werk het is, hangt vooral af van de grootte van het huis, hoeveel muren en vloeren open moeten en of er nieuw tegelwerk nodig is.</p>
+  <p><strong>Wilt u uw leidingen of boiler laten vervangen?</strong> Wij beoordelen wat er in uw huis zit, adviseren de boiler die bij uw gebruik past en zorgen voor de uitvoering. <a href="/nl/aanvraag/?dienst=renovatie">Vertel ons wat er speelt</a>.</p>
+
+  <h2 id="tips">Tips voor een vakantiehuis</h2>
+  <ul>
+    <li><strong>Hoofdkraan dicht</strong> als u vertrekt, en de termo uit. Een slimme stekker zet hem een dag voor aankomst weer aan.</li>
+    <li><strong>Legionella</strong>: water dat weken stilstaat in een lauwe boiler is een risico. Laat de boiler na aankomst eerst een paar uur op minstens 60 °C draaien en laat alle kranen doorlopen. Zie <a href="/nl/problemen/legionella/">legionella</a>.</li>
+    <li><strong>Hard water</strong>: een <a href="/nl/gidsen/waterfilter-spanje/">ontharder</a> beschermt boiler, leidingen en kranen.</li>
+    <li><strong>Een watermelder</strong> onder de boiler en de vaatwasser waarschuwt via uw telefoon bij lekkage. Een kleine uitgave die veel schade kan voorkomen.</li>
+    <li>Laat iemand tijdens uw afwezigheid de kranen doorspoelen en de meter controleren. Dat hoort bij <a href="/nl/sleutelbeheer/">sleutelbeheer</a>.</li>
+  </ul>
+  <p class="note">Deze gids geeft algemene informatie voor de Axarquía in november 2026.</p>
+</Guide>

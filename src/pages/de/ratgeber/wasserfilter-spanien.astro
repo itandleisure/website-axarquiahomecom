@@ -1,0 +1,118 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Die kurze Antwort' },
+  { id: 'leitungswasser', label: 'Kann man das Leitungswasser trinken?' },
+  { id: 'test', label: 'Beginnen Sie mit einem Wassertest' },
+  { id: 'arten', label: 'Die Arten von Wasserfiltern' },
+  { id: 'vergleich', label: 'Alle Filter im Vergleich' },
+  { id: 'brunnen', label: 'Wasser aus Brunnen oder Tank' },
+  { id: 'empfehlung', label: 'Welcher Filter passt zu Ihnen?' },
+  { id: 'wartung', label: 'Wartung' },
+];
+
+const faq = [
+  {
+    q: 'Ist Osmosewasser gesund?',
+    a: 'Osmosewasser ist sehr rein, enthält aber auch kaum noch Mineralien. Wer sich abwechslungsreich ernährt, hat damit kein Problem. Viele Anlagen haben einen Remineralisierungsfilter, der wieder etwas Calcium und Magnesium zusetzt; das verbessert auch den Geschmack.',
+  },
+  {
+    q: 'Verschwendet eine Osmoseanlage viel Wasser?',
+    a: 'Ältere Anlagen spülten 3 bis 4 Liter für jeden Liter Trinkwasser weg. Moderne Anlagen kommen mit 1 bis 2 Litern aus, manche Direct-Flow-Modelle mit noch weniger. Auf einer Finca mit eigenem Tank können Sie das Spülwasser für den Garten auffangen.',
+  },
+  {
+    q: 'Kann ich enthärtetes Wasser trinken?',
+    a: 'Eine Enthärtungsanlage ersetzt Kalk durch eine kleine Menge Natrium. Zum Kochen und Waschen ist das kein Problem. Als Trinkwasser raten wir für Babys und Menschen mit salzarmer Ernährung davon ab. Die übliche Lösung: Enthärtung für das ganze Haus und ein Osmosehahn in der Küche für Trinkwasser.',
+  },
+  {
+    q: 'Ist ein Filter günstiger als Flaschenwasser?',
+    a: 'Meist ja, wenn Sie einen großen Teil des Jahres dort wohnen. Zwei Personen kaufen schnell mehr als tausend Liter Flaschenwasser im Jahr, dazu das Schleppen und der Plastikmüll. Eine Osmoseanlage hat sich dann in wenigen Jahren bezahlt gemacht. Für eine Wohnung, die Sie ein paar Wochen im Jahr nutzen, reicht ein Wasserfilterkrug.',
+  },
+];
+---
+<Guide lang="de" slug="wasserfilter-spanien" toc={toc} faq={faq} dienst="anders" ctaTitle="Sauberes Trinkwasser aus dem eigenen Hahn?" ctaText="Wir lassen Ihr Wasser testen, empfehlen den passenden Filter für Ihr Wasser und Ihr Haus und kümmern uns um den Einbau.">
+  <h2 id="kurz">Die kurze Antwort</h2>
+  <p>Viele Ausländer in der Axarquía kaufen Wasser in Flaschen, weil das Leitungswasser nach Chlor schmeckt, hart ist oder aus dem eigenen Brunnen kommt. Ein Wasserfilter ist bequemer und auf Dauer günstiger. Es gibt vier Stufen: einen <strong>Filterkrug</strong>, einen <strong>Filter unter der Spüle</strong>, eine <strong>Umkehrosmoseanlage</strong> für reines Trinkwasser und eine <strong>Anlage für das ganze Haus</strong> mit Enthärtung, bei Brunnenwasser zusätzlich eine UV-Lampe. Welche Sie brauchen, hängt davon ab, woher Ihr Wasser kommt.</p>
+
+  <h2 id="leitungswasser">Kann man das Leitungswasser trinken?</h2>
+  <p>Das hängt von der Quelle ab:</p>
+  <ul>
+    <li><strong>Kommunales Leitungswasser</strong> wird kontrolliert und muss die spanischen Trinkwasserregeln (RD 3/2023) erfüllen. Es ist also grundsätzlich trinkbar. Es schmeckt aber oft nach Chlor und ist in weiten Teilen der Axarquía <strong>hart</strong>, enthält also viel Kalk. Nach trockenen Phasen kann auch der Geschmack schwanken.</li>
+    <li><strong>Das letzte Stück</strong> ist oft das Problem: alte <a href="/de/ratgeber/leitungen-und-boiler-erneuern-spanien/">Eisen- oder Bleileitungen</a> oder ein Wassertank auf dem Dach, der seit Jahren nicht gereinigt wurde. Dann ist gutes Wasser am Zähler an Ihrem Hahn nicht mehr gut.</li>
+    <li><strong>Wasser aus einem eigenen Brunnen oder einer Quelle</strong> (<em>pozo</em>) auf einer Finca kontrolliert niemand. In einem Landwirtschaftsgebiet wie der Axarquía kann es Nitrat, Bakterien oder Pflanzenschutzmittel enthalten. Trinken Sie es nicht ohne Test und Aufbereitung.</li>
+    <li><strong>Wasser aus einem Tank</strong>, der per Tankwagen (<em>cuba</em>) befüllt wird, ist bei Lieferung meist Trinkwasser, aber die Qualität hängt vom Zustand Ihres Tanks ab.</li>
+  </ul>
+  <p>Deshalb trinken viele Menschen Flaschenwasser. Verständlich, aber Sie schleppen jede Woche Wasserpacks und haben einen Berg Plastik.</p>
+
+  <h2 id="test">Beginnen Sie mit einem Wassertest</h2>
+  <p>Kaufen Sie keinen Filter auf gut Glück. Ein Test zeigt, was in Ihrem Wasser ist und was der Filter also leisten muss.</p>
+  <table class="prices">
+    <thead><tr><th>Test</th><th>Was Sie erfahren</th></tr></thead>
+    <tbody>
+      <tr><td>Teststreifen oder TDS-Messgerät</td><td>Härte, gelöste Stoffe, Chlor</td></tr>
+      <tr><td>Basisanalyse im Labor</td><td>Härte, Nitrat, pH-Wert, Bakterien (E. coli)</td></tr>
+      <tr><td>Erweiterte Analyse</td><td>Zusätzlich Schwermetalle (Blei) und Pflanzenschutzmittel</td></tr>
+    </tbody>
+  </table>
+  <p>Bei kommunalem Wasser reichen oft ein TDS-Messgerät und ein Härtetest. Bei Brunnenwasser ist eine Laboranalyse Pflicht, danach einmal jährlich wiederholen.</p>
+
+  <h2 id="arten">Die Arten von Wasserfiltern</h2>
+  <h3>1. Filterkrug</h3>
+  <p>Ein Krug mit Aktivkohlefilter im Deckel. Sie füllen Leitungswasser ein, nach ein paar Minuten ist es gefiltert. Er entfernt den Chlorgeschmack und einen Teil des Kalks. <strong>Bakterien, Nitrat oder Blei entfernt er nicht.</strong> Ideal zum Einstieg oder für eine Wohnung, die Sie ein paar Wochen im Jahr nutzen. Die Kartusche wechseln Sie etwa monatlich.</p>
+  <h3>2. Hahnfilter oder Filter unter der Spüle</h3>
+  <p>Ein Filter am Wasserhahn oder, besser, ein Aktivkohleblockfilter im Küchenschrank mit eigenem Trinkwasserhahn auf der Arbeitsplatte. Er entfernt Chlor, Geruch, Schwebstoffe und einen Teil von Blei und Pflanzenschutzmitteln. Gefiltertes Wasser ohne Wartezeit. Die Kartusche wechseln Sie alle 6 bis 12 Monate.</p>
+  <h3>3. Umkehrosmose (ósmosis inversa)</h3>
+  <p>Das beliebteste System in spanischen Küchen. Das Wasser läuft durch Vorfilter und dann durch eine Membran mit so feinen Poren, dass fast alles zurückbleibt: Kalk, Salze, Nitrat, Blei, Bakterien und Viren. Das Ergebnis schmeckt wie Wasser aus der Flasche. Die Anlage steht im Küchenschrank und hat einen eigenen Hahn. Es gibt einfache Modelle mit Vorratstank und Direct-Flow-Modelle ohne Tank, die weniger Wasser verbrauchen. Vorfilter jährlich, Membran alle 2 bis 4 Jahre.</p>
+  <h3>4. Anlage für das ganze Haus</h3>
+  <p>Eine Anlage an der Hauptleitung, direkt nach dem Wasserzähler oder der Pumpe. Das gesamte Wasser im Haus wird behandelt: Dusche, Waschmaschine, Boiler und Hähne. Eine solche Anlage besteht aus einem oder mehreren dieser Teile:</p>
+  <ul>
+    <li><strong>Sedimentfilter</strong>: fängt Sand, Rost und Schmutz auf und schützt Armaturen und Geräte.</li>
+    <li><strong>Aktivkohlefilter für das ganze Haus</strong>: entfernt Chlor und Geruch aus allem Wasser, auch unter der Dusche.</li>
+    <li><strong>Enthärtungsanlage</strong> (<em>descalcificador</em>): entfernt Kalk über ein Harzbett, das sich mit Salz selbst regeneriert. Kein Kalk mehr auf Fliesen und Armaturen, und Boiler, Waschmaschine und Spülmaschine halten länger. Beim harten Wasser der Axarquía eine der sinnvollsten Investitionen. Salz füllen Sie ein paar Mal im Jahr nach.</li>
+    <li><strong>UV-Lampe</strong>: tötet Bakterien und Viren mit ultraviolettem Licht ab, ohne Chemie. Bei Brunnen- oder Quellwasser notwendig. Die Lampe wird jährlich gewechselt.</li>
+  </ul>
+  <p>Eine beliebte Kombination: <strong>Enthärtung für das ganze Haus und eine Osmoseanlage in der Küche</strong> für Trinkwasser.</p>
+
+  <h2 id="vergleich">Alle Filter im Vergleich</h2>
+  <p>Mehr Sterne bedeuten saubereres Wasser.</p>
+  <table class="prices">
+    <thead><tr><th>System</th><th>Entfernt</th><th>Reinheit</th></tr></thead>
+    <tbody>
+      <tr><td>Filterkrug</td><td>Chlorgeschmack, etwas Kalk</td><td>★</td></tr>
+      <tr><td>Filter unter der Spüle (Aktivkohle)</td><td>Chlor, Geruch, Schwebstoffe, etwas Blei</td><td>★★</td></tr>
+      <tr><td>Umkehrosmose</td><td>Fast alles, auch Nitrat und Bakterien</td><td>★★★★</td></tr>
+      <tr><td>Sediment- und Aktivkohlefilter für das ganze Haus</td><td>Sand, Rost, Chlor</td><td>★★</td></tr>
+      <tr><td>Enthärtung für das ganze Haus</td><td>Kalk</td><td>★ (schützt das Haus)</td></tr>
+      <tr><td>UV-Lampe</td><td>Bakterien und Viren</td><td>★★★</td></tr>
+      <tr><td>Komplettanlage für Finca mit Brunnen</td><td>Alles</td><td>★★★★</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Möchten Sie einen Wasserfilter einbauen lassen?</strong> Wir lassen Ihr Wasser testen, empfehlen den Filter, der zu Ihrem Wasser und Ihrem Haus passt, und kümmern uns um den Einbau. <a href="/de/anfrage/?dienst=anders">Erzählen Sie uns, woher Ihr Wasser kommt</a>.</p>
+
+  <h2 id="brunnen">Wasser aus Brunnen oder Tank</h2>
+  <p>Auf vielen Fincas kommt das Wasser aus einem eigenen Brunnen, einer Quelle, einer gemeinsamen Bewässerungsleitung oder einem Tank, der per Tankwagen befüllt wird. Dann ist Filtern kein Luxus. Eine sichere Anlage hat vier Stufen:</p>
+  <ol>
+    <li><strong>Sedimentfilter</strong> gegen Sand und Partikel.</li>
+    <li><strong>Aktivkohlefilter</strong> gegen Geruch, Geschmack und einen Teil der Chemikalien.</li>
+    <li><strong>Enthärtung</strong>, wenn das Wasser hart ist.</li>
+    <li><strong>UV-Lampe</strong> als letzte Stufe gegen Bakterien. Für Trinkwasser zusätzlich eine Osmoseanlage in der Küche, vor allem bei Nitrat.</li>
+  </ol>
+  <p>Halten Sie auch den Tank selbst sauber: Lassen Sie ihn alle ein bis zwei Jahre leeren und reinigen. Einen alten Tank aus <a href="/de/ratgeber/asbest-uralita-dach-spanien/">Uralita</a> ersetzen Sie besser durch Kunststoff. Mehr zu Tanks und Brunnen unter <a href="/de/kosten/wassertank-und-klaergrube/">Wassertank, Brunnen und Klärgrube</a>.</p>
+
+  <h2 id="empfehlung">Welcher Filter passt zu Ihnen?</h2>
+  <table class="prices">
+    <thead><tr><th>Ihre Situation</th><th>Unsere Empfehlung</th></tr></thead>
+    <tbody>
+      <tr><td>Wohnung an der Küste, ein paar Wochen im Jahr</td><td>Filterkrug oder Hahnfilter</td></tr>
+      <tr><td>Haus am Leitungsnetz, Sie wohnen (halb) dauerhaft dort</td><td>Osmose in der Küche, eventuell Enthärtung für das ganze Haus</td></tr>
+      <tr><td>Viel Kalk auf Fliesen und Armaturen, Boiler schnell kaputt</td><td>Enthärtung für das ganze Haus</td></tr>
+      <tr><td>Finca mit eigenem Brunnen oder Quelle</td><td>Erst ein Labortest, dann Sediment, Aktivkohle, Enthärtung, UV und Osmose</td></tr>
+      <tr><td>Tank, der per Tankwagen befüllt wird</td><td>Sedimentfilter, UV-Lampe und Osmose; Tank regelmäßig reinigen</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="wartung">Wartung</h2>
+  <p>Ein Filter ohne Wartung ist schlechter als gar keiner: In einer alten Kartusche wachsen Bakterien. Tragen Sie die Wechseltermine in Ihren Kalender ein oder lassen Sie es erledigen. Steht das Haus lange leer, spülen Sie bei der Ankunft alle Hähne ein paar Minuten durch und verwerfen das erste Wasser aus dem Osmosetank. Durchspülen und Filterwechsel können Teil der <a href="/de/hausbetreuung/">Hausbetreuung</a> sein.</p>
+  <p class="note">Dieser Ratgeber gibt allgemeine Informationen für die Axarquía im November 2026. Er ist keine medizinische Beratung. Lassen Sie bei Zweifeln an Ihrem Trinkwasser immer einen Labortest machen.</p>
+</Guide>

@@ -1,0 +1,132 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'short', label: 'The short answer' },
+  { id: 'why', label: 'Why Spanish houses are cold' },
+  { id: 'roof', label: 'Insulating the roof' },
+  { id: 'walls', label: 'Insulating the walls' },
+  { id: 'lining', label: 'Fitting an insulated wall lining' },
+  { id: 'compare', label: 'All options compared' },
+  { id: 'damp', label: 'Insulating without damp problems' },
+  { id: 'order', label: 'Where to start' },
+];
+
+const faq = [
+  {
+    q: 'Is insulation worth it in a warm country?',
+    a: 'More than you might think. A well-insulated roof keeps the heat out in summer and the warmth in during winter. In an uninsulated house in the Axarquía, roof and wall insulation often cuts heating and cooling by 30 to 50%, and the house feels far more comfortable in both seasons.',
+  },
+  {
+    q: 'Do I need a permit to insulate?',
+    a: 'Insulating on the inside, such as a wall lining or a lowered ceiling, usually only needs a simple notification (declaración responsable) or a minor works licence. External insulation changes the façade and usually needs a licence. In protected village centres the town hall may set rules on the finish and colour.',
+  },
+  {
+    q: 'How much space does an insulated wall lining take?',
+    a: 'A plasterboard lining on a metal frame with 4 to 5 cm of insulation is 6 to 8 cm thick in total. In a 4 × 4 metre room where you line two outside walls, you lose about half a square metre of floor.',
+  },
+  {
+    q: 'Are there grants or tax relief?',
+    a: 'If you are tax resident in Spain, in recent years you could deduct part of the cost of energy-saving works from your income tax (IRPF), with an energy certificate before and after. The scheme has been extended several times. Ask your gestor whether it still applies to you. Non-residents usually get no benefit.',
+  },
+];
+---
+<Guide lang="en" slug="insulating-your-house-in-spain" toc={toc} faq={faq} dienst="renovatie" ctaTitle="A home that stays warm in winter and cool in summer?" ctaText="We find where your house loses most heat and give you a price for the roof, walls or internal wall linings.">
+  <h2 id="short">The short answer</h2>
+  <p>Most houses in the Axarquía built before 2007 have little or no insulation. Start with the <strong>roof</strong>: that is where heat gets in during summer and escapes in winter. Then the <strong>outside walls</strong>, either externally with an insulation system or internally with an <strong>insulated wall lining</strong>. Below you can see what each method involves and what it achieves.</p>
+
+  <h2 id="why">Why Spanish houses are cold</h2>
+  <p>Anyone spending their first winter in Spain is often surprised: 18 degrees outside in the sun, 13 degrees and clammy indoors. Older Spanish houses were built to stay cool in summer, with tiled floors, single-leaf brick or stone walls, single glazing and an uninsulated roof. Insulation has only been compulsory for new builds since the 2006 building code (<em>Código Técnico de la Edificación</em>).</p>
+  <p>The result: in winter it is colder indoors than outside during the day, with <a href="/en/problems/damp-and-mould/">damp and mould</a> as a side effect. In summer a flat roof or roof terrace heats up so much that the upper floor no longer cools down at night.</p>
+
+  <h2 id="roof">Insulating the roof</h2>
+  <p>The roof gives the most benefit for the least money. There are three common approaches:</p>
+  <h3>From the inside: a lowered ceiling</h3>
+  <p>A frame with mineral wool or wood fibre is fixed below the existing ceiling and finished with plasterboard. The roof itself is left alone. Suitable if the room is high enough.</p>
+  <h3>On a flat roof or roof terrace: an inverted roof</h3>
+  <p>Rigid insulation boards (XPS) go on top of the existing roof covering, with new tiles or gravel on top. This is the best solution for the typical flat roofs of the Axarquía, ideally combined with renewing the waterproofing.</p>
+  <h3>With a new tiled roof</h3>
+  <p>If the roof is coming off anyway, for example because of leaks or <a href="/en/guides/asbestos-uralita-roof-spain/">uralita</a>, insulate between or over the rafters at the same time. That is the smartest moment: the insulation goes in at the same time. See also <a href="/en/costs/roof-and-roof-terrace/">roof and roof terrace costs</a>.</p>
+  <h3>Quick win: reflective roof paint</h3>
+  <p>A white, reflective coating on a flat roof keeps a lot of summer heat out. It is no substitute for insulation, but it is a quick improvement.</p>
+
+  <h2 id="walls">Insulating the walls</h2>
+  <h3>On the outside (SATE)</h3>
+  <p>An external insulation system (<em>SATE</em>, known in the UK as EWI) with insulation boards and render. It works best: the wall stays warm and cold bridges disappear, and you lose no space indoors. The downside: the façade changes and you need a licence.</p>
+  <h3>In the cavity</h3>
+  <p>Houses from the 1970s to 2000 sometimes have a double wall with an air cavity (<em>cámara de aire</em>). It can be filled with insulating beads or foam through small holes. Quick and affordable, but only if there really is a cavity; a specialist checks with a test hole or camera.</p>
+  <h3>On the inside</h3>
+  <p>If the outside cannot or may not change, or you have a terraced village house, insulate from the inside. That can be done with insulating plasters (cork or lime, 2 to 4 cm) or, usually better, with an insulated wall lining.</p>
+
+  <h2 id="lining">Fitting an insulated wall lining</h2>
+  <p>An insulated wall lining (<em>trasdosado</em>) is a second, thin wall just in front of the existing outside wall. It is the most popular way to insulate an existing Spanish house from the inside.</p>
+  <h3>How it works</h3>
+  <ul>
+    <li>A frame of <strong>metal studs</strong> (or timber) is fixed against or just in front of the wall.</li>
+    <li><strong>Insulation</strong> goes between the studs: mineral wool, wood fibre or PIR boards, usually 4 to 6 cm.</li>
+    <li>A <strong>vapour control layer</strong> goes on the warm side, so moisture from the room does not condense in the cold wall.</li>
+    <li>Then <strong>plasterboard</strong> (<em>pladur</em>), moisture-resistant board in bathrooms and kitchens, followed by skimming and painting.</li>
+  </ul>
+  <p>There are also <strong>ready-made insulated boards</strong>: plasterboard with a layer of insulation bonded to it, glued straight onto a flat wall. Thinner and quicker, but only suitable for a dry, flat wall.</p>
+  <h3>Advantages</h3>
+  <ul>
+    <li>The room heats up much faster and the wall no longer feels cold.</li>
+    <li>New pipes and sockets can be hidden inside it.</li>
+    <li>No façade licence needed; it can be done room by room.</li>
+    <li>Crooked, cracked or ugly walls become straight in one go.</li>
+  </ul>
+  <h3>Points to watch</h3>
+  <ul>
+    <li>You lose 6 to 10 cm per wall.</li>
+    <li>Skirting, sockets, radiators and window sills have to be moved or adapted.</li>
+    <li><strong>Solve damp first.</strong> A lining in front of a wet wall hides the problem and makes it worse. On old stone walls with rising damp, choose a breathable system (wood fibre, cork, lime) and a ventilated gap.</li>
+  </ul>
+  <h3>Types of wall lining</h3>
+  <table class="prices">
+    <thead><tr><th>Type</th><th>Suitable for</th></tr></thead>
+    <tbody>
+      <tr><td>Plasterboard with bonded insulation</td><td>Dry, flat walls; quick</td></tr>
+      <tr><td>Metal studs, mineral wool, plasterboard</td><td>The standard; room for pipes and cables</td></tr>
+      <tr><td>Breathable system (wood fibre or cork, lime)</td><td>Old stone walls</td></tr>
+    </tbody>
+  </table>
+  <p class="note">A wall lining can be fitted room by room. Start with the rooms you use most in winter, such as the living room and bedroom.</p>
+
+  <h2 id="compare">All options compared</h2>
+  <p>More stars means more comfort and bigger savings.</p>
+  <table class="prices">
+    <thead><tr><th>Measure</th><th>Effect</th></tr></thead>
+    <tbody>
+      <tr><td>Reflective roof coating</td><td>★★ (mainly summer)</td></tr>
+      <tr><td>Cavity wall fill</td><td>★★★</td></tr>
+      <tr><td>Insulating lime or cork plaster</td><td>★★</td></tr>
+      <tr><td>Lowered ceiling with insulation</td><td>★★★</td></tr>
+      <tr><td>Internal wall lining</td><td>★★★</td></tr>
+      <tr><td>Insulating a flat roof or roof terrace (inverted roof)</td><td>★★★★</td></tr>
+      <tr><td>External wall insulation (SATE)</td><td>★★★★</td></tr>
+      <tr><td>New tiled roof with insulation</td><td>★★★★</td></tr>
+    </tbody>
+  </table>
+  <p class="note">If damp or cracks need fixing, that comes first. To sell or let you also need an energy certificate (<em>certificado energético</em>).</p>
+  <p>Don’t forget the windows: single glazing in an old frame loses more heat than a whole wall. See <a href="/en/costs/windows-and-frames/">windows and frames</a>. And with insulation a <a href="/en/costs/air-conditioning-and-heat-pumps/">heat pump or air conditioning</a> runs far more efficiently; read also <a href="/en/guides/heating-and-cooling-spain/">heating and cooling in Spain</a>.</p>
+
+  <p><strong>Want your house insulated?</strong> We find where your house loses most heat and make sure the work is done properly, from roof to wall lining. <a href="/en/request/?dienst=renovatie">Tell us what you would like to tackle</a>.</p>
+
+  <h2 id="damp">Insulating without damp problems</h2>
+  <p>An insulated house is more airtight. That is good for warmth, but moisture has to go somewhere. So pay attention to:</p>
+  <ul>
+    <li><strong>Ventilation</strong>: trickle vents in the windows or an extractor in the bathroom and kitchen.</li>
+    <li><strong>Fixing the causes of damp first</strong>: a leaking roof, a broken downpipe or rising damp.</li>
+    <li><strong>The right material</strong>: on old stone walls, use breathable systems.</li>
+    <li><strong>A house that stands empty for long periods</strong> benefits from a dehumidifier or regular airing. That can be arranged through <a href="/en/key-holding/">key holding</a>.</li>
+  </ul>
+
+  <h2 id="order">Where to start</h2>
+  <ol>
+    <li>The <strong>roof</strong>, especially over the top floor or a roof terrace.</li>
+    <li>The <strong>windows</strong> if they are still single glazed.</li>
+    <li>The <strong>outside walls</strong> of the rooms you use most in winter, for example with a wall lining.</li>
+    <li>Only then choose the <strong>heating</strong>: an insulated house needs a smaller system.</li>
+  </ol>
+  <p class="note">This guide gives general information for the Axarquía in November 2026. Rules may change.</p>
+</Guide>
