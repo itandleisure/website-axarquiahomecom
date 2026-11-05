@@ -479,4 +479,84 @@ export const problemsNl: Topic[] = [
     minutes: 6,
     published: '2026-11-05',
   },
+  {
+    key: 'stroom',
+    slug: 'stroom-valt-uit',
+    title: 'Stroom valt steeds uit in uw huis in Spanje: oorzaak en oplossing',
+    seoTitle: 'Stroom valt steeds uit in huis in Spanje: oorzaken, oplossingen en kosten',
+    short: 'Stroom valt uit',
+    description: 'Valt de stroom in uw huis in de Axarquía steeds uit? Zo herkent u een te laag vermogen, een aardlekschakelaar die afslaat of een storing op het net, wat u zelf doet en wat de oplossing kost.',
+    lead: 'De waterkoker aan, de airco aan, en het huis is donker. Of de stroom valt uit na een regenbui terwijl u in Nederland bent. Bijna altijd zit er een van vier oorzaken achter.',
+    keyword: 'stroom valt uit spanje',
+    dienst: 'energie',
+    onderwerp: 'De stroom valt steeds uit in mijn huis.',
+    answer: 'Valt de stroom uit als u veel apparaten tegelijk aanzet, dan is uw <strong>aansluitvermogen te laag</strong>. Slaat de <strong>aardlekschakelaar</strong> af, vaak na regen, dan lekt er ergens stroom naar de aarde, meestal via buitenverlichting, een boiler of een vochtige contactdoos. Is het hele dorp donker, dan is het een <strong>storing op het net</strong>.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Waarom valt de stroom uit?',
+        table: {
+          head: ['Wat u ziet', 'Waarschijnlijke oorzaak'],
+          rows: [
+            ['Stroom valt uit als airco, oven en waterkoker tegelijk aan staan', 'Te laag aansluitvermogen (potencia contratada) of een overbelaste groep'],
+            ['Aardlekschakelaar (diferencial) slaat af, vaak na regen of ’s nachts', 'Lekstroom: vocht in buitenlampen, contactdozen of een apparaat'],
+            ['Eén groep slaat steeds af als één apparaat aan gaat', 'Defect apparaat, bijvoorbeeld boiler, zwembadpomp of koelkast'],
+            ['Stroom valt uit bij onweer of storm', 'Overspanning of storing op het net'],
+            ['Het hele huis en de buren zijn donker', 'Storing bij de netbeheerder (in de Axarquía meestal e-distribución)'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'Wat u zelf kunt doen',
+        html: `<ul>
+<li>Kijk in de groepenkast welke schakelaar omlaag staat: de hoofdschakelaar (te veel vermogen), de aardlekschakelaar of één groep.</li>
+<li>Slaat de aardlekschakelaar af: zet alle groepen uit, de aardlekschakelaar aan, en zet de groepen één voor één weer aan. Bij de groep waarbij hij weer afslaat, zit het probleem.</li>
+<li>Trek bij die groep alle stekkers eruit en probeer opnieuw. Zo vindt u het apparaat dat lekt.</li>
+<li>Is het hele dorp donker, meld de storing bij de netbeheerder. Het nummer staat op uw stroomrekening.</li>
+<li>Werk nooit zelf aan de groepenkast of aan natte contactdozen.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'De oplossing en wat die kost',
+        table: {
+          head: ['Oplossing', 'Bij', 'Indicatie'],
+          rows: [
+            ['Storing zoeken door een elektricien', 'Aardlekschakelaar die blijft afslaan', '€ 80 – € 250'],
+            ['Waterdichte buitenlampen en contactdozen', 'Lekstroom na regen', '€ 60 – € 150 per punt'],
+            ['Aansluitvermogen verhogen, met boletín', 'Te laag vermogen', '€ 150 – € 500'],
+            ['Extra groep of nieuwe groepenkast', 'Overbelaste groep', '€ 150 – € 1.000'],
+            ['Overspanningsbeveiliging', 'Storing bij onweer', '€ 150 – € 400'],
+            ['Complete elektra vernieuwen', 'Oude installatie zonder aarding', 'zie <a href="/nl/kosten/elektra-vernieuwen/">kosten elektra</a>'],
+          ],
+          note: 'Indicaties exclusief btw.',
+        },
+      },
+      {
+        id: 'leeg',
+        h: 'Stroomuitval in een leegstaand huis',
+        html: '<p>Valt de stroom uit terwijl u er niet bent, dan ontdooit de vriezer, stopt de zwembadpomp en valt het alarm na een tijd uit. Twee dingen helpen: een slimme meter of stroomsensor die u een melding stuurt, en iemand die snel ter plaatse kan zijn. Met <a href="/nl/sleutelbeheer/">sleutelbeheer</a> komt er iemand langs die de groepenkast weer aanzet en kijkt wat de oorzaak was.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Wat betekent ICP in mijn groepenkast?', a: 'De ICP (Interruptor de Control de Potencia) was de schakelaar die het vermogen begrensde. Tegenwoordig doet de slimme meter van de netbeheerder dat. Bij te veel vermogen schakelt de meter uit en na een paar seconden vaak vanzelf weer in.' },
+      { q: 'Hoeveel vermogen heb ik nodig?', a: 'Voor een appartement zonder airco is 3,45 tot 4,6 kW meestal genoeg. Met airco en inductie 5,75 kW, en met een warmtepomp, zwembadpomp of laadpaal 7 tot 9,2 kW.' },
+      { q: 'Mag ik het vermogen verhogen zonder nieuw boletín?', a: 'Soms. Als de installatie al voor het nieuwe vermogen is goedgekeurd, gaat het met een telefoontje naar de leverancier. Is ze ouder dan twintig jaar of niet geschikt, dan vraagt de netbeheerder om een nieuw boletín.' },
+    ],
+    links: [
+      { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
+      { href: '/nl/sleutelbeheer/', label: 'Sleutelbeheer en toezicht' },
+      { href: '/nl/kosten/zonnepanelen/', label: 'Kosten zonnepanelen' },
+    ],
+    related: ['costs:elektra', 'problems:vocht', 'problems:inbraak'],
+    sources: [
+      { name: 'e-distribución, storing melden', url: 'https://www.edistribucion.com/es/averias.html' },
+      { name: 'CNMC, het boletín eléctrico: wat het is en waarvoor', url: 'https://cnmc.es/sites/default/files/editor_contenidos/Energia/Consumidores/3.2%20Bolet%C3%ADn%20el%C3%A9ctrico%2C%20qu%C3%A9%20es%20y%20para%20qu%C3%A9%20sirve.pdf' },
+    ],
+    ctaTitle: 'Stroom valt steeds uit?',
+    ctaText: 'Stuur een foto van uw groepenkast en vertel wanneer het gebeurt. Een elektricien zoekt de oorzaak.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
 ];

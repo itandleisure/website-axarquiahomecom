@@ -479,4 +479,84 @@ export const problemsEn: Topic[] = [
     minutes: 6,
     published: '2026-11-05',
   },
+  {
+    key: 'stroom',
+    slug: 'power-keeps-tripping',
+    title: 'Power keeps tripping in your house in Spain: cause and fix',
+    seoTitle: 'Power keeps tripping in a house in Spain: causes, fixes and costs',
+    short: 'Power keeps tripping',
+    description: 'Does the power in your house in the Axarquía keep going off? How to tell a supply that is too low from a tripping RCD or a grid fault, what to do yourself and what the fix costs.',
+    lead: 'The kettle on, the air con on, and the house goes dark. Or the power goes off after a rain shower while you are back home. There is almost always one of four causes.',
+    keyword: 'power keeps tripping spain',
+    dienst: 'energie',
+    onderwerp: 'The power keeps tripping in my house.',
+    answer: 'If the power goes off when you switch on several appliances at once, your <strong>contracted power is too low</strong>. If the <strong>RCD (diferencial)</strong> trips, often after rain, current is leaking to earth somewhere, usually through outdoor lights, a water heater or a damp socket. If the whole village is dark, it is a <strong>grid fault</strong>.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Why does the power go off?',
+        table: {
+          head: ['What you see', 'Likely cause'],
+          rows: [
+            ['Power goes off when air con, oven and kettle are on together', 'Contracted power (potencia contratada) too low, or an overloaded circuit'],
+            ['RCD (diferencial) trips, often after rain or at night', 'Earth leakage: damp in outdoor lights, sockets or an appliance'],
+            ['One circuit trips every time one appliance is switched on', 'Faulty appliance, for example water heater, pool pump or fridge'],
+            ['Power goes off in thunderstorms', 'Surge or grid fault'],
+            ['The whole house and the neighbours are dark', 'Fault at the network operator (in the Axarquía usually e-distribución)'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'What you can do yourself',
+        html: `<ul>
+<li>Check the consumer unit to see which switch is down: the main switch (too much power), the RCD or a single circuit.</li>
+<li>If the RCD trips: switch off all circuits, switch the RCD on, then switch the circuits back on one by one. The circuit that trips it again is where the problem is.</li>
+<li>Unplug everything on that circuit and try again. That way you find the leaking appliance.</li>
+<li>If the whole village is dark, report the fault to the network operator. The number is on your electricity bill.</li>
+<li>Never work on the consumer unit or on wet sockets yourself.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'The fix and what it costs',
+        table: {
+          head: ['Fix', 'For', 'Guide price'],
+          rows: [
+            ['Fault finding by an electrician', 'RCD that keeps tripping', '€80 – €250'],
+            ['Waterproof outdoor lights and sockets', 'Leakage after rain', '€60 – €150 per point'],
+            ['Higher contracted power, with boletín', 'Supply too low', '€150 – €500'],
+            ['Extra circuit or new consumer unit', 'Overloaded circuit', '€150 – €1,000'],
+            ['Surge protection', 'Faults in thunderstorms', '€150 – €400'],
+            ['Full rewire', 'Old installation without earthing', 'see <a href="/en/costs/electrical-rewiring/">rewiring costs</a>'],
+          ],
+          note: 'Guide prices excluding VAT.',
+        },
+      },
+      {
+        id: 'leeg',
+        h: 'Power cuts in an empty house',
+        html: '<p>If the power goes off while you are away, the freezer defrosts, the pool pump stops and the alarm eventually dies. Two things help: a smart meter or power sensor that sends you an alert, and someone who can be there quickly. With <a href="/en/key-holding/">key holding</a> someone comes round, switches the consumer unit back on and checks what caused it.</p>',
+      },
+    ],
+    faq: [
+      { q: 'What does ICP mean in my consumer unit?', a: 'The ICP (Interruptor de Control de Potencia) was the switch that limited your power. Today the network operator’s smart meter does that. If you use too much, the meter switches off and often back on by itself after a few seconds.' },
+      { q: 'How much power do I need?', a: 'For an apartment without air con, 3.45 to 4.6 kW is usually enough. With air con and induction 5.75 kW, and with a heat pump, pool pump or EV charger 7 to 9.2 kW.' },
+      { q: 'Can I raise the power without a new boletín?', a: 'Sometimes. If the installation is already approved for the higher power, a call to your supplier is enough. If it is more than twenty years old or not suitable, the network operator asks for a new boletín.' },
+    ],
+    links: [
+      { href: '/en/maintenance/', label: 'Maintenance and repairs' },
+      { href: '/en/key-holding/', label: 'Key holding and property checks' },
+      { href: '/en/costs/solar-panels/', label: 'Cost of solar panels' },
+    ],
+    related: ['costs:elektra', 'problems:vocht', 'problems:inbraak'],
+    sources: [
+      { name: 'e-distribución, report a fault', url: 'https://www.edistribucion.com/es/averias.html' },
+      { name: 'CNMC, the boletín eléctrico: what it is and what it is for', url: 'https://cnmc.es/sites/default/files/editor_contenidos/Energia/Consumidores/3.2%20Bolet%C3%ADn%20el%C3%A9ctrico%2C%20qu%C3%A9%20es%20y%20para%20qu%C3%A9%20sirve.pdf' },
+    ],
+    ctaTitle: 'Power keeps tripping?',
+    ctaText: 'Send a photo of your consumer unit and tell us when it happens. An electrician will find the cause.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
 ];

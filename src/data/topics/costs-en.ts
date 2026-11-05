@@ -442,4 +442,175 @@ export const costsEn: Topic[] = [
     minutes: 4,
     published: '2026-11-05',
   },
+  {
+    key: 'zonnepanelen',
+    slug: 'solar-panels',
+    title: 'How much do solar panels cost in Spain?',
+    seoTitle: 'Solar panels in Spain: costs, home batteries and rules in the Axarquía (2026)',
+    short: 'Solar panels',
+    description: 'What do solar panels on your home in the Axarquía cost? Prices for 3 to 8 kWp, a home battery, a solar water heater and an off-grid finca, plus permits, grants and payback time.',
+    lead: 'The Axarquía gets more than 300 sunny days a year. Solar panels here produce around one and a half times as much as in the UK or Germany. This is what it costs, including when you only spend part of the year in Spain.',
+    keyword: 'solar panels spain cost',
+    dienst: 'energie',
+    onderwerp: 'I would like a price for solar panels on my house.',
+    answer: 'A 4 to 5 kWp system (10 to 12 panels) for a family home usually costs <strong>€4,500 to €7,000</strong> in the Axarquía, excluding VAT, including inverter, mounting and registration. A 5 kWh home battery adds <strong>€3,000 to €5,000</strong>. A finca with no grid connection needs a larger system with batteries: <strong>€10,000 to €18,000</strong>.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Prices by system',
+        html: '<p>Guide prices for 2026, including panels, inverter, mounting, cabling, installation and registration, excluding VAT.</p>',
+        table: {
+          head: ['System', 'Suits', 'Guide price'],
+          rows: [
+            ['3 kWp, 7 – 8 panels', 'Apartment with its own roof or a small house, mostly daytime use', '€3,500 – €5,000'],
+            ['4 – 5 kWp, 10 – 12 panels', 'Family home with air con and an induction hob', '€4,500 – €7,000'],
+            ['6 – 8 kWp, 14 – 20 panels', 'Villa with a pool pump, heat pump or EV charger', '€6,500 – €10,000'],
+            ['Home battery 5 kWh', 'Use daytime power in the evening', '+ €3,000 – €5,000'],
+            ['Home battery 10 kWh', 'High use or a lot of evening use', '+ €5,500 – €9,000'],
+            ['Solar water heater (termosifón), 150 – 300 litres', 'Hot water only', '€1,500 – €3,500'],
+            ['Off-grid finca (aislada), 3 – 5 kWp with 10 – 15 kWh battery', 'Rural house without a grid connection', '€10,000 – €18,000'],
+          ],
+          note: 'Ground-mounted panels or a solar carport add €500 – €2,000 for the frame and foundations.',
+        },
+      },
+      {
+        id: 'factoren',
+        h: 'What affects the price?',
+        html: `<ul>
+<li><strong>The roof.</strong> A flat roof terrace is easy. An old tiled roof sometimes needs checking or repairing first, or it will leak after drilling. Do both at once: see <a href="/en/costs/roof-and-roof-terrace/">the cost of a roof or roof terrace</a>.</li>
+<li><strong>The wiring.</strong> An old installation without earthing or with a small consumer unit has to be sorted first. See <a href="/en/costs/electrical-rewiring/">what rewiring costs</a>.</li>
+<li><strong>Access.</strong> Carrying panels up a narrow street in Frigiliana or Cómpeta takes longer than at a villa with a driveway.</li>
+<li><strong>Battery or not.</strong> A battery nearly doubles the price. It pays off mainly if you live there all year or use a lot of power in the evening.</li>
+<li><strong>Protected village centres.</strong> In some historic centres the town hall sets rules for visible panels.</li>
+</ul>`,
+      },
+      {
+        id: 'afwezig',
+        h: 'Are solar panels worth it if you are only in Spain part of the year?',
+        html: '<p>Yes, but it works differently from the UK. Power you do not use goes to the grid. In Spain you get a credit for it on your electricity bill through <em>compensación simplificada</em>, but it is lower than what you pay for power and the bill can never go below zero. A few tips:</p><ul><li>Choose a smaller system that matches what the house uses while you are away: fridge, pool pump, alarm, dehumidifier.</li><li>Ask your supplier about a virtual battery (<em>batería virtual</em>): it saves the credit for the months you are there.</li><li>If you rent the house out, guests use the power in summer and the system pays for itself faster.</li></ul>',
+      },
+      {
+        id: 'terugverdienen',
+        h: 'Worked example and payback',
+        html: '<p>A villa in Torrox used all year, with air con, an induction hob and a pool pump. Consumption about 7,000 kWh a year.</p>',
+        table: {
+          head: ['Item', 'Guide figure'],
+          rows: [
+            ['5 kWp, 12 panels, hybrid inverter', '€6,000'],
+            ['Yield per year in the Axarquía', 'approx. 8,000 kWh'],
+            ['Self-consumed (approx. 50%) at €0.18 per kWh', 'approx. €720 a year'],
+            ['Credit for exported power at €0.06 per kWh', 'approx. €240 a year'],
+            ['<strong>Saving per year</strong>', '<strong>approx. €960</strong>'],
+            ['<strong>Payback</strong>', '<strong>6 to 7 years</strong>'],
+          ],
+          note: 'Panels last 25 to 30 years. The inverter usually needs replacing after 10 to 15 years (€800 – €1,500).',
+        },
+      },
+      {
+        id: 'regels',
+        h: 'Permits, registration and grants',
+        html: `<ul>
+<li><strong>Permit.</strong> Panels on the roof of an existing, legal home in Andalusia usually only need a simple notification (<em>declaración responsable</em>) to the town hall. Ground-mounted panels, a rural finca or a house with AFO status can need more. See the <em>Building permit</em> page of your municipality under <a href="/en/places/">Places</a>.</li>
+<li><strong>Registration.</strong> The installer registers the system with the Junta de Andalucía and provides the electrical certificate (<em>boletín</em>). You then ask your supplier for the export credit.</li>
+<li><strong>Tax discounts.</strong> Many town halls give a few years’ discount on property tax (<em>bonificación del IBI</em>) and on building tax (ICIO) for solar panels. The amount varies by municipality.</li>
+<li><strong>Grants.</strong> Spanish and EU grants for self-consumption change often and sometimes run out quickly. Ask what is available when you get your quote.</li>
+</ul>`,
+      },
+    ],
+    faq: [
+      { q: 'How many panels do I need?', a: 'As a rule of thumb, about 0.7 kWp, so two panels, per 1,000 kWh of annual use. A house using 5,000 kWh needs 3.5 to 4 kWp, about 9 to 10 panels.' },
+      { q: 'Does it work during a power cut?', a: 'A standard system switches off during a power cut, for the safety of engineers on the grid. If you want power during an outage, you need a hybrid inverter with a battery and a backup function.' },
+      { q: 'Who cleans the panels?', a: 'Dust and Saharan sand (calima) reduce output. Rinsing them two or three times a year is enough. That can be part of maintenance or key holding.' },
+      { q: 'Can I combine solar panels with a heat pump or air con?', a: 'Yes, that is the best combination. Air con and heat pumps run mostly during summer days, exactly when the panels produce most.' },
+    ],
+    links: [
+      { href: '/en/renovation/', label: 'Renovation and building work' },
+      { href: '/en/costs/air-conditioning-and-heat-pumps/', label: 'Cost of air con and heat pumps' },
+      { href: '/en/guides/buying-a-finca-in-spain/', label: 'Guide: buying a finca in Spain' },
+    ],
+    related: ['costs:elektra', 'costs:airco', 'costs:dak'],
+    sources: [
+      { name: 'Selectra, solar panel prices for a family home (2026)', url: 'https://selectra.es/autoconsumo/instalacion/vivienda-unifamiliar' },
+      { name: 'Autosolar, installing solar panels in Málaga', url: 'https://autosolar.es/mi-experiencia-placas-solares/instalacion-placas-solares-malaga' },
+      { name: 'Real Decreto 244/2019, self-consumption and export compensation', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2019-5089' },
+      { name: 'IDAE, grants for energy saving and renewables', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'A price for solar panels?',
+    ctaText: 'Send a photo of your roof and your latest electricity bill. You get a tailored proposal and a price.',
+    minutes: 6,
+    published: '2026-11-05',
+  },
+  {
+    key: 'elektra',
+    slug: 'electrical-rewiring',
+    title: 'How much does rewiring a house cost in Spain?',
+    seoTitle: 'Rewiring a house in Spain: costs, boletín and more power (2026)',
+    short: 'Electrics',
+    description: 'What does it cost to renew the electrics of your home in the Axarquía? Prices for a new consumer unit, earthing, the electrical certificate (boletín) and a higher power supply.',
+    lead: 'In many older houses in the Axarquía the electrics have never been renewed: no earthing, a small consumer unit and a supply that trips as soon as the air con and the kettle are on together. This is what it costs to put right.',
+    keyword: 'rewiring house spain cost',
+    dienst: 'energie',
+    onderwerp: 'I would like a price for renewing or extending the electrics.',
+    answer: 'Rewiring an apartment or small house (70 – 100 m²) usually costs <strong>€3,500 to €6,500</strong> in the Axarquía, excluding VAT. A village house or villa of 120 – 200 m²: <strong>€6,500 to €12,000</strong>. A new consumer unit alone costs €400 – €1,000 and the electrical certificate (<em>boletín</em>) €100 – €300.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Prices by job',
+        table: {
+          head: ['Job', 'What it includes', 'Guide price'],
+          rows: [
+            ['Electrical certificate (boletín, CIE)', 'Inspection and certificate by a registered electrician', '€100 – €300'],
+            ['New consumer unit (cuadro)', 'Main switch, RCDs, circuits', '€400 – €1,000'],
+            ['Earthing (toma de tierra)', 'Earth rod and earth cable to the consumer unit', '€300 – €800'],
+            ['Extra circuit, for example for air con or induction', 'New cable from the consumer unit', '€150 – €400 per circuit'],
+            ['Full rewire, apartment 70 – 100 m²', 'All cables, switches and sockets new, boletín included', '€3,500 – €6,500'],
+            ['Full rewire, house 120 – 200 m²', 'The same, with more circuits and outdoor lighting', '€6,500 – €12,000'],
+            ['EV charger', '7 kW wallbox on its own circuit', '€900 – €1,800'],
+          ],
+          note: 'In a full renovation the rewiring goes along with the demolition and plastering. That is cheaper than chasing walls afterwards.',
+        },
+      },
+      {
+        id: 'vermogen',
+        h: 'More power (potencia contratada)',
+        html: '<p>In Spain you choose how many kilowatts you can use at the same time. Many older houses have 3.45 or 4.6 kW. With air con, induction, a heat pump or a pool pump you often need 5.75 to 9.2 kW. You raise it through your electricity supplier. If the installation is more than twenty years old or a lot changes, the network operator (in the Axarquía usually e-distribución) asks for a new boletín. The operator charges a one-off connection fee of a few tens to a few hundred euros. Note that more power also means a higher fixed charge on your bill.</p>',
+      },
+      {
+        id: 'wanneer',
+        h: 'When do the electrics need renewing?',
+        html: `<ul>
+<li>There is no earthing, or the sockets have no earth pin.</li>
+<li>The consumer unit still has fuses, or no RCD.</li>
+<li>The power keeps tripping. See <a href="/en/problems/power-keeps-tripping/">what to do when the power keeps tripping</a>.</li>
+<li>You see scorched sockets, loose wires or cables with fabric insulation.</li>
+<li>You are buying the house, renting it out or putting the supply in your name: then you need a valid boletín.</li>
+</ul>`,
+      },
+      {
+        id: 'koop',
+        h: 'When buying a house',
+        html: '<p>The electrics are one of the things we always check in a <a href="/en/property-survey/">pre-purchase survey</a>. A full rewire can easily cost €5,000 to €10,000. That is a good argument when negotiating the price.</p>',
+      },
+    ],
+    faq: [
+      { q: 'What is a boletín eléctrico?', a: 'The Certificado de Instalación Eléctrica (CIE) proves that the electrics meet Spanish regulations. Only a registered electrician can issue it. You need it for a new connection, more power, or to put the contract in your name if the supply has been unused for a long time.' },
+      { q: 'How long does rewiring take?', a: 'An apartment usually takes one to two weeks, a larger house two to four weeks. Plastering and painting come after, if they are not part of a wider renovation.' },
+      { q: 'Can it be done while I am not in Spain?', a: 'Yes. You agree the position of sockets and lights on a floor plan beforehand, and you receive photos during the work.' },
+    ],
+    links: [
+      { href: '/en/renovation/', label: 'Renovation and building work' },
+      { href: '/en/property-survey/', label: 'Pre-purchase survey' },
+      { href: '/en/guides/renovation-costs-spain/', label: 'Guide: how much does it cost to renovate a house in Spain?' },
+    ],
+    related: ['problems:stroom', 'costs:zonnepanelen', 'costs:airco'],
+    sources: [
+      { name: 'Habitissimo, price guide for rewiring (reformar instalación eléctrica)', url: 'https://www.habitissimo.es/presupuestos/reformar-instalacion-electrica-vivienda-o-local' },
+      { name: 'CNMC, the boletín eléctrico: what it is and what it is for', url: 'https://cnmc.es/sites/default/files/editor_contenidos/Energia/Consumidores/3.2%20Bolet%C3%ADn%20el%C3%A9ctrico%2C%20qu%C3%A9%20es%20y%20para%20qu%C3%A9%20sirve.pdf' },
+      { name: 'Reglamento Electrotécnico para Baja Tensión (REBT)', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2002-18099' },
+    ],
+    ctaTitle: 'Electrics in order?',
+    ctaText: 'Send a photo of your consumer unit and tell us what you want to connect. You get advice and a price.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
 ];

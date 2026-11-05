@@ -479,4 +479,84 @@ export const problemsDe: Topic[] = [
     minutes: 6,
     published: '2026-11-05',
   },
+  {
+    key: 'stroom',
+    slug: 'strom-faellt-aus',
+    title: 'Strom fällt ständig aus in Ihrem Haus in Spanien: Ursache und Lösung',
+    seoTitle: 'Strom fällt ständig aus im Haus in Spanien: Ursachen, Lösungen und Kosten',
+    short: 'Strom fällt aus',
+    description: 'Fällt in Ihrem Haus in der Axarquía immer wieder der Strom aus? So erkennen Sie eine zu niedrige Anschlussleistung, einen auslösenden FI-Schalter oder eine Netzstörung, was Sie selbst tun und was die Lösung kostet.',
+    lead: 'Wasserkocher an, Klimaanlage an, und das Haus ist dunkel. Oder der Strom fällt nach einem Regenschauer aus, während Sie in Deutschland sind. Fast immer steckt eine von vier Ursachen dahinter.',
+    keyword: 'strom fällt aus spanien',
+    dienst: 'energie',
+    onderwerp: 'In meinem Haus fällt ständig der Strom aus.',
+    answer: 'Fällt der Strom aus, wenn Sie mehrere Geräte gleichzeitig einschalten, ist Ihre <strong>Anschlussleistung zu niedrig</strong>. Löst der <strong>FI-Schalter (diferencial)</strong> aus, oft nach Regen, fließt irgendwo Strom zur Erde ab, meist über Außenleuchten, einen Boiler oder eine feuchte Steckdose. Ist das ganze Dorf dunkel, ist es eine <strong>Störung im Netz</strong>.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Warum fällt der Strom aus?',
+        table: {
+          head: ['Was Sie sehen', 'Wahrscheinliche Ursache'],
+          rows: [
+            ['Strom fällt aus, wenn Klimaanlage, Backofen und Wasserkocher gleichzeitig laufen', 'Zu niedrige Anschlussleistung (potencia contratada) oder überlasteter Stromkreis'],
+            ['FI-Schalter (diferencial) löst aus, oft nach Regen oder nachts', 'Fehlerstrom: Feuchtigkeit in Außenleuchten, Steckdosen oder einem Gerät'],
+            ['Ein Stromkreis fällt jedes Mal aus, wenn ein bestimmtes Gerät angeht', 'Defektes Gerät, etwa Boiler, Poolpumpe oder Kühlschrank'],
+            ['Strom fällt bei Gewitter aus', 'Überspannung oder Netzstörung'],
+            ['Das ganze Haus und die Nachbarn sind dunkel', 'Störung beim Netzbetreiber (in der Axarquía meist e-distribución)'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'Was Sie selbst tun können',
+        html: `<ul>
+<li>Sehen Sie im Sicherungskasten nach, welcher Schalter unten ist: der Hauptschalter (zu viel Leistung), der FI-Schalter oder ein einzelner Stromkreis.</li>
+<li>Löst der FI-Schalter aus: alle Stromkreise aus, FI-Schalter ein, dann die Stromkreise einzeln wieder einschalten. Bei dem Stromkreis, bei dem er erneut auslöst, liegt das Problem.</li>
+<li>Ziehen Sie in diesem Stromkreis alle Stecker und versuchen Sie es noch einmal. So finden Sie das Gerät mit dem Fehler.</li>
+<li>Ist das ganze Dorf dunkel, melden Sie die Störung beim Netzbetreiber. Die Nummer steht auf Ihrer Stromrechnung.</li>
+<li>Arbeiten Sie nie selbst am Sicherungskasten oder an nassen Steckdosen.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'Die Lösung und was sie kostet',
+        table: {
+          head: ['Lösung', 'Bei', 'Richtwert'],
+          rows: [
+            ['Fehlersuche durch einen Elektriker', 'FI-Schalter löst immer wieder aus', '80 – 250 €'],
+            ['Wasserdichte Außenleuchten und Steckdosen', 'Fehlerstrom nach Regen', '60 – 150 € je Punkt'],
+            ['Anschlussleistung erhöhen, mit boletín', 'Zu niedrige Leistung', '150 – 500 €'],
+            ['Zusätzlicher Stromkreis oder neuer Sicherungskasten', 'Überlasteter Stromkreis', '150 – 1.000 €'],
+            ['Überspannungsschutz', 'Ausfall bei Gewitter', '150 – 400 €'],
+            ['Komplette Elektrik erneuern', 'Alte Installation ohne Erdung', 'siehe <a href="/de/kosten/elektrik-erneuern/">Kosten Elektrik</a>'],
+          ],
+          note: 'Richtwerte ohne Mehrwertsteuer.',
+        },
+      },
+      {
+        id: 'leeg',
+        h: 'Stromausfall in einem leerstehenden Haus',
+        html: '<p>Fällt der Strom aus, während Sie nicht da sind, taut der Gefrierschrank ab, die Poolpumpe steht still und die Alarmanlage fällt irgendwann aus. Zwei Dinge helfen: ein smarter Zähler oder Stromsensor, der Ihnen eine Meldung schickt, und jemand, der schnell vor Ort ist. Mit der <a href="/de/hausbetreuung/">Hausbetreuung</a> kommt jemand vorbei, schaltet den Sicherungskasten wieder ein und prüft die Ursache.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Was bedeutet ICP in meinem Sicherungskasten?', a: 'Der ICP (Interruptor de Control de Potencia) war der Schalter, der die Leistung begrenzte. Heute macht das der smarte Zähler des Netzbetreibers. Bei zu viel Leistung schaltet er ab und nach einigen Sekunden oft von selbst wieder ein.' },
+      { q: 'Wie viel Leistung brauche ich?', a: 'Für eine Wohnung ohne Klimaanlage reichen meist 3,45 bis 4,6 kW. Mit Klimaanlage und Induktion 5,75 kW, mit Wärmepumpe, Poolpumpe oder Wallbox 7 bis 9,2 kW.' },
+      { q: 'Kann ich die Leistung ohne neues boletín erhöhen?', a: 'Manchmal. Ist die Installation bereits für die höhere Leistung zugelassen, genügt ein Anruf beim Anbieter. Ist sie älter als zwanzig Jahre oder nicht geeignet, verlangt der Netzbetreiber ein neues boletín.' },
+    ],
+    links: [
+      { href: '/de/instandhaltung/', label: 'Instandhaltung und Reparaturen' },
+      { href: '/de/hausbetreuung/', label: 'Hausbetreuung und Schlüsselservice' },
+      { href: '/de/kosten/solaranlage/', label: 'Kosten Solaranlage' },
+    ],
+    related: ['costs:elektra', 'problems:vocht', 'problems:inbraak'],
+    sources: [
+      { name: 'e-distribución, Störung melden', url: 'https://www.edistribucion.com/es/averias.html' },
+      { name: 'CNMC, das boletín eléctrico: was es ist und wofür', url: 'https://cnmc.es/sites/default/files/editor_contenidos/Energia/Consumidores/3.2%20Bolet%C3%ADn%20el%C3%A9ctrico%2C%20qu%C3%A9%20es%20y%20para%20qu%C3%A9%20sirve.pdf' },
+    ],
+    ctaTitle: 'Strom fällt ständig aus?',
+    ctaText: 'Schicken Sie ein Foto Ihres Sicherungskastens und sagen Sie uns, wann es passiert. Ein Elektriker findet die Ursache.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
 ];

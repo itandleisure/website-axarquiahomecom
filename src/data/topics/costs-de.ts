@@ -442,4 +442,175 @@ export const costsDe: Topic[] = [
     minutes: 4,
     published: '2026-11-05',
   },
+  {
+    key: 'zonnepanelen',
+    slug: 'solaranlage',
+    title: 'Was kostet eine Solaranlage in Spanien?',
+    seoTitle: 'Solaranlage in Spanien: Kosten, Batteriespeicher und Regeln in der Axarquía (2026)',
+    short: 'Solaranlage',
+    description: 'Was kostet eine Photovoltaikanlage auf Ihrem Haus in der Axarquía? Preise für 3 bis 8 kWp, einen Batteriespeicher, eine Solarthermie-Anlage und eine Finca ohne Stromnetz, dazu Genehmigung, Förderung und Amortisation.',
+    lead: 'Die Axarquía hat mehr als 300 Sonnentage im Jahr. Eine Solaranlage bringt hier rund anderthalbmal so viel wie in Deutschland. So sieht die Rechnung aus, auch wenn Sie nur einen Teil des Jahres in Spanien sind.',
+    keyword: 'solaranlage spanien kosten',
+    dienst: 'energie',
+    onderwerp: 'Ich hätte gern ein Angebot für eine Solaranlage auf meinem Haus.',
+    answer: 'Eine Anlage mit 4 bis 5 kWp (10 bis 12 Module) für ein Wohnhaus kostet in der Axarquía meist <strong>4.500 bis 7.000 €</strong> ohne Mehrwertsteuer, inklusive Wechselrichter, Montage und Anmeldung. Ein Batteriespeicher mit 5 kWh kommt mit <strong>3.000 bis 5.000 €</strong> dazu. Eine Finca ohne Netzanschluss braucht eine größere Inselanlage mit Speicher: <strong>10.000 bis 18.000 €</strong>.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Preise je Anlage',
+        html: '<p>Richtwerte für 2026, inklusive Module, Wechselrichter, Montagesystem, Verkabelung, Installation und Anmeldung, ohne Mehrwertsteuer.</p>',
+        table: {
+          head: ['Anlage', 'Geeignet für', 'Richtwert'],
+          rows: [
+            ['3 kWp, 7 – 8 Module', 'Wohnung mit eigenem Dach oder kleines Haus, vor allem Verbrauch tagsüber', '3.500 – 5.000 €'],
+            ['4 – 5 kWp, 10 – 12 Module', 'Wohnhaus mit Klimaanlage und Induktionsherd', '4.500 – 7.000 €'],
+            ['6 – 8 kWp, 14 – 20 Module', 'Villa mit Poolpumpe, Wärmepumpe oder Wallbox', '6.500 – 10.000 €'],
+            ['Batteriespeicher 5 kWh', 'Solarstrom vom Tag am Abend nutzen', '+ 3.000 – 5.000 €'],
+            ['Batteriespeicher 10 kWh', 'Hoher Verbrauch oder viel Verbrauch am Abend', '+ 5.500 – 9.000 €'],
+            ['Solarthermie (termosifón), 150 – 300 Liter', 'Nur Warmwasser', '1.500 – 3.500 €'],
+            ['Finca ohne Stromnetz (aislada), 3 – 5 kWp mit 10 – 15 kWh Speicher', 'Landhaus ohne Netzanschluss', '10.000 – 18.000 €'],
+          ],
+          note: 'Module auf dem Boden oder auf einem Carport kosten 500 – 2.000 € mehr für Gestell und Fundament.',
+        },
+      },
+      {
+        id: 'factoren',
+        h: 'Was bestimmt den Preis?',
+        html: `<ul>
+<li><strong>Das Dach.</strong> Eine flache Dachterrasse ist einfach. Ein altes Ziegeldach muss manchmal zuerst geprüft oder repariert werden, sonst ist es nach dem Bohren undicht. Machen Sie beides in einem Zug: siehe <a href="/de/kosten/dach-und-dachterrasse/">Kosten für Dach und Dachterrasse</a>.</li>
+<li><strong>Die Elektrik.</strong> Eine alte Installation ohne Erdung oder mit zu kleinem Sicherungskasten muss zuerst in Ordnung gebracht werden. Lesen Sie, <a href="/de/kosten/elektrik-erneuern/">was eine neue Elektrik kostet</a>.</li>
+<li><strong>Zugang.</strong> Module durch eine enge Gasse in Frigiliana oder Cómpeta zu tragen, dauert länger als bei einer Villa mit Zufahrt.</li>
+<li><strong>Mit oder ohne Speicher.</strong> Ein Speicher verdoppelt fast den Preis. Er lohnt sich vor allem, wenn Sie das ganze Jahr dort wohnen oder abends viel verbrauchen.</li>
+<li><strong>Geschützte Ortskerne.</strong> In manchen historischen Ortskernen stellt die Gemeinde Auflagen für sichtbare Module.</li>
+</ul>`,
+      },
+      {
+        id: 'afwezig',
+        h: 'Lohnt sich eine Solaranlage, wenn Sie nur einen Teil des Jahres in Spanien sind?',
+        html: '<p>Ja, aber anders als in Deutschland. Strom, den Sie nicht selbst verbrauchen, geht ins Netz. In Spanien bekommen Sie dafür über die <em>compensación simplificada</em> eine Gutschrift auf der Stromrechnung. Sie ist niedriger als der Strompreis, und die Rechnung kann nie unter null fallen. Eine feste Einspeisevergütung wie früher in Deutschland gibt es nicht. Ein paar Tipps:</p><ul><li>Wählen Sie eine kleinere Anlage, die zum Verbrauch passt, wenn Sie nicht da sind: Kühlschrank, Poolpumpe, Alarmanlage, Luftentfeuchter.</li><li>Fragen Sie Ihren Stromanbieter nach einer virtuellen Batterie (<em>batería virtual</em>): Damit sparen Sie das Guthaben für die Monate, in denen Sie da sind.</li><li>Vermieten Sie das Haus, nutzen die Gäste den Strom im Sommer und die Anlage amortisiert sich schneller.</li></ul>',
+      },
+      {
+        id: 'terugverdienen',
+        h: 'Rechenbeispiel und Amortisation',
+        html: '<p>Eine Villa in Torrox, die das ganze Jahr bewohnt wird, mit Klimaanlage, Induktion und Poolpumpe. Verbrauch rund 7.000 kWh im Jahr.</p>',
+        table: {
+          head: ['Posten', 'Richtwert'],
+          rows: [
+            ['5 kWp, 12 Module, Hybrid-Wechselrichter', '6.000 €'],
+            ['Ertrag pro Jahr in der Axarquía', 'ca. 8.000 kWh'],
+            ['Eigenverbrauch (ca. 50 %) zu 0,18 € pro kWh', 'ca. 720 € im Jahr'],
+            ['Gutschrift für Einspeisung zu 0,06 € pro kWh', 'ca. 240 € im Jahr'],
+            ['<strong>Ersparnis pro Jahr</strong>', '<strong>ca. 960 €</strong>'],
+            ['<strong>Amortisation</strong>', '<strong>6 bis 7 Jahre</strong>'],
+          ],
+          note: 'Module halten 25 bis 30 Jahre. Der Wechselrichter muss meist nach 10 bis 15 Jahren ersetzt werden (800 – 1.500 €).',
+        },
+      },
+      {
+        id: 'regels',
+        h: 'Genehmigung, Anmeldung und Förderung',
+        html: `<ul>
+<li><strong>Genehmigung.</strong> Module auf dem Dach eines bestehenden, legalen Hauses brauchen in Andalusien meist nur eine einfache Meldung (<em>declaración responsable</em>) bei der Gemeinde. Für Anlagen auf dem Boden, eine Finca im Außenbereich oder ein Haus mit AFO-Status kann die Gemeinde mehr verlangen. Siehe die Seite <em>Baugenehmigung</em> Ihrer Gemeinde unter <a href="/de/orte/">Orte</a>.</li>
+<li><strong>Anmeldung.</strong> Der Installateur meldet die Anlage bei der Junta de Andalucía an und stellt das Elektro-Zertifikat (<em>boletín</em>) aus. Danach beantragen Sie bei Ihrem Anbieter die Gutschrift für die Einspeisung.</li>
+<li><strong>Steuerermäßigung.</strong> Viele Gemeinden gewähren für einige Jahre einen Nachlass auf die Grundsteuer (<em>bonificación del IBI</em>) und auf die Bausteuer (ICIO). Die Höhe ist je Gemeinde verschieden.</li>
+<li><strong>Förderung.</strong> Spanische und europäische Förderprogramme für Eigenverbrauch ändern sich oft und sind manchmal schnell ausgeschöpft. Fragen Sie beim Angebot, was gerade läuft.</li>
+</ul>`,
+      },
+    ],
+    faq: [
+      { q: 'Wie viele Module brauche ich?', a: 'Als Faustregel: pro 1.000 kWh Jahresverbrauch etwa 0,7 kWp, also zwei Module. Ein Haus mit 5.000 kWh Verbrauch kommt mit 3,5 bis 4 kWp aus, etwa 9 bis 10 Module.' },
+      { q: 'Funktioniert die Anlage bei einem Stromausfall?', a: 'Eine normale Anlage schaltet bei einem Stromausfall ab, zum Schutz der Techniker am Netz. Wenn Sie dann Strom haben wollen, brauchen Sie einen Hybrid-Wechselrichter mit Speicher und Notstromfunktion.' },
+      { q: 'Wer reinigt die Module?', a: 'Staub und Saharasand (calima) kosten Ertrag. Zwei- bis dreimal im Jahr abspritzen reicht. Das kann Teil der Instandhaltung oder der Hausbetreuung sein.' },
+      { q: 'Kann ich eine Solaranlage mit Wärmepumpe oder Klimaanlage kombinieren?', a: 'Ja, das ist die beste Kombination. Klimaanlage und Wärmepumpe laufen vor allem an Sommertagen, genau dann, wenn die Module am meisten liefern.' },
+    ],
+    links: [
+      { href: '/de/renovierung/', label: 'Renovierung und Umbau' },
+      { href: '/de/kosten/klimaanlage-und-waermepumpe/', label: 'Kosten Klimaanlage und Wärmepumpe' },
+      { href: '/de/ratgeber/finca-kaufen-spanien/', label: 'Ratgeber: Finca kaufen in Spanien' },
+    ],
+    related: ['costs:elektra', 'costs:airco', 'costs:dak'],
+    sources: [
+      { name: 'Selectra, Preise für Solaranlagen auf Einfamilienhäusern (2026)', url: 'https://selectra.es/autoconsumo/instalacion/vivienda-unifamiliar' },
+      { name: 'Autosolar, Solaranlagen in Málaga installieren', url: 'https://autosolar.es/mi-experiencia-placas-solares/instalacion-placas-solares-malaga' },
+      { name: 'Real Decreto 244/2019, Eigenverbrauch und Einspeisevergütung', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2019-5089' },
+      { name: 'IDAE, Förderung für Energieeinsparung und erneuerbare Energien', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'Ein Angebot für eine Solaranlage?',
+    ctaText: 'Schicken Sie ein Foto Ihres Dachs und Ihre letzte Stromrechnung. Sie erhalten einen passenden Vorschlag und einen Preis.',
+    minutes: 6,
+    published: '2026-11-05',
+  },
+  {
+    key: 'elektra',
+    slug: 'elektrik-erneuern',
+    title: 'Was kostet es, die Elektrik in Spanien zu erneuern?',
+    seoTitle: 'Elektrik erneuern in Spanien: Kosten, Boletín und mehr Leistung (2026)',
+    short: 'Elektrik',
+    description: 'Was kostet eine neue Elektroinstallation für Ihr Haus in der Axarquía? Preise für einen neuen Sicherungskasten, Erdung, das Elektro-Zertifikat (boletín) und mehr Anschlussleistung.',
+    lead: 'In vielen älteren Häusern in der Axarquía wurde die Elektrik nie erneuert: keine Erdung, ein zu kleiner Sicherungskasten und ein Anschluss, der abschaltet, sobald Klimaanlage und Wasserkocher gleichzeitig laufen. So sieht die Rechnung aus.',
+    keyword: 'elektrik erneuern spanien kosten',
+    dienst: 'energie',
+    onderwerp: 'Ich hätte gern ein Angebot für die Erneuerung oder Erweiterung der Elektrik.',
+    answer: 'Die komplette Elektrik einer Wohnung oder eines kleinen Hauses (70 – 100 m²) zu erneuern, kostet in der Axarquía meist <strong>3.500 bis 6.500 €</strong> ohne Mehrwertsteuer. Ein Dorfhaus oder eine Villa mit 120 – 200 m²: <strong>6.500 bis 12.000 €</strong>. Nur ein neuer Sicherungskasten kostet 400 – 1.000 €, das Elektro-Zertifikat (<em>boletín</em>) 100 – 300 €.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Preise je Arbeit',
+        table: {
+          head: ['Arbeit', 'Was dazugehört', 'Richtwert'],
+          rows: [
+            ['Elektro-Zertifikat (boletín, CIE)', 'Prüfung und Zertifikat durch einen zugelassenen Elektriker', '100 – 300 €'],
+            ['Neuer Sicherungskasten (cuadro)', 'Hauptschalter, FI-Schalter, Stromkreise', '400 – 1.000 €'],
+            ['Erdung (toma de tierra)', 'Erder und Erdungsleitung zum Sicherungskasten', '300 – 800 €'],
+            ['Zusätzlicher Stromkreis, etwa für Klimaanlage oder Induktion', 'Neue Leitung ab Sicherungskasten', '150 – 400 € je Stromkreis'],
+            ['Komplette Elektrik, Wohnung 70 – 100 m²', 'Alle Leitungen, Schalter und Steckdosen neu, inklusive boletín', '3.500 – 6.500 €'],
+            ['Komplette Elektrik, Haus 120 – 200 m²', 'Ebenso, mit mehr Stromkreisen und Außenbeleuchtung', '6.500 – 12.000 €'],
+            ['Wallbox fürs Auto', '7 kW mit eigenem Stromkreis', '900 – 1.800 €'],
+          ],
+          note: 'Bei einer Komplettsanierung wird die Elektrik mit Abbruch- und Putzarbeiten erneuert. Das ist günstiger als nachträglich Schlitze zu fräsen.',
+        },
+      },
+      {
+        id: 'vermogen',
+        h: 'Mehr Leistung (potencia contratada)',
+        html: '<p>In Spanien wählen Sie selbst, wie viele Kilowatt Sie gleichzeitig nutzen dürfen. Viele ältere Häuser haben 3,45 oder 4,6 kW. Mit Klimaanlage, Induktion, Wärmepumpe oder Poolpumpe brauchen Sie oft 5,75 bis 9,2 kW. Sie erhöhen die Leistung über Ihren Stromanbieter. Ist die Installation älter als zwanzig Jahre oder ändert sich viel, verlangt der Netzbetreiber (in der Axarquía meist e-distribución) ein neues boletín. Der Netzbetreiber berechnet einmalige Anschlusskosten von einigen Dutzend bis einigen Hundert Euro. Beachten Sie: Mehr Leistung bedeutet auch einen höheren Grundpreis auf der Rechnung.</p>',
+      },
+      {
+        id: 'wanneer',
+        h: 'Wann muss die Elektrik erneuert werden?',
+        html: `<ul>
+<li>Es gibt keine Erdung, oder die Steckdosen haben keinen Schutzkontakt.</li>
+<li>Der Sicherungskasten hat noch Schmelzsicherungen oder keinen FI-Schalter.</li>
+<li>Der Strom fällt immer wieder aus. Lesen Sie, <a href="/de/probleme/strom-faellt-aus/">was Sie tun, wenn der Strom ständig ausfällt</a>.</li>
+<li>Sie sehen verschmorte Steckdosen, lose Drähte oder Leitungen mit Stoffisolierung.</li>
+<li>Sie kaufen das Haus, vermieten es oder lassen den Anschluss auf Ihren Namen umschreiben: Dann brauchen Sie ein gültiges boletín.</li>
+</ul>`,
+      },
+      {
+        id: 'koop',
+        h: 'Beim Hauskauf',
+        html: '<p>Die Elektrik gehört zu den Punkten, die wir bei einem <a href="/de/immobiliengutachten/">Gutachten vor dem Kauf</a> immer prüfen. Eine komplette Erneuerung kann schnell 5.000 bis 10.000 € kosten. Das ist ein gutes Argument bei der Preisverhandlung.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Was ist ein boletín eléctrico?', a: 'Das Certificado de Instalación Eléctrica (CIE) bescheinigt, dass die Elektrik den spanischen Vorschriften entspricht. Nur ein zugelassener Elektriker darf es ausstellen. Sie brauchen es für einen neuen Anschluss, mehr Leistung oder um den Vertrag auf Ihren Namen umzuschreiben, wenn der Anschluss lange nicht genutzt wurde.' },
+      { q: 'Wie lange dauert die Erneuerung der Elektrik?', a: 'Eine Wohnung dauert meist ein bis zwei Wochen, ein größeres Haus zwei bis vier Wochen. Danach folgen Putz- und Malerarbeiten, wenn sie nicht Teil einer Sanierung sind.' },
+      { q: 'Geht das, während ich nicht in Spanien bin?', a: 'Ja. Sie legen vorab anhand eines Grundrisses fest, wo Steckdosen und Lampen hinkommen, und Sie erhalten während der Arbeiten Fotos.' },
+    ],
+    links: [
+      { href: '/de/renovierung/', label: 'Renovierung und Umbau' },
+      { href: '/de/immobiliengutachten/', label: 'Gutachten vor dem Kauf' },
+      { href: '/de/ratgeber/renovierungskosten-spanien/', label: 'Ratgeber: Was kostet es, ein Haus in Spanien zu renovieren?' },
+    ],
+    related: ['problems:stroom', 'costs:zonnepanelen', 'costs:airco'],
+    sources: [
+      { name: 'Habitissimo, Preisübersicht Elektrik erneuern (reformar instalación eléctrica)', url: 'https://www.habitissimo.es/presupuestos/reformar-instalacion-electrica-vivienda-o-local' },
+      { name: 'CNMC, das boletín eléctrico: was es ist und wofür', url: 'https://cnmc.es/sites/default/files/editor_contenidos/Energia/Consumidores/3.2%20Bolet%C3%ADn%20el%C3%A9ctrico%2C%20qu%C3%A9%20es%20y%20para%20qu%C3%A9%20sirve.pdf' },
+      { name: 'Reglamento Electrotécnico para Baja Tensión (REBT)', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2002-18099' },
+    ],
+    ctaTitle: 'Elektrik in Ordnung?',
+    ctaText: 'Schicken Sie ein Foto Ihres Sicherungskastens und sagen Sie uns, was Sie anschließen möchten. Sie erhalten eine Beratung und einen Preis.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
 ];

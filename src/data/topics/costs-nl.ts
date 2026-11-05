@@ -442,4 +442,175 @@ export const costsNl: Topic[] = [
     minutes: 4,
     published: '2026-11-05',
   },
+  {
+    key: 'zonnepanelen',
+    slug: 'zonnepanelen',
+    title: 'Wat kosten zonnepanelen in Spanje?',
+    seoTitle: 'Zonnepanelen in Spanje: kosten, thuisbatterij en regels in de Axarquía (2026)',
+    short: 'Zonnepanelen',
+    description: 'Wat kosten zonnepanelen op uw huis in de Axarquía? Prijzen voor 3 tot 8 kWp, een thuisbatterij, een zonneboiler en een finca zonder stroomnet, plus regels, subsidie en terugverdientijd.',
+    lead: 'De Axarquía heeft meer dan 300 zonnige dagen per jaar. Zonnepanelen leveren hier ruim anderhalf keer zoveel op als in Nederland of Duitsland. Zo ziet de rekening eruit, ook als u maar een deel van het jaar in Spanje bent.',
+    keyword: 'zonnepanelen spanje kosten',
+    dienst: 'energie',
+    onderwerp: 'Ik wil graag een prijs voor zonnepanelen op mijn huis.',
+    answer: 'Een installatie van 4 tot 5 kWp (10 tot 12 panelen) voor een woonhuis kost in de Axarquía meestal <strong>€ 4.500 tot € 7.000</strong> exclusief btw, inclusief omvormer, montage en aanmelding. Een thuisbatterij van 5 kWh komt daar <strong>€ 3.000 tot € 5.000</strong> bij. Een finca zonder aansluiting op het stroomnet heeft een groter systeem met batterijen nodig: <strong>€ 10.000 tot € 18.000</strong>.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Prijzen per installatie',
+        html: '<p>Indicaties voor 2026, inclusief panelen, omvormer, montagesysteem, bekabeling, installatie en aanmelding, exclusief btw.</p>',
+        table: {
+          head: ['Installatie', 'Geschikt voor', 'Indicatie'],
+          rows: [
+            ['3 kWp, 7 – 8 panelen', 'Appartement met eigen dak of klein huis, vooral overdag stroom', '€ 3.500 – € 5.000'],
+            ['4 – 5 kWp, 10 – 12 panelen', 'Woonhuis met airco en inductie', '€ 4.500 – € 7.000'],
+            ['6 – 8 kWp, 14 – 20 panelen', 'Villa met zwembadpomp, warmtepomp of laadpaal', '€ 6.500 – € 10.000'],
+            ['Thuisbatterij 5 kWh', 'Stroom van overdag ’s avonds gebruiken', '+ € 3.000 – € 5.000'],
+            ['Thuisbatterij 10 kWh', 'Groot verbruik of veel avondgebruik', '+ € 5.500 – € 9.000'],
+            ['Zonneboiler (termosifón), 150 – 300 liter', 'Alleen warm water', '€ 1.500 – € 3.500'],
+            ['Finca zonder stroomnet (aislada), 3 – 5 kWp met 10 – 15 kWh batterij', 'Huis op het platteland zonder aansluiting', '€ 10.000 – € 18.000'],
+          ],
+          note: 'Panelen op de grond of op een pergola (carport) kosten € 500 – € 2.000 meer voor het montagesysteem en de fundering.',
+        },
+      },
+      {
+        id: 'factoren',
+        h: 'Wat bepaalt de prijs?',
+        html: `<ul>
+<li><strong>Het dak.</strong> Een plat dakterras is makkelijk. Een oud pannendak moet soms eerst worden nagekeken of hersteld, anders lekt het na het boren. Doe dat in één keer: zie <a href="/nl/kosten/dak-en-dakterras/">de kosten van een dak of dakterras</a>.</li>
+<li><strong>De elektra.</strong> Een oude installatie zonder aarding of met een te kleine groepenkast moet eerst op orde. Lees <a href="/nl/kosten/elektra-vernieuwen/">wat elektra vernieuwen kost</a>.</li>
+<li><strong>Bereikbaarheid.</strong> Panelen in een smal straatje van Frigiliana of Cómpeta naar boven krijgen, kost meer tijd dan bij een villa met oprit.</li>
+<li><strong>Batterij of niet.</strong> Een batterij verdubbelt bijna de prijs. Dat loont vooral als u er het hele jaar woont of ’s avonds veel verbruikt.</li>
+<li><strong>Beschermd dorpsgezicht.</strong> In sommige historische kernen stelt de gemeente eisen aan zichtbare panelen.</li>
+</ul>`,
+      },
+      {
+        id: 'afwezig',
+        h: 'Lonen zonnepanelen als u maar een deel van het jaar in Spanje bent?',
+        html: '<p>Ja, maar anders dan in Nederland. Stroom die u niet zelf gebruikt, gaat het net op. In Spanje krijgt u daar via de <em>compensación simplificada</em> een vergoeding voor op de stroomrekening, maar die is lager dan wat u voor stroom betaalt en kan nooit onder nul gaan. Er is geen salderen zoals in Nederland. Een paar tips:</p><ul><li>Kies een kleiner systeem dat past bij wat het huis ook verbruikt als u er niet bent: koelkast, zwembadpomp, alarm, ontvochtiger.</li><li>Vraag naar een virtuele batterij (<em>batería virtual</em>) bij uw energieleverancier: dan spaart u het tegoed op voor de maanden dat u er wel bent.</li><li>Verhuurt u het huis, dan gebruiken de gasten de stroom in de zomer en verdient het systeem zich sneller terug.</li></ul>',
+      },
+      {
+        id: 'terugverdienen',
+        h: 'Rekenvoorbeeld en terugverdientijd',
+        html: '<p>Een villa in Torrox die u het hele jaar gebruikt, met airco, inductie en een zwembadpomp. Verbruik ongeveer 7.000 kWh per jaar.</p>',
+        table: {
+          head: ['Onderdeel', 'Indicatie'],
+          rows: [
+            ['5 kWp, 12 panelen, hybride omvormer', '€ 6.000'],
+            ['Opbrengst per jaar in de Axarquía', '± 8.000 kWh'],
+            ['Zelf gebruikt (± 50%) tegen € 0,18 per kWh', '± € 720 per jaar'],
+            ['Vergoeding voor teruglevering tegen € 0,06 per kWh', '± € 240 per jaar'],
+            ['<strong>Besparing per jaar</strong>', '<strong>± € 960</strong>'],
+            ['<strong>Terugverdientijd</strong>', '<strong>6 tot 7 jaar</strong>'],
+          ],
+          note: 'Panelen gaan 25 tot 30 jaar mee. De omvormer moet meestal na 10 tot 15 jaar worden vervangen (€ 800 – € 1.500).',
+        },
+      },
+      {
+        id: 'regels',
+        h: 'Vergunning, aanmelding en subsidie',
+        html: `<ul>
+<li><strong>Vergunning.</strong> Panelen op het dak van een bestaande, legale woning vallen in Andalusië meestal onder een eenvoudige melding (<em>declaración responsable</em>) bij de gemeente. Op de grond, op een finca in het buitengebied of op een huis met AFO-status kan de gemeente meer vragen. Zie de pagina <em>Bouwvergunning</em> van uw gemeente onder <a href="/nl/plaatsen/">Plaatsen</a>.</li>
+<li><strong>Aanmelding.</strong> De installateur meldt de installatie aan bij de Junta de Andalucía en regelt het keuringsbewijs (<em>boletín</em>). Daarna vraagt u bij uw leverancier de vergoeding voor teruglevering aan.</li>
+<li><strong>Belastingkorting.</strong> Veel gemeenten geven een paar jaar korting op de onroerendgoedbelasting (<em>bonificación del IBI</em>) en op de bouwleges (ICIO) bij zonnepanelen. Hoeveel verschilt per gemeente.</li>
+<li><strong>Subsidie.</strong> De Spaanse en Europese subsidies voor zelfopwekking wisselen vaak en zijn soms snel op. Vraag bij de offerte wat er op dat moment loopt.</li>
+</ul>`,
+      },
+    ],
+    faq: [
+      { q: 'Hoeveel panelen heb ik nodig?', a: 'Als vuistregel: per 1.000 kWh verbruik per jaar ongeveer 0,7 kWp, dus twee panelen. Een huis met 5.000 kWh verbruik heeft genoeg aan 3,5 tot 4 kWp, ongeveer 9 tot 10 panelen.' },
+      { q: 'Werkt het als de stroom uitvalt?', a: 'Een gewone installatie schakelt bij een stroomstoring uit, voor de veiligheid van monteurs op het net. Wilt u bij een storing stroom houden, dan heeft u een hybride omvormer met batterij en noodstroomfunctie nodig.' },
+      { q: 'Wie maakt de panelen schoon?', a: 'Stof en Saharazand (calima) kosten opbrengst. Twee tot drie keer per jaar schoonspuiten is genoeg. Dat kan meegenomen worden in het onderhoud of in sleutelbeheer.' },
+      { q: 'Kan ik zonnepanelen combineren met een warmtepomp of airco?', a: 'Ja, dat is juist de beste combinatie. Airco en warmtepomp draaien vooral overdag in de zomer, precies als de panelen het meest leveren.' },
+    ],
+    links: [
+      { href: '/nl/renovatie/', label: 'Renovatie en verbouwing' },
+      { href: '/nl/kosten/airco-en-warmtepomp/', label: 'Kosten airco en warmtepomp' },
+      { href: '/nl/gidsen/finca-kopen-in-spanje/', label: 'Gids: finca kopen in Spanje' },
+    ],
+    related: ['costs:elektra', 'costs:airco', 'costs:dak'],
+    sources: [
+      { name: 'Selectra, prijs zonnepanelen voor een eengezinswoning (2026)', url: 'https://selectra.es/autoconsumo/instalacion/vivienda-unifamiliar' },
+      { name: 'Autosolar, zonnepanelen installeren in Málaga', url: 'https://autosolar.es/mi-experiencia-placas-solares/instalacion-placas-solares-malaga' },
+      { name: 'Real Decreto 244/2019, zelfopwekking en compensatie van teruglevering', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2019-5089' },
+      { name: 'IDAE, subsidies voor energiebesparing en hernieuwbare energie', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'Een prijs voor zonnepanelen?',
+    ctaText: 'Stuur een foto van uw dak en uw laatste stroomrekening. U krijgt een voorstel op maat en een prijs.',
+    minutes: 6,
+    published: '2026-11-05',
+  },
+  {
+    key: 'elektra',
+    slug: 'elektra-vernieuwen',
+    title: 'Wat kost elektra vernieuwen in Spanje?',
+    seoTitle: 'Elektra vernieuwen in Spanje: kosten, boletín en meer vermogen (2026)',
+    short: 'Elektra',
+    description: 'Wat kost het om de elektrische installatie van uw huis in de Axarquía te vernieuwen? Prijzen voor een nieuwe groepenkast, aarding, het keuringsbewijs (boletín) en meer aansluitvermogen.',
+    lead: 'In veel oudere huizen in de Axarquía is de elektra nooit vernieuwd: geen aarding, een te kleine groepenkast en een aansluiting die uitvalt zodra de airco en de waterkoker tegelijk aan gaan. Zo ziet de rekening eruit.',
+    keyword: 'elektra vernieuwen spanje kosten',
+    dienst: 'energie',
+    onderwerp: 'Ik wil graag een prijs voor het vernieuwen of uitbreiden van de elektra.',
+    answer: 'De complete elektra van een appartement of klein huis (70 – 100 m²) vernieuwen kost in de Axarquía meestal <strong>€ 3.500 tot € 6.500</strong> exclusief btw. Een dorpshuis of villa van 120 – 200 m²: <strong>€ 6.500 tot € 12.000</strong>. Alleen een nieuwe groepenkast kost € 400 – € 1.000 en het keuringsbewijs (<em>boletín</em>) € 100 – € 300.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Prijzen per klus',
+        table: {
+          head: ['Klus', 'Wat het inhoudt', 'Indicatie'],
+          rows: [
+            ['Keuringsbewijs (boletín, CIE)', 'Controle en certificaat door een erkend installateur', '€ 100 – € 300'],
+            ['Nieuwe groepenkast (cuadro)', 'Hoofdschakelaar, aardlekschakelaars, groepen', '€ 400 – € 1.000'],
+            ['Aarding aanleggen (toma de tierra)', 'Aardpen en aardleiding naar de groepenkast', '€ 300 – € 800'],
+            ['Extra groep, bijvoorbeeld voor airco of inductie', 'Nieuwe leiding vanaf de groepenkast', '€ 150 – € 400 per groep'],
+            ['Complete elektra, appartement 70 – 100 m²', 'Alle leidingen, schakelaars en contactdozen nieuw, inclusief boletín', '€ 3.500 – € 6.500'],
+            ['Complete elektra, huis 120 – 200 m²', 'Idem, met meer groepen en buitenverlichting', '€ 6.500 – € 12.000'],
+            ['Laadpaal voor de auto', 'Wallbox 7 kW met eigen groep', '€ 900 – € 1.800'],
+          ],
+          note: 'Bij een complete renovatie gaat de elektra mee in het sloop- en stucwerk. Dat is goedkoper dan achteraf sleuven frezen.',
+        },
+      },
+      {
+        id: 'vermogen',
+        h: 'Meer vermogen (potencia contratada)',
+        html: '<p>In Spanje kiest u zelf hoeveel kilowatt u tegelijk mag gebruiken. Veel oudere huizen hebben 3,45 of 4,6 kW. Met airco, inductie, een warmtepomp of een zwembadpomp is 5,75 tot 9,2 kW vaak nodig. Verhogen gaat via uw energieleverancier. Is de installatie ouder dan twintig jaar of verandert er veel, dan vraagt de netbeheerder (in de Axarquía meestal e-distribución) om een nieuw boletín. De netbeheerder rekent eenmalige aansluitkosten van een paar tientallen tot een paar honderd euro. Let op: een hoger vermogen geeft ook een hoger vast bedrag op de rekening.</p>',
+      },
+      {
+        id: 'wanneer',
+        h: 'Wanneer moet de elektra worden vernieuwd?',
+        html: `<ul>
+<li>Er is geen aarding, of de stopcontacten hebben geen randaarde.</li>
+<li>De groepenkast heeft nog smeltzekeringen of geen aardlekschakelaar.</li>
+<li>De stroom valt steeds uit. Lees <a href="/nl/problemen/stroom-valt-uit/">wat u doet als de stroom steeds uitvalt</a>.</li>
+<li>U ziet zwartgeblakerde stopcontacten, losse draden of leidingen met stoffen isolatie.</li>
+<li>U koopt het huis, gaat het verhuren of zet de aansluiting op uw naam: dan heeft u een geldig boletín nodig.</li>
+</ul>`,
+      },
+      {
+        id: 'koop',
+        h: 'Bij de aankoop van een huis',
+        html: '<p>De elektra is een van de punten die we bij een <a href="/nl/aankoopkeuring/">aankoopkeuring</a> altijd bekijken. Een complete vernieuwing kan zo € 5.000 tot € 10.000 kosten. Dat is een goed argument bij de onderhandeling over de prijs.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Wat is een boletín eléctrico?', a: 'Het Certificado de Instalación Eléctrica (CIE) is het bewijs dat de elektra aan de Spaanse regels voldoet. Alleen een erkende installateur mag het afgeven. U heeft het nodig voor een nieuwe aansluiting, een hoger vermogen, of om het contract op uw naam te zetten als de aansluiting lang buiten gebruik was.' },
+      { q: 'Hoelang duurt het vernieuwen van de elektra?', a: 'Een appartement duurt meestal een tot twee weken, een groter huis twee tot vier weken. Daarna nog het stucwerk en schilderwerk, als dat niet in een renovatie is meegenomen.' },
+      { q: 'Kan het terwijl ik niet in Spanje ben?', a: 'Ja. U spreekt vooraf de plaats van stopcontacten en lampen af aan de hand van een plattegrond, en u krijgt tijdens het werk foto’s.' },
+    ],
+    links: [
+      { href: '/nl/renovatie/', label: 'Renovatie en verbouwing' },
+      { href: '/nl/aankoopkeuring/', label: 'Aankoopkeuring' },
+      { href: '/nl/gidsen/kosten-huis-renoveren-spanje/', label: 'Gids: wat kost een huis renoveren in Spanje?' },
+    ],
+    related: ['problems:stroom', 'costs:zonnepanelen', 'costs:airco'],
+    sources: [
+      { name: 'Habitissimo, prijsgids elektra vernieuwen (reformar instalación eléctrica)', url: 'https://www.habitissimo.es/presupuestos/reformar-instalacion-electrica-vivienda-o-local' },
+      { name: 'CNMC, het boletín eléctrico: wat het is en waarvoor', url: 'https://cnmc.es/sites/default/files/editor_contenidos/Energia/Consumidores/3.2%20Bolet%C3%ADn%20el%C3%A9ctrico%2C%20qu%C3%A9%20es%20y%20para%20qu%C3%A9%20sirve.pdf' },
+      { name: 'Reglamento Electrotécnico para Baja Tensión (REBT)', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2002-18099' },
+    ],
+    ctaTitle: 'Elektra op orde?',
+    ctaText: 'Stuur een foto van uw groepenkast en vertel wat u wilt aansluiten. U krijgt een advies en een prijs.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
 ];
