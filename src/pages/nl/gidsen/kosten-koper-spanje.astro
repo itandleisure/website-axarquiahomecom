@@ -1,0 +1,92 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort antwoord' },
+  { id: 'belasting', label: 'Overdrachtsbelasting of btw' },
+  { id: 'notaris', label: 'Notaris, register en advocaat' },
+  { id: 'voorbeeld', label: 'Rekenvoorbeeld' },
+  { id: 'jaarlijks', label: 'Jaarlijkse kosten' },
+  { id: 'verbouwen', label: 'Verbouwen: de vergeten kostenpost' },
+  { id: 'tips', label: 'Tips om geld te besparen' },
+];
+
+const faq = [
+  {
+    q: 'Hoeveel procent kosten koper betaal ik in Andalusië?',
+    a: 'Voor een bestaande woning rekent u met ongeveer 9 tot 11% van de koopprijs: 7% overdrachtsbelasting (ITP) en daarnaast notaris, register, advocaat en eventueel hypotheekkosten. Bij nieuwbouw betaalt u 10% btw (IVA) plus 1,2% zegelbelasting (AJD).',
+  },
+  {
+    q: 'Wie betaalt de plusvalía?',
+    a: 'De gemeentelijke belasting op de waardestijging van de grond (plusvalía municipal) is wettelijk voor de verkoper. Let op dat dit in het koopcontract niet naar u wordt doorgeschoven.',
+  },
+  {
+    q: 'Wat is de 3% inhouding?',
+    a: 'Koopt u van een verkoper die niet in Spanje woont, dan moet u 3% van de koopprijs inhouden en namens de verkoper afdragen aan de Spaanse belastingdienst. Uw advocaat of notaris regelt dit. Het is geen extra kostenpost voor u, maar het gaat wel van het bedrag af dat u aan de verkoper betaalt.',
+  },
+  {
+    q: 'Kan ik als Nederlander een hypotheek krijgen in Spanje?',
+    a: 'Ja, Spaanse banken verstrekken hypotheken aan niet-inwoners, meestal tot 60 à 70% van de waarde. U heeft dus een flinke eigen inbreng nodig, bovenop de kosten koper.',
+  },
+];
+---
+<Guide slug="kosten-koper-spanje" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Weten wat het huis u écht gaat kosten?" ctaText="Met een aankoopkeuring krijgt u vóór het tekenen een prijs voor alles wat moet worden opgeknapt.">
+  <h2 id="kort">Kort antwoord</h2>
+  <p>Koopt u een bestaande woning in Andalusië, reken dan op <strong>ongeveer 10% bovenop de koopprijs</strong> aan belastingen en bijkomende kosten. Bij een huis van € 300.000 is dat zo’n € 30.000. Heeft het huis achterstallig onderhoud, en dat is bij oudere huizen in de Axarquía eerder regel dan uitzondering, dan komt daar het verbouwbudget nog bij.</p>
+
+  <h2 id="belasting">Overdrachtsbelasting of btw</h2>
+  <h3>Bestaande woning: 7% ITP</h3>
+  <p>Bij de aankoop van een bestaande woning betaalt u in Andalusië de overdrachtsbelasting <em>Impuesto de Transmisiones Patrimoniales</em> (ITP). Sinds 2021 is dat een vast tarief van 7%. In een paar specifieke gevallen geldt een lager tarief; uw advocaat kan nagaan of dat voor u geldt.</p>
+  <h3>Nieuwbouw: 10% IVA plus 1,2% AJD</h3>
+  <p>Koopt u nieuwbouw rechtstreeks van de projectontwikkelaar, dan betaalt u geen ITP maar 10% btw (<em>IVA</em>). Daarbovenop komt de zegelbelasting <em>Actos Jurídicos Documentados</em> (AJD), in Andalusië 1,2%.</p>
+
+  <h2 id="notaris">Notaris, register en advocaat</h2>
+  <table class="prices">
+    <thead><tr><th>Post</th><th>Indicatie</th></tr></thead>
+    <tbody>
+      <tr><td>Notaris (escritura)</td><td>€ 600 – € 1.500</td></tr>
+      <tr><td>Eigendomsregister (Registro de la Propiedad)</td><td>€ 400 – € 1.000</td></tr>
+      <tr><td>Onafhankelijke advocaat</td><td>circa 1% + IVA</td></tr>
+      <tr><td>Gestoría (afhandeling belastingen en inschrijving)</td><td>€ 300 – € 600</td></tr>
+      <tr><td>Taxatie en kosten bij een hypotheek</td><td>€ 400 – € 1.000 + bankkosten</td></tr>
+      <tr><td>NIE-nummer en bankrekening</td><td>€ 0 – € 200</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Indicaties op basis van gangbare tarieven in de provincie Málaga. De exacte bedragen hangen af van de koopprijs en de complexiteit.</p>
+  <p>De notaris in Spanje controleert de identiteit en de betaling, maar niet of het huis legaal is of goed in elkaar zit. Daarom is een eigen, onafhankelijke advocaat geen luxe. Kies er een die niet door de makelaar is aangedragen.</p>
+
+  <h2 id="voorbeeld">Rekenvoorbeeld: dorpshuis van € 250.000</h2>
+  <table class="prices">
+    <tbody>
+      <tr><td>Koopprijs</td><td>€ 250.000</td></tr>
+      <tr><td>ITP 7%</td><td>€ 17.500</td></tr>
+      <tr><td>Notaris en register</td><td>€ 1.800</td></tr>
+      <tr><td>Advocaat (1% + IVA)</td><td>€ 3.025</td></tr>
+      <tr><td>Gestoría en overig</td><td>€ 700</td></tr>
+      <tr><td><strong>Totaal kosten koper</strong></td><td><strong>€ 23.025 (9,2%)</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Met een hypotheek komen daar nog taxatie- en bankkosten bij.</p>
+
+  <h2 id="jaarlijks">Jaarlijkse kosten als eigenaar</h2>
+  <ul>
+    <li><strong>IBI</strong>: onroerendgoedbelasting aan de gemeente, een percentage van de kadastrale waarde. Meestal enkele honderden euro’s per jaar.</li>
+    <li><strong>Afvalstoffenheffing</strong> (basura): enkele tientallen tot ruim honderd euro per jaar.</li>
+    <li><strong>Belasting niet-inwoners (IRNR)</strong>: woont u niet in Spanje, dan betaalt u jaarlijks belasting over een fictief inkomen uit uw woning, ook als u die niet verhuurt. Voor EU-burgers 19% over 1,1% of 2% van de kadastrale waarde.</li>
+    <li><strong>Vereniging van eigenaars</strong> (comunidad): bij appartementen en urbanisaties, van € 50 tot ruim € 300 per maand.</li>
+    <li><strong>Verzekering, water, stroom en internet</strong>.</li>
+    <li><strong>Onderhoud en toezicht</strong>: een leegstaand huis vraagt aandacht. Zie <a href="/nl/sleutelbeheer/">sleutelbeheer</a>.</li>
+  </ul>
+
+  <h2 id="verbouwen">Verbouwen: de vergeten kostenpost</h2>
+  <p>Veel kopers rekenen nauwkeurig met de kosten koper en vergeten dat het huis ook moet worden opgeknapt. Een badkamer van dertig jaar oud, elektra zonder aarding, een dak dat lekt: het zijn posten van duizenden tot tienduizenden euro’s. Vraag daarom vóór de aankoop een keuring met prijsindicatie aan, en lees onze gids <a href="/nl/gidsen/kosten-huis-renoveren-spanje/">wat kost renoveren in Spanje</a>.</p>
+
+  <h2 id="tips">Tips om geld te besparen</h2>
+  <ul>
+    <li>Laat het huis keuren en gebruik de gebreken in de onderhandeling.</li>
+    <li>Controleer of de kadastrale waarde realistisch is; die bepaalt uw jaarlijkse belastingen.</li>
+    <li>Laat de plusvalía bij de verkoper, zoals de wet voorschrijft.</li>
+    <li>Plan de verbouwing vóór u erin trekt: verbouwen in een bewoond huis is duurder en lastiger.</li>
+  </ul>
+  <p class="note">Deze gids geeft algemene informatie op basis van de regels in Andalusië in november 2026. Tarieven kunnen wijzigen. Het is geen fiscaal of juridisch advies.</p>
+</Guide>

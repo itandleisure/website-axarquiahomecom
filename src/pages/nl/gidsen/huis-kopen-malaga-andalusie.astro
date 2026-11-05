@@ -1,0 +1,66 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'gebieden', label: 'De gebieden in de provincie Málaga' },
+  { id: 'prijzen', label: 'Wat kost een huis?' },
+  { id: 'proces', label: 'Het koopproces stap voor stap' },
+  { id: 'valkuilen', label: 'Valkuilen voor buitenlandse kopers' },
+  { id: 'na', label: 'Na de aankoop' },
+];
+
+const faq = [
+  {
+    q: 'Waar is een huis in de provincie Málaga het goedkoopst?',
+    a: 'In het binnenland en in de oostelijke Axarquía zijn huizen per m² het goedkoopst. Aan de westelijke Costa del Sol, rond Marbella en Estepona, liggen de prijzen het hoogst. Ook in Málaga-stad zijn de prijzen de laatste jaren sterk gestegen.',
+  },
+  {
+    q: 'Heb ik een makelaar nodig?',
+    a: 'In Spanje betaalt de verkoper meestal de makelaarscourtage. De makelaar werkt dus voor de verkoper. Schakel daarom zelf een onafhankelijke advocaat in en laat het huis keuren door iemand die niet aan de verkoop verdient.',
+  },
+  {
+    q: 'Hoelang duurt het koopproces?',
+    a: 'Van het tekenen van het voorlopige contract (arras) tot de overdracht bij de notaris duurt het meestal zes tot tien weken. Met een hypotheek of bij een finca met juridische vragen kan het langer duren.',
+  },
+];
+---
+<Guide slug="huis-kopen-malaga-andalusie" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Een huis gevonden?" ctaText="Laat het keuren vóór u de arras tekent. U krijgt een rapport in het Nederlands met de staat van het huis en wat het opknappen kost.">
+  <h2 id="gebieden">De gebieden in de provincie Málaga</h2>
+  <h3>Westelijke Costa del Sol</h3>
+  <p>Van Torremolinos via Benalmádena, Fuengirola en Marbella tot Estepona. Druk, internationaal, met veel nieuwbouw, golfbanen en voorzieningen. Hier liggen de hoogste prijzen van de provincie.</p>
+  <h3>Málaga-stad</h3>
+  <p>Een bruisende stad met cultuur, universiteit, een groeiende techsector en het vliegveld om de hoek. De prijzen zijn de laatste jaren hard gestegen, en het aanbod is vooral appartementen.</p>
+  <h3>De Axarquía (oostelijke Costa del Sol)</h3>
+  <p>Van Rincón de la Victoria tot Nerja, plus de bergdorpen erachter. Meer authentiek Spaans, minder hoogbouw, en per m² goedkoper dan het westen. Dorpshuizen, villa’s op de hellingen en fincas in het binnenland. Zie <a href="/nl/gidsen/wonen-in-de-axarquia/">wonen in de Axarquía</a>.</p>
+  <h3>Het binnenland</h3>
+  <p>Rond Antequera, Ronda en Álora. Ruimte, rust en lagere prijzen, maar verder van zee en vliegveld, en in de winter kouder.</p>
+
+  <h2 id="prijzen">Wat kost een huis?</h2>
+  <p>De prijzen verschillen sterk per plek en per type woning. Als grove richtlijn: een appartement aan de kust in de Axarquía begint rond € 200.000, een dorpshuis in de bergen kan vanaf € 150.000, en villa’s en gerenoveerde fincas met zeezicht lopen snel op tot € 400.000 tot ruim € 1 miljoen. Kijk op portalen als Idealista en Kyero om een actueel beeld te krijgen. Let op: vraagprijzen liggen vaak boven wat er uiteindelijk betaald wordt.</p>
+  <p>Reken bovenop de koopprijs op ongeveer 10% kosten koper (zie <a href="/nl/gidsen/kosten-koper-spanje/">kosten koper Spanje</a>), en bij oudere huizen op een verbouwbudget.</p>
+
+  <h2 id="proces">Het koopproces stap voor stap</h2>
+  <ol>
+    <li><strong>NIE-nummer en bankrekening</strong>: zonder NIE kunt u niet kopen.</li>
+    <li><strong>Zoeken en bezichtigen</strong>: kom meerdere keren, ook buiten het seizoen.</li>
+    <li><strong>Bod en reservering</strong>: bij een akkoord vraagt de makelaar soms een kleine reserveringsbetaling om het huis van de markt te halen.</li>
+    <li><strong>Onderzoek</strong>: uw advocaat controleert register, kadaster, vergunningen, schulden en lopende procedures. Laat in deze fase ook de <a href="/nl/aankoopkeuring/">bouwkundige keuring</a> doen.</li>
+    <li><strong>Contrato de arras</strong>: het voorlopige koopcontract, meestal met 10% aanbetaling. Trekt u zich terug, dan bent u die kwijt; trekt de verkoper zich terug, dan betaalt hij het dubbele terug.</li>
+    <li><strong>Hypotheek</strong> (indien nodig): taxatie en goedkeuring door de bank.</li>
+    <li><strong>Escritura bij de notaris</strong>: u betaalt de rest, krijgt de sleutel en wordt eigenaar.</li>
+    <li><strong>Inschrijving en belastingen</strong>: uw advocaat of gestoría betaalt de ITP en schrijft de akte in het eigendomsregister in.</li>
+  </ol>
+
+  <h2 id="valkuilen">Valkuilen voor buitenlandse kopers</h2>
+  <ul>
+    <li><strong>Geen eigen advocaat</strong>: de makelaar en de notaris beschermen niet uw belang.</li>
+    <li><strong>Illegale aanbouw</strong>: een extra slaapkamer, een overdekt terras of een zwembad zonder vergunning. Vooral bij fincas; zie <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren</a>.</li>
+    <li><strong>Schulden op het huis</strong>: onbetaalde IBI of bijdragen aan de vereniging van eigenaars gaan mee naar de nieuwe eigenaar. Laat dit checken.</li>
+    <li><strong>Verborgen gebreken</strong>: een huis bezichtigd in juli lijkt droog; in februari blijkt er vocht in de muren te zitten.</li>
+    <li><strong>Vakantieverhuur</strong>: wilt u verhuren, check dan vooraf of de gemeente en de vereniging van eigenaars dat toestaan. Regels zijn de laatste jaren strenger geworden, en sinds 2025 is een landelijk registratienummer verplicht.</li>
+  </ul>
+
+  <h2 id="na">Na de aankoop</h2>
+  <p>Zet water, stroom en de gemeentelijke belastingen op uw naam, bij voorkeur met automatische incasso. Plan de verbouwing, liefst voordat u er gaat wonen. En regel wie het huis in de gaten houdt als u in Nederland bent. Wij helpen met alle drie: <a href="/nl/renovatie/">renovatie</a>, <a href="/nl/onderhoud/">onderhoud</a> en <a href="/nl/sleutelbeheer/">sleutelbeheer</a>.</p>
+  <p class="note">Deze gids geeft algemene informatie en is geen juridisch of financieel advies.</p>
+</Guide>
