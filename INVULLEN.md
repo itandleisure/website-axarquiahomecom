@@ -25,7 +25,7 @@ en op de pagina's in een geel blok "Nog aanleveren". Zodra alles klopt, zet je
 - [ ] Engelse titels en teksten bij projecten (`titleEn`, `summaryEn`, `durationEn`) en teamleden (`roleEn`, `bioEn`)
 
 ## Analyse en cookies
-- [ ] Google Analytics: Measurement ID (G-...) invullen bij `gaId` in `src/data/site.ts`
+- [x] Google Analytics: Measurement ID G-YSBXSHM7SS ingevuld
 - [ ] Clarity: onder Settings › Setup › Advanced settings Masking op Strict zetten
 
 ## Zweedse en Franse versie (volgen na de plaatsnaampagina's)

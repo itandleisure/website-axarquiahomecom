@@ -45,7 +45,7 @@ export const site = {
   // Leeg laten om Clarity uit te zetten.
   clarityId: 'z8rraji52s',
   // Google Analytics 4 Measurement ID (G-...). Laadt ook pas na toestemming. Leeg = uit.
-  gaId: '',
+  gaId: 'G-YSBXSHM7SS',
 
   villages: [
     'Nerja',
