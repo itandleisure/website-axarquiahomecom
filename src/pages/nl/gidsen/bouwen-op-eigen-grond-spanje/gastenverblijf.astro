@@ -1,0 +1,57 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'kort', label: 'Het korte antwoord' },
+  { id: 'rustico', label: 'Op een finca (rústico)' },
+  { id: 'urbano', label: 'In een woonwijk (urbano)' },
+  { id: 'prefab', label: 'Prefab, tiny house en mobile home' },
+  { id: 'opties', label: 'Wat zijn de mogelijkheden?' },
+  { id: 'verhuur', label: 'Verhuren aan gasten' },
+];
+
+const faq = [
+  { q: 'Mag ik een tweede huis bouwen op mijn finca in Spanje?', a: 'Bijna nooit. Op landelijke grond (rústico) is een nieuwe woning alleen mogelijk via een aparte procedure, met een groot minimumperceel, en meestal maar één woning per perceel. Een tweede, losse woning naast het bestaande huis wordt vrijwel nooit toegestaan.' },
+  { q: 'Mag ik een mobile home of tiny house op mijn grond zetten?', a: 'Niet zonder vergunning als hij er blijvend staat. Een mobile home met een vaste plek, aansluiting op water en stroom of een fundering geldt als bouwwerk. Op rústico wordt dat in de regel niet toegestaan.' },
+  { q: 'Is een bestaande casita zonder vergunning een probleem?', a: 'Het kan bij verkoop, verzekering en verhuur een probleem worden. Soms kan zo’n casita worden gelegaliseerd of als AFO worden erkend. Laat dat uitzoeken voordat u er geld in steekt.' },
+  { q: 'Mag ik een bestaand bijgebouw ombouwen tot gastenverblijf?', a: 'Alleen met een vergunning voor ander gebruik, en alleen als het bestemmingsplan het toestaat. Een landbouwschuur ombouwen tot slaapruimte mag op rústico meestal niet.' },
+];
+---
+<Guide slug="bouwen-op-eigen-grond-gastenverblijf" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Ruimte voor gasten maken?" ctaText="Vertel wat u voor ogen hebt. Wij kijken eerlijk wat er op uw perceel mag en welke oplossing het beste past.">
+  <h2 id="kort">Het korte antwoord</h2>
+  <p>Een tweede, losse woning op uw perceel is in Andalusië bijna nooit toegestaan, zeker niet op landelijke grond. Wat vaak wel kan: <strong>het bestaande huis uitbreiden</strong> met een gastenvleugel, of <strong>een bestaand legaal bijgebouw verbouwen</strong>. Het verschil zit erin dat het één woning blijft, met één adres en één kadasternummer.</p>
+
+  <h2 id="rustico">Op een finca (rústico)</h2>
+  <p>Op landelijke grond is een woning de uitzondering. De Andalusische wet LISTA staat een nieuwe vrijstaande woning alleen toe onder strenge voorwaarden: het perceel moet groot genoeg zijn (de gemeente bepaalt hoe groot, vaak enkele hectares), er mag geen nieuwe bebouwingskern ontstaan, en er is een aparte procedure met een heffing aan de gemeente. Een tweede woning naast het bestaande huis op hetzelfde perceel valt daar vrijwel nooit onder.</p>
+  <p>Wat soms wel kan:</p>
+  <ul>
+    <li><strong>Het huis uitbreiden</strong> met een kamer of gastenvleugel, als het huis legaal is en het bestemmingsplan nog bouwruimte laat.</li>
+    <li><strong>Een bestaande, legale ruimte verbouwen</strong>, zoals een oude stal die al bij de woning hoort.</li>
+  </ul>
+  <p>Heeft het huis AFO-status, dan mag er niets bij. Zie <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren</a>.</p>
+
+  <h2 id="urbano">In een woonwijk (urbano)</h2>
+  <p>In een dorp of urbanisatie hangt het af van het bestemmingsplan. In veel villawijken mag op een perceel maar één woning staan. Een gastenverblijf kan dan soms wel als <strong>bijgebouw bij de woning</strong>, zolang er nog bouwruimte is en het geen zelfstandige woning wordt (bijvoorbeeld zonder eigen keuken of eigen aansluitingen). Wilt u er echt een tweede woning van maken, dan moet het perceel daarvoor bestemd zijn, en vaak ook gesplitst kunnen worden.</p>
+
+  <h2 id="prefab">Prefab, tiny house en mobile home</h2>
+  <p>Een prefab huisje, tiny house of mobile home lijkt een slimme omweg, maar voor de gemeente telt wat het doet, niet hoe het gebouwd is. Staat het er blijvend, met een fundering of aansluiting op water, stroom of afvoer, dan is het een bouwwerk en hebt u een vergunning nodig. Op rústico wordt die in de regel niet gegeven. Een caravan die u af en toe gebruikt en weer wegrijdt, is iets anders, maar wonen of verhuren in een caravan op eigen grond mag ook niet zomaar.</p>
+
+  <h2 id="opties">Wat zijn de mogelijkheden?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Optie</th><th>Goed om te weten</th></tr></thead>
+    <tbody>
+      <tr><td>Logeerkamer inrichten in het huis</td><td>Geen vergunning nodig zolang u niets aan de buitenkant verandert.</td></tr>
+      <tr><td>Bestaand legaal bijgebouw verbouwen</td><td>Vaak de beste route. Vergunning nodig als het gebruik verandert.</td></tr>
+      <tr><td>Gastenvleugel aan het huis</td><td>Telt als uitbouw: project, vergunning en bouwruimte nodig.</td></tr>
+      <tr><td>Prefab of modulair gastenverblijf</td><td>Sneller gebouwd, maar dezelfde vergunning als een gemetseld huis.</td></tr>
+      <tr><td>Los gemetseld gastenverblijf</td><td>Alleen waar het bestemmingsplan het toestaat, vrijwel nooit op rústico.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Wilt u dit laten realiseren? Vertel ons wat u wilt. Wij zoeken uit wat er mag, regelen de vergunning en bouwen het voor u.</strong> <a href="/nl/aanvraag/?dienst=renovatie">Neem contact op →</a></p>
+  <p>Meer over uitbreiden leest u in <a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/uitbouw-en-terras-dichtmaken/">uitbouw en terras dichtmaken</a>.</p>
+
+  <h2 id="verhuur">Verhuren aan gasten</h2>
+  <p>Wilt u het gastenverblijf verhuren, dan moet het in Andalusië als vakantiewoning (<em>vivienda de uso turístico</em>) worden ingeschreven. Dat kan alleen voor een legale ruimte, en in een complex soms alleen als de VvE het niet verbiedt. Een casita zonder vergunning kunt u dus niet legaal verhuren. Meer in de gids over <MaybeLink href="/nl/gidsen/woning-verhuren-spanje/">een woning verhuren in Spanje</MaybeLink>.</p>
+  <p>Terug naar het overzicht: <a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/">bouwen op eigen grond</a>.</p>
+</Guide>

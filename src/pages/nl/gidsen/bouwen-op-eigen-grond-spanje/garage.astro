@@ -1,0 +1,64 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'regels', label: 'Wat de gemeente vraagt' },
+  { id: 'urbano', label: 'In een woonwijk' },
+  { id: 'finca', label: 'Op een finca' },
+  { id: 'opties', label: 'Wat zijn de mogelijkheden?' },
+  { id: 'stappen', label: 'De stappen' },
+];
+
+const faq = [
+  { q: 'Heb ik een architect nodig voor een garage in Spanje?', a: 'Voor een gemetselde garage meestal wel: het is nieuwbouw, en daarvoor vraagt de gemeente een project van een architect of bevoegde technicus. Voor een lichte, open carport is dat vaak niet nodig.' },
+  { q: 'Mag ik een garage omzetten in een kamer of appartement?', a: 'Alleen met een vergunning voor een ander gebruik, en alleen als het bestemmingsplan dat toestaat. De extra woonruimte telt mee in de bouwruimte. Een extra zelfstandige woning maken mag op rústico vrijwel nooit.' },
+  { q: 'Mag ik een prefab garage neerzetten zonder vergunning?', a: 'Nee. Ook een prefab garage of container op een betonvloer geldt als bouwwerk en vraagt een vergunning.' },
+];
+---
+<Guide slug="bouwen-op-eigen-grond-garage" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Een garage of berging bouwen?" ctaText="Vertel wat u wilt en stuur een foto van de plek. Wij kijken wat er mag, regelen het project en bouwen het.">
+  <h2 id="regels">Wat de gemeente vraagt</h2>
+  <p>Een garage met muren en een dak is voor de gemeente een nieuw gebouw. Dat betekent bijna altijd:</p>
+  <ul>
+    <li>een <strong>vergunning</strong> (<em>licencia de obra</em>), geen melding;</li>
+    <li>een <strong>project</strong> van een architect of bevoegde technicus;</li>
+    <li>de vierkante meters tellen volledig mee in de <strong>bouwruimte</strong> van het perceel;</li>
+    <li>u betaalt <strong>bouwbelasting</strong> (ICIO) en leges, en na de bouw moet de garage in het kadaster.</li>
+  </ul>
+  <p>Hoe een vergunningsaanvraag verloopt, leest u in <MaybeLink href="/nl/gidsen/vergunning-verbouwen-andalusie/">vergunning voor verbouwen</MaybeLink>.</p>
+
+  <h2 id="urbano">In een woonwijk</h2>
+  <p>In een dorp of urbanisatie lukt een garage meestal, als er nog bouwruimte is en hij op de voorgeschreven afstand van de erfgrens en de straat staat. Sommige bestemmingsplannen staan een garage op de erfgrens wel toe, soms alleen met toestemming van de buren. In een urbanisatie met een VvE moet de garage ook passen bij de regels van de comunidad.</p>
+
+  <h2 id="finca">Op een finca</h2>
+  <p>Op landelijke grond (<em>suelo rústico</em>) is een garage lastiger:</p>
+  <ul>
+    <li>Het mag alleen bij een legaal huis, en alleen als het bestemmingsplan nog ruimte laat voor extra bebouwing.</li>
+    <li>Soms is een gebouw voor de landbouw (<em>almacén agrícola</em>) wel toegestaan. Dat is dan voor gereedschap en oogst, niet als garage of woonruimte.</li>
+    <li>Heeft het huis AFO-status, dan mag er niets bij. Zie <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren</a>.</li>
+  </ul>
+  <p>Een open carport is op een finca vaak beter haalbaar. Zie <a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/carport-en-pergola/">carport en pergola</a>.</p>
+
+  <h2 id="opties">Wat zijn de mogelijkheden?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Optie</th><th>Goed om te weten</th></tr></thead>
+    <tbody>
+      <tr><td>Bestaande ruimte ombouwen tot garage of berging</td><td>Bijvoorbeeld een oude stal of bodega. Mag vaak met een melding als de buitenkant niet verandert.</td></tr>
+      <tr><td>Prefab garage van staal of beton</td><td>Snel geplaatst, wel een vloer en vergunning nodig.</td></tr>
+      <tr><td>Gemetselde garage voor één auto</td><td>Duurzaam en passend bij het huis. Met project en vergunning.</td></tr>
+      <tr><td>Dubbele garage met berging of werkplaats</td><td>Meer vierkante meters, dus ook meer bouwruimte nodig.</td></tr>
+      <tr><td>Garage in de helling of onder het terras</td><td>Veel graaf- en keermuurwerk, maar ziet u bijna niet.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Wilt u dit laten realiseren? Vertel ons wat u wilt. Wij zoeken uit wat er mag, regelen de vergunning en bouwen het voor u.</strong> <a href="/nl/aanvraag/?dienst=renovatie">Neem contact op →</a></p>
+
+  <h2 id="stappen">De stappen</h2>
+  <ol>
+    <li><strong>Haalbaarheid</strong>: laat nagaan welke grond het is, hoeveel bouwruimte er nog is en of het huis zelf legaal is.</li>
+    <li><strong>Project en aanvraag</strong>: de architect tekent de garage en vraagt de vergunning aan.</li>
+    <li><strong>Vergunning</strong>: de gemeente heeft volgens de wet tot drie maanden na een compleet dossier. U betaalt de ICIO en leges.</li>
+    <li><strong>Bouwen</strong>: fundering, muren, dak, deur, en eventueel stroom en verlichting.</li>
+    <li><strong>Afronden</strong>: opleveringscertificaat, melding bij de gemeente en opname in het kadaster.</li>
+  </ol>
+  <p>Terug naar het overzicht: <a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/">bouwen op eigen grond</a>.</p>
+</Guide>

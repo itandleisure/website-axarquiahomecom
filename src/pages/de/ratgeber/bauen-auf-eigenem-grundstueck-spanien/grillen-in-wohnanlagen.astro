@@ -1,0 +1,55 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Ist es erlaubt?' },
+  { id: 'regeln', label: 'Wo die Regeln stehen' },
+  { id: 'gemeinschaft', label: 'Was die Gemeinschaft tun kann' },
+  { id: 'pruefen', label: 'So finden Sie es heraus' },
+  { id: 'alternativen', label: 'Was oft erlaubt ist' },
+];
+
+const faq = [
+  { q: 'Ist Grillen auf dem Balkon in Spanien gesetzlich verboten?', a: 'Es gibt kein landesweites Gesetz, das es verbietet. Das Verbot steht meist in den Statuten oder der Hausordnung der Comunidad, manchmal in einer Gemeindesatzung. Außerdem dürfen Sie die Nachbarn nicht belästigen, auch nicht mit Rauch.' },
+  { q: 'Kann die Gemeinschaft ein Grillverbot einführen?', a: 'Ja. Eine Regel in der Hausordnung (Normas de régimen interior) kann die Versammlung mit einfacher Mehrheit beschließen. Ein Verbot in den Statuten selbst braucht grundsätzlich die Zustimmung aller Eigentümer.' },
+  { q: 'Was passiert, wenn ich mich nicht an das Verbot halte?', a: 'Der Präsident der Comunidad kann Sie zuerst schriftlich auffordern, es zu unterlassen. Hilft das nicht, kann die Gemeinschaft vor Gericht gehen. Das Gericht kann die Nutzung verbieten, Schadenersatz zusprechen und in schweren Fällen sogar die Nutzung der Wohnung zeitweise untersagen.' },
+  { q: 'Dürfen Mieter oder Urlaubsgäste grillen?', a: 'Mieter und Gäste müssen sich an dieselben Regeln halten. Als Eigentümer sind Sie verantwortlich, nehmen Sie es also in Ihre Hausregeln auf, wenn Sie vermieten.' },
+];
+---
+<Guide lang="de" slug="bauen-auf-eigenem-grundstueck-grillen-in-wohnanlagen" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Eine Wohnung in einer Anlage?" ctaText="Wir behalten Ihre Wohnung im Auge, wenn Sie nicht da sind, und wissen, wie es bei der Comunidad läuft.">
+  <h2 id="kurz">Ist es erlaubt?</h2>
+  <p>Das hängt von Ihrer Wohnanlage ab. In vielen Wohnanlagen an der Costa del Sol und in der Axarquía ist Grillen auf Terrasse oder Balkon verboten, vor allem mit Holzkohle. Anderswo ist es erlaubt oder nur elektrisch. Kein landesweites Gesetz regelt das: Es steht in den Regeln der Eigentümergemeinschaft (<em>Comunidad de propietarios</em>).</p>
+
+  <h2 id="regeln">Wo die Regeln stehen</h2>
+  <ul>
+    <li><strong>Statuten</strong> (<em>Estatutos</em>): Teil der Teilungsurkunde, oft im Eigentumsregister eingetragen. Eine Änderung braucht grundsätzlich alle Eigentümer.</li>
+    <li><strong>Hausordnung</strong> (<em>Normas de régimen interior</em>): Regeln für den Alltag, etwa Poolzeiten, Haustiere und Grillen. Die Versammlung kann sie mit Mehrheit beschließen oder ändern.</li>
+    <li><strong>Das Wohnungseigentumsgesetz</strong> (<em>Ley de Propiedad Horizontal</em>, Art. 7.2): Eigentümer und Bewohner dürfen nichts tun, was die Statuten verbieten oder was für die Nachbarn lästig, ungesund oder gefährlich ist. Auch ohne ausdrückliches Verbot kann viel Rauch also ein Problem sein.</li>
+    <li><strong>Gemeinde</strong>: Manche Gemeinden haben Regeln zu Rauch und Feuer im Ortsgebiet. In der Waldbrandsaison können weitere Einschränkungen gelten.</li>
+  </ul>
+  <p>Auch eine Terrasse, die nur Sie nutzen, ist rechtlich oft Gemeinschaftseigentum mit Sondernutzungsrecht. Dort dürfen Sie nicht einfach etwas bauen, etwa einen gemauerten Grill.</p>
+
+  <h2 id="gemeinschaft">Was die Gemeinschaft tun kann</h2>
+  <p>Hält sich ein Eigentümer oder Mieter nicht an die Regeln, fordert der Präsident ihn zuerst schriftlich zur Unterlassung auf. Hilft das nicht, kann die Versammlung eine Klage beschließen (<em>Acción de cesación</em>). Das Gericht kann die Nutzung verbieten und Schadenersatz zusprechen. So weit kommt es selten, aber ein schlechtes Verhältnis zu den Nachbarn wollen Sie in einer Wohnanlage nicht.</p>
+
+  <h2 id="pruefen">So finden Sie es heraus</h2>
+  <ol>
+    <li>Fordern Sie beim Verwalter (<em>Administrador de fincas</em>) oder beim Präsidenten die <strong>Statuten</strong> und die <strong>Hausordnung</strong> an.</li>
+    <li>Fragen Sie auch nach den <strong>Protokollen</strong> (<em>Actas</em>) der letzten Versammlungen: Manchmal gibt es einen Beschluss, der noch nicht in der Hausordnung steht.</li>
+    <li>Sie möchten eine Wohnung kaufen? Lassen Sie Makler oder Anwalt diese Unterlagen vor dem Kauf anfordern. Eine Außenküche oder ein Grill auf der Terrasse ist für viele Käufer ein Grund für eine bestimmte Wohnung.</li>
+    <li>Möchten Sie die Regeln ändern? Setzen Sie es auf die Tagesordnung der Jahresversammlung. Ein gemeinsamer Grillplatz am Pool ist oft leichter durchzusetzen als eine Regel für jede Terrasse.</li>
+  </ol>
+
+  <h2 id="alternativen">Was oft erlaubt ist</h2>
+  <table class="prices plain">
+    <thead><tr><th>Option</th><th>Gut zu wissen</th></tr></thead>
+    <tbody>
+      <tr><td>Elektrischer Tischgrill oder Plancha</td><td>Keine offene Flamme, wenig Rauch. Oft erlaubt, Hausordnung prüfen.</td></tr>
+      <tr><td>Elektrischer Terrassengrill</td><td>Echter Grill ohne Holzkohle. Achten Sie auf die Leistung Ihres Stromanschlusses.</td></tr>
+      <tr><td>Gasgrill</td><td>In manchen Anlagen wegen der Gasflasche verboten. Hausordnung und Versicherung prüfen.</td></tr>
+      <tr><td>Gemeinsamer Grillplatz der Comunidad</td><td>Braucht einen Beschluss der Versammlung, die Kosten werden geteilt.</td></tr>
+    </tbody>
+  </table>
+  <p>Sie haben ein Haus mit eigenem Garten? Lesen Sie <a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/aussenkueche/">Außenküche und Grill</a>, mit den Regeln für die Waldbrandsaison.</p>
+  <p>Zurück zur Übersicht: <a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/">Bauen auf dem eigenen Grundstück</a>.</p>
+</Guide>

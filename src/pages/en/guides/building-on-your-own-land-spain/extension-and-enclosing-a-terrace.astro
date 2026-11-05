@@ -1,0 +1,53 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'allowance', label: 'Is there building allowance left?' },
+  { id: 'extension', label: 'Extension or annex' },
+  { id: 'floor', label: 'An extra floor' },
+  { id: 'terrace', label: 'Enclosing a terrace (cerramiento)' },
+  { id: 'options', label: 'What are your options?' },
+];
+
+const faq = [
+  { q: 'Do I need a permit to enclose my terrace?', a: 'Yes. Enclosing a terrace with glass or walls turns outdoor space into indoor space and changes the façade. In Andalusia that needs a permit, and in a complex also the community’s consent.' },
+  { q: 'How many owners must agree to enclosing a terrace?', a: 'Under the Ley de Propiedad Horizontal (art. 10.3), the owners’ meeting must agree by three fifths of the owners, who together also hold three fifths of the shares. If the statutes already set a standard design for all terraces, it is often simpler.' },
+  { q: 'Are frameless glass curtains also a cerramiento?', a: 'Usually yes. A glass curtain (cortina de cristal) also closes off the terrace and changes the look. Some towns are more lenient than with walls, but in a complex the community must always agree.' },
+  { q: 'Can I add a floor to my house?', a: 'Only if the zoning plan allows an extra floor and there is building allowance left. The structure must also be able to carry the weight. In a complex it needs the consent of the community and of the owners directly affected.' },
+];
+---
+<Guide lang="en" slug="building-on-your-own-land-extension-and-enclosing-a-terrace" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Need more space?" ctaText="Tell us what you want. We check what the zoning plan allows, arrange the architect and the permit, and build it.">
+  <h2 id="allowance">Is there building allowance left?</h2>
+  <p>Every extension starts with the same question: how much more may be built on your plot? The zoning plan (<em>PGOU</em>) sets how many square metres may be built on a plot in total (<em>edificabilidad</em>), how high and how far from the boundary. Once that is used up, nothing more may be added. An architect can check this for you, or you can ask the town hall for an <em>informe urbanístico</em>.</p>
+  <p>On a finca (<em>suelo rústico</em>) the allowance is usually small or already used up. If the house has AFO status, nothing may be added. See <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation</a>.</p>
+
+  <h2 id="extension">Extension or annex</h2>
+  <p>An extension, annex or extra room in Andalusia always needs a permit, with a project by an architect and an <em>arquitecto técnico</em>. You may only start once the permit is granted and the execution project has been filed with the town. Afterwards the extra square metres must be added to the Catastro, and ideally to the deeds too. All the steps are in our guide to <MaybeLink href="/en/guides/building-permits-renovation-andalusia/">building permits for renovation</MaybeLink>.</p>
+
+  <h2 id="floor">An extra floor</h2>
+  <p>Adding a floor is one of the heaviest renovations. Besides building allowance, the zoning plan must allow the extra height, and the foundations and walls must carry the weight. The architect calculates the latter. Older village houses often need strengthening. In an apartment complex an extra floor needs the consent of the community and of the owners directly affected.</p>
+
+  <h2 id="terrace">Enclosing a terrace (cerramiento)</h2>
+  <p>Enclosing a terrace with glass or a conservatory is very common in Spain, and often done without a permit. Yet it is a renovation with rules:</p>
+  <ul>
+    <li><strong>Town hall</strong>: outdoor space becomes indoor space. That counts towards the building allowance and changes the façade, so you need a permit. If it does not fit within the zoning plan, it is not allowed.</li>
+    <li><strong>Community</strong>: in a complex you change the look of the building. Under the Ley de Propiedad Horizontal (art. 10.3) the meeting must agree, by three fifths of the owners and three fifths of the shares. The community often also prescribes a standard design so that all terraces look the same.</li>
+    <li><strong>Without consent</strong>: the community can demand that you remove it, and the town can fine you. It can also raise questions when you sell.</li>
+  </ul>
+
+  <h2 id="options">What are your options?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Option</th><th>Good to know</th></tr></thead>
+    <tbody>
+      <tr><td>Awning or screens on the terrace</td><td>Not a cerramiento. In a complex often a set colour from the community.</td></tr>
+      <tr><td>Glass curtain (cortina de cristal)</td><td>Slides open and closed, clear view. Needs the community and often a permit.</td></tr>
+      <tr><td>Aluminium frames with glass</td><td>Better against wind and cold; becomes a real extra room.</td></tr>
+      <tr><td>Conservatory with a roof against the house</td><td>Counts as an extension: project and permit.</td></tr>
+      <tr><td>Masonry extension or extra room</td><td>The most durable extension, with an architect.</td></tr>
+      <tr><td>Extra floor</td><td>Often with structural strengthening.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Want this built? Tell us what you have in mind. We find out what is allowed, arrange the permit and build it for you.</strong> <a href="/en/request/?dienst=renovatie">Get in touch →</a></p>
+  <p>Back to the overview: <a href="/en/guides/building-on-your-own-land-spain/">building on your own land</a>.</p>
+</Guide>

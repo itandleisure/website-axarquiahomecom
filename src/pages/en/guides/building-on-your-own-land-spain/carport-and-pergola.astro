@@ -1,0 +1,64 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'difference', label: 'Pergola, canopy or carport' },
+  { id: 'rules', label: 'Notification or permit?' },
+  { id: 'finca', label: 'On a finca' },
+  { id: 'options', label: 'What are your options?' },
+  { id: 'tips', label: 'What to watch out for' },
+];
+
+const faq = [
+  { q: 'Do I need a permit for a pergola in Spain?', a: 'For a freestanding pergola without a solid roof, many towns only require a notification (declaración responsable), and some nothing at all. Once it gets a solid roof or is attached to the house, it often counts as a canopy and needs a permit. Ask the town hall first.' },
+  { q: 'Does a carport count towards the built area?', a: 'Usually yes, although many zoning plans only count part of a canopy that is open at the sides. If the building allowance on your plot is used up, a carport is often no longer allowed.' },
+  { q: 'Can I put a carport on the boundary?', a: 'Often not. The zoning plan sets a minimum distance from the boundary and the street (retranqueo). Sometimes it is allowed with written consent from the neighbours. That differs per town.' },
+];
+---
+<Guide lang="en" slug="building-on-your-own-land-carport-and-pergola" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Want a carport or pergola built?" ctaText="Send a photo of the spot and tell us the size you need. We check what is allowed and make you a proposal.">
+  <h2 id="difference">Pergola, canopy or carport</h2>
+  <p>To the town hall, what is above your head makes a big difference:</p>
+  <ul>
+    <li><strong>Pergola</strong>: an open structure of wood or aluminium, with at most a cloth, reed matting or climbing plants on top. No solid roof.</li>
+    <li><strong>Canopy</strong> (<em>porche</em> or <em>cubierta</em>): a solid, waterproof roof, open at the sides. A louvred roof that closes completely usually counts as a canopy too.</li>
+    <li><strong>Carport</strong> (<em>cochera</em> or <em>aparcamiento cubierto</em>): a canopy for the car. For the rules it is the same as a canopy.</li>
+  </ul>
+
+  <h2 id="rules">Notification or permit?</h2>
+  <p>The Andalusian building law LISTA has two routes: a notification (<em>declaración responsable</em>) for small works and a permit (<em>licencia de obra</em>) for everything else. Which route a pergola or carport follows is set in your town's bylaws. In practice:</p>
+  <ul>
+    <li><strong>Freestanding pergola without a roof</strong>: often a notification, exempt in some towns.</li>
+    <li><strong>Canopy or carport</strong>: usually a permit, with drawings. For a larger structure the town asks for a project by an architect or technician.</li>
+    <li><strong>In a complex or urbanización</strong>: the community must also agree if it changes the look, for example a pergola on a roof terrace.</li>
+  </ul>
+  <p>A canopy almost always counts towards the building allowance (<em>edificabilidad</em>) and must keep its distance from the boundary. More in our guide to <MaybeLink href="/en/guides/building-permits-renovation-andalusia/">building permits</MaybeLink>.</p>
+
+  <h2 id="finca">On a finca</h2>
+  <p>On rural land (<em>suelo rústico</em>), a canopy or carport extends the built area. That is only allowed for a legal house, and only if the zoning plan leaves room. A freestanding pergola without a roof is usually not a problem. If your house has AFO status, you may not add a canopy with a solid roof. See <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation</a>.</p>
+  <p>On a finca with several cars, a light, open carport of steel or wood is often more feasible than an enclosed garage. Ask the town hall first: the difference between “allowed” and “not allowed” is often in the details.</p>
+
+  <h2 id="options">What are your options?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Option</th><th>Good to know</th></tr></thead>
+    <tbody>
+      <tr><td>Shade cloth or reed matting on posts</td><td>Quick and simple, lasts a few years. Take it down in a storm.</td></tr>
+      <tr><td>Wooden pergola</td><td>Attractive and easy to build yourself. Treat it every few years against sun and woodworm.</td></tr>
+      <tr><td>Aluminium pergola with fabric</td><td>Low maintenance; close the fabric in strong wind.</td></tr>
+      <tr><td>Open carport of steel or wood with a light roof</td><td>For one or two cars. Usually needs a permit.</td></tr>
+      <tr><td>Masonry canopy with tiled roof</td><td>Suits an Andalusian house and lasts a long time.</td></tr>
+      <tr><td>Louvred roof (bioclimatic pergola)</td><td>Louvres open and close, with lighting and screens as options. Usually counts as a canopy.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Want this built? Tell us what you have in mind. We find out what is allowed, arrange the permit and build it for you.</strong> <a href="/en/request/?dienst=renovatie">Get in touch →</a></p>
+  <p>Building a pergola yourself? See our <MaybeLink href="/en/diy/">DIY guides</MaybeLink> for steps and materials.</p>
+
+  <h2 id="tips">What to watch out for</h2>
+  <ul>
+    <li><strong>Wind</strong>: it can blow hard in the Axarquía, especially on hilltops. Anchor the posts well in concrete and choose a structure designed for wind.</li>
+    <li><strong>Sun and salt</strong>: near the coast, ordinary steel rusts quickly. Choose galvanised steel, aluminium or well-treated wood.</li>
+    <li><strong>Rainwater</strong>: a solid roof collects a lot of water in short downpours. Fit a gutter and a drain that does not run onto the neighbours' land.</li>
+    <li><strong>Solar panels</strong>: a carport is a good spot for solar panels. Allow for them in the structure from the start.</li>
+  </ul>
+  <p>Back to the overview: <a href="/en/guides/building-on-your-own-land-spain/">building on your own land</a>.</p>
+</Guide>

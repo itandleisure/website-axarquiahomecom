@@ -1,0 +1,91 @@
+---
+// Quellen (gelesen am 5. November 2026): Ley 7/2021 LISTA Art. 21, 22, 137, 138, 153 und Decreto 550/2022;
+// Ley 49/1960 Propiedad Horizontal Art. 7.2, 10.3, 17; Orden 21 mayo 2009 Junta de Andalucía (Waldbrandgefahr).
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'boden', label: 'Zuerst: welcher Boden?' },
+  { id: 'ueberblick', label: 'Was ist wo erlaubt?' },
+  { id: 'urbano', label: 'Im Wohngebiet (urbano)' },
+  { id: 'rustico', label: 'Auf einer Finca (rústico)' },
+  { id: 'gemeinschaft', label: 'In einer Wohnanlage' },
+  { id: 'ohne', label: 'Bauen ohne Genehmigung' },
+  { id: 'projekte', label: 'Nach Projekt' },
+];
+
+const faq = [
+  { q: 'Wie finde ich heraus, ob mein Grundstück rústico oder urbano ist?', a: 'Suchen Sie Ihre Referencia catastral im Catastro (sedecatastro.gob.es): Dort steht, ob das Grundstück urbano oder rústico ist. Sicherheit gibt ein Informe urbanístico oder eine Cédula urbanística der Gemeinde, in der auch steht, wie viel auf Ihrem Grundstück gebaut werden darf.' },
+  { q: 'Darf ich etwas Kleines ohne Genehmigung bauen?', a: 'Nur sehr wenig. Eine freistehende Pergola ohne Dach, ein niedriges Gartenmäuerchen oder ein Pflaster gehen manchmal mit einer Anzeige (Declaración responsable). Alles mit festem Dach, Mauern oder Fundament braucht in der Regel eine Genehmigung. Fragen Sie immer vorher bei der Gemeinde.' },
+  { q: 'Darf ich an ein Haus mit AFO-Status anbauen?', a: 'Nein. Ein AFO-Haus dürfen Sie instand halten und renovieren, aber nicht erweitern: kein Anbau, keine Garage, kein Gästehaus. Auch ein Carport mit festem Dach gilt als Erweiterung.' },
+  { q: 'Darf die Eigentümergemeinschaft mir das Grillen verbieten?', a: 'Ja, wenn die Statuten oder die Hausordnung es verbieten oder wenn Sie die Nachbarn belästigen. Die Comunidad kann dann gerichtlich durchsetzen, dass Sie es unterlassen.' },
+];
+---
+<Guide lang="de" slug="bauen-auf-eigenem-grundstueck-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Möchten Sie etwas dazubauen?" ctaText="Sagen Sie uns, was Sie bauen möchten und wo Ihr Haus steht. Wir klären, was erlaubt ist, kümmern uns um die Genehmigung und bauen es für Sie.">
+  <h2 id="boden">Zuerst: welcher Boden?</h2>
+  <p>In Andalusien legt der Bebauungsplan der Gemeinde (<em>PGOU</em>) fest, was auf einem Grundstück erlaubt ist. Die wichtigste Frage ist, um welche Art von Boden es sich handelt:</p>
+  <ul>
+    <li><strong>Suelo urbano</strong>: Boden in einem Dorf, einer Stadt oder Urbanisation. Hier dürfen Sie bauen, im Rahmen des Bebauungsplans: wie viele Quadratmeter, wie hoch und mit welchem Abstand zur Grenze.</li>
+    <li><strong>Suelo rústico</strong>: ländlicher Boden. Hier stehen die meisten Fincas in der Axarquía. Bauen ist die Ausnahme: Das Land ist für Landwirtschaft und Natur gedacht, nicht für Häuser.</li>
+  </ul>
+  <p>Die Bodenart finden Sie im Kataster (<em>Catastro</em>). Mehr Sicherheit gibt ein <em>Informe urbanístico</em> der Gemeinde: Darin steht auch, wie viel auf Ihrem Grundstück schon gebaut ist und wie viel noch hinzukommen darf.</p>
+  <p>Wohnen Sie in einer Wohnung oder einer Urbanisation mit Eigentümergemeinschaft (<em>Comunidad de propietarios</em>), gelten zusätzlich deren Regeln.</p>
+
+  <h2 id="ueberblick">Was ist wo erlaubt?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Projekt</th><th>Wohngebiet (urbano)</th><th>Finca (rústico)</th></tr></thead>
+    <tbody>
+      <tr><td><a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/carport-und-pergola/">Pergola ohne festes Dach</a></td><td>Meist ja, oft mit Anzeige</td><td>Oft ja, vorher fragen</td></tr>
+      <tr><td><a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/carport-und-pergola/">Carport oder Überdachung</a></td><td>Oft ja, mit Genehmigung</td><td>Manchmal, mit Genehmigung</td></tr>
+      <tr><td><a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/aussenkueche/">Außenküche</a></td><td>Meist ja</td><td>Meist ja; Waldbrandsaison beachten</td></tr>
+      <tr><td><a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/garage/">Garage</a></td><td>Oft ja, mit Projekt und Genehmigung</td><td>Schwierig, nur wenn der Plan Raum lässt</td></tr>
+      <tr><td><a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/anbau-und-terrasse-schliessen/">Anbau oder zusätzliches Stockwerk</a></td><td>Wenn noch Baurecht übrig ist</td><td>Selten</td></tr>
+      <tr><td><a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/anbau-und-terrasse-schliessen/">Terrasse schließen</a></td><td>Mit Genehmigung, in einer Anlage auch mit der Gemeinschaft</td><td>Selten</td></tr>
+      <tr><td><a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/gaestehaus/">Zweites Haus oder Gästehaus</a></td><td>Manchmal, als Anbau oder im Rahmen des Baurechts</td><td>Fast nie</td></tr>
+      <tr><td><a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/grillen-in-wohnanlagen/">Grill auf der Wohnungsterrasse</a></td><td colspan="2">Hängt von den Regeln der Gemeinschaft ab</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="urbano">Im Wohngebiet (urbano)</h2>
+  <p>Im Dorf oder in einer Urbanisation dürfen Sie bauen, aber der Bebauungsplan bestimmt, wie viel. Drei Begriffe kehren immer wieder:</p>
+  <ul>
+    <li><strong>Edificabilidad</strong>: wie viele Quadratmeter insgesamt auf dem Grundstück gebaut werden dürfen. Ist das ausgeschöpft, darf nichts mehr hinzukommen, auch keine Garage.</li>
+    <li><strong>Ocupación</strong>: welcher Anteil des Grundstücks bebaut sein darf.</li>
+    <li><strong>Retranqueos</strong>: der Abstand zur Grundstücksgrenze und zur Straße. Oft einige Meter, und auch ein Carport oder eine Garage muss ihn einhalten.</li>
+  </ul>
+  <p>Eine seitlich offene Überdachung zählt in vielen Bebauungsplänen nur teilweise mit. Eine geschlossene Garage oder ein Zimmer zählt voll. Die Regeln unterscheiden sich je Gemeinde, lassen Sie es also vorher prüfen. Für fast alles mit festem Dach oder Mauern brauchen Sie eine Genehmigung (<em>Licencia de obra</em>), für größere Arbeiten auch einen Architekten. Mehr im Ratgeber <MaybeLink href="/de/ratgeber/baugenehmigung-umbau-andalusien/">Baugenehmigung für den Umbau</MaybeLink>.</p>
+
+  <h2 id="rustico">Auf einer Finca (rústico)</h2>
+  <p>Auf ländlichem Boden gilt: Gebaut werden darf nur, was Gesetz und Bebauungsplan ausdrücklich erlauben. Für die meisten Fincas bedeutet das:</p>
+  <ul>
+    <li><strong>Ein legales Haus</strong> dürfen Sie instand halten und renovieren. Erweitern geht nur, wenn der Bebauungsplan noch Raum lässt, und viele ältere Fincas sind schon am Maximum.</li>
+    <li><strong>Ein neues, separates Gebäude</strong> wie eine Garage oder ein Gästehaus braucht eine Genehmigung und oft zuerst eine eigene Zulassung für das Bauen auf ländlichem Boden. Das dauert lange und gelingt längst nicht immer.</li>
+    <li><strong>Ein zweites Wohnhaus</strong> auf demselben Grundstück ist in der Praxis fast nie möglich. Ein neues Haus auf Rústico verlangt nach dem andalusischen Gesetz LISTA unter anderem ein großes Grundstück (die Gemeinde legt die Mindestgröße fest, oft mehrere Hektar), ein eigenes Verfahren und eine Abgabe an die Gemeinde.</li>
+    <li><strong>Ein landwirtschaftliches Gebäude</strong> (<em>Almacén agrícola</em> oder <em>Cuarto de aperos</em>) ist manchmal erlaubt, aber nur für die Landwirtschaft. Wer daraus später ein Schlafzimmer oder Gästehaus macht, baut illegal.</li>
+  </ul>
+  <p>Hat Ihr Haus AFO-Status, dürfen Sie nichts dazubauen. Mehr im Ratgeber <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>.</p>
+
+  <h2 id="gemeinschaft">In einer Wohnanlage</h2>
+  <p>Wohnen Sie in einer Wohnanlage oder Urbanisation mit <em>Comunidad de propietarios</em>, gelten neben den Regeln der Gemeinde auch die der Gemeinschaft:</p>
+  <ul>
+    <li><strong>Statuten und Hausordnung</strong> (<em>Estatutos</em> und <em>Normas de régimen interior</em>) können vieles verbieten: einen Grill auf der Terrasse, eine Markise in einer anderen Farbe, eine Pergola auf der Dachterrasse.</li>
+    <li><strong>Alles, was die Fassade oder das Gebäude verändert</strong>, etwa eine Terrasse schließen oder ein Stockwerk aufsetzen, braucht nach dem spanischen Wohnungseigentumsgesetz (<em>Ley de Propiedad Horizontal</em>) die Zustimmung der Versammlung, meist mit drei Fünfteln der Eigentümer.</li>
+    <li><strong>Belästigung</strong>: Auch wenn etwas nicht ausdrücklich verboten ist, kann die Gemeinschaft gegen Tätigkeiten vorgehen, die die Nachbarn stören, etwa Rauch.</li>
+  </ul>
+  <p>Fordern Sie beim Verwalter (<em>Administrador de fincas</em>) die Statuten, die Hausordnung und die letzten Protokolle an, bevor Sie kaufen oder bauen. Mehr zum Grillen unter <a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/grillen-in-wohnanlagen/">Grillen in Wohnanlagen</a>.</p>
+
+  <h2 id="ohne">Bauen ohne Genehmigung</h2>
+  <p>In der Axarquía stehen Tausende Carports, Casitas und geschlossene Terrassen ohne Genehmigung. Ohne Risiko ist das trotzdem nicht:</p>
+  <ul>
+    <li>Die Gemeinde kann bis zu sechs Jahre nach Fertigstellung ein Bußgeld verhängen und den Abriss verlangen. Auf geschütztem Boden verjährt das nie.</li>
+    <li>Beim Verkauf muss das, was steht, mit Kataster und Urkunde übereinstimmen. Ein illegaler Anbau kostet Sie dann Zeit, Geld oder Käufer.</li>
+    <li>Eine Versicherung kann die Zahlung für Schäden an einem nicht genehmigten Teil verweigern.</li>
+  </ul>
+  <p>Steht schon etwas ohne Genehmigung, ist eine Legalisierung manchmal möglich. Siehe <a href="/de/ratgeber/afo-legalisierung-andalusien/">Legalisierung und AFO</a>. Kaufen Sie ein Haus, lassen Sie in einem <a href="/de/immobiliengutachten/">Immobiliengutachten</a> prüfen, ob alles, was steht, auch auf dem Papier steht.</p>
+
+  <h2 id="projekte">Nach Projekt</h2>
+  <p>Je Projekt lesen Sie, was erlaubt ist, welche Möglichkeiten es gibt und wie wir Ihnen bei der Umsetzung helfen:</p>
+  <GuideChildren lang="de" parent="bauen-auf-eigenem-grundstueck-spanien" />
+  <p class="note">Dieser Ratgeber gibt allgemeine Informationen auf Grundlage des andalusischen Gesetzes LISTA (Ley 7/2021), seiner Verordnung (Decreto 550/2022) und der Ley de Propiedad Horizontal, Stand 5. November 2026. Er ist keine Rechtsberatung: Was auf Ihrem Grundstück erlaubt ist, hängt vom Bebauungsplan Ihrer Gemeinde ab und wird von einem Architekten und der Gemeinde beurteilt.</p>
+</Guide>

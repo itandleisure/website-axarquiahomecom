@@ -1,0 +1,63 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'unterschied', label: 'Pergola, Überdachung oder Carport' },
+  { id: 'regeln', label: 'Anzeige oder Genehmigung?' },
+  { id: 'finca', label: 'Auf einer Finca' },
+  { id: 'optionen', label: 'Welche Möglichkeiten gibt es?' },
+  { id: 'tipps', label: 'Worauf Sie achten sollten' },
+];
+
+const faq = [
+  { q: 'Brauche ich in Spanien eine Genehmigung für eine Pergola?', a: 'Für eine freistehende Pergola ohne festes Dach reicht in vielen Gemeinden eine Anzeige (Declaración responsable), manchmal nicht einmal das. Bekommt sie ein festes Dach oder steht sie am Haus, gilt sie oft als Überdachung und braucht eine Genehmigung. Fragen Sie vorher bei der Gemeinde.' },
+  { q: 'Zählt ein Carport zur bebauten Fläche?', a: 'Meistens ja, auch wenn eine seitlich offene Überdachung in vielen Bebauungsplänen nur teilweise mitzählt. Ist das Baurecht auf Ihrem Grundstück ausgeschöpft, ist oft kein Carport mehr möglich.' },
+  { q: 'Darf ich einen Carport an die Grundstücksgrenze stellen?', a: 'Oft nicht. Der Bebauungsplan schreibt einen Mindestabstand zur Grenze und zur Straße vor (Retranqueo). Manchmal geht es mit schriftlicher Zustimmung der Nachbarn. Das ist je Gemeinde verschieden.' },
+];
+---
+<Guide lang="de" slug="bauen-auf-eigenem-grundstueck-carport-und-pergola" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Carport oder Pergola bauen lassen?" ctaText="Schicken Sie ein Foto der Stelle und sagen Sie uns die gewünschte Größe. Wir prüfen, was erlaubt ist, und machen Ihnen einen Vorschlag.">
+  <h2 id="unterschied">Pergola, Überdachung oder Carport</h2>
+  <p>Für die Gemeinde macht es einen großen Unterschied, was über Ihrem Kopf ist:</p>
+  <ul>
+    <li><strong>Pergola</strong>: eine offene Konstruktion aus Holz oder Aluminium, höchstens mit Tuch, Schilfmatten oder Kletterpflanzen darüber. Kein festes Dach.</li>
+    <li><strong>Überdachung</strong> (<em>Porche</em> oder <em>Cubierta</em>): ein festes, wasserdichtes Dach, an den Seiten offen. Auch ein Lamellendach, das ganz schließt, gilt meist als Überdachung.</li>
+    <li><strong>Carport</strong> (<em>Cochera</em> oder <em>Aparcamiento cubierto</em>): eine Überdachung für das Auto. Für die Regeln dasselbe wie eine Überdachung.</li>
+  </ul>
+
+  <h2 id="regeln">Anzeige oder Genehmigung?</h2>
+  <p>Das andalusische Baugesetz LISTA kennt zwei Wege: eine Anzeige (<em>Declaración responsable</em>) für kleine Arbeiten und eine Genehmigung (<em>Licencia de obra</em>) für alles andere. Welchen Weg eine Pergola oder ein Carport nimmt, steht in der Satzung Ihrer Gemeinde. In der Praxis:</p>
+  <ul>
+    <li><strong>Freistehende Pergola ohne Dach</strong>: oft eine Anzeige, in manchen Gemeinden genehmigungsfrei.</li>
+    <li><strong>Überdachung oder Carport</strong>: meist eine Genehmigung mit Zeichnungen. Bei einer größeren Konstruktion verlangt die Gemeinde ein Projekt eines Architekten oder Technikers.</li>
+    <li><strong>In einer Wohnanlage oder Urbanisation</strong>: Auch die Gemeinschaft muss zustimmen, wenn sich das Erscheinungsbild ändert, etwa bei einer Pergola auf der Dachterrasse.</li>
+  </ul>
+  <p>Eine Überdachung zählt fast immer zum Baurecht (<em>Edificabilidad</em>) und muss Abstand zur Grenze halten. Mehr im Ratgeber <MaybeLink href="/de/ratgeber/baugenehmigung-umbau-andalusien/">Baugenehmigung für den Umbau</MaybeLink>.</p>
+
+  <h2 id="finca">Auf einer Finca</h2>
+  <p>Auf ländlichem Boden (<em>Suelo rústico</em>) erweitert eine Überdachung oder ein Carport die Bebauung. Das ist nur bei einem legalen Haus erlaubt und nur, wenn der Bebauungsplan noch Raum lässt. Eine freistehende Pergola ohne Dach ist meist kein Problem. Hat Ihr Haus AFO-Status, dürfen Sie keine Überdachung mit festem Dach errichten. Siehe <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>.</p>
+  <p>Auf einer Finca mit mehreren Autos ist ein leichter, offener Carport aus Stahl oder Holz oft eher machbar als eine geschlossene Garage. Fragen Sie zuerst bei der Gemeinde: Der Unterschied zwischen „erlaubt“ und „nicht erlaubt“ liegt oft im Detail.</p>
+
+  <h2 id="optionen">Welche Möglichkeiten gibt es?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Option</th><th>Gut zu wissen</th></tr></thead>
+    <tbody>
+      <tr><td>Sonnensegel oder Schilfmatte auf Pfosten</td><td>Schnell und einfach, hält einige Jahre. Bei Sturm abnehmen.</td></tr>
+      <tr><td>Holzpergola</td><td>Schön und gut selbst zu bauen. Alle paar Jahre gegen Sonne und Holzwurm behandeln.</td></tr>
+      <tr><td>Aluminiumpergola mit Tuch</td><td>Pflegeleicht, Tuch bei starkem Wind schließen.</td></tr>
+      <tr><td>Offener Carport aus Stahl oder Holz mit leichtem Dach</td><td>Für ein oder zwei Autos. Genehmigung meist nötig.</td></tr>
+      <tr><td>Gemauerte Überdachung mit Ziegeldach</td><td>Passt zu einem andalusischen Haus und hält lange.</td></tr>
+      <tr><td>Lamellendach (bioklimatische Pergola)</td><td>Lamellen öffnen und schließen, auch mit Beleuchtung und Screens. Gilt meist als Überdachung.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Möchten Sie das umsetzen lassen? Sagen Sie uns, was Sie vorhaben. Wir klären, was erlaubt ist, kümmern uns um die Genehmigung und bauen es für Sie.</strong> <a href="/de/anfrage/?dienst=renovatie">Kontakt aufnehmen →</a></p>
+
+  <h2 id="tipps">Worauf Sie achten sollten</h2>
+  <ul>
+    <li><strong>Wind</strong>: In der Axarquía kann es kräftig wehen, vor allem auf Hügeln. Verankern Sie die Pfosten gut in Beton und wählen Sie eine windfeste Konstruktion.</li>
+    <li><strong>Sonne und Salz</strong>: An der Küste rostet normaler Stahl schnell. Wählen Sie verzinkten Stahl, Aluminium oder gut behandeltes Holz.</li>
+    <li><strong>Regenwasser</strong>: Ein festes Dach fängt bei kurzen Schauern viel Wasser. Sorgen Sie für eine Rinne und einen Abfluss, der nicht zum Nachbarn läuft.</li>
+    <li><strong>Solarmodule</strong>: Ein Carport ist ein guter Platz für Solarmodule. Berücksichtigen Sie das von Anfang an in der Konstruktion.</li>
+  </ul>
+  <p>Zurück zur Übersicht: <a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/">Bauen auf dem eigenen Grundstück</a>.</p>
+</Guide>

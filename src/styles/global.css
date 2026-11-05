@@ -301,3 +301,5 @@ a.card:hover { transform: translateY(-2px); border-color: var(--terra); color: v
 .calc-cta { display: block; text-align: center; margin: 16px 0 8px; }
 .calc-callout { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; background: var(--sand); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin: 1.4em 0; }
 .calc-callout p { margin: 0; }
+/* Tabellen met uitleg in de laatste kolom (geen prijzen) */
+.prices.plain td:last-child { font-weight: 400; white-space: normal; }

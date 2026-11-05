@@ -1,0 +1,92 @@
+---
+// Sources (read 5 November 2026): Ley 7/2021 LISTA art. 21, 22, 137, 138, 153 and Decreto 550/2022;
+// Ley 49/1960 Propiedad Horizontal art. 7.2, 10.3, 17; Orden 21 mayo 2009 Junta de Andalucía (fire risk).
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'land', label: 'First: what kind of land?' },
+  { id: 'overview', label: 'What is allowed where?' },
+  { id: 'urbano', label: 'In a residential area (urbano)' },
+  { id: 'rustico', label: 'On a finca (rústico)' },
+  { id: 'community', label: 'In a complex: the community' },
+  { id: 'without', label: 'Building without a permit' },
+  { id: 'projects', label: 'By project' },
+];
+
+const faq = [
+  { q: 'How do I know whether my land is rústico or urbano?', a: 'Look up your referencia catastral in the Catastro (sedecatastro.gob.es): it shows whether the plot is urbano or rústico. For certainty, ask the town hall for an informe urbanístico or cédula urbanística, which also states how much may be built on your plot.' },
+  { q: 'Can I build something small without a permit?', a: 'Very little. A freestanding pergola without a roof, a low garden wall or paving can sometimes be done with a notification (declaración responsable). Anything with a solid roof, walls or foundations normally needs a permit. Always ask the town hall first.' },
+  { q: 'Can I extend a house with AFO status?', a: 'No. With an AFO house you may maintain and renovate, but not add anything: no extension, no garage, no guest house. A carport with a solid roof also counts as an extension.' },
+  { q: 'Can the community ban me from using a barbecue?', a: 'Yes, if the statutes or house rules prohibit it, or if you cause a nuisance to your neighbours. The comunidad can then go to court to make you stop.' },
+];
+---
+<Guide lang="en" slug="building-on-your-own-land-spain" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Planning to build something?" ctaText="Tell us what you want to build and where your house is. We find out what is allowed, arrange the permit and build it for you.">
+  <h2 id="land">First: what kind of land?</h2>
+  <p>In Andalusia, the town's zoning plan (<em>PGOU</em>) decides what may be built on a plot. The key question is what kind of land it is:</p>
+  <ul>
+    <li><strong>Suelo urbano</strong>: land in a village, town or urbanización. You may build here, within the zoning rules: how many square metres, how high and how far from the boundary.</li>
+    <li><strong>Suelo rústico</strong>: rural land. Most fincas in the Axarquía stand on it. Building is the exception: the land is meant for farming and nature, not houses.</li>
+  </ul>
+  <p>You can find the type of land in the land registry (<em>Catastro</em>). An <em>informe urbanístico</em> from the town hall gives more certainty: it also shows how much has already been built on your plot and how much more is allowed.</p>
+  <p>If you live in an apartment or an urbanización with an owners' community (<em>comunidad de propietarios</em>), the community's rules apply as well.</p>
+
+  <h2 id="overview">What is allowed where?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Project</th><th>Residential (urbano)</th><th>Finca (rústico)</th></tr></thead>
+    <tbody>
+      <tr><td><a href="/en/guides/building-on-your-own-land-spain/carport-and-pergola/">Pergola without a solid roof</a></td><td>Usually yes, often with a notification</td><td>Often yes, ask first</td></tr>
+      <tr><td><a href="/en/guides/building-on-your-own-land-spain/carport-and-pergola/">Carport or canopy</a></td><td>Often yes, with a permit</td><td>Sometimes, with a permit</td></tr>
+      <tr><td><a href="/en/guides/building-on-your-own-land-spain/outdoor-kitchen/">Outdoor kitchen</a></td><td>Usually yes</td><td>Usually yes; mind the fire season</td></tr>
+      <tr><td><a href="/en/guides/building-on-your-own-land-spain/garage/">Garage</a></td><td>Often yes, with project and permit</td><td>Difficult, only if the plan allows</td></tr>
+      <tr><td><a href="/en/guides/building-on-your-own-land-spain/extension-and-enclosing-a-terrace/">Extension or extra floor</a></td><td>If there is building allowance left</td><td>Rarely</td></tr>
+      <tr><td><a href="/en/guides/building-on-your-own-land-spain/extension-and-enclosing-a-terrace/">Enclosing a terrace</a></td><td>With a permit, in a complex also with the community</td><td>Rarely</td></tr>
+      <tr><td><a href="/en/guides/building-on-your-own-land-spain/guest-house/">Second house or guest house</a></td><td>Sometimes, as an extension or within the allowance</td><td>Almost never</td></tr>
+      <tr><td><a href="/en/guides/building-on-your-own-land-spain/barbecue-in-apartments/">Barbecue on an apartment terrace</a></td><td colspan="2">Depends on the community rules</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="urbano">In a residential area (urbano)</h2>
+  <p>In a village or urbanización you may build, but the zoning plan decides how much. Three terms keep coming back:</p>
+  <ul>
+    <li><strong>Edificabilidad</strong>: how many square metres may be built on the plot in total. Once that is used up, nothing more may be added, not even a garage.</li>
+    <li><strong>Ocupación</strong>: how much of the plot may be covered by buildings.</li>
+    <li><strong>Retranqueos</strong>: the distance from the boundary and the street. Often a few metres, and a carport or garage must respect it too.</li>
+  </ul>
+  <p>A canopy that is open at the sides only partly counts in many zoning plans. An enclosed garage or room counts in full. Rules differ per town, so have it checked first. Almost anything with a solid roof or walls needs a permit (<em>licencia de obra</em>), and larger works also need an architect. See our guide to <MaybeLink href="/en/guides/building-permits-renovation-andalusia/">building permits for renovation</MaybeLink>.</p>
+
+  <h2 id="rustico">On a finca (rústico)</h2>
+  <p>On rural land the rule is: you may only build what the law and the zoning plan expressly allow. For most fincas that means:</p>
+  <ul>
+    <li><strong>A legal house</strong> may be maintained and renovated. Extending is only possible if the zoning plan leaves room, and many older fincas are already at the limit.</li>
+    <li><strong>A new, separate building</strong> such as a garage or guest house needs a permit, and often first a separate authorisation for building on rural land. That takes a long time and often fails.</li>
+    <li><strong>A second home</strong> on the same plot is almost never possible in practice. Under the Andalusian law LISTA, a new house on rústico requires among other things a large plot (the town sets the minimum, often several hectares), a separate procedure and a levy paid to the town.</li>
+    <li><strong>A farm building</strong> (<em>almacén agrícola</em> or <em>cuarto de aperos</em>) is sometimes allowed, but only for farming. Turning it into a bedroom or guest house later is illegal.</li>
+  </ul>
+  <p>If your house has AFO status, you may not add anything. Read more in our guide to <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation</a>.</p>
+
+  <h2 id="community">In a complex: the community</h2>
+  <p>If you live in an apartment complex or an urbanización with a <em>comunidad de propietarios</em>, the community's rules apply on top of the town's:</p>
+  <ul>
+    <li><strong>Statutes and house rules</strong> (<em>estatutos</em> and <em>normas de régimen interior</em>) can prohibit all sorts of things: a barbecue on the terrace, an awning in a different colour, a pergola on the roof terrace.</li>
+    <li><strong>Anything that changes the façade or the building</strong>, such as enclosing a terrace or adding a floor, needs the owners' meeting to agree under the Spanish Horizontal Property Act (<em>Ley de Propiedad Horizontal</em>), usually by three fifths of the owners.</li>
+    <li><strong>Nuisance</strong>: even if something is not expressly prohibited, the community can act against activities that bother the neighbours, such as smoke.</li>
+  </ul>
+  <p>Ask the property manager (<em>administrador de fincas</em>) for the statutes, the house rules and the latest minutes before you buy or build. More on barbecues in <a href="/en/guides/building-on-your-own-land-spain/barbecue-in-apartments/">barbecues in apartment complexes</a>.</p>
+
+  <h2 id="without">Building without a permit</h2>
+  <p>There are thousands of carports, casitas and enclosed terraces in the Axarquía without a permit. That does not make it risk-free:</p>
+  <ul>
+    <li>The town can fine you and order demolition for up to six years after completion. On protected land that period never runs out.</li>
+    <li>When you sell, what stands on the plot must match the land registry and the deeds. An illegal extension then costs you time, money or buyers.</li>
+    <li>An insurer may refuse to pay for damage to an unpermitted part.</li>
+  </ul>
+  <p>If something has already been built without a permit, legalising it is sometimes possible. See <a href="/en/guides/afo-legalisation-andalusia/">legalisation and AFO</a>. Buying a house? Have a <a href="/en/property-survey/">property survey</a> check that everything on the plot is also on paper.</p>
+
+  <h2 id="projects">By project</h2>
+  <p>For each project: what is allowed, which options there are and how we help you make it happen.</p>
+  <GuideChildren lang="en" parent="building-on-your-own-land-spain" />
+  <p>Want to build part of it yourself? Our <MaybeLink href="/en/diy/">DIY guides</MaybeLink> list the steps and materials.</p>
+  <p class="note">This guide gives general information based on the Andalusian law LISTA (Ley 7/2021), its regulation (Decreto 550/2022) and the Ley de Propiedad Horizontal as they stood on 5 November 2026. It is not legal advice: what is allowed on your plot depends on your town's zoning plan and is assessed by an architect and the town hall.</p>
+</Guide>

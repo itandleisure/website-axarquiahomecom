@@ -1,5 +1,7 @@
 // Overzicht van alle gidsen. De volgorde is in elke taal gelijk: de gids op
 // positie i is de vertaling van de gids op positie i in de andere talen.
+import { bouwenNl, bouwenEn, bouwenDe } from './guides-bouwen';
+
 export interface GuideMeta {
   slug: string;
   title: string;
@@ -171,6 +173,8 @@ export const guides: GuideMeta[] = [
     minutes: 7,
     published: '2026-11-05',
   },
+  // Gids bouwen op eigen grond met deelpagina's (zie guides-bouwen.ts).
+  ...bouwenNl,
   // Verkoopgids met deelpagina's (papieren, opknappen). Achteraan in nl/en/de, zelfde volgorde.
   {
     slug: 'huis-verkopen-spanje',
@@ -362,6 +366,8 @@ export const guidesEn: GuideMeta[] = [
     minutes: 7,
     published: '2026-11-05',
   },
+  // Gids bouwen op eigen grond met deelpagina's (zie guides-bouwen.ts).
+  ...bouwenEn,
   {
     slug: 'selling-a-house-in-spain',
     title: 'Selling a house in Spain: getting your Axarquía property ready to sell',
@@ -552,6 +558,8 @@ export const guidesDe: GuideMeta[] = [
     minutes: 7,
     published: '2026-11-05',
   },
+  // Gids bouwen op eigen grond met deelpagina's (zie guides-bouwen.ts).
+  ...bouwenDe,
   {
     slug: 'haus-verkaufen-spanien',
     title: 'Haus in Spanien verkaufen: So machen Sie Ihre Immobilie in der Axarquía verkaufsfertig',
