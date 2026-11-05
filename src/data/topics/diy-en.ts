@@ -134,7 +134,7 @@ export const diyEn: Topic[] = [
         table: {
           head: ['Job', 'DIY?'],
           rows: [
-            ['Clear gutters and outlets', 'Yes, every autumn', '—'],
+            ['Clear gutters and outlets', 'Yes, every autumn'],
             ['Replace a broken or slipped tile', 'Yes'],
             ['Seal joints and flashings', 'Yes'],
             ['Recoat a roof terrace with liquid rubber (<em>membrana líquida</em>)', 'Yes'],
@@ -189,6 +189,7 @@ export const diyEn: Topic[] = [
     ],
     links: [
       { href: '/en/problems/roof-leaks/', label: 'Roof leaks: cause and solution' },
+      { href: '/en/guides/asbestos-uralita-roof-spain/', label: 'Guide: asbestos and uralita roofs' },
       { href: '/en/costs/roof-and-roof-terrace/', label: 'What does a new roof or roof terrace cost?' },
       { href: '/en/maintenance/', label: 'Maintenance and repairs' },
     ],
@@ -538,7 +539,7 @@ export const diyEn: Topic[] = [
       {
         id: 'drinking-water',
         h: 'Drinking water from the tank',
-        html: '<p>Water from a comunidad de regantes, a well or rain is not drinking water until it has been treated. Use a sediment filter, a carbon filter and a UV lamp, or a chlorine dosing pump. Have the water tested by a laboratory from time to time. Clean the tank every year and keep it closed and dark: still, warm water carries a risk of <a href="/en/problems/legionella/">legionella</a>.</p>',
+        html: '<p>Water from a comunidad de regantes, a well or rain is not drinking water until it has been treated. Which filters you need depends on the source; usually a sediment filter, a carbon filter and a UV lamp. Have the water tested from time to time. Clean the tank every year and keep it closed and dark: still, warm water carries a risk of <a href="/en/problems/legionella/">legionella</a>.</p>',
       },
       {
         id: 'permit',
@@ -552,6 +553,8 @@ export const diyEn: Topic[] = [
       { q: 'Do I need a contract if I have my own well?', a: 'No, the water then comes from your own source. Many owners still have a tank as a buffer, so the pump does not keep cutting in and you have a supply when the well gives less in summer.' },
     ],
     links: [
+      { href: '/en/guides/water-filters-spain/', label: 'Guide: water filters for tanks and wells' },
+      { href: '/en/guides/water-leak-spain/', label: 'Guide: water leaks' },
       { href: '/en/guides/buying-a-finca-in-spain/', label: 'Guide: buying a finca in Spain' },
       { href: '/en/problems/legionella/', label: 'Legionella in tanks and pipes' },
       { href: '/en/key-holding/', label: 'Key holding: tank and pump checked while you are away' },

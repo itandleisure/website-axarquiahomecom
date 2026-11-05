@@ -134,7 +134,7 @@ export const diyNl: Topic[] = [
         table: {
           head: ['Klus', 'Zelf?'],
           rows: [
-            ['Goten en afvoeren schoonmaken', 'Ja, elk najaar', '—'],
+            ['Goten en afvoeren schoonmaken', 'Ja, elk najaar'],
             ['Gebroken of verschoven pan vervangen', 'Ja'],
             ['Naden en aansluitingen kitten of afplakken', 'Ja'],
             ['Dakterras coaten met vloeibaar rubber (<em>membrana líquida</em>)', 'Ja'],
@@ -189,6 +189,7 @@ export const diyNl: Topic[] = [
     ],
     links: [
       { href: '/nl/problemen/daklekkage/', label: 'Daklekkage: oorzaak en oplossing' },
+      { href: '/nl/gidsen/asbest-uralita-dak-spanje/', label: 'Gids: asbest en uralita op het dak' },
       { href: '/nl/kosten/dak-en-dakterras/', label: 'Wat kost een nieuw dak of dakterras?' },
       { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
     ],
@@ -538,7 +539,7 @@ export const diyNl: Topic[] = [
       {
         id: 'drinkwater',
         h: 'Drinkwater uit de tank',
-        html: '<p>Water van een comunidad de regantes, een put of regen is geen drinkwater zolang het niet is gefilterd. Gebruik een sedimentfilter, een koolfilter en een uv-lamp, of een doseerpomp met chloor. Laat het water af en toe testen in een laboratorium. Maak de tank elk jaar schoon en houd hem dicht en donker: stilstaand, warm water geeft kans op <a href="/nl/problemen/legionella/">legionella</a>.</p>',
+        html: '<p>Water van een comunidad de regantes, een put of regen is geen drinkwater zolang het niet is gefilterd. Welke filters u nodig heeft, hangt af van de bron; meestal is dat een sedimentfilter, een koolfilter en een uv-lamp. Laat het water af en toe testen. Maak de tank elk jaar schoon en houd hem dicht en donker: stilstaand, warm water geeft kans op <a href="/nl/problemen/legionella/">legionella</a>.</p>',
       },
       {
         id: 'vergunning',
@@ -552,6 +553,8 @@ export const diyNl: Topic[] = [
       { q: 'Heb ik een contract nodig als ik een eigen put heb?', a: 'Nee, dan komt het water uit uw eigen bron. Veel eigenaren nemen wel een tank als buffer, zodat de pomp niet steeds aanslaat en u een voorraad heeft als de put in de zomer minder geeft.' },
     ],
     links: [
+      { href: '/nl/gidsen/waterfilter-spanje/', label: 'Gids: waterfilters voor tank en put' },
+      { href: '/nl/gidsen/waterlekkage-spanje/', label: 'Gids: waterlekkage' },
       { href: '/nl/gidsen/finca-kopen-in-spanje/', label: 'Gids: finca kopen in Spanje' },
       { href: '/nl/problemen/legionella/', label: 'Legionella in tank en leidingen' },
       { href: '/nl/sleutelbeheer/', label: 'Sleutelbeheer: tank en pomp in de gaten houden als u weg bent' },

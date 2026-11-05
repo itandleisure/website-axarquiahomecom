@@ -8,14 +8,14 @@ import { problemsEn } from './problems-en';
 import { problemsDe } from './problems-de';
 import { diyNl } from './diy-nl';
 import { diyEn } from './diy-en';
+import { diyDe } from './diy-de';
 
 export * from './types';
 
 export const topics: Record<TopicKind, Record<TopicLang, Topic[]>> = {
   costs: { nl: costsNl, en: costsEn, de: costsDe },
   problems: { nl: problemsNl, en: problemsEn, de: problemsDe },
-  // Zelf doen: Duits volgt later; een taal zonder pagina's krijgt geen overzichtspagina
-  diy: { nl: diyNl, en: diyEn, de: [] },
+  diy: { nl: diyNl, en: diyEn, de: diyDe },
 };
 
 export const topicHref = (kind: TopicKind, lang: TopicLang, t: Topic) => `${topicBase[kind][lang]}${t.slug}/`;

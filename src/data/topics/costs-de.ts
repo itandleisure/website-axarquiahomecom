@@ -226,6 +226,7 @@ export const costsDe: Topic[] = [
     links: [
       { href: '/de/pool/', label: 'Poolbau und Poolpflege' },
       { href: '/de/probleme/legionellen/', label: 'Legionellen in Pool, Whirlpool und Leitungen' },
+      { href: '/de/selbermachen/pool-selber-bauen/', label: 'Pool selber bauen: alle Schritte' },
       { href: '/de/ratgeber/afo-legalisierung-andalusien/', label: 'Ratgeber: AFO-Status und Legalisierung' },
     ],
     related: ['costs:buitenkeuken', 'problems:legionella', 'costs:airco'],
@@ -367,6 +368,7 @@ export const costsDe: Topic[] = [
     ],
     links: [
       { href: '/de/probleme/undichtes-dach/', label: 'Undichtes Dach: was tun?' },
+      { href: '/de/selbermachen/dach-selbst-reparieren/', label: 'Dach selbst reparieren' },
       { href: '/de/instandhaltung/', label: 'Instandhaltung und Reparaturen' },
       { href: '/de/hausbetreuung/', label: 'Hausbetreuung und Schlüsselservice' },
     ],
