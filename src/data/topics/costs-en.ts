@@ -226,6 +226,7 @@ export const costsEn: Topic[] = [
     links: [
       { href: '/en/swimming-pool/', label: 'Swimming pools: building and maintenance' },
       { href: '/en/problems/legionella/', label: 'Legionella in pools, hot tubs and pipes' },
+      { href: '/en/diy/building-your-own-swimming-pool/', label: 'Building your own pool: every step' },
       { href: '/en/guides/afo-legalisation-andalusia/', label: 'Guide: AFO status and legalisation' },
     ],
     related: ['costs:buitenkeuken', 'problems:legionella', 'costs:airco'],
@@ -367,6 +368,7 @@ export const costsEn: Topic[] = [
     ],
     links: [
       { href: '/en/problems/roof-leaks/', label: 'Roof leaks: what to do' },
+      { href: '/en/diy/repairing-or-replacing-your-roof/', label: 'Repairing your roof yourself' },
       { href: '/en/maintenance/', label: 'Maintenance and repairs' },
       { href: '/en/key-holding/', label: 'Key holding and property checks' },
     ],

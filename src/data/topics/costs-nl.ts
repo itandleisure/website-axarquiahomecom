@@ -226,6 +226,7 @@ export const costsNl: Topic[] = [
     links: [
       { href: '/nl/zwembad/', label: 'Zwembad bouwen en onderhoud' },
       { href: '/nl/problemen/legionella/', label: 'Legionella in zwembad, jacuzzi en leidingen' },
+      { href: '/nl/zelf-doen/zwembad-zelf-aanleggen/', label: 'Zelf een zwembad aanleggen: alle stappen' },
       { href: '/nl/gidsen/afo-legaliseren-andalusie/', label: 'Gids: AFO en legaliseren' },
     ],
     related: ['costs:buitenkeuken', 'problems:legionella', 'costs:airco'],
@@ -367,6 +368,7 @@ export const costsNl: Topic[] = [
     ],
     links: [
       { href: '/nl/problemen/daklekkage/', label: 'Daklekkage: wat nu?' },
+      { href: '/nl/zelf-doen/dak-zelf-repareren-of-vervangen/', label: 'Dak zelf repareren: wat kunt u zelf?' },
       { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
       { href: '/nl/sleutelbeheer/', label: 'Sleutelbeheer en toezicht' },
     ],

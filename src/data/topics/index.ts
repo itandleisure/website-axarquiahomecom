@@ -1,4 +1,4 @@
-// Kosten- en probleempagina's: alle inhoud bij elkaar en hulpfuncties voor adressen.
+// Kosten-, probleem- en zelf-doen-pagina's: alle inhoud bij elkaar en hulpfuncties voor adressen.
 import { topicBase, topicLangs, type Topic, type TopicKind, type TopicLang } from './types';
 import { costsNl } from './costs-nl';
 import { costsEn } from './costs-en';
@@ -6,12 +6,16 @@ import { costsDe } from './costs-de';
 import { problemsNl } from './problems-nl';
 import { problemsEn } from './problems-en';
 import { problemsDe } from './problems-de';
+import { diyNl } from './diy-nl';
+import { diyEn } from './diy-en';
 
 export * from './types';
 
 export const topics: Record<TopicKind, Record<TopicLang, Topic[]>> = {
   costs: { nl: costsNl, en: costsEn, de: costsDe },
   problems: { nl: problemsNl, en: problemsEn, de: problemsDe },
+  // Zelf doen: Duits volgt later; een taal zonder pagina's krijgt geen overzichtspagina
+  diy: { nl: diyNl, en: diyEn, de: [] },
 };
 
 export const topicHref = (kind: TopicKind, lang: TopicLang, t: Topic) => `${topicBase[kind][lang]}${t.slug}/`;
@@ -33,7 +37,9 @@ export function topicAlternates(kind: TopicKind, key: string): Partial<Record<To
   );
 }
 
-export const hubAlternates = (kind: TopicKind) => ({ ...topicBase[kind] });
+/** Overzichtspagina's per taal, alleen voor talen waarin dit onderwerp pagina's heeft */
+export const hubAlternates = (kind: TopicKind): Partial<Record<TopicLang, string>> =>
+  Object.fromEntries(topicLangs.filter((l) => topics[kind][l].length > 0).map((l) => [l, topicBase[kind][l]]));
 
 /** Alle adressen, voor de sitemap */
 export const topicPaths = (Object.keys(topics) as TopicKind[]).flatMap((kind) =>
