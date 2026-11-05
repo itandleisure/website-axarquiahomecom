@@ -49,6 +49,11 @@ export const site = {
   // Google Analytics 4 Measurement ID (G-...). Laadt ook pas na toestemming. Leeg = uit.
   gaId: 'G-YSBXSHM7SS',
 
+  // URL van de web-app "Dashboard" uit apps-script/statistieken (eindigt op /exec).
+  // Wordt getoond op /statistiek/. Geen geheim: alleen jouw Google-account ziet er cijfers.
+  // Leeg = /statistiek/ toont uitleg in plaats van het dashboard.
+  statsDashboardUrl: '',
+
   // Voorbeelden van plaatsen in het werkgebied: de hele Axarquía, niet gebonden aan één bouwbedrijf.
   villages: [
     'Nerja',

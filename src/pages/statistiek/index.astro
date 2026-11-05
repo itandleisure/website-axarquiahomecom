@@ -1,0 +1,95 @@
+---
+// Privé statistiekenpagina. Toont het Apps Script-dashboard (apps-script/statistieken/).
+// De inlog is je Google-account: Google laat alleen de eigenaar van het script de cijfers zien.
+// Op deze pagina staan zelf geen cijfers en geen geheimen. Geen menu, geen cookiebanner,
+// geen analytics (je eigen bezoeken tellen niet mee), niet in de sitemap en noindex.
+import { site } from '../../data/site';
+
+const url = site.statsDashboardUrl;
+---
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Statistieken | {site.brand}</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <style>
+      :root { --terra: #b5532f; --ink: #23201d; --muted: #625b54; --line: #e7dfd5; --sand: #f8f3ec; }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; height: 100%; }
+      body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--ink); background: var(--sand); display: flex; flex-direction: column; }
+      header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; background: #fff; border-bottom: 1px solid var(--line); }
+      header strong { font-size: 1rem; }
+      a.btn { display: inline-block; padding: 7px 14px; border-radius: 999px; background: var(--terra); color: #fff; text-decoration: none; font-size: 0.9rem; white-space: nowrap; }
+      a.btn.ghost { background: transparent; color: var(--terra); border: 1px solid var(--terra); }
+      main { flex: 1; position: relative; }
+      iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #fff; }
+      .panel { max-width: 560px; margin: 48px auto; padding: 24px; background: #fff; border: 1px solid var(--line); border-radius: 14px; line-height: 1.55; }
+      .panel h1 { font-size: 1.3rem; margin: 0 0 0.5em; }
+      .panel p { margin: 0 0 1em; color: var(--muted); }
+      .overlay { position: absolute; inset: 0; background: rgb(248 243 236 / 0.97); overflow: auto; padding: 0 16px; }
+      [hidden] { display: none !important; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <strong>Statistieken {site.domain}</strong>
+      {url && <a class="btn ghost" href={url} target="_blank" rel="noopener">Openen in nieuw tabblad</a>}
+    </header>
+    <main>
+      {url ? (
+        <>
+          <iframe id="dash" src={url} title="Statistieken-dashboard" referrerpolicy="no-referrer"></iframe>
+          <div class="overlay" id="hulp" hidden>
+            <div class="panel">
+              <h1 id="hulp-titel">Inloggen</h1>
+              <p id="hulp-tekst">
+                Het dashboard verschijnt hier als je in deze browser bent ingelogd met het Google-account
+                dat eigenaar is van het dashboard.
+              </p>
+              <p>
+                <a class="btn" href={url} target="_blank" rel="noopener">Inloggen bij Google</a>
+                &nbsp; <a class="btn ghost" href="">Opnieuw laden</a>
+              </p>
+              <p style="font-size:0.9rem">
+                Lukt het daarna nog niet? Safari en sommige browsers blokkeren de Google-inlog binnen een andere site.
+                Gebruik dan de knop "Openen in nieuw tabblad". Ben je met meerdere Google-accounts ingelogd, open de pagina
+                dan in een venster waarin alleen het juiste account is ingelogd.
+              </p>
+            </div>
+          </div>
+          <script is:inline>
+            (() => {
+              const hulp = document.getElementById('hulp');
+              let klaar = false;
+              window.addEventListener('message', (e) => {
+                if (!/^https:\/\/[a-z0-9-]+\.(googleusercontent|google)\.com$/.test(e.origin)) return;
+                if (e.data === 'axh-statistiek:ok') { klaar = true; hulp.hidden = true; }
+                if (e.data === 'axh-statistiek:geen-toegang') {
+                  klaar = true;
+                  document.getElementById('hulp-titel').textContent = 'Geen toegang met dit account';
+                  document.getElementById('hulp-tekst').textContent =
+                    'Je bent ingelogd met een ander Google-account dan de eigenaar van het dashboard. Log in met het juiste account.';
+                  hulp.hidden = false;
+                }
+              });
+              // Geen seintje van het dashboard binnen 8 seconden: waarschijnlijk niet ingelogd.
+              setTimeout(() => { if (!klaar) hulp.hidden = false; }, 8000);
+            })();
+          </script>
+        </>
+      ) : (
+        <div class="panel">
+          <h1>Dashboard nog niet gekoppeld</h1>
+          <p>
+            Vul in <code>src/data/site.ts</code> bij <code>statsDashboardUrl</code> de URL van de web-app
+            "Dashboard" in (zie <code>apps-script/statistieken/README.md</code>).
+          </p>
+        </div>
+      )}
+    </main>
+  </body>
+</html>
