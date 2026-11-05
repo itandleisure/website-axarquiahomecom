@@ -209,6 +209,17 @@ export const guides: GuideMeta[] = [
     minutes: 7,
     published: '2026-11-05',
   },
+  {
+    slug: 'off-grid-wonen-spanje',
+    title: 'Off-grid wonen in Spanje: stroom, water en internet op uw finca',
+    seoTitle: 'Off-grid wonen in Spanje: zonnepanelen, thuisbatterij, watertank en Starlink',
+    short: 'Off-grid wonen',
+    description: 'Off-grid wonen op een finca in de Axarquía: zonnepanelen en thuisbatterij, watertank, regenwater of boorput, beerput en internet via Starlink. Wat u nodig heeft en wat het kost.',
+    lead: 'Veel fincas in de heuvels van de Axarquía hebben geen aansluiting op stroom of water. Met zonnepanelen, een thuisbatterij, een watertank en Starlink woont u er toch comfortabel. Zo pakt u het aan.',
+    keyword: 'off grid wonen spanje',
+    minutes: 9,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesEn: GuideMeta[] = [
@@ -399,6 +410,17 @@ export const guidesEn: GuideMeta[] = [
     minutes: 7,
     published: '2026-11-05',
   },
+  {
+    slug: 'off-grid-living-spain',
+    title: 'Off-grid living in Spain: power, water and internet on your finca',
+    seoTitle: 'Off-grid living in Spain: solar panels, home batteries, water tanks and Starlink',
+    short: 'Off-grid living',
+    description: 'Off-grid living on a finca in the Axarquía: solar panels and home batteries, water tanks, rainwater or a borehole, septic tanks and internet via Starlink. What you need and what it costs.',
+    lead: 'Many fincas in the Axarquía hills have no mains power or water. With solar panels, a home battery, a water tank and Starlink you can still live there in comfort. This is how.',
+    keyword: 'off grid living spain',
+    minutes: 9,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesDe: GuideMeta[] = [
@@ -587,6 +609,17 @@ export const guidesDe: GuideMeta[] = [
     lead: 'Käufer schauen zuerst mit den Augen und danach mit einem Gutachter. Kleine sichtbare Mängel kosten Sie bei der Verhandlung oft mehr als die Reparatur. Eine komplett neue Küche holen Sie selten wieder herein.',
     keyword: 'vor dem verkauf renovieren',
     minutes: 7,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'autark-leben-spanien',
+    title: 'Autark leben in Spanien: Strom, Wasser und Internet auf Ihrer Finca',
+    seoTitle: 'Autark leben in Spanien: Solaranlage, Batteriespeicher, Wassertank und Starlink',
+    short: 'Autark leben',
+    description: 'Autark leben auf einer Finca in der Axarquía: Solaranlage und Batteriespeicher, Wassertank, Regenwasser oder Brunnen, Klärgrube und Internet über Starlink. Was Sie brauchen und was es kostet.',
+    lead: 'Viele Fincas in den Hügeln der Axarquía haben keinen Strom- oder Wasseranschluss. Mit Solaranlage, Batteriespeicher, Wassertank und Starlink wohnen Sie dort trotzdem bequem. So gehen Sie vor.',
+    keyword: 'autark leben spanien',
+    minutes: 9,
     published: '2026-11-05',
   },
 ];

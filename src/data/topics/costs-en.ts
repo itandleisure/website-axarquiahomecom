@@ -526,9 +526,9 @@ export const costsEn: Topic[] = [
     links: [
       { href: '/en/renovation/', label: 'Renovation and building work' },
       { href: '/en/costs/air-conditioning-and-heat-pumps/', label: 'Cost of air con and heat pumps' },
-      { href: '/en/guides/buying-a-finca-in-spain/', label: 'Guide: buying a finca in Spain' },
+      { href: '/en/guides/off-grid-living-spain/', label: 'Guide: off-grid living in Spain' },
     ],
-    related: ['costs:elektra', 'costs:airco', 'costs:dak'],
+    related: ['costs:thuisbatterij', 'costs:elektra', 'costs:airco'],
     sources: [
       { name: 'Selectra, solar panel prices for a family home (2026)', url: 'https://selectra.es/autoconsumo/instalacion/vivienda-unifamiliar' },
       { name: 'Autosolar, installing solar panels in Málaga', url: 'https://autosolar.es/mi-experiencia-placas-solares/instalacion-placas-solares-malaga' },
@@ -610,6 +610,93 @@ export const costsEn: Topic[] = [
     ],
     ctaTitle: 'Electrics in order?',
     ctaText: 'Send a photo of your consumer unit and tell us what you want to connect. You get advice and a price.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'thuisbatterij',
+    slug: 'home-battery',
+    title: 'How much does a home battery cost in Spain?',
+    seoTitle: 'Home battery in Spain: costs, payback and backup power (2026)',
+    short: 'Home battery',
+    description: 'What does a home battery for your solar panels in the Axarquía cost? Prices for 5, 10 and 15 kWh, backup power during a power cut, where to put it and when a battery pays off.',
+    lead: 'Since the great blackout of April 2025, when all of Spain was without power for hours, many owners have been asking about a home battery. What does it cost, when does it pay off, and what should you watch for in the Spanish climate?',
+    keyword: 'home battery spain',
+    dienst: 'energie',
+    onderwerp: 'I would like a price for a home battery.',
+    answer: 'A 5 kWh home battery costs about <strong>€3,000 to €5,000</strong> installed in the Axarquía, a 10 kWh battery <strong>€5,500 to €9,000</strong>, excluding VAT. If you already have solar panels with a standard inverter, you often need a hybrid inverter as well: <strong>€1,000 to €2,000</strong>. With a battery you use 70 to 80% of your solar power yourself, instead of 30 to 50%.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Prices by battery',
+        html: '<p>Guide prices for 2026 for a lithium iron phosphate battery (LiFePO4), including installation and connection, excluding VAT.</p>',
+        table: {
+          head: ['Battery', 'Suits', 'Guide price'],
+          rows: [
+            ['5 kWh', 'Apartment or small house, evening use', '€3,000 – €5,000'],
+            ['10 kWh', 'Family home with air con and induction', '€5,500 – €9,000'],
+            ['15 kWh', 'Villa, or a house with a heat pump', '€8,000 – €12,000'],
+            ['Add a hybrid inverter', 'If you already have panels with a standard inverter', '+ €1,000 – €2,000'],
+            ['Backup function', 'Keep power during a grid outage', '+ €300 – €800'],
+          ],
+          note: 'Installing battery and panels together is cheaper than adding one later. See also the cost of <a href="/en/costs/solar-panels/">solar panels</a>.',
+        },
+      },
+      {
+        id: 'loont',
+        h: 'When does a home battery pay off?',
+        html: `<ul>
+<li><strong>You live there all year or most of it.</strong> Then you use the stored power every evening, and the battery pays for itself in 8 to 12 years.</li>
+<li><strong>You want power during an outage.</strong> With backup, the fridge, lights, internet, alarm and water pump keep working. In the countryside, where outages are more frequent, that is the main reason.</li>
+<li><strong>Your finca has no grid connection.</strong> Then a battery is not a choice but a necessity. Read the guide <a href="/en/guides/off-grid-living-spain/">off-grid living</a>.</li>
+<li><strong>You are only there a few weeks a year.</strong> Then a battery rarely pays off financially. A virtual battery from your supplier is cheaper.</li>
+</ul>`,
+      },
+      {
+        id: 'plek',
+        h: 'Where does the battery go?',
+        html: '<p>A battery lasts longer when it stays cool, ideally between 10 and 30 degrees. In the Axarquía that matters: in July a shed or roof terrace in the sun gets far too hot. An indoor space, a cellar or a ventilated plant room on the north side is best. The battery must also be easy to reach for maintenance and not in a damp room.</p>',
+      },
+      {
+        id: 'voorbeeld',
+        h: 'Worked example',
+        html: '<p>A house in Torre del Mar, lived in all year, with 5 kWp of solar panels and a consumption of 6,000 kWh a year.</p>',
+        table: {
+          head: ['', 'Without battery', 'With 10 kWh battery'],
+          rows: [
+            ['Solar power used yourself', 'approx. 2,700 kWh', 'approx. 4,800 kWh'],
+            ['Saving on power (€0.18 per kWh)', 'approx. €490', 'approx. €860'],
+            ['Export credit (€0.06 per kWh)', 'approx. €320', 'approx. €190'],
+            ['<strong>Total saving per year</strong>', '<strong>approx. €810</strong>', '<strong>approx. €1,050</strong>'],
+          ],
+          note: 'In this example the battery adds about €240 a year. At €7,000 for the battery, it is mainly an investment in security and independence, with a payback close to the battery’s lifespan. If electricity prices rise, it pays back faster.',
+        },
+      },
+      {
+        id: 'subsidie',
+        h: 'Grants and tax discounts',
+        html: '<p>Andalusia and Madrid regularly run grant schemes for batteries with self-consumption, and many town halls give an IBI discount for solar. The schemes change often. Ask what is available when you get your quote.</p>',
+      },
+    ],
+    faq: [
+      { q: 'How long does a home battery last?', a: 'A lithium iron phosphate battery lasts 6,000 cycles or more, which is 12 to 15 years of daily use. Manufacturers usually give a 10-year warranty.' },
+      { q: 'Does the battery work automatically during a power cut?', a: 'Only if the system has a backup function (EPS). Without it, the battery switches off during an outage too. Ask for it explicitly.' },
+      { q: 'Can I add a battery to my existing solar panels?', a: 'Yes. With a hybrid inverter or a separate battery inverter that is possible with almost any system. Sometimes the existing inverter is already suitable.' },
+      { q: 'Is a home battery safe?', a: 'Lithium iron phosphate is the safest type and is used almost everywhere. Have it installed by a registered installer, with the right protection and in a cool, dry place.' },
+    ],
+    links: [
+      { href: '/en/costs/solar-panels/', label: 'Cost of solar panels' },
+      { href: '/en/guides/off-grid-living-spain/', label: 'Guide: off-grid living in Spain' },
+      { href: '/en/problems/power-keeps-tripping/', label: 'Power keeps tripping' },
+    ],
+    related: ['costs:zonnepanelen', 'costs:elektra', 'problems:stroom'],
+    sources: [
+      { name: 'Selectra, solar panels with a battery: prices 2026', url: 'https://selectra.es/autoconsumo/instalacion/vivienda-unifamiliar' },
+      { name: 'Red Eléctrica, report on the blackout of 28 April 2025', url: 'https://www.ree.es/es/sala-de-prensa' },
+      { name: 'IDAE, grants for energy saving and renewables', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'A home battery for your panels?',
+    ctaText: 'Send a photo of your inverter or your roof and your latest electricity bill. You get advice on the right battery and a price.',
     minutes: 5,
     published: '2026-11-05',
   },

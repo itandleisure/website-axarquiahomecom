@@ -526,9 +526,9 @@ export const costsNl: Topic[] = [
     links: [
       { href: '/nl/renovatie/', label: 'Renovatie en verbouwing' },
       { href: '/nl/kosten/airco-en-warmtepomp/', label: 'Kosten airco en warmtepomp' },
-      { href: '/nl/gidsen/finca-kopen-in-spanje/', label: 'Gids: finca kopen in Spanje' },
+      { href: '/nl/gidsen/off-grid-wonen-spanje/', label: 'Gids: off-grid wonen in Spanje' },
     ],
-    related: ['costs:elektra', 'costs:airco', 'costs:dak'],
+    related: ['costs:thuisbatterij', 'costs:elektra', 'costs:airco'],
     sources: [
       { name: 'Selectra, prijs zonnepanelen voor een eengezinswoning (2026)', url: 'https://selectra.es/autoconsumo/instalacion/vivienda-unifamiliar' },
       { name: 'Autosolar, zonnepanelen installeren in Málaga', url: 'https://autosolar.es/mi-experiencia-placas-solares/instalacion-placas-solares-malaga' },
@@ -610,6 +610,93 @@ export const costsNl: Topic[] = [
     ],
     ctaTitle: 'Elektra op orde?',
     ctaText: 'Stuur een foto van uw groepenkast en vertel wat u wilt aansluiten. U krijgt een advies en een prijs.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'thuisbatterij',
+    slug: 'thuisbatterij',
+    title: 'Wat kost een thuisbatterij in Spanje?',
+    seoTitle: 'Thuisbatterij in Spanje: kosten, terugverdientijd en noodstroom (2026)',
+    short: 'Thuisbatterij',
+    description: 'Wat kost een thuisbatterij bij uw zonnepanelen in de Axarquía? Prijzen voor 5, 10 en 15 kWh, noodstroom bij een stroomstoring, de plek in huis en wanneer een batterij loont.',
+    lead: 'Sinds de grote stroomstoring van april 2025, toen heel Spanje urenlang zonder stroom zat, vragen veel eigenaren naar een thuisbatterij. Wat kost het, wanneer loont het, en waar let u op in het Spaanse klimaat?',
+    keyword: 'thuisbatterij spanje',
+    dienst: 'energie',
+    onderwerp: 'Ik wil graag een prijs voor een thuisbatterij.',
+    answer: 'Een thuisbatterij van 5 kWh kost in de Axarquía geplaatst ongeveer <strong>€ 3.000 tot € 5.000</strong>, een van 10 kWh <strong>€ 5.500 tot € 9.000</strong>, exclusief btw. Heeft u al zonnepanelen met een gewone omvormer, dan komt er vaak een hybride omvormer bij: <strong>€ 1.000 tot € 2.000</strong>. Met een batterij gebruikt u 70 tot 80% van uw zonnestroom zelf, in plaats van 30 tot 50%.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Prijzen per batterij',
+        html: '<p>Indicaties voor 2026 voor een lithium-ijzerfosfaatbatterij (LiFePO4), inclusief plaatsing en aansluiting, exclusief btw.</p>',
+        table: {
+          head: ['Batterij', 'Geschikt voor', 'Indicatie'],
+          rows: [
+            ['5 kWh', 'Appartement of klein huis, avondverbruik', '€ 3.000 – € 5.000'],
+            ['10 kWh', 'Woonhuis met airco en inductie', '€ 5.500 – € 9.000'],
+            ['15 kWh', 'Villa, of een huis met warmtepomp', '€ 8.000 – € 12.000'],
+            ['Hybride omvormer erbij', 'Als u al panelen heeft met een gewone omvormer', '+ € 1.000 – € 2.000'],
+            ['Noodstroomfunctie (back-up)', 'Stroom houden bij een storing op het net', '+ € 300 – € 800'],
+          ],
+          note: 'Batterij en panelen tegelijk laten plaatsen is goedkoper dan achteraf. Zie ook de kosten van <a href="/nl/kosten/zonnepanelen/">zonnepanelen</a>.',
+        },
+      },
+      {
+        id: 'loont',
+        h: 'Wanneer loont een thuisbatterij?',
+        html: `<ul>
+<li><strong>U woont er het hele jaar of het grootste deel ervan.</strong> Dan gebruikt u de opgeslagen stroom elke avond, en verdient de batterij zich in 8 tot 12 jaar terug.</li>
+<li><strong>U wilt stroom houden bij een storing.</strong> Met noodstroom blijven koelkast, licht, internet, alarm en waterpomp werken. Op het platteland, waar storingen vaker voorkomen, is dat de belangrijkste reden.</li>
+<li><strong>Uw finca heeft geen aansluiting.</strong> Dan is een batterij geen keuze maar noodzaak. Lees de gids <a href="/nl/gidsen/off-grid-wonen-spanje/">off-grid wonen</a>.</li>
+<li><strong>U bent er maar een paar weken per jaar.</strong> Dan loont een batterij financieel meestal niet. Een virtuele batterij bij uw energieleverancier is dan goedkoper.</li>
+</ul>`,
+      },
+      {
+        id: 'plek',
+        h: 'Waar komt de batterij?',
+        html: '<p>Een batterij gaat langer mee als hij koel staat, bij voorkeur tussen 10 en 30 graden. In de Axarquía is dat belangrijk: in juli wordt een schuur of dakterras in de zon veel te heet. Een binnenruimte, een kelder of een geventileerde technische ruimte aan de noordkant is het beste. De batterij moet ook goed bereikbaar zijn voor onderhoud en niet in een vochtige ruimte staan.</p>',
+      },
+      {
+        id: 'voorbeeld',
+        h: 'Rekenvoorbeeld',
+        html: '<p>Een huis in Torre del Mar, het hele jaar bewoond, met 5 kWp aan zonnepanelen en een verbruik van 6.000 kWh per jaar.</p>',
+        table: {
+          head: ['', 'Zonder batterij', 'Met 10 kWh batterij'],
+          rows: [
+            ['Zelf gebruikte zonnestroom', '± 2.700 kWh', '± 4.800 kWh'],
+            ['Besparing op stroom (€ 0,18 per kWh)', '± € 490', '± € 860'],
+            ['Vergoeding teruglevering (€ 0,06 per kWh)', '± € 320', '± € 190'],
+            ['<strong>Totale besparing per jaar</strong>', '<strong>± € 810</strong>', '<strong>± € 1.050</strong>'],
+          ],
+          note: 'De batterij levert in dit voorbeeld ± € 240 per jaar extra op. Bij € 7.000 voor de batterij is dat vooral een investering in zekerheid en onafhankelijkheid, met een terugverdientijd rond de levensduur van de batterij. Stijgen de stroomprijzen, dan gaat het sneller.',
+        },
+      },
+      {
+        id: 'subsidie',
+        h: 'Subsidie en belastingkorting',
+        html: '<p>Voor batterijen bij zelfopwekking zijn er in Andalusië en vanuit Madrid regelmatig subsidieregelingen, en veel gemeenten geven korting op de IBI bij zonne-energie. De regelingen wisselen vaak. Vraag bij de offerte wat er op dat moment loopt.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Hoelang gaat een thuisbatterij mee?', a: 'Een lithium-ijzerfosfaatbatterij gaat 6.000 cycli of meer mee, dat is 12 tot 15 jaar bij dagelijks gebruik. De fabrikant geeft meestal 10 jaar garantie.' },
+      { q: 'Werkt de batterij automatisch als de stroom uitvalt?', a: 'Alleen als het systeem een noodstroomfunctie (back-up of EPS) heeft. Zonder die functie schakelt ook de batterij uit bij een storing. Vraag hier expliciet naar.' },
+      { q: 'Kan ik een batterij toevoegen aan mijn bestaande zonnepanelen?', a: 'Ja. Met een hybride omvormer of een aparte batterijomvormer kan dat bij vrijwel elk systeem. Soms is de bestaande omvormer al geschikt.' },
+      { q: 'Is een thuisbatterij veilig?', a: 'Lithium-ijzerfosfaat is het veiligste type en wordt bijna overal gebruikt. Laat hem plaatsen door een erkende installateur, met de juiste beveiliging en op een koele, droge plek.' },
+    ],
+    links: [
+      { href: '/nl/kosten/zonnepanelen/', label: 'Kosten zonnepanelen' },
+      { href: '/nl/gidsen/off-grid-wonen-spanje/', label: 'Gids: off-grid wonen in Spanje' },
+      { href: '/nl/problemen/stroom-valt-uit/', label: 'Stroom valt steeds uit' },
+    ],
+    related: ['costs:zonnepanelen', 'costs:elektra', 'problems:stroom'],
+    sources: [
+      { name: 'Selectra, zonnepanelen met batterij: prijzen 2026', url: 'https://selectra.es/autoconsumo/instalacion/vivienda-unifamiliar' },
+      { name: 'Red Eléctrica, rapport over de stroomstoring van 28 april 2025', url: 'https://www.ree.es/es/sala-de-prensa' },
+      { name: 'IDAE, subsidies voor energiebesparing en hernieuwbare energie', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'Een thuisbatterij bij uw panelen?',
+    ctaText: 'Stuur een foto van uw omvormer of uw dak en uw laatste stroomrekening. U krijgt advies over de juiste batterij en een prijs.',
     minutes: 5,
     published: '2026-11-05',
   },

@@ -526,9 +526,9 @@ export const costsDe: Topic[] = [
     links: [
       { href: '/de/renovierung/', label: 'Renovierung und Umbau' },
       { href: '/de/kosten/klimaanlage-und-waermepumpe/', label: 'Kosten Klimaanlage und Wärmepumpe' },
-      { href: '/de/ratgeber/finca-kaufen-spanien/', label: 'Ratgeber: Finca kaufen in Spanien' },
+      { href: '/de/ratgeber/autark-leben-spanien/', label: 'Ratgeber: autark leben in Spanien' },
     ],
-    related: ['costs:elektra', 'costs:airco', 'costs:dak'],
+    related: ['costs:thuisbatterij', 'costs:elektra', 'costs:airco'],
     sources: [
       { name: 'Selectra, Preise für Solaranlagen auf Einfamilienhäusern (2026)', url: 'https://selectra.es/autoconsumo/instalacion/vivienda-unifamiliar' },
       { name: 'Autosolar, Solaranlagen in Málaga installieren', url: 'https://autosolar.es/mi-experiencia-placas-solares/instalacion-placas-solares-malaga' },
@@ -610,6 +610,93 @@ export const costsDe: Topic[] = [
     ],
     ctaTitle: 'Elektrik in Ordnung?',
     ctaText: 'Schicken Sie ein Foto Ihres Sicherungskastens und sagen Sie uns, was Sie anschließen möchten. Sie erhalten eine Beratung und einen Preis.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'thuisbatterij',
+    slug: 'batteriespeicher',
+    title: 'Was kostet ein Batteriespeicher in Spanien?',
+    seoTitle: 'Batteriespeicher in Spanien: Kosten, Amortisation und Notstrom (2026)',
+    short: 'Batteriespeicher',
+    description: 'Was kostet ein Batteriespeicher für Ihre Solaranlage in der Axarquía? Preise für 5, 10 und 15 kWh, Notstrom bei Stromausfall, der richtige Standort und wann sich ein Speicher lohnt.',
+    lead: 'Seit dem großen Stromausfall im April 2025, als ganz Spanien stundenlang ohne Strom war, fragen viele Eigentümer nach einem Batteriespeicher. Was kostet er, wann lohnt er sich, und worauf achten Sie im spanischen Klima?',
+    keyword: 'batteriespeicher spanien',
+    dienst: 'energie',
+    onderwerp: 'Ich hätte gern ein Angebot für einen Batteriespeicher.',
+    answer: 'Ein Batteriespeicher mit 5 kWh kostet in der Axarquía installiert etwa <strong>3.000 bis 5.000 €</strong>, einer mit 10 kWh <strong>5.500 bis 9.000 €</strong>, ohne Mehrwertsteuer. Haben Sie schon eine Solaranlage mit normalem Wechselrichter, kommt oft ein Hybrid-Wechselrichter dazu: <strong>1.000 bis 2.000 €</strong>. Mit Speicher nutzen Sie 70 bis 80 % Ihres Solarstroms selbst statt 30 bis 50 %.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Preise je Speicher',
+        html: '<p>Richtwerte für 2026 für einen Lithium-Eisenphosphat-Speicher (LiFePO4), inklusive Aufstellung und Anschluss, ohne Mehrwertsteuer.</p>',
+        table: {
+          head: ['Speicher', 'Geeignet für', 'Richtwert'],
+          rows: [
+            ['5 kWh', 'Wohnung oder kleines Haus, Verbrauch am Abend', '3.000 – 5.000 €'],
+            ['10 kWh', 'Wohnhaus mit Klimaanlage und Induktion', '5.500 – 9.000 €'],
+            ['15 kWh', 'Villa oder Haus mit Wärmepumpe', '8.000 – 12.000 €'],
+            ['Hybrid-Wechselrichter dazu', 'Wenn Sie schon Module mit normalem Wechselrichter haben', '+ 1.000 – 2.000 €'],
+            ['Notstromfunktion (Backup)', 'Strom behalten bei einer Netzstörung', '+ 300 – 800 €'],
+          ],
+          note: 'Speicher und Module gleichzeitig zu installieren ist günstiger als nachzurüsten. Siehe auch die Kosten einer <a href="/de/kosten/solaranlage/">Solaranlage</a>.',
+        },
+      },
+      {
+        id: 'loont',
+        h: 'Wann lohnt sich ein Batteriespeicher?',
+        html: `<ul>
+<li><strong>Sie wohnen ganzjährig oder den Großteil des Jahres dort.</strong> Dann nutzen Sie den gespeicherten Strom jeden Abend, und der Speicher amortisiert sich in 8 bis 12 Jahren.</li>
+<li><strong>Sie wollen bei einem Ausfall Strom haben.</strong> Mit Notstrom laufen Kühlschrank, Licht, Internet, Alarmanlage und Wasserpumpe weiter. Auf dem Land, wo Ausfälle häufiger sind, ist das der wichtigste Grund.</li>
+<li><strong>Ihre Finca hat keinen Netzanschluss.</strong> Dann ist ein Speicher keine Wahl, sondern Pflicht. Lesen Sie den Ratgeber <a href="/de/ratgeber/autark-leben-spanien/">autark leben</a>.</li>
+<li><strong>Sie sind nur wenige Wochen im Jahr dort.</strong> Dann lohnt sich ein Speicher finanziell meist nicht. Eine virtuelle Batterie bei Ihrem Anbieter ist günstiger.</li>
+</ul>`,
+      },
+      {
+        id: 'plek',
+        h: 'Wo steht der Speicher?',
+        html: '<p>Ein Speicher hält länger, wenn er kühl steht, am besten zwischen 10 und 30 Grad. In der Axarquía ist das wichtig: Im Juli wird ein Schuppen oder eine Dachterrasse in der Sonne viel zu heiß. Ein Innenraum, ein Keller oder ein belüfteter Technikraum an der Nordseite ist am besten. Der Speicher muss außerdem gut zugänglich sein und darf nicht in einem feuchten Raum stehen.</p>',
+      },
+      {
+        id: 'voorbeeld',
+        h: 'Rechenbeispiel',
+        html: '<p>Ein Haus in Torre del Mar, ganzjährig bewohnt, mit 5 kWp Solarmodulen und einem Verbrauch von 6.000 kWh im Jahr.</p>',
+        table: {
+          head: ['', 'Ohne Speicher', 'Mit 10 kWh Speicher'],
+          rows: [
+            ['Selbst genutzter Solarstrom', 'ca. 2.700 kWh', 'ca. 4.800 kWh'],
+            ['Ersparnis beim Strom (0,18 € pro kWh)', 'ca. 490 €', 'ca. 860 €'],
+            ['Gutschrift für Einspeisung (0,06 € pro kWh)', 'ca. 320 €', 'ca. 190 €'],
+            ['<strong>Ersparnis pro Jahr gesamt</strong>', '<strong>ca. 810 €</strong>', '<strong>ca. 1.050 €</strong>'],
+          ],
+          note: 'Der Speicher bringt in diesem Beispiel rund 240 € im Jahr zusätzlich. Bei 7.000 € für den Speicher ist das vor allem eine Investition in Sicherheit und Unabhängigkeit, mit einer Amortisation nahe der Lebensdauer. Steigen die Strompreise, geht es schneller.',
+        },
+      },
+      {
+        id: 'subsidie',
+        h: 'Förderung und Steuerermäßigung',
+        html: '<p>Für Speicher bei Eigenverbrauch gibt es in Andalusien und vom spanischen Staat regelmäßig Förderprogramme, und viele Gemeinden gewähren einen Nachlass auf die IBI bei Solarenergie. Die Programme ändern sich oft. Fragen Sie beim Angebot, was gerade läuft.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Wie lange hält ein Batteriespeicher?', a: 'Ein Lithium-Eisenphosphat-Speicher hält 6.000 Zyklen oder mehr, also 12 bis 15 Jahre bei täglicher Nutzung. Die Hersteller geben meist 10 Jahre Garantie.' },
+      { q: 'Springt der Speicher bei einem Stromausfall automatisch ein?', a: 'Nur wenn die Anlage eine Notstromfunktion (Backup oder EPS) hat. Ohne sie schaltet auch der Speicher bei einem Ausfall ab. Fragen Sie ausdrücklich danach.' },
+      { q: 'Kann ich meine bestehende Solaranlage mit einem Speicher nachrüsten?', a: 'Ja. Mit einem Hybrid-Wechselrichter oder einem eigenen Batteriewechselrichter geht das bei fast jeder Anlage. Manchmal ist der vorhandene Wechselrichter schon geeignet.' },
+      { q: 'Ist ein Batteriespeicher sicher?', a: 'Lithium-Eisenphosphat ist der sicherste Typ und wird fast überall verwendet. Lassen Sie ihn von einem zugelassenen Installateur einbauen, mit der richtigen Absicherung und an einem kühlen, trockenen Ort.' },
+    ],
+    links: [
+      { href: '/de/kosten/solaranlage/', label: 'Kosten Solaranlage' },
+      { href: '/de/ratgeber/autark-leben-spanien/', label: 'Ratgeber: autark leben in Spanien' },
+      { href: '/de/probleme/strom-faellt-aus/', label: 'Strom fällt ständig aus' },
+    ],
+    related: ['costs:zonnepanelen', 'costs:elektra', 'problems:stroom'],
+    sources: [
+      { name: 'Selectra, Solaranlagen mit Speicher: Preise 2026', url: 'https://selectra.es/autoconsumo/instalacion/vivienda-unifamiliar' },
+      { name: 'Red Eléctrica, Bericht zum Stromausfall vom 28. April 2025', url: 'https://www.ree.es/es/sala-de-prensa' },
+      { name: 'IDAE, Förderung für Energieeinsparung und erneuerbare Energien', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'Ein Batteriespeicher für Ihre Anlage?',
+    ctaText: 'Schicken Sie ein Foto Ihres Wechselrichters oder Ihres Dachs und Ihre letzte Stromrechnung. Sie erhalten eine Beratung zum passenden Speicher und einen Preis.',
     minutes: 5,
     published: '2026-11-05',
   },

@@ -1,0 +1,133 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'wat', label: 'Autark leben in der Axarquía' },
+  { id: 'stroom', label: 'Strom: Solaranlage und Batteriespeicher' },
+  { id: 'water', label: 'Wasser: Tank, Regenwasser und Brunnen' },
+  { id: 'afvoer', label: 'Abwasser: Klärgrube oder Kläranlage' },
+  { id: 'internet', label: 'Internet: Starlink und Alternativen' },
+  { id: 'koken', label: 'Kochen, Warmwasser und Heizen' },
+  { id: 'kosten', label: 'Was kostet alles zusammen?' },
+  { id: 'kopen', label: 'Eine autarke Finca kaufen' },
+];
+
+const faq = [
+  {
+    q: 'Ist autarkes Wohnen in Spanien legal?',
+    a: 'Ja. Es gibt keine Pflicht, ans Stromnetz angeschlossen zu sein. Das Haus selbst muss aber legal sein oder einen AFO-Status haben, Solaranlage und Brunnen müssen vorschriftsmäßig gebaut und angemeldet sein, und das Abwassersystem muss genehmigt sein.',
+  },
+  {
+    q: 'Kann ich eine autarke Finca später doch ans Netz anschließen?',
+    a: 'Manchmal. Das hängt von der Entfernung zum Netz und vom Status des Hauses ab. Liegt die nächste Leitung Hunderte Meter entfernt, kann der Netzbetreiber Zehntausende Euro verlangen. Eine gute Solaranlage ist dann oft günstiger.',
+  },
+  {
+    q: 'Was passiert mit dem Speicher, wenn ich monatelang weg bin?',
+    a: 'Ein moderner Lithium-Speicher (LiFePO4) kann problemlos monatelang ruhen, solange die Module ihn nachladen. Lassen Sie aber jemanden prüfen, ob die Anlage läuft und der Wechselrichter keine Störung meldet. Das kann Teil der Hausbetreuung sein.',
+  },
+  {
+    q: 'Funktioniert Starlink in den Bergen der Axarquía?',
+    a: 'Meist gut, wenn die Antenne freie Sicht auf den nördlichen Himmel hat. Bäume oder ein Berghang in dieser Richtung können das Signal unterbrechen. Prüfen Sie den Standort vorab mit der Starlink-App.',
+  },
+];
+---
+<Guide lang="de" slug="autark-leben-spanien" toc={toc} faq={faq} dienst="energie" ctaTitle="Eine Finca autark machen?" ctaText="Sagen Sie uns, wo das Haus steht und wie Sie es nutzen. Sie erhalten einen Vorschlag für Strom, Wasser und Abwasser, mit einem Preis je Posten.">
+  <h2 id="wat">Autark leben in der Axarquía</h2>
+  <p>Viele Fincas in den Hügeln rund um Cómpeta, Canillas, Árchez, Periana und Comares waren nie an Stromnetz oder Wasserleitung angeschlossen. Die Bewohner holen ihren Strom vom Dach, ihr Wasser aus einem Tank oder Brunnen und ihr Internet von einem Satelliten. Mit heutiger Technik ist das kein Camping mehr: Sie können dort bequem wohnen, mit Klimaanlage, Waschmaschine und schnellem Internet.</p>
+  <p>Autarkes Wohnen braucht aber ein gut geplantes System. Ein zu kleiner Speicher oder Wassertank fällt erst in einer bewölkten Januarwoche oder am Ende eines trockenen Sommers auf. Unten sehen Sie je Posten, worauf Sie achten und was es kostet. Alle Beträge sind Richtwerte für 2026, ohne Mehrwertsteuer.</p>
+
+  <h2 id="stroom">Strom: Solaranlage und Batteriespeicher</h2>
+  <p>Das Herz eines autarken Hauses ist eine Inselanlage mit Speicher (<em>instalación aislada</em>). Tagsüber laden die Module den Speicher, abends und nachts beziehen Sie Strom aus dem Speicher. Weil es kein Netz als Reserve gibt, planen Sie großzügiger als bei einem angeschlossenen Haus:</p>
+  <ul>
+    <li><strong>Module:</strong> genug für einen kurzen Wintertag. In der Axarquía liefert 1 kWp im Dezember etwa 3 kWh pro Tag, im Juli das Doppelte.</li>
+    <li><strong>Speicher:</strong> genug für ein bis zwei Tage ohne Sonne. Für ein ganzjährig bewohntes Haus meist 10 bis 20 kWh.</li>
+    <li><strong>Wechselrichter:</strong> stark genug für die größten gleichzeitig laufenden Geräte, etwa Wasserpumpe, Waschmaschine und Klimaanlage.</li>
+    <li><strong>Reserve:</strong> ein kleiner Generator für lange bewölkte Phasen, oder eine kluge Planung schwerer Geräte auf sonnige Nachmittage.</li>
+  </ul>
+  <table class="prices">
+    <thead><tr><th>Anlage</th><th>Geeignet für</th><th>Richtwert</th></tr></thead>
+    <tbody>
+      <tr><td>3 kWp, 10 kWh Speicher</td><td>Ferienhaus, sparsame Nutzung, keine Klimaanlage</td><td>10.000 – 14.000 €</td></tr>
+      <tr><td>5 kWp, 15 kWh Speicher</td><td>Ganzjährig bewohntes Haus mit ein oder zwei Klimageräten</td><td>14.000 – 20.000 €</td></tr>
+      <tr><td>8 kWp, 20 – 30 kWh Speicher</td><td>Großes Haus mit Poolpumpe oder Wärmepumpe</td><td>20.000 – 32.000 €</td></tr>
+      <tr><td>Generator als Reserve</td><td>Lange bewölkte Phasen</td><td>800 – 3.000 €</td></tr>
+    </tbody>
+  </table>
+  <p>Mehr zu Preisen, Speichern und Amortisation unter <a href="/de/kosten/solaranlage/">Kosten Solaranlage</a> und <a href="/de/kosten/batteriespeicher/">Kosten Batteriespeicher</a>.</p>
+
+  <h2 id="water">Wasser: Tank, Regenwasser und Brunnen</h2>
+  <p>Ohne Wasserleitung brauchen Sie eine oder mehrere dieser Quellen. Nach der Dürre der letzten Jahre ist es klug, sich auf zwei verlassen zu können.</p>
+  <ul>
+    <li><strong>Wassertank (<em>depósito</em>) mit Lieferung per Tankwagen.</strong> Die einfachste Lösung. Ein Haushalt verbraucht schnell 3 bis 5 m³ pro Woche, ein Tank mit 10.000 bis 20.000 Litern ist also kein Luxus.</li>
+    <li><strong>Regenwasser sammeln.</strong> Viele alte Fincas haben eine gemauerte Zisterne (<em>aljibe</em>) unter der Terrasse. Sie zu reparieren und abzudichten ist oft günstiger als ein neuer Tank.</li>
+    <li><strong>Brunnen (<em>pozo</em>).</strong> Bringt die größte Unabhängigkeit, braucht aber eine Genehmigung der Wasserbehörde, und es gibt keine Garantie, dass Sie Wasser finden.</li>
+    <li><strong>Bewässerungswasser (<em>agua de riego</em>).</strong> Manche Grundstücke haben einen Anteil an einer Bewässerungsgemeinschaft. Dieses Wasser ist für den Garten, nicht zum Trinken.</li>
+  </ul>
+  <p>Zu jeder Quelle gehört eine Pumpe mit Druckkessel, für Trinkwasser ein Filter und eventuell eine UV-Lampe.</p>
+  <table class="prices">
+    <thead><tr><th>Posten</th><th>Richtwert</th></tr></thead>
+    <tbody>
+      <tr><td>Kunststofftank 10.000 Liter, aufgestellt und angeschlossen</td><td>1.500 – 4.000 €</td></tr>
+      <tr><td>Gemauerte Zisterne (aljibe) reparieren und abdichten</td><td>2.000 – 8.000 €</td></tr>
+      <tr><td>Pumpe mit Druckkessel</td><td>600 – 1.500 €</td></tr>
+      <tr><td>Filter und UV-Lampe für Trinkwasser</td><td>800 – 2.000 €</td></tr>
+      <tr><td>Brunnen mit Genehmigung, Pumpe und Leitung</td><td>10.000 – 30.000 €</td></tr>
+      <tr><td>Wasser per Tankwagen</td><td>4 – 10 € pro m³ inklusive Lieferung</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="afvoer">Abwasser: Klärgrube oder Kläranlage</h2>
+  <p>Ohne Kanalisation geht das Abwasser in eine Klärgrube (<em>fosa séptica</em>) oder eine Kleinkläranlage (<em>depuradora</em>). Alte Klärgruben sind oft nicht dicht und entsprechen nicht mehr den Vorschriften. Beim Kauf oder bei einer Renovierung gehört das zu den ersten Punkten, die Sie prüfen sollten.</p>
+  <table class="prices">
+    <thead><tr><th>Posten</th><th>Richtwert</th></tr></thead>
+    <tbody>
+      <tr><td>Neue Klärgrube, eingebaut</td><td>2.500 – 6.000 €</td></tr>
+      <tr><td>Kleinkläranlage</td><td>4.000 – 9.000 €</td></tr>
+      <tr><td>Klärgrube leeren</td><td>150 – 300 € je Leerung</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="internet">Internet: Starlink und Alternativen</h2>
+  <p>Glasfaser reicht selten bis zur Finca. Es gibt drei Möglichkeiten:</p>
+  <ul>
+    <li><strong>Starlink.</strong> Internet per Satellit, schnell genug für Homeoffice und Streaming. Sie kaufen eine Antenne und zahlen ein Monatsabo; Preise und Aktionen ändern sich, rechnen Sie mit einigen Hundert Euro für das Set und etwa 30 – 65 € im Monat. Achtung: Die Antenne verbraucht dauerhaft 50 bis 75 Watt, also 1 bis 1,5 kWh pro Tag. Berücksichtigen Sie das bei der Größe des Speichers.</li>
+    <li><strong>4G oder 5G mit Außenantenne.</strong> Günstiger und oft ausreichend, wenn es Empfang gibt. Eine Antenne auf dem Dach macht einen großen Unterschied.</li>
+    <li><strong>Richtfunk.</strong> Lokale Anbieter in der Axarquía liefern Internet über einen Sender auf einem Hügel. Fragen Sie im Dorf, wer Ihr Tal abdeckt.</li>
+  </ul>
+  <p>Antenne oder Schüssel müssen fest und wetterdicht auf dem Dach oder einem Mast montiert werden, mit sauber ins Haus geführtem Kabel. Das erledigen wir zusammen mit der Solaranlage.</p>
+
+  <h2 id="koken">Kochen, Warmwasser und Heizen</h2>
+  <ul>
+    <li><strong>Kochen:</strong> mit Gasflaschen (<em>butano</em> oder <em>propano</em>) oder mit Induktion, wenn der Speicher groß genug ist.</li>
+    <li><strong>Warmwasser:</strong> Solarthermie (<em>termosifón</em>) ist autark die beste Wahl. Sie kostet 1.500 – 3.500 € und braucht keinen Strom.</li>
+    <li><strong>Heizen:</strong> ein Holz- oder Pelletofen, und tagsüber die Klimaanlage als Wärmepumpe, solange die Sonne scheint. Gute Fenster und Dämmung machen den Unterschied: siehe <a href="/de/renovierung/">Renovierung</a>.</li>
+  </ul>
+
+  <h2 id="kosten">Was kostet alles zusammen?</h2>
+  <p>Ein Rechenbeispiel: eine Finca mit 120 m² bei Cómpeta, ganzjährig von zwei Personen bewohnt, die aus einem alten Ferienhäuschen ein vollwertiges autarkes Haus wird.</p>
+  <table class="prices">
+    <thead><tr><th>Posten</th><th>Richtwert</th></tr></thead>
+    <tbody>
+      <tr><td>Solaranlage 5 kWp mit 15 kWh Speicher</td><td>14.000 – 20.000 €</td></tr>
+      <tr><td>Wassertank 15.000 Liter, Pumpe, Filter und UV</td><td>3.500 – 7.000 €</td></tr>
+      <tr><td>Neue Klärgrube</td><td>2.500 – 6.000 €</td></tr>
+      <tr><td>Solarthermie</td><td>1.500 – 3.500 €</td></tr>
+      <tr><td>Starlink, montiert</td><td>500 – 900 €</td></tr>
+      <tr><td>Elektrik im Haus erneuern</td><td>6.000 – 9.000 €</td></tr>
+      <tr><td><strong>Gesamt</strong></td><td><strong>28.000 – 46.000 €</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Danach sind die laufenden Kosten niedrig: keine Stromrechnung, nur Wasser per Tankwagen, Gas, Internet und gelegentliche Wartung der Anlage.</p>
+
+  <h2 id="kopen">Eine autarke Finca kaufen</h2>
+  <p>Eine Finca ohne Anschlüsse ist oft günstiger, aber die Rechnung kommt später. Lassen Sie vor dem Kauf prüfen:</p>
+  <ul class="checks">
+    <li>Wie alt die Solaranlage und vor allem der Speicher sind und ob sie angemeldet ist</li>
+    <li>Woher das Wasser kommt, ob ein Brunnen genehmigt ist und wie viel er liefert</li>
+    <li>Ob die Klärgrube dicht und zulässig ist</li>
+    <li>Ob der Zufahrtsweg im Winter befahrbar bleibt, auch für einen Tankwagen</li>
+    <li>Ob es Mobilfunkempfang gibt und freie Sicht nach Norden für Starlink</li>
+    <li>Ob das Haus legal ist oder einen AFO-Status hat: siehe <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a></li>
+  </ul>
+  <p>All diese Punkte prüfen wir bei einem <a href="/de/immobiliengutachten/">Gutachten vor dem Kauf</a>. Lesen Sie auch den Ratgeber <a href="/de/ratgeber/finca-kaufen-spanien/">Finca kaufen in Spanien</a>.</p>
+</Guide>

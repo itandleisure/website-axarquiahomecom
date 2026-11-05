@@ -1,0 +1,133 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'wat', label: 'Off-grid wonen in de Axarquía' },
+  { id: 'stroom', label: 'Stroom: zonnepanelen en thuisbatterij' },
+  { id: 'water', label: 'Water: watertank, regenwater en boorput' },
+  { id: 'afvoer', label: 'Afvoer: beerput of zuivering' },
+  { id: 'internet', label: 'Internet: Starlink en alternatieven' },
+  { id: 'koken', label: 'Koken, warm water en verwarmen' },
+  { id: 'kosten', label: 'Wat kost het samen?' },
+  { id: 'kopen', label: 'Een off-grid finca kopen' },
+];
+
+const faq = [
+  {
+    q: 'Is off-grid wonen legaal in Spanje?',
+    a: 'Ja. Er is geen verplichting om op het stroomnet aangesloten te zijn. Wel moet het huis zelf legaal zijn of een AFO-status hebben, moeten zonnepanelen en een boorput volgens de regels zijn aangelegd en aangemeld, en moet de afvoer goedgekeurd zijn.',
+  },
+  {
+    q: 'Kan ik een off-grid finca later toch aansluiten op het net?',
+    a: 'Soms. Dat hangt af van de afstand tot het net en de status van het huis. Ligt de dichtstbijzijnde lijn honderden meters weg, dan kan de netbeheerder tienduizenden euro’s rekenen. Vaak is een goed zonnesysteem dan goedkoper.',
+  },
+  {
+    q: 'Wat gebeurt er met de batterij als ik maanden weg ben?',
+    a: 'Een moderne lithiumbatterij (LiFePO4) kan prima maanden in rust staan, zolang de panelen hem bijhouden. Laat wel iemand controleren of het systeem werkt en of de omvormer geen storing geeft. Dat kan via sleutelbeheer.',
+  },
+  {
+    q: 'Werkt Starlink in de bergen van de Axarquía?',
+    a: 'Meestal goed, als de schotel vrij zicht heeft op de noordelijke hemel. Bomen of een berghelling in die richting kunnen het signaal onderbreken. Kijk vooraf met de Starlink-app of de plek geschikt is.',
+  },
+];
+---
+<Guide slug="off-grid-wonen-spanje" toc={toc} faq={faq} dienst="energie" ctaTitle="Een finca off-grid maken?" ctaText="Vertel ons waar het huis staat en hoe u het gebruikt. U krijgt een voorstel voor stroom, water en afvoer, met een prijs per onderdeel.">
+  <h2 id="wat">Off-grid wonen in de Axarquía</h2>
+  <p>Een groot deel van de fincas in de heuvels rond Cómpeta, Canillas, Árchez, Periana en Comares is nooit aangesloten op het stroomnet of de waterleiding. De bewoners halen hun stroom van het dak, hun water uit een tank of een put, en hun internet van een satelliet. Met de techniek van nu is dat geen kamperen meer: u kunt er comfortabel wonen, met airco, een wasmachine en snel internet.</p>
+  <p>Off-grid wonen vraagt wel een goed ontworpen systeem. Een te kleine batterij of een te kleine watertank merkt u pas in een bewolkte week in januari of aan het eind van een droge zomer. Hieronder ziet u per onderdeel waar u op let en wat het kost. Alle bedragen zijn indicaties voor 2026, exclusief btw.</p>
+
+  <h2 id="stroom">Stroom: zonnepanelen en thuisbatterij</h2>
+  <p>Het hart van een off-grid huis is een zonnesysteem met batterij (<em>instalación aislada</em>). Overdag laden de panelen de batterij op, ’s avonds en ’s nachts haalt u stroom uit de batterij. Omdat er geen net is om op terug te vallen, rekent u ruimer dan bij een huis met aansluiting:</p>
+  <ul>
+    <li><strong>Panelen:</strong> genoeg voor een korte winterdag. In de Axarquía levert 1 kWp in december ongeveer 3 kWh per dag, in juli het dubbele.</li>
+    <li><strong>Batterij:</strong> genoeg voor één à twee dagen zonder zon. Voor een huis dat u het hele jaar bewoont is dat meestal 10 tot 20 kWh.</li>
+    <li><strong>Omvormer:</strong> sterk genoeg voor de grootste apparaten die tegelijk draaien, zoals een waterpomp, een wasmachine en een airco.</li>
+    <li><strong>Back-up:</strong> een kleine generator voor lange bewolkte periodes, of een slimme planning van zware apparaten op zonnige middagen.</li>
+  </ul>
+  <table class="prices">
+    <thead><tr><th>Systeem</th><th>Geschikt voor</th><th>Indicatie</th></tr></thead>
+    <tbody>
+      <tr><td>3 kWp, 10 kWh batterij</td><td>Vakantiehuis, zuinig gebruik, geen airco</td><td>€ 10.000 – € 14.000</td></tr>
+      <tr><td>5 kWp, 15 kWh batterij</td><td>Woonhuis het hele jaar, met een of twee airco’s</td><td>€ 14.000 – € 20.000</td></tr>
+      <tr><td>8 kWp, 20 – 30 kWh batterij</td><td>Groot huis met zwembadpomp of warmtepomp</td><td>€ 20.000 – € 32.000</td></tr>
+      <tr><td>Generator als back-up</td><td>Lange bewolkte periodes</td><td>€ 800 – € 3.000</td></tr>
+    </tbody>
+  </table>
+  <p>Meer over prijzen, accu’s en terugverdientijd leest u op <a href="/nl/kosten/zonnepanelen/">kosten zonnepanelen</a> en <a href="/nl/kosten/thuisbatterij/">kosten thuisbatterij</a>.</p>
+
+  <h2 id="water">Water: watertank, regenwater en boorput</h2>
+  <p>Zonder waterleiding heeft u een of meer van deze bronnen nodig. Na de droogte van de afgelopen jaren is het verstandig om op twee bronnen te kunnen leunen.</p>
+  <ul>
+    <li><strong>Watertank (<em>depósito</em>) met levering per tankwagen.</strong> De eenvoudigste oplossing. Een gezin verbruikt al snel 3 tot 5 m³ per week, dus een tank van 10.000 tot 20.000 liter is geen luxe.</li>
+    <li><strong>Regenwater opvangen.</strong> Veel oude fincas hebben een gemetselde regenbak (<em>aljibe</em>) onder het terras. Herstellen en waterdicht maken is vaak goedkoper dan een nieuwe tank.</li>
+    <li><strong>Boorput (<em>pozo</em>).</strong> Geeft de meeste onafhankelijkheid, maar vraagt een vergunning van de waterautoriteit en er is geen garantie dat u water vindt.</li>
+    <li><strong>Irrigatiewater (<em>agua de riego</em>).</strong> Sommige percelen hebben een aandeel in een irrigatiegemeenschap. Dat water is voor de tuin, niet om te drinken.</li>
+  </ul>
+  <p>Bij elke bron hoort een pomp met drukvat, en voor drinkwater een filter en eventueel een uv-lamp.</p>
+  <table class="prices">
+    <thead><tr><th>Onderdeel</th><th>Indicatie</th></tr></thead>
+    <tbody>
+      <tr><td>Kunststof watertank 10.000 liter, geplaatst en aangesloten</td><td>€ 1.500 – € 4.000</td></tr>
+      <tr><td>Gemetselde regenbak (aljibe) herstellen en waterdicht maken</td><td>€ 2.000 – € 8.000</td></tr>
+      <tr><td>Pomp met drukvat</td><td>€ 600 – € 1.500</td></tr>
+      <tr><td>Filter en uv-lamp voor drinkwater</td><td>€ 800 – € 2.000</td></tr>
+      <tr><td>Boorput met vergunning, pomp en leiding</td><td>€ 10.000 – € 30.000</td></tr>
+      <tr><td>Water per tankwagen</td><td>€ 4 – € 10 per m³ inclusief transport</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="afvoer">Afvoer: beerput of zuivering</h2>
+  <p>Zonder riolering gaat het afvalwater naar een beerput (<em>fosa séptica</em>) of een kleine zuiveringsinstallatie (<em>depuradora</em>). Oude beerputten zijn vaak niet waterdicht en voldoen niet meer aan de regels. Bij een aankoop of een renovatie is dit een van de eerste dingen om te controleren.</p>
+  <table class="prices">
+    <thead><tr><th>Onderdeel</th><th>Indicatie</th></tr></thead>
+    <tbody>
+      <tr><td>Nieuwe septic tank, geplaatst</td><td>€ 2.500 – € 6.000</td></tr>
+      <tr><td>Compacte zuiveringsinstallatie</td><td>€ 4.000 – € 9.000</td></tr>
+      <tr><td>Beerput legen</td><td>€ 150 – € 300 per keer</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="internet">Internet: Starlink en alternatieven</h2>
+  <p>Glasvezel komt zelden tot aan een finca. Er zijn drie opties:</p>
+  <ul>
+    <li><strong>Starlink.</strong> Internet via satelliet, met snelheden die goed genoeg zijn voor thuiswerken en streamen. U koopt een schotel en betaalt een maandabonnement; prijzen en acties wisselen, reken op een paar honderd euro voor de set en ongeveer € 30 – € 65 per maand. Let op: de schotel verbruikt continu 50 tot 75 watt, dus 1 tot 1,5 kWh per dag. Neem dat mee bij het berekenen van de batterij.</li>
+    <li><strong>4G of 5G met een buitenantenne.</strong> Goedkoper, en vaak voldoende als er bereik is. Een antenne op het dak maakt een groot verschil.</li>
+    <li><strong>Draadloze straalverbinding.</strong> Lokale aanbieders in de Axarquía leveren internet via een zender op een heuvel. Vraag in het dorp wie er in uw vallei werkt.</li>
+  </ul>
+  <p>De schotel of antenne moet stevig en waterdicht op het dak of een mast worden gemonteerd, met de kabel netjes naar binnen. Dat nemen we mee bij de installatie van de zonnepanelen.</p>
+
+  <h2 id="koken">Koken, warm water en verwarmen</h2>
+  <ul>
+    <li><strong>Koken:</strong> op gasflessen (<em>butano</em> of <em>propano</em>) of op inductie als de batterij groot genoeg is.</li>
+    <li><strong>Warm water:</strong> een zonneboiler (<em>termosifón</em>) is off-grid de beste keuze. Hij kost € 1.500 – € 3.500 en verbruikt geen stroom.</li>
+    <li><strong>Verwarmen:</strong> een houtkachel of pelletkachel, en overdag de airco als warmtepomp zolang de zon schijnt. Goede ramen en isolatie maken het verschil: zie <a href="/nl/renovatie/">renovatie</a>.</li>
+  </ul>
+
+  <h2 id="kosten">Wat kost het samen?</h2>
+  <p>Een rekenvoorbeeld: een finca van 120 m² bij Cómpeta, het hele jaar bewoond door twee personen, die van een oud vakantiehuisje een volwaardig off-grid huis wordt.</p>
+  <table class="prices">
+    <thead><tr><th>Onderdeel</th><th>Indicatie</th></tr></thead>
+    <tbody>
+      <tr><td>Zonnesysteem 5 kWp met 15 kWh batterij</td><td>€ 14.000 – € 20.000</td></tr>
+      <tr><td>Watertank 15.000 liter, pomp, filter en uv</td><td>€ 3.500 – € 7.000</td></tr>
+      <tr><td>Nieuwe septic tank</td><td>€ 2.500 – € 6.000</td></tr>
+      <tr><td>Zonneboiler</td><td>€ 1.500 – € 3.500</td></tr>
+      <tr><td>Starlink, gemonteerd</td><td>€ 500 – € 900</td></tr>
+      <tr><td>Elektra in huis vernieuwen</td><td>€ 6.000 – € 9.000</td></tr>
+      <tr><td><strong>Totaal</strong></td><td><strong>€ 28.000 – € 46.000</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Daarna zijn de vaste lasten laag: geen stroomrekening, alleen water per tankwagen, gas, internet en af en toe onderhoud van het systeem.</p>
+
+  <h2 id="kopen">Een off-grid finca kopen</h2>
+  <p>Een finca zonder aansluitingen is vaak goedkoper, maar de rekening komt later. Laat vóór de koop controleren:</p>
+  <ul class="checks">
+    <li>Hoe oud het zonnesysteem en vooral de batterij is, en of het is aangemeld</li>
+    <li>Waar het water vandaan komt, of een put een vergunning heeft en hoeveel hij geeft</li>
+    <li>Of de beerput waterdicht en toegestaan is</li>
+    <li>Of de toegangsweg in de winter begaanbaar blijft, ook voor een tankwagen</li>
+    <li>Of er mobiel bereik is en vrij zicht naar het noorden voor Starlink</li>
+    <li>Of het huis legaal is of een AFO-status heeft: zie <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren</a></li>
+  </ul>
+  <p>Al deze punten nemen we mee in een <a href="/nl/aankoopkeuring/">aankoopkeuring</a>. Lees ook de gids <a href="/nl/gidsen/finca-kopen-in-spanje/">finca kopen in Spanje</a>.</p>
+</Guide>
