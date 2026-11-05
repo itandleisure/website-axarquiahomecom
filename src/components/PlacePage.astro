@@ -11,6 +11,7 @@ import { placeContent } from '../data/place-content';
 import { services, path as route, type Lang } from '../i18n';
 import { site } from '../data/site';
 import { guidesBy, guideHref } from '../data/guides';
+import { fiestaHref, fiestaSlugFor } from '../data/fiestas';
 
 interface Props { lang: Lang; place: Place; page: PlacePage; }
 const { lang, place, page } = Astro.props;
@@ -62,6 +63,9 @@ const tabs: { page: PlacePage; label: string }[] = [
   ...(c.see ? [{ page: 'see' as PlacePage, label: T.see }] : []),
   ...(c.living ? [{ page: 'living' as PlacePage, label: T.living }] : []),
 ];
+// Feestpagina: eigen pagina, of bij een kern die van de gemeente
+const fiestaSlug = fiestaSlugFor(place.slug, place.municipality);
+const fiestaLabel = { nl: 'Feesten', en: 'Fiestas', de: 'Feste', sv: 'Fester' }[lang];
 const self = placeHref(lang, place, page);
 const sub = page === 'see' ? c.see! : page === 'living' ? c.living! : null;
 const title = sub ? sub.title : c.title;
@@ -89,11 +93,12 @@ const placeLd = {
 <Base title={title} description={description} path={self} lang={lang} jsonLd={page === 'overview' ? [placeLd] : []}>
   <Breadcrumbs lang={lang} items={crumbs} />
   <Hero lang={lang} eyebrow={parent ? `${place.name} · ${parent.name}` : 'Axarquía'} title={h1} lead={lead} ctaHref={`${request}?plaats=${place.slug}`}>
-    {tabs.length > 1 && (
+    {(tabs.length > 1 || fiestaSlug) && (
       <nav class="place-tabs" aria-label={place.name}>
         {tabs.map((t) => (
           <a href={placeHref(lang, place, t.page)} aria-current={t.page === page ? 'page' : undefined}>{t.label}</a>
         ))}
+        {fiestaSlug && <a href={fiestaHref(lang, fiestaSlug)}>{fiestaSlug === place.slug ? fiestaLabel : `${fiestaLabel} (${placeBySlug(fiestaSlug)!.name})`}</a>}
       </nav>
     )}
   </Hero>
@@ -126,6 +131,7 @@ const placeLd = {
           <>
             <h2>{T.fiestas}</h2>
             <ul>{c.see.fiestas.map((f) => <li><strong>{f.name}</strong> ({f.when}): <span set:html={f.text} /></li>)}</ul>
+            {fiestaSlug && <p><a class="more" href={fiestaHref(lang, fiestaSlug)}>{fiestaLabel}: {placeBySlug(fiestaSlug)!.name} →</a></p>}
           </>
         )}
       </div>

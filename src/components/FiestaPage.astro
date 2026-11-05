@@ -1,0 +1,263 @@
+---
+// Feestpagina van één gemeente: het feestjaar, algemene feesten, CTA's naar diensten en FAQ.
+// De feesten staan in src/data/fiestas/places/<slug>.ts
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Hero from './Hero.astro';
+import Faq from './Faq.astro';
+import Cta from './Cta.astro';
+import { places, placeHref, type Place, type PlacePage } from '../data/places';
+import { placeContent } from '../data/place-content';
+import { fiestas, fiestaHref, fiestaCalendar, fiestaSub } from '../data/fiestas';
+import { nameOf, monthName, type FLang, type FiestaEvent } from '../data/fiestas/types';
+import { services, path as route } from '../i18n';
+import { site } from '../data/site';
+
+interface Props { lang: FLang; place: Place; }
+const { lang, place } = Astro.props;
+const data = fiestas[place.slug];
+const c = placeContent[place.slug]?.[lang];
+const n = place.name;
+const request = route(lang, 'request');
+const req = (dienst: string) => `${request}?${new URLSearchParams({ dienst, plaats: place.slug })}`;
+
+const events = [...data.events].sort((a, b) => a.when.month - b.when.month);
+const highlights = events.filter((e) => e.highlight);
+const main = highlights[0] ?? events[0];
+const has = (k: FiestaEvent['kind']) => events.some((e) => e.kind === k);
+const listNames = (list: FiestaEvent[], and: string) => {
+  const names = list.map((e) => nameOf(e, lang));
+  return names.length > 1 ? `${names.slice(0, -1).join(', ')} ${and} ${names.at(-1)}` : names[0];
+};
+const svc = services[lang]; // 0 renovatie, 1 sleutelbeheer, 2 aankoopkeuring, 3 zwembad, 4 onderhoud
+
+const T = {
+  nl: {
+    places: 'Plaatsen', feesten: 'Feesten', overview: 'Overzicht', see: 'Zien en doen', living: 'Wonen',
+    h1: `Feesten in ${n}`,
+    title: `Feesten in ${n}: ${nameOf(main, 'nl')}, feria en fiesta’s door het jaar`,
+    description: `Alle jaarlijkse feesten van ${n} op een rij: ${listNames(events.slice(0, 4), 'en')}. Wanneer ze zijn, wat er gebeurt en wat handig is als u er een huis heeft of zoekt.`,
+    year: `Het feestjaar in ${n}`, highlight: 'Het bekendste feest',
+    note: 'Datums verschillen soms per jaar. De gemeente (ayuntamiento) maakt het programma meestal een paar weken vooraf bekend.',
+    general: 'Feesten die u overal in de Axarquía ziet',
+    ss: ['Semana Santa', `In 2027 valt de Goede Week van Palmzondag 21 maart tot Pasen 28 maart. Elk dorp heeft zijn processies, met beelden die op de schouders van dragers door de straten gaan.${has('semana-santa') ? ` Wat er in ${n} bijzonder is, staat hierboven.` : ''}`],
+    sj: ['Noche de San Juan', place.coastal ? 'In de nacht van 23 op 24 juni gaat de kust naar het strand: vuurwerk, muziek en het verbranden van poppen. Zelf vuur maken op het strand is meestal niet toegestaan; volg de regels van de gemeente.' : 'In de nacht van 23 op 24 juni wordt de kortste nacht gevierd. In de bergdorpen vaak met een maaltijd buiten; aan de kust met vuurwerk op het strand.'],
+    hw: ['Halloween en Allerheiligen', `Halloween wordt steeds meer gevierd, vooral aan de kust, met optochten en verkleedfeesten voor kinderen. Het oudere Spaanse gebruik is Allerheiligen op 1 november, met bloemen op het kerkhof en geroosterde kastanjes.${has('halloween') ? ` Hoe ${n} dit viert, staat hierboven.` : ''}`],
+    xm: ['Kerst en Driekoningen', 'Op 5 januari trekken de Drie Koningen door de straten en gooien snoep naar de kinderen. 6 januari is de dag van de cadeaus.'],
+    ctaH: `Komt u voor de feesten naar ${n}? Regel meteen uw huis`,
+    ctaP: 'Veel kopers ontdekken een dorp tijdens een feria. Zo helpen we u verder, met één aanvraag en een vrijblijvend antwoord.',
+    cards: [
+      { key: 'aankoopkeuring', i: 2, h: 'Huis gezien? Laat het keuren', p: `Valt u tijdens uw bezoek voor een huis in ${n}? Laat het keuren voordat u tekent: constructie, vocht, dak, installaties en vergunningen.`, b: 'Keuring aanvragen' },
+      { key: 'sleutelbeheer', i: 1, h: 'Toezicht als u weer weg bent', p: `Na de zomer staat uw huis leeg. Wij controleren het vast, met foto’s, en grijpen in bij storm of lekkage.`, b: 'Sleutelbeheer aanvragen' },
+      { key: 'renovatie', i: 0, h: 'Verbouwen vóór het volgende feest', p: 'De rustige maanden na de zomer zijn ideaal om te verbouwen. Dan is uw huis klaar als de familie weer komt.', b: 'Renovatie aanvragen' },
+      { key: 'onderhoud', i: 4, h: 'Terras, dak en zwembad klaar', p: 'Een lekkend dakterras of een groen zwembad net voor de gasten komen? Wij lossen het op, ook als u er niet bent.', b: 'Onderhoud aanvragen' },
+    ],
+    more: 'Meer informatie',
+    faq: [
+      [`Wat is het bekendste feest van ${n}?`, `${nameOf(main, 'nl')} (${main.when.text.nl}): ${main.text.nl.replace(/<[^>]+>/g, '')}`],
+      [`Welke feesten zijn er in ${n}?`, `De belangrijkste zijn ${listNames(events, 'en')}.`],
+      ['Wanneer is de Semana Santa in 2027?', 'Van Palmzondag 21 maart tot Paaszondag 28 maart 2027. De grootste processies zijn op Witte Donderdag en Goede Vrijdag.'],
+      [`Kan ik een huis in ${n} laten keuren als ik er alleen op vakantie ben?`, 'Ja. Een keuring kan worden ingepland terwijl u in Spanje bent, of zonder dat u erbij bent. U krijgt een rapport met foto’s, in het Nederlands of Engels.'],
+    ],
+    others: 'Feesten in andere dorpen', calendar: 'Feestkalender van de hele Axarquía',
+    ctaBand: `Plannen voor een huis in ${n}?`,
+  },
+  en: {
+    places: 'Places', feesten: 'Fiestas', overview: 'Overview', see: 'Things to do', living: 'Living',
+    h1: `Fiestas in ${n}`,
+    title: `Fiestas in ${n}: ${nameOf(main, 'en')}, the feria and festivals through the year`,
+    description: `All of ${n}’s annual fiestas in one place: ${listNames(events.slice(0, 4), 'and')}. When they are, what happens, and what is useful if you own or are looking for a home there.`,
+    year: `The fiesta year in ${n}`, highlight: 'Best-known fiesta',
+    note: 'Dates sometimes change from year to year. The town hall (ayuntamiento) usually publishes the programme a few weeks ahead.',
+    general: 'Fiestas you will see all over the Axarquía',
+    ss: ['Semana Santa', `In 2027 Holy Week runs from Palm Sunday 21 March to Easter Sunday 28 March. Every village has its processions, with statues carried through the streets on the shoulders of bearers.${has('semana-santa') ? ` What is special in ${n} is listed above.` : ''}`],
+    sj: ['Noche de San Juan', place.coastal ? 'On the night of 23 to 24 June the coast heads to the beach: fireworks, music and the burning of effigies. Lighting your own fire on the beach is usually not allowed; follow the town hall’s rules.' : 'On the night of 23 to 24 June the shortest night is celebrated. In the mountain villages often with a meal outdoors; on the coast with fireworks on the beach.'],
+    hw: ['Halloween and All Saints’ Day', `Halloween is increasingly popular, especially on the coast, with parades and fancy-dress parties for children. The older Spanish custom is All Saints’ Day on 1 November, with flowers at the cemetery and roasted chestnuts.${has('halloween') ? ` How ${n} celebrates it is listed above.` : ''}`],
+    xm: ['Christmas and Three Kings', 'On 5 January the Three Kings parade through the streets throwing sweets to the children. 6 January is the day for presents.'],
+    ctaH: `Coming to ${n} for the fiestas? Sort out your home while you are here`,
+    ctaP: 'Many buyers discover a village during its feria. This is how we can help, with one request and a no-obligation reply.',
+    cards: [
+      { key: 'aankoopkeuring', i: 2, h: 'Found a house? Have it surveyed', p: `Fallen for a house in ${n} during your visit? Have it surveyed before you sign: structure, damp, roof, services and permits.`, b: 'Request a survey' },
+      { key: 'sleutelbeheer', i: 1, h: 'Checks while you are away', p: 'After the summer your home stands empty. We check it regularly, with photos, and act in case of storms or leaks.', b: 'Request key holding' },
+      { key: 'renovatie', i: 0, h: 'Renovate before the next fiesta', p: 'The quiet months after summer are ideal for building work, so your home is ready when the family comes back.', b: 'Request renovation' },
+      { key: 'onderhoud', i: 4, h: 'Terrace, roof and pool ready', p: 'A leaking roof terrace or a green pool just before your guests arrive? We fix it, even when you are not there.', b: 'Request maintenance' },
+    ],
+    more: 'Find out more',
+    faq: [
+      [`What is ${n}’s best-known fiesta?`, `${nameOf(main, 'en')} (${main.when.text.en}): ${main.text.en.replace(/<[^>]+>/g, '')}`],
+      [`Which fiestas are there in ${n}?`, `The main ones are ${listNames(events, 'and')}.`],
+      ['When is Semana Santa in 2027?', 'From Palm Sunday 21 March to Easter Sunday 28 March 2027. The biggest processions are on Maundy Thursday and Good Friday.'],
+      [`Can I have a house in ${n} surveyed while I am only here on holiday?`, 'Yes. A survey can be scheduled while you are in Spain, or without you being there. You receive a report with photos, in English or Dutch.'],
+    ],
+    others: 'Fiestas in other villages', calendar: 'Fiesta calendar for the whole Axarquía',
+    ctaBand: `Plans for a home in ${n}?`,
+  },
+  de: {
+    places: 'Orte', feesten: 'Feste', overview: 'Überblick', see: 'Sehenswertes', living: 'Wohnen',
+    h1: `Feste in ${n}`,
+    title: `Feste in ${n}: ${nameOf(main, 'de')}, Feria und Fiestas im Jahreslauf`,
+    description: `Alle jährlichen Feste von ${n} auf einen Blick: ${listNames(events.slice(0, 4), 'und')}. Wann sie stattfinden, was passiert und was nützlich ist, wenn Sie dort ein Haus haben oder suchen.`,
+    year: `Das Festjahr in ${n}`, highlight: 'Das bekannteste Fest',
+    note: 'Die Termine ändern sich manchmal von Jahr zu Jahr. Die Gemeinde (Ayuntamiento) veröffentlicht das Programm meist einige Wochen vorher.',
+    general: 'Feste, die Sie überall in der Axarquía erleben',
+    ss: ['Semana Santa', `2027 dauert die Karwoche von Palmsonntag, 21. März, bis Ostersonntag, 28. März. Jedes Dorf hat seine Prozessionen, bei denen Figuren auf den Schultern der Träger durch die Straßen getragen werden.${has('semana-santa') ? ` Was in ${n} besonders ist, steht oben.` : ''}`],
+    sj: ['Noche de San Juan', place.coastal ? 'In der Nacht vom 23. auf den 24. Juni zieht die Küste an den Strand: Feuerwerk, Musik und das Verbrennen von Puppen. Eigene Feuer am Strand sind meist nicht erlaubt; beachten Sie die Regeln der Gemeinde.' : 'In der Nacht vom 23. auf den 24. Juni wird die kürzeste Nacht gefeiert. In den Bergdörfern oft mit einem Essen im Freien, an der Küste mit Feuerwerk am Strand.'],
+    hw: ['Halloween und Allerheiligen', `Halloween wird immer beliebter, vor allem an der Küste, mit Umzügen und Kostümfesten für Kinder. Der ältere spanische Brauch ist Allerheiligen am 1. November, mit Blumen auf dem Friedhof und gerösteten Kastanien.${has('halloween') ? ` Wie ${n} das feiert, steht oben.` : ''}`],
+    xm: ['Weihnachten und Heilige Drei Könige', 'Am 5. Januar ziehen die Heiligen Drei Könige durch die Straßen und werfen Süßigkeiten für die Kinder. Der 6. Januar ist der Tag der Geschenke.'],
+    ctaH: `Kommen Sie zu den Festen nach ${n}? Kümmern Sie sich gleich um Ihr Haus`,
+    ctaP: 'Viele Käufer entdecken ein Dorf während seiner Feria. So helfen wir Ihnen weiter, mit einer Anfrage und einer unverbindlichen Antwort. Der Kontakt läuft auf Englisch oder Niederländisch.',
+    cards: [
+      { key: 'aankoopkeuring', i: 2, h: 'Haus gefunden? Lassen Sie es prüfen', p: `Haben Sie sich bei Ihrem Besuch in ein Haus in ${n} verliebt? Lassen Sie es prüfen, bevor Sie unterschreiben: Bausubstanz, Feuchtigkeit, Dach, Installationen und Genehmigungen.`, b: 'Gutachten anfragen' },
+      { key: 'sleutelbeheer', i: 1, h: 'Kontrolle, wenn Sie weg sind', p: 'Nach dem Sommer steht Ihr Haus leer. Wir kontrollieren es regelmäßig, mit Fotos, und handeln bei Sturm oder Wasserschaden.', b: 'Hausbetreuung anfragen' },
+      { key: 'renovatie', i: 0, h: 'Renovieren vor dem nächsten Fest', p: 'Die ruhigen Monate nach dem Sommer sind ideal zum Umbauen. Dann ist Ihr Haus fertig, wenn die Familie wiederkommt.', b: 'Renovierung anfragen' },
+      { key: 'onderhoud', i: 4, h: 'Terrasse, Dach und Pool bereit', p: 'Eine undichte Dachterrasse oder ein grüner Pool kurz bevor die Gäste kommen? Wir lösen das, auch wenn Sie nicht da sind.', b: 'Instandhaltung anfragen' },
+    ],
+    more: 'Mehr erfahren',
+    faq: [
+      [`Was ist das bekannteste Fest in ${n}?`, `${nameOf(main, 'de')} (${main.when.text.de}): ${main.text.de.replace(/<[^>]+>/g, '')}`],
+      [`Welche Feste gibt es in ${n}?`, `Die wichtigsten sind ${listNames(events, 'und')}.`],
+      ['Wann ist die Semana Santa 2027?', 'Von Palmsonntag, 21. März, bis Ostersonntag, 28. März 2027. Die größten Prozessionen sind an Gründonnerstag und Karfreitag.'],
+      [`Kann ich ein Haus in ${n} prüfen lassen, wenn ich nur im Urlaub hier bin?`, 'Ja. Ein Gutachten kann während Ihres Aufenthalts in Spanien geplant werden oder auch ohne Ihre Anwesenheit. Sie erhalten einen Bericht mit Fotos, auf Englisch oder Niederländisch.'],
+    ],
+    others: 'Feste in anderen Dörfern', calendar: 'Festkalender der ganzen Axarquía',
+    ctaBand: `Pläne für ein Haus in ${n}?`,
+  },
+  sv: {
+    places: 'Orter', feesten: 'Fester', overview: 'Översikt', see: 'Se och göra', living: 'Bo',
+    h1: `Fester i ${n}`,
+    title: `Fester i ${n}: ${nameOf(main, 'sv')}, feria och fiestor under året`,
+    description: `Alla årliga fester i ${n} samlade: ${listNames(events.slice(0, 4), 'och')}. När de är, vad som händer och vad som är bra att veta om du har eller letar efter ett hus där.`,
+    year: `Feståret i ${n}`, highlight: 'Den mest kända festen',
+    note: 'Datumen ändras ibland från år till år. Kommunen (ayuntamiento) publicerar oftast programmet några veckor i förväg.',
+    general: 'Fester du ser överallt i Axarquía',
+    ss: ['Semana Santa', `2027 varar påskveckan från palmsöndagen 21 mars till påskdagen 28 mars. Varje by har sina processioner, där statyer bärs genom gatorna på bärarnas axlar.${has('semana-santa') ? ` Det som är speciellt i ${n} står ovan.` : ''}`],
+    sj: ['Noche de San Juan', place.coastal ? 'Natten mellan 23 och 24 juni drar kusten till stranden: fyrverkeri, musik och bränning av dockor. Att göra egen eld på stranden är oftast inte tillåtet; följ kommunens regler.' : 'Natten mellan 23 och 24 juni firas årets kortaste natt. I bergsbyarna ofta med en måltid utomhus, vid kusten med fyrverkeri på stranden.'],
+    hw: ['Halloween och allhelgona', `Halloween firas allt mer, särskilt vid kusten, med parader och maskerader för barn. Den äldre spanska seden är allhelgonadagen den 1 november, med blommor på kyrkogården och rostade kastanjer.${has('halloween') ? ` Hur ${n} firar står ovan.` : ''}`],
+    xm: ['Jul och trettondagen', 'Den 5 januari tågar de tre vise männen genom gatorna och kastar godis till barnen. Den 6 januari är dagen för julklappar.'],
+    ctaH: `Kommer du till ${n} för festerna? Ordna ditt hus samtidigt`,
+    ctaP: 'Många köpare upptäcker en by under dess feria. Så här kan vi hjälpa till, med en förfrågan och ett svar utan förpliktelser. Kontakten sker på engelska eller nederländska.',
+    cards: [
+      { key: 'aankoopkeuring', i: 2, h: 'Hittat ett hus? Låt besiktiga det', p: `Har du fallit för ett hus i ${n} under besöket? Låt besiktiga det innan du skriver på: konstruktion, fukt, tak, installationer och tillstånd.`, b: 'Begär besiktning' },
+      { key: 'sleutelbeheer', i: 1, h: 'Tillsyn när du är borta', p: 'Efter sommaren står huset tomt. Vi kontrollerar det regelbundet, med foton, och agerar vid storm eller läckage.', b: 'Begär tillsyn' },
+      { key: 'renovatie', i: 0, h: 'Renovera före nästa fest', p: 'De lugna månaderna efter sommaren är perfekta för renovering, så att huset är klart när familjen kommer tillbaka.', b: 'Begär renovering' },
+      { key: 'onderhoud', i: 4, h: 'Terrass, tak och pool klara', p: 'En läckande takterrass eller en grön pool precis innan gästerna kommer? Vi fixar det, även när du inte är där.', b: 'Begär underhåll' },
+    ],
+    more: 'Läs mer',
+    faq: [
+      [`Vilken är den mest kända festen i ${n}?`, `${nameOf(main, 'sv')} (${main.when.text.sv}): ${main.text.sv.replace(/<[^>]+>/g, '')}`],
+      [`Vilka fester finns det i ${n}?`, `De viktigaste är ${listNames(events, 'och')}.`],
+      ['När är Semana Santa 2027?', 'Från palmsöndagen 21 mars till påskdagen 28 mars 2027. De största processionerna är på skärtorsdagen och långfredagen.'],
+      [`Kan jag låta besiktiga ett hus i ${n} när jag bara är här på semester?`, 'Ja. En besiktning kan planeras medan du är i Spanien eller utan att du är på plats. Du får en rapport med foton, på engelska eller nederländska.'],
+    ],
+    others: 'Fester i andra byar', calendar: 'Festkalender för hela Axarquía',
+    ctaBand: `Planer för ett hus i ${n}?`,
+  },
+}[lang];
+
+const self = fiestaHref(lang, place.slug);
+const alternates = Object.fromEntries((['nl', 'en', 'de', 'sv'] as FLang[]).map((l) => [l, fiestaHref(l, place.slug)]));
+const tabs: { href: string; label: string; current?: boolean }[] = c
+  ? [
+      { href: placeHref(lang, place), label: T.overview },
+      ...(c.see ? [{ href: placeHref(lang, place, 'see' as PlacePage), label: T.see }] : []),
+      ...(c.living ? [{ href: placeHref(lang, place, 'living' as PlacePage), label: T.living }] : []),
+      { href: self, label: T.feesten, current: true },
+    ]
+  : [];
+const crumbs = [
+  { name: T.places, href: route(lang, 'places') },
+  { name: n, href: c ? placeHref(lang, place) : route(lang, 'places') },
+  { name: T.feesten, href: self },
+];
+// Andere feestpagina's: zelfde ligging eerst
+const others = places
+  .filter((p) => p.slug !== place.slug && fiestas[p.slug])
+  .sort((a, b) => Number(b.setting === place.setting) - Number(a.setting === place.setting))
+  .slice(0, 6);
+const general = [T.ss, ...(place.coastal || has('san-juan') ? [T.sj] : []), T.hw, T.xm];
+const eventLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: T.year,
+  itemListElement: events.map((e, i) => ({ '@type': 'ListItem', position: i + 1, name: nameOf(e, lang) })),
+};
+---
+<Base title={T.title} description={T.description} path={self} lang={lang} alternates={alternates} jsonLd={[eventLd]}>
+  <Breadcrumbs lang={lang} items={crumbs} />
+  <Hero lang={lang} eyebrow={`${n} · Axarquía`} title={T.h1} lead={data.intro[lang]} ctaHref={req('aankoopkeuring')} cta={T.cards[0].b} secondary={T.cards[1].b} secondaryHref={req('sleutelbeheer')}>
+    {tabs.length > 1 && (
+      <nav class="place-tabs" aria-label={n}>
+        {tabs.map((t) => <a href={t.href} aria-current={t.current ? 'page' : undefined}>{t.label}</a>)}
+      </nav>
+    )}
+  </Hero>
+
+  <section class="section">
+    <div class="wrap">
+      {highlights.length > 0 && (
+        <div class="fiesta-highlights">
+          {highlights.map((e) => (
+            <div class="box">
+              <p class="eyebrow">{T.highlight}</p>
+              <h2>{nameOf(e, lang)}</h2>
+              <p class="fiesta-when">{e.when.text[lang]}</p>
+              <p set:html={e.text[lang].charAt(0).toUpperCase() + e.text[lang].slice(1)} />
+            </div>
+          ))}
+        </div>
+      )}
+      <h2>{T.year}</h2>
+      <ol class="fiesta-list">
+        {events.map((e) => (
+          <li>
+            <span class="fiesta-month">{monthName(lang, Math.floor(e.when.month))}</span>
+            <div>
+              <h3>{nameOf(e, lang)}</h3>
+              <p class="fiesta-when">{e.when.text[lang]}</p>
+              <p set:html={e.text[lang].charAt(0).toUpperCase() + e.text[lang].slice(1)} />
+            </div>
+          </li>
+        ))}
+      </ol>
+      <p class="note">{T.note}</p>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <h2>{T.ctaH}</h2>
+      <p class="section-intro">{T.ctaP}</p>
+      <div class="cards fiesta-ctas">
+        {T.cards.map((k) => (
+          <div class="card">
+            <h3>{k.h}</h3>
+            <p>{k.p}</p>
+            <p><a class="btn" href={req(k.key)}>{k.b}</a></p>
+            <p><a class="more" href={svc[k.i].href}>{T.more}: {svc[k.i].title}</a></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>{T.general}</h2>
+      {general.map(([h, p]) => (<><h3>{h}</h3><p>{p}</p></>))}
+    </div>
+  </section>
+
+  <Faq items={T.faq.map(([q, a]) => ({ q, a }))} lang={lang} />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>{T.others}</h2>
+      <div class="cards place-cards">
+        {others.map((p) => <a class="card" href={fiestaHref(lang, p.slug)}><h3>{p.name}</h3><p class="note">{nameOf((fiestas[p.slug].events.find((e) => e.highlight) ?? fiestas[p.slug].events[0]), lang)}</p></a>)}
+      </div>
+      <p><a class="more" href={fiestaCalendar[lang]}>{T.calendar} →</a></p>
+    </div>
+  </section>
+
+  <Cta lang={lang} title={T.ctaBand} plaats={place.slug} />
+</Base>

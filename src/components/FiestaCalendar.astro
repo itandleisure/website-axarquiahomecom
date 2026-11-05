@@ -1,0 +1,113 @@
+---
+// Regionale feestkalender: alle feesten van de 31 gemeenten per maand.
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Hero from './Hero.astro';
+import Cta from './Cta.astro';
+import { places } from '../data/places';
+import { fiestas, fiestaHref, fiestaCalendar } from '../data/fiestas';
+import { nameOf, monthName, type FLang } from '../data/fiestas/types';
+import { services, path as route } from '../i18n';
+
+interface Props { lang: FLang; }
+const { lang } = Astro.props;
+const request = route(lang, 'request');
+const svc = services[lang];
+
+const T = {
+  nl: {
+    title: 'Feesten in de Axarquía: feria’s, Semana Santa en fiesta’s per maand',
+    description: 'De feestkalender van de Axarquía: alle feria’s, romerías, Semana Santa, San Juan, Halloween en dorpsfeesten van de 31 gemeenten, maand voor maand.',
+    crumb: 'Feesten', h1: 'Feesten in de <em>Axarquía</em>, maand voor maand',
+    lead: 'Elk dorp heeft zijn eigen feria, romería en patroonsfeest, en daarnaast zijn er de grote feesten van de streek. Hier staan ze allemaal op een rij, met een link naar de feestpagina van elk dorp.',
+    easter: 'Rond Pasen', places: 'Feesten per dorp',
+    note: 'Datums verschillen soms per jaar. De gemeenten maken het programma meestal een paar weken vooraf bekend.',
+    ctaH: 'Een huis gevonden tijdens de feria?', ctaP: 'Laat het keuren voordat u tekent, of laat ons op uw huis letten als u weer naar huis gaat.',
+    b1: 'Aankoopkeuring aanvragen', b2: 'Sleutelbeheer aanvragen',
+  },
+  en: {
+    title: 'Fiestas in the Axarquía: ferias, Semana Santa and festivals by month',
+    description: 'The Axarquía fiesta calendar: every feria, romería, Semana Santa, San Juan, Halloween and village fiesta in its 31 municipalities, month by month.',
+    crumb: 'Fiestas', h1: 'Fiestas in the <em>Axarquía</em>, month by month',
+    lead: 'Every village has its own feria, romería and patron saint’s day, alongside the big fiestas of the region. Here they all are, with a link to each village’s fiesta page.',
+    easter: 'Around Easter', places: 'Fiestas by village',
+    note: 'Dates sometimes change from year to year. The town halls usually publish the programme a few weeks ahead.',
+    ctaH: 'Found a house during the feria?', ctaP: 'Have it surveyed before you sign, or let us keep an eye on your home once you have gone back.',
+    b1: 'Request a survey', b2: 'Request key holding',
+  },
+  de: {
+    title: 'Feste in der Axarquía: Ferias, Semana Santa und Fiestas nach Monat',
+    description: 'Der Festkalender der Axarquía: alle Ferias, Romerías, Semana Santa, San Juan, Halloween und Dorffeste der 31 Gemeinden, Monat für Monat.',
+    crumb: 'Feste', h1: 'Feste in der <em>Axarquía</em>, Monat für Monat',
+    lead: 'Jedes Dorf hat seine eigene Feria, Romería und sein Patronatsfest, dazu kommen die großen Feste der Region. Hier finden Sie alle, mit einem Link zur Festseite jedes Dorfes.',
+    easter: 'Um Ostern', places: 'Feste nach Dorf',
+    note: 'Die Termine ändern sich manchmal von Jahr zu Jahr. Die Gemeinden veröffentlichen das Programm meist einige Wochen vorher.',
+    ctaH: 'Ein Haus auf der Feria gefunden?', ctaP: 'Lassen Sie es prüfen, bevor Sie unterschreiben, oder lassen Sie uns auf Ihr Haus aufpassen, wenn Sie wieder zu Hause sind.',
+    b1: 'Gutachten anfragen', b2: 'Hausbetreuung anfragen',
+  },
+  sv: {
+    title: 'Fester i Axarquía: ferior, Semana Santa och fiestor månad för månad',
+    description: 'Festkalendern för Axarquía: alla ferior, romerías, Semana Santa, San Juan, halloween och byfester i de 31 kommunerna, månad för månad.',
+    crumb: 'Fester', h1: 'Fester i <em>Axarquía</em>, månad för månad',
+    lead: 'Varje by har sin egen feria, romería och skyddshelgonfest, och därtill kommer regionens stora fester. Här finns alla, med länk till varje bys festsida.',
+    easter: 'Kring påsk', places: 'Fester per by',
+    note: 'Datumen ändras ibland från år till år. Kommunerna publicerar oftast programmet några veckor i förväg.',
+    ctaH: 'Hittat ett hus under ferian?', ctaP: 'Låt besiktiga det innan du skriver på, eller låt oss hålla koll på huset när du har åkt hem.',
+    b1: 'Begär besiktning', b2: 'Begär tillsyn',
+  },
+}[lang];
+
+const all = places
+  .filter((p) => fiestas[p.slug])
+  .flatMap((p) => fiestas[p.slug].events.map((e) => ({ p, e })));
+const groups = [1, 2, 3, 'easter' as const, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  .map((m) => ({
+    label: m === 'easter' ? T.easter : monthName(lang, m),
+    items: all
+      .filter(({ e }) => (m === 'easter' ? e.when.month === 3.5 : e.when.month !== 3.5 && Math.floor(e.when.month) === m))
+      .sort((a, b) => a.e.when.month - b.e.when.month || a.p.name.localeCompare(b.p.name, 'es')),
+  }))
+  .filter((g) => g.items.length > 0);
+const alternates = { ...fiestaCalendar };
+const self = fiestaCalendar[lang];
+const sorted = places.filter((p) => fiestas[p.slug]).sort((a, b) => a.name.localeCompare(b.name, 'es'));
+---
+<Base title={T.title} description={T.description} path={self} lang={lang} alternates={alternates}>
+  <Breadcrumbs lang={lang} items={[{ name: T.crumb, href: self }]} />
+  <Hero lang={lang} eyebrow="Axarquía" title={T.h1} lead={T.lead} ctaHref={`${request}?dienst=aankoopkeuring`} cta={T.b1} secondary={T.b2} secondaryHref={`${request}?dienst=sleutelbeheer`} />
+
+  <section class="section">
+    <div class="wrap">
+      {groups.map((g) => (
+        <>
+          <h2>{g.label.charAt(0).toUpperCase() + g.label.slice(1)}</h2>
+          <ul class="fiesta-cal">
+            {g.items.map(({ p, e }) => (
+              <li><a href={fiestaHref(lang, p.slug)}><strong>{p.name}</strong></a> · {nameOf(e, lang)} <span class="note">({e.when.text[lang]})</span></li>
+            ))}
+          </ul>
+        </>
+      ))}
+      <p class="note">{T.note}</p>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <h2>{T.places}</h2>
+      <div class="cards place-cards">
+        {sorted.map((p) => <a class="card" href={fiestaHref(lang, p.slug)}><h3>{p.name}</h3><p class="note">{nameOf(fiestas[p.slug].events.find((e) => e.highlight) ?? fiestas[p.slug].events[0], lang)}</p></a>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        {[2, 1, 0, 4].map((i) => <a class="card" href={svc[i].href}><h3>{svc[i].title}</h3><p>{svc[i].text}</p></a>)}
+      </div>
+    </div>
+  </section>
+
+  <Cta lang={lang} title={T.ctaH} text={T.ctaP} />
+</Base>

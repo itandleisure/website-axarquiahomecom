@@ -240,3 +240,18 @@ a.card:hover { transform: translateY(-2px); border-color: var(--terra); color: v
 .link-btn { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
 .site-footer .link-btn { color: #f1e9df; text-decoration: none; text-align: left; } .site-footer .link-btn:hover { color: var(--sun); }
 .footer-note { font-size: 0.85rem; opacity: 0.8; margin-top: 0.6em; }
+
+/* Feesten */
+.fiesta-highlights { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-bottom: 2.4em; }
+.fiesta-highlights h2 { margin: 0.1em 0 0.2em; }
+.fiesta-highlights .eyebrow { margin: 0; }
+.fiesta-when { color: var(--terra-dark); font-weight: 600; margin: 0 0 0.4em; }
+.fiesta-list { list-style: none; padding: 0; margin: 0 0 1.4em; }
+.fiesta-list li { display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 16px 0; border-top: 1px solid var(--line); }
+.fiesta-list h3 { margin: 0 0 0.15em; }
+.fiesta-list p { margin: 0 0 0.3em; }
+.fiesta-month { font-weight: 700; text-transform: capitalize; color: var(--muted); padding-top: 3px; }
+@media (max-width: 600px) { .fiesta-list li { grid-template-columns: 1fr; gap: 4px; } }
+.fiesta-ctas .card .btn { margin-top: 4px; }
+.fiesta-cal { list-style: none; padding: 0; margin: 0 0 1.6em; }
+.fiesta-cal li { padding: 6px 0; border-bottom: 1px solid var(--line); }
