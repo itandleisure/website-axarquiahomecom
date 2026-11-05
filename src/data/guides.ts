@@ -11,6 +11,8 @@ export interface GuideMeta {
   minutes: number;
   published: string;
   updated?: string;
+  /** Eigen adres buiten de gidsenmap, bijv. een regiopagina. Zo'n pagina staat niet in het gidsenoverzicht. */
+  path?: string;
 }
 
 export const guides: GuideMeta[] = [
@@ -60,6 +62,7 @@ export const guides: GuideMeta[] = [
   },
   {
     slug: 'wonen-in-de-axarquia',
+    path: '/nl/wonen/',
     title: 'Wonen in de Axarquía: dorpen, kosten, zorg en klimaat',
     seoTitle: 'Wonen in Spanje: de Axarquía bij Málaga (dorpen, kosten, zorg)',
     short: 'Wonen in de Axarquía',
@@ -151,6 +154,7 @@ export const guidesEn: GuideMeta[] = [
   },
   {
     slug: 'living-in-the-axarquia',
+    path: '/en/living/',
     title: 'Living in the Axarquía: towns, costs, healthcare and climate',
     seoTitle: 'Living in the Axarquía, Málaga: towns compared, costs and healthcare',
     short: 'Living in the Axarquía',
@@ -242,6 +246,7 @@ export const guidesDe: GuideMeta[] = [
   },
   {
     slug: 'leben-in-der-axarquia',
+    path: '/de/wohnen/',
     title: 'Leben in der Axarquía: Orte, Lebenshaltungskosten, Gesundheit und Klima',
     seoTitle: 'Leben in der Axarquía (Málaga): Orte im Vergleich, Kosten und Ärzte',
     short: 'Leben in der Axarquía',
@@ -288,3 +293,7 @@ export const guidesDe: GuideMeta[] = [
 
 import type { Lang } from '../i18n';
 export const guidesBy: Record<Lang, GuideMeta[]> = { nl: guides, en: guidesEn, de: guidesDe };
+export const guideBase: Record<Lang, string> = { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/' };
+export const guideHref = (lang: Lang, g: GuideMeta) => g.path ?? `${guideBase[lang]}${g.slug}/`;
+/** Gidsen die in het gidsenoverzicht staan (zonder regiopagina's) */
+export const guideList = (lang: Lang) => guidesBy[lang].filter((g) => !g.path);

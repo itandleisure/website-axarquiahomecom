@@ -87,8 +87,17 @@ const current = Astro.url.pathname;
         </button>
         <nav id="hoofdmenu" class="menu" aria-label={t.mainMenu}>
           <ul class="nav-list">
-            {nav.map((n) => (
-              <li><a href={n.href} aria-current={current === n.href ? 'page' : undefined}>{n.label}</a></li>
+            {nav.map((n) => n.children ? (
+              <li class="has-sub">
+                <button type="button" class="sub-toggle" aria-expanded="false">{n.label}</button>
+                <ul class="sub">
+                  {n.children.map((c) => (
+                    <li><a href={c.href} aria-current={current === c.href ? 'page' : undefined}>{c.label}</a></li>
+                  ))}
+                </ul>
+              </li>
+            ) : (
+              <li><a href={n.href} aria-current={current.startsWith(n.href) ? 'page' : undefined}>{n.label}</a></li>
             ))}
           </ul>
           <ul class="lang-switch" aria-label={t.langLabel}>
@@ -104,6 +113,18 @@ const current = Astro.url.pathname;
           b?.addEventListener('click', () => {
             const open = m?.classList.toggle('open');
             b.setAttribute('aria-expanded', String(!!open));
+          });
+          document.querySelectorAll<HTMLButtonElement>('.sub-toggle').forEach((t) => {
+            t.addEventListener('click', () => {
+              const open = t.getAttribute('aria-expanded') !== 'true';
+              t.setAttribute('aria-expanded', String(open));
+            });
+            t.parentElement?.addEventListener('focusout', (e) => {
+              if (!t.parentElement!.contains((e as FocusEvent).relatedTarget as Node)) t.setAttribute('aria-expanded', 'false');
+            });
+          });
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') document.querySelectorAll('.sub-toggle').forEach((t) => t.setAttribute('aria-expanded', 'false'));
           });
         </script>
       </div>

@@ -1,5 +1,6 @@
 // Talen, vertaalde routes en vaste teksten van de site.
-import { guides, guidesEn, guidesDe } from './data/guides';
+import { guides, guidesBy, guideHref } from './data/guides';
+import { places, placeBase } from './data/places';
 export type Lang = 'nl' | 'en' | 'de';
 export const langs: Lang[] = ['nl', 'en', 'de'];
 export const langNames: Record<Lang, string> = { nl: 'Nederlands', en: 'English', de: 'Deutsch' };
@@ -18,49 +19,64 @@ export const routes: Partial<Record<Lang, string>>[] = [
   { nl: '/nl/privacy/', en: '/en/privacy/', de: '/de/datenschutz/' },
   { nl: '/nl/bedankt/', en: '/en/thank-you/', de: '/de/danke/' },
   { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/' },
+  { nl: '/nl/plaatsen/', en: '/en/places/', de: '/de/orte/' },
+  { nl: '/nl/zien-en-doen/', en: '/en/things-to-do/', de: '/de/sehenswuerdigkeiten/' },
   // Gidsen staan in alle talen in dezelfde volgorde (zie src/data/guides.ts)
-  ...guides.map((g, i) => ({
-    nl: `/nl/gidsen/${g.slug}/`,
-    ...(guidesEn[i] ? { en: `/en/guides/${guidesEn[i].slug}/` } : {}),
-    ...(guidesDe[i] ? { de: `/de/ratgeber/${guidesDe[i].slug}/` } : {}),
-  })),
+  ...guides.map((_, i) =>
+    Object.fromEntries(langs.filter((l) => guidesBy[l][i]).map((l) => [l, guideHref(l, guidesBy[l][i])])),
+  ),
+  // Plaatsen (pagina's bestaan alleen voor plaatsen met built: true)
+  ...places.filter((p) => p.built).map((p) => Object.fromEntries(langs.map((l) => [l, `${placeBase[l]}${p.slug}/`]))),
 ];
 
 export function alternatesFor(path: string): Partial<Record<Lang, string>> {
   return routes.find((r) => Object.values(r).includes(path)) ?? {};
 }
 
-type Key = 'home' | 'request' | 'privacy' | 'thanks' | 'guides' | 'about' | 'projects';
-const keyIndex: Record<Key, number> = { home: 0, projects: 6, about: 7, request: 8, privacy: 9, thanks: 10, guides: 11 };
+type Key = 'home' | 'request' | 'privacy' | 'thanks' | 'guides' | 'about' | 'projects' | 'places' | 'todo';
+const keyIndex: Record<Key, number> = { home: 0, projects: 6, about: 7, request: 8, privacy: 9, thanks: 10, guides: 11, places: 12, todo: 13 };
 export const path = (lang: Lang, key: Key) => routes[keyIndex[key]][lang]!;
 
-export const nav: Record<Lang, { href: string; label: string }[]> = {
+export interface NavItem { href: string; label: string; children?: { href: string; label: string }[] }
+export const nav: Record<Lang, NavItem[]> = {
   nl: [
-    { href: '/nl/renovatie/', label: 'Renovatie' },
-    { href: '/nl/sleutelbeheer/', label: 'Sleutelbeheer' },
-    { href: '/nl/aankoopkeuring/', label: 'Aankoopkeuring' },
-    { href: '/nl/zwembad/', label: 'Zwembad' },
-    { href: '/nl/onderhoud/', label: 'Onderhoud' },
+    { href: '/nl/#diensten', label: 'Diensten', children: [
+      { href: '/nl/renovatie/', label: 'Renovatie' },
+      { href: '/nl/sleutelbeheer/', label: 'Sleutelbeheer' },
+      { href: '/nl/aankoopkeuring/', label: 'Aankoopkeuring' },
+      { href: '/nl/zwembad/', label: 'Zwembad' },
+      { href: '/nl/onderhoud/', label: 'Onderhoud' },
+    ] },
+    { href: '/nl/plaatsen/', label: 'Plaatsen' },
+    { href: '/nl/wonen/', label: 'Wonen' },
+    { href: '/nl/zien-en-doen/', label: 'Zien en doen' },
     { href: '/nl/gidsen/', label: 'Gidsen' },
-    { href: '/nl/over-ons/', label: 'Over ons' },
   ],
   en: [
-    { href: '/en/renovation/', label: 'Renovation' },
-    { href: '/en/key-holding/', label: 'Key holding' },
-    { href: '/en/property-survey/', label: 'Survey' },
-    { href: '/en/swimming-pool/', label: 'Pools' },
-    { href: '/en/maintenance/', label: 'Maintenance' },
+    { href: '/en/#services', label: 'Services', children: [
+      { href: '/en/renovation/', label: 'Renovation' },
+      { href: '/en/key-holding/', label: 'Key holding' },
+      { href: '/en/property-survey/', label: 'Property survey' },
+      { href: '/en/swimming-pool/', label: 'Swimming pools' },
+      { href: '/en/maintenance/', label: 'Maintenance' },
+    ] },
+    { href: '/en/places/', label: 'Places' },
+    { href: '/en/living/', label: 'Living' },
+    { href: '/en/things-to-do/', label: 'Things to do' },
     { href: '/en/guides/', label: 'Guides' },
-    { href: '/en/about-us/', label: 'About us' },
   ],
   de: [
-    { href: '/de/renovierung/', label: 'Renovierung' },
-    { href: '/de/hausbetreuung/', label: 'Hausbetreuung' },
-    { href: '/de/immobiliengutachten/', label: 'Gutachten' },
-    { href: '/de/pool/', label: 'Pool' },
-    { href: '/de/instandhaltung/', label: 'Wartung' },
+    { href: '/de/#leistungen', label: 'Leistungen', children: [
+      { href: '/de/renovierung/', label: 'Renovierung' },
+      { href: '/de/hausbetreuung/', label: 'Hausbetreuung' },
+      { href: '/de/immobiliengutachten/', label: 'Gutachten' },
+      { href: '/de/pool/', label: 'Pool' },
+      { href: '/de/instandhaltung/', label: 'Instandhaltung' },
+    ] },
+    { href: '/de/orte/', label: 'Orte' },
+    { href: '/de/wohnen/', label: 'Wohnen' },
+    { href: '/de/sehenswuerdigkeiten/', label: 'Sehenswertes' },
     { href: '/de/ratgeber/', label: 'Ratgeber' },
-    { href: '/de/ueber-uns/', label: 'Über uns' },
   ],
 };
 

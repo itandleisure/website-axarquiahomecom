@@ -3,7 +3,7 @@ import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import Hero from '../../../components/Hero.astro';
 import Cta from '../../../components/Cta.astro';
-import { guidesDe } from '../../../data/guides';
+import { guideList, guideHref } from '../../../data/guides';
 ---
 <Base
   title="Ratgeber: Kaufen, Renovieren und Leben in Spanien"
@@ -22,8 +22,8 @@ import { guidesDe } from '../../../data/guides';
   <section class="section">
     <div class="wrap">
       <div class="cards">
-        {guidesDe.map((g) => (
-          <a class="card" href={`/de/ratgeber/${g.slug}/`}>
+        {guideList('de').map((g) => (
+          <a class="card" href={guideHref('de', g)}>
             <h3>{g.title}</h3>
             <p>{g.description}</p>
             <span class="more">Zum Ratgeber ({g.minutes} Min.) →</span>

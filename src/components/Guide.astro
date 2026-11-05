@@ -5,7 +5,7 @@ import Breadcrumbs from './Breadcrumbs.astro';
 import Faq from './Faq.astro';
 import Cta from './Cta.astro';
 import { site } from '../data/site';
-import { guidesBy } from '../data/guides';
+import { guidesBy, guideHref, guideList } from '../data/guides';
 import { ui, path as route, type Lang } from '../i18n';
 
 interface Props {
@@ -23,7 +23,7 @@ const t = ui[lang];
 const list = guidesBy[lang];
 const g = list.find((x) => x.slug === slug)!;
 const base = route(lang, 'guides');
-const path = `${base}${slug}/`;
+const path = guideHref(lang, g);
 const article = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -36,12 +36,12 @@ const article = {
   publisher: { '@id': `${site.url}/#bedrijf` },
   mainEntityOfPage: new URL(path, site.url).href,
 };
-const related = list.filter((x) => x.slug !== slug).slice(0, 3);
+const related = guideList(lang).filter((x) => x.slug !== slug).slice(0, 3);
 const fmt = (d: string) => new Date(d).toLocaleDateString(t.dateLocale, { day: 'numeric', month: 'long', year: 'numeric' });
 const request = route(lang, 'request');
 ---
 <Base title={g.seoTitle ?? g.title} description={g.description} path={path} lang={lang} jsonLd={[article]}>
-  <Breadcrumbs lang={lang} items={[{ name: t.guidesCrumb, href: base }, { name: g.short, href: path }]} />
+  <Breadcrumbs lang={lang} items={g.path ? [{ name: g.short, href: path }] : [{ name: t.guidesCrumb, href: base }, { name: g.short, href: path }]} />
   <article class="section guide" style="padding-top:24px">
     <div class="wrap guide-grid">
       <div class="prose">
@@ -65,7 +65,7 @@ const request = route(lang, 'request');
       <h2>{t.readAlso}</h2>
       <div class="cards">
         {related.map((r) => (
-          <a class="card" href={`${base}${r.slug}/`}>
+          <a class="card" href={guideHref(lang, r)}>
             <h3>{r.title}</h3>
             <p>{r.description}</p>
             <span class="more">{t.readGuide} →</span>
