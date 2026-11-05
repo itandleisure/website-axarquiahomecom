@@ -1,0 +1,129 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'keuze', label: 'Douche, bad of allebei?' },
+  { id: 'vergelijking', label: 'Alle opties vergeleken met prijzen' },
+  { id: 'inloopdouche', label: 'Inloopdouche' },
+  { id: 'regendouche', label: 'Regendouche' },
+  { id: 'douchebak', label: 'Douchebak met glazen wand' },
+  { id: 'bad', label: 'Bad, bad met douche of vrijstaand bad' },
+  { id: 'water', label: 'Water, druk en boiler' },
+  { id: 'verhuur', label: 'Voor B&B en vakantieverhuur' },
+  { id: 'senioren', label: 'Badkamer voor later' },
+  { id: 'kiezen', label: 'Ons advies per situatie' },
+];
+
+const faq = [
+  {
+    q: 'Is een regendouche zuinig?',
+    a: 'Nee, meestal niet. Een gewone spaardouche gebruikt 6 tot 9 liter per minuut, een grote regendouche 12 tot 20 liter. Met een waterbesparende regendouchekop (rond 9 liter per minuut) en een thermostaatkraan valt het verbruik mee. Op een finca met een watertank of in een droog jaar is een gewone douchekop verstandiger, of een combinatie met een handdouche.',
+  },
+  {
+    q: 'Moet een B&B een bad hebben?',
+    a: 'Nee. De meeste gasten in de Axarquía willen een goede, ruime douche. Een bad is een extra voor gezinnen met kleine kinderen of voor één luxe suite, waar een vrijstaand bad mooi staat op de foto’s. Controleer wel de eisen voor de categorie waarin u uw accommodatie registreert.',
+  },
+  {
+    q: 'Kan overal een inloopdouche op vloerniveau?',
+    a: 'Niet altijd. Een douche zonder opstap heeft verval nodig naar de afvoer, en daar moet ruimte voor zijn onder de vloer. Op een begane grond kan dat meestal. In een appartement liggen de afvoeren vaak in de vloer van de buren eronder; dan wordt de vloer iets opgehoogd of komt er een heel vlakke douchebak van 2 à 3 cm.',
+  },
+  {
+    q: 'Wat kost het om het bad te vervangen door een douche?',
+    a: 'Bad eruit en een inloopdouche met glazen wand erin is een middelgrote klus (€€€), inclusief nieuwe tegels in de douchehoek. Een complete nieuwe badkamer is ongeveer twee keer zo duur. Een vaste prijs krijgt u in de offerte; wat een hele badkamer kost staat op de kostenpagina.',
+  },
+];
+---
+<Guide slug="badkamer-douche-of-bad" toc={toc} faq={faq} dienst="badkamer-keuken" ctaTitle="Uw badkamer vernieuwen?" ctaText="Stuur ons een paar foto’s en de maten van uw badkamer. U krijgt advies over douche of bad en een prijs, ook als u niet in Spanje bent.">
+  <h2 id="keuze">Douche, bad of allebei?</h2>
+  <p>Wie in de Axarquía een badkamer vernieuwt, staat bijna altijd voor dezelfde vraag: houd ik het bad, kies ik een inloopdouche, of wordt het een regendouche? Het antwoord hangt af van wie de badkamer gebruikt. Woont u er zelf, verhuurt u aan vakantiegasten of runt u een B&B? En hoeveel water en ruimte heeft u?</p>
+  <p>In Spaanse huizen uit de jaren 70 tot 2000 zit vaak een klein bad met een douchekop erboven. Dat is de badkamer die de meeste kopers als eerste aanpakken. Hieronder zetten we alle opties naast elkaar.</p>
+
+  <h2 id="vergelijking">Alle opties vergeleken met prijzen</h2>
+  <p>De prijsklasse loopt van € (goedkoop) tot €€€€ (duur), inclusief plaatsen. Een prijs voor uw badkamer krijgt u in de offerte.</p>
+  <div class="table-scroll">
+  <table class="prices">
+    <thead><tr><th>Optie</th><th>Prijsklasse</th><th>Waterverbruik</th><th>Sterk in</th></tr></thead>
+    <tbody>
+      <tr><td>Douchebak met glazen wand</td><td class="pk">€</td><td>6 – 9 l per minuut</td><td>Betaalbaar, past bijna overal</td></tr>
+      <tr><td>Inloopdouche op vloerniveau</td><td class="pk">€€€</td><td>6 – 9 l per minuut</td><td>Ruim, modern, makkelijk schoon, ook voor later</td></tr>
+      <tr><td>Regendouche (set, extra op een douche)</td><td class="pk">€ – €€</td><td>9 – 20 l per minuut</td><td>Comfort en luxe gevoel</td></tr>
+      <tr><td>Bad met douchewand vervangen</td><td class="pk">€€</td><td>150 – 200 l per bad</td><td>Gezinnen met kleine kinderen</td></tr>
+      <tr><td>Vrijstaand bad</td><td class="pk">€€€</td><td>200 – 300 l per bad</td><td>Sfeer, luxe suite, foto’s</td></tr>
+      <tr><td>Bad eruit, inloopdouche erin</td><td class="pk">€€€</td><td>Bespaart water</td><td>De meest gevraagde verbouwing</td></tr>
+      <tr><td>Complete badkamer (4 – 6 m²)</td><td class="pk">€€€€</td><td>-</td><td>Alles nieuw, ook leidingen</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Meer over wat een hele badkamer kost staat op <a href="/nl/kosten/badkamer-renoveren/">kosten badkamer renoveren</a>.</p>
+
+  <h2 id="inloopdouche">Inloopdouche</h2>
+  <p>Een inloopdouche (<em>ducha a ras de suelo</em> of <em>ducha de obra</em>) heeft geen opstap: de vloer loopt door en ligt licht op afschot naar een afvoergoot of putje. Een glazen wand houdt het water binnen.</p>
+  <ul>
+    <li><strong>Voordelen:</strong> ruim en licht, geen randen waar vuil blijft zitten, de badkamer lijkt groter, en u kunt er ook op latere leeftijd veilig in.</li>
+    <li><strong>Nadelen:</strong> de vloer moet met verval worden aangelegd en de afvoer moet daar ruimte voor hebben; een goede waterdichting onder de tegels is essentieel. Een te kleine inloopdouche zonder deur kan water op de badkamervloer geven.</li>
+    <li><strong>Tip:</strong> reken op minimaal 90 × 120 cm, liever 100 × 140 cm. Een lange afvoergoot langs de muur maakt grote tegels of microcement mogelijk.</li>
+  </ul>
+
+  <h2 id="regendouche">Regendouche</h2>
+  <p>Een regendouche (<em>ducha efecto lluvia</em> of <em>rociador</em>) is een grote, platte douchekop van 25 tot 40 cm boven uw hoofd. Het water valt als een zachte regenbui over u heen. Het is geen apart soort douche, maar een kop die u bij een inloopdouche of douchebak kiest.</p>
+  <ul>
+    <li><strong>Opbouwset:</strong> een stang met regendouche, handdouche en thermostaatkraan op de muur (€). Kan in een bestaande douche.</li>
+    <li><strong>Inbouw:</strong> de kranen zitten in de muur en de regendouche komt uit het plafond of de wand. Strak, maar de muur moet open (€€).</li>
+    <li><strong>Kies altijd een combinatie met een handdouche.</strong> Dat is handig om de douche schoon te maken en om niet elke keer uw haar nat te maken.</li>
+    <li><strong>Kalk:</strong> het water in de Axarquía is hard. Kies een douchekop met rubberen sproeigaatjes die u schoon kunt wrijven, en overweeg een waterontharder of kalkfilter.</li>
+  </ul>
+
+  <h2 id="douchebak">Douchebak met glazen wand</h2>
+  <p>Een douchebak (<em>plato de ducha</em>) van kunsthars of mineraal materiaal ligt op de vloer, met een heel lage rand van 2 tot 4 cm. Moderne bakken zijn plat, antislip en in elke maat te krijgen.</p>
+  <ul>
+    <li><strong>Voordelen:</strong> goedkoper en sneller dan een inloopdouche, past ook waar de afvoer weinig ruimte heeft, en een nieuwe bak kan vaak op de plek van het oude bad.</li>
+    <li><strong>Nadelen:</strong> een klein randje, en de aansluiting tussen bak en tegels moet goed gekit worden.</li>
+    <li><strong>Geschikt voor:</strong> appartementen, een budgetverbouwing en verhuur.</li>
+  </ul>
+
+  <h2 id="bad">Bad, bad met douche of vrijstaand bad</h2>
+  <ul>
+    <li><strong>Inbouwbad met douchewand:</strong> de klassieke combinatie. Handig met kleine kinderen en als u af en toe graag in bad gaat. Nadeel: over de rand stappen wordt op leeftijd lastig, en het neemt veel ruimte in.</li>
+    <li><strong>Vrijstaand bad:</strong> het pronkstuk van een luxe badkamer of suite. Heeft ruimte nodig rondom en een afvoer in de vloer. Gebruikt het meeste water.</li>
+    <li><strong>Douche én bad:</strong> heeft de badkamer minstens 7 à 8 m², dan passen een aparte inloopdouche en een bad. Dat is de beste keuze voor de hoofdbadkamer van een villa.</li>
+  </ul>
+
+  <h2 id="water">Water, druk en boiler</h2>
+  <p>In de Axarquía gelden in droge jaren soms waterbeperkingen, en op veel fincas komt het water uit een eigen tank of put. Denk daarom bij uw keuze ook aan het water:</p>
+  <ul>
+    <li><strong>Verbruik:</strong> een douche van 5 minuten met een spaardouche kost 30 tot 45 liter, met een grote regendouche 60 tot 100 liter, een bad 150 tot 300 liter.</li>
+    <li><strong>Waterdruk:</strong> een regendouche heeft minstens 2 tot 3 bar nodig. Bij lage druk zit u onder een druppelende plaat.</li>
+    <li><strong>Boiler:</strong> een regendouche of bad vraagt meer warm water. Een boiler (<em>termo</em>) van 50 liter is dan te klein; kies 80 tot 100 liter, of een warmtepompboiler die op zonnestroom warm water maakt.</li>
+    <li><strong>Watertank of beerput:</strong> op een finca bepaalt de tank hoeveel u kunt douchen.</li>
+  </ul>
+
+  <h2 id="verhuur">Voor B&B en vakantieverhuur</h2>
+  <p>Verhuurt u aan gasten, dan gelden andere afwegingen dan voor uw eigen badkamer. Ons advies:</p>
+  <ul>
+    <li><strong>Douche als standaard.</strong> De meeste gasten willen een goede, ruime douche met een stevige straal. Een inloopdouche met een thermostaatkraan scoort in reviews en is in een paar minuten schoon te maken.</li>
+    <li><strong>Regendouche plus handdouche</strong> geeft het luxe gevoel waar gasten foto’s van maken, terwijl de handdouche het schoonmaken makkelijk houdt.</li>
+    <li><strong>Eén bad voor gezinnen.</strong> Ouders met kleine kinderen zoeken op ‘bad’. Heeft u een familiekamer of een vakantiehuis voor gezinnen, houd daar een bad met douche.</li>
+    <li><strong>Vrijstaand bad in één suite</strong> als u een duurdere kamer wilt aanbieden. Het is een sterk beeld voor de website, maar kost water, ruimte en schoonmaaktijd.</li>
+    <li><strong>Sterk en makkelijk vervangbaar:</strong> kies standaardmaten en Spaanse merken, zodat een kapotte kraan of douchewand snel te vervangen is.</li>
+    <li><strong>Afzuiging:</strong> veel badkamers in dorpshuizen hebben geen raam. Een goede afzuiger met timer voorkomt schimmel tussen de wisselingen. Zie <a href="/nl/problemen/vocht-en-schimmel/">vocht en schimmel</a>.</li>
+  </ul>
+  <p>Gaat u een B&B kopen of starten? Lees ook <a href="/nl/gidsen/finca-appartement-of-dorpshuis/bed-and-breakfast/">welk huis past bij een B&B</a>.</p>
+
+  <h2 id="senioren">Badkamer voor later</h2>
+  <p>Veel eigenaren in de Axarquía wonen er na hun pensioen. Bouwt u nu een nieuwe badkamer, denk dan meteen aan later: een inloopdouche zonder opstap, een antislipvloer, een thermostaatkraan tegen verbranden, versterking in de muur zodat er later beugels kunnen komen, en ruimte voor een douchezitje. Dat kost nu bijna niets extra en voorkomt een tweede verbouwing.</p>
+
+  <h2 id="kiezen">Ons advies per situatie</h2>
+  <table class="prices">
+    <thead><tr><th>Situatie</th><th>Ons advies</th></tr></thead>
+    <tbody>
+      <tr><td>Eigen appartement, kleine badkamer</td><td>Bad eruit, inloopdouche of platte douchebak met glazen wand en een regendouche met handdouche</td></tr>
+      <tr><td>Villa of finca, ruime hoofdbadkamer</td><td>Aparte inloopdouche met regendouche én een bad</td></tr>
+      <tr><td>B&B, standaardkamers</td><td>Inloopdouche met thermostaat, regendouche plus handdouche</td></tr>
+      <tr><td>B&B of verhuur, familiekamer</td><td>Bad met douche erboven</td></tr>
+      <tr><td>Luxe suite</td><td>Vrijstaand bad in de kamer of badkamer, plus een ruime douche</td></tr>
+      <tr><td>Finca met watertank</td><td>Gewone of waterbesparende douchekop, geen groot bad</td></tr>
+      <tr><td>Wonen na het pensioen</td><td>Inloopdouche zonder opstap, antislip, voorbereid op beugels</td></tr>
+    </tbody>
+  </table>
+  <p>Een nieuwe badkamer gaat goed samen met een nieuwe vloer in de rest van het huis. Lees ook <a href="/nl/gidsen/vloer-kiezen-spanje/">welke vloer past bij uw huis</a>.</p>
+</Guide>

@@ -60,6 +60,8 @@ const nl: HomeMenu = {
       links: [
         { label: 'Wat kost een huis renoveren?', href: '/nl/gidsen/kosten-huis-renoveren-spanje/' },
         { label: 'Vergunning voor verbouwen', href: '/nl/gidsen/vergunning-verbouwen-andalusie/' },
+        { label: 'Vloer kiezen: tegels, microcement of PVC', href: '/nl/gidsen/vloer-kiezen-spanje/' },
+        { label: 'Regendouche, inloopdouche of bad?', href: '/nl/gidsen/badkamer-douche-of-bad/' },
         { label: 'Badkamer renoveren: kosten', href: '/nl/kosten/badkamer-renoveren/' },
         { label: 'Nieuwe keuken: kosten', href: '/nl/kosten/keuken-renoveren/' },
         { label: 'Dak en dakterras', href: '/nl/kosten/dak-en-dakterras/' },
@@ -193,6 +195,8 @@ const en: HomeMenu = {
       links: [
         { label: 'How much does renovating cost?', href: '/en/guides/renovation-costs-spain/' },
         { label: 'Building permits for renovation', href: '/en/guides/building-permits-renovation-andalusia/' },
+        { label: 'Choosing a floor: tiles, microcement or vinyl', href: '/en/guides/flooring-options-spain/' },
+        { label: 'Rain shower, walk-in shower or bath?', href: '/en/guides/bathroom-shower-or-bath/' },
         { label: 'Bathroom renovation costs', href: '/en/costs/bathroom-renovation/' },
         { label: 'New kitchen costs', href: '/en/costs/kitchen-renovation/' },
         { label: 'Roof and roof terrace', href: '/en/costs/roof-and-roof-terrace/' },
@@ -326,6 +330,8 @@ const de: HomeMenu = {
       links: [
         { label: 'Was kostet eine Renovierung?', href: '/de/ratgeber/renovierungskosten-spanien/' },
         { label: 'Baugenehmigung für den Umbau', href: '/de/ratgeber/baugenehmigung-umbau-andalusien/' },
+        { label: 'Bodenbelag: Fliesen, Mikrozement oder Vinyl', href: '/de/ratgeber/bodenbelag-spanien/' },
+        { label: 'Regendusche, bodengleiche Dusche oder Wanne?', href: '/de/ratgeber/bad-dusche-oder-badewanne/' },
         { label: 'Bad renovieren: Kosten', href: '/de/kosten/bad-renovieren/' },
         { label: 'Neue Küche: Kosten', href: '/de/kosten/kueche-renovieren/' },
         { label: 'Dach und Dachterrasse', href: '/de/kosten/dach-und-dachterrasse/' },
