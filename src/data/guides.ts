@@ -209,6 +209,18 @@ export const guides: GuideMeta[] = [
     minutes: 7,
     published: '2026-11-05',
   },
+  // Vergunningengids. Achteraan in nl/en/de, zelfde positie.
+  {
+    slug: 'vergunning-verbouwen-andalusie',
+    title: 'Verbouwen in Andalusië: welke vergunning en wie u nodig hebt',
+    seoTitle: 'Vergunning voor verbouwen of uitbouw in Spanje (Andalusië): regels en stappen 2026',
+    short: 'Vergunning en verbouwen',
+    description: 'Hebt u voor uw verbouwing of uitbouw in Andalusië een vergunning nodig? Per type werk: melding of licencia de obra, wanneer een architect verplicht is, en alle stappen tot en met de notaris.',
+    lead: 'Een nieuwe badkamer mag u in Andalusië dezelfde dag beginnen. Voor een uitbouw hebt u een architect, een vergunning en een paar maanden geduld nodig. Hier leest u welk werk welke route volgt, wie u erbij nodig hebt en wat er officieel moet gebeuren.',
+    keyword: 'vergunning verbouwen spanje',
+    minutes: 9,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesEn: GuideMeta[] = [
@@ -399,6 +411,18 @@ export const guidesEn: GuideMeta[] = [
     minutes: 7,
     published: '2026-11-05',
   },
+  // Permit guide. Kept last in nl/en/de, same position.
+  {
+    slug: 'building-permits-renovation-andalusia',
+    title: 'Renovating in Andalusia: which permit you need and who does what',
+    seoTitle: 'Building permits for renovations and extensions in Spain (Andalusia): rules and steps 2026',
+    short: 'Permits and renovation',
+    description: 'Do you need a permit for your renovation or extension in Andalusia? By type of work: notification or licencia de obra, when an architect is required, and every step up to the notary.',
+    lead: 'In Andalusia you can start a new bathroom the day you file. An extension needs an architect, a permit and a few months of patience. Here is which work follows which route, who you need and what has to happen officially.',
+    keyword: 'building permit spain renovation',
+    minutes: 9,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesDe: GuideMeta[] = [
@@ -587,6 +611,18 @@ export const guidesDe: GuideMeta[] = [
     lead: 'Käufer schauen zuerst mit den Augen und danach mit einem Gutachter. Kleine sichtbare Mängel kosten Sie bei der Verhandlung oft mehr als die Reparatur. Eine komplett neue Küche holen Sie selten wieder herein.',
     keyword: 'vor dem verkauf renovieren',
     minutes: 7,
+    published: '2026-11-05',
+  },
+  // Genehmigungs-Ratgeber. In nl/en/de am Ende, gleiche Position.
+  {
+    slug: 'baugenehmigung-umbau-andalusien',
+    title: 'Umbauen in Andalusien: welche Genehmigung und wen Sie brauchen',
+    seoTitle: 'Baugenehmigung für Umbau oder Anbau in Spanien (Andalusien): Regeln und Schritte 2026',
+    short: 'Genehmigung und Umbau',
+    description: 'Brauchen Sie für Umbau oder Anbau in Andalusien eine Genehmigung? Je Art der Arbeiten: Anzeige oder Licencia de obra, wann ein Architekt Pflicht ist und alle Schritte bis zum Notar.',
+    lead: 'Ein neues Bad dürfen Sie in Andalusien am Tag der Anzeige beginnen. Für einen Anbau brauchen Sie einen Architekten, eine Genehmigung und einige Monate Geduld. Hier lesen Sie, welche Arbeit welchen Weg geht, wen Sie brauchen und was offiziell geschehen muss.',
+    keyword: 'baugenehmigung spanien',
+    minutes: 9,
     published: '2026-11-05',
   },
 ];
