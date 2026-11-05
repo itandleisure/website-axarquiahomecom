@@ -106,7 +106,7 @@
 
     <div class="card">
       <h2>Bronnen van bezoekers</h2>
-      <p class="sub">Laatste 28 dagen, uit Plausible. AI = doorverwezen vanuit ChatGPT, Perplexity enz.</p>
+      <p class="sub">Laatste 28 dagen, uit Google Analytics of Plausible. AI = doorverwezen vanuit ChatGPT, Perplexity enz.</p>
       <div class="tbl" id="bronnen"></div>
     </div>
 
@@ -171,11 +171,11 @@ function gemPositie(rows, t, van, tot) {
 function kpis() {
   const g = D.gscDag, nu = [dag(-28), dag(0)], toen = [dag(-56), dag(-29)];
   const k = [];
-  if (D.plausible) {
+  if (D.bezoekersBron) {
     const a = som(D.bezDag, taal, ...nu, 2), b = som(D.bezDag, taal, ...toen, 2);
     k.push(['Bezoekers', fmt(a), delta(a, b)]);
   } else {
-    k.push(['Bezoekers', '–', '<span class="d">Plausible nog niet gekoppeld</span>']);
+    k.push(['Bezoekers', '–', '<span class="d">Analytics nog niet gekoppeld</span>']);
   }
   const c1 = som(g, taal, ...nu, 2), c0 = som(g, taal, ...toen, 2);
   const i1 = som(g, taal, ...nu, 3), i0 = som(g, taal, ...toen, 3);
@@ -200,7 +200,7 @@ function kpis() {
   } else {
     k.push(['Genoemd door AI', '–', '<span class="d">eerste meting volgt</span>']);
   }
-  if (D.plausible) {
+  if (D.bezoekersBron) {
     const ai = D.bronnen.filter((r) => r[0] === taal && r[3] === 'ja').reduce((s, r) => s + r[2], 0);
     k.push(['Bezoekers via AI', fmt(ai), '<span class="d">laatste 28 dagen</span>']);
   }
@@ -284,7 +284,7 @@ function prompts() {
 }
 
 function bronnen() {
-  if (!D.plausible) { document.getElementById('bronnen').innerHTML = leeg('Plausible is nog niet gekoppeld (zie README).'); return; }
+  if (!D.bezoekersBron) { document.getElementById('bronnen').innerHTML = leeg('Google Analytics is nog niet gekoppeld (zie README).'); return; }
   const r = D.bronnen.filter((x) => x[0] === taal).sort((a, b) => b[2] - a[2]).slice(0, 12);
   document.getElementById('bronnen').innerHTML = r.length ? tabel([['Bron'], ['Bezoekers', 1]],
     r.map((x) => [esc(x[1]) + (x[3] === 'ja' ? ' <span class="tag">AI</span>' : ''), fmt(x[2])])) : leeg('Nog geen bezoekers gemeten.');

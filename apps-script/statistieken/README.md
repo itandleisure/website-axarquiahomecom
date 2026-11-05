@@ -10,7 +10,7 @@ en alleen te openen met jouw Google-account.
 |---|---|---|---|
 | Klikken, vertoningen, gem. positie, zoekwoorden, pagina's | Google Search Console | elke nacht | ja |
 | Klikken en zoekwoorden in Bing (ook basis voor Copilot) | Bing Webmaster Tools API | elke nacht | ja, met API-sleutel |
-| Bezoekers, bronnen, bezoekers via ChatGPT/Perplexity | Plausible (cookieloos) | elke nacht | ja, met API-sleutel |
+| Bezoekers, bronnen, bezoekers via ChatGPT/Perplexity | Google Analytics 4 (of Plausible) | elke nacht | ja, met property-ID |
 | Posities op 40 vaste zoekwoorden (NL, BE, ES, UK) | Ubersuggest | wekelijks | ja, via Claude |
 | Genoemd in ChatGPT, Gemini, Google AI Overviews | Ubersuggest AI Search Visibility | wekelijks | ja, via Claude |
 | Aanvragen per maand en taal | Sheet "Aanvragen axarquiahome.com" | bij openen | ja |
@@ -64,11 +64,14 @@ Sleutels gaan in **Projectinstellingen > Scripteigenschappen** (niet in de code)
 
 | Eigenschap | Waar vind je hem |
 |---|---|
+| `GA4_PROPERTY_ID` | Google Analytics > Beheer (tandwiel) > **Property-details**: het getal rechtsboven bij Property-ID (bijv. `512345678`, niet de G-code) |
 | `BING_API_KEY` | Bing Webmaster Tools > tandwiel (Instellingen) > **API-toegang** > API-sleutel |
 | `PLAUSIBLE_API_KEY` | Plausible > Account settings > **API keys** > New API key (Stats API) |
 | `AANVRAGEN_SHEET_ID` | De lange code in de URL van de sheet "Aanvragen axarquiahome.com", tussen `/d/` en `/edit` |
 
-**Plausible** meet echte bezoekers zonder cookies (geen cookiebanner nodig) en laat zien
+**Google Analytics 4**: gebruik hetzelfde Google-account als voor het script, of geef dat account leesrechten op de GA4-property. Na het toevoegen van `GA4_PROPERTY_ID` één keer `ververs` uitvoeren en de nieuwe toestemming geven. Let op: met een cookiebanner telt GA4 alleen bezoekers die cookies accepteren, dus de echte aantallen liggen hoger.
+
+**Plausible** (alternatief, alleen als GA4 niet gekoppeld is) meet echte bezoekers zonder cookies (geen cookiebanner nodig) en laat zien
 hoeveel mensen via ChatGPT, Perplexity of Gemini binnenkomen. Search Console ziet alleen
 Google-zoekverkeer. Kosten: vanaf ongeveer 9 euro per maand. Maak een account op
 plausible.io, voeg `axarquiahome.com` toe en laat Claude het meetscript in de site zetten.
