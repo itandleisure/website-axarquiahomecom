@@ -1,0 +1,155 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'spaans', label: 'Waarom vloeren in Spanje anders zijn' },
+  { id: 'vergelijking', label: 'Alle vloeren vergeleken' },
+  { id: 'tegels', label: 'Tegels (gres porcelánico)' },
+  { id: 'microcement', label: 'Microcement' },
+  { id: 'terrazzo', label: 'Terrazzo en oude cementtegels' },
+  { id: 'barro', label: 'Barro en terracotta' },
+  { id: 'natuursteen', label: 'Marmer en natuursteen' },
+  { id: 'pvc', label: 'PVC, laminaat en hout' },
+  { id: 'buiten', label: 'Terras, dakterras en zwembadrand' },
+  { id: 'vloerverwarming', label: 'Vloerverwarming' },
+  { id: 'kiezen', label: 'Welke vloer past bij uw huis?' },
+  { id: 'kosten', label: 'Wat komt er nog bij?' },
+];
+
+const faq = [
+  {
+    q: 'Kan ik nieuwe tegels over de oude tegels leggen?',
+    a: 'Vaak wel, als de oude vloer vlak is, goed vastzit en niet hol klinkt. U bespaart het slopen en het afvoeren van puin, en dat scheelt flink. De vloer wordt wel 1 tot 2 cm hoger, dus deuren moeten worden ingekort en bij de voordeur, badkamer en trap ontstaat een randje. Bij losse tegels, vocht of scheuren moet de oude vloer er eerst uit.',
+  },
+  {
+    q: 'Is microcement een goed idee in Spanje?',
+    a: 'Voor een strakke, naadloze look in badkamer of woonkamer wel, en het kan over bestaande tegels. Maar het is vakwerk: een slecht aangebrachte microcementvloer scheurt of laat vlekken zien. Het is gevoeliger voor krassen dan tegels en moet om de paar jaar opnieuw worden afgelakt. In een druk verhuurhuis kiezen we liever voor grote tegels.',
+  },
+  {
+    q: 'Waarom heeft bijna elk Spaans huis een tegelvloer?',
+    a: 'Tegels blijven koel in de zomer, kunnen tegen zand, water en zonnebrandolie, en gaan tientallen jaren mee. Bovendien zijn ze in Spanje goed en betaalbaar te krijgen. Het nadeel is dat ze in de winter koud aanvoelen; vloerverwarming of een paar goede kleden lossen dat op.',
+  },
+  {
+    q: 'Kan ik laminaat of parket leggen in een Spaans huis?',
+    a: 'In een droog appartement kan het, maar in oude dorpshuizen en fincas zonder kruipruimte trekt vocht uit de grond omhoog. Laminaat zwelt dan op en hout gaat werken. Wilt u de warme look van hout, kies dan een keramische tegel met houtstructuur of een waterbestendige PVC-klikvloer.',
+  },
+  {
+    q: 'Heb ik toestemming nodig voor een nieuwe vloer?',
+    a: 'Een vloer vervangen binnen het huis valt meestal onder kleine werken. Bij de gemeente doet u dan een melding (declaración responsable) of vraagt u een kleine vergunning aan, afhankelijk van de gemeente. In een appartement kijkt u ook in de regels van de comunidad: soms zijn er eisen aan geluidsisolatie. Zie de gids over de vergunning voor verbouwen.',
+  },
+];
+---
+<Guide slug="vloer-kiezen-spanje" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Een nieuwe vloer laten leggen?" ctaText="Vertel ons welke ruimtes u wilt aanpakken en welke vloer u voor ogen heeft. Wij regelen het hele werk, van de oude vloer eruit tot de laatste plint, ook als u niet in Spanje bent.">
+  <h2 id="spaans">Waarom vloeren in Spanje anders zijn</h2>
+  <p>Een vloer in de Axarquía moet tegen andere dingen kunnen dan in Nederland of Duitsland. In de zomer moet hij koel blijven, er komt zand en water van het strand of het zwembad op, en in oude dorpshuizen en fincas ligt de vloer vaak direct op de grond, zonder kruipruimte. Vocht uit de grond trekt dan omhoog. Daarom heeft bijna elk Spaans huis een stenen of keramische vloer (<em>suelo</em> of <em>solería</em>).</p>
+  <p>Toch is er meer keuze dan alleen de standaard beige tegel. Hieronder vergelijken we alle gangbare vloeren: wat ze kosten, waar ze goed in zijn en waar ze niet passen.</p>
+
+  <h2 id="vergelijking">Alle vloeren vergeleken</h2>
+  <p>Hieronder per vloer waar hij sterk in is en waar niet. Het slopen van een oude vloer en het egaliseren van de ondergrond komen erbij (zie <a href="#kosten">wat komt er nog bij</a>).</p>
+  <div class="table-scroll">
+  <table class="prices">
+    <thead><tr><th>Vloer</th><th>Sterk in</th><th>Minder goed in</th></tr></thead>
+    <tbody>
+      <tr><td>Keramische tegel (gres porcelánico)</td><td>Sterk, waterbestendig, koel, onderhoudsvrij</td><td>Koud in de winter, voegen</td></tr>
+      <tr><td>Grote tegels (bijv. 120 × 60 cm of groter)</td><td>Strak, weinig voegen, ruimtelijk</td><td>Vraagt een heel vlakke ondergrond en vakwerk</td></tr>
+      <tr><td>Microcement</td><td>Naadloos, over oude tegels, ook op wanden</td><td>Krassen, vakwerk, om de paar jaar aflakken</td></tr>
+      <tr><td>Oude terrazzo opknappen (schuren en polijsten)</td><td>Goedkoop, karakter, gaat nog decennia mee</td><td>Beschadigde tegels zijn lastig te vervangen</td></tr>
+      <tr><td>Nieuwe terrazzo</td><td>Bijna onverwoestbaar, mooi</td><td>Prijs, gewicht</td></tr>
+      <tr><td>Barro / terracotta (handgemaakt)</td><td>Warme, authentieke uitstraling</td><td>Poreus, vlekt, moet behandeld worden</td></tr>
+      <tr><td>Marmer en natuursteen</td><td>Luxe, koel, lang mee</td><td>Prijs, gevoelig voor citroen en azijn</td></tr>
+      <tr><td>Gepolijst of gietbeton</td><td>Industriële look, sterk</td><td>Haarscheurtjes, vraagt goede ondergrond</td></tr>
+      <tr><td>PVC-klikvloer (SPC/LVT)</td><td>Snel, waterbestendig, over tegels, warmer en stiller</td><td>Wordt warm in de zon, minder duurzaam dan tegels</td></tr>
+      <tr><td>Laminaat</td><td>Goedkoop, houtlook</td><td>Zwelt bij vocht, niet voor oude huizen</td></tr>
+      <tr><td>Parket of massief hout</td><td>Warm en sfeervol</td><td>Vocht, zon en zand, werkt in een droog/nat klimaat</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box"><p><strong>Wilt u een nieuwe vloer laten leggen?</strong> Wij doen het hele werk: de oude vloer eruit, de ondergrond in orde en de nieuwe vloer erin, ook als u niet in Spanje bent. Vertel ons wat u wilt laten doen.</p><a class="btn" href="/nl/aanvraag/?dienst=renovatie">Vertel ons uw plan</a></div>
+  <p>Voor kleinere oppervlakken, trappen en veel snijwerk ligt de prijs per m² hoger. Reken ook op een nette plint (<em>rodapié</em>) langs de muren.</p>
+
+  <h2 id="tegels">Tegels (gres porcelánico)</h2>
+  <p>Spanje is een van de grootste tegelproducenten ter wereld, met fabrieken rond Castellón. Daardoor zijn goede tegels hier betaalbaar en is de keuze enorm. Kies voor <strong>porcelánico</strong> (doorgekleurd en dicht gebakken) en niet voor gewone keramiek: het neemt bijna geen water op, is harder en kan ook buiten.</p>
+  <ul>
+    <li><strong>Formaat:</strong> 60 × 60 cm is de standaard. Grote formaten (120 × 60, 120 × 120 cm) geven minder voegen en een strak beeld, maar de ondergrond moet heel vlak zijn en het leggen kost meer.</li>
+    <li><strong>Houtlook:</strong> lange tegels met houtstructuur geven de sfeer van parket, zonder de problemen met vocht.</li>
+    <li><strong>Kleur:</strong> lichte kleuren laten de ruimte groter lijken en blijven koeler. Heel donker of heel wit laat elk zandkorreltje zien.</li>
+    <li><strong>Voegen:</strong> kies een smalle voeg in een kleur die dicht bij de tegel ligt. Een epoxyvoeg in keuken en badkamer blijft schoon.</li>
+  </ul>
+
+  <h2 id="microcement">Microcement</h2>
+  <p>Microcement is een dunne laag (2 tot 3 mm) van cement, kunsthars en pigment die in een paar lagen met de hand wordt aangebracht en daarna wordt afgelakt. Het resultaat is een naadloze vloer zonder voegen, die ook op wanden, trappen en in de douche kan doorlopen.</p>
+  <ul>
+    <li><strong>Voordelen:</strong> strakke, moderne uitstraling; kan over bestaande tegels, dus geen sloopwerk en nauwelijks hoogteverschil; geen voegen om schoon te houden; vloer en wanden in één materiaal.</li>
+    <li><strong>Nadelen:</strong> het resultaat hangt volledig af van de vakman; de ondergrond mag niet bewegen, anders komen er scheurtjes; gevoeliger voor krassen en vlekken dan tegels; de laklaag moet om de 2 tot 5 jaar worden bijgewerkt.</li>
+    <li><strong>Geschikt voor:</strong> een eigen huis of appartement waar u zelf woont, badkamers en open keukens. Minder voor een druk verhuurhuis met zand en koffers.</li>
+  </ul>
+
+  <h2 id="terrazzo">Terrazzo en oude cementtegels</h2>
+  <p>In veel appartementen uit de jaren 60 tot 80 en in oude dorpshuizen ligt <em>terrazo</em> of <em>granito</em>: tegels van cement met stukjes marmer. Of de beroemde gekleurde cementtegels met patroon (<em>baldosa hidráulica</em>). Veel kopers willen die eruit, maar dat is vaak zonde.</p>
+  <ul>
+    <li><strong>Opknappen:</strong> schuren, plamuren en polijsten maakt een doffe terrazzovloer weer als nieuw. Veel goedkoper dan een nieuwe vloer en zonder puin.</li>
+    <li><strong>Cementtegels met patroon</strong> zijn tegenwoordig gewild. Kunt u ze niet in het hele huis houden, hergebruik ze dan in een hal of als ‘kleed’ in de woonkamer.</li>
+    <li><strong>Let op:</strong> gebroken terrazzotegels zijn moeilijk na te maken. Bewaar bij een verbouwing een paar heel gebleven tegels.</li>
+  </ul>
+
+  <h2 id="barro">Barro en terracotta</h2>
+  <p>Handgemaakte tegels van gebakken klei, rood tot zandkleurig, passen bij een finca of cortijo. Een oude barrovloer schoonmaken en opnieuw impregneren is veel goedkoper dan een nieuwe leggen.</p>
+  <ul>
+    <li><strong>Voordelen:</strong> warme, authentieke sfeer; elke tegel is anders; slijt mooi.</li>
+    <li><strong>Nadelen:</strong> poreus, dus vlekken van olie en wijn trekken erin als de vloer niet goed is behandeld; moet regelmatig opnieuw worden behandeld met olie of was; in de keuken minder praktisch.</li>
+    <li><strong>Tip:</strong> wilt u de look zonder het onderhoud, er zijn porcelánico-tegels met terracotta-uitstraling die bijna niet van echt te onderscheiden zijn.</li>
+  </ul>
+
+  <h2 id="natuursteen">Marmer en natuursteen</h2>
+  <p>Andalusië heeft zijn eigen marmer: het witte marmer uit Macael (Almería) ligt in veel villa’s en op veel trappen. Natuursteen is luxe, koel en gaat generaties mee, maar is ook duur en gevoelig: zuur zoals citroen, azijn en sommige schoonmaakmiddelen tast gepolijst marmer aan. Een gezoete of geschuurde afwerking is minder glad en minder kwetsbaar dan hoogglans.</p>
+
+  <h2 id="pvc">PVC, laminaat en hout</h2>
+  <ul>
+    <li><strong>PVC-klikvloer (SPC of LVT):</strong> de snelste en goedkoopste manier om een gedateerde tegelvloer te vernieuwen. Hij wordt over de bestaande tegels gelegd, is waterbestendig, voelt warmer en klinkt zachter. Nadelen: in een ruimte met veel zon op de vloer kan hij uitzetten en verkleuren, hij is minder krasbestendig dan tegels en gaat minder lang mee. Prima voor slaapkamers en een appartement dat u zelf gebruikt.</li>
+    <li><strong>Laminaat</strong> raden we in de Axarquía meestal af: bij vocht uit de ondergrond, een lekkende airco of een natte badjas zwelt het op.</li>
+    <li><strong>Parket of massief hout</strong> kan in een droog, goed geïsoleerd huis, maar moet tegen het verschil tussen een vochtige winter en een droge zomer kunnen. Kies dan voor meerlaags parket, nooit direct op een vloer zonder vochtscherm.</li>
+  </ul>
+
+  <h2 id="buiten">Terras, dakterras en zwembadrand</h2>
+  <p>Buiten gelden andere eisen. Let bij het kiezen van een tegel voor terras, trap of zwembadrand op:</p>
+  <ul>
+    <li><strong>Antislip:</strong> kies klasse C3 (de hoogste Spaanse antislipklasse, <em>clase 3</em>) rond het zwembad en op trappen, minimaal C2 op een terras.</li>
+    <li><strong>Vorstbestendig</strong> in de bergdorpen, waar het in de winter soms vriest.</li>
+    <li><strong>Lichte kleur:</strong> donkere tegels worden in de zomerzon zo heet dat u er niet op blote voeten over kunt lopen.</li>
+    <li><strong>Afschot en waterdichting:</strong> op een dakterras ligt onder de tegels een waterdichte laag. Nieuwe tegels leggen zonder die laag te controleren is vragen om lekkage. Zie <a href="/nl/kosten/dak-en-dakterras/">dak en dakterras</a> en <a href="/nl/problemen/daklekkage/">daklekkage</a>.</li>
+  </ul>
+  <p>Gaat het om de zwembadrand of het hele zwembad, lees dan <a href="/nl/kosten/zwembad-laten-bouwen/">wat een zwembad kost</a>.</p>
+
+  <h2 id="vloerverwarming">Vloerverwarming</h2>
+  <p>Het grootste nadeel van een stenen vloer is dat hij in de winter koud is. Vloerverwarming lost dat op, en tegels en microcement geleiden de warmte juist heel goed.</p>
+  <ul>
+    <li><strong>Elektrische verwarmingsmat</strong> onder de tegels: betaalbaar voor een badkamer of één kamer, maar duurder in gebruik.</li>
+    <li><strong>Watergedragen vloerverwarming met een warmtepomp (aerotermia):</strong> een grotere investering, omdat er ook een warmtepomp bij komt. Zuinig en comfortabel voor het hele huis, vooral als de vloer toch al open ligt bij een grote verbouwing.</li>
+  </ul>
+  <p>Een warmtepomp verwarmt en koelt; wat dat kost leest u bij <a href="/nl/kosten/airco-en-warmtepomp/">airco en warmtepomp</a>.</p>
+
+  <h2 id="kiezen">Welke vloer past bij uw huis?</h2>
+  <table class="prices">
+    <thead><tr><th>Situatie</th><th>Ons advies</th></tr></thead>
+    <tbody>
+      <tr><td>Vakantieverhuur of B&B</td><td>Porcelánico in een middenkleur met smalle voegen: tegen zand, koffers en schoonmaakmiddelen, en een beschadigde tegel is makkelijk te vervangen</td></tr>
+      <tr><td>Appartement uit de jaren 70 met terrazzo</td><td>Terrazzo laten schuren en polijsten, of microcement eroverheen als u een moderne look wilt</td></tr>
+      <tr><td>Oud dorpshuis met vocht in de vloer</td><td>Eerst het vocht aanpakken, dan tegels of barro. Geen laminaat, parket of PVC direct op de grond</td></tr>
+      <tr><td>Finca of cortijo</td><td>Barro of tegels met terracotta-look binnen, antislip porcelánico buiten</td></tr>
+      <tr><td>Gedateerde vloer, klein budget</td><td>PVC-klikvloer over de tegels in slaapkamers, of tegel over tegel</td></tr>
+      <tr><td>Huis met honden of kleine kinderen</td><td>Porcelánico of terrazzo: krasvast en makkelijk schoon</td></tr>
+      <tr><td>Hele jaar bewoond, grote verbouwing</td><td>Grote tegels of microcement met vloerverwarming op een warmtepomp</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="kosten">Wat komt er nog bij?</h2>
+  <ul>
+    <li><strong>Oude vloer slopen en puin afvoeren:</strong> in smalle straatjes van witte dorpen, waar geen container kan staan, is dit duurder omdat alles met de hand naar buiten moet.</li>
+    <li><strong>Egaliseren:</strong> nodig voor grote tegels, microcement en PVC.</li>
+    <li><strong>Vochtscherm of drainage</strong> bij vochtige vloeren: vraag eerst advies over de oorzaak, zie <a href="/nl/problemen/vocht-en-schimmel/">vocht en schimmel</a>.</li>
+    <li><strong>Deuren inkorten</strong> als de vloer hoger wordt.</li>
+    <li><strong>Meubels verplaatsen en het huis stofvrij afdekken</strong>, als het huis bewoond of gemeubileerd verhuurd wordt.</li>
+    <li><strong>Btw:</strong> renovatiewerk aan een woning valt onder voorwaarden onder 10% btw in plaats van 21%. Zie <a href="/nl/gidsen/kosten-huis-renoveren-spanje/">wat een renovatie kost</a>.</li>
+  </ul>
+  <p>Woont u niet in Spanje? Een nieuwe vloer is een klus die prima kan terwijl u er niet bent. Reken op 1 tot 2 weken voor een gemiddeld appartement, met foto’s van elke stap.</p>
+</Guide>
