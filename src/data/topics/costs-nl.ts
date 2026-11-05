@@ -555,6 +555,8 @@ export const costsNl: Topic[] = [
       { href: '/nl/renovatie/', label: 'Renovatie en verbouwing' },
       { href: '/nl/kosten/airco-en-warmtepomp/', label: 'Kosten airco en warmtepomp' },
       { href: '/nl/gidsen/off-grid-wonen-spanje/', label: 'Gids: off-grid wonen in Spanje' },
+      { href: '/nl/gidsen/virtuele-batterij-spanje/', label: 'Gids: virtuele batterij en teruglevering' },
+      { href: '/nl/gidsen/energieleveranciers-spanje-vergelijken/', label: 'Gids: energieleveranciers vergelijken' },
     ],
     related: ['costs:thuisbatterij', 'costs:laadpaal', 'costs:energiebeheer'],
     sources: [
@@ -721,6 +723,8 @@ export const costsNl: Topic[] = [
       { href: '/nl/kosten/zonnepanelen/', label: 'Kosten zonnepanelen' },
       { href: '/nl/gidsen/off-grid-wonen-spanje/', label: 'Gids: off-grid wonen in Spanje' },
       { href: '/nl/problemen/stroom-valt-uit/', label: 'Stroom valt steeds uit' },
+      { href: '/nl/gidsen/virtuele-batterij-spanje/', label: 'Gids: virtuele batterij en teruglevering' },
+      { href: '/nl/gidsen/energieleveranciers-spanje-vergelijken/', label: 'Gids: energieleveranciers vergelijken' },
     ],
     related: ['costs:zonnepanelen', 'costs:laadpaal', 'costs:energiebeheer'],
     sources: [
@@ -961,6 +965,7 @@ export const costsNl: Topic[] = [
       { href: '/nl/kosten/zonnepanelen/', label: 'Kosten zonnepanelen' },
       { href: '/nl/kosten/thuisbatterij/', label: 'Kosten thuisbatterij' },
       { href: '/nl/gidsen/off-grid-wonen-spanje/', label: 'Gids: off-grid wonen in Spanje' },
+      { href: '/nl/gidsen/energieleveranciers-spanje-vergelijken/#laadpaal', label: 'Gids: laadpaal via uw energieleverancier' },
     ],
     related: ['costs:zonnepanelen', 'costs:thuisbatterij', 'costs:energiebeheer'],
     sources: [
@@ -1041,6 +1046,8 @@ export const costsNl: Topic[] = [
       { href: '/nl/kosten/zonnepanelen/', label: 'Kosten zonnepanelen' },
       { href: '/nl/kosten/thuisbatterij/', label: 'Kosten thuisbatterij' },
       { href: '/nl/kosten/laadpaal/', label: 'Kosten laadpaal' },
+      { href: '/nl/gidsen/energieleveranciers-spanje-vergelijken/', label: 'Gids: energieleveranciers vergelijken' },
+      { href: '/nl/gidsen/virtuele-batterij-spanje/', label: 'Gids: virtuele batterij en teruglevering' },
     ],
     related: ['costs:zonnepanelen', 'costs:thuisbatterij', 'costs:laadpaal'],
     sources: [
