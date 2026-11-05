@@ -179,10 +179,10 @@ a.card:hover { transform: translateY(-2px); border-color: var(--terra); color: v
 .wstep legend { font-family: var(--serif); font-size: 1.45rem; font-weight: 600; margin-bottom: 18px; padding: 0; }
 .wstep[hidden] { display: none; }
 .choices { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-.choice { position: relative; }
+.choice { position: relative; display: flex; }
 .choice input { position: absolute; opacity: 0; inset: 0; }
-.choice span { display: block; border: 2px solid var(--line); border-radius: 12px; padding: 14px 16px; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
-.choice span small { display: block; color: var(--muted); font-size: 0.86rem; margin-top: 2px; }
+.choice span { display: block; flex: 1; line-height: 1.35; border: 2px solid var(--line); border-radius: 12px; padding: 14px 16px; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.choice span small { display: block; color: var(--muted); font-size: 0.86rem; line-height: 1.45; margin-top: 4px; }
 .choice input:checked + span { border-color: var(--terra); background: #fbf0ea; }
 .choice input:focus-visible + span { outline: 3px solid var(--sun); outline-offset: 2px; }
 .field { margin-bottom: 16px; }
