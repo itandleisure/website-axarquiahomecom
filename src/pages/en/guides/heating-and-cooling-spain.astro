@@ -1,0 +1,134 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'winter', label: 'Why heat a house in southern Spain?' },
+  { id: 'vergelijking', label: 'All types of heating compared' },
+  { id: 'airco', label: 'Air con and heat pumps' },
+  { id: 'aerotermia', label: 'Aerotermia and underfloor heating' },
+  { id: 'hout', label: 'Wood burner and open fire' },
+  { id: 'pellet', label: 'Pellet stove' },
+  { id: 'gas', label: 'Butane gas heater' },
+  { id: 'elektrisch', label: 'Electric heaters and infrared panels' },
+  { id: 'kiezen', label: 'What suits your house?' },
+  { id: 'koelen', label: 'Staying cool in summer' },
+];
+
+const faq = [
+  {
+    q: 'What is the cheapest way to heat a house in Spain?',
+    a: 'Per kWh of heat, an air con with heat pump and a wood burner with your own or cheap wood are cheapest, around €0.05 to €0.07. With solar panels the air con gets even cheaper during the day. A plain electric heater is the most expensive, around €0.18 per kWh.',
+  },
+  {
+    q: 'Is a butane heater dangerous?',
+    a: 'Not if you use it properly: always with some ventilation, never in a bedroom or bathroom, and with a heater that has an oxygen depletion sensor. Add a carbon monoxide alarm. A butane heater does give off a lot of moisture, which causes condensation and mould.',
+  },
+  {
+    q: 'Do I need underfloor heating in Spain?',
+    a: 'Not necessarily, but tiled floors are cold in winter. Electric underfloor heating in the bathroom is an affordable luxury. For a whole house, underfloor heating with a heat pump (aerotermia) is comfortable and economical, especially during a major renovation.',
+  },
+  {
+    q: 'Can I heat a finca without mains power?',
+    a: 'Yes. A wood burner works without power and is the standard there. A pellet stove needs a little electricity. Air con only works on sunny days or with a large home battery. See the off-grid living guide.',
+  },
+];
+---
+<Guide lang="en" slug="heating-and-cooling-spain" toc={toc} faq={faq} dienst="energie" ctaTitle="Advice on heating or cooling?" ctaText="Tell us how big your house is, where it is and how you use it. You get advice on the best heating and a price.">
+  <h2 id="winter">Why heat a house in southern Spain?</h2>
+  <p>Even in January the Axarquía is often 16 to 18 degrees in the daytime sun. But in the evening and at night it drops to 6 to 10 degrees on the coast, and in the mountain villages sometimes to around freezing. Spanish houses are built to stay cool: thick walls, tiled floors, single glazing and often no central heating. So indoors in winter it is often colder than outside in the afternoon sun.</p>
+  <p>There is no single best heating system. It depends on your house, how often you are there and whether you want one or two rooms warm or the whole house. Below we compare all the common types.</p>
+
+  <h2 id="vergelijking">All types of heating compared</h2>
+  <p>Indicative 2026 figures. Cost per kWh of heat assumes electricity at €0.18 per kWh, a butane bottle at about €17 and seasoned olive wood at €150 to €250 a tonne.</p>
+  <div class="table-scroll">
+  <table class="prices">
+    <thead><tr><th>Type</th><th>Heats</th><th>Purchase and installation</th><th>Per kWh of heat</th></tr></thead>
+    <tbody>
+      <tr><td>Air con with heat pump (split)</td><td>Per room, or several with multi-split</td><td>€1,000 – €2,000 per room</td><td>± €0.05 – €0.06</td></tr>
+      <tr><td>Aerotermia with underfloor heating</td><td>Whole house</td><td>€10,000 – €20,000</td><td>± €0.05 – €0.06</td></tr>
+      <tr><td>Wood burner</td><td>Living room, partly the rest of the house with warm air</td><td>€2,500 – €6,000</td><td>± €0.05 – €0.07</td></tr>
+      <tr><td>Pellet stove</td><td>Living room, or the whole house with radiators</td><td>€3,000 – €7,000</td><td>± €0.08 – €0.09</td></tr>
+      <tr><td>Butane gas heater</td><td>One room</td><td>€80 – €200</td><td>± €0.10 – €0.12</td></tr>
+      <tr><td>Infrared panel</td><td>One room or spot</td><td>€150 – €500 per panel</td><td>± €0.18</td></tr>
+      <tr><td>Electric heater or oil-filled radiator</td><td>One room</td><td>€30 – €200</td><td>± €0.18</td></tr>
+      <tr><td>Electric underfloor heating</td><td>Bathroom or one room</td><td>€40 – €70 per m²</td><td>± €0.18</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>With <a href="/en/costs/solar-panels/">solar panels</a> anything that runs on electricity gets much cheaper during the day, and with <a href="/en/costs/smart-energy-management/">smart energy management</a> the house pre-heats in exactly the cheapest hours.</p>
+
+  <h2 id="airco">Air con and heat pumps</h2>
+  <p>Almost every modern air con in Spain is a heat pump (<em>bomba de calor</em>): it cools in summer and heats in winter. From 1 kWh of electricity it produces 3 to 4 kWh of heat. On the coast, where it rarely freezes, that works well all year.</p>
+  <ul>
+    <li><strong>Pros:</strong> cheap to run, warms up quickly, cools in summer, no smell, can be switched on remotely and works well with solar panels.</li>
+    <li><strong>Cons:</strong> blows air, which some people dislike; heats from above so the floor stays cold; outdoor unit on a wall or roof.</li>
+    <li><strong>Suits:</strong> almost every apartment and house on the coast, and as a supplement in the mountains.</li>
+  </ul>
+  <p>Prices per type are on <a href="/en/costs/air-conditioning-and-heat-pumps/">cost of air con and heat pumps</a>.</p>
+
+  <h2 id="aerotermia">Aerotermia and underfloor heating</h2>
+  <p><em>Aerotermia</em> is a heat pump that heats water instead of air. That water goes to underfloor heating, radiators and often the hot water cylinder too. It is the Spanish version of central heating, but economical.</p>
+  <ul>
+    <li><strong>Pros:</strong> the whole house evenly warm, warm feet on tiled floors, quiet, no smell, hot water too, and very cheap with solar panels.</li>
+    <li><strong>Cons:</strong> high purchase cost; underfloor heating needs a new floor, so it mainly makes sense in a major renovation or new build. Slow to warm up, so less suited to a house you only use now and then.</li>
+    <li><strong>Suits:</strong> a house you live in all year, or one you are renovating completely anyway.</li>
+  </ul>
+  <p>If you only want warm feet in the bathroom, an electric heating mat under the tiles is an affordable solution.</p>
+
+  <h2 id="hout">Wood burner and open fire</h2>
+  <p>In the villages and on the fincas the wood burner is still the favourite. Olive wood from pruning is easy to get in the Axarquía.</p>
+  <ul>
+    <li><strong>Pros:</strong> atmosphere, radiant heat that also warms thick walls, cheap with your own or local wood, works without power.</li>
+    <li><strong>Cons:</strong> fetching, storing and drying wood; ash and dust; wood smoke smells, next door too; the chimney must be swept every year. Mainly heats the room it is in.</li>
+    <li><strong>Suits:</strong> village houses and fincas, mountain villages, off-grid.</li>
+  </ul>
+  <p>An <strong>open fire</strong> is cosy, but gets only 10 to 20% of the heat from the wood and pulls warm air up the chimney. An insert or a wood burner in the existing fireplace gives three to four times as much heat. See <a href="/en/costs/chimney-and-wood-burner/">cost of chimney and wood burner</a> and, if it smokes, <a href="/en/problems/smoking-chimney/">smoking chimney</a>.</p>
+
+  <h2 id="pellet">Pellet stove</h2>
+  <p>A pellet stove burns compressed wood pellets from a hopper, with a thermostat and timer.</p>
+  <ul>
+    <li><strong>Pros:</strong> automatic, cleaner than wood, temperature-controlled, can be switched on remotely, bags of pellets are easy to buy and store. A hydro pellet stove heats the whole house through radiators.</li>
+    <li><strong>Cons:</strong> needs electricity for the fan and ignition; it hums audibly; maintenance and yearly sweeping; more expensive to buy than a wood burner.</li>
+    <li><strong>Suits:</strong> anyone who wants the warmth of a stove without hauling wood, also in a house you want to pre-heat remotely.</li>
+  </ul>
+
+  <h2 id="gas">Butane gas heater</h2>
+  <p>The portable heater with an orange butane bottle inside is found in many Spanish homes.</p>
+  <ul>
+    <li><strong>Pros:</strong> cheap to buy, warms quickly, portable, works without power.</li>
+    <li><strong>Cons:</strong> gives off a lot of water vapour, causing condensation and mould; gas smell; carbon monoxide risk, so always ventilate and never use in a bedroom or bathroom; carrying and changing bottles.</li>
+    <li><strong>Suits:</strong> warming a room quickly now and then, as a stopgap. Not as permanent heating in a house that is already damp.</li>
+  </ul>
+  <p>Struggling with damp? Read <a href="/en/problems/damp-and-mould/">damp and mould</a> and <a href="/en/problems/draughts-and-condensation-at-windows/">draughts and condensation at windows</a>.</p>
+
+  <h2 id="elektrisch">Electric heaters and infrared panels</h2>
+  <ul>
+    <li><strong>Oil-filled radiator or convector:</strong> cheap to buy and easy, but expensive to run. Handy for a guest room you use a few times a year.</li>
+    <li><strong>Infrared panel:</strong> a flat panel on a wall or ceiling that heats people and walls rather than the air, like the sun. Feels warm at a lower air temperature, no draught and no smell. Per kWh as expensive as other electric heating, but economical if you only heat the spot where you sit. Good for a bathroom, workspace or terrace.</li>
+    <li><strong>Watch the power:</strong> several electric heaters at once can trip the supply. See <a href="/en/problems/power-keeps-tripping/">power keeps tripping</a>.</li>
+  </ul>
+
+  <h2 id="kiezen">What suits your house?</h2>
+  <table class="prices">
+    <thead><tr><th>Situation</th><th>Our advice</th></tr></thead>
+    <tbody>
+      <tr><td>Apartment on the coast</td><td>Air con with heat pump in the living room and bedrooms, possibly electric underfloor heating in the bathroom</td></tr>
+      <tr><td>Holiday home, a few months a year</td><td>Air con with heat pump, switched on remotely so it is warm when you arrive</td></tr>
+      <tr><td>Village house with thick walls</td><td>Wood burner or pellet stove in the living room, air con in the bedrooms</td></tr>
+      <tr><td>Lived in all year, major renovation</td><td>Aerotermia with underfloor heating, with solar panels</td></tr>
+      <tr><td>Finca in the mountains</td><td>Wood burner as the base, air con or pellet stove as a supplement</td></tr>
+      <tr><td>Off-grid finca</td><td>Wood burner, air con only in the daytime on solar power; see <a href="/en/guides/off-grid-living-spain/">off-grid living</a></td></tr>
+    </tbody>
+  </table>
+  <p>Whatever heating you choose: good <a href="/en/costs/windows-and-frames/">double-glazed windows</a> and sealing draughts often make more difference than a bigger heater.</p>
+
+  <h2 id="koelen">Staying cool in summer</h2>
+  <p>In July and August it is 28 to 32 degrees on the coast and sometimes above 38 inland. Only air con really cools, but there is more you can do:</p>
+  <ul>
+    <li><strong>Roller shutters and awnings</strong> closed during the day on the sunny and west sides.</li>
+    <li><strong>Air the house at night</strong> when it is cooler outside, and close everything during the day.</li>
+    <li><strong>Ceiling fans</strong> feel 3 to 4 degrees cooler and use little power.</li>
+    <li><strong>Solar control glass</strong> and an insulated roof or roof terrace keep the heat out.</li>
+    <li><strong>Air con on solar panels</strong> cools exactly when the sun is strongest, so almost for free.</li>
+  </ul>
+</Guide>
