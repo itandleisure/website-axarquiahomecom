@@ -5,6 +5,7 @@ import Breadcrumbs from './Breadcrumbs.astro';
 import Hero from './Hero.astro';
 import Cta from './Cta.astro';
 import { site } from '../data/site';
+import { calcPath } from '../data/calculator';
 import { topics, topicBase, topicUi, topicHref, hubAlternates, type TopicKind, type TopicLang } from '../data/topics';
 
 interface Props {
@@ -23,6 +24,11 @@ const { kind, lang, title, description, eyebrow, heading, lead, cta, extra = [] 
 const u = topicUi[lang];
 const path = topicBase[kind][lang];
 const list = topics[kind][lang];
+const calcCard = kind === 'costs' ? {
+  nl: { title: 'Rekentool: bereken uw prijs', text: 'Kies wat u wilt laten doen en zie direct wat het ongeveer kost. Daarna met één klik een offerte.' },
+  en: { title: 'Calculator: work out your price', text: 'Choose what you want done and see straight away roughly what it costs. Then ask for a quote in one click.' },
+  de: { title: 'Kostenrechner: Preis berechnen', text: 'Wählen Sie, was gemacht werden soll, und sehen Sie sofort die ungefähren Kosten. Danach mit einem Klick ein Angebot.' },
+}[lang] : null;
 const itemList = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -35,6 +41,13 @@ const itemList = {
   <section class="section">
     <div class="wrap">
       <div class="cards">
+        {calcCard && (
+          <a class="card" href={calcPath[lang]}>
+            <h3>{calcCard.title}</h3>
+            <p>{calcCard.text}</p>
+            <span class="more">{u.read} →</span>
+          </a>
+        )}
         {list.map((t) => (
           <a class="card" href={topicHref(kind, lang, t)}>
             <h3>{t.title}</h3>

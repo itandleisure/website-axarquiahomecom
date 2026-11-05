@@ -6,6 +6,7 @@ import Faq from './Faq.astro';
 import Cta from './Cta.astro';
 import Todo from './Todo.astro';
 import { site } from '../data/site';
+import { calcs, calcPath } from '../data/calculator';
 import {
   topics, topicBase, topicUi, topicHref, topicByRef, topicAlternates, pricesChecked, requestPath,
   type TopicKind, type TopicLang,
@@ -21,6 +22,13 @@ const fmt = (d: string) => new Date(d).toLocaleDateString(u.dateLocale, { day: '
 const toc = t.sections.map((s) => ({ id: s.id, label: s.h }));
 const q = new URLSearchParams({ dienst: t.dienst, onderwerp: t.onderwerp }).toString();
 const requestHref = `${requestPath[lang]}?${q}`;
+// Rekentool: alleen bij kostenpagina's waarvoor de rekentool een klus heeft
+const calcText = {
+  nl: { title: 'Bereken uw eigen prijs', text: 'Vul in wat u wilt laten doen en zie direct de bandbreedte.', btn: 'Naar de rekentool' },
+  en: { title: 'Work out your own price', text: 'Enter what you want done and see the range straight away.', btn: 'Open the calculator' },
+  de: { title: 'Eigenen Preis berechnen', text: 'Geben Sie ein, was gemacht werden soll, und sehen Sie sofort die Spanne.', btn: 'Zum Kostenrechner' },
+}[lang];
+const calcHref = kind === 'costs' && calcs.some((c) => c.key === t.key) ? `${calcPath[lang]}?klus=${t.key}` : '';
 const related = t.related.map((r) => topicByRef(r, lang)).filter((x) => !!x);
 const article = {
   '@context': 'https://schema.org',
@@ -48,6 +56,15 @@ const article = {
           <p class="answer-title">{u.shortAnswer}</p>
           <p set:html={t.answer} />
         </div>
+        {calcHref && (
+          <div class="calc-callout">
+            <div>
+              <p><strong>{calcText.title}</strong></p>
+              <p class="note">{calcText.text}</p>
+            </div>
+            <a class="btn btn-small" href={calcHref}>{calcText.btn}</a>
+          </div>
+        )}
         {kind === 'costs' && lang === 'nl' && <Todo label="bevestiging van deze bedragen door het bouwbedrijf." />}
         {t.sections.map((s) => (
           <>
