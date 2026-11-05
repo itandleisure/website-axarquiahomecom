@@ -1,0 +1,110 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'overview', label: 'The calendar in one table' },
+  { id: 'ibi', label: 'IBI and rubbish tax (town hall)' },
+  { id: 'irnr', label: 'Non-resident tax (form 210)' },
+  { id: 'wealth', label: 'Wealth tax' },
+  { id: 'home', label: 'Your return at home' },
+  { id: 'paying', label: 'Paying from abroad' },
+  { id: 'late', label: 'Missed a deadline? Avoiding surcharges' },
+  { id: 'sources', label: 'Sources' },
+];
+
+const faq = [
+  {
+    q: 'When do I pay IBI in the Axarquía?',
+    a: 'It depends on the town. In most towns IBI is collected by the provincial tax office of Málaga (Patronato de Recaudación Provincial); the payment window usually falls in summer or early autumn and lasts about two to three months. A few towns collect it themselves, on their own calendar. With a direct debit it is taken automatically and you don’t need to remember the date.',
+  },
+  {
+    q: 'Do I have to file every year if I don’t let my home?',
+    a: 'Yes. As a non-resident you pay tax every year on a deemed income from your home: 1.1% or 2% of the cadastral value, taxed at 24% if you live outside the EU (for example in the UK) or 19% if you live in the EU. You file form 210 the following year. For 2025 you can do so until 31 December 2026; from 2026 the window is 1 April to 31 December of the following year.',
+  },
+  {
+    q: 'When do I declare my rental income?',
+    a: 'For rent earned from 2026 you file once a year, from 1 to 20 April of the following year. So rent earned in 2026 is declared in April 2027. Up to and including 2025 it was quarterly; the last quarterly return for 2025 was due by 20 January 2026.',
+  },
+  {
+    q: 'Can I pay Spanish taxes from a UK bank account?',
+    a: 'Usually not by direct debit: Spanish tax offices collect through Spanish or SEPA accounts, and many only accept Spanish ones in practice. A Spanish bank account is therefore easiest: you can have IBI, rubbish tax, water, electricity and form 210 taken from it. Town hall bills can also be paid online by card.',
+  },
+  {
+    q: 'Do I need a fiscal representative?',
+    a: 'As a private individual who only owns or lets a home, usually not, although the tax office can ask for one. What helps is a gestor or tax adviser who files your returns and receives letters from the Spanish tax office. That often costs €100 to €400 a year, depending on whether you let.',
+  },
+];
+---
+<Guide lang="en" slug="spanish-property-tax-calendar" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Someone on the spot to keep an eye on your post and home?" ctaText="We check your home while you are away, collect the post and forward letters from the town hall or tax office, so you don’t miss a deadline.">
+  <p>Own a home in the Axarquía but don’t live there? Then a few taxes come round every year: from the town hall, from the Spanish tax office and in your own country. If you are never there, a letter is easily missed, and a missed deadline soon costs a surcharge. This calendar sets out what comes when, what you have to file and how to pay from abroad. For tax on rental income in general, see our guide to <a href="/en/guides/renting-out-property-in-spain/">renting out property in Spain</a>.</p>
+
+  <h2 id="overview">The calendar in one table</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>When</th><th>What</th><th>Who</th></tr></thead>
+    <tbody>
+      <tr><td>1 – 20 January</td><td>Form 210 with a nil result on last year’s rent (for example when costs equalled the rent)</td><td>Landlords resident in the EU</td></tr>
+      <tr><td>Spring</td><td>Road tax (IVTM), if you have a car on Spanish plates</td><td>Owners with a Spanish car</td></tr>
+      <tr><td>1 – 20 April</td><td>Form 210 on last year’s rental income (first in April 2027, for 2026). By direct debit until 15 April.</td><td>Landlords</td></tr>
+      <tr><td>April – 30 June</td><td>Wealth tax, only with large assets in Spain</td><td>Few owners, see below</td></tr>
+      <tr><td>Summer to early autumn (per town)</td><td>IBI, the town hall’s property tax; sometimes in two instalments</td><td>All owners</td></tr>
+      <tr><td>Per town</td><td>Rubbish tax (<em>tasa de basura</em>), separately, with the IBI or on the water bill</td><td>All owners</td></tr>
+      <tr><td>1 April – 31 December</td><td>Form 210 on last year’s deemed income, for the days you did not let. By direct debit until 23 December. (For 2025: all of 2026.)</td><td>All owners who don’t live in Spain</td></tr>
+      <tr><td>Your home country</td><td>Income tax return, including the Spanish property</td><td>All owners</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">As of 5 November 2026. The Spanish tax office deadlines are set in Orden HAC/623/2026; town hall deadlines vary by year and by town.</p>
+
+  <h2 id="ibi">IBI and rubbish tax (town hall)</h2>
+  <p><strong>IBI</strong> (<em>Impuesto sobre Bienes Inmuebles</em>) is the annual property tax. You pay a percentage of the cadastral value; for an ordinary home in the Axarquía it is usually a few hundred euros a year. Whoever owns the home on 1 January pays the IBI for the whole year. On a sale, buyer and seller often settle it between them.</p>
+  <ul>
+    <li><strong>Who collects.</strong> Most towns in the Axarquía have IBI collected by the provincial <em>Patronato de Recaudación Provincial</em> of Málaga. A few larger towns collect it themselves. Your bill shows who it is from.</li>
+    <li><strong>When.</strong> Each body sets a tax calendar every year. The payment window (<em>periodo voluntario</em>) usually lasts two to three months and in the Axarquía often falls in summer or early autumn. Some towns split the IBI into two instalments.</li>
+    <li><strong>Rubbish tax.</strong> Since 2025 every Spanish town must charge a rubbish tax that covers its costs. In the Axarquía it arrives, depending on the town, as a separate bill, together with the IBI, or on the water bill.</li>
+    <li><strong>What you have to do.</strong> You don’t file anything for IBI or rubbish tax: you receive a bill (<em>recibo</em>). Do make sure the collector has your correct address, or set up a direct debit. Even if no letter arrives, you remain liable to pay.</li>
+  </ul>
+  <p>Keep the receipt every year. On a sale the notary asks for the latest IBI bill, and unpaid IBI stays attached to the property. See also our guide to the <a href="/en/guides/selling-a-house-in-spain/paperwork/">paperwork for selling</a>.</p>
+
+  <h2 id="irnr">Non-resident tax (form 210)</h2>
+  <p>If you don’t live in Spain, the Spanish tax office treats you under non-resident income tax (IRNR). For a home there are two situations, often both in the same year:</p>
+  <ul>
+    <li><strong>You use the home yourself or it stands empty.</strong> You pay tax on a deemed income: 1.1% of the cadastral value (2% if that value has not been revised since 1994), pro rata to the days. On that you pay 24% if you live outside the EU and EEA, such as in the UK, or 19% if you live in the EU, Iceland or Norway. With a cadastral value of €100,000, that is €264 a year for a UK resident. You file the following year: from tax year 2026, from 1 April to 31 December; for 2025, at any time in 2026.</li>
+    <li><strong>You let it.</strong> On rental income you pay 24% on the gross rent (outside the EU) or 19% on the net income (EU). From rent earned in 2026 you file once a year, from 1 to 20 April of the following year. Up to and including 2025 it was quarterly. If the result is nil, the return is due from 1 to 20 January.</li>
+  </ul>
+  <p>If two people own the home, each files their own return for their share. You can file form 210 online with the Agencia Tributaria yourself, but most owners have a gestor or tax adviser do it.</p>
+
+  <h2 id="wealth">Wealth tax</h2>
+  <p>For most owners this does not apply. Non-residents pay wealth tax on their assets in Spain above an allowance of €700,000 per person, after deducting any mortgage. Andalusia grants a relief on this tax, and there is also a temporary solidarity tax on fortunes above €3 million. A return is required in any case if your assets in Spain are worth more than €2 million. The window runs from April to 30 June. If you fall into this group, have it calculated.</p>
+  <p>The Spanish declaration of foreign assets (form 720) applies only to Spanish residents, not to you as a non-resident.</p>
+
+  <h2 id="home">Your return at home</h2>
+  <p>You also declare the Spanish property in your own country. If you live in the UK, rental income from Spain goes on your Self Assessment return (deadline 31 January for online returns), and you claim credit for the Spanish tax paid so you are not taxed twice. Ireland and other countries work similarly under their tax treaties with Spain. Keep the Spanish bills and returns: you need them for your return at home.</p>
+
+  <h2 id="paying">Paying from abroad</h2>
+  <ul>
+    <li><strong>Direct debit.</strong> The easiest route: have IBI, rubbish tax and form 210 taken automatically. That works best with a Spanish bank account. EU SEPA rules say a foreign euro IBAN may not be refused, but in practice not every body accepts one, and a UK account usually won’t work.</li>
+    <li><strong>Paying online.</strong> Town hall bills can be paid online by card using the reference on the bill, via the website of the Patronato or the town hall.</li>
+    <li><strong>Form 210.</strong> An amount due is paid through a Spanish bank (direct debit or payment with a reference number). Without a Spanish account a transfer from abroad is possible but more cumbersome; a gestor usually arranges this for you.</li>
+    <li><strong>Digital post.</strong> Letters from the Spanish tax office increasingly arrive digitally. With a digital certificate or through your gestor you see them in time. Give the town hall and tax office an address where post actually arrives.</li>
+    <li><strong>A gestor or representative.</strong> A gestor can file your returns, pay your bills and be your contact with the tax office. A formal fiscal representative is usually not compulsory for a private owner.</li>
+  </ul>
+
+  <h2 id="late">Missed a deadline? Avoiding surcharges</h2>
+  <p>If you don’t pay a town hall bill on time, a 5% surcharge is added, rising to 20% plus interest once it goes to enforcement. In the end your Spanish bank account can be seized. A late return to the tax office costs a surcharge that rises over time. Three tips:</p>
+  <ul>
+    <li>Have everything you can taken by direct debit, and check once a year that it actually was.</li>
+    <li>Make sure someone on the spot sees your post. With <a href="/en/key-holding/">key holding</a> we collect the post and forward letters from the town hall or tax office.</li>
+    <li>Put all returns with one gestor, so the deadlines sit with one person too.</li>
+  </ul>
+  <p>Questions about your home in the Axarquía? Email <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>. See also <a href="/en/guides/buying-costs-in-spain/">buying costs</a> for the annual costs of a home in Spain.</p>
+
+  <h2 id="sources">Sources</h2>
+  <ul>
+    <li>Form 210 deadlines (rent annually in April, deemed income 1 April to 31 December): Orden HAC/623/2026 of 12 June 2026 (BOE, 23 June 2026), amending Orden EHA/3316/2010.</li>
+    <li>Non-resident tax and deemed income: Real Decreto Legislativo 5/2004, articles 24 and 25; Ley 35/2006, article 85.</li>
+    <li>IBI: Real Decreto Legislativo 2/2004 (local taxes act), articles 60 to 77.</li>
+    <li>Cost-covering rubbish tax: Ley 7/2022 on waste, article 11, compulsory since April 2025.</li>
+    <li>Surcharges for late payment and filing: Ley 58/2003 (Ley General Tributaria), articles 27 and 28.</li>
+    <li>Wealth tax: Ley 19/1991; temporary solidarity tax: Ley 38/2022.</li>
+  </ul>
+  <p class="note">Checked on 5 November 2026. This calendar gives general information and is not tax advice. Deadlines and rates change; check your town hall’s tax calendar and have your returns filed by a gestor or tax adviser.</p>
+</Guide>

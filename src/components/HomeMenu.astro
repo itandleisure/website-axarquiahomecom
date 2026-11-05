@@ -1,0 +1,109 @@
+---
+// Keuzemenu "Wat wilt u doen?" op de homepage. Inhoud: src/data/home-menu.ts.
+// Links naar pagina's die (nog) niet bestaan worden weggelaten, zodat het menu
+// vanzelf meegroeit zodra een nieuwe gids live staat.
+import { homeMenu, type MenuLink } from '../data/home-menu';
+import { topicPaths } from '../data/topics';
+import type { Lang } from '../i18n';
+
+interface Props { lang?: Lang; id?: string; }
+const { lang = 'nl', id = 'wat-wilt-u' } = Astro.props;
+const menu = homeMenu[lang];
+
+// Alle vaste pagina's (zonder [slug]) omgezet naar hun adres, plus de kosten- en probleempagina's.
+const files = Object.keys(import.meta.glob('../pages/**/*.astro'));
+const existing = new Set<string>([
+  ...files
+    .filter((f) => !f.includes('['))
+    .map((f) => f.replace('../pages', '').replace(/(\/index)?\.astro$/, '/')),
+  ...topicPaths,
+]);
+const exists = (l: MenuLink) => existing.has(l.href);
+
+const topics = (menu?.topics ?? [])
+  .map((t) => ({ ...t, links: t.links.filter(exists), cta: t.cta?.find(exists) }))
+  .filter((t) => t.links.length > 0);
+---
+{menu && topics.length > 0 && (
+  <section class="section home-menu" id={id}>
+    <div class="wrap">
+      <h2>{menu.heading}</h2>
+      <p class="lead">{menu.lead}</p>
+      <div class="hm-tabs" role="tablist" aria-label={menu.heading} hidden>
+        {topics.map((t, i) => (
+          <button type="button" role="tab" id={`hm-tab-${t.key}`} aria-controls={`hm-${t.key}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>{t.label}</button>
+        ))}
+      </div>
+      <div class="hm-panels">
+        {topics.map((t) => (
+          <div class="hm-panel" id={`hm-${t.key}`} role="tabpanel" aria-labelledby={`hm-tab-${t.key}`}>
+            <h3>{t.title}</h3>
+            <p>{t.intro}</p>
+            <ul>
+              {t.links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+            </ul>
+            {t.cta && <a class="btn btn-ghost" href={t.cta.href}>{t.cta.label} →</a>}
+          </div>
+        ))}
+      </div>
+      <p class="hm-request"><a href={menu.request.href}>{menu.request.label} →</a></p>
+    </div>
+  </section>
+)}
+
+<script>
+  // Zonder JavaScript staan alle onderwerpen onder elkaar; met JavaScript wordt het een keuzemenu.
+  document.querySelectorAll<HTMLElement>('.home-menu').forEach((root) => {
+    const list = root.querySelector<HTMLElement>('.hm-tabs');
+    if (!list) return;
+    const tabs = [...list.querySelectorAll<HTMLButtonElement>('[role="tab"]')];
+    const panels = [...root.querySelectorAll<HTMLElement>('.hm-panel')];
+    const select = (i: number, focus = false) => {
+      tabs.forEach((t, j) => {
+        t.setAttribute('aria-selected', String(i === j));
+        t.tabIndex = i === j ? 0 : -1;
+      });
+      panels.forEach((p, j) => (p.hidden = i !== j));
+      if (focus) tabs[i].focus();
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => select(i));
+      t.addEventListener('keydown', (e) => {
+        const n = tabs.length;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); select((i + 1) % n, true); }
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); select((i - 1 + n) % n, true); }
+        if (e.key === 'Home') { e.preventDefault(); select(0, true); }
+        if (e.key === 'End') { e.preventDefault(); select(n - 1, true); }
+      });
+    });
+    list.hidden = false;
+    root.classList.add('is-tabs');
+    select(0);
+  });
+</script>
+
+<style>
+  .lead { color: var(--muted); max-width: 640px; }
+  .hm-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 20px; }
+  .hm-tabs button {
+    font: inherit; font-size: 0.97rem; font-weight: 600; cursor: pointer;
+    padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line);
+    background: var(--white); color: var(--ink);
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+  }
+  .hm-tabs button:hover { border-color: var(--terra); }
+  .hm-tabs button[aria-selected='true'] { background: var(--terra); border-color: var(--terra); color: #fff; }
+  .hm-tabs button:focus-visible { outline: 3px solid var(--sun); outline-offset: 2px; }
+  .hm-panels { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .is-tabs .hm-panels { display: block; }
+  .hm-panel { background: var(--sand); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .hm-panel h3 { margin-top: 0; }
+  .hm-panel p { color: var(--muted); }
+  .hm-panel ul { list-style: none; padding: 0; margin: 0 0 18px; }
+  .is-tabs .hm-panel ul { columns: 2 260px; column-gap: 32px; }
+  .hm-panel li { break-inside: avoid; padding: 6px 0; border-bottom: 1px solid var(--line); }
+  .hm-panel li a { text-decoration: none; font-weight: 500; }
+  .hm-panel li a::before { content: '→ '; color: var(--terra); }
+  .hm-panel li a:hover { text-decoration: underline; }
+  .hm-request { margin-top: 18px; font-weight: 600; }
+</style>

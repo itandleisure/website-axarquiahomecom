@@ -1,5 +1,5 @@
 ---
-// Kosten- of probleempagina: kort antwoord, secties met tabellen, FAQ, bronnen, links en CTA.
+// Kosten-, probleem- of zelf-doen-pagina: kort antwoord, secties met tabellen, FAQ, bronnen, links en CTA.
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import Faq from './Faq.astro';
@@ -7,6 +7,7 @@ import Cta from './Cta.astro';
 import Todo from './Todo.astro';
 import { site } from '../data/site';
 import { calcs, calcPath } from '../data/calculator';
+import { guidesBy, guideBase, guideHref } from '../data/guides';
 import {
   topics, topicBase, topicUi, topicHref, topicByRef, topicAlternates, pricesChecked, requestPath,
   type TopicKind, type TopicLang,
@@ -29,6 +30,9 @@ const calcText = {
   de: { title: 'Eigenen Preis berechnen', text: 'Geben Sie ein, was gemacht werden soll, und sehen Sie sofort die Spanne.', btn: 'Zum Kostenrechner' },
 }[lang];
 const calcHref = kind === 'costs' && calcs.some((c) => c.key === t.key) ? `${calcPath[lang]}?klus=${t.key}` : '';
+// Links naar gidsen die (nog) niet bestaan laten we weg, zodat een pagina kan verwijzen naar een gids die later wordt toegevoegd
+const guidePaths = new Set(guidesBy[lang].map((g) => guideHref(lang, g)));
+const links = t.links.filter((l) => !l.href.startsWith(guideBase[lang]) || guidePaths.has(l.href));
 const related = t.related.map((r) => topicByRef(r, lang)).filter((x) => !!x);
 const article = {
   '@context': 'https://schema.org',
@@ -83,17 +87,17 @@ const article = {
           </>
         ))}
         <h2 id="links">{u.alsoUseful}</h2>
-        <ul>{t.links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+        <ul>{links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
         <aside class="sources">
           <h2 class="h3">{u.sourcesTitle}</h2>
-          <p class="note">{u.sourcesText} {fmt(pricesChecked)}.</p>
+          <p class="note">{kind === 'diy' ? u.sourcesTextDiy : u.sourcesText} {fmt(pricesChecked)}.</p>
           <ul class="note">{t.sources.map((s) => <li><a href={s.url} rel="noopener nofollow" target="_blank">{s.name}</a></li>)}</ul>
         </aside>
       </div>
       <aside class="toc">
         <p class="footer-title" style="color:var(--ink)">{u.inPage}</p>
         <ol>{toc.map((x) => <li><a href={`#${x.id}`}>{x.label}</a></li>)}</ol>
-        <a class="btn btn-small" href={requestHref}>{kind === 'costs' ? u.askQuote : u.askHelp}</a>
+        <a class="btn btn-small" href={requestHref}>{kind === 'costs' ? u.askQuote : kind === 'diy' ? u.askDiy : u.askHelp}</a>
       </aside>
     </div>
   </article>

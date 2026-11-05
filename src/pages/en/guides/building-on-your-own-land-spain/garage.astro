@@ -1,0 +1,64 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'rules', label: 'What the town hall requires' },
+  { id: 'urbano', label: 'In a residential area' },
+  { id: 'finca', label: 'On a finca' },
+  { id: 'options', label: 'What are your options?' },
+  { id: 'steps', label: 'The steps' },
+];
+
+const faq = [
+  { q: 'Do I need an architect for a garage in Spain?', a: 'For a masonry garage, usually yes: it is new construction, and the town asks for a project by an architect or qualified technician. A light, open carport often does not need one.' },
+  { q: 'Can I convert a garage into a room or apartment?', a: 'Only with a permit for a change of use, and only if the zoning plan allows it. The extra living space counts towards the building allowance. Creating an extra self-contained home is almost never allowed on rústico.' },
+  { q: 'Can I put up a prefab garage without a permit?', a: 'No. A prefab garage or container on a concrete base also counts as a building and needs a permit.' },
+];
+---
+<Guide lang="en" slug="building-on-your-own-land-garage" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Building a garage or store?" ctaText="Tell us what you want and send a photo of the spot. We check what is allowed, arrange the project and build it.">
+  <h2 id="rules">What the town hall requires</h2>
+  <p>To the town hall, a garage with walls and a roof is a new building. That almost always means:</p>
+  <ul>
+    <li>a <strong>permit</strong> (<em>licencia de obra</em>), not a notification;</li>
+    <li>a <strong>project</strong> by an architect or qualified technician;</li>
+    <li>the square metres count in full towards the plot's <strong>building allowance</strong>;</li>
+    <li>you pay <strong>construction tax</strong> (ICIO) and fees, and once built the garage must be added to the Catastro.</li>
+  </ul>
+  <p>How a permit application works is explained in <MaybeLink href="/en/guides/building-permits-renovation-andalusia/">building permits for renovation</MaybeLink>.</p>
+
+  <h2 id="urbano">In a residential area</h2>
+  <p>In a village or urbanización a garage is usually possible if there is building allowance left and it keeps the required distance from the boundary and the street. Some zoning plans allow a garage on the boundary, sometimes only with the neighbours' consent. In an urbanización with a community, the garage must also fit the comunidad's rules.</p>
+
+  <h2 id="finca">On a finca</h2>
+  <p>On rural land (<em>suelo rústico</em>) a garage is harder:</p>
+  <ul>
+    <li>It is only allowed for a legal house, and only if the zoning plan leaves room for extra building.</li>
+    <li>A farm building (<em>almacén agrícola</em>) is sometimes allowed. It is then for tools and harvest, not as a garage or living space.</li>
+    <li>If the house has AFO status, nothing may be added. See <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation</a>.</li>
+  </ul>
+  <p>An open carport is often more feasible on a finca. See <a href="/en/guides/building-on-your-own-land-spain/carport-and-pergola/">carport and pergola</a>.</p>
+
+  <h2 id="options">What are your options?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Option</th><th>Good to know</th></tr></thead>
+    <tbody>
+      <tr><td>Converting an existing space into a garage or store</td><td>For example an old stable or bodega. Often possible with a notification if the outside does not change.</td></tr>
+      <tr><td>Prefab garage of steel or concrete</td><td>Quick to install, but needs a base and a permit.</td></tr>
+      <tr><td>Single masonry garage</td><td>Durable and matches the house. With project and permit.</td></tr>
+      <tr><td>Double garage with store or workshop</td><td>More square metres, so more building allowance needed.</td></tr>
+      <tr><td>Garage dug into the slope or under the terrace</td><td>Lots of excavation and retaining walls, but almost invisible.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Want this built? Tell us what you have in mind. We find out what is allowed, arrange the permit and build it for you.</strong> <a href="/en/request/?dienst=renovatie">Get in touch →</a></p>
+
+  <h2 id="steps">The steps</h2>
+  <ol>
+    <li><strong>Feasibility</strong>: check the type of land, how much building allowance is left and whether the house itself is legal.</li>
+    <li><strong>Project and application</strong>: the architect designs the garage and applies for the permit.</li>
+    <li><strong>Permit</strong>: by law the town has up to three months after a complete file. You pay the ICIO and fees.</li>
+    <li><strong>Building</strong>: foundations, walls, roof, door, and electricity and lighting if needed.</li>
+    <li><strong>Completion</strong>: completion certificate, notification to the town and registration in the Catastro.</li>
+  </ol>
+  <p>Back to the overview: <a href="/en/guides/building-on-your-own-land-spain/">building on your own land</a>.</p>
+</Guide>

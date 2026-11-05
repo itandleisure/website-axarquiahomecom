@@ -1,0 +1,180 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
+
+const toc = [
+  { id: 'overview', label: 'The steps at a glance' },
+  { id: 'prepare', label: 'Phase 1: preparation' },
+  { id: 'search', label: 'Phase 2: searching and making an offer' },
+  { id: 'checks', label: 'Phase 3: checking the property' },
+  { id: 'arras', label: 'Phase 4: the arras contract' },
+  { id: 'notary', label: 'Phase 5: the notary' },
+  { id: 'after', label: 'Phase 6: after completion' },
+  { id: 'abroad', label: 'Buying from abroad' },
+  { id: 'more', label: 'Checklist and buying a B&B' },
+  { id: 'sources', label: 'Sources' },
+];
+
+const faq = [
+  {
+    q: 'How long does it take to buy a house in Spain?',
+    a: 'Once you have found a property, allow two to three months to completion at the notary. It is best to arrange your NIE and bank account beforehand. A finca with permit questions, or a purchase with a mortgage, often takes longer.',
+  },
+  {
+    q: 'Can foreigners buy property in Spain?',
+    a: 'Yes. There are no restrictions for EU citizens, and Britons and other non-EU nationals can buy freely too. You do need an NIE number. Owning a home does not give you the right to live in Spain; residence is a separate matter.',
+  },
+  {
+    q: 'Do I really need my own lawyer?',
+    a: 'It is not compulsory, but strongly recommended. The estate agent is usually paid by the seller and the notary mainly checks that the deed is formally correct. An independent lawyer checks that the property is free of debts, legally built and that the contract protects you. Expect to pay around 1% of the price plus VAT.',
+  },
+  {
+    q: 'What happens if I pull out after signing the arras contract?',
+    a: 'Under the usual arras penitenciales you lose your deposit, normally 10% of the price. If the seller pulls out, they have to pay you back double. So have the legal checks and the survey done before you sign, or add conditions to the contract.',
+  },
+  {
+    q: 'What does buying in Andalusia cost on top of the price?',
+    a: 'For a resale home, around 10%: 7% transfer tax (ITP) plus notary, Land Registry, lawyer and gestoría. For a new build bought from a developer you pay 10% VAT plus 1.2% stamp duty. Older houses usually need a renovation budget as well.',
+  },
+  {
+    q: 'Does the buyer pay the plusvalía?',
+    a: 'Normally not: the municipal plusvalía tax is the seller’s. But if the seller is not resident in Spain, the buyer must pay it to the town hall on the seller’s behalf, and withholds the amount from the price. The same goes for the 3% withholding for the Spanish tax office. Your lawyer arranges this at the notary.',
+  },
+];
+---
+<Guide lang="en" slug="buying-a-house-in-spain" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Found a house you like?" ctaText="Have it surveyed before you sign the arras. You get a report in English on the condition of the house, with a price estimate for the work it needs.">
+  <p>Looking for an overview of the areas and prices in the province first? Read <a href="/en/guides/buying-property-in-malaga/">buying property in Málaga and Andalusia</a>. Not sure what type of home suits you? See <a href="/en/guides/finca-apartment-or-village-house/">finca, apartment or village house</a>. This guide is about the buying process itself: what you arrange, what you have checked and what you pay.</p>
+
+  <h2 id="overview">The steps at a glance</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Step</th><th>Who does it</th><th>Allow</th></tr></thead>
+    <tbody>
+      <tr><td>1. Apply for an NIE number</td><td>You or your lawyer</td><td>1 day to a few weeks</td></tr>
+      <tr><td>2. Open a Spanish bank account</td><td>You</td><td>1 day to 2 weeks</td></tr>
+      <tr><td>3. Budget and mortgage, if needed</td><td>You, the bank or a broker</td><td>2 to 6 weeks</td></tr>
+      <tr><td>4. Choose an independent lawyer</td><td>You</td><td>Before you make an offer</td></tr>
+      <tr><td>5. Search, view and make an offer</td><td>You, with agents</td><td>Weeks to months</td></tr>
+      <tr><td>6. Reservation</td><td>You and the agent</td><td>Once the price is agreed</td></tr>
+      <tr><td>7. Legal checks: registry, cadastre, debts</td><td>Lawyer</td><td>1 to 3 weeks</td></tr>
+      <tr><td>8. Legal status: permits and AFO</td><td>Lawyer, possibly an architect</td><td>1 to 4 weeks</td></tr>
+      <tr><td>9. Building survey</td><td>Surveyor or builder</td><td>1 to 2 weeks</td></tr>
+      <tr><td>10. Arras contract and deposit</td><td>Lawyer and seller</td><td>Usually 10% of the price</td></tr>
+      <tr><td>11. Escritura at the notary</td><td>Notary, you (or your attorney)</td><td>4 to 10 weeks after the arras</td></tr>
+      <tr><td>12. Pay the taxes and register</td><td>Lawyer or gestoría</td><td>Straight after the notary</td></tr>
+      <tr><td>13. Utilities and town hall</td><td>You, your lawyer or key holder</td><td>First weeks after completion</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Timings are typical for Málaga province. A finca or a mortgage often adds time.</p>
+
+  <h2 id="prepare">Phase 1: preparation</h2>
+  <h3>Step 1: NIE number</h3>
+  <p>The <em>Número de Identidad de Extranjero</em> (NIE) is your Spanish tax identification number. Without it you cannot sign a deed, pay tax and often cannot open a bank account. You apply at the police (<em>Policía Nacional</em>, Oficina de Extranjería) in Spain, or at the Spanish consulate in your home country. The fee is around €12 (form 790, code 012; the amount is updated each year).</p>
+  <p>Police appointments in Málaga province can be hard to get, so many buyers let their lawyer apply for them with a power of attorney. If you plan to live in Spain you will also need to register as a resident later; see <a href="/en/guides/moving-to-spain-from-the-uk/">moving to Spain from the UK</a>.</p>
+
+  <h3>Step 2: Spanish bank account</h3>
+  <p>A Spanish account is not a legal requirement, but in practice you cannot do without one. You use it for the deposit, the banker’s draft or transfer at the notary, and later for the property tax (IBI), water, electricity and community fees by direct debit. As a non-resident you open a <em>no residente</em> account. The bank will ask where your money comes from, so keep bank statements or the sale deed of your current home to hand.</p>
+
+  <h3>Step 3: budget and mortgage</h3>
+  <p>For a resale home, budget <strong>around 10% on top of the price</strong> for taxes and fees, plus a renovation budget for an older house. The breakdown is in <a href="/en/guides/buying-costs-in-spain/">the costs of buying in Spain</a>, and guide prices for building work are in <a href="/en/guides/renovation-costs-spain/">renovation costs in Spain</a> and our <a href="/en/costs/calculator/">cost calculator</a>.</p>
+  <p>Need a mortgage? Spanish banks usually lend non-residents up to 60 to 70% of the valuation or the price, whichever is lower. The rest, plus all costs, comes from your own funds. The bank has the property valued by an approved valuer. Apply before you sign the arras, or agree in the arras that you can withdraw without penalty if the mortgage is refused.</p>
+
+  <h3>Step 4: an independent lawyer</h3>
+  <p>In Spain the estate agent works for the seller, who also pays the commission. The notary is neutral and mainly checks that the deed is formally in order, not whether the house was built legally or is in good condition. So choose your own lawyer (<em>abogado</em>) who was not introduced by the agent, who speaks English and who knows rural property in the Axarquía. Check that they are registered with the bar (<em>Colegio de Abogados</em>) and carry professional indemnity insurance. A common fee is around 1% of the price plus 21% VAT.</p>
+
+  <h2 id="search">Phase 2: searching and making an offer</h2>
+  <h3>Step 5: searching and viewing</h3>
+  <p>Most homes in the Axarquía are listed on portals such as Idealista, Fotocasa and Kyero, often with several agents at once and sometimes at different prices. Visit a property more than once if you can, including in winter or after rain: that is when you see damp, leaks and the state of the access road. Drive the route to the nearest supermarket, health centre and the coast. Compare the towns on our <a href="/en/places/">places pages</a>. Take our <a href="/en/guides/buying-a-house-in-spain/checklist/">checklist with questions in Spanish</a> to the viewing.</p>
+  <h3>Step 6: offer and reservation</h3>
+  <p>Offers go through the agent. Once a price is agreed, the agent often asks for a small reservation payment, for example €3,000 to €6,000, to take the house off the market. Have your lawyer read the paperwork first and make sure it says you get the money back if the legal checks or the survey turn up problems. Pay into your lawyer’s client account rather than straight to the seller.</p>
+
+  <h2 id="checks">Phase 3: checking the property</h2>
+  <p>This is the most important phase. Anything you find now you can still use to negotiate, or walk away without losing money.</p>
+  <h3>Step 7: registry, cadastre and debts</h3>
+  <ul>
+    <li><strong>Nota simple.</strong> An extract from the Land Registry (<em>Registro de la Propiedad</em>) shows who owns the property, the size of the plot and whether there is a mortgage, charge or easement on it. You or your lawyer can request it online from the Colegio de Registradores for around €10 to €15.</li>
+    <li><strong>Cadastre.</strong> The <em>Catastro</em> describes the plot and buildings for tax purposes. Compare cadastre, registry and reality. If the cadastre says 90 m² and the house is 140 m², someone has probably extended it without a permit.</li>
+    <li><strong>Debts that pass to you.</strong> Unpaid property tax (IBI) stays with the property, as do unpaid community fees for the current year and the three before it. Ask for the latest IBI bill and, for an apartment or urbanisation, a certificate from the community confirming there are no arrears.</li>
+    <li><strong>Tenants and occupants.</strong> Check that the house will be handed over empty and that no tenancy or holiday letting continues.</li>
+  </ul>
+
+  <h3>Step 8: legal status, permits and AFO</h3>
+  <p>Many homes in the Axarquía stand on rural land (<em>suelo rústico</em>), where a lot of houses, extensions and pools were built without permits in the past. Your lawyer checks with the town hall whether the house and every outbuilding has a permit. If not, there are roughly three situations:</p>
+  <ul>
+    <li><strong>The house already has an AFO declaration (DAFO).</strong> The town hall has confirmed that no action can be taken against it any more. It may be lived in and can be registered, but you cannot simply extend it.</li>
+    <li><strong>The house qualifies for AFO but does not have it yet.</strong> It is then sensible to agree that the seller completes the procedure before the notary, or to reflect the cost and time in the price. AFO procedures often take months.</li>
+    <li><strong>There are enforcement proceedings, or the plot is an illegal subdivision.</strong> Then the risk of a fine or even demolition can be real. Walk away unless your lawyer is certain it can be resolved.</li>
+  </ul>
+  <p>Planning to extend, build a pool or add a guest house later? Check first what is allowed on that plot. On rural land in Andalusia, building a new home is generally not permitted, and neither is extending a house with AFO status. Read more in <a href="/en/guides/afo-legalisation-andalusia/">AFO status and legalisation in Andalusia</a> and, for country homes, <a href="/en/guides/buying-a-finca-in-spain/">buying a finca in Spain</a>.</p>
+  <p>Also ask for the energy performance certificate (<em>certificado de eficiencia energética</em>): the seller must have one made and hand it to you.</p>
+
+  <h3>Step 9: building survey</h3>
+  <p>A building survey is not compulsory in Spain and the agent will not suggest one. That is exactly why it is useful. A surveyor looks at damp and mould, the roof and roof terrace, cracks, wiring, water and drainage, the septic tank, the pool and, in older houses, woodworm and termites. Typical findings in the Axarquía are <a href="/en/problems/damp-and-mould/">damp and mould</a>, <a href="/en/problems/roof-leaks/">roof leaks</a> and <a href="/en/problems/cracks-in-walls/">cracks in walls</a>.</p>
+  <p>Our <a href="/en/property-survey/">property survey</a> gives you a report in English, with photos and a price estimate for the work needed. You can use that figure in the negotiation, and you know before signing what the house will really cost you. <a href="/en/request/?dienst=aankoopkeuring">Request a survey</a>.</p>
+
+  <h2 id="arras">Phase 4: the arras contract</h2>
+  <h3>Step 10: private purchase contract and deposit</h3>
+  <p>If the checks are fine, you sign the private purchase contract, usually a <em>contrato de arras penitenciales</em>, and pay a deposit, typically 10% of the price. The contract fixes the price, the date for the notary and what is included (furniture, appliances). If you pull out, you lose the deposit. If the seller pulls out, they pay you back double.</p>
+  <p>Have the arras state what must happen before completion, such as the seller paying off their mortgage, completing an AFO procedure or repairing a defect. A condition for your mortgage can be included too. Never sign an arras before your lawyer has seen the nota simple and the permits.</p>
+
+  <h2 id="notary">Phase 5: the notary</h2>
+  <h3>Step 11: escritura de compraventa</h3>
+  <p>At the notary you sign the deed of sale (<em>escritura pública de compraventa</em>). In practice the buyer usually chooses the notary. Just before the appointment the notary obtains an up-to-date registry statement, so no new debt or charge can slip in at the last moment. What happens at signing:</p>
+  <ul>
+    <li><strong>Payment.</strong> You pay the balance by banker’s draft or bank transfer. The notary records in the deed how everything, including the deposit, was paid. Always pay through the bank: when buying from a company, cash payments are even capped at €1,000.</li>
+    <li><strong>3% withholding for a non-resident seller.</strong> If the seller does not live in Spain, you withhold 3% of the price and pay it to the Spanish tax office within a month (form 211). If you do not, the tax office can recover the amount from the property.</li>
+    <li><strong>Plusvalía.</strong> The municipal tax on the increase in land value is the seller’s. If the seller is non-resident, you as buyer must pay it on their behalf, so withhold the amount from the price.</li>
+    <li><strong>Keys.</strong> Once signed, you are the owner and get the keys. Change the locks, because you never know who else has a key.</li>
+  </ul>
+  <p>You do not need to be there in person. With a power of attorney (<em>poder notarial</em>) your lawyer can sign on your behalf. The deed is in Spanish; you are entitled to an interpreter or translation if you do not speak Spanish.</p>
+
+  <h2 id="after">Phase 6: after completion</h2>
+  <h3>Step 12: paying the taxes and registering</h3>
+  <p>After the notary, your lawyer or gestoría pays the tax and registers the deed at the Land Registry. Only once registered are you protected as owner against third parties.</p>
+  <ul>
+    <li><strong>Resale home:</strong> 7% transfer tax (<em>Impuesto de Transmisiones Patrimoniales</em>, ITP) to the Junta de Andalucía, filed on form 600 with the Agencia Tributaria de Andalucía within the legal deadline. Have it done straight after the notary: late payment carries a surcharge.</li>
+    <li><strong>New build from a developer:</strong> 10% VAT (IVA), paid to the developer, plus 1.2% stamp duty (<em>Actos Jurídicos Documentados</em>, AJD) to the Junta.</li>
+    <li><strong>Notary and Land Registry:</strong> set by official scales, together usually €1,000 to €2,500.</li>
+  </ul>
+  <p>The full breakdown with a worked example is in <a href="/en/guides/buying-costs-in-spain/">the costs of buying in Spain</a>.</p>
+
+  <h3>Step 13: utilities, town hall and annual costs</h3>
+  <ul>
+    <li><strong>Water and electricity</strong> transferred to your name with a copy of the deed and your NIE. If the power has been off for a long time, the network operator may ask for a new electrical certificate (<em>boletín</em>), which sometimes means upgrading the installation first.</li>
+    <li><strong>IBI and refuse tax</strong> transferred to your name at the town hall or the provincial tax office (in Málaga the Patronato de Recaudación Provincial), with direct debit.</li>
+    <li><strong>Community of owners</strong>: give your details to the administrator.</li>
+    <li><strong>Insurance</strong>: arrange buildings and contents cover from the day of completion.</li>
+    <li><strong>Annual non-resident tax</strong>: if you do not live in Spain, you file a return each year (form 210) on a notional income from the property, even if you do not let it.</li>
+  </ul>
+  <p>Want to let the property? Check before you buy whether the town hall and the community allow holiday letting, and allow for the holiday rental registration.</p>
+
+  <h3>Step 14: renovation and looking after the house</h3>
+  <p>If you want to renovate, ideally do it before you move in. Most work needs a notification or permit from the town hall, and rural land and AFO status bring extra limits. We turn the survey into a quote and carry out the <a href="/en/renovation/">renovation</a>, even while you are abroad. When you are not there, <a href="/en/key-holding/">key holding</a> keeps an eye on the house. <a href="/en/request/?dienst=renovatie">Request a renovation quote</a>.</p>
+
+  <h2 id="abroad">Buying from abroad</h2>
+  <p>Many buyers in the Axarquía handle most of the purchase from home. That works well with a few precautions:</p>
+  <ul>
+    <li><strong>Power of attorney.</strong> A <em>poder notarial</em> lets your lawyer apply for the NIE, open the bank account and sign the arras and the deed. You can sign it at a Spanish notary, or at a notary in your home country with an apostille. Limit it to this purchase.</li>
+    <li><strong>Transferring money.</strong> If you pay from another currency, such as pounds, fix the exchange rate in advance and send large sums in good time: banks check where the money comes from, and that can take days.</li>
+    <li><strong>Someone on the ground.</strong> A surveyor or builder who inspects the house and keeps you updated with photos and video stops you relying on the agent’s pictures alone.</li>
+  </ul>
+  <p>Got a house in mind? We do the <a href="/en/property-survey/">property survey</a>, price the renovation and help after the purchase with <a href="/en/renovation/">renovation</a>, <a href="/en/maintenance/">maintenance</a> and <a href="/en/key-holding/">key holding</a>. Send your question through the <a href="/en/request/?dienst=aankoopkeuring">request form</a> or email <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+
+  <h2 id="more">Checklist and buying a B&amp;B</h2>
+  <p>Two parts have their own pages: a checklist of questions to ask at a viewing, with the Spanish sentence alongside, and a guide for anyone taking over a running B&amp;B.</p>
+  <GuideChildren lang="en" parent="buying-a-house-in-spain" />
+
+  <h2 id="sources">Sources</h2>
+  <ul>
+    <li>NIE: Real Decreto 557/2011 (Immigration Regulation), article 206; fee via form 790, code 012 (Ministerio del Interior).</li>
+    <li>7% transfer tax and 1.2% AJD in Andalusia: Ley 5/2021 de Tributos Cedidos de la Comunidad Autónoma de Andalucía (BOJA, 22 October 2021). 10% VAT on new homes: Ley 37/1992 (VAT Act), article 91.</li>
+    <li>Arras: Código Civil, article 1454.</li>
+    <li>Community debts: Ley 49/1960 de Propiedad Horizontal, article 9.1.e. IBI attaches to the property: Real Decreto Legislativo 2/2004 (Local Finance Act), article 64.</li>
+    <li>Plusvalía and the buyer as substitute for a non-resident seller: Real Decreto Legislativo 2/2004, article 106.2.</li>
+    <li>3% withholding for a non-resident seller: Real Decreto Legislativo 5/2004 (Non-Resident Income Tax Act), article 25.2; form 211 of the Agencia Tributaria.</li>
+    <li>Cash payment limit: Ley 7/2012, article 7, as amended by Ley 11/2021.</li>
+    <li>Energy certificate: Real Decreto 390/2021.</li>
+    <li>Building on rural land and AFO in Andalusia: Ley 7/2021 de Impulso para la Sostenibilidad del Territorio de Andalucía (LISTA) and Decreto 550/2022 (implementing regulation).</li>
+    <li>Nota simple: Colegio de Registradores (registradores.org). Cadastre: Sede Electrónica del Catastro.</li>
+  </ul>
+  <p class="note">Checked on 5 November 2026. This guide gives general information and is not legal, tax or financial advice. Rules and rates can change; have your purchase handled by an independent lawyer and ask a tax adviser about your own situation.</p>
+</Guide>

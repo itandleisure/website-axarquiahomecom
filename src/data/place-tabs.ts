@@ -6,8 +6,10 @@ import { placeContent } from './place-content';
 import { municipalSlugFor } from './municipal';
 import { municipalLangs, type MunicipalLang } from './municipal-text';
 import { fiestaHref, fiestaSlugFor } from './fiestas';
+import { weatherPlaceBySlug, weatherPlaceHref, type WLang } from './weather';
+const weatherLabels: Record<WLang, string> = { nl: 'Weer', en: 'Weather', de: 'Wetter' };
 
-export type PlaceTab = PlacePage | 'fiestas';
+export type PlaceTab = PlacePage | 'fiestas' | 'weather';
 const fiestaLabels: Record<Lang, string> = { nl: 'Feesten', en: 'Fiestas', de: 'Feste', sv: 'Fester' };
 
 export const tabLabels: Record<Lang, Record<PlacePage, string>> = {
@@ -36,6 +38,10 @@ export function placeTabs(lang: Lang, place: Place): { page: PlaceTab; label: st
   const fiestaSlug = fiestaSlugFor(place.slug, place.municipality);
   if (fiestaSlug && (lang === 'nl' || lang === 'en' || lang === 'de' || lang === 'sv')) {
     tabs.push({ page: 'fiestas', label: fiestaLabels[lang], href: fiestaHref(lang, fiestaSlug) });
+  }
+  // Weer: alleen voor plaatsen met een eigen weerpagina (NL/EN/DE)
+  if (weatherPlaceBySlug(place.slug) && (lang === 'nl' || lang === 'en' || lang === 'de')) {
+    tabs.push({ page: 'weather', label: weatherLabels[lang], href: weatherPlaceHref(lang, place.slug) });
   }
   return tabs;
 }

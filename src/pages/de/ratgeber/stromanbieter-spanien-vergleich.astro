@@ -1,0 +1,144 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'wie', label: 'Wie wir verglichen haben' },
+  { id: 'arten', label: 'Festpreis, indexiert oder PVPC?' },
+  { id: 'vergleich', label: 'Vergleich: virtuelle Batterie und Einspeisung' },
+  { id: 'situation', label: 'Was passt zu Ihrer Situation?' },
+  { id: 'tarif', label: 'Niedertarif, Leistung und Wallbox' },
+  { id: 'wallbox', label: 'Wallbox vom Stromanbieter' },
+  { id: 'wechsel', label: 'Wechseln als ausländischer Eigentümer' },
+  { id: 'selbst', label: 'Selbst vergleichen' },
+  { id: 'quellen', label: 'Quellen und Stichtag' },
+];
+
+const faq = [
+  {
+    q: 'Welcher ist der günstigste Stromanbieter in Spanien?',
+    a: 'Das hängt davon ab, wann Sie Strom verbrauchen, wie viel Sie einspeisen und wie oft Sie vor Ort sind. Ein Anbieter mit hoher Einspeisevergütung kann unterm Strich teurer sein, wenn der bezogene Strom viel kostet. Vergleichen Sie deshalb immer mit Ihrem eigenen Verbrauch, etwa mit dem offiziellen Vergleichsrechner der CNMC.',
+  },
+  {
+    q: 'Kostet ein Anbieterwechsel in Spanien etwas?',
+    a: 'Nein. Der Wechsel ist kostenlos und der neue Anbieter erledigt alles, auch die Kündigung beim alten. Sie brauchen nur den CUPS-Code Ihres Anschlusses, der auf jeder Rechnung steht. Achten Sie aber auf eine Mindestlaufzeit (permanencia) bei Ihrem jetzigen Anbieter und auf Ihr Guthaben in einer virtuellen Batterie: Das geht meist verloren.',
+  },
+  {
+    q: 'Brauche ich ein spanisches Bankkonto für einen Stromvertrag?',
+    a: 'Nach den europäischen SEPA-Regeln darf ein Anbieter eine Lastschrift von einem Konto in einem anderen Euroland nicht ablehnen. In der Praxis verlangen manche Anbieter trotzdem eine spanische IBAN. Eine NIE als Vertragsinhaber brauchen Sie immer.',
+  },
+  {
+    q: 'Ist PVPC oder ein Festpreis besser mit einer Solaranlage?',
+    a: 'Mit Solaranlage wählen die meisten Eigentümer einen Festpreis- oder indexierten Tarif auf dem freien Markt, weil nur dort eine virtuelle Batterie möglich ist. PVPC lohnt sich, wenn Sie wenig einspeisen, Ihren Verbrauch in günstige Stunden verschieben können oder Anspruch auf den bono social haben.',
+  },
+  {
+    q: 'Bekommen Sie eine Vergütung von den Anbietern in diesem Vergleich?',
+    a: 'Nein. Wir verkaufen keine Energieverträge und sind an keinen Anbieter gebunden. Wir installieren und warten Solaranlagen, Batteriespeicher und Wallboxen und beraten, welche Vertragsart dazu passt.',
+  },
+];
+---
+<Guide lang="de" slug="stromanbieter-spanien-vergleich" toc={toc} faq={faq} dienst="energiebeheer" ctaTitle="Hilfe mit Ihrem Strom in Spanien?" ctaText="Schicken Sie uns eine aktuelle Rechnung. Wir prüfen, ob Leistung, Tarif und Verrechnung zu Ihrer Nutzung des Hauses passen und was eine Solaranlage oder ein Speicher bringen würde.">
+  <h2 id="wie">Wie wir verglichen haben</h2>
+  <p>In Spanien können Sie zwischen Dutzenden Stromanbietern (<em>comercializadoras</em>) wählen. Das Netz selbst gehört einem Netzbetreiber pro Gebiet; in der Axarquía ist das fast überall e-distribución. Egal bei welchem Anbieter Sie sind: Strom, Zähler und Störungen sind dieselben. Sie wählen also vor allem Preis und Bedingungen.</p>
+  <p>Für Eigentümer mit Solaranlage zählen drei Dinge: was Sie für bezogenen Strom zahlen, was Sie für eingespeisten Strom bekommen und was mit dem Überschuss passiert. Letzteres entscheidet, ob Sie eine <a href="/de/ratgeber/virtuelle-batterie-spanien/">virtuelle Batterie</a> brauchen.</p>
+  <p>Wir haben die bekanntesten Anbieter mit einem Angebot für Eigenverbrauch nebeneinandergestellt. Zu jedem Anbieter nennen wir Quelle und Stichtag. <strong>Preise und Bedingungen ändern sich oft</strong>, manchmal monatlich. Nutzen Sie die Tabelle, um die Unterschiede zu sehen, und prüfen Sie die aktuellen Bedingungen vor einem Wechsel.</p>
+
+  <h2 id="arten">Festpreis, indexiert oder PVPC?</h2>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Vertragsart</th><th>Wie der Preis funktioniert</th><th>Für wen</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Festpreis</strong> (<em>precio fijo</em>, freier Markt)</td><td>Ein fester Preis pro kWh, oft für 12 Monate. Mal ein Preis für den ganzen Tag, mal je Zeitraum (Spitze, Mittel, Nieder).</td><td>Wer Planungssicherheit möchte. Die meisten Angebote mit virtueller Batterie sind von dieser Art.</td></tr>
+      <tr><td><strong>Indexiert</strong> (<em>tarifa indexada</em>, freier Markt)</td><td>Der stündliche Großhandelspreis plus eine feste Marge. Einspeisung erhält meist ebenfalls den Marktpreis.</td><td>Wer seinen Verbrauch steuern kann, etwa mit Batteriespeicher oder intelligenter Wallbox.</td></tr>
+      <tr><td><strong>PVPC</strong> (regulierter Tarif)</td><td>Der Staat legt die Formel fest. 2026 hängen 55 % des Energiepreises von Terminmärkten und 45 % vom Day-Ahead-Markt ab. Einspeisung erhält den stündlichen Marktpreis.</td><td>Wer wenig einspeist oder Anspruch auf den <em>bono social</em> hat. Keine virtuelle Batterie möglich.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>PVPC gibt es nur bei einem der regulierten Anbieter (<em>comercializadoras de referencia</em>), etwa Energía XXI, Curenergía, Baser oder Régsiti, und nur für Anschlüsse bis 10 kW. Achtung: Viele Firmen mit fast gleichem Namen verkaufen Verträge auf dem freien Markt.</p>
+  <p>Um die Mittagszeit, wenn alle Solaranlagen Spaniens gleichzeitig produzieren, ist der Marktpreis oft sehr niedrig. Im PVPC und bei indexierten Verträgen ist Ihre Einspeisung dann wenig wert. Eine feste Vergütung pro kWh ist für eine Solaranlage besser planbar.</p>
+
+  <h2 id="vergleich">Vergleich: virtuelle Batterie und Einspeisung</h2>
+  <p class="note">Beträge ohne MwSt., pro Monat, sofern nicht anders angegeben. „Einspeisung“ ist die Vergütung pro kWh für Strom, den Sie ins Netz zurückspeisen. Siehe die <a href="#quellen">Quellen</a> unten.</p>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Anbieter</th><th>Virtuelle Batterie und Kosten</th><th>Einspeisung</th><th>Guthaben gültig</th><th>Teilen mit</th><th>Stand</th></tr></thead>
+    <tbody>
+      <tr><td>Octopus Energy</td><td>Solar Wallet, kostenlos</td><td>0,035 €; 0,07 € bei Installation über Octopus</td><td>Verfällt nicht</td><td>Andere Octopus-Anschlüsse, auch eine Zweitwohnung</td><td>Nov. 2026</td></tr>
+      <tr><td>Endesa</td><td>Batería virtual, 2 €</td><td>0,06 €</td><td>Verfällt nicht</td><td>Nur derselbe Anschluss</td><td>Juli 2026</td></tr>
+      <tr><td>Iberdrola</td><td>Solar Cloud; Neukunden seit Sept. 2026 nur mit der Zusatzleistung Asistente Smart Avanzado, 3,45 €</td><td>Je nach Tarif</td><td>Nachfragen</td><td>Andere Iberdrola-Verträge desselben Inhabers</td><td>Sept. 2026</td></tr>
+      <tr><td>Naturgy</td><td>Batería virtual, kostenlos</td><td>ca. 0,06 €</td><td>5 Jahre</td><td>Strom und Gas desselben Inhabers</td><td>Sept. 2026</td></tr>
+      <tr><td>Repsol</td><td>Batería virtual, 1,99 €</td><td>0,06 €</td><td>Solange Sie Kunde sind, bis 1 Jahr nach Kündigung</td><td>Anschlüsse desselben Inhabers</td><td>Juli 2026</td></tr>
+      <tr><td>Holaluz</td><td>Holaluz Cloud, individueller Monatsbetrag mit Jahresabrechnung</td><td>Im Monatsbetrag enthalten</td><td>Nachfragen</td><td>Haupt- und Zweitwohnung</td><td>Sept. 2026</td></tr>
+      <tr><td>Factorenergia</td><td>Batería virtual, kostenlos</td><td>Je nach Tarif</td><td>Verfällt nicht, aber beim Wechsel</td><td>Anschlüsse desselben Inhabers, auch ohne Solaranlage</td><td>Sept. 2026</td></tr>
+      <tr><td>Energía Nufri</td><td>Batería virtual, kostenlos</td><td>Je nach Tarif</td><td>Verfällt nicht</td><td>Andere Anschlüsse desselben Inhabers</td><td>Sept. 2026</td></tr>
+      <tr><td>Som Energia (Genossenschaft)</td><td>Sols: 80 % des nicht verrechneten Überschusses, keine Gebühr</td><td>Marktpreis</td><td>5 Jahre</td><td>Nur derselbe Vertrag</td><td>Sept. 2026</td></tr>
+      <tr><td>TotalEnergies</td><td>Keine virtuelle Batterie im Solartarif</td><td>ca. 0,06 €</td><td>Überschuss verfällt monatlich</td><td>Nein</td><td>Sept. 2026</td></tr>
+      <tr><td>PVPC (reguliert)</td><td>Keine virtuelle Batterie</td><td>Stündlicher Marktpreis</td><td>Überschuss verfällt monatlich</td><td>Nein</td><td>Nov. 2026</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Auffällig: Die Unterschiede bei der Einspeisevergütung sind klein (wenige Cent pro kWh), die Unterschiede bei den Bedingungen groß. Ob Sie das Guthaben mit einer Zweitwohnung teilen können, wie lange es gültig bleibt und ob eine Pflicht-Zusatzleistung dazugehört, macht über ein paar Jahre oft mehr aus als ein halber Cent Vergütung. Und vergessen Sie nicht den Preis des bezogenen Stroms: Er macht im Winter den größten Teil Ihrer Rechnung aus.</p>
+
+  <h2 id="situation">Was passt zu Ihrer Situation?</h2>
+  <ul>
+    <li><strong>Ferienhaus mit Solaranlage, monatelang leer.</strong> Sie speisen viel ein, während Sie weg sind. Eine kostenlose virtuelle Batterie, die nicht verfällt, ist hier am wichtigsten. Eine hohe Vergütung ist ein Bonus.</li>
+    <li><strong>Zwei Wohnungen in Spanien</strong>, etwa eine Finca und eine Wohnung an der Küste. Wählen Sie einen Anbieter, bei dem das Guthaben zwischen beiden Anschlüssen geteilt werden kann.</li>
+    <li><strong>Ganzjährig bewohnt, abends hoher Verbrauch.</strong> Ein <a href="/de/kosten/batteriespeicher/">Batteriespeicher</a> bringt mehr als eine virtuelle Batterie. Wählen Sie einen Vertrag mit niedrigen Preisen in Spitzen- und Mittelzeiten.</li>
+    <li><strong>Elektroauto.</strong> Wählen Sie einen Tarif mit günstigem Niedertarif (nachts und am Wochenende) und laden Sie tagsüber mit Solarstrom. Siehe unten.</li>
+    <li><strong>Ferienvermietung.</strong> Gäste verbrauchen viel, oft im Sommer, wenn die Anlage am meisten liefert. Ein Festpreis pro kWh schafft die meiste Übersicht. Mit intelligentem Energiemanagement läuft die Klimaanlage nicht den ganzen Tag auf voller Leistung.</li>
+    <li><strong>Keine Solaranlage.</strong> Dann spielt die virtuelle Batterie keine Rolle. Vergleichen Sie nur den Preis pro kWh, den Leistungspreis und Ihre vertragliche Leistung, und prüfen Sie, ob PVPC günstiger ist.</li>
+  </ul>
+
+  <h2 id="tarif">Niedertarif, Leistung und Wallbox</h2>
+  <p>Fast jeder spanische Haushalt hat den Netztarif 2.0TD, mit Preisen je nach Uhrzeit:</p>
+  <table class="prices">
+    <thead><tr><th>Zeitraum</th><th>Werktags</th><th>Preis</th></tr></thead>
+    <tbody>
+      <tr><td>Spitze (<em>punta</em>, P1)</td><td>10:00 – 14:00 und 18:00 – 22:00</td><td>Am höchsten</td></tr>
+      <tr><td>Mittel (<em>llano</em>, P2)</td><td>08:00 – 10:00, 14:00 – 18:00 und 22:00 – 24:00</td><td>Mittel</td></tr>
+      <tr><td>Nieder (<em>valle</em>, P3)</td><td>00:00 – 08:00 sowie das ganze Wochenende und nationale Feiertage</td><td>Am niedrigsten</td></tr>
+    </tbody>
+  </table>
+  <p>Dazu zahlen Sie einen Leistungspreis für die <strong>vertragliche Leistung</strong> (<em>potencia contratada</em>) in kW. Für die Niedertarifzeit können Sie eine höhere Leistung wählen als tagsüber. Praktisch für eine <a href="/de/kosten/wallbox/">Wallbox</a>: nachts mit mehr Leistung laden, ohne tagsüber dafür zu zahlen. Zu viel Leistung kostet jeden Monat Geld, auch wenn Sie nicht da sind; zu wenig lässt die Hauptsicherung auslösen.</p>
+  <p>Manche Anbieter haben spezielle Tarife für Elektroautos mit sehr niedrigem Nachtpreis. Prüfen Sie dann auch den Preis in den anderen Stunden, denn der ist oft höher. Mit Solaranlage, Batteriespeicher und Wallbox lohnt es sich, alles aufeinander abzustimmen: siehe <a href="/de/kosten/intelligentes-energiemanagement/">intelligentes Energiemanagement</a>.</p>
+
+  <h2 id="wallbox">Wallbox vom Stromanbieter</h2>
+  <p>Die großen Anbieter verkaufen auch eine Wallbox mit Installation, oft zusammen mit einem speziellen Autotarif. Im Paket ist eine feste Kabellänge zwischen Zählerschrank und Wallbox enthalten. Ist der Abstand größer, etwa in einer Tiefgarage unter einer Wohnanlage oder bei einem Carport hinten auf einer Finca, zahlen Sie pro zusätzlichem Meter. Lassen Sie sich deshalb immer ein Angebot mit der tatsächlichen Entfernung machen.</p>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Anbieter</th><th>Paket</th><th>Kabel inklusive</th><th>Preis ab</th><th>Stand</th></tr></thead>
+    <tbody>
+      <tr><td>Endesa</td><td>Waybox, 7,4 oder 22 kW, mit Installationszertifikat (CIE)</td><td>Haus: bis 20 m. Gemeinschaftsgarage: bis 20 m (Mini) oder 50 m</td><td>1.099 €</td><td>Nov. 2026</td></tr>
+      <tr><td>Repsol</td><td>Wallbox mit Lastmanagement (<em>balanceo</em>), einphasig</td><td>Nicht angegeben, nach Angebot</td><td>2.011 € (Haus), 2.066 € (Garage), inkl. MwSt.</td><td>Nov. 2026</td></tr>
+      <tr><td>Iberdrola</td><td>Wallbox kaufen oder mieten, Installation nach Angebot über deren Rechner</td><td>Je nach Entfernung</td><td>Nach Angebot</td><td>Nov. 2026</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Endesa gewährt mit dem Paket 30 % Rabatt auf den Autotarif <em>Tarifa Recarga en Casa</em>, einen festen Monatsbetrag für ein kWh-Paket. Das lohnt sich, wenn Sie viel zu Hause laden, weniger, wenn Sie eine Solaranlage haben und tagsüber mit Sonnenstrom laden. Sie müssen die Wallbox nicht bei Ihrem Stromanbieter kaufen: Jeder zugelassene Installateur darf sie einbauen, und den Vertrag wählen Sie unabhängig davon. Was eine Wallbox kostet und was ein zusätzlicher Meter Kabel üblicherweise kostet, sehen Sie unter <a href="/de/kosten/wallbox/">Kosten Wallbox</a>.</p>
+
+  <h2 id="wechsel">Wechseln als ausländischer Eigentümer</h2>
+  <ul class="checks">
+    <li>Sie brauchen eine NIE und den CUPS-Code des Anschlusses (steht auf jeder Rechnung)</li>
+    <li>Der Wechsel ist kostenlos; der neue Anbieter kündigt den alten Vertrag</li>
+    <li>Prüfen Sie, ob Ihr jetziger Vertrag eine <em>permanencia</em> mit Gebühr hat</li>
+    <li>Brauchen Sie das Guthaben Ihrer virtuellen Batterie vorher auf: Beim Wechsel geht es meist verloren</li>
+    <li>Achten Sie auf Ihrer Rechnung auf Zusatzleistungen (<em>servicios adicionales</em>), etwa Wartungsverträge, die Sie nie bestellt haben</li>
+    <li>Fragen Sie, ob der Kundendienst Englisch spricht und ob Sie alles online erledigen können</li>
+    <li>Läuft der Anschluss noch auf den Vorbesitzer? Dann ist ein Inhaberwechsel (<em>cambio de titular</em>) nötig, manchmal mit gültigem Elektro-Prüfzertifikat</li>
+  </ul>
+  <p>Ist die Elektrik alt oder fehlt ein gültiges Zertifikat (<em>boletín</em>)? Siehe <a href="/de/kosten/elektrik-erneuern/">Elektrik erneuern</a>.</p>
+
+  <h2 id="selbst">Selbst vergleichen</h2>
+  <p>Die spanische Regulierungsbehörde CNMC betreibt einen unabhängigen Vergleichsrechner: <a href="https://comparador.cnmc.gob.es/" rel="noopener" target="_blank">comparador.cnmc.gob.es</a>. Sie geben Postleitzahl, Leistung und Verbrauch je Zeitraum ein und sehen alle Angebote, auch mit Eigenverbrauch. Ihren stündlichen Verbrauch können Sie im Online-Bereich Ihres Netzbetreibers herunterladen (bei e-distribución heißt er <em>Área Privada</em>).</p>
+  <p>Sie möchten es nicht selbst ausrechnen? Schicken Sie uns eine aktuelle Rechnung, dann sagen wir Ihnen, was auffällt und was eine Solaranlage, ein Speicher oder ein anderer Tarif bringen würde.</p>
+
+  <h2 id="quellen">Quellen und Stichtag</h2>
+  <ul>
+    <li>Octopus Energy: <a href="https://octopusenergy.es/precios/tarifa-solar" rel="noopener" target="_blank">octopusenergy.es, tarifa solar</a>, abgerufen am 5. November 2026.</li>
+    <li>Kosten, Gültigkeit und Teilen der virtuellen Batterie je Anbieter: <a href="https://tuexcedente.es/bateria-virtual/" rel="noopener" target="_blank">tuexcedente.es</a>, mit Verweisen auf die Websites der Anbieter, Stand September 2026 (Endesa: Preise vom 22. Juli 2026; Iberdrola: Änderung ab 7. September 2026).</li>
+    <li>Einspeisevergütung sowie Kosten bei Repsol und Endesa: <a href="https://selectra.es/autoconsumo/tarifas/bateria-virtual/comercializadoras" rel="noopener" target="_blank">Selectra</a>, aktualisiert am 2. Juli 2026. Selectra führte die virtuelle Batterie von Endesa damals noch als kostenlos.</li>
+    <li>TotalEnergies und Naturgy: <a href="https://veredictosolar.com/mejor-tarifa-bateria-virtual/" rel="noopener" target="_blank">Veredicto Solar</a>, aktualisiert am 30. September 2026.</li>
+    <li>Wallbox-Pakete von Endesa und Repsol: <a href="https://www.endesa.com/es/movilidad-electrica/cargador.html" rel="noopener" target="_blank">endesa.com</a> und <a href="https://www.repsol.es/particulares/asesoramiento-consumo/instalar-punto-recarga-en-garaje/" rel="noopener" target="_blank">repsol.es</a>, abgerufen am 5. November 2026.</li>
+    <li>Verrechnungsregelung: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2019-5089" rel="noopener" target="_blank">Real Decreto 244/2019</a>. PVPC-Formel: <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-14048" rel="noopener" target="_blank">Real Decreto 446/2023</a>.</li>
+  </ul>
+  <p class="note">Dieser Vergleich ist eine allgemeine Information und keine Empfehlung für einen bestimmten Anbieter. Preise und Bedingungen ändern sich regelmäßig; prüfen Sie sie immer beim Anbieter, bevor Sie einen Vertrag abschließen. Sie haben einen Fehler oder eine geänderte Bedingung entdeckt? Schreiben Sie uns an info@axarquiahome.com, dann passen wir es an. Wir verkaufen keine Energieverträge und sind an keinen Anbieter gebunden.</p>
+</Guide>
