@@ -24,6 +24,13 @@ en op de pagina's in een geel blok "Nog aanleveren". Zodra alles klopt, zet je
 - [ ] Bevestigen dat het bouwbedrijf Engelstalige klanten kan bedienen (de Engelse site belooft een "English-speaking team")
 - [ ] Engelse titels en teksten bij projecten (`titleEn`, `summaryEn`, `durationEn`) en teamleden (`roleEn`, `bioEn`)
 
+## Analyse en cookies
+- [ ] Google Analytics: Measurement ID (G-...) invullen bij `gaId` in `src/data/site.ts`
+- [ ] Clarity: onder Settings › Setup › Advanced settings Masking op Strict zetten
+
+## Zweedse en Franse versie (volgen na de plaatsnaampagina's)
+- [ ] Bevestigen of het bouwbedrijf iemand heeft die Zweeds en Frans spreekt, of dat we die klanten in het Engels helpen
+
 ## Duitse versie
 - [ ] Bevestigen dat er een Duitstalige contactpersoon is (de Duitse site belooft een "deutschsprachiger Ansprechpartner" en een aankoopkeuringsrapport in het Duits)
 - [ ] Duitse titels en teksten bij projecten (`titleDe`, `summaryDe`, `durationDe`) en teamleden (`roleDe`, `bioDe`)
