@@ -516,6 +516,11 @@ export const costsDe: Topic[] = [
 <li><strong>Förderung.</strong> Spanische und europäische Förderprogramme für Eigenverbrauch ändern sich oft und sind manchmal schnell ausgeschöpft. Fragen Sie beim Angebot, was gerade läuft.</li>
 </ul>`,
       },
+      {
+        id: 'slim',
+        h: 'Tipp: intelligentes Energiemanagement',
+        html: '<p>Lassen Sie Module, Speicher, Wallbox, Boiler und Poolpumpe zusammenarbeiten. Mit <a href="/de/kosten/intelligentes-energiemanagement/">intelligentem Energiemanagement</a> laufen sie automatisch, wenn die Sonne scheint oder der Strom günstig ist. Mit einem variablen Tarif bringt das oft zusätzlich 150 bis 400 € im Jahr, und Sie verfolgen alles auf dem Handy.</p>',
+      },
     ],
     faq: [
       { q: 'Wie viele Module brauche ich?', a: 'Als Faustregel: pro 1.000 kWh Jahresverbrauch etwa 0,7 kWp, also zwei Module. Ein Haus mit 5.000 kWh Verbrauch kommt mit 3,5 bis 4 kWp aus, etwa 9 bis 10 Module.' },
@@ -528,7 +533,7 @@ export const costsDe: Topic[] = [
       { href: '/de/kosten/klimaanlage-und-waermepumpe/', label: 'Kosten Klimaanlage und Wärmepumpe' },
       { href: '/de/ratgeber/autark-leben-spanien/', label: 'Ratgeber: autark leben in Spanien' },
     ],
-    related: ['costs:thuisbatterij', 'costs:elektra', 'costs:airco'],
+    related: ['costs:thuisbatterij', 'costs:laadpaal', 'costs:energiebeheer'],
     sources: [
       { name: 'Selectra, Preise für Solaranlagen auf Einfamilienhäusern (2026)', url: 'https://selectra.es/autoconsumo/instalacion/vivienda-unifamiliar' },
       { name: 'Autosolar, Solaranlagen in Málaga installieren', url: 'https://autosolar.es/mi-experiencia-placas-solares/instalacion-placas-solares-malaga' },
@@ -677,6 +682,11 @@ export const costsDe: Topic[] = [
         h: 'Förderung und Steuerermäßigung',
         html: '<p>Für Speicher bei Eigenverbrauch gibt es in Andalusien und vom spanischen Staat regelmäßig Förderprogramme, und viele Gemeinden gewähren einen Nachlass auf die IBI bei Solarenergie. Die Programme ändern sich oft. Fragen Sie beim Angebot, was gerade läuft.</p>',
       },
+      {
+        id: 'slim',
+        h: 'Tipp: intelligentes Energiemanagement',
+        html: '<p>Lassen Sie Module, Speicher, Wallbox, Boiler und Poolpumpe zusammenarbeiten. Mit <a href="/de/kosten/intelligentes-energiemanagement/">intelligentem Energiemanagement</a> laufen sie automatisch, wenn die Sonne scheint oder der Strom günstig ist. Mit einem variablen Tarif bringt das oft zusätzlich 150 bis 400 € im Jahr, und Sie verfolgen alles auf dem Handy.</p>',
+      },
     ],
     faq: [
       { q: 'Wie lange hält ein Batteriespeicher?', a: 'Ein Lithium-Eisenphosphat-Speicher hält 6.000 Zyklen oder mehr, also 12 bis 15 Jahre bei täglicher Nutzung. Die Hersteller geben meist 10 Jahre Garantie.' },
@@ -689,7 +699,7 @@ export const costsDe: Topic[] = [
       { href: '/de/ratgeber/autark-leben-spanien/', label: 'Ratgeber: autark leben in Spanien' },
       { href: '/de/probleme/strom-faellt-aus/', label: 'Strom fällt ständig aus' },
     ],
-    related: ['costs:zonnepanelen', 'costs:elektra', 'problems:stroom'],
+    related: ['costs:zonnepanelen', 'costs:laadpaal', 'costs:energiebeheer'],
     sources: [
       { name: 'Selectra, Solaranlagen mit Speicher: Preise 2026', url: 'https://selectra.es/autoconsumo/instalacion/vivienda-unifamiliar' },
       { name: 'Red Eléctrica, Bericht zum Stromausfall vom 28. April 2025', url: 'https://www.ree.es/es/sala-de-prensa' },
@@ -838,6 +848,173 @@ export const costsDe: Topic[] = [
     ],
     ctaTitle: 'Eine Stützmauer oder Entwässerung nötig?',
     ctaText: 'Schicken Sie Fotos der Mauer oder der Stelle, wo das Wasser hinläuft. Sie erhalten eine Beratung und einen Preis.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'laadpaal',
+    slug: 'wallbox',
+    title: 'Was kostet eine Wallbox in Spanien?',
+    seoTitle: 'Wallbox in Spanien: Kosten, Laden mit Solarstrom und Regeln (2026)',
+    short: 'Wallbox',
+    description: 'Was kostet eine Wallbox an Ihrem Haus in der Axarquía? Preise je Situation, Laden mit Solaranlage und Batteriespeicher, autarkes Laden und die Regeln in einer Wohnanlage.',
+    lead: 'Ein Elektroauto laden Sie am günstigsten zu Hause, und in der Axarquía am liebsten mit eigenem Solarstrom. Was kostet eine Wallbox, was muss am Anschluss passieren, und geht das auch auf einer Finca ohne Stromnetz?',
+    keyword: 'wallbox spanien',
+    dienst: 'energie',
+    onderwerp: 'Ich möchte ein Angebot für eine Wallbox.',
+    answer: 'Eine Wallbox mit 7,4 kW kostet in der Axarquía installiert meist <strong>900 bis 1.800 €</strong> zzgl. MwSt., mit eigenem Stromkreis und Absicherung. Liegt der Stellplatz weit vom Zähler entfernt, etwa in der Tiefgarage einer Wohnanlage, sind es <strong>1.500 bis 3.000 €</strong>. Mit einer Solaranlage laden Sie tagsüber fast kostenlos.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Preise je Situation',
+        html: '<p>Richtwerte für 2026, mit Wallbox, Kabel, Absicherung und Anmeldung, zzgl. MwSt.</p>',
+        table: {
+          head: ['Situation', 'Erläuterung', 'Richtwert'],
+          rows: [
+            ['Wallbox 7,4 kW am Haus', 'Einfahrt oder Carport nah am Sicherungskasten', '900 – 1.800 €'],
+            ['Wallbox in einer Tiefgarage', 'Langes Kabel ab Ihrem Zähler, in einer Wohnanlage', '1.500 – 3.000 €'],
+            ['Smarte Wallbox für Solarstrom', 'Lädt mit dem Überschuss Ihrer Module', '+ 200 – 500 €'],
+            ['Höhere Anschlussleistung', 'Von 4,6 auf 7 kW oder mehr beim Netzbetreiber', '100 – 300 € einmalig, höhere Grundgebühr'],
+            ['Zusätzliche Module fürs Auto', '1,5 bis 2 kWp, genug für 10.000 km im Jahr', '2.000 – 3.500 €'],
+          ],
+          note: 'Lassen Sie die Wallbox zusammen mit der Solaranlage oder neuer Elektrik einbauen: Das spart Stemm- und Putzarbeiten. Siehe die Kosten für eine <a href="/de/kosten/solaranlage/">Solaranlage</a> und <a href="/de/kosten/elektrik-erneuern/">neue Elektrik</a>.',
+        },
+      },
+      {
+        id: 'zon',
+        h: 'Laden mit Solaranlage und Batteriespeicher',
+        html: `<p>Ein durchschnittliches Elektroauto verbraucht 15 bis 18 kWh pro 100 km. Bei 10.000 km im Jahr sind das etwa 1.500 bis 1.800 kWh. In der Axarquía erzeugt 1 kWp Module rund 1.600 kWh im Jahr, 1 bis 2 zusätzliche kWp decken also den Großteil.</p>
+<ul>
+<li><strong>Tagsüber laden.</strong> Eine smarte Wallbox passt die Ladeleistung an den aktuellen Überschuss der Module an. Wer zu Hause arbeitet oder im Ruhestand ist, lädt so fast komplett mit Sonne.</li>
+<li><strong>Lieber nicht aus dem Hausspeicher laden.</strong> Ein Autoakku mit 60 kWh ist viel größer als ein Hausspeicher mit 10 kWh. Stellen Sie ein, dass die Wallbox den Speicher nicht leert, damit Sie abends Strom haben.</li>
+<li><strong>Nachts günstig aus dem Netz.</strong> Mit einem Tarif mit günstigem Nachtzeitraum laden Sie außerhalb der Sonnenstunden für einen Bruchteil des Tagespreises.</li>
+</ul>`,
+      },
+      {
+        id: 'offgrid',
+        h: 'Laden auf einer Finca ohne Stromnetz',
+        html: `<p>Autarkes Laden geht, braucht aber eine größere Anlage. Das Auto lädt dann vor allem an sonnigen Nachmittagen, mit geringerer Leistung von 2 bis 3,7 kW, damit der Wechselrichter auch den Rest des Hauses versorgen kann.</p>
+<ul>
+<li>Rechnen Sie mit <strong>2 bis 3 kWp zusätzlichen Modulen</strong> fürs Auto, weil Sie im Winter weniger erzeugen und kein Netz als Reserve haben.</li>
+<li>Wählen Sie einen <strong>Wechselrichter mit genug Leistung</strong> für Wallbox, Wasserpumpe und Klimaanlage gleichzeitig.</li>
+<li>Lassen Sie die Wallbox <strong>nur mit Überschuss laden</strong>, damit der Hausspeicher für die Nacht voll ist.</li>
+</ul>
+<p>Mehr dazu im Ratgeber <a href="/de/ratgeber/autark-leben-spanien/">autark leben in Spanien</a>.</p>`,
+      },
+      {
+        id: 'regels',
+        h: 'Regeln und Anmeldung',
+        html: `<ul>
+<li><strong>Zugelassener Installateur:</strong> Ein Ladepunkt fällt unter die spanischen Installationsvorschriften (ITC-BT-52). Ein zugelassener Installateur baut ihn ein und meldet ihn bei der Junta an.</li>
+<li><strong>In einer Wohnanlage:</strong> Für eine Wallbox auf Ihrem eigenen Stellplatz brauchen Sie keine Zustimmung der Eigentümergemeinschaft (<em>comunidad</em>). Sie teilen es vorab schriftlich mit und zahlen Einbau und Strom selbst.</li>
+<li><strong>Leistung:</strong> Viele Häuser haben 4,6 oder 5,75 kW. Mit Wallbox sind 7 kW oder mehr angenehm, oder eine Wallbox mit dynamischem Lastmanagement, die zurückregelt, wenn der Backofen läuft.</li>
+<li><strong>Förderung:</strong> Es gibt regelmäßig staatliche Programme für Ladepunkte und einen Abzug bei der Einkommensteuer (IRPF). Die Bedingungen ändern sich; fragen Sie beim Angebot, was gerade läuft.</li>
+</ul>`,
+      },
+      {
+        id: 'slim',
+        h: 'Tipp: intelligentes Energiemanagement',
+        html: '<p>Lassen Sie Module, Speicher, Wallbox, Boiler und Poolpumpe zusammenarbeiten. Mit <a href="/de/kosten/intelligentes-energiemanagement/">intelligentem Energiemanagement</a> laufen sie automatisch, wenn die Sonne scheint oder der Strom günstig ist. Mit einem variablen Tarif bringt das oft zusätzlich 150 bis 400 € im Jahr, und Sie verfolgen alles auf dem Handy.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Kann ich nicht einfach an der Steckdose laden?', a: 'Ab und zu ja, aber eine normale Steckdose ist nicht für stundenlang 2,3 kW gemacht. Sie wird warm und lädt langsam: 10 bis 12 km pro Stunde. Eine Wallbox ist sicherer und dreimal so schnell.' },
+      { q: 'Was kostet eine volle Ladung zu Hause?', a: 'Einen 60-kWh-Akku zu 0,18 € pro kWh voll zu laden kostet etwa 11 €, im Nachtzeitraum oft die Hälfte und mit eigener Solaranlage fast nichts.' },
+      { q: 'Muss meine Anschlussleistung erhöht werden?', a: 'Meist sind 7 kW oder mehr zu empfehlen. Mit einer smarten Wallbox, die bei hohem Verbrauch zurückregelt, reicht manchmal Ihre jetzige Leistung.' },
+      { q: 'Kann ich autark elektrisch fahren?', a: 'Ja, mit genug zusätzlichen Modulen und einem passenden Wechselrichter. Sie laden dann vor allem an sonnigen Nachmittagen. Für lange Winterwochen ist ein Schnelllader unterwegs eine gute Ergänzung.' },
+    ],
+    links: [
+      { href: '/de/kosten/solaranlage/', label: 'Kosten Solaranlage' },
+      { href: '/de/kosten/batteriespeicher/', label: 'Kosten Batteriespeicher' },
+      { href: '/de/ratgeber/autark-leben-spanien/', label: 'Ratgeber: autark leben in Spanien' },
+    ],
+    related: ['costs:zonnepanelen', 'costs:thuisbatterij', 'costs:energiebeheer'],
+    sources: [
+      { name: 'BOE, Ley de Propiedad Horizontal, Artikel 17.5 (Ladepunkte in einer comunidad)', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906' },
+      { name: 'BOE, ITC-BT-52, Anlagen zum Laden von Elektrofahrzeugen', url: 'https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13681' },
+      { name: 'IDAE, Förderung für Elektromobilität', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'Eine Wallbox an Ihrem Haus?',
+    ctaText: 'Schicken Sie ein Foto Ihres Sicherungskastens und des Stellplatzes. Sie erhalten Beratung und ein Angebot, auch zusammen mit einer Solaranlage.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'energiebeheer',
+    slug: 'intelligentes-energiemanagement',
+    title: 'Intelligentes Energiemanagement: automatisch niedrigere Stromkosten',
+    seoTitle: 'Intelligentes Energiemanagement in Spanien: Solar, Speicher und Wallbox automatisch steuern (2026)',
+    short: 'Energiemanagement',
+    description: 'Mit intelligentem Energiemanagement steuert Ihr Haus in Spanien Solaranlage, Batteriespeicher, Wallbox, Boiler und Poolpumpe selbst. Fester oder variabler Stromtarif, was es bringt und was es kostet.',
+    lead: 'Solaranlage, Batteriespeicher und Wallbox bringen am meisten, wenn sie zusammenarbeiten. Mit intelligentem Energiemanagement regelt Ihr Haus das selbst: Geräte laufen, wenn die Sonne scheint oder der Strom günstig ist, und Sie sehen alles auf dem Handy, auch wenn Sie nicht in Spanien sind.',
+    keyword: 'energiemanagement spanien',
+    dienst: 'energiebeheer',
+    onderwerp: 'Ich möchte eine Beratung zu intelligentem Energiemanagement.',
+    answer: 'Intelligentes Energiemanagement kostet einmalig meist <strong>400 bis 1.500 €</strong>, je nachdem, wie viele Geräte Sie einbinden. Mit Solaranlage, Speicher und variablem Stromtarif sparen Sie damit oft zusätzlich <strong>150 bis 400 € im Jahr</strong>, zusätzlich zu dem, was die Module schon bringen.',
+    sections: [
+      {
+        id: 'wat',
+        h: 'Was macht intelligentes Energiemanagement?',
+        html: `<p>Ein kleines Gerät im Sicherungskasten verbindet alles, was Strom erzeugt, speichert oder viel verbraucht. Das System schaut auf Sonne, Strompreis und Ladestand und entscheidet jede Viertelstunde, was passiert:</p>
+<ul>
+<li><strong>Boiler und Poolpumpe</strong> laufen mittags, mit eigenem Solarstrom.</li>
+<li>Das <strong>Auto</strong> lädt mit dem Überschuss der Module oder nachts in den günstigsten Stunden.</li>
+<li>Der <strong>Batteriespeicher</strong> lädt in günstigen Stunden und liefert Strom in den teuren Abendstunden.</li>
+<li>Die <strong>Klimaanlage</strong> kühlt das Haus mit Solarstrom vor, bevor Sie nach Hause kommen.</li>
+<li>Sie erhalten eine <strong>Meldung</strong> bei Stromausfall, leerem Speicher, niedrigem Wassertank oder einem Leck, auch wenn Sie in Deutschland sind.</li>
+</ul>
+<p>Wir arbeiten mit offenen Systemen wie Home Assistant, die mit fast jeder Marke von Wechselrichter, Speicher und Wallbox zusammenarbeiten. Sie sind also nicht an einen Hersteller oder die App eines Anbieters gebunden.</p>`,
+      },
+      {
+        id: 'contract',
+        h: 'Fester oder variabler Stromtarif?',
+        html: `<p>In Spanien wählen Sie grob zwischen zwei Arten von Vertrag:</p>
+<ul>
+<li><strong>Festpreis</strong> auf dem freien Markt (<em>mercado libre</em>): jede Stunde derselbe Preis pro kWh, oder ein fester Preis je Zeitzone. Sie wissen, woran Sie sind.</li>
+<li><strong>Variabler Preis</strong>, etwa der regulierte PVPC-Tarif: Der Preis ändert sich jede Stunde und wird am Vortag veröffentlicht. Mittags und nachts ist Strom oft günstig, abends teuer.</li>
+</ul>
+<p>Ein Festpreis passt zu einem Ferienhaus ohne Speicher oder Wallbox. Können Sie Verbrauch verschieben, bringt ein variabler Tarif mehr: Das System liest die Stundenpreise von morgen und plant Speicher, Auto, Boiler und Poolpumpe in die günstigsten Stunden. Je mehr Sie verschieben können, desto größer der Unterschied.</p>`,
+      },
+      {
+        id: 'prijzen',
+        h: 'Was kostet es?',
+        html: '<p>Richtwerte für 2026, mit Installation und Einrichtung, zzgl. MwSt.</p>',
+        table: {
+          head: ['Paket', 'Was Sie bekommen', 'Richtwert'],
+          rows: [
+            ['Überblick', 'Energiezähler, Übersicht auf dem Handy, Meldungen bei Störungen', '400 – 700 €'],
+            ['Intelligent steuern', 'Plus Anbindung von Wechselrichter, Speicher, Boiler und Poolpumpe', '700 – 1.200 €'],
+            ['Komplett', 'Plus Wallbox, Klimaanlage und Steuerung nach Stundenpreisen', '1.000 – 1.500 €'],
+            ['Betreuung aus der Ferne', 'Updates, Anpassungen und Hilfe, wenn etwas nicht funktioniert', '10 – 25 € im Monat'],
+          ],
+          note: 'Noch keine Solaranlage oder Speicher? Siehe die Kosten für eine <a href="/de/kosten/solaranlage/">Solaranlage</a>, einen <a href="/de/kosten/batteriespeicher/">Batteriespeicher</a> und eine <a href="/de/kosten/wallbox/">Wallbox</a>.',
+        },
+      },
+      {
+        id: 'offgrid',
+        h: 'Auf einer Finca ohne Stromnetz',
+        html: '<p>Autark ist intelligentes Energiemanagement noch wichtiger, weil kein Netz als Reserve da ist. Das System schaltet große Verbraucher erst ein, wenn der Speicher voll genug ist, lädt das Auto nur mit Überschuss, warnt bei niedrigem Speicher oder Wassertank und zeigt Ihnen aus der Ferne, dass alles funktioniert. Siehe den Ratgeber <a href="/de/ratgeber/autark-leben-spanien/">autark leben in Spanien</a>.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Brauche ich eine Solaranlage für intelligentes Energiemanagement?', a: 'Nicht unbedingt. Schon mit einem variablen Tarif können Boiler, Poolpumpe und Auto in günstigen Stunden laufen. Mit Modulen und Speicher bringt es aber am meisten.' },
+      { q: 'Funktioniert es mit meinem Wechselrichter oder Speicher?', a: 'Fast immer. Offene Systeme wie Home Assistant arbeiten mit den gängigen Marken. Beim Angebot prüfen wir, was Sie haben.' },
+      { q: 'Kann ich alles von Deutschland aus verfolgen?', a: 'Ja. Auf dem Handy sehen Sie, was die Module erzeugen, was das Haus verbraucht und wie voll der Speicher ist, und Sie erhalten eine Meldung, wenn etwas nicht stimmt.' },
+      { q: 'Was passiert, wenn das Internet ausfällt?', a: 'Das System läuft lokal im Haus und steuert weiter. Nur der Blick aus der Ferne fällt aus, bis das Internet wieder da ist.' },
+    ],
+    links: [
+      { href: '/de/kosten/solaranlage/', label: 'Kosten Solaranlage' },
+      { href: '/de/kosten/batteriespeicher/', label: 'Kosten Batteriespeicher' },
+      { href: '/de/kosten/wallbox/', label: 'Kosten Wallbox' },
+    ],
+    related: ['costs:zonnepanelen', 'costs:thuisbatterij', 'costs:laadpaal'],
+    sources: [
+      { name: 'Red Eléctrica, Stundenpreise des PVPC-Tarifs', url: 'https://www.ree.es/es/datos/mercados/precio-voluntario-pequeno-consumidor' },
+      { name: 'CNMC, Vergleichsrechner für Stromtarife', url: 'https://comparador.cnmc.gob.es/' },
+      { name: 'Home Assistant, offene Smart-Home-Plattform', url: 'https://www.home-assistant.io/' },
+    ],
+    ctaTitle: 'Stromkosten automatisch senken?',
+    ctaText: 'Sagen Sie uns, welche Module, welchen Speicher oder welche Wallbox Sie haben und welchen Stromtarif. Sie erhalten eine Beratung, was Sie einbinden können und was es bringt.',
     minutes: 5,
     published: '2026-11-05',
   },

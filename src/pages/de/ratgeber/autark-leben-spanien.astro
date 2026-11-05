@@ -4,6 +4,8 @@ import Guide from '../../../components/Guide.astro';
 const toc = [
   { id: 'wat', label: 'Autark leben in der Axarquía' },
   { id: 'stroom', label: 'Strom: Solaranlage und Batteriespeicher' },
+  { id: 'auto', label: 'Elektroauto fahren und laden' },
+  { id: 'slim', label: 'Intelligentes Energiemanagement' },
   { id: 'water', label: 'Wasser: Tank, Regenwasser und Brunnen' },
   { id: 'afvoer', label: 'Abwasser: Klärgrube oder Kläranlage' },
   { id: 'internet', label: 'Internet: Starlink und Alternativen' },
@@ -54,6 +56,24 @@ const faq = [
     </tbody>
   </table>
   <p>Mehr zu Preisen, Speichern und Amortisation unter <a href="/de/kosten/solaranlage/">Kosten Solaranlage</a> und <a href="/de/kosten/batteriespeicher/">Kosten Batteriespeicher</a>.</p>
+
+  <h2 id="auto">Elektroauto fahren und laden</h2>
+  <p>Auch autark können Sie elektrisch fahren, mit eigenem Solarstrom. Ein Auto mit 10.000 km im Jahr verbraucht etwa 1.500 bis 1.800 kWh. Dazu kommen:</p>
+  <ul>
+    <li><strong>2 bis 3 kWp zusätzliche Module</strong>, weil Sie im Winter weniger erzeugen und kein Netz als Reserve haben. Rechnen Sie mit 2.500 bis 4.500 €.</li>
+    <li><strong>Eine Wallbox, die nur mit Überschuss lädt</strong>, mit 2 bis 3,7 kW, damit der Hausspeicher für die Nacht voll bleibt. Ein Autoakku mit 60 kWh ist viel größer als Ihr Hausspeicher.</li>
+    <li><strong>Ein Wechselrichter mit genug Leistung</strong> für Wallbox, Wasserpumpe und Klimaanlage gleichzeitig.</li>
+  </ul>
+  <p>Sie laden dann vor allem an sonnigen Nachmittagen. In langen bewölkten Phasen ist ein Schnelllader im Ort oder an der A-7 eine gute Ergänzung. Mehr zu Preisen und Regeln unter <a href="/de/kosten/wallbox/">Kosten Wallbox</a>.</p>
+
+  <h2 id="slim">Intelligentes Energiemanagement</h2>
+  <p>Ohne Netz ist wichtig, dass große Verbraucher nicht gleichzeitig laufen und der Speicher nie leer wird. Mit <a href="/de/kosten/intelligentes-energiemanagement/">intelligentem Energiemanagement</a>, zum Beispiel mit Home Assistant, regelt das Haus das selbst:</p>
+  <ul>
+    <li>Wasserpumpe, Boiler, Waschmaschine und Wallbox laufen, wenn die Sonne scheint und der Speicher voll genug ist.</li>
+    <li>Sie erhalten eine Meldung bei niedrigem Speicher, leerem Wassertank oder einer Störung am Wechselrichter.</li>
+    <li>Auf dem Handy sehen Sie, auch aus Deutschland, was die Module erzeugen und wie voll Speicher und Wassertank sind.</li>
+    <li>Der Generator startet automatisch, wenn der Speicher nach ein paar grauen Tagen zu leer wird.</li>
+  </ul>
 
   <h2 id="water">Wasser: Tank, Regenwasser und Brunnen</h2>
   <p>Ohne Wasserleitung brauchen Sie eine oder mehrere dieser Quellen. Nach der Dürre der letzten Jahre ist es klug, sich auf zwei verlassen zu können.</p>

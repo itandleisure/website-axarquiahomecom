@@ -516,6 +516,11 @@ export const costsNl: Topic[] = [
 <li><strong>Subsidie.</strong> De Spaanse en Europese subsidies voor zelfopwekking wisselen vaak en zijn soms snel op. Vraag bij de offerte wat er op dat moment loopt.</li>
 </ul>`,
       },
+      {
+        id: 'slim',
+        h: 'Tip: slim energiebeheer',
+        html: '<p>Laat panelen, batterij, laadpaal, boiler en zwembadpomp samenwerken. Met <a href="/nl/kosten/slim-energiebeheer/">slim energiebeheer</a> draaien ze automatisch als de zon schijnt of de stroom goedkoop is. Met een variabel stroomcontract levert dat vaak € 150 tot € 400 per jaar extra op, en u volgt alles op uw telefoon.</p>',
+      },
     ],
     faq: [
       { q: 'Hoeveel panelen heb ik nodig?', a: 'Als vuistregel: per 1.000 kWh verbruik per jaar ongeveer 0,7 kWp, dus twee panelen. Een huis met 5.000 kWh verbruik heeft genoeg aan 3,5 tot 4 kWp, ongeveer 9 tot 10 panelen.' },
@@ -528,7 +533,7 @@ export const costsNl: Topic[] = [
       { href: '/nl/kosten/airco-en-warmtepomp/', label: 'Kosten airco en warmtepomp' },
       { href: '/nl/gidsen/off-grid-wonen-spanje/', label: 'Gids: off-grid wonen in Spanje' },
     ],
-    related: ['costs:thuisbatterij', 'costs:elektra', 'costs:airco'],
+    related: ['costs:thuisbatterij', 'costs:laadpaal', 'costs:energiebeheer'],
     sources: [
       { name: 'Selectra, prijs zonnepanelen voor een eengezinswoning (2026)', url: 'https://selectra.es/autoconsumo/instalacion/vivienda-unifamiliar' },
       { name: 'Autosolar, zonnepanelen installeren in Málaga', url: 'https://autosolar.es/mi-experiencia-placas-solares/instalacion-placas-solares-malaga' },
@@ -677,6 +682,11 @@ export const costsNl: Topic[] = [
         h: 'Subsidie en belastingkorting',
         html: '<p>Voor batterijen bij zelfopwekking zijn er in Andalusië en vanuit Madrid regelmatig subsidieregelingen, en veel gemeenten geven korting op de IBI bij zonne-energie. De regelingen wisselen vaak. Vraag bij de offerte wat er op dat moment loopt.</p>',
       },
+      {
+        id: 'slim',
+        h: 'Tip: slim energiebeheer',
+        html: '<p>Laat panelen, batterij, laadpaal, boiler en zwembadpomp samenwerken. Met <a href="/nl/kosten/slim-energiebeheer/">slim energiebeheer</a> draaien ze automatisch als de zon schijnt of de stroom goedkoop is. Met een variabel stroomcontract levert dat vaak € 150 tot € 400 per jaar extra op, en u volgt alles op uw telefoon.</p>',
+      },
     ],
     faq: [
       { q: 'Hoelang gaat een thuisbatterij mee?', a: 'Een lithium-ijzerfosfaatbatterij gaat 6.000 cycli of meer mee, dat is 12 tot 15 jaar bij dagelijks gebruik. De fabrikant geeft meestal 10 jaar garantie.' },
@@ -689,7 +699,7 @@ export const costsNl: Topic[] = [
       { href: '/nl/gidsen/off-grid-wonen-spanje/', label: 'Gids: off-grid wonen in Spanje' },
       { href: '/nl/problemen/stroom-valt-uit/', label: 'Stroom valt steeds uit' },
     ],
-    related: ['costs:zonnepanelen', 'costs:elektra', 'problems:stroom'],
+    related: ['costs:zonnepanelen', 'costs:laadpaal', 'costs:energiebeheer'],
     sources: [
       { name: 'Selectra, zonnepanelen met batterij: prijzen 2026', url: 'https://selectra.es/autoconsumo/instalacion/vivienda-unifamiliar' },
       { name: 'Red Eléctrica, rapport over de stroomstoring van 28 april 2025', url: 'https://www.ree.es/es/sala-de-prensa' },
@@ -838,6 +848,173 @@ export const costsNl: Topic[] = [
     ],
     ctaTitle: 'Een keermuur of afwatering nodig?',
     ctaText: 'Stuur foto’s van de muur of de plek waar het water heen loopt. U krijgt advies en een prijs.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'laadpaal',
+    slug: 'laadpaal',
+    title: 'Wat kost een laadpaal voor uw auto in Spanje?',
+    seoTitle: 'Laadpaal thuis in Spanje: kosten, laden op zonne-energie en regels (2026)',
+    short: 'Laadpaal',
+    description: 'Wat kost een laadpaal (wallbox) bij uw huis in de Axarquía? Prijzen per situatie, laden op zonnepanelen en thuisbatterij, off-grid laden en de regels in een appartementencomplex.',
+    lead: 'Een elektrische auto laadt u het goedkoopst thuis, en in de Axarquía het liefst met uw eigen zonnestroom. Wat kost een laadpaal, wat moet er aan de aansluiting gebeuren en kan het ook op een finca zonder stroomnet?',
+    keyword: 'laadpaal spanje',
+    dienst: 'energie',
+    onderwerp: 'Ik wil graag een prijs voor een laadpaal.',
+    answer: 'Een laadpaal (wallbox) van 7,4 kW kost in de Axarquía geplaatst meestal <strong>€ 900 tot € 1.800</strong>, exclusief btw, inclusief een eigen groep en beveiliging. Ligt de parkeerplaats ver van de meterkast, zoals in een parkeergarage van een complex, dan wordt het <strong>€ 1.500 tot € 3.000</strong>. Met zonnepanelen laadt u overdag bijna gratis.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Prijzen per situatie',
+        html: '<p>Indicaties voor 2026, inclusief laadpaal, kabel, beveiliging en aanmelding, exclusief btw.</p>',
+        table: {
+          head: ['Situatie', 'Toelichting', 'Indicatie'],
+          rows: [
+            ['Laadpaal 7,4 kW bij het huis', 'Oprit of carport dicht bij de meterkast', '€ 900 – € 1.800'],
+            ['Laadpaal in een parkeergarage', 'Lange kabel vanaf uw meter, in een complex', '€ 1.500 – € 3.000'],
+            ['Slimme laadpaal voor zonnestroom', 'Laadt op het overschot van uw panelen', '+ € 200 – € 500'],
+            ['Hoger aansluitvermogen', 'Van 4,6 naar 7 kW of meer bij de netbeheerder', '€ 100 – € 300 eenmalig, hoger vast tarief'],
+            ['Extra zonnepanelen voor de auto', '1,5 tot 2 kWp, genoeg voor 10.000 km per jaar', '€ 2.000 – € 3.500'],
+          ],
+          note: 'Laat de laadpaal tegelijk met zonnepanelen of nieuwe elektra plaatsen: dat scheelt hak- en breekwerk. Zie de kosten van <a href="/nl/kosten/zonnepanelen/">zonnepanelen</a> en <a href="/nl/kosten/elektra-vernieuwen/">elektra vernieuwen</a>.',
+        },
+      },
+      {
+        id: 'zon',
+        h: 'Laden op zonnepanelen en thuisbatterij',
+        html: `<p>Een gemiddelde elektrische auto verbruikt 15 tot 18 kWh per 100 km. Rijdt u 10.000 km per jaar, dan is dat zo’n 1.500 tot 1.800 kWh. In de Axarquía levert 1 kWp aan panelen ongeveer 1.600 kWh per jaar, dus 1 tot 2 extra kWp dekt het grootste deel.</p>
+<ul>
+<li><strong>Laad overdag.</strong> Een slimme laadpaal past de laadsnelheid aan op wat de panelen op dat moment overhouden. Wie thuis werkt of gepensioneerd is, laadt zo bijna helemaal op de zon.</li>
+<li><strong>Laad liever niet uit de thuisbatterij.</strong> Een autoaccu van 60 kWh is veel groter dan een thuisbatterij van 10 kWh. Stel in dat de laadpaal de thuisbatterij niet leegtrekt, zodat u ’s avonds stroom houdt.</li>
+<li><strong>’s Nachts goedkoop van het net.</strong> Met een tarief met een goedkoop nachtdal laadt u buiten de zon voor een fractie van de dagprijs.</li>
+</ul>`,
+      },
+      {
+        id: 'offgrid',
+        h: 'Laden op een finca zonder stroomnet',
+        html: `<p>Off-grid laden kan, maar vraagt een ruimer systeem. De auto laadt dan vooral op zonnige middagen, op een lager vermogen van 2 tot 3,7 kW, zodat de omvormer ook de rest van het huis aankan.</p>
+<ul>
+<li>Reken op <strong>2 tot 3 kWp extra panelen</strong> voor de auto, omdat u in de winter minder opwekt en geen net als achtervang heeft.</li>
+<li>Kies een <strong>omvormer met genoeg vermogen</strong> voor de laadpaal plus de waterpomp en airco tegelijk.</li>
+<li>Laat de laadpaal <strong>alleen laden bij overschot</strong>, zodat de thuisbatterij vol is voor de nacht.</li>
+</ul>
+<p>Lees meer in de gids <a href="/nl/gidsen/off-grid-wonen-spanje/">off-grid wonen in Spanje</a>.</p>`,
+      },
+      {
+        id: 'regels',
+        h: 'Regels en aanmelding',
+        html: `<ul>
+<li><strong>Erkend installateur:</strong> een laadpunt valt onder de Spaanse installatievoorschriften (ITC-BT-52). Een erkende installateur legt het aan en meldt het aan bij de Junta.</li>
+<li><strong>In een appartementencomplex:</strong> voor een laadpaal op uw eigen parkeerplaats heeft u geen toestemming van de vereniging van eigenaren (<em>comunidad</em>) nodig. U meldt het vooraf schriftelijk, en u betaalt de aanleg en de stroom zelf.</li>
+<li><strong>Vermogen:</strong> veel huizen hebben 4,6 of 5,75 kW. Met een laadpaal erbij is 7 kW of meer prettig, of een laadpaal met dynamische belastingverdeling die terugschakelt als de oven aan gaat.</li>
+<li><strong>Subsidie:</strong> er zijn regelmatig landelijke regelingen voor laadpunten en een belastingaftrek in de IRPF. De voorwaarden wisselen; vraag bij de offerte wat er op dat moment loopt.</li>
+</ul>`,
+      },
+      {
+        id: 'slim',
+        h: 'Tip: slim energiebeheer',
+        html: '<p>Laat panelen, batterij, laadpaal, boiler en zwembadpomp samenwerken. Met <a href="/nl/kosten/slim-energiebeheer/">slim energiebeheer</a> draaien ze automatisch als de zon schijnt of de stroom goedkoop is. Met een variabel stroomcontract levert dat vaak € 150 tot € 400 per jaar extra op, en u volgt alles op uw telefoon.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Kan ik niet gewoon aan het stopcontact laden?', a: 'Af en toe wel, maar een gewoon stopcontact is niet gemaakt voor uren achter elkaar 2,3 kW. Het wordt warm en laadt traag: 10 tot 12 km per uur. Een laadpaal is veiliger en drie keer zo snel.' },
+      { q: 'Hoeveel kost een volle accu thuis?', a: 'Een accu van 60 kWh vol laden kost tegen € 0,18 per kWh ongeveer € 11, in het nachtdal vaak de helft, en op uw eigen zonnepanelen bijna niets.' },
+      { q: 'Moet mijn aansluiting omhoog?', a: 'Meestal is 7 kW of meer aan te raden. Met een slimme laadpaal die terugschakelt als u veel andere apparaten gebruikt, kan het soms met uw huidige vermogen.' },
+      { q: 'Kan ik off-grid elektrisch rijden?', a: 'Ja, met genoeg extra panelen en een omvormer die het aankan. U laadt dan vooral op zonnige middagen. Voor lange winterweken is een snellader onderweg een handige aanvulling.' },
+    ],
+    links: [
+      { href: '/nl/kosten/zonnepanelen/', label: 'Kosten zonnepanelen' },
+      { href: '/nl/kosten/thuisbatterij/', label: 'Kosten thuisbatterij' },
+      { href: '/nl/gidsen/off-grid-wonen-spanje/', label: 'Gids: off-grid wonen in Spanje' },
+    ],
+    related: ['costs:zonnepanelen', 'costs:thuisbatterij', 'costs:energiebeheer'],
+    sources: [
+      { name: 'BOE, Ley de Propiedad Horizontal, artikel 17.5 (laadpunten in een comunidad)', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906' },
+      { name: 'BOE, ITC-BT-52, installaties voor het laden van elektrische voertuigen', url: 'https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13681' },
+      { name: 'IDAE, subsidies voor elektrische mobiliteit', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'Een laadpaal bij uw huis?',
+    ctaText: 'Stuur een foto van uw meterkast en de plek waar de auto staat. U krijgt advies en een prijs, ook in combinatie met zonnepanelen.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'energiebeheer',
+    slug: 'slim-energiebeheer',
+    title: 'Slim energiebeheer: automatisch een lagere energierekening',
+    seoTitle: 'Slim energiebeheer in Spanje: zonnepanelen, batterij en laadpaal automatisch sturen (2026)',
+    short: 'Slim energiebeheer',
+    description: 'Met slim energiebeheer stuurt uw huis in Spanje zelf zonnepanelen, thuisbatterij, laadpaal, boiler en zwembadpomp aan. Vast of variabel stroomcontract, wat het oplevert en wat het kost.',
+    lead: 'Zonnepanelen, een thuisbatterij en een laadpaal leveren het meest op als ze samenwerken. Met slim energiebeheer regelt uw huis dat zelf: apparaten draaien als de zon schijnt of de stroom goedkoop is, en u ziet alles op uw telefoon, ook als u niet in Spanje bent.',
+    keyword: 'slim energiebeheer',
+    dienst: 'energiebeheer',
+    onderwerp: 'Ik wil graag advies over slim energiebeheer.',
+    answer: 'Slim energiebeheer kost eenmalig meestal <strong>€ 400 tot € 1.500</strong>, afhankelijk van hoeveel apparaten u koppelt. Met zonnepanelen, een batterij en een variabel stroomcontract bespaart u daarmee vaak <strong>€ 150 tot € 400 per jaar</strong> extra, bovenop wat de panelen al opleveren.',
+    sections: [
+      {
+        id: 'wat',
+        h: 'Wat doet slim energiebeheer?',
+        html: `<p>Een klein kastje in uw meterkast verbindt alles wat stroom opwekt, opslaat of veel verbruikt. Het systeem kijkt naar de zon, de stroomprijs en de stand van de batterij, en beslist per kwartier wat er gebeurt:</p>
+<ul>
+<li>De <strong>boiler en de zwembadpomp</strong> draaien op het middaguur, op uw eigen zonnestroom.</li>
+<li>De <strong>auto</strong> laadt op het overschot van de panelen, of ’s nachts in de goedkoopste uren.</li>
+<li>De <strong>thuisbatterij</strong> laadt bij in goedkope uren en levert stroom in de dure avonduren.</li>
+<li>De <strong>airco</strong> koelt het huis voor met zonnestroom, voordat u thuiskomt.</li>
+<li>U krijgt een <strong>melding</strong> bij een stroomstoring, een lege batterij, een lege watertank of een lekkage, ook als u in Nederland bent.</li>
+</ul>
+<p>Wij werken met open systemen zoals Home Assistant, die met vrijwel elk merk omvormer, batterij en laadpaal samenwerken. U zit dus niet vast aan één fabrikant of een app van een leverancier.</p>`,
+      },
+      {
+        id: 'contract',
+        h: 'Vast of variabel stroomcontract?',
+        html: `<p>In Spanje kiest u grofweg tussen twee soorten contract:</p>
+<ul>
+<li><strong>Vaste prijs</strong> op de vrije markt (<em>mercado libre</em>): elk uur dezelfde prijs per kWh, of een vaste prijs per dagdeel. U weet waar u aan toe bent.</li>
+<li><strong>Variabele prijs</strong>, zoals het gereguleerde PVPC-tarief: de prijs is elk uur anders en wordt de dag ervoor bekendgemaakt. Midden op de dag en ’s nachts is stroom vaak goedkoop, ’s avonds duur.</li>
+</ul>
+<p>Een vast contract past bij een vakantiehuis zonder batterij of laadpaal. Kunt u verbruik verschuiven, dan levert een variabel contract meer op: het systeem leest de uurprijzen van morgen en plant de batterij, de auto, de boiler en de zwembadpomp in de goedkoopste uren. Hoe meer u kunt verschuiven, hoe groter het verschil.</p>`,
+      },
+      {
+        id: 'prijzen',
+        h: 'Wat kost het?',
+        html: '<p>Indicaties voor 2026, inclusief installatie en instellen, exclusief btw.</p>',
+        table: {
+          head: ['Pakket', 'Wat u krijgt', 'Indicatie'],
+          rows: [
+            ['Inzicht', 'Energiemeter, overzicht op uw telefoon, meldingen bij storing', '€ 400 – € 700'],
+            ['Slim sturen', 'Plus koppeling met omvormer, batterij, boiler en zwembadpomp', '€ 700 – € 1.200'],
+            ['Compleet', 'Plus laadpaal, airco en sturen op uurprijzen', '€ 1.000 – € 1.500'],
+            ['Beheer op afstand', 'Updates, aanpassingen en hulp als iets niet werkt', '€ 10 – € 25 per maand'],
+          ],
+          note: 'Heeft u nog geen zonnepanelen of batterij? Zie de kosten van <a href="/nl/kosten/zonnepanelen/">zonnepanelen</a>, een <a href="/nl/kosten/thuisbatterij/">thuisbatterij</a> en een <a href="/nl/kosten/laadpaal/">laadpaal</a>.',
+        },
+      },
+      {
+        id: 'offgrid',
+        h: 'Op een finca zonder stroomnet',
+        html: '<p>Off-grid is slim energiebeheer nog belangrijker, omdat er geen net is als achtervang. Het systeem zet zware apparaten pas aan als de batterij vol genoeg is, laadt de auto alleen op overschot, waarschuwt bij een lage batterij of een lage watertank, en laat u vanaf afstand zien dat alles werkt. Zie de gids <a href="/nl/gidsen/off-grid-wonen-spanje/">off-grid wonen in Spanje</a>.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Heb ik zonnepanelen nodig voor slim energiebeheer?', a: 'Niet per se. Met alleen een variabel contract kunt u de boiler, de zwembadpomp en de auto al in goedkope uren laten draaien. Met panelen en een batterij levert het wel het meest op.' },
+      { q: 'Werkt het met mijn merk omvormer of batterij?', a: 'Bijna altijd. Open systemen zoals Home Assistant werken met de gangbare merken. Bij de offerte kijken we wat u heeft.' },
+      { q: 'Kan ik alles vanuit Nederland volgen?', a: 'Ja. U ziet op uw telefoon wat de panelen opwekken, wat het huis verbruikt en hoe vol de batterij is, en u krijgt een melding als er iets mis is.' },
+      { q: 'Wat gebeurt er als het internet uitvalt?', a: 'Het systeem draait lokaal in huis en blijft gewoon sturen. Alleen het meekijken op afstand stopt tot het internet terug is.' },
+    ],
+    links: [
+      { href: '/nl/kosten/zonnepanelen/', label: 'Kosten zonnepanelen' },
+      { href: '/nl/kosten/thuisbatterij/', label: 'Kosten thuisbatterij' },
+      { href: '/nl/kosten/laadpaal/', label: 'Kosten laadpaal' },
+    ],
+    related: ['costs:zonnepanelen', 'costs:thuisbatterij', 'costs:laadpaal'],
+    sources: [
+      { name: 'Red Eléctrica, uurprijzen van het PVPC-tarief', url: 'https://www.ree.es/es/datos/mercados/precio-voluntario-pequeno-consumidor' },
+      { name: 'CNMC, vergelijker van stroomcontracten', url: 'https://comparador.cnmc.gob.es/' },
+      { name: 'Home Assistant, open platform voor slim wonen', url: 'https://www.home-assistant.io/' },
+    ],
+    ctaTitle: 'Uw energierekening automatisch omlaag?',
+    ctaText: 'Vertel ons welke panelen, batterij of laadpaal u heeft en welk stroomcontract. U krijgt advies over wat u kunt koppelen en wat het oplevert.',
     minutes: 5,
     published: '2026-11-05',
   },

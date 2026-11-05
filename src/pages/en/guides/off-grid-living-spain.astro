@@ -4,6 +4,8 @@ import Guide from '../../../components/Guide.astro';
 const toc = [
   { id: 'wat', label: 'Off-grid living in the Axarquía' },
   { id: 'stroom', label: 'Power: solar panels and home batteries' },
+  { id: 'auto', label: 'Driving and charging an electric car' },
+  { id: 'slim', label: 'Smart energy management' },
   { id: 'water', label: 'Water: tanks, rainwater and boreholes' },
   { id: 'afvoer', label: 'Waste water: septic tank or treatment plant' },
   { id: 'internet', label: 'Internet: Starlink and alternatives' },
@@ -54,6 +56,24 @@ const faq = [
     </tbody>
   </table>
   <p>More on prices, batteries and payback in <a href="/en/costs/solar-panels/">the cost of solar panels</a> and <a href="/en/costs/home-battery/">the cost of a home battery</a>.</p>
+
+  <h2 id="auto">Driving and charging an electric car</h2>
+  <p>You can drive electric off-grid too, on your own solar power. A car doing 10,000 km a year uses about 1,500 to 1,800 kWh. That means adding:</p>
+  <ul>
+    <li><strong>2 to 3 kWp of extra panels</strong>, because you produce less in winter and have no grid as a fallback. Allow €2,500 to €4,500.</li>
+    <li><strong>A charger that only charges on surplus</strong>, at 2 to 3.7 kW, so the home battery stays full for the night. A 60 kWh car battery is far bigger than your home battery.</li>
+    <li><strong>An inverter with enough capacity</strong> for the charger, water pump and air con at the same time.</li>
+  </ul>
+  <p>You then mainly charge on sunny afternoons. In long cloudy spells a rapid charger in the village or along the A-7 is a useful backup. More on prices and rules at <a href="/en/costs/ev-charger/">cost of an EV charger</a>.</p>
+
+  <h2 id="slim">Smart energy management</h2>
+  <p>Without a grid it matters that heavy appliances do not all run at once and that the battery never runs flat. With <a href="/en/costs/smart-energy-management/">smart energy management</a>, for example with Home Assistant, the house handles that by itself:</p>
+  <ul>
+    <li>The water pump, water heater, washing machine and charger run when the sun shines and the battery is full enough.</li>
+    <li>You get an alert for a low battery, an empty water tank or an inverter fault.</li>
+    <li>Your phone shows, even from the UK, what the panels produce and how full the battery and water tank are.</li>
+    <li>The generator starts automatically when the battery gets too low after a few grey days.</li>
+  </ul>
 
   <h2 id="water">Water: tanks, rainwater and boreholes</h2>
   <p>Without mains water you need one or more of these sources. After the drought of recent years it is wise to be able to rely on two.</p>

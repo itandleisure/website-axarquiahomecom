@@ -516,6 +516,11 @@ export const costsEn: Topic[] = [
 <li><strong>Grants.</strong> Spanish and EU grants for self-consumption change often and sometimes run out quickly. Ask what is available when you get your quote.</li>
 </ul>`,
       },
+      {
+        id: 'slim',
+        h: 'Tip: smart energy management',
+        html: '<p>Let your panels, battery, EV charger, water heater and pool pump work together. With <a href="/en/costs/smart-energy-management/">smart energy management</a> they run automatically when the sun shines or power is cheap. With a variable tariff that often saves an extra €150 to €400 a year, and you follow everything on your phone.</p>',
+      },
     ],
     faq: [
       { q: 'How many panels do I need?', a: 'As a rule of thumb, about 0.7 kWp, so two panels, per 1,000 kWh of annual use. A house using 5,000 kWh needs 3.5 to 4 kWp, about 9 to 10 panels.' },
@@ -528,7 +533,7 @@ export const costsEn: Topic[] = [
       { href: '/en/costs/air-conditioning-and-heat-pumps/', label: 'Cost of air con and heat pumps' },
       { href: '/en/guides/off-grid-living-spain/', label: 'Guide: off-grid living in Spain' },
     ],
-    related: ['costs:thuisbatterij', 'costs:elektra', 'costs:airco'],
+    related: ['costs:thuisbatterij', 'costs:laadpaal', 'costs:energiebeheer'],
     sources: [
       { name: 'Selectra, solar panel prices for a family home (2026)', url: 'https://selectra.es/autoconsumo/instalacion/vivienda-unifamiliar' },
       { name: 'Autosolar, installing solar panels in Málaga', url: 'https://autosolar.es/mi-experiencia-placas-solares/instalacion-placas-solares-malaga' },
@@ -677,6 +682,11 @@ export const costsEn: Topic[] = [
         h: 'Grants and tax discounts',
         html: '<p>Andalusia and Madrid regularly run grant schemes for batteries with self-consumption, and many town halls give an IBI discount for solar. The schemes change often. Ask what is available when you get your quote.</p>',
       },
+      {
+        id: 'slim',
+        h: 'Tip: smart energy management',
+        html: '<p>Let your panels, battery, EV charger, water heater and pool pump work together. With <a href="/en/costs/smart-energy-management/">smart energy management</a> they run automatically when the sun shines or power is cheap. With a variable tariff that often saves an extra €150 to €400 a year, and you follow everything on your phone.</p>',
+      },
     ],
     faq: [
       { q: 'How long does a home battery last?', a: 'A lithium iron phosphate battery lasts 6,000 cycles or more, which is 12 to 15 years of daily use. Manufacturers usually give a 10-year warranty.' },
@@ -689,7 +699,7 @@ export const costsEn: Topic[] = [
       { href: '/en/guides/off-grid-living-spain/', label: 'Guide: off-grid living in Spain' },
       { href: '/en/problems/power-keeps-tripping/', label: 'Power keeps tripping' },
     ],
-    related: ['costs:zonnepanelen', 'costs:elektra', 'problems:stroom'],
+    related: ['costs:zonnepanelen', 'costs:laadpaal', 'costs:energiebeheer'],
     sources: [
       { name: 'Selectra, solar panels with a battery: prices 2026', url: 'https://selectra.es/autoconsumo/instalacion/vivienda-unifamiliar' },
       { name: 'Red Eléctrica, report on the blackout of 28 April 2025', url: 'https://www.ree.es/es/sala-de-prensa' },
@@ -838,6 +848,173 @@ export const costsEn: Topic[] = [
     ],
     ctaTitle: 'Need a retaining wall or drainage?',
     ctaText: 'Send photos of the wall or of where the water runs. You get advice and a price.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'laadpaal',
+    slug: 'ev-charger',
+    title: 'What does a home EV charger cost in Spain?',
+    seoTitle: 'Home EV charger in Spain: costs, solar charging and rules (2026)',
+    short: 'EV charger',
+    description: 'What does an EV charger (wallbox) at your home in the Axarquía cost? Prices per situation, charging from solar panels and a home battery, off-grid charging and the rules in an apartment block.',
+    lead: 'The cheapest place to charge an electric car is at home, and in the Axarquía ideally with your own solar power. What does a charger cost, what needs doing to your supply, and can it work on a finca without mains power?',
+    keyword: 'ev charger spain',
+    dienst: 'energie',
+    onderwerp: 'I would like a price for an EV charger.',
+    answer: 'A 7.4 kW EV charger (wallbox) installed in the Axarquía usually costs <strong>€900 to €1,800</strong> excluding VAT, including its own circuit and protection. If the parking space is far from the meter, such as in the garage of an apartment block, expect <strong>€1,500 to €3,000</strong>. With solar panels you charge almost for free during the day.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Prices per situation',
+        html: '<p>Indicative 2026 prices, including charger, cable, protection and registration, excluding VAT.</p>',
+        table: {
+          head: ['Situation', 'Details', 'Indication'],
+          rows: [
+            ['7.4 kW charger at the house', 'Drive or carport close to the consumer unit', '€900 – €1,800'],
+            ['Charger in a parking garage', 'Long cable from your meter, in a block', '€1,500 – €3,000'],
+            ['Smart charger for solar', 'Charges on the surplus from your panels', '+ €200 – €500'],
+            ['Higher contracted power', 'From 4.6 to 7 kW or more with the grid operator', '€100 – €300 one-off, higher standing charge'],
+            ['Extra solar panels for the car', '1.5 to 2 kWp, enough for 10,000 km a year', '€2,000 – €3,500'],
+          ],
+          note: 'Have the charger fitted together with solar panels or new wiring: it saves on chasing and making good. See the cost of <a href="/en/costs/solar-panels/">solar panels</a> and <a href="/en/costs/electrical-rewiring/">electrical rewiring</a>.',
+        },
+      },
+      {
+        id: 'zon',
+        h: 'Charging from solar panels and a home battery',
+        html: `<p>An average electric car uses 15 to 18 kWh per 100 km. At 10,000 km a year that is about 1,500 to 1,800 kWh. In the Axarquía 1 kWp of panels produces about 1,600 kWh a year, so 1 to 2 extra kWp covers most of it.</p>
+<ul>
+<li><strong>Charge during the day.</strong> A smart charger adjusts its speed to whatever the panels have spare. If you work from home or are retired, you can charge almost entirely on sunshine.</li>
+<li><strong>Avoid charging from the home battery.</strong> A 60 kWh car battery is far bigger than a 10 kWh home battery. Set the charger so it does not drain the home battery, so you still have power in the evening.</li>
+<li><strong>Cheap grid power at night.</strong> With a tariff that has a cheap night period, you charge outside sunny hours for a fraction of the daytime price.</li>
+</ul>`,
+      },
+      {
+        id: 'offgrid',
+        h: 'Charging on a finca without mains power',
+        html: `<p>Off-grid charging is possible, but needs a larger system. The car then mainly charges on sunny afternoons, at a lower rate of 2 to 3.7 kW, so the inverter can still run the rest of the house.</p>
+<ul>
+<li>Allow for <strong>2 to 3 kWp of extra panels</strong> for the car, because you produce less in winter and have no grid as a fallback.</li>
+<li>Choose an <strong>inverter with enough capacity</strong> for the charger plus the water pump and air con at the same time.</li>
+<li>Set the charger to <strong>charge only on surplus</strong>, so the home battery is full for the night.</li>
+</ul>
+<p>Read more in the guide <a href="/en/guides/off-grid-living-spain/">off-grid living in Spain</a>.</p>`,
+      },
+      {
+        id: 'regels',
+        h: 'Rules and registration',
+        html: `<ul>
+<li><strong>Authorised installer:</strong> a charging point falls under the Spanish wiring regulations (ITC-BT-52). An authorised installer fits it and registers it with the Junta.</li>
+<li><strong>In an apartment block:</strong> you do not need permission from the owners’ association (<em>comunidad</em>) for a charger in your own parking space. You notify them in writing beforehand, and pay for the installation and the power yourself.</li>
+<li><strong>Power:</strong> many homes have 4.6 or 5.75 kW. With a charger, 7 kW or more is comfortable, or use a charger with dynamic load balancing that backs off when the oven goes on.</li>
+<li><strong>Grants:</strong> there are regular national schemes for charging points and an income tax (IRPF) deduction. Conditions change; ask what is available when you get a quote.</li>
+</ul>`,
+      },
+      {
+        id: 'slim',
+        h: 'Tip: smart energy management',
+        html: '<p>Let your panels, battery, EV charger, water heater and pool pump work together. With <a href="/en/costs/smart-energy-management/">smart energy management</a> they run automatically when the sun shines or power is cheap. With a variable tariff that often saves an extra €150 to €400 a year, and you follow everything on your phone.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Can I not just charge from a normal socket?', a: 'Now and then, yes, but a normal socket is not made for hours at 2.3 kW. It gets hot and charges slowly: 10 to 12 km per hour. A charger is safer and three times as fast.' },
+      { q: 'What does a full charge at home cost?', a: 'Charging a 60 kWh battery at €0.18 per kWh costs about €11, often half that in the night period, and almost nothing on your own solar panels.' },
+      { q: 'Do I need to increase my contracted power?', a: 'Usually 7 kW or more is advisable. With a smart charger that backs off when you use a lot of other appliances, your current power can sometimes do.' },
+      { q: 'Can I drive electric off-grid?', a: 'Yes, with enough extra panels and an inverter that can cope. You then mainly charge on sunny afternoons. For long winter weeks a rapid charger on the road is a useful backup.' },
+    ],
+    links: [
+      { href: '/en/costs/solar-panels/', label: 'Cost of solar panels' },
+      { href: '/en/costs/home-battery/', label: 'Cost of a home battery' },
+      { href: '/en/guides/off-grid-living-spain/', label: 'Guide: off-grid living in Spain' },
+    ],
+    related: ['costs:zonnepanelen', 'costs:thuisbatterij', 'costs:energiebeheer'],
+    sources: [
+      { name: 'BOE, Ley de Propiedad Horizontal, article 17.5 (charging points in a comunidad)', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-1960-10906' },
+      { name: 'BOE, ITC-BT-52, installations for charging electric vehicles', url: 'https://www.boe.es/buscar/doc.php?id=BOE-A-2014-13681' },
+      { name: 'IDAE, grants for electric mobility', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'An EV charger at your house?',
+    ctaText: 'Send a photo of your consumer unit and where the car is parked. You get advice and a price, also combined with solar panels.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'energiebeheer',
+    slug: 'smart-energy-management',
+    title: 'Smart energy management: a lower energy bill, automatically',
+    seoTitle: 'Smart energy management in Spain: run solar, battery and EV charger automatically (2026)',
+    short: 'Smart energy management',
+    description: 'With smart energy management your house in Spain runs its solar panels, home battery, EV charger, water heater and pool pump by itself. Fixed or variable electricity tariff, what it saves and what it costs.',
+    lead: 'Solar panels, a home battery and an EV charger pay off most when they work together. With smart energy management your house handles that by itself: appliances run when the sun shines or power is cheap, and you see everything on your phone, even when you are not in Spain.',
+    keyword: 'smart energy management',
+    dienst: 'energiebeheer',
+    onderwerp: 'I would like advice on smart energy management.',
+    answer: 'Smart energy management usually costs a one-off <strong>€400 to €1,500</strong>, depending on how many devices you connect. With solar panels, a battery and a variable tariff it often saves an extra <strong>€150 to €400 a year</strong>, on top of what the panels already save.',
+    sections: [
+      {
+        id: 'wat',
+        h: 'What does smart energy management do?',
+        html: `<p>A small box in your consumer unit connects everything that generates, stores or uses a lot of power. The system looks at the sun, the electricity price and the battery level, and decides every quarter of an hour what happens:</p>
+<ul>
+<li>The <strong>water heater and pool pump</strong> run around midday, on your own solar power.</li>
+<li>The <strong>car</strong> charges on the surplus from the panels, or at night in the cheapest hours.</li>
+<li>The <strong>home battery</strong> tops up in cheap hours and supplies power in the expensive evening hours.</li>
+<li>The <strong>air con</strong> pre-cools the house on solar power before you get home.</li>
+<li>You get an <strong>alert</strong> for a power cut, an empty battery, a low water tank or a leak, even when you are back in the UK.</li>
+</ul>
+<p>We work with open systems such as Home Assistant, which work with almost every brand of inverter, battery and charger. So you are not tied to one manufacturer or a supplier’s app.</p>`,
+      },
+      {
+        id: 'contract',
+        h: 'Fixed or variable electricity tariff?',
+        html: `<p>In Spain you broadly choose between two kinds of contract:</p>
+<ul>
+<li><strong>Fixed price</strong> on the free market (<em>mercado libre</em>): the same price per kWh every hour, or a fixed price per time band. You know where you stand.</li>
+<li><strong>Variable price</strong>, such as the regulated PVPC tariff: the price changes every hour and is published the day before. Power is often cheap in the middle of the day and at night, and expensive in the evening.</li>
+</ul>
+<p>A fixed contract suits a holiday home without a battery or charger. If you can shift your usage, a variable contract pays more: the system reads tomorrow’s hourly prices and schedules the battery, car, water heater and pool pump in the cheapest hours. The more you can shift, the bigger the difference.</p>`,
+      },
+      {
+        id: 'prijzen',
+        h: 'What does it cost?',
+        html: '<p>Indicative 2026 prices, including installation and set-up, excluding VAT.</p>',
+        table: {
+          head: ['Package', 'What you get', 'Indication'],
+          rows: [
+            ['Insight', 'Energy meter, overview on your phone, alerts for faults', '€400 – €700'],
+            ['Smart control', 'Plus link to inverter, battery, water heater and pool pump', '€700 – €1,200'],
+            ['Complete', 'Plus EV charger, air con and control on hourly prices', '€1,000 – €1,500'],
+            ['Remote management', 'Updates, changes and help when something does not work', '€10 – €25 a month'],
+          ],
+          note: 'No solar panels or battery yet? See the cost of <a href="/en/costs/solar-panels/">solar panels</a>, a <a href="/en/costs/home-battery/">home battery</a> and an <a href="/en/costs/ev-charger/">EV charger</a>.',
+        },
+      },
+      {
+        id: 'offgrid',
+        h: 'On a finca without mains power',
+        html: '<p>Off-grid, smart energy management matters even more, because there is no grid as a fallback. The system only switches on heavy appliances when the battery is full enough, charges the car only on surplus, warns you of a low battery or low water tank, and shows you remotely that everything works. See the guide <a href="/en/guides/off-grid-living-spain/">off-grid living in Spain</a>.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Do I need solar panels for smart energy management?', a: 'Not necessarily. With just a variable tariff you can already run the water heater, pool pump and car in cheap hours. With panels and a battery it pays off most.' },
+      { q: 'Does it work with my brand of inverter or battery?', a: 'Almost always. Open systems such as Home Assistant work with the common brands. We check what you have when we quote.' },
+      { q: 'Can I follow everything from the UK?', a: 'Yes. Your phone shows what the panels produce, what the house uses and how full the battery is, and you get an alert if something is wrong.' },
+      { q: 'What happens if the internet goes down?', a: 'The system runs locally in the house and keeps controlling everything. Only remote viewing stops until the internet is back.' },
+    ],
+    links: [
+      { href: '/en/costs/solar-panels/', label: 'Cost of solar panels' },
+      { href: '/en/costs/home-battery/', label: 'Cost of a home battery' },
+      { href: '/en/costs/ev-charger/', label: 'Cost of an EV charger' },
+    ],
+    related: ['costs:zonnepanelen', 'costs:thuisbatterij', 'costs:laadpaal'],
+    sources: [
+      { name: 'Red Eléctrica, hourly PVPC prices', url: 'https://www.ree.es/es/datos/mercados/precio-voluntario-pequeno-consumidor' },
+      { name: 'CNMC, electricity tariff comparison', url: 'https://comparador.cnmc.gob.es/' },
+      { name: 'Home Assistant, open smart home platform', url: 'https://www.home-assistant.io/' },
+    ],
+    ctaTitle: 'Lower your energy bill automatically?',
+    ctaText: 'Tell us which panels, battery or charger you have and your electricity tariff. You get advice on what you can connect and what it saves.',
     minutes: 5,
     published: '2026-11-05',
   },
