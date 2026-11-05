@@ -89,5 +89,30 @@ const content: PlaceContent = {
       { q: 'Wie weit ist Arenas von der Küste entfernt?', a: 'Etwa zehn Kilometer bis Vélez-Málaga und etwas weiter bis zu den Stränden von Torre del Mar.' },
     ],
   },
+  sv: {
+    title: 'Arenas och Daimalos: bo nedanför borgen Bentomiz',
+    description: 'Allt om Arenas och Daimalos: ruinerna av Castillo de Bentomiz, mudéjarkyrkorna, mulåsnemarknaden, bostadspriser och att köpa tio kilometer från Vélez-Málaga.',
+    lead: 'Arenas ligger på 500 meters höjd mot berget Bentomiz, med ruinerna av en morisk borg ovanför och Vélez-Málaga tio kilometer bort. Tillsammans med grannbyn Daimalos är det en lugn plats nära kusten.',
+    intro: [
+      'Arenas ligger i kullarna norr om <a href="/sv/orter/velez-malaga/">Vélez-Málaga</a>, cirka tio kilometer från staden och 48 kilometer från Málaga. Till kommunen hör också Daimalos, två kilometer längre bort, och det utspridda Los Vados vid den gamla vägen till Viñuela. Tillsammans har de cirka 1 300 invånare.',
+      'Mitt emot byn reser sig Bentomiz, ett 711 meter högt berg med resterna av en morisk fästning på toppen. Utsikten från borgen sträcker sig längs hela kusten. I byn står kyrkan Santa Catalina bredvid en gammal minaret, och Daimalos har en egen mudéjarkyrka. I Arenas hålls också Feria de la Mula den 12 oktober, en marknad till mulåsnans ära, djuret som i århundraden gjorde jobbet på de branta sluttningarna.',
+      'Runt Arenas bor britter och andra nordeuropéer i villor och lanthus på sluttningarna, ofta med havsutsikt. Där det förr växte vinrankor och mandelträd tar mango och avokado allt oftare över. I oktober 2026 låg det genomsnittliga utgångspriset kring 2 300 € per m² (RealAdvisor), högre än i bergsbyarna längre in i landet tack vare det korta avståndet till kusten. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a>.',
+      'För vardagsinköp, sjukhus och skolor är du i Vélez-Málaga på en kvart. Har du ett lanthus utanför byn är det viktigt att kontrollera tillstånden, tillfartsvägen och vattenförsörjningen; läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>, och låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+    ],
+    facts: [
+      ['Invånare', 'cirka 1 300 (2025)'],
+      ['Byar', 'Arenas, Daimalos, Los Vados'],
+      ['Läge', 'kullar, 500 m'],
+      ['Vélez-Málaga', 'cirka 10 km'],
+      ['Sevärt', 'Castillo de Bentomiz, mudéjarkyrkor'],
+      ['Prisnivå', 'medel, cirka 2 300 € per m²'],
+    ],
+    forWhom: 'För dig som vill bo i kullarna med havsutsikt, med Vélez-Málaga och stränderna i Torre del Mar en kvart till tjugo minuter bort.',
+    faq: [
+      { q: 'Kan man gå till Castillo de Bentomiz?', a: 'Ja, ruinerna ligger på toppen av Bentomiz mitt emot byn. Utsikten över kusten och Axarquía är värd klättringen.' },
+      { q: 'Vad är Feria de la Mula?', a: 'En marknad den 12 oktober till mulåsnans ära, djuret som i århundraden gjorde jobbet på de branta sluttningarna runt Arenas.' },
+      { q: 'Hur långt är det från Arenas till kusten?', a: 'Cirka tio kilometer till Vélez-Málaga och lite längre till stränderna i Torre del Mar.' },
+    ],
+  },
 };
 export default content;

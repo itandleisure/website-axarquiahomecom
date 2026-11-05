@@ -205,5 +205,69 @@ const content: PlaceContent = {
       { q: 'Was ist der Tag der Mispel?', a: 'Am ersten Sonntag im Mai feiert Sayalonga die Ernte der Mispel (níspero) mit Verkostungen, Musik und einem Markt.' },
     ],
   },
+  sv: {
+    title: 'Sayalonga: bo i mispelbyn ovanför kusten',
+    description: 'Allt om Sayalonga och Corumbela: den runda kyrkogården, Mispelns dag, den stora internationella gemenskapen, bostadspriser och vad du ska veta om att köpa och renovera.',
+    lead: 'Sayalonga ligger i en grön dal full av mispel- och avokadoträd, mellan Cómpeta och kusten. Nästan hälften av invånarna kommer från utlandet, men det har förblivit en äkta andalusisk by.',
+    intro: [
+      'Sayalonga ligger på cirka 360 meters höjd på en ås mellan <a href="/sv/orter/competa/">Cómpeta</a> och kusten vid <a href="/sv/orter/algarrobo/">Algarrobo</a> och <a href="/sv/orter/torrox/">Torrox</a>. Dalen runt byn är full av japanska mispelträd (<em>nísperos</em>), avokado och mango, och på våren är det grönare här än i de flesta byar i regionen.',
+      'Byn är liten och lätt att lära känna, med vita gränder, en kyrka och en rund kyrkogård som lockar besökare från hela regionen. Högre upp på berget ligger Corumbela, kommunens andra by, med en mudéjarminaret från 1300-talet och en vidsträckt utsikt.',
+      'Sayalonga har cirka 1 700 invånare. År 2022 hade 45 % utländskt medborgarskap, en av de högsta andelarna i Axarquía. Många bor i villor och på fincor på sluttningarna runt byn.',
+    ],
+    facts: [
+      ['Invånare', 'cirka 1 700 (2025)'],
+      ['Utländska invånare', 'cirka 45 %'],
+      ['Läge', 'kullar, cirka 360 m'],
+      ['Kusten (Algarrobo, Torrox)', 'cirka 15 minuter'],
+      ['Byar', 'Sayalonga och Corumbela'],
+      ['Prisnivå', 'medel, cirka 2 700 € per m²'],
+    ],
+    forWhom: 'För dig som söker en kullby nära havet med en stor internationell gemenskap, men utan trängseln i Frigiliana eller Cómpeta. Sayalonga passar dig som vill ha en villa eller finca med utsikt, en kort bilresa från stränderna.',
+    see: {
+      title: 'Se och göra i Sayalonga: den runda kyrkogården, Corumbela och mispel',
+      description: 'Vad du kan göra i Sayalonga: den runda kyrkogården, Axarquías smalaste gränd, minareten i Corumbela, vandringar genom dalen och Mispelns dag.',
+      lead: 'Sayalonga är liten, men har några sevärdheter som du inte hittar någon annanstans.',
+      items: [
+        { name: 'Cementerio Redondo', text: 'En av få runda kyrkogårdar i Spanien, med gravnischerna i en cirkel runt en öppen innergård. Bredvid finns en utsiktsplats över dalen.' },
+        { name: 'Callejón de la Alcuza', text: 'En av de smalaste gränderna i Axarquía: på det smalaste stället är den bara cirka 56 centimeter bred.' },
+        { name: 'Ventorrillo del Aljibe', text: 'En cistern från al-Andalus-tiden som rymmer över 90 000 liter vatten.' },
+        { name: 'Corumbela', text: 'Kommunens lilla bergsby, vars kyrktorn är en mudéjarminaret från 1300-talet. Från torget ser du ut över hela kusten.' },
+        { name: 'Vandra i dalen', text: 'Stigar leder från Sayalonga genom odlingarna och längs floden till Corumbela och Árchez. En vacker vandring på våren, när mispeln är mogen.' },
+      ],
+      fiestas: [
+        { name: 'Día del Níspero', when: 'första söndagen i maj', text: 'byn firar mispelskörden med provsmakning, musik och marknad. Festen är erkänd som fest av turistiskt intresse.' },
+        { name: 'Candelarias', when: '7 september', text: 'brasor och ljus i byn.' },
+        { name: 'Romería Virgen del Rosario', when: '7 oktober', text: 'festen för Sayalongas skyddshelgon.' },
+        { name: 'Romería San Pedro', when: 'slutet av oktober', text: 'Corumbelas fest.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Sayalonga: villor, fincor, byhus och priser',
+      description: 'Köpa bostad i Sayalonga eller Corumbela? Vilka bostäder som finns, vad de kostar, service och vad du ska tänka på med en finca eller en renovering i kullarna.',
+      lead: 'Prismässigt ligger Sayalonga mellan kusten och bergsbyarna. Du betalar för den gröna omgivningen och den korta vägen till havet.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'I byn byhus med takterrass, ofta med utsikt över dalen. På sluttningarna runt omkring villor med pool och fincor med mispel-, avokado- och olivträd. I Corumbela främst små byhus med mycket karaktär.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 2 700 € per m² (RealAdvisor). Det är klart mer än i bergsbyarna längre in i landet, men mindre än i Frigiliana eller Nerja. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a>.',
+        ] },
+        { h: 'Service', p: [
+          'Byn har en consultorio, ett apotek, några affärer, barer och restauranger och en grundskola. För större stormarknader och annan service kör du till Algarrobo Costa eller Torrox Costa, och till Vélez-Málaga för sjukhuset.',
+        ] },
+        { h: 'Se upp med fincor', p: [
+          'På sluttningarna runt Sayalonga har mycket byggts och byggts ut, inte alltid med tillstånd. Kontrollera vid köpet att huset är lagligt, i vilket skick tillfartsvägen är och om det finns tillräckligt med vatten för trädgård och pool. Läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+        ] },
+        { h: 'Renovera i Sayalonga', p: [
+          'Villor från 1980- och 1990-talen har ofta föråldrade installationer, läckande tak eller terrasser och pooler som behöver renoveras. I den gamla byn är gränderna smala, vilket gör det svårare att få in material. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Hur långt är det från Sayalonga till stranden?', a: 'Cirka 15 minuter med bil till stränderna i Algarrobo Costa och Torrox Costa.' },
+      { q: 'Bor det många utlänningar i Sayalonga?', a: 'Ja. 2022 hade 45 % av invånarna utländskt medborgarskap, en av de högsta andelarna i Axarquía.' },
+      { q: 'Vad är Mispelns dag?', a: 'Den första söndagen i maj firar Sayalonga skörden av japansk mispel (níspero) med provsmakning, musik och marknad.' },
+    ],
+  },
 };
 export default content;

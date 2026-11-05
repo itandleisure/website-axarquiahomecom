@@ -85,5 +85,29 @@ const content: PlaceContent = {
       { q: 'Wann ist das Gazpacho-Fest in Alfarnatejo?', a: 'Am ersten Augustwochenende.' },
     ],
   },
+  sv: {
+    title: 'Alfarnatejo: bo i Axarquías lugna högland',
+    description: 'Allt om Alfarnatejo: den lilla bergsbyn bredvid Alfarnate, klippskyddet Vilo, gazpachofesten, de lägsta bostadspriserna i Axarquía och att köpa och renovera i bergen.',
+    lead: 'Med cirka 350 invånare är Alfarnatejo en av de minsta byarna i Axarquía, högt uppe i bergen i regionens nordvästra del. Här hittar du lugn, utrymme och de lägsta bostadspriserna i området.',
+    intro: [
+      'Alfarnatejo ligger högt uppe i bergen i nordvästra Axarquía, bredvid <a href="/sv/orter/alfarnate/">Alfarnate</a> och cirka 50 kilometer från Málaga. Byn har cirka 350 invånare och ligger bland åkrar, olivlundar och kala bergskammar. Klimatet är inlandets: varma somrar, kalla vintrar.',
+      'I byn står kyrkan Santo Cristo de Cabrilla, ombyggd under andra hälften av 1700-talet. På kommunens mark finns Abrigos del Vilo, klippskydd som är skyddade som kulturarv. Den mest kända festen är Fiesta del Gazpacho den första helgen i augusti. Maten är bergsmat: migas, en svampgryta (<em>morrete de setas</em>) och <em>sopa de cachorreñas</em>.',
+      'Köpare i Alfarnatejo hittar främst gamla byhus och gårdar med mark. I oktober 2026 låg det genomsnittliga utgångspriset kring 1 350 € per m² (RealAdvisor), den lägsta nivån av alla kommuner i Axarquía. Få bostäder säljs, så genomsnitten säger mindre här. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a> och, för ett gammalt hus, en rejäl <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringsbudget</a>.',
+      'Service finns knappt. För att handla och gå till läkaren kör du till de större byarna i närheten, och till Málaga eller Vélez-Málaga för sjukhuset. En renovering här måste ta hänsyn till kalla vintrar: isolering, ett tätt tak och uppvärmning är nödvändigt. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+    ],
+    facts: [
+      ['Invånare', 'cirka 350 (2025)'],
+      ['Läge', 'inland, högt i bergen'],
+      ['Málaga', 'cirka 50 km'],
+      ['Sevärt', 'Abrigos del Vilo'],
+      ['Största fest', 'Fiesta del Gazpacho (augusti)'],
+      ['Prisnivå', 'lägst i Axarquía, cirka 1 350 € per m²'],
+    ],
+    forWhom: 'För dig som söker verklig stillhet och gott om utrymme för lite pengar, och som är beredd att bo långt från kusten och service.',
+    faq: [
+      { q: 'Är Alfarnatejo den billigaste orten i Axarquía?', a: 'Sett till genomsnittliga utgångspriser i oktober 2026, ja: kring 1 350 € per m². Eftersom få bostäder säljs kan priset per hus variera kraftigt.' },
+      { q: 'När är gazpachofesten i Alfarnatejo?', a: 'Den första helgen i augusti.' },
+    ],
+  },
 };
 export default content;

@@ -206,5 +206,69 @@ const content: PlaceContent = {
       { q: 'Gibt es in Periana öffentliche Verkehrsmittel?', a: 'Ja, eine Buslinie verbindet Periana mit Málaga. Für den Alltag brauchen Sie in der Praxis ein Auto.' },
     ],
   },
+  sv: {
+    title: 'Periana: bo bland oliver och persikor ovanför sjön',
+    description: 'Allt om Periana: byn ovanför La Viñuela-sjön, olivoljan av verdialsorten och persikorna, småbyarna Mondrón och Guaro, bostadspriser och att köpa på landsbygden.',
+    lead: 'Periana ligger på en utlöpare av Sierra de Alhama, med La Viñuela-sjön nedanför. Det är en levande jordbruksby, känd för sin olivolja och för några av Spaniens bästa persikor.',
+    intro: [
+      'Periana ligger på 550 meters höjd i norra Axarquía, cirka 58 kilometer från Málaga. Från byn ser du ner på <a href="/sv/orter/vinuela/">La Viñuela</a>-sjön och ut över kullarna mot havet. Bakom byn reser sig bergen i Sierra de Alhama och Sierra de Enmedio.',
+      'Med drygt 3 300 invånare är Periana en av de större inlandsbyarna. Kommunen är stor och utspridd: förutom själva byn finns småbyar som Mondrón, känd för olivträd som är över tusen år gamla, Guaro, där floden med samma namn har sin källa, och Baños de Vilo, med resterna av en gammal kurort.',
+      'Landskapet kretsar kring jordbruket. Sluttningarna är täckta av olivlundar för verdialolja, och på sommaren skördas här persikor som är kända i hela Spanien.',
+    ],
+    facts: [
+      ['Invånare', 'drygt 3 300 (2025)'],
+      ['Läge', 'inland, 550 m'],
+      ['Málaga', 'cirka 58 km'],
+      ['La Viñuela-sjön', 'nedanför byn'],
+      ['Känt för', 'olivolja (verdial) och persikor'],
+      ['Prisnivå', 'låg, cirka 1 800 € per m²'],
+    ],
+    forWhom: 'För dig som söker den riktiga landsbygden, med utrymme, en bit mark och en by där livet följer skörden. Periana passar dig som vill ha en cortijo eller finca med olivträd och inte behöver kusten varje dag.',
+    see: {
+      title: 'Se och göra i Periana: Baños de Vilo, olivolja och persikor',
+      description: 'Vad du kan göra i Periana: ruinerna av kurorten Baños de Vilo, de tusenåriga olivträden i Mondrón, passet Puerto del Sol, sjön och persikofesterna.',
+      lead: 'Periana är ingen turistby. Just därför är det ett bra ställe att se hur Axarquías inland lever.',
+      items: [
+        { name: 'Baños de Vilo', text: 'Mineralkällor som var en känd kurort på 1700- och 1800-talen. Av badhuset finns murar och en bassäng kvar, på en vacker grön plats.' },
+        { name: 'Olivträden i Mondrón', text: 'I och runt byn Mondrón står olivträd som är över tusen år gamla. Här tillverkas verdialoljan som Periana är känt för.' },
+        { name: 'Puerto del Sol', text: 'Bergspasset på vägen mot Alfarnate, med vidsträckt utsikt över Axarquía och sjön.' },
+        { name: 'La Viñuela-sjön', text: 'Provinsens största vattenreservoar ligger nedanför Periana. Längs stränderna finns vandrings- och cykelleder och picknickplatser.' },
+        { name: 'Guaro', text: 'Byn där floden Guaro har sin källa, floden som fyller La Viñuela-sjön.' },
+      ],
+      fiestas: [
+        { name: 'San Isidro Labrador', when: 'kring 15 maj', text: 'en feria i flera dagar till ära för böndernas skyddshelgon.' },
+        { name: 'Romería', when: 'början av juni', text: 'en vallfärd till stranden av La Viñuela-sjön.' },
+        { name: 'Feria del Melocotón', when: 'kring 25 juli', text: 'persikofesten, mitt i skörden.' },
+        { name: 'Feria de agosto', when: 'slutet av augusti', text: 'byns sommarfest.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Periana: cortijos, fincor, byhus och priser',
+      description: 'Köpa bostad i Periana? Vilka bostäder som finns, vad de kostar, service i byn och vad du ska tänka på med en cortijo eller finca i inlandet.',
+      lead: 'I Periana får du mycket hus och mark för pengarna. Du bor bland spanjorer, cirka 45 minuter från kusten.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'I byn rymliga byhus, ofta med patio. I småbyarna och på landsbygden cortijos och fincor med oliv-, mandel- och fruktträd, från enkla bondgårdar till ombyggda lanthus med pool.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 1 800 € per m² (RealAdvisor), ungefär hälften av nivån vid kusten. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a> och, för ett gammalt lanthus, en <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringsbudget</a>.',
+        ] },
+        { h: 'Service', p: [
+          'Som en större by har Periana vårdcentral, apotek, livsmedelsbutiker, banker och en grundskola. Det går buss till Málaga. Till sjukhuset åker du till Vélez-Málaga.',
+        ] },
+        { h: 'Se upp med lanthus', p: [
+          'Många bostäder ligger på landsbygden. Kontrollera vid köpet att huset är lagligt, hur tillfartsvägen ser ut och varifrån vattnet kommer: en egen källa, en gemensam anslutning eller det kommunala nätet. Läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+        ] },
+        { h: 'Renovera i Periana', p: [
+          'På 550 meter är vintrarna svalare än vid kusten. Isolering, bra fönster och uppvärmning hör till en renovering här. Området är seismiskt aktivt (1884 förstörde en jordbävning stora delar av byn), så låt också kontrollera konstruktionen i gamla hus. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Hur långt är det från Periana till kusten?', a: 'Till Vélez-Málaga och Torre del Mar är det cirka 45 minuter med bil, via La Viñuela-sjön.' },
+      { q: 'Vad är Periana känt för?', a: 'Sin olivolja av verdialsorten, med över tusen år gamla olivträd i Mondrón, och sina persikor.' },
+      { q: 'Finns det kollektivtrafik i Periana?', a: 'Ja, en busslinje förbinder Periana med Málaga. I vardagen behöver du i praktiken bil.' },
+    ],
+  },
 };
 export default content;

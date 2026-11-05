@@ -86,5 +86,29 @@ const content: PlaceContent = {
       { q: 'Wohnen Ausländer in Cútar?', a: 'Ja, 2022 hatten fast 30% der Einwohner eine ausländische Staatsangehörigkeit.' },
     ],
   },
+  sv: {
+    title: 'Cútar: bo i en liten morisk by i floddalen',
+    description: 'Allt om Cútar: den lilla byn med en arabisk fontän, mudéjarkyrkan, Monfífestivalen, den internationella gemenskapen, bostadspriser och att köpa och renovera.',
+    lead: 'Cútar är en liten vit by ovanför Benamargosadalen, med en arabisk fontän och en kyrka på högsta punkten. Varje höst väcks det moriska förflutna till liv under Monfífestivalen.',
+    intro: [
+      'Cútar ligger på 331 meters höjd i kullarna i centrala Axarquía, mellan <a href="/sv/orter/el-borge/">El Borge</a>, <a href="/sv/orter/benamargosa/">Benamargosa</a> och <a href="/sv/orter/comares/">Comares</a>, cirka 40 kilometer från Málaga. Här bor cirka 600 personer, och nästan tre av tio har utländskt medborgarskap.',
+      'På byns högsta punkt står mudéjarkyrkan Encarnación från 1500-talet. Söder om byn finns en arabisk fontän som är unik i provinsen. I mitten av oktober firar Cútar Fiesta del Monfí, uppkallad efter moriskerna som flydde upp i bergen efter upproret, med marknader, musik och moriska dräkter. Trakten är känd för olivolja, russin och sött moscatelvin.',
+      'Bostäderna i Cútar är främst byhus och lanthus på sluttningarna med olivträd och vinrankor. I oktober 2026 låg det genomsnittliga utgångspriset kring 1 550 € per m² (RealAdvisor). Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a>. För ett lanthus är tillstånden, tillfartsvägen och vattenförsörjningen det viktigaste att kontrollera; läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+      'Cútar har lite service. För att handla, gå till läkaren och till sjukhuset kör du till Vélez-Málaga eller de större byarna i närheten. Låt <a href="/sv/besiktning/">besiktiga</a> ett gammalt byhus innan du köper, eftersom fukt och gamla tak är de vanligaste problemen här.',
+    ],
+    facts: [
+      ['Invånare', 'cirka 600 (2025)'],
+      ['Utländska invånare', 'nästan 30 %'],
+      ['Läge', 'kullar, 331 m'],
+      ['Málaga', 'cirka 40 km'],
+      ['Sevärt', 'arabisk fontän, mudéjarkyrka'],
+      ['Prisnivå', 'låg, cirka 1 550 € per m²'],
+    ],
+    forWhom: 'För dig som söker en liten, lugn by med en internationell gemenskap, låga priser och en egen historia.',
+    faq: [
+      { q: 'Vad är Fiesta del Monfí?', a: 'En festival i mitten av oktober där Cútar firar sitt moriska förflutna, med marknader, musik och dräkter. Monfíes var morisker som flydde upp i bergen efter upproret på 1500-talet.' },
+      { q: 'Bor det utlänningar i Cútar?', a: 'Ja, 2022 hade nästan 30 % av invånarna utländskt medborgarskap.' },
+    ],
+  },
 };
 export default content;

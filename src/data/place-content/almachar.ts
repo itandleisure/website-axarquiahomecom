@@ -85,5 +85,29 @@ const content: PlaceContent = {
       { q: 'Was ist Ajoblanco?', a: 'Eine kalte Suppe aus Mandeln, Knoblauch, Brot, Olivenöl und Essig, traditionell mit Trauben oder Rosinen serviert.' },
     ],
   },
+  sv: {
+    title: 'Almáchar: bo i russinens och ajoblancons by',
+    description: 'Allt om Almáchar: den vita byn bland russinvingårdarna, Ajoblancodagen, bostadspriser och vad du ska veta om att köpa och renovera i kullarna.',
+    lead: 'Almáchar ligger bland branta sluttningar med vinrankor där russin har torkats i århundraden. Varje september firar byn Ajoblancodagen, till ära för traktens kalla mandel- och vitlökssoppa.',
+    intro: [
+      'Almáchar ligger på 246 meters höjd i kullarna i västra Axarquía, cirka 35 kilometer från Málaga längs vägen. Byn har nästan 2 000 invånare och ligger längs Ruta de la Pasa, vägen genom russinbyarna. På sluttningarna runt byn finns cirka 300 hektar moscateldruvor som här torkas i solen till russin. Allt fler tomter blir avokado- eller mangoodlingar.',
+      'Byn har smala vita gränder runt kyrkan San Mateo, och på en kulle i närheten står ett stort kors som gett byn dess smeknamn, Almáchar de la Cruz. Den mest kända festen är Día del Ajoblanco den första lördagen i september, erkänd som fest av turistiskt intresse i Andalusien, med gratis ajoblanco och russin åt alla.',
+      'Köpare i Almáchar väljer mellan byhus och lanthus i vingårdarna, ofta med egen mark. I oktober 2026 låg det genomsnittliga utgångspriset kring 1 550 € per m² (RealAdvisor), bland de lägre nivåerna i Axarquía. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a>. Lanthus på de branta sluttningarna nås ofta bara via smala grusvägar; låt kontrollera tillfart, tillstånd och vattenförsörjning och läs vår guide om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a>.',
+      'Byn har grundläggande service. För större inköp och sjukhuset kör du till Vélez-Málaga, och till Málaga för storstaden. I gamla byhus är fukt, gamla rör och tak de vanliga problemen; låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+    ],
+    facts: [
+      ['Invånare', 'nästan 2 000 (2025)'],
+      ['Läge', 'kullar, 246 m'],
+      ['Málaga', 'cirka 35 km'],
+      ['Känt för', 'russin och ajoblanco'],
+      ['Största fest', 'Día del Ajoblanco (september)'],
+      ['Prisnivå', 'låg, cirka 1 550 € per m²'],
+    ],
+    forWhom: 'För dig som söker en äkta by bland vingårdarna, med låga priser och Málaga cirka 45 minuter bort.',
+    faq: [
+      { q: 'När är Ajoblancodagen i Almáchar?', a: 'Lördagen den första helgen i september. Byn bjuder på ajoblanco och russin, med musik och dans.' },
+      { q: 'Vad är ajoblanco?', a: 'En kall soppa på mandel, vitlök, bröd, olivolja och vinäger, som traditionellt serveras med vindruvor eller russin.' },
+    ],
+  },
 };
 export default content;

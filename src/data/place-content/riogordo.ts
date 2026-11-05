@@ -205,5 +205,69 @@ const content: PlaceContent = {
       { q: 'Ist Riogordo günstig?', a: 'Ja, die durchschnittlichen Angebotspreise lagen im Oktober 2026 bei rund 1.600 € pro m², einem der niedrigsten Niveaus der Axarquía.' },
     ],
   },
+  sv: {
+    title: 'Riogordo: bo i byn med passionsspelet El Paso',
+    description: 'Allt om Riogordo: passionsspelet El Paso, Tajo de Gómer, en by en halvtimme från Málaga, bostadspriser och vad du ska veta om att köpa och renovera i inlandet.',
+    lead: 'Riogordo är en lugn jordbruksby i västra Axarquía, en halvtimme från Málaga. Varje vår spelar halva byn passionsspelet El Paso, som lockar besökare från när och fjärran.',
+    intro: [
+      'Riogordo ligger på 381 meters höjd i en dal på Axarquías västra sida, cirka 36 kilometer från Málaga och 30 kilometer från <a href="/sv/orter/velez-malaga/">Vélez-Málaga</a>. Runt byn finns olivlundar och sädesfält, med klippan Tajo de Gómer (1 129 meter) som landmärke.',
+      'Byn grundades 1552, men traktens historia går längre tillbaka: nedströms ligger Cortijo de Auta, som enligt traditionen är födelseplatsen för Omar ben Hafsun, rebellen som utmanade kalifatet i Córdoba på 800-talet.',
+      'Med drygt 2 800 invånare är Riogordo en livlig by med egna affärer, barer och en stark gemenskap. Andelen utlänningar är mindre än i byarna nära kusten.',
+    ],
+    facts: [
+      ['Invånare', 'drygt 2 800 (2025)'],
+      ['Läge', 'inland, 381 m'],
+      ['Málaga', 'cirka 36 km, drygt en halvtimme'],
+      ['Vélez-Málaga', 'cirka 30 km'],
+      ['Känt för', 'El Paso, sniglar och olivolja'],
+      ['Prisnivå', 'låg, cirka 1 600 € per m²'],
+    ],
+    forWhom: 'För dig som söker en riktig spansk by, med låga priser och Málaga närmare än från de flesta byar i Axarquía. Riogordo passar dig som vill ha lugn och utrymme och gärna deltar i bylivet.',
+    see: {
+      title: 'Se och göra i Riogordo: El Paso, museet och Tajo de Gómer',
+      description: 'Vad du kan göra i Riogordo: passionsspelet El Paso i påsk, det etnografiska museet i den gamla oljekvarnen, vandra till Tajo de Gómer och byns fester.',
+      lead: 'Riogordo är en lugn by året runt, med några dagar om året då den vaknar till liv på riktigt.',
+      items: [
+        { name: 'El Paso de Riogordo', text: 'På långfredagen och påskaftonen spelar byn upp Kristi lidande utomhus, med hundratals invånare som skådespelare och statister. Det är ett av Andalusiens mest kända passionsspel och lockar tusentals åskådare varje år.' },
+        { name: 'Museo Etnográfico', text: 'Det etnografiska museet finns i en gammal oljekvarn och visar hur man förr levde och arbetade på landsbygden, med vinkällare och kvarnar från 1600- och 1800-talen.' },
+        { name: 'Tajo de Gómer', text: 'Den iögonfallande klippan på 1 129 meter är kommunens högsta punkt. Från toppen ser du ut över hela västra Axarquía.' },
+        { name: 'Sniglar och olivolja', text: 'Riogordo är känt för sin sniggelgryta (<em>caracoles</em>) och för olivoljan från kooperativet, som du kan köpa i byn.' },
+      ],
+      fiestas: [
+        { name: 'El Paso', when: 'långfredagen och påskaftonen', text: 'passionsspelet utomhus.' },
+        { name: 'Feria de mayo', when: 'slutet av maj', text: 'vårens feria.' },
+        { name: 'Día del Caracol', when: '1 juni', text: 'byn bjuder på sniglar tillagade på traditionellt sätt.' },
+        { name: 'Feria de agosto', when: 'mitten av augusti', text: 'huvudfesten till ära för San Jacinto och Nuestra Señora de Gracia.' },
+        { name: 'Fiesta del Candil', when: '7 september', text: 'en traditionell fest med ljus i byn.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Riogordo: byhus, cortijos och priser',
+      description: 'Köpa bostad i Riogordo? Vilka bostäder som finns, vad de kostar, service i byn och vad du ska tänka på med en cortijo eller ett gammalt byhus.',
+      lead: 'Riogordo är en av de billigaste orterna i Axarquía, samtidigt som Málaga ligger drygt en halvtimme bort. Det gör byn intressant för dig som söker ett stort hus med liten budget.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'I byn främst rymliga byhus, ofta med patio eller en liten trädgård. Utanför byn cortijos med olivträd och åkrar. Det finns lite nyproduktion och nästan inga villor till salu.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 1 600 € per m² (RealAdvisor), mindre än hälften av nivån vid kusten. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a> och, för ett gammalt hus, en <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringsbudget</a>.',
+        ] },
+        { h: 'Service', p: [
+          'Riogordo har vårdcentral, apotek, livsmedelsbutiker, en bank och en grundskola. För sjukhus och större affärer åker du till Málaga eller Vélez-Málaga.',
+        ] },
+        { h: 'Se upp med cortijos', p: [
+          'För lanthus, kontrollera noga den rättsliga statusen, tillfartsvägen och vattenförsörjningen. Läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+        ] },
+        { h: 'Renovera i Riogordo', p: [
+          'Gamla byhus har ofta väggar av sten och lera, bjälktak av trä och tak som behöver bytas. I inlandet är vintrarna svalare, så planera in isolering och uppvärmning i renoveringen. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'När spelas El Paso i Riogordo?', a: 'På långfredagen och påskaftonen, veckan före påsk. Kom i god tid, för det kommer många besökare.' },
+      { q: 'Hur långt är det från Riogordo till Málaga?', a: 'Cirka 36 kilometer, drygt en halvtimme med bil. Det gör Riogordo närmare Málaga än de flesta byar i Axarquía.' },
+      { q: 'Är Riogordo billigt?', a: 'Ja, det genomsnittliga utgångspriset låg i oktober 2026 kring 1 600 € per m², en av de lägsta nivåerna i Axarquía.' },
+    ],
+  },
 };
 export default content;

@@ -152,5 +152,51 @@ const content: PlaceContent = {
       { q: 'Wo kauft man ein, wenn man in Árchez wohnt?', a: 'In Cómpeta oder Sayalonga für den täglichen Bedarf, an der Küste oder in Vélez-Málaga für größere Supermärkte.' },
     ],
   },
+  sv: {
+    title: 'Árchez: bo i provinsen Málagas minsta kommun',
+    description: 'Allt om Árchez: den lilla flodbyn med en av Andalusiens vackraste mudéjarminareter, läget mellan Cómpeta och Sayalonga, bostadspriser och att köpa och renovera.',
+    lead: 'Árchez är den minsta kommunen i provinsen Málaga: en handfull vita gränder i en floddal, med en morisk minaret som kyrktorn. Lugnare än så här blir det inte i Axarquía.',
+    intro: [
+      'Árchez ligger på cirka 435 meters höjd i Turvilladalen, mellan <a href="/sv/orter/competa/">Cómpeta</a>, <a href="/sv/orter/canillas-de-albaida/">Canillas de Albaida</a> och <a href="/sv/orter/sayalonga/">Sayalonga</a>. Vélez-Málaga ligger cirka 21 kilometer bort, Málaga 52. Med en yta på under fem kvadratkilometer är det provinsens minsta kommun.',
+      'Den mest kända sevärdheten är kyrktornet: en minaret från morisk tid, dekorerad med geometriskt tegelmönster i almohadisk stil. Byn ligger längs Ruta Mudéjar, vägen förbi de moriska tornen och kyrkorna i östra Axarquía. Längs floden står fortfarande gamla kvarnar.',
+      'Här bor drygt 400 personer, nästan en tredjedel från utlandet. Runt byn finns terrasser med olivträd och vinrankor, och några lanthus på sluttningarna.',
+    ],
+    facts: [
+      ['Invånare', 'drygt 400 (2025)'],
+      ['Utländska invånare', 'nästan en tredjedel'],
+      ['Läge', 'berg, cirka 435 m, vid floden'],
+      ['Vélez-Málaga', 'cirka 21 km'],
+      ['Málaga', 'cirka 52 km'],
+      ['Prisnivå', 'låg till medel, cirka 2 000 € per m²'],
+    ],
+    forWhom: 'För dig som söker verkligt lugn i en liten by, med Cómpeta och Sayalonga som grannar för vardagsbehoven. Árchez passar dig som söker ett byhus eller ett litet lanthus och inte har något emot att utbudet är begränsat.',
+    living: {
+      title: 'Bo i Árchez: byhus, lanthus och priser',
+      description: 'Köpa bostad i Árchez? Vilka bostäder som finns, vad de kostar, var du hittar service och vad du ska tänka på vid renovering i en liten bergsby vid floden.',
+      lead: 'Det är sällan hus kommer ut till försäljning i Árchez. Den som bor här väljer tystnaden och accepterar bilresan till Cómpeta eller kusten.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'I byn gamla byhus, ofta med tjocka väggar och en terrass mot floden. Utanför byn ett begränsat antal lanthus och fincor på terrasserna. Eftersom kommunen är så liten är utbudet också litet.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 2 000 € per m² (RealAdvisor). Eftersom få bostäder säljs säger genomsnitten mindre här än på större orter. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a> och, för ett gammalt hus, en <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringsbudget</a>.',
+        ] },
+        { h: 'Service', p: [
+          'Árchez har nästan ingen service själv. För att handla, gå till läkaren och äta ute åker du till Cómpeta eller Sayalonga, för större livsmedelsbutiker till kusten och till Vélez-Málaga för sjukhuset. Bil är ett måste.',
+        ] },
+        { h: 'Se upp med lanthus', p: [
+          'För ett hus utanför byn, kontrollera att det är lagligt, i vilket skick tillfartsvägen är och varifrån vattnet kommer. Läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+        ] },
+        { h: 'Renovera i Árchez', p: [
+          'Hus i dalen och nära floden är mer utsatta för fukt i väggar och golv. God dränering, ventilation och torra grunder förtjänar mest uppmärksamhet vid en renovering. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Vad finns att se i Árchez?', a: 'Framför allt kyrktornet, en minaret från morisk tid med geometriskt tegelmönster. Byn ligger längs Ruta Mudéjar, och gångstigar längs floden leder till grannbyarna.' },
+      { q: 'Är Árchez verkligen den minsta kommunen i Málaga?', a: 'Ja, med en yta på 4,8 kvadratkilometer är Árchez provinsens minsta kommun.' },
+      { q: 'Var handlar man om man bor i Árchez?', a: 'I Cómpeta eller Sayalonga för vardagsinköp, och vid kusten eller i Vélez-Málaga för större livsmedelsbutiker.' },
+    ],
+  },
 };
 export default content;

@@ -208,5 +208,69 @@ const content: PlaceContent = {
       { q: 'Wie weit ist Alcaucín von der Küste entfernt?', a: 'Nach Vélez-Málaga und Torre del Mar sind es etwa 45 Minuten mit dem Auto, über den Stausee La Viñuela.' },
     ],
   },
+  sv: {
+    title: 'Alcaucín: bo nedanför Sierra de Tejeda',
+    description: 'Allt om Alcaucín: bergsbyn med en stor brittisk gemenskap, Castillo de Zalía, El Alcázar, bostadspriser och vad du ska kontrollera extra noga med ett hus på landsbygden.',
+    lead: 'Alcaucín ligger mot Sierra de Tejeda, med naturparkens klippväggar precis bakom byn och La Viñuela-sjön nedanför. Mer än fyra av tio invånare kommer från utlandet, de flesta från Storbritannien.',
+    intro: [
+      'Alcaucín ligger på 510 meters höjd i nordöstra Axarquía, cirka 54 kilometer från Málaga och strax ovanför <a href="/sv/orter/vinuela/">La Viñuela</a>-sjön. Bakom byn börjar naturparken Sierras de Tejeda, Almijara y Alhama, och vägen till Granada går här över passet vid Zafarraya.',
+      'Byn har cirka 2 700 invånare. År 2022 hade 42 % utländskt medborgarskap, de flesta brittiskt. De flesta av dem bor inte i själva byn utan i villor och lanthus utspridda över sluttningarna.',
+      'Det är just den landsbygden som också gett Alcaucín dess rykte: på 2000-talet hamnade byn i nyheterna eftersom hus hade byggts utan giltigt bygglov. För köpare betyder det att en grundlig juridisk kontroll är ännu viktigare här.',
+    ],
+    facts: [
+      ['Invånare', 'cirka 2 700 (2025)'],
+      ['Utländska invånare', 'cirka 42 %, mest britter'],
+      ['Läge', 'berg, 510 m'],
+      ['Málaga', 'cirka 54 km'],
+      ['La Viñuela-sjön', 'några minuter'],
+      ['Prisnivå', 'låg, cirka 1 800 € per m²'],
+    ],
+    forWhom: 'För dig som vill bo i bergen bland en engelskspråkig gemenskap, med mycket natur och rymliga hus till lågt pris. Alcaucín passar dig som söker en villa eller ett lanthus med utsikt och är beredd att låta kontrollera papperen grundligt.',
+    see: {
+      title: 'Se och göra i Alcaucín: Castillo de Zalía, El Alcázar och Tejeda',
+      description: 'Vad du kan göra i Alcaucín: ruinerna av Castillo de Zalía, rekreationsområdet El Alcázar, vandra i Sierra de Tejeda, Fuente de los Cinco Caños och kastanjefesten.',
+      lead: 'Alcaucín är en by för friluftsmänniskor: vandring, picknick och klättring kommer först här.',
+      items: [
+        { name: 'Castillo de Zalía', text: 'Resterna av en fästning som fanns redan under antiken och byggdes om av morerna. De katolska monarkerna intog den 1485. Ruinen står på en kulle med utsikt över Guarodalen.' },
+        { name: 'El Alcázar', text: 'Ett rekreationsområde cirka fem kilometer från byn, mitt i naturparken, med picknickplatser under träden och startpunkt för vandringar till topparna i Sierra de Tejeda.' },
+        { name: 'Byn', text: 'I centrum finns kyrkan Nuestra Señora del Rosario från 1700-talet, kapellet Ermita de Jesús del Calvario från 1600-talet och Fuente de los Cinco Caños, fontänen med fem pipar.' },
+        { name: 'Boquete de Zafarraya', text: 'Nära passet mot Granada hittades 1983 lämningar efter neandertalare. Själva passet bjuder på en imponerande utsikt över Axarquía.' },
+      ],
+      fiestas: [
+        { name: 'San Sebastián', when: '20 januari', text: 'skyddshelgonets dag.' },
+        { name: 'Romería de San Isidro', when: '15 maj', text: 'en vallfärd till El Alcázar i bergen.' },
+        { name: 'Byfesterna', when: 'första helgen i augusti', text: 'fem dagars firande, bland annat en flamencofestival.' },
+        { name: 'Candelarias', when: '7 och 8 september', text: 'brasor i byn.' },
+        { name: 'Fiesta de la Castaña', when: 'första helgen i november', text: 'kastanjefesten.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Alcaucín: villor, lanthus och priser',
+      description: 'Köpa bostad i Alcaucín? Vilka bostäder som finns, vad de kostar, service och varför tillstånden för ett lanthus måste kontrolleras extra noga.',
+      lead: 'I Alcaucín får du mycket utrymme och utsikt för pengarna. Men ingenstans i Axarquía är kontrollen av husets rättsliga status lika viktig som här.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'De flesta bostäder till salu är villor och lanthus på landsbygden, ofta med pool, terrasser och utsikt över sjön. I själva byn finns byhus, och i Puente Don Manuel, nere vid vägen, vanliga familjebostäder.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 1 800 € per m² (RealAdvisor), ungefär hälften av nivån vid kusten. Lanthus med tveksam rättslig status bjuds ibland ut till påfallande låga priser. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a>.',
+        ] },
+        { h: 'Tillstånden först', p: [
+          'På 2000-talet hamnade Alcaucín i nyheterna för bostäder som byggts på landsbygden utan giltigt bygglov. Låt före köpet en oberoende advokat kontrollera att huset är registrerat, om det har en AFO eller annat erkännande och om det pågår några ärenden. Läs våra guider om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a> och om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a>.',
+        ] },
+        { h: 'Service', p: [
+          'Byn har en consultorio, ett apotek, några affärer och barer och en grundskola. För livsmedelsbutiker åker du till Puente Don Manuel eller Viñuela, och till Vélez-Málaga för sjukhuset.',
+        ] },
+        { h: 'Renovera i Alcaucín', p: [
+          'Med ett lanthus får du ofta bara utföra underhåll, inte bygga ut. Ta därför reda på vad som är tillåtet innan du planerar ett extra rum eller en pool. Villor som är tjugo år eller äldre behöver ofta åtgärder på tak, terrasser och installationer. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Bor det många britter i Alcaucín?', a: 'Ja. 2022 hade 42 % av invånarna utländskt medborgarskap, och den största gruppen kom från Storbritannien.' },
+      { q: 'Är det säkert att köpa hus i Alcaucín?', a: 'Ja, förutsatt att du i förväg låter kontrollera att huset är lagligt byggt och registrerat. Just här är oberoende juridisk rådgivning ingen lyx.' },
+      { q: 'Hur långt är det från Alcaucín till kusten?', a: 'Till Vélez-Málaga och Torre del Mar är det cirka 45 minuter med bil, via La Viñuela-sjön.' },
+    ],
+  },
 };
 export default content;
