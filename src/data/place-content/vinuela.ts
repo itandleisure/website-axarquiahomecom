@@ -204,5 +204,68 @@ const content: PlaceContent = {
       { q: 'Leben viele Ausländer in Viñuela?', a: 'Ja, über 40% der Einwohner, vor allem Briten, dazu Deutsche und Franzosen.' },
     ],
   },
+  sv: {
+    title: 'Viñuela: bo och köpa vid Axarquías sjö',
+    description: 'Allt om Viñuela: reservoaren, byarna Viñuela, Los Romanes och Los Gómez, den stora brittiska gemenskapen, bostadspriser och vad du ska tänka på med hus på landet.',
+    lead: 'Mitt i Axarquía ligger den största sjön i provinsen Málaga, omgiven av böljande kullar, olivträd och byn Viñuela. Här får du mycket utrymme för pengarna.',
+    intro: [
+      'Viñuela är en liten inlandskommun med drygt 2 000 invånare, cirka tjugo minuter från kusten vid Torre del Mar. Byn ligger på cirka 150 meters höjd vid stranden av Embalse de La Viñuela, provinsens största reservoar, med bergskammen La Maroma bakom.',
+      'Nästan hälften av invånarna har utländskt medborgarskap, de flesta brittiskt. Många bor i hus på landet och villor utspridda över kullarna runt sjön, och i småorterna Los Romanes och Los Gómez.',
+      'Under torra år var sjön nästan tom; efter regnen 2025 och 2026 är den åter väl fylld.',
+    ],
+    facts: [
+      ['Invånare', 'drygt 2 000 (2025)'],
+      ['Utländska invånare', 'cirka 42 %, mest britter'],
+      ['Läge', 'inland, cirka 150 m'],
+      ['Till kusten', 'cirka 20 minuter'],
+      ['Málaga (flygplats)', 'cirka 50 minuter med bil'],
+      ['Prisnivå', 'låg till medel'],
+    ],
+    forWhom: 'För dig som söker utrymme, lugn och natur och har bil. Perfekt för en villa eller ett hus på landet med pool och mark, med kusten och Vélez-Málaga tjugo minuter bort.',
+    see: {
+      title: 'Se och göra i Viñuela: sjön, vandringar och verdiales',
+      description: 'Vad du kan göra i Viñuela: vandra och cykla runt Embalse de La Viñuela, paddla kajak, Museo de los Verdiales i Los Romanes och de tre byarnas ferior.',
+      lead: 'I Viñuela kretsar allt kring sjön: promenera längs stranden, ha picknick under tallarna eller ge dig ut på vattnet i kajak.',
+      items: [
+        { name: 'Embalse de La Viñuela', text: 'Provinsens största reservoar, med turkost vatten mot La Maroma i bakgrunden. Runt sjön finns picknickplatser och vandrings- och cykelleder; på vattnet kan du paddla kajak och SUP.' },
+        { name: 'Byn Viñuela', text: 'En liten vit by med kyrkan San José och kapellet Virgen de las Angustias.' },
+        { name: 'Museo de los Verdiales', text: 'I Los Romanes finns ett museum om verdiales, den gamla folkmusiken från bergen bakom Málaga, med färgglada hattar och fioler.' },
+        { name: 'Torre de la Atalaya', text: 'Ett gammalt vakttorn från den moriska tiden på en kulle i kommunen.' },
+      ],
+      fiestas: [
+        { name: 'San José', when: 'mars', text: 'skyddshelgonets dag.' },
+        { name: 'Romería', when: 'slutet av maj', text: 'en vallfärd till sjön med de tre byarna tillsammans.' },
+        { name: 'Ferior i Los Gómez, Viñuela och Los Romanes', when: 'juli och augusti', text: 'varje by har sin egen sommarfest.' },
+        { name: 'Feria de la Pasa', when: 'mitten av september', text: 'russinskördens fest.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Viñuela: villor, hus på landet och priser',
+      description: 'Köpa hus i Viñuela? Vilka bostäder som finns, vad de kostar, service och vad du ska tänka på med hus på landet runt sjön.',
+      lead: 'Viñuela är en av de billigaste orterna i Axarquía för ett fristående hus med mark. Nackdelen: du är beroende av bilen.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'Mest fristående villor och hus på landet (<em>cortijos</em>) på kullarna runt sjön, ofta med pool, terrasser och mark med oliv- eller mandelträd. I byarna byhus och några nyare radhus.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 2 050 € per m² för hus (RealAdvisor), långt under kusten. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a> och en budget för underhåll eller renovering.',
+        ] },
+        { h: 'Service', p: [
+          'Viñuela och Los Romanes har små affärer, en vårdmottagning, en grundskola och restauranger. För stora stormarknader, sjukhuset och gymnasiet kör du till Vélez-Málaga, cirka en kvart.',
+        ] },
+        { h: 'Se upp på landsbygden', p: [
+          'Många hus runt sjön ligger på landsbygdsmark (<em>suelo rústico</em>) och har byggts ut genom åren. Kontrollera den rättsliga statusen för hus, pool och uthus, tillfartsvägen och vattenanslutningen. Läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+        ] },
+        { h: 'Renovera i Viñuela', p: [
+          'Typiska jobb är att täta tak och terrasser, renovera pooler, laga stödmurar och isolera. För ägare som inte är i Spanien hela året är <a href="/sv/tillsyn/">tillsyn av huset</a> ännu viktigare här: ett hus på landet står ensamt. Låt <a href="/sv/besiktning/">besiktiga</a> bostaden före köpet.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Kan man bada i sjön vid Viñuela?', a: 'Sjön är en dricksvattenreservoar. Kajak och SUP går bra; kontrollera skyltarna på plats för vad som är tillåtet.' },
+      { q: 'Hur långt är det från Viñuela till kusten?', a: 'Cirka tjugo minuter med bil till Torre del Mar och Vélez-Málaga.' },
+      { q: 'Bor det många utlänningar i Viñuela?', a: 'Ja, över 40 % av invånarna, mest britter, men också tyskar och fransmän.' },
+    ],
+  },
 };
 export default content;

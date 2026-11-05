@@ -291,9 +291,101 @@ export const guidesDe: GuideMeta[] = [
   },
 ];
 
+export const guidesSv: GuideMeta[] = [
+  {
+    slug: 'flytta-till-spanien',
+    title: 'Flytta till Spanien: den kompletta guiden för Axarquía och Costa del Sol',
+    seoTitle: 'Flytta till Spanien (Costa del Sol, Axarquía): steg för steg 2026',
+    short: 'Flytta till Spanien',
+    description: 'Flytta till Spanien steg för steg: NIE, folkbokföring, skatt, sjukvård, boende och att hitta ett hus i Axarquía och på Costa del Sol.',
+    lead: 'Varje år flyttar tusentals svenskar söderut, och Costa del Sol är ett av de populäraste målen. Den här guiden går igenom alla steg, från det första pappersarbetet till ett hus som är klart att flytta in i.',
+    keyword: 'flytta till spanien',
+    minutes: 11,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'kopa-finca-i-spanien',
+    title: 'Köpa finca i Spanien: laglighet, vatten, tillfartsväg och besiktning',
+    seoTitle: 'Köpa finca i Spanien: det här ska du kontrollera innan du skriver på',
+    short: 'Köpa finca',
+    description: 'Köpa en finca i Andalusien? Det här ska du kontrollera: tillstånd och AFO-status, vatten och brunn, tillfartsväg, septiktank, besiktning och renoveringskostnad.',
+    lead: 'En finca i Axarquías kullar är en dröm för många. Men med ett lantställe finns det mycket mer att kontrollera än med en lägenhet vid kusten.',
+    keyword: 'köpa finca i spanien',
+    minutes: 10,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'kopa-hus-i-spanien-kostnader',
+    title: 'Kostnader vid husköp i Spanien (och vad en renovering kostar)',
+    seoTitle: 'Köpa hus i Spanien: alla kostnader 2026 (skatt, notarie, avgifter)',
+    short: 'Kostnader vid köp',
+    description: 'Vad betalar du utöver köpeskillingen när du köper hus i Spanien? Överlåtelseskatt i Andalusien, notarie, fastighetsregister, advokat, löpande kostnader för icke-residenter och renovering.',
+    lead: 'Räkna med ungefär 10 % i kostnader utöver priset för en begagnad bostad i Andalusien, och ofta en rejäl summa för renovering. Så här är kostnaderna uppbyggda.',
+    keyword: 'köpa hus i spanien kostnader',
+    minutes: 8,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'renovera-hus-i-spanien-kostnad',
+    title: 'Vad kostar det att renovera ett hus i Spanien?',
+    seoTitle: 'Renovera hus i Spanien: priser per m² (2026)',
+    short: 'Renoveringskostnad',
+    description: 'Riktpriser för renovering i Axarquía: per m², badrum, kök, tak, pool och finca. Och vad som styr priset och hur du håller kostnaderna under kontroll.',
+    lead: 'Frågan alla köpare ställer: vad kostar renoveringen? Det ärliga svaret börjar med ”det beror på”, men vi kan ge dig realistiska intervall.',
+    keyword: 'renovera hus i spanien kostnad',
+    minutes: 8,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'bo-i-axarquia',
+    path: '/sv/bo/',
+    title: 'Bo i Axarquía: orter, levnadskostnader, sjukvård och klimat',
+    seoTitle: 'Bo i Axarquía (Málaga): orterna jämförda, kostnader och sjukvård',
+    short: 'Bo i Axarquía',
+    description: 'Hur är det att bo i Axarquía öster om Málaga? Orterna jämförda, levnadskostnader, sjukvård, klimat och resor från Skandinavien.',
+    lead: 'Vita byar mot bergen, avokado och mango på sluttningarna och havet tjugo minuter bort. Det här gör Axarquía så populärt, och så hittar du orten som passar dig.',
+    keyword: 'bo i axarquia',
+    minutes: 9,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'overvintra-i-spanien',
+    title: 'Övervintra i Spanien: det här behöver du ordna, och vem som tittar till huset',
+    seoTitle: 'Övervintra i Spanien: regler, försäkring och ditt hus',
+    short: 'Övervintra i Spanien',
+    description: 'Tillbringa vintern på Costa del Sol: vad du ska tänka på när det gäller vistelse, skatt och sjukvård, och hur ditt hus sköts när du har åkt hem.',
+    lead: 'Vintern i Axarquía är mild och solig, och många svenskar tillbringar några månader där varje år. Vad behöver du ordna, och vem tar hand om huset när du åker hem igen?',
+    keyword: 'övervintra i spanien',
+    minutes: 7,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'kopa-bostad-i-malaga',
+    title: 'Köpa bostad i Málaga och Andalusien: områden, priser och köpprocessen',
+    seoTitle: 'Köpa hus i Málagaprovinsen: områden, priser och köpprocessen',
+    short: 'Köpa i Málaga',
+    description: 'Köpa hus i provinsen Málaga: de viktigaste områdena, vad bostäder ungefär kostar och hur ett köp i Spanien går till steg för steg.',
+    lead: 'Provinsen Málaga är en av Europas populäraste platser för ett hus i solen. Från Marbella i väster till Nerja i öster: så hittar du rätt.',
+    keyword: 'köpa bostad i malaga',
+    minutes: 10,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'afo-andalusien',
+    title: 'AFO-status och legalisering i Andalusien förklarat',
+    seoTitle: 'AFO-status i Andalusien: vad det betyder och vad som är tillåtet',
+    short: 'AFO förklarat',
+    description: 'Vad betyder AFO (asimilado a fuera de ordenación) för ett hus i Andalusien? Vad som är tillåtet och inte, hur processen går till och vad köpare ska tänka på.',
+    lead: 'Uppskattningsvis 300 000 hus i Andalusien saknar fullständigt bygglov. Många av dem ligger på landsbygden, även i Axarquía. Vad betyder det för dig som köpare eller ägare?',
+    keyword: 'afo andalusien',
+    minutes: 8,
+    published: '2026-11-05',
+  },
+];
+
 import type { Lang } from '../i18n';
-export const guidesBy: Record<Lang, GuideMeta[]> = { nl: guides, en: guidesEn, de: guidesDe };
-export const guideBase: Record<Lang, string> = { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/' };
+export const guidesBy: Record<Lang, GuideMeta[]> = { nl: guides, en: guidesEn, de: guidesDe, sv: guidesSv };
+export const guideBase: Record<Lang, string> = { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/', sv: '/sv/guider/' };
 export const guideHref = (lang: Lang, g: GuideMeta) => g.path ?? `${guideBase[lang]}${g.slug}/`;
 /** Gidsen die in het gidsenoverzicht staan (zonder regiopagina's) */
 export const guideList = (lang: Lang) => guidesBy[lang].filter((g) => !g.path);

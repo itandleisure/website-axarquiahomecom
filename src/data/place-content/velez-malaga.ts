@@ -199,5 +199,67 @@ const content: PlaceContent = {
       { q: 'Leben viele Ausländer in Vélez-Málaga?', a: 'Weniger als in Nerja oder Torrox: etwa 13% der Einwohner. In Torre del Mar und Caleta leben mehr Ausländer als in der Stadt selbst.' },
     ],
   },
+  sv: {
+    title: 'Vélez-Málaga: bo och köpa i Axarquías huvudort',
+    description: 'Allt om Vélez-Málaga: staden, kustorterna Torre del Mar, Caleta de Vélez och Benajarafe, service, bostadspriser och vad du ska veta om köp och renovering.',
+    lead: 'Vélez-Málaga är Axarquías huvudort: en riktig spansk stad med sjukhus, marknader och affärer, och vid havet orterna Torre del Mar, Caleta de Vélez och Benajarafe.',
+    intro: [
+      'Med över 85 000 invånare är Vélez-Málaga den överlägset största kommunen i Axarquía. Själva staden ligger några kilometer inåt landet, på en kulle med den moriska borgen Fortaleza överst. Vid kusten ligger <a href="/sv/orter/torre-del-mar/">Torre del Mar</a> med sin långa strandpromenad, fiskehamnen <a href="/sv/orter/caleta-de-velez/">Caleta de Vélez</a> och <a href="/sv/orter/benajarafe/">Benajarafe</a> med lugnare stränder mot Málaga.',
+      'Till skillnad från Nerja och Torrox är Vélez framför allt en spansk stad: andelen utlänningar är lägre och livet kretsar kring arbete, skola och familj. För den som vill bo i Spanien och inte bara övervintra är det en fördel. Här finns allt: Axarquías sjukhus, skolor, stora affärer, en busstation och motorvägen till Málaga (cirka 37 kilometer).',
+      'Mellan staden och bergen ligger småorter som Trapiche, Cajiz och Lagos, med avokado- och mangoodlingar och hus på landet.',
+    ],
+    facts: [
+      ['Invånare', 'över 85 000'],
+      ['Utländska invånare', 'cirka 13 %'],
+      ['Läge', 'kust, stad och kullar'],
+      ['Staden till stranden', 'cirka 4 km'],
+      ['Málaga (flygplats)', 'cirka 40 minuter med bil'],
+      ['Prisnivå', 'medel'],
+    ],
+    forWhom: 'För dig som bor i Spanien året runt och vill ha all service nära, i en spansk miljö. Torre del Mar är populärt bland dem som övervintrar och bland barnfamiljer; småorterna i inlandet bland dem som söker utrymme.',
+    see: {
+      title: 'Se och göra i Vélez-Málaga: Fortaleza, Torre del Mar och hamnen i Caleta',
+      description: 'Vad du kan göra i Vélez-Málaga: Fortaleza och gamla stan, strandpromenaden i Torre del Mar, fiskehamnen i Caleta de Vélez, stränder och fiestor.',
+      lead: 'Vélez kombinerar en historisk stad med en lång kustremsa. På en dag hinner du se en morisk borg, en fiskmarknad och en strand.',
+      items: [
+        { name: 'Fortaleza och gamla stan', text: 'Ovanför staden står tornet och murarna från den moriska borgen, med utsikt över dalen och havet. Nedanför ligger de gamla kvarteren med kyrkorna Santa María la Mayor och San Juan Bautista.' },
+        { name: 'Strandpromenaden i Torre del Mar', text: 'En lång strandpromenad med palmer, uteserveringar och strandbarer. På kvällen är det en av de livligaste platserna längs kusten.' },
+        { name: 'Hamnen i Caleta de Vélez', text: 'Den enda hamnen på östra Costa del Sol, med småbåtshamn och en stor fiskeflotta. Runt hamnen ligger fiskrestauranger som serverar dagens fångst.' },
+        { name: 'Stränder', text: 'Från Benajarafe till Torre del Mar: breda sand- och stenstränder, bland annat Valle Niza. Stränderna vid Almayate och Benajarafe är lugnare än centrala Torre del Mar.' },
+      ],
+      fiestas: [
+        { name: 'Semana Santa', when: 'mars eller april', text: 'processionerna i Vélez-Málaga är de viktigaste i Axarquía.' },
+        { name: 'Virgen del Carmen', when: 'juli', text: 'processioner till sjöss i Torre del Mar och Caleta de Vélez.' },
+        { name: 'Feria de San Miguel', when: 'slutet av september', text: 'stadens stora feria.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Vélez-Málaga: stad, kust och landsbygd',
+      description: 'Köpa bostad i Vélez-Málaga, Torre del Mar eller Caleta? Vilka bostäder som finns, vad de kostar, service och vad du ska tänka på vid köp och renovering.',
+      lead: 'Vélez-Málaga har det bredaste utbudet i Axarquía, från lägenheter vid havet till stadshus och hus på landet bland avokadoträden.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'I Torre del Mar och Caleta mest lägenheter, från äldre komplex till nyproduktion. I staden Vélez lägenheter och radhus, ofta billigare än vid kusten. På landsbygden hus och villor med mark, ibland med en avokado- eller mangoodling.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset i kommunen kring 3 200 € per m² för lägenheter och 2 500 € per m² för hus. Lägenheter i Torre del Mar kostar mer, cirka 3 850 € per m² (RealAdvisor). Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a>.',
+        ] },
+        { h: 'Service', p: [
+          'Här ligger Axarquías sjukhus, och här finns vårdcentraler i staden och vid kusten, gymnasieskolor, stora stormarknader, en saluhall och en busstation. Málaga och flygplatsen ligger cirka 40 minuter bort via A-7.',
+        ] },
+        { h: 'Se upp på landsbygden', p: [
+          'Bland odlingarna finns många hus som byggts eller byggts ut i omgångar. Kontrollera den rättsliga statusen, tillfartsvägen och vattnet: under torra år är bevattningsvattnet knappt i Axarquía. Läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+        ] },
+        { h: 'Renovera i Vélez-Málaga', p: [
+          'Vid kusten handlar det mest om att modernisera lägenheter: kök, badrum, golv och luftkonditionering. I staden och på landet om tak, fukt, isolering och tillbyggnader. Tillstånd ges av Vélez-Málagas kommun, även för kustorterna. Låt <a href="/sv/besiktning/">besiktiga</a> bostaden före köpet.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Hör Torre del Mar och Caleta de Vélez till Vélez-Málaga?', a: 'Ja. Torre del Mar, Caleta de Vélez, Benajarafe, Almayate och flera småorter i inlandet hör alla till kommunen Vélez-Málaga.' },
+      { q: 'Var ligger Axarquías sjukhus?', a: 'Hospital Comarcal de la Axarquía ligger i Vélez-Málaga, mellan staden och Torre del Mar.' },
+      { q: 'Bor det många utlänningar i Vélez-Málaga?', a: 'Färre än i Nerja och Torrox: cirka 13 % av invånarna. I Torre del Mar och Caleta bor fler utlänningar än i själva staden.' },
+    ],
+  },
 };
 export default content;

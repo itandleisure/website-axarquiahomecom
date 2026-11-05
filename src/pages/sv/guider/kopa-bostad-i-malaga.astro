@@ -1,0 +1,66 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'omraden', label: 'Områdena i provinsen Málaga' },
+  { id: 'priser', label: 'Vad kostar en bostad?' },
+  { id: 'process', label: 'Köpet steg för steg' },
+  { id: 'fallor', label: 'Fallgropar för utländska köpare' },
+  { id: 'efter', label: 'Efter köpet' },
+];
+
+const faq = [
+  {
+    q: 'Var är bostäderna billigast i provinsen Málaga?',
+    a: 'I inlandet och i östra Axarquía är husen billigast per m². Dyrast är västra Costa del Sol kring Marbella och Estepona. Även i staden Málaga har priserna stigit kraftigt de senaste åren.',
+  },
+  {
+    q: 'Behöver jag en mäklare?',
+    a: 'I Spanien betalar oftast säljaren mäklararvodet, så mäklaren arbetar för säljaren. Anlita därför en egen, oberoende advokat och låt besiktiga bostaden av någon som inte tjänar på försäljningen.',
+  },
+  {
+    q: 'Hur lång tid tar ett köp?',
+    a: 'Från underskriften av reservationsavtalet (arras) till notariebesöket går det oftast sex till tio veckor. Med bolån eller med en finca med juridiska frågetecken kan det ta längre tid.',
+  },
+];
+---
+<Guide lang="sv" slug="kopa-bostad-i-malaga" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Hittat en bostad?" ctaText="Låt besiktiga den innan du skriver under arras-avtalet. Du får en rapport om skicket och vad det kostar att åtgärda.">
+  <h2 id="omraden">Områdena i provinsen Málaga</h2>
+  <h3>Västra Costa del Sol</h3>
+  <p>Från Torremolinos via Benalmádena, Fuengirola och Marbella till Estepona. Livligt och internationellt, med mycket nyproduktion, golfbanor och service. Här finns de största svenska och nordiska gemenskaperna, särskilt i Fuengirola och Marbella. De högsta priserna i provinsen.</p>
+  <h3>Staden Málaga</h3>
+  <p>En levande stad med kultur, universitet, en växande techbransch och flygplatsen nära. Priserna har stigit kraftigt de senaste åren, och utbudet består mest av lägenheter.</p>
+  <h3>Axarquía (östra Costa del Sol)</h3>
+  <p>Från Rincón de la Victoria till Nerja, plus bergsbyarna bakom. Mer spanskt, färre höghus och billigare per m² än väster om Málaga. Byhus, villor på sluttningarna och fincor i inlandet. Se <a href="/sv/bo/">Bo i Axarquía</a>.</p>
+  <h3>Inlandet</h3>
+  <p>Kring Antequera, Ronda och Álora. Utrymme, lugn och lägre priser, men längre till havet och flygplatsen och kallare på vintern.</p>
+
+  <h2 id="priser">Vad kostar en bostad?</h2>
+  <p>Priserna skiljer sig mycket beroende på läge och typ. Som en grov fingervisning: en lägenhet vid kusten i Axarquía finns från cirka 200 000 €, ett byhus i kullarna från cirka 150 000 €, och villor och renoverade fincor med havsutsikt når snabbt 400 000 € till långt över 1 miljon €. Portaler som Idealista och Kyero ger en aktuell bild. Utgångspriset ligger ofta över det som till slut betalas.</p>
+  <p>Lägg till ungefär 10 % i köpkostnader (se <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">kostnader vid husköp i Spanien</a>) och, för äldre hus, en renoveringsbudget.</p>
+
+  <h2 id="process">Köpet steg för steg</h2>
+  <ol>
+    <li><strong>NIE-nummer och bankkonto</strong>: utan NIE kan du inte köpa.</li>
+    <li><strong>Sökande och visningar</strong>: kom flera gånger, även utanför säsongen.</li>
+    <li><strong>Bud och reservation</strong>: när ni är överens begär mäklaren ibland en liten reservationsavgift så att bostaden tas av marknaden.</li>
+    <li><strong>Granskning (due diligence)</strong>: din advokat kontrollerar fastighetsregistret, Catastro, tillstånd, skulder och pågående ärenden. Låt också göra <a href="/sv/besiktning/">besiktningen</a> i det här skedet.</li>
+    <li><strong>Contrato de arras</strong>: reservationsavtalet, oftast med 10 % handpenning. Drar du dig ur förlorar du den; drar säljaren sig ur betalar hen tillbaka det dubbla.</li>
+    <li><strong>Bolån</strong> (vid behov): värdering och lånelöfte från banken.</li>
+    <li><strong>Escritura hos notarien</strong>: du betalar resten, får nycklarna och blir ägare.</li>
+    <li><strong>Registrering och skatter</strong>: din advokat eller gestoría betalar ITP och skriver in köpebrevet i fastighetsregistret.</li>
+  </ol>
+
+  <h2 id="fallor">Fallgropar för utländska köpare</h2>
+  <ul>
+    <li><strong>Ingen egen advokat</strong>: mäklaren och notarien företräder inte dina intressen.</li>
+    <li><strong>Olagliga tillbyggnader</strong>: ett extra sovrum, en inbyggd terrass eller en pool utan tillstånd. Särskilt vanligt med fincor; se <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.</li>
+    <li><strong>Skulder på fastigheten</strong>: obetald IBI eller samfällighetsavgift går över till den nya ägaren. Låt kontrollera det.</li>
+    <li><strong>Dolda fel</strong>: ett hus du ser i juli verkar torrt; i februari visar det sig att väggarna är fuktiga.</li>
+    <li><strong>Korttidsuthyrning</strong>: vill du hyra ut, kontrollera först att kommunen och samfälligheten tillåter det. Reglerna har skärpts de senaste åren, och sedan 2025 krävs ett nationellt registreringsnummer.</li>
+  </ul>
+
+  <h2 id="efter">Efter köpet</h2>
+  <p>För över vatten, el och kommunala avgifter till ditt namn, helst med autogiro. Planera renoveringen, helst innan du flyttar in. Och se till att någon tittar till huset när du är i Sverige. Vi hjälper till med alla tre: <a href="/sv/renovering/">renovering</a>, <a href="/sv/underhall/">underhåll</a> och <a href="/sv/tillsyn/">tillsyn</a>.</p>
+  <p class="note">Den här guiden ger allmän information och är inte juridisk eller finansiell rådgivning.</p>
+</Guide>

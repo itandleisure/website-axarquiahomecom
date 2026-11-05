@@ -203,5 +203,68 @@ const content: PlaceContent = {
       { q: 'Leben viele Deutsche in Torrox?', a: 'Ja. Torrox hat seit Langem eine große deutsche Gemeinschaft mit deutschsprachigen Ärzten, Geschäften und Vereinen. Auch viele Niederländer, Belgier und Briten wohnen dort.' },
     ],
   },
+  sv: {
+    title: 'Torrox: bo och köpa mellan den vita byn och Torrox Costa',
+    description: 'Allt om Torrox: Torrox Pueblo och Torrox Costa, klimatet, den stora internationella gemenskapen, bostadspriser och vad du ska tänka på vid köp och renovering.',
+    lead: 'Torrox kallas ofta orten med Europas bästa klimat. Den består av två världar: en vit by i kullarna och en badort med strandpromenad och strand.',
+    intro: [
+      'Kommunen Torrox ligger mellan <a href="/sv/orter/nerja/">Nerja</a> och <a href="/sv/orter/algarrobo/">Algarrobo</a>. Den gamla byn, Torrox Pueblo, ligger cirka fyra kilometer inåt landet mot kullarna. Vid havet ligger <a href="/sv/orter/torrox-costa/">Torrox Costa</a> och El Morche, med lägenhetskomplex, en lång strandpromenad och breda stränder.',
+      'Med drygt 22 000 invånare är Torrox en av de större kommunerna i Axarquía. Enligt de preliminära siffrorna för 2026 är den nu något större än Nerja. Över en tredjedel av invånarna har utländskt medborgarskap; här finns sedan länge en stor tysk gemenskap, och också många nederländare, belgare och skandinaver.',
+      'Vid fyren ligger resterna av romerska Caviclum, med badhus och gravfält. Slogan ”Europas bästa klimat” har Torrox använt i årtionden: milda vintrar och en sommar som känns mindre het än i inlandet tack vare havsbrisen.',
+    ],
+    facts: [
+      ['Invånare', 'drygt 22 000 (2025)'],
+      ['Utländska invånare', 'över en tredjedel'],
+      ['Läge', 'kust och kullar'],
+      ['Byn till stranden', 'cirka 4 km'],
+      ['Málaga (flygplats)', 'cirka 50 minuter med bil'],
+      ['Prisnivå', 'medel till hög'],
+    ],
+    forWhom: 'För dig som vill bo vid havet med allt på gångavstånd, eller i en livlig vit by med kusten några minuter bort. Torrox Costa är populärt bland dem som övervintrar; byn och kullarna runt omkring bland dem som bor i Spanien året runt.',
+    see: {
+      title: 'Se och göra i Torrox: stränder, romerska lämningar och Día de las Migas',
+      description: 'Vad du kan göra i Torrox: stränderna i Torrox Costa och El Morche, fyren och Caviclum, den vita byn och fiestorna.',
+      lead: 'I Torrox är det lätt att växla mellan strand och by: strandpromenaden på förmiddagen, torgen och gränderna i gamla byn på eftermiddagen.',
+      items: [
+        { name: 'Stränderna i Torrox Costa och El Morche', text: 'Breda stränder med mörk sand, strandpromenad, strandbarer (<em>chiringuitos</em>) och service. Ferrara och El Morche är lite lugnare än centrala Torrox Costa.' },
+        { name: 'Fyren och Caviclum', text: 'Runt Faro de Torrox ligger resterna av en romersk bosättning med badhus, villa och gravfält. De kan ses fritt från strandpromenaden.' },
+        { name: 'Torrox Pueblo', text: 'Den vita byn med Plaza de la Constitución, kyrkan Nuestra Señora de la Encarnación och smala gränder. Här öppnade 1872 det första folkbiblioteket i provinsen Málaga.' },
+        { name: 'Vandra och cykla', text: 'Från byn går stigar upp i kullarna mot naturparkerna. Längs kusten kan du gå eller cykla på strandpromenaden och Senda Litoral mot Nerja och Algarrobo.' },
+      ],
+      fiestas: [
+        { name: 'Feria de El Morche', when: 'andra veckan i augusti', text: 'sommarfest vid havet.' },
+        { name: 'Virgen del Carmen', when: 'augusti', text: 'procession i Torrox Costa.' },
+        { name: 'Feria de Torrox', when: 'första helgen i oktober', text: 'byns stora fest.' },
+        { name: 'Día de las Migas', when: 'sista söndagen före jul', text: 'tusentals portioner <em>migas</em> delas ut gratis på gatan, med musik och vin.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Torrox: lägenheter vid havet, byhus och villor',
+      description: 'Köpa hus i Torrox? Utbudet i Torrox Costa och Torrox Pueblo, priser, service och vad du ska tänka på med äldre komplex och hus på landet.',
+      lead: 'Torrox har ett stort utbud av alla slag, till priser under Nerjas. De flesta utländska köpare väljer en lägenhet vid kusten eller en villa i kullarna.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'I Torrox Costa och El Morche mest lägenheter och studios i komplex från 1970- till 1990-talet, ofta med gemensam pool. I byn traditionella byhus och nyare radhus. I kullarna villor med havsutsikt och längre in i landet fincor.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 3 800 € per m² för lägenheter och 3 100 € per m² för hus (RealAdvisor). Lägenheter i första raden är dyrare; byhus som behöver renoveras betydligt billigare. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a>.',
+        ] },
+        { h: 'Service', p: [
+          'Torrox har vårdcentraler både i byn och vid kusten, stormarknader, skolor och många restauranger och affärer som är öppna året runt. Regionsjukhuset ligger i Vélez-Málaga.',
+        ] },
+        { h: 'Se upp med äldre komplex', p: [
+          'Många komplex vid kusten är fyrtio år eller äldre. Fråga om skicket på tak, rör och fasader och om planerade arbeten i samfälligheten (<em>comunidad</em>), eftersom du betalar din del. Tänk också på havsluften: balkongräcken av metall och fasadbetong tar skada.',
+        ] },
+        { h: 'Renovera i Torrox', p: [
+          'Att modernisera en lägenhet (kök, badrum, golv, luftkonditionering) är det vanligaste jobbet i Torrox. I byn och i kullarna handlar det oftare om tak, fukt och tillbyggnader, som kräver tillstånd. Låt vid tveksamhet först göra en <a href="/sv/besiktning/">besiktning</a>.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Vad är skillnaden mellan Torrox och Torrox Costa?', a: 'Torrox Pueblo är den historiska vita byn, cirka fyra kilometer inåt landet. Torrox Costa är delen vid havet med strandpromenad, strand och lägenheter. Båda hör till samma kommun.' },
+      { q: 'Har Torrox verkligen Europas bästa klimat?', a: 'Det är en slogan, men med en kärna av sanning: vintrarna är milda och soliga, och bergen i norr stänger ute kalla vindar.' },
+      { q: 'Bor det många nordbor i Torrox?', a: 'Ja. Störst är den tyska gemenskapen, men här bor också många nederländare, belgare, svenskar, danskar och norrmän.' },
+    ],
+  },
 };
 export default content;

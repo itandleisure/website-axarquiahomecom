@@ -131,6 +131,48 @@ const content: PlaceContent = {
         "a": "Ja. Genehmigungen laufen über die Gemeinde Vélez-Málaga."
       }
     ]
+  },
+  "sv": {
+    "title": "Caleta de Vélez: bo vid hamnen",
+    "description": "Allt om Caleta de Vélez: fiskehamnen och småbåtshamnen, stränder, service och bostäder, och vad du ska veta om köp och renovering.",
+    "lead": "Caleta de Vélez är Axarquías hamnby: en fiskeflotta, en småbåtshamn och fiskrestauranger, alldeles intill Torre del Mar.",
+    "intro": [
+      "Caleta hör till kommunen <a href=\"/sv/orter/velez-malaga/\">Vélez-Málaga</a> och har drygt 4 000 invånare. Hamnen är den enda på östra Costa del Sol, med småbåtshamn och en av provinsens största fiskeflottor. På eftermiddagen kommer båtarna in och fisken går till auktion.",
+      "På båda sidor om hamnen ligger stränder med en strandpromenad som fortsätter till <a href=\"/sv/orter/torre-del-mar/\">Torre del Mar</a> och <a href=\"/sv/orter/algarrobo/\">Algarrobo Costa</a>."
+    ],
+    "facts": [
+      [
+        "Kommun",
+        "Vélez-Málaga"
+      ],
+      [
+        "Invånare",
+        "drygt 4 000"
+      ],
+      [
+        "Läge",
+        "kust, vid hamnen"
+      ],
+      [
+        "Torre del Mar",
+        "cirka 2 km"
+      ],
+      [
+        "Prisnivå",
+        "medel"
+      ]
+    ],
+    "forWhom": "För dig som har båt eller helt enkelt gillar att bo vid en hamn, med servicen i Torre del Mar och Vélez-Málaga nära.",
+    "faq": [
+      {
+        "q": "Kan man hyra en båtplats i Caleta?",
+        "a": "Småbåtshamnen har över tvåhundra platser. Fråga hamnen om lediga platser; på sommaren är det ofta fullt."
+      },
+      {
+        "q": "Hör Caleta de Vélez till Vélez-Málaga?",
+        "a": "Ja. Tillstånd går via Vélez-Málagas kommun."
+      }
+    ]
   }
 };
 export default content;

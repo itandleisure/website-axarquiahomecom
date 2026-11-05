@@ -1,0 +1,63 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'varfor', label: 'Varför övervintra i Axarquía' },
+  { id: 'regler', label: 'Vistelse och registrering' },
+  { id: 'sjukvard', label: 'Sjukvård och försäkring' },
+  { id: 'hus', label: 'Eget hus eller hyra' },
+  { id: 'borta', label: 'Ditt hus när du har åkt hem' },
+  { id: 'checklista', label: 'Checklista innan du åker' },
+];
+
+const faq = [
+  {
+    q: 'Hur länge får jag som svensk övervintra i Spanien?',
+    a: 'Som EU-medborgare finns ingen fast maxtid. Stannar du längre än tre månader ska du registrera dig i utlänningsregistret. Tänk också på gränsen på 183 dagar: över den blir du i regel skattskyldig i Spanien.',
+  },
+  {
+    q: 'Gäller min svenska sjukförsäkring i Spanien?',
+    a: 'Med det europeiska sjukförsäkringskortet från Försäkringskassan har du vid tillfällig vistelse rätt till nödvändig vård i den offentliga spanska vården. Kontrollera också din hemförsäkring eller reseförsäkring: många reseskydd gäller bara de första 45 eller 60 dagarna av en resa, och för en vistelse på flera månader kan du behöva ett tillägg.',
+  },
+  {
+    q: 'Vad kostar tillsyn de månader jag är borta?',
+    a: 'Ett baspaket med kontroll varannan vecka kostar oftast några tiotals euro i månaden. Paketen hittar du på vår sida om tillsyn. Du kan välja det bara för de månader du inte är i Spanien.',
+  },
+];
+---
+<Guide lang="sv" slug="overvintra-i-spanien" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Hem igen, med huset i goda händer?" ctaText="Med tillsyn kontrollerar vi ditt hus regelbundet och ingriper om något inte stämmer.">
+  <h2 id="varfor">Varför övervintra i Axarquía</h2>
+  <p>Medan Sverige är mörkt och kallt skiner solen nästan varje dag på kusten öster om Málaga. I januari och februari ligger dagstemperaturen oftast på 15 till 19 grader, varmt nog för en lunch utomhus. Axarquía är lugnare än Fuengirola eller västra Costa del Sol, och orterna lever även på vintern: bageriet, marknaden och kaféet är öppna.</p>
+  <p>Populära orter att övervintra på är Nerja, Torrox Costa och Torre del Mar vid kusten och, för den som vill vandra, Cómpeta och Frigiliana. I Nerja finns en stor svensk och nordisk gemenskap. Läs mer i <a href="/sv/bo/">Bo i Axarquía</a>.</p>
+
+  <h2 id="regler">Vistelse och registrering</h2>
+  <p>Som EU-medborgare får du stanna i Spanien så länge du vill. Det finns ingen 90-dagarsregel som för britter eller amerikaner. Några saker ska du ändå tänka på:</p>
+  <ul>
+    <li>Stannar du <strong>längre än tre månader</strong> ska du registrera dig i det centrala utlänningsregistret (<em>Certificado de Registro de Ciudadano de la UE</em>).</li>
+    <li>Från <strong>183 dagar</strong> per kalenderår blir du i regel skattskyldig i Spanien. Den som vill behålla sin bosättning i Sverige håller sig under det.</li>
+    <li>Är du utomlands mer än ett år kan du behöva anmäla flytt till Skatteverket. För en vintervistelse på några månader behåller du folkbokföringen i Sverige.</li>
+    <li>Som ägare som inte är bosatt i Spanien betalar du ändå varje år inkomstskatt för icke-residenter för ditt spanska hus.</li>
+  </ul>
+
+  <h2 id="sjukvard">Sjukvård och försäkring</h2>
+  <p>Med det europeiska sjukförsäkringskortet har du rätt till nödvändig vård i den offentliga spanska vården. Privata läkare och kliniker täcks inte. Kontrollera om din hem- eller reseförsäkring gäller för en vistelse på flera månader; många reseskydd gäller bara en begränsad tid per resa. Ta med tillräckligt med dina mediciner för hela perioden, med en kopia av receptet.</p>
+
+  <h2 id="hus">Eget hus eller hyra</h2>
+  <p>Att hyra tre månader på vintern går bra, och utanför sommarsäsongen är priserna lägre. Den som kommer tillbaka varje år köper ofta en lägenhet eller ett hus. Men då står bostaden tom åtta eller nio månader om året och behöver tillsyn.</p>
+
+  <h2 id="borta">Ditt hus när du har åkt hem</h2>
+  <p>Ett tomt hus på Costa del Sol har det inte lätt. Läckor efter en storm, fukt och mögel om ingen vädrar, en pool som blir grön, ett strömavbrott som får frysen att tina, eller objudna gäster. Om ingen är på plats märker du det först när du kommer tillbaka.</p>
+  <p>Med <a href="/sv/tillsyn/">tillsyn</a> kontrollerar vi ditt hus enligt ett fast schema. Efter varje besök får du foton och en kort rapport. Om något inte stämmer åtgärdar vi det efter ditt godkännande. Och innan du kommer gör vi huset klart: vädrat, vatten och el påslaget och på begäran städat, med lite mat i kylskåpet.</p>
+
+  <h2 id="checklista">Checklista innan du åker</h2>
+  <ul class="checks">
+    <li>Huvudkranen avstängd, varmvattenberedaren av</li>
+    <li>Kylskåpet tömt och öppet, eller på med någon som tittar till det</li>
+    <li>Fönster och persienner stängda, ventiler öppna mot fukt</li>
+    <li>Värdesaker undanlagda, larmet på</li>
+    <li>Poolen täckt eller skötseln ordnad</li>
+    <li>Trädgårdsbevattning med timer eller någon som sköter den</li>
+    <li>Nycklar och kontaktuppgifter hos din tillsyn</li>
+    <li>Autogiro för IBI, vatten och el kontrollerat</li>
+  </ul>
+</Guide>

@@ -132,6 +132,48 @@ const content: PlaceContent = {
         "a": "Im Durchschnitt rund 3.850 € pro m² (Oktober 2026, RealAdvisor). In erster Linie mehr, weiter vom Meer weniger."
       }
     ]
+  },
+  "sv": {
+    "title": "Torre del Mar: bo och köpa vid strandpromenaden",
+    "description": "Allt om Torre del Mar: strandpromenaden och stränderna, service, lägenheter och priser, och vad du ska veta om köp och renovering.",
+    "lead": "Torre del Mar är Axarquías största badort: en livlig kuststad med lång strandpromenad, breda stränder och affärer och restauranger som är öppna året runt.",
+    "intro": [
+      "Torre del Mar hör till kommunen <a href=\"/sv/orter/velez-malaga/\">Vélez-Málaga</a> och har själv över 23 000 invånare. Det är ingen ort som tystnar på vintern: här bor spanska familjer, de som övervintrar och utländska invånare året runt.",
+      "Strandpromenaden går i flera kilometer längs stranden, med palmer, uteserveringar och <em>chiringuitos</em>. I centrum finns shoppinggator, en marknad och all daglig service. Axarquías sjukhus ligger några minuter bort med bil."
+    ],
+    "facts": [
+      [
+        "Kommun",
+        "Vélez-Málaga"
+      ],
+      [
+        "Invånare",
+        "över 23 000"
+      ],
+      [
+        "Läge",
+        "kust, platt"
+      ],
+      [
+        "Málaga (flygplats)",
+        "cirka 35 minuter"
+      ],
+      [
+        "Prisnivå",
+        "medel"
+      ]
+    ],
+    "forWhom": "För dig som vill bo vid havet med allt på gångavstånd, även på vintern. Det är platt, vilket passar den som inte gillar backar.",
+    "faq": [
+      {
+        "q": "Hör Torre del Mar till Vélez-Málaga?",
+        "a": "Ja. Tillstånd och lokala skatter går via Vélez-Málagas kommun."
+      },
+      {
+        "q": "Vad kostar en lägenhet i Torre del Mar?",
+        "a": "I genomsnitt cirka 3 850 € per m² (oktober 2026, RealAdvisor). Mer i första raden, mindre längre från havet."
+      }
+    ]
   }
 };
 export default content;

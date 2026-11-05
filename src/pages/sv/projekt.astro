@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Cta from '../../components/Cta.astro';
+import Todo from '../../components/Todo.astro';
+import { projects } from '../../data/projects';
+import { svPrice } from '../../data/site';
+---
+<Base
+  title="Projekt: renoveringar i Axarquía, före och efter"
+  description="Renoveringar, badrum, pooler och fincor som vi har gjort för utländska ägare i Axarquía, med ort, prisnivå och tid."
+  path="/sv/projekt/"
+  lang="sv"
+>
+  <Breadcrumbs lang="sv" items={[{ name: 'Projekt', href: '/sv/projekt/' }]} />
+  <Hero
+    lang="sv"
+    eyebrow="Projekt"
+    title="Före och efter: <em>vårt arbete i Axarquía</em>"
+    lead="Varje hus är olika. Här är ett urval av projekt, med ort, ungefärlig kostnad och tid."
+  />
+  <section class="section">
+    <div class="wrap">
+      {projects.length === 0 && <Todo label="projecten (zie src/data/projects.ts). Voeg per project ook een Zweedse titel en omschrijving toe." />}
+      <div class="cards">
+        {projects.map((p) => (
+          <article class="card">
+            {p.after && <img src={p.after} alt={`${p.titleSv ?? p.titleEn ?? p.title}, ${p.place}, efter renoveringen`} loading="lazy" width="640" height="420" />}
+            <h3>{p.titleSv ?? p.titleEn ?? p.title}</h3>
+            <p>{p.summarySv ?? p.summaryEn ?? p.summary}</p>
+            <p class="note">{p.place} · {svPrice(p.budget)} · {p.durationSv ?? p.durationEn ?? p.duration}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Cta lang="sv" title="Ett sådant resultat för ditt hus?" />
+</Base>

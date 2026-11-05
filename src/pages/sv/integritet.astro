@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Todo from '../../components/Todo.astro';
+import { site } from '../../data/site';
+const o = site.operator;
+const c = site.company;
+---
+<Base
+  title="Integritet och villkor"
+  description="Hur Axarquía Home hanterar dina personuppgifter när du gör en förfrågan, och vem vi delar dem med."
+  path="/sv/integritet/"
+  lang="sv"
+>
+  <Breadcrumbs lang="sv" items={[{ name: 'Integritet och villkor', href: '/sv/integritet/' }]} />
+  <section class="section">
+    <div class="wrap prose">
+      <h1>Integritet och villkor</h1>
+      <Todo label="gegevens van de onderneming van Frans en het bouwbedrijf. Laat deze tekst één keer nakijken door een AVG-jurist." />
+      <p>Senast uppdaterad: 5 november 2026.</p>
+
+      <h2>Vilka vi är</h2>
+      <p>Webbplatsen {site.domain} drivs av {o.name}, {o.address}, registrerat hos den nederländska handelskammaren (Kamer van Koophandel) med nummer {o.kvk} (”Axarquía Home”). Du når oss på <a href={`mailto:${o.email}`}>{o.email}</a>.</p>
+      <p>Axarquía Home utför inga byggarbeten själv. Arbetet utförs av vår fasta partner {c.legalName}, {c.cif}, {c.street}, {c.postalCode} {c.town}, Spanien (”byggföretaget”).</p>
+
+      <h2>Vilka uppgifter vi behandlar</h2>
+      <p>När du fyller i vårt förfrågningsformulär behandlar vi de uppgifter du lämnar: namn, e-postadress, telefonnummer, adress eller ort för bostaden, en beskrivning av dina planer, budget och tidsplan samt eventuella foton. Vi sparar också datumet och sidan du gjorde förfrågan från.</p>
+
+      <h2>Varför, och med vilken rättslig grund</h2>
+      <p>Vi använder uppgifterna bara för att hantera din förfrågan: för att ringa eller mejla dig, boka ett besök och ta fram en offert. Den rättsliga grunden är ditt samtycke (artikel 6.1 a i dataskyddsförordningen), som du ger genom att kryssa i rutan i formuläret, och åtgärder på din begäran innan ett avtal ingås (artikel 6.1 b).</p>
+
+      <h2>Vem vi delar uppgifterna med</h2>
+      <p>Din förfrågan skickas automatiskt vidare till byggföretaget, som kontaktar dig och tar fram offerten. Om din förfrågan inte hör till byggföretagets arbete (till exempel solpaneler, luftkonditionering eller en flytt) skickar vi den bara vidare till en annan partner om du har godkänt det i formuläret.</p>
+      <p>Förfrågningar sparas i Axarquía Homes Google Workspace (Google Sheets och Google Drive). Google behandlar uppgifterna för vår räkning. Vi säljer inte dina uppgifter och använder dem inte för nyhetsbrev utan ditt separata samtycke.</p>
+
+      <h2>Hur länge vi sparar uppgifter</h2>
+      <p>Vi sparar förfrågningar i upp till 24 månader efter senaste kontakt, eller längre om det behövs för bokföringen av ett avtal (den lagstadgade lagringstiden för fakturor i Nederländerna är 7 år).</p>
+
+      <h2>Dina rättigheter</h2>
+      <p>Du kan när som helst fråga vilka uppgifter vi har om dig, få dem rättade eller raderade, eller återkalla ditt samtycke. Mejla <a href={`mailto:${o.email}`}>{o.email}</a>. Du har också rätt att klaga hos den nederländska dataskyddsmyndigheten (Autoriteit Persoonsgegevens), den spanska Agencia Española de Protección de Datos eller Integritetsskyddsmyndigheten (IMY) i Sverige.</p>
+
+      <h2>Cookies och statistik</h2>
+      <p>Den här webbplatsen sätter bara cookies om du godkänner det i cookiebannern. Vi använder Google Search Console och Bing Webmaster Tools för att se hur webbplatsen hittas i sökmotorer; inget sparas på din enhet för det. Ditt val i bannern sparas i din webbläsare (localStorage), så att vi inte frågar på varje sida.</p>
+      <p>För att förbättra webbplatsen använder vi Microsoft Clarity. Clarity visar hur besökare använder sidorna, till exempel var de klickar och hur långt de scrollar, med värmekartor och anonyma inspelningar av ett besök. Clarity laddas bara om du klickar på Godkänn i cookiebannern. Då sätts cookies från Microsoft (till exempel _clck, _clsk och MUID) som sparas i upp till ett år. Allt du skriver i formulär maskeras. Microsoft behandlar uppgifterna för vår räkning; se <a href="https://privacy.microsoft.com/privacystatement" rel="noopener">Microsofts integritetspolicy</a>. Den rättsliga grunden är ditt samtycke (artikel 6.1 a i dataskyddsförordningen). Du kan när som helst återkalla det via Cookie-inställningar längst ner på varje sida.</p>
+      <p>Vi använder också Google Analytics 4 för att mäta besök, till exempel hur många som besöker webbplatsen, vilken sökmotor de kom från och vilka sidor de läser. Även Google Analytics laddas bara om du klickar på Godkänn i cookiebannern. Då sätts cookies från Google (_ga och _ga_*) som sparas i upp till två år. IP-adresser förkortas och vi delar inga uppgifter för annonsering. Google behandlar uppgifterna för vår räkning; se <a href="https://policies.google.com/privacy" rel="noopener">Googles integritetspolicy</a>. Den rättsliga grunden är ditt samtycke (artikel 6.1 a i dataskyddsförordningen), som du kan återkalla via Cookie-inställningar längst ner på varje sida.</p>
+
+      <h2>Villkor</h2>
+      <p>Informationen på den här webbplatsen är allmän och har tagits fram med omsorg, men den är inte juridisk, skattemässig eller byggteknisk rådgivning för just din situation. Priserna på webbplatsen är riktpriser; bara en skriftlig offert från byggföretaget är bindande. Byggföretaget ansvarar för utförandet, garantier och eventuella klagomål på arbetet.</p>
+      <p>Om legalisering (AFO) och tillstånd ger vi bara allmänna förklaringar. Bedömningen av en viss fastighet görs av en arkitekt eller advokat.</p>
+    </div>
+  </section>
+</Base>

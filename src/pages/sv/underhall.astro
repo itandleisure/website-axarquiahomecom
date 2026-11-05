@@ -1,0 +1,93 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import { prices, site, svPrice } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Taket läcker och jag är i Sverige. Vad gör jag?',
+    a: 'Skicka adressen och gärna ett foto via formuläret eller WhatsApp. Om du inte redan har tillsyn hos oss kommer vi överens om hur vi kommer in. Vi tätar provisoriskt så snabbt som möjligt och ger dig sedan ett pris på den permanenta reparationen.',
+  },
+  {
+    q: 'Varför läcker platta tak och terrasser så ofta i Spanien?',
+    a: 'Många hus i Axarquía har platta tak (azoteas) och terrasser ovanför bostadsrum. De stora temperaturskillnaderna gör att tätskikt och fogar spricker med tiden. Efter en torrperiod märks det vid första skyfallet. Ett nytt tätskikt (impermeabilización) löser oftast problemet.',
+  },
+  {
+    q: 'Måste jag röja min tomt?',
+    a: 'I Andalusien måste ägare till tomter i eller nära skog och naturområden hålla dem fria från brännbart material, särskilt på sommaren. Kommunerna kan också ställa krav. Vi röjer din tomt en gång eller varje år före sommaren.',
+  },
+  {
+    q: 'Gör ni också små jobb?',
+    a: 'Ja. En droppande kran, en dörr som kärvar, ett eluttag utan ström. För kunder med tillsyn fixar vi det vid nästa besök.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Underhåll och reparationer',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en', 'es'],
+};
+---
+<Base
+  title="Underhåll och reparationer av ditt hus i Spanien"
+  description="Läckande tak, nytt tätskikt på terrassen, tomtskötsel och små reparationer i Axarquía. Även när du inte är i Spanien."
+  path="/sv/underhall/"
+  lang="sv"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="sv" items={[{ name: 'Underhåll och reparationer', href: '/sv/underhall/' }]} />
+  <Hero
+    lang="sv"
+    eyebrow="Underhåll och reparationer"
+    title="Läcka, skada eller eftersatt underhåll? <em>Vi tar hand om det.</em>"
+    lead="Tak, terrasser, tomt och trädgård, och alla små jobb i och runt huset. Även när du är i Sverige och bara hör om det från grannarna."
+    cta="Begär reparation"
+    ctaHref="/sv/forfragan/?dienst=onderhoud"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h3>Tak och läckor</h3>
+          <p>Läckande tak, nytt tätskikt på platta tak och terrasser, hängrännor och avvattning.</p>
+          <p><strong>{svPrice(prices.daken)}</strong></p>
+        </div>
+        <div class="card">
+          <h3>Tomt och trädgård</h3>
+          <p>Röjning mot brandrisk, trädbeskärning, bevattning, konstgräs och trädgårdsanläggning.</p>
+          <p><strong>{svPrice(prices.perceel)}</strong></p>
+        </div>
+        <div class="card">
+          <h3>Fukt och målning</h3>
+          <p>Åtgärda fukt, laga väggar och måla huset inne och ute.</p>
+          <p><strong>Pris efter besök</strong></p>
+        </div>
+        <div class="card">
+          <h3>Små jobb</h3>
+          <p>VVS, el, dörrar, fönster, lås och allt annat som går sönder.</p>
+          <p><strong>Timpris</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Underhåll utan att du behöver vara på plats</h2>
+      <p>De flesta ägare vi arbetar för tillbringar en stor del av året i Sverige, Norge, Danmark, Finland eller någon annanstans i Europa. Därför arbetar vi med foton: före, under och efter jobbet. Du godkänner priset, vi gör jobbet och du ser resultatet i mobilen.</p>
+      <p>Vill du slippa ringa oss varje gång? Med <a href="/sv/tillsyn/">tillsyn</a> håller vi regelbundet koll på huset och upptäcker problem ofta innan de orsakar skada.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="sv" />
+  <Cta lang="sv" dienst="onderhoud" title="Har något gått sönder i ditt hus i Spanien?" />
+  <Services lang="sv" exclude="underhall" title="Det här kan också vara intressant" />
+</Base>

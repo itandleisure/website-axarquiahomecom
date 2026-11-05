@@ -1,0 +1,107 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site, svPrice } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Är besiktning före köp vanligt i Spanien?',
+    a: 'Nej, och just därför lönar det sig. I Spanien köper du normalt en bostad i befintligt skick. Fel som du upptäcker efter notariebesöket är nästan alltid ditt problem. En besiktning innan du skriver under reservationsavtalet (contrato de arras) sparar dig dyra överraskningar.',
+  },
+  {
+    q: 'Vad kostar en besiktning?',
+    a: `De flesta besiktningar kostar mellan ${svPrice(prices.keuring)}, beroende på storlek och om det är en lägenhet, ett byhus eller en finca. Du får ett fast pris i förväg.`,
+  },
+  {
+    q: 'Kontrollerar ni om huset är lagligt?',
+    a: 'Vi kontrollerar om det som finns stämmer med registren (Catastro och fastighetsregistret) och letar efter tecken på byggen utan tillstånd. Den juridiska bedömningen, till exempel i ett AFO-ärende, görs av den arkitekt eller advokat vi samarbetar med.',
+  },
+  {
+    q: 'Hur snabbt kan ni besiktiga?',
+    a: 'Oftast inom en vecka efter din förfrågan, ofta snabbare. Du behöver inte vara med: vi ordnar tillträde med mäklaren eller säljaren och skickar rapporten digitalt.',
+  },
+  {
+    q: 'Får jag också ett pris på åtgärderna?',
+    a: 'Ja, det är den stora fördelen med en besiktning av ett byggföretag. Rapporten anger ett riktpris för att åtgärda varje fel. Då vet du vad bostaden verkligen kostar och kan förhandla därefter.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Besiktning före köp',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en', 'es'],
+};
+---
+<Base
+  title="Besiktning före köp i Spanien: vet vad du köper"
+  description="Besiktning före köp av hus och fincor i Axarquía. En rapport med foton, fel och vad det kostar att åtgärda dem. Även om du inte är i Spanien."
+  path="/sv/besiktning/"
+  lang="sv"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="sv" items={[{ name: 'Besiktning', href: '/sv/besiktning/' }]} />
+  <Hero
+    lang="sv"
+    eyebrow="Besiktning före köp"
+    title="Låt kontrollera huset <em>innan du skriver på</em>"
+    lead="I Spanien köper du en bostad i befintligt skick. Vi besiktigar den före köpet och säger tydligt vad som är bra, vad som inte är det och vad det kostar att åtgärda."
+    cta="Begär besiktning"
+    ctaHref="/sv/forfragan/?dienst=aankoopkeuring"
+  />
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>Det här kontrollerar vi</h2>
+        <ul class="checks">
+          <li><strong>Stomme</strong>: sprickor, sättningar, bärande väggar och bjälkar.</li>
+          <li><strong>Tak och terrasser</strong>: läckor, isolering och avvattning.</li>
+          <li><strong>Fukt</strong>: uppstigande fukt, kondens och mögel.</li>
+          <li><strong>El</strong>: jordning, elcentral och om den uppfyller dagens regler.</li>
+          <li><strong>Vatten och avlopp</strong>: ledningar, tryck, varmvattenberedare, septiktank eller kommunalt avlopp.</li>
+          <li><strong>Pool och utomhus</strong>: läckor, teknik och murar.</li>
+          <li><strong>Registrering</strong>: stämmer det som finns med Catastro?</li>
+        </ul>
+        <h2>Fincor kräver extra noggrannhet</h2>
+        <p>Med ett lantställe i Axarquía finns det mer att kontrollera än med en lägenhet. Varifrån kommer vattnet, och är det lagligt? Är tillfartsvägen allmän eller går den över grannens mark? Har tillbyggnaden och poolen tillstånd? Finns det en septiktank som uppfyller reglerna? Vi går igenom allt systematiskt och tar vid behov in vår arkitekt.</p>
+      </div>
+      <div class="box">
+        <h3>Det här får du</h3>
+        <ul class="checks">
+          <li>En rapport med foton</li>
+          <li>För varje fel: hur allvarligt det är och vad det kostar att åtgärda</li>
+          <li>Tips på vad du kan ta upp i förhandlingen</li>
+          <li>Ett telefon- eller videosamtal där vi går igenom allt</li>
+        </ul>
+        <p class="price" style="font-family:var(--serif);font-size:1.4rem;color:var(--terra-dark);margin:0.4em 0">{svPrice(prices.keuring)}</p>
+        <p class="note">Fast pris, överenskommet i förväg, beroende på typ och storlek av bostaden.</p>
+        <Todo label="bevestiging prijs, naam van de partner-aparejador of architect, en in welke taal het rapport kan (Engels of Zweeds)." />
+        <a class="btn" href="/sv/forfragan/?dienst=aankoopkeuring">Begär besiktning</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="sv"
+    title="Från förfrågan till rapport"
+    steps={[
+      { t: 'Förfrågan', d: 'Skicka länken till annonsen och dina frågor.' },
+      { t: 'Bokning', d: 'Vi bokar besöket med mäklaren eller säljaren.' },
+      { t: 'Besiktning', d: 'En grundlig kontroll inomhus och utomhus, med foton och mätningar.' },
+      { t: 'Rapport och samtal', d: 'Du får rapporten inom några dagar, och vi går igenom den tillsammans.' },
+    ]}
+  />
+
+  <Faq items={faq} lang="sv" />
+  <Cta lang="sv" dienst="aankoopkeuring" title="Hittat en bostad?" text="Skicka länken eller adressen. Inom 24 timmar säger vi när vi kan besiktiga och vad det kostar." />
+  <Services lang="sv" exclude="besiktning" title="Efter köpet" />
+</Base>
