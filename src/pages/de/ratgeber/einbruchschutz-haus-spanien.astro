@@ -1,0 +1,89 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'ueberblick', label: 'Alle Möglichkeiten im Überblick' },
+  { id: 'alarm', label: 'Alarmanlage: mit oder ohne Notrufzentrale' },
+  { id: 'kameras', label: 'Kameras und Datenschutz' },
+  { id: 'rejas', label: 'Gitter, Tür und Schlösser' },
+  { id: 'leerstand', label: 'Ein Haus, das leer steht' },
+  { id: 'kombination', label: 'Welche Kombination passt zu Ihnen?' },
+];
+
+const faq = [
+  {
+    q: 'Kommt die Polizei, wenn meine Alarmanlage auslöst?',
+    a: 'Nicht automatisch. In Spanien schickt die Notrufzentrale eines zugelassenen Sicherheitsunternehmens Polizei oder Guardia Civil erst, wenn der Alarm bestätigt ist, etwa durch Bilder, Ton oder mehrere ausgelöste Sensoren. Eine Anlage ohne Zentrale macht nur Lärm und schickt Ihnen eine Nachricht.',
+  },
+  {
+    q: 'Darf meine Kamera die Straße filmen?',
+    a: 'Nein, nur Ihr eigenes Grundstück. Ein kleiner Streifen Straße oder der Zugang zur Haustür ist erlaubt, wenn es nicht anders geht. Eine Kamera, die die öffentliche Straße oder das Nachbargrundstück erfasst, verstößt gegen den Datenschutz. Bringen Sie außerdem ein Schild „zona videovigilada“ an.',
+  },
+  {
+    q: 'Bekomme ich mit Alarmanlage Rabatt bei der Versicherung?',
+    a: 'Oft ja, und manche Versicherer verlangen eine Alarmanlage oder Gitter sogar als Bedingung, wenn das Haus einen Teil des Jahres leer steht. Fragen Sie bei Ihrer Versicherung nach.',
+  },
+];
+---
+<Guide slug="einbruchschutz-haus-spanien" lang="de" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Ihr Haus besser sichern?" ctaText="Erzählen Sie uns von Ihrem Haus und wie oft Sie dort sind. Wir schauen, wo die Schwachstellen liegen und was am meisten bringt: Gitter, eine bessere Tür, eine Alarmanlage oder jemand, der regelmäßig nach dem Rechten sieht.">
+  <h2 id="ueberblick">Alle Möglichkeiten im Überblick</h2>
+  <p>Ein Überblick, was es gibt und wofür es gut ist. Möchten Sie das machen lassen? <a href="/de/anfrage/">Sagen Sie uns, was Sie vorhaben</a>, und wir helfen Ihnen bei der Umsetzung.</p>
+  <table class="prices">
+    <thead><tr><th>Möglichkeit</th><th>Was es bringt</th></tr></thead>
+    <tbody>
+      <tr><td>Besserer Schließzylinder (einbruchhemmend)</td><td>Macht das Aufbrechen der Tür deutlich schwerer</td></tr>
+      <tr><td>Smarte Alarmanlage ohne Zentrale (selbst montiert)</td><td>Sirene und Nachricht aufs Handy; Sie müssen selbst jemanden schicken</td></tr>
+      <tr><td>WLAN-Kameras zum Selbstmontieren</td><td>Fernzugriff; funktioniert nur mit gutem Internet</td></tr>
+      <tr><td>Fenstergitter (<em>rejas</em>)</td><td>Hält Einbrecher im Erdgeschoss ab; kein Abo</td></tr>
+      <tr><td>Kamerasystem mit Rekorder, montiert</td><td>Zuverlässige Aufnahmen, auch wenn das Internet ausfällt</td></tr>
+      <tr><td>Alarmanlage mit Notrufzentrale (Abo)</td><td>Rund um die Uhr überwacht; die Zentrale ruft Sie und bei Bedarf die Polizei</td></tr>
+      <tr><td>Sicherheitstür (<em>puerta de seguridad / acorazada</em>)</td><td>Die Haustür wird zum stärksten statt schwächsten Punkt</td></tr>
+      <tr><td>Rollläden mit Motor und Zeitschaltuhr</td><td>Haus wirkt bewohnt; zusätzliche Barriere am Fenster</td></tr>
+      <tr><td>Hausbetreuung: jemand, der regelmäßig vorbeischaut</td><td>Sieht, was eine Alarmanlage nicht sieht: Lecks, Sturmschäden, Post, ein kaputtes Schloss</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="alarm">Alarmanlage: mit oder ohne Notrufzentrale</h2>
+  <p>Es gibt zwei Arten von Alarmanlagen, und der Unterschied ist groß:</p>
+  <ul>
+    <li><strong>Mit Notrufzentrale</strong> (<em>alarma conectada a central receptora</em>): Ein zugelassenes Sicherheitsunternehmen überwacht das Haus rund um die Uhr. Löst der Alarm aus, prüft die Zentrale Bild oder Ton, ruft Sie an und schickt bei Bedarf Polizei oder Wachdienst. Nur ein beim Innenministerium registriertes Unternehmen darf eine solche Anlage aufschalten. Meist binden Sie sich für einige Jahre.</li>
+    <li><strong>Ohne Zentrale</strong>: eine smarte Anlage mit Sensoren und Sirene, die Ihnen eine Nachricht schickt. Günstig und ohne Abo, aber wenn Sie in Deutschland sind, müssen Sie selbst jemanden finden, der nachsieht.</li>
+  </ul>
+  <p>Bei einer Finca: Ohne festen Internetanschluss brauchen Sie eine Anlage, die über das Mobilfunknetz (4G) funktioniert, mit Akku für Stromausfälle. Bei einem autarken Haus ist das besonders wichtig.</p>
+
+  <h2 id="kameras">Kameras und Datenschutz</h2>
+  <p>Mit Kameras schauen Sie aus der Ferne nach, und Aufnahmen helfen später bei Anzeige und Versicherung. Eine Kamera verhindert allein keinen Einbruch, sichtbare Kameras schrecken aber ab. Halten Sie sich an die spanischen Datenschutzregeln (Aufsichtsbehörde ist die AEPD):</p>
+  <ul>
+    <li>Filmen Sie nur Ihr eigenes Grundstück, nicht Straße oder Nachbarn.</li>
+    <li>Bringen Sie am Zugang ein Schild „<em>zona videovigilada</em>“ an.</li>
+    <li>Speichern Sie Aufnahmen nicht länger als nötig (Richtwert höchstens ein Monat).</li>
+  </ul>
+  <p>Selbst montierte WLAN-Kameras sind günstig, fallen aber mit dem WLAN aus. Ein verkabeltes System mit Rekorder (NVR) im Haus ist zuverlässiger.</p>
+
+  <h2 id="rejas">Gitter, Tür und Schlösser</h2>
+  <p>Die meisten Einbrecher kommen durch ein Fenster im Erdgeschoss oder eine schwache Tür. Deshalb bringen diese Maßnahmen oft am meisten pro Euro:</p>
+  <ul>
+    <li><strong>Gitter</strong> (<em>rejas</em>): in Andalusien ganz normal und aus Schmiedeeisen passend zu Dorfhaus oder Finca. Für Fenster, die auch Fluchtweg sind, wählen Sie Gitter, die sich von innen öffnen lassen.</li>
+    <li><strong>Sicherheitstür</strong>: Tür mit Stahlkern, Mehrfachverriegelung und gutem Zylinder.</li>
+    <li><strong>Zylinder</strong>: Viele spanische Türen haben einen einfachen Zylinder, der sich per „Bumping“ in Sekunden öffnen lässt. Ein Anti-Bumping-Zylinder ist ein kleiner Eingriff mit großer Wirkung.</li>
+    <li><strong>Terrassen- und Schiebetüren</strong>: Zusatzschloss oder Sperrstange in der Schiene.</li>
+  </ul>
+  <p>Gitter und Sicherheitstür lassen sich gut mit anderen Arbeiten kombinieren, etwa neuen Fenstern oder <a href="/de/ratgeber/sonnenschutz-rolllaeden-insektenschutz-spanien/">Rollläden</a>.</p>
+
+  <h2 id="leerstand">Ein Haus, das leer steht</h2>
+  <p>Ein Haus, das monatelang verschlossen ist, fällt auf: geschlossene Rollläden, ein voller Briefkasten, ein verwilderter Garten. Was hilft:</p>
+  <ul>
+    <li>Rollläden und Licht mit Zeitschaltuhr, zu wechselnden Zeiten.</li>
+    <li>Jemand, der regelmäßig vorbeischaut, die Post holt und prüft, ob alles in Ordnung ist. Genau das macht die <a href="/de/hausbetreuung/">Hausbetreuung</a>.</li>
+    <li>Guter Kontakt zu den Nachbarn, mit deren Nummer im Handy.</li>
+    <li>Keine Beiträge in sozialen Medien, dass Sie weg sind.</li>
+  </ul>
+  <p>Sorge vor Hausbesetzern (<em>okupas</em>)? Lesen Sie, was Sie tun können, unter <a href="/de/probleme/einbruch-und-hausbesetzer/">Einbruch und Hausbesetzer</a>.</p>
+
+  <h2 id="kombination">Welche Kombination passt zu Ihnen?</h2>
+  <ul>
+    <li><strong>Wohnung in einer Anlage</strong>, Sie sind oft da: Ein besserer Zylinder und eine smarte Anlage ohne Zentrale reichen oft.</li>
+    <li><strong>Dorfhaus</strong>, einen Teil des Jahres leer: Gitter im Erdgeschoss, eine gute Tür und Hausbetreuung.</li>
+    <li><strong>Freistehende Villa oder Finca</strong>, monatelang leer: Gitter oder Sicherheitsrollläden, Alarmanlage mit Zentrale über 4G, einige Kameras und Hausbetreuung.</li>
+  </ul>
+</Guide>

@@ -1,75 +1,153 @@
 ---
+// Quellen: siehe die niederländische Fassung (src/pages/nl/gidsen/afo-legaliseren-andalusie.astro).
 import Guide from '../../../components/Guide.astro';
 
 const toc = [
-  { id: 'was', label: 'Was bedeutet AFO?' },
-  { id: 'warum', label: 'Warum so viele Häuser ohne Genehmigung sind' },
-  { id: 'erlaubt', label: 'Was erlaubt ist und was nicht' },
-  { id: 'verfahren', label: 'Das Verfahren im Überblick' },
-  { id: 'kaeufer', label: 'Als Käufer: worauf Sie achten sollten' },
-  { id: 'eigentuemer', label: 'Als Eigentümer: renovieren mit AFO' },
+  { id: 'kurz', label: 'Legalisierung oder AFO?' },
+  { id: 'legalisierung', label: 'Echte Legalisierung mit Genehmigung' },
+  { id: 'afo', label: 'AFO: Anerkennung nach sechs Jahren' },
+  { id: 'erlaubt', label: 'Was mit AFO erlaubt ist und was nicht' },
+  { id: 'schritte', label: 'Die Schritte und wen Sie brauchen' },
+  { id: 'kosten', label: 'Kosten und Dauer' },
+  { id: 'folgen', label: 'Ein Haus ohne Papiere kaufen: die Folgen' },
+  { id: 'wert', label: 'Vorteile, Risiken und Wert' },
+  { id: 'kaeufer', label: 'Checkliste für Käufer' },
 ];
 
 const faq = [
   {
     q: 'Ist ein Haus mit AFO-Status legal?',
-    a: 'Nicht in dem Sinne, dass es mit Genehmigung gebaut wurde. Das Rathaus erkennt aber an, dass dagegen nicht mehr vorgegangen werden kann. Das Haus darf bewohnt, verkauft, eingetragen und an Wasser und Strom angeschlossen werden. Erweitern oder neu bauen ist in der Regel nicht erlaubt.',
+    a: 'Nicht ganz. AFO ist keine Legalisierung: Die Gemeinde erkennt nur an, dass sie nicht mehr einschreiten kann, weil die Frist von sechs Jahren abgelaufen ist. Sie dürfen darin wohnen, es verkaufen, eintragen lassen und an Wasser und Strom anschließen. Vergrößern dürfen Sie es nicht.',
   },
   {
-    q: 'Bekomme ich eine Hypothek auf ein Haus mit AFO-Status?',
-    a: 'Manchmal. Banken sind vorsichtiger als bei einer vollständig genehmigten Immobilie, und die Bedingungen unterscheiden sich von Bank zu Bank. Mit einer offiziellen AFO-Erklärung, die im Grundbuch vermerkt ist, sind Ihre Chancen deutlich besser als ohne.',
+    q: 'Bekomme ich eine Hypothek auf ein Haus ohne Baugenehmigung?',
+    a: 'Für ein Haus ganz ohne Papiere kaum: Der Gutachter der Bank bewertet nur, was legal und eingetragen ist, oder lehnt ab. Mit einer im Eigentumsregister eingetragenen AFO-Anerkennung geht es besser, aber nicht jede Bank finanziert, und oft nur einen geringeren Betrag. Fragen Sie vorab bei Ihrer Bank nach.',
+  },
+  {
+    q: 'Was kostet eine Legalisierung?',
+    a: 'Gutachten oder Projekt des Architekten, Gemeindegebühren, eventuell geforderte Arbeiten am Haus sowie Notar und Register. Die Gebühren unterscheiden sich je Gemeinde. Für AFO verlangt Nerja 3,5 % der Baukosten (mindestens 750 €), Torrox 750 € plus 3,25 % und Vélez-Málaga 7,5 %. Insgesamt sind es meist einige tausend Euro, mehr, wenn Reparaturen nötig sind.',
   },
   {
     q: 'Wie lange dauert ein AFO-Verfahren?',
-    a: 'Das ist von Rathaus zu Rathaus verschieden. Rechnen Sie mit einigen Monaten bis über einem Jahr, je nach Auslastung und Vollständigkeit der Unterlagen.',
+    a: 'Die Gemeinde muss innerhalb von sechs Monaten entscheiden. Tut sie das nicht, gilt der Antrag als abgelehnt. Mit dem Sammeln von Nachweisen und eventuellen Arbeiten vorab dauert das Ganze in der Praxis oft ein halbes Jahr bis über ein Jahr.',
   },
   {
-    q: 'Was kostet ein AFO-Verfahren?',
-    a: 'Die Kosten sind ein technisches Gutachten eines Architekten oder Bausachverständigen, die Gebühren des Rathauses und die Eintragung. Zusammen sind das oft einige tausend Euro, mehr, wenn vorher Reparaturen nötig sind.',
+    q: 'Darf ich ein Haus mit AFO als Ferienwohnung vermieten?',
+    a: 'Nicht ohne Weiteres. Seit 2024 darf eine Wohnung mit AFO-Status in Andalusien nur dann als Ferienwohnung (VUT) registriert werden, wenn die Gemeinde es vorher ausdrücklich erlaubt. Langzeitvermietung ist erlaubt.',
+  },
+  {
+    q: 'Was ist der Unterschied zwischen AFO und DAFO?',
+    a: 'Keiner. DAFO steht für die Erklärung (declaración) des AFO-Status durch die Gemeinde. Nach den alten Regeln sprach man oft von DAFO, heute meist von der Anerkennung (reconocimiento) als AFO.',
   },
 ];
 ---
-<Guide lang="de" slug="afo-legalisierung-andalusien" toc={toc} faq={faq} dienst="legalisatie" ctaTitle="Zweifel an den Papieren einer Immobilie?" ctaText="Wir sehen uns das an und bringen Sie mit dem Architekten in Kontakt, mit dem wir zusammenarbeiten.">
-  <h2 id="was">Was bedeutet AFO?</h2>
-  <p>AFO steht für <em>asimilado a fuera de ordenación</em>, sinngemäß „gleichgestellt mit außerhalb der Planungsordnung“. Es ist ein Status für Gebäude, die ohne (die richtige) Genehmigung gebaut wurden, gegen die die Behörden aber nicht mehr vorgehen können, weil die Frist abgelaufen ist. In Andalusien beträgt diese Frist in den meisten Fällen sechs Jahre nach Fertigstellung. Geregelt ist der Status im andalusischen Raumordnungsgesetz LISTA (Ley 7/2021).</p>
-  <p>Das Rathaus bestätigt den Status mit einer offiziellen Erklärung. Danach kann das Haus mit Vermerk der AFO-Situation im Grundbuch eingetragen und an Wasser und Strom angeschlossen werden.</p>
+<Guide slug="afo-legalisierung-andalusien" lang="de" toc={toc} faq={faq} dienst="legalisatie" ctaTitle="Ein Haus legalisieren oder ohne Papiere kaufen?" ctaText="Sagen Sie uns, um welches Haus es geht. Wir klären, was möglich ist, und erledigen das ganze Verfahren mit unserem festen Architekten und Gestor.">
+  <h2 id="kurz">Legalisierung oder AFO?</h2>
+  <p>In der Axarquía stehen viele Häuser, die (teilweise) ohne Genehmigung gebaut wurden: ein Anbau, ein zusätzliches Stockwerk, ein Pool oder eine Scheune, die zum Wohnhaus wurde. Ein solches Haus ist nicht automatisch verloren. Das andalusische Raumordnungsgesetz LISTA (Ley 7/2021) kennt zwei Wege:</p>
+  <ul>
+    <li><strong>Legalisierung</strong> (<em>legalización</em>): Entspricht das Gebäude dem heute geltenden Bebauungsplan, beantragen Sie die Genehmigung nachträglich. Danach ist das Haus vollständig legal, als wäre es mit Genehmigung gebaut worden.</li>
+    <li><strong>AFO</strong> (<em>asimilado a fuera de ordenación</em>): Entspricht es nicht dem Bebauungsplan, ist aber die Frist abgelaufen, in der die Gemeinde einschreiten darf (meist sechs Jahre), erkennt die Gemeinde den AFO-Status an. Das Haus bleibt stehen und darf genutzt werden, ist aber nicht legalisiert.</li>
+  </ul>
+  <p>Ist beides nicht möglich, kann die Gemeinde die Wiederherstellung anordnen, bis hin zum Abriss. Was bei einem bestimmten Haus möglich ist, hängt von der Art des Bodens, dem Bebauungsplan und dem Baudatum ab. Das klärt ein Architekt.</p>
 
-  <h2 id="warum">Warum so viele Häuser ohne Genehmigung sind</h2>
-  <p>Bauen auf ländlichem Boden war in Andalusien schon immer streng eingeschränkt. Trotzdem wurden in den letzten Jahrzehnten zehntausende Häuser ohne Genehmigung gebaut oder erweitert: eine Scheune, aus der ein Wohnhaus wurde, ein zusätzliches Stockwerk, ein Pool oder eine überdachte Terrasse. Lange wurde wenig dagegen unternommen. Schätzungsweise 300.000 Häuser in Andalusien sind in dieser Lage, viele davon in Gegenden wie der Axarquía.</p>
+  <h2 id="legalisierung">Echte Legalisierung mit Genehmigung</h2>
+  <p>Legalisieren lässt sich, was dem heute geltenden Bebauungsplan (PGOU) entspricht. Zum Beispiel ein Anbau im Ort, der innerhalb der zulässigen Bebauung bleibt, für den aber nie eine Genehmigung beantragt wurde. Sie durchlaufen dann dasselbe Verfahren wie für eine neue <a href="/de/ratgeber/baugenehmigung-umbau-andalusien/">Baugenehmigung</a>: Ein Architekt erstellt ein Legalisierungsprojekt mit Visado der Kammer, die Gemeinde prüft es, und Sie zahlen die Bausteuer (ICIO) und die Gebühren.</p>
+  <p>Der Vorteil ist groß: Das Haus ist danach ganz normal legal. Sie können den Anbau beim Notar und im Register eintragen lassen, später weiter umbauen, und Banken und Käufer sehen kein Problem mehr. Auch solange die sechs Jahre noch laufen, ist das der einzige Weg, das Risiko loszuwerden.</p>
 
-  <h2 id="erlaubt">Was erlaubt ist und was nicht</h2>
+  <h2 id="afo">AFO: Anerkennung nach sechs Jahren</h2>
+  <p>Ist eine Legalisierung nicht möglich, kann die Gemeinde noch sechs Jahre nach Fertigstellung einschreiten. Danach kann der Eigentümer die Anerkennung als AFO beantragen. Für manche Flächen gilt keine Frist, und die Gemeinde kann immer einschreiten. Dann ist auch AFO ausgeschlossen:</p>
+  <ul>
+    <li>öffentliches Gut, etwa der Küstenstreifen und Flussufer;</li>
+    <li>ländlicher Boden mit natürlichen oder anderen Risiken, etwa Überschwemmungsgebiete;</li>
+    <li>ländlicher Boden im Einflussbereich der Küste;</li>
+    <li>geschütztes Kulturerbe und Grünzonen;</li>
+    <li>Parzellierung (<em>parcelación</em>) von ländlichem Boden.</li>
+  </ul>
+  <p>Außerdem muss das Haus Mindestanforderungen an Sicherheit, Gesundheit und Bewohnbarkeit erfüllen. Sonst kann die Gemeinde zuerst Arbeiten verlangen. Bis zur Anerkennung dürfen am Haus keine Arbeiten erfolgen, und es darf nicht an Wasser, Strom oder Abwasser angeschlossen werden.</p>
+
+  <h2 id="erlaubt">Was mit AFO erlaubt ist und was nicht</h2>
   <table class="prices">
     <thead><tr><th>Erlaubt</th><th>Nicht erlaubt</th></tr></thead>
     <tbody>
-      <tr><td>Bewohnen und langfristig vermieten</td><td>Anbauen oder aufstocken</td></tr>
-      <tr><td>Verkaufen und eintragen</td><td>Abreißen und neu bauen</td></tr>
-      <tr><td>Wasser und Strom anschließen (wo verfügbar)</td><td>Neue Nebengebäude oder ein Pool</td></tr>
-      <tr><td>Instandhaltung und Reparatur (Dach, Leitungen, Ausbau)</td><td>Arbeiten, die Größe oder Wert wesentlich erhöhen</td></tr>
+      <tr><td>Bewohnen, verkaufen und langfristig vermieten</td><td>Anbauen oder aufstocken</td></tr>
+      <tr><td>Eintragung im Eigentumsregister, mit Vermerk des AFO-Status</td><td>Neue Nebengebäude oder ein Pool</td></tr>
+      <tr><td>Anschluss an Wasser und Strom, wo verfügbar</td><td>Mehr bebaute Fläche oder Volumen</td></tr>
+      <tr><td>Instandhaltung, Renovierung und Verstärkung, auch der Konstruktion, mit Genehmigung</td><td>Ferienvermietung, außer die Gemeinde erlaubt sie ausdrücklich</td></tr>
+      <tr><td>Eine andere Nutzung, wenn sie zu den Regeln passt</td><td>Arbeiten ohne Anzeige oder Genehmigung</td></tr>
     </tbody>
   </table>
-  <p>Welche Arbeiten genau erlaubt sind, hängt vom Einzelfall und vom Rathaus ab. Lassen Sie sich immer beraten und reichen Sie vorher eine Anzeige oder einen Genehmigungsantrag ein.</p>
-  <p>Wichtig: Nicht jedes Haus kommt infrage. Liegt es in einem Naturschutzgebiet, einem Überschwemmungsgebiet, auf öffentlichem Grund oder in einer besonderen Risikozone, gilt die Frist oft nicht, und die Behörden können weiterhin einschreiten.</p>
+  <p>Ein AFO-Haus können Sie also gut modernisieren: neues Dach, Bad und Küche, Dämmung, neue Elektrik. Nur größer machen geht nicht. Siehe <a href="/de/renovierung/">Renovierung und Umbau</a>.</p>
 
-  <h2 id="verfahren">Das Verfahren im Überblick</h2>
+  <h2 id="schritte">Die Schritte und wen Sie brauchen</h2>
   <ol>
-    <li><strong>Untersuchung</strong>: Ein Architekt oder Bausachverständiger (aparejador) stellt fest, was vorhanden ist, wann es gebaut wurde und ob es infrage kommt.</li>
-    <li><strong>Technisches Gutachten</strong>: mit Zeichnungen, Fotos, Nachweisen zum Baujahr (etwa Luftbilder oder Catastro-Daten) und einer Erklärung, dass das Gebäude sicher und bewohnbar ist.</li>
-    <li><strong>Antrag beim Rathaus</strong>: mit dem Gutachten und den Gebühren.</li>
-    <li><strong>Eventuelle Reparaturen</strong>: Das Rathaus verlangt manchmal vorher Änderungen, zum Beispiel an der Klärgrube oder aus Sicherheitsgründen.</li>
-    <li><strong>Erklärung und Eintragung</strong>: Nach der AFO-Erklärung wird die Situation im Grundbuch vermerkt.</li>
+    <li><strong>Vorprüfung</strong>: Ein Architekt vergleicht, was steht, mit den Unterlagen (Kataster, Eigentumsregister, alte Genehmigungen) und mit dem Bebauungsplan. Ergebnis: Legalisierung, AFO oder keins von beiden.</li>
+    <li><strong>Nachweis des Baudatums</strong>: Für AFO muss belegt werden, dass die Arbeiten seit mehr als sechs Jahren fertig sind, etwa mit historischen Luftbildern, dem Kataster oder alten Rechnungen.</li>
+    <li><strong>Technisches Gutachten oder Projekt</strong>: mit Zeichnungen, Fotos, einer Beschreibung von Konstruktion und Installationen und einer Erklärung, dass das Haus sicher und bewohnbar ist. Für eine Legalisierung ist ein vollständiges Projekt mit Visado nötig.</li>
+    <li><strong>Antrag bei der Gemeinde</strong>: mit dem Gutachten und den bezahlten Gebühren. Ein Gestor oder der Architekt reicht ihn ein.</li>
+    <li><strong>Eventuelle Anpassungen</strong>: Manchmal verlangt die Gemeinde zuerst Arbeiten, etwa eine ordentliche Klärgrube oder Sicherheitsmaßnahmen.</li>
+    <li><strong>Entscheidung</strong>: Die Gemeinde entscheidet. Bei AFO innerhalb von sechs Monaten. Ohne Entscheidung gilt der Antrag als abgelehnt.</li>
+    <li><strong>Kataster, Notar und Register</strong>: Die tatsächliche Fläche kommt ins Kataster. Beim Notar lassen Sie das Gebäude in die Urkunde aufnehmen, und das Eigentumsregister vermerkt den AFO-Status.</li>
   </ol>
+  <p>Wen Sie brauchen: einen <strong>Architekten</strong> oder <strong>Arquitecto técnico</strong> für Prüfung und Gutachten, einen <strong>Gestor</strong> für die Anträge und das Kataster, einen <strong>Notar</strong> und das <strong>Eigentumsregister</strong>, und bei unklarer Rechtslage einen <strong>Anwalt</strong>. Wir erledigen das ganze Verfahren mit unserem festen Architekten und Gestor, bei Bedarf auch mit einem Steuerberater.</p>
 
-  <h2 id="kaeufer">Als Käufer: worauf Sie achten sollten</h2>
+  <h2 id="kosten">Kosten und Dauer</h2>
+  <table class="prices">
+    <thead><tr><th>Kostenpunkt</th><th>Wovon er abhängt</th></tr></thead>
+    <tbody>
+      <tr><td>Architekt oder Arquitecto técnico</td><td>Größe des Hauses und Umfang der Prüfung. Bei Legalisierung ein vollständiges Projekt, bei AFO ein technisches Gutachten.</td></tr>
+      <tr><td>Gemeindegebühren für AFO</td><td>Je Gemeinde, meist ein Prozentsatz der Baukosten dessen, was ohne Genehmigung gebaut wurde. Siehe die Tabelle unten.</td></tr>
+      <tr><td>Bausteuer und Gebühren bei Legalisierung</td><td>Wie bei einer neuen Genehmigung: in der Axarquía 2 % bis 4 % ICIO auf die Baukosten, plus Gebühren. Je Ort auf der Seite Baugenehmigung.</td></tr>
+      <tr><td>Arbeiten am Haus</td><td>Was die Gemeinde verlangt, etwa Klärgrube, Elektrik oder Sicherheit.</td></tr>
+      <tr><td>Notar und Register</td><td>Urkunde für das Gebäude und Eintragung.</td></tr>
+      <tr><td>Kataster und IBI</td><td>Eine größere Fläche im Kataster erhöht die jährliche IBI. Das Kataster kann auch für Vorjahre nachfordern.</td></tr>
+    </tbody>
+  </table>
+  <p>Die AFO-Gebühren in drei großen Gemeinden der Axarquía, am Beispiel eines Anbaus mit 40.000 € Baukosten:</p>
+  <table class="prices">
+    <thead><tr><th>Gemeinde</th><th>AFO-Gebühr</th><th>Bei 40.000 €</th></tr></thead>
+    <tbody>
+      <tr><td>Nerja</td><td>3,5 % der Baukosten, mindestens 750 €</td><td>1.400 €</td></tr>
+      <tr><td>Torrox</td><td>750 € (über 60.000 € Baukosten: 1,25 %) plus 3,25 % der Baukosten</td><td>2.050 €</td></tr>
+      <tr><td>Vélez-Málaga</td><td>7,5 % der Baukosten</td><td>3.000 €</td></tr>
+    </tbody>
+  </table>
+  <p>Die Baukosten sind nicht, was der Bau damals gekostet hat, sondern was der Architekt angibt, mit den festen Beträgen je m² der Gemeinde oder der Architektenkammer als Untergrenze. Die Beträge stammen aus den von den Gemeinden veröffentlichten Gebührensatzungen (Nerja 2020, Torrox 2013, Vélez-Málaga 2014). Satzungen werden manchmal geändert, fragen Sie daher den aktuellen Satz bei der Gemeinde nach. Für andere Gemeinden suchen wir ihn heraus, sobald Sie ein konkretes Haus haben. Insgesamt kostet ein AFO-Verfahren meist einige tausend Euro, mehr, wenn Reparaturen nötig sind. Eine Legalisierung mit Projekt kostet mehr, bringt aber auch mehr.</p>
+  <p>Dauer: Vorprüfung und Gutachten dauern einige Wochen. Die Gemeinde hat für AFO sechs Monate Zeit. Mit Anpassungen und Eintragung dauert das Ganze oft ein halbes Jahr bis über ein Jahr.</p>
+
+  <h2 id="folgen">Ein Haus ohne Papiere kaufen: die Folgen</h2>
+  <p>Was steht in der Praxis auf dem Spiel, wenn Sie ein Haus kaufen, das teilweise nicht genehmigt oder anerkannt ist?</p>
   <ul>
-    <li>Vergleichen Sie das Vorhandene mit der Beschreibung im Catastro und im Grundbuch. Jeder Unterschied muss erklärt werden.</li>
-    <li>Lassen Sie sich die AFO-Erklärung des Rathauses oder die Genehmigungen zeigen. Ein Versprechen des Verkäufers reicht nicht.</li>
-    <li>Kaufen Sie auf Basis dessen, was jetzt da ist: Wollen Sie später anbauen oder einen Pool bauen, geht das wahrscheinlich nicht.</li>
-    <li>Lassen Sie einen unabhängigen Anwalt und einen Architekten prüfen und machen Sie das Ergebnis zur Bedingung im Arras-Vertrag.</li>
-    <li>Denken Sie an den Wert: Ein Haus mit AFO-Status ist beim Wiederverkauf oft weniger wert als ein vergleichbares, vollständig genehmigtes.</li>
+    <li><strong>Hypothek</strong>: Die Bank lässt das Haus bewerten. Der Gutachter bewertet nur, was legal und eingetragen ist, oder lehnt ab. Sie bekommen dann weniger oder gar keine Hypothek. Mit AFO im Register geht es besser, aber nicht bei jeder Bank.</li>
+    <li><strong>Notar und Register</strong>: Ein Gebäude kommt nur mit Genehmigung, AFO-Anerkennung oder Nachweis des Fristablaufs in Urkunde und Register. Ohne das kaufen Sie auf dem Papier weniger, als dasteht.</li>
+    <li><strong>Anschlüsse</strong>: Ein Haus ohne Genehmigung oder AFO darf nicht an Wasser, Strom oder Abwasser angeschlossen werden. Besteht der Anschluss schon, können ein neuer Vertrag oder mehr Leistung schwierig sein.</li>
+    <li><strong>Versicherung</strong>: Der Versicherer geht von der angegebenen Fläche aus. Bei Schäden an einem nicht genehmigten Teil kann es Streit über die Auszahlung geben.</li>
+    <li><strong>Einschreiten der Gemeinde</strong>: Sind die sechs Jahre nicht vorbei oder liegt das Haus auf Boden ohne Frist, kann die Gemeinde Wiederherstellung oder Abriss verlangen. Diese Pflicht geht mit dem Haus auf Sie als neuen Eigentümer über.</li>
+    <li><strong>Umbauen</strong>: Vor der Anerkennung dürfen Sie nichts tun. Danach nur renovieren, nicht erweitern.</li>
+    <li><strong>Ferienvermietung</strong>: Mit AFO nur mit ausdrücklicher Erlaubnis der Gemeinde, ohne Papiere gar nicht.</li>
+    <li><strong>Weiterverkauf</strong>: Der nächste Käufer stößt auf dieselben Fragen. Das drückt den Preis und verlängert den Verkauf. Siehe auch <a href="/de/ratgeber/haus-verkaufen-spanien/unterlagen/">welche Unterlagen Sie beim Verkauf brauchen</a>.</li>
   </ul>
-  <p>Mehr zum Kauf eines Landhauses lesen Sie in unserem Ratgeber <a href="/de/ratgeber/finca-kaufen-spanien/">Finca kaufen in Spanien</a>.</p>
 
-  <h2 id="eigentuemer">Als Eigentümer: renovieren mit AFO</h2>
-  <p>Auch mit AFO-Status können Sie Ihr Haus instand halten und modernisieren: ein neues Dach, neues Bad und neue Küche, Dämmung, neue Elektrik. Was Sie nicht dürfen, ist das Haus vergrößern. Wir stimmen mit Ihnen pro Projekt ab, was erlaubt ist, und reichen die richtige Anzeige beim Rathaus ein. Siehe <a href="/de/renovierung/">Renovierung</a>.</p>
-  <p class="note">Dieser Ratgeber gibt eine allgemeine Erklärung und ist keine Rechtsberatung. Das Urteil über eine bestimmte Immobilie kommt von einem Architekten oder Anwalt. Die Regeln können sich zwischen Rathäusern unterscheiden und mit der Zeit ändern.</p>
+  <h2 id="wert">Vorteile, Risiken und Wert</h2>
+  <p>Ein Haus ohne Papiere hat auch einen Vorteil: den Preis. Verkäufer und Makler wissen, dass es schwerer zu verkaufen ist, und das zeigt sich im Angebotspreis. Für einen Käufer, der ohne Hypothek zahlt und weiß, was möglich ist, kann das eine Chance sein: Sie kaufen unter Marktwert, legalisieren oder lassen AFO anerkennen, und das Haus ist danach mehr wert und leichter verkäuflich.</p>
+  <table class="prices">
+    <thead><tr><th>Status</th><th>Was er für Wert und Verkauf bedeutet</th></tr></thead>
+    <tbody>
+      <tr><td>Vollständig genehmigt und eingetragen</td><td>Voller Marktwert, Hypothek möglich, Erweiterung im Rahmen des Bebauungsplans möglich</td></tr>
+      <tr><td>AFO anerkannt und eingetragen</td><td>Verkäuflich und bei einem Teil der Banken finanzierbar, aber nicht erweiterbar. Meist weniger wert als ein vergleichbares genehmigtes Haus</td></tr>
+      <tr><td>Keine Genehmigung und kein AFO</td><td>Schwer zu finanzieren und zu verkaufen, mit Risiko eines Einschreitens. Der niedrigste Preis, aber auch das größte Risiko</td></tr>
+    </tbody>
+  </table>
+  <p>Die Chance ist nur dann eine, wenn vorher feststeht, dass Legalisierung oder AFO machbar ist. Liegt das Haus in einer Zone ohne Frist, kaufen Sie ein Problem, keine Chance. Lassen Sie es deshalb zuerst prüfen, und rechnen Sie Kosten und Dauer des Verfahrens in Ihr Angebot ein.</p>
+
+  <h2 id="kaeufer">Checkliste für Käufer</h2>
+  <ul>
+    <li>Vergleichen Sie, was steht, mit Kataster und Eigentumsregister. Jeder Unterschied bei Fläche oder Nebengebäuden muss erklärt werden.</li>
+    <li>Lassen Sie sich die Genehmigungen oder die AFO-Anerkennung der Gemeinde zeigen. Ein Versprechen des Verkäufers reicht nicht.</li>
+    <li>Lassen Sie einen Architekten prüfen, ob Legalisierung oder AFO möglich ist und was es kostet. Ein <a href="/de/immobiliengutachten/">Immobiliengutachten</a> zeigt, ob das Haus die Mindestanforderungen erfüllt.</li>
+    <li>Fragen Sie bei der Gemeinde nach, ob ein Verfahren gegen das Haus läuft.</li>
+    <li>Nehmen Sie das Ergebnis in den Vorvertrag (<em>arras</em>) auf, etwa als Bedingung, oder lassen Sie den Verkäufer die AFO-Anerkennung vor der Übergabe besorgen.</li>
+    <li>Wollen Sie später anbauen, einen Pool bauen oder an Touristen vermieten? Gehen Sie davon aus, dass das mit AFO nicht geht.</li>
+  </ul>
+  <p>Welche Fragen Sie Verkäufer, Makler und Gemeinde auf Spanisch stellen und worauf Sie je nach Haustyp achten, steht in der <a href="/de/ratgeber/haus-kaufen-spanien/checkliste/#legalitaetstest">Checkliste zum Hauskauf</a>. Kaufen Sie einen bestehenden Betrieb, lesen Sie auch <a href="/de/ratgeber/haus-kaufen-spanien/pension-kaufen/">Pension kaufen</a>. Mehr zum Kauf eines Landhauses lesen Sie im Ratgeber <a href="/de/ratgeber/finca-kaufen-spanien/">Finca kaufen in Spanien</a>.</p>
+  <p class="note">Dieser Ratgeber gibt allgemeine Informationen auf Grundlage des andalusischen und spanischen Rechts mit Stand 5. November 2026 (LISTA Art. 151–153 und 173–174, Ley de Suelo Art. 28, Decreto 28/2016 in der Fassung von 2024, LOE, RD 1000/2010, Ley del Catastro) und der Gebührensatzungen von Nerja, Torrox und Vélez-Málaga. Er ist keine Rechtsberatung. Ob ein bestimmtes Haus legalisiert werden kann, beurteilen Architekt, Anwalt und Gemeinde.</p>
 </Guide>

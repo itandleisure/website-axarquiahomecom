@@ -1,0 +1,147 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'wat', label: 'Huis of bedrijf: wat koopt u?' },
+  { id: 'licentie', label: 'Licentie en bestemming' },
+  { id: 'cijfers', label: 'De jaarcijfers controleren' },
+  { id: 'kanalen', label: 'Boekingskanalen en directe boekingen' },
+  { id: 'online', label: 'Website, social media en reviews' },
+  { id: 'pand', label: 'Het pand en de installaties' },
+  { id: 'personeel', label: 'Personeel en contracten' },
+  { id: 'vergelijken', label: 'Meerdere B&B’s vergelijken' },
+  { id: 'spaans', label: 'Vragen in het Spaans' },
+  { id: 'hulp', label: 'Hoe wij helpen' },
+  { id: 'bronnen', label: 'Bronnen' },
+];
+
+const faq = [
+  {
+    q: 'Gaat de toeristische licentie mee als ik een B&B koop?',
+    a: 'De inschrijving in het toerismeregister van Andalusië staat op naam van de exploitant. Bij een overname meldt u de wijziging van exploitant bij de Junta, en het landelijke registratienummer voor verhuursites moet ook worden aangepast. Of de bestaande inschrijving onder de huidige regels nog geldig is, laat u vóór de koop controleren: regels en gemeentelijke beperkingen zijn de laatste jaren veranderd.',
+  },
+  {
+    q: 'Gaan de reviews op Booking.com en Airbnb mee?',
+    a: 'Dat verschilt per platform. Op Booking.com hoort de pagina bij de accommodatie, en er is een procedure voor een wisseling van eigenaar. Op Airbnb horen reviews bij het account van de host en gaan ze meestal niet mee naar een nieuw account. Vraag de verkoper hoe de overdracht per kanaal verloopt en reken erop dat u op sommige kanalen opnieuw begint.',
+  },
+  {
+    q: 'Hoeveel jaar cijfers moet ik zien?',
+    a: 'Minimaal drie volledige jaren, en het lopende jaar per maand. Zo ziet u de trend en de seizoenen, en of een goed jaar een uitschieter was. Vergelijk de cijfers met de belastingaangiften en de uitbetalingen van de platforms.',
+  },
+  {
+    q: 'Koop ik het pand of het bedrijf van de verkoper?',
+    a: 'Meestal koopt u het pand met inventaris, en begint u zelf de exploitatie. Soms is de B&B ondergebracht in een Spaanse vennootschap (SL) en koopt u de aandelen. Dat kan fiscaal anders uitpakken, maar u neemt dan ook alle schulden en risico’s van die vennootschap over. Laat de structuur altijd door een advocaat en gestor beoordelen.',
+  },
+];
+---
+<Guide slug="huis-kopen-in-spanje-bed-and-breakfast" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Een B&B op het oog?" ctaText="Wij keuren het pand met de ogen van een exploitant: kamers, badkamers, water, afvoer en installaties, met een prijs voor wat er moet gebeuren. U krijgt een rapport in het Nederlands.">
+  <p>Deze pagina gaat over het overnemen van een B&amp;B, casa rural of kleinschalige vakantieverhuur die al draait. Wilt u zelf een B&amp;B beginnen in een huis dat u nog moet kiezen, lees dan <a href="/nl/gidsen/finca-appartement-of-dorpshuis/bed-and-breakfast/">een B&amp;B starten in de Axarquía</a>. De gewone stappen van de aankoop staan in het <a href="/nl/gidsen/huis-kopen-in-spanje/">stappenplan huis kopen in Spanje</a>.</p>
+
+  <h2 id="wat">Huis of bedrijf: wat koopt u?</h2>
+  <p>Een lopende B&amp;B wordt vaak verkocht voor meer dan het huis alleen waard zou zijn. De verkoper rekent de omzet, de reviews en de vaste gasten mee. Dat kan terecht zijn, maar alleen als die omzet echt is en na de overdracht blijft. Stel daarom twee vragen apart:</p>
+  <ul>
+    <li><strong>Wat is het pand waard als woning?</strong> Vergelijk met gewone huizen in de buurt en tel de verbouwkosten mee.</li>
+    <li><strong>Wat levert het bedrijf netto op</strong>, na alle kosten en na een redelijke vergoeding voor uw eigen werk? Het verschil tussen de vraagprijs en de woningwaarde betaalt u voor dat resultaat.</li>
+  </ul>
+  <p>Meestal koopt u het pand met inventaris en start u zelf de exploitatie. Zit de B&amp;B in een Spaanse vennootschap (SL) en koopt u de aandelen, dan neemt u ook alle schulden en risico’s van die vennootschap over. Laat de structuur door een advocaat en gestor beoordelen.</p>
+
+  <h2 id="licentie">Licentie en bestemming</h2>
+  <p>Een B&amp;B is in Andalusië geen aparte categorie. Het gaat om een vakantiewoning (VFT, ook per kamer), logies op het platteland (zoals een <em>casa rural</em>) of een kleine hotelvorm zoals een pension. Controleer:</p>
+  <ul>
+    <li><strong>De inschrijving in het toerismeregister</strong> (<em>Registro de Turismo de Andalucía</em>): welke categorie, hoeveel kamers en hoeveel gasten. Draait de B&amp;B met meer kamers of gasten dan ingeschreven, dan is de omzet deels niet legaal te halen.</li>
+    <li><strong>Het landelijke registratienummer</strong> dat sinds juli 2025 verplicht is om op verhuursites te adverteren.</li>
+    <li><strong>De legale status van het pand.</strong> Zijn alle gastenkamers, badkamers en het zwembad vergund? Bij een finca met AFO-status mag u niet uitbreiden en is toeristische exploitatie niet vanzelfsprekend. Zie <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren</a>.</li>
+    <li><strong>Gemeentelijke beperkingen.</strong> Gemeenten mogen nieuwe vakantiewoningen beperken. Vraag na wat er geldt als de exploitant wisselt.</li>
+    <li><strong>Overige vergunningen</strong>: een activiteitenvergunning bij hotelachtige vormen, en bij ontbijt de regels voor voedselhygiëne.</li>
+  </ul>
+
+  <h2 id="cijfers">De jaarcijfers controleren</h2>
+  <p>Vraag minimaal drie volledige jaren en het lopende jaar per maand. Kijk naar:</p>
+  <ul>
+    <li><strong>Omzet per maand</strong>, zodat u het seizoen ziet. Veel B&amp;B’s in de Axarquía draaien van maart tot november en hebben in de winter weinig gasten.</li>
+    <li><strong>Bezetting en gemiddelde prijs per nacht</strong>, per kamer. Een hoge omzet met lage prijzen is kwetsbaarder dan een lagere omzet met vaste gasten die meer betalen.</li>
+    <li><strong>Alle kosten</strong>: commissies van platforms, schoonmaak en was, energie en water, ontbijt, onderhoud, verzekering, IBI, afvalheffing, gestor, marketing en personeel.</li>
+    <li><strong>Het eigen werk van de verkoper.</strong> Doen de eigenaars alles zelf, dan zit hun arbeid niet in de kosten. Reken een vergoeding mee, of het loon van iemand die het werk overneemt.</li>
+    <li><strong>De trend.</strong> Stijgt of daalt de omzet? Was één jaar een uitschieter?</li>
+  </ul>
+  <p><strong>Laat de cijfers aantonen.</strong> Een overzicht in een spreadsheet is geen bewijs. Vraag de Spaanse belastingaangiften (inkomstenbelasting of vennootschapsbelasting, en btw), de uitbetalingsoverzichten van Booking.com, Airbnb en andere kanalen, en bankafschriften. Omzet die “contant” of buiten de boeken zou zijn gemaakt, telt u niet mee: die kunt u niet controleren en zelf niet legaal herhalen.</p>
+  <p>Vraag ook naar de <strong>toekomstige boekingen</strong>: hoeveel staan er al, en wie krijgt de aanbetalingen die gasten al hebben gedaan? Leg dat vast in het koopcontract.</p>
+
+  <h2 id="kanalen">Boekingskanalen en directe boekingen</h2>
+  <p>Waar de gasten vandaan komen, bepaalt hoeveel u overhoudt en hoe kwetsbaar de omzet is. Vraag per kanaal het aandeel in boekingen en omzet over de laatste jaren:</p>
+  <ul>
+    <li><strong>Platforms</strong> zoals Booking.com, Airbnb en Expedia. Die rekenen commissie, vaak 15 tot 20% bij Booking.com en een vergelijkbaar deel van de totale prijs bij Airbnb. Een B&amp;B die bijna alles via één platform krijgt, is afhankelijk van het algoritme en de regels van dat platform.</li>
+    <li><strong>Directe boekingen</strong> via de eigen website, telefoon of e-mail. Die leveren het meest op. Een hoog aandeel directe boekingen en terugkerende gasten is vaak het meest waardevolle deel van een B&amp;B.</li>
+    <li><strong>Overige kanalen</strong>: reisorganisaties, wandel- of fietsreizen, yogaretraites, bruiloften.</li>
+  </ul>
+  <p>Vraag ook wat er overgaat. Op Booking.com hoort de pagina bij de accommodatie en is er een procedure voor een nieuwe eigenaar. Op Airbnb horen reviews bij het account van de host en gaan ze meestal niet mee. De klantenlijst van directe gasten kunt u alleen overnemen als de privacyregels (AVG) dat toelaten; laat dit door de advocaat regelen.</p>
+
+  <h2 id="online">Website, social media en reviews</h2>
+  <p>Een goed lopende B&amp;B wordt online gevonden. Kijk zelf, voordat u het de verkoper vraagt:</p>
+  <ul>
+    <li><strong>De website</strong>: staat de domeinnaam op naam van de verkoper en gaat hij mee? Hoeveel bezoekers komen er en waarvandaan (Google, social media, platforms)? Vraag toegang tot de statistieken, zoals Google Analytics en Search Console.</li>
+    <li><strong>Google-bedrijfsprofiel</strong>: aantal reviews, gemiddelde score en of de eigenaar reageert.</li>
+    <li><strong>Social media</strong>: op welke kanalen staat de B&amp;B (Instagram, Facebook, TikTok, YouTube)? Hoeveel volgers, hoe vaak wordt er gepost en hoeveel reacties komen erop? Een account met 10.000 volgers waarop al een jaar niets gebeurt, is weinig waard. Vraag of de accounts worden overgedragen.</li>
+    <li><strong>Reviews op alle platforms</strong>: lees de laatste twee jaar, niet alleen de score. Terugkerende klachten over vocht, lawaai, bedden of de toegangsweg wijzen op kosten na de koop.</li>
+    <li><strong>De rol van de eigenaar.</strong> Gasten schrijven vaak over de gastheer of gastvrouw. Draait de B&amp;B op hun persoonlijkheid, dan kan een deel van de vaste gasten na de overdracht wegblijven.</li>
+  </ul>
+
+  <h2 id="pand">Het pand en de installaties</h2>
+  <p>Gasten belasten een huis zwaarder dan bewoners. Bij een keuring van een B&amp;B kijken we naast de gewone punten naar:</p>
+  <ul>
+    <li>Badkamers per kamer: leidingen, afvoer, vocht en ventilatie.</li>
+    <li>Warm water en water in het algemeen: is de bron of aansluiting berekend op een volle bezetting in augustus?</li>
+    <li>Afvoer en septische put: capaciteit en of die aan de regels voldoet.</li>
+    <li>Airco en verwarming in alle kamers, verplicht voor toeristische verhuur in Andalusië.</li>
+    <li>Elektra: vermogen en veiligheid, met het oog op airco’s, keuken en zwembad tegelijk.</li>
+    <li>Brandveiligheid, vluchtwegen en geluidsisolatie tussen kamers.</li>
+    <li>Uitgesteld onderhoud: een verkoper die stopt, investeert de laatste jaren vaak weinig meer.</li>
+  </ul>
+  <p>Lees ook <a href="/nl/gidsen/finca-kopen-in-spanje/">finca kopen in Spanje</a> voor water, toegang en afvoer op het platteland, en bekijk richtprijzen in <a href="/nl/gidsen/kosten-huis-renoveren-spanje/">wat kost renoveren</a>.</p>
+
+  <h2 id="personeel">Personeel en contracten</h2>
+  <p>Heeft de B&amp;B personeel, zoals een schoonmaker of kok? Neemt u het bedrijf als geheel over, dan gaan arbeidscontracten in Spanje in de regel mee naar de nieuwe eigenaar, inclusief opgebouwde rechten. Vraag een lijst van personeel, contracten en eventuele geschillen. Kijk ook naar lopende contracten met wasserijen, leveranciers, reisorganisaties en onderhoudsbedrijven: wat loopt door, wat kunt u opzeggen?</p>
+
+  <h2 id="vergelijken">Meerdere B&amp;B’s vergelijken</h2>
+  <p>Bekijk bij voorkeur twee of drie kandidaten en zet ze naast elkaar. Reken alles om naar dezelfde maatstaven:</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Maatstaf</th><th>Waar u het vindt</th></tr></thead>
+    <tbody>
+      <tr><td>Vraagprijs, en prijs per legale kamer</td><td>Advertentie en inschrijving toerismeregister</td></tr>
+      <tr><td>Woningwaarde zonder bedrijf</td><td>Vergelijkbare huizen in de buurt, taxatie</td></tr>
+      <tr><td>Omzet en nettoresultaat over drie jaar</td><td>Belastingaangiften, uitbetalingen platforms</td></tr>
+      <tr><td>Bezetting en prijs per nacht per seizoen</td><td>Boekingsoverzicht per maand</td></tr>
+      <tr><td>Aandeel directe boekingen en vaste gasten</td><td>Boekingsoverzicht per kanaal</td></tr>
+      <tr><td>Reviewscore en trend</td><td>Google, Booking.com, Airbnb, TripAdvisor</td></tr>
+      <tr><td>Online bereik</td><td>Websitestatistieken, social media</td></tr>
+      <tr><td>Investering na aankoop</td><td>Aankoopkeuring met prijsindicatie</td></tr>
+      <tr><td>Legale status pand en licentie</td><td>Advocaat, gemeente, Junta</td></tr>
+      <tr><td>Eigen werk dat u erin moet steken</td><td>Gesprek met de verkoper, personeelslijst</td></tr>
+    </tbody>
+  </table></div>
+  <p>Maak voor de B&amp;B die het beste uitkomt een eigen begroting met een voorzichtig scenario: lagere bezetting in het eerste jaar, de commissies van de platforms, en de investeringen uit de keuring. Klopt het dan nog, dan heeft u een goede basis voor uw bod.</p>
+
+  <h2 id="spaans">Vragen in het Spaans</h2>
+  <p>Een paar vragen die u de verkoper of de makelaar kunt sturen:</p>
+  <ul>
+    <li><q lang="es">¿Me puede enviar las declaraciones de impuestos y de IVA de los últimos tres años?</q> Kunt u mij de belasting- en btw-aangiften van de laatste drie jaar sturen?</li>
+    <li><q lang="es">¿Me puede enviar los informes de pagos de Booking y Airbnb de los últimos tres años?</q> Kunt u mij de uitbetalingsoverzichten van Booking en Airbnb van de laatste drie jaar sturen?</li>
+    <li><q lang="es">¿Qué porcentaje de las reservas es directo y qué porcentaje viene de plataformas?</q> Welk deel van de boekingen is direct en welk deel komt via platforms?</li>
+    <li><q lang="es">¿Con qué número está inscrito en el Registro de Turismo de Andalucía, y para cuántas habitaciones y plazas?</q> Met welk nummer staat u ingeschreven in het toerismeregister, en voor hoeveel kamers en gasten?</li>
+    <li><q lang="es">¿Están incluidos en la venta el dominio web, las redes sociales y las reservas futuras?</q> Horen de domeinnaam, de social media en de toekomstige boekingen bij de verkoop?</li>
+    <li><q lang="es">¿Hay trabajadores contratados? ¿Me puede enviar sus contratos?</q> Is er personeel in dienst? Kunt u mij de contracten sturen?</li>
+  </ul>
+  <p>Meer vragen over het huis zelf, ook in het Spaans, staan in de <a href="/nl/gidsen/huis-kopen-in-spanje/checklist/">checklist huis kopen</a>.</p>
+
+  <h2 id="hulp">Hoe wij helpen</h2>
+  <p>De boeken laat u controleren door een gestor of accountant, de licentie en de structuur door een advocaat. Wij doen het pand: met onze <a href="/nl/aankoopkeuring/">aankoopkeuring</a> bekijken we de B&amp;B met de ogen van een exploitant en geven we een prijs voor wat er moet gebeuren, per kamer uitgesplitst. Na de aankoop helpen we met <a href="/nl/renovatie/">renovatie</a>, <a href="/nl/onderhoud/">onderhoud</a>, het <a href="/nl/zwembad/">zwembad</a> en, als u er niet bent, <a href="/nl/sleutelbeheer/">sleutelbeheer</a>. <a href="/nl/aanvraag/?dienst=aankoopkeuring">Vraag een keuring aan</a> of mail naar <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+
+  <h2 id="bronnen">Bronnen</h2>
+  <ul>
+    <li>Toerisme in Andalusië: Ley 13/2011 del Turismo de Andalucía; vakantiewoningen: Decreto 28/2016, gewijzigd door Decreto 31/2024; logies op het platteland: Decreto 20/2002 de Turismo en el Medio Rural.</li>
+    <li>Landelijk registratienummer voor korte verhuur: Real Decreto 1312/2024 (verplicht sinds 1 juli 2025).</li>
+    <li>Overgang van personeel bij overname van een onderneming: Estatuto de los Trabajadores, artikel 44.</li>
+    <li>Bouwen op landelijke grond en AFO: Ley 7/2021 (LISTA) en Decreto 550/2022.</li>
+  </ul>
+  <p class="note">Gecontroleerd op 5 november 2026. Deze gids geeft algemene informatie en is geen juridisch, fiscaal of financieel advies. Regels voor toeristische verhuur veranderen regelmatig; laat een overname begeleiden door een advocaat en een gestor of accountant.</p>
+</Guide>

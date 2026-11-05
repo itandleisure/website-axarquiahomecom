@@ -1,0 +1,115 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import BuyingChecklist from '../../../../components/BuyingChecklist.astro';
+import { buyingChecklist } from '../../../../data/buying-checklist';
+
+const toc = [
+  { id: 'nutzung', label: 'So nutzen Sie diese Liste' },
+  { id: 'legalitaetstest', label: 'Der Legalitätstest: drei Fälle' },
+  ...buyingChecklist.map((t) => ({ id: t.id.de, label: t.title.de })),
+  { id: 'nach-typ', label: 'Zusätzliche Punkte je Haustyp' },
+  { id: 'gutachten', label: 'Lassen Sie es uns prüfen' },
+  { id: 'quellen', label: 'Quellen' },
+];
+
+const faq = [
+  {
+    q: 'Muss ich diese Fragen stellen, wenn ich einen Anwalt habe?',
+    a: 'Ihr Anwalt prüft die Unterlagen: Register, Kataster, Genehmigungen und Schulden. Fragen zum Haus selbst, etwa Feuchtigkeit, Undichtigkeiten, Wasser und Zufahrt, stellen Sie am besten schon bei der Besichtigung. So wissen Sie früh, ob sich das Haus lohnt, bevor Kosten entstehen.',
+  },
+  {
+    q: 'Kann ich mich auf die Antworten des Verkäufers verlassen?',
+    a: 'Eine mündliche Antwort ist ein Anfang, kein Beweis. Verlangen Sie das Dokument (Lizenz, AFO-Erklärung, Nota simple, Rechnungen) oder eine schriftliche Bestätigung, und lassen Sie die wichtigsten Punkte in den Arras-Vertrag aufnehmen. Eine schriftliche Angabe des Verkäufers, die nicht stimmt, kann später einen Anspruch begründen.',
+  },
+  {
+    q: 'Was ist der Unterschied zwischen licencia de primera ocupación und declaración responsable?',
+    a: 'Früher erteilte die Gemeinde eine Erstbezugslizenz. Seit dem andalusischen Gesetz LISTA vom Dezember 2021 genügt für die meisten neuen oder umgebauten Wohnungen eine Erklärung (declaración responsable de ocupación) des Eigentümers mit einem Architektenzertifikat. Ältere Häuser haben manchmal keines von beiden; dann kann ein Altersnachweis oder eine AFO-Erklärung nötig sein.',
+  },
+];
+---
+<Guide lang="de" slug="haus-kaufen-spanien-checkliste" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Sollen wir das für Sie prüfen?" ctaText="Mit einem Immobiliengutachten prüfen wir den Zustand des Hauses, ob das Gebaute zu den Unterlagen passt, und kalkulieren die nötigen Arbeiten. Kommunikation auf Englisch oder Niederländisch.">
+  <h2 id="nutzung">So nutzen Sie diese Liste</h2>
+  <p>Diese Checkliste gehört zum Ratgeber <a href="/de/ratgeber/haus-kaufen-spanien/">Haus kaufen in Spanien Schritt für Schritt</a>. Nehmen Sie sie zur Besichtigung mit, auf dem Handy oder ausgedruckt. Stellen Sie die Fragen dem Makler oder dem Verkäufer. Spricht er kein Deutsch oder Englisch, lesen Sie den spanischen Satz vor oder schicken Sie ihn per WhatsApp oder E-Mail.</p>
+  <p>Drei Sätze, die immer nützlich sind:</p>
+  <ul>
+    <li><q lang="es">¿Me lo puede confirmar por escrito, por favor?</q> Können Sie das bitte schriftlich bestätigen?</li>
+    <li><q lang="es">¿Me puede enviar una copia del documento?</q> Können Sie mir eine Kopie des Dokuments schicken?</li>
+    <li><q lang="es">Mi abogado lo va a comprobar.</q> Mein Anwalt wird das prüfen.</li>
+  </ul>
+  <p>Eine Antwort zählt erst, wenn sie auf Papier steht. Lassen Sie die wichtigsten Antworten von Ihrem eigenen Anwalt prüfen und im privaten Kaufvertrag (Arras) festhalten.</p>
+
+  <h2 id="legalitaetstest">Der Legalitätstest: drei Fälle</h2>
+  <p>Wurde etwas ohne Genehmigung gebaut (ein Anbau, eine geschlossene Terrasse, ein Pool oder das ganze Haus), klären Sie zuerst, in welchem von drei Fällen sich das Haus befindet. Davon hängt ab, ob Sie das Problem lösen können, damit leben können oder besser aussteigen.</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Fall</th><th>Was es bedeutet</th><th>Für Sie als Käufer</th></tr></thead>
+    <tbody>
+      <tr><td><strong>1. Legalisierbar</strong></td><td>Das Gebaute passt in den Bebauungsplan. Der Eigentümer kann nachträglich eine Genehmigung beantragen.</td><td>Danach voll legal. Vereinbaren Sie, dass der Verkäufer das vor dem Notar erledigt, oder berücksichtigen Sie die Kosten im Preis.</td></tr>
+      <tr><td><strong>2. AFO</strong></td><td>Es passt nicht in den Plan, aber die Frist von sechs Jahren für ein Einschreiten ist abgelaufen. Die Gemeinde kann eine AFO-Erklärung ausstellen.</td><td>Das Haus darf stehen bleiben und bewohnt werden, aber nicht erweitert werden. Eine Hypothek ist schwieriger, Ferienvermietung nur mit ausdrücklicher Zustimmung der Gemeinde.</td></tr>
+      <tr><td><strong>3. Nie verjährt</strong></td><td>Auf Flächen ohne Frist, etwa im Küstenstreifen, in Überschwemmungsgebieten oder geschützter Natur, und bei einer illegalen Parzellierung.</td><td>Ein Abriss bleibt jederzeit möglich. Nicht kaufen, es sei denn, Ihr Anwalt ist sicher, dass es nicht zutrifft.</td></tr>
+    </tbody>
+  </table></div>
+  <p>Die Fragen dazu:</p>
+  <ul>
+    <li><q lang="es">¿Lo construido sin licencia es compatible con el planeamiento? ¿Se puede legalizar?</q> Passt das ohne Genehmigung Gebaute in den Bebauungsplan? Lässt es sich legalisieren?</li>
+    <li><q lang="es">¿Cuándo se terminó la obra? ¿Han pasado más de seis años? ¿Tiene ya la resolución de AFO?</q> Wann wurde es gebaut? Vor mehr als sechs Jahren? Gibt es schon eine AFO-Erklärung?</li>
+    <li><q lang="es">¿Está la parcela en zona de costa, zona inundable, espacio natural protegido o suelo de especial protección?</q> Liegt das Grundstück im Küstenstreifen, im Überschwemmungsgebiet oder in einem Schutzgebiet?</li>
+    <li><q lang="es">¿La parcela procede de una segregación o parcelación con licencia?</q> Wurde das Grundstück mit Genehmigung abgeteilt?</li>
+  </ul>
+  <p>Die Antwort des Verkäufers ist ein Anfang; Ihr Anwalt prüft sie bei der Gemeinde. Kosten, Dauer und Verfahren je Fall stehen in <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung in Andalusien</a>.</p>
+
+  <BuyingChecklist lang="de" theme={0} />
+  <p>Mehr zum rechtlichen Status in <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung in Andalusien</a> und für Landhäuser in <a href="/de/ratgeber/finca-kaufen-spanien/">Finca kaufen in Spanien</a>. Auf den Gemeindeseiten unter <a href="/de/orte/">Orte</a> stehen auch die örtlichen Regeln für Baugenehmigungen.</p>
+
+  <BuyingChecklist lang="de" theme={1} />
+  <p>Was Sie zusätzlich zum Preis zahlen, steht in <a href="/de/ratgeber/kaufnebenkosten-spanien/">Kaufnebenkosten in Spanien</a>.</p>
+
+  <BuyingChecklist lang="de" theme={2} />
+  <p>Auf diese Fragen bekommen Sie fast immer eine beruhigende Antwort. Darum lassen Sie das Haus auch selbst prüfen. Mehr zu <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit und Schimmel</a>, <a href="/de/probleme/undichtes-dach/">undichten Dächern</a>, <a href="/de/probleme/risse-in-waenden/">Rissen in Wänden</a> und <a href="/de/probleme/termiten/">Termiten</a>.</p>
+
+  <BuyingChecklist lang="de" theme={3} />
+
+  <BuyingChecklist lang="de" theme={4} />
+  <p>Sie wollen eine laufende Pension oder Ferienvermietung übernehmen? Dann kommen viele weitere Fragen hinzu; siehe <a href="/de/ratgeber/haus-kaufen-spanien/pension-kaufen/">eine bestehende Pension kaufen</a>.</p>
+
+  <h2 id="nach-typ">Zusätzliche Punkte je Haustyp</h2>
+  <h3>Wohnung</h3>
+  <ul>
+    <li><strong>Protokolle der Gemeinschaft.</strong> <q lang="es">¿Me puede enviar las actas de las tres últimas juntas de la comunidad?</q> Darin sehen Sie geplante Arbeiten, Streit und Rückstände.</li>
+    <li><strong>Zustand des Gebäudes.</strong> <q lang="es">¿Tiene el edificio la inspección técnica (ITE) favorable?</q> Eine ungünstige Prüfung bedeutet oft eine Sonderumlage für Fassade, Dach oder Leitungen.</li>
+    <li><strong>Stellplatz und Abstellraum.</strong> <q lang="es">¿La plaza de garaje y el trastero están inscritos en el Registro y se incluyen en la venta?</q></li>
+    <li><strong>Ferienvermietung.</strong> Seit April 2025 braucht neue touristische Vermietung in einer Wohnanlage die vorherige Zustimmung von drei Fünfteln der Gemeinschaft. <q lang="es">¿Permiten los estatutos de la comunidad el alquiler turístico?</q></li>
+  </ul>
+  <h3>Finca</h3>
+  <ul>
+    <li>Machen Sie immer den Legalitätstest oben, für das Haus und für jedes Nebengebäude und den Pool.</li>
+    <li>Wasser, Abwasser, Zufahrt und Strom sind bei einer Finca die größten Kostenposten; siehe die Fragen unter <a href="#land">Wasser, Abwasser und Zufahrt</a>.</li>
+    <li>Fragen Sie nach den Grenzen: <q lang="es">¿Están los límites de la finca marcados y coinciden con el Catastro?</q></li>
+    <li>Mehr in <a href="/de/ratgeber/finca-kaufen-spanien/">Finca kaufen in Spanien</a>.</li>
+  </ul>
+  <h3>Pension oder Ferienvermietung</h3>
+  <ul>
+    <li>Machen Sie den Legalitätstest für jedes Gästezimmer: Zimmer ohne Genehmigung dürfen nicht legal vermietet werden. Ein Haus mit AFO-Status darf nur mit ausdrücklicher Zustimmung der Gemeinde an Urlauber vermietet werden.</li>
+    <li><q lang="es">¿Con qué número está inscrito en el Registro de Turismo de Andalucía, y para cuántas plazas?</q></li>
+    <li>Kaufen Sie eine laufende Pension, prüfen Sie auch Zahlen, Buchungskanäle und Bewertungen; siehe <a href="/de/ratgeber/haus-kaufen-spanien/pension-kaufen/">eine bestehende Pension kaufen</a>. Wollen Sie selbst gründen, lesen Sie <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/bed-and-breakfast/">ein B&amp;B gründen</a>.</li>
+  </ul>
+
+  <h2 id="gutachten">Lassen Sie es uns prüfen</h2>
+  <p>Ein Verkäufer, der sagt, das Dach sei nie undicht gewesen, kann das ehrlich meinen. Ein Gutachter sieht, was wirklich da ist. Mit unserem <a href="/de/immobiliengutachten/">Immobiliengutachten</a> prüfen wir die technischen Punkte dieser Liste für Sie:</p>
+  <ul class="checks">
+    <li>Feuchtigkeit, Undichtigkeiten, Risse, Termiten und Holzwurm</li>
+    <li>Dach und Dachterrasse, Fenster, Elektrik, Wasser und Abwasser, Pool</li>
+    <li>Bei einer Finca: Wasserquelle, Klärgrube und Zufahrt</li>
+    <li>Ob Wohnfläche und Nebengebäude zu Urkunde und Kataster passen, als Hinweis für Ihren Anwalt</li>
+    <li>Eine Preisschätzung für jeden Mangel, damit Sie verhandeln können</li>
+  </ul>
+  <p>Sie erhalten einen Bericht mit Fotos, auch wenn Sie selbst nicht in Spanien sind; die Kommunikation läuft auf Englisch oder Niederländisch. <a href="/de/anfrage/?dienst=aankoopkeuring">Gutachten anfragen</a> oder E-Mail an <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+  <h2 id="quellen">Quellen</h2>
+  <ul>
+    <li>Sechsjahresfrist für das Einschreiten und Flächen ohne Frist: Ley 7/2021 (LISTA), Artikel 153; AFO: Decreto 550/2022.</li>
+    <li>Bewohnbarkeit per Erklärung (declaración responsable): Ley 7/2021 (LISTA), Artikel 138.</li>
+    <li>Ferienvermietung eines AFO-Hauses nur mit Zustimmung der Gemeinde: Decreto 28/2016, Artikel 1.3.d, geändert durch Decreto 31/2024.</li>
+    <li>Zustimmung von drei Fünfteln der Gemeinschaft für Ferienvermietung: Ley 49/1960 de Propiedad Horizontal, Artikel 17.12, geändert durch Ley Orgánica 1/2025.</li>
+    <li>Schulden der Gemeinschaft: Ley 49/1960, Artikel 9.1.e. IBI haftet an der Immobilie: Real Decreto Legislativo 2/2004, Artikel 64.</li>
+  </ul>
+  <p class="note">Geprüft am 5. November 2026. Diese Checkliste bietet allgemeine Informationen und ersetzt keine Rechtsberatung. Die rechtliche Prüfung von Register, Genehmigungen und Schulden gehört zu einem unabhängigen Anwalt.</p>
+</Guide>

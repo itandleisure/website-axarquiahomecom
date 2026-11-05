@@ -1,0 +1,93 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'vooraf', label: 'Eerst checken' },
+  { id: 'materiaal', label: 'Hout, aluminium of staal?' },
+  { id: 'nodig', label: 'Wat u nodig hebt' },
+  { id: 'stappen', label: 'Stap voor stap' },
+  { id: 'gevel', label: 'Tegen de gevel of op het dakterras' },
+  { id: 'andalusie', label: 'Wat in Andalusië anders is' },
+  { id: 'uitbesteden', label: 'Wanneer laat u het doen?' },
+];
+
+const faq = [
+  { q: 'Heb ik een vergunning nodig voor een zelfgebouwde pergola?', a: 'Voor een losse, open pergola zonder vast dak is in veel gemeenten een melding (declaración responsable) genoeg, soms zelfs niets. Komt er een vast dak op of zet u hem tegen het huis, dan vraagt de gemeente vaak een vergunning. In een complex moet ook de VvE akkoord zijn. Vraag het vooraf na.' },
+  { q: 'Hoe diep moeten de poeren voor een pergola?', a: 'Reken op gaten van ongeveer 40 × 40 cm en 50 tot 60 cm diep, gevuld met beton. Op een helling, in losse grond of op een winderige plek gaat u dieper of breder. Bij twijfel laat u het even narekenen.' },
+  { q: 'Welk hout is het beste voor een pergola in Spanje?', a: 'Geïmpregneerd grenen (madera tratada en autoclave) is het meest gebruikt en goed verkrijgbaar. Douglas of lariks gaat langer mee, tropisch hardhout het langst. Belangrijker dan de houtsoort: houd het hout uit de grond en behandel het elke paar jaar tegen zon en houtworm.' },
+  { q: 'Mag ik een pergola op mijn dakterras zetten?', a: 'Alleen als het dak het gewicht en de windkracht aankan en de waterdichting heel blijft. Boor nooit zomaar door de dakbedekking. In een complex is toestemming van de VvE bijna altijd nodig. Dit is een klus voor een vakman.' },
+];
+---
+<Guide slug="bouwen-op-eigen-grond-pergola-bouwen" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Liever een pergola laten bouwen?" ctaText="Geen tijd of zin om zelf te bouwen? Vertel wat u wilt en stuur een foto van de plek. Wij regelen het van melding tot montage.">
+  <h2 id="vooraf">Eerst checken</h2>
+  <ul>
+    <li><strong>Mag het?</strong> Een open pergola zonder vast dak is meestal goed te regelen, vaak met een melding bij de gemeente. Met een vast dak wordt het een overkapping, met strengere regels. Lees eerst <a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/carport-en-pergola/">carport, overkapping en pergola</a>.</li>
+    <li><strong>Woont u in een complex?</strong> Vraag de VvE om toestemming voordat u iets koopt.</li>
+    <li><strong>De plek</strong>: kijk waar de zon 's middags en 's avonds staat, waar de wind vandaan komt en of er leidingen in de grond liggen (water, afvoer, stroom naar het zwembad).</li>
+    <li><strong>De maat</strong>: een gangbare maat is 3 × 4 meter tot 4 × 5 meter, met een vrije hoogte van ongeveer 2,40 meter. Houd de afstand tussen de palen bij hout onder de 3 à 3,5 meter, anders moeten de balken zwaarder.</li>
+  </ul>
+
+  <h2 id="materiaal">Hout, aluminium of staal?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Materiaal</th><th>Goed om te weten</th></tr></thead>
+    <tbody>
+      <tr><td>Geïmpregneerd grenen (<em>madera tratada en autoclave</em>)</td><td>Het meest gebruikt, overal te koop en goed zelf te verwerken. Elke paar jaar behandelen.</td></tr>
+      <tr><td>Douglas, lariks of tropisch hardhout</td><td>Gaat langer mee en ziet er mooier uit, maar is zwaarder en lastiger te zagen en te boren.</td></tr>
+      <tr><td>Aluminium bouwpakket</td><td>Bijna geen onderhoud. Zelf te monteren, maar u zit vast aan de maten van het pakket.</td></tr>
+      <tr><td>Staal</td><td>Sterk en slank, maar lassen is vakwerk. Aan de kust alleen gegalvaniseerd of gepoedercoat.</td></tr>
+    </tbody>
+  </table>
+  <p>Deze gids gaat uit van een vrijstaande houten pergola op vier of zes palen.</p>
+
+  <h2 id="nodig">Wat u nodig hebt</h2>
+  <p><strong>Materiaal</strong> (handig om de Spaanse woorden mee te nemen naar de bouwmarkt of het <em>almacén de maderas</em>):</p>
+  <ul>
+    <li>Staanders: palen van 9 × 9 of 12 × 12 cm (<em>postes</em>)</li>
+    <li>Liggers op de palen: balken van bijvoorbeeld 7 × 17 cm of zwaarder (<em>vigas</em>)</li>
+    <li>Dwarsbalken of latten bovenop (<em>travesaños</em> of <em>listones</em>)</li>
+    <li>Paalankers om in het beton te zetten (<em>anclajes para poste</em>), gegalvaniseerd</li>
+    <li>Beton of zakken snelbeton (<em>hormigón</em>)</li>
+    <li>Slotbouten M10 of M12 met ringen, en roestvaste schroeven (<em>tornillería inoxidable</em>)</li>
+    <li>Houtbeits of olie met UV-bescherming en een middel tegen houtworm (<em>carcoma</em>)</li>
+    <li>Voor de schaduw: rietmat (<em>cañizo</em>), schaduwdoek (<em>malla de sombreo</em>) of klimplanten</li>
+  </ul>
+  <p><strong>Gereedschap</strong>: rolmaat, touw en piketpaaltjes, waterpas (liefst ook een lange of een laserwaterpas), spade of grondboor, cirkelzaag, accuboormachine met lange houtboren, dopsleutels, twee stevige ladders en een tweede persoon.</p>
+
+  <h2 id="stappen">Stap voor stap</h2>
+  <ol>
+    <li><strong>Uitzetten.</strong> Zet de hoeken uit met piketpaaltjes en touw. Controleer of het haaks is door de twee diagonalen te meten: die moeten even lang zijn.</li>
+    <li><strong>Gaten graven.</strong> Per paal een gat van ongeveer 40 × 40 cm en 50 tot 60 cm diep. In de rotsachtige grond van de Axarquía hebt u soms een breekhamer nodig; die kunt u huren.</li>
+    <li><strong>Poeren storten.</strong> Vul de gaten met beton en zet de paalankers erin, precies op de touwlijn en op dezelfde hoogte. Laat het beton minstens een paar dagen uitharden, in de zomerhitte afgedekt en af en toe nat gemaakt.</li>
+    <li><strong>Palen plaatsen.</strong> Zet de palen in de ankers, houd ze met een waterpas aan twee kanten loodrecht en zet ze tijdelijk vast met schoorlatten. Bout ze vast.</li>
+    <li><strong>Op hoogte zagen.</strong> Zet met een (laser)waterpas de hoogte op alle palen af en zaag ze op dezelfde lengte. Geef het dak een klein afschot als er later toch iets waterdichts op komt.</li>
+    <li><strong>Liggers monteren.</strong> Leg de liggers op of tegen de palen en zet ze vast met doorgaande slotbouten. Boor eerst voor en gebruik ringen.</li>
+    <li><strong>Dwarsbalken leggen.</strong> Leg de dwarsbalken of latten om de 40 tot 60 cm op de liggers en schroef ze vast. Hoe dichter, hoe meer schaduw.</li>
+    <li><strong>Schoren tegen de wind.</strong> Zet schuine kopschoren tussen de palen en de liggers. Die maken de pergola stijf, en dat is in de wind van de Axarquía geen overbodige luxe.</li>
+    <li><strong>Afwerken.</strong> Behandel al het hout, ook de zaagsneden. Bevestig de rietmat, het schaduwdoek of zet klimplanten zoals blauweregen, bougainville of druiven aan de voet.</li>
+  </ol>
+
+  <h2 id="gevel">Tegen de gevel of op het dakterras</h2>
+  <p>Een pergola die aan één kant op de gevel rust, hangt aan een muurbalk die met zware ankers in de muur zit. In de oude, soms brokkelige muren van dorpshuizen en fincas houden gewone pluggen dat niet; daar gebruikt u chemische ankers. Een pergola tegen de gevel geldt voor de gemeente sneller als uitbreiding van het huis, en in een complex verandert hij het aanzicht.</p>
+  <p>Op een dakterras is het nog lastiger: het dak moet het gewicht en de windkracht kunnen dragen, en elk gat in de dakbedekking is een mogelijk lek. Laat dat altijd door een vakman doen.</p>
+
+  <h2 id="andalusie">Wat in Andalusië anders is</h2>
+  <ul>
+    <li><strong>Zon</strong>: de UV-straling vergrijst en scheurt onbehandeld hout binnen een paar jaar. Behandel het hout om de twee à drie jaar.</li>
+    <li><strong>Wind</strong>: vooral op heuvels en in de herfst kan het hard waaien. Een strak gespannen schaduwdoek vangt veel wind; haal het binnen bij storm.</li>
+    <li><strong>Houtworm en termieten</strong>: houd het hout minstens een paar centimeter boven de grond, zoals een paalanker doet, en controleer het elk jaar.</li>
+    <li><strong>Hevige regen</strong>: kort maar hevig in de winter. Laat geen water op balken blijven staan en zorg dat de voet van de palen droog blijft.</li>
+    <li><strong>Zout</strong>: aan de kust roesten gewone bouten en schroeven snel. Gebruik roestvast staal of thermisch verzinkt.</li>
+  </ul>
+
+  <h2 id="uitbesteden">Wanneer laat u het doen?</h2>
+  <p>Een eenvoudige, vrijstaande houten pergola kunt u prima zelf bouwen. Laat het werk liever over aan een vakman als:</p>
+  <ul>
+    <li>u een lamellendak, vast dak of glazen dak wilt;</li>
+    <li>de pergola op een dakterras of tegen een oude gevel komt;</li>
+    <li>hij groter wordt dan zo'n 4 × 5 meter, of op een steile helling staat;</li>
+    <li>er verlichting, stroom of een buitenkeuken onder moet;</li>
+    <li>u een vergunning en een tekening nodig hebt.</li>
+  </ul>
+  <p><strong>Wilt u de pergola laten bouwen, of alleen de poeren en het zware werk laten doen?</strong> <a href="/nl/aanvraag/?dienst=renovatie">Neem contact op →</a></p>
+  <p>Terug naar het overzicht: <a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/">bouwen op eigen grond</a>.</p>
+</Guide>

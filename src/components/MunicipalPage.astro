@@ -1,0 +1,106 @@
+---
+// Pagina Bouwvergunning of Praktisch wonen van één gemeente.
+// Cijfers uit src/data/municipal.ts, teksten uit src/data/municipal-text.ts.
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Hero from './Hero.astro';
+import Faq from './Faq.astro';
+import Cta from './Cta.astro';
+import { places, placeHref, type Place } from '../data/places';
+import { placeTabs, tabLabels } from '../data/place-tabs';
+import { municipalText, type MunicipalPageKind, type MunicipalLang } from '../data/municipal-text';
+import { services, path as route } from '../i18n';
+import { guidesBy, guideHref } from '../data/guides';
+
+interface Props { lang: MunicipalLang; place: Place; kind: MunicipalPageKind; }
+const { lang, place, kind } = Astro.props;
+
+const svc = services[lang];
+const g = guidesBy[lang];
+const permitGuideSlugs = ['vergunning-verbouwen-andalusie', 'building-permits-renovation-andalusia', 'baugenehmigung-umbau-andalusien'];
+const request = route(lang, 'request');
+const villages = places.filter((p) => p.municipality === place.slug).map((p) => p.name);
+for (const v of place.villages ?? []) if (!villages.includes(v)) villages.push(v);
+
+const t = municipalText(kind, lang, place.slug, {
+  name: place.name,
+  villages,
+  links: {
+    request: (dienst?: string) => `${request}?${new URLSearchParams({ ...(dienst ? { dienst } : {}), plaats: place.slug })}`,
+    renovation: svc[0].href, keyholding: svc[1].href, survey: svc[2].href, pool: svc[3].href, maintenance: svc[4].href,
+    finca: guideHref(lang, g[1]), buyCosts: guideHref(lang, g[2]), renoCosts: guideHref(lang, g[3]), afo: guideHref(lang, g[7]),
+    permit: placeHref(lang, place, 'permit'), practical: placeHref(lang, place, 'practical'),
+    permitGuide: guideHref(lang, g.find((x) => permitGuideSlugs.includes(x.slug))!),
+  },
+});
+
+const T = {
+  nl: { places: 'Plaatsen', cta: 'Vraag advies aan', servicesTitle: 'Hiermee helpen we u', ctaPermit: `Verbouwen in ${place.name}?`, ctaPractical: `Een huis in ${place.name}?`,
+    ctaPermitText: 'Vertel kort wat u wilt laten doen. We zoeken uit welke vergunning nodig is en sturen een vrijblijvende offerte.',
+    ctaPracticalText: 'Wij houden uw huis in de gaten als u er niet bent, en regelen onderhoud en reparaties.' },
+  en: { places: 'Places', cta: 'Ask for advice', servicesTitle: 'How we can help', ctaPermit: `Renovating in ${place.name}?`, ctaPractical: `A home in ${place.name}?`,
+    ctaPermitText: 'Tell us briefly what you want done. We find out which permit is needed and send you a quote, with no obligation.',
+    ctaPracticalText: 'We keep an eye on your home while you are away, and take care of maintenance and repairs.' },
+  de: { places: 'Orte', cta: 'Beratung anfragen', servicesTitle: 'Dabei helfen wir Ihnen', ctaPermit: `Umbauen in ${place.name}?`, ctaPractical: `Ein Haus in ${place.name}?`,
+    ctaPermitText: 'Beschreiben Sie kurz Ihr Vorhaben. Wir klären, welche Genehmigung nötig ist, und schicken ein unverbindliches Angebot.',
+    ctaPracticalText: 'Wir behalten Ihr Haus im Blick, wenn Sie nicht da sind, und kümmern uns um Instandhaltung und Reparaturen.' },
+}[lang];
+
+const self = placeHref(lang, place, kind);
+const tabs = placeTabs(lang, place);
+const crumbs = [
+  { name: T.places, href: route(lang, 'places') },
+  { name: place.name, href: placeHref(lang, place) },
+  { name: tabLabels[lang][kind], href: self },
+];
+// Diensten die bij de pagina passen: bij een vergunning eerst verbouwen, bij praktisch eerst beheer
+const svcOrder = kind === 'permit' ? [0, 3, 2] : [1, 4, 2];
+const dienst = kind === 'permit' ? 'renovatie' : 'sleutelbeheer';
+---
+<Base title={t.title} description={t.description} path={self} lang={lang}>
+  <Breadcrumbs lang={lang} items={crumbs} />
+  <Hero lang={lang} eyebrow={`${place.name} · Axarquía`} title={t.h1} lead={t.lead} cta={T.cta} ctaHref={`${request}?dienst=${kind === 'permit' ? 'legalisatie' : dienst}&plaats=${place.slug}`}>
+    <nav class="place-tabs" aria-label={place.name}>
+      {tabs.map((tab) => <a href={tab.href} aria-current={tab.page === kind ? 'page' : undefined}>{tab.label}</a>)}
+    </nav>
+  </Hero>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        {t.sections.map((s) => (
+          <>
+            <h2>{s.h}</h2>
+            {s.p.map((p) => <p set:html={p} />)}
+            {s.list && <ul>{s.list.map((li) => <li set:html={li} />)}</ul>}
+          </>
+        ))}
+        <p class="note" set:html={t.sources} />
+      </div>
+      <div class="box">
+        <h3>{t.factsTitle}</h3>
+        <table class="prices"><tbody>
+          {t.facts.map(([k, v]) => <tr><td>{k}</td><td set:html={v} /></tr>)}
+        </tbody></table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <h2>{T.servicesTitle}</h2>
+      <div class="cards">
+        {svcOrder.map((i) => (
+          <a class="card" href={svc[i].href}>
+            <h3>{svc[i].title}</h3>
+            <p>{svc[i].text}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Faq items={t.faq} lang={lang} />
+
+  <Cta lang={lang} title={kind === 'permit' ? T.ctaPermit : T.ctaPractical} text={kind === 'permit' ? T.ctaPermitText : T.ctaPracticalText} dienst={dienst} plaats={place.slug} />
+</Base>

@@ -1,0 +1,57 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Die kurze Antwort' },
+  { id: 'rustico', label: 'Auf einer Finca (rústico)' },
+  { id: 'urbano', label: 'Im Wohngebiet (urbano)' },
+  { id: 'fertighaus', label: 'Fertighaus, Tiny House und Mobilheim' },
+  { id: 'optionen', label: 'Welche Möglichkeiten gibt es?' },
+  { id: 'vermietung', label: 'An Gäste vermieten' },
+];
+
+const faq = [
+  { q: 'Darf ich auf meiner Finca in Spanien ein zweites Haus bauen?', a: 'Fast nie. Auf ländlichem Boden (Rústico) ist ein neues Wohnhaus nur über ein eigenes Verfahren möglich, mit großem Mindestgrundstück und meist nur einem Wohnhaus je Grundstück. Ein zweites, separates Haus neben dem bestehenden wird praktisch nie erlaubt.' },
+  { q: 'Darf ich ein Mobilheim oder Tiny House auf mein Grundstück stellen?', a: 'Nicht ohne Genehmigung, wenn es dauerhaft dort steht. Ein Mobilheim mit festem Platz, Wasser- und Stromanschluss oder Fundament gilt als Bauwerk. Auf Rústico wird das in der Regel nicht erlaubt.' },
+  { q: 'Ist eine vorhandene Casita ohne Genehmigung ein Problem?', a: 'Beim Verkauf, bei der Versicherung und bei der Vermietung kann sie zum Problem werden. Manchmal kann eine solche Casita legalisiert oder als AFO anerkannt werden. Lassen Sie das prüfen, bevor Sie Geld hineinstecken.' },
+  { q: 'Darf ich ein vorhandenes Nebengebäude zum Gästehaus umbauen?', a: 'Nur mit einer Genehmigung für eine Nutzungsänderung und nur, wenn der Bebauungsplan es zulässt. Ein landwirtschaftliches Gebäude zum Schlafraum umzubauen, ist auf Rústico meist nicht erlaubt.' },
+];
+---
+<Guide lang="de" slug="bauen-auf-eigenem-grundstueck-gaestehaus" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Platz für Gäste schaffen?" ctaText="Sagen Sie uns, was Sie sich vorstellen. Wir sagen Ihnen ehrlich, was auf Ihrem Grundstück erlaubt ist und welche Lösung am besten passt.">
+  <h2 id="kurz">Die kurze Antwort</h2>
+  <p>Ein zweites, separates Haus auf Ihrem Grundstück ist in Andalusien fast nie erlaubt, auf ländlichem Boden schon gar nicht. Was oft geht: <strong>das bestehende Haus erweitern</strong>, etwa um einen Gästeflügel, oder <strong>ein vorhandenes legales Nebengebäude umbauen</strong>. Der Unterschied: Es bleibt ein Wohnhaus, mit einer Adresse und einer Katasternummer.</p>
+
+  <h2 id="rustico">Auf einer Finca (rústico)</h2>
+  <p>Auf ländlichem Boden ist ein Wohnhaus die Ausnahme. Das andalusische Gesetz LISTA erlaubt ein neues freistehendes Haus nur unter strengen Bedingungen: Das Grundstück muss groß genug sein (die Gemeinde legt die Mindestgröße fest, oft mehrere Hektar), es darf keine neue Siedlung entstehen, und es gibt ein eigenes Verfahren mit einer Abgabe an die Gemeinde. Ein zweites Haus neben dem bestehenden auf demselben Grundstück fällt praktisch nie darunter.</p>
+  <p>Was manchmal geht:</p>
+  <ul>
+    <li><strong>Das Haus erweitern</strong> um ein Zimmer oder einen Gästeflügel, wenn das Haus legal ist und der Bebauungsplan noch Baurecht lässt.</li>
+    <li><strong>Einen vorhandenen, legalen Raum umbauen</strong>, etwa einen alten Stall, der schon zum Haus gehört.</li>
+  </ul>
+  <p>Hat das Haus AFO-Status, darf nichts hinzukommen. Siehe <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>.</p>
+
+  <h2 id="urbano">Im Wohngebiet (urbano)</h2>
+  <p>Im Dorf oder in einer Urbanisation hängt es vom Bebauungsplan ab. In vielen Villengebieten ist nur ein Wohnhaus je Grundstück erlaubt. Ein Gästehaus ist dann manchmal als <strong>Nebengebäude zum Wohnhaus</strong> möglich, solange noch Baurecht übrig ist und keine eigenständige Wohnung entsteht (etwa ohne eigene Küche oder eigene Anschlüsse). Soll es wirklich ein zweites Wohnhaus werden, muss das Grundstück dafür ausgewiesen sein und oft auch geteilt werden können.</p>
+
+  <h2 id="fertighaus">Fertighaus, Tiny House und Mobilheim</h2>
+  <p>Ein Fertighaus, Tiny House oder Mobilheim wirkt wie ein cleverer Umweg, aber die Gemeinde schaut darauf, wie es genutzt wird, nicht wie es gebaut ist. Steht es dauerhaft, mit Fundament oder Anschluss an Wasser, Strom oder Abwasser, ist es ein Bauwerk und braucht eine Genehmigung. Auf Rústico wird die in der Regel nicht erteilt. Ein Wohnwagen, den Sie gelegentlich nutzen und wieder wegfahren, ist etwas anderes, aber dauerhaft darin wohnen oder ihn vermieten ist auch auf eigenem Grund nicht einfach erlaubt.</p>
+
+  <h2 id="optionen">Welche Möglichkeiten gibt es?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Option</th><th>Gut zu wissen</th></tr></thead>
+    <tbody>
+      <tr><td>Gästezimmer im Haus einrichten</td><td>Keine Genehmigung nötig, solange sich außen nichts ändert.</td></tr>
+      <tr><td>Vorhandenes legales Nebengebäude umbauen</td><td>Oft der beste Weg. Genehmigung nötig, wenn sich die Nutzung ändert.</td></tr>
+      <tr><td>Gästeflügel am Haus</td><td>Gilt als Anbau: Projekt, Genehmigung und Baurecht nötig.</td></tr>
+      <tr><td>Fertig- oder Modul-Gästehaus</td><td>Schneller gebaut, aber dieselbe Genehmigung wie ein gemauertes Haus.</td></tr>
+      <tr><td>Separates gemauertes Gästehaus</td><td>Nur wo der Bebauungsplan es erlaubt, auf Rústico fast nie.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Möchten Sie das umsetzen lassen? Sagen Sie uns, was Sie vorhaben. Wir klären, was erlaubt ist, kümmern uns um die Genehmigung und bauen es für Sie.</strong> <a href="/de/anfrage/?dienst=renovatie">Kontakt aufnehmen →</a></p>
+  <p>Mehr zum Erweitern unter <a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/anbau-und-terrasse-schliessen/">Anbau und Terrasse schließen</a>.</p>
+
+  <h2 id="vermietung">An Gäste vermieten</h2>
+  <p>Wollen Sie das Gästehaus an Urlauber vermieten, muss es in Andalusien als Ferienwohnung (<em>Vivienda de uso turístico</em>) registriert werden. Das geht nur für einen legalen Raum, und in einer Wohnanlage manchmal nur, wenn die Gemeinschaft es nicht verbietet. Eine Casita ohne Genehmigung können Sie also nicht legal vermieten. Mehr im Ratgeber <MaybeLink href="/de/ratgeber/immobilie-in-spanien-vermieten/">Immobilie in Spanien vermieten</MaybeLink>.</p>
+  <p>Zurück zur Übersicht: <a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/">Bauen auf dem eigenen Grundstück</a>.</p>
+</Guide>

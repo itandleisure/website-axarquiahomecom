@@ -1,0 +1,105 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
+
+const toc = [
+  { id: 'drie', label: 'Drie soorten huizen' },
+  { id: 'vergelijking', label: 'Vergelijking in één tabel' },
+  { id: 'bereikbaarheid', label: 'Bereikbaarheid' },
+  { id: 'voorzieningen', label: 'Voorzieningen' },
+  { id: 'onderhoud', label: 'Onderhoud en vaste lasten' },
+  { id: 'renovatie', label: 'Renovatiekosten' },
+  { id: 'legaal', label: 'Legale status (AFO)' },
+  { id: 'verhuur', label: 'Vakantieverhuur en vergunning' },
+  { id: 'doelgroep', label: 'Wat past bij u?' },
+];
+
+const faq = [
+  {
+    q: 'Is een finca duurder in onderhoud dan een appartement?',
+    a: 'Meestal wel. Bij een appartement deelt u de kosten van dak, gevel, lift en zwembad met de andere eigenaars via de maandelijkse bijdrage. Bij een finca betaalt u alles zelf: het perceel, de toegangsweg, de septische put, het water en vaak een zwembad. Reken voor een finca met grond al snel op enkele duizenden euro’s per jaar aan onderhoud, los van grotere reparaties.',
+  },
+  {
+    q: 'Mag ik mijn finca verhuren aan toeristen?',
+    a: 'Dat hangt af van de bestemming van de grond en de status van het huis. De gewone regeling voor vakantiewoningen in Andalusië (vivienda con fines turísticos) geldt voor woningen op woongrond. Voor huizen op landelijke grond gelden de regels voor toerisme op het platteland, met eigen eisen. Bij een huis met AFO-status is verhuur niet altijd mogelijk. Laat het vóór de koop uitzoeken.',
+  },
+  {
+    q: 'Mag de vereniging van eigenaars vakantieverhuur in mijn appartement verbieden?',
+    a: 'Sinds april 2025 moet een eigenaar die een appartement toeristisch wil gaan verhuren, vooraf toestemming hebben van de vereniging van eigenaars, met een meerderheid van drie vijfde. Lees daarom de statuten en de notulen van de laatste vergaderingen voordat u koopt, als u wilt verhuren.',
+  },
+  {
+    q: 'Is een dorpshuis een goed compromis?',
+    a: 'Vaak wel. U woont op loopafstand van bakker, bar en dokter, op stedelijke grond waar verbouwen eenvoudiger is dan op het platteland, en zonder maandelijkse bijdrage aan een vereniging. De keerzijde: weinig buitenruimte behalve een dakterras, trappen, buren tegen uw muur en straatjes waar u niet altijd met de auto komt.',
+  },
+];
+---
+<Guide slug="finca-appartement-of-dorpshuis" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Twijfelt u tussen twee huizen?" ctaText="Wij bekijken ze allebei en vertellen wat er aan elk huis moet gebeuren en wat dat kost. Dan vergelijkt u niet alleen de vraagprijs.">
+  <h2 id="drie">Drie soorten huizen</h2>
+  <p>In de Axarquía kiezen de meeste buitenlandse kopers uit drie typen woningen. Ze verschillen niet alleen in sfeer, maar ook in hoe u er woont, wat ze kosten aan onderhoud en wat er juridisch mag.</p>
+  <ul>
+    <li><strong>De finca</strong>: een landelijk huis met grond, vaak met olijf-, amandel-, avocado- of mangobomen. Juridisch staat het op landelijke grond (<em>suelo rústico</em>). Veel ruimte en rust, maar u bent voor alles zelf verantwoordelijk. Lees ook onze gids <a href="/nl/gidsen/finca-kopen-in-spanje/">finca kopen</a>.</li>
+    <li><strong>Het appartement</strong>: meestal aan de kust, in Torre del Mar, Nerja, Torrox Costa of Rincón de la Victoria, of in een complex op de heuvels erboven. Vaak met gedeeld zwembad. De vereniging van eigenaars (<em>comunidad de propietarios</em>) regelt het onderhoud van de gemeenschappelijke delen.</li>
+    <li><strong>Het dorpshuis</strong> (<em>casa de pueblo</em>): een smal, hoog huis in een wit dorp als Cómpeta, Frigiliana of Canillas de Albaida. Dikke muren, een dakterras, alles op loopafstand. Het staat op stedelijke grond.</li>
+  </ul>
+  <p>Daarnaast zijn er villa’s op de hellingen boven de kust. Die zitten er qua afwegingen tussenin: privacy en een eigen zwembad zoals bij een finca, maar vaak wel op stedelijke grond en aan een geasfalteerde weg.</p>
+
+  <h2 id="vergelijking">Vergelijking in één tabel</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th></th><th>Finca</th><th>Appartement</th><th>Dorpshuis</th></tr></thead>
+    <tbody>
+      <tr><td>Bereikbaarheid</td><td>Auto nodig, soms onverharde weg</td><td>Goed, vaak bij de A-7</td><td>Dorp goed bereikbaar, het huis zelf soms niet met de auto</td></tr>
+      <tr><td>Voorzieningen</td><td>Rijden naar alles</td><td>Op loopafstand</td><td>Op loopafstand, minder keus dan aan de kust</td></tr>
+      <tr><td>Ruimte en privacy</td><td>Veel</td><td>Weinig, buren boven en naast u</td><td>Binnen redelijk, buiten vooral het dakterras</td></tr>
+      <tr><td>Onderhoud zelf</td><td>Veel: grond, weg, water, afvoer, zwembad</td><td>Weinig, de vereniging regelt veel</td><td>Gemiddeld: dak, gevel, vocht</td></tr>
+      <tr><td>Vaste lasten</td><td>Hoog (onderhoud, water, eventueel stroom)</td><td>Bijdrage aan de vereniging</td><td>Laag</td></tr>
+      <tr><td>Legale status</td><td>Vaak uitzoekwerk (AFO)</td><td>Meestal eenvoudig</td><td>Meestal eenvoudig, let op aanbouwen</td></tr>
+      <tr><td>Vakantieverhuur</td><td>Andere regels (platteland)</td><td>Toestemming vereniging nodig</td><td>Meestal mogelijk, check de gemeente</td></tr>
+      <tr><td>Toezicht als u weg bent</td><td>Belangrijk</td><td>Minder kritisch</td><td>Gemiddeld</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Algemene lijn. Elk huis is anders; de feiten per woning komen uit de papieren en een keuring.</p>
+
+  <h2 id="bereikbaarheid">Bereikbaarheid</h2>
+  <p>Een appartement aan de kust ligt meestal dicht bij de snelweg A-7. Van Torre del Mar rijdt u in ongeveer 40 minuten naar het vliegveld van Málaga. Bussen rijden langs de kust en naar Vélez-Málaga en Málaga.</p>
+  <p>Een dorpshuis in de bergen ligt verder weg: van Cómpeta of Canillas de Albaida rijdt u ruim een uur naar het vliegveld, over bochtige wegen. Het dorp zelf heeft een busverbinding, maar weinig ritten per dag. Let op het huis zelf: in de oude kern zijn de straatjes vaak te smal of te steil voor een auto. Boodschappen, koffers en bouwmateriaal gaan dan het laatste stuk lopend of met een kleine kruiwagen.</p>
+  <p>Een finca vraagt het meest. Zonder auto bent u nergens, en vaak zelfs met twee auto’s als er twee mensen werken of kinderen naar school moeten. Het laatste stuk is regelmatig een onverharde weg over het land van de buren. Na zware regen kan die weg dagen slecht begaanbaar zijn. Vraag wie de weg onderhoudt en of het recht van overpad in het register staat. Rijd er bij voorkeur zelf eens over in het donker.</p>
+
+  <h2 id="voorzieningen">Voorzieningen</h2>
+  <p>Aan de kust heeft u alles op loopafstand: supermarkten, artsen, apotheken, restaurants en internationale winkels. Het regionale ziekenhuis staat in Vélez-Málaga. In een dorp als Cómpeta, Frigiliana of Torrox heeft u een gezondheidscentrum (<em>centro de salud</em>), een apotheek, een basisschool, bakkers, bars en een kleine supermarkt. Voor de grote boodschappen of een bouwmarkt rijdt u naar de kust.</p>
+  <p>Vanaf een finca rijdt u voor alles: brood, de dokter, een avondje uit. Dat voelt in het eerste jaar als vakantie. Na een paar jaar, of als u ouder wordt, kan het een last worden. Internet is buiten de dorpen vaak via 4G/5G of satelliet; glasvezel ligt er zelden.</p>
+
+  <h2 id="onderhoud">Onderhoud en vaste lasten</h2>
+  <p><strong>Appartement.</strong> U betaalt maandelijks een bijdrage aan de vereniging van eigenaars. Daarvan worden het dak, de gevel, de lift, de tuin en het zwembad onderhouden. In de Axarquía ligt die bijdrage vaak tussen de € 50 en € 250 per maand, afhankelijk van het complex. Bij grote werkzaamheden kan de vereniging een extra heffing (<em>derrama</em>) opleggen. Vraag vóór de koop de notulen van de laatste vergaderingen op: daarin staat wat er aan komt.</p>
+  <p><strong>Dorpshuis.</strong> Geen bijdrage aan een vereniging, maar u onderhoudt zelf dak, gevel en dakterras. Oude dorpshuizen hebben vaak last van vocht in de muren, houten balken die aangetast kunnen zijn, en platte daken die na jaren gaan lekken. Gemeenschappelijke muren met de buren maken sommige reparaties tot een gezamenlijk project.</p>
+  <p><strong>Finca.</strong> Hier zit het meeste werk. Het perceel moet worden bijgehouden: bomen snoeien, onkruid weghalen en in bosrijke gebieden een brandvrije strook rond het huis aanhouden. Dan zijn er de toegangsweg, de waterinstallatie of put, de septische put, vaak een zwembad en soms zonnepanelen met accu’s. Voor het perceel alleen rekenen we al snel € 300 tot € 2.000 per jaar. Wie niet zelf wil of kan klussen, besteedt het uit via <a href="/nl/onderhoud/">onderhoud</a>.</p>
+
+  <h2 id="renovatie">Renovatiekosten</h2>
+  <p>De prijs per vierkante meter is voor alle drie de typen ongeveer gelijk: van € 250 – € 500 voor opfrissen tot € 1.000 – € 1.600 voor een totaalrenovatie. Zie onze gids <a href="/nl/gidsen/kosten-huis-renoveren-spanje/">wat kost een huis renoveren</a>. Het verschil zit in wat er bijkomt:</p>
+  <ul>
+    <li><strong>Appartement</strong>: het minste werk, vaak badkamer, keuken en ramen. Houd rekening met de regels van de vereniging (werktijden, lift beschermen, puin afvoeren) en vraag toestemming voor alles wat aan de gevel of het terras te zien is.</li>
+    <li><strong>Dorpshuis</strong>: vaak dak en dakterras waterdicht maken, vocht aanpakken, elektra vernieuwen. Door de smalle straatjes is de aan- en afvoer van materiaal bewerkelijk, wat de prijs verhoogt. In beschermde dorpskernen gelden regels voor gevels, kozijnen en dakpannen.</li>
+    <li><strong>Finca</strong>: naast het huis zelf vaak water, afvoer (€ 3.000 – € 10.000 voor een nieuwe septische put of zuiveringsinstallatie), stroom en de toegangsweg. En bij een AFO-status mag u niet uitbreiden, dus wat u ziet is wat u krijgt.</li>
+  </ul>
+  <p>Laat daarom vóór de koop een <a href="/nl/aankoopkeuring/">aankoopkeuring</a> doen met een prijs per gebrek. Dan vergelijkt u twee huizen op wat ze echt gaan kosten, en niet alleen op de vraagprijs.</p>
+
+  <h2 id="legaal">Legale status (AFO)</h2>
+  <p>Bij een <strong>appartement</strong> is de legale status meestal eenvoudig: het gebouw is met vergunning gebouwd en heeft een bewoonbaarheidsverklaring. Let wel op dichtgemaakte terrassen of een extra kamer op het dak, die er zonder vergunning bij kunnen zijn gekomen.</p>
+  <p>Een <strong>dorpshuis</strong> staat op stedelijke grond. Ook daar zijn er soms zonder vergunning verdiepingen of dakkamers bijgebouwd, maar zo’n situatie is op stedelijke grond meestal makkelijker te regelen dan op het platteland. Vergelijk het oppervlak in het kadaster en het eigendomsregister met wat er staat.</p>
+  <p>Bij een <strong>finca</strong> is dit de belangrijkste vraag. Op landelijke grond is bouwen in Andalusië sterk beperkt, en veel fincas zijn (deels) zonder vergunning gebouwd of uitgebreid. Is de termijn voor handhaving verstreken, dan kan de gemeente een verklaring afgeven dat het huis <em>asimilado a fuera de ordenación</em> is: de AFO-status, waarvan de officiële verklaring ook wel DAFO heet. Het huis is dan bewoonbaar, verkoopbaar en kan worden aangesloten, maar uitbreiden of herbouwen mag niet. Dat raakt ook uw plannen: een extra slaapkamer, een gastenverblijf of een zwembad bijbouwen is bij een AFO-woning meestal niet mogelijk. Alles hierover leest u in onze gids <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren</a>.</p>
+
+  <h2 id="verhuur">Vakantieverhuur en toeristische vergunning</h2>
+  <p>Wilt u het huis (af en toe) aan toeristen verhuren, dan maakt het type huis veel uit.</p>
+  <ul>
+    <li><strong>Appartement of dorpshuis op woongrond</strong>: in Andalusië valt dit onder de regeling voor de <em>vivienda con fines turísticos</em> (VFT, vaak VUT genoemd). U meldt de woning met een verklaring aan in het toerismeregister van Andalusië (<em>Registro de Turismo de Andalucía</em>) en moet aan eisen voldoen, onder meer voor airco en verwarming, inrichting en een klachtenformulier. Sinds 2024 mogen gemeenten het aantal vakantiewoningen beperken. Op verhuursites adverteert u met het nummer uit het Andalusische register; het landelijke registratienummer dat sinds juli 2025 gold, is in mei 2026 door het Spaanse Hooggerechtshof vernietigd. Zie ook onze gids <a href="/nl/gidsen/woning-verhuren-spanje/">woning verhuren in Spanje</a>.</li>
+    <li><strong>Appartement</strong>: sinds april 2025 heeft u voor nieuwe vakantieverhuur vooraf toestemming nodig van de vereniging van eigenaars, met drie vijfde van de stemmen. In veel complexen is dat de grootste horde.</li>
+    <li><strong>Finca op landelijke grond</strong>: de gewone VFT-regeling geldt alleen voor woningen op woongrond. Voor landelijke huizen gelden de regels voor toerisme op het platteland (<em>alojamiento rural</em>, zoals een <em>casa rural</em>), met eigen eisen. Of een huis met AFO-status daarvoor in aanmerking komt, verschilt per geval.</li>
+  </ul>
+  <p>Regels rond toeristische verhuur veranderen snel. Laat de mogelijkheden voor een specifiek huis vóór de koop nagaan bij de gemeente of een gespecialiseerde gestor of advocaat. Wilt u een B&amp;B beginnen? Lees dan de deelpagina hieronder.</p>
+
+  <h2 id="doelgroep">Wat past bij u?</h2>
+  <p>De afweging hangt sterk af van uw situatie. Per doelgroep zetten we de belangrijkste punten op een rij:</p>
+  <GuideChildren parent="finca-appartement-of-dorpshuis" />
+  <p>In het kort: wie rust en ruimte zoekt en graag zelf klust of het onderhoud wil uitbesteden, wordt gelukkig van een finca. Wie zorgeloos wil wonen, met alles op loopafstand en weinig onderhoud, kiest een appartement. Het dorpshuis zit ertussenin: Spaans dorpsleven, voorzieningen dichtbij, geen vereniging van eigenaars, wel trappen en een oud huis dat aandacht vraagt.</p>
+  <p>Gaat u er niet het hele jaar wonen? Denk dan ook aan <a href="/nl/sleutelbeheer/">sleutelbeheer</a>: iemand die regelmatig gaat kijken, na een storm het dak controleert en de tuin en het zwembad laat bijhouden. Bij een afgelegen finca is dat geen luxe. Heeft u een huis gevonden dat opgeknapt moet worden, dan maken we graag een offerte voor de <a href="/nl/renovatie/">renovatie</a>.</p>
+  <p class="note">Deze gids geeft algemene informatie en is geen juridisch of fiscaal advies. Het oordeel over een specifiek huis komt van een advocaat, architect of gestor.</p>
+</Guide>

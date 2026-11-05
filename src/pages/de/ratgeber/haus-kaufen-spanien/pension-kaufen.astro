@@ -1,0 +1,147 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'was', label: 'Haus oder Betrieb: was kaufen Sie?' },
+  { id: 'lizenz', label: 'Lizenz und Bodennutzung' },
+  { id: 'zahlen', label: 'Die Jahreszahlen prüfen' },
+  { id: 'kanaele', label: 'Buchungskanäle und Direktbuchungen' },
+  { id: 'online', label: 'Website, Social Media und Bewertungen' },
+  { id: 'gebaeude', label: 'Gebäude und Anlagen' },
+  { id: 'personal', label: 'Personal und Verträge' },
+  { id: 'vergleich', label: 'Mehrere Objekte vergleichen' },
+  { id: 'spanisch', label: 'Fragen auf Spanisch' },
+  { id: 'hilfe', label: 'Wie wir helfen' },
+  { id: 'quellen', label: 'Quellen' },
+];
+
+const faq = [
+  {
+    q: 'Geht die touristische Lizenz beim Kauf mit über?',
+    a: 'Die Eintragung im Tourismusregister Andalusiens lautet auf den Betreiber. Bei einer Übernahme melden Sie den Betreiberwechsel bei der Junta, und auch die nationale Registrierungsnummer für Vermietungsportale muss angepasst werden. Lassen Sie vor dem Kauf prüfen, ob die bestehende Eintragung nach den aktuellen Regeln noch gilt: Regeln und kommunale Beschränkungen haben sich in den letzten Jahren geändert.',
+  },
+  {
+    q: 'Gehen die Bewertungen auf Booking.com und Airbnb mit über?',
+    a: 'Das hängt vom Portal ab. Bei Booking.com gehört die Seite zur Unterkunft, und es gibt ein Verfahren für einen Eigentümerwechsel. Bei Airbnb gehören Bewertungen zum Konto des Gastgebers und gehen meist nicht auf ein neues Konto über. Fragen Sie den Verkäufer, wie die Übergabe je Kanal läuft, und rechnen Sie damit, auf manchen Kanälen neu zu beginnen.',
+  },
+  {
+    q: 'Wie viele Jahre Zahlen sollte ich sehen?',
+    a: 'Mindestens drei volle Jahre und das laufende Jahr nach Monaten. So sehen Sie Trend und Saison und ob ein gutes Jahr ein Ausreißer war. Vergleichen Sie die Zahlen mit den Steuererklärungen und den Auszahlungen der Portale.',
+  },
+  {
+    q: 'Kaufe ich das Gebäude oder die Firma des Verkäufers?',
+    a: 'Meist kaufen Sie das Gebäude mit Inventar und starten den Betrieb selbst. Manchmal gehört die Pension einer spanischen Gesellschaft (SL), und Sie kaufen die Anteile. Steuerlich kann das anders aussehen, aber Sie übernehmen dann auch alle Schulden und Risiken der Gesellschaft. Lassen Sie die Struktur immer von Anwalt und Gestor prüfen.',
+  },
+];
+---
+<Guide lang="de" slug="haus-kaufen-spanien-pension" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Eine Pension im Blick?" ctaText="Wir begutachten das Gebäude mit den Augen eines Betreibers: Zimmer, Bäder, Wasser, Abwasser und Anlagen, mit einem Preis für die nötigen Arbeiten. Kommunikation auf Englisch oder Niederländisch.">
+  <p>Diese Seite behandelt die Übernahme einer Pension, eines B&amp;B, einer Casa rural oder einer kleinen Ferienvermietung, die bereits läuft. Wenn Sie selbst ein B&amp;B in einem noch zu wählenden Haus gründen möchten, lesen Sie <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/bed-and-breakfast/">ein B&amp;B in der Axarquía gründen</a>. Die üblichen Kaufschritte stehen im Ratgeber <a href="/de/ratgeber/haus-kaufen-spanien/">Haus kaufen in Spanien</a>.</p>
+
+  <h2 id="was">Haus oder Betrieb: was kaufen Sie?</h2>
+  <p>Eine laufende Pension wird oft teurer angeboten, als das Haus allein wert wäre. Der Verkäufer rechnet Umsatz, Bewertungen und Stammgäste mit ein. Das kann berechtigt sein, aber nur, wenn der Umsatz echt ist und die Übergabe übersteht. Stellen Sie deshalb zwei getrennte Fragen:</p>
+  <ul>
+    <li><strong>Was ist das Gebäude als Wohnhaus wert?</strong> Vergleichen Sie mit normalen Häusern in der Nähe und rechnen Sie die Kosten für Arbeiten mit.</li>
+    <li><strong>Was bringt der Betrieb netto</strong>, nach allen Kosten und einer angemessenen Vergütung für Ihre eigene Arbeit? Die Differenz zwischen Kaufpreis und Hauswert zahlen Sie für dieses Ergebnis.</li>
+  </ul>
+  <p>Meist kaufen Sie das Gebäude mit Inventar und starten den Betrieb selbst. Gehört die Pension einer spanischen Gesellschaft (SL) und kaufen Sie die Anteile, übernehmen Sie auch alle Schulden und Risiken dieser Gesellschaft. Lassen Sie die Struktur von Anwalt und Gestor prüfen.</p>
+
+  <h2 id="lizenz">Lizenz und Bodennutzung</h2>
+  <p>Ein B&amp;B ist in Andalusien keine eigene Kategorie. Es handelt sich um eine Ferienwohnung (VFT, auch zimmerweise), eine ländliche Unterkunft (etwa eine <em>casa rural</em>) oder eine kleine Hotelform wie eine Pension. Prüfen Sie:</p>
+  <ul>
+    <li><strong>Die Eintragung im Tourismusregister</strong> (<em>Registro de Turismo de Andalucía</em>): Kategorie, Zahl der Zimmer und Gäste. Läuft der Betrieb mit mehr Zimmern oder Gästen als eingetragen, lässt sich ein Teil des Umsatzes nicht legal wiederholen.</li>
+    <li><strong>Die nationale Registrierungsnummer</strong>, die seit Juli 2025 für Inserate auf Vermietungsportalen Pflicht ist.</li>
+    <li><strong>Den rechtlichen Status des Gebäudes.</strong> Sind alle Gästezimmer, Bäder und der Pool genehmigt? Eine Finca mit AFO-Status darf nicht erweitert werden, und die touristische Nutzung ist nicht selbstverständlich. Siehe <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>.</li>
+    <li><strong>Kommunale Beschränkungen.</strong> Gemeinden dürfen neue Ferienwohnungen begrenzen. Fragen Sie, was beim Betreiberwechsel gilt.</li>
+    <li><strong>Weitere Genehmigungen</strong>: eine Gewerbeerlaubnis bei hotelähnlichen Formen und beim Frühstück die Regeln der Lebensmittelhygiene.</li>
+  </ul>
+
+  <h2 id="zahlen">Die Jahreszahlen prüfen</h2>
+  <p>Verlangen Sie mindestens drei volle Jahre und das laufende Jahr nach Monaten. Achten Sie auf:</p>
+  <ul>
+    <li><strong>Umsatz pro Monat</strong>, damit Sie die Saison sehen. Viele Pensionen in der Axarquía laufen von März bis November und haben im Winter wenige Gäste.</li>
+    <li><strong>Auslastung und durchschnittlichen Preis pro Nacht</strong>, je Zimmer. Hoher Umsatz zu niedrigen Preisen ist anfälliger als weniger Umsatz mit Stammgästen, die mehr zahlen.</li>
+    <li><strong>Alle Kosten</strong>: Provisionen der Portale, Reinigung und Wäsche, Energie und Wasser, Frühstück, Instandhaltung, Versicherung, IBI, Müllgebühr, Gestor, Marketing und Personal.</li>
+    <li><strong>Die eigene Arbeit des Verkäufers.</strong> Machen die Eigentümer alles selbst, steckt ihre Arbeit nicht in den Kosten. Rechnen Sie eine Vergütung ein oder den Lohn für jemanden, der sie übernimmt.</li>
+    <li><strong>Den Trend.</strong> Steigt oder sinkt der Umsatz? War ein Jahr ein Ausreißer?</li>
+  </ul>
+  <p><strong>Lassen Sie sich die Zahlen belegen.</strong> Eine Tabelle ist kein Beweis. Verlangen Sie die spanischen Steuererklärungen (Einkommen- oder Körperschaftsteuer und Mehrwertsteuer), die Auszahlungsberichte von Booking.com, Airbnb und anderen Kanälen sowie Kontoauszüge. Umsatz, der „bar“ oder außerhalb der Bücher erzielt worden sein soll, zählen Sie nicht mit: Sie können ihn nicht prüfen und selbst nicht legal wiederholen.</p>
+  <p>Fragen Sie auch nach <strong>künftigen Buchungen</strong>: Wie viele gibt es schon, und wer erhält die Anzahlungen der Gäste? Halten Sie das im Kaufvertrag fest.</p>
+
+  <h2 id="kanaele">Buchungskanäle und Direktbuchungen</h2>
+  <p>Woher die Gäste kommen, bestimmt, wie viel Ihnen bleibt und wie anfällig der Umsatz ist. Fragen Sie je Kanal nach dem Anteil an Buchungen und Umsatz der letzten Jahre:</p>
+  <ul>
+    <li><strong>Portale</strong> wie Booking.com, Airbnb und Expedia. Sie verlangen Provision, bei Booking.com oft 15 bis 20 %, bei Airbnb einen vergleichbaren Anteil am Gesamtpreis. Eine Pension, die fast alles über ein Portal bekommt, hängt von dessen Algorithmus und Regeln ab.</li>
+    <li><strong>Direktbuchungen</strong> über die eigene Website, Telefon oder E-Mail. Sie bringen am meisten. Ein hoher Anteil an Direktbuchungen und Stammgästen ist oft der wertvollste Teil einer Pension.</li>
+    <li><strong>Weitere Kanäle</strong>: Reiseveranstalter, Wander- oder Radreisen, Yoga-Retreats, Hochzeiten.</li>
+  </ul>
+  <p>Fragen Sie auch, was übergeht. Bei Booking.com gehört die Seite zur Unterkunft, und es gibt ein Verfahren für neue Eigentümer. Bei Airbnb gehören Bewertungen zum Konto des Gastgebers und gehen meist nicht mit. Die Kundenliste der Direktgäste können Sie nur übernehmen, wenn der Datenschutz (DSGVO) es erlaubt; lassen Sie das den Anwalt regeln.</p>
+
+  <h2 id="online">Website, Social Media und Bewertungen</h2>
+  <p>Eine gut laufende Pension wird online gefunden. Schauen Sie selbst, bevor Sie den Verkäufer fragen:</p>
+  <ul>
+    <li><strong>Die Website</strong>: Lautet die Domain auf den Verkäufer, und geht sie mit über? Wie viele Besucher kommen woher (Google, Social Media, Portale)? Verlangen Sie Zugang zu den Statistiken, etwa Google Analytics und Search Console.</li>
+    <li><strong>Google-Unternehmensprofil</strong>: Zahl der Bewertungen, Durchschnittsnote und ob der Eigentümer antwortet.</li>
+    <li><strong>Social Media</strong>: Auf welchen Kanälen ist die Pension (Instagram, Facebook, TikTok, YouTube)? Wie viele Follower, wie oft wird gepostet, wie viele Reaktionen gibt es? Ein Konto mit 10.000 Followern, auf dem seit einem Jahr nichts passiert, ist wenig wert. Fragen Sie, ob die Konten übertragen werden.</li>
+    <li><strong>Bewertungen auf allen Portalen</strong>: Lesen Sie die letzten zwei Jahre, nicht nur die Note. Wiederkehrende Klagen über Feuchtigkeit, Lärm, Betten oder die Zufahrt deuten auf Kosten nach dem Kauf.</li>
+    <li><strong>Die Rolle des Eigentümers.</strong> Gäste schreiben oft über die Gastgeber. Lebt die Pension von deren Persönlichkeit, bleiben nach der Übergabe womöglich Stammgäste weg.</li>
+  </ul>
+
+  <h2 id="gebaeude">Gebäude und Anlagen</h2>
+  <p>Gäste beanspruchen ein Haus stärker als Bewohner. Bei einem Gutachten für eine Pension prüfen wir über die üblichen Punkte hinaus:</p>
+  <ul>
+    <li>Das Bad jedes Zimmers: Leitungen, Abfluss, Feuchtigkeit und Lüftung.</li>
+    <li>Warmwasser und Wasserversorgung: Reicht Quelle oder Anschluss bei voller Belegung im August?</li>
+    <li>Abwasser und Klärgrube: Kapazität und ob sie den Vorschriften entspricht.</li>
+    <li>Klimaanlage und Heizung in allen Zimmern, für touristische Vermietung in Andalusien vorgeschrieben.</li>
+    <li>Elektrik: Leistung und Sicherheit, wenn Klimaanlagen, Küche und Pool gleichzeitig laufen.</li>
+    <li>Brandschutz, Fluchtwege und Schallschutz zwischen den Zimmern.</li>
+    <li>Aufgeschobene Instandhaltung: Ein Verkäufer, der aufhört, investiert in den letzten Jahren oft wenig.</li>
+  </ul>
+  <p>Lesen Sie auch <a href="/de/ratgeber/finca-kaufen-spanien/">Finca kaufen in Spanien</a> zu Wasser, Zufahrt und Abwasser auf dem Land, und Richtpreise in <a href="/de/ratgeber/renovierungskosten-spanien/">Renovierungskosten in Spanien</a>.</p>
+
+  <h2 id="personal">Personal und Verträge</h2>
+  <p>Beschäftigt die Pension Personal, etwa Reinigungskräfte oder einen Koch? Übernehmen Sie den Betrieb als Ganzes, gehen spanische Arbeitsverträge in der Regel samt erworbener Rechte auf den neuen Eigentümer über. Verlangen Sie eine Liste von Personal, Verträgen und etwaigen Streitigkeiten. Prüfen Sie auch laufende Verträge mit Wäschereien, Lieferanten, Reiseveranstaltern und Wartungsfirmen: Was läuft weiter, was können Sie kündigen?</p>
+
+  <h2 id="vergleich">Mehrere Objekte vergleichen</h2>
+  <p>Sehen Sie sich möglichst zwei oder drei Objekte an und stellen Sie sie nach denselben Maßstäben nebeneinander:</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Maßstab</th><th>Wo Sie es finden</th></tr></thead>
+    <tbody>
+      <tr><td>Kaufpreis und Preis pro legalem Zimmer</td><td>Inserat und Eintragung im Tourismusregister</td></tr>
+      <tr><td>Hauswert ohne Betrieb</td><td>Vergleichbare Häuser in der Nähe, Bewertung</td></tr>
+      <tr><td>Umsatz und Nettoergebnis über drei Jahre</td><td>Steuererklärungen, Auszahlungen der Portale</td></tr>
+      <tr><td>Auslastung und Preis pro Nacht je Saison</td><td>Monatlicher Buchungsbericht</td></tr>
+      <tr><td>Anteil Direktbuchungen und Stammgäste</td><td>Buchungsbericht je Kanal</td></tr>
+      <tr><td>Bewertungsnote und Trend</td><td>Google, Booking.com, Airbnb, Tripadvisor</td></tr>
+      <tr><td>Online-Reichweite</td><td>Website-Statistik, Social Media</td></tr>
+      <tr><td>Investitionen nach dem Kauf</td><td>Gutachten mit Preisschätzung</td></tr>
+      <tr><td>Rechtsstatus von Gebäude und Lizenz</td><td>Anwalt, Gemeinde, Junta</td></tr>
+      <tr><td>Nötige eigene Arbeit</td><td>Gespräch mit dem Verkäufer, Personalliste</td></tr>
+    </tbody>
+  </table></div>
+  <p>Erstellen Sie für das beste Objekt einen eigenen Plan mit vorsichtigem Szenario: geringere Auslastung im ersten Jahr, Provisionen der Portale und die Investitionen aus dem Gutachten. Geht die Rechnung dann noch auf, haben Sie eine gute Grundlage für Ihr Angebot.</p>
+
+  <h2 id="spanisch">Fragen auf Spanisch</h2>
+  <p>Einige Fragen, die Sie Verkäufer oder Makler schicken können:</p>
+  <ul>
+    <li><q lang="es">¿Me puede enviar las declaraciones de impuestos y de IVA de los últimos tres años?</q> Können Sie mir die Steuer- und Mehrwertsteuererklärungen der letzten drei Jahre schicken?</li>
+    <li><q lang="es">¿Me puede enviar los informes de pagos de Booking y Airbnb de los últimos tres años?</q> Können Sie mir die Auszahlungsberichte von Booking und Airbnb der letzten drei Jahre schicken?</li>
+    <li><q lang="es">¿Qué porcentaje de las reservas es directo y qué porcentaje viene de plataformas?</q> Welcher Anteil der Buchungen ist direkt, welcher kommt über Portale?</li>
+    <li><q lang="es">¿Con qué número está inscrito en el Registro de Turismo de Andalucía, y para cuántas habitaciones y plazas?</q> Unter welcher Nummer sind Sie im Tourismusregister eingetragen, für wie viele Zimmer und Gäste?</li>
+    <li><q lang="es">¿Están incluidos en la venta el dominio web, las redes sociales y las reservas futuras?</q> Gehören Domain, Social Media und künftige Buchungen zum Verkauf?</li>
+    <li><q lang="es">¿Hay trabajadores contratados? ¿Me puede enviar sus contratos?</q> Gibt es Angestellte? Können Sie mir die Verträge schicken?</li>
+  </ul>
+  <p>Weitere Fragen zum Haus selbst, auch auf Spanisch, finden Sie in der <a href="/de/ratgeber/haus-kaufen-spanien/checkliste/">Checkliste Hauskauf</a>.</p>
+
+  <h2 id="hilfe">Wie wir helfen</h2>
+  <p>Die Bücher lassen Sie von einem Gestor oder Steuerberater prüfen, Lizenz und Struktur von einem Anwalt. Wir übernehmen das Gebäude: Mit unserem <a href="/de/immobiliengutachten/">Immobiliengutachten</a> sehen wir die Pension mit den Augen eines Betreibers und kalkulieren die nötigen Arbeiten, Zimmer für Zimmer. Nach dem Kauf helfen wir bei <a href="/de/renovierung/">Renovierung</a>, <a href="/de/instandhaltung/">Instandhaltung</a>, dem <a href="/de/pool/">Pool</a> und, wenn Sie nicht da sind, mit der <a href="/de/hausbetreuung/">Hausbetreuung</a>. <a href="/de/anfrage/?dienst=aankoopkeuring">Gutachten anfragen</a> oder E-Mail an <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+
+  <h2 id="quellen">Quellen</h2>
+  <ul>
+    <li>Tourismus in Andalusien: Ley 13/2011 del Turismo de Andalucía; Ferienwohnungen: Decreto 28/2016, geändert durch Decreto 31/2024; ländliche Unterkünfte: Decreto 20/2002 de Turismo en el Medio Rural.</li>
+    <li>Nationale Registrierungsnummer für Kurzzeitvermietung: Real Decreto 1312/2024 (Pflicht seit 1. Juli 2025).</li>
+    <li>Übergang des Personals bei Betriebsübernahme: Estatuto de los Trabajadores, Artikel 44.</li>
+    <li>Bauen auf ländlichem Boden und AFO: Ley 7/2021 (LISTA) und Decreto 550/2022.</li>
+  </ul>
+  <p class="note">Geprüft am 5. November 2026. Dieser Ratgeber bietet allgemeine Informationen und ist keine Rechts-, Steuer- oder Finanzberatung. Die Regeln für touristische Vermietung ändern sich regelmäßig; lassen Sie eine Übernahme von Anwalt und Gestor oder Steuerberater begleiten.</p>
+</Guide>

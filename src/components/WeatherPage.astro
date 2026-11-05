@@ -1,0 +1,339 @@
+---
+// Weer en klimaat: regiopagina (geen maand, geen plaats), maandpagina (month) of plaatspagina (place).
+// Gegevens en teksten staan in src/data/weather.ts
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Hero from './Hero.astro';
+import Faq from './Faq.astro';
+import Cta from './Cta.astro';
+import { placeBySlug, placeHref } from '../data/places';
+import { placeTabs } from '../data/place-tabs';
+import { placeContent } from '../data/place-content';
+import {
+  climate, climateFor, monthNames, monthText, weatherBase, weatherMonthHref, weatherPlaceHref,
+  weatherPlaces, weatherPlaceBySlug, weatherLangs, type WLang,
+} from '../data/weather';
+import { services, path as route } from '../i18n';
+
+interface Props { lang: WLang; month?: number; place?: string; }
+const { lang, month, place: placeSlug } = Astro.props;
+const wp = placeSlug ? weatherPlaceBySlug(placeSlug)! : undefined;
+const place = placeSlug ? placeBySlug(placeSlug)! : undefined;
+const mode: 'hub' | 'month' | 'place' = wp ? 'place' : month !== undefined ? 'month' : 'hub';
+const M = monthNames[lang];
+const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+const svc = services[lang]; // 0 renovatie, 1 sleutelbeheer, 2 aankoopkeuring, 3 zwembad, 4 onderhoud
+const request = route(lang, 'request');
+const n = place?.name ?? '';
+const home = { nl: 'Nederland (De Bilt)', en: 'London', de: 'Berlin' }[lang];
+
+const T = {
+  nl: {
+    crumb: 'Weer', places: 'Plaatsen', weer: 'Weer',
+    hubTitle: 'Weer en klimaat in de Axarquía per maand: temperatuur, zon, regen en zee',
+    hubDesc: 'Hoe is het weer in de Axarquía en aan de Costa del Sol rond Nerja, Torrox en Torre del Mar? Temperatuur, zonuren, regen en zeewater per maand, aan de kust en in de bergen.',
+    hubH1: 'Weer en klimaat in de <em>Axarquía</em>, maand voor maand',
+    hubLead: 'Meer dan 300 zonnige dagen per jaar, zachte winters en warme zomers met een zeebries. Hier ziet u per maand wat u kunt verwachten, aan de kust en in de bergdorpen, en wat het weer betekent voor uw huis.',
+    monthTitle: (m: string) => `Weer in de Axarquía in ${m}: temperatuur, zon en zee (Nerja, Torrox, Torre del Mar)`,
+    monthDesc: (m: string, c: typeof climate[number]) => `Het weer in ${m} aan de oostkust van de Costa del Sol: gemiddeld ${c.max} °C overdag, ${c.min} °C ’s nachts, ${c.sun} uur zon per dag en zeewater van ${c.sea} °C. Met de bergdorpen en wat u in ${m} aan uw huis doet.`,
+    monthH1: (m: string) => `Het weer in de Axarquía in <em>${m}</em>`,
+    placeTitle: `Weer en klimaat in ${n} per maand: temperatuur, zon, regen en zee`,
+    placeDesc: `Hoe is het weer in ${n}? Gemiddelde temperatuur, zonuren, regen en zeewater per maand, en wat het klimaat betekent voor een huis in ${n}.`,
+    placeH1: `Weer en klimaat in <em>${n}</em>`,
+    stats: { max: 'Overdag', min: '’s Nachts', sun: 'Zon per dag', sea: 'Zeewater', rain: 'Regendagen' },
+    hours: 'uur', days: 'dagen',
+    table: { month: 'Maand', max: 'Max', min: 'Min', sun: 'Zon', rain: 'Regen', days: 'Regendagen', sea: 'Zee' },
+    tableTitle: 'Het klimaat per maand aan de kust',
+    tablePlace: `Het klimaat per maand in ${n}`,
+    tableNote: 'Afgeronde langjarige gemiddelden. Max en min in °C, zon in uren per dag, regen in mm per maand. Bronnen: AEMET (klimaatnormalen 1991–2020) en Copernicus voor de zeewatertemperatuur. Het weer verschilt per jaar.',
+    coastMountain: 'Kust en bergen', cmText: 'Hoe hoger, hoe koeler. Per 100 meter hoogte daalt de temperatuur ongeveer een halve graad, en in de bergen valt meer regen.',
+    cm: { where: 'Waar', coast: 'Kust (Nerja, Torrox Costa, Torre del Mar)', hills: 'Heuvels (Frigiliana, Torrox-dorp, ± 300 m)', mountains: 'Bergen (Cómpeta, Canillas, ± 650 m)' },
+    vsHome: (m: string, d: number) => `In ${m} is het overdag gemiddeld ${d} graden warmer dan in ${home}.`,
+    weatherH: (m: string) => `Hoe is het weer in ${m}?`,
+    houseH: (m: string) => `Uw huis in ${m}`,
+    otherMonths: 'Andere maanden', byPlace: 'Het weer per plaats', inPlaces: (m: string) => `Temperatuur in ${m} per plaats`,
+    best: 'Wanneer is het weer het best?',
+    bestText: 'Voor zon en zee: juni tot en met oktober. Voor wandelen en dorpen bezoeken: maart tot en met mei en oktober tot en met half november. Voor overwinteren: november tot en met maart, met overdag 16 tot 21 graden aan de kust. Lees ook de gids <a href="/nl/gidsen/overwinteren-in-spanje/">overwinteren in Spanje</a>.',
+    houseHub: 'Wat het klimaat met uw huis doet',
+    houseItems: [
+      ['Vocht in de winter', 'Dikke stenen muren en tegelvloeren houden de zomer koel, maar maken een huis in de winter koud en vochtig. Zeker als het leegstaat.', '/nl/problemen/vocht-en-schimmel/'],
+      ['Zware regen in de herfst', 'Na een droge zomer valt de regen soms in één keer. Dan blijkt waar een dak of dakterras lekt en of de afwatering rond het huis werkt.', '/nl/problemen/daklekkage/'],
+      ['Zon en hitte', 'De zon is sterk: daken, kitwerk en verf slijten sneller, en een huis zonder airco of zonwering wordt in juli heet. Die zon kunt u ook gebruiken, met zonnepanelen.', '/nl/kosten/zonnepanelen/'],
+      ['Een leeg huis', 'Wie een deel van het jaar weg is, merkt problemen pas bij terugkomst. Sleutelbeheer houdt het huis in de gaten, ook na een storm.', '/nl/sleutelbeheer/'],
+    ],
+    read: 'Lees meer',
+    placeHouse: `Wat het klimaat betekent voor een huis in ${n}`,
+    placeHouseText: {
+      coast: 'Aan de kust zijn zout, zon en wind de grootste vijanden: metaal roest sneller, kitwerk en verf slijten, en een dakterras moet goed waterdicht zijn. In de winter is ventilatie belangrijk tegen vocht.',
+      hills: 'In de heuvels zijn de nachten koeler en blijft vocht langer hangen. Let op goede ventilatie, een droge kelder of benedenverdieping en afwatering van de helling rond het huis.',
+      mountains: 'In de bergen heeft een huis verwarming, isolatie en goede ramen nodig. Leidingen buiten en in onverwarmde ruimtes kunnen bevriezen, en bij zware regen moet de afwatering van de helling werken.',
+    },
+    faqHub: [
+      ['Hoe warm is het in de winter in de Axarquía?', 'Aan de kust is het in december, januari en februari overdag gemiddeld 17 tot 18 graden, met zes à zeven uur zon per dag. ’s Nachts koelt het af naar 8 tot 9 graden. In de bergdorpen is het een paar graden kouder.'],
+      ['Wanneer kun je in de Axarquía in zee zwemmen?', 'Het zeewater is van juni tot en met oktober 20 graden of warmer, met een top van rond 23 graden in augustus. In mei en november zwemmen de echte liefhebbers.'],
+      ['Wat is de terral?', 'Een hete, droge wind uit het binnenland die in de zomer een paar dagen per jaar waait. De temperatuur aan de kust kan dan boven de 38 graden komen.'],
+      ['Wat is een DANA?', 'Een koudeluchtbel hoog in de atmosfeer die vooral in september tot november korte, zware regenbuien en onweer kan geven. Zorg dat goten en afvoeren vrij zijn.'],
+    ],
+    cta: 'Uw huis klaar voor elk seizoen?', ctaText: 'Van een lekkend dakterras na de herfstregen tot airco voor de zomer en toezicht in de winter. Vraag het in één keer aan.',
+  },
+  en: {
+    crumb: 'Weather', places: 'Places', weer: 'Weather',
+    hubTitle: 'Axarquía weather and climate by month: temperature, sun, rain and sea',
+    hubDesc: 'What is the weather like in the Axarquía and on the Costa del Sol around Nerja, Torrox and Torre del Mar? Temperature, sunshine, rain and sea temperature by month, on the coast and in the mountains.',
+    hubH1: 'Weather and climate in the <em>Axarquía</em>, month by month',
+    hubLead: 'More than 300 sunny days a year, mild winters and warm summers with a sea breeze. Here you can see what to expect each month, on the coast and in the mountain villages, and what the weather means for your home.',
+    monthTitle: (m: string) => `Axarquía weather in ${m}: temperature, sun and sea (Nerja, Torrox, Torre del Mar)`,
+    monthDesc: (m: string, c: typeof climate[number]) => `The weather in ${m} on the eastern Costa del Sol: on average ${c.max} °C in the day, ${c.min} °C at night, ${c.sun} hours of sun a day and a sea temperature of ${c.sea} °C. Including the mountain villages and what to do to your home in ${m}.`,
+    monthH1: (m: string) => `Axarquía weather in <em>${m}</em>`,
+    placeTitle: `${n} weather and climate by month: temperature, sun, rain and sea`,
+    placeDesc: `What is the weather like in ${n}? Average temperature, sunshine, rain and sea temperature by month, and what the climate means for a home in ${n}.`,
+    placeH1: `Weather and climate in <em>${n}</em>`,
+    stats: { max: 'Daytime', min: 'Night', sun: 'Sun a day', sea: 'Sea', rain: 'Rainy days' },
+    hours: 'hours', days: 'days',
+    table: { month: 'Month', max: 'Max', min: 'Min', sun: 'Sun', rain: 'Rain', days: 'Rainy days', sea: 'Sea' },
+    tableTitle: 'Climate by month on the coast',
+    tablePlace: `Climate by month in ${n}`,
+    tableNote: 'Rounded long-term averages. Max and min in °C, sun in hours a day, rain in mm a month. Sources: AEMET (climate normals 1991–2020) and Copernicus for sea temperature. The weather varies from year to year.',
+    coastMountain: 'Coast and mountains', cmText: 'The higher you go, the cooler it gets. Temperature drops about half a degree per 100 metres, and the mountains get more rain.',
+    cm: { where: 'Where', coast: 'Coast (Nerja, Torrox Costa, Torre del Mar)', hills: 'Hills (Frigiliana, Torrox village, approx. 300 m)', mountains: 'Mountains (Cómpeta, Canillas, approx. 650 m)' },
+    vsHome: (m: string, d: number) => `In ${m} it is on average ${d} degrees warmer in the daytime than in ${home}.`,
+    weatherH: (m: string) => `What is the weather like in ${m}?`,
+    houseH: (m: string) => `Your home in ${m}`,
+    otherMonths: 'Other months', byPlace: 'Weather by town', inPlaces: (m: string) => `Temperature in ${m} by town`,
+    best: 'When is the weather best?',
+    bestText: 'For sun and sea: June to October. For walking and visiting villages: March to May and October to mid-November. For wintering: November to March, with 16 to 21 degrees in the daytime on the coast. Also read the guide <a href="/en/guides/wintering-in-spain/">wintering in Spain</a>.',
+    houseHub: 'What the climate does to your home',
+    houseItems: [
+      ['Damp in winter', 'Thick stone walls and tiled floors keep summer cool, but make a house cold and damp in winter. Especially when it stands empty.', '/en/problems/damp-and-mould/'],
+      ['Heavy rain in autumn', 'After a dry summer the rain sometimes comes all at once. That is when you find out where a roof or roof terrace leaks and whether the drainage around the house works.', '/en/problems/roof-leaks/'],
+      ['Sun and heat', 'The sun is strong: roofs, sealant and paint wear faster, and a house without air con or shading gets hot in July. You can also put that sun to work, with solar panels.', '/en/costs/solar-panels/'],
+      ['An empty house', 'If you are away part of the year, you only find problems when you return. Key holding keeps an eye on the house, including after a storm.', '/en/key-holding/'],
+    ],
+    read: 'Read more',
+    placeHouse: `What the climate means for a home in ${n}`,
+    placeHouseText: {
+      coast: 'On the coast, salt, sun and wind are the main enemies: metal rusts faster, sealant and paint wear, and a roof terrace needs to be properly waterproof. In winter, ventilation matters against damp.',
+      hills: 'In the hills nights are cooler and damp lingers longer. Pay attention to good ventilation, a dry cellar or ground floor and drainage of the slope around the house.',
+      mountains: 'In the mountains a house needs heating, insulation and good windows. Pipes outside and in unheated rooms can freeze, and in heavy rain the drainage of the slope has to work.',
+    },
+    faqHub: [
+      ['How warm is it in winter in the Axarquía?', 'On the coast in December, January and February it is on average 17 to 18 degrees in the daytime, with six to seven hours of sun a day. At night it cools to 8 or 9 degrees. The mountain villages are a few degrees colder.'],
+      ['When can you swim in the sea in the Axarquía?', 'The sea is 20 degrees or warmer from June to October, peaking at around 23 degrees in August. In May and November only the keenest swimmers go in.'],
+      ['What is the terral?', 'A hot, dry wind from inland that blows a few days a year in summer. Temperatures on the coast can then go above 38 degrees.'],
+      ['What is a DANA?', 'A pocket of cold air high in the atmosphere which, mainly from September to November, can bring short, heavy downpours and thunderstorms. Make sure gutters and drains are clear.'],
+    ],
+    cta: 'Your home ready for every season?', ctaText: 'From a leaking roof terrace after the autumn rain to air con for summer and property checks in winter. Ask for it all in one go.',
+  },
+  de: {
+    crumb: 'Wetter', places: 'Orte', weer: 'Wetter',
+    hubTitle: 'Wetter und Klima in der Axarquía nach Monat: Temperatur, Sonne, Regen und Meer',
+    hubDesc: 'Wie ist das Wetter in der Axarquía und an der Costa del Sol rund um Nerja, Torrox und Torre del Mar? Temperatur, Sonnenstunden, Regen und Wassertemperatur nach Monat, an der Küste und in den Bergen.',
+    hubH1: 'Wetter und Klima in der <em>Axarquía</em>, Monat für Monat',
+    hubLead: 'Mehr als 300 Sonnentage im Jahr, milde Winter und warme Sommer mit Meeresbrise. Hier sehen Sie für jeden Monat, was Sie erwartet, an der Küste und in den Bergdörfern, und was das Wetter für Ihr Haus bedeutet.',
+    monthTitle: (m: string) => `Wetter in der Axarquía im ${m}: Temperatur, Sonne und Meer (Nerja, Torrox, Torre del Mar)`,
+    monthDesc: (m: string, c: typeof climate[number]) => `Das Wetter im ${m} an der östlichen Costa del Sol: im Schnitt ${c.max} °C am Tag, ${c.min} °C in der Nacht, ${c.sun} Stunden Sonne am Tag und ${c.sea} °C Wassertemperatur. Mit den Bergdörfern und was Sie im ${m} an Ihrem Haus tun.`,
+    monthH1: (m: string) => `Das Wetter in der Axarquía im <em>${m}</em>`,
+    placeTitle: `Wetter und Klima in ${n} nach Monat: Temperatur, Sonne, Regen und Meer`,
+    placeDesc: `Wie ist das Wetter in ${n}? Durchschnittstemperatur, Sonnenstunden, Regen und Wassertemperatur nach Monat, und was das Klima für ein Haus in ${n} bedeutet.`,
+    placeH1: `Wetter und Klima in <em>${n}</em>`,
+    stats: { max: 'Tagsüber', min: 'Nachts', sun: 'Sonne pro Tag', sea: 'Wasser', rain: 'Regentage' },
+    hours: 'Std.', days: 'Tage',
+    table: { month: 'Monat', max: 'Max', min: 'Min', sun: 'Sonne', rain: 'Regen', days: 'Regentage', sea: 'Meer' },
+    tableTitle: 'Das Klima nach Monat an der Küste',
+    tablePlace: `Das Klima nach Monat in ${n}`,
+    tableNote: 'Gerundete langjährige Mittelwerte. Max und Min in °C, Sonne in Stunden pro Tag, Regen in mm pro Monat. Quellen: AEMET (Klimanormalwerte 1991–2020) und Copernicus für die Wassertemperatur. Das Wetter ist von Jahr zu Jahr verschieden.',
+    coastMountain: 'Küste und Berge', cmText: 'Je höher, desto kühler. Pro 100 Höhenmeter sinkt die Temperatur um etwa ein halbes Grad, und in den Bergen regnet es mehr.',
+    cm: { where: 'Wo', coast: 'Küste (Nerja, Torrox Costa, Torre del Mar)', hills: 'Hügel (Frigiliana, Torrox-Dorf, ca. 300 m)', mountains: 'Berge (Cómpeta, Canillas, ca. 650 m)' },
+    vsHome: (m: string, d: number) => `Im ${m} ist es tagsüber im Schnitt ${d} Grad wärmer als in ${home}.`,
+    weatherH: (m: string) => `Wie ist das Wetter im ${m}?`,
+    houseH: (m: string) => `Ihr Haus im ${m}`,
+    otherMonths: 'Andere Monate', byPlace: 'Das Wetter nach Ort', inPlaces: (m: string) => `Temperatur im ${m} nach Ort`,
+    best: 'Wann ist das Wetter am besten?',
+    bestText: 'Für Sonne und Meer: Juni bis Oktober. Zum Wandern und für Dorfbesuche: März bis Mai und Oktober bis Mitte November. Zum Überwintern: November bis März, mit 16 bis 21 Grad tagsüber an der Küste. Lesen Sie auch den Ratgeber <a href="/de/ratgeber/ueberwintern-in-spanien/">Überwintern in Spanien</a>.',
+    houseHub: 'Was das Klima mit Ihrem Haus macht',
+    houseItems: [
+      ['Feuchtigkeit im Winter', 'Dicke Steinmauern und Fliesenböden halten den Sommer kühl, machen ein Haus im Winter aber kalt und feucht. Vor allem, wenn es leer steht.', '/de/probleme/feuchtigkeit-und-schimmel/'],
+      ['Starkregen im Herbst', 'Nach einem trockenen Sommer kommt der Regen manchmal auf einmal. Dann zeigt sich, wo ein Dach oder eine Dachterrasse undicht ist und ob die Entwässerung ums Haus funktioniert.', '/de/probleme/undichtes-dach/'],
+      ['Sonne und Hitze', 'Die Sonne ist stark: Dächer, Fugen und Farbe verschleißen schneller, und ein Haus ohne Klimaanlage oder Sonnenschutz wird im Juli heiß. Diese Sonne können Sie auch nutzen, mit einer Solaranlage.', '/de/kosten/solaranlage/'],
+      ['Ein leeres Haus', 'Wer einen Teil des Jahres weg ist, bemerkt Probleme erst bei der Rückkehr. Die Hausbetreuung behält das Haus im Blick, auch nach einem Sturm.', '/de/hausbetreuung/'],
+    ],
+    read: 'Mehr lesen',
+    placeHouse: `Was das Klima für ein Haus in ${n} bedeutet`,
+    placeHouseText: {
+      coast: 'An der Küste sind Salz, Sonne und Wind die größten Feinde: Metall rostet schneller, Fugen und Farbe verschleißen, und eine Dachterrasse muss gut abgedichtet sein. Im Winter ist Lüften wichtig gegen Feuchtigkeit.',
+      hills: 'In den Hügeln sind die Nächte kühler und Feuchtigkeit hält sich länger. Achten Sie auf gute Lüftung, ein trockenes Untergeschoss und die Entwässerung des Hangs rund ums Haus.',
+      mountains: 'In den Bergen braucht ein Haus Heizung, Dämmung und gute Fenster. Leitungen draußen und in unbeheizten Räumen können einfrieren, und bei Starkregen muss die Entwässerung des Hangs funktionieren.',
+    },
+    faqHub: [
+      ['Wie warm ist es im Winter in der Axarquía?', 'An der Küste sind es im Dezember, Januar und Februar tagsüber im Schnitt 17 bis 18 Grad, mit sechs bis sieben Stunden Sonne am Tag. Nachts kühlt es auf 8 bis 9 Grad ab. In den Bergdörfern ist es ein paar Grad kälter.'],
+      ['Wann kann man in der Axarquía im Meer baden?', 'Das Meer hat von Juni bis Oktober 20 Grad oder mehr, mit einem Höchstwert von etwa 23 Grad im August. Im Mai und November baden nur die Unerschrockenen.'],
+      ['Was ist der Terral?', 'Ein heißer, trockener Wind aus dem Landesinneren, der im Sommer an einigen Tagen im Jahr weht. Die Temperatur an der Küste kann dann über 38 Grad steigen.'],
+      ['Was ist eine DANA?', 'Ein Kaltlufttropfen in großer Höhe, der vor allem von September bis November kurze, heftige Regengüsse und Gewitter bringen kann. Halten Sie Regenrinnen und Abflüsse frei.'],
+    ],
+    cta: 'Ihr Haus bereit für jede Jahreszeit?', ctaText: 'Von der undichten Dachterrasse nach dem Herbstregen über die Klimaanlage für den Sommer bis zur Hausbetreuung im Winter. Fragen Sie alles auf einmal an.',
+  },
+}[lang];
+
+// Adressen, kruimelpad en vertalingen
+const self = mode === 'place' ? weatherPlaceHref(lang, wp!.slug) : mode === 'month' ? weatherMonthHref(lang, month!) : weatherBase[lang];
+const alternates = Object.fromEntries(
+  weatherLangs.map((l) => [l, mode === 'place' ? weatherPlaceHref(l, wp!.slug) : mode === 'month' ? weatherMonthHref(l, month!) : weatherBase[l]]),
+);
+const crumbs =
+  mode === 'place'
+    ? [
+        { name: T.places, href: route(lang, 'places') },
+        { name: n, href: placeContent[place!.slug]?.[lang] ? placeHref(lang, place!) : route(lang, 'places') },
+        { name: T.weer, href: self },
+      ]
+    : mode === 'month'
+      ? [{ name: T.crumb, href: weatherBase[lang] }, { name: cap(M[month!]), href: self }]
+      : [{ name: T.crumb, href: self }];
+const tabs = mode === 'place' ? placeTabs(lang, place!).map((t) => ({ ...t, current: t.page === 'weather' })) : [];
+
+const title = mode === 'place' ? T.placeTitle : mode === 'month' ? T.monthTitle(M[month!]) : T.hubTitle;
+const description = mode === 'place' ? T.placeDesc : mode === 'month' ? T.monthDesc(M[month!], climate[month!]) : T.hubDesc;
+const h1 = mode === 'place' ? T.placeH1 : mode === 'month' ? T.monthH1(M[month!]) : T.hubH1;
+const placeLead = { nl: `Temperatuur, zon, regen en zeewater in ${n}, maand voor maand. Met wat het klimaat betekent voor uw huis.`, en: `Temperature, sunshine, rain and sea temperature in ${n}, month by month. Plus what the climate means for your home.`, de: `Temperatur, Sonne, Regen und Wassertemperatur in ${n}, Monat für Monat. Dazu, was das Klima für Ihr Haus bedeutet.` }[lang];
+const lead = mode === 'place' ? placeLead : mode === 'month' ? monthText[month!].weather[lang].replace(/<[^>]+>/g, '').split('. ')[0] + '.' : T.hubLead;
+const alt = wp?.alt ?? 'coast';
+const rows = climate.map((_, i) => ({ i, ...climateFor(i, alt) }));
+const c = month !== undefined ? climate[month] : undefined;
+const req = (dienst: string) => `${request}?${new URLSearchParams({ dienst, ...(place ? { plaats: place.slug } : {}) })}`;
+const placeName = (slug: string) => placeBySlug(slug)?.name ?? slug;
+---
+<Base title={title} description={description} path={self} lang={lang} alternates={alternates}>
+  <Breadcrumbs lang={lang} items={crumbs} />
+  <Hero lang={lang} eyebrow={mode === 'place' ? `${n} · Axarquía` : 'Axarquía · Costa del Sol'} title={h1} lead={lead} ctaHref={req('onderhoud')} cta={svc[4].title} secondary={svc[1].title} secondaryHref={req('sleutelbeheer')}>
+    {tabs.length > 1 && (
+      <nav class="place-tabs" aria-label={n}>
+        {tabs.map((t) => <a href={t.href} aria-current={t.current ? 'page' : undefined}>{t.label}</a>)}
+      </nav>
+    )}
+  </Hero>
+
+  {mode === 'month' && c && (
+    <section class="section">
+      <div class="wrap">
+        <div class="weather-stats">
+          <div class="box"><p class="eyebrow">{T.stats.max}</p><p class="big">{c.max} °C</p></div>
+          <div class="box"><p class="eyebrow">{T.stats.min}</p><p class="big">{c.min} °C</p></div>
+          <div class="box"><p class="eyebrow">{T.stats.sun}</p><p class="big">{c.sun} {T.hours}</p></div>
+          <div class="box"><p class="eyebrow">{T.stats.sea}</p><p class="big">{c.sea} °C</p></div>
+          <div class="box"><p class="eyebrow">{T.stats.rain}</p><p class="big">{c.rainDays} {T.days}</p></div>
+        </div>
+        <p class="note">{T.vsHome(M[month!], c.max - c.home[lang])}</p>
+        <div class="prose">
+          <h2>{T.weatherH(M[month!])}</h2>
+          <p set:html={monthText[month!].weather[lang]} />
+          <h3>{T.inPlaces(M[month!])}</h3>
+          <div class="table-scroll">
+            <table class="prices weather-table">
+              <thead><tr><th>{T.cm.where}</th><th>{T.table.max}</th><th>{T.table.min}</th></tr></thead>
+              <tbody>
+                {weatherPlaces.map((w) => {
+                  const x = climateFor(month!, w.alt);
+                  return <tr><td><a href={weatherPlaceHref(lang, w.slug)}>{placeName(w.slug)}</a></td><td>{x.max} °C</td><td>{x.min} °C</td></tr>;
+                })}
+              </tbody>
+            </table>
+          </div>
+          <h2>{T.houseH(M[month!])}</h2>
+          <p set:html={monthText[month!].house[lang]} />
+          <p><a href={req('onderhoud')}>{svc[4].title} →</a> · <a href={svc[1].href}>{svc[1].title} →</a></p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {mode !== 'month' && (
+    <section class="section">
+      <div class="wrap">
+        {mode === 'place' && <div class="prose"><p set:html={wp!.intro[lang]} /></div>}
+        <h2>{mode === 'place' ? T.tablePlace : T.tableTitle}</h2>
+        <div class="table-scroll">
+          <table class="prices weather-table">
+            <thead><tr><th>{T.table.month}</th><th>{T.table.max}</th><th>{T.table.min}</th><th>{T.table.sun}</th><th>{T.table.rain}</th><th>{T.table.days}</th>{alt === 'coast' && <th>{T.table.sea}</th>}</tr></thead>
+            <tbody>
+              {rows.map((r) => (
+                <tr>
+                  <td><a href={weatherMonthHref(lang, r.i)}>{cap(M[r.i])}</a></td>
+                  <td>{r.max} °C</td><td>{r.min} °C</td><td>{r.sun}</td><td>{r.rain} mm</td><td>{r.rainDays}</td>{alt === 'coast' && <td>{r.sea} °C</td>}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="note">{T.tableNote}</p>
+      </div>
+    </section>
+  )}
+
+  {mode === 'hub' && (
+    <section class="section alt">
+      <div class="wrap prose">
+        <h2>{T.coastMountain}</h2>
+        <p>{T.cmText}</p>
+        <div class="table-scroll">
+          <table class="prices weather-table">
+            <thead><tr><th>{T.cm.where}</th><th>{cap(M[0])}</th><th>{cap(M[6])}</th></tr></thead>
+            <tbody>
+              {(['coast', 'hills', 'mountains'] as const).map((a) => {
+                const j = climateFor(0, a); const jl = climateFor(6, a);
+                return <tr><td>{T.cm[a]}</td><td>{j.min} – {j.max} °C</td><td>{jl.min} – {jl.max} °C</td></tr>;
+              })}
+            </tbody>
+          </table>
+        </div>
+        <h2>{T.best}</h2>
+        <p set:html={T.bestText} />
+      </div>
+    </section>
+  )}
+
+  {mode !== 'month' && (
+    <section class="section">
+      <div class="wrap">
+        <h2>{mode === 'place' ? T.placeHouse : T.houseHub}</h2>
+        {mode === 'place' ? (
+          <div class="prose"><p>{T.placeHouseText[alt]}</p></div>
+        ) : null}
+        <div class="cards">
+          {T.houseItems.map(([h, p, href]) => (
+            <a class="card" href={href}><h3>{h}</h3><p>{p}</p><span class="more">{T.read} →</span></a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section alt">
+    <div class="wrap">
+      {mode === 'month' ? (
+        <>
+          <h2>{T.otherMonths}</h2>
+          <ul class="weather-links">
+            {M.map((m, i) => i !== month && <li><a href={weatherMonthHref(lang, i)}>{cap(m)}</a></li>)}
+          </ul>
+        </>
+      ) : null}
+      <h2>{T.byPlace}</h2>
+      <ul class="weather-links">
+        {weatherPlaces.filter((w) => w.slug !== placeSlug).map((w) => <li><a href={weatherPlaceHref(lang, w.slug)}>{placeName(w.slug)}</a></li>)}
+        {mode !== 'hub' && <li><a href={weatherBase[lang]}>Axarquía</a></li>}
+      </ul>
+    </div>
+  </section>
+
+  {mode === 'hub' && <Faq items={T.faqHub.map(([q, a]) => ({ q, a }))} lang={lang} />}
+  <Cta lang={lang} title={T.cta} text={T.ctaText} plaats={place?.slug} />
+</Base>
+
+<style>
+  .weather-stats { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); margin-bottom: 0.8em; }
+  .weather-stats .box { padding: 16px 18px; }
+  .weather-stats .eyebrow { margin: 0 0 4px; }
+  .weather-stats .big { font-size: 1.6rem; font-weight: 700; margin: 0; }
+  .weather-table td, .weather-table td:last-child { font-weight: 400; white-space: nowrap; }
+  .weather-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0 0 1.5em; }
+</style>

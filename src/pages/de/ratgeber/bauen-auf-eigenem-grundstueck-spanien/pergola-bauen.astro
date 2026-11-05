@@ -1,0 +1,93 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'vorab', label: 'Vorab prüfen' },
+  { id: 'material', label: 'Holz, Aluminium oder Stahl?' },
+  { id: 'brauchen', label: 'Was Sie brauchen' },
+  { id: 'schritte', label: 'Schritt für Schritt' },
+  { id: 'fassade', label: 'An der Fassade oder auf der Dachterrasse' },
+  { id: 'andalusien', label: 'Was in Andalusien anders ist' },
+  { id: 'fachmann', label: 'Wann zum Fachmann?' },
+];
+
+const faq = [
+  { q: 'Brauche ich eine Genehmigung für eine selbst gebaute Pergola?', a: 'Für eine freistehende, offene Pergola ohne festes Dach reicht in vielen Gemeinden eine Anzeige (Declaración responsable), manchmal nicht einmal das. Mit festem Dach oder am Haus verlangt die Gemeinde oft eine Genehmigung. In einer Wohnanlage muss auch die Gemeinschaft zustimmen. Fragen Sie vorher nach.' },
+  { q: 'Wie tief müssen die Fundamente für eine Pergola sein?', a: 'Rechnen Sie mit Löchern von etwa 40 × 40 cm und 50 bis 60 cm Tiefe, mit Beton gefüllt. Am Hang, in lockerem Boden oder an windigen Stellen gehen Sie tiefer oder breiter. Lassen Sie es im Zweifel nachrechnen.' },
+  { q: 'Welches Holz ist für eine Pergola in Spanien am besten?', a: 'Kesseldruckimprägnierte Kiefer (Madera tratada en autoclave) ist am verbreitetsten und gut erhältlich. Douglasie oder Lärche halten länger, tropisches Hartholz am längsten. Wichtiger als die Holzart: Halten Sie das Holz vom Boden fern und behandeln Sie es alle paar Jahre gegen Sonne und Holzwurm.' },
+  { q: 'Darf ich eine Pergola auf meine Dachterrasse stellen?', a: 'Nur wenn das Dach Gewicht und Windlast trägt und die Abdichtung intakt bleibt. Bohren Sie nie einfach durch die Dachhaut. In einer Wohnanlage ist die Zustimmung der Gemeinschaft fast immer nötig. Das ist eine Aufgabe für einen Fachmann.' },
+];
+---
+<Guide lang="de" slug="bauen-auf-eigenem-grundstueck-pergola-bauen" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Lieber eine Pergola bauen lassen?" ctaText="Keine Zeit oder Lust, selbst zu bauen? Sagen Sie uns, was Sie möchten, und schicken Sie ein Foto der Stelle. Wir kümmern uns um alles, von der Anzeige bis zur Montage.">
+  <h2 id="vorab">Vorab prüfen</h2>
+  <ul>
+    <li><strong>Ist es erlaubt?</strong> Eine offene Pergola ohne festes Dach ist meist gut zu regeln, oft mit einer Anzeige bei der Gemeinde. Mit festem Dach wird sie zur Überdachung, mit strengeren Regeln. Lesen Sie zuerst <a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/carport-und-pergola/">Carport, Überdachung und Pergola</a>.</li>
+    <li><strong>Wohnen Sie in einer Wohnanlage?</strong> Fragen Sie die Gemeinschaft um Zustimmung, bevor Sie etwas kaufen.</li>
+    <li><strong>Der Standort</strong>: Achten Sie darauf, wo die Sonne nachmittags und abends steht, woher der Wind kommt und ob Leitungen im Boden liegen (Wasser, Abwasser, Strom zum Pool).</li>
+    <li><strong>Die Größe</strong>: Üblich sind 3 × 4 bis 4 × 5 Meter mit etwa 2,40 Metern Durchgangshöhe. Halten Sie den Abstand zwischen Holzpfosten unter 3 bis 3,5 Metern, sonst müssen die Balken stärker sein.</li>
+  </ul>
+
+  <h2 id="material">Holz, Aluminium oder Stahl?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Material</th><th>Gut zu wissen</th></tr></thead>
+    <tbody>
+      <tr><td>Kesseldruckimprägnierte Kiefer (<em>Madera tratada en autoclave</em>)</td><td>Am verbreitetsten, überall erhältlich und gut zu verarbeiten. Alle paar Jahre behandeln.</td></tr>
+      <tr><td>Douglasie, Lärche oder tropisches Hartholz</td><td>Hält länger und sieht schöner aus, ist aber schwerer und schwieriger zu sägen und zu bohren.</td></tr>
+      <tr><td>Aluminium-Bausatz</td><td>Fast wartungsfrei. Selbst montierbar, aber an die Maße des Bausatzes gebunden.</td></tr>
+      <tr><td>Stahl</td><td>Stark und schlank, aber Schweißen ist Facharbeit. An der Küste nur verzinkt oder pulverbeschichtet.</td></tr>
+    </tbody>
+  </table>
+  <p>Dieser Ratgeber geht von einer freistehenden Holzpergola auf vier oder sechs Pfosten aus.</p>
+
+  <h2 id="brauchen">Was Sie brauchen</h2>
+  <p><strong>Material</strong> (praktisch, die spanischen Begriffe in den Baumarkt oder zum <em>Almacén de maderas</em> mitzunehmen):</p>
+  <ul>
+    <li>Pfosten von 9 × 9 oder 12 × 12 cm (<em>Postes</em>)</li>
+    <li>Pfetten auf den Pfosten, zum Beispiel 7 × 17 cm oder stärker (<em>Vigas</em>)</li>
+    <li>Querbalken oder Latten obendrauf (<em>Travesaños</em> oder <em>Listones</em>)</li>
+    <li>Verzinkte Pfostenanker zum Einbetonieren (<em>Anclajes para poste</em>)</li>
+    <li>Beton oder Sackware Schnellbeton (<em>Hormigón</em>)</li>
+    <li>Schlossschrauben M10 oder M12 mit Unterlegscheiben und Edelstahlschrauben (<em>Tornillería inoxidable</em>)</li>
+    <li>Holzlasur oder Öl mit UV-Schutz und ein Mittel gegen Holzwurm (<em>Carcoma</em>)</li>
+    <li>Für Schatten: Schilfmatte (<em>Cañizo</em>), Schattiernetz (<em>Malla de sombreo</em>) oder Kletterpflanzen</li>
+  </ul>
+  <p><strong>Werkzeug</strong>: Maßband, Schnur und Pflöcke, Wasserwaage (am besten auch eine lange oder ein Laser), Spaten oder Erdbohrer, Kreissäge, Akkuschrauber mit langen Holzbohrern, Steckschlüssel, zwei stabile Leitern und eine zweite Person.</p>
+
+  <h2 id="schritte">Schritt für Schritt</h2>
+  <ol>
+    <li><strong>Abstecken.</strong> Markieren Sie die Ecken mit Pflöcken und Schnur. Prüfen Sie den rechten Winkel über die beiden Diagonalen: Sie müssen gleich lang sein.</li>
+    <li><strong>Löcher graben.</strong> Je Pfosten ein Loch von etwa 40 × 40 cm und 50 bis 60 cm Tiefe. Im felsigen Boden der Axarquía brauchen Sie manchmal einen Abbruchhammer; den können Sie mieten.</li>
+    <li><strong>Fundamente gießen.</strong> Füllen Sie die Löcher mit Beton und setzen Sie die Pfostenanker genau auf die Schnurlinie und auf gleiche Höhe. Lassen Sie den Beton mindestens einige Tage aushärten, bei Sommerhitze abgedeckt und ab und zu befeuchtet.</li>
+    <li><strong>Pfosten stellen.</strong> Setzen Sie die Pfosten in die Anker, richten Sie sie mit der Wasserwaage an zwei Seiten lotrecht aus und stützen Sie sie vorläufig ab. Verschrauben Sie sie.</li>
+    <li><strong>Auf Höhe sägen.</strong> Übertragen Sie die Höhe mit (Laser-)Wasserwaage auf alle Pfosten und sägen Sie sie gleich lang. Geben Sie oben etwas Gefälle, falls später doch etwas Wasserdichtes daraufkommt.</li>
+    <li><strong>Pfetten montieren.</strong> Legen Sie die Pfetten auf oder an die Pfosten und befestigen Sie sie mit durchgehenden Schlossschrauben. Vorbohren und Unterlegscheiben verwenden.</li>
+    <li><strong>Querbalken legen.</strong> Legen Sie Querbalken oder Latten alle 40 bis 60 cm auf die Pfetten und schrauben Sie sie fest. Je enger, desto mehr Schatten.</li>
+    <li><strong>Gegen Wind aussteifen.</strong> Setzen Sie schräge Kopfbänder zwischen Pfosten und Pfetten. Sie machen die Pergola steif, und das ist beim Wind in der Axarquía kein Luxus.</li>
+    <li><strong>Fertigstellen.</strong> Behandeln Sie das ganze Holz, auch die Schnittkanten. Befestigen Sie Schilfmatte oder Schattiernetz, oder pflanzen Sie Kletterpflanzen wie Blauregen, Bougainvillea oder Wein an den Fuß.</li>
+  </ol>
+
+  <h2 id="fassade">An der Fassade oder auf der Dachterrasse</h2>
+  <p>Eine Pergola, die auf einer Seite am Haus aufliegt, hängt an einer Wandpfette, die mit schweren Ankern in der Wand sitzt. In den alten, teils bröckeligen Mauern von Dorfhäusern und Fincas halten normale Dübel nicht; nehmen Sie Verbundanker. Eine Pergola an der Fassade gilt bei der Gemeinde eher als Erweiterung des Hauses, und in einer Wohnanlage verändert sie das Erscheinungsbild.</p>
+  <p>Auf einer Dachterrasse ist es noch schwieriger: Das Dach muss Gewicht und Windlast tragen, und jedes Loch in der Dachhaut ist ein mögliches Leck. Überlassen Sie das immer einem Fachmann.</p>
+
+  <h2 id="andalusien">Was in Andalusien anders ist</h2>
+  <ul>
+    <li><strong>Sonne</strong>: UV-Strahlung lässt unbehandeltes Holz in wenigen Jahren vergrauen und reißen. Behandeln Sie es alle zwei bis drei Jahre.</li>
+    <li><strong>Wind</strong>: Vor allem auf Hügeln und im Herbst kann es stark wehen. Ein straff gespanntes Schattiernetz fängt viel Wind; bei Sturm abnehmen.</li>
+    <li><strong>Holzwurm und Termiten</strong>: Halten Sie das Holz einige Zentimeter über dem Boden, wie es ein Pfostenanker tut, und kontrollieren Sie es jedes Jahr.</li>
+    <li><strong>Starkregen</strong>: Im Winter kurz, aber heftig. Lassen Sie kein Wasser auf Balken stehen und halten Sie den Pfostenfuß trocken.</li>
+    <li><strong>Salz</strong>: An der Küste rosten normale Schrauben schnell. Verwenden Sie Edelstahl oder feuerverzinkte Teile.</li>
+  </ul>
+
+  <h2 id="fachmann">Wann zum Fachmann?</h2>
+  <p>Eine einfache, freistehende Holzpergola können Sie gut selbst bauen. Überlassen Sie die Arbeit lieber einem Fachmann, wenn:</p>
+  <ul>
+    <li>Sie ein Lamellendach, festes Dach oder Glasdach möchten;</li>
+    <li>die Pergola auf eine Dachterrasse oder an eine alte Fassade kommt;</li>
+    <li>sie größer als etwa 4 × 5 Meter wird oder an einem steilen Hang steht;</li>
+    <li>Beleuchtung, Strom oder eine Außenküche darunter sollen;</li>
+    <li>Sie eine Genehmigung und Zeichnungen brauchen.</li>
+  </ul>
+  <p><strong>Möchten Sie die Pergola bauen lassen oder nur Fundamente und schwere Arbeiten abgeben?</strong> <a href="/de/anfrage/?dienst=renovatie">Kontakt aufnehmen →</a></p>
+  <p>Zurück zur Übersicht: <a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/">Bauen auf dem eigenen Grundstück</a>.</p>
+</Guide>

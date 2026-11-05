@@ -1,0 +1,131 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Die kurze Antwort' },
+  { id: 'sofort', label: 'Erste Hilfe: die ersten zehn Minuten' },
+  { id: 'suchen', label: 'Das Leck finden' },
+  { id: 'ursache', label: 'Dach, Leitung, Abwasser oder Kondenswasser?' },
+  { id: 'selbst', label: 'Was Sie selbst reparieren können' },
+  { id: 'fachmann', label: 'Wann rufen Sie einen Installateur?' },
+  { id: 'zahlt', label: 'Wer zahlt den Schaden?' },
+  { id: 'vorbeugen', label: 'Lecks vorbeugen, wenn Sie nicht da sind' },
+];
+
+const faq = [
+  {
+    q: 'Wo ist der Hauptabsperrhahn in einem spanischen Haus?',
+    a: 'Meist beim Wasserzähler (contador): in einem Kasten an der Fassade, in einem Schacht im Gehweg oder am Eingang der Urbanisation. Im Haus gibt es oft noch ein zweites Ventil (llave de paso) in Küche, Bad oder beim Boiler. Suchen Sie beide, bevor etwas passiert, und drehen Sie sie ab und zu zu und auf, damit sie nicht festrosten.',
+  },
+  {
+    q: 'Zahlt meine Versicherung den Wasserschaden?',
+    a: 'Eine normale Hausversicherung (seguro de hogar) deckt meist Wasserschäden an Haus und Hausrat und oft auch die Lecksuche. Die Reparatur der defekten Leitung selbst ist manchmal ausgeschlossen. Schäden durch mangelnde Instandhaltung, etwa ein seit Jahren undichtes Dach, werden oft abgelehnt. Melden Sie den Schaden schnell, machen Sie Fotos und werfen Sie nichts weg, bevor der Gutachter da war.',
+  },
+  {
+    q: 'Die Nachbarn oben verursachen ein Leck bei mir. Was nun?',
+    a: 'Warnen Sie die Nachbarn sofort und bitten Sie sie, ihren Haupthahn zu schließen. Melden Sie es dann Ihrer eigenen Versicherung; sie klärt alles mit der Versicherung der Nachbarn. Kommt das Wasser aus einer gemeinsamen Leitung oder vom Dach des Gebäudes, ist die Eigentümergemeinschaft (comunidad) zuständig. Informieren Sie den Verwalter (administrador) schriftlich.',
+  },
+  {
+    q: 'Meine Wasserrechnung ist plötzlich sehr hoch. Habe ich ein Leck?',
+    a: 'Wahrscheinlich. Machen Sie den Zählertest: Alle Hähne zu, Geräte aus, und schauen Sie, ob der Zähler noch läuft. Läuft er, ist zwischen Zähler und Ihren Hähnen ein Leck. Oft ist es eine laufende Toilettenspülung oder ein Leck unter der Erde im Garten. Manche Wasserversorger senken die Rechnung, wenn Sie mit einer Rechnung nachweisen, dass das Leck repariert wurde.',
+  },
+];
+---
+<Guide lang="de" slug="wasserschaden-spanien" toc={toc} faq={faq} dienst="onderhoud" ctaTitle="Ein Leck, das Sie nicht finden oder dem Sie nicht trauen?" ctaText="Wir finden das Leck, reparieren es und beheben den Schaden. Auch wenn Sie selbst nicht in Spanien sind.">
+  <h2 id="kurz">Die kurze Antwort</h2>
+  <p>Bei einem Leck gilt: zuerst <strong>das Wasser abdrehen</strong> und wenn nötig <strong>den Strom abschalten</strong>, dann <strong>Fotos machen</strong> und erst danach die Ursache suchen. Mit dem Wasserzähler sehen Sie in wenigen Minuten, ob eine Leitung leckt. Ein undichtes Dach zeigt sich vor allem nach Regen, eine undichte Leitung auch bei Trockenheit. Melden Sie Schäden schnell Ihrer Versicherung und, in einer Wohnung, den Nachbarn oder der Eigentümergemeinschaft.</p>
+
+  <h2 id="sofort">Erste Hilfe: die ersten zehn Minuten</h2>
+  <ol>
+    <li><strong>Drehen Sie den Hauptabsperrhahn zu.</strong> Im Haus heißt er <em>llave de paso</em>, am Zähler <em>llave del contador</em>. Wissen Sie nicht, wo er ist, ist jetzt der Moment, ihn zu suchen.</li>
+    <li><strong>Schalten Sie den Strom ab</strong> in Räumen, in denen Wasser an Steckdosen, Lampen oder den Sicherungskasten kommt. Fassen Sie nasse Geräte nicht an.</li>
+    <li><strong>Schalten Sie den Boiler aus</strong>, wenn das Leck an der Warmwasserleitung ist.</li>
+    <li><strong>Fangen Sie das Wasser auf</strong> mit Eimern und Handtüchern und stellen Sie Möbel, Teppiche und Papiere hoch.</li>
+    <li><strong>Machen Sie Fotos und Videos</strong> vom Schaden und vom Leck, mit Datum. Die brauchen Sie für die Versicherung.</li>
+    <li><strong>Warnen Sie die Nachbarn</strong>, wenn das Wasser von oben kommt oder nach unten läuft.</li>
+  </ol>
+
+  <h2 id="suchen">Das Leck finden</h2>
+  <h3>Der Zählertest</h3>
+  <p>Drehen Sie alle Hähne zu, schalten Sie Waschmaschine, Spülmaschine und eine eventuelle Bewässerung aus und schauen Sie auf den Wasserzähler. Steht das kleine Rädchen oder der rote Stern still? Dann leckt keine Leitung. Dreht es sich, ist irgendwo zwischen Zähler und Hähnen ein Leck. Notieren Sie den Stand und prüfen Sie im Zweifel nach einer Stunde noch einmal.</p>
+  <h3>Selbst suchen</h3>
+  <ul>
+    <li><strong>Toilette</strong>: Geben Sie ein paar Tropfen Lebensmittelfarbe in den Spülkasten. Ist nach einer Viertelstunde Farbe in der Schüssel, läuft die Spülung nach. Das ist die häufigste Ursache einer hohen Wasserrechnung.</li>
+    <li><strong>Feuchte Stellen</strong>: Eine Stelle, die wächst, auch bei Trockenheit, deutet auf eine Leitung hin. Verfolgen Sie sie nach oben oder zum nächsten Hahn.</li>
+    <li><strong>Lose oder hohl klingende Fliesen</strong> und ein Boden, der sich warm anfühlt (bei einem Leck in der Warmwasserleitung).</li>
+    <li><strong>Nasse Stellen im Garten</strong> oder ein auffallend grüner Streifen Rasen: ein Leck in der Leitung unter der Erde.</li>
+    <li><strong>Unter der Spüle und hinter der Waschmaschine</strong>: Flexschläuche und Siphons gehen als Erstes kaputt.</li>
+  </ul>
+  <h3>Lecksuche durch einen Fachbetrieb</h3>
+  <p>Finden Sie das Leck nicht, lassen Sie keine Wände auf gut Glück aufstemmen. Ein Fachbetrieb für Lecksuche (<em>detección de fugas</em>) arbeitet zerstörungsfrei:</p>
+  <ul>
+    <li><strong>Thermografie</strong>: Eine Wärmebildkamera zeigt, wo warmes oder kaltes Wasser durch Wand oder Boden läuft.</li>
+    <li><strong>Akustisch</strong>: Ein empfindliches Mikrofon hört das Zischen eines Lecks unter dem Boden.</li>
+    <li><strong>Formiergas</strong>: Ein harmloses Gas in der Leitung tritt am Leck aus und wird gemessen. Gut für Lecks unter der Erde.</li>
+    <li><strong>Kamerainspektion</strong> von Abwasser und Kanal.</li>
+  </ul>
+  <p>Viele Hausversicherungen übernehmen die Lecksuche. Fragen Sie vorher nach.</p>
+
+  <h2 id="ursache">Dach, Leitung, Abwasser oder Kondenswasser?</h2>
+  <table class="prices">
+    <thead><tr><th>Was Sie sehen</th><th>Wahrscheinliche Ursache</th></tr></thead>
+    <tbody>
+      <tr><td>Fleck an der Decke, nur nach Regen</td><td>Dach oder Dachterrasse. Siehe <a href="/de/probleme/undichtes-dach/">undichtes Dach</a>.</td></tr>
+      <tr><td>Fleck, der wächst, auch bei Trockenheit; Zähler läuft</td><td>Undichte Wasserleitung</td></tr>
+      <tr><td>Nasse Stelle nach Duschen oder Abwaschen; Zähler steht</td><td>Undichtes Abwasser, Siphon oder Fuge</td></tr>
+      <tr><td>Nasse Stellen unten an der Wand, Salzrand</td><td>Aufsteigende Feuchtigkeit aus dem Boden</td></tr>
+      <tr><td>Tropfen an Fenstern und kalten Wänden im Winter, schwarze Pünktchen</td><td>Kondenswasser. Siehe <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit und Schimmel</a>.</td></tr>
+      <tr><td>Wasser an der Außenwand nach Starkregen</td><td>Fallrohr, Dachrinne oder Entwässerung des Grundstücks</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="selbst">Was Sie selbst reparieren können</h2>
+  <p>Kleine Lecks lassen sich oft mit ein paar Euro an Ersatzteilen selbst beheben:</p>
+  <ul>
+    <li><strong>Tropfender Hahn</strong>: neue Dichtung oder Kartusche. Nehmen Sie das alte Teil mit in den Baumarkt (<em>ferretería</em>).</li>
+    <li><strong>Laufende Toilettenspülung</strong>: Schwimmerventil oder Dichtung im Spülkasten ersetzen.</li>
+    <li><strong>Undichter Siphon</strong>: abschrauben, reinigen, neue Dichtung einsetzen und handfest anziehen.</li>
+    <li><strong>Flexschlauch</strong> unter dem Hahn oder zur Waschmaschine: in wenigen Minuten getauscht. Vorher das Eckventil schließen.</li>
+    <li><strong>Silikonfuge</strong> an Dusche oder Badewanne: alte Fuge entfernen, trocknen lassen, neue Sanitärfuge ziehen.</li>
+    <li><strong>Dach</strong>: einen verrutschten Ziegel zurücklegen oder einen Riss in der Dachterrasse provisorisch abdichten. Gehen Sie nie allein aufs Dach; lesen Sie vorher <a href="/de/selbermachen/dach-selbst-reparieren/">Dach selbst reparieren</a>.</li>
+  </ul>
+
+  <h2 id="fachmann">Wann rufen Sie einen Installateur?</h2>
+  <ul>
+    <li>Das Leck ist in der Wand, im Boden oder unter der Erde.</li>
+    <li>Der Hauptabsperrhahn schließt nicht richtig oder ist festgerostet.</li>
+    <li>Wasser ist an die Elektrik gekommen.</li>
+    <li>Das Leck kommt nach Ihrer eigenen Reparatur zurück.</li>
+    <li>Sie haben alte Eisen- oder Bleileitungen. Dann ist ein Leck oft erst der Anfang. Lesen Sie <a href="/de/ratgeber/leitungen-und-boiler-erneuern-spanien/">Leitungen und Boiler erneuern</a>.</li>
+  </ul>
+  <p>Dabei können wir Ihnen helfen:</p>
+  <ul>
+    <li>Hahn, Siphon oder Toilette reparieren</li>
+    <li>Lecksuche durch einen Fachbetrieb</li>
+    <li>Leitung in der Wand reparieren, inklusive Schließen und Fliesen</li>
+    <li>Leck in einer Dachterrasse beheben</li>
+    <li>Wasserschaden beheben: trocknen, verputzen, streichen</li>
+    <li>Alle Leitungen erneuern</li>
+  </ul>
+  <p><strong>Ein Leck, das Sie nicht selbst beheben können oder wollen?</strong> Wir finden das Leck, reparieren es und beheben den Schaden, auch wenn Sie nicht in Spanien sind. <a href="/de/anfrage/?dienst=onderhoud">Erzählen Sie uns, was los ist</a>.</p>
+
+  <h2 id="zahlt">Wer zahlt den Schaden?</h2>
+  <ul>
+    <li><strong>Ihre eigene Hausversicherung</strong> (<em>seguro de hogar</em>): deckt meist Wasserschäden an Haus und Hausrat und oft die Lecksuche. Die Reparatur der Leitung selbst oder eines verschlissenen Teils manchmal nicht. Suchen Sie in Ihrer Police nach „daños por agua“ und „localización de fugas“. Siehe auch unseren Ratgeber <a href="/de/ratgeber/hausversicherung-spanien/">Hausversicherung in Spanien</a>.</li>
+    <li><strong>Die Nachbarn</strong>: Kommt das Wasser aus deren Wohnung, ist deren Haftpflichtversicherung zuständig. Ihr Versicherer regelt das meist direkt.</li>
+    <li><strong>Die Eigentümergemeinschaft</strong> (<em>comunidad de propietarios</em>): bei Lecks aus gemeinsamen Leitungen, dem Dach oder der Fassade des Gebäudes. Melden Sie es schriftlich beim Verwalter.</li>
+    <li><strong>Sie selbst</strong>: bei Verschleiß und mangelnder Instandhaltung. Versicherer lehnen ab, wenn sich zeigt, dass ein Leck schon lange bestand.</li>
+  </ul>
+  <p>Tipp: Melden Sie Schäden innerhalb von sieben Tagen, heben Sie defekte Teile auf und lassen Sie nichts endgültig reparieren, bevor der Gutachter (<em>perito</em>) da war, außer es ist nötig, um Schlimmeres zu verhindern.</p>
+
+  <h2 id="vorbeugen">Lecks vorbeugen, wenn Sie nicht da sind</h2>
+  <p>Ein Leck in einem leeren Haus läuft manchmal wochenlang. Das ist der größte Einzelschaden, den wir bei Ferienhäusern sehen.</p>
+  <ul>
+    <li><strong>Hauptabsperrhahn zu</strong>, wenn Sie abreisen. Lassen Sie nur ein separates Ventil für Bewässerung oder Pool offen, wenn nötig.</li>
+    <li><strong>Wassermelder</strong> unter Boiler, Waschmaschine und Spülmaschine, die eine Nachricht aufs Handy schicken.</li>
+    <li><strong>Ein smarter Haupthahn</strong>, der bei einem Leck oder ungewöhnlichem Verbrauch automatisch schließt.</li>
+    <li><strong>Dach und Dachrinnen</strong> vor der Regenzeit im Herbst prüfen lassen.</li>
+    <li><strong>Jemand, der regelmäßig nach dem Rechten sieht</strong>, die Hähne durchspült und den Zähler kontrolliert. Genau das macht die <a href="/de/hausbetreuung/">Hausbetreuung</a>.</li>
+  </ul>
+  <p class="note">Dieser Ratgeber gibt allgemeine Informationen für Hauseigentümer in der Axarquía im November 2026. Was Ihre Versicherung zahlt, steht in Ihrer eigenen Police.</p>
+</Guide>

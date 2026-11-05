@@ -1,75 +1,153 @@
 ---
+// Sources: see the Dutch version (src/pages/nl/gidsen/afo-legaliseren-andalusie.astro).
 import Guide from '../../../components/Guide.astro';
 
 const toc = [
-  { id: 'what', label: 'What does AFO mean?' },
-  { id: 'why', label: 'Why so many homes lack permission' },
-  { id: 'can', label: 'What you can and cannot do' },
-  { id: 'procedure', label: 'The procedure in outline' },
-  { id: 'buyer', label: 'As a buyer: what to watch for' },
-  { id: 'owner', label: 'As an owner: renovating with AFO' },
+  { id: 'short', label: 'Legalisation or AFO?' },
+  { id: 'legalise', label: 'Full legalisation with a permit' },
+  { id: 'afo', label: 'AFO: recognition after six years' },
+  { id: 'allowed', label: 'What you can and cannot do with AFO' },
+  { id: 'steps', label: 'The steps and who you need' },
+  { id: 'costs', label: 'Costs and timescale' },
+  { id: 'consequences', label: 'Buying a house without paperwork' },
+  { id: 'value', label: 'Benefits, risks and value' },
+  { id: 'buyer', label: 'Checklist for buyers' },
 ];
 
 const faq = [
   {
     q: 'Is a house with AFO status legal?',
-    a: 'Not in the sense of having been built with a licence. But the town hall recognises that no action can be taken against it any more. The house can be lived in, sold, registered and connected to water and electricity. Extending or rebuilding it is generally not allowed.',
+    a: 'Not entirely. AFO is not legalisation: the council only recognises that it can no longer take action because the six-year limit has passed. You may live in it, sell it, register it and connect it to water and electricity. You may not make it bigger.',
   },
   {
-    q: 'Can I get a mortgage on a house with AFO status?',
-    a: 'Sometimes. Banks are more cautious than with a fully licensed home, and conditions vary between banks. With an official AFO declaration recorded at the Land Registry your chances are much better than without.',
+    q: 'Can I get a mortgage on a house without planning permission?',
+    a: 'On a house with no paperwork at all, hardly ever: the bank’s valuer only values what is legal and registered, or rejects it. With AFO recognition entered in the property register it is easier, but not every bank will lend, and often for less. Check with your bank beforehand.',
+  },
+  {
+    q: 'What does legalisation cost?',
+    a: 'The architect’s report or project, the council fees, any work the council requires, and the notary and land registry. Council fees vary by town. For AFO, Nerja charges 3.5% of the construction cost (minimum €750), Torrox €750 plus 3.25%, and Vélez-Málaga 7.5%. Altogether it usually comes to a few thousand euros, more if repairs are needed.',
   },
   {
     q: 'How long does an AFO procedure take?',
-    a: 'It varies by town hall. Expect several months to more than a year, depending on the workload and how complete the file is.',
+    a: 'The council must decide within six months. If it does not, the application counts as refused. Including gathering evidence and any work beforehand, the whole process often takes from six months to over a year.',
   },
   {
-    q: 'What does an AFO procedure cost?',
-    a: 'The costs are an architect’s or surveyor’s technical report, the town hall fees and registration. Together these often come to several thousand euros, more if repairs are needed first.',
+    q: 'Can I let a house with AFO status as a holiday rental?',
+    a: 'Not automatically. Since 2024 a home with AFO status in Andalusia can only be registered as a holiday rental (VUT) if the council expressly allows it beforehand. Long-term letting is allowed.',
+  },
+  {
+    q: 'What is the difference between AFO and DAFO?',
+    a: 'None. DAFO stands for the declaration of AFO, the council’s decision. Under the old rules people often spoke of DAFO; now it is usually called the recognition (reconocimiento) of AFO.',
   },
 ];
 ---
-<Guide lang="en" slug="afo-legalisation-andalusia" toc={toc} faq={faq} dienst="legalisatie" ctaTitle="Doubts about a property’s paperwork?" ctaText="We will take a look and put you in touch with the architect we work with.">
-  <h2 id="what">What does AFO mean?</h2>
-  <p>AFO stands for <em>asimilado a fuera de ordenación</em>, roughly “treated as outside the planning rules”. It is a status for buildings that were built without (the right) permission, but against which the authorities can no longer act because the time limit has passed. In Andalusia that limit is six years after completion in most cases. The status is set out in the Andalusian planning law LISTA (Ley 7/2021).</p>
-  <p>The town hall confirms the status with an official declaration. The house can then be recorded at the Land Registry with its AFO situation noted, and connected to water and electricity.</p>
+<Guide slug="afo-legalisation-andalusia" lang="en" toc={toc} faq={faq} dienst="legalisatie" ctaTitle="Legalising a house, or buying one without paperwork?" ctaText="Tell us which house it is. We find out what is possible and handle the whole process with our regular architect and gestor.">
+  <h2 id="short">Legalisation or AFO?</h2>
+  <p>Many houses in the Axarquía were built partly or wholly without a permit: an extension, an extra floor, a pool or a barn turned into a home. Such a house is not automatically lost. The Andalusian planning law LISTA (Ley 7/2021) offers two routes:</p>
+  <ul>
+    <li><strong>Legalisation</strong> (<em>legalización</em>): if what stands complies with the current local plan, you apply for the permit after the fact. The house is then fully legal, as if it had been built with a permit.</li>
+    <li><strong>AFO</strong> (<em>asimilado a fuera de ordenación</em>): if it does not comply with the plan, but the period in which the council can take action has passed (usually six years), the council recognises it as AFO. The house stays and may be used, but it is not legalised.</li>
+  </ul>
+  <p>If neither is possible, the council can order the situation to be restored, up to demolition. What is possible for a particular house depends on the type of land, the local plan and when it was built. An architect finds that out.</p>
 
-  <h2 id="why">Why so many homes lack permission</h2>
-  <p>Building on rural land in Andalusia has always been tightly restricted. Even so, over the past decades tens of thousands of homes were built or extended without permission: a barn turned into a house, an extra storey, a pool or a covered terrace. For a long time little was done about it. An estimated 300,000 homes in Andalusia are in this situation, many of them in areas such as the Axarquía.</p>
+  <h2 id="legalise">Full legalisation with a permit</h2>
+  <p>Legalisation is possible if the building complies with the local plan (PGOU) as it stands today. For example, an extension in town that stays within the permitted building limits but for which no permit was ever requested. You then follow the same procedure as for a new <a href="/en/guides/building-permits-renovation-andalusia/">building permit</a>: an architect draws up a legalisation project stamped by the professional body (visado), the council assesses it, and you pay the building tax (ICIO) and fees.</p>
+  <p>The benefit is considerable: the house is simply legal afterwards. You can have the extension entered in the deeds and the property register, renovate further later, and banks and buyers no longer see a problem. Even while the six years are still running, this is the only way to remove the risk.</p>
 
-  <h2 id="can">What you can and cannot do</h2>
+  <h2 id="afo">AFO: recognition after six years</h2>
+  <p>If legalisation is not possible, the council can take action for six years after the building was completed. After that the owner can apply for recognition as AFO. For some land there is no time limit and the council can always act. AFO is then also ruled out:</p>
+  <ul>
+    <li>public domain, such as the coastal strip and riverbanks;</li>
+    <li>countryside land with natural or other risks, such as flood zones;</li>
+    <li>countryside land within the coastal-influence zone;</li>
+    <li>protected heritage sites and green zones;</li>
+    <li>subdivision (<em>parcelación</em>) of countryside land.</li>
+  </ul>
+  <p>The house must also meet minimum standards of safety, health and habitability. If it does not, the council can require work first. Until recognition is granted, no work may be done on the house and it may not be connected to water, electricity or sewerage.</p>
+
+  <h2 id="allowed">What you can and cannot do with AFO</h2>
   <table class="prices">
     <thead><tr><th>Allowed</th><th>Not allowed</th></tr></thead>
     <tbody>
-      <tr><td>Live in it and let it long-term</td><td>Extend it or add a storey</td></tr>
-      <tr><td>Sell it and register it</td><td>Demolish and rebuild</td></tr>
-      <tr><td>Connect water and electricity (where available)</td><td>New outbuildings or a pool</td></tr>
-      <tr><td>Maintenance and repair (roof, pipes, finishes)</td><td>Work that substantially increases its size or value</td></tr>
+      <tr><td>Living in it, selling it and letting it long term</td><td>Extending it or adding a floor</td></tr>
+      <tr><td>Registering it in the property register, with a note of the AFO status</td><td>New outbuildings or a pool</td></tr>
+      <tr><td>Connecting to water and electricity, where available</td><td>More built area or volume</td></tr>
+      <tr><td>Maintenance, renovation and strengthening, including the structure, with a permit</td><td>Holiday letting, unless the council expressly allows it</td></tr>
+      <tr><td>A different use, if it fits the rules</td><td>Work without a notification or permit</td></tr>
     </tbody>
   </table>
-  <p>Exactly which works are allowed varies by case and by town hall. Always take advice and submit a notification or licence application first.</p>
-  <p>Important: not every house qualifies. If it is in a protected natural area, a flood zone, on public land or in a special-risk zone, the time limit often does not apply and the authorities can still take action.</p>
+  <p>So you can modernise an AFO house well: a new roof, bathroom and kitchen, insulation, new wiring. You just cannot make it bigger. See <a href="/en/renovation/">renovation</a>.</p>
 
-  <h2 id="procedure">The procedure in outline</h2>
+  <h2 id="steps">The steps and who you need</h2>
   <ol>
-    <li><strong>Investigation</strong>: an architect or surveyor (aparejador) establishes what is there, when it was built and whether it qualifies.</li>
-    <li><strong>Technical report</strong>: with drawings, photos, evidence of the build date (such as aerial photos or Catastro records) and a statement that the building is safe and habitable.</li>
-    <li><strong>Application to the town hall</strong>: with the report and the fees.</li>
-    <li><strong>Any repairs</strong>: the town hall sometimes requires changes first, for example to the septic tank or for safety.</li>
-    <li><strong>Declaration and registration</strong>: after the AFO declaration, the situation is recorded at the Land Registry.</li>
+    <li><strong>Preliminary check</strong>: an architect compares what stands with the paperwork (Catastro, property register, old permits) and with the local plan. Outcome: legalisation, AFO, or neither.</li>
+    <li><strong>Proof of the building date</strong>: for AFO you must show the work was finished more than six years ago, for example with historical aerial photos, the Catastro or old invoices.</li>
+    <li><strong>Technical report or project</strong>: with drawings, photos, a description of the structure and installations, and a statement that the house is safe and habitable. Legalisation needs a full project with visado.</li>
+    <li><strong>Application to the council</strong>: with the report and the fees paid. A gestor or the architect files it.</li>
+    <li><strong>Any required work</strong>: the council sometimes asks for work first, such as a proper septic tank or safety measures.</li>
+    <li><strong>Decision</strong>: the council decides. For AFO it must do so within six months. Without a decision the application counts as refused.</li>
+    <li><strong>Catastro, notary and register</strong>: the actual floor area goes into the Catastro. At the notary you have the building added to the deeds, and the property register notes the AFO status.</li>
   </ol>
+  <p>Who you need: an <strong>architect</strong> or <strong>arquitecto técnico</strong> for the check and the report, a <strong>gestor</strong> for the applications and the Catastro, a <strong>notary</strong> and the <strong>land registry</strong>, and a <strong>lawyer</strong> if the legal position is unclear. We handle the whole process with our regular architect and gestor, and an accountant for the tax side if needed.</p>
 
-  <h2 id="buyer">As a buyer: what to watch for</h2>
+  <h2 id="costs">Costs and timescale</h2>
+  <table class="prices">
+    <thead><tr><th>Cost</th><th>What it depends on</th></tr></thead>
+    <tbody>
+      <tr><td>Architect or arquitecto técnico</td><td>Size of the house and how much needs investigating. A full project for legalisation, a technical report for AFO.</td></tr>
+      <tr><td>Council fees for AFO</td><td>Set by each council, usually a percentage of the construction cost of what was built without a permit. See the table below.</td></tr>
+      <tr><td>Building tax and fees for legalisation</td><td>As for a new permit: in the Axarquía 2% to 4% ICIO on the construction cost, plus fees. Per town on its Building permit page.</td></tr>
+      <tr><td>Work on the house</td><td>Whatever the council requires, such as a septic tank, wiring or safety.</td></tr>
+      <tr><td>Notary and land registry</td><td>Deed for the building and registration.</td></tr>
+      <tr><td>Catastro and IBI</td><td>A larger floor area in the Catastro raises the annual IBI. The Catastro can also charge for previous years.</td></tr>
+    </tbody>
+  </table>
+  <p>AFO fees in three large Axarquía towns, using an extension with €40,000 in construction costs as an example:</p>
+  <table class="prices">
+    <thead><tr><th>Town</th><th>AFO fee</th><th>At €40,000</th></tr></thead>
+    <tbody>
+      <tr><td>Nerja</td><td>3.5% of construction cost, minimum €750</td><td>€1,400</td></tr>
+      <tr><td>Torrox</td><td>€750 (above €60,000 construction cost: 1.25%) plus 3.25% of construction cost</td><td>€2,050</td></tr>
+      <tr><td>Vélez-Málaga</td><td>7.5% of construction cost</td><td>€3,000</td></tr>
+    </tbody>
+  </table>
+  <p>The construction cost is not what it cost at the time, but what the architect declares, with a floor set by the fixed amounts per m² used by the council or the architects’ association. The figures come from the tax bylaws the councils publish (Nerja 2020, Torrox 2013, Vélez-Málaga 2014). Bylaws are sometimes amended, so check the current rate with the council. For other towns we look it up once you have a specific house. Altogether an AFO process usually costs a few thousand euros, more if repairs are needed. Legalisation with a project costs more, but also gives you more.</p>
+  <p>Timescale: the preliminary check and the report take a few weeks. The council has six months to decide on AFO. Including any work and registration, the whole process often takes from six months to over a year.</p>
+
+  <h2 id="consequences">Buying a house without paperwork</h2>
+  <p>What is at stake in practice when you buy a house that is partly unpermitted or unrecognised?</p>
   <ul>
-    <li>Compare what is there with the description in the Catastro and at the Land Registry. Every difference needs explaining.</li>
-    <li>Ask for the town hall’s AFO declaration, or the licences. A promise from the seller is not enough.</li>
-    <li>Buy on the basis of what is there now: if you later want to extend or build a pool, you probably cannot.</li>
-    <li>Have an independent lawyer and an architect check it, and make the outcome a condition in the arras contract.</li>
-    <li>Consider value: a house with AFO status is often worth less on resale than a comparable fully licensed one.</li>
+    <li><strong>Mortgage</strong>: the bank has the house valued. The valuer only values what is legal and registered, or rejects it. You then borrow less or get no mortgage. With AFO in the register it is easier, but not with every bank.</li>
+    <li><strong>Notary and register</strong>: a building only goes into the deeds and the register with a permit, AFO recognition or proof that the time limit has passed. Without that, on paper you buy less than what stands there.</li>
+    <li><strong>Utilities</strong>: a house without a permit or AFO may not be connected to water, electricity or sewerage. If a connection already exists, a new contract or more power can be difficult.</li>
+    <li><strong>Insurance</strong>: the insurer works from the declared floor area. Damage to an unpermitted part can lead to disputes over the payout.</li>
+    <li><strong>Council action</strong>: if the six years have not passed, or the house is on land with no time limit, the council can order restoration or demolition. That obligation goes with the house, so it passes to you as the new owner.</li>
+    <li><strong>Renovating</strong>: before recognition you may do nothing. After it, only renovate, not extend.</li>
+    <li><strong>Holiday letting</strong>: with AFO only with the council’s express permission, without paperwork not at all.</li>
+    <li><strong>Resale</strong>: the next buyer faces the same questions. That lowers the price and lengthens the sale. See also <a href="/en/guides/selling-a-house-in-spain/paperwork/">the paperwork you need to sell</a>.</li>
   </ul>
-  <p>Read more about buying a country property in our guide <a href="/en/guides/buying-a-finca-in-spain/">buying a finca in Spain</a>.</p>
 
-  <h2 id="owner">As an owner: renovating with AFO</h2>
-  <p>Even with AFO status you can maintain and modernise your home: a new roof, new bathroom and kitchen, insulation, new electrics. What you cannot do is make the house bigger. We agree with you, project by project, what is allowed and submit the right notification to the town hall. See <a href="/en/renovation/">renovation</a>.</p>
-  <p class="note">This guide gives a general explanation and is not legal advice. The opinion on a specific property comes from an architect or lawyer. Rules can differ between town halls and change over time.</p>
+  <h2 id="value">Benefits, risks and value</h2>
+  <p>A house without paperwork has one advantage: the price. Sellers and agents know such a house is harder to sell, and that shows in the asking price. For a buyer paying without a mortgage who knows what is possible, that can be an opportunity: you buy below market value, legalise or obtain AFO, and the house is then worth more and easier to sell.</p>
+  <table class="prices">
+    <thead><tr><th>Status</th><th>What it means for value and sale</th></tr></thead>
+    <tbody>
+      <tr><td>Fully permitted and registered</td><td>Full market value, mortgage possible, extending possible within the local plan</td></tr>
+      <tr><td>AFO recognised and registered</td><td>Sellable and financeable with some banks, but cannot be extended. Usually worth less than a comparable permitted house</td></tr>
+      <tr><td>No permit and no AFO</td><td>Hard to finance and to sell, with a risk of council action. The lowest price, but also the highest risk</td></tr>
+    </tbody>
+  </table>
+  <p>The opportunity is only real if it is clear beforehand that legalisation or AFO is achievable. If the house is in a zone with no time limit, you are buying a problem, not an opportunity. So have it checked first, and factor the cost and time of the process into your offer.</p>
+
+  <h2 id="buyer">Checklist for buyers</h2>
+  <ul>
+    <li>Compare what stands with the Catastro and the property register. Every difference in floor area or outbuilding must be explained.</li>
+    <li>Ask for the permits or the council’s AFO recognition. A promise from the seller is not enough.</li>
+    <li>Have an architect check whether legalisation or AFO is possible, and what it costs. A <a href="/en/property-survey/">pre-purchase survey</a> shows whether the house meets the minimum standards.</li>
+    <li>Ask the council whether any procedure is open against the house.</li>
+    <li>Include the outcome in the reservation contract (<em>arras</em>), for example as a condition, or have the seller obtain AFO recognition before completion.</li>
+    <li>Want to extend later, build a pool or let to tourists? Assume that is not possible with AFO.</li>
+  </ul>
+  <p>The questions to ask the seller, agent and council in Spanish, and what to check for each type of home, are in the <a href="/en/guides/buying-a-house-in-spain/checklist/#legal-test">house-buying checklist</a>. Buying an existing business? Also read <a href="/en/guides/buying-a-house-in-spain/buying-a-bed-and-breakfast/">buying a B&amp;B</a>. For more on buying a rural property, see our guide to <a href="/en/guides/buying-a-finca-in-spain/">buying a finca in Spain</a>.</p>
+  <p class="note">This guide gives general information based on Andalusian and Spanish law as it stood on 5 November 2026 (LISTA arts. 151–153 and 173–174, Ley de Suelo art. 28, Decreto 28/2016 as amended in 2024, LOE, RD 1000/2010, Ley del Catastro) and the tax bylaws of Nerja, Torrox and Vélez-Málaga. It is not legal advice. Whether a particular house can be legalised is for the architect, a lawyer and the council to judge.</p>
 </Guide>

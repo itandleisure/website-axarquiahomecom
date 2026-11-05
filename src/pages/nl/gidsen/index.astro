@@ -20,6 +20,8 @@ import { guideList, guideHref } from '../../../data/guides';
   <section class="section">
     <div class="wrap">
       <div class="cards">
+        <a class="card" href="/nl/kosten/"><h3>Kosten per onderdeel</h3><p>Wat kost een badkamer, keuken, zwembad, airco, dak of buitenkeuken in de Axarquía? Met rekenvoorbeelden en bronnen.</p><span class="more">Bekijk de prijzen →</span></a>
+        <a class="card" href="/nl/problemen/"><h3>Problemen met uw huis</h3><p>Vocht, daklekkage, scheuren, termieten, legionella of inbraak: herkennen, eerste stappen en kosten.</p><span class="more">Bekijk de problemen →</span></a>
         {guideList('nl').map((g) => (
           <a class="card" href={guideHref('nl', g)}>
             <h3>{g.title}</h3>

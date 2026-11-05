@@ -15,13 +15,17 @@ const ALL = {
     q1: 'Waarmee kunnen we u helpen?',
     diensten: [
       { v: 'renovatie', t: 'Renovatie of verbouwing', s: 'Hele woning of een deel' },
-      { v: 'badkamer-keuken', t: 'Badkamer of keuken', s: 'Vernieuwen of verbouwen' },
+      { v: 'badkamer-keuken', t: 'Badkamer of keuken', s: 'Vernieuwen, verbouwen of op maat' },
       { v: 'sleutelbeheer', t: 'Sleutelbeheer', s: 'Toezicht als u weg bent' },
       { v: 'aankoopkeuring', t: 'Aankoopkeuring', s: 'Keuring vóór de koop' },
       { v: 'zwembad', t: 'Zwembad', s: 'Bouwen, herstellen of onderhoud' },
       { v: 'onderhoud', t: 'Reparatie of onderhoud', s: 'Dak, lekkage, perceel, tuin' },
+      { v: 'ramen', t: 'Ramen en kozijnen', s: 'Vervangen, dubbel glas, rolluiken' },
+      { v: 'schoorsteen', t: 'Schoorsteen of kachel', s: 'Vegen, herstellen, houtkachel plaatsen' },
       { v: 'legalisatie', t: 'Vergunning of legalisatie', s: 'AFO, aanbouw, energielabel' },
-      { v: 'anders', t: 'Iets anders', s: 'Zonnepanelen, airco, verhuizen…' },
+      { v: 'energie', t: 'Zonnepanelen of elektra', s: 'Panelen, batterij, laadpaal, groepenkast' },
+      { v: 'energiebeheer', t: 'Slim energiebeheer', s: 'Automatisch een lagere energierekening' },
+      { v: 'anders', t: 'Iets anders', s: 'Airco, verhuizen…' },
     ],
     q2: 'Wat is uw situatie?',
     situaties: [
@@ -57,13 +61,17 @@ const ALL = {
     q1: 'How can we help?',
     diensten: [
       { v: 'renovatie', t: 'Renovation or building work', s: 'The whole house or part of it' },
-      { v: 'badkamer-keuken', t: 'Bathroom or kitchen', s: 'Replace or remodel' },
+      { v: 'badkamer-keuken', t: 'Bathroom or kitchen', s: 'Replace, remodel or bespoke' },
       { v: 'sleutelbeheer', t: 'Key holding', s: 'Property checks while you are away' },
       { v: 'aankoopkeuring', t: 'Pre-purchase survey', s: 'Before you buy' },
       { v: 'zwembad', t: 'Swimming pool', s: 'Build, repair or maintain' },
       { v: 'onderhoud', t: 'Repairs or maintenance', s: 'Roof, leak, land, garden' },
+      { v: 'ramen', t: 'Windows and frames', s: 'Replacement, double glazing, shutters' },
+      { v: 'schoorsteen', t: 'Chimney or stove', s: 'Sweeping, repair, wood burner' },
       { v: 'legalisatie', t: 'Permits or legalisation', s: 'AFO, extension, energy certificate' },
-      { v: 'anders', t: 'Something else', s: 'Solar panels, air con, removals…' },
+      { v: 'energie', t: 'Solar panels or electrics', s: 'Panels, battery, EV charger, consumer unit' },
+      { v: 'energiebeheer', t: 'Smart energy management', s: 'A lower energy bill, automatically' },
+      { v: 'anders', t: 'Something else', s: 'Air con, removals…' },
     ],
     q2: 'What is your situation?',
     situaties: [
@@ -99,13 +107,17 @@ const ALL = {
     q1: 'Wobei können wir Ihnen helfen?',
     diensten: [
       { v: 'renovatie', t: 'Renovierung oder Umbau', s: 'Ganzes Haus oder ein Teil' },
-      { v: 'badkamer-keuken', t: 'Bad oder Küche', s: 'Erneuern oder umbauen' },
+      { v: 'badkamer-keuken', t: 'Bad oder Küche', s: 'Erneuern, umbauen oder nach Maß' },
       { v: 'sleutelbeheer', t: 'Hausbetreuung', s: 'Kontrolle, wenn Sie weg sind' },
       { v: 'aankoopkeuring', t: 'Gutachten vor dem Kauf', s: 'Prüfung vor der Unterschrift' },
       { v: 'zwembad', t: 'Pool', s: 'Bauen, reparieren oder pflegen' },
       { v: 'onderhoud', t: 'Reparatur oder Instandhaltung', s: 'Dach, Undichtigkeit, Grundstück, Garten' },
+      { v: 'ramen', t: 'Fenster und Rahmen', s: 'Austausch, Doppelverglasung, Rollläden' },
+      { v: 'schoorsteen', t: 'Schornstein oder Ofen', s: 'Fegen, Reparatur, Kaminofen' },
       { v: 'legalisatie', t: 'Genehmigung oder Legalisierung', s: 'AFO, Anbau, Energieausweis' },
-      { v: 'anders', t: 'Etwas anderes', s: 'Solaranlage, Klimaanlage, Umzug…' },
+      { v: 'energie', t: 'Solaranlage oder Elektrik', s: 'Module, Speicher, Wallbox, Sicherungskasten' },
+      { v: 'energiebeheer', t: 'Energiemanagement', s: 'Automatisch niedrigere Stromkosten' },
+      { v: 'anders', t: 'Etwas anderes', s: 'Klimaanlage, Umzug…' },
     ],
     q2: 'Wie ist Ihre Situation?',
     situaties: [
@@ -141,13 +153,17 @@ const ALL = {
     q1: 'Vad kan vi hjälpa dig med?',
     diensten: [
       { v: 'renovatie', t: 'Renovering eller ombyggnad', s: 'Hela huset eller en del' },
-      { v: 'badkamer-keuken', t: 'Badrum eller kök', s: 'Förnya eller bygga om' },
+      { v: 'badkamer-keuken', t: 'Badrum eller kök', s: 'Förnya, bygga om eller måttbeställt' },
       { v: 'sleutelbeheer', t: 'Tillsyn', s: 'Kontroll när du är borta' },
       { v: 'aankoopkeuring', t: 'Besiktning före köp', s: 'Kontroll innan du skriver på' },
       { v: 'zwembad', t: 'Pool', s: 'Bygga, reparera eller sköta' },
       { v: 'onderhoud', t: 'Reparation eller underhåll', s: 'Tak, läcka, tomt, trädgård' },
+      { v: 'ramen', t: 'Fönster', s: 'Byte, tvåglas, rullgardiner' },
+      { v: 'schoorsteen', t: 'Skorsten eller kamin', s: 'Sotning, reparation, braskamin' },
       { v: 'legalisatie', t: 'Tillstånd eller legalisering', s: 'AFO, tillbyggnad, energideklaration' },
-      { v: 'anders', t: 'Något annat', s: 'Solpaneler, luftkonditionering, flytt…' },
+      { v: 'energie', t: 'Solpaneler eller el', s: 'Paneler, batteri, laddbox, elcentral' },
+      { v: 'energiebeheer', t: 'Smart energistyrning', s: 'Lägre elräkning, automatiskt' },
+      { v: 'anders', t: 'Något annat', s: 'Luftkonditionering, flytt…' },
     ],
     q2: 'Hur ser din situation ut?',
     situaties: [
@@ -393,6 +409,19 @@ const perDienst = Object.fromEntries(groepen.map(([k, g]) => [k, {
   if (pakket) {
     const r = form.querySelector<HTMLInputElement>(`[data-groep="sleutelbeheer"] input[name="pakket"][value="${CSS.escape(pakket)}"]`);
     if (r) r.checked = true;
+  }
+  // Budget vanaf de rekentool (?budget=0…4, de volgorde van de budgetkeuzes), bij de budgetvraag van de gekozen dienst
+  const budgetParam = params.get('budget');
+  if (budgetParam && /^\d$/.test(budgetParam)) {
+    const sel = form.querySelector<HTMLSelectElement>(`[data-groep="${CSS.escape(dienst())}"] select[name="budget"]`);
+    const i = Number(budgetParam) + 1;
+    if (sel && i < sel.options.length - 1) sel.selectedIndex = i;
+  }
+  // Vrije tekst vanaf een kosten- of probleempagina (?onderwerp=…), alleen als het veld nog leeg is
+  const onderwerp = params.get('onderwerp');
+  if (onderwerp) {
+    const t = form.querySelector<HTMLTextAreaElement>('#omschrijving')!;
+    if (!t.value) t.value = onderwerp.slice(0, 500);
   }
   applyDienst();
 

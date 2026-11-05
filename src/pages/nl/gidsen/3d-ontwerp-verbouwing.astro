@@ -1,0 +1,95 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'waarom', label: 'Waarom vooraf zien wat het wordt' },
+  { id: 'wat', label: 'Wat u krijgt: tekening, 3D en sfeerimpressie' },
+  { id: 'ai', label: 'Wat AI wel en niet kan' },
+  { id: 'oplevert', label: 'Wat het u oplevert' },
+  { id: 'stappen', label: 'Zo werkt het, stap voor stap' },
+  { id: 'voorbereiden', label: 'Wat u zelf kunt voorbereiden' },
+];
+
+const faq = [
+  {
+    q: 'Moet ik in Spanje zijn om een 3D-ontwerp te laten maken?',
+    a: 'Nee. Het huis wordt ter plaatse ingemeten en gefotografeerd. De besprekingen en de keuzes kunnen daarna gewoon via videobellen en e-mail, in het Nederlands.',
+  },
+  {
+    q: 'Is een 3D-ontwerp hetzelfde als een bouwtekening voor de vergunning?',
+    a: 'Nee. Een 3D-ontwerp en sfeerimpressies laten zien hoe het eruit komt te zien. Voor de vergunning zijn technische tekeningen nodig. Het voordeel van werken met een architect is dat beide op dezelfde maten en hetzelfde ontwerp zijn gebaseerd.',
+  },
+  {
+    q: 'Kan ik verschillende varianten laten zien?',
+    a: 'Ja, dat is juist de kracht van een 3D-ontwerp. U kunt bijvoorbeeld twee indelingen of twee kleurstellingen naast elkaar zien voordat u kiest. Met AI gaan zulke varianten van de sfeer vaak sneller dan vroeger.',
+  },
+  {
+    q: 'Is een sfeerimpressie met AI betrouwbaar?',
+    a: 'Als beeld van de sfeer wel, als maatvoering niet. AI kan een ruimte overtuigend in beeld brengen, maar weet niet waar een draagmuur of een afvoer zit. Daarom laten we de beelden altijd controleren en uitwerken door de architect.',
+  },
+  {
+    q: 'Heeft een 3D-ontwerp zin bij een huis met AFO-status?',
+    a: 'Ja, zolang het huis niet groter wordt. Juist binnen de bestaande muren helpt een ontwerp om de ruimte zo goed mogelijk te benutten. Lees meer in de gids over AFO en legaliseren.',
+  },
+];
+
+const aanvraag = '/nl/aanvraag/?dienst=renovatie&onderwerp=' + encodeURIComponent('Ik wil graag een 3D-ontwerp en sfeerimpressies van mijn verbouwing.');
+---
+<Guide slug="3d-ontwerp-verbouwing" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Wilt u dit laten doen?" ctaText="Wij helpen u het te realiseren. Onze architect maakt het ontwerp en de sfeerimpressies, en daarna zorgen wij voor de uitvoering.">
+  <h2 id="waarom">Waarom vooraf zien wat het wordt</h2>
+  <p>Wie een huis in de Axarquía verbouwt, woont vaak nog in Nederland of België. U ziet het huis een paar keer per jaar, overlegt op afstand en moet kiezen uit tegels, keukens en indelingen die u alleen van een foto kent. Een plattegrond met maten zegt dan weinig. De meeste mensen kunnen zich pas echt voorstellen hoe een ruimte wordt als ze het zien.</p>
+  <p>Daar komt bij dat een oud dorpshuis of een finca zelden recht en haaks is. Muren lopen scheef, plafonds zijn laag en het licht valt anders dan u denkt. Een 3D-ontwerp laat zien wat er werkelijk mogelijk is in uw huis, niet in een standaardwoning.</p>
+
+  <h2 id="wat">Wat u krijgt: tekening, 3D en sfeerimpressie</h2>
+  <p>Er zijn grofweg drie soorten beelden. Ze vullen elkaar aan.</p>
+  <table class="prices">
+    <thead><tr><th>Soort</th><th>Wat het laat zien</th><th>Waar het voor dient</th></tr></thead>
+    <tbody>
+      <tr><td>Plattegrond en doorsnede</td><td>Indeling, maten, muren, ramen en deuren</td><td>Basis voor het ontwerp en later voor de vergunning</td></tr>
+      <tr><td>3D-model</td><td>Het huis van alle kanten, waar u doorheen kunt kijken</td><td>Indeling en verhoudingen beoordelen</td></tr>
+      <tr><td>Sfeerimpressie</td><td>Een realistisch beeld met materialen, kleuren en licht</td><td>Kiezen hoe het eruit moet zien en voelen</td></tr>
+    </tbody>
+  </table>
+  <p>Een sfeerimpressie (in de bouw ook wel <em>render</em> genoemd) lijkt op een foto van het eindresultaat: de nieuwe keuken met het uitzicht op zee, het dakterras met de pergola, de badkamer met de tegel die u op het oog heeft. Dat maakt het makkelijk om te zeggen: “ja, zo wil ik het” of juist “nee, toch lichter”.</p>
+
+  <h2 id="ai">Wat AI wel en niet kan</h2>
+  <p>Kunstmatige intelligentie heeft het maken van sfeerbeelden een stuk sneller gemaakt. Vanuit een foto van de huidige ruimte kan AI in korte tijd laten zien hoe die eruitziet met andere vloeren, wanden of meubels. Dat is handig in de eerste fase, als u nog aan het zoeken bent naar een stijl.</p>
+  <p>Maar AI heeft ook duidelijke grenzen:</p>
+  <ul>
+    <li>Een AI-beeld klopt niet op maat. Het kan een raam verplaatsen of een ruimte groter laten lijken dan hij is.</li>
+    <li>AI weet niet waar draagmuren, leidingen en afvoeren zitten, en ook niet wat de gemeente toestaat.</li>
+    <li>Een AI-beeld is geen bouwtekening. Een vakman kan er niet op bouwen en de gemeente accepteert het niet.</li>
+  </ul>
+  <p>Daarom werkt het het best als een architect AI gebruikt als hulpmiddel, en de beelden zelf controleert en uitwerkt op basis van de echte maten van uw huis. Dan krijgt u het snelle van AI en het betrouwbare van een vakman.</p>
+
+  <h2 id="oplevert">Wat het u oplevert</h2>
+  <ul>
+    <li><strong>Keuzes vooraf maken.</strong> U beslist over indeling, materialen en kleuren voordat de bouw begint, en niet halverwege onder tijdsdruk.</li>
+    <li><strong>Minder meerwerk en verrassingen.</strong> Veel meerwerk ontstaat doordat het resultaat anders uitvalt dan iemand zich had voorgesteld. Een duidelijk beeld vooraf voorkomt veel van die wijzigingen.</li>
+    <li><strong>Iedereen weet wat de bedoeling is.</strong> Een beeld zegt meer dan een omschrijving, ook voor de Spaanse vakmensen. Taalverschillen spelen dan minder.</li>
+    <li><strong>Een betere basis voor de vergunning.</strong> Het ontwerp en de technische tekeningen sluiten op elkaar aan. Zo is meteen duidelijk wat er vergund moet worden en wat niet, bijvoorbeeld bij een huis met <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO-status</a>.</li>
+    <li><strong>Rust bij verbouwen op afstand.</strong> U weet wat er gebouwd wordt, ook als u er niet bij bent.</li>
+    <li><strong>Hulp bij verkopen.</strong> Gaat u verkopen? Sfeerbeelden laten kopers zien wat er van een huis te maken is. Zie ook <a href="/nl/gidsen/huis-verkopen-spanje/opknappen/">opknappen voor de verkoop</a>.</li>
+  </ul>
+
+  <h2 id="stappen">Zo werkt het, stap voor stap</h2>
+  <ol>
+    <li><strong>Uw wensen.</strong> U vertelt wat u wilt: welke ruimtes, welke sfeer, wat er beter moet. Foto’s en voorbeelden helpen.</li>
+    <li><strong>Inmeten ter plaatse.</strong> Het huis wordt ingemeten en gefotografeerd, zodat het ontwerp op de werkelijke situatie is gebaseerd.</li>
+    <li><strong>Eerste schets en varianten.</strong> U krijgt een eerste indeling, en vaak een paar varianten om te vergelijken.</li>
+    <li><strong>3D-model en sfeerimpressies.</strong> De gekozen richting wordt uitgewerkt in 3D, met beelden van de belangrijkste ruimtes.</li>
+    <li><strong>Bijstellen.</strong> U geeft aan wat u anders wilt, tot het beeld klopt met wat u voor ogen heeft.</li>
+    <li><strong>Technisch uitwerken en uitvoeren.</strong> Het definitieve ontwerp wordt de basis voor de vergunning en voor de verbouwing zelf.</li>
+  </ol>
+  <p>Hoe uitgebreid het ontwerp wordt, hangt af van uw project. Voor een nieuwe badkamer is één goede sfeerimpressie vaak genoeg; bij een complete <a href="/nl/renovatie/">renovatie</a> van een finca loont een volledig 3D-model.</p>
+
+  <h2 id="voorbereiden">Wat u zelf kunt voorbereiden</h2>
+  <ul>
+    <li>Foto’s van elke ruimte, ook van plafonds, vloeren en het uitzicht vanuit de ramen.</li>
+    <li>Plattegronden of tekeningen die u bij de koop heeft gekregen, als u die heeft.</li>
+    <li>Voorbeelden van wat u mooi vindt: foto’s uit tijdschriften, van internet of van huizen die u heeft gezien.</li>
+    <li>Een lijstje met wat zeker moet, wat mag en wat u liever niet wilt.</li>
+    <li>Hoe u het huis gaat gebruiken: zelf wonen, overwinteren, verhuren of verkopen.</li>
+  </ul>
+  <p><strong>Wilt u uw verbouwing vooraf in 3D zien?</strong> Wij helpen u het te realiseren, van het eerste ontwerp tot de laatste tegel. <a href={aanvraag}>Vertel ons wat u van plan bent</a>.</p>
+</Guide>

@@ -1,0 +1,94 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'principe', label: 'Het principe: geen onderhandelpunten' },
+  { id: 'tabel', label: 'Wat loont: overzicht met richtprijzen' },
+  { id: 'gebreken', label: 'Eerst: gebreken herstellen' },
+  { id: 'uitstraling', label: 'Dan: uitstraling' },
+  { id: 'niet', label: 'Wat u beter laat' },
+  { id: 'vergunning', label: 'Vergunning voor kleine werken' },
+  { id: 'aanpak', label: 'Aanpak en planning' },
+];
+
+const faq = [
+  {
+    q: 'Moet ik gebreken melden aan de koper?',
+    a: 'Gebreken die u kent, hoort u te melden. Volgens het Spaanse burgerlijk wetboek staat de verkoper in voor verborgen gebreken, en wie een bekend gebrek verzwijgt, loopt het risico op een claim. Herstellen vóór de verkoop is daarom vaak de eenvoudigste oplossing.',
+  },
+  {
+    q: 'Is het verstandig zelf een keuring te laten doen voordat ik verkoop?',
+    a: 'Vaak wel. U ziet dan wat een koper zal vinden en kunt kiezen: herstellen, of het melden en in de prijs verwerken. Een keuring met een prijs per gebrek geeft u bovendien een sterke positie als een koper later met een eigen lijst komt.',
+  },
+  {
+    q: 'Kan ik opknappen terwijl ik in het buitenland ben?',
+    a: 'Ja. Wij maken een prijs op basis van een bezoek en foto’s, en houden u tijdens het werk op de hoogte met foto’s. Met sleutelbeheer kan dezelfde contactpersoon daarna de bezichtigingen voor de makelaar openen.',
+  },
+];
+---
+<Guide slug="huis-verkopen-spanje-opknappen" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Wat moet er aan uw huis gebeuren vóór de verkoop?" ctaText="Wij lopen het huis door met de ogen van een koper en geven een prijs per klus. U kiest zelf wat u laat doen.">
+  <h2 id="principe">Het principe: geen onderhandelpunten</h2>
+  <p>Een koper die een vochtplek, een lekkend dakterras of een scheur ziet, rekent zelden de werkelijke reparatiekosten. Hij rekent het risico: wat zit er nog meer achter? Dat bedrag gaat van zijn bod af. Een gebrek dat u voor een paar honderd euro laat herstellen, kan u bij de onderhandeling al snel een veelvoud kosten.</p>
+  <p>De regel is dus eenvoudig: herstel wat een koper of keurder vindt, maak het huis fris en schoon, en laat grote keuzes aan de koper.</p>
+
+  <h2 id="tabel">Wat loont: overzicht met richtprijzen</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Klus</th><th>Richtprijs</th><th>Loont het?</th></tr></thead>
+    <tbody>
+      <tr><td>Binnen witten (huis van ca. 100 m²)</td><td>€ 1.500 – € 3.500</td><td>Ja, bijna altijd</td></tr>
+      <tr><td>Gevel witten</td><td>€ 1.500 – € 5.000</td><td>Ja, bepaalt de eerste indruk en de foto’s</td></tr>
+      <tr><td>Vochtplekken en oorzaak herstellen</td><td>€ 300 – € 3.000</td><td>Ja, vocht is het grootste afhaakpunt</td></tr>
+      <tr><td>Dakterras opnieuw waterdicht maken</td><td>Zie <a href="/nl/kosten/dak-en-dakterras/">kosten dak en dakterras</a></td><td>Ja, als het lekt of de laag versleten is</td></tr>
+      <tr><td>Zwembad schoon, pomp en filter werkend</td><td>€ 150 – € 1.000</td><td>Ja, een groen zwembad schrikt af</td></tr>
+      <tr><td>Tuin en perceel bijwerken</td><td>€ 200 – € 1.500</td><td>Ja, vooral bij een finca</td></tr>
+      <tr><td>Kleine reparaties (kranen, klinken, tegels, lampen)</td><td>€ 200 – € 1.000</td><td>Ja</td></tr>
+      <tr><td>Keukenfronten en werkblad vervangen</td><td>€ 2.000 – € 6.000</td><td>Soms, bij een keuken die er gedateerd uitziet maar goed is</td></tr>
+      <tr><td>Complete nieuwe keuken</td><td>Zie <a href="/nl/kosten/keuken-renoveren/">kosten keuken</a></td><td>Zelden</td></tr>
+      <tr><td>Complete nieuwe badkamer</td><td>Zie <a href="/nl/kosten/badkamer-renoveren/">kosten badkamer</a></td><td>Zelden, tenzij hij kapot is</td></tr>
+      <tr><td>Nieuw zwembad aanleggen</td><td>Zie <a href="/nl/kosten/zwembad-laten-bouwen/">kosten zwembad</a></td><td>Nee, niet vlak voor de verkoop</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Richtprijzen voor de Axarquía, november 2026, exclusief btw. De werkelijke prijs hangt af van het huis en de bereikbaarheid.</p>
+
+  <h2 id="gebreken">Eerst: gebreken herstellen</h2>
+  <p>Begin met wat een keurder in zijn rapport zou zetten. In de Axarquía zijn dat vooral:</p>
+  <ul>
+    <li><strong>Vocht en schimmel</strong> in muren en hoeken, vaak door optrekkend vocht of een lekkend dakterras. Overschilderen helpt niet; een koper of keurder met een vochtmeter vindt het toch. Zie <a href="/nl/problemen/vocht-en-schimmel/">vocht en schimmel</a>.</li>
+    <li><strong>Lekkages</strong> van dak en dakterras. Zie <a href="/nl/problemen/daklekkage/">daklekkage</a>.</li>
+    <li><strong>Scheuren</strong> in muren en gevel. Laat vaststellen of ze oppervlakkig zijn of op een probleem met de fundering wijzen. Zie <a href="/nl/problemen/scheuren-in-muren/">scheuren in muren</a>.</li>
+    <li><strong>Houtaantasting</strong> in balken, kozijnen en deuren, bijvoorbeeld door <a href="/nl/problemen/termieten/">termieten</a>.</li>
+    <li><strong>Installaties</strong>: een elektrische installatie zonder aardlek, een boiler aan het eind van zijn leven, een septische put die vol zit, een zwembadpomp die het niet doet.</li>
+  </ul>
+  <p>Bewaar facturen en foto’s van wat u heeft laten doen. Die laat u de koper zien; dat wekt vertrouwen.</p>
+
+  <h2 id="uitstraling">Dan: uitstraling</h2>
+  <p>Daarna gaat het om de eerste indruk, zowel bij de bezichtiging als op de foto’s waarmee kopers vanuit het buitenland zoeken.</p>
+  <ul>
+    <li><strong>Witten</strong>, binnen en buiten. Lichte, neutrale kleuren. Een witte gevel hoort bij de Axarquía en geeft het huis direct een verzorgde uitstraling.</li>
+    <li><strong>Buitenruimte</strong>. Terras schoon, kapotte tegels vervangen, tuin bijgewerkt, zwembad helder. Bij een finca: paden begaanbaar, onkruid weg en de brandvrije strook rond het huis bijgehouden.</li>
+    <li><strong>Opruimen</strong>. Minder meubels en persoonlijke spullen maken ruimtes groter. Kopers willen zich hun eigen leven in het huis voorstellen.</li>
+    <li><strong>Licht en lucht</strong>. Werkende lampen, schone ramen, luiken open. Een huis dat lang dicht heeft gezeten, ruikt muf; laat het voor bezichtigingen luchten.</li>
+  </ul>
+
+  <h2 id="niet">Wat u beter laat</h2>
+  <ul>
+    <li><strong>Grote verbouwingen</strong> van keuken of badkamer. Een koper heeft zijn eigen smaak, en u verdient de kosten zelden helemaal terug. Is een keuken echt versleten, overweeg dan nieuwe fronten en een werkblad in plaats van een complete keuken.</li>
+    <li><strong>Uitbreiden zonder vergunning</strong>. Een aanbouw of dichtgemaakt terras zonder vergunning maakt het huis lastiger verkoopbaar, niet beter. Bij een huis met AFO-status mag u bovendien niet uitbreiden.</li>
+    <li><strong>Gebreken wegwerken in plaats van herstellen</strong>. Een geschilderde vochtplek komt terug, en verzwijgen kan na de verkoop tot een claim leiden.</li>
+    <li><strong>Persoonlijke keuzes</strong>: felle kleuren, speciale tegels of een thema-inrichting.</li>
+  </ul>
+
+  <h2 id="vergunning">Vergunning voor kleine werken</h2>
+  <p>Ook voor kleinere werken heeft u in Spanje vaak iets van de gemeente nodig: een melding (<em>declaración responsable</em>) of een licentie voor kleine werken (<em>licencia de obra menor</em>). Dat geldt bijvoorbeeld voor een badkamer of keuken vervangen, een dakterras opnieuw afwerken of de gevel opknappen. Gewoon schilderen binnen valt er meestal niet onder. Wat precies nodig is, verschilt per gemeente; bij de werkzaamheden die wij uitvoeren regelen we dat mee. Werk dat met de juiste papieren is gedaan, kunt u bij de verkoop ook laten zien.</p>
+
+  <h2 id="aanpak">Aanpak en planning</h2>
+  <ol>
+    <li><strong>Huis doorlopen</strong> met iemand die kijkt zoals een koper of keurder. U krijgt een lijst met gebreken en een prijs per klus.</li>
+    <li><strong>Kiezen</strong>: wat herstelt u, wat meldt u en verwerkt u in de prijs?</li>
+    <li><strong>Uitvoeren</strong>, bij voorkeur buiten het hoogseizoen. Reken voor een opknapbeurt op enkele weken; vocht moet na herstel eerst uitdrogen voordat er geschilderd kan worden.</li>
+    <li><strong>Foto’s laten maken</strong> als alles klaar is, op een zonnige dag.</li>
+    <li><strong>Bijhouden tot de verkoop</strong>: tuin, zwembad en luchten, zodat het huis bij elke bezichtiging er net zo bij staat als op de foto’s. Daarvoor is <a href="/nl/sleutelbeheer/">sleutelbeheer</a> en <a href="/nl/onderhoud/">onderhoud</a>.</li>
+  </ol>
+  <p>Wilt u weten wat uw huis nodig heeft? Vraag een <a href="/nl/aanvraag/?dienst=renovatie">offerte voor opknappen</a> of een <a href="/nl/aanvraag/?dienst=onderhoud">reparatie</a> aan. Terug naar de hoofdgids: <a href="/nl/gidsen/huis-verkopen-spanje/">huis verkopen in Spanje</a>.</p>
+  <p class="note">Gecontroleerd op 5 november 2026. Richtprijzen zijn indicaties en geen offerte. Of een investering zich terugverdient, hangt af van het huis, de ligging en de markt op het moment van verkoop.</p>
+</Guide>

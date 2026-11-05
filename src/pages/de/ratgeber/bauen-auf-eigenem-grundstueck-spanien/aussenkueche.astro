@@ -1,0 +1,53 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'erlaubt', label: 'Ist eine Außenküche erlaubt?' },
+  { id: 'brand', label: 'Waldbrandsaison: Grillverbot' },
+  { id: 'optionen', label: 'Welche Möglichkeiten gibt es?' },
+  { id: 'tipps', label: 'Worauf Sie achten sollten' },
+];
+
+const faq = [
+  { q: 'Brauche ich für eine Außenküche in Spanien eine Genehmigung?', a: 'Für eine gemauerte Außenküche ohne Dach reicht in vielen Gemeinden eine Anzeige (Declaración responsable). Kommt eine feste Überdachung darüber, braucht diese meist eine Genehmigung. In einer Wohnanlage muss auch die Gemeinschaft zustimmen.' },
+  { q: 'Darf ich im Sommer auf meiner Finca grillen?', a: 'Vom 1. Juni bis 15. Oktober gilt in Andalusien hohe Waldbrandgefahr. Dann ist Feuer im Wald- und Naturgebiet und in einem 400-Meter-Streifen darum herum verboten, auch Grillen. Viele Fincas in der Axarquía liegen in diesem Streifen. Fragen Sie Ihre Gemeinde, was für Ihr Grundstück gilt.' },
+  { q: 'Ist ein Gas- oder Elektrogrill erlaubt?', a: 'Sie sind weniger riskant als Holzkohle, aber ob sie unter das Verbot fallen, hängt von der Situation und den Regeln des jeweiligen Jahres ab. Fragen Sie bei der Gemeinde oder der Junta nach und halten Sie immer einen Gartenschlauch oder Feuerlöscher bereit.' },
+];
+---
+<Guide lang="de" slug="bauen-auf-eigenem-grundstueck-aussenkueche" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Außenküche bauen lassen?" ctaText="Sagen Sie uns, wo sie hin soll und was hinein soll. Wir entwerfen und bauen sie, inklusive Wasser und Strom.">
+  <h2 id="erlaubt">Ist eine Außenküche erlaubt?</h2>
+  <p>Bei einem freistehenden Haus meistens ja. Wie Sie es regeln, hängt davon ab, was Sie bauen:</p>
+  <ul>
+    <li><strong>Freistehender Grill oder mobile Außenküche</strong>: keine Genehmigung nötig.</li>
+    <li><strong>Gemauerte Außenküche ohne Dach</strong>: oft eine Anzeige (<em>Declaración responsable</em>) bei der Gemeinde.</li>
+    <li><strong>Außenküche mit fester Überdachung</strong>: Die Überdachung braucht meist eine Genehmigung und zählt zum Baurecht. Siehe <a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/carport-und-pergola/">Carport, Überdachung und Pergola</a>.</li>
+  </ul>
+  <p>Auf einer Finca (<em>Suelo rústico</em>) gelten dieselben Schritte, aber eine Überdachung ist nur bei einem legalen Haus mit verbleibendem Baurecht erlaubt. In einer Wohnanlage hängt alles von der Gemeinschaft ab: Lesen Sie <a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/grillen-in-wohnanlagen/">Grillen in Wohnanlagen</a>.</p>
+
+  <h2 id="brand">Waldbrandsaison: Grillverbot</h2>
+  <p>Das übersehen viele neue Eigentümer. Vom <strong>1. Juni bis 15. Oktober</strong> gilt in Andalusien die Zeit hoher Waldbrandgefahr. In dieser Zeit ist Feuer im Wald- und Naturgebiet (<em>Terreno forestal</em>) und im <strong>400-Meter-Streifen</strong> darum herum (<em>Zona de influencia forestal</em>) verboten, auch zum Grillen. In trockenen Jahren kann die Junta de Andalucía den Zeitraum verlängern.</p>
+  <p>In den Hügeln der Axarquía liegen viele Fincas in oder nahe einer solchen Zone. Fragen Sie bei der Gemeinde, ob Ihr Grundstück darin liegt und was für einen festen Grill am Haus gilt. Eine Außenküche mit Gas- oder Elektrogrill neben dem Holzkohlegrill macht Sie unabhängiger von der Saison.</p>
+
+  <h2 id="optionen">Welche Möglichkeiten gibt es?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Option</th><th>Gut zu wissen</th></tr></thead>
+    <tbody>
+      <tr><td>Freistehender Gas- oder Holzkohlegrill</td><td>Kein Bauwerk, verstellbar.</td></tr>
+      <tr><td>Gemauerter Block mit Grill und Arbeitsplatte</td><td>Die klassische andalusische <em>Barbacoa de obra</em>.</td></tr>
+      <tr><td>Komplette Außenküche mit Spüle, Strom und Kühlschrank</td><td>Wasser und Abwasser zu verlegen ist oft der größte Teil der Arbeit.</td></tr>
+      <tr><td>Mit Pizzaofen, Naturstein und Beleuchtung</td><td>Für alle, die viel draußen kochen und Gäste haben.</td></tr>
+      <tr><td>Mit fester Überdachung oder Lamellendach</td><td>Auch bei praller Sonne und Regen nutzbar. Genehmigung meist nötig.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Möchten Sie das umsetzen lassen? Sagen Sie uns, was Sie vorhaben. Wir klären, was erlaubt ist, kümmern uns um die Genehmigung und bauen es für Sie.</strong> <a href="/de/anfrage/?dienst=renovatie">Kontakt aufnehmen →</a></p>
+
+  <h2 id="tipps">Worauf Sie achten sollten</h2>
+  <ul>
+    <li><strong>Materialien</strong>: Sonne, Salz an der Küste und Winterregen. Wählen Sie Edelstahl, Naturstein oder Keramik, kein normales Holz oder Spanplatten.</li>
+    <li><strong>Abwasser</strong>: Auf einer Finca mit Klärgrube muss das Abwasser richtig angeschlossen sein. Fett und Essensreste gehören nicht hinein.</li>
+    <li><strong>Standort und Wind</strong>: Stellen Sie den Grill so, dass der Rauch nicht zum Haus, Pool oder Nachbarn zieht, und nicht unter ein überstehendes Dach oder Bäume.</li>
+    <li><strong>Strom</strong>: Außensteckdosen müssen wasserdicht und separat abgesichert sein, installiert von einem zugelassenen Elektriker.</li>
+  </ul>
+  <p>Zurück zur Übersicht: <a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/">Bauen auf dem eigenen Grundstück</a>.</p>
+</Guide>

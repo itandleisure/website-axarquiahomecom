@@ -1,7 +1,8 @@
 // Talen, vertaalde routes en vaste teksten van de site.
-import { guides, guidesBy, guideHref } from './data/guides';
+import { guidesBy, guideHref } from './data/guides';
 import { places, placeHref, type PlacePage } from './data/places';
 import { placeContent } from './data/place-content';
+import { hasMunicipalPages } from './data/place-tabs';
 export type Lang = 'nl' | 'en' | 'de' | 'sv';
 export const langs: Lang[] = ['nl', 'en', 'de', 'sv'];
 export const langNames: Record<Lang, string> = { nl: 'Nederlands', en: 'English', de: 'Deutsch', sv: 'Svenska' };
@@ -24,7 +25,7 @@ export const routes: Partial<Record<Lang, string>>[] = [
   { nl: '/nl/zien-en-doen/', en: '/en/things-to-do/', de: '/de/sehenswuerdigkeiten/', sv: '/sv/se-och-gora/' },
   { nl: '/nl/contact/', en: '/en/contact/', de: '/de/kontakt/', sv: '/sv/kontakt/' },
   // Gidsen staan in alle talen in dezelfde volgorde (zie src/data/guides.ts)
-  ...guides.map((_, i) =>
+  ...guidesBy.nl.map((_, i) =>
     Object.fromEntries(langs.filter((l) => guidesBy[l][i]).map((l) => [l, guideHref(l, guidesBy[l][i])])),
   ),
   // Plaatsen (pagina's bestaan alleen voor plaatsen met built: true)
@@ -40,6 +41,14 @@ export const routes: Partial<Record<Lang, string>>[] = [
             })
             .map((l) => [l, placeHref(l, p, page)]),
         ),
+      ),
+    )
+    .filter((r) => Object.keys(r).length > 0),
+  // Bouwvergunning en Praktisch per gemeente (alleen nl, en, de)
+  ...places
+    .flatMap((p) =>
+      (['permit', 'practical'] as PlacePage[]).map((page) =>
+        Object.fromEntries(langs.filter((l) => hasMunicipalPages(l, p)).map((l) => [l, placeHref(l, p, page)])),
       ),
     )
     .filter((r) => Object.keys(r).length > 0),
@@ -67,6 +76,7 @@ export const nav: Record<Lang, NavItem[]> = {
     { href: '/nl/wonen/', label: 'Wonen' },
     { href: '/nl/zien-en-doen/', label: 'Zien en doen' },
     { href: '/nl/gidsen/', label: 'Gidsen' },
+    { href: '/nl/over-ons/', label: 'Over ons' },
   ],
   en: [
     { href: '/en/#services', label: 'Services', children: [
@@ -80,6 +90,7 @@ export const nav: Record<Lang, NavItem[]> = {
     { href: '/en/living/', label: 'Living' },
     { href: '/en/things-to-do/', label: 'Things to do' },
     { href: '/en/guides/', label: 'Guides' },
+    { href: '/en/about-us/', label: 'About us' },
   ],
   de: [
     { href: '/de/#leistungen', label: 'Leistungen', children: [
@@ -93,6 +104,7 @@ export const nav: Record<Lang, NavItem[]> = {
     { href: '/de/wohnen/', label: 'Wohnen' },
     { href: '/de/sehenswuerdigkeiten/', label: 'Sehenswertes' },
     { href: '/de/ratgeber/', label: 'Ratgeber' },
+    { href: '/de/ueber-uns/', label: 'Über uns' },
   ],
   sv: [
     { href: '/sv/#tjanster', label: 'Tjänster', children: [
@@ -106,6 +118,7 @@ export const nav: Record<Lang, NavItem[]> = {
     { href: '/sv/bo/', label: 'Bo' },
     { href: '/sv/se-och-gora/', label: 'Se och göra' },
     { href: '/sv/guider/', label: 'Guider' },
+    { href: '/sv/om-oss/', label: 'Om oss' },
   ],
 };
 

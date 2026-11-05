@@ -18,7 +18,11 @@ export type Dienst =
   | 'aankoopkeuring'
   | 'zwembad'
   | 'onderhoud'
+  | 'ramen'
+  | 'schoorsteen'
   | 'legalisatie'
+  | 'energie'
+  | 'energiebeheer'
   | 'anders';
 
 export interface Optie { t: Tx; s?: Tx }
@@ -430,6 +434,163 @@ export const vragen: Record<Dienst, DienstVragen> = {
     ),
   },
 
+  ramen: {
+    legend: tx('Wat wilt u aan ramen of kozijnen laten doen?', 'What would you like done to your windows?', 'Was soll an Fenstern oder Rahmen gemacht werden?', 'Vad vill du få gjort med fönstren?'),
+    situatie: true,
+    fotos: true,
+    vragen: [
+      {
+        name: 'ramen',
+        kind: 'radio',
+        required: true,
+        label: waarOm,
+        options: [
+          o('Ramen of kozijnen vervangen', 'Replace windows or frames', 'Fenster oder Rahmen austauschen', 'Byta fönster eller karmar'),
+          o('Dubbel glas', 'Double glazing', 'Doppelverglasung', 'Tvåglasfönster'),
+          o('Rolluiken of luiken', 'Roller shutters or shutters', 'Rollläden oder Fensterläden', 'Rullgardiner eller fönsterluckor'),
+          o('Horren', 'Fly screens', 'Insektenschutz', 'Insektsnät'),
+          o('Reparatie of tocht', 'Repair or draughts', 'Reparatur oder Zugluft', 'Reparation eller drag'),
+        ],
+      },
+      {
+        name: 'aantal',
+        kind: 'select',
+        label: tx('Om hoeveel ramen gaat het ongeveer?', 'Roughly how many windows?', 'Um wie viele Fenster geht es ungefähr?', 'Ungefär hur många fönster?'),
+        options: [
+          o('1 tot 3', '1 to 3', '1 bis 3', '1 till 3'),
+          o('4 tot 10', '4 to 10', '4 bis 10', '4 till 10'),
+          o('Meer dan 10', 'More than 10', 'Mehr als 10', 'Fler än 10'),
+          weetNiet,
+        ],
+      },
+      planningStart,
+      budget(),
+    ],
+    placeholder: tx(
+      'Bijvoorbeeld: zes houten ramen met enkel glas, het tocht en de luiken klemmen…',
+      'For example: six wooden single-glazed windows, draughty, and the shutters stick…',
+      'Zum Beispiel: sechs Holzfenster mit Einfachverglasung, es zieht und die Läden klemmen…',
+      'Till exempel: sex träfönster med enkelglas, det drar och luckorna kärvar…',
+    ),
+  },
+
+  schoorsteen: {
+    legend: tx('Schoorsteen of kachel', 'Chimney or stove', 'Schornstein oder Ofen', 'Skorsten eller kamin'),
+    situatie: true,
+    fotos: true,
+    vragen: [
+      {
+        name: 'schoorsteen',
+        kind: 'radio',
+        required: true,
+        label: waarOm,
+        options: [
+          o('Schoorsteen vegen', 'Chimney sweeping', 'Schornstein fegen', 'Sotning'),
+          o('Reparatie of lekkage', 'Repair or leak', 'Reparatur oder Undichtigkeit', 'Reparation eller läcka'),
+          o('Houtkachel of pelletkachel plaatsen', 'Install a wood or pellet stove', 'Kamin- oder Pelletofen einbauen', 'Installera braskamin eller pelletskamin'),
+          o('Open haard ombouwen', 'Convert an open fireplace', 'Offenen Kamin umbauen', 'Bygga om en öppen spis'),
+        ],
+      },
+      {
+        name: 'planning',
+        kind: 'select',
+        required: true,
+        label: tx('Wanneer moet het klaar zijn?', 'When do you need it done?', 'Bis wann soll es fertig sein?', 'När behöver det vara klart?'),
+        options: [
+          o('Zo snel mogelijk', 'As soon as possible', 'So bald wie möglich', 'Så snart som möjligt'),
+          o('Voor de winter', 'Before winter', 'Vor dem Winter', 'Före vintern'),
+          o('Geen haast', 'No rush', 'Keine Eile', 'Ingen brådska'),
+        ],
+      },
+      budget({ name: 'schoorsteen', values: ['Houtkachel of pelletkachel plaatsen', 'Open haard ombouwen'] }),
+    ],
+    placeholder: tx(
+      'Bijvoorbeeld: de open haard rookt terug in de kamer, of: graag een houtkachel in de woonkamer…',
+      'For example: the open fire smokes back into the room, or: a wood burner in the living room please…',
+      'Zum Beispiel: Der offene Kamin raucht ins Zimmer, oder: bitte einen Kaminofen im Wohnzimmer…',
+      'Till exempel: den öppna spisen ryker in i rummet, eller: gärna en braskamin i vardagsrummet…',
+    ),
+  },
+
+  energie: {
+    legend: tx('Zonnepanelen of elektra', 'Solar panels or electrics', 'Solaranlage oder Elektrik', 'Solpaneler eller el'),
+    situatie: true,
+    fotos: true,
+    vragen: [
+      {
+        name: 'energie',
+        kind: 'checks',
+        required: true,
+        label: waarOm,
+        hint: tx('Meerdere antwoorden mogelijk.', 'Tick all that apply.', 'Mehrfachauswahl möglich.', 'Flera svar möjliga.'),
+        options: [
+          o('Zonnepanelen', 'Solar panels', 'Solaranlage', 'Solpaneler'),
+          o('Thuisbatterij', 'Home battery', 'Batteriespeicher', 'Hembatteri'),
+          o('Laadpaal', 'EV charger', 'Wallbox', 'Laddbox'),
+          o('Groepenkast of elektra vernieuwen', 'New consumer unit or rewiring', 'Sicherungskasten oder Elektrik erneuern', 'Ny elcentral eller ny el'),
+          o('Storing of reparatie', 'Fault or repair', 'Störung oder Reparatur', 'Fel eller reparation'),
+        ],
+      },
+      {
+        name: 'verbruik',
+        kind: 'select',
+        label: tx('Hoe wordt de woning gebruikt?', 'How is the property used?', 'Wie wird die Immobilie genutzt?', 'Hur används bostaden?'),
+        options: [
+          o('Ik woon er het hele jaar', 'I live there all year', 'Ich wohne dort das ganze Jahr', 'Jag bor där hela året'),
+          o('Een deel van het jaar', 'Part of the year', 'Einen Teil des Jahres', 'En del av året'),
+          o('Verhuur', 'Holiday let', 'Vermietung', 'Uthyrning'),
+        ],
+      },
+      planningStart,
+      budget(),
+    ],
+    placeholder: tx(
+      'Bijvoorbeeld: plat dak op het zuiden, rekening van zo’n € 120 per maand, airco in de zomer…',
+      'For example: south-facing flat roof, bills of about €120 a month, air con in summer…',
+      'Zum Beispiel: Flachdach nach Süden, Stromrechnung etwa 120 € im Monat, Klimaanlage im Sommer…',
+      'Till exempel: platt tak mot söder, elräkning på cirka 120 € i månaden, luftkonditionering på sommaren…',
+    ),
+  },
+
+  energiebeheer: {
+    legend: tx('Slim energiebeheer', 'Smart energy management', 'Energiemanagement', 'Smart energistyrning'),
+    situatie: true,
+    fotos: false,
+    vragen: [
+      {
+        name: 'installatie',
+        kind: 'checks',
+        label: tx('Wat heeft u al?', 'What do you already have?', 'Was haben Sie bereits?', 'Vad har du redan?'),
+        hint: tx('Optioneel, meerdere antwoorden mogelijk.', 'Optional, tick all that apply.', 'Optional, Mehrfachauswahl möglich.', 'Valfritt, flera svar möjliga.'),
+        options: [
+          o('Zonnepanelen', 'Solar panels', 'Solaranlage', 'Solpaneler'),
+          o('Thuisbatterij', 'Home battery', 'Batteriespeicher', 'Hembatteri'),
+          o('Warmtepomp of airco', 'Heat pump or air con', 'Wärmepumpe oder Klimaanlage', 'Värmepump eller luftkonditionering'),
+          o('Zwembadpomp', 'Pool pump', 'Poolpumpe', 'Poolpump'),
+          o('Laadpaal', 'EV charger', 'Wallbox', 'Laddbox'),
+        ],
+      },
+      {
+        name: 'rekening',
+        kind: 'select',
+        label: tx('Hoe hoog is uw stroomrekening ongeveer?', 'Roughly how high is your electricity bill?', 'Wie hoch ist Ihre Stromrechnung ungefähr?', 'Ungefär hur hög är din elräkning?'),
+        options: [
+          o('Tot € 75 per maand', 'Up to €75 a month', 'Bis 75 € im Monat', 'Upp till 75 € i månaden'),
+          o('€ 75 – € 150 per maand', '€75 – €150 a month', '75 – 150 € im Monat', '75 – 150 € i månaden'),
+          o('Meer dan € 150 per maand', 'Over €150 a month', 'Mehr als 150 € im Monat', 'Mer än 150 € i månaden'),
+          weetNiet,
+        ],
+      },
+      planningStart,
+    ],
+    placeholder: tx(
+      'Bijvoorbeeld: we hebben zonnepanelen maar leveren veel terug, en de zwembadpomp draait ’s nachts…',
+      'For example: we have solar panels but export a lot, and the pool pump runs at night…',
+      'Zum Beispiel: Wir haben eine Solaranlage, speisen aber viel ein, und die Poolpumpe läuft nachts…',
+      'Till exempel: vi har solpaneler men säljer mycket tillbaka, och poolpumpen går på natten…',
+    ),
+  },
+
   anders: {
     legend: tx('Waar kunnen we u mee helpen?', 'What can we help with?', 'Womit können wir helfen?', 'Vad kan vi hjälpa till med?'),
     situatie: true,
@@ -441,7 +602,6 @@ export const vragen: Record<Dienst, DienstVragen> = {
         required: true,
         label: waarOm,
         options: [
-          o('Zonnepanelen', 'Solar panels', 'Solaranlage', 'Solpaneler'),
           o('Airco of verwarming', 'Air con or heating', 'Klimaanlage oder Heizung', 'Luftkonditionering eller värme'),
           o('Tegelwerk', 'Tiling', 'Fliesenarbeiten', 'Kakel och klinker'),
           o('Verhuizen', 'Removals', 'Umzug', 'Flytt'),
