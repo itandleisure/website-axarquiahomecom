@@ -479,4 +479,472 @@ export const problemsEn: Topic[] = [
     minutes: 6,
     published: '2026-11-05',
   },
+  {
+    key: 'stroom',
+    slug: 'power-keeps-tripping',
+    title: 'Power keeps tripping in your house in Spain: cause and fix',
+    seoTitle: 'Power keeps tripping in a house in Spain: causes, fixes and costs',
+    short: 'Power keeps tripping',
+    description: 'Does the power in your house in the Axarquía keep going off? How to tell a supply that is too low from a tripping RCD or a grid fault, what to do yourself and what the fix costs.',
+    lead: 'The kettle on, the air con on, and the house goes dark. Or the power goes off after a rain shower while you are back home. There is almost always one of four causes.',
+    keyword: 'power keeps tripping spain',
+    dienst: 'energie',
+    onderwerp: 'The power keeps tripping in my house.',
+    answer: 'If the power goes off when you switch on several appliances at once, your <strong>contracted power is too low</strong>. If the <strong>RCD (diferencial)</strong> trips, often after rain, current is leaking to earth somewhere, usually through outdoor lights, a water heater or a damp socket. If the whole village is dark, it is a <strong>grid fault</strong>.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Why does the power go off?',
+        table: {
+          head: ['What you see', 'Likely cause'],
+          rows: [
+            ['Power goes off when air con, oven and kettle are on together', 'Contracted power (potencia contratada) too low, or an overloaded circuit'],
+            ['RCD (diferencial) trips, often after rain or at night', 'Earth leakage: damp in outdoor lights, sockets or an appliance'],
+            ['One circuit trips every time one appliance is switched on', 'Faulty appliance, for example water heater, pool pump or fridge'],
+            ['Power goes off in thunderstorms', 'Surge or grid fault'],
+            ['The whole house and the neighbours are dark', 'Fault at the network operator (in the Axarquía usually e-distribución)'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'What you can do yourself',
+        html: `<ul>
+<li>Check the consumer unit to see which switch is down: the main switch (too much power), the RCD or a single circuit.</li>
+<li>If the RCD trips: switch off all circuits, switch the RCD on, then switch the circuits back on one by one. The circuit that trips it again is where the problem is.</li>
+<li>Unplug everything on that circuit and try again. That way you find the leaking appliance.</li>
+<li>If the whole village is dark, report the fault to the network operator. The number is on your electricity bill.</li>
+<li>Never work on the consumer unit or on wet sockets yourself.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'The fix and what it costs',
+        table: {
+          head: ['Fix', 'For', 'Guide price'],
+          rows: [
+            ['Fault finding by an electrician', 'RCD that keeps tripping', '€80 – €250'],
+            ['Waterproof outdoor lights and sockets', 'Leakage after rain', '€60 – €150 per point'],
+            ['Higher contracted power, with boletín', 'Supply too low', '€150 – €500'],
+            ['Extra circuit or new consumer unit', 'Overloaded circuit', '€150 – €1,000'],
+            ['Surge protection', 'Faults in thunderstorms', '€150 – €400'],
+            ['Full rewire', 'Old installation without earthing', 'see <a href="/en/costs/electrical-rewiring/">rewiring costs</a>'],
+          ],
+          note: 'Guide prices excluding VAT.',
+        },
+      },
+      {
+        id: 'leeg',
+        h: 'Power cuts in an empty house',
+        html: '<p>If the power goes off while you are away, the freezer defrosts, the pool pump stops and the alarm eventually dies. Two things help: a smart meter or power sensor that sends you an alert, and someone who can be there quickly. With <a href="/en/key-holding/">key holding</a> someone comes round, switches the consumer unit back on and checks what caused it.</p>',
+      },
+    ],
+    faq: [
+      { q: 'What does ICP mean in my consumer unit?', a: 'The ICP (Interruptor de Control de Potencia) was the switch that limited your power. Today the network operator’s smart meter does that. If you use too much, the meter switches off and often back on by itself after a few seconds.' },
+      { q: 'How much power do I need?', a: 'For an apartment without air con, 3.45 to 4.6 kW is usually enough. With air con and induction 5.75 kW, and with a heat pump, pool pump or EV charger 7 to 9.2 kW.' },
+      { q: 'Can I raise the power without a new boletín?', a: 'Sometimes. If the installation is already approved for the higher power, a call to your supplier is enough. If it is more than twenty years old or not suitable, the network operator asks for a new boletín.' },
+    ],
+    links: [
+      { href: '/en/maintenance/', label: 'Maintenance and repairs' },
+      { href: '/en/key-holding/', label: 'Key holding and property checks' },
+      { href: '/en/costs/solar-panels/', label: 'Cost of solar panels' },
+    ],
+    related: ['costs:elektra', 'problems:vocht', 'problems:inbraak'],
+    sources: [
+      { name: 'e-distribución, report a fault', url: 'https://www.edistribucion.com/es/averias.html' },
+      { name: 'CNMC, the boletín eléctrico: what it is and what it is for', url: 'https://cnmc.es/sites/default/files/editor_contenidos/Energia/Consumidores/3.2%20Bolet%C3%ADn%20el%C3%A9ctrico%2C%20qu%C3%A9%20es%20y%20para%20qu%C3%A9%20sirve.pdf' },
+    ],
+    ctaTitle: 'Power keeps tripping?',
+    ctaText: 'Send a photo of your consumer unit and tell us when it happens. An electrician will find the cause.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'waterdruk',
+    slug: 'no-water-or-low-pressure',
+    title: 'No water or low water pressure in your house in Spain',
+    seoTitle: 'No water or low water pressure in a house in Spain: causes, fixes and costs',
+    short: 'No water or low pressure',
+    description: 'No water, or only a trickle, from the tap in your house in the Axarquía? How to find the cause: an outage, an empty tank, a dry well, a broken pump or a leak, and what the fix costs.',
+    lead: 'You arrive, turn on the tap and nothing comes out, or just a trickle. On a finca with a tank or well, but also in a village house on mains water, it happens more often than you would think.',
+    keyword: 'no water house spain',
+    dienst: 'onderhoud',
+    onderwerp: 'I have no water or low water pressure in my house.',
+    answer: 'On mains water it is usually an <strong>outage or interruption in the village</strong>, a closed main valve or a leak. On a finca with a tank or well it is often an <strong>empty tank</strong>, a <strong>broken or dry-running pump</strong>, a <strong>blocked filter</strong> or a well that yields less in summer.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'What is the cause?',
+        table: {
+          head: ['What you see', 'Likely cause'],
+          rows: [
+            ['No water, and the neighbours have none either', 'Outage or planned interruption by the water company'],
+            ['No water after a long absence', 'Main valve closed, or cut off for an unpaid bill'],
+            ['Pump keeps switching on and off', 'Pressure vessel without air, or a leak in the pipe'],
+            ['Pump runs but no water comes', 'Tank or well empty, or the pump is drawing air'],
+            ['Pressure slowly dropping, cloudy water', 'Blocked filter or limescale in pipes and taps'],
+            ['High water bill or a wet patch in the garden', 'Leak in the supply pipe'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'What you can do yourself',
+        html: `<ul>
+<li>Ask the neighbours or the municipal water company whether there is an outage.</li>
+<li>Check the main valve at the water meter and the valve after the tank.</li>
+<li>Check how much water is left in the tank. Order a tanker in good time.</li>
+<li>Switch off the pump if it is running dry, or it will burn out.</li>
+<li>Check whether the meter turns while all taps are closed: then there is a leak.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'The fix and what it costs',
+        table: {
+          head: ['Fix', 'For', 'Guide price'],
+          rows: [
+            ['Finding and repairing a leak', 'Leaking pipe', '€200 – €1,000'],
+            ['Replacing or re-pressurising the pressure vessel', 'Pump that keeps cycling', '€150 – €500'],
+            ['New pump with pressure vessel', 'Broken pump', '€600 – €1,500'],
+            ['New filter, water softener', 'Low pressure, limescale', '€150 – €1,500'],
+            ['Larger or extra water tank', 'Tank keeps running empty', 'see <a href="/en/costs/water-tank-and-septic-tank/">water tank costs</a>'],
+            ['Dry-run protection and level alarm', 'Protect the pump, alert when the tank is empty', '€150 – €400'],
+          ],
+          note: 'Guide prices excluding VAT.',
+        },
+      },
+      {
+        id: 'leeg',
+        h: 'When you are away',
+        html: '<p>A leak in an empty house can run for months, and a pump that runs dry breaks down. When you leave, close the main valve and switch off the pump, unless the garden needs water. With <a href="/en/key-holding/">key holding</a> someone checks the meter, tank and pump regularly, and gets the house ready before you arrive.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Why does the water sometimes go off in summer?', a: 'After dry years, town halls in the Axarquía can cut the water at night or at set hours to save it. A small buffer tank with a pump covers that.' },
+      { q: 'What does a water tanker cost?', a: 'Expect €4 to €10 per m³ including delivery, depending on the distance and the access track.' },
+      { q: 'Can I have my well drilled deeper?', a: 'Sometimes, but it needs a permit and is no guarantee of more water. First have the pump and pipework checked.' },
+    ],
+    links: [
+      { href: '/en/maintenance/', label: 'Maintenance and repairs' },
+      { href: '/en/costs/water-tank-and-septic-tank/', label: 'Cost of a water tank, borehole and septic tank' },
+      { href: '/en/guides/off-grid-living-spain/', label: 'Guide: off-grid living in Spain' },
+    ],
+    related: ['costs:water', 'problems:beerput', 'problems:stroom'],
+    sources: [
+      { name: 'Junta de Andalucía, water and water rights', url: 'https://www.juntadeandalucia.es/medioambiente/portal/areas-tematicas/agua' },
+    ],
+    ctaTitle: 'No water or low pressure?',
+    ctaText: 'Tell us how your house gets its water and what happens. A plumber will find the cause.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'beerput',
+    slug: 'septic-tank-problems',
+    title: 'Septic tank full or smelly: what now?',
+    seoTitle: 'Septic tank full or smelly at your house in Spain: causes, fixes and costs',
+    short: 'Septic tank',
+    description: 'A sewage smell around your house in the Axarquía, or slow drains? How to recognise a full or broken septic tank (fosa séptica), what to do yourself and what emptying or replacing costs.',
+    lead: 'On many fincas and in some village houses the waste water goes to a septic tank in the garden. As long as it works, nobody thinks about it. Until it starts to smell or the toilet stops flushing.',
+    keyword: 'septic tank spain',
+    dienst: 'onderhoud',
+    onderwerp: 'My septic tank is full or smells.',
+    answer: 'A smell, slow drains or gurgling usually point to a <strong>full septic tank</strong>: emptying costs €150 to €300. If the problem stays, or there is water on the ground above the tank, the <strong>soakaway is blocked</strong> or the tank is broken. A new septic tank costs €2,500 to €6,000.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'What is going on?',
+        table: {
+          head: ['What you see or smell', 'Likely cause'],
+          rows: [
+            ['Sewage smell in the garden, toilet flushes slowly', 'Septic tank full'],
+            ['Wet, green or smelly patch above the tank', 'Soakaway blocked or tank leaking'],
+            ['Sewage smell indoors, especially in the bathroom', 'Trap dried out or no vent pipe'],
+            ['Gurgling drains or sink', 'Blockage or full tank'],
+            ['Problem shortly after a let or a party', 'Too much water or fat in a short time'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'What you can do yourself',
+        html: `<ul>
+<li>After a long absence, run all taps and the shower briefly: a dried-out trap lets sewage smells through.</li>
+<li>Do not flush wet wipes, fat or large amounts of bleach: they kill the bacteria in the tank.</li>
+<li>Do not drive or park over the tank or soakaway.</li>
+<li>Note when the tank was last emptied.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'The fix and what it costs',
+        table: {
+          head: ['Fix', 'For', 'Guide price'],
+          rows: [
+            ['Emptying the septic tank', 'Full tank', '€150 – €300'],
+            ['Unblocking the drain', 'Blocked pipe', '€100 – €300'],
+            ['Fitting a vent pipe', 'Smell indoors', '€200 – €600'],
+            ['Renewing the soakaway', 'Wet patch above the soakaway', '€1,500 – €4,000'],
+            ['New septic tank or treatment plant', 'Broken or undersized tank', 'see <a href="/en/costs/water-tank-and-septic-tank/">septic tank costs</a>'],
+          ],
+          note: 'Guide prices excluding VAT.',
+        },
+      },
+      {
+        id: 'verhuur',
+        h: 'Letting and selling',
+        html: '<p>If you let the house, a full house uses as much water in a week as you do in a month. Have the tank checked before the season. When selling, a good buyer will ask about the drainage: a broken or non-compliant septic tank is a reason to negotiate on price. See also the guide <a href="/en/guides/selling-a-house-in-spain/">selling a house in Spain</a>.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Does a septic tank need regular emptying?', a: 'Yes, usually every two to four years. Do not wait until it overflows: that blocks the soakaway too.' },
+      { q: 'Do I need septic tank starters or bacteria?', a: 'Usually not. A healthy tank keeps itself going. They can help after a period of heavy bleach or cleaning product use.' },
+      { q: 'Is my old cesspit still allowed?', a: 'A brick-built pit without a base, where waste water runs straight into the ground, usually does not meet current rules. Replacement can be required during a renovation or after a complaint.' },
+    ],
+    links: [
+      { href: '/en/maintenance/', label: 'Maintenance and repairs' },
+      { href: '/en/costs/water-tank-and-septic-tank/', label: 'Cost of a water tank, borehole and septic tank' },
+      { href: '/en/property-survey/', label: 'Pre-purchase survey' },
+    ],
+    related: ['costs:water', 'problems:waterdruk', 'problems:vocht'],
+    sources: [
+      { name: 'Junta de Andalucía, discharges and waste water', url: 'https://www.juntadeandalucia.es/medioambiente/portal/areas-tematicas/agua' },
+    ],
+    ctaTitle: 'Septic tank problems?',
+    ctaText: 'Tell us what you see and smell, and send a photo of the spot. We arrange emptying, repair or replacement.',
+    minutes: 4,
+    published: '2026-11-05',
+  },
+  {
+    key: 'wateroverlast',
+    slug: 'flooding-and-retaining-walls',
+    title: 'Flooding after heavy rain and a cracking retaining wall',
+    seoTitle: 'Flooding and retaining walls in Spain: what to do after heavy rain or a DANA',
+    short: 'Flooding and retaining walls',
+    description: 'Water against or inside your house after heavy rain, a washed-out access track or a retaining wall that cracks or leans? What to do straight away, how to prevent it and what repairs cost in the Axarquía.',
+    lead: 'In autumn more rain can fall in a few hours than in the whole summer. On a slope that water takes the shortest way down, and sometimes that runs against or through your house.',
+    keyword: 'flooding house spain',
+    dienst: 'onderhoud',
+    onderwerp: 'I have flooding or a retaining wall that is cracking.',
+    answer: 'Flooding on a slope is almost always caused by <strong>missing or blocked drainage</strong>: water from the hillside, terrace or track with nowhere to go. A retaining wall that cracks, bulges or leans usually has <strong>no drainage</strong> behind it. Have it checked quickly: after the next downpour it may give way.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Warning signs',
+        table: {
+          head: ['What you see', 'What it means'],
+          rows: [
+            ['Mud or water against the back wall after rain', 'Water from the slope has no drain along the house'],
+            ['Wet wall indoors after rain, on the hill side', 'Penetrating damp: soil and water against the wall'],
+            ['Retaining wall bulging, leaning or with diagonal cracks', 'Water pressure behind the wall, risk of collapse'],
+            ['Water coming out of the joints at the base of the wall', 'The wall drains, which is good; no water at all is the risk'],
+            ['Gullies in the access track', 'Run-off without a channel or cross drain'],
+          ],
+        },
+      },
+      {
+        id: 'direct',
+        h: 'What to do straight away',
+        html: `<ul>
+<li>Keep away from a retaining wall that moves or cracks, and do not park below or above it.</li>
+<li>Clear gutters, gullies and gratings of leaves and mud.</li>
+<li>Divert water temporarily away from the house with sandbags or a trench.</li>
+<li>Take dated photos of the damage for the insurer.</li>
+<li>In danger or with major damage after a storm: call 112.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'The fix and what it costs',
+        table: {
+          head: ['Fix', 'For', 'Guide price'],
+          rows: [
+            ['Drainage along the back wall', 'Water and damp on the hill side', '€40 – €80 per m'],
+            ['Drainage channel on terrace or drive', 'Water running towards the house', '€60 – €150 per m'],
+            ['Drainage behind an existing retaining wall', 'Wall without drainage', '€80 – €200 per m'],
+            ['Repairing or rebuilding a retaining wall', 'Cracking or collapsed wall', 'see <a href="/en/costs/retaining-wall-and-drainage/">retaining wall costs</a>'],
+            ['Repairing the access track with channels', 'Washed-out track', '€40 – €70 per m²'],
+          ],
+          note: 'Guide prices excluding VAT.',
+        },
+      },
+      {
+        id: 'verzekering',
+        h: 'Insurance and the Consorcio',
+        html: '<p>In Spain, damage from exceptional rain, floods or storms is often paid not by the insurer itself but by the <em>Consorcio de Compensación de Seguros</em>, a state fund. You do need a buildings or contents policy for that. Report the damage as soon as possible and keep photos and invoices.</p>',
+      },
+    ],
+    faq: [
+      { q: 'What is a DANA?', a: 'A pocket of cold air high in the atmosphere which, mainly from September to November, brings short, heavy downpours. More than 100 mm can fall in a few hours.' },
+      { q: 'Who is responsible for a retaining wall on the boundary?', a: 'That depends on who built the wall and whose land it holds back. Check the title deeds and the land registry, and talk to the neighbours before you repair it.' },
+      { q: 'Can I prevent this?', a: 'Yes. Have gutters, gullies and drainage checked and cleaned before the autumn. That is a standard part of maintenance and key holding.' },
+    ],
+    links: [
+      { href: '/en/maintenance/', label: 'Maintenance and repairs' },
+      { href: '/en/key-holding/', label: 'Key holding and property checks' },
+      { href: '/en/weather/september/', label: 'The weather in September: DANA and the first rain' },
+    ],
+    related: ['costs:keermuur', 'problems:daklekkage', 'problems:scheuren'],
+    sources: [
+      { name: 'Consorcio de Compensación de Seguros, damage from extraordinary events', url: 'https://www.consorseguros.es/' },
+      { name: 'AEMET, what is a DANA', url: 'https://www.aemet.es/' },
+    ],
+    ctaTitle: 'Flooding or a cracking retaining wall?',
+    ctaText: 'Send photos of the wall or of where the water runs. We will come and look and give you a price.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'schoorsteen',
+    slug: 'smoking-chimney',
+    title: 'Chimney smoking back or drawing badly: cause and solution',
+    seoTitle: 'Smoking chimney or wood burner in Spain: causes and solutions',
+    short: 'Smoking chimney',
+    description: 'Is smoke coming into the room from your open fire or wood burner in the Axarquía? How to find the cause: cold flue, damp wood, too little air, wind or a dirty chimney. What you can do yourself and what the fix costs.',
+    lead: 'You light the fire and within minutes the room is full of smoke. It happens a lot in a house that has been closed up for months. There is usually one of five causes, and most are easy to fix.',
+    keyword: 'smoking chimney',
+    dienst: 'schoorsteen',
+    onderwerp: 'My chimney or stove is smoking back.',
+    answer: 'If the fire only smokes when you light it, the <strong>flue is still cold</strong>. If it smokes all the time, the chimney is often <strong>dirty or blocked</strong> by soot or a nest, there is <strong>too little air</strong> in the room, or <strong>the wind</strong> is pushing the smoke back. Have the chimney swept and checked first: it costs €60 to €120 and often solves it.',
+    sections: [
+      {
+        id: 'oorzaak',
+        h: 'Why does the chimney smoke back?',
+        table: {
+          head: ['What you see', 'Likely cause'],
+          rows: [
+            ['Smoke only when lighting', 'Cold flue, especially on an outside wall or after a long idle period'],
+            ['Smoke all the time, even with a good fire', 'Dirty or blocked flue: soot, tar, a nest or loose bricks'],
+            ['Better with a window ajar', 'Too little air: a well-sealed house or a cooker hood pulling air out'],
+            ['Only with wind from one direction', 'Wind pushing smoke back, from a taller neighbour, a slope or a chimney that is too short'],
+            ['Lots of smoke, hissing, black fire', 'Damp wood'],
+            ['Smell of smoke in another room or next door', 'Crack in the flue: have it checked straight away'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'What you can do yourself',
+        html: `<ul>
+<li><strong>Warm the flue first</strong> with a burning twist of newspaper at the bottom of the chimney, and start with small, dry kindling.</li>
+<li><strong>Open a window slightly</strong> in the room and switch off the kitchen cooker hood.</li>
+<li><strong>Burn dry wood</strong> with less than 20% moisture, such as olive or almond seasoned for a year.</li>
+<li><strong>Look up</strong> with a torch when the fire is cold: if you see no daylight, something is in the flue.</li>
+<li><strong>Fit a carbon monoxide alarm</strong> in the room with the fire or stove. It costs €25 to €50.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'Solutions and costs',
+        table: {
+          head: ['Solution', 'When', 'Indication'],
+          rows: [
+            ['Sweep and check the chimney', 'Always the first step', '€60 – €120'],
+            ['Wind cowl or draught cowl', 'For downdraught from wind', '€150 – €400'],
+            ['Extend the chimney', 'If it ends too low above the roof or ridge', '€300 – €1,200'],
+            ['Air vent or outside air supply', 'For too little air', '€100 – €400'],
+            ['Stainless steel liner', 'For a flue that is too wide, cracked or leaking', '€1,000 – €2,500'],
+          ],
+          note: 'More prices for sweeping, repair and a new stove: see <a href="/en/costs/chimney-and-wood-burner/">cost of chimney and wood burner</a>.',
+        },
+      },
+      {
+        id: 'gevaar',
+        h: 'When is it dangerous?',
+        html: '<p>Smoke in the house is a nuisance, but you cannot see or smell carbon monoxide. If you get a headache, feel dizzy or sick near the fire, go outside and do not light it again until the chimney has been checked. If you smell smoke in another room or next door, or see soot marks on a wall, the flue is probably cracked.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Why does the fire only smoke at the start of winter?', a: 'A flue that has been cold and damp for months draws badly until it warms up. A nest may also have been built in spring. Have the chimney swept in September or October.' },
+      { q: 'Does a wind cowl always help?', a: 'Only if wind is the cause. With a dirty flue or too little air a cowl does not help. So have the cause found first.' },
+      { q: 'Can a wood burner go into an old open fireplace?', a: 'Often, yes, with a stainless steel liner through the existing chimney. That solves most smoke problems straight away and gives much more heat.' },
+    ],
+    links: [
+      { href: '/en/costs/chimney-and-wood-burner/', label: 'Cost of chimney and wood burner' },
+      { href: '/en/guides/preparing-your-spanish-home-for-winter/', label: 'Guide: preparing your home for winter' },
+      { href: '/en/maintenance/', label: 'Maintenance and repairs' },
+    ],
+    related: ['costs:schoorsteen', 'problems:tocht', 'problems:vocht'],
+    sources: [
+      { name: 'BOE, RITE (heating installations)', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2007-15820' },
+    ],
+    ctaTitle: 'Chimney smoking back?',
+    ctaText: 'Send a photo of the fireplace or stove and of the chimney on the roof, and tell us when it happens. You get advice and a price.',
+    minutes: 4,
+    published: '2026-11-05',
+  },
+  {
+    key: 'tocht',
+    slug: 'draughts-and-condensation-at-windows',
+    title: 'Draughts and condensation at windows in your Spanish home: cause and solution',
+    seoTitle: 'Draughts, cold and condensation at windows in Spain: causes and solutions',
+    short: 'Draughts and condensation',
+    description: 'Do your windows stream in winter and is your house in the Axarquía draughty? Why single glazing and cold aluminium frames cause it, what you can do yourself and what new windows or glass cost.',
+    lead: 'Spanish houses are built for summer. In winter you sit behind single glazing in thin aluminium frames, with a cold draught along the floor and puddles on the windowsill in the morning. It is not only uncomfortable, it also leads to mould.',
+    keyword: 'condensation windows spain',
+    dienst: 'ramen',
+    onderwerp: 'I have draughts or condensation at my windows.',
+    answer: 'Condensation on windows is caused by <strong>humid indoor air on a cold surface</strong>: single glazing and aluminium frames without a thermal break. Draughts usually come from <strong>worn seals and gaps</strong> around frames and shutter boxes. Ventilating and sealing help a lot; the real fix is double glazing in an insulated frame, from about €400 per window.',
+    sections: [
+      {
+        id: 'oorzaak',
+        h: 'What causes it?',
+        table: {
+          head: ['What you see', 'Likely cause'],
+          rows: [
+            ['Droplets on the glass, especially in the morning', 'Single glazing and moist air from sleeping, cooking and showering'],
+            ['Water and black spots on the frame', 'Aluminium frame without a thermal break: the metal is ice cold'],
+            ['Draught along the window', 'Worn brushes or seals, gaps between frame and wall'],
+            ['Cold air from the shutter box', 'Uninsulated roller shutter box (cajón de persiana)'],
+            ['Mould in the corner around the window', 'Cold bridge in the wall and too little ventilation'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'What you can do yourself',
+        html: `<ul>
+<li><strong>Ventilate every day</strong> for ten minutes with windows open on opposite sides, also in winter.</li>
+<li><strong>Wipe off condensation in the morning</strong> so it does not soak into the frame or wall.</li>
+<li><strong>Use a dehumidifier</strong> in bedrooms and in a house that stands empty.</li>
+<li><strong>Replace the brushes and seals</strong> of sliding windows and seal gaps between frame and wall.</li>
+<li><strong>Insulate the shutter box</strong> with insulation board and draught strip.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'Solutions and costs',
+        table: {
+          head: ['Solution', 'Details', 'Indication'],
+          rows: [
+            ['Renew seals and sealant', 'Per window, brushes, seals and sealant', '€50 – €150'],
+            ['Insulate the shutter box', 'Per box', '€80 – €200'],
+            ['Double glazing in an existing frame', 'If the frame is sound and suitable', '€100 – €250 per m²'],
+            ['New double-glazed window', 'Aluminium RPT or uPVC, about 120 × 120 cm', '€350 – €800'],
+          ],
+          note: 'More on materials, glass and permits: see <a href="/en/costs/windows-and-frames/">cost of windows and frames</a>.',
+        },
+      },
+    ],
+    faq: [
+      { q: 'Is condensation on windows a problem?', a: 'A little condensation on a cold morning is normal. If it streams every day and the frame or wall turns black, mould develops. Then you need more ventilation or better glass.' },
+      { q: 'Does double glazing stop all condensation?', a: 'Most of it, because the inner pane stays warmer. If the air in the house is very humid, you still need to ventilate. See also damp and mould.' },
+      { q: 'Do new windows help in summer too?', a: 'Yes. With solar control double glazing and roller shutters the house stays cooler, so the air con has to work less.' },
+    ],
+    links: [
+      { href: '/en/costs/windows-and-frames/', label: 'Cost of windows and frames' },
+      { href: '/en/problems/damp-and-mould/', label: 'Damp and mould' },
+      { href: '/en/guides/preparing-your-spanish-home-for-winter/', label: 'Guide: preparing your home for winter' },
+    ],
+    related: ['costs:ramen', 'problems:vocht', 'costs:airco'],
+    sources: [
+      { name: 'Código Técnico de la Edificación, DB HE (energy saving)', url: 'https://www.codigotecnico.org/DocumentosCTE/AhorroEnergia.html' },
+      { name: 'IDAE, grants for energy saving in homes', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'Troubled by draughts or condensation?',
+    ctaText: 'Send photos of your windows and the spots with condensation or mould. You get advice and a price.',
+    minutes: 4,
+    published: '2026-11-05',
+  },
 ];

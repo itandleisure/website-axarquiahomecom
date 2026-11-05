@@ -1,0 +1,110 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'overzicht', label: 'De kalender in één tabel' },
+  { id: 'ibi', label: 'IBI en afvalheffing (gemeente)' },
+  { id: 'irnr', label: 'Belasting niet-inwoners (formulier 210)' },
+  { id: 'vermogen', label: 'Vermogensbelasting' },
+  { id: 'woonland', label: 'Aangifte in uw woonland' },
+  { id: 'betalen', label: 'Betalen vanuit het buitenland' },
+  { id: 'missen', label: 'Te laat? Zo voorkomt u boetes' },
+  { id: 'bronnen', label: 'Bronnen' },
+];
+
+const faq = [
+  {
+    q: 'Wanneer moet ik de IBI betalen in de Axarquía?',
+    a: 'Dat verschilt per gemeente. In de meeste gemeenten int het Patronato de Recaudación Provincial van de provincie Málaga de IBI; die periode valt meestal in de zomer of het vroege najaar en duurt ongeveer twee tot drie maanden. Een paar gemeenten innen zelf, met een eigen kalender. Met een domiciliëring wordt het automatisch afgeschreven en hoeft u de datum niet te onthouden.',
+  },
+  {
+    q: 'Moet ik elk jaar aangifte doen als ik mijn huis niet verhuur?',
+    a: 'Ja. Als niet-inwoner betaalt u elk jaar belasting over een fictief inkomen uit uw woning: 1,1% of 2% van de kadastrale waarde, met 19% (EU) of 24% (buiten de EU) belasting. Die aangifte, formulier 210, doet u in het jaar daarna. Voor 2025 kan dat tot en met 31 december 2026, vanaf 2026 van 1 april tot 31 december van het jaar daarna.',
+  },
+  {
+    q: 'Wanneer doe ik aangifte over mijn huurinkomsten?',
+    a: 'Over huur vanaf 2026 doet u één keer per jaar aangifte, van 1 tot en met 20 april van het jaar daarna. De huur over 2026 geeft u dus op in april 2027. Tot en met 2025 was het per kwartaal; de laatste kwartaalaangifte over 2025 liep tot 20 januari 2026.',
+  },
+  {
+    q: 'Kan ik Spaanse belastingen betalen met een Nederlandse of Belgische bankrekening?',
+    a: 'Soms. Volgens de Europese SEPA-regels mag een Spaanse instantie een buitenlandse IBAN niet weigeren, maar in de praktijk lukt dat lang niet altijd. Een Spaanse bankrekening is daarom het makkelijkst: daarop kunt u IBI, afvalheffing, water, stroom en formulier 210 laten afschrijven. De gemeentelijke belastingen kunt u ook online met een bankkaart betalen.',
+  },
+  {
+    q: 'Heb ik een fiscaal vertegenwoordiger nodig?',
+    a: 'Als particulier die alleen een woning bezit of verhuurt meestal niet; de fiscus kan het wel vragen. Wel handig is een gestor of belastingadviseur die uw aangiftes doet en de brieven van de Spaanse fiscus ontvangt. Dat kost vaak € 100 tot € 400 per jaar, afhankelijk van of u verhuurt.',
+  },
+];
+---
+<Guide slug="belastingkalender-spanje" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Iemand ter plaatse die uw post en huis in de gaten houdt?" ctaText="Wij controleren uw huis als u er niet bent, halen de post op en sturen u brieven van de gemeente of de fiscus door, zodat u geen termijn mist.">
+  <p>Heeft u een huis in de Axarquía maar woont u er niet? Dan krijgt u elk jaar met een paar vaste belastingen te maken: van de gemeente, van de Spaanse fiscus en in uw eigen land. Wie er nooit is, mist makkelijk een brief, en een gemiste termijn kost al snel een toeslag. Deze kalender zet op een rij wat wanneer komt, wat u moet indienen en hoe u betaalt vanuit het buitenland. Over de belasting op huurinkomsten in het algemeen leest u meer in onze gids <a href="/nl/gidsen/woning-verhuren-spanje/">woning verhuren in Spanje</a>.</p>
+
+  <h2 id="overzicht">De kalender in één tabel</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Wanneer</th><th>Wat</th><th>Voor wie</th></tr></thead>
+    <tbody>
+      <tr><td>1 – 20 januari</td><td>Formulier 210 met uitkomst nul over de huur van vorig jaar (bijvoorbeeld als de kosten even hoog waren als de huur)</td><td>Verhuurders in de EU</td></tr>
+      <tr><td>Voorjaar</td><td>Motorrijtuigenbelasting (IVTM), als u een auto op Spaans kenteken heeft</td><td>Eigenaars met een Spaanse auto</td></tr>
+      <tr><td>1 – 20 april</td><td>Formulier 210 over de huurinkomsten van vorig jaar (voor het eerst in april 2027, over 2026). Met domiciliëring tot 15 april.</td><td>Verhuurders</td></tr>
+      <tr><td>April – 30 juni</td><td>Vermogensbelasting, alleen bij groot vermogen in Spanje</td><td>Weinig eigenaars, zie hieronder</td></tr>
+      <tr><td>Zomer tot vroege najaar (per gemeente)</td><td>IBI, onroerendgoedbelasting van de gemeente; soms in twee delen</td><td>Alle eigenaars</td></tr>
+      <tr><td>Per gemeente</td><td>Afvalheffing (<em>tasa de basura</em>), los, met de IBI of via de waterrekening</td><td>Alle eigenaars</td></tr>
+      <tr><td>1 april – 31 december</td><td>Formulier 210 over het fictieve inkomen van vorig jaar, voor de dagen dat u niet verhuurde. Met domiciliëring tot 23 december. (Over 2025: het hele jaar 2026.)</td><td>Alle eigenaars die niet in Spanje wonen</td></tr>
+      <tr><td>Uw woonland</td><td>Aangifte inkomstenbelasting, met de Spaanse woning erin</td><td>Alle eigenaars</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Stand 5 november 2026. De termijnen van de Spaanse fiscus staan in Orden HAC/623/2026; die van de gemeente verschillen per jaar en per gemeente.</p>
+
+  <h2 id="ibi">IBI en afvalheffing (gemeente)</h2>
+  <p>De <strong>IBI</strong> (<em>Impuesto sobre Bienes Inmuebles</em>) is de jaarlijkse onroerendgoedbelasting. U betaalt een percentage van de kadastrale waarde; voor een gewoon huis in de Axarquía gaat het meestal om enkele honderden euro’s per jaar. Wie op 1 januari eigenaar is, betaalt de IBI van het hele jaar. Bij een verkoop verrekenen koper en verkoper dat vaak onderling.</p>
+  <ul>
+    <li><strong>Wie int.</strong> De meeste gemeenten in de Axarquía laten de IBI innen door het <em>Patronato de Recaudación Provincial</em> van de provincie Málaga. Enkele grotere gemeenten innen zelf. Op uw aanslag staat wie de afzender is.</li>
+    <li><strong>Wanneer.</strong> Elke instantie stelt per jaar een belastingkalender vast. De betaaltermijn (<em>periodo voluntario</em>) duurt meestal twee tot drie maanden en valt in de Axarquía vaak in de zomer of het vroege najaar. Sommige gemeenten splitsen de IBI in twee termijnen.</li>
+    <li><strong>Afvalheffing.</strong> Sinds 2025 moeten alle Spaanse gemeenten een kostendekkende afvalheffing heffen. In de Axarquía komt die, afhankelijk van de gemeente, als aparte aanslag, samen met de IBI, of op de waterrekening.</li>
+    <li><strong>Wat u moet doen.</strong> Voor IBI en afvalheffing hoeft u niets in te dienen: u krijgt een aanslag (<em>recibo</em>). Zorg wel dat de instantie uw juiste adres heeft, of laat de aanslag automatisch afschrijven. Ook als er geen brief komt, blijft u verantwoordelijk voor betaling.</li>
+  </ul>
+  <p>Bewaar elk jaar het betaalbewijs. Bij een verkoop vraagt de notaris om de laatste IBI-aanslag, en een openstaande IBI blijft aan het huis hangen. Zie ook onze gids <a href="/nl/gidsen/huis-verkopen-spanje/papieren/">papieren voor de verkoop</a>.</p>
+
+  <h2 id="irnr">Belasting niet-inwoners (formulier 210)</h2>
+  <p>Woont u niet in Spanje, dan valt u voor de Spaanse fiscus onder de belasting voor niet-inwoners (IRNR). Voor een woning zijn er twee situaties, en vaak allebei in hetzelfde jaar:</p>
+  <ul>
+    <li><strong>U gebruikt het huis zelf of het staat leeg.</strong> U betaalt belasting over een fictief inkomen: 1,1% van de kadastrale waarde (2% als die waarde sinds 1994 niet is herzien), naar verhouding van de dagen. Daarover betaalt u 19% als u in de EU, IJsland of Noorwegen woont, anders 24%. Bij een kadastrale waarde van € 100.000 is dat voor een EU-inwoner € 209 per jaar. U doet aangifte in het jaar daarna: vanaf het belastingjaar 2026 van 1 april tot 31 december; over 2025 kan het nog het hele jaar 2026.</li>
+    <li><strong>U verhuurt.</strong> Over de huurinkomsten betaalt u 19% over de netto opbrengst (EU) of 24% over de bruto huur (buiten de EU). Vanaf de huur over 2026 doet u daarvan één keer per jaar aangifte, van 1 tot en met 20 april van het jaar daarna. Tot en met 2025 ging dat per kwartaal. Is de uitkomst nul, dan dient u de aangifte in van 1 tot en met 20 januari.</li>
+  </ul>
+  <p>Heeft u het huis met twee personen, dan doet elk van u een eigen aangifte voor zijn of haar deel. Formulier 210 kunt u zelf online indienen via de Agencia Tributaria, maar de meeste eigenaars laten het doen door een gestor of belastingadviseur.</p>
+
+  <h2 id="vermogen">Vermogensbelasting</h2>
+  <p>Voor de meeste eigenaars speelt dit niet. Niet-inwoners betalen vermogensbelasting over hun bezit in Spanje boven een vrijstelling van € 700.000 per persoon, na aftrek van een eventuele hypotheek. Andalusië geeft een korting op deze belasting, en daarnaast bestaat er een tijdelijke solidariteitsheffing op vermogens boven € 3 miljoen. Aangifte is in elk geval verplicht als uw bezittingen in Spanje meer dan € 2 miljoen waard zijn. De termijn loopt van april tot en met 30 juni. Valt u in deze groep, laat het dan narekenen.</p>
+  <p>Het Spaanse overzicht van buitenlandse bezittingen (formulier 720) geldt alleen voor inwoners van Spanje, niet voor u als niet-inwoner.</p>
+
+  <h2 id="woonland">Aangifte in uw woonland</h2>
+  <p>Ook in uw eigen land geeft u de Spaanse woning op. Woont u in Nederland, dan valt de woning in box 3 en krijgt u een vermindering ter voorkoming van dubbele belasting; huurinkomsten tellen daar niet apart mee. In België geeft u het kadastraal inkomen of de huur op in de personenbelasting, en ook daar voorkomt het verdrag met Spanje dubbele heffing. Bewaar daarom de Spaanse aanslagen en aangiftes: u heeft ze nodig voor uw aangifte thuis.</p>
+
+  <h2 id="betalen">Betalen vanuit het buitenland</h2>
+  <ul>
+    <li><strong>Domiciliëring.</strong> De makkelijkste weg: laat IBI, afvalheffing en formulier 210 automatisch afschrijven. Dat gaat het soepelst met een Spaanse bankrekening. Volgens de Europese SEPA-regels mag een buitenlandse IBAN niet worden geweigerd, maar in de praktijk accepteert niet elke instantie die.</li>
+    <li><strong>Online betalen.</strong> Gemeentelijke aanslagen kunt u met het nummer op de aanslag online betalen met een bankkaart, via de website van het Patronato of de gemeente.</li>
+    <li><strong>Formulier 210.</strong> Een te betalen bedrag gaat via een Spaanse bank (domiciliëring of betaling met een referentienummer). Zonder Spaanse rekening kan een overschrijving vanuit het buitenland, maar dat is omslachtiger; een gestor regelt dit meestal voor u.</li>
+    <li><strong>Digitale post.</strong> Brieven van de Spaanse fiscus komen steeds vaker digitaal. Met een digitaal certificaat of via uw gestor ziet u ze op tijd. Geef de gemeente en de fiscus een adres waar post echt aankomt.</li>
+    <li><strong>Een gestor of vertegenwoordiger.</strong> Een gestor kan uw aangiftes doen, aanslagen betalen en uw contactpersoon voor de fiscus zijn. Een formele fiscaal vertegenwoordiger is voor een particuliere eigenaar meestal niet verplicht.</li>
+  </ul>
+
+  <h2 id="missen">Te laat? Zo voorkomt u boetes</h2>
+  <p>Betaalt u een gemeentelijke aanslag niet binnen de termijn, dan komt er een toeslag van 5% bij, oplopend tot 20% plus rente als het bij de invordering terechtkomt. Uiteindelijk kan er beslag worden gelegd op uw Spaanse bankrekening. Een te late aangifte bij de fiscus kost een toeslag die oploopt met de tijd. Drie tips:</p>
+  <ul>
+    <li>Laat alles wat kan automatisch afschrijven, en controleer één keer per jaar of het ook gebeurd is.</li>
+    <li>Zorg dat iemand ter plaatse uw post ziet. Met <a href="/nl/sleutelbeheer/">sleutelbeheer</a> halen wij de post op en sturen u brieven van de gemeente of de fiscus door.</li>
+    <li>Leg de aangiftes bij één gestor, zodat ook de termijnen bij één persoon liggen.</li>
+  </ul>
+  <p>Vragen over uw huis in de Axarquía? Mail naar <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>. Zie ook <a href="/nl/gidsen/kosten-koper-spanje/">kosten koper</a> voor de jaarlijkse kosten van een huis in Spanje.</p>
+
+  <h2 id="bronnen">Bronnen</h2>
+  <ul>
+    <li>Termijnen formulier 210 (huur jaarlijks in april, fictief inkomen 1 april tot 31 december): Orden HAC/623/2026 van 12 juni 2026 (BOE, 23 juni 2026), tot wijziging van Orden EHA/3316/2010.</li>
+    <li>Belasting niet-inwoners en fictief inkomen: Real Decreto Legislativo 5/2004, artikelen 24 en 25; Ley 35/2006, artikel 85.</li>
+    <li>IBI: Real Decreto Legislativo 2/2004 (wet op de lokale belastingen), artikelen 60 tot en met 77.</li>
+    <li>Kostendekkende afvalheffing: Ley 7/2022 over afval, artikel 11, verplicht sinds april 2025.</li>
+    <li>Toeslagen bij te laat betalen en aangeven: Ley 58/2003 (Ley General Tributaria), artikelen 27 en 28.</li>
+    <li>Vermogensbelasting: Ley 19/1991; tijdelijke solidariteitsheffing: Ley 38/2022.</li>
+  </ul>
+  <p class="note">Gecontroleerd op 5 november 2026. Deze kalender geeft algemene informatie en is geen fiscaal advies. Termijnen en tarieven veranderen; controleer de belastingkalender van uw gemeente en laat uw aangiftes doen door een gestor of belastingadviseur.</p>
+</Guide>

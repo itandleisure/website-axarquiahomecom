@@ -1,0 +1,83 @@
+---
+// Bronnen (gelezen op 5 november 2026, BOE, geconsolideerde teksten):
+// Ley 7/2021 LISTA art. 137, 138, 140, 141, 153, 173, 174 · Ley 38/1999 LOE art. 2, 10, 12, 13 ·
+// RD 1000/2010 art. 2 (visado) · RD 1627/1997 art. 3, 4 (veiligheid) · RD 842/2002 REBT (elektra) ·
+// RDLeg 1/2004 Catastro art. 13 · RDLeg 7/2015 Ley de Suelo art. 28 ·
+// Decreto 550/2022 art. 310 (uitvoeringsproject vóór de start), bevestigd via COAM Málaga en gemeentelijke besluiten.
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Melding of vergunning?' },
+  { id: 'tabel', label: 'Per type werk' },
+  { id: 'wie', label: 'Wie u nodig hebt' },
+  { id: 'stappen', label: 'De stappen bij een uitbouw' },
+  { id: 'buitengebied', label: 'Fincas en het buitengebied' },
+  { id: 'gemeente', label: 'Kosten en regels per gemeente' },
+];
+
+const faq = [
+  { q: 'Heb ik een vergunning nodig voor een uitbouw in Spanje?', a: 'Ja. Een uitbouw, aanbouw of extra verdieping vraagt in Andalusië altijd een licencia de obra van de gemeente, met een project van een architect. U mag pas beginnen als de vergunning er is en het uitvoeringsproject bij de gemeente ligt.' },
+  { q: 'Is een architect verplicht bij een verbouwing?', a: 'Alleen als het werk een bouwproject vraagt: nieuwbouw, uitbreiding, werk aan de constructie, een andere gevel of een ander gebruik. Dan zijn voor een woning een architect en een arquitecto técnico verplicht. Voor een nieuwe keuken of badkamer is dat niet nodig.' },
+  { q: 'Mag ik zelf de aanvraag bij de gemeente doen?', a: 'Ja, maar meestal doet de architect of aannemer het namens u, ook digitaal. U tekent een machtiging.' },
+  { q: 'Wat als de uitbreiding nooit is vergund?', a: 'Dan kan de gemeente tot zes jaar na de bouw ingrijpen. Daarna kan het huis worden erkend als AFO. Dat is geen legalisatie: u mag het onderhouden en verbouwen, maar niet verder uitbreiden.' },
+  { q: 'Moet een uitbouw ook in het kadaster en de akte?', a: 'In het kadaster (Catastro) moet hij altijd komen. In de akte en het eigendomsregister is niet verplicht, maar wel verstandig: bij verkoop vraagt de notaris ernaar, en zonder vergunning en opleveringscertificaat lukt dat niet.' },
+];
+---
+<Guide slug="vergunning-verbouwen-andalusie" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Verbouwen of uitbouwen?" ctaText="Vertel wat u van plan bent. Wij zoeken uit welke vergunning nodig is, regelen de architect en voeren het werk uit.">
+  <h2 id="kort">Melding of vergunning?</h2>
+  <p>In Andalusië bepaalt de bouwwet LISTA (Ley 7/2021) welke route een verbouwing volgt. Er zijn er twee:</p>
+  <ul>
+    <li><strong>Melding</strong> (<em>declaración responsable</em>, in de volksmond nog vaak <em>obra menor</em>): voor kleine werken zonder bouwproject, en voor werk binnen een bestaand, legaal huis in de bebouwde kom dat niets verandert aan de omvang, de hoogte of het aantal woningen. U dient de melding met de stukken in en mag dezelfde dag beginnen. De gemeente controleert achteraf.</li>
+    <li><strong>Vergunning</strong> (<em>licencia de obra</em>, vaak <em>obra mayor</em> genoemd): voor al het andere, zoals nieuwbouw, een uitbouw of extra verdieping en werk aan de draagconstructie. De gemeente moet binnen drie maanden na een compleet dossier beslissen. U mag pas beginnen als de vergunning er is.</li>
+  </ul>
+  <p>Wie u nodig hebt, hangt af van één vraag: is er een bouwproject nodig? Volgens de Spaanse bouwwet (LOE) is dat zo bij nieuwbouw, bij werk dat de gevel, het volume of de constructie wezenlijk verandert, bij een ander gebruik van het gebouw en bij beschermde gebouwen. Dan zijn een architect en een <em>arquitecto técnico</em> verplicht.</p>
+
+  <h2 id="tabel">Per type werk</h2>
+  <p>Voor een legaal huis in de bebouwde kom. Wat er precies bij een melding moet, staat in de verordening van de gemeente.</p>
+  <table class="prices">
+    <thead><tr><th>Werk</th><th>Route</th><th>Wie u nodig hebt</th></tr></thead>
+    <tbody>
+      <tr><td>Keuken of badkamer vernieuwen, zonder muren te verplaatsen</td><td>Melding</td><td>Aannemer; erkend elektricien als de installatie verandert</td></tr>
+      <tr><td>Tegels, stucwerk, schilderen, ramen in dezelfde maat</td><td>Melding, soms vrijgesteld</td><td>Aannemer</td></tr>
+      <tr><td>Dak of terras waterdicht maken, zonder de draagconstructie te raken</td><td>Melding</td><td>Aannemer; vaak een technicus bij een steiger</td></tr>
+      <tr><td>Indeling binnen veranderen, zonder dragende muren en zonder extra woning</td><td>Melding</td><td>Aannemer, met een tekening</td></tr>
+      <tr><td>Zonnepanelen, isolatie, warmtepomp</td><td>Melding, ook in het buitengebied</td><td>Installateur; erkend elektricien</td></tr>
+      <tr><td>Dragende muur weg, nieuwe vloer of balken</td><td>Vergunning</td><td>Architect, arquitecto técnico, aannemer</td></tr>
+      <tr><td>Uitbouw, aanbouw, extra verdieping, terras dichtmaken</td><td>Vergunning</td><td>Architect, arquitecto técnico, aannemer</td></tr>
+      <tr><td>Zwembad</td><td>In de regel een vergunning</td><td>Technicus met project; welke, verschilt per gemeente</td></tr>
+      <tr><td>Sloop (niet beschermd)</td><td>Melding</td><td>Technicus met sloopproject</td></tr>
+    </tbody>
+  </table>
+  <p>Een steiger of container op de openbare weg vraagt vaak een aparte toestemming van de gemeente. Over de bouwkosten betaalt u altijd bouwbelasting (ICIO), ook bij een melding.</p>
+
+  <h2 id="wie">Wie u nodig hebt</h2>
+  <ul>
+    <li><strong>Architect</strong> (<em>arquitecto</em>): tekent het project en leidt het werk. Verplicht voor elk werk aan een woning dat een project vraagt.</li>
+    <li><strong>Arquitecto técnico</strong> (ook <em>aparejador</em>): leidt de uitvoering op de bouwplaats en bewaakt de kwaliteit. Verplicht naast de architect. Samen heten ze de <em>dirección facultativa</em>.</li>
+    <li><strong>Veiligheidscoördinator</strong> (<em>coordinador de seguridad y salud</em>): verplicht zodra er meer dan één bedrijf of zelfstandige op de bouw werkt. In elk project zit ook een veiligheidsstudie.</li>
+    <li><strong>Beroepsorde</strong> (<em>colegio</em>): stempelt het uitvoeringsproject en het opleveringscertificaat (het <em>visado</em>). Verplicht bij elk werk dat een project vraagt, ook bij legalisatie.</li>
+    <li><strong>Erkend elektricien</strong>: geeft bij een nieuwe of gewijzigde installatie een installatiecertificaat af, dat bij de Junta de Andalucía wordt geregistreerd. Zonder dat certificaat krijgt u geen nieuw stroomcontract.</li>
+    <li><strong>Aannemer</strong>: voert het werk uit, met of zonder project.</li>
+  </ul>
+
+  <h2 id="stappen">De stappen bij een uitbouw</h2>
+  <ol>
+    <li><strong>Haalbaarheid</strong>: de architect kijkt in het bestemmingsplan (PGOU) hoeveel er op het perceel mag worden gebouwd, en of het huis zelf legaal is.</li>
+    <li><strong>Basisproject en aanvraag</strong>: met een <em>proyecto básico</em> vraagt de architect de vergunning aan bij de gemeente.</li>
+    <li><strong>Beoordeling</strong>: een technicus en een jurist van de gemeente, in kleine gemeenten vaak van de Diputación de Málaga, geven advies. De gemeente beslist binnen drie maanden na een compleet dossier. U betaalt de ICIO en de leges.</li>
+    <li><strong>Uitvoeringsproject</strong>: met alleen de vergunning mag u nog niet bouwen. Eerst gaat het uitvoeringsproject (<em>proyecto de ejecución</em>) met visado naar de gemeente, met de melding dat het werk begint.</li>
+    <li><strong>Bouwen</strong>: begin binnen een jaar en rond af binnen drie jaar, tenzij de vergunning iets anders zegt. Verlengen kan.</li>
+    <li><strong>Oplevering</strong>: de architect en de arquitecto técnico tekenen het opleveringscertificaat (<em>certificado final de obra</em>). Daarmee meldt u de ingebruikname bij de gemeente.</li>
+    <li><strong>Kadaster en notaris</strong>: de nieuwe vierkante meters moeten in het Catastro. Wilt u ze ook in de akte en het eigendomsregister, dan laat u een akte van <em>ampliación de obra nueva</em> maken. De notaris vraagt daarvoor de vergunning, het opleveringscertificaat en het bewijs van ingebruikname. Dat scheelt veel gedoe als u later <a href="/nl/gidsen/huis-verkopen-spanje/">verkoopt</a>.</li>
+  </ol>
+  <p>Bij een melding gaat het sneller: de aannemer of technicus dient de melding in met de stukken, u betaalt de ICIO en u kunt beginnen.</p>
+
+  <h2 id="buitengebied">Fincas en het buitengebied</h2>
+  <p>Veel fincas in de Axarquía staan op <em>suelo rústico</em>. Daar volstaat een melding alleen voor werk dat het huis zuiniger maakt, zoals isolatie of zonnepanelen, zonder extra vierkante meters. Al het andere vraagt een vergunning, en uitbreiden mag vaak helemaal niet.</p>
+  <p>Is een huis of aanbouw ooit zonder vergunning gebouwd, dan kan de gemeente tot zes jaar na de bouw ingrijpen. Daarna kan het huis worden erkend als AFO. Zolang die erkenning er niet is, mag er geen werk aan gebeuren. Daarna mag u het onderhouden en verbouwen, ook aan de constructie, maar niet groter maken. Lees meer in de gids <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren</a>. Gaat u een finca kopen, laat dan vooraf in een <a href="/nl/aankoopkeuring/">aankoopkeuring</a> nagaan of wat er staat klopt met de papieren.</p>
+
+  <h2 id="gemeente">Kosten en regels per gemeente</h2>
+  <p>De regels hierboven gelden in heel Andalusië. De bouwbelasting (ICIO) en de leges verschillen per gemeente: in de Axarquía ligt de ICIO tussen 2% en 4% van de bouwkosten. Per gemeente vindt u het tarief, voorbeeldbedragen en het adres van het gemeentehuis op de pagina Bouwvergunning, bijvoorbeeld voor <a href="/nl/plaatsen/nerja/bouwvergunning/">Nerja</a>, <a href="/nl/plaatsen/competa/bouwvergunning/">Cómpeta</a> of <a href="/nl/plaatsen/velez-malaga/bouwvergunning/">Vélez-Málaga</a>. Alle plaatsen staan in het <a href="/nl/plaatsen/">overzicht</a>. Wat de verbouwing zelf kost, leest u in <a href="/nl/gidsen/kosten-huis-renoveren-spanje/">kosten van renoveren</a>.</p>
+  <p>Wij regelen het hele traject: we kijken of uw plan een melding of vergunning nodig heeft, zorgen voor de architect en de aanvraag, en voeren het werk uit. Zie <a href="/nl/renovatie/">renovatie en verbouwing</a> en <a href="/nl/zwembad/">een zwembad bouwen</a>.</p>
+  <p class="note">Deze gids geeft algemene uitleg op basis van de Andalusische en Spaanse wetgeving zoals die gold op 5 november 2026 (LISTA, LOE, RD 1000/2010, RD 1627/1997, REBT, Ley del Catastro, Ley de Suelo). Het is geen juridisch advies; het oordeel over een concreet plan komt van de architect en de gemeente.</p>
+</Guide>

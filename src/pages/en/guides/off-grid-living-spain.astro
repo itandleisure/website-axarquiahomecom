@@ -1,0 +1,153 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'wat', label: 'Off-grid living in the Axarquía' },
+  { id: 'stroom', label: 'Power: solar panels and home batteries' },
+  { id: 'auto', label: 'Driving and charging an electric car' },
+  { id: 'slim', label: 'Smart energy management' },
+  { id: 'water', label: 'Water: tanks, rainwater and boreholes' },
+  { id: 'afvoer', label: 'Waste water: septic tank or treatment plant' },
+  { id: 'internet', label: 'Internet: Starlink and alternatives' },
+  { id: 'koken', label: 'Cooking, hot water and heating' },
+  { id: 'kosten', label: 'What does it cost altogether?' },
+  { id: 'kopen', label: 'Buying an off-grid finca' },
+];
+
+const faq = [
+  {
+    q: 'Is off-grid living legal in Spain?',
+    a: 'Yes. There is no obligation to be connected to the grid. The house itself must be legal or have AFO status, solar panels and boreholes must be installed and registered according to the rules, and the waste water system must be approved.',
+  },
+  {
+    q: 'Can I connect an off-grid finca to the grid later?',
+    a: 'Sometimes. It depends on the distance to the grid and the legal status of the house. If the nearest line is hundreds of metres away, the network operator can charge tens of thousands of euros. A good solar system is often cheaper.',
+  },
+  {
+    q: 'What happens to the battery when I am away for months?',
+    a: 'A modern lithium battery (LiFePO4) is fine standing idle for months, as long as the panels keep it topped up. Do have someone check that the system works and that the inverter shows no faults. That can be part of key holding.',
+  },
+  {
+    q: 'Does Starlink work in the Axarquía mountains?',
+    a: 'Usually well, as long as the dish has a clear view of the northern sky. Trees or a hillside in that direction can interrupt the signal. Check the spot beforehand with the Starlink app.',
+  },
+];
+---
+<Guide lang="en" slug="off-grid-living-spain" toc={toc} faq={faq} dienst="energie" ctaTitle="Taking a finca off-grid?" ctaText="Tell us where the house is and how you use it. You get a proposal for power, water and waste water, with a price per item.">
+  <h2 id="wat">Off-grid living in the Axarquía</h2>
+  <p>Many of the fincas in the hills around Cómpeta, Canillas, Árchez, Periana and Comares have never been connected to mains electricity or mains water. Owners get their power from the roof, their water from a tank or a well, and their internet from a satellite. With today’s technology that is no longer camping: you can live there comfortably, with air con, a washing machine and fast internet.</p>
+  <p>Off-grid living does need a well-designed system. A battery or water tank that is too small only shows up in a cloudy week in January or at the end of a dry summer. Below you see per item what to look out for and what it costs. All figures are guide prices for 2026, excluding VAT.</p>
+
+  <h2 id="stroom">Power: solar panels and home batteries</h2>
+  <p>The heart of an off-grid house is a solar system with a battery (<em>instalación aislada</em>). During the day the panels charge the battery; in the evening and at night you draw power from it. Because there is no grid to fall back on, you size it more generously than for a connected house:</p>
+  <ul>
+    <li><strong>Panels:</strong> enough for a short winter day. In the Axarquía 1 kWp produces about 3 kWh a day in December, and twice that in July.</li>
+    <li><strong>Battery:</strong> enough for one or two days without sun. For a house lived in all year that is usually 10 to 20 kWh.</li>
+    <li><strong>Inverter:</strong> powerful enough for the largest appliances running at the same time, such as a water pump, a washing machine and an air con unit.</li>
+    <li><strong>Backup:</strong> a small generator for long cloudy spells, or smart planning of heavy appliances on sunny afternoons.</li>
+  </ul>
+  <table class="prices">
+    <thead><tr><th>System</th><th>Suits</th><th>Guide price</th></tr></thead>
+    <tbody>
+      <tr><td>3 kWp, 10 kWh battery</td><td>Holiday home, light use, no air con</td><td>€10,000 – €14,000</td></tr>
+      <tr><td>5 kWp, 15 kWh battery</td><td>Year-round home with one or two air con units</td><td>€14,000 – €20,000</td></tr>
+      <tr><td>8 kWp, 20 – 30 kWh battery</td><td>Large house with a pool pump or heat pump</td><td>€20,000 – €32,000</td></tr>
+      <tr><td>Backup generator</td><td>Long cloudy spells</td><td>€800 – €3,000</td></tr>
+    </tbody>
+  </table>
+  <p>More on prices, batteries and payback in <a href="/en/costs/solar-panels/">the cost of solar panels</a> and <a href="/en/costs/home-battery/">the cost of a home battery</a>.</p>
+
+  <h2 id="auto">Driving and charging an electric car</h2>
+  <p>You can drive electric off-grid too, on your own solar power. A car doing 10,000 km a year uses about 1,500 to 1,800 kWh. That means adding:</p>
+  <ul>
+    <li><strong>2 to 3 kWp of extra panels</strong>, because you produce less in winter and have no grid as a fallback. Allow €2,500 to €4,500.</li>
+    <li><strong>A charger that only charges on surplus</strong>, at 2 to 3.7 kW, so the home battery stays full for the night. A 60 kWh car battery is far bigger than your home battery.</li>
+    <li><strong>An inverter with enough capacity</strong> for the charger, water pump and air con at the same time.</li>
+  </ul>
+  <p>You then mainly charge on sunny afternoons. In long cloudy spells a rapid charger in the village or along the A-7 is a useful backup. More on prices and rules at <a href="/en/costs/ev-charger/">cost of an EV charger</a>.</p>
+
+  <h2 id="slim">Smart energy management</h2>
+  <p>Without a grid it matters that heavy appliances do not all run at once and that the battery never runs flat. With <a href="/en/costs/smart-energy-management/">smart energy management</a>, for example with Home Assistant, the house handles that by itself:</p>
+  <ul>
+    <li>The water pump, water heater, washing machine and charger run when the sun shines and the battery is full enough.</li>
+    <li>You get an alert for a low battery, an empty water tank or an inverter fault.</li>
+    <li>Your phone shows, even from the UK, what the panels produce and how full the battery and water tank are.</li>
+    <li>The generator starts automatically when the battery gets too low after a few grey days.</li>
+  </ul>
+
+  <h2 id="water">Water: tanks, rainwater and boreholes</h2>
+  <p>Without mains water you need one or more of these sources. After the drought of recent years it is wise to be able to rely on two.</p>
+  <ul>
+    <li><strong>Water tank (<em>depósito</em>) filled by tanker.</strong> The simplest solution. A household easily uses 3 to 5 m³ a week, so a 10,000 to 20,000 litre tank is no luxury.</li>
+    <li><strong>Rainwater harvesting.</strong> Many old fincas have a built cistern (<em>aljibe</em>) under the terrace. Repairing and sealing it is often cheaper than a new tank.</li>
+    <li><strong>Borehole (<em>pozo</em>).</strong> Gives the most independence, but needs a permit from the water authority and there is no guarantee you will find water.</li>
+    <li><strong>Irrigation water (<em>agua de riego</em>).</strong> Some plots have a share in an irrigation community. That water is for the garden, not for drinking.</li>
+  </ul>
+  <p>Every source needs a pump with a pressure vessel, and drinking water needs a filter and possibly a UV lamp.</p>
+  <table class="prices">
+    <thead><tr><th>Item</th><th>Guide price</th></tr></thead>
+    <tbody>
+      <tr><td>Plastic water tank 10,000 litres, installed and connected</td><td>€1,500 – €4,000</td></tr>
+      <tr><td>Repair and seal a built cistern (aljibe)</td><td>€2,000 – €8,000</td></tr>
+      <tr><td>Pump with pressure vessel</td><td>€600 – €1,500</td></tr>
+      <tr><td>Filter and UV lamp for drinking water</td><td>€800 – €2,000</td></tr>
+      <tr><td>Borehole with permit, pump and pipework</td><td>€10,000 – €30,000</td></tr>
+      <tr><td>Water by tanker</td><td>€4 – €10 per m³ including delivery</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="afvoer">Waste water: septic tank or treatment plant</h2>
+  <p>Without mains drainage, waste water goes to a septic tank (<em>fosa séptica</em>) or a small treatment plant (<em>depuradora</em>). Old septic tanks are often not watertight and no longer meet the rules. When buying or renovating, this is one of the first things to check.</p>
+  <table class="prices">
+    <thead><tr><th>Item</th><th>Guide price</th></tr></thead>
+    <tbody>
+      <tr><td>New septic tank, installed</td><td>€2,500 – €6,000</td></tr>
+      <tr><td>Compact treatment plant</td><td>€4,000 – €9,000</td></tr>
+      <tr><td>Emptying the septic tank</td><td>€150 – €300 per time</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="internet">Internet: Starlink and alternatives</h2>
+  <p>Fibre rarely reaches a finca. There are three options:</p>
+  <ul>
+    <li><strong>Starlink.</strong> Satellite internet with speeds good enough for working from home and streaming. You buy a dish and pay a monthly subscription; prices and offers change, but expect a few hundred euros for the kit and about €30 – €65 a month. Note: the dish draws 50 to 75 watts continuously, so 1 to 1.5 kWh a day. Include that when sizing the battery.</li>
+    <li><strong>4G or 5G with an outdoor antenna.</strong> Cheaper, and often enough if there is coverage. An antenna on the roof makes a big difference.</li>
+    <li><strong>Wireless radio link.</strong> Local providers in the Axarquía deliver internet from a transmitter on a hill. Ask in the village who covers your valley.</li>
+  </ul>
+  <p>The dish or antenna needs to be mounted firmly and weatherproof on the roof or a mast, with the cable neatly brought inside. We include that when we install the solar panels.</p>
+
+  <h2 id="koken">Cooking, hot water and heating</h2>
+  <ul>
+    <li><strong>Cooking:</strong> on gas bottles (<em>butano</em> or <em>propano</em>), or on induction if the battery is large enough.</li>
+    <li><strong>Hot water:</strong> a solar water heater (<em>termosifón</em>) is the best off-grid choice. It costs €1,500 – €3,500 and uses no electricity.</li>
+    <li><strong>Heating:</strong> a wood or pellet stove, plus the air con as a heat pump during the day while the sun shines. Good windows and insulation make the difference: see <a href="/en/renovation/">renovation</a>.</li>
+  </ul>
+
+  <h2 id="kosten">What does it cost altogether?</h2>
+  <p>A worked example: a 120 m² finca near Cómpeta, lived in all year by two people, turned from an old holiday cottage into a fully equipped off-grid home.</p>
+  <table class="prices">
+    <thead><tr><th>Item</th><th>Guide price</th></tr></thead>
+    <tbody>
+      <tr><td>Solar system 5 kWp with 15 kWh battery</td><td>€14,000 – €20,000</td></tr>
+      <tr><td>15,000 litre water tank, pump, filter and UV</td><td>€3,500 – €7,000</td></tr>
+      <tr><td>New septic tank</td><td>€2,500 – €6,000</td></tr>
+      <tr><td>Solar water heater</td><td>€1,500 – €3,500</td></tr>
+      <tr><td>Starlink, mounted</td><td>€500 – €900</td></tr>
+      <tr><td>Rewiring the house</td><td>€6,000 – €9,000</td></tr>
+      <tr><td><strong>Total</strong></td><td><strong>€28,000 – €46,000</strong></td></tr>
+    </tbody>
+  </table>
+  <p>After that the running costs are low: no electricity bill, just water by tanker, gas, internet and occasional maintenance of the system.</p>
+
+  <h2 id="kopen">Buying an off-grid finca</h2>
+  <p>A finca without connections is often cheaper, but the bill comes later. Before you buy, have these checked:</p>
+  <ul class="checks">
+    <li>How old the solar system and especially the battery are, and whether it is registered</li>
+    <li>Where the water comes from, whether a well has a permit and how much it yields</li>
+    <li>Whether the septic tank is watertight and permitted</li>
+    <li>Whether the access track stays passable in winter, including for a water tanker</li>
+    <li>Whether there is mobile coverage and a clear view north for Starlink</li>
+    <li>Whether the house is legal or has AFO status: see <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation</a></li>
+  </ul>
+  <p>We cover all of these in a <a href="/en/property-survey/">pre-purchase survey</a>. Also read the guide <a href="/en/guides/buying-a-finca-in-spain/">buying a finca in Spain</a>.</p>
+</Guide>
