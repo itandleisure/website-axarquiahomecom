@@ -19,10 +19,12 @@ const { title, description, path, lang = 'nl', alternates = {}, jsonLd = [], noi
 const canonical = new URL(path, site.url).href;
 const allAlternates: Partial<Record<string, string>> = { ...alternatesFor(path), ...alternates, [lang]: path };
 const t = ui[lang];
+const tools = [site.clarityId && 'Microsoft Clarity', site.gaId && 'Google Analytics'].filter(Boolean);
+const toolList = (and: string) => tools.join(` ${and} `);
 const cookieText = {
-  nl: { text: 'Mogen we met Microsoft Clarity bijhouden hoe u deze site gebruikt? Dat plaatst cookies en helpt ons de site te verbeteren.', yes: 'Accepteren', no: 'Weigeren', more: 'Meer in de privacyverklaring', settings: 'Cookie-instellingen' },
-  en: { text: 'May we use Microsoft Clarity to see how you use this site? It places cookies and helps us improve the site.', yes: 'Accept', no: 'Decline', more: 'More in the privacy statement', settings: 'Cookie settings' },
-  de: { text: 'Dürfen wir mit Microsoft Clarity erfassen, wie Sie diese Website nutzen? Dabei werden Cookies gesetzt; es hilft uns, die Website zu verbessern.', yes: 'Akzeptieren', no: 'Ablehnen', more: 'Mehr in der Datenschutzerklärung', settings: 'Cookie-Einstellungen' },
+  nl: { text: `Mogen we met ${toolList('en')} bijhouden hoe u deze site gebruikt? Dat plaatst cookies en helpt ons de site te verbeteren.`, yes: 'Accepteren', no: 'Weigeren', more: 'Meer in de privacyverklaring', settings: 'Cookie-instellingen' },
+  en: { text: `May we use ${toolList('and')} to see how you use this site? It places cookies and helps us improve the site.`, yes: 'Accept', no: 'Decline', more: 'More in the privacy statement', settings: 'Cookie settings' },
+  de: { text: `Dürfen wir mit ${toolList('und')} erfassen, wie Sie diese Website nutzen? Dabei werden Cookies gesetzt; es hilft uns, die Website zu verbessern.`, yes: 'Akzeptieren', no: 'Ablehnen', more: 'Mehr in der Datenschutzerklärung', settings: 'Cookie-Einstellungen' },
 }[lang];
 const nav = navs[lang];
 const others = langs
@@ -78,10 +80,19 @@ const current = Astro.url.pathname;
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={lang === 'nl' ? 'nl_NL' : lang === 'en' ? 'en_GB' : 'de_DE'} />
     {schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
-    {site.clarityId && (
-      <script is:inline define:vars={{ id: site.clarityId }}>
+    {(site.clarityId || site.gaId) && (
+      <script is:inline define:vars={{ id: site.clarityId, ga: site.gaId }}>
         window.axhLoadClarity = function () {
-          if (window.clarity) return;
+          if (ga && !window.gtag) {
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () { window.dataLayer.push(arguments); };
+            window.gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted' });
+            window.gtag('js', new Date());
+            window.gtag('config', ga, { anonymize_ip: true });
+            var g = document.createElement('script'); g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga;
+            document.head.appendChild(g);
+          }
+          if (!id || window.clarity) return;
           (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
             t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
@@ -182,7 +193,7 @@ const current = Astro.url.pathname;
             <li><a href={route(lang, 'about')}>{t.fAboutUs}</a></li>
             <li><a href={route(lang, 'projects')}>{t.fProjects}</a></li>
             <li><a href={route(lang, 'privacy')}>{t.fPrivacy}</a></li>
-            {site.clarityId && <li><button type="button" class="link-btn" data-cookie-open>{cookieText.settings}</button></li>}
+            {(site.clarityId || site.gaId) && <li><button type="button" class="link-btn" data-cookie-open>{cookieText.settings}</button></li>}
           </ul>
         </div>
       </div>
@@ -190,7 +201,7 @@ const current = Astro.url.pathname;
         <p>© {new Date().getFullYear()} {site.brand}. {t.builtBy(isFilled(c.name) ? c.name : t.builtByDefault)}</p>
       </div>
     </footer>
-    {site.clarityId && (
+    {(site.clarityId || site.gaId) && (
       <div class="cookie-bar" role="region" aria-label={cookieText.settings} hidden>
         <div class="wrap cookie-inner">
           <p>{cookieText.text} <a href={route(lang, 'privacy')}>{cookieText.more}</a></p>
@@ -213,9 +224,10 @@ const current = Astro.url.pathname;
             if (v === 'yes') window.axhLoadClarity && window.axhLoadClarity();
             else if (was === 'yes') {
               if (window.clarity) window.clarity('consent', false);
+              if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'denied' });
               document.cookie.split(';').forEach(function (c) {
                 var n = c.split('=')[0].trim();
-                if (/^_cl|^CLID$|^MUID$/.test(n)) document.cookie = n + '=; Max-Age=0; path=/; domain=.' + location.hostname.replace(/^www\./, '');
+                if (/^_cl|^CLID$|^MUID$|^_ga/.test(n)) document.cookie = n + '=; Max-Age=0; path=/; domain=.' + location.hostname.replace(/^www\./, '');
                 document.cookie = n + '=; Max-Age=0; path=/';
               });
               location.reload();

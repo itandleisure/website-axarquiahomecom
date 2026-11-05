@@ -44,6 +44,8 @@ export const site = {
   // Zet in Clarity onder Settings › Setup › Advanced settings Masking op Strict.
   // Leeg laten om Clarity uit te zetten.
   clarityId: 'z8rraji52s',
+  // Google Analytics 4 Measurement ID (G-...). Laadt ook pas na toestemming. Leeg = uit.
+  gaId: '',
 
   villages: [
     'Nerja',
