@@ -1,0 +1,95 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'warum', label: 'Warum Sie es vorher sehen sollten' },
+  { id: 'was', label: 'Was Sie bekommen: Grundriss, 3D und Visualisierung' },
+  { id: 'ki', label: 'Was KI kann und was nicht' },
+  { id: 'nutzen', label: 'Was es Ihnen bringt' },
+  { id: 'ablauf', label: 'So funktioniert es, Schritt für Schritt' },
+  { id: 'vorbereiten', label: 'Was Sie selbst vorbereiten können' },
+];
+
+const faq = [
+  {
+    q: 'Muss ich in Spanien sein, um eine 3D-Planung machen zu lassen?',
+    a: 'Nein. Das Haus wird vor Ort aufgemessen und fotografiert. Besprechungen und Entscheidungen laufen danach per Videoanruf und E-Mail.',
+  },
+  {
+    q: 'Ist eine 3D-Planung dasselbe wie die Pläne für die Baugenehmigung?',
+    a: 'Nein. 3D-Planung und Visualisierungen zeigen, wie das Ergebnis aussieht. Für die Genehmigung braucht es technische Zeichnungen. Der Vorteil der Arbeit mit einem Architekten: Beides beruht auf denselben Maßen und demselben Entwurf.',
+  },
+  {
+    q: 'Kann ich verschiedene Varianten vergleichen?',
+    a: 'Ja, genau dafür ist eine 3D-Planung gut. Sie sehen zum Beispiel zwei Grundrisse oder zwei Farbkonzepte nebeneinander, bevor Sie sich entscheiden. Mit KI lassen sich Varianten der Gestaltung oft schneller erstellen als früher.',
+  },
+  {
+    q: 'Kann ich mich auf eine KI-Visualisierung verlassen?',
+    a: 'Was die Wirkung angeht, ja. Was die Maße angeht, nein. KI kann einen Raum überzeugend darstellen, weiß aber nicht, wo eine tragende Wand oder ein Abfluss liegt. Deshalb prüft und überarbeitet der Architekt die Bilder immer.',
+  },
+  {
+    q: 'Lohnt sich eine 3D-Planung bei einem Haus mit AFO-Status?',
+    a: 'Ja, solange das Haus nicht größer wird. Gerade innerhalb der bestehenden Mauern hilft ein guter Entwurf, den Raum optimal zu nutzen. Mehr dazu im Ratgeber zu AFO und Legalisierung.',
+  },
+];
+
+const anfrage = '/de/anfrage/?dienst=renovatie&onderwerp=' + encodeURIComponent('Ich möchte eine 3D-Planung und Visualisierungen meines Umbaus.');
+---
+<Guide lang="de" slug="3d-planung-umbau" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Möchten Sie das umsetzen lassen?" ctaText="Wir helfen Ihnen, es zu verwirklichen. Unser Architekt erstellt den Entwurf und die Visualisierungen, danach kümmern wir uns um die Ausführung.">
+  <h2 id="warum">Warum Sie es vorher sehen sollten</h2>
+  <p>Wer ein Haus in der Axarquía umbaut, lebt meist noch in Deutschland, Österreich oder der Schweiz. Sie sehen das Haus ein paar Mal im Jahr, besprechen vieles aus der Ferne und müssen Fliesen, Küchen und Grundrisse auswählen, die Sie nur von einem Foto kennen. Ein Grundriss mit Maßen sagt dann wenig. Die meisten Menschen können sich einen Raum erst wirklich vorstellen, wenn sie ihn sehen.</p>
+  <p>Hinzu kommt: Ein altes Dorfhaus oder eine Finca ist selten gerade und rechtwinklig. Wände sind schief, Decken niedrig, und das Licht fällt anders als gedacht. Eine 3D-Planung zeigt, was in Ihrem Haus tatsächlich möglich ist, nicht in einem Standardhaus.</p>
+
+  <h2 id="was">Was Sie bekommen: Grundriss, 3D und Visualisierung</h2>
+  <p>Grob gibt es drei Arten von Bildern. Sie ergänzen einander.</p>
+  <table class="prices">
+    <thead><tr><th>Art</th><th>Was es zeigt</th><th>Wofür es dient</th></tr></thead>
+    <tbody>
+      <tr><td>Grundriss und Schnitt</td><td>Aufteilung, Maße, Wände, Fenster und Türen</td><td>Grundlage für den Entwurf und später für die Genehmigung</td></tr>
+      <tr><td>3D-Modell</td><td>Das Haus von allen Seiten, in das Sie hineinschauen können</td><td>Aufteilung und Proportionen beurteilen</td></tr>
+      <tr><td>Visualisierung</td><td>Ein realistisches Bild mit Materialien, Farben und Licht</td><td>Entscheiden, wie es aussehen und wirken soll</td></tr>
+    </tbody>
+  </table>
+  <p>Eine Visualisierung (oft auch <em>Rendering</em> genannt) wirkt wie ein Foto des fertigen Ergebnisses: die neue Küche mit Meerblick, die Dachterrasse mit Pergola, das Bad mit der Fliese, die Sie im Kopf haben. So sagen Sie leicht „ja, genau so“ oder „nein, lieber heller“.</p>
+
+  <h2 id="ki">Was KI kann und was nicht</h2>
+  <p>Künstliche Intelligenz hat das Erstellen von Visualisierungen deutlich beschleunigt. Aus einem Foto des heutigen Raums kann KI schnell zeigen, wie er mit anderen Böden, Wänden oder Möbeln aussähe. Das ist in der ersten Phase praktisch, wenn Sie noch nach einem Stil suchen.</p>
+  <p>KI hat aber auch klare Grenzen:</p>
+  <ul>
+    <li>Ein KI-Bild ist nicht maßstabsgetreu. Es kann ein Fenster verschieben oder einen Raum größer wirken lassen, als er ist.</li>
+    <li>KI weiß nicht, wo tragende Wände, Leitungen und Abflüsse liegen, und auch nicht, was die Gemeinde erlaubt.</li>
+    <li>Ein KI-Bild ist kein Bauplan. Handwerker können danach nicht bauen, und die Gemeinde akzeptiert es nicht.</li>
+  </ul>
+  <p>Am besten funktioniert es deshalb, wenn ein Architekt KI als Werkzeug einsetzt und die Bilder anhand der echten Maße Ihres Hauses prüft und ausarbeitet. So verbinden Sie die Geschwindigkeit der KI mit der Zuverlässigkeit eines Fachmanns.</p>
+
+  <h2 id="nutzen">Was es Ihnen bringt</h2>
+  <ul>
+    <li><strong>Entscheidungen im Voraus.</strong> Sie entscheiden über Aufteilung, Materialien und Farben, bevor der Bau beginnt, und nicht mittendrin unter Zeitdruck.</li>
+    <li><strong>Weniger Mehrarbeit und Überraschungen.</strong> Viele Nachträge entstehen, weil das Ergebnis anders ausfällt, als sich jemand vorgestellt hat. Ein klares Bild vorab vermeidet viele dieser Änderungen.</li>
+    <li><strong>Alle wissen, was gemeint ist.</strong> Ein Bild sagt mehr als eine Beschreibung, auch für die spanischen Handwerker. Sprachunterschiede spielen weniger eine Rolle.</li>
+    <li><strong>Eine bessere Grundlage für die Genehmigung.</strong> Entwurf und technische Zeichnungen passen zusammen. So ist sofort klar, was genehmigt werden muss und was nicht, zum Beispiel bei einem Haus mit <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO-Status</a>.</li>
+    <li><strong>Ruhe beim Umbau aus der Ferne.</strong> Sie wissen, was gebaut wird, auch wenn Sie nicht vor Ort sind.</li>
+    <li><strong>Hilfe beim Verkauf.</strong> Sie möchten verkaufen? Visualisierungen zeigen Käufern, was aus dem Haus werden kann. Siehe auch <a href="/de/ratgeber/haus-verkaufen-spanien/renovieren-vor-dem-verkauf/">Renovieren vor dem Verkauf</a>.</li>
+  </ul>
+
+  <h2 id="ablauf">So funktioniert es, Schritt für Schritt</h2>
+  <ol>
+    <li><strong>Ihre Wünsche.</strong> Sie erzählen, was Sie möchten: welche Räume, welche Atmosphäre, was besser werden soll. Fotos und Beispiele helfen.</li>
+    <li><strong>Aufmaß vor Ort.</strong> Das Haus wird aufgemessen und fotografiert, damit der Entwurf auf der tatsächlichen Situation beruht.</li>
+    <li><strong>Erste Skizze und Varianten.</strong> Sie erhalten einen ersten Grundriss, oft mit einigen Varianten zum Vergleichen.</li>
+    <li><strong>3D-Modell und Visualisierungen.</strong> Die gewählte Richtung wird in 3D ausgearbeitet, mit Bildern der wichtigsten Räume.</li>
+    <li><strong>Anpassen.</strong> Sie sagen, was anders werden soll, bis das Bild zu Ihrer Vorstellung passt.</li>
+    <li><strong>Technische Ausarbeitung und Ausführung.</strong> Der endgültige Entwurf wird Grundlage für die Genehmigung und den Umbau selbst.</li>
+  </ol>
+  <p>Wie umfangreich der Entwurf wird, hängt von Ihrem Projekt ab. Für ein neues Bad reicht oft eine gute Visualisierung; bei einer kompletten <a href="/de/renovierung/">Renovierung</a> einer Finca lohnt sich ein vollständiges 3D-Modell.</p>
+
+  <h2 id="vorbereiten">Was Sie selbst vorbereiten können</h2>
+  <ul>
+    <li>Fotos von jedem Raum, auch von Decken, Böden und dem Blick aus den Fenstern.</li>
+    <li>Grundrisse oder Zeichnungen, die Sie beim Kauf bekommen haben, falls vorhanden.</li>
+    <li>Beispiele, die Ihnen gefallen: Bilder aus Zeitschriften, aus dem Internet oder von Häusern, die Sie gesehen haben.</li>
+    <li>Eine kurze Liste: was unbedingt sein muss, was sein darf und was Sie lieber nicht möchten.</li>
+    <li>Wie Sie das Haus nutzen werden: selbst wohnen, überwintern, vermieten oder verkaufen.</li>
+  </ul>
+  <p><strong>Möchten Sie Ihren Umbau vorher in 3D sehen?</strong> Wir helfen Ihnen, es zu verwirklichen, vom ersten Entwurf bis zur letzten Fliese. <a href={anfrage}>Erzählen Sie uns von Ihrem Vorhaben</a>.</p>
+</Guide>
