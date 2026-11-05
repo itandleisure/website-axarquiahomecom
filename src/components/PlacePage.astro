@@ -12,6 +12,7 @@ import { services, path as route, type Lang } from '../i18n';
 import { site } from '../data/site';
 import { guidesBy, guideHref } from '../data/guides';
 import { placeTabs } from '../data/place-tabs';
+import { fiestaHref, fiestaSlugFor } from '../data/fiestas';
 
 interface Props { lang: Lang; place: Place; page: PlacePage; }
 const { lang, place, page } = Astro.props;
@@ -60,6 +61,8 @@ const request = route(lang, 'request');
 
 // Tabs, inclusief Bouwvergunning en Praktisch (bij een kern die van de gemeente)
 const tabs = placeTabs(lang, place);
+const fiestaSlug = fiestaSlugFor(place.slug, place.municipality);
+const fiestaLabel = { nl: 'Feesten', en: 'Fiestas', de: 'Feste', sv: 'Fester' }[lang];
 const self = placeHref(lang, place, page);
 const sub = page === 'see' ? c.see! : page === 'living' ? c.living! : null;
 const title = sub ? sub.title : c.title;
@@ -124,6 +127,7 @@ const placeLd = {
           <>
             <h2>{T.fiestas}</h2>
             <ul>{c.see.fiestas.map((f) => <li><strong>{f.name}</strong> ({f.when}): <span set:html={f.text} /></li>)}</ul>
+            {fiestaSlug && <p><a class="more" href={fiestaHref(lang, fiestaSlug)}>{fiestaLabel}: {placeBySlug(fiestaSlug)!.name} →</a></p>}
           </>
         )}
       </div>
