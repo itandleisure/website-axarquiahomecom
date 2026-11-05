@@ -1,0 +1,199 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Kurze Antwort' },
+  { id: 'welches-haus', label: 'Welche Häuser sich eignen' },
+  { id: 'kauf', label: 'Kauf: Kosten und Prüfungen' },
+  { id: 'sanierung', label: 'Genehmigung und Sanierung' },
+  { id: 'finanzierung', label: 'Finanzierung und laufende Kosten' },
+  { id: 'verkauf', label: 'Verkaufskosten' },
+  { id: 'steuer', label: 'Steuer auf den Gewinn' },
+  { id: 'beispiel', label: 'Rechenbeispiel' },
+  { id: 'dauer', label: 'Zeitplan' },
+  { id: 'risiken', label: 'Die größten Risiken' },
+  { id: 'checkliste', label: 'Checkliste' },
+];
+
+const faq = [
+  {
+    q: 'Lohnt sich das Flippen von Häusern in der Axarquía?',
+    a: 'Es kann sich lohnen, aber die Marge ist kleiner, als viele denken. Kaufnebenkosten (etwa 10 %), Verkaufskosten (etwa 6 bis 7 % inklusive Mehrwertsteuer auf die Maklerprovision) und die Steuer auf den Gewinn nehmen zusammen schnell 15 bis 20 % des Verkaufspreises ein. Der Gewinn entsteht vor allem beim Einkauf: ein Haus deutlich unter Marktwert, mit einer Sanierung, die vorab sauber kalkuliert ist.',
+  },
+  {
+    q: 'Wie viel Steuer zahle ich auf den Gewinn?',
+    a: 'Wohnen Sie nicht in Spanien, zahlen Sie dort 19 % auf den Veräußerungsgewinn. Als spanischer Steuerresident fällt der Gewinn in die Sparbemessungsgrundlage der IRPF (19 bis 30 %). Über eine spanische Gesellschaft gilt die Körperschaftsteuer. Als Verkäufer zahlen Sie außerdem die kommunale Plusvalía. Auch in Deutschland kann der Gewinn steuerlich eine Rolle spielen. Lassen Sie das vorab von einem Steuerberater prüfen.',
+  },
+  {
+    q: 'Was ist der Einbehalt von 3 % beim Verkauf?',
+    a: 'Verkaufen Sie als Nichtresident, behält der Käufer 3 % des Kaufpreises ein und führt sie an das spanische Finanzamt ab, als Vorauszahlung auf Ihre Steuer. Ist Ihre Steuer niedriger, fordern Sie die Differenz per Steuererklärung (modelo 210) zurück. Das dauert oft Monate, planen Sie das in Ihrer Liquidität ein.',
+  },
+  {
+    q: 'Gibt es einen niedrigeren Grunderwerbsteuersatz für Flipper?',
+    a: 'In Andalusien gilt für professionelle Immobilienunternehmen, die die Wohnung als Umlaufvermögen buchen und innerhalb von fünf Jahren weiterverkaufen, ein Satz von 2 % statt 7 %. Sie müssen beim Kauf bereits als Immobilienunternehmen gemeldet sein (IAE) und das beim Notar nachweisen. Privatkäufer zahlen die üblichen 7 %.',
+  },
+  {
+    q: 'Kann ich ein Haus mit AFO-Status flippen?',
+    a: 'Das ist schwierig. Ein AFO-Haus dürfen Sie instand halten und modernisieren, aber nicht vergrößern. Viele Käufer bekommen dafür schwerer eine Hypothek, und der Verkaufspreis liegt oft niedriger. Rechnen Sie also nicht damit, den Wert mit einem zusätzlichen Schlafzimmer oder Pool zu steigern.',
+  },
+  {
+    q: 'Zahle ich keine Steuer, wenn ich innerhalb von zwei Jahren ein neues Haus kaufe?',
+    a: 'Nur wenn das verkaufte Haus Ihr Hauptwohnsitz war und Sie in einen neuen Hauptwohnsitz reinvestieren. Als spanischer Steuerresident müssen Sie dort grundsätzlich drei Jahre gewohnt haben. Als Nichtresident in der EU oder im EWR muss es vor dem Wegzug Ihr Hauptwohnsitz in Spanien gewesen sein. Ein als Ferienhaus oder Kapitalanlage gekauftes und wieder verkauftes Haus fällt nicht darunter. Lassen Sie das von Ihrem Gestor oder Steuerberater für Ihre Situation berechnen.',
+  },
+];
+---
+<Guide lang="de" slug="immobilien-flippen-spanien" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Ein Haus zum Herrichten im Blick?" ctaText="Lassen Sie es vor dem Angebot begutachten. Sie erhalten eine Liste der Mängel mit einer Preisschätzung für die Sanierung und wissen, ob die Rechnung aufgeht.">
+  <h2 id="kurz">Kurze Antwort</h2>
+  <p>Ein Haus kaufen, sanieren und mit Gewinn verkaufen funktioniert in der Axarquía, aber nur, wenn drei Dinge stimmen: Sie kaufen deutlich unter Marktwert, die Papiere des Hauses sind in Ordnung, und die Sanierung ist vor dem Kauf kalkuliert. Zwischen Kauf und Verkauf verschwinden schnell 15 bis 20 % des Verkaufspreises in Steuern, Notar, Makler und Gewinnsteuer. Eine Sanierung, die 20 % teurer wird, oder ein Verkauf, der ein halbes Jahr länger dauert, frisst den Rest der Marge.</p>
+  <p>Dieser Ratgeber zeigt alles, woran Sie denken müssen. Für die Details der einzelnen Schritte verweisen wir auf unsere anderen Ratgeber.</p>
+
+  <h2 id="welches-haus">Welche Häuser sich eignen</h2>
+  <ul>
+    <li><strong>Dorfhäuser</strong> in beliebten weißen Dörfern (Nerja, Frigiliana, Cómpeta, Torrox) und in Vélez-Málaga: oft veraltet, mit Dachterrasse und Charakter. Käufer suchen sie, aber achten Sie auf Feuchtigkeit, alte Balken und schlechte Zufahrt für Baumaterial.</li>
+    <li><strong>Wohnungen</strong> an der Küste (Torre del Mar, Caleta de Vélez, Rincón de la Victoria, Torrox Costa): einfacher zu sanieren, viele Käufer, schneller verkauft. Die Marge pro Objekt ist meist kleiner. Arbeiten an Fassade, Dach oder Leitungen des Gebäudes hängen von der Eigentümergemeinschaft ab.</li>
+    <li><strong>Fincas auf dem Land</strong>: das größte Potenzial, aber auch das größte Risiko. Viele Fincas haben Anbauten ohne Genehmigung oder einen <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO-Status</a>, einen eigenen Brunnen oder eine Klärgrube und eine schwierige Zufahrt. Der Käufermarkt ist kleiner, der Verkauf dauert länger.</li>
+  </ul>
+  <p>Schwanken Sie zwischen diesen Typen, lesen Sie <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/">Finca, Wohnung oder Dorfhaus</a>. Achten Sie beim Einkauf auf tatsächliche Verkaufspreise in derselben Straße oder Urbanisation, nicht auf Angebotspreise.</p>
+
+  <h2 id="kauf">Kauf: Kosten und Prüfungen</h2>
+  <p>Beim Kauf einer Bestandsimmobilie zahlen Sie in Andalusien 7 % Grunderwerbsteuer (ITP), dazu Notar, Grundbuch, Anwalt und Gestoría. Rechnen Sie insgesamt mit 9 bis 11 % zusätzlich zum Kaufpreis. Die vollständige Aufstellung steht in unserem Ratgeber zu den <a href="/de/ratgeber/kaufnebenkosten-spanien/">Kaufnebenkosten in Spanien</a>.</p>
+  <p>Arbeiten Sie als professionelles Immobilienunternehmen, kann der andalusische Satz von 2 % gelten. Die Bedingungen: Sie sind beim Kauf in einer Immobilienrubrik der IAE gemeldet, buchen die Wohnung als Umlaufvermögen und verkaufen innerhalb von fünf Jahren per notarieller Urkunde. Können Sie das beim Notar nicht nachweisen, zahlen Sie 7 %. Lassen Sie das vorab von einem Steuerberater prüfen.</p>
+  <h3>Was Sie vor der Unterschrift prüfen</h3>
+  <ul>
+    <li><strong>Legalität</strong>: Stimmt das Gebaute mit Kataster (catastro) und Grundbuch (nota simple) überein? Gibt es Genehmigungen für Anbauten oder eine AFO-Bescheinigung der Gemeinde? Der nächste Käufer und seine Bank stellen dieselben Fragen.</li>
+    <li><strong>Baurecht</strong>: Dürfen Sie erweitern, einen Pool bauen oder den Grundriss ändern? Wenn nicht, muss der Gewinn aus der Modernisierung kommen.</li>
+    <li><strong>Bauzustand</strong>: Dach, Feuchtigkeit, Risse, Elektrik, Leitungen, Abwasser oder Klärgrube. Hier liegen die großen Überraschungen. Ein <a href="/de/immobiliengutachten/">Immobiliengutachten</a> liefert pro Mangel eine Preisschätzung, die Sie auch in der Verhandlung nutzen.</li>
+    <li><strong>Schulden und Lasten</strong>: offene IBI, Beiträge zur Eigentümergemeinschaft, Hypotheken oder Pfändungen. Ihr Anwalt prüft das.</li>
+    <li><strong>Rücktrittsklauseln</strong>: Halten Sie im Vorvertrag (arras) fest, dass Sie zurücktreten können, wenn das Gutachten oder die rechtliche Prüfung negativ ausfällt.</li>
+  </ul>
+
+  <h2 id="sanierung">Genehmigung und Sanierung</h2>
+  <p>Seit dem andalusischen Gesetz LISTA (Ley 7/2021) genügt für viele Arbeiten innerhalb einer bestehenden Wohnung eine vorherige Anzeige bei der Gemeinde (<em>declaración responsable</em>), etwa für eine neue Küche oder ein neues Bad, Fliesen und neue Installationen. Arbeiten an Tragwerk oder Fassade oder ein Anbau brauchen eine Baugenehmigung (<em>licencia de obra</em>) mit einem Architektenprojekt. Das kostet mehr Zeit und Geld. Die Regeln je Gemeinde finden Sie auf der Seite Baugenehmigung, zum Beispiel für <a href="/de/orte/velez-malaga/baugenehmigung/">Vélez-Málaga</a> und <a href="/de/orte/nerja/baugenehmigung/">Nerja</a>.</p>
+  <p>Was zur Rechnung des Bauunternehmens hinzukommt:</p>
+  <ul>
+    <li><strong>Kommunale Bausteuer (ICIO) und Gebühren</strong>: meist einige Prozent der Baukosten.</li>
+    <li><strong>Architekt oder Aparejador</strong>: bei genehmigungspflichtigen Arbeiten, oft auch für die Abnahme sinnvoll.</li>
+    <li><strong>Mehrwertsteuer auf die Sanierung</strong>: Als Privatperson zahlen Sie für die Renovierung einer Wohnung unter Bedingungen 10 % IVA. Über eine Gesellschaft sind es meist 21 %. Da der Verkauf einer Bestandswohnung umsatzsteuerfrei ist, können Sie diese IVA auch nicht zurückfordern.</li>
+    <li><strong>Energieausweis</strong>: Pflicht, sobald Sie das Haus zum Verkauf anbieten.</li>
+    <li><strong>Unvorhergesehenes</strong>: Planen Sie mindestens 10 bis 15 % Puffer ein, bei älteren Dorfhäusern und Fincas eher mehr.</li>
+  </ul>
+  <p>Realistische Beträge je Posten finden Sie unter <a href="/de/ratgeber/renovierungskosten-spanien/">Renovierungskosten in Spanien</a>. Mit dem <a href="/de/kosten/rechner/">Kostenrechner</a> erstellen Sie in wenigen Minuten ein erstes Budget.</p>
+  <p>Investieren Sie beim Flippen in das, was Käufer sehen und bezahlen: eine helle, frische Küche und ein Bad, eine gute Klimaanlage, einen gepflegten Außenbereich, trockene Wände und ein dichtes Dach. Teuren Luxus, den Sie nicht zurückverdienen, lassen Sie weg.</p>
+
+  <h2 id="finanzierung">Finanzierung und laufende Kosten</h2>
+  <p>Spanische Banken finanzieren Nichtresidenten meist 60 bis 70 % des Schätzwerts, die Sanierung nur selten. Ein Flip läuft also größtenteils über Eigenkapital. Mit einer Hypothek kommen Gutachten- und Bankkosten hinzu, manchmal auch eine Vorfälligkeitsgebühr. Lassen Sie das im Angebot festhalten.</p>
+  <p>Solange Ihnen das Haus gehört, zahlen Sie laufende Kosten: IBI, Müllgebühr, Versicherung, Wasser und Strom, gegebenenfalls die Eigentümergemeinschaft und als Nichtresident die jährliche Steuer auf die Immobilie (IRNR). Ein leeres Haus braucht Aufsicht; siehe <a href="/de/hausbetreuung/">Hausbetreuung</a>.</p>
+
+  <h2 id="verkauf">Verkaufskosten</h2>
+  <table class="prices">
+    <thead><tr><th>Posten</th><th>Richtwert</th></tr></thead>
+    <tbody>
+      <tr><td>Makler</td><td>3 – 6 % + 21 % IVA</td></tr>
+      <tr><td>Plusvalía municipal (Gemeinde)</td><td>einige hundert bis einige tausend Euro</td></tr>
+      <tr><td>Energieausweis</td><td>100 – 300 €</td></tr>
+      <tr><td>Ablösung der Hypothek und Löschung im Grundbuch</td><td>einige hundert Euro</td></tr>
+      <tr><td>Anwalt oder Gestoría beim Verkauf</td><td>500 – 1.500 €</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Richtwerte auf Basis üblicher Tarife in der Provinz Málaga, November 2026.</p>
+  <p>Die <strong>Plusvalía municipal</strong> ist eine kommunale Steuer auf den Wertzuwachs des Bodens, die der Verkäufer zahlt. Seit Ende 2021 wird auch ein Verkauf innerhalb eines Jahres besteuert. Sie wählen zwischen einer Berechnung auf Basis des Katasterwerts und einer auf Basis des tatsächlichen Gewinns; die niedrigere zählt. Verkaufen Sie mit Verlust, zahlen Sie nichts, sofern Sie das mit den Urkunden belegen.</p>
+  <p>Wie Sie das Haus verkaufsfertig machen, welche Unterlagen Käufer erwarten und wie der Verkauf aus der Ferne gelingt, lesen Sie unter <a href="/de/ratgeber/haus-verkaufen-spanien/">Haus verkaufen in Spanien</a>.</p>
+
+  <h2 id="steuer">Steuer auf den Gewinn</h2>
+  <p>Der Gewinn ist der Verkaufspreis abzüglich Verkaufskosten, Kaufpreis, Kaufnebenkosten und Sanierungskosten (mit Rechnungen). Laufende Kosten wie IBI und Versicherung zählen für Privatverkäufer meist nicht. Wie viel Steuer Sie zahlen, hängt davon ab, wie Sie flippen:</p>
+  <table class="prices">
+    <thead><tr><th>Situation</th><th>Steuer in Spanien</th></tr></thead>
+    <tbody>
+      <tr><td>Privatperson, Nichtresident</td><td>19 % auf den Gewinn (IRNR)</td></tr>
+      <tr><td>Privatperson, spanischer Steuerresident</td><td>19 – 30 % in der Sparbemessungsgrundlage der IRPF</td></tr>
+      <tr><td>Spanische Gesellschaft (S.L.)</td><td>Körperschaftsteuer, allgemein 25 %</td></tr>
+    </tbody>
+  </table>
+  <p>Zwei Punkte, auf die Sie achten sollten. Erstens der <strong>Einbehalt von 3 %</strong>: Verkaufen Sie als Nichtresident, behält der Käufer 3 % des Kaufpreises als Vorauszahlung auf Ihre Steuer ein. Zu viel Gezahltes holen Sie per Steuererklärung (modelo 210) zurück, das dauert aber oft Monate. Zweitens: Kaufen und verkaufen Sie regelmäßig, kann das Finanzamt das als gewerbliche Tätigkeit statt als Veräußerungsgewinn einstufen, mit höheren Sätzen. Auch in Deutschland kann der Gewinn relevant sein, etwa im Hinblick auf die zehnjährige Spekulationsfrist oder den gewerblichen Grundstückshandel. Lassen Sie das vorab prüfen.</p>
+  <h3 id="belege">Bewahren Sie alle Belege und Rechnungen auf</h3>
+  <p>Was Sie nachweislich in das Haus gesteckt haben, senkt den steuerpflichtigen Gewinn. Dazu gehören die Kaufnebenkosten und Verbesserungen am Haus: eine neue Küche oder ein neues Bad, ein neues Dach, Dämmung, Klimaanlage, ein Pool sowie der Architekt und die Gebühren dafür. Normale Instandhaltung und Reparaturen zählen meist nicht.</p>
+  <ul>
+    <li>Verlangen Sie immer eine richtige Rechnung (<em>factura</em>) auf den Namen des Eigentümers, mit der NIF des Unternehmens und gesondert ausgewiesener IVA. Einen Kassenbon oder einen Zettel ohne Angaben erkennt das Finanzamt oft nicht an.</li>
+    <li>Zahlen Sie per Überweisung, nicht bar. Barzahlungen an Unternehmen sind in Spanien auf 1.000 € begrenzt, und der Kontoauszug ist Ihr Nachweis.</li>
+    <li>Bewahren Sie alles gesammelt auf, auch digital, bis lange nach dem Verkauf. Das Finanzamt kann bis zu vier Jahre nach der Erklärung nachfragen.</li>
+    <li>Heben Sie auch die Belege Ihres nächsten Hauses auf. Verkaufen Sie es später, brauchen Sie sie wieder.</li>
+  </ul>
+
+  <h3 id="reinvestition">Steuerbefreiung bei Reinvestition in einen neuen Hauptwohnsitz</h3>
+  <p>Spanien stellt den Gewinn aus dem Verkauf Ihres <strong>Hauptwohnsitzes</strong> (<em>vivienda habitual</em>) steuerfrei, wenn Sie den Erlös innerhalb von zwei Jahren (vor oder nach dem Verkauf) in einen neuen Hauptwohnsitz investieren. Reinvestieren Sie nur einen Teil, gilt die Befreiung anteilig.</p>
+  <ul>
+    <li><strong>Spanischer Steuerresident</strong>: Die Regel gilt in der IRPF. Als Hauptwohnsitz zählt grundsätzlich ein Haus, in dem Sie mindestens drei Jahre ununterbrochen gewohnt haben.</li>
+    <li><strong>Nichtresident</strong>: Wohnen Sie in einem anderen EU- oder EWR-Land, kann die Befreiung ebenfalls gelten, aber nur, wenn das verkaufte Haus vor Ihrem Wegzug Ihr Hauptwohnsitz in Spanien war und Sie in einen neuen Hauptwohnsitz reinvestieren. Ein Ferienhaus oder ein aus Deutschland als Kapitalanlage gekauftes Haus fällt nicht darunter. Der Käufer behält trotzdem 3 % ein; die Befreiung beantragen Sie in der Erklärung (modelo 210) oder nachträglich als Erstattung.</li>
+  </ul>
+  <p>Für einen Flip heißt das: Ein Haus, das Sie kaufen, sanieren und nach ein bis zwei Jahren wieder verkaufen, ist kein Hauptwohnsitz, und die Befreiung gilt nicht. Nur wenn Sie dort wirklich wohnen und gemeldet sind und die Fristen einhalten, kann sie greifen. Ob sie für Sie gilt, hängt stark von den Details ab. Bitten Sie Ihren Gestor oder Steuerberater vor dem Verkauf um eine Berechnung.</p>
+  <h3 id="zweitwohnsitz">Ihr Hauptwohnsitz liegt in Deutschland</h3>
+  <p>Das ist die Lage der meisten Käufer: Sie wohnen in Deutschland, Österreich oder der Schweiz und kaufen in Spanien ein Zweithaus, um es zu sanieren und zu verkaufen oder selbst zu nutzen. Steuerlich heißt das:</p>
+  <ul>
+    <li><strong>Das spanische Haus ist kein Hauptwohnsitz.</strong> Die Zweijahresregel gilt also nicht. Auf den Gewinn beim Verkauf zahlen Sie in Spanien 19 %, auch wenn Sie danach ein anderes Haus kaufen.</li>
+    <li><strong>Ihre Belege zählen voll.</strong> Der Gewinn ist der Verkaufspreis abzüglich Verkaufskosten, Kaufpreis, Kaufnebenkosten und Verbesserungen am Haus. Jede Rechnung für eine neue Küche, ein Bad, ein Dach oder einen Pool senkt den Gewinn, auf den Sie 19 % zahlen. Ohne Belege zahlen Sie Steuer auf Geld, das Sie selbst in das Haus gesteckt haben.</li>
+    <li><strong>Belege gehen nicht auf das nächste Haus über.</strong> Sie gehören zu dem Haus, an dem gearbeitet wurde. Kaufen Sie danach ein neues Haus, beginnen Sie dort mit neuen Belegen.</li>
+    <li><strong>Auch ohne Verkauf zahlen Sie in Spanien Steuer.</strong> Für ein nicht vermietetes Zweithaus zahlen Sie jährlich Steuer auf ein fiktives Einkommen (IRNR), zusätzlich zur IBI.</li>
+    <li><strong>In Deutschland</strong> regelt das Doppelbesteuerungsabkommen, dass Spanien den Gewinn aus dem Haus besteuert. Ob und wie Deutschland ihn noch berücksichtigt, etwa bei einem Verkauf innerhalb von zehn Jahren oder bei mehreren Flips, klären Sie mit einem Steuerberater. Ihr deutsches Eigenheim bleibt davon unberührt.</li>
+    <li><strong>Ziehen Sie später nach Spanien</strong>, melden sich an und wohnen mindestens drei Jahre im Haus, kann es doch Ihr Hauptwohnsitz werden. Ab dann kann die Zweijahresregel gelten.</li>
+  </ul>
+  <p>Kurz: Mit Ihrem Hauptwohnsitz in Deutschland hilft Ihnen die Zweijahresregel nicht, Ihre Belege dafür umso mehr. Lassen Sie Ihren Gestor oder Steuerberater rechnen, auch für die Folgen in Deutschland.</p>
+
+  <h2 id="beispiel">Rechenbeispiel: Dorfhaus für 180.000 €</h2>
+  <p>Ein veraltetes Dorfhaus, gekauft von einer Privatperson, die nicht in Spanien wohnt, saniert und nach etwa einem Jahr verkauft. Alle Beträge sind Richtwerte.</p>
+  <table class="prices">
+    <tbody>
+      <tr><td>Kaufpreis</td><td>180.000 €</td></tr>
+      <tr><td>Kaufnebenkosten (ITP 7 %, Notar, Grundbuch, Anwalt, Gestoría)</td><td>16.900 €</td></tr>
+      <tr><td>Sanierung inkl. 10 % IVA</td><td>60.000 €</td></tr>
+      <tr><td>Architekt, ICIO und Gebühren</td><td>6.000 €</td></tr>
+      <tr><td>Unvorhergesehenes (10 %)</td><td>6.000 €</td></tr>
+      <tr><td>Laufende Kosten während des Projekts</td><td>2.500 €</td></tr>
+      <tr><td><strong>Gesamtinvestition</strong></td><td><strong>271.400 €</strong></td></tr>
+      <tr><td>Verkaufspreis</td><td>320.000 €</td></tr>
+      <tr><td>Verkaufskosten (Makler 5 % + IVA, Plusvalía, Energieausweis)</td><td>− 20.500 €</td></tr>
+      <tr><td><strong>Erlös nach Verkaufskosten</strong></td><td><strong>299.500 €</strong></td></tr>
+      <tr><td>Gewinn vor Steuern</td><td>28.100 €</td></tr>
+      <tr><td>Steuer 19 % (auf 30.600 €, laufende Kosten nicht abziehbar)</td><td>− 5.800 €</td></tr>
+      <tr><td><strong>Nettogewinn</strong></td><td><strong>22.300 € (etwa 8 %)</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Was das zeigt: Bei einer Investition von über 270.000 € bleiben nach einem Jahr Arbeit etwa 22.000 € übrig. Verkaufen Sie 5 % günstiger (304.000 €), halbiert sich der Gewinn ungefähr. Wird die Sanierung 20 % teurer, bleibt noch weniger. Außerdem behält der Käufer 9.600 € (3 %) ein, die Sie teilweise erst Monate später zurückbekommen.</p>
+
+  <h2 id="dauer">Zeitplan</h2>
+  <table class="prices">
+    <thead><tr><th>Phase</th><th>Richtwert</th></tr></thead>
+    <tbody>
+      <tr><td>Suche, Gutachten und Kauf</td><td>1 – 3 Monate</td></tr>
+      <tr><td>Planung, Angebote und Anzeige oder Genehmigung</td><td>1 – 4 Monate</td></tr>
+      <tr><td>Sanierung</td><td>3 – 6 Monate</td></tr>
+      <tr><td>Verkauf bis zum Notartermin</td><td>3 – 9 Monate</td></tr>
+      <tr><td><strong>Gesamt</strong></td><td><strong>etwa 9 – 18 Monate</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Frühjahr und Herbst sind die stärksten Verkaufszeiten, wenn ausländische Käufer zu Besichtigungen kommen. Planen Sie die Fertigstellung möglichst davor. Im Sommer ruhen Bauarbeiten in vielen Dörfern teilweise.</p>
+
+  <h2 id="risiken">Die größten Risiken</h2>
+  <ul>
+    <li><strong>Papiere nicht in Ordnung</strong>: Ein Anbau ohne Genehmigung macht das Haus für den nächsten Käufer schwerer verkäuflich und finanzierbar.</li>
+    <li><strong>Versteckte Mängel</strong>: Feuchtigkeit, Holzwurm und Termiten in alten Balken, ein undichtes Dach, Elektrik ohne Erdung.</li>
+    <li><strong>Verzögerungen</strong>: Warten auf Genehmigung oder Handwerker heißt länger laufende Kosten und später Geld zurück.</li>
+    <li><strong>Der Markt</strong>: Preise können während des Projekts fallen, und manche Lagen (abgelegene Fincas) verkaufen sich langsam.</li>
+    <li><strong>Wasser</strong>: Nach der Dürre von 2022 bis 2024 achten Käufer stärker auf die Wasserversorgung, vor allem bei Fincas mit eigenem Brunnen oder ohne Anschluss.</li>
+    <li><strong>Leerstand</strong>: Ein leeres Haus zieht Einbrecher und Hausbesetzer an. Sorgen Sie für Aufsicht und gute Schlösser.</li>
+    <li><strong>Haftung nach dem Verkauf</strong>: Als Verkäufer haften Sie für versteckte Mängel. Gute, dokumentierte Arbeit mit Rechnungen schützt Sie.</li>
+  </ul>
+
+  <h2 id="checkliste">Checkliste</h2>
+  <ol>
+    <li>Bestimmen Sie den erwarteten Verkaufspreis anhand tatsächlicher Verkäufe, nicht Angebotspreise.</li>
+    <li>Rechnen Sie rückwärts: Verkaufspreis minus Verkaufskosten, Steuer, Sanierung, Puffer und Wunschgewinn ergibt Ihr Höchstgebot.</li>
+    <li>Lassen Sie das Haus vor der Unterschrift begutachten und die Sanierung kalkulieren.</li>
+    <li>Lassen Sie einen unabhängigen Anwalt Legalität, Schulden und Lasten prüfen.</li>
+    <li>Entscheiden Sie vorab mit einem Steuerberater: Privatperson oder Gesellschaft, und was das in Spanien und Deutschland bedeutet.</li>
+    <li>Kümmern Sie sich um Anzeige oder Genehmigung, bevor die Arbeiten beginnen.</li>
+    <li>Bewahren Sie alle Rechnungen und Kontoauszüge auf: Sie senken den steuerpflichtigen Gewinn.</li>
+    <li>Bitten Sie Ihren Gestor oder Steuerberater vor dem Verkauf um eine Berechnung, auch einer möglichen Befreiung bei Reinvestition.</li>
+    <li>Planen Sie den Einbehalt von 3 % in Ihrer Liquidität ein.</li>
+  </ol>
+  <p class="note">Dieser Ratgeber gibt allgemeine Informationen auf Basis der Regeln in Andalusien und Spanien im November 2026. Quellen: andalusisches Ley 5/2021 (ITP 7 % und 2 % für Immobilienunternehmen), Ley 7/2021 (LISTA), Real Decreto-ley 26/2021 (Plusvalía) und die spanische Steuerbehörde (Agencia Tributaria) für IRPF, IRNR, den Einbehalt von 3 % und die Befreiung bei Reinvestition (Art. 38 Ley IRPF und siebte Zusatzbestimmung der Ley IRNR). Sätze und Regeln können sich ändern. Dies ist keine Steuer- oder Rechtsberatung; lassen Sie Ihre Situation von einem Anwalt und einem Steuerberater prüfen.</p>
+</Guide>

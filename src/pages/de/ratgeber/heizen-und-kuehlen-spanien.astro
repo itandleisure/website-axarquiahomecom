@@ -1,0 +1,134 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'winter', label: 'Warum heizen in Südspanien?' },
+  { id: 'vergelijking', label: 'Alle Heizarten im Vergleich' },
+  { id: 'airco', label: 'Klimaanlage und Wärmepumpe' },
+  { id: 'aerotermia', label: 'Aerotermia und Fußbodenheizung' },
+  { id: 'hout', label: 'Kaminofen und offener Kamin' },
+  { id: 'pellet', label: 'Pelletofen' },
+  { id: 'gas', label: 'Gasofen mit Butan' },
+  { id: 'elektrisch', label: 'Elektroheizungen und Infrarotpaneele' },
+  { id: 'kiezen', label: 'Was passt zu Ihrem Haus?' },
+  { id: 'koelen', label: 'Kühl bleiben im Sommer' },
+];
+
+const faq = [
+  {
+    q: 'Was ist die günstigste Art, in Spanien zu heizen?',
+    a: 'Pro kWh Wärme sind eine Klimaanlage mit Wärmepumpe und ein Kaminofen mit eigenem oder günstigem Holz am günstigsten, etwa 0,05 bis 0,07 €. Mit einer Solaranlage wird die Klimaanlage tagsüber noch günstiger. Ein einfacher Elektroheizer ist am teuersten, etwa 0,18 € pro kWh.',
+  },
+  {
+    q: 'Ist ein Butanofen gefährlich?',
+    a: 'Nicht bei richtiger Nutzung: immer mit etwas Lüftung, nie im Schlaf- oder Badezimmer und mit einem Ofen mit Sauerstoffmangelsicherung. Hängen Sie einen Kohlenmonoxidmelder dazu. Ein Butanofen gibt aber viel Feuchtigkeit ab, was Kondenswasser und Schimmel verursacht.',
+  },
+  {
+    q: 'Brauche ich in Spanien eine Fußbodenheizung?',
+    a: 'Nicht unbedingt, aber Fliesenböden sind im Winter kalt. Eine elektrische Fußbodenheizung im Bad ist ein bezahlbarer Luxus. Für das ganze Haus ist eine Fußbodenheizung mit Wärmepumpe (aerotermia) komfortabel und sparsam, vor allem bei einer großen Renovierung.',
+  },
+  {
+    q: 'Kann ich eine Finca ohne Stromnetz heizen?',
+    a: 'Ja. Ein Kaminofen funktioniert ohne Strom und ist dort Standard. Ein Pelletofen braucht etwas Strom. Eine Klimaanlage geht nur an sonnigen Tagen oder mit einem großen Batteriespeicher. Siehe den Ratgeber autark leben.',
+  },
+];
+---
+<Guide lang="de" slug="heizen-und-kuehlen-spanien" toc={toc} faq={faq} dienst="energie" ctaTitle="Beratung zum Heizen oder Kühlen?" ctaText="Sagen Sie uns, wie groß Ihr Haus ist, wo es steht und wie Sie es nutzen. Sie erhalten eine Beratung zur besten Heizung und einen Preis.">
+  <h2 id="winter">Warum heizen in Südspanien?</h2>
+  <p>Tagsüber hat es in der Axarquía auch im Januar oft 16 bis 18 Grad in der Sonne. Abends und nachts sinkt es an der Küste auf 6 bis 10 Grad, in den Bergdörfern manchmal bis um den Gefrierpunkt. Spanische Häuser sind gebaut, um kühl zu bleiben: dicke Mauern, Fliesenböden, Einfachverglasung und oft keine Zentralheizung. Drinnen ist es im Winter deshalb oft kälter als draußen in der Mittagssonne.</p>
+  <p>Die eine beste Heizung gibt es also nicht. Es hängt von Ihrem Haus ab, wie oft Sie dort sind und ob Sie ein, zwei Räume oder das ganze Haus warm haben möchten. Unten vergleichen wir alle gängigen Arten.</p>
+
+  <h2 id="vergelijking">Alle Heizarten im Vergleich</h2>
+  <p>Richtwerte für 2026. Die Kosten pro kWh Wärme rechnen mit Strom zu 0,18 € pro kWh, einer Butanflasche zu etwa 17 € und getrocknetem Olivenholz zu 150 bis 250 € pro Tonne.</p>
+  <div class="table-scroll">
+  <table class="prices">
+    <thead><tr><th>Art</th><th>Heizt</th><th>Anschaffung und Einbau</th><th>Pro kWh Wärme</th></tr></thead>
+    <tbody>
+      <tr><td>Klimaanlage mit Wärmepumpe (Split)</td><td>Pro Raum, oder mehrere mit Multisplit</td><td>1.000 – 2.000 € pro Raum</td><td>± 0,05 – 0,06 €</td></tr>
+      <tr><td>Aerotermia mit Fußbodenheizung</td><td>Ganzes Haus</td><td>10.000 – 20.000 €</td><td>± 0,05 – 0,06 €</td></tr>
+      <tr><td>Kaminofen</td><td>Wohnzimmer, mit Warmluft auch Teile des Hauses</td><td>2.500 – 6.000 €</td><td>± 0,05 – 0,07 €</td></tr>
+      <tr><td>Pelletofen</td><td>Wohnzimmer, oder das ganze Haus mit Heizkörpern</td><td>3.000 – 7.000 €</td><td>± 0,08 – 0,09 €</td></tr>
+      <tr><td>Gasofen mit Butan</td><td>Ein Raum</td><td>80 – 200 €</td><td>± 0,10 – 0,12 €</td></tr>
+      <tr><td>Infrarotpaneel</td><td>Ein Raum oder Platz</td><td>150 – 500 € pro Paneel</td><td>± 0,18 €</td></tr>
+      <tr><td>Elektroheizer oder Ölradiator</td><td>Ein Raum</td><td>30 – 200 €</td><td>± 0,18 €</td></tr>
+      <tr><td>Elektrische Fußbodenheizung</td><td>Bad oder ein Raum</td><td>40 – 70 € pro m²</td><td>± 0,18 €</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Mit einer <a href="/de/kosten/solaranlage/">Solaranlage</a> wird alles, was mit Strom läuft, tagsüber deutlich günstiger, und mit <a href="/de/kosten/intelligentes-energiemanagement/">intelligentem Energiemanagement</a> heizt das Haus genau in den günstigsten Stunden vor.</p>
+
+  <h2 id="airco">Klimaanlage und Wärmepumpe</h2>
+  <p>Fast jede moderne Klimaanlage in Spanien ist eine Wärmepumpe (<em>bomba de calor</em>): Sie kühlt im Sommer und heizt im Winter. Aus 1 kWh Strom macht sie 3 bis 4 kWh Wärme. An der Küste, wo es selten friert, funktioniert das das ganze Jahr gut.</p>
+  <ul>
+    <li><strong>Vorteile:</strong> günstig im Betrieb, schnell warm, im Sommer auch Kühlung, kein Geruch, aus der Ferne einschaltbar und gut mit einer Solaranlage kombinierbar.</li>
+    <li><strong>Nachteile:</strong> bläst Luft, was manche nicht mögen; heizt von oben, der Boden bleibt kalt; Außengerät an Fassade oder Dach.</li>
+    <li><strong>Passt zu:</strong> fast jeder Wohnung und jedem Haus an der Küste, und als Ergänzung in den Bergen.</li>
+  </ul>
+  <p>Preise je Typ unter <a href="/de/kosten/klimaanlage-und-waermepumpe/">Kosten Klimaanlage und Wärmepumpe</a>.</p>
+
+  <h2 id="aerotermia">Aerotermia und Fußbodenheizung</h2>
+  <p><em>Aerotermia</em> ist eine Wärmepumpe, die Wasser statt Luft erwärmt. Das Wasser geht in Fußbodenheizung, Heizkörper und oft auch in den Warmwasserspeicher. Die spanische Version der Zentralheizung, aber sparsam.</p>
+  <ul>
+    <li><strong>Vorteile:</strong> das ganze Haus gleichmäßig warm, warme Füße auf Fliesen, leise, kein Geruch, auch Warmwasser, mit Solaranlage sehr günstig.</li>
+    <li><strong>Nachteile:</strong> hohe Anschaffung; Fußbodenheizung braucht einen neuen Boden, lohnt sich also vor allem bei einer großen Renovierung oder einem Neubau. Heizt langsam auf, daher weniger geeignet für ein Haus, das Sie nur ab und zu nutzen.</li>
+    <li><strong>Passt zu:</strong> einem Haus, das Sie das ganze Jahr bewohnen oder ohnehin komplett renovieren.</li>
+  </ul>
+  <p>Möchten Sie nur warme Füße im Bad, ist eine elektrische Heizmatte unter den Fliesen eine günstige Lösung.</p>
+
+  <h2 id="hout">Kaminofen und offener Kamin</h2>
+  <p>In den Dörfern und auf den Fincas ist der Kaminofen nach wie vor der Favorit. Olivenholz vom Baumschnitt ist in der Axarquía leicht zu bekommen.</p>
+  <ul>
+    <li><strong>Vorteile:</strong> Atmosphäre, Strahlungswärme, die auch dicke Mauern erwärmt, günstig mit eigenem oder lokalem Holz, funktioniert ohne Strom.</li>
+    <li><strong>Nachteile:</strong> Holz holen, lagern und trocknen; Asche und Staub; Holzrauch riecht, auch beim Nachbarn; der Schornstein muss jedes Jahr gefegt werden. Heizt vor allem den Raum, in dem er steht.</li>
+    <li><strong>Passt zu:</strong> Dorfhäusern und Fincas, Bergdörfern, autarkem Wohnen.</li>
+  </ul>
+  <p>Ein <strong>offener Kamin</strong> ist gemütlich, holt aber nur 10 bis 20 % der Wärme aus dem Holz und zieht warme Luft in den Schornstein. Ein Heizeinsatz oder Kaminofen im bestehenden Kamin gibt drei- bis viermal so viel Wärme. Siehe <a href="/de/kosten/schornstein-und-kaminofen/">Kosten Schornstein und Kaminofen</a> und, falls er raucht, <a href="/de/probleme/kamin-raucht/">Kamin raucht zurück</a>.</p>
+
+  <h2 id="pellet">Pelletofen</h2>
+  <p>Ein Pelletofen verbrennt gepresste Holzpellets aus einem Vorratsbehälter, mit Thermostat und Zeitschaltuhr.</p>
+  <ul>
+    <li><strong>Vorteile:</strong> automatisch, sauberer als Holz, nach Temperatur regelbar, aus der Ferne einschaltbar, Pelletsäcke sind leicht zu kaufen und zu lagern. Ein wasserführender Pelletofen heizt über Heizkörper das ganze Haus.</li>
+    <li><strong>Nachteile:</strong> braucht Strom für Gebläse und Zündung; summt hörbar; Wartung und jährliches Fegen; teurer in der Anschaffung als ein Kaminofen.</li>
+    <li><strong>Passt zu:</strong> allen, die die Wärme eines Ofens ohne Holzschleppen möchten, auch in einem Haus, das Sie aus der Ferne vorheizen wollen.</li>
+  </ul>
+
+  <h2 id="gas">Gasofen mit Butan</h2>
+  <p>Der fahrbare Ofen mit einer orangefarbenen Butanflasche darin steht in vielen spanischen Häusern.</p>
+  <ul>
+    <li><strong>Vorteile:</strong> günstig in der Anschaffung, schnell warm, beweglich, funktioniert ohne Strom.</li>
+    <li><strong>Nachteile:</strong> gibt viel Wasserdampf ab, was Kondenswasser und Schimmel verursacht; Gasgeruch; Kohlenmonoxidrisiko, also immer lüften und nie im Schlaf- oder Badezimmer; Flaschen schleppen und wechseln.</li>
+    <li><strong>Passt zu:</strong> ab und zu einen Raum schnell warm machen, als Notlösung. Nicht als feste Heizung in einem Haus, das schon feucht ist.</li>
+  </ul>
+  <p>Probleme mit Feuchtigkeit? Lesen Sie <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit und Schimmel</a> und <a href="/de/probleme/zugluft-und-kondenswasser-an-fenstern/">Zugluft und Kondenswasser an Fenstern</a>.</p>
+
+  <h2 id="elektrisch">Elektroheizungen und Infrarotpaneele</h2>
+  <ul>
+    <li><strong>Ölradiator oder Konvektor:</strong> günstig zu kaufen und einfach, aber teuer im Betrieb. Praktisch für ein Gästezimmer, das Sie ein paar Mal im Jahr nutzen.</li>
+    <li><strong>Infrarotpaneel:</strong> ein flaches Paneel an Wand oder Decke, das Menschen und Wände statt der Luft erwärmt, wie die Sonne. Fühlt sich schon bei niedrigerer Lufttemperatur warm an, kein Luftzug und kein Geruch. Pro kWh so teuer wie andere Elektroheizungen, aber sparsam, wenn Sie nur den Platz heizen, an dem Sie sitzen. Gut für Bad, Arbeitsplatz oder Terrasse.</li>
+    <li><strong>Achten Sie auf die Leistung:</strong> Mehrere Elektroheizer gleichzeitig können die Sicherung auslösen. Siehe <a href="/de/probleme/strom-faellt-aus/">Strom fällt ständig aus</a>.</li>
+  </ul>
+
+  <h2 id="kiezen">Was passt zu Ihrem Haus?</h2>
+  <table class="prices">
+    <thead><tr><th>Situation</th><th>Unsere Empfehlung</th></tr></thead>
+    <tbody>
+      <tr><td>Wohnung an der Küste</td><td>Klimaanlage mit Wärmepumpe in Wohn- und Schlafzimmern, eventuell elektrische Fußbodenheizung im Bad</td></tr>
+      <tr><td>Ferienhaus, einige Monate im Jahr</td><td>Klimaanlage mit Wärmepumpe, aus der Ferne einschaltbar, damit es bei Ankunft warm ist</td></tr>
+      <tr><td>Dorfhaus mit dicken Mauern</td><td>Kamin- oder Pelletofen im Wohnzimmer, Klimaanlage in den Schlafzimmern</td></tr>
+      <tr><td>Ganzjährig bewohnt, große Renovierung</td><td>Aerotermia mit Fußbodenheizung, mit Solaranlage</td></tr>
+      <tr><td>Finca in den Bergen</td><td>Kaminofen als Basis, Klimaanlage oder Pelletofen als Ergänzung</td></tr>
+      <tr><td>Autarke Finca</td><td>Kaminofen, Klimaanlage nur tagsüber mit Solarstrom; siehe <a href="/de/ratgeber/autark-leben-spanien/">autark leben</a></td></tr>
+    </tbody>
+  </table>
+  <p>Welche Heizung Sie auch wählen: gute <a href="/de/kosten/fenster-und-rahmen/">doppelt verglaste Fenster</a> und das Abdichten von Zugluft bringen oft mehr als ein stärkerer Ofen.</p>
+
+  <h2 id="koelen">Kühl bleiben im Sommer</h2>
+  <p>Im Juli und August hat es an der Küste 28 bis 32 Grad, im Landesinneren manchmal über 38. Nur eine Klimaanlage kühlt wirklich, aber es gibt mehr:</p>
+  <ul>
+    <li><strong>Rollläden und Markisen</strong> tagsüber auf der Sonnen- und Westseite geschlossen.</li>
+    <li><strong>Nachts lüften</strong>, wenn es draußen kühler ist, und tagsüber alles schließen.</li>
+    <li><strong>Deckenventilatoren</strong> fühlen sich 3 bis 4 Grad kühler an und verbrauchen wenig.</li>
+    <li><strong>Sonnenschutzglas</strong> und ein gedämmtes Dach oder eine gedämmte Dachterrasse halten die Hitze draußen.</li>
+    <li><strong>Eine Klimaanlage mit Solarstrom</strong> kühlt genau dann, wenn die Sonne am stärksten scheint, also fast kostenlos.</li>
+  </ul>
+</Guide>

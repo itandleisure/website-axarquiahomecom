@@ -301,3 +301,14 @@ a.card:hover { transform: translateY(-2px); border-color: var(--terra); color: v
 .calc-cta { display: block; text-align: center; margin: 16px 0 8px; }
 .calc-callout { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; background: var(--sand); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin: 1.4em 0; }
 .calc-callout p { margin: 0; }
+
+/* Aankoopchecklist met Spaanse vragen */
+.ask-list { padding-left: 1.3em; }
+.ask-list li { margin-bottom: 1.1em; }
+.ask-list p { margin: 0.25em 0 0; }
+.ask-es { background: var(--sand, #f6efe4); border-left: 3px solid var(--olive); padding: 0.45em 0.7em; border-radius: 4px; }
+.ask-es q { font-style: italic; quotes: '“' '”'; }
+.ask-label { font-size: 0.85em; font-weight: 600; color: var(--muted, #6b6b6b); }
+.ask-why { font-size: 0.95em; }
+/* Tabellen met uitleg in de laatste kolom (geen prijzen) */
+.prices.plain td:last-child { font-weight: 400; white-space: normal; }

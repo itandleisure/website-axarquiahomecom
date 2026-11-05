@@ -1,0 +1,64 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'regeln', label: 'Was die Gemeinde verlangt' },
+  { id: 'urbano', label: 'Im Wohngebiet' },
+  { id: 'finca', label: 'Auf einer Finca' },
+  { id: 'optionen', label: 'Welche Möglichkeiten gibt es?' },
+  { id: 'schritte', label: 'Die Schritte' },
+];
+
+const faq = [
+  { q: 'Brauche ich für eine Garage in Spanien einen Architekten?', a: 'Für eine gemauerte Garage meistens ja: Es ist ein Neubau, und dafür verlangt die Gemeinde ein Projekt eines Architekten oder befugten Technikers. Für einen leichten, offenen Carport ist das oft nicht nötig.' },
+  { q: 'Darf ich eine Garage in ein Zimmer oder eine Wohnung umbauen?', a: 'Nur mit einer Genehmigung für eine Nutzungsänderung und nur, wenn der Bebauungsplan das erlaubt. Der zusätzliche Wohnraum zählt zum Baurecht. Eine zusätzliche, eigenständige Wohnung ist auf Rústico praktisch nie erlaubt.' },
+  { q: 'Darf ich eine Fertiggarage ohne Genehmigung aufstellen?', a: 'Nein. Auch eine Fertiggarage oder ein Container auf einer Betonplatte gilt als Bauwerk und braucht eine Genehmigung.' },
+];
+---
+<Guide lang="de" slug="bauen-auf-eigenem-grundstueck-garage" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Garage oder Abstellraum bauen?" ctaText="Sagen Sie uns, was Sie möchten, und schicken Sie ein Foto der Stelle. Wir prüfen, was erlaubt ist, kümmern uns um das Projekt und bauen es.">
+  <h2 id="regeln">Was die Gemeinde verlangt</h2>
+  <p>Eine Garage mit Mauern und Dach ist für die Gemeinde ein neues Gebäude. Das bedeutet fast immer:</p>
+  <ul>
+    <li>eine <strong>Genehmigung</strong> (<em>Licencia de obra</em>), keine Anzeige;</li>
+    <li>ein <strong>Projekt</strong> eines Architekten oder befugten Technikers;</li>
+    <li>die Quadratmeter zählen voll zum <strong>Baurecht</strong> des Grundstücks;</li>
+    <li>Sie zahlen <strong>Bausteuer</strong> (ICIO) und Gebühren, und nach dem Bau muss die Garage ins Kataster.</li>
+  </ul>
+  <p>Wie ein Genehmigungsantrag abläuft, lesen Sie unter <MaybeLink href="/de/ratgeber/baugenehmigung-umbau-andalusien/">Baugenehmigung für den Umbau</MaybeLink>.</p>
+
+  <h2 id="urbano">Im Wohngebiet</h2>
+  <p>Im Dorf oder in einer Urbanisation klappt eine Garage meistens, wenn noch Baurecht übrig ist und sie den vorgeschriebenen Abstand zu Grenze und Straße einhält. Manche Bebauungspläne erlauben eine Garage an der Grenze, manchmal nur mit Zustimmung der Nachbarn. In einer Urbanisation mit Gemeinschaft muss die Garage auch zu deren Regeln passen.</p>
+
+  <h2 id="finca">Auf einer Finca</h2>
+  <p>Auf ländlichem Boden (<em>Suelo rústico</em>) ist eine Garage schwieriger:</p>
+  <ul>
+    <li>Sie ist nur bei einem legalen Haus erlaubt und nur, wenn der Bebauungsplan noch Raum für weitere Bebauung lässt.</li>
+    <li>Manchmal ist ein landwirtschaftliches Gebäude (<em>Almacén agrícola</em>) erlaubt. Das ist dann für Werkzeug und Ernte, nicht als Garage oder Wohnraum.</li>
+    <li>Hat das Haus AFO-Status, darf nichts hinzukommen. Siehe <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>.</li>
+  </ul>
+  <p>Ein offener Carport ist auf einer Finca oft eher machbar. Siehe <a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/carport-und-pergola/">Carport und Pergola</a>.</p>
+
+  <h2 id="optionen">Welche Möglichkeiten gibt es?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Option</th><th>Gut zu wissen</th></tr></thead>
+    <tbody>
+      <tr><td>Vorhandenen Raum zur Garage oder zum Lager umbauen</td><td>Etwa einen alten Stall oder eine Bodega. Oft mit Anzeige möglich, wenn sich außen nichts ändert.</td></tr>
+      <tr><td>Fertiggarage aus Stahl oder Beton</td><td>Schnell aufgestellt, braucht aber Fundament und Genehmigung.</td></tr>
+      <tr><td>Gemauerte Einzelgarage</td><td>Langlebig und passend zum Haus. Mit Projekt und Genehmigung.</td></tr>
+      <tr><td>Doppelgarage mit Lager oder Werkstatt</td><td>Mehr Quadratmeter, also mehr Baurecht nötig.</td></tr>
+      <tr><td>Garage im Hang oder unter der Terrasse</td><td>Viel Aushub und Stützmauern, aber kaum sichtbar.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Möchten Sie das umsetzen lassen? Sagen Sie uns, was Sie vorhaben. Wir klären, was erlaubt ist, kümmern uns um die Genehmigung und bauen es für Sie.</strong> <a href="/de/anfrage/?dienst=renovatie">Kontakt aufnehmen →</a></p>
+
+  <h2 id="schritte">Die Schritte</h2>
+  <ol>
+    <li><strong>Machbarkeit</strong>: Bodenart, verbleibendes Baurecht und Legalität des Hauses prüfen lassen.</li>
+    <li><strong>Projekt und Antrag</strong>: Der Architekt plant die Garage und beantragt die Genehmigung.</li>
+    <li><strong>Genehmigung</strong>: Die Gemeinde hat laut Gesetz bis zu drei Monate nach vollständigen Unterlagen. Sie zahlen ICIO und Gebühren.</li>
+    <li><strong>Bauen</strong>: Fundament, Mauern, Dach, Tor und bei Bedarf Strom und Beleuchtung.</li>
+    <li><strong>Abschluss</strong>: Fertigstellungsbescheinigung, Meldung bei der Gemeinde und Eintragung ins Kataster.</li>
+  </ol>
+  <p>Zurück zur Übersicht: <a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/">Bauen auf dem eigenen Grundstück</a>.</p>
+</Guide>

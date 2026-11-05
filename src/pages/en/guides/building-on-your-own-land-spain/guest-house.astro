@@ -1,0 +1,57 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'short', label: 'The short answer' },
+  { id: 'rustico', label: 'On a finca (rústico)' },
+  { id: 'urbano', label: 'In a residential area (urbano)' },
+  { id: 'prefab', label: 'Prefab, tiny house and mobile home' },
+  { id: 'options', label: 'What are your options?' },
+  { id: 'letting', label: 'Letting it to guests' },
+];
+
+const faq = [
+  { q: 'Can I build a second house on my finca in Spain?', a: 'Almost never. On rural land (rústico) a new house is only possible through a separate procedure, with a large minimum plot, and usually only one house per plot. A second, separate house next to the existing one is almost never allowed.' },
+  { q: 'Can I put a mobile home or tiny house on my land?', a: 'Not without a permit if it stays there permanently. A mobile home with a fixed spot, water and electricity connections or a foundation counts as a building. On rústico that is generally not allowed.' },
+  { q: 'Is an existing casita without a permit a problem?', a: 'It can become a problem when you sell, insure or let the property. Sometimes such a casita can be legalised or recognised as AFO. Have that checked before you invest in it.' },
+  { q: 'Can I convert an existing outbuilding into a guest house?', a: 'Only with a permit for a change of use, and only if the zoning plan allows it. Converting a farm building into sleeping accommodation is usually not allowed on rústico.' },
+];
+---
+<Guide lang="en" slug="building-on-your-own-land-guest-house" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Making room for guests?" ctaText="Tell us what you have in mind. We give you an honest view of what is allowed on your plot and which solution fits best.">
+  <h2 id="short">The short answer</h2>
+  <p>A second, separate house on your plot is almost never allowed in Andalusia, certainly not on rural land. What often is possible: <strong>extending the existing house</strong> with a guest wing, or <strong>converting an existing legal outbuilding</strong>. The difference is that it remains one home, with one address and one cadastral reference.</p>
+
+  <h2 id="rustico">On a finca (rústico)</h2>
+  <p>On rural land a house is the exception. The Andalusian law LISTA only allows a new detached house under strict conditions: the plot must be large enough (the town sets the minimum, often several hectares), no new settlement may arise, and there is a separate procedure with a levy paid to the town. A second house next to the existing one on the same plot almost never qualifies.</p>
+  <p>What sometimes is possible:</p>
+  <ul>
+    <li><strong>Extending the house</strong> with a room or guest wing, if the house is legal and the zoning plan leaves building allowance.</li>
+    <li><strong>Converting an existing, legal space</strong>, such as an old stable that already belongs to the house.</li>
+  </ul>
+  <p>If the house has AFO status, nothing may be added. See <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation</a>.</p>
+
+  <h2 id="urbano">In a residential area (urbano)</h2>
+  <p>In a village or urbanización it depends on the zoning plan. In many villa areas only one home is allowed per plot. A guest house is then sometimes possible as an <strong>annex to the home</strong>, as long as there is building allowance left and it does not become a self-contained home (for example without its own kitchen or utility connections). If you want a true second home, the plot must be zoned for it, and often it must also be possible to divide it.</p>
+
+  <h2 id="prefab">Prefab, tiny house and mobile home</h2>
+  <p>A prefab cabin, tiny house or mobile home looks like a smart workaround, but the town looks at what it does, not how it is built. If it stays permanently, with a foundation or connections to water, electricity or drainage, it is a building and needs a permit. On rústico that is generally refused. A caravan you use occasionally and drive away is different, but living in or letting a caravan on your own land is not simply allowed either.</p>
+
+  <h2 id="options">What are your options?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Option</th><th>Good to know</th></tr></thead>
+    <tbody>
+      <tr><td>Fitting out a guest room in the house</td><td>No permit needed as long as nothing changes on the outside.</td></tr>
+      <tr><td>Converting an existing legal outbuilding</td><td>Often the best route. Needs a permit if the use changes.</td></tr>
+      <tr><td>Guest wing attached to the house</td><td>Counts as an extension: project, permit and building allowance needed.</td></tr>
+      <tr><td>Prefab or modular guest house</td><td>Faster to build, but the same permit as a masonry house.</td></tr>
+      <tr><td>Separate masonry guest house</td><td>Only where the zoning plan allows it, almost never on rústico.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Want this built? Tell us what you have in mind. We find out what is allowed, arrange the permit and build it for you.</strong> <a href="/en/request/?dienst=renovatie">Get in touch →</a></p>
+  <p>More about extending in <a href="/en/guides/building-on-your-own-land-spain/extension-and-enclosing-a-terrace/">extensions and enclosing a terrace</a>.</p>
+
+  <h2 id="letting">Letting it to guests</h2>
+  <p>To let the guest house to holidaymakers in Andalusia, it must be registered as a holiday home (<em>vivienda de uso turístico</em>). That is only possible for a legal space, and in a complex sometimes only if the community does not prohibit it. So a casita without a permit cannot be let legally. More in our guide to <MaybeLink href="/en/guides/renting-out-property-in-spain/">renting out property in Spain</MaybeLink>.</p>
+  <p>Back to the overview: <a href="/en/guides/building-on-your-own-land-spain/">building on your own land</a>.</p>
+</Guide>

@@ -1,0 +1,17 @@
+---
+// Link naar een pagina die misschien nog niet bestaat (bijv. een gids uit een andere PR).
+// Bestaat de pagina, dan wordt het een link; anders alleen de tekst. Zo ontstaan geen dode links.
+import { topicPaths } from '../data/topics';
+
+interface Props { href: string; }
+const { href } = Astro.props;
+const files = Object.keys(import.meta.glob('../pages/**/*.astro'));
+const existing = new Set<string>([
+  ...files
+    .filter((f) => !f.includes('['))
+    .map((f) => f.replace('../pages', '').replace(/(\/index)?\.astro$/, '/')),
+  ...topicPaths,
+]);
+const ok = existing.has(href.split('#')[0]);
+---
+{ok ? <a href={href}><slot /></a> : <slot />}

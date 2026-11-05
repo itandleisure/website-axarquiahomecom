@@ -1,0 +1,89 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'overzicht', label: 'Alle mogelijkheden op een rij' },
+  { id: 'alarm', label: 'Alarm: met of zonder meldkamer' },
+  { id: 'cameras', label: 'Camera’s en de privacyregels' },
+  { id: 'rejas', label: 'Tralies, deur en sloten' },
+  { id: 'leegstand', label: 'Een huis dat leegstaat' },
+  { id: 'combinatie', label: 'Welke combinatie past bij u?' },
+];
+
+const faq = [
+  {
+    q: 'Komt de politie als mijn alarm afgaat?',
+    a: 'Niet zomaar. In Spanje stuurt de meldkamer van een erkend beveiligingsbedrijf pas politie of Guardia Civil als het alarm eerst is bevestigd, bijvoorbeeld met beelden, geluid of meerdere sensoren die afgaan. Een los alarm zonder meldkamer maakt alleen lawaai en stuurt u een bericht.',
+  },
+  {
+    q: 'Mag mijn camera de straat filmen?',
+    a: 'Nee, alleen uw eigen terrein. Een klein stukje straat of de toegang tot uw voordeur is toegestaan als het niet anders kan, maar een camera die de openbare weg of het terrein van de buren in beeld heeft, is in strijd met de privacywet. Hang ook een bord “zona videovigilada” op.',
+  },
+  {
+    q: 'Krijg ik korting op mijn verzekering met een alarm?',
+    a: 'Vaak wel, en sommige verzekeraars stellen een alarm of tralies zelfs als voorwaarde als het huis een deel van het jaar leegstaat. Vraag het na bij uw verzekeraar.',
+  },
+];
+---
+<Guide slug="beveiliging-huis-spanje" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Uw huis beter beveiligen?" ctaText="Vertel ons over uw huis en hoe vaak u er bent. We bekijken waar het zwak is en wat u het meeste oplevert: tralies, een betere deur, een alarm of iemand die regelmatig langsgaat.">
+  <h2 id="overzicht">Alle mogelijkheden op een rij</h2>
+  <p>Een overzicht van wat er is en waarvoor het dient. Wilt u dit laten doen? <a href="/nl/aanvraag/">Vertel ons wat u wilt</a>, dan helpen wij u het te realiseren.</p>
+  <table class="prices">
+    <thead><tr><th>Mogelijkheid</th><th>Wat het doet</th></tr></thead>
+    <tbody>
+      <tr><td>Betere cilinder in het slot (anti-inbraak)</td><td>Maakt openbreken van de deur veel lastiger</td></tr>
+      <tr><td>Slim alarm zonder meldkamer (zelf plaatsen)</td><td>Sirene en melding op uw telefoon; u moet zelf iemand sturen</td></tr>
+      <tr><td>Camera’s die u zelf plaatst (wifi)</td><td>Meekijken op afstand; werkt alleen met goede internetverbinding</td></tr>
+      <tr><td>Tralies voor de ramen (<em>rejas</em>)</td><td>Houdt inbrekers tegen op de begane grond; geen abonnement</td></tr>
+      <tr><td>Camerasysteem met recorder, geplaatst</td><td>Betrouwbare beelden, ook als internet even wegvalt</td></tr>
+      <tr><td>Alarm met meldkamer (abonnement)</td><td>24 uur bewaakt; meldkamer belt u en zo nodig de politie</td></tr>
+      <tr><td>Veiligheidsdeur (<em>puerta de seguridad / acorazada</em>)</td><td>De voordeur is het sterkste punt in plaats van het zwakste</td></tr>
+      <tr><td>Rolluiken met motor en tijdschakelaar</td><td>Huis lijkt bewoond; extra barrière voor het raam</td></tr>
+      <tr><td>Sleutelbeheer: iemand die regelmatig langsgaat</td><td>Ziet wat een alarm niet ziet: lekkage, storm, post, een kapot slot</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="alarm">Alarm: met of zonder meldkamer</h2>
+  <p>Er zijn twee soorten alarmen, en het verschil is groot:</p>
+  <ul>
+    <li><strong>Met meldkamer</strong> (<em>alarma conectada a central receptora</em>): een erkend beveiligingsbedrijf bewaakt het huis 24 uur per dag. Gaat het alarm af, dan kijkt of luistert de meldkamer mee, belt u en stuurt zo nodig politie of een bewaker. Alleen een bij het ministerie van Binnenlandse Zaken geregistreerd bedrijf mag zo’n alarm aansluiten. U zit meestal vast aan een contract van een paar jaar.</li>
+    <li><strong>Zonder meldkamer</strong>: een slim alarm met sensoren en een sirene dat u een bericht stuurt. Goedkoop en zonder abonnement, maar als u in Nederland zit, moet u zelf iemand vinden die gaat kijken.</li>
+  </ul>
+  <p>Let op bij een finca: zonder vaste internetverbinding heeft u een alarm nodig dat via het mobiele netwerk (4G) werkt, met een accu voor als de stroom uitvalt. Op een off-grid huis is dat extra belangrijk.</p>
+
+  <h2 id="cameras">Camera’s en de privacyregels</h2>
+  <p>Met camera’s kijkt u op afstand mee, en beelden helpen achteraf bij aangifte en verzekering. Een camera voorkomt op zich geen inbraak; zichtbare camera’s schrikken wel af. Houd u aan de Spaanse privacyregels (de toezichthouder is de AEPD):</p>
+  <ul>
+    <li>Film alleen uw eigen terrein, niet de straat of de buren.</li>
+    <li>Hang een bord “<em>zona videovigilada</em>” op bij de toegang.</li>
+    <li>Bewaar beelden niet langer dan nodig (de richtlijn is maximaal een maand).</li>
+  </ul>
+  <p>Zelf geplaatste wifi-camera’s zijn goedkoop, maar vallen weg als het wifi uitvalt. Een systeem met kabel en recorder (NVR) in huis is betrouwbaarder.</p>
+
+  <h2 id="rejas">Tralies, deur en sloten</h2>
+  <p>De meeste inbrekers komen binnen via een raam op de begane grond of een zwakke deur. Daarom zijn dit vaak de maatregelen met het meeste effect per euro:</p>
+  <ul>
+    <li><strong>Tralies</strong> (<em>rejas</em>): in Andalusië heel gewoon, en in smeedijzer passend bij een dorpshuis of finca. Voor ramen die ook een vluchtweg zijn, kiest u tralies die u van binnen kunt openen.</li>
+    <li><strong>Veiligheidsdeur</strong>: een deur met stalen kern, meerpuntssluiting en een goede cilinder.</li>
+    <li><strong>Cilinder</strong>: veel Spaanse deuren hebben een simpele cilinder die met de “bumping”-methode in seconden open is. Een anti-bumping cilinder is een kleine ingreep met groot effect.</li>
+    <li><strong>Terrasdeuren en schuifpuien</strong>: extra slot of stang in de rail.</li>
+  </ul>
+  <p>Tralies en een veiligheidsdeur passen goed bij ander werk aan het huis, zoals nieuwe ramen of <a href="/nl/gidsen/zonwering-rolluiken-horren-spanje/">rolluiken</a>.</p>
+
+  <h2 id="leegstand">Een huis dat leegstaat</h2>
+  <p>Een huis dat maanden dicht is, valt op: dichte rolluiken, een volle brievenbus, een tuin die verwildert. Wat helpt:</p>
+  <ul>
+    <li>Rolluiken en licht op een tijdschakelaar, op wisselende tijden.</li>
+    <li>Iemand die regelmatig langsgaat, de post weghaalt en controleert of alles heel is. Dat is precies wat <a href="/nl/sleutelbeheer/">sleutelbeheer</a> doet.</li>
+    <li>Goede contacten met de buren, en hun nummer in uw telefoon.</li>
+    <li>Geen berichten op sociale media dat u weg bent.</li>
+  </ul>
+  <p>Bang voor krakers (<em>okupas</em>)? Lees wat u kunt doen in <a href="/nl/problemen/inbraak-en-kraak-leeg-huis/">inbraak en kraak bij een leeg huis</a>. En controleer of uw verzekering leegstand dekt.</p>
+
+  <h2 id="combinatie">Welke combinatie past bij u?</h2>
+  <ul>
+    <li><strong>Appartement in een complex</strong>, u bent er vaak: een betere cilinder en een slim alarm zonder meldkamer zijn vaak genoeg.</li>
+    <li><strong>Dorpshuis</strong>, deel van het jaar leeg: tralies op de begane grond, een goede deur en sleutelbeheer.</li>
+    <li><strong>Vrijstaande villa of finca</strong>, maanden leeg: tralies of veiligheidsrolluiken, alarm met meldkamer via 4G, enkele camera’s en sleutelbeheer.</li>
+  </ul>
+</Guide>
