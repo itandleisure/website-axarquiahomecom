@@ -4,7 +4,6 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Todo from '../../components/Todo.astro';
 import { site } from '../../data/site';
 const o = site.operator;
-const c = site.company;
 ---
 <Base
   title="Integritet och villkor"
@@ -16,12 +15,12 @@ const c = site.company;
   <section class="section">
     <div class="wrap prose">
       <h1>Integritet och villkor</h1>
-      <Todo label="gegevens van de onderneming van Frans en het bouwbedrijf. Laat deze tekst één keer nakijken door een AVG-jurist." />
+      <Todo label="gegevens van de onderneming van Frans. Laat deze tekst één keer nakijken door een AVG-jurist." />
       <p>Senast uppdaterad: 5 november 2026.</p>
 
       <h2>Vilka vi är</h2>
       <p>Webbplatsen {site.domain} drivs av {o.name}, {o.address}, registrerat hos den nederländska handelskammaren (Kamer van Koophandel) med nummer {o.kvk} (”Axarquía Home”). Du når oss på <a href={`mailto:${o.email}`}>{o.email}</a>.</p>
-      <p>Axarquía Home utför inga byggarbeten själv. Arbetet utförs av vår fasta partner {c.legalName}, {c.cif}, {c.street}, {c.postalCode} {c.town}, Spanien (”byggföretaget”).</p>
+      <p>Axarquía Home utför inga byggarbeten själv. Arbetet utförs av ett noga utvalt byggföretag i Axarquía som vi samarbetar med (”byggföretaget”). Vill du veta vilket företag som hanterar din förfrågan, berättar vi det på begäran.</p>
 
       <h2>Vilka uppgifter vi behandlar</h2>
       <p>När du fyller i vårt förfrågningsformulär behandlar vi de uppgifter du lämnar: namn, e-postadress, telefonnummer, adress eller ort för bostaden, en beskrivning av dina planer, budget och tidsplan samt eventuella foton. Vi sparar också datumet och sidan du gjorde förfrågan från.</p>
@@ -30,7 +29,7 @@ const c = site.company;
       <p>Vi använder uppgifterna bara för att hantera din förfrågan: för att ringa eller mejla dig, boka ett besök och ta fram en offert. Den rättsliga grunden är ditt samtycke (artikel 6.1 a i dataskyddsförordningen), som du ger genom att kryssa i rutan i formuläret, och åtgärder på din begäran innan ett avtal ingås (artikel 6.1 b).</p>
 
       <h2>Vem vi delar uppgifterna med</h2>
-      <p>Din förfrågan skickas automatiskt vidare till byggföretaget, som kontaktar dig och tar fram offerten. Om din förfrågan inte hör till byggföretagets arbete (till exempel solpaneler, luftkonditionering eller en flytt) skickar vi den bara vidare till en annan partner om du har godkänt det i formuläret.</p>
+      <p>Din förfrågan skickas automatiskt vidare till byggföretaget, som kontaktar dig och tar fram offerten. Om din förfrågan inte hör till byggföretagets arbete (till exempel solpaneler eller en flytt) skickar vi den bara vidare till en annan partner om du har godkänt det i formuläret.</p>
       <p>Förfrågningar sparas i Axarquía Homes Google Workspace (Google Sheets och Google Drive). Google behandlar uppgifterna för vår räkning. Vi säljer inte dina uppgifter och använder dem inte för nyhetsbrev utan ditt separata samtycke.</p>
 
       <h2>Hur länge vi sparar uppgifter</h2>

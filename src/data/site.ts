@@ -47,7 +47,7 @@ export const site = {
   // Google Analytics 4 Measurement ID (G-...). Laadt ook pas na toestemming. Leeg = uit.
   gaId: 'G-YSBXSHM7SS',
 
-  // Werkgebied volgens de site van het bouwbedrijf (basis Cómpeta); verder weg in overleg.
+  // Voorbeelden van plaatsen in het werkgebied: de hele Axarquía, niet gebonden aan één bouwbedrijf.
   villages: [
     'Nerja',
     'Frigiliana',
@@ -55,15 +55,12 @@ export const site = {
     'Cómpeta',
     'Torre del Mar',
     'Vélez-Málaga',
+    'Rincón de la Victoria',
     'Algarrobo',
-    'Sayalonga',
-    'Canillas de Albaida',
-    'Árchez',
-    'Sedella',
+    'Viñuela',
+    'Comares',
     'Canillas de Aceituno',
-    'Salares',
-    'Alcaucín',
-    'Arenas',
+    'Periana',
   ],
 };
 
