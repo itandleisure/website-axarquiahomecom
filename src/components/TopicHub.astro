@@ -1,0 +1,56 @@
+---
+// Overzichtspagina van alle kosten- of probleempagina's in één taal.
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Hero from './Hero.astro';
+import Cta from './Cta.astro';
+import { site } from '../data/site';
+import { topics, topicBase, topicUi, topicHref, hubAlternates, type TopicKind, type TopicLang } from '../data/topics';
+
+interface Props {
+  kind: TopicKind;
+  lang: TopicLang;
+  title: string;
+  description: string;
+  eyebrow: string;
+  heading: string;
+  lead: string;
+  cta: string;
+  /** Extra kaarten, bijv. naar een bestaande gids */
+  extra?: { href: string; title: string; text: string }[];
+}
+const { kind, lang, title, description, eyebrow, heading, lead, cta, extra = [] } = Astro.props;
+const u = topicUi[lang];
+const path = topicBase[kind][lang];
+const list = topics[kind][lang];
+const itemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: list.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: t.title, url: new URL(topicHref(kind, lang, t), site.url).href })),
+};
+---
+<Base title={title} description={description} path={path} lang={lang} alternates={hubAlternates(kind)} jsonLd={[itemList]}>
+  <Breadcrumbs lang={lang} items={[{ name: u.hub[kind], href: path }]} />
+  <Hero eyebrow={eyebrow} title={heading} lead={lead} cta={cta} lang={lang} />
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        {list.map((t) => (
+          <a class="card" href={topicHref(kind, lang, t)}>
+            <h3>{t.title}</h3>
+            <p>{t.description}</p>
+            <span class="more">{u.read} →</span>
+          </a>
+        ))}
+        {extra.map((e) => (
+          <a class="card" href={e.href}>
+            <h3>{e.title}</h3>
+            <p>{e.text}</p>
+            <span class="more">{u.read} →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Cta lang={lang} />
+</Base>

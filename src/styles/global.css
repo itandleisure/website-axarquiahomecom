@@ -264,3 +264,14 @@ a.card:hover { transform: translateY(-2px); border-color: var(--terra); color: v
 .compare td { font-weight: 400; white-space: normal; }
 .compare td:first-child { font-weight: 600; color: var(--muted); }
 @media (max-width: 600px) { .compare { font-size: 0.82rem; } .compare th, .compare td { padding: 8px 4px; hyphens: auto; } }
+
+/* Kosten- en probleempagina's */
+.answer { background: var(--sand); border-left: 4px solid var(--terra); border-radius: 10px; padding: 16px 20px; margin: 1.4em 0; }
+.answer p { margin: 0; }
+.answer .answer-title { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--olive); margin-bottom: 0.4em; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-scroll .prices { min-width: 480px; }
+.sources { margin-top: 2.4em; padding-top: 1em; border-top: 1px solid var(--line); }
+.sources .h3 { font-size: 1.1rem; margin-top: 0; }
+.sources ul { padding-left: 1.2em; }
+.guide-grid > .prose { min-width: 0; }
