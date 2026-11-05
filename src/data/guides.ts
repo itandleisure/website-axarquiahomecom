@@ -221,6 +221,17 @@ export const guides: GuideMeta[] = [
     minutes: 12,
     published: '2026-11-05',
   },
+  {
+    slug: 'belastingkalender-spanje',
+    title: 'Belastingkalender voor eigenaars die niet in Spanje wonen',
+    seoTitle: 'Belastingen huis in Spanje als niet-resident: kalender IBI, 210 en betalen (2026)',
+    short: 'Belastingkalender',
+    description: 'Wanneer betaalt u IBI en afvalheffing in de Axarquía, wanneer doet u aangifte met formulier 210, en hoe betaalt u vanuit het buitenland? De jaarlijkse kalender voor niet-inwoners.',
+    lead: 'Wie een huis in Spanje heeft maar er niet woont, krijgt elk jaar te maken met belastingen van de gemeente en de Spaanse fiscus. Een gemiste brief kost al snel een toeslag. Deze kalender zet alles op een rij.',
+    keyword: 'belasting huis spanje niet resident',
+    minutes: 7,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesEn: GuideMeta[] = [
@@ -423,6 +434,17 @@ export const guidesEn: GuideMeta[] = [
     minutes: 12,
     published: '2026-11-05',
   },
+  {
+    slug: 'spanish-property-tax-calendar',
+    title: 'Tax calendar for owners who don’t live in Spain',
+    seoTitle: 'Spanish property taxes for non-residents: IBI, form 210 and paying from abroad (2026)',
+    short: 'Tax calendar',
+    description: 'When do you pay IBI and rubbish tax in the Axarquía, when do you file form 210, and how do you pay from abroad? The annual calendar for non-resident owners.',
+    lead: 'If you own a home in Spain but don’t live there, taxes from the town hall and the Spanish tax office come round every year. One missed letter soon costs a surcharge. This calendar sets it all out.',
+    keyword: 'spanish property tax non resident',
+    minutes: 7,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesDe: GuideMeta[] = [
@@ -623,6 +645,17 @@ export const guidesDe: GuideMeta[] = [
     lead: 'Ein Haus in der Axarquía steht oft monatelang leer. Vermieten kann die Kosten decken oder mehr einbringen, aber die Regeln haben sich in den letzten Jahren stark verändert. So wählen Sie zwischen Ferien- und Langzeitmiete und organisieren alles aus der Ferne.',
     keyword: 'immobilie in spanien vermieten',
     minutes: 12,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'steuerkalender-spanien',
+    title: 'Steuerkalender für Eigentümer, die nicht in Spanien wohnen',
+    seoTitle: 'Steuern für Immobilien in Spanien als Nichtresident: IBI, Formular 210, Zahlung (2026)',
+    short: 'Steuerkalender',
+    description: 'Wann zahlen Sie IBI und Müllgebühr in der Axarquía, wann geben Sie Formular 210 ab, und wie zahlen Sie aus dem Ausland? Der Jahreskalender für Nichtresidenten.',
+    lead: 'Wer eine Immobilie in Spanien besitzt, aber nicht dort wohnt, hat jedes Jahr mit Steuern von Gemeinde und spanischem Finanzamt zu tun. Ein verpasster Brief kostet schnell einen Zuschlag. Dieser Kalender stellt alles zusammen.',
+    keyword: 'steuern immobilie spanien nichtresident',
+    minutes: 7,
     published: '2026-11-05',
   },
 ];
