@@ -1,0 +1,111 @@
+---
+import Guide from '../../../components/Guide.astro';
+import Todo from '../../../components/Todo.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Kurze Antwort' },
+  { id: 'typisch', label: 'Warum Häuser hier schwierig sind' },
+  { id: 'massnahmen', label: 'Die Maßnahmen im Überblick' },
+  { id: 'kosten', label: 'Was teuer ist und was nicht' },
+  { id: 'treppenlift', label: 'Treppenlift, Plattformlift oder Hauslift' },
+  { id: 'regeln', label: 'Genehmigung, MwSt. und Eigentümergemeinschaft' },
+  { id: 'vorgehen', label: 'So gehen Sie vor' },
+];
+
+const faq = [
+  {
+    q: 'Brauche ich eine Genehmigung für eine bodengleiche Dusche oder einen Treppenlift?',
+    a: 'Für Arbeiten im Inneren ohne Eingriff in die Statik genügt in den meisten Gemeinden der Axarquía eine Anzeige (declaración responsable). Ein Hauslift, eine neue Öffnung in einer tragenden Wand oder eine Rampe zur Straße hin brauchen meist eine Genehmigung mit Plänen eines Architekten.',
+  },
+  {
+    q: 'Darf die Eigentümergemeinschaft einen Treppenlift oder eine Rampe ablehnen?',
+    a: 'Nach dem spanischen Wohnungseigentumsgesetz (Ley de Propiedad Horizontal) muss die Gemeinschaft Maßnahmen zur Barrierefreiheit durchführen, wenn ein Bewohner über 70 oder mit einer Behinderung sie verlangt, solange die Kosten zwölf Monatsbeiträge nicht übersteigen. Darüber ist ein Beschluss der Versammlung nötig. Lassen Sie das für Ihren Fall prüfen.',
+  },
+  {
+    q: 'Gibt es Zuschüsse für den Umbau meines Hauses in Spanien?',
+    a: 'Die Junta de Andalucía und einige Gemeinden öffnen gelegentlich Förderprogramme für Barrierefreiheit, die aber oft an eine Anmeldung und einen festen Wohnsitz in Spanien gebunden sind und kurze Antragsfristen haben. Deutsche Förderungen wie die der KfW oder der Pflegekasse gelten in der Regel nicht für eine Immobilie im Ausland.',
+  },
+  {
+    q: 'Wie lange dauert der Umbau zur bodengleichen Dusche?',
+    a: 'Rechnen Sie mit ein bis drei Wochen Arbeit, je nachdem, ob der Abfluss verlegt und der Boden abgesenkt werden muss. Mit Vorbereitung und Lieferzeiten sind es einige Wochen bis zwei Monate von der Anfrage bis zur Fertigstellung.',
+  },
+];
+---
+<Guide lang="de" slug="barrierefrei-umbauen-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Ihr Haus bereit für die nächsten zwanzig Jahre?" ctaText="Schicken Sie uns Fotos oder einen Grundriss und erzählen Sie, was Ihnen schwerfällt. Sie bekommen einen Vorschlag pro Maßnahme und entscheiden selbst, was zuerst kommt.">
+  <h2 id="kurz">Kurze Antwort</h2>
+  <p>Ein Haus altersgerecht umbauen heißt, dass Sie auch mit weniger Kraft, mit Rollator oder nach einer Operation sicher darin wohnen können. Die wichtigsten Maßnahmen sind <strong>Schwellen entfernen, eine bodengleiche Dusche, Haltegriffe, ein Schlafzimmer mit Bad im Erdgeschoss und bei Bedarf ein Treppenlift</strong>. Haltegriffe, Handläufe und gutes Licht sind kleine Arbeiten mit großer Wirkung. Eine bodengleiche Dusche ist ein mittlerer Umbau. Ein Schlafzimmer im Erdgeschoss oder ein Lift ist eine große Investition.</p>
+  <p>Der beste Zeitpunkt ist, wenn Sie ohnehin renovieren oder ein Haus kaufen. Wer jetzt ein Bad erneuert, macht es für kaum mehr Geld gleich schwellenlos.</p>
+
+  <h2 id="typisch">Warum Häuser in der Axarquía schwierig sind</h2>
+  <ul>
+    <li><strong>Überall Treppen</strong>: Dorfhäuser sind schmal und hoch, mit dem Wohnzimmer im ersten Stock und Schlafzimmern oder Dachterrasse darüber. Fincas liegen am Hang, mit Stufen vom Parkplatz zur Haustür.</li>
+    <li><strong>Hohe Duschwannen und Badewannen</strong>: viele ältere Bäder haben eine Wanne oder eine hohe Duschtasse, in die man schwer ein- und aussteigt.</li>
+    <li><strong>Schwellen und Höhenunterschiede</strong>: zwischen Zimmern, zur Terrasse und an der Haustür. Oft nur ein paar Zentimeter, genau genug zum Stolpern.</li>
+    <li><strong>Rutschige Fliesen</strong>: glänzende Bodenfliesen und Außenfliesen am Pool werden nass glatt.</li>
+    <li><strong>Schmale Türen</strong>: Innentüren von 70 cm sind üblich, ein Rollstuhl oder Rollator braucht 80 bis 90 cm.</li>
+  </ul>
+
+  <h2 id="massnahmen">Die Maßnahmen im Überblick</h2>
+  <h3>Bad</h3>
+  <p>Eine bodengleiche Dusche mit rutschfestem Boden, ein fester oder klappbarer Duschsitz, Haltegriffe an Dusche und WC und eine Thermostatarmatur gegen Verbrühen. Ein etwas höheres WC (etwa 46 bis 48 cm) erleichtert das Aufstehen. Lassen Sie die Tür nach außen öffnen oder wählen Sie eine Schiebetür, damit Sie jemanden, der gestürzt ist, immer erreichen.</p>
+  <h3>Böden und Schwellen</h3>
+  <p>Schwellen entfernen, kleine Höhenunterschiede mit einem flachen Übergang ausgleichen und wo nötig neue, rutschfeste Böden verlegen. Draußen helfen eine Rampe oder breitere, niedrigere Stufen mit Handlauf auf beiden Seiten.</p>
+  <h3>Wohnen auf einer Ebene</h3>
+  <p>Lässt sich unten ein Schlafzimmer mit eigenem Bad einrichten, brauchen Sie die Treppe nicht mehr jeden Tag. Im Dorfhaus ist das oft der größte, aber auch der wertvollste Umbau.</p>
+  <h3>Kleinigkeiten mit großer Wirkung</h3>
+  <ul>
+    <li>Handläufe auf beiden Seiten jeder Treppe.</li>
+    <li>Gutes Licht mit Bewegungsmeldern in Flur, Treppe und Bad.</li>
+    <li>Schalter und Steckdosen in bequemer Höhe.</li>
+    <li>Hebelarmaturen und Türklinken statt Knäufen.</li>
+    <li>Ein Notrufknopf oder eine smarte Türklingel, damit Familie oder Nachbarn mit nach dem Rechten sehen können.</li>
+  </ul>
+
+  <h2 id="kosten">Was teuer ist und was nicht</h2>
+  <p>Jedes Haus ist anders, deshalb nennen wir keine Beträge, sondern eine Preisklasse. So sehen Sie schnell, wo Sie mit wenig Geld viel erreichen und was eine größere Investition ist.</p>
+  <table class="prices">
+    <thead><tr><th>Maßnahme</th><th>Was sie löst</th><th>Preisklasse</th></tr></thead>
+    <tbody>
+      <tr><td>Haltegriffe, Duschsitz, höheres WC</td><td>Sicher duschen und aufstehen</td><td>€</td></tr>
+      <tr><td>Handläufe auf beiden Seiten der Treppe</td><td>Weniger Sturzgefahr</td><td>€</td></tr>
+      <tr><td>Licht mit Bewegungsmeldern, Notrufknopf</td><td>Sehen, wohin man tritt, Hilfe rufen können</td><td>€</td></tr>
+      <tr><td>Rutschhemmende Behandlung vorhandener Fliesen</td><td>Weniger glatt im Haus und am Pool</td><td>€</td></tr>
+      <tr><td>Schwellen entfernen, Übergänge angleichen</td><td>Kein Stolpern mehr, Platz für den Rollator</td><td>€€</td></tr>
+      <tr><td>Rampe oder angepasste Außentreppe</td><td>Bequem ins Haus und auf die Terrasse</td><td>€€</td></tr>
+      <tr><td>Innentüren verbreitern</td><td>Durchgang für Rollator oder Rollstuhl</td><td>€€</td></tr>
+      <tr><td>Wanne oder Duschtasse durch bodengleiche Dusche ersetzen</td><td>Kein Einstieg mehr</td><td>€€</td></tr>
+      <tr><td>Treppenlift, gerade Treppe</td><td>Treppe bleibt ohne Steigen nutzbar</td><td>€€</td></tr>
+      <tr><td>Komplettes, schwellenloses und angepasstes Bad</td><td>Ein Bad für die nächsten zwanzig Jahre</td><td>€€€</td></tr>
+      <tr><td>Treppenlift für eine kurvige Treppe oder draußen</td><td>Schiene nach Maß, wetterfest</td><td>€€€</td></tr>
+      <tr><td>Schlafzimmer mit Bad im Erdgeschoss</td><td>Wohnen auf einer Ebene</td><td>€€€€</td></tr>
+      <tr><td>Plattformlift oder kleiner Hauslift</td><td>Jede Etage erreichbar, auch mit Rollstuhl</td><td>€€€€</td></tr>
+    </tbody>
+  </table>
+  <p class="note">€ = kleine Arbeit · €€ = mittlerer Umbau · €€€ = größerer Umbau · €€€€ = große Investition. Was es in Ihrem Haus kostet, hängt davon ab, wie der Abfluss verläuft, was unter den Fliesen liegt und wie gut das Haus erreichbar ist. Nach einer Besichtigung bekommen Sie ein Angebot pro Maßnahme.</p>
+  <Todo label="controle van de prijsklassen (vooral traplift en huislift) door het bouwbedrijf." />
+  <p>Mehr über ein neues Bad lesen Sie unter <a href="/de/kosten/bad-renovieren/">Bad renovieren</a>.</p>
+
+  <h2 id="treppenlift">Treppenlift, Plattformlift oder Hauslift</h2>
+  <ul>
+    <li><strong>Treppenlift</strong>: ein Sitz, der auf einer Schiene die Treppe hinauffährt. Bei einer geraden Treppe am günstigsten; bei einer Kurve oder Wendeltreppe wird die Schiene nach Maß gefertigt. Die Treppe bleibt für andere nutzbar.</li>
+    <li><strong>Außentreppenlift</strong>: für die Stufen von der Straße oder dem Parkplatz zur Haustür, bei Fincas und Dorfhäusern oft das eigentliche Problem. Wählen Sie ein Modell, das Sonne, Regen und Salz verträgt.</li>
+    <li><strong>Plattformlift</strong>: eine Plattform für einen Rollstuhl, für einen kurzen Höhenunterschied wie eine Terrasse oder ein paar Stufen am Eingang.</li>
+    <li><strong>Hauslift</strong>: ein kleiner Aufzug zwischen den Etagen. Teurer und oft genehmigungspflichtig, im hohen Dorfhaus aber manchmal die einzige Möglichkeit, alle Etagen nutzbar zu halten.</li>
+  </ul>
+  <p>Fragen Sie bei jedem Lift nach Wartung und einem Störungsdienst in der Nähe. Einen Lift, der während Ihrer Abwesenheit ausgefallen ist, möchten Sie nicht erst bei der Rückkehr entdecken. Wird Ihr Haus über die <a href="/de/hausbetreuung/">Hausbetreuung</a> kontrolliert, lassen Sie den Lift bei jedem Besuch testen.</p>
+
+  <h2 id="regeln">Genehmigung, MwSt. und Eigentümergemeinschaft</h2>
+  <p>Arbeiten im Inneren wie ein neues Bad oder das Entfernen von Schwellen fallen in den meisten Gemeinden unter eine einfache Anzeige (<em>declaración responsable</em>). Ein Hauslift, ein Durchbruch in einer tragenden Wand oder eine Rampe auf öffentlichem Grund brauchen meist eine Genehmigung mit Plänen eines Architekten. Wir arbeiten dafür mit einem festen Architekten und Gestor zusammen.</p>
+  <p>Für Renovierungsarbeiten an einer selbst genutzten Wohnung gilt unter Bedingungen 10 % statt 21 % Mehrwertsteuer. Für manche Hilfsmittel für Menschen mit Behinderung gilt ein noch niedrigerer Satz. Fragen Sie Ihren Bauunternehmer oder Gestor, was in Ihrem Fall gilt.</p>
+  <p>Wohnen Sie in einer Wohnung oder Urbanisation mit einer <em>comunidad</em>, ist die Gemeinschaft gesetzlich verpflichtet, Maßnahmen zur Barrierefreiheit im Gemeinschaftseigentum durchzuführen, wenn ein Bewohner über 70 oder mit einer Behinderung sie verlangt, bis zu einem Betrag von zwölf Monatsbeiträgen.</p>
+
+  <h2 id="vorgehen">So gehen Sie vor</h2>
+  <ol>
+    <li><strong>Gehen Sie mit kritischem Blick durchs Haus</strong>: wo steigen Sie hoch, wo halten Sie sich fest, wo ist es dunkel oder glatt? Notieren Sie es Raum für Raum.</li>
+    <li><strong>Beginnen Sie mit Bad und Eingang</strong>: dort passieren die meisten Stürze, und dort haben Sie den größten Nutzen.</li>
+    <li><strong>Kombinieren Sie mit anderen Arbeiten</strong>: steht ohnehin ein neues Bad, ein neuer Boden oder neue Elektrik an, machen Sie es gleich schwellenlos.</li>
+    <li><strong>Lassen Sie sich ein Angebot pro Maßnahme geben</strong>: dann wählen Sie, was jetzt nötig ist und was ein paar Jahre warten kann.</li>
+    <li><strong>Lassen Sie es während Ihrer Abwesenheit ausführen</strong>: mit wöchentlichen Fotos und Zahlung pro abgeschlossenem Abschnitt. Wie das geht, lesen Sie unter <a href="/de/ratgeber/renovieren-aus-der-ferne-spanien/">Renovieren aus der Ferne</a>.</li>
+  </ol>
+  <p>Suchen Sie noch ein Haus? Denken Sie jetzt schon daran, wie es in fünfzehn Jahren ist. Unter <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/">Finca, Wohnung oder Dorfhaus</a> vergleichen wir die Haustypen, auch für <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/rentner/">Rentner</a>.</p>
+</Guide>

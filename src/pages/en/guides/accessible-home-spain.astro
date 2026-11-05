@@ -1,0 +1,111 @@
+---
+import Guide from '../../../components/Guide.astro';
+import Todo from '../../../components/Todo.astro';
+
+const toc = [
+  { id: 'short', label: 'Short answer' },
+  { id: 'typical', label: 'Why homes here are tricky' },
+  { id: 'works', label: 'The changes at a glance' },
+  { id: 'costs', label: 'What is costly and what is not' },
+  { id: 'stairlift', label: 'Stairlift, platform lift or home lift' },
+  { id: 'rules', label: 'Permits, VAT and the community' },
+  { id: 'approach', label: 'How to go about it' },
+];
+
+const faq = [
+  {
+    q: 'Do I need a permit for a walk-in shower or a stairlift?',
+    a: 'For interior work that does not touch the structure, most municipalities in the Axarquía only require a notification (declaración responsable). A home lift, a new opening in a load-bearing wall or a ramp on the street side usually needs a permit with drawings by an architect.',
+  },
+  {
+    q: 'Can the community of owners refuse a stairlift or ramp?',
+    a: 'Under the Spanish law on horizontal property (Ley de Propiedad Horizontal), the community must carry out accessibility works if a resident over 70 or with a disability asks for them, as long as the cost does not exceed twelve monthly fees. Above that, a decision of the owners’ meeting is needed. Have this checked for your situation.',
+  },
+  {
+    q: 'Are there grants for adapting my home in Spain?',
+    a: 'The Junta de Andalucía and some municipalities occasionally open accessibility schemes, but these are often tied to being registered and resident in Spain and have short application windows. Grants from your home country generally do not apply to a property abroad.',
+  },
+  {
+    q: 'How long does it take to turn a bathroom into a walk-in shower?',
+    a: 'Allow one to three weeks of work, depending on whether the drain has to be moved and the floor lowered. With preparation and delivery times, expect a few weeks to two months from request to completion.',
+  },
+];
+---
+<Guide lang="en" slug="accessible-home-spain" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Is your home ready for the next twenty years?" ctaText="Send us photos or a floor plan and tell us what you find difficult. You get a proposal per change, so you can decide what comes first.">
+  <h2 id="short">Short answer</h2>
+  <p>Adapting a home for later life means you can still live there safely with less strength, a walking frame or after an operation. The key changes are <strong>removing steps and thresholds, a walk-in shower, grab rails, a bedroom and bathroom on the ground floor and, if needed, a stairlift</strong>. Grab rails, handrails and good lighting are small jobs with a big effect. A walk-in shower is a medium-sized job. A downstairs bedroom or a lift is a major investment.</p>
+  <p>The best moment is when you are renovating anyway, or when you buy. If you are replacing a bathroom now, making it step-free costs little extra.</p>
+
+  <h2 id="typical">Why homes in the Axarquía are tricky</h2>
+  <ul>
+    <li><strong>Stairs everywhere</strong>: village houses are narrow and tall, with the living room on the first floor and bedrooms or the roof terrace above. Fincas sit on slopes, with steps from the parking area to the front door.</li>
+    <li><strong>High shower trays and baths</strong>: many older bathrooms have a bath or a raised shower tray that is hard to step in and out of.</li>
+    <li><strong>Thresholds and level changes</strong>: between rooms, onto the terrace and at the front door. Often just a few centimetres, exactly enough to trip over.</li>
+    <li><strong>Slippery tiles</strong>: glossy floor tiles and outdoor tiles around the pool get slippery when wet.</li>
+    <li><strong>Narrow doors</strong>: 70 cm interior doors are common, while a wheelchair or walking frame needs 80 to 90 cm.</li>
+  </ul>
+
+  <h2 id="works">The changes at a glance</h2>
+  <h3>Bathroom</h3>
+  <p>A level-access shower with a non-slip floor, a fixed or fold-down shower seat, grab rails by the shower and toilet, and a thermostatic tap against scalding. A slightly higher toilet (around 46 to 48 cm) makes standing up easier. Have the door open outwards or fit a sliding door, so you can always reach someone who has fallen.</p>
+  <h3>Floors and thresholds</h3>
+  <p>Remove thresholds, smooth out small level changes with a gentle slope and, where needed, lay new non-slip flooring. Outside, a ramp or wider, lower steps with a handrail on both sides help.</p>
+  <h3>Living on one floor</h3>
+  <p>If a bedroom with its own bathroom can be created downstairs, you no longer need the stairs every day. In a village house this is often the biggest change, but also the most valuable.</p>
+  <h3>Small things with a big effect</h3>
+  <ul>
+    <li>Handrails on both sides of every staircase.</li>
+    <li>Good lighting with motion sensors in the hall, on the stairs and in the bathroom.</li>
+    <li>Switches and sockets at an easy height.</li>
+    <li>Lever taps and lever handles instead of knobs.</li>
+    <li>An alarm button or smart doorbell, so family or a neighbour can keep an eye out.</li>
+  </ul>
+
+  <h2 id="costs">What is costly and what is not</h2>
+  <p>Every house is different, so rather than amounts we show a price class. That way you can quickly see where a little money goes a long way and what is a bigger investment.</p>
+  <table class="prices">
+    <thead><tr><th>Change</th><th>What it solves</th><th>Price class</th></tr></thead>
+    <tbody>
+      <tr><td>Grab rails, shower seat, higher toilet</td><td>Safe showering and standing up</td><td>€</td></tr>
+      <tr><td>Handrails on both sides of the stairs</td><td>Less risk of falling</td><td>€</td></tr>
+      <tr><td>Lighting with motion sensors, alarm button</td><td>Seeing where you walk, calling for help</td><td>€</td></tr>
+      <tr><td>Non-slip treatment of existing tiles</td><td>Less slippery indoors and around the pool</td><td>€</td></tr>
+      <tr><td>Removing thresholds and levelling transitions</td><td>No more tripping, room for a walking frame</td><td>€€</td></tr>
+      <tr><td>Ramp or adapted outdoor steps</td><td>Easy access to the house and terrace</td><td>€€</td></tr>
+      <tr><td>Widening interior doors</td><td>Passage for a walking frame or wheelchair</td><td>€€</td></tr>
+      <tr><td>Replacing bath or shower tray with a walk-in shower</td><td>No more step-in</td><td>€€</td></tr>
+      <tr><td>Stairlift, straight staircase</td><td>Stairs stay usable without climbing</td><td>€€</td></tr>
+      <tr><td>Fully adapted, step-free bathroom</td><td>A bathroom for the next twenty years</td><td>€€€</td></tr>
+      <tr><td>Stairlift for a curved or outdoor staircase</td><td>Made-to-measure rail, weatherproof</td><td>€€€</td></tr>
+      <tr><td>Bedroom with bathroom on the ground floor</td><td>Living on one floor</td><td>€€€€</td></tr>
+      <tr><td>Platform lift or small home lift</td><td>Every floor reachable, also by wheelchair</td><td>€€€€</td></tr>
+    </tbody>
+  </table>
+  <p class="note">€ = small job · €€ = medium job · €€€ = substantial renovation · €€€€ = major investment. What it costs in your home depends on how the drains run, what is under the tiles and how accessible the property is. After a visit you get a quote per change.</p>
+  <Todo label="controle van de prijsklassen (vooral traplift en huislift) door het bouwbedrijf." />
+  <p>More about a new bathroom in <a href="/en/costs/bathroom-renovation/">bathroom renovation</a>.</p>
+
+  <h2 id="stairlift">Stairlift, platform lift or home lift</h2>
+  <ul>
+    <li><strong>Stairlift</strong>: a seat that runs along a rail on the stairs. Cheapest on a straight staircase; with a bend or a spiral the rail has to be made to measure. The stairs stay usable for others.</li>
+    <li><strong>Outdoor stairlift</strong>: for the steps from the street or parking area to the front door, which at fincas and village houses is often the real problem. Choose a model that resists sun, rain and salt.</li>
+    <li><strong>Platform lift</strong>: a platform for a wheelchair, for a short height difference such as a terrace or a few steps at the entrance.</li>
+    <li><strong>Home lift</strong>: a small lift between floors. More expensive and often needs a permit, but in a tall village house sometimes the only way to keep every floor usable.</li>
+  </ul>
+  <p>With any lift, ask about maintenance and a local repair service. A lift that has broken down while you are away is not something you want to discover when you return. If your house is checked through <a href="/en/key-holding/">key holding</a>, have the lift tested on every visit.</p>
+
+  <h2 id="rules">Permits, VAT and the community of owners</h2>
+  <p>Interior work such as a new bathroom or removing thresholds falls under a simple notification (<em>declaración responsable</em>) in most municipalities. A home lift, an opening in a load-bearing wall or a ramp on the public road usually needs a permit with drawings by an architect. We work with a regular architect and gestor for this.</p>
+  <p>Renovation work on a home for private use can, under conditions, be charged at 10% VAT instead of 21%. Some aids for people with a disability qualify for an even lower rate. Ask your builder or gestor what applies to you.</p>
+  <p>If you live in an apartment or urbanisation with a <em>comunidad</em>, the law requires the community to carry out accessibility works in the shared areas if a resident over 70 or with a disability asks for them, up to an amount of twelve monthly fees.</p>
+
+  <h2 id="approach">How to go about it</h2>
+  <ol>
+    <li><strong>Walk through the house with a critical eye</strong>: where do you step up, where do you hold on, where is it dark or slippery? Note it room by room.</li>
+    <li><strong>Start with the bathroom and the entrance</strong>: that is where most falls happen and where you gain the most.</li>
+    <li><strong>Combine with other work</strong>: if a new bathroom, floor or wiring is planned anyway, make it step-free at the same time.</li>
+    <li><strong>Ask for a quote per change</strong>: then you can choose what to do now and what can wait a few years.</li>
+    <li><strong>Have it done while you are away</strong>: with weekly photos and payment per completed stage. Read how that works in <a href="/en/guides/renovating-from-abroad-spain/">renovating from abroad</a>.</li>
+  </ol>
+  <p>Still looking for a house? Think now about what it will be like in fifteen years. In <a href="/en/guides/finca-apartment-or-village-house/">finca, apartment or village house</a> we compare the property types, including for <a href="/en/guides/finca-apartment-or-village-house/retirees/">retirees</a>.</p>
+</Guide>

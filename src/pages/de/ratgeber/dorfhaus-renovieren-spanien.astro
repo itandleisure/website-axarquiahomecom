@@ -1,0 +1,114 @@
+---
+import Guide from '../../../components/Guide.astro';
+import Todo from '../../../components/Todo.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Kurze Antwort' },
+  { id: 'balken', label: 'Alte Holzbalken' },
+  { id: 'feuchtigkeit', label: 'Feuchtigkeit in alten Mauern' },
+  { id: 'gassen', label: 'Enge Gassen ohne Baustellenzufahrt' },
+  { id: 'dach', label: 'Dach und Dachterrasse' },
+  { id: 'regeln', label: 'Regeln im alten Ortskern' },
+  { id: 'kosten', label: 'Was teuer ist und was nicht' },
+  { id: 'tipps', label: 'Tipps für Käufer' },
+];
+
+const faq = [
+  {
+    q: 'Ist die Renovierung eines Dorfhauses teuer?',
+    a: 'Das hängt vor allem vom Zustand der Balken, des Dachs und der Mauern ab und von der Erreichbarkeit. Eine Komplettrenovierung ist eine große Investition; eine Auffrischung mit neuem Bad und neuer Küche kostet einen Bruchteil davon. Weil Material oft von Hand herangeschafft werden muss, ist jede Arbeit im Ortskern etwas teurer als anderswo. Nach einer Besichtigung bekommen Sie ein Angebot pro Position.',
+  },
+  {
+    q: 'Müssen alte Holzbalken immer ersetzt werden?',
+    a: 'Nein. Gesunde Balken können oft bleiben, eventuell mit einer Behandlung gegen Holzwurm oder Termiten und einer Verstärkung der Balkenköpfe in der Mauer. Ersetzen ist erst nötig, wenn ein Balken durchhängt, reißt oder an den Enden verfault ist. Lassen Sie es immer prüfen, bevor Sie eine Decke schließen oder einen schweren Boden verlegen.',
+  },
+  {
+    q: 'Warum kommt die Feuchtigkeit nach dem Verputzen zurück?',
+    a: 'Alte Natursteinmauern müssen atmen können. Wird eine solche Mauer mit Zementputz oder Kunststofffarbe verschlossen, bleibt die Feuchtigkeit eingesperrt und kommt als abblätternde Farbe, Schimmel oder weiße Salzkrusten zurück. Kalkputz und Kalkfarbe lassen die Mauer trocknen.',
+  },
+  {
+    q: 'Darf ich die Fassade meines Dorfhauses verändern?',
+    a: 'In geschützten Ortskernen wie Frigiliana und in den Altstädten vieler anderer Dörfer gibt es Regeln für Fassade, Fenster, Farben und Dach. Ein größeres Fenster, ein neuer Balkon oder ein Aufbau auf der Dachterrasse braucht fast immer eine Genehmigung. Fragen Sie vorab bei der Gemeinde nach oder lassen Sie es vom Architekten prüfen.',
+  },
+];
+---
+<Guide lang="de" slug="dorfhaus-renovieren-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Ein Dorfhaus gekauft oder im Auge?" ctaText="Wir sehen uns Balken, Mauern und Dach an und sagen Ihnen ehrlich, was zu tun ist und was das bedeutet, auch wenn die Gasse zu eng für einen Transporter ist.">
+  <h2 id="kurz">Kurze Antwort</h2>
+  <p>Ein Dorfhaus in der Axarquía ist meist Jahrzehnte bis Jahrhunderte alt, aus Naturstein, Kalk und Holzbalken gebaut, und liegt an einer Gasse, in die kein Lastwagen kommt. Das macht die Renovierung anders als bei einer Villa. Die drei Dinge, die am meisten zählen, sind <strong>der Zustand der Holzbalken, Feuchtigkeit in den Mauern und die Erreichbarkeit</strong>. Muss alles von Hand herangeschafft werden, kostet jede Arbeit spürbar mehr als bei einem Haus an einer normalen Straße.</p>
+  <p>Die gute Nachricht: ein Dorfhaus, das mit den richtigen Materialien renoviert wird, ist im Sommer kühl, im Winter trocken und behält seinen Wert. Lesen Sie auch unseren <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/">Vergleich von Finca, Wohnung und Dorfhaus</a>.</p>
+
+  <h2 id="balken">Alte Holzbalken</h2>
+  <p>Böden und Dächer alter Dorfhäuser ruhen oft auf Holzbalken (<em>vigas</em>) mit Schilfrohr, Brettern oder kleinen Ziegelgewölben dazwischen. Schön, aber empfindlich.</p>
+  <ul>
+    <li><strong>Holzwurm und Termiten</strong>: kleine Löcher und Holzmehl deuten auf Holzwurm (<em>carcoma</em>). Termiten sieht man von außen oft nicht; das Holz klingt hohl und zerbröselt. Mehr über <a href="/de/probleme/termiten/">Termiten</a>.</li>
+    <li><strong>Verfaulte Balkenköpfe</strong>: der Teil des Balkens in der Mauer ist am empfindlichsten. Dringt Feuchtigkeit in die Mauer, fault der Balken genau dort, unsichtbar.</li>
+    <li><strong>Durchhängen</strong>: ein federnder Boden oder eine sichtbar hängende Decke ist ein Zeichen, es prüfen zu lassen.</li>
+  </ul>
+  <p>Die Lösung hängt vom Befund ab: Behandlung gegen Insekten, Verstärkung der Balkenköpfe mit Stahl oder einem neuen Auflager, einzelne Balken ersetzen oder den ganzen Boden erneuern. Lassen Sie das prüfen, bevor ein schwerer Fliesenboden, eine Badewanne oder ein kleines Becken auf die Dachterrasse kommt.</p>
+
+  <h2 id="feuchtigkeit">Feuchtigkeit in alten Mauern</h2>
+  <p>Alte Mauern sind oft 50 bis 70 cm dick, aus Naturstein mit Kalk- oder Lehmmörtel, ohne Fundament, wie wir es kennen, und ohne Sperrschicht. Feuchtigkeit steigt aus dem Boden auf, kommt über eine gemeinsame Wand vom Nachbarn oder von oben durchs Dach.</p>
+  <ul>
+    <li><strong>Lassen Sie die Mauer atmen</strong>: verwenden Sie Kalkputz und Kalkfarbe, keinen Zement und keine Kunststofffarbe. Das ist der häufigste Fehler bei Renovierungen.</li>
+    <li><strong>Beseitigen Sie die Ursache</strong>: ein undichter Abfluss, eine schlechte Dachterrasse oder eine erhöhte Straße an der Fassade. Erst danach hat Trocknen Sinn.</li>
+    <li><strong>Lüften</strong>: Dorfhäuser sind tief und haben wenige Fenster. Eine kleine Lüftungsanlage oder Lüftungsgitter bewirken viel.</li>
+    <li><strong>Injektion gegen aufsteigende Feuchtigkeit</strong>: kann bei einem klaren Feuchtigkeitsproblem unten in der Mauer helfen, ist aber kein Wundermittel.</li>
+  </ul>
+  <p>Mehr zu Ursachen und Lösungen unter <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit und Schimmel</a>.</p>
+
+  <h2 id="gassen">Enge Gassen ohne Baustellenzufahrt</h2>
+  <p>In die Altstädte von Cómpeta, Frigiliana, Canillas de Albaida oder Árchez kommt kein Transporter, geschweige denn ein Lastwagen. Alles geht per Schubkarre, mit einem kleinen Raupendumper oder auf der Schulter, die Gasse hinauf und die Treppe hoch. Das hat Folgen:</p>
+  <ul>
+    <li><strong>Mehr Arbeitsstunden</strong>: Sand, Zement, Fliesen und Schutt werden oft mehrmals umgeladen.</li>
+    <li><strong>Kleinere Lieferungen</strong>: Material kommt in kleinen Säcken, was teurer ist als lose Ware.</li>
+    <li><strong>Schuttabfuhr</strong>: in Big Bags zu einer Stelle, an der ein Container stehen darf.</li>
+    <li><strong>Genehmigung für öffentlichen Grund</strong>: für einen Container, ein Gerüst oder das vorübergehende Sperren der Gasse verlangt die Gemeinde eine Genehmigung (<em>ocupación de vía pública</em>).</li>
+    <li><strong>Große Teile</strong>: eine Arbeitsplatte, ein großes Fenster oder eine Wärmepumpe muss manchmal in Teilen hinein oder mit einem kleinen Kran über die Dächer.</li>
+    <li><strong>Nachbarn</strong>: in einer Gasse, in der sich alle kennen, hilft es, die Nachbarn vorab zu informieren, was passiert und wie lange.</li>
+  </ul>
+
+  <h2 id="dach">Dach und Dachterrasse</h2>
+  <p>Viele Dorfhäuser haben eine flache Dachterrasse (<em>azotea</em>) oder ein Dach aus Mönch-Nonne-Ziegeln auf Holzbalken. Undichtigkeiten sitzen oft am Abfluss, an den Aufkantungen oder am Anschluss zum Nachbarn. Eine Dachterrasse neu abzudichten verhindert viele Feuchtigkeitsprobleme darunter. Siehe <a href="/de/kosten/dach-und-dachterrasse/">Dach und Dachterrasse</a> und <a href="/de/probleme/undichtes-dach/">undichtes Dach</a>.</p>
+
+  <h2 id="regeln">Regeln im alten Ortskern</h2>
+  <p>Die weißen Dörfer sind ein Teil ihres Werts, und die Gemeinden achten darauf. In geschützten Ortskernen wie Frigiliana und in den Altstädten anderer Dörfer gibt es Regeln für:</p>
+  <ul>
+    <li>Die Farbe der Fassade (weiß gekalkt) sowie von Fenstern und Türen.</li>
+    <li>Größe und Art von Fenstern, Fensterläden und Balkonen.</li>
+    <li>Dachziegel, Schornsteine und Aufbauten auf der Dachterrasse.</li>
+    <li>Sichtbare Anlagen wie Klimageräte, Solarmodule und Satellitenschüsseln zur Straße hin.</li>
+  </ul>
+  <p>Innenarbeiten fallen meist unter eine einfache Anzeige. Alles, was außen sichtbar verändert wird oder in die Statik eingreift, braucht meist eine Genehmigung mit Plänen eines Architekten. Wir arbeiten dafür mit einem festen Architekten und Gestor, die die Regeln jeder Gemeinde kennen.</p>
+
+  <h2 id="kosten">Was teuer ist und was nicht</h2>
+  <p>Kein Dorfhaus gleicht dem anderen, deshalb nennen wir keine Beträge, sondern eine Preisklasse. So sehen Sie, wo das große Geld steckt.</p>
+  <table class="prices">
+    <thead><tr><th>Position</th><th>Wann nötig</th><th>Preisklasse</th></tr></thead>
+    <tbody>
+      <tr><td>Genehmigung für Container oder Gerüst auf der Straße</td><td>Bei fast jeder Renovierung im Ortskern</td><td>€</td></tr>
+      <tr><td>Balken gegen Holzwurm oder Termiten behandeln</td><td>Bei Löchern, Holzmehl oder hohl klingendem Holz</td><td>€</td></tr>
+      <tr><td>Mauern lüften, Kalkfarbe statt Kunststofffarbe</td><td>Bei abblätternder Farbe und feuchten Flecken</td><td>€</td></tr>
+      <tr><td>Einzelne Balken ersetzen oder Köpfe verstärken</td><td>Bei Durchhängen oder verfaulten Enden</td><td>€€</td></tr>
+      <tr><td>Alten Putz entfernen, neuer Kalkputz</td><td>Bei hartnäckiger Feuchtigkeit und Salzkrusten</td><td>€€</td></tr>
+      <tr><td>Injektion gegen aufsteigende Feuchtigkeit</td><td>Bei Feuchtigkeit unten in der Mauer</td><td>€€</td></tr>
+      <tr><td>Dachterrasse neu abdichten</td><td>Bei Undichtigkeit oder Flecken an der Decke darunter</td><td>€€</td></tr>
+      <tr><td>Zuschlag für Erreichbarkeit (alles von Hand)</td><td>In Gassen ohne Zufahrt für einen Transporter</td><td>€€</td></tr>
+      <tr><td>Ganzen Holzboden oder ganze Decke erneuern</td><td>Wenn viele Balken schlecht sind</td><td>€€€</td></tr>
+      <tr><td>Ziegeldach mit Dämmung erneuern</td><td>Bei alten, undichten oder durchgesackten Dächern</td><td>€€€</td></tr>
+      <tr><td>Elektrik und Wasserleitungen komplett erneuern</td><td>Bei fast jedem Haus über 30 Jahre</td><td>€€€</td></tr>
+      <tr><td>Komplettrenovierung</td><td>Alles raus: Balken, Leitungen, Aufteilung, Dach</td><td>€€€€</td></tr>
+    </tbody>
+  </table>
+  <p class="note">€ = kleine Arbeit · €€ = mittlere Arbeit · €€€ = größerer Umbau · €€€€ = große Investition. Bei alten Häusern zeigt sich der wahre Zustand erst beim Abbruch; planen Sie immer eine Reserve ein.</p>
+  <Todo label="controle van de prijsklassen door het bouwbedrijf." />
+  <p>Sie möchten doch ein erstes Budget in Euro? Siehe <a href="/de/ratgeber/renovierungskosten-spanien/">Was kostet die Renovierung eines Hauses in Spanien</a>, oder fragen Sie nach einer Besichtigung ein Angebot an.</p>
+
+  <h2 id="tipps">Tipps für Käufer</h2>
+  <ul>
+    <li><strong>Lassen Sie das Haus vor der Unterschrift begutachten</strong>, mit besonderem Augenmerk auf Balken, Feuchtigkeit und Dach. Siehe das <a href="/de/immobiliengutachten/">Immobiliengutachten</a>.</li>
+    <li><strong>Gehen Sie den Weg selbst ab</strong> von der nächsten Stelle, an der ein Transporter halten kann, bis zur Haustür. Je länger und steiler, desto teurer jede Arbeit.</li>
+    <li><strong>Prüfen Sie die Unterlagen</strong>: stimmt das Gebaute mit Grundbuch und Kataster überein? Aufbauten auf Dachterrassen sind nicht immer genehmigt.</li>
+    <li><strong>Denken Sie an später</strong>: viele Treppen sind jetzt charmant, in fünfzehn Jahren vielleicht nicht mehr. Lesen Sie <a href="/de/ratgeber/barrierefrei-umbauen-spanien/">Ihr Haus altersgerecht umbauen</a>.</li>
+    <li><strong>Renovieren Sie Schritt für Schritt, wenn nötig</strong>: zuerst Dach, Balken und Feuchtigkeit, danach der Ausbau. Den Rest können Sie auch aus der Ferne erledigen lassen; lesen Sie <a href="/de/ratgeber/renovieren-aus-der-ferne-spanien/">Renovieren aus der Ferne</a>.</li>
+  </ul>
+</Guide>

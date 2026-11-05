@@ -1,0 +1,127 @@
+---
+import Guide from '../../../components/Guide.astro';
+import Todo from '../../../components/Todo.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Kurze Antwort' },
+  { id: 'unternehmer', label: 'Einen Bauunternehmer wählen' },
+  { id: 'angebote', label: 'Angebote vergleichen' },
+  { id: 'vertrag', label: 'Was schriftlich festgehalten wird' },
+  { id: 'zahlen', label: 'In Raten zahlen' },
+  { id: 'updates', label: 'Auf dem Laufenden bleiben' },
+  { id: 'kosten', label: 'Nebenkosten' },
+  { id: 'abnahme', label: 'Abnahme und danach' },
+];
+
+const faq = [
+  {
+    q: 'Muss ich während der Renovierung in Spanien sein?',
+    a: 'Nein. Es ist aber sinnvoll, zum Start und zur Abnahme vor Ort zu sein oder jemanden zu haben, der für Sie nachsieht. Dazwischen verfolgen Sie die Arbeiten über Fotos, Video und einen festen Ansprechpartner.',
+  },
+  {
+    q: 'Welche Anzahlung ist bei einem Bauunternehmer in Spanien üblich?',
+    a: 'Üblich sind 20 bis 30 % zum Start, vor allem für Material. Danach zahlen Sie pro abgeschlossenem Abschnitt und behalten 5 bis 10 % bis nach der Abnahme ein. Ein Unternehmer, der den Großteil vorab verlangt, ist ein Warnsignal.',
+  },
+  {
+    q: 'Kann ich einen Bauunternehmer bar bezahlen?',
+    a: 'Tun Sie das nicht. Zahlen Sie immer per Überweisung auf eine Rechnung mit Mehrwertsteuer. Ohne Rechnung haben Sie keine Gewährleistung, keinen Nachweis für die Genehmigung und später Probleme beim Verkauf, weil Sie die Renovierungskosten nicht belegen können.',
+  },
+  {
+    q: 'Brauche ich eine Vollmacht?',
+    a: 'Nicht immer. Für Genehmigungen und Anschlüsse kann eine Vollmacht (poder notarial) für einen Gestor praktisch sein, damit Sie nicht für jede Unterschrift nach Spanien fliegen müssen. Eine solche Vollmacht können Sie auch beim spanischen Konsulat oder bei einem Notar in Deutschland erstellen lassen.',
+  },
+];
+---
+<Guide lang="de" slug="renovieren-aus-der-ferne-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Renovieren, während Sie zu Hause sind?" ctaText="Schicken Sie uns Fotos und Ihre Wünsche. Sie bekommen ein Angebot pro Position, einen festen Ansprechpartner auf Englisch oder Niederländisch und wöchentliche Fotos vom Fortschritt.">
+  <h2 id="kurz">Kurze Antwort</h2>
+  <p>Renovieren aus der Ferne funktioniert gut, wenn vier Dinge stimmen: <strong>ein Bauunternehmer, den Sie überprüfen können, ein Angebot pro Position, Zahlung in Raten für abgeschlossene Arbeit und regelmäßige Updates mit Fotos</strong>. Was bei Renovierungen in Spanien schiefgeht, liegt fast immer an vagen Absprachen: ein Pauschalpreis ohne Aufschlüsselung, mündlich vereinbarte Zusatzarbeiten oder zu viel Vorauszahlung.</p>
+  <p>In diesem Ratgeber lesen Sie, wie Sie einen Unternehmer wählen, Angebote fair vergleichen, was schriftlich festgehalten werden sollte und wie Sie von zu Hause aus den Überblick behalten.</p>
+
+  <h2 id="unternehmer">Einen Bauunternehmer wählen</h2>
+  <p>In der Axarquía arbeiten große Baufirmen, kleine Trupps und selbständige Handwerker nebeneinander. Für eine größere Renovierung möchten Sie jemanden, der Folgendes vorweisen kann:</p>
+  <ul class="checks">
+    <li>Eine spanische Steuernummer (<em>CIF</em> oder <em>NIF</em>) und Rechnungen mit Mehrwertsteuer.</li>
+    <li>Anmeldung als Firma oder Selbständiger bei der spanischen Sozialversicherung, damit die Leute auf Ihrer Baustelle versichert sind.</li>
+    <li>Eine Haftpflichtversicherung (<em>seguro de responsabilidad civil</em>). Lassen Sie sich eine Kopie geben.</li>
+    <li>Referenzen von Eigentümern, die ebenfalls aus der Ferne renoviert haben, und Fotos fertiger Arbeiten in der Nähe.</li>
+    <li>Einen festen Ansprechpartner, der eine Sprache spricht, die Sie verstehen, und innerhalb eines Tages antwortet.</li>
+    <li>Zusammenarbeit mit einem Architekten und Gestor für Genehmigungen, damit Sie nicht alle Beteiligten selbst koordinieren müssen.</li>
+  </ul>
+  <p>Seien Sie vorsichtig mit dem günstigsten Preis von jemandem ohne Firmenangaben. Das wirkt günstig, bis etwas schiefgeht und niemand haftet.</p>
+
+  <h2 id="angebote">Angebote vergleichen</h2>
+  <p>Holen Sie zwei oder drei Angebote auf Basis derselben Beschreibung ein. Ein gutes Angebot (<em>presupuesto</em>) ist nach Positionen (<em>partidas</em>) aufgeschlüsselt und sagt, was enthalten ist und was nicht. Achten Sie auf diese Unterschiede:</p>
+  <table class="prices">
+    <thead><tr><th>Prüfen</th><th>Warum</th></tr></thead>
+    <tbody>
+      <tr><td>MwSt.: 10 % oder 21 %</td><td>Für die Renovierung einer selbst genutzten Wohnung gilt unter Bedingungen 10 %. Vergleichen Sie Preise immer inklusive MwSt.</td></tr>
+      <tr><td>Schuttabfuhr und Container</td><td>Wird oft vergessen und kann im Dorf mit engen Gassen ins Geld gehen.</td></tr>
+      <tr><td>Genehmigung und Gebühren</td><td>Sind Anzeige oder Genehmigung und die Gemeindesteuer (ICIO) enthalten oder kommen sie dazu?</td></tr>
+      <tr><td>Material</td><td>Stehen Marke und Typ von Fliesen, Sanitär und Armaturen drin oder nur „Standard“? Ein Pauschalbetrag für Material erschwert den Vergleich.</td></tr>
+      <tr><td>Gerüst, Schutz und Reinigung</td><td>Inklusive oder extra?</td></tr>
+      <tr><td>Zeitplan</td><td>Startdatum, Dauer und was bei Verzögerung passiert.</td></tr>
+    </tbody>
+  </table>
+  <p>Liegt ein Angebot weit unter den anderen, fragen Sie, was fehlt. Meist steckt der Unterschied in dem, was nicht drinsteht.</p>
+
+  <h2 id="vertrag">Was schriftlich festgehalten wird</h2>
+  <ul>
+    <li><strong>Das aufgeschlüsselte Angebot</strong> als Grundlage, mit Festpreis pro Position.</li>
+    <li><strong>Ein Zeitplan</strong> mit Start, Zwischenschritten und Fertigstellung.</li>
+    <li><strong>Der Zahlungsplan</strong>, gekoppelt an abgeschlossene Arbeit, nicht an Termine.</li>
+    <li><strong>Zusatzarbeiten nur schriftlich</strong>: ein Preis per WhatsApp oder E-Mail, ausgeführt erst nach Ihrer Zustimmung. Bei alten Häusern kommt fast immer etwas zum Vorschein; planen Sie 10 bis 15 % Reserve ein.</li>
+    <li><strong>Gewährleistung</strong>: in Spanien gibt es eine gesetzliche Haftung für Baumängel, vereinbaren Sie aber auch selbst eine Gewährleistungsfrist auf die Arbeiten.</li>
+    <li><strong>Schlüssel und Zugang</strong>: wer hat einen Schlüssel, wer schließt ab, wer schaltet die Alarmanlage ein?</li>
+  </ul>
+
+  <h2 id="zahlen">In Raten zahlen</h2>
+  <p>Ein sicherer und üblicher Zahlungsplan für eine mittlere Renovierung sieht etwa so aus:</p>
+  <table class="prices">
+    <thead><tr><th>Zeitpunkt</th><th>Anteil am Preis</th></tr></thead>
+    <tbody>
+      <tr><td>Zum Start (Material, Vorbereitung)</td><td>20 – 30 %</td></tr>
+      <tr><td>Nach Abbruch und Rohinstallation (Leitungen, Elektrik, Wände)</td><td>25 – 30 %</td></tr>
+      <tr><td>Nach dem Ausbau (Fliesen, Sanitär, Küche)</td><td>25 – 30 %</td></tr>
+      <tr><td>Nach Abnahme und Behebung der letzten Mängel</td><td>5 – 10 %</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Ein Richtwert, keine feste Regel. Bei kleinen Arbeiten ist eine Zahlung nach Abschluss üblich.</p>
+  <p>Zahlen Sie jede Rate erst, wenn Sie Fotos der Arbeit gesehen haben, für die Sie zahlen. Zahlen Sie immer per Überweisung auf eine Rechnung mit MwSt., nie bar. Diese Rechnungen brauchen Sie später: für die Gewährleistung, die Genehmigung und beim Verkauf des Hauses.</p>
+
+  <h2 id="updates">Auf dem Laufenden bleiben</h2>
+  <p>Beim Renovieren aus der Ferne ist gute Kommunikation wichtiger als der Preis. Vereinbaren Sie vorab:</p>
+  <ul>
+    <li><strong>Einen festen Ansprechpartner</strong>, nicht einen wechselnden Vorarbeiter.</li>
+    <li><strong>Wöchentliche Fotos und kurze Videos</strong> vom Fortschritt, auch von dem, was später hinter Fliesen oder Putz verschwindet, wie Leitungen und Elektrik.</li>
+    <li><strong>Ein Videogespräch</strong> bei den wichtigen Entscheidungen: Fliesen, Küchenaufteilung, Lage der Steckdosen.</li>
+    <li><strong>Eine gemeinsame Liste</strong> mit Entscheidungen, Zusatzarbeiten und Zahlungen, damit Sie immer wissen, wo Sie stehen.</li>
+  </ul>
+  <p>So arbeiten wir auch selbst: die meisten unserer Kunden sind während der Renovierung nicht in Spanien. Unser Team hat zwanzig Jahre Erfahrung in der Axarquía, arbeitet nach niederländischen Qualitätsstandards und mit einem festen Architekten und Gestor, und Sie haben einen festen Ansprechpartner auf Englisch oder Niederländisch.</p>
+
+  <h2 id="kosten">Nebenkosten, die Sie einplanen sollten</h2>
+  <p>Neben der Renovierung selbst gibt es Kosten, die in Angeboten oft fehlen. Fragen Sie bei jedem Posten nach.</p>
+  <table class="prices">
+    <thead><tr><th>Posten</th><th>Wann</th><th>Preisklasse</th></tr></thead>
+    <tbody>
+      <tr><td>Anzeige für kleine Arbeiten (declaración responsable)</td><td>Innenarbeiten ohne Eingriff in die Statik</td><td>€</td></tr>
+      <tr><td>Vollmacht beim Notar</td><td>Wenn ein Gestor für Sie unterschreibt</td><td>€</td></tr>
+      <tr><td>Container oder Schuttabfuhr</td><td>Bei jeder Renovierung mit Abbrucharbeiten</td><td>€</td></tr>
+      <tr><td>Gestor für Anträge und Papierkram</td><td>Genehmigung, Anschlüsse, Anmeldungen</td><td>€€</td></tr>
+      <tr><td>Gebühren und Gemeindesteuer (ICIO)</td><td>Bei einer Genehmigung, ein Prozentsatz der Bausumme</td><td>€€</td></tr>
+      <tr><td>Architekt: Projekt und Bauleitung</td><td>Bei genehmigungspflichtigen Arbeiten, Anbau oder Pool</td><td>€€€</td></tr>
+      <tr><td>Reserve für Unvorhergesehenes</td><td>Immer, besonders bei alten Häusern</td><td>€€€</td></tr>
+    </tbody>
+  </table>
+  <p class="note">€ = kleiner Posten · €€ = spürbar · €€€ = ein großer Teil des Budgets. Die genauen Beträge hängen von Gemeinde und Bausumme ab.</p>
+  <Todo label="controle van de prijsklassen door het bouwbedrijf en de architect." />
+  <p>Was die Renovierung selbst kostet, lesen Sie unter <a href="/de/ratgeber/renovierungskosten-spanien/">Was kostet die Renovierung eines Hauses in Spanien</a>.</p>
+
+  <h2 id="abnahme">Abnahme und danach</h2>
+  <ol>
+    <li><strong>Gehen Sie das Haus gemeinsam durch</strong>, vor Ort oder per Videogespräch, und erstellen Sie eine Mängelliste.</li>
+    <li><strong>Zahlen Sie die letzte Rate</strong> erst, wenn diese Punkte erledigt sind.</li>
+    <li><strong>Lassen Sie sich alle Unterlagen geben</strong>: Rechnungen, Garantiescheine, das Elektroprüfprotokoll (<em>boletín</em>), wenn die Elektrik erneuert wurde, und die Fertigstellungsunterlagen, wenn es eine Genehmigung gab.</li>
+    <li><strong>Lassen Sie das Haus danach im Auge behalten</strong>. Kleine Undichtigkeiten oder Risse entdecken Sie am besten in den ersten Monaten. Mit der <a href="/de/hausbetreuung/">Hausbetreuung</a> schaut regelmäßig jemand nach.</li>
+  </ol>
+  <p>Sie wissen noch nicht, ob Sie eine Genehmigung brauchen? Lesen Sie zuerst die Seite <a href="/de/renovierung/">Renovierung</a> oder schicken Sie uns Ihre Frage.</p>
+</Guide>

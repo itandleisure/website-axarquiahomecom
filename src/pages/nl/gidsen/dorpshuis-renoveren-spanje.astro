@@ -1,0 +1,114 @@
+---
+import Guide from '../../../components/Guide.astro';
+import Todo from '../../../components/Todo.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort antwoord' },
+  { id: 'balken', label: 'Oude houten balken' },
+  { id: 'vocht', label: 'Vocht in oude muren' },
+  { id: 'straatjes', label: 'Smalle straatjes zonder bouwtoegang' },
+  { id: 'dak', label: 'Dak en dakterras' },
+  { id: 'regels', label: 'Regels in de oude dorpskern' },
+  { id: 'kosten', label: 'Wat is duur en wat valt mee?' },
+  { id: 'tips', label: 'Tips voor kopers' },
+];
+
+const faq = [
+  {
+    q: 'Is een dorpshuis renoveren duur?',
+    a: 'Dat hangt vooral af van de staat van balken, dak en muren, en van de bereikbaarheid. Een totaalrenovatie is een grote investering; een opfrisbeurt met nieuwe badkamer en keuken kost een fractie daarvan. Omdat materiaal vaak met de hand moet worden aangevoerd, is elke klus in een dorpskern iets duurder dan elders. Na een bezoek krijgt u een offerte per onderdeel.',
+  },
+  {
+    q: 'Moeten oude houten balken altijd worden vervangen?',
+    a: 'Nee. Vaak kunnen balken blijven als ze gezond zijn, eventueel met een behandeling tegen houtworm of termieten en versterking van de koppen in de muur. Pas als een balk doorbuigt, scheurt of aan de uiteinden is weggerot, is vervangen nodig. Laat het altijd beoordelen voordat u een plafond dichtmaakt of een zware vloer legt.',
+  },
+  {
+    q: 'Waarom komt het vocht na het stucen terug?',
+    a: 'Oude natuurstenen muren moeten kunnen ademen. Wordt zo’n muur afgewerkt met cementpleister of plastic verf, dan raakt het vocht opgesloten en komt het terug als bladderende verf, schimmel of witte zoutkorsten. Kalkpleister en kalkverf laten de muur drogen.',
+  },
+  {
+    q: 'Mag ik de gevel van mijn dorpshuis veranderen?',
+    a: 'In beschermde dorpskernen zoals Frigiliana en in de oude kernen van veel andere dorpen gelden regels voor gevel, ramen, kleuren en dak. Een groter raam, een nieuw balkon of een opbouw op het dakterras vraagt vrijwel altijd een vergunning. Vraag het vooraf na bij de gemeente of laat de architect het controleren.',
+  },
+];
+---
+<Guide slug="dorpshuis-renoveren-spanje" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Een dorpshuis gekocht, of op het oog?" ctaText="We bekijken balken, muren en dak en zeggen eerlijk wat er moet gebeuren en wat het ongeveer kost, ook als de straat te smal is voor een busje.">
+  <h2 id="kort">Kort antwoord</h2>
+  <p>Een dorpshuis in de Axarquía is meestal tientallen tot honderden jaren oud, gebouwd met natuursteen, kalk en houten balken, en ligt aan een straatje waar geen vrachtwagen komt. Dat maakt renoveren anders dan bij een villa. De drie dingen die het meeste bepalen zijn <strong>de staat van de houten balken, vocht in de muren en de bereikbaarheid</strong>. Moet alles met de hand worden aangevoerd, dan kost elke klus merkbaar meer dan bij een huis aan een gewone straat.</p>
+  <p>Goed nieuws: een dorpshuis dat met de juiste materialen wordt aangepakt, is koel in de zomer, droog in de winter en houdt zijn waarde. Lees ook de <a href="/nl/gidsen/finca-appartement-of-dorpshuis/">vergelijking tussen finca, appartement en dorpshuis</a>.</p>
+
+  <h2 id="balken">Oude houten balken</h2>
+  <p>Vloeren en daken van oude dorpshuizen rusten vaak op houten balken (<em>vigas</em>) met daartussen riet, planken of kleine gewelfjes van baksteen. Dat is mooi, maar kwetsbaar.</p>
+  <ul>
+    <li><strong>Houtworm en termieten</strong>: kleine gaatjes en houtmeel wijzen op houtworm (<em>carcoma</em>). Termieten ziet u vaak niet van buitenaf; het hout klinkt hol en verkruimelt. Lees meer over <a href="/nl/problemen/termieten/">termieten</a>.</li>
+    <li><strong>Rotte koppen</strong>: het deel van de balk dat in de muur zit, is het gevoeligst. Komt er vocht in de muur, dan rot de balk juist daar, onzichtbaar.</li>
+    <li><strong>Doorbuigen</strong>: een vloer die veert of een plafond dat zichtbaar hangt, is een teken om te laten kijken.</li>
+  </ul>
+  <p>De oplossing hangt af van wat er wordt gevonden: behandelen tegen insecten, de koppen versterken met staal of een nieuwe oplegging, enkele balken vervangen of de hele vloer vernieuwen. Laat dit beoordelen voordat er een zware tegelvloer, een bad of een zwembadje op het dakterras komt.</p>
+
+  <h2 id="vocht">Vocht in oude muren</h2>
+  <p>Oude muren zijn vaak 50 tot 70 cm dik, van natuursteen met kalk- of leemmortel, zonder fundering zoals wij die kennen en zonder vochtwerende laag. Vocht komt van onderen uit de grond, van buren met een gedeelde muur, of van boven via het dak.</p>
+  <ul>
+    <li><strong>Laat de muur ademen</strong>: gebruik kalkpleister en kalkverf, geen cement of plastic muurverf. Dit is de meest gemaakte fout bij een renovatie.</li>
+    <li><strong>Pak de oorzaak aan</strong>: een lekkende afvoer, een slecht dakterras of een verhoogde straat tegen de gevel. Pas daarna heeft drogen zin.</li>
+    <li><strong>Ventileer</strong>: dorpshuizen zijn diep en hebben weinig ramen. Een klein ventilatiesysteem of roosters doen veel.</li>
+    <li><strong>Injecteren tegen optrekkend vocht</strong>: kan helpen bij een duidelijk vochtprobleem onderin de muur, maar is geen wondermiddel.</li>
+  </ul>
+  <p>Meer over oorzaken en aanpak leest u op <a href="/nl/problemen/vocht-en-schimmel/">vocht en schimmel</a>.</p>
+
+  <h2 id="straatjes">Smalle straatjes zonder bouwtoegang</h2>
+  <p>In de oude kernen van Cómpeta, Frigiliana, Canillas de Albaida of Árchez komt geen bestelbus, laat staan een vrachtwagen. Alles gaat met een kruiwagen, een kleine rupsdumper of op de schouder, de straat in en de trap op. Dat heeft gevolgen:</p>
+  <ul>
+    <li><strong>Meer arbeidsuren</strong>: zand, cement, tegels en puin worden vaak meerdere keren overgeladen.</li>
+    <li><strong>Kleinere leveringen</strong>: materiaal komt in kleine zakken, wat duurder is dan bulk.</li>
+    <li><strong>Puin afvoeren</strong>: in big bags naar een plek waar een container mag staan.</li>
+    <li><strong>Vergunning voor de openbare weg</strong>: voor een container, steiger of het tijdelijk afzetten van de straat vraagt de gemeente een vergunning (<em>ocupación de vía pública</em>).</li>
+    <li><strong>Grote onderdelen</strong>: een keukenblad, een groot raam of een warmtepomp moet soms in delen naar binnen, of met een kleine kraan over de daken.</li>
+    <li><strong>Buren</strong>: in een straat waar iedereen elkaar kent, helpt het om de buren vooraf te vertellen wat er gaat gebeuren en hoelang.</li>
+  </ul>
+
+  <h2 id="dak">Dak en dakterras</h2>
+  <p>Veel dorpshuizen hebben een plat dakterras (<em>azotea</em>) of een dak van Arabische dakpannen op houten balken. Lekkages zitten vaak bij de afvoer, langs de opstaande randen of bij de aansluiting op de buren. Een dakterras opnieuw waterdicht maken voorkomt veel vochtproblemen eronder. Zie <a href="/nl/kosten/dak-en-dakterras/">dak en dakterras: kosten</a> en <a href="/nl/problemen/daklekkage/">daklekkage</a>.</p>
+
+  <h2 id="regels">Regels in de oude dorpskern</h2>
+  <p>De witte dorpen zijn een deel van hun waarde, en de gemeentes bewaken dat. In beschermde kernen zoals Frigiliana en in de oude centra van andere dorpen gelden regels voor:</p>
+  <ul>
+    <li>De kleur van de gevel (wit gekalkt) en van ramen en deuren.</li>
+    <li>Het formaat en type van ramen, luiken en balkons.</li>
+    <li>Dakpannen, schoorstenen en opbouwen op het dakterras.</li>
+    <li>Zichtbare installaties, zoals airco-units, zonnepanelen en schotels aan de straatkant.</li>
+  </ul>
+  <p>Binnenwerk valt meestal onder een eenvoudige melding. Alles wat aan de buitenkant zichtbaar verandert, of ingrijpt in de constructie, vraagt meestal een vergunning met een tekening van een architect. Wij werken daarvoor met een vaste architect en gestor die de regels per gemeente kennen.</p>
+
+  <h2 id="kosten">Wat is duur en wat valt mee?</h2>
+  <p>Geen twee dorpshuizen zijn gelijk, dus we geven geen bedragen maar een prijsklasse. Zo ziet u waar het grote geld zit.</p>
+  <table class="prices">
+    <thead><tr><th>Onderdeel</th><th>Wanneer nodig</th><th>Prijsklasse</th></tr></thead>
+    <tbody>
+      <tr><td>Vergunning voor container of steiger op straat</td><td>Bij bijna elke verbouwing in de oude kern</td><td>€</td></tr>
+      <tr><td>Balken behandelen tegen houtworm of termieten</td><td>Bij gaatjes, houtmeel of hol klinkend hout</td><td>€</td></tr>
+      <tr><td>Muren ventileren, kalkverf in plaats van plastic verf</td><td>Bij bladderende verf en vochtplekken</td><td>€</td></tr>
+      <tr><td>Enkele balken vervangen of koppen versterken</td><td>Bij doorbuigen of rotte uiteinden</td><td>€€</td></tr>
+      <tr><td>Oude pleister eraf, nieuwe kalkpleister</td><td>Bij hardnekkig vocht en zoutkorsten</td><td>€€</td></tr>
+      <tr><td>Injecteren tegen optrekkend vocht</td><td>Bij vocht onderin de muur</td><td>€€</td></tr>
+      <tr><td>Dakterras opnieuw waterdicht maken</td><td>Bij lekkage of vochtplekken in het plafond eronder</td><td>€€</td></tr>
+      <tr><td>Toeslag voor bereikbaarheid (alles met de hand)</td><td>In straatjes zonder toegang voor een busje</td><td>€€</td></tr>
+      <tr><td>Hele houten vloer of plafond vernieuwen</td><td>Als veel balken slecht zijn</td><td>€€€</td></tr>
+      <tr><td>Dak van dakpannen vernieuwen met isolatie</td><td>Bij oude, lekkende of doorgezakte daken</td><td>€€€</td></tr>
+      <tr><td>Elektra en waterleidingen volledig vernieuwen</td><td>Bij vrijwel elk huis ouder dan 30 jaar</td><td>€€€</td></tr>
+      <tr><td>Totaalrenovatie</td><td>Alles eruit: balken, leidingen, indeling, dak</td><td>€€€€</td></tr>
+    </tbody>
+  </table>
+  <p class="note">€ = kleine klus · €€ = gemiddelde klus · €€€ = forse verbouwing · €€€€ = grote investering. Bij oude huizen komt pas bij het slopen aan het licht hoe het er echt voor staat; houd altijd een buffer aan.</p>
+  <Todo label="controle van de prijsklassen door het bouwbedrijf." />
+  <p>Wilt u toch een eerste begroting in euro’s? Kijk dan bij <a href="/nl/gidsen/kosten-huis-renoveren-spanje/">wat kost een huis renoveren</a> of vraag een offerte na een bezoek.</p>
+
+  <h2 id="tips">Tips voor kopers</h2>
+  <ul>
+    <li><strong>Laat het huis keuren vóór u tekent</strong>, met speciale aandacht voor balken, vocht en dak. Zie de <a href="/nl/aankoopkeuring/">aankoopkeuring</a>.</li>
+    <li><strong>Loop zelf de route</strong> van de dichtstbijzijnde plek waar een busje kan stoppen naar de voordeur. Hoe langer en steiler, hoe duurder elke klus.</li>
+    <li><strong>Controleer de papieren</strong>: komt wat er staat overeen met het kadaster en de inschrijving? Opbouwen op het dakterras zijn niet altijd vergund.</li>
+    <li><strong>Denk aan later</strong>: veel trappen zijn nu charmant, maar over vijftien jaar misschien niet meer. Lees <a href="/nl/gidsen/levensloopbestendig-maken-spanje/">uw huis levensloopbestendig maken</a>.</li>
+    <li><strong>Verbouw stap voor stap als dat moet</strong>: eerst dak, balken en vocht, daarna de afwerking. Wat daarna komt, kunt u ook vanuit Nederland laten doen; lees <a href="/nl/gidsen/verbouwen-op-afstand-spanje/">verbouwen op afstand</a>.</li>
+  </ul>
+</Guide>

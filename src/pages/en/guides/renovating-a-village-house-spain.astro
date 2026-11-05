@@ -1,0 +1,114 @@
+---
+import Guide from '../../../components/Guide.astro';
+import Todo from '../../../components/Todo.astro';
+
+const toc = [
+  { id: 'short', label: 'Short answer' },
+  { id: 'beams', label: 'Old timber beams' },
+  { id: 'damp', label: 'Damp in old walls' },
+  { id: 'streets', label: 'Narrow streets with no site access' },
+  { id: 'roof', label: 'Roof and roof terrace' },
+  { id: 'rules', label: 'Rules in the old village centre' },
+  { id: 'costs', label: 'What is costly and what is not' },
+  { id: 'tips', label: 'Tips for buyers' },
+];
+
+const faq = [
+  {
+    q: 'Is renovating a village house expensive?',
+    a: 'It mainly depends on the state of the beams, roof and walls, and on access. A full renovation is a major investment; a refresh with a new bathroom and kitchen costs a fraction of that. Because materials often have to be carried in by hand, every job in a village centre costs somewhat more than elsewhere. After a visit you get a quote per item.',
+  },
+  {
+    q: 'Do old timber beams always have to be replaced?',
+    a: 'No. Beams can often stay if they are sound, possibly with treatment against woodworm or termites and strengthening of the ends in the wall. Replacement is only needed when a beam sags, splits or has rotted at the ends. Always have it assessed before you close up a ceiling or lay a heavy floor.',
+  },
+  {
+    q: 'Why does the damp come back after replastering?',
+    a: 'Old stone walls need to breathe. If such a wall is finished with cement render or plastic paint, the moisture is trapped and comes back as flaking paint, mould or white salt crusts. Lime plaster and lime paint let the wall dry out.',
+  },
+  {
+    q: 'Can I change the façade of my village house?',
+    a: 'In protected village centres such as Frigiliana, and in the old centres of many other villages, there are rules on façades, windows, colours and roofs. A larger window, a new balcony or a structure on the roof terrace almost always needs a permit. Check with the town hall first or have the architect look into it.',
+  },
+];
+---
+<Guide lang="en" slug="renovating-a-village-house-spain" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Bought a village house, or have your eye on one?" ctaText="We look at the beams, walls and roof and tell you honestly what needs doing and roughly what it involves, even if the street is too narrow for a van.">
+  <h2 id="short">Short answer</h2>
+  <p>A village house in the Axarquía is usually decades to centuries old, built of stone, lime and timber beams, on a street no lorry can reach. That makes renovating it different from a villa. The three things that matter most are <strong>the condition of the timber beams, damp in the walls and access</strong>. If everything has to be carried in by hand, every job costs noticeably more than at a house on an ordinary street.</p>
+  <p>The good news: a village house renovated with the right materials is cool in summer, dry in winter and holds its value. See also our <a href="/en/guides/finca-apartment-or-village-house/">comparison of finca, apartment and village house</a>.</p>
+
+  <h2 id="beams">Old timber beams</h2>
+  <p>Floors and roofs in old village houses often rest on timber beams (<em>vigas</em>) with cane, boards or small brick vaults in between. Beautiful, but vulnerable.</p>
+  <ul>
+    <li><strong>Woodworm and termites</strong>: small holes and wood dust point to woodworm (<em>carcoma</em>). Termites are often invisible from outside; the wood sounds hollow and crumbles. Read more about <a href="/en/problems/termites/">termites</a>.</li>
+    <li><strong>Rotten beam ends</strong>: the part of the beam inside the wall is the most vulnerable. If damp gets into the wall, the beam rots right there, out of sight.</li>
+    <li><strong>Sagging</strong>: a bouncy floor or a visibly drooping ceiling is a sign to have it checked.</li>
+  </ul>
+  <p>The fix depends on what is found: treating against insects, strengthening the ends with steel or a new bearing, replacing a few beams or renewing the whole floor. Have this assessed before a heavy tiled floor, a bath or a plunge pool goes on the roof terrace.</p>
+
+  <h2 id="damp">Damp in old walls</h2>
+  <p>Old walls are often 50 to 70 cm thick, of stone with lime or earth mortar, without foundations as we know them and without a damp-proof course. Damp rises from the ground, comes through a shared wall with the neighbours, or from above through the roof.</p>
+  <ul>
+    <li><strong>Let the wall breathe</strong>: use lime plaster and lime paint, not cement or plastic paint. This is the most common mistake in renovations.</li>
+    <li><strong>Tackle the cause</strong>: a leaking drain, a poor roof terrace or a raised street against the façade. Only then does drying out make sense.</li>
+    <li><strong>Ventilate</strong>: village houses are deep with few windows. A small ventilation system or vents make a big difference.</li>
+    <li><strong>Injection against rising damp</strong>: can help with a clear damp problem low in the wall, but it is no miracle cure.</li>
+  </ul>
+  <p>More on causes and solutions in <a href="/en/problems/damp-and-mould/">damp and mould</a>.</p>
+
+  <h2 id="streets">Narrow streets with no site access</h2>
+  <p>In the old centres of Cómpeta, Frigiliana, Canillas de Albaida or Árchez, no van can get in, let alone a lorry. Everything goes by wheelbarrow, small tracked dumper or on someone’s shoulder, up the street and up the stairs. That has consequences:</p>
+  <ul>
+    <li><strong>More labour hours</strong>: sand, cement, tiles and rubble are often moved several times.</li>
+    <li><strong>Smaller deliveries</strong>: materials come in small bags, which costs more than bulk.</li>
+    <li><strong>Rubble removal</strong>: in bulk bags to a spot where a skip is allowed.</li>
+    <li><strong>Permit for the public road</strong>: for a skip, scaffolding or closing the street temporarily, the town hall requires a permit (<em>ocupación de vía pública</em>).</li>
+    <li><strong>Large items</strong>: a worktop, a large window or a heat pump sometimes has to go in in pieces, or by small crane over the rooftops.</li>
+    <li><strong>Neighbours</strong>: in a street where everyone knows each other, it helps to tell the neighbours in advance what will happen and for how long.</li>
+  </ul>
+
+  <h2 id="roof">Roof and roof terrace</h2>
+  <p>Many village houses have a flat roof terrace (<em>azotea</em>) or a roof of Arab tiles on timber beams. Leaks are usually at the drain, along the upstands or at the join with the neighbours. Re-waterproofing a roof terrace prevents a lot of damp below. See <a href="/en/costs/roof-and-roof-terrace/">roof and roof terrace</a> and <a href="/en/problems/roof-leaks/">roof leaks</a>.</p>
+
+  <h2 id="rules">Rules in the old village centre</h2>
+  <p>The white villages are part of their value, and the municipalities protect that. In protected centres such as Frigiliana and in the old centres of other villages there are rules on:</p>
+  <ul>
+    <li>The colour of the façade (whitewashed) and of windows and doors.</li>
+    <li>The size and type of windows, shutters and balconies.</li>
+    <li>Roof tiles, chimneys and structures on the roof terrace.</li>
+    <li>Visible installations such as air conditioning units, solar panels and dishes on the street side.</li>
+  </ul>
+  <p>Interior work usually falls under a simple notification. Anything that visibly changes the outside, or touches the structure, usually needs a permit with drawings by an architect. We work with a regular architect and gestor who know the rules in each municipality.</p>
+
+  <h2 id="costs">What is costly and what is not</h2>
+  <p>No two village houses are the same, so rather than amounts we show a price class. That way you can see where the big money goes.</p>
+  <table class="prices">
+    <thead><tr><th>Item</th><th>When needed</th><th>Price class</th></tr></thead>
+    <tbody>
+      <tr><td>Permit for a skip or scaffolding on the street</td><td>Almost every renovation in the old centre</td><td>€</td></tr>
+      <tr><td>Treating beams against woodworm or termites</td><td>Holes, wood dust or hollow-sounding timber</td><td>€</td></tr>
+      <tr><td>Ventilating walls, lime paint instead of plastic paint</td><td>Flaking paint and damp patches</td><td>€</td></tr>
+      <tr><td>Replacing a few beams or strengthening the ends</td><td>Sagging or rotten ends</td><td>€€</td></tr>
+      <tr><td>Stripping old plaster, new lime plaster</td><td>Persistent damp and salt crusts</td><td>€€</td></tr>
+      <tr><td>Injection against rising damp</td><td>Damp low in the wall</td><td>€€</td></tr>
+      <tr><td>Re-waterproofing the roof terrace</td><td>Leaks or damp patches on the ceiling below</td><td>€€</td></tr>
+      <tr><td>Access surcharge (everything by hand)</td><td>Streets with no access for a van</td><td>€€</td></tr>
+      <tr><td>Renewing a whole timber floor or ceiling</td><td>When many beams are in poor condition</td><td>€€€</td></tr>
+      <tr><td>Renewing a tiled roof with insulation</td><td>Old, leaking or sagging roofs</td><td>€€€</td></tr>
+      <tr><td>Rewiring and replumbing the whole house</td><td>Almost any house older than 30 years</td><td>€€€</td></tr>
+      <tr><td>Full renovation</td><td>Everything out: beams, pipes, layout, roof</td><td>€€€€</td></tr>
+    </tbody>
+  </table>
+  <p class="note">€ = small job · €€ = medium job · €€€ = substantial renovation · €€€€ = major investment. In old houses, you only see the real condition once demolition starts; always keep a contingency.</p>
+  <Todo label="controle van de prijsklassen door het bouwbedrijf." />
+  <p>Want a first budget in euros? See <a href="/en/guides/renovation-costs-spain/">what does it cost to renovate a house in Spain</a>, or ask for a quote after a visit.</p>
+
+  <h2 id="tips">Tips for buyers</h2>
+  <ul>
+    <li><strong>Have the house surveyed before you sign</strong>, with particular attention to beams, damp and roof. See the <a href="/en/property-survey/">property survey</a>.</li>
+    <li><strong>Walk the route yourself</strong> from the nearest spot a van can stop to the front door. The longer and steeper, the more every job costs.</li>
+    <li><strong>Check the paperwork</strong>: does what is there match the land registry and the cadastre? Structures on roof terraces are not always permitted.</li>
+    <li><strong>Think ahead</strong>: lots of stairs are charming now, but perhaps not in fifteen years. Read <a href="/en/guides/accessible-home-spain/">adapting your home for later life</a>.</li>
+    <li><strong>Renovate step by step if you need to</strong>: roof, beams and damp first, finishing after. The rest can be done while you are away; read <a href="/en/guides/renovating-from-abroad-spain/">renovating from abroad</a>.</li>
+  </ul>
+</Guide>

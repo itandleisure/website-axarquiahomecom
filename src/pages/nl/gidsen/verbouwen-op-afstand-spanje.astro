@@ -1,0 +1,127 @@
+---
+import Guide from '../../../components/Guide.astro';
+import Todo from '../../../components/Todo.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort antwoord' },
+  { id: 'aannemer', label: 'Een aannemer kiezen' },
+  { id: 'offertes', label: 'Offertes vergelijken' },
+  { id: 'contract', label: 'Wat er in de afspraken hoort' },
+  { id: 'betalen', label: 'Betalen in termijnen' },
+  { id: 'updates', label: 'Op de hoogte blijven' },
+  { id: 'kosten', label: 'Bijkomende kosten' },
+  { id: 'oplevering', label: 'Oplevering en daarna' },
+];
+
+const faq = [
+  {
+    q: 'Moet ik in Spanje zijn tijdens de verbouwing?',
+    a: 'Nee. Wel is het verstandig om bij de start en bij de oplevering aanwezig te zijn, of iemand te hebben die namens u kijkt. Daartussen kunt u het werk volgen met foto’s, video en een vaste contactpersoon.',
+  },
+  {
+    q: 'Hoeveel aanbetaling is normaal bij een aannemer in Spanje?',
+    a: 'Gangbaar is 20 tot 30% bij de start, vooral voor materialen. Betaal daarna per afgerond onderdeel en houd 5 tot 10% achter tot na de oplevering. Een aannemer die vooraf het grootste deel van het bedrag vraagt, is een waarschuwing.',
+  },
+  {
+    q: 'Kan ik een aannemer contant betalen?',
+    a: 'Doe dat niet. Betaal altijd per bankoverschrijving op een factuur met btw. Zonder factuur heeft u geen garantie, geen bewijs voor de vergunning en later problemen bij de verkoop, omdat u de verbouwkosten niet kunt aantonen.',
+  },
+  {
+    q: 'Heb ik een volmacht nodig?',
+    a: 'Niet altijd. Voor vergunningen en aansluitingen kan een volmacht (poder notarial) aan een gestor handig zijn, zodat u niet voor elke handtekening naar Spanje hoeft. Zo’n volmacht kunt u ook bij een Spaans consulaat of een notaris in Nederland laten opmaken.',
+  },
+];
+---
+<Guide slug="verbouwen-op-afstand-spanje" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Verbouwen terwijl u in Nederland bent?" ctaText="Stuur ons foto’s en uw wensen. U krijgt een offerte per onderdeel, één aanspreekpunt in het Nederlands en wekelijkse foto’s van de voortgang.">
+  <h2 id="kort">Kort antwoord</h2>
+  <p>Verbouwen op afstand gaat goed als vier dingen kloppen: <strong>een aannemer die u kunt controleren, een offerte per onderdeel, betaling in termijnen per afgerond werk en vaste updates met foto’s</strong>. Wat misgaat bij verbouwingen in Spanje komt bijna altijd neer op vage afspraken: een totaalprijs zonder uitsplitsing, meerwerk dat mondeling is afgesproken, of te veel vooruit betaald.</p>
+  <p>In deze gids leest u hoe u een aannemer kiest, hoe u offertes eerlijk vergelijkt, wat er in de afspraken hoort en hoe u vanuit Nederland grip houdt.</p>
+
+  <h2 id="aannemer">Een aannemer kiezen</h2>
+  <p>In de Axarquía werken grote bouwbedrijven, kleine ploegen en zelfstandige klusjesmannen naast elkaar. Voor een flinke verbouwing wilt u een partij die dit kan laten zien:</p>
+  <ul class="checks">
+    <li>Een Spaans bedrijfsnummer (<em>CIF</em> of <em>NIF</em>) en facturen met btw.</li>
+    <li>Inschrijving als bedrijf of zelfstandige bij de Spaanse sociale zekerheid, zodat de mensen op uw bouwplaats verzekerd zijn.</li>
+    <li>Een aansprakelijkheidsverzekering (<em>seguro de responsabilidad civil</em>). Vraag om een kopie.</li>
+    <li>Referenties van eigenaren die ook op afstand verbouwden, en foto’s van afgerond werk in de buurt.</li>
+    <li>Een vast aanspreekpunt dat uw taal spreekt en binnen een dag reageert.</li>
+    <li>Samenwerking met een architect en gestor voor vergunningen, zodat u niet zelf alle partijen hoeft te coördineren.</li>
+  </ul>
+  <p>Wees voorzichtig met de goedkoopste prijs van iemand zonder bedrijfsgegevens. Dat lijkt voordelig, tot er iets misgaat en u niemand kunt aanspreken.</p>
+
+  <h2 id="offertes">Offertes vergelijken</h2>
+  <p>Vraag twee of drie offertes op basis van dezelfde omschrijving. Een goede offerte (<em>presupuesto</em>) is uitgesplitst per onderdeel (<em>partida</em>) en zegt wat wel en niet is inbegrepen. Let op deze verschillen:</p>
+  <table class="prices">
+    <thead><tr><th>Controleer</th><th>Waarom</th></tr></thead>
+    <tbody>
+      <tr><td>Btw: 10% of 21%</td><td>Voor renovatie van een woning voor eigen gebruik geldt onder voorwaarden 10%. Vergelijk prijzen altijd inclusief btw.</td></tr>
+      <tr><td>Afvoer van puin en container</td><td>Wordt vaak vergeten en kan in een dorp met smalle straatjes flink oplopen.</td></tr>
+      <tr><td>Vergunning en bouwleges</td><td>Zit de melding of vergunning en de gemeentelijke belasting (ICIO) erin, of komt die erbij?</td></tr>
+      <tr><td>Materialen</td><td>Staan merk en type tegels, sanitair en kranen erbij, of alleen “standaard”? Een stelpost voor materialen maakt vergelijken lastig.</td></tr>
+      <tr><td>Steigers, bescherming en schoonmaak</td><td>Inbegrepen of apart?</td></tr>
+      <tr><td>Planning</td><td>Startdatum, duur en wat er gebeurt bij vertraging.</td></tr>
+    </tbody>
+  </table>
+  <p>Ligt één offerte veel lager dan de rest, vraag dan wat er ontbreekt. Meestal zit het verschil in wat er niet in staat.</p>
+
+  <h2 id="contract">Wat er in de afspraken hoort</h2>
+  <ul>
+    <li><strong>De offerte per onderdeel</strong> als basis, met een vaste prijs per onderdeel.</li>
+    <li><strong>Een planning</strong> met start, tussenstappen en opleverdatum.</li>
+    <li><strong>Het betaalschema</strong> gekoppeld aan afgerond werk, niet aan data.</li>
+    <li><strong>Meerwerk alleen schriftelijk</strong>: een prijs per WhatsApp of e-mail, en pas uitvoeren na uw akkoord. Bij oude huizen komt er bijna altijd iets tevoorschijn; houd 10 tot 15% buffer aan.</li>
+    <li><strong>Garantie</strong>: in Spanje geldt een wettelijke aansprakelijkheid voor bouwgebreken, maar spreek ook zelf een garantietermijn af op het werk.</li>
+    <li><strong>Sleutels en toegang</strong>: wie heeft een sleutel, wie sluit af, wie doet het alarm aan?</li>
+  </ul>
+
+  <h2 id="betalen">Betalen in termijnen</h2>
+  <p>Een veilig en gangbaar schema voor een middelgrote verbouwing ziet er ongeveer zo uit:</p>
+  <table class="prices">
+    <thead><tr><th>Moment</th><th>Deel van de prijs</th></tr></thead>
+    <tbody>
+      <tr><td>Bij de start (materialen, voorbereiding)</td><td>20 – 30%</td></tr>
+      <tr><td>Na sloop en ruwbouw (leidingen, elektra, muren)</td><td>25 – 30%</td></tr>
+      <tr><td>Na afwerking (tegels, sanitair, keuken)</td><td>25 – 30%</td></tr>
+      <tr><td>Na oplevering en herstel van de laatste punten</td><td>5 – 10%</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Een richtlijn, geen vaste regel. Bij kleine klussen is één betaling na afloop gebruikelijk.</p>
+  <p>Betaal elke termijn pas als u foto’s heeft gezien van het werk waarvoor u betaalt. Betaal altijd per bank, op een factuur met btw, nooit contant. U heeft die facturen later nodig: voor de garantie, de vergunning en bij verkoop van het huis.</p>
+
+  <h2 id="updates">Op de hoogte blijven</h2>
+  <p>Goede communicatie is bij verbouwen op afstand belangrijker dan de prijs. Spreek vooraf af:</p>
+  <ul>
+    <li><strong>Eén vast aanspreekpunt</strong> in het Nederlands of Engels, niet een wisselende ploegbaas.</li>
+    <li><strong>Wekelijkse foto’s en korte video’s</strong> van de voortgang, ook van wat later achter tegels of stucwerk verdwijnt, zoals leidingen en elektra.</li>
+    <li><strong>Een videogesprek</strong> bij de belangrijke keuzes: tegels, indeling van de keuken, plaats van stopcontacten.</li>
+    <li><strong>Een gedeelde lijst</strong> met keuzes, meerwerk en betalingen, zodat u altijd weet waar u staat.</li>
+  </ul>
+  <p>Zo werken wij zelf ook: de meeste van onze klanten zijn tijdens de verbouwing in Nederland. Ons team heeft twintig jaar ervaring in de Axarquía, werkt met Nederlandse kwaliteitsnormen en met een vaste architect en gestor, en u heeft één aanspreekpunt dat uw taal spreekt.</p>
+
+  <h2 id="kosten">Bijkomende kosten om mee te rekenen</h2>
+  <p>Naast de verbouwing zelf zijn er kosten die in een offerte nogal eens ontbreken. Vraag bij elke post of hij erin zit.</p>
+  <table class="prices">
+    <thead><tr><th>Post</th><th>Wanneer</th><th>Prijsklasse</th></tr></thead>
+    <tbody>
+      <tr><td>Melding voor klein werk (declaración responsable)</td><td>Binnenwerk zonder constructieve ingreep</td><td>€</td></tr>
+      <tr><td>Volmacht bij een notaris</td><td>Als een gestor namens u tekent</td><td>€</td></tr>
+      <tr><td>Container of puinafvoer</td><td>Bij elke verbouwing met sloopwerk</td><td>€</td></tr>
+      <tr><td>Gestor voor aanvragen en papierwerk</td><td>Vergunning, aansluitingen, inschrijvingen</td><td>€€</td></tr>
+      <tr><td>Bouwleges en belasting van de gemeente (ICIO)</td><td>Bij een vergunning, een percentage van de bouwsom</td><td>€€</td></tr>
+      <tr><td>Architect: project en toezicht</td><td>Bij vergunningplichtig werk, uitbreiding of zwembad</td><td>€€€</td></tr>
+      <tr><td>Buffer voor onvoorziene zaken</td><td>Altijd, zeker bij oude huizen</td><td>€€€</td></tr>
+    </tbody>
+  </table>
+  <p class="note">€ = kleine post · €€ = merkbaar · €€€ = flink deel van het budget. Exacte bedragen hangen af van gemeente en bouwsom.</p>
+  <Todo label="controle van de prijsklassen door het bouwbedrijf en de architect." />
+  <p>Wat de verbouwing zelf kost, leest u in <a href="/nl/gidsen/kosten-huis-renoveren-spanje/">wat kost een huis renoveren in Spanje</a>.</p>
+
+  <h2 id="oplevering">Oplevering en daarna</h2>
+  <ol>
+    <li><strong>Loop het huis samen door</strong>, zelf of via een videogesprek, en maak een lijst van restpunten.</li>
+    <li><strong>Betaal de laatste termijn</strong> pas als die punten zijn opgelost.</li>
+    <li><strong>Vraag alle papieren op</strong>: facturen, garantiebewijzen, het elektrakeuringsrapport (<em>boletín</em>) als de elektra is vernieuwd, en de documenten van de gereedmelding als er een vergunning was.</li>
+    <li><strong>Laat het huis daarna in de gaten houden</strong>. Kleine lekkages of scheurtjes ziet u het liefst in de eerste maanden. Met <a href="/nl/sleutelbeheer/">sleutelbeheer</a> kijkt er regelmatig iemand.</li>
+  </ol>
+  <p>Weet u nog niet of een vergunning nodig is? Lees dan eerst de <a href="/nl/renovatie/">informatie over renovatie</a> of stel uw vraag via het aanvraagformulier.</p>
+</Guide>
