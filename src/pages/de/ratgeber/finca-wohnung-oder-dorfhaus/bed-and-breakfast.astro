@@ -1,0 +1,83 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kern', label: 'Rechtlich gibt es kein B&B' },
+  { id: 'formen', label: 'Die Formen, die es gibt' },
+  { id: 'finca', label: 'B&B in einer Finca' },
+  { id: 'dorfhaus', label: 'B&B in einem Dorfhaus' },
+  { id: 'wohnung', label: 'Und eine Wohnung?' },
+  { id: 'umbau', label: 'Was der Umbau verlangt' },
+  { id: 'checkliste', label: 'Checkliste vor dem Kauf' },
+];
+
+const faq = [
+  {
+    q: 'Darf ich meinen Gästen Frühstück servieren?',
+    a: 'In der Regel ja, aber sobald Sie Essen servieren, gelten Lebensmittelhygieneregeln, etwa ein Hygienekurs (manipulador de alimentos) und Anforderungen an die Küche. Bei hotelähnlichen Leistungen wie Frühstück und Reinigung während des Aufenthalts kommen oft auch steuerliche Pflichten hinzu, etwa Mehrwertsteuer. Lassen Sie das von einem Gestor für Ihre Situation klären.',
+  },
+  {
+    q: 'Kann ich bei einer Finca mit AFO-Status Gästezimmer anbauen?',
+    a: 'Meistens nicht. Bei einer AFO-Immobilie dürfen Sie das bestehende Haus instand halten und im bestehenden Volumen umbauen, aber nicht erweitern. Einen Stall zum Gästezimmer umzubauen gilt in der Regel ebenfalls als Erweiterung. Rechnen Sie also mit den Zimmern, die heute legal bestehen.',
+  },
+  {
+    q: 'Wie viele Zimmer brauche ich, um von einem B&B zu leben?',
+    a: 'Das hängt von Ihren Preisen, der Auslastung und den Fixkosten ab. Viele kleine B&Bs in der Axarquía haben drei bis sechs Zimmer und laufen vor allem vom Frühjahr bis zum Herbst. Machen Sie eine realistische Planung mit niedriger Auslastung im Winter, und rechnen Sie Umbau und Genehmigungen mit ein.',
+  },
+];
+---
+<Guide lang="de" slug="finca-wohnung-oder-dorfhaus-bed-and-breakfast" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Ein Haus für Ihr B&B im Blick?" ctaText="Wir prüfen, ob Zimmer, Bäder, Wasser und Abwasser für Gäste geeignet sind, und was der Umbau kostet.">
+  <h2 id="kern">Rechtlich gibt es kein B&amp;B</h2>
+  <p>In Andalusien ist „Bed and Breakfast“ keine offizielle Kategorie. Was Sie vorhaben, fällt unter eine der Formen touristischer Vermietung oder Beherbergung, die die Junta de Andalucía kennt, jede mit eigenen Anforderungen. Welche Form möglich ist, hängt vor allem davon ab, <strong>wo das Haus steht</strong> (Wohnbauland oder ländlicher Boden), <strong>welchen rechtlichen Status</strong> es hat und <strong>ob Sie selbst dort wohnen</strong>. Deshalb ist die Wahl zwischen Finca, Dorfhaus und Wohnung für ein B&amp;B viel wichtiger als fürs reine Wohnen. Die allgemeine Abwägung finden Sie im <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/">Hauptratgeber</a>.</p>
+
+  <h2 id="formen">Die Formen, die es gibt</h2>
+  <ul>
+    <li><strong>Zimmer in der eigenen Wohnung vermieten</strong>: als <em>vivienda con fines turísticos</em> (VFT) zimmerweise. Sie wohnen selbst dort und vermieten einige Zimmer an Touristen. Nur auf Wohnbauland möglich, also im Dorf oder an der Küste.</li>
+    <li><strong>Ein ganzes Haus oder Gästehaus vermieten</strong>: als VFT für die ganze Wohnung. Ebenfalls nur auf Wohnbauland. Seit 2024 dürfen Gemeinden die Zahl der Ferienwohnungen begrenzen.</li>
+    <li><strong>Ländliche Unterkunft</strong> (<em>alojamiento rural</em>), etwa eine <em>casa rural</em>: für Häuser auf ländlichem Boden oder in kleinen Dörfern, mit eigenen Anforderungen an Zustand, Ausstattung und Umgebung.</li>
+    <li><strong>Eine kleine Pension oder ein Hostal</strong>: fällt unter die Hotelregeln, mit strengeren Anforderungen an Brandschutz, Barrierefreiheit und eine Gewerbegenehmigung der Gemeinde.</li>
+  </ul>
+  <p>Jede Form wird im Tourismusregister Andalusiens (<em>Registro de Turismo de Andalucía</em>) eingetragen. Seit Juli 2025 ist außerdem eine landesweite Registriernummer Pflicht, um auf Vermietungsplattformen zu inserieren. Die Regeln ändern sich regelmäßig; lassen Sie die Möglichkeiten für ein bestimmtes Haus vor dem Vorvertrag bei der Gemeinde und einem spezialisierten Gestor oder Anwalt prüfen.</p>
+
+  <h2 id="finca">B&amp;B in einer Finca</h2>
+  <p>Das ist der klassische Traum: ein restaurierter Cortijo mit Pool, einigen Gästezimmern und Frühstück auf der Terrasse mit Meerblick. Gäste, die Ruhe und Natur suchen, zahlen dafür gern. Aber an drei Punkten geht es oft schief:</p>
+  <ul>
+    <li><strong>Der Boden</strong>: Eine Finca steht auf ländlichem Boden, die übliche VFT-Regelung gilt also nicht. Sie arbeiten mit den Regeln für ländlichen Tourismus, die Anforderungen an Haus und Umgebung stellen.</li>
+    <li><strong>Der rechtliche Status</strong>: Viele Fincas haben AFO-Status. Dann dürfen Sie nicht erweitern: keine zusätzlichen Zimmer, kein Gästehaus im alten Stall. Ob eine AFO-Immobilie touristisch vermietet werden darf, ist von Fall zu Fall verschieden. Lesen Sie unseren Ratgeber <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>.</li>
+    <li><strong>Die Versorgung</strong>: Sechs oder zehn Gäste verbrauchen viel mehr Wasser als zwei Bewohner. Reicht die Wasserquelle, auch in einem trockenen Sommer? Schafft die Klärgrube das? Und finden und befahren Gäste die Zufahrt im Dunkeln?</li>
+  </ul>
+  <p>Für ein B&amp;B ist eine Finca also zugleich das schönste und das schwierigste Objekt. Wählen Sie eine mit vollständig genehmigten Räumen, zuverlässigem Wasser und guter Zufahrt. Lesen Sie auch <a href="/de/ratgeber/finca-kaufen-spanien/">Finca kaufen</a>.</p>
+
+  <h2 id="dorfhaus">B&amp;B in einem Dorfhaus</h2>
+  <p>Rechtlich ist ein Dorfhaus oft einfacher: Es steht auf Wohnbauland, Vermietung als VFT (zimmerweise, wenn Sie dort wohnen, oder als ganze Wohnung) ist also grundsätzlich möglich, solange die Gemeinde die Zahl der Ferienwohnungen nicht begrenzt. Beliebte Dörfer wie Frigiliana, Cómpeta und Nerja ziehen das ganze Jahr Touristen an, und Gäste gehen zu Fuß zu Restaurants und Sehenswürdigkeiten.</p>
+  <p>Die Nachteile: Das Haus ist schmal und hoch, Zimmer mit jeweils eigenem Bad passen nicht immer hinein. Parken für Gäste ist in der Altstadt oft schwierig. Und die Wände teilen Sie mit Nachbarn, die Kofferrollen und späte Ankünfte nicht immer schätzen. In geschützten Ortskernen gelten zudem Regeln für Fassaden und Dächer beim Umbau.</p>
+
+  <h2 id="wohnung">Und eine Wohnung?</h2>
+  <p>Eine Wohnung ist für ein B&amp;B am wenigsten geeignet. Zimmer mit Frühstück in einer Wohnung zu vermieten ist klein und kaum rentabel, und seit April 2025 braucht eine neue touristische Vermietung in einem Wohngebäude die vorherige Zustimmung von drei Fünfteln der Eigentümergemeinschaft. Wer eine Wohnung vermieten will, denkt eher an eine Ferienwohnung als an ein B&amp;B. Siehe die Seite zum <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/ferienhaus/">Ferienhaus</a>.</p>
+
+  <h2 id="umbau">Was der Umbau verlangt</h2>
+  <p>Gäste erwarten mehr als Bewohner. Rechnen Sie bei einem B&amp;B mit:</p>
+  <ul>
+    <li>Einem eigenen Bad pro Zimmer: je 6.000 – 25.000 €.</li>
+    <li>Klimaanlage und Heizung in den Zimmern, was auch eine Anforderung für touristische Vermietung in Andalusien ist: 3.000 – 10.000 € für mehrere Räume.</li>
+    <li>Schallschutz zwischen den Zimmern, guter Beleuchtung und Schlössern.</li>
+    <li>Brandschutz: Rauchmelder, Feuerlöscher und ein klarer Fluchtweg; bei hotelähnlichen Formen strengere Auflagen.</li>
+    <li>Bei einer Finca oft größerem Wasserspeicher, einer neuen Kläranlage (3.000 – 10.000 €) und einer besseren Zufahrt.</li>
+  </ul>
+  <p>Preise pro Gewerk finden Sie in unserem Ratgeber <a href="/de/ratgeber/renovierungskosten-spanien/">Renovierungskosten</a>. Wir erstellen gern ein Angebot für die <a href="/de/renovierung/">Renovierung</a> Ihres B&amp;B, nach Zimmern aufgeschlüsselt.</p>
+
+  <h2 id="checkliste">Checkliste vor dem Kauf</h2>
+  <ul class="checks">
+    <li>Einstufung des Bodens bekannt: Wohnbauland oder ländlicher Boden</li>
+    <li>Rechtlicher Status des Hauses, einschließlich aller Zimmer, Anbauten und Pool</li>
+    <li>Bei der Gemeinde geklärt, ob touristische Vermietung (noch) möglich ist</li>
+    <li>Gewählte Form der Vermietung oder Beherbergung und ihre Anforderungen</li>
+    <li>Wasser, Abwasser und Strom auf die Gästezahl ausgelegt</li>
+    <li>Zufahrt und Parkplätze für Gäste</li>
+    <li>Umbaukosten pro Zimmer, einschließlich Bädern und Klimaanlage</li>
+    <li>Steuerliche Folgen mit einem Gestor besprochen (Einkommensteuer, Mehrwertsteuer, ggf. Anmeldung als Selbstständiger)</li>
+    <li><a href="/de/immobiliengutachten/">Immobiliengutachten</a> mit Preis pro Mangel</li>
+  </ul>
+  <p>Wohnen Sie nicht das ganze Jahr dort, oder möchten Sie Hilfe bei Gästewechseln und Betreuung? Dann sehen Sie sich die <a href="/de/hausbetreuung/">Hausbetreuung</a> an.</p>
+  <p class="note">Diese Seite bietet allgemeine Informationen und ist keine Rechts- oder Steuerberatung. Die Regeln für touristische Vermietung ändern sich regelmäßig.</p>
+</Guide>

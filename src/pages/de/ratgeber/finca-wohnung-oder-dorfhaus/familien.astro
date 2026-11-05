@@ -1,0 +1,58 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kern', label: 'Worum es geht' },
+  { id: 'schule', label: 'Schule und Schulbus' },
+  { id: 'sozial', label: 'Freunde und Selbstständigkeit' },
+  { id: 'platz', label: 'Platz und Leben im Freien' },
+  { id: 'arbeit', label: 'Arbeit und Internet' },
+  { id: 'kosten', label: 'Kosten und Umbau' },
+  { id: 'rat', label: 'Unser Rat je Haustyp' },
+];
+
+const faq = [
+  {
+    q: 'Können meine Kinder auf eine normale spanische Schule gehen?',
+    a: 'Ja. Kinder, die in Spanien wohnen, haben Anspruch auf einen Platz an einer öffentlichen Schule. Sie melden sich bei der Gemeinde an (padrón) und bewerben sich bei der Schule; die reguläre Anmeldung ist im Frühjahr, aber wer umzieht, kann auch während des Schuljahres einsteigen. Kleine Kinder lernen meist schnell Spanisch; für Jugendliche ist der Wechsel schwerer.',
+  },
+  {
+    q: 'Gibt es internationale Schulen in der Axarquía?',
+    a: 'Das Angebot in der Axarquía selbst ist begrenzt. Die meisten internationalen Schulen liegen Richtung Málaga und an der westlichen Costa del Sol. Wer in den Bergen wohnt, hat schnell eine lange tägliche Fahrt. Prüfen Sie Entfernung und Schulbus, bevor Sie ein Haus wählen.',
+  },
+  {
+    q: 'Ist eine Finca sicher für kleine Kinder?',
+    a: 'Eine Finca bietet viel Freiheit, aber achten Sie auf einen Pool ohne Zaun, steile Terrassen, Brunnen und Wasserbecken (albercas) und eine Schotterpiste mit Verkehr. Ein Zaun um den Pool und Abdeckungen für Brunnen und Becken sind die ersten Verbesserungen, die wir Familien empfehlen.',
+  },
+];
+---
+<Guide lang="de" slug="finca-wohnung-oder-dorfhaus-familien" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Ein Haus für die ganze Familie im Blick?" ctaText="Wir begutachten es vor der Unterschrift und sagen ehrlich, was zu tun ist, bevor die Kinder dort sicher und bequem wohnen.">
+  <h2 id="kern">Worum es geht</h2>
+  <p>Eine Familie, die auswandert, wählt nicht nur ein Haus, sondern auch einen Tagesablauf. Wie kommen die Kinder zur Schule? Können sie allein zu Freunden oder zum Fußball? Wie viele Stunden am Tag sitzen Sie im Auto? Diese Fragen zählen mehr als die Aussicht oder die Quadratmeter. Für die Formalitäten rund um den Umzug lesen Sie unseren Ratgeber <a href="/de/ratgeber/auswandern-nach-spanien/">Auswandern nach Spanien</a>.</p>
+
+  <h2 id="schule">Schule und Schulbus</h2>
+  <p>Die meisten Dörfer der Axarquía haben eine öffentliche Grundschule (<em>CEIP</em>). Weiterführende Schulen (<em>IES</em>) gibt es in den größeren Orten wie Vélez-Málaga, Torre del Mar, Nerja, Torrox und Cómpeta. Für Kinder auf dem Land gibt es oft einen kostenlosen Schulbus, aber er hält nicht an jeder Finca. Wohnen Sie ein paar Kilometer eine Schotterpiste hinauf, bringen Sie die Kinder täglich zu einer Haltestelle oder zur Schule.</p>
+  <p>Internationale Schulen liegen vor allem Richtung Málaga und an der westlichen Costa del Sol. Wer sich dafür entscheidet, wohnt praktischer an der Küste oder nahe der Autobahn als hoch in den Bergen.</p>
+
+  <h2 id="sozial">Freunde und Selbstständigkeit</h2>
+  <p>In einem Dorf oder an der Küste gehen Kinder nach ein paar Monaten allein zur Schule, auf den Platz oder in den Sportverein. Das ist gut für ihr Spanisch und ihre Selbstständigkeit, und für Ihren Terminkalender. Auf einer Finca sind sie für jede Verabredung auf Sie angewiesen. Für kleine Kinder ist das kein Problem; für Jugendliche, die ausgehen oder einen Nebenjob suchen, oft schon.</p>
+
+  <h2 id="platz">Platz und Leben im Freien</h2>
+  <p>Hier gewinnt die Finca. Ein eigenes Grundstück, ein Pool, Platz für Gemüsegarten, Hund oder Hühner: Für viele Familien ist genau das der Grund, nach Spanien zu gehen. Eine Wohnung hat meist einen Gemeinschaftspool und eine Terrasse, ein Dorfhaus eine Dachterrasse und den Dorfplatz. Eine Zwischenlösung ist ein Haus am Dorfrand oder eine Villa auf städtischem Boden mit kleinem Garten.</p>
+  <p>Achten Sie auf einer Finca auf die Sicherheit: Ein Pool ohne Zaun, steile Terrassen und offene Wasserbecken (<em>albercas</em>) sind Risiken mit kleinen Kindern.</p>
+
+  <h2 id="arbeit">Arbeit und Internet</h2>
+  <p>Wenn Sie aus der Ferne arbeiten, ist stabiles Internet Pflicht. An der Küste und in vielen Dörfern gibt es Glasfaser. Auf einer Finca sind Sie oft auf 4G/5G oder Satellit angewiesen; testen Sie den Empfang vor Ort, zu der Zeit, in der Sie normalerweise telefonieren. Arbeiten Sie außer Haus, rechnen Sie aus, wie viele Autofahrten die Familie täglich macht. Mit zwei berufstätigen Eltern und Schulkindern sind zwei Autos auf einer Finca fast unvermeidlich.</p>
+
+  <h2 id="kosten">Kosten und Umbau</h2>
+  <p>Familien brauchen Platz, und das macht eine Finca oder ein großes Dorfhaus beim Preis pro Quadratmeter attraktiv. Aber ein zusätzliches Schlafzimmer anzubauen ist bei einer Finca mit AFO-Status meist nicht erlaubt. Schauen Sie also darauf, was heute legal dasteht, nicht darauf, was Sie später daraus machen wollen. Ein Dorfhaus auf städtischem Boden bietet mehr Spielraum, etwa für ein zusätzliches Zimmer oder Bad im bestehenden Volumen.</p>
+  <p>Soll das Haus fertig sein, wenn die Kinder in die Schule kommen? Planen Sie die <a href="/de/renovierung/">Renovierung</a> großzügig: Genehmigungen und Ausführung dauern in der Axarquía schnell einige Monate. Siehe auch <a href="/de/ratgeber/renovierungskosten-spanien/">Renovierungskosten</a>.</p>
+
+  <h2 id="rat">Unser Rat je Haustyp</h2>
+  <ul>
+    <li><strong>Wohnung</strong>: ein guter erster Schritt. Mieten oder kaufen Sie ein Jahr an der Küste, lernen Sie die Gegend kennen und wählen Sie erst dann Ihren endgültigen Ort. Weniger geeignet, wenn Sie viel Platz und Leben im Freien suchen.</li>
+    <li><strong>Dorfhaus</strong>: oft die beste Wahl für Familien mit Schulkindern. Schule, Freunde und Sport zu Fuß erreichbar, schnell im Dorfleben angekommen. Achten Sie auf Treppen und Außenfläche.</li>
+    <li><strong>Finca</strong>: ideal für Familien mit kleinen Kindern, die Platz und Natur suchen und das Fahren und den Unterhalt in Kauf nehmen. Wählen Sie dann eine Finca nahe einem Dorf mit Schule und an einer befahrbaren Straße.</li>
+  </ul>
+  <p>Lassen Sie vor der Unterschrift ein <a href="/de/immobiliengutachten/">Immobiliengutachten</a> erstellen. Dann wissen Sie, was zu tun ist, bevor die Familie dort sicher und bequem wohnt, und was es kostet.</p>
+</Guide>

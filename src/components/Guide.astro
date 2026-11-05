@@ -36,12 +36,21 @@ const article = {
   publisher: { '@id': `${site.url}/#bedrijf` },
   mainEntityOfPage: new URL(path, site.url).href,
 };
-const related = guideList(lang).filter((x) => x.slug !== slug).slice(0, 3);
+// Een deelpagina (met parent) verwijst naar de hoofdgids en de andere deelpagina's.
+const parent = g.parent ? list.find((x) => x.slug === g.parent) : undefined;
+const related = parent
+  ? [parent, ...list.filter((x) => x.parent === g.parent && x.slug !== slug)]
+  : guideList(lang).filter((x) => x.slug !== slug).slice(0, 3);
+const crumbs = parent
+  ? [{ name: t.guidesCrumb, href: base }, { name: parent.short, href: guideHref(lang, parent) }, { name: g.short, href: path }]
+  : g.path
+    ? [{ name: g.short, href: path }]
+    : [{ name: t.guidesCrumb, href: base }, { name: g.short, href: path }];
 const fmt = (d: string) => new Date(d).toLocaleDateString(t.dateLocale, { day: 'numeric', month: 'long', year: 'numeric' });
 const request = route(lang, 'request');
 ---
 <Base title={g.seoTitle ?? g.title} description={g.description} path={path} lang={lang} jsonLd={[article]}>
-  <Breadcrumbs lang={lang} items={g.path ? [{ name: g.short, href: path }] : [{ name: t.guidesCrumb, href: base }, { name: g.short, href: path }]} />
+  <Breadcrumbs lang={lang} items={crumbs} />
   <article class="section guide" style="padding-top:24px">
     <div class="wrap guide-grid">
       <div class="prose">
