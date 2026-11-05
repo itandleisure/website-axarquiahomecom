@@ -40,6 +40,11 @@ export const site = {
   // Zolang dit niet is ingevuld, toont de keuzehulp een melding in plaats van te versturen.
   leadEndpoint: 'https://script.google.com/macros/s/AKfycbyyOE8lTxFgFYaHyr7P4ebh_bxp5dal77rUdwcBO46O2Lu6Ic4Bz8GFvCpbC7LZhwGSnw/exec',
 
+  // Microsoft Clarity (heatmaps en sessie-opnames). Draait zonder cookies: zet in Clarity
+  // onder Settings › Setup › Advanced settings de optie Cookies uit, en Masking op Strict.
+  // Leeg laten om Clarity uit te zetten.
+  clarityId: 'z8rraji52s',
+
   villages: [
     'Nerja',
     'Cómpeta',
