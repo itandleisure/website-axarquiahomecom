@@ -1,0 +1,115 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import BuyingChecklist from '../../../../components/BuyingChecklist.astro';
+import { buyingChecklist } from '../../../../data/buying-checklist';
+
+const toc = [
+  { id: 'gebruik', label: 'Zo gebruikt u deze lijst' },
+  { id: 'legaliteitstoets', label: 'De legaliteitstoets: drie situaties' },
+  ...buyingChecklist.map((t) => ({ id: t.id.nl, label: t.title.nl })),
+  { id: 'per-type', label: 'Extra punten per type huis' },
+  { id: 'keuring', label: 'Laat het ons controleren' },
+  { id: 'bronnen', label: 'Bronnen' },
+];
+
+const faq = [
+  {
+    q: 'Moet ik deze vragen zelf stellen als ik een advocaat heb?',
+    a: 'Uw advocaat controleert de papieren: register, kadaster, vergunningen en schulden. Maar vragen over het huis zelf, zoals vocht, lekkages, water en de toegangsweg, stelt u het beste al tijdens de bezichtiging. Dan weet u vroeg of het huis de moeite waard is, voordat u kosten maakt.',
+  },
+  {
+    q: 'Mag ik een antwoord van de verkoper geloven?',
+    a: 'Een mondeling antwoord is een begin, geen bewijs. Vraag om het document (licentie, AFO-verklaring, nota simple, facturen) of om een schriftelijke bevestiging, en laat de belangrijkste punten in de arras opnemen. Wat de verkoper schriftelijk verklaart en niet klopt, kan later een claim worden.',
+  },
+  {
+    q: 'Wat is het verschil tussen licencia de primera ocupación en declaración responsable?',
+    a: 'Vroeger gaf de gemeente een licentie van eerste ingebruikname af. Sinds de Andalusische wet LISTA van december 2021 volstaat voor de meeste nieuwe of verbouwde woningen een verklaring (declaración responsable de ocupación) van de eigenaar met een certificaat van de architect. Oudere huizen hebben soms geen van beide; dan kan een certificaat van ouderdom of een AFO-verklaring nodig zijn.',
+  },
+];
+---
+<Guide slug="huis-kopen-in-spanje-checklist" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Wilt u dat wij dit voor u nalopen?" ctaText="Met een aankoopkeuring controleren wij de staat van het huis, kijken we of wat er staat overeenkomt met de papieren en geven we een prijs voor wat er moet gebeuren. U krijgt een rapport in het Nederlands.">
+  <h2 id="gebruik">Zo gebruikt u deze lijst</h2>
+  <p>Deze checklist hoort bij het <a href="/nl/gidsen/huis-kopen-in-spanje/">stappenplan huis kopen in Spanje</a>. Neem hem mee naar de bezichtiging, op uw telefoon of geprint. Stel de vragen aan de makelaar of de verkoper. Spreken die geen Nederlands of Engels, lees dan de Spaanse zin voor of stuur hem per WhatsApp of e-mail.</p>
+  <p>Drie zinnen die altijd van pas komen:</p>
+  <ul>
+    <li><q lang="es">¿Me lo puede confirmar por escrito, por favor?</q> Kunt u dat schriftelijk bevestigen?</li>
+    <li><q lang="es">¿Me puede enviar una copia del documento?</q> Kunt u mij een kopie van het document sturen?</li>
+    <li><q lang="es">Mi abogado lo va a comprobar.</q> Mijn advocaat gaat dit controleren.</li>
+  </ul>
+  <p>Een antwoord is pas iets waard als het op papier staat. De belangrijkste antwoorden laat u door uw eigen advocaat controleren en in het voorlopige koopcontract (arras) vastleggen.</p>
+
+  <h2 id="legaliteitstoets">De legaliteitstoets: drie situaties</h2>
+  <p>Is er iets gebouwd zonder vergunning (een aanbouw, een dichtgemaakt terras, een zwembad of het hele huis), stel dan eerst vast in welke van drie situaties het huis zit. Dat bepaalt of u het probleem kunt oplossen, of u ermee kunt leven, of dat u beter afhaakt.</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Situatie</th><th>Wat het betekent</th><th>Voor u als koper</th></tr></thead>
+    <tbody>
+      <tr><td><strong>1. Te legaliseren</strong></td><td>Wat er staat, past in het bestemmingsplan. De eigenaar kan achteraf een vergunning aanvragen.</td><td>Daarna volledig legaal. Spreek af dat de verkoper het regelt vóór de notaris, of verreken de kosten in de prijs.</td></tr>
+      <tr><td><strong>2. AFO</strong></td><td>Het past niet in het plan, maar de termijn van zes jaar voor handhaving is voorbij. De gemeente kan een AFO-verklaring afgeven.</td><td>Het huis mag blijven staan en bewoond worden, maar niet uitbreiden. Een hypotheek is lastiger, en toeristische verhuur alleen met uitdrukkelijke toestemming van de gemeente.</td></tr>
+      <tr><td><strong>3. Nooit verjaard</strong></td><td>Op gronden waar geen termijn geldt, zoals de kuststrook, overstromingsgebied of beschermde natuur, en bij een illegale perceelsplitsing.</td><td>Afbraak blijft altijd mogelijk. Niet kopen, tenzij uw advocaat zeker weet dat het niet speelt.</td></tr>
+    </tbody>
+  </table></div>
+  <p>De vragen die u hiervoor stelt:</p>
+  <ul>
+    <li><q lang="es">¿Lo construido sin licencia es compatible con el planeamiento? ¿Se puede legalizar?</q> Past wat zonder vergunning is gebouwd in het bestemmingsplan? Kan het worden gelegaliseerd?</li>
+    <li><q lang="es">¿Cuándo se terminó la obra? ¿Han pasado más de seis años? ¿Tiene ya la resolución de AFO?</q> Wanneer is het gebouwd? Is dat meer dan zes jaar geleden? Is er al een AFO-verklaring?</li>
+    <li><q lang="es">¿Está la parcela en zona de costa, zona inundable, espacio natural protegido o suelo de especial protección?</q> Ligt het perceel in de kuststrook, in overstromingsgebied of in beschermd gebied?</li>
+    <li><q lang="es">¿La parcela procede de una segregación o parcelación con licencia?</q> Is het perceel met vergunning afgesplitst?</li>
+  </ul>
+  <p>Het antwoord van de verkoper is een begin; uw advocaat controleert het bij de gemeente. Kosten, doorlooptijden en de procedure per situatie staan in de gids <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren in Andalusië</a>.</p>
+
+  <BuyingChecklist theme={0} />
+  <p>Meer over de legale status leest u in <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren in Andalusië</a> en, bij een huis op het platteland, in <a href="/nl/gidsen/finca-kopen-in-spanje/">finca kopen in Spanje</a>. Op de pagina’s per gemeente onder <a href="/nl/plaatsen/">plaatsen</a> staat ook wat er lokaal geldt voor bouwvergunningen.</p>
+
+  <BuyingChecklist theme={1} />
+  <p>Wat u bovenop de koopprijs betaalt, staat in <a href="/nl/gidsen/kosten-koper-spanje/">kosten koper Spanje</a>.</p>
+
+  <BuyingChecklist theme={2} />
+  <p>Op deze vragen krijgt u bijna altijd een geruststellend antwoord. Daarom laat u het huis ook zelf bekijken. Lees meer over <a href="/nl/problemen/vocht-en-schimmel/">vocht en schimmel</a>, <a href="/nl/problemen/daklekkage/">daklekkage</a>, <a href="/nl/problemen/scheuren-in-muren/">scheuren in muren</a> en <a href="/nl/problemen/termieten/">termieten</a>.</p>
+
+  <BuyingChecklist theme={3} />
+
+  <BuyingChecklist theme={4} />
+  <p>Wilt u een lopende B&amp;B of vakantieverhuur overnemen? Dan komen er nog veel meer vragen bij; zie <a href="/nl/gidsen/huis-kopen-in-spanje/bed-and-breakfast-kopen/">een bestaande B&amp;B kopen</a>.</p>
+
+  <h2 id="per-type">Extra punten per type huis</h2>
+  <h3>Appartement</h3>
+  <ul>
+    <li><strong>Notulen van de vereniging.</strong> <q lang="es">¿Me puede enviar las actas de las tres últimas juntas de la comunidad?</q> Daarin ziet u geplande werken, ruzies en achterstanden.</li>
+    <li><strong>Staat van het gebouw.</strong> <q lang="es">¿Tiene el edificio la inspección técnica (ITE) favorable?</q> Een ongunstige keuring betekent vaak een extra heffing voor gevel, dak of leidingen.</li>
+    <li><strong>Parkeerplaats en berging.</strong> <q lang="es">¿La plaza de garaje y el trastero están inscritos en el Registro y se incluyen en la venta?</q></li>
+    <li><strong>Vakantieverhuur.</strong> Sinds april 2025 is voor nieuwe toeristische verhuur in een appartementengebouw vooraf toestemming van drie vijfde van de vereniging nodig. <q lang="es">¿Permiten los estatutos de la comunidad el alquiler turístico?</q></li>
+  </ul>
+  <h3>Finca</h3>
+  <ul>
+    <li>Doe altijd de legaliteitstoets hierboven, voor het huis én voor elk bijgebouw en het zwembad.</li>
+    <li>Water, afvoer, toegangsweg en stroom zijn bij een finca de grootste kostenposten; zie de vragen onder <a href="#platteland">water, afvoer en toegang</a>.</li>
+    <li>Vraag naar de perceelgrenzen: <q lang="es">¿Están los límites de la finca marcados y coinciden con el Catastro?</q></li>
+    <li>Lees verder in <a href="/nl/gidsen/finca-kopen-in-spanje/">finca kopen in Spanje</a>.</li>
+  </ul>
+  <h3>B&amp;B of vakantieverhuur</h3>
+  <ul>
+    <li>Doe de legaliteitstoets voor elke gastenkamer: kamers die niet vergund zijn, kunt u niet legaal verhuren. Bij een huis met AFO-status mag toeristische verhuur alleen met uitdrukkelijke toestemming van de gemeente.</li>
+    <li><q lang="es">¿Con qué número está inscrito en el Registro de Turismo de Andalucía, y para cuántas plazas?</q></li>
+    <li>Koopt u een B&amp;B die al draait, controleer dan ook de cijfers, boekingskanalen en reviews; zie <a href="/nl/gidsen/huis-kopen-in-spanje/bed-and-breakfast-kopen/">een bestaande B&amp;B kopen</a>. Wilt u er zelf een beginnen, lees dan <a href="/nl/gidsen/finca-appartement-of-dorpshuis/bed-and-breakfast/">een B&amp;B starten</a>.</li>
+  </ul>
+
+  <h2 id="keuring">Laat het ons controleren</h2>
+  <p>Een verkoper die zegt dat het dak nooit heeft gelekt, kan dat oprecht menen. Een keurder kijkt naar wat er werkelijk is. Bij onze <a href="/nl/aankoopkeuring/">aankoopkeuring</a> lopen wij de technische punten van deze lijst voor u na:</p>
+  <ul class="checks">
+    <li>Vocht, lekkages, scheuren, termieten en houtworm</li>
+    <li>Dak en dakterras, ramen, elektra, water en afvoer, zwembad</li>
+    <li>Bij een finca: waterbron, septische put en toegangsweg</li>
+    <li>Of de metrage en de bijgebouwen overeenkomen met akte en kadaster, als signaal voor uw advocaat</li>
+    <li>Een prijsindicatie voor elk gebrek, zodat u kunt onderhandelen</li>
+  </ul>
+  <p>U krijgt een rapport in het Nederlands met foto’s, ook als u zelf niet in Spanje bent. <a href="/nl/aanvraag/?dienst=aankoopkeuring">Vraag een aankoopkeuring aan</a> of mail naar <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+  <h2 id="bronnen">Bronnen</h2>
+  <ul>
+    <li>Termijn van zes jaar voor handhaving en de gronden zonder termijn: Ley 7/2021 (LISTA), artikel 153; AFO: Decreto 550/2022.</li>
+    <li>Ingebruikname met een verklaring (declaración responsable): Ley 7/2021 (LISTA), artikel 138.</li>
+    <li>Toeristische verhuur van een AFO-woning alleen met toestemming van de gemeente: Decreto 28/2016, artikel 1.3.d, zoals gewijzigd door Decreto 31/2024.</li>
+    <li>Toestemming van drie vijfde van de vereniging voor toeristische verhuur: Ley 49/1960 de Propiedad Horizontal, artikel 17.12, zoals gewijzigd door Ley Orgánica 1/2025.</li>
+    <li>Schulden van de vereniging: Ley 49/1960, artikel 9.1.e. IBI gaat mee met het huis: Real Decreto Legislativo 2/2004, artikel 64.</li>
+  </ul>
+  <p class="note">Gecontroleerd op 5 november 2026. Deze checklist geeft algemene informatie en vervangt geen juridisch advies. De juridische controle van register, vergunningen en schulden hoort bij een onafhankelijke advocaat.</p>
+</Guide>
