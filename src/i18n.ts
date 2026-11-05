@@ -22,6 +22,7 @@ export const routes: Partial<Record<Lang, string>>[] = [
   { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/', sv: '/sv/guider/' },
   { nl: '/nl/plaatsen/', en: '/en/places/', de: '/de/orte/', sv: '/sv/orter/' },
   { nl: '/nl/zien-en-doen/', en: '/en/things-to-do/', de: '/de/sehenswuerdigkeiten/', sv: '/sv/se-och-gora/' },
+  { nl: '/nl/contact/', en: '/en/contact/', de: '/de/kontakt/', sv: '/sv/kontakt/' },
   // Gidsen staan in alle talen in dezelfde volgorde (zie src/data/guides.ts)
   ...guides.map((_, i) =>
     Object.fromEntries(langs.filter((l) => guidesBy[l][i]).map((l) => [l, guideHref(l, guidesBy[l][i])])),
@@ -48,8 +49,8 @@ export function alternatesFor(path: string): Partial<Record<Lang, string>> {
   return routes.find((r) => Object.values(r).includes(path)) ?? {};
 }
 
-type Key = 'home' | 'request' | 'privacy' | 'thanks' | 'guides' | 'about' | 'projects' | 'places' | 'todo';
-const keyIndex: Record<Key, number> = { home: 0, projects: 6, about: 7, request: 8, privacy: 9, thanks: 10, guides: 11, places: 12, todo: 13 };
+type Key = 'home' | 'request' | 'privacy' | 'thanks' | 'guides' | 'about' | 'projects' | 'places' | 'todo' | 'contact';
+const keyIndex: Record<Key, number> = { home: 0, projects: 6, about: 7, request: 8, privacy: 9, thanks: 10, guides: 11, places: 12, todo: 13, contact: 14 };
 export const path = (lang: Lang, key: Key) => routes[keyIndex[key]][lang]!;
 
 export interface NavItem { href: string; label: string; children?: { href: string; label: string }[] }

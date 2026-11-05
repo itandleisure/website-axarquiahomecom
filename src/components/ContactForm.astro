@@ -1,0 +1,97 @@
+---
+// Eenvoudig contactformulier. Gaat via dezelfde verwerking als de keuzehulp
+// (apps-script/Code.gs) naar het bouwbedrijf, met dienst "contact".
+import { site, isFilled } from '../data/site';
+import { contactTeksten, wizardHintEnd } from '../data/contactformulier';
+import { path, type Lang } from '../i18n';
+
+interface Props { lang?: Lang; }
+const lang = Astro.props.lang ?? 'nl';
+const C = contactTeksten[lang];
+const endpoint = isFilled(site.leadEndpoint) ? site.leadEndpoint : '';
+---
+<form id="contactformulier" class="wizard" data-endpoint={endpoint} data-thanks={path(lang, 'thanks')} data-msgs={JSON.stringify(C.msgs)} novalidate>
+  <div class="row2">
+    <div class="field"><label for="c-naam">{C.naam}</label><input id="c-naam" name="naam" type="text" autocomplete="name" required /></div>
+    <div class="field"><label for="c-email">{C.email}</label><input id="c-email" name="email" type="email" autocomplete="email" required /></div>
+  </div>
+  <div class="field">
+    <label for="c-telefoon">{C.telefoon} <span class="note">{C.optional}</span></label>
+    <input id="c-telefoon" name="telefoon" type="tel" autocomplete="tel" placeholder={C.telPh} />
+  </div>
+  <div class="field">
+    <label for="c-bericht">{C.bericht}</label>
+    <textarea id="c-bericht" name="omschrijving" rows="6" placeholder={C.berichtPh} required></textarea>
+  </div>
+  <div class="hp" aria-hidden="true"><label>{C.hp} <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+  <label class="consent"><input type="checkbox" name="toestemming" value="ja" required /><span>{C.consent} <a href={path(lang, 'privacy')} target="_blank">{C.privacy}</a>.</span></label>
+  <p class="wizard-error" role="alert" data-error></p>
+  <div class="wizard-nav">
+    <button type="submit" class="btn" data-submit>{C.submit}</button>
+  </div>
+</form>
+<p class="contact-alt">{C.wizardHint} <a href={path(lang, 'request')}>{C.wizardLink}</a> {wizardHintEnd[lang]}</p>
+
+<style>
+  .contact-alt { margin-top: 20px; color: var(--muted); max-width: 760px; }
+</style>
+
+<script>
+  import { sendLead, newId } from '../scripts/send-lead';
+
+  const form = document.getElementById('contactformulier') as HTMLFormElement;
+  const errorEl = form.querySelector<HTMLElement>('[data-error]')!;
+  const submit = form.querySelector<HTMLButtonElement>('[data-submit]')!;
+  const M = JSON.parse(form.dataset.msgs || '{}');
+
+  function valid(): boolean {
+    for (const f of Array.from(form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('[required]'))) {
+      if (f instanceof HTMLInputElement && f.type === 'checkbox') {
+        if (!f.checked) { errorEl.textContent = M.consent; return false; }
+      } else if (!f.value.trim() || !f.checkValidity()) {
+        const label = form.querySelector(`label[for="${f.id}"]`)?.childNodes[0]?.textContent?.trim() ?? M.thisField;
+        errorEl.textContent = M.fill.replace('{x}', M.keepCase ? label : label.toLowerCase());
+        f.focus();
+        return false;
+      }
+    }
+    errorEl.textContent = '';
+    return true;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!valid()) return;
+    const fd = new FormData(form);
+    if (fd.get('website')) return; // spam
+    const data: Record<string, unknown> = {
+      dienst: 'contact',
+      soort: 'contact',
+      naam: String(fd.get('naam') ?? '').trim(),
+      email: String(fd.get('email') ?? '').trim(),
+      telefoon: String(fd.get('telefoon') ?? '').trim(),
+      omschrijving: String(fd.get('omschrijving') ?? '').trim(),
+      toestemming: fd.get('toestemming') ? 'ja' : '',
+      taal: document.documentElement.lang,
+      pagina: document.referrer || location.href,
+      utm: location.search,
+      id: newId(),
+    };
+    const endpoint = form.dataset.endpoint;
+    if (!endpoint) {
+      errorEl.textContent = M.notLinked;
+      console.info('Contactbericht (niet verstuurd):', data);
+      return;
+    }
+    submit.disabled = true;
+    const label = submit.textContent;
+    submit.textContent = M.sending;
+    if (await sendLead(endpoint, data)) {
+      location.href = form.dataset.thanks!;
+    } else {
+      submit.disabled = false;
+      submit.textContent = label;
+      errorEl.textContent = M.failed;
+    }
+  });
+</script>
