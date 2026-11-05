@@ -2,6 +2,7 @@
 import { guides, guidesBy, guideHref } from './data/guides';
 import { places, placeHref, type PlacePage } from './data/places';
 import { placeContent } from './data/place-content';
+import { hasMunicipalPages } from './data/place-tabs';
 export type Lang = 'nl' | 'en' | 'de' | 'sv';
 export const langs: Lang[] = ['nl', 'en', 'de', 'sv'];
 export const langNames: Record<Lang, string> = { nl: 'Nederlands', en: 'English', de: 'Deutsch', sv: 'Svenska' };
@@ -39,6 +40,14 @@ export const routes: Partial<Record<Lang, string>>[] = [
             })
             .map((l) => [l, placeHref(l, p, page)]),
         ),
+      ),
+    )
+    .filter((r) => Object.keys(r).length > 0),
+  // Bouwvergunning en Praktisch per gemeente (alleen nl, en, de)
+  ...places
+    .flatMap((p) =>
+      (['permit', 'practical'] as PlacePage[]).map((page) =>
+        Object.fromEntries(langs.filter((l) => hasMunicipalPages(l, p)).map((l) => [l, placeHref(l, p, page)])),
       ),
     )
     .filter((r) => Object.keys(r).length > 0),
