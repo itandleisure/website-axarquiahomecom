@@ -136,7 +136,7 @@ function mailKlant_(d) {
     },
     sv: {
       subject: 'Vi har tagit emot din förfrågan',
-      body: `<p>Hej ${esc_(d.naam)},</p><p>Tack för din förfrågan. Inom 24 timmar hör någon från vårt team av sig för att gå igenom nästa steg.</p><p>Vänliga hälsningar<br>Axarquía Home</p>`,
+      body: `<p>Hej ${esc_(d.naam)},</p><p>Tack för din förfrågan. Inom 24 timmar hör någon från vårt team av sig för att gå igenom nästa steg. Vi svarar på engelska.</p><p>Vänliga hälsningar<br>Axarquía Home</p>`,
     },
   };
   const m = teksten[d.taal] || teksten.nl;
