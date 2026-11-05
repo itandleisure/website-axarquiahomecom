@@ -149,7 +149,14 @@ const nl: HomeMenu = {
       label: 'Zelf doen',
       title: 'Zelf aan de slag',
       intro: 'Klussen die u zelf kunt doen, met stappen, materiaal en wanneer u beter een vakman belt.',
-      links: [],
+      links: [
+        { label: 'Zwembad zelf aanleggen', href: '/nl/zelf-doen/zwembad-zelf-aanleggen/' },
+        { label: 'Dak zelf repareren of vervangen', href: '/nl/zelf-doen/dak-zelf-repareren-of-vervangen/' },
+        { label: 'Ramen zelf vervangen', href: '/nl/zelf-doen/ramen-zelf-vervangen/' },
+        { label: 'Houtkachel en schoorsteen plaatsen', href: '/nl/zelf-doen/houtkachel-en-schoorsteen-plaatsen/' },
+        { label: 'Gevel witten met kalk', href: '/nl/zelf-doen/gevel-witten-met-kalk/' },
+      ],
+      cta: [{ label: 'Alle klussen', href: '/nl/zelf-doen/' }],
     },
     {
       key: 'wonen',
@@ -287,7 +294,14 @@ const en: HomeMenu = {
       label: 'Do it yourself',
       title: 'Doing it yourself',
       intro: 'Jobs you can do yourself, with steps, materials and when to call a professional.',
-      links: [],
+      links: [
+        { label: 'Building your own pool', href: '/en/diy/building-your-own-swimming-pool/' },
+        { label: 'Repairing or replacing your roof', href: '/en/diy/repairing-or-replacing-your-roof/' },
+        { label: 'Replacing windows', href: '/en/diy/replacing-windows/' },
+        { label: 'Installing a wood burner and flue', href: '/en/diy/installing-a-wood-burner-and-flue/' },
+        { label: 'Limewashing your house', href: '/en/diy/limewashing-your-house/' },
+      ],
+      cta: [{ label: 'All DIY guides', href: '/en/diy/' }],
     },
     {
       key: 'wonen',
@@ -426,6 +440,7 @@ const de: HomeMenu = {
       title: 'Selbst Hand anlegen',
       intro: 'Arbeiten, die Sie selbst erledigen können, mit Schritten, Material und wann besser ein Profi kommt.',
       links: [],
+      cta: [{ label: 'Alle Anleitungen', href: '/de/selbermachen/' }],
     },
     {
       key: 'wonen',
