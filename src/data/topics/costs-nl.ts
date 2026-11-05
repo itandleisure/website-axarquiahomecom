@@ -314,6 +314,7 @@ export const costsNl: Topic[] = [
       { q: 'Wat kost airco aan stroom?', a: 'Een moderne split-unit van 3,5 kW verbruikt bij koelen gemiddeld 0,8 tot 1,2 kW per uur. Met een paar uur per dag in de zomer is dat enkele tientallen euro’s per maand per kamer.' },
     ],
     links: [
+      { href: '/nl/gidsen/verwarmen-en-koelen-spanje/', label: 'Gids: verwarmen en koelen vergeleken' },
       { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
       { href: '/nl/renovatie/', label: 'Renovatie en verbouwing' },
       { href: '/nl/problemen/vocht-en-schimmel/', label: 'Vocht en schimmel in huis' },
@@ -1110,6 +1111,7 @@ export const costsNl: Topic[] = [
       { q: 'Welk hout stook ik het beste?', a: 'Droog hardhout, zoals olijf- of amandelhout, met minder dan 20% vocht. Laat vers hout minstens een jaar drogen. Dennenhout en vochtig hout geven meer roet en teer.' },
     ],
     links: [
+      { href: '/nl/gidsen/verwarmen-en-koelen-spanje/', label: 'Gids: verwarmen en koelen vergeleken' },
       { href: '/nl/problemen/schoorsteen-rookt-terug/', label: 'Schoorsteen rookt terug' },
       { href: '/nl/gidsen/huis-winterklaar-spanje/', label: 'Gids: huis winterklaar maken' },
       { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },

@@ -314,6 +314,7 @@ export const costsDe: Topic[] = [
       { q: 'Wie viel Strom verbraucht eine Klimaanlage?', a: 'Ein modernes Split-Gerät mit 3,5 kW verbraucht beim Kühlen im Schnitt 0,8 bis 1,2 kW pro Stunde. Bei einigen Stunden am Tag im Sommer sind das einige zehn Euro pro Monat und Raum.' },
     ],
     links: [
+      { href: '/de/ratgeber/heizen-und-kuehlen-spanien/', label: 'Ratgeber: Heizen und Kühlen im Vergleich' },
       { href: '/de/instandhaltung/', label: 'Instandhaltung und Reparaturen' },
       { href: '/de/renovierung/', label: 'Renovierung und Umbau' },
       { href: '/de/probleme/feuchtigkeit-und-schimmel/', label: 'Feuchtigkeit und Schimmel im Haus' },
@@ -1110,6 +1111,7 @@ export const costsDe: Topic[] = [
       { q: 'Welches Holz brennt am besten?', a: 'Trockenes Hartholz wie Oliven- oder Mandelholz mit weniger als 20 % Feuchte. Lassen Sie frisches Holz mindestens ein Jahr trocknen. Kiefer und feuchtes Holz geben mehr Ruß und Teer.' },
     ],
     links: [
+      { href: '/de/ratgeber/heizen-und-kuehlen-spanien/', label: 'Ratgeber: Heizen und Kühlen im Vergleich' },
       { href: '/de/probleme/kamin-raucht/', label: 'Kamin raucht zurück' },
       { href: '/de/ratgeber/haus-winterfest-spanien/', label: 'Ratgeber: Haus winterfest machen' },
       { href: '/de/instandhaltung/', label: 'Instandhaltung und Reparaturen' },

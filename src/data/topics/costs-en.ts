@@ -314,6 +314,7 @@ export const costsEn: Topic[] = [
       { q: 'How much electricity does air conditioning use?', a: 'A modern 3.5 kW split unit uses on average 0.8 to 1.2 kW per hour when cooling. A few hours a day in summer comes to a few tens of euros a month per room.' },
     ],
     links: [
+      { href: '/en/guides/heating-and-cooling-spain/', label: 'Guide: heating and cooling compared' },
       { href: '/en/maintenance/', label: 'Maintenance and repairs' },
       { href: '/en/renovation/', label: 'Renovation and building work' },
       { href: '/en/problems/damp-and-mould/', label: 'Damp and mould in your home' },
@@ -1110,6 +1111,7 @@ export const costsEn: Topic[] = [
       { q: 'Which wood burns best?', a: 'Dry hardwood, such as olive or almond, with less than 20% moisture. Let fresh wood dry for at least a year. Pine and damp wood give more soot and tar.' },
     ],
     links: [
+      { href: '/en/guides/heating-and-cooling-spain/', label: 'Guide: heating and cooling compared' },
       { href: '/en/problems/smoking-chimney/', label: 'Smoking chimney' },
       { href: '/en/guides/preparing-your-spanish-home-for-winter/', label: 'Guide: preparing your home for winter' },
       { href: '/en/maintenance/', label: 'Maintenance and repairs' },

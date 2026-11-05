@@ -242,6 +242,17 @@ export const guides: GuideMeta[] = [
     minutes: 7,
     published: '2026-11-05',
   },
+  {
+    slug: 'verwarmen-en-koelen-spanje',
+    title: 'Verwarmen en koelen in Spanje: alle mogelijkheden vergeleken',
+    seoTitle: 'Huis verwarmen in Spanje: airco, houtkachel, pellet, butaan, infrarood en vloerverwarming vergeleken',
+    short: 'Verwarmen en koelen',
+    description: 'Welke verwarming past bij uw huis in de Axarquía? Airco met warmtepomp, aerotermia, houtkachel, pelletkachel, butaankachel, infraroodpanelen en vloerverwarming vergeleken: voor- en nadelen, geur, kosten in gebruik en wat past bij een appartement, finca of off-grid.',
+    lead: 'Spaanse huizen zijn gebouwd voor de zomer, dus in de winter is het binnen vaak kouder dan buiten. Er is niet één beste verwarming. Hier staan alle mogelijkheden naast elkaar, met wat ze kosten en wat bij uw huis past.',
+    keyword: 'verwarming spanje',
+    minutes: 8,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesEn: GuideMeta[] = [
@@ -465,6 +476,17 @@ export const guidesEn: GuideMeta[] = [
     minutes: 7,
     published: '2026-11-05',
   },
+  {
+    slug: 'heating-and-cooling-spain',
+    title: 'Heating and cooling your house in Spain: every option compared',
+    seoTitle: 'Heating a house in Spain: air con, wood burner, pellet, butane, infrared and underfloor compared',
+    short: 'Heating and cooling',
+    description: 'Which heating suits your house in the Axarquía? Air con with heat pump, aerotermia, wood burner, pellet stove, butane heater, infrared panels and underfloor heating compared: pros and cons, smell, running costs and what suits an apartment, finca or off-grid.',
+    lead: 'Spanish houses are built for summer, so in winter it is often colder indoors than out. There is no single best heating. Here are all the options side by side, with what they cost and which suits your house.',
+    keyword: 'heating a house in spain',
+    minutes: 8,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesDe: GuideMeta[] = [
@@ -686,6 +708,17 @@ export const guidesDe: GuideMeta[] = [
     lead: 'Ein Haus in Spanien versichern Sie bei einem spanischen Versicherer, mit Regeln, die anders sind als in Deutschland. Vor allem, wenn das Haus einen Teil des Jahres leer steht. Das sollten Sie wissen, und so melden Sie Schäden.',
     keyword: 'hausversicherung spanien',
     minutes: 7,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'heizen-und-kuehlen-spanien',
+    title: 'Heizen und Kühlen in Spanien: alle Möglichkeiten im Vergleich',
+    seoTitle: 'Haus heizen in Spanien: Klimaanlage, Kaminofen, Pellet, Butan, Infrarot und Fußbodenheizung im Vergleich',
+    short: 'Heizen und Kühlen',
+    description: 'Welche Heizung passt zu Ihrem Haus in der Axarquía? Klimaanlage mit Wärmepumpe, Aerotermia, Kaminofen, Pelletofen, Butanofen, Infrarotpaneele und Fußbodenheizung im Vergleich: Vor- und Nachteile, Geruch, Betriebskosten und was zu Wohnung, Finca oder autarkem Haus passt.',
+    lead: 'Spanische Häuser sind für den Sommer gebaut, im Winter ist es drinnen oft kälter als draußen. Die eine beste Heizung gibt es nicht. Hier stehen alle Möglichkeiten nebeneinander, mit Kosten und was zu Ihrem Haus passt.',
+    keyword: 'heizen in spanien',
+    minutes: 8,
     published: '2026-11-05',
   },
 ];
