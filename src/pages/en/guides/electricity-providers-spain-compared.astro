@@ -1,0 +1,144 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'how', label: 'How we compared' },
+  { id: 'types', label: 'Fixed, indexed or PVPC?' },
+  { id: 'comparison', label: 'Comparison: virtual battery and solar export' },
+  { id: 'situation', label: 'What suits your situation?' },
+  { id: 'tariff', label: 'Off-peak hours, contracted power and EV charging' },
+  { id: 'charger', label: 'EV chargers from energy suppliers' },
+  { id: 'switching', label: 'Switching as a foreign owner' },
+  { id: 'yourself', label: 'Compare for yourself' },
+  { id: 'sources', label: 'Sources and dates' },
+];
+
+const faq = [
+  {
+    q: 'Which is the cheapest electricity provider in Spain?',
+    a: 'That depends on when you use power, how much you export and how often you are there. A provider with a high export rate can work out more expensive overall if the power you buy is costly. Always compare using your own usage, for example with the official CNMC comparison tool.',
+  },
+  {
+    q: 'Does it cost anything to switch electricity provider in Spain?',
+    a: 'No. Switching is free and the new provider arranges it, including cancelling the old contract. You only need the CUPS code of your connection, which is on every bill. Do watch out for a minimum term (permanencia) with your current provider, and for any credit in a virtual battery, which is usually lost.',
+  },
+  {
+    q: 'Do I need a Spanish bank account for an electricity contract?',
+    a: 'Under EU SEPA rules a provider may not refuse a direct debit from an account in another euro country. In practice some providers still ask for a Spanish IBAN, and a UK account is outside those rules, so a Spanish or euro account makes life easier. You always need an NIE as the account holder.',
+  },
+  {
+    q: 'Is PVPC or a fixed tariff better with solar panels?',
+    a: 'With solar panels most owners choose a fixed or indexed tariff on the free market, because only there can you get a virtual battery. PVPC can make sense if you export little, can shift your usage to cheap hours, or qualify for the bono social.',
+  },
+  {
+    q: 'Are you paid by the providers in this comparison?',
+    a: 'No. We do not sell energy contracts and are not tied to any provider. We install and maintain solar panels, home batteries and EV chargers, and advise on which kind of contract suits them.',
+  },
+];
+---
+<Guide lang="en" slug="electricity-providers-spain-compared" toc={toc} faq={faq} dienst="energiebeheer" ctaTitle="Help with your energy in Spain?" ctaText="Send us a recent bill. We check whether your contracted power, tariff and solar compensation suit how you use the house, and what solar panels or a battery would save.">
+  <h2 id="how">How we compared</h2>
+  <p>In Spain you can choose from dozens of electricity suppliers (<em>comercializadoras</em>). The grid itself belongs to one operator per area; in the Axarquía that is almost everywhere e-distribución. Whichever supplier you are with, the power, the meter and outages are the same. What you choose is mainly a price and terms.</p>
+  <p>For owners with solar panels, three things count: what you pay for the power you buy, what you get for the power you export, and what happens to any surplus. That last point decides whether you need a <a href="/en/guides/virtual-battery-spain/">virtual battery</a>.</p>
+  <p>We have put the best-known suppliers with a self-consumption offer side by side. For each one we give the source and the date the information applied. <strong>Prices and terms change often</strong>, sometimes monthly. Use the table to see where the differences lie, and check the current terms before you switch.</p>
+
+  <h2 id="types">Fixed, indexed or PVPC?</h2>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Type of contract</th><th>How the price works</th><th>Who it suits</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Fixed price</strong> (<em>precio fijo</em>, free market)</td><td>A fixed price per kWh, often for 12 months. Sometimes one price all day, sometimes per period (peak, mid, off-peak).</td><td>Anyone who wants certainty. Most offers with a virtual battery are of this type.</td></tr>
+      <tr><td><strong>Indexed</strong> (<em>tarifa indexada</em>, free market)</td><td>The hourly wholesale price plus a fixed margin. Exports usually also get the market price.</td><td>Anyone who can shift usage, for example with a home battery or smart charger.</td></tr>
+      <tr><td><strong>PVPC</strong> (regulated tariff)</td><td>The government sets the formula. In 2026, 55% of the energy price depends on forward markets and 45% on the day-ahead market. Exports get the hourly market price.</td><td>Anyone who exports little or qualifies for the <em>bono social</em>. No virtual battery possible.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>PVPC is only available from one of the regulated suppliers (<em>comercializadoras de referencia</em>), such as Energía XXI, Curenergía, Baser or Régsiti, and only for a connection up to 10 kW. Note that many companies with nearly the same name sell free-market contracts.</p>
+  <p>Around midday, when every solar panel in Spain is producing at once, the market price is often very low. On PVPC and indexed contracts your exports are worth little at that time. A fixed export rate per kWh is more predictable for solar panels.</p>
+
+  <h2 id="comparison">Comparison: virtual battery and solar export</h2>
+  <p class="note">Amounts exclude VAT, per month unless stated otherwise. “Export rate” is the payment per kWh for power you send back to the grid. See the <a href="#sources">sources</a> below.</p>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Supplier</th><th>Virtual battery and cost</th><th>Export rate</th><th>Credit valid</th><th>Share with</th><th>As of</th></tr></thead>
+    <tbody>
+      <tr><td>Octopus Energy</td><td>Solar Wallet, free</td><td>€0.035; €0.07 if you install through Octopus</td><td>Does not expire</td><td>Other Octopus connections, including a second home</td><td>Nov 2026</td></tr>
+      <tr><td>Endesa</td><td>Batería virtual, €2</td><td>€0.06</td><td>Does not expire</td><td>Same connection only</td><td>Jul 2026</td></tr>
+      <tr><td>Iberdrola</td><td>Solar Cloud; new customers since Sept 2026 only with the Asistente Smart Avanzado service, €3.45</td><td>Depends on plan</td><td>Ask</td><td>Other Iberdrola contracts of the same holder</td><td>Sep 2026</td></tr>
+      <tr><td>Naturgy</td><td>Batería virtual, free</td><td>approx. €0.06</td><td>5 years</td><td>Electricity and gas of the same holder</td><td>Sep 2026</td></tr>
+      <tr><td>Repsol</td><td>Batería virtual, €1.99</td><td>€0.06</td><td>While you are a customer, up to 1 year after leaving</td><td>Connections of the same holder</td><td>Jul 2026</td></tr>
+      <tr><td>Holaluz</td><td>Holaluz Cloud, tailored fixed monthly amount with annual settlement</td><td>Built into the monthly amount</td><td>Ask</td><td>Main and second home</td><td>Sep 2026</td></tr>
+      <tr><td>Factorenergia</td><td>Batería virtual, free</td><td>Per tariff</td><td>Does not expire, lost if you switch</td><td>Connections of the same holder, even without panels</td><td>Sep 2026</td></tr>
+      <tr><td>Energía Nufri</td><td>Batería virtual, free</td><td>Per tariff</td><td>Does not expire</td><td>Other connections of the same holder</td><td>Sep 2026</td></tr>
+      <tr><td>Som Energia (cooperative)</td><td>Sols: 80% of the surplus not offset, no fee</td><td>Market price</td><td>5 years</td><td>Same contract only</td><td>Sep 2026</td></tr>
+      <tr><td>TotalEnergies</td><td>No virtual battery on the solar tariff</td><td>approx. €0.06</td><td>Surplus lost monthly</td><td>No</td><td>Sep 2026</td></tr>
+      <tr><td>PVPC (regulated)</td><td>No virtual battery</td><td>Hourly market price</td><td>Surplus lost monthly</td><td>No</td><td>Nov 2026</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>What stands out: the differences in export rates are small (a few cents per kWh), the differences in terms are large. Whether you can share credit with a second home, how long it stays valid and whether a mandatory add-on service is attached often matter more over a few years than half a cent on the export rate. And do not forget the price of the power you do buy: in winter it makes up most of your bill.</p>
+
+  <h2 id="situation">What suits your situation?</h2>
+  <ul>
+    <li><strong>Holiday home with solar panels, empty for months.</strong> You export a lot while you are away. A free virtual battery that does not expire matters most here. A high export rate is a bonus.</li>
+    <li><strong>Two homes in Spain</strong>, for example a finca and a flat on the coast. Choose a supplier that lets you share credit between both connections.</li>
+    <li><strong>Lived in all year, high evening use.</strong> A <a href="/en/costs/home-battery/">home battery</a> earns more than a virtual battery. Choose a contract with low peak and mid-period prices.</li>
+    <li><strong>Electric car.</strong> Choose a tariff with cheap off-peak hours (nights and weekends) and charge on solar during the day. See below.</li>
+    <li><strong>Holiday letting.</strong> Guests use a lot, often in summer when the panels produce most. A fixed price per kWh gives the clearest picture. Smart energy management stops the air con running flat out all day.</li>
+    <li><strong>No solar panels.</strong> The virtual battery plays no part. Just compare the price per kWh, the standing charge and your contracted power, and see whether PVPC works out cheaper.</li>
+  </ul>
+
+  <h2 id="tariff">Off-peak hours, contracted power and EV charging</h2>
+  <p>Almost every Spanish home is on the 2.0TD grid tariff, with prices that vary by time of day:</p>
+  <table class="prices">
+    <thead><tr><th>Period</th><th>Weekdays</th><th>Price</th></tr></thead>
+    <tbody>
+      <tr><td>Peak (<em>punta</em>, P1)</td><td>10:00 – 14:00 and 18:00 – 22:00</td><td>Highest</td></tr>
+      <tr><td>Mid (<em>llano</em>, P2)</td><td>08:00 – 10:00, 14:00 – 18:00 and 22:00 – 24:00</td><td>Middle</td></tr>
+      <tr><td>Off-peak (<em>valle</em>, P3)</td><td>00:00 – 08:00, plus all weekend and national holidays</td><td>Lowest</td></tr>
+    </tbody>
+  </table>
+  <p>You also pay a standing charge for your <strong>contracted power</strong> (<em>potencia contratada</em>) in kW. You can set it higher for off-peak hours than for the daytime. That is useful for an <a href="/en/costs/ev-charger/">EV charger</a>: charge at night with more power without paying for that power during the day. Too much contracted power costs money every month, even when you are away; too little trips the main switch.</p>
+  <p>Some suppliers have special EV tariffs with a very low night price. Check the price in the other hours too, as it is often higher. With solar panels, a home battery and a charger it pays to make everything work together: see <a href="/en/costs/smart-energy-management/">smart energy management</a>.</p>
+
+  <h2 id="charger">EV chargers from energy suppliers</h2>
+  <p>The big suppliers also sell an EV charger with installation, often together with a special EV tariff. A pack includes a fixed length of cable between the consumer unit and the charger. If the distance is longer, for example in a car park under a block of flats or a carport at the back of a finca, you pay extra per metre. Always ask for a quote based on the real distance.</p>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Supplier</th><th>Pack</th><th>Cable included</th><th>Price from</th><th>As of</th></tr></thead>
+    <tbody>
+      <tr><td>Endesa</td><td>Waybox, 7.4 or 22 kW, with installation certificate (CIE)</td><td>House: up to 20 m. Shared car park: up to 20 m (Mini) or 50 m</td><td>€1,099</td><td>Nov 2026</td></tr>
+      <tr><td>Repsol</td><td>Charger with load balancing (<em>balanceo</em>), single phase</td><td>Not stated, on quote</td><td>€2,011 (house), €2,066 (car park), incl. VAT</td><td>Nov 2026</td></tr>
+      <tr><td>Iberdrola</td><td>Buy or rent the charger, installation quoted through their calculator</td><td>Depends on distance</td><td>On quote</td><td>Nov 2026</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>With the pack, Endesa gives 30% off its EV tariff <em>Tarifa Recarga en Casa</em>, a fixed monthly amount for a bundle of kWh. A bundle suits you if you charge a lot at home, less so if you have solar panels and charge on sunshine during the day. You do not have to buy the charger from your energy supplier: any authorised installer can fit it, and you can choose your contract separately. What a charger costs, and what an extra metre of cable usually costs, is on <a href="/en/costs/ev-charger/">EV charger costs</a>.</p>
+
+  <h2 id="switching">Switching as a foreign owner</h2>
+  <ul class="checks">
+    <li>You need an NIE and the CUPS code of the connection (on every bill)</li>
+    <li>Switching is free; the new supplier cancels the old contract</li>
+    <li>Check whether your current contract has a <em>permanencia</em> with an exit fee</li>
+    <li>Use up the credit in your virtual battery first: it is usually lost when you switch</li>
+    <li>Look on your bill for add-on services (<em>servicios adicionales</em>), such as maintenance plans you never asked for</li>
+    <li>Ask whether customer service speaks English and whether you can manage everything online</li>
+    <li>Is the connection still in the previous owner’s name? You need a change of holder (<em>cambio de titular</em>), sometimes with a valid electrical certificate</li>
+  </ul>
+  <p>Is the wiring old, or do you not have a valid certificate (<em>boletín</em>)? See <a href="/en/costs/electrical-rewiring/">electrical rewiring</a>.</p>
+
+  <h2 id="yourself">Compare for yourself</h2>
+  <p>The Spanish regulator CNMC runs an independent comparison tool: <a href="https://comparador.cnmc.gob.es/" rel="noopener" target="_blank">comparador.cnmc.gob.es</a>. Enter your postcode, contracted power and usage per period, and you see every offer, including self-consumption. You can download your hourly usage from your grid operator’s online account (at e-distribución it is called <em>Área Privada</em>).</p>
+  <p>Rather not work it out yourself? Send us a recent bill and we will tell you what stands out, and what solar panels, a battery or a different tariff would save.</p>
+
+  <h2 id="sources">Sources and dates</h2>
+  <ul>
+    <li>Octopus Energy: <a href="https://octopusenergy.es/precios/tarifa-solar" rel="noopener" target="_blank">octopusenergy.es, tarifa solar</a>, checked 5 November 2026.</li>
+    <li>Cost, validity and sharing of the virtual battery per supplier: <a href="https://tuexcedente.es/bateria-virtual/" rel="noopener" target="_blank">tuexcedente.es</a>, with links to the suppliers’ websites, as of September 2026 (Endesa: prices of 22 July 2026; Iberdrola: change from 7 September 2026).</li>
+    <li>Export rates and the cost at Repsol and Endesa: <a href="https://selectra.es/autoconsumo/tarifas/bateria-virtual/comercializadoras" rel="noopener" target="_blank">Selectra</a>, updated 2 July 2026. Selectra still listed Endesa’s virtual battery as free at that time.</li>
+    <li>TotalEnergies and Naturgy: <a href="https://veredictosolar.com/mejor-tarifa-bateria-virtual/" rel="noopener" target="_blank">Veredicto Solar</a>, updated 30 September 2026.</li>
+    <li>EV charger packs from Endesa and Repsol: <a href="https://www.endesa.com/es/movilidad-electrica/cargador.html" rel="noopener" target="_blank">endesa.com</a> and <a href="https://www.repsol.es/particulares/asesoramiento-consumo/instalar-punto-recarga-en-garaje/" rel="noopener" target="_blank">repsol.es</a>, checked 5 November 2026.</li>
+    <li>Compensation scheme: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2019-5089" rel="noopener" target="_blank">Real Decreto 244/2019</a>. PVPC formula: <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-14048" rel="noopener" target="_blank">Real Decreto 446/2023</a>.</li>
+  </ul>
+  <p class="note">This comparison is general information and not a recommendation to choose a particular supplier. Prices and terms change regularly; always check them with the supplier before signing a contract. Spotted a mistake or a changed term? Email us at info@axarquiahome.com and we will update it. We do not sell energy contracts and are not tied to any supplier.</p>
+</Guide>
