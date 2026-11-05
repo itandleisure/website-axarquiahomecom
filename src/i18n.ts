@@ -66,6 +66,7 @@ export const nav: Record<Lang, NavItem[]> = {
     { href: '/nl/wonen/', label: 'Wonen' },
     { href: '/nl/zien-en-doen/', label: 'Zien en doen' },
     { href: '/nl/gidsen/', label: 'Gidsen' },
+    { href: '/nl/over-ons/', label: 'Over ons' },
   ],
   en: [
     { href: '/en/#services', label: 'Services', children: [
@@ -79,6 +80,7 @@ export const nav: Record<Lang, NavItem[]> = {
     { href: '/en/living/', label: 'Living' },
     { href: '/en/things-to-do/', label: 'Things to do' },
     { href: '/en/guides/', label: 'Guides' },
+    { href: '/en/about-us/', label: 'About us' },
   ],
   de: [
     { href: '/de/#leistungen', label: 'Leistungen', children: [
@@ -92,6 +94,7 @@ export const nav: Record<Lang, NavItem[]> = {
     { href: '/de/wohnen/', label: 'Wohnen' },
     { href: '/de/sehenswuerdigkeiten/', label: 'Sehenswertes' },
     { href: '/de/ratgeber/', label: 'Ratgeber' },
+    { href: '/de/ueber-uns/', label: 'Über uns' },
   ],
   sv: [
     { href: '/sv/#tjanster', label: 'Tjänster', children: [
@@ -105,6 +108,7 @@ export const nav: Record<Lang, NavItem[]> = {
     { href: '/sv/bo/', label: 'Bo' },
     { href: '/sv/se-och-gora/', label: 'Se och göra' },
     { href: '/sv/guider/', label: 'Guider' },
+    { href: '/sv/om-oss/', label: 'Om oss' },
   ],
 };
 
