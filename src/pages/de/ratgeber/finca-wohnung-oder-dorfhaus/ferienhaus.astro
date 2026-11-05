@@ -1,0 +1,63 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kern', label: 'Worum es geht' },
+  { id: 'abwesenheit', label: 'Während Sie weg sind' },
+  { id: 'unterhalt', label: 'Unterhalt aus der Ferne' },
+  { id: 'kosten', label: 'Laufende Kosten und Steuern' },
+  { id: 'vermietung', label: 'Selbst vermieten?' },
+  { id: 'reisen', label: 'Hin und her reisen' },
+  { id: 'rat', label: 'Unser Rat je Haustyp' },
+];
+
+const faq = [
+  {
+    q: 'Wie oft sollte jemand nach meinem Ferienhaus sehen?',
+    a: 'Für eine Wohnung reicht oft alle zwei bis vier Wochen. Für ein Dorfhaus oder eine Finca empfehlen wir alle ein bis zwei Wochen, und immer nach Sturm oder starkem Regen. So werden Lecks, Einbrüche oder eine defekte Pumpe rechtzeitig entdeckt.',
+  },
+  {
+    q: 'Zahle ich Steuern auf mein Ferienhaus, wenn ich es nicht vermiete?',
+    a: 'Ja. Wenn Sie nicht in Spanien ansässig sind, zahlen Sie jedes Jahr spanische Einkommensteuer auf ein fiktives Einkommen aus der Zweitwohnung, zusätzlich zur kommunalen Grundsteuer (IBI). Vermieten Sie, zahlen Sie Steuern auf die Mieteinnahmen. Lassen Sie die Erklärungen von einem Gestor erledigen.',
+  },
+  {
+    q: 'Kann ich meine Wohnung vermieten, wenn ich nicht da bin?',
+    a: 'Nur mit einer touristischen Registrierung, und seit April 2025 braucht eine neue Ferienvermietung in einem Wohngebäude die vorherige Zustimmung von drei Fünfteln der Eigentümergemeinschaft. Prüfen Sie auch, ob die Gemeinde die Zahl der Ferienwohnungen begrenzt.',
+  },
+];
+---
+<Guide lang="de" slug="finca-wohnung-oder-dorfhaus-ferienhaus" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Ihr Ferienhaus in guten Händen?" ctaText="Mit der Hausbetreuung sieht regelmäßig jemand nach dem Rechten, auch nach Sturm und starkem Regen. Nach jedem Besuch erhalten Sie einen kurzen Bericht mit Fotos.">
+  <h2 id="kern">Worum es geht</h2>
+  <p>Bei einem Ferienhaus wählen Sie mit dem Herzen: die Aussicht, das Dorf, die Terrasse. Aber das Haus steht wahrscheinlich acht bis zehn Monate im Jahr leer. Die wichtigste Frage ist also: Was passiert, während Sie nicht da sind, und was kostet das? Die allgemeine Abwägung finden Sie im <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/">Hauptratgeber</a>.</p>
+
+  <h2 id="abwesenheit">Während Sie weg sind</h2>
+  <p>Eine <strong>Wohnung</strong> in einer Anlage lässt sich am einfachsten abschließen. Es wohnen Nachbarn dort, oft gibt es einen Hausmeister (<em>conserje</em>) oder Verwalter, und Dach und Garten werden von der Gemeinschaft unterhalten. Ein Wasserschaden aus der Wohnung darüber bleibt ein Risiko.</p>
+  <p>Ein <strong>Dorfhaus</strong> hat Nachbarn auf allen Seiten, die oft merken, wenn etwas nicht stimmt. Aber alte Dorfhäuser werden muffig und feucht, wenn sie monatelang geschlossen sind, und eine undichte Dachterrasse bemerkt niemand, bis die Decke darunter nachgibt.</p>
+  <p>Eine <strong>Finca</strong> liegt abgelegen. Ein Einbruch, eine defekte Wasserpumpe, ein umgestürzter Baum oder ein undichter Pool können wochenlang unbemerkt bleiben. Eine Alarmanlage mit Kameras und jemand, der regelmäßig nachsieht, sind hier kein Luxus. Mit der <a href="/de/hausbetreuung/">Hausbetreuung</a> regeln Sie das.</p>
+
+  <h2 id="unterhalt">Unterhalt aus der Ferne</h2>
+  <p>Bei einer Wohnung beschränkt sich der Unterhalt auf Ihre eigenen vier Wände. Bei einem Dorfhaus geht es um Dach, Fassade und Feuchtigkeit. Eine Finca hat dazu das Grundstück, die Bäume, die Zufahrt, die Wasseranlage und meist einen Pool, und das läuft weiter, wenn Sie nicht da sind. Das Unkraut wächst, und in bewaldeten Gebieten muss das Grundstück rund ums Haus als Brandschutzstreifen freigehalten werden. Ohne jemanden vor Ort wird das schwierig. Siehe unsere Seiten <a href="/de/instandhaltung/">Instandhaltung</a> und <a href="/de/pool/">Pool</a>.</p>
+
+  <h2 id="kosten">Laufende Kosten und Steuern</h2>
+  <p>Jeder Haustyp hat laufende Kosten: Grundsteuer (IBI), Müllgebühr, Versicherung und die Grundgebühren für Wasser und Strom. Bei einer Wohnung kommt das Hausgeld dazu, bei einer Finca der Unterhalt von Grundstück und Pool. Wohnen Sie nicht in Spanien, zahlen Sie außerdem jährlich Einkommensteuer auf ein fiktives Einkommen aus dem Haus, auch wenn Sie es nicht vermieten. Siehe auch unseren Ratgeber <a href="/de/ratgeber/kaufnebenkosten-spanien/">Kaufnebenkosten</a>.</p>
+
+  <h2 id="vermietung">Selbst vermieten?</h2>
+  <p>Viele Eigentümer vermieten ihr Ferienhaus einen Teil des Jahres, um die Kosten zu decken. Dann macht der Haustyp viel aus:</p>
+  <ul>
+    <li><strong>Wohnung</strong>: Vermietung als Ferienwohnung (VFT) ist auf Wohnbauland möglich, aber seit April 2025 braucht eine neue Vermietung die Zustimmung von drei Fünfteln der Eigentümergemeinschaft.</li>
+    <li><strong>Dorfhaus</strong>: meist als VFT möglich, solange die Gemeinde die Zahl der Ferienwohnungen nicht begrenzt. In beliebten Dörfern geschieht das immer öfter.</li>
+    <li><strong>Finca</strong>: Auf ländlichem Boden gelten die Regeln für ländlichen Tourismus, und mit AFO-Status ist Vermietung nicht immer möglich.</li>
+  </ul>
+  <p>Seit Juli 2025 brauchen Sie außerdem eine landesweite Registriernummer, um auf Vermietungsplattformen zu inserieren. Wer vermietet, braucht auch jemanden für Schlüsselübergabe, Reinigung und kleine Reparaturen zwischen den Gästen. Möchten Sie ein richtiges Geschäft daraus machen, lesen Sie die Seite zum <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/bed-and-breakfast/">B&amp;B</a>.</p>
+
+  <h2 id="reisen">Hin und her reisen</h2>
+  <p>Je öfter Sie fahren wollen, desto wichtiger ist die Reisezeit. Von Málaga gibt es das ganze Jahr Direktflüge zu vielen Flughäfen in Deutschland, Österreich und der Schweiz. Von Torre del Mar sind Sie in etwa 40 Minuten am Flughafen, von Nerja in einer Stunde, aus den Bergdörfern in gut einer Stunde. Bei einer Finca kommt die Fahrt über die Zufahrt hinzu, und Sie brauchen ein (Miet-)Auto. Für ein langes Wochenende macht das einen Unterschied.</p>
+
+  <h2 id="rat">Unser Rat je Haustyp</h2>
+  <ul>
+    <li><strong>Wohnung</strong>: das sorgloseste Ferienhaus. Wenig Unterhalt, leicht abzuschließen, nah am Flughafen. Wenn Sie vermieten wollen, klären Sie zuerst die Eigentümergemeinschaft.</li>
+    <li><strong>Dorfhaus</strong>: viel Atmosphäre und oft gut zu vermieten. Lassen Sie es regelmäßig lüften und die Dachterrasse prüfen.</li>
+    <li><strong>Finca</strong>: das schönste und aufwendigste Ferienhaus. Sorgen Sie für Hausbetreuung, eine Alarmanlage und einen festen Ansprechpartner für Garten und Pool, und prüfen Sie die Vermietungsmöglichkeiten vor dem Kauf.</li>
+  </ul>
+  <p>Noch auf der Suche? Lassen Sie das Haus zuerst mit einem <a href="/de/immobiliengutachten/">Immobiliengutachten</a> prüfen. Muss etwas gemacht werden, bevor Sie es nutzen oder vermieten können, erstellen wir ein Angebot für die <a href="/de/renovierung/">Renovierung</a>.</p>
+</Guide>

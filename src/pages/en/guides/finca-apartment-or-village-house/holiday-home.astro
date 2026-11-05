@@ -1,0 +1,63 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'core', label: 'What really matters' },
+  { id: 'away', label: 'While you are away' },
+  { id: 'upkeep', label: 'Upkeep from a distance' },
+  { id: 'costs', label: 'Running costs and tax' },
+  { id: 'letting', label: 'Letting it out?' },
+  { id: 'travel', label: 'Travelling back and forth' },
+  { id: 'advice', label: 'Our advice by type' },
+];
+
+const faq = [
+  {
+    q: 'How often should someone check my holiday home?',
+    a: 'For an apartment, every two to four weeks is often enough. For a village house or finca we recommend every one to two weeks, and always after storms or heavy rain. That way leaks, break-ins or a broken pump are caught in time.',
+  },
+  {
+    q: 'Do I pay tax on my holiday home if I do not let it?',
+    a: 'Yes. If you are not resident in Spain, you pay Spanish income tax each year on a deemed income from your second home, on top of the municipal property tax (IBI). If you let it, you pay tax on the rental income. Have a gestor handle the returns.',
+  },
+  {
+    q: 'Can I let my apartment while I am not there?',
+    a: 'Only with a tourist registration, and since April 2025 a new holiday let in an apartment building needs prior approval from three-fifths of the community of owners. Also check whether the town hall limits holiday lets.',
+  },
+];
+---
+<Guide lang="en" slug="finca-apartment-or-village-house-holiday-home" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Your holiday home in good hands?" ctaText="With key holding someone checks the house regularly, including after storms and heavy rain. After every visit you get a short report with photos.">
+  <h2 id="core">What really matters</h2>
+  <p>With a holiday home you choose with your heart: the view, the village, the terrace. But the house will probably stand empty for eight to ten months a year. So the key question is: what happens while you are away, and what does that cost? For the general trade-offs, see the <a href="/en/guides/finca-apartment-or-village-house/">main guide</a>.</p>
+
+  <h2 id="away">While you are away</h2>
+  <p>An <strong>apartment</strong> in a complex is the easiest to lock up. There are neighbours, often a caretaker (<em>conserje</em>) or manager, and the roof and gardens are maintained by the community. A leak from the flat above remains a risk.</p>
+  <p>A <strong>village house</strong> has neighbours all around, who often notice if something is wrong. But old village houses become musty and damp when shut for months, and nobody notices a leaking roof terrace until the ceiling below gives way.</p>
+  <p>A <strong>finca</strong> is remote. A break-in, a broken water pump, a fallen tree or a leaking pool can go unnoticed for weeks. An alarm with cameras and someone who checks regularly are no luxury here. <a href="/en/key-holding/">Key holding</a> takes care of that.</p>
+
+  <h2 id="upkeep">Upkeep from a distance</h2>
+  <p>With an apartment, upkeep is limited to your own home. With a village house it is the roof, façade and damp. A finca also has the land, trees, track, water system and usually a pool, and that carries on while you are away. Weeds grow, and in wooded areas the land around the house must be kept clear as a firebreak. Without someone on the spot, that gets difficult. See our pages on <a href="/en/maintenance/">maintenance</a> and <a href="/en/swimming-pool/">swimming pools</a>.</p>
+
+  <h2 id="costs">Running costs and tax</h2>
+  <p>Every type of house has running costs: property tax (IBI), refuse charges, insurance and standing charges for water and power. An apartment adds the community fee; a finca the upkeep of land and pool. If you do not live in Spain, you also pay income tax each year on a deemed income from the house, even if you do not let it. See also our guide to <a href="/en/guides/buying-costs-in-spain/">buying costs</a>.</p>
+
+  <h2 id="letting">Letting it out?</h2>
+  <p>Many owners let their holiday home for part of the year to cover costs. Then the type of property matters a lot:</p>
+  <ul>
+    <li><strong>Apartment</strong>: letting as a holiday home (VFT) is possible on residential land, but since April 2025 a new let needs approval from three-fifths of the community of owners.</li>
+    <li><strong>Village house</strong>: usually possible as a VFT, unless the town hall limits holiday lets. In popular villages that is happening more often.</li>
+    <li><strong>Finca</strong>: rural land falls under the rural tourism rules, and with AFO status letting is not always possible.</li>
+  </ul>
+  <p>Since July 2025 you also need a national registration number to advertise on letting platforms. If you let, you also need someone for key handovers, cleaning and small repairs between guests. Want to turn it into a real business? Read the page on a <a href="/en/guides/finca-apartment-or-village-house/bed-and-breakfast/">B&amp;B</a>.</p>
+
+  <h2 id="travel">Travelling back and forth</h2>
+  <p>The more often you want to go, the more travel time matters. Málaga has direct flights to many UK and Irish airports all year round. From Torre del Mar you are at the airport in about 40 minutes, from Nerja in an hour, from the mountain villages in just over an hour. For a finca, add the drive along the access track, and you will need a (hire) car. For a long weekend, that makes a difference.</p>
+
+  <h2 id="advice">Our advice by type</h2>
+  <ul>
+    <li><strong>Apartment</strong>: the most carefree holiday home. Little upkeep, easy to lock up, close to the airport. If you want to let it, check the community of owners first.</li>
+    <li><strong>Village house</strong>: lots of character and often easy to let. Have it aired regularly and the roof terrace checked.</li>
+    <li><strong>Finca</strong>: the most beautiful and the most demanding holiday home. Arrange key holding, an alarm and a regular contractor for garden and pool, and check the letting options before you buy.</li>
+  </ul>
+  <p>Still looking? Have the house checked first with a <a href="/en/property-survey/">property survey</a>. If work is needed before you can use or let it, we will quote for the <a href="/en/renovation/">renovation</a>.</p>
+</Guide>
