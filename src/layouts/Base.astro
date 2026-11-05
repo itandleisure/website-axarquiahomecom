@@ -58,8 +58,8 @@ if (isFilled(c.street) && isFilled(c.town)) {
 }
 const schemas = [organization, ...jsonLd];
 const current = Astro.url.pathname;
-// Talen waarin het team niet zelf spreekt: contact gaat in het Engels
-const englishContact: Partial<Record<Lang, string>> = { sv: 'Kontakten sker på engelska.' };
+// Talen waarin het team niet zelf spreekt: contact gaat in het Engels of Nederlands
+const englishContact: Partial<Record<Lang, string>> = { sv: 'Kontakten sker på engelska eller nederländska.' };
 ---
 <!doctype html>
 <html lang={lang}>
