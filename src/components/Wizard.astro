@@ -347,11 +347,18 @@ const budgetten = T.budgetten;
     const t = form.querySelector<HTMLTextAreaElement>('#omschrijving')!;
     t.value = M.pakket.replace('{x}', pakket);
   }
+  // Budget vanaf de rekentool (?budget=0…4, de volgorde van de budgetkeuzes)
+  const budgetParam = params.get('budget');
+  if (budgetParam && /^\d$/.test(budgetParam)) {
+    const sel = form.querySelector<HTMLSelectElement>('#budget')!;
+    const i = Number(budgetParam) + 1;
+    if (i < sel.options.length - 1) sel.selectedIndex = i;
+  }
   // Vrije tekst vanaf een kosten- of probleempagina (?onderwerp=…), alleen als het veld nog leeg is
   const onderwerp = params.get('onderwerp');
   if (onderwerp) {
     const t = form.querySelector<HTMLTextAreaElement>('#omschrijving')!;
-    if (!t.value) t.value = onderwerp.slice(0, 300);
+    if (!t.value) t.value = onderwerp.slice(0, 500);
   }
 
   function show(i: number) {

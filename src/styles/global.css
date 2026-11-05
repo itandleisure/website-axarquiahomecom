@@ -275,3 +275,29 @@ a.card:hover { transform: translateY(-2px); border-color: var(--terra); color: v
 .sources .h3 { font-size: 1.1rem; margin-top: 0; }
 .sources ul { padding-left: 1.2em; }
 .guide-grid > .prose { min-width: 0; }
+
+/* Rekentool */
+.calc { display: grid; gap: 28px; grid-template-columns: minmax(0, 1fr); margin-top: 28px; align-items: start; }
+@media (min-width: 900px) { .calc { grid-template-columns: minmax(0, 1fr) 340px; } .calc-result { position: sticky; top: 90px; } }
+.calc-main { background: var(--white); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); padding: clamp(20px, 4vw, 36px); }
+.calc-step { border: 0; padding: 0; margin: 0 0 26px; min-width: 0; }
+.calc-step legend { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-bottom: 14px; padding: 0; }
+.calc-step[hidden], .calc-qty[hidden] { display: none; }
+.calc-kinds { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+.calc-qty { margin-top: 16px; max-width: 260px; }
+.calc-qty-row { display: flex; align-items: center; gap: 10px; }
+.calc-qty-row input { max-width: 140px; }
+.calc-extras { display: grid; gap: 10px; }
+.calc-check { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; }
+.calc-check input { margin-top: 0.3em; width: 18px; height: 18px; accent-color: var(--terra); flex: none; }
+.calc-row { display: grid; gap: 0 18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.calc-result { background: var(--sand); border: 1px solid var(--line); border-top: 4px solid var(--terra); border-radius: 18px; padding: 24px; }
+.calc-result p { margin: 0 0 10px; }
+.calc-result .answer-title { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--olive); }
+.calc-total { font-family: var(--serif); font-size: clamp(1.6rem, 4vw, 2rem); font-weight: 700; line-height: 1.2; color: var(--terra-dark); }
+.calc-lines { list-style: none; padding: 0; margin: 0 0 14px; font-size: 0.92rem; border-top: 1px solid var(--line); }
+.calc-lines li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.calc-lines strong { white-space: nowrap; }
+.calc-cta { display: block; text-align: center; margin: 16px 0 8px; }
+.calc-callout { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; background: var(--sand); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin: 1.4em 0; }
+.calc-callout p { margin: 0; }
