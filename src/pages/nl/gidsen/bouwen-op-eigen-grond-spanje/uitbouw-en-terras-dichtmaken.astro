@@ -1,0 +1,53 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'ruimte', label: 'Is er nog bouwruimte?' },
+  { id: 'uitbouw', label: 'Uitbouw of aanbouw' },
+  { id: 'verdieping', label: 'Een extra verdieping' },
+  { id: 'terras', label: 'Terras dichtmaken (cerramiento)' },
+  { id: 'opties', label: 'Wat zijn de mogelijkheden?' },
+];
+
+const faq = [
+  { q: 'Heb ik een vergunning nodig om mijn terras dicht te maken?', a: 'Ja. Een terras dichtmaken met glas of muren maakt van buitenruimte binnenruimte en verandert de gevel. Daar is in Andalusië een vergunning voor nodig, en in een complex ook toestemming van de VvE.' },
+  { q: 'Hoeveel eigenaren moeten instemmen met het dichtmaken van een terras?', a: 'Volgens de Ley de Propiedad Horizontal (art. 10.3) moet de vergadering van eigenaren instemmen met drie vijfde van de eigenaren, die samen ook drie vijfde van de aandelen hebben. Hebben de statuten al een vaste uitvoering voor alle terrassen vastgelegd, dan is het vaak eenvoudiger.' },
+  { q: 'Zijn glazen vouwwanden zonder kozijn ook een cerramiento?', a: 'Meestal wel. Ook een glazen vouwwand (cortina de cristal) sluit het terras af en verandert het aanzicht. Sommige gemeenten zijn er soepeler in dan bij muren, maar de VvE moet in een complex altijd akkoord zijn.' },
+  { q: 'Mag ik een verdieping op mijn huis zetten?', a: 'Alleen als het bestemmingsplan een extra verdieping toestaat en er nog bouwruimte is. Daarnaast moet de constructie het gewicht kunnen dragen. In een complex vraagt het instemming van de VvE en van de eigenaren die het raakt.' },
+];
+---
+<Guide slug="bouwen-op-eigen-grond-uitbouw-en-terras-dichtmaken" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Meer ruimte in uw huis?" ctaText="Vertel wat u wilt. Wij kijken wat het bestemmingsplan toestaat, regelen de architect en de vergunning en bouwen het.">
+  <h2 id="ruimte">Is er nog bouwruimte?</h2>
+  <p>Elke uitbreiding begint met dezelfde vraag: hoeveel mag er op uw perceel nog bij? Het bestemmingsplan (<em>PGOU</em>) legt vast hoeveel vierkante meter er in totaal op een perceel gebouwd mag worden (<em>edificabilidad</em>), hoe hoog en hoe ver van de erfgrens. Is dat al op, dan mag er niets meer bij. Een architect kan dat voor u nagaan, of u vraagt een <em>informe urbanístico</em> bij de gemeente.</p>
+  <p>Op een finca (<em>suelo rústico</em>) is de ruimte meestal klein of al op. Heeft het huis AFO-status, dan mag er niets bij. Zie <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren</a>.</p>
+
+  <h2 id="uitbouw">Uitbouw of aanbouw</h2>
+  <p>Een uitbouw, aanbouw of extra kamer is in Andalusië altijd een vergunningplichtig werk, met een project van een architect en een <em>arquitecto técnico</em>. U mag pas beginnen als de vergunning er is en het uitvoeringsproject bij de gemeente ligt. Na afloop moeten de extra meters in het kadaster, en het liefst ook in de akte. Alle stappen staan in de gids <MaybeLink href="/nl/gidsen/vergunning-verbouwen-andalusie/">vergunning voor verbouwen</MaybeLink>.</p>
+
+  <h2 id="verdieping">Een extra verdieping</h2>
+  <p>Een verdieping erop is een van de zwaarste verbouwingen. Behalve bouwruimte moet het bestemmingsplan de extra hoogte toestaan, en de fundering en muren moeten het gewicht kunnen dragen. Dat laatste laat de architect berekenen. Bij oudere dorpshuizen is versterken vaak nodig. In een appartementencomplex vraagt een extra verdieping toestemming van de VvE en van de eigenaren die het direct raakt.</p>
+
+  <h2 id="terras">Terras dichtmaken (cerramiento)</h2>
+  <p>Het terras dichtmaken met glas of een veranda is in Spanje heel gewoon, en vaak zonder vergunning gedaan. Toch is het een verbouwing met regels:</p>
+  <ul>
+    <li><strong>Gemeente</strong>: van buitenruimte wordt binnenruimte. Dat telt mee in de bouwruimte en verandert de gevel, dus u hebt een vergunning nodig. Past het niet binnen het bestemmingsplan, dan mag het niet.</li>
+    <li><strong>VvE</strong>: in een complex verandert u het aanzicht van het gebouw. Volgens de Ley de Propiedad Horizontal (art. 10.3) moet de vergadering daarmee instemmen, met drie vijfde van de eigenaren en drie vijfde van de aandelen. Vaak schrijft de VvE ook een vaste uitvoering voor, zodat alle terrassen er hetzelfde uitzien.</li>
+    <li><strong>Zonder toestemming</strong>: de VvE kan eisen dat u het weer verwijdert, en de gemeente kan een boete opleggen. Bij verkoop kan het ook vragen opleveren.</li>
+  </ul>
+
+  <h2 id="opties">Wat zijn de mogelijkheden?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Optie</th><th>Goed om te weten</th></tr></thead>
+    <tbody>
+      <tr><td>Zonnescherm of screens op het terras</td><td>Geen cerramiento. In een complex vaak een vaste kleur van de VvE.</td></tr>
+      <tr><td>Glazen vouwwand (cortina de cristal)</td><td>Open en dicht te schuiven, vrij uitzicht. Wel VvE en vaak vergunning nodig.</td></tr>
+      <tr><td>Aluminium kozijnen met glas</td><td>Beter tegen wind en kou, wordt echt een extra kamer.</td></tr>
+      <tr><td>Veranda met dak aan het huis</td><td>Telt als uitbouw: project en vergunning.</td></tr>
+      <tr><td>Gemetselde uitbouw of extra kamer</td><td>De meest duurzame uitbreiding, met architect.</td></tr>
+      <tr><td>Extra verdieping</td><td>Vaak met versterking van de constructie.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Wilt u dit laten realiseren? Vertel ons wat u wilt. Wij zoeken uit wat er mag, regelen de vergunning en bouwen het voor u.</strong> <a href="/nl/aanvraag/?dienst=renovatie">Neem contact op →</a></p>
+  <p>Terug naar het overzicht: <a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/">bouwen op eigen grond</a>.</p>
+</Guide>

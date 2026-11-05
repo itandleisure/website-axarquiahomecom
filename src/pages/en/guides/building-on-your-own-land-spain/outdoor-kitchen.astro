@@ -1,0 +1,53 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'allowed', label: 'Is an outdoor kitchen allowed?' },
+  { id: 'fire', label: 'Fire season: barbecue ban' },
+  { id: 'options', label: 'What are your options?' },
+  { id: 'tips', label: 'What to watch out for' },
+];
+
+const faq = [
+  { q: 'Do I need a permit for an outdoor kitchen in Spain?', a: 'For a masonry outdoor kitchen without a roof, many towns only require a notification (declaración responsable). A fixed canopy over it usually needs a permit. In a complex the community must also agree.' },
+  { q: 'Can I barbecue on my finca in summer?', a: 'From 1 June to 15 October Andalusia is in its high fire-risk period. Lighting fires is then banned on forest and natural land and in a 400-metre strip around it, barbecues included. Many fincas in the Axarquía lie in that strip. Ask your town hall what applies to your plot.' },
+  { q: 'Is a gas or electric barbecue allowed?', a: 'They are less risky than charcoal, but whether they fall under the ban depends on the situation and that year’s rules. Check with the town hall or the Junta, and always keep a hose or extinguisher at hand.' },
+];
+---
+<Guide lang="en" slug="building-on-your-own-land-outdoor-kitchen" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Want an outdoor kitchen built?" ctaText="Tell us where it should go and what you want in it. We design it and build it, including water and electricity.">
+  <h2 id="allowed">Is an outdoor kitchen allowed?</h2>
+  <p>With a detached house, usually yes. How you arrange it depends on what you build:</p>
+  <ul>
+    <li><strong>Freestanding barbecue or mobile outdoor kitchen</strong>: no permit needed.</li>
+    <li><strong>Masonry outdoor kitchen without a roof</strong>: often a notification (<em>declaración responsable</em>) to the town hall.</li>
+    <li><strong>Outdoor kitchen with a fixed canopy</strong>: the canopy usually needs a permit and counts towards the building allowance. See <a href="/en/guides/building-on-your-own-land-spain/carport-and-pergola/">carport, canopy and pergola</a>.</li>
+  </ul>
+  <p>On a finca (<em>suelo rústico</em>) the same steps apply, but a canopy is only allowed for a legal house with building allowance left. In an apartment complex everything depends on the community: read <a href="/en/guides/building-on-your-own-land-spain/barbecue-in-apartments/">barbecues in apartment complexes</a>.</p>
+
+  <h2 id="fire">Fire season: barbecue ban</h2>
+  <p>Many new owners overlook this. From <strong>1 June to 15 October</strong> Andalusia is in its high fire-risk period. During that time, lighting fires is banned on forest and natural land (<em>terreno forestal</em>) and in the <strong>400-metre</strong> strip around it (<em>zona de influencia forestal</em>). That includes barbecues. In dry years the Junta de Andalucía can extend the period.</p>
+  <p>In the Axarquía hills many fincas lie in or close to such a zone. Ask the town hall whether your plot is in it and what applies to a fixed barbecue at your house. An outdoor kitchen with a gas or electric grill next to the charcoal barbecue makes you less dependent on the season.</p>
+
+  <h2 id="options">What are your options?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Option</th><th>Good to know</th></tr></thead>
+    <tbody>
+      <tr><td>Freestanding gas or charcoal barbecue</td><td>Not a structure, can be moved.</td></tr>
+      <tr><td>Masonry block with barbecue and worktop</td><td>The classic Andalusian <em>barbacoa de obra</em>.</td></tr>
+      <tr><td>Complete outdoor kitchen with sink, power and fridge</td><td>Laying water and drainage is often the bulk of the work.</td></tr>
+      <tr><td>With pizza oven, natural stone and lighting</td><td>For those who cook and entertain outdoors a lot.</td></tr>
+      <tr><td>With fixed canopy or louvred roof</td><td>Usable in blazing sun and rain. Usually needs a permit.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Want this built? Tell us what you have in mind. We find out what is allowed, arrange the permit and build it for you.</strong> <a href="/en/request/?dienst=renovatie">Get in touch →</a></p>
+
+  <h2 id="tips">What to watch out for</h2>
+  <ul>
+    <li><strong>Materials</strong>: sun, salt near the coast and winter rain. Choose stainless steel, natural stone or ceramics, not ordinary wood or chipboard.</li>
+    <li><strong>Drainage</strong>: on a finca with a septic tank, the waste water must connect to it properly. Grease and food scraps do not belong in it.</li>
+    <li><strong>Position and wind</strong>: place the barbecue so the smoke does not blow towards the house, the pool or the neighbours, and not under an overhanging roof or trees.</li>
+    <li><strong>Electricity</strong>: outdoor sockets must be waterproof and separately protected, installed by a registered electrician.</li>
+  </ul>
+  <p>Back to the overview: <a href="/en/guides/building-on-your-own-land-spain/">building on your own land</a>.</p>
+</Guide>
