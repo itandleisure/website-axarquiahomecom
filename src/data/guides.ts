@@ -17,6 +17,9 @@ export interface GuideMeta {
   path?: string;
   /** Slug van de hoofdgids als dit een deelpagina is (bijv. per doelgroep). Geef dan ook path op. */
   parent?: string;
+  /** NL-slug van de gids waarvan dit de vertaling is. Alleen nodig in een taal die niet alle gidsen heeft
+   *  (zoals sv): zo'n gids wordt op slug gekoppeld in plaats van op positie. */
+  of?: string;
 }
 
 export const guides: GuideMeta[] = [
@@ -1475,14 +1478,23 @@ export const guidesSv: GuideMeta[] = [
 import type { Lang } from '../i18n';
 import { huisEnTuinNl, huisEnTuinEn, huisEnTuinDe } from './guides-huis-en-tuin';
 import { ontwerpNl, ontwerpEn, ontwerpDe } from './guides-ontwerp';
+import { guidesSvExtra } from './guides-sv';
 // Gidsen uit eigen bestanden komen achter de lijsten hierboven, in elke taal op dezelfde positie.
 export const guidesBy: Record<Lang, GuideMeta[]> = {
   nl: [...guides, ...huisEnTuinNl, ...ontwerpNl],
   en: [...guidesEn, ...huisEnTuinEn, ...ontwerpEn],
   de: [...guidesDe, ...huisEnTuinDe, ...ontwerpDe],
-  sv: guidesSv,
+  sv: [...guidesSv, ...guidesSvExtra],
 };
 export const guideBase: Record<Lang, string> = { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/', sv: '/sv/guider/' };
 export const guideHref = (lang: Lang, g: GuideMeta) => g.path ?? `${guideBase[lang]}${g.slug}/`;
+/** De vertaling in `lang` van de gids op positie i van de Nederlandse lijst: eerst op `of`, anders op positie. */
+export const guideAt = (lang: Lang, i: number): GuideMeta | undefined => {
+  const nl = guidesBy.nl[i];
+  const byOf = nl && guidesBy[lang].find((g) => g.of === nl.slug);
+  if (byOf) return byOf;
+  const g = guidesBy[lang][i];
+  return g && !g.of ? g : undefined;
+};
 /** Gidsen die in het gidsenoverzicht staan (zonder regiopagina's) */
 export const guideList = (lang: Lang) => guidesBy[lang].filter((g) => !g.path);

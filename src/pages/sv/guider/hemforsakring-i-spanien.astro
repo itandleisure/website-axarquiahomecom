@@ -1,0 +1,79 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'vilken', label: 'Vilken försäkring behöver du?' },
+  { id: 'tomt', label: 'Se upp när huset står tomt' },
+  { id: 'consorcio', label: 'Storm och översvämning: Consorcio' },
+  { id: 'inte', label: 'Det här täcks oftast inte' },
+  { id: 'anmala', label: 'Skadeanmälan steg för steg' },
+  { id: 'reparation', label: 'Reparation efter en skada' },
+];
+
+const faq = [
+  {
+    q: 'Är byggnadsförsäkring obligatorisk i Spanien?',
+    a: 'För en bostad med bolån kräver banken byggnadsförsäkring (seguro de hogar med continente). Utan bolån är det inte obligatoriskt, men starkt att rekommendera. I ett flerfamiljshus försäkrar samfälligheten (comunidad) byggnaden; du försäkrar då främst ditt lösöre och ditt ansvar.',
+  },
+  {
+    q: 'Vad kostar en hemförsäkring i Spanien?',
+    a: 'För en lägenhet eller ett byhus oftast 150 till 400 € per år, för en villa eller finca med pool 300 till 800 € eller mer. Det beror på återuppbyggnadsvärde, lösöre, läge och skydd.',
+  },
+  {
+    q: 'Täcker min svenska hemförsäkring mitt hus i Spanien?',
+    a: 'Oftast inte. En svensk hemförsäkring gäller en bostad i Sverige. För ett hus i Spanien tecknar du en spansk försäkring, eller en internationell försäkring som uttryckligen täcker Spanien.',
+  },
+  {
+    q: 'Måste jag berätta för försäkringsbolaget om semesteruthyrning?',
+    a: 'Ja. En vanlig hemförsäkring täcker ofta inte skador orsakade av hyresgäster eller ansvar gentemot gäster. För uthyrning behöver du en anpassad försäkring.',
+  },
+];
+---
+<Guide lang="sv" slug="hemforsakring-i-spanien" toc={toc} faq={faq} dienst="onderhoud" ctaTitle="Skada på ditt hus i Spanien?" ctaText="Vi bedömer skadan, tar foton och tar fram en offert på reparationen som du kan lämna till försäkringsbolaget.">
+  <p>Det här är allmän information, inte försäkringsrådgivning. Läs alltid villkoren i din egen försäkring och fråga en oberoende rådgivare om du är osäker.</p>
+
+  <h2 id="vilken">Vilken försäkring behöver du?</h2>
+  <p>I Spanien heter hemförsäkring <em>seguro de hogar</em>. Den består oftast av tre delar:</p>
+  <ul>
+    <li><strong>Byggnad (<em>continente</em>):</strong> själva konstruktionen, inklusive tak, väggar, fasta installationer, pool och trädgårdsmurar.</li>
+    <li><strong>Lösöre (<em>contenido</em>):</strong> möbler, apparater och tillhörigheter.</li>
+    <li><strong>Ansvar (<em>responsabilidad civil</em>):</strong> skador som du eller ditt hus orsakar andra, till exempel en läcka ner till grannen.</li>
+  </ul>
+  <p>Bor du i ett flerfamiljshus är byggnaden oftast försäkrad via samfälligheten (<em>comunidad</em>). Be om försäkringsbrevet och kontrollera vad den täcker, till exempel tak och fasad.</p>
+  <p>Försäkra byggnaden till <strong>återuppbyggnadsvärdet</strong>, inte köpeskillingen. För en finca med billig mark och dyr återuppbyggnad kan skillnaden vara stor. Är du underförsäkrad sänks en eventuell ersättning i motsvarande grad.</p>
+
+  <h2 id="tomt">Se upp när huset står tomt</h2>
+  <p>Många spanska försäkringar har en <strong>klausul om obebodda hus</strong>. Står huset tomt längre än en viss tid, ofta 30 till 90 dagar i följd, faller en del av skyddet bort, till exempel för inbrott eller vattenskador. Kontrollera detta noga om du tillbringar vintern eller sommaren någon annanstans.</p>
+  <p>Försäkringsbolagen förväntar sig också att du begränsar skadan. En läcka som inte upptäcks på flera månader täcks ibland inte, eller bara delvis. Regelbundna kontroller genom <a href="/sv/tillsyn/">tillsyn</a>, med rapporter och foton, hjälper vid en skadeanmälan.</p>
+
+  <h2 id="consorcio">Storm och översvämning: Consorcio</h2>
+  <p>Skador från extraordinära naturhändelser, som en översvämning, en svår storm med vindbyar över 120 km/h eller en jordbävning, betalas i Spanien inte av ditt försäkringsbolag utan av <em>Consorcio de Compensación de Seguros</em>. Det är en statlig fond som finansieras med ett tillägg på varje försäkring.</p>
+  <ul>
+    <li>Du har bara rätt till ersättning om du har en hemförsäkring.</li>
+    <li>Du anmäler skadan direkt till Consorcio, online eller per telefon, inte till ditt försäkringsbolag.</li>
+    <li>Vanliga regn- eller stormskador under den gränsen faller under din egen försäkring, om den täcker dem.</li>
+  </ul>
+
+  <h2 id="inte">Det här täcks oftast inte</h2>
+  <ul>
+    <li>Slitage och dåligt underhåll, till exempel en takterrass med gamla, spruckna plattor</li>
+    <li>Skador som uppstår gradvis, som fukt eller mögel från kondens</li>
+    <li>Termiter och andra skadedjur</li>
+    <li>Skador från byggarbeten utan tillstånd, eller på en del av huset som inte är laglig</li>
+    <li>En stödmur som rasar för att den saknade dränering</li>
+  </ul>
+  <p>Gott underhåll är inte bara billigare, det gör också skillnad vid en skadeanmälan. Se <a href="/sv/guider/forbereda-huset-for-vintern-i-spanien/">checklistorna för att förbereda huset för vintern</a>.</p>
+
+  <h2 id="anmala">Skadeanmälan steg för steg</h2>
+  <ol>
+    <li><strong>Begränsa skadan:</strong> stäng av vattnet, slå av strömmen vid en läcka, täck takterrassen.</li>
+    <li><strong>Ta daterade foton och videor</strong> av skadan och orsaken.</li>
+    <li><strong>Anmäl skadan inom 7 dagar</strong> till ditt försäkringsbolag, eller till Consorcio vid en extraordinär händelse. Den fristen står i den spanska försäkringsavtalslagen.</li>
+    <li><strong>Släng ingenting</strong> innan skadebesiktningsmannen (<em>perito</em>) har varit där, om det inte är farligt.</li>
+    <li><strong>Be om en offert på reparationen</strong> och spara alla fakturor.</li>
+  </ol>
+
+  <h2 id="reparation">Reparation efter en skada</h2>
+  <p>Försäkringsbolaget skickar oftast sin egen skadebesiktningsman och ibland sin egen reparationsfirma. Ofta kan du själv välja firma och lämna in deras offert. Är du inte i Spanien hjälper det att ha någon på plats som tar emot besiktningsmannen, visar skadan och övervakar reparationen.</p>
+  <p>Efter en skada tar vi fram en rapport med foton och en specificerad offert som du kan lämna till försäkringsbolaget eller Consorcio, och vi utför reparationen: från läckande tak och fukt till översvämning och en rasad stödmur. Se <a href="/sv/underhall/">underhåll och reparationer</a>.</p>
+</Guide>

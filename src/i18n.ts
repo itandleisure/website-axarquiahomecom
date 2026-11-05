@@ -1,5 +1,5 @@
 // Talen, vertaalde routes en vaste teksten van de site.
-import { guidesBy, guideHref } from './data/guides';
+import { guidesBy, guideHref, guideAt } from './data/guides';
 import { places, placeHref, type PlacePage } from './data/places';
 import { placeContent } from './data/place-content';
 import { hasMunicipalPages } from './data/place-tabs';
@@ -25,7 +25,7 @@ export const routes: Partial<Record<Lang, string>>[] = [
   { nl: '/nl/zien-en-doen/', en: '/en/things-to-do/', de: '/de/sehenswuerdigkeiten/', sv: '/sv/se-och-gora/' },
   // Gidsen staan in alle talen in dezelfde volgorde (zie src/data/guides.ts)
   ...guidesBy.nl.map((_, i) =>
-    Object.fromEntries(langs.filter((l) => guidesBy[l][i]).map((l) => [l, guideHref(l, guidesBy[l][i])])),
+    Object.fromEntries(langs.filter((l) => guideAt(l, i)).map((l) => [l, guideHref(l, guideAt(l, i)!)])),
   ),
   // Plaatsen (pagina's bestaan alleen voor plaatsen met built: true)
   ...places
