@@ -6,7 +6,9 @@
 // - Ley de Suelo, RDLeg 7/2015 art. 28.4 (inschrijving oud bouwwerk zonder mogelijkheid tot herstel).
 // - Decreto 28/2016 art. 1.3.d, zoals gewijzigd bij Decreto 31/2024 (geen VUT bij AFO zonder uitdrukkelijke toestemming).
 // - LOE art. 2.2, 10, 12, 13; RD 1000/2010 art. 2 (visado, ook bij legalisatie); Ley del Catastro art. 13.
-// - Nerja, ordenanza fiscal tasa AFO (transparencia.nerja.es): 3,5% van de bouwkosten, minimaal € 750.
+// - Nerja, ordenanza fiscal tasa AFO (transparencia.nerja.es, 2020): 3,5% van de bouwkosten, minimaal € 750.
+// - Torrox, ordenanzas fiscales 2013 nr. 12 art. 6c (torrox.es): € 750 vast (1,25% boven € 60.000) + 3,25% variabel.
+// - Vélez-Málaga, ordenanza fiscal procedimientos Decreto 2/2012 (BOP 131, 10-07-2014) art. 6 h/i: 7,5% van het PEM.
 import Guide from '../../../components/Guide.astro';
 
 const toc = [
@@ -32,7 +34,7 @@ const faq = [
   },
   {
     q: 'Wat kost legaliseren?',
-    a: 'Het technisch rapport of project van de architect, de gemeentelijke leges, eventueel aanpassingen aan het huis, en notaris en register. De leges verschillen per gemeente. Nerja rekent voor AFO bijvoorbeeld 3,5% van de bouwkosten, met een minimum van € 750. Reken alles bij elkaar meestal op enkele duizenden euro’s, meer als er herstelwerk nodig is.',
+    a: 'Het technisch rapport of project van de architect, de gemeentelijke leges, eventueel aanpassingen aan het huis, en notaris en register. De leges verschillen per gemeente. Nerja rekent voor AFO 3,5% van de bouwkosten (minimaal € 750), Torrox € 750 plus 3,25% en Vélez-Málaga 7,5%. Reken alles bij elkaar meestal op enkele duizenden euro’s, meer als er herstelwerk nodig is.',
   },
   {
     q: 'Hoelang duurt een AFO-procedure?',
@@ -102,14 +104,23 @@ const faq = [
     <thead><tr><th>Kostenpost</th><th>Waar het van afhangt</th></tr></thead>
     <tbody>
       <tr><td>Architect of arquitecto técnico</td><td>Grootte van het huis en hoeveel er moet worden uitgezocht. Bij legaliseren een volledig project, bij AFO een technisch rapport.</td></tr>
-      <tr><td>Gemeentelijke leges voor AFO</td><td>Per gemeente. Nerja: 3,5% van de bouwkosten van wat zonder vergunning is gebouwd, minimaal € 750.</td></tr>
+      <tr><td>Gemeentelijke leges voor AFO</td><td>Per gemeente, meestal een percentage van de bouwkosten van wat zonder vergunning is gebouwd. Zie de tabel hieronder.</td></tr>
       <tr><td>Bouwbelasting en leges bij legaliseren</td><td>Zoals bij een nieuwe vergunning: in de Axarquía 2% tot 4% ICIO over de bouwkosten, plus leges. Per gemeente op de pagina Bouwvergunning.</td></tr>
       <tr><td>Aanpassingen aan het huis</td><td>Wat de gemeente eist, bijvoorbeeld een septische put, elektra of veiligheid.</td></tr>
       <tr><td>Notaris en register</td><td>Akte voor het bouwwerk en inschrijving.</td></tr>
       <tr><td>Kadaster en IBI</td><td>Een groter oppervlak in het kadaster verhoogt de jaarlijkse IBI. Het kadaster kan ook over voorgaande jaren navorderen.</td></tr>
     </tbody>
   </table>
-  <p>Een rekenvoorbeeld voor Nerja: een uitbouw met € 40.000 aan bouwkosten geeft € 1.400 aan AFO-leges. Alles bij elkaar komt een AFO-traject meestal uit op enkele duizenden euro’s, meer als er herstelwerk nodig is. Een legalisatie met project kost meer, maar levert ook meer op.</p>
+  <p>De AFO-leges in drie grote gemeenten van de Axarquía, met als voorbeeld een uitbouw met € 40.000 aan bouwkosten:</p>
+  <table class="prices">
+    <thead><tr><th>Gemeente</th><th>Leges AFO</th><th>Bij € 40.000</th></tr></thead>
+    <tbody>
+      <tr><td>Nerja</td><td>3,5% van de bouwkosten, minimaal € 750</td><td>€ 1.400</td></tr>
+      <tr><td>Torrox</td><td>€ 750 (boven € 60.000 bouwkosten: 1,25%) plus 3,25% van de bouwkosten</td><td>€ 2.050</td></tr>
+      <tr><td>Vélez-Málaga</td><td>7,5% van de bouwkosten</td><td>€ 3.000</td></tr>
+    </tbody>
+  </table>
+  <p>De bouwkosten zijn niet wat het destijds kostte, maar wat de architect opgeeft, met als ondergrens de vaste bedragen per m² die de gemeente of het college van architecten hanteert. De bedragen komen uit de belastingverordeningen die de gemeenten publiceren (Nerja 2020, Torrox 2013, Vélez-Málaga 2014). Verordeningen worden soms aangepast, dus vraag het actuele tarief na bij de gemeente. Voor de andere gemeenten zoeken wij het op als u een concreet huis hebt. Alles bij elkaar komt een AFO-traject meestal uit op enkele duizenden euro’s, meer als er herstelwerk nodig is. Een legalisatie met project kost meer, maar levert ook meer op.</p>
   <p>Doorlooptijd: het vooronderzoek en het rapport kosten enkele weken. De gemeente heeft voor AFO zes maanden om te beslissen. Met aanpassingen en inschrijving duurt het hele traject vaak een half jaar tot meer dan een jaar.</p>
 
   <h2 id="gevolgen">Een huis kopen zonder papieren: de gevolgen</h2>
@@ -147,5 +158,5 @@ const faq = [
     <li>Wilt u later uitbreiden, een zwembad bouwen of aan toeristen verhuren? Ga ervan uit dat dat met AFO niet kan.</li>
   </ul>
   <p>Meer over het kopen van een landelijk huis leest u in de gids <a href="/nl/gidsen/finca-kopen-in-spanje/">finca kopen in Spanje</a>.</p>
-  <p class="note">Deze gids geeft algemene uitleg op basis van de Andalusische en Spaanse wetgeving zoals die gold op 5 november 2026 (LISTA art. 151–153 en 173–174, Ley de Suelo art. 28, Decreto 28/2016 zoals gewijzigd in 2024, LOE, RD 1000/2010, Ley del Catastro) en de belastingverordening van Nerja. Het is geen juridisch advies. Of een bepaald huis kan worden gelegaliseerd, beoordelen de architect, de advocaat en de gemeente.</p>
+  <p class="note">Deze gids geeft algemene uitleg op basis van de Andalusische en Spaanse wetgeving zoals die gold op 5 november 2026 (LISTA art. 151–153 en 173–174, Ley de Suelo art. 28, Decreto 28/2016 zoals gewijzigd in 2024, LOE, RD 1000/2010, Ley del Catastro) en de belastingverordeningen van Nerja, Torrox en Vélez-Málaga. Het is geen juridisch advies. Of een bepaald huis kan worden gelegaliseerd, beoordelen de architect, de advocaat en de gemeente.</p>
 </Guide>

@@ -25,7 +25,7 @@ const faq = [
   },
   {
     q: 'Was kostet eine Legalisierung?',
-    a: 'Gutachten oder Projekt des Architekten, Gemeindegebühren, eventuell geforderte Arbeiten am Haus sowie Notar und Register. Die Gebühren unterscheiden sich je Gemeinde. Nerja verlangt für AFO zum Beispiel 3,5 % der Baukosten, mindestens 750 €. Insgesamt sind es meist einige tausend Euro, mehr, wenn Reparaturen nötig sind.',
+    a: 'Gutachten oder Projekt des Architekten, Gemeindegebühren, eventuell geforderte Arbeiten am Haus sowie Notar und Register. Die Gebühren unterscheiden sich je Gemeinde. Für AFO verlangt Nerja 3,5 % der Baukosten (mindestens 750 €), Torrox 750 € plus 3,25 % und Vélez-Málaga 7,5 %. Insgesamt sind es meist einige tausend Euro, mehr, wenn Reparaturen nötig sind.',
   },
   {
     q: 'Wie lange dauert ein AFO-Verfahren?',
@@ -95,14 +95,23 @@ const faq = [
     <thead><tr><th>Kostenpunkt</th><th>Wovon er abhängt</th></tr></thead>
     <tbody>
       <tr><td>Architekt oder Arquitecto técnico</td><td>Größe des Hauses und Umfang der Prüfung. Bei Legalisierung ein vollständiges Projekt, bei AFO ein technisches Gutachten.</td></tr>
-      <tr><td>Gemeindegebühren für AFO</td><td>Je Gemeinde. Nerja: 3,5 % der Baukosten dessen, was ohne Genehmigung gebaut wurde, mindestens 750 €.</td></tr>
+      <tr><td>Gemeindegebühren für AFO</td><td>Je Gemeinde, meist ein Prozentsatz der Baukosten dessen, was ohne Genehmigung gebaut wurde. Siehe die Tabelle unten.</td></tr>
       <tr><td>Bausteuer und Gebühren bei Legalisierung</td><td>Wie bei einer neuen Genehmigung: in der Axarquía 2 % bis 4 % ICIO auf die Baukosten, plus Gebühren. Je Ort auf der Seite Baugenehmigung.</td></tr>
       <tr><td>Arbeiten am Haus</td><td>Was die Gemeinde verlangt, etwa Klärgrube, Elektrik oder Sicherheit.</td></tr>
       <tr><td>Notar und Register</td><td>Urkunde für das Gebäude und Eintragung.</td></tr>
       <tr><td>Kataster und IBI</td><td>Eine größere Fläche im Kataster erhöht die jährliche IBI. Das Kataster kann auch für Vorjahre nachfordern.</td></tr>
     </tbody>
   </table>
-  <p>Ein Rechenbeispiel für Nerja: Ein Anbau mit 40.000 € Baukosten ergibt 1.400 € AFO-Gebühr. Insgesamt kostet ein AFO-Verfahren meist einige tausend Euro, mehr, wenn Reparaturen nötig sind. Eine Legalisierung mit Projekt kostet mehr, bringt aber auch mehr.</p>
+  <p>Die AFO-Gebühren in drei großen Gemeinden der Axarquía, am Beispiel eines Anbaus mit 40.000 € Baukosten:</p>
+  <table class="prices">
+    <thead><tr><th>Gemeinde</th><th>AFO-Gebühr</th><th>Bei 40.000 €</th></tr></thead>
+    <tbody>
+      <tr><td>Nerja</td><td>3,5 % der Baukosten, mindestens 750 €</td><td>1.400 €</td></tr>
+      <tr><td>Torrox</td><td>750 € (über 60.000 € Baukosten: 1,25 %) plus 3,25 % der Baukosten</td><td>2.050 €</td></tr>
+      <tr><td>Vélez-Málaga</td><td>7,5 % der Baukosten</td><td>3.000 €</td></tr>
+    </tbody>
+  </table>
+  <p>Die Baukosten sind nicht, was der Bau damals gekostet hat, sondern was der Architekt angibt, mit den festen Beträgen je m² der Gemeinde oder der Architektenkammer als Untergrenze. Die Beträge stammen aus den von den Gemeinden veröffentlichten Gebührensatzungen (Nerja 2020, Torrox 2013, Vélez-Málaga 2014). Satzungen werden manchmal geändert, fragen Sie daher den aktuellen Satz bei der Gemeinde nach. Für andere Gemeinden suchen wir ihn heraus, sobald Sie ein konkretes Haus haben. Insgesamt kostet ein AFO-Verfahren meist einige tausend Euro, mehr, wenn Reparaturen nötig sind. Eine Legalisierung mit Projekt kostet mehr, bringt aber auch mehr.</p>
   <p>Dauer: Vorprüfung und Gutachten dauern einige Wochen. Die Gemeinde hat für AFO sechs Monate Zeit. Mit Anpassungen und Eintragung dauert das Ganze oft ein halbes Jahr bis über ein Jahr.</p>
 
   <h2 id="folgen">Ein Haus ohne Papiere kaufen: die Folgen</h2>
@@ -140,5 +149,5 @@ const faq = [
     <li>Wollen Sie später anbauen, einen Pool bauen oder an Touristen vermieten? Gehen Sie davon aus, dass das mit AFO nicht geht.</li>
   </ul>
   <p>Mehr zum Kauf eines Landhauses lesen Sie im Ratgeber <a href="/de/ratgeber/finca-kaufen-spanien/">Finca kaufen in Spanien</a>.</p>
-  <p class="note">Dieser Ratgeber gibt allgemeine Informationen auf Grundlage des andalusischen und spanischen Rechts mit Stand 5. November 2026 (LISTA Art. 151–153 und 173–174, Ley de Suelo Art. 28, Decreto 28/2016 in der Fassung von 2024, LOE, RD 1000/2010, Ley del Catastro) und der Gebührensatzung von Nerja. Er ist keine Rechtsberatung. Ob ein bestimmtes Haus legalisiert werden kann, beurteilen Architekt, Anwalt und Gemeinde.</p>
+  <p class="note">Dieser Ratgeber gibt allgemeine Informationen auf Grundlage des andalusischen und spanischen Rechts mit Stand 5. November 2026 (LISTA Art. 151–153 und 173–174, Ley de Suelo Art. 28, Decreto 28/2016 in der Fassung von 2024, LOE, RD 1000/2010, Ley del Catastro) und der Gebührensatzungen von Nerja, Torrox und Vélez-Málaga. Er ist keine Rechtsberatung. Ob ein bestimmtes Haus legalisiert werden kann, beurteilen Architekt, Anwalt und Gemeinde.</p>
 </Guide>
