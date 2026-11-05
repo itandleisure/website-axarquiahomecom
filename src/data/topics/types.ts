@@ -73,12 +73,12 @@ export const topicUi = {
     shortAnswer: 'Kort antwoord',
     askQuote: 'Vraag een offerte aan',
     askHelp: 'Vraag hulp aan',
-    askDiy: 'Liever laten doen?',
+    askDiy: 'Laten doen? Wij helpen u',
     sourcesTitle: 'Bronnen en verantwoording',
     sourcesText:
       'De bedragen zijn indicaties voor de Axarquía, inclusief materiaal en arbeid en exclusief btw (IVA), tenzij anders vermeld. Ze zijn gebaseerd op Spaanse prijsgidsen en op wat we in de praktijk zien. Elk huis is anders: een offerte na een bezoek of op basis van foto’s is altijd nauwkeuriger. Prijzen nagekeken op',
     sourcesTextDiy:
-      'Wilt u weten wat een klus bij uw huis kost, of laat u hem liever doen? Vraag een vrijblijvende offerte aan. Regels voor vergunningen verschillen per gemeente: vraag het altijd na bij het ayuntamiento voordat u begint. Werk veilig; u voert deze klussen uit op eigen risico. Nagekeken op',
+      'Wilt u een klus liever laten doen? Wij helpen u het te realiseren. Regels voor vergunningen verschillen per gemeente: vraag het altijd na bij het ayuntamiento voordat u begint. Werk veilig; u voert deze klussen uit op eigen risico. Nagekeken op',
     alsoUseful: 'Ook handig',
     related: { costs: 'Meer kostenoverzichten', problems: 'Andere problemen', diy: 'Meer klussen om zelf te doen' },
     read: 'Lees meer',
@@ -93,12 +93,12 @@ export const topicUi = {
     shortAnswer: 'Short answer',
     askQuote: 'Ask for a quote',
     askHelp: 'Ask for help',
-    askDiy: 'Rather have it done?',
+    askDiy: 'Have it done? We can help',
     sourcesTitle: 'Sources and method',
     sourcesText:
       'Figures are guide prices for the Axarquía, including materials and labour and excluding VAT (IVA), unless stated otherwise. They are based on Spanish price guides and on what we see in practice. Every house is different: a quote after a visit, or based on photos, is always more accurate. Prices checked on',
     sourcesTextDiy:
-      'Want to know what a job would cost at your house, or would you rather have it done? Ask for a free, no-obligation quote. Permit rules differ per municipality: always check with the ayuntamiento before you start. Work safely; you carry out these jobs at your own risk. Checked on',
+      'Would you rather have a job done for you? We help you make it happen. Permit rules differ per municipality: always check with the ayuntamiento before you start. Work safely; you carry out these jobs at your own risk. Checked on',
     alsoUseful: 'Also useful',
     related: { costs: 'More cost guides', problems: 'Other problems', diy: 'More DIY guides' },
     read: 'Read more',
@@ -113,12 +113,12 @@ export const topicUi = {
     shortAnswer: 'Kurze Antwort',
     askQuote: 'Angebot anfragen',
     askHelp: 'Hilfe anfragen',
-    askDiy: 'Lieber machen lassen?',
+    askDiy: 'Machen lassen? Wir helfen',
     sourcesTitle: 'Quellen und Methode',
     sourcesText:
       'Die Beträge sind Richtwerte für die Axarquía, inklusive Material und Arbeit und ohne Mehrwertsteuer (IVA), sofern nicht anders angegeben. Sie beruhen auf spanischen Preisportalen und auf unserer Erfahrung vor Ort. Jedes Haus ist anders: Ein Angebot nach einer Besichtigung oder anhand von Fotos ist immer genauer. Preise geprüft am',
     sourcesTextDiy:
-      'Möchten Sie wissen, was eine Arbeit an Ihrem Haus kostet, oder lassen Sie sie lieber machen? Fragen Sie ein unverbindliches Angebot an. Die Genehmigungsregeln unterscheiden sich je Gemeinde: Fragen Sie vor Beginn immer beim Ayuntamiento nach. Arbeiten Sie sicher; Sie führen diese Arbeiten auf eigenes Risiko aus. Geprüft am',
+      'Möchten Sie eine Arbeit lieber machen lassen? Wir helfen Ihnen, sie umzusetzen. Die Genehmigungsregeln unterscheiden sich je Gemeinde: Fragen Sie vor Beginn immer beim Ayuntamiento nach. Arbeiten Sie sicher; Sie führen diese Arbeiten auf eigenes Risiko aus. Geprüft am',
     alsoUseful: 'Auch hilfreich',
     related: { costs: 'Weitere Kostenübersichten', problems: 'Weitere Probleme', diy: 'Weitere Anleitungen' },
     read: 'Weiterlesen',
