@@ -8,7 +8,8 @@
 // ===== Instellingen =====
 const CONFIG = {
   // Waar elke aanvraag direct heen gaat (bouwbedrijf). Meerdere adressen met komma's.
-  MAIL_BOUWBEDRIJF: 'VUL_IN@bouwbedrijf.es',
+  // Voorlopig info@; vervang door het adres van het bouwbedrijf zodra dat bekend is.
+  MAIL_BOUWBEDRIJF: 'info@axarquiahome.com',
   // Kopie voor Frans (commissie-administratie)
   MAIL_KOPIE: 'info@axarquiahome.com',
   // Naam van het tabblad in de sheet
