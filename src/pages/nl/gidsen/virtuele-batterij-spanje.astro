@@ -1,0 +1,115 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'wat', label: 'Wat is een virtuele batterij?' },
+  { id: 'compensatie', label: 'De basis: compensatie van teruglevering' },
+  { id: 'verschil', label: 'Wat de virtuele batterij daaraan toevoegt' },
+  { id: 'rekenvoorbeeld', label: 'Rekenvoorbeeld: een vakantiehuis in Torrox' },
+  { id: 'echte-batterij', label: 'Virtuele of echte thuisbatterij?' },
+  { id: 'laadpaal', label: 'Samen met een laadpaal' },
+  { id: 'regelen', label: 'Zo regelt u het' },
+  { id: 'letop', label: 'Waar u op let' },
+];
+
+const faq = [
+  {
+    q: 'Krijg ik geld uitbetaald voor mijn teruggeleverde stroom?',
+    a: 'Nee, niet bij de gewone regeling voor huishoudens. Teruggeleverde stroom wordt verrekend met uw rekening, maar een rekening wordt nooit negatief. Met een virtuele batterij bewaart u wat overblijft als tegoed in euro’s voor latere rekeningen. Geld op uw bankrekening krijgt u alleen als u zich als producent registreert, en dat is voor een woonhuis zelden de moeite waard.',
+  },
+  {
+    q: 'Is een virtuele batterij wettelijk geregeld?',
+    a: 'Nee. De wet regelt alleen de maandelijkse compensatie van teruglevering (Real Decreto 244/2019). De virtuele batterij is een extra dienst van de energieleverancier, met eigen voorwaarden. Daarom verschillen de kosten, de looptijd van het tegoed en wat u ermee mag betalen per leverancier.',
+  },
+  {
+    q: 'Kan ik een virtuele batterij krijgen met het gereguleerde PVPC-tarief?',
+    a: 'Nee. Met PVPC krijgt u wel de wettelijke compensatie tegen de uurprijs van de markt, maar wat in een maand overblijft vervalt. Een virtuele batterij bieden alleen leveranciers op de vrije markt aan.',
+  },
+  {
+    q: 'Gaat mijn tegoed verloren als ik van leverancier wissel?',
+    a: 'Bij bijna alle leveranciers wel. Het tegoed is van de leverancier, niet van de aansluiting. Maak het tegoed dus eerst zo veel mogelijk op, of wissel in een maand waarin het laag is.',
+  },
+  {
+    q: 'Kan ik het tegoed van mijn huis in Spanje gebruiken voor mijn huis in Nederland?',
+    a: 'Nee. Delen kan alleen tussen aansluitingen in Spanje bij dezelfde leverancier, en vaak alleen op naam van dezelfde contracthouder. Sommige leveranciers staan het toe voor een tweede woning of zelfs het gascontract.',
+  },
+];
+---
+<Guide slug="virtuele-batterij-spanje" toc={toc} faq={faq} dienst="energiebeheer" ctaTitle="Uw zonnepanelen beter laten renderen?" ctaText="Wij kijken naar uw installatie, uw verbruik en uw contract, en zeggen eerlijk of een virtuele batterij, een thuisbatterij of een ander tarief het meeste oplevert.">
+  <h2 id="wat">Wat is een virtuele batterij?</h2>
+  <p>Zonnepanelen in de Axarquía leveren overdag vaak meer stroom dan u op dat moment gebruikt. Zeker in een vakantiehuis dat een deel van het jaar leegstaat. Die extra stroom gaat het net op. In Spanje krijgt u daar een vergoeding voor, maar die mag uw rekening hooguit tot nul verlagen. Wat er daarna overblijft, vervalt.</p>
+  <p>Een <strong>virtuele batterij</strong> (<em>batería virtual</em>, bij sommige leveranciers <em>monedero solar</em> of <em>solar wallet</em>) lost dat op. De leverancier zet het bedrag dat u niet kon verrekenen op een tegoed in euro’s. Dat tegoed gebruikt u in een latere maand, bijvoorbeeld in de winter als de panelen minder opbrengen, of als u zelf in Spanje bent en meer verbruikt.</p>
+  <p>Het is dus geen batterij met stroom erin, maar een spaarpot met geld. Dat verschil is belangrijk als u hem vergelijkt met een echte thuisbatterij.</p>
+
+  <h2 id="compensatie">De basis: compensatie van teruglevering</h2>
+  <p>Bijna elk huis met zonnepanelen in Spanje valt onder de regeling <em>autoconsumo con excedentes acogido a compensación simplificada</em>, uit het Real Decreto 244/2019. In het kort:</p>
+  <ul>
+    <li>De regeling geldt voor installaties tot 100 kW, dus voor elk woonhuis.</li>
+    <li>Elke maand wordt de stroom die u teruglevert gewaardeerd tegen een prijs per kWh. Bij het gereguleerde tarief (PVPC) is dat de uurprijs van de markt, op de vrije markt de prijs uit uw contract, vaak tussen € 0,03 en € 0,08 per kWh.</li>
+    <li>Dat bedrag gaat af van de <strong>energiekosten</strong> op uw rekening. Het vastrecht voor het vermogen (<em>término de potencia</em>), de meterhuur en de belastingen daarop blijven staan.</li>
+    <li>De energiekosten worden hooguit nul. Er wordt nooit geld uitbetaald, en zonder virtuele batterij vervalt wat overblijft aan het eind van de maand.</li>
+  </ul>
+  <p>Ter vergelijking: voor stroom die u van het net haalt, betaalt u op de vrije markt meestal € 0,12 tot € 0,30 per kWh, afhankelijk van het tarief en het tijdstip. Een kWh die u zelf verbruikt is dus drie tot vijf keer zoveel waard als een kWh die u teruglevert.</p>
+
+  <h2 id="verschil">Wat de virtuele batterij daaraan toevoegt</h2>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th></th><th>Alleen compensatie</th><th>Met virtuele batterij</th></tr></thead>
+    <tbody>
+      <tr><td>Overschot aan het eind van de maand</td><td>Vervalt</td><td>Blijft staan als tegoed</td></tr>
+      <tr><td>Wat u kunt verrekenen</td><td>Alleen de energiekosten</td><td>Bij veel leveranciers ook vastrecht en andere posten</td></tr>
+      <tr><td>Delen met een andere aansluiting</td><td>Nee</td><td>Bij sommige leveranciers wel</td></tr>
+      <tr><td>Kosten</td><td>Geen</td><td>Gratis tot een paar euro per maand</td></tr>
+      <tr><td>Beschikbaar bij</td><td>Elke leverancier en PVPC</td><td>Alleen vrije markt, voorwaarden per leverancier</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Welke leveranciers een virtuele batterij aanbieden en tegen welke voorwaarden, ziet u in onze <a href="/nl/gidsen/energieleveranciers-spanje-vergelijken/">vergelijking van energieleveranciers in Spanje</a>.</p>
+
+  <h2 id="rekenvoorbeeld">Rekenvoorbeeld: een vakantiehuis in Torrox</h2>
+  <p>Een huis met 4 kWp zonnepanelen levert in de Axarquía ongeveer 6.000 kWh per jaar. De eigenaren zijn er van oktober tot april en in de zomer verhuren ze een paar weken. Ze gebruiken zelf direct ongeveer 1.800 kWh van de panelen, en leveren 4.200 kWh terug. De vergoeding is € 0,06 per kWh.</p>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Periode</th><th>Teruglevering waard</th><th>Te verrekenen energiekosten</th><th>Zonder virtuele batterij</th></tr></thead>
+    <tbody>
+      <tr><td>Mei tot september (huis grotendeels leeg)</td><td>± € 160</td><td>± € 40</td><td>± € 120 vervalt</td></tr>
+      <tr><td>Oktober tot april (bewoond)</td><td>± € 90</td><td>± € 260</td><td>Alles verrekend</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Zonder virtuele batterij gaat in dit voorbeeld zo’n € 120 per jaar verloren. Met een virtuele batterij schuift dat bedrag door naar de wintermaanden, en mag het bij veel leveranciers ook het vastrecht betalen. Hoe vaker het huis leegstaat, hoe meer de virtuele batterij oplevert. De bedragen zijn een indicatie: uw eigen verbruik, het contract en de stand van de panelen maken veel uit.</p>
+
+  <h2 id="echte-batterij">Virtuele of echte thuisbatterij?</h2>
+  <p>Een echte thuisbatterij bewaart stroom, een virtuele batterij bewaart geld. Een kWh in uw thuisbatterij bespaart ’s avonds de volle prijs van € 0,15 tot € 0,30. Dezelfde kWh in een virtuele batterij is € 0,03 tot € 0,08 waard. Toch is de echte batterij niet altijd de betere keuze:</p>
+  <ul>
+    <li><strong>Woont u er het hele jaar en gebruikt u ’s avonds veel</strong> (airco, koken, een laadpaal)? Dan verdient een thuisbatterij zich het snelst terug. Zie <a href="/nl/kosten/thuisbatterij/">wat een thuisbatterij kost</a>.</li>
+    <li><strong>Staat het huis maanden leeg?</strong> Dan is een thuisbatterij al snel vol en levert hij weinig op. Een gratis virtuele batterij vangt het overschot dan zonder investering op.</li>
+    <li><strong>Het beste van twee:</strong> met een thuisbatterij én een virtuele batterij gaat de stroom eerst naar uw huis, dan naar de batterij, en pas wat dan nog overblijft het net op, waar het als tegoed bewaard blijft.</li>
+    <li><strong>Stroomuitval:</strong> een echte batterij met noodstroomfunctie houdt koelkast, alarm en router aan bij een storing. Een virtuele batterij doet dat niet. In de heuvels van de Axarquía valt de stroom na een storm geregeld uit.</li>
+  </ul>
+  <p>Meer over zonnepanelen, opbrengst en terugverdientijd leest u op <a href="/nl/kosten/zonnepanelen/">kosten zonnepanelen</a>. Heeft u geen netaansluiting? Dan is er ook niets terug te leveren: zie <a href="/nl/gidsen/off-grid-wonen-spanje/">off-grid wonen in Spanje</a>.</p>
+
+  <h2 id="laadpaal">Samen met een laadpaal</h2>
+  <p>Een elektrische auto die overdag thuis staat, is de goedkoopste manier om uw zonnestroom zelf te gebruiken: elke kWh in de auto is een kWh die u niet voor een paar cent teruglevert. Een slimme laadpaal laadt op het overschot van de panelen en schakelt ’s nachts over op het goedkope daltarief. Rijdt u overdag weg, dan vangt de virtuele batterij het overschot op en betaalt die mee aan het nachtladen. Zie <a href="/nl/kosten/laadpaal/">wat een laadpaal kost</a> en hoe <a href="/nl/kosten/slim-energiebeheer/">slim energiebeheer</a> panelen, batterij, laadpaal en airco op elkaar afstemt.</p>
+
+  <h2 id="regelen">Zo regelt u het</h2>
+  <ol>
+    <li><strong>Installatie aanmelden.</strong> De installateur maakt het keuringsbewijs (<em>certificado de instalación</em>, CIE) en meldt de installatie aan bij het register voor zelfopwekking van de Junta de Andalucía.</li>
+    <li><strong>Netbeheerder.</strong> In de provincie Málaga is dat bijna overal e-distribución. Die past uw aansluiting aan naar zelfopwekking met compensatie. Dit gaat meestal automatisch na de aanmelding, maar kan enkele weken tot een paar maanden duren.</li>
+    <li><strong>Leverancier.</strong> U kiest een contract met compensatie en, als u dat wilt, een virtuele batterij. Bij sommige leveranciers stuurt u zelf het CIE op, bij andere gaat het vanzelf.</li>
+    <li><strong>Eerste rekeningen controleren.</strong> Kijk of er een regel staat met <em>compensación de excedentes</em> of <em>energía vertida</em>. Staat die er na twee maanden niet, dan is de aanmelding ergens blijven hangen.</li>
+  </ol>
+  <p>Wij regelen de aanmelding bij de installatie van <a href="/nl/kosten/zonnepanelen/">zonnepanelen</a>, en controleren bij bestaande installaties of de compensatie goed loopt. Dat gaat vaker mis dan u denkt, zeker bij oudere installaties of na een verkoop.</p>
+
+  <h2 id="letop">Waar u op let</h2>
+  <ul class="checks">
+    <li>De prijs per kWh voor teruglevering, en of die vast is of meebeweegt met de markt</li>
+    <li>De maandelijkse kosten van de virtuele batterij, of een verplichte extra dienst</li>
+    <li>Wat u met het tegoed mag betalen: alleen energie, of ook vastrecht en belastingen</li>
+    <li>Hoe lang het tegoed geldig blijft, en wat er gebeurt als u overstapt</li>
+    <li>Of u het tegoed kunt delen met een tweede woning in Spanje</li>
+    <li>De prijs van de stroom die u wél afneemt: een hoge vergoeding bij een duur tarief levert per saldo vaak minder op</li>
+    <li>Een eventuele contractduur (<em>permanencia</em>) of boete bij overstappen</li>
+  </ul>
+  <p class="note">Deze gids is algemene informatie, bijgewerkt in november 2026. Leveranciers passen hun prijzen en voorwaarden regelmatig aan; controleer altijd de actuele voorwaarden voordat u een contract afsluit. Wij verkopen geen energiecontracten en zijn aan geen enkele leverancier gebonden.</p>
+</Guide>

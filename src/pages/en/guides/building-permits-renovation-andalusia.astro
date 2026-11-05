@@ -1,0 +1,79 @@
+---
+// Sources: see the Dutch version (src/pages/nl/gidsen/vergunning-verbouwen-andalusie.astro).
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'short', label: 'Notification or permit?' },
+  { id: 'table', label: 'By type of work' },
+  { id: 'who', label: 'Who you need' },
+  { id: 'steps', label: 'The steps for an extension' },
+  { id: 'countryside', label: 'Fincas and the countryside' },
+  { id: 'council', label: 'Costs and rules by town' },
+];
+
+const faq = [
+  { q: 'Do I need planning permission for an extension in Spain?', a: 'Yes. An extension, annex or extra floor always needs a licencia de obra from the council in Andalusia, with a project by an architect. You may only start once the permit is granted and the execution project is with the council.' },
+  { q: 'Is an architect required for a renovation?', a: 'Only when the work needs a building project: new build, extension, structural work, a different facade or a change of use. Then a home needs both an architect and an arquitecto técnico. A new kitchen or bathroom does not.' },
+  { q: 'Can I apply to the council myself?', a: 'Yes, but usually the architect or builder files it on your behalf, also online. You sign an authorisation.' },
+  { q: 'What if the extension was never permitted?', a: 'The council can act for up to six years after it was built. After that the house can be recognised as AFO. That is not legalisation: you may maintain and renovate it, but not extend it further.' },
+  { q: 'Does an extension need to go in the land registry and the deeds?', a: 'It always has to go in the Catastro. The deeds and property register are not compulsory but sensible: when you sell, the notary asks for them, and without a permit and completion certificate that cannot be done.' },
+];
+---
+<Guide slug="building-permits-renovation-andalusia" lang="en" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Renovating or extending?" ctaText="Tell us what you have in mind. We find out which permit is needed, arrange the architect and carry out the work.">
+  <h2 id="short">Notification or permit?</h2>
+  <p>In Andalusia the planning law LISTA (Ley 7/2021) decides which route a renovation follows. There are two:</p>
+  <ul>
+    <li><strong>Notification</strong> (<em>declaración responsable</em>, still often called <em>obra menor</em> locally): for small works without a building project, and for work inside an existing, legal house in town that does not change its size, height or number of dwellings. You file the notification with the documents and may start the same day. The council checks afterwards.</li>
+    <li><strong>Permit</strong> (<em>licencia de obra</em>, often called <em>obra mayor</em>): for everything else, such as new builds, an extension or extra floor, and structural work. The council must decide within three months of a complete application. You may only start once the permit is granted.</li>
+  </ul>
+  <p>Who you need depends on one question: does the work need a building project? Under the Spanish building act (LOE) it does for new builds, for work that substantially changes the facade, volume or structure, for a change of use and for protected buildings. Then an architect and an <em>arquitecto técnico</em> are required.</p>
+
+  <h2 id="table">By type of work</h2>
+  <p>For a legal house in town. Exactly what goes with a notification is set in the council’s bylaw.</p>
+  <table class="prices">
+    <thead><tr><th>Work</th><th>Route</th><th>Who you need</th></tr></thead>
+    <tbody>
+      <tr><td>New kitchen or bathroom, no walls moved</td><td>Notification</td><td>Builder; certified electrician if the wiring changes</td></tr>
+      <tr><td>Tiling, plastering, painting, same-size windows</td><td>Notification, sometimes exempt</td><td>Builder</td></tr>
+      <tr><td>Waterproofing a roof or terrace without touching the structure</td><td>Notification</td><td>Builder; often a technician if there is scaffolding</td></tr>
+      <tr><td>Changing the layout without load-bearing walls or an extra dwelling</td><td>Notification</td><td>Builder, with a drawing</td></tr>
+      <tr><td>Solar panels, insulation, heat pump</td><td>Notification, also in the countryside</td><td>Installer; certified electrician</td></tr>
+      <tr><td>Removing a load-bearing wall, new floor or beams</td><td>Permit</td><td>Architect, arquitecto técnico, builder</td></tr>
+      <tr><td>Extension, annex, extra floor, enclosing a terrace</td><td>Permit</td><td>Architect, arquitecto técnico, builder</td></tr>
+      <tr><td>Swimming pool</td><td>As a rule a permit</td><td>Technician with a project; which one varies by council</td></tr>
+      <tr><td>Demolition (not protected)</td><td>Notification</td><td>Technician with a demolition project</td></tr>
+    </tbody>
+  </table>
+  <p>Scaffolding or a skip on the public road often needs separate council consent. You always pay building tax (ICIO) on the cost of the works, also with a notification.</p>
+
+  <h2 id="who">Who you need</h2>
+  <ul>
+    <li><strong>Architect</strong> (<em>arquitecto</em>): draws up the project and directs the work. Required for any work on a home that needs a project.</li>
+    <li><strong>Arquitecto técnico</strong> (also <em>aparejador</em>): directs the work on site and checks quality. Required alongside the architect. Together they form the <em>dirección facultativa</em>.</li>
+    <li><strong>Health and safety coordinator</strong> (<em>coordinador de seguridad y salud</em>): required as soon as more than one company or self-employed worker is on site. Every project also includes a safety study.</li>
+    <li><strong>Professional body</strong> (<em>colegio</em>): stamps the execution project and the completion certificate (the <em>visado</em>). Required for any work that needs a project, also for legalisation.</li>
+    <li><strong>Certified electrician</strong>: issues an installation certificate for new or altered wiring, registered with the Junta de Andalucía. Without it you cannot get a new electricity contract.</li>
+    <li><strong>Builder</strong>: carries out the work, with or without a project.</li>
+  </ul>
+
+  <h2 id="steps">The steps for an extension</h2>
+  <ol>
+    <li><strong>Feasibility</strong>: the architect checks the local plan (PGOU) for how much may be built on the plot, and whether the house itself is legal.</li>
+    <li><strong>Basic project and application</strong>: with a <em>proyecto básico</em> the architect applies to the council for the permit.</li>
+    <li><strong>Assessment</strong>: a technician and a lawyer from the council, in small towns often from the Diputación de Málaga, give their opinion. The council decides within three months of a complete application. You pay the ICIO and the fees.</li>
+    <li><strong>Execution project</strong>: the permit alone does not let you build. First the execution project (<em>proyecto de ejecución</em>) with its visado goes to the council, together with notice that work is starting.</li>
+    <li><strong>Building</strong>: start within one year and finish within three, unless the permit says otherwise. Extensions of time are possible.</li>
+    <li><strong>Completion</strong>: the architect and arquitecto técnico sign the completion certificate (<em>certificado final de obra</em>). With it you notify the council that the building is in use.</li>
+    <li><strong>Catastro and notary</strong>: the new floor area must go into the Catastro. To add it to the deeds and the property register too, have a deed of <em>ampliación de obra nueva</em> drawn up. The notary asks for the permit, the completion certificate and proof of occupancy. It saves a lot of trouble when you <a href="/en/guides/selling-a-house-in-spain/">sell</a>.</li>
+  </ol>
+  <p>With a notification it is quicker: the builder or technician files it with the documents, you pay the ICIO and you can start.</p>
+
+  <h2 id="countryside">Fincas and the countryside</h2>
+  <p>Many fincas in the Axarquía stand on <em>suelo rústico</em>. There a notification is only enough for work that makes the house more energy efficient, such as insulation or solar panels, without extra floor space. Everything else needs a permit, and extending is often not allowed at all.</p>
+  <p>If a house or annex was ever built without a permit, the council can act for up to six years after it was built. After that the house can be recognised as AFO. Until that recognition, no work may be done on it. Afterwards you may maintain and renovate it, including the structure, but not make it bigger. Read more in our guide to <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation</a>. Buying a finca? Have a <a href="/en/property-survey/">pre-purchase survey</a> check that what stands there matches the paperwork.</p>
+
+  <h2 id="council">Costs and rules by town</h2>
+  <p>The rules above apply across Andalusia. The building tax (ICIO) and fees differ by council: in the Axarquía the ICIO ranges from 2% to 4% of the cost of the works. For each town you will find the rate, worked examples and the town hall address on its Building permit page, for example <a href="/en/places/nerja/building-permit/">Nerja</a>, <a href="/en/places/competa/building-permit/">Cómpeta</a> or <a href="/en/places/velez-malaga/building-permit/">Vélez-Málaga</a>. All towns are in the <a href="/en/places/">overview</a>. For what the work itself costs, see <a href="/en/guides/renovation-costs-spain/">renovation costs</a>.</p>
+  <p>We handle the whole process: we check whether your plan needs a notification or a permit, arrange the architect and the application, and carry out the work. See <a href="/en/renovation/">renovation</a> and <a href="/en/swimming-pool/">building a pool</a>.</p>
+  <p class="note">This guide gives general information based on Andalusian and Spanish law as it stood on 5 November 2026 (LISTA, LOE, RD 1000/2010, RD 1627/1997, REBT, Ley del Catastro, Ley de Suelo). It is not legal advice; the architect and the council decide on a specific plan.</p>
+</Guide>

@@ -1,0 +1,144 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'hoe', label: 'Hoe we vergeleken hebben' },
+  { id: 'soorten', label: 'Vast, variabel of PVPC?' },
+  { id: 'vergelijking', label: 'Vergelijking: virtuele batterij en teruglevering' },
+  { id: 'situatie', label: 'Wat past bij uw situatie?' },
+  { id: 'tarief', label: 'Daluren, vermogen en de laadpaal' },
+  { id: 'laadpaal', label: 'Laadpaal via de energieleverancier' },
+  { id: 'overstappen', label: 'Overstappen als buitenlandse eigenaar' },
+  { id: 'zelf', label: 'Zelf vergelijken' },
+  { id: 'bronnen', label: 'Bronnen en peildatum' },
+];
+
+const faq = [
+  {
+    q: 'Wat is de goedkoopste energieleverancier in Spanje?',
+    a: 'Dat hangt af van wanneer u stroom gebruikt, hoeveel u teruglevert en hoe vaak u er bent. Een leverancier met een hoge vergoeding voor teruglevering kan per saldo duurder zijn als de stroom die u afneemt veel kost. Vergelijk daarom altijd met uw eigen verbruik, bijvoorbeeld met de officiële vergelijker van de CNMC.',
+  },
+  {
+    q: 'Kost overstappen van energieleverancier in Spanje geld?',
+    a: 'Nee. Overstappen is gratis en de nieuwe leverancier regelt het, ook de opzegging bij de oude. U heeft alleen de CUPS-code van uw aansluiting nodig, die op elke rekening staat. Let wel op een contractduur (permanencia) bij uw huidige leverancier, en op uw tegoed in een virtuele batterij: dat gaat meestal verloren.',
+  },
+  {
+    q: 'Heb ik een Spaanse bankrekening nodig voor een energiecontract?',
+    a: 'Volgens de Europese regels mag een leverancier een rekening in een ander euroland niet weigeren voor een automatische incasso. In de praktijk vragen sommige leveranciers toch om een Spaans IBAN. U heeft wel altijd een NIE nodig als contracthouder.',
+  },
+  {
+    q: 'Is PVPC of een vast tarief beter met zonnepanelen?',
+    a: 'Met zonnepanelen kiezen de meeste eigenaren voor een vast of geïndexeerd tarief op de vrije markt, omdat alleen daar een virtuele batterij mogelijk is. PVPC is interessant als u weinig teruglevert, uw verbruik naar goedkope uren kunt verschuiven of recht heeft op het bono social.',
+  },
+  {
+    q: 'Krijgen jullie een vergoeding van de energieleveranciers in deze vergelijking?',
+    a: 'Nee. Wij verkopen geen energiecontracten en zijn aan geen enkele leverancier gebonden. Wij installeren en onderhouden zonnepanelen, thuisbatterijen en laadpalen, en adviseren welk soort contract daarbij past.',
+  },
+];
+---
+<Guide slug="energieleveranciers-spanje-vergelijken" toc={toc} faq={faq} dienst="energiebeheer" ctaTitle="Hulp bij uw energie in Spanje?" ctaText="Stuur ons een recente rekening. Wij kijken of uw vermogen, tarief en compensatie kloppen bij hoe u het huis gebruikt, en wat zonnepanelen of een batterij zouden opleveren.">
+  <h2 id="hoe">Hoe we vergeleken hebben</h2>
+  <p>In Spanje kunt u kiezen uit tientallen energieleveranciers (<em>comercializadoras</em>). Het net zelf is van één netbeheerder per gebied; in de Axarquía is dat bijna overal e-distribución. Of u nu bij de ene of de andere leverancier zit, de stroom, de meter en storingen zijn hetzelfde. U kiest dus vooral een prijs en voorwaarden.</p>
+  <p>Voor eigenaren met zonnepanelen tellen drie dingen: wat u betaalt voor de stroom die u afneemt, wat u krijgt voor de stroom die u teruglevert, en wat er gebeurt met het overschot. Dat laatste bepaalt of u een <a href="/nl/gidsen/virtuele-batterij-spanje/">virtuele batterij</a> nodig heeft.</p>
+  <p>We hebben de bekendste leveranciers met een aanbod voor zelfopwekking naast elkaar gezet. Per leverancier staan de bron en de datum waarop die informatie gold. <strong>Prijzen en voorwaarden veranderen vaak</strong>, soms per maand. Gebruik de tabel om te zien waar de verschillen zitten, en controleer de actuele voorwaarden voordat u overstapt.</p>
+
+  <h2 id="soorten">Vast, variabel of PVPC?</h2>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Soort contract</th><th>Hoe de prijs werkt</th><th>Voor wie</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Vaste prijs</strong> (<em>precio fijo</em>, vrije markt)</td><td>Een vaste prijs per kWh, vaak 12 maanden. Soms één prijs voor de hele dag, soms per periode (piek, dal, normaal).</td><td>Wie zekerheid wil. De meeste aanbiedingen met virtuele batterij zijn van dit soort.</td></tr>
+      <tr><td><strong>Geïndexeerd</strong> (<em>tarifa indexada</em>, vrije markt)</td><td>De uurprijs van de groothandelsmarkt plus een vaste marge. Teruglevering krijgt meestal ook de marktprijs.</td><td>Wie zijn verbruik kan sturen, bijvoorbeeld met een thuisbatterij of slimme laadpaal.</td></tr>
+      <tr><td><strong>PVPC</strong> (gereguleerd tarief)</td><td>De overheid bepaalt de formule. In 2026 hangt 55% van de energieprijs af van termijnmarkten en 45% van de dagmarkt. Teruglevering krijgt de uurprijs van de markt.</td><td>Wie weinig teruglevert of recht heeft op het <em>bono social</em>. Geen virtuele batterij mogelijk.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>PVPC krijgt u alleen bij een van de gereguleerde leveranciers (<em>comercializadoras de referencia</em>), zoals Energía XXI, Curenergía, Baser of Régsiti, en alleen bij een aansluiting tot 10 kW. Let op: veel bedrijven met bijna dezelfde naam bieden juist vrije-marktcontracten aan.</p>
+  <p>Rond het middaguur, als alle zonnepanelen in Spanje tegelijk produceren, is de marktprijs vaak heel laag. Bij PVPC en geïndexeerde contracten is uw teruglevering op dat moment dus weinig waard. Een vaste vergoeding per kWh is voor zonnepanelen voorspelbaarder.</p>
+
+  <h2 id="vergelijking">Vergelijking: virtuele batterij en teruglevering</h2>
+  <p class="note">Bedragen exclusief btw, per maand tenzij anders vermeld. “Teruglevering” is de vergoeding per kWh voor stroom die u terug het net op stuurt. Zie de <a href="#bronnen">bronnen</a> onderaan.</p>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Leverancier</th><th>Virtuele batterij en kosten</th><th>Teruglevering</th><th>Tegoed geldig</th><th>Delen met</th><th>Peildatum</th></tr></thead>
+    <tbody>
+      <tr><td>Octopus Energy</td><td>Solar Wallet, gratis</td><td>€ 0,035; € 0,07 als u via Octopus installeert</td><td>Vervalt niet</td><td>Andere Octopus-aansluitingen, ook een tweede woning</td><td>Nov. 2026</td></tr>
+      <tr><td>Endesa</td><td>Batería virtual, € 2</td><td>€ 0,06</td><td>Vervalt niet</td><td>Alleen dezelfde aansluiting</td><td>Juli 2026</td></tr>
+      <tr><td>Iberdrola</td><td>Solar Cloud; nieuwe klanten sinds sept. 2026 alleen met de dienst Asistente Smart Avanzado, € 3,45</td><td>Volgens gekozen plan</td><td>Navragen</td><td>Andere Iberdrola-contracten van dezelfde houder</td><td>Sept. 2026</td></tr>
+      <tr><td>Naturgy</td><td>Batería virtual, gratis</td><td>± € 0,06</td><td>5 jaar</td><td>Stroom en gas van dezelfde houder</td><td>Sept. 2026</td></tr>
+      <tr><td>Repsol</td><td>Batería virtual, € 1,99</td><td>€ 0,06</td><td>Zolang u klant bent, tot 1 jaar na opzeggen</td><td>Aansluitingen van dezelfde houder</td><td>Juli 2026</td></tr>
+      <tr><td>Holaluz</td><td>Holaluz Cloud, vast maandbedrag op maat met jaarafrekening</td><td>In het maandbedrag verwerkt</td><td>Navragen</td><td>Hoofd- en tweede woning</td><td>Sept. 2026</td></tr>
+      <tr><td>Factorenergia</td><td>Batería virtual, gratis</td><td>Volgens tarief</td><td>Vervalt niet, wel bij overstappen</td><td>Aansluitingen van dezelfde houder, ook zonder panelen</td><td>Sept. 2026</td></tr>
+      <tr><td>Energía Nufri</td><td>Batería virtual, gratis</td><td>Volgens tarief</td><td>Vervalt niet</td><td>Andere aansluitingen van dezelfde houder</td><td>Sept. 2026</td></tr>
+      <tr><td>Som Energia (coöperatie)</td><td>Sols: 80% van het niet-verrekende overschot, geen kosten</td><td>Marktprijs</td><td>5 jaar</td><td>Alleen hetzelfde contract</td><td>Sept. 2026</td></tr>
+      <tr><td>TotalEnergies</td><td>Geen virtuele batterij in het zonnetarief</td><td>± € 0,06</td><td>Overschot vervalt per maand</td><td>Nee</td><td>Sept. 2026</td></tr>
+      <tr><td>PVPC (gereguleerd)</td><td>Geen virtuele batterij</td><td>Uurprijs van de markt</td><td>Overschot vervalt per maand</td><td>Nee</td><td>Nov. 2026</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Wat opvalt: de verschillen in teruglevering zijn klein (een paar cent per kWh), de verschillen in voorwaarden groot. Of u het tegoed kunt delen met een tweede woning, hoe lang het geldig blijft en of er een verplichte extra dienst bij zit, maakt over een paar jaar vaak meer uit dan een halve cent in de vergoeding. En vergeet de prijs niet van de stroom die u wél afneemt: die bepaalt in de winter het grootste deel van uw rekening.</p>
+
+  <h2 id="situatie">Wat past bij uw situatie?</h2>
+  <ul>
+    <li><strong>Vakantiehuis, maanden leeg met zonnepanelen.</strong> U levert veel terug als u er niet bent. Een gratis virtuele batterij die niet vervalt is hier het belangrijkst. Een hoge vergoeding is mooi meegenomen.</li>
+    <li><strong>Twee woningen in Spanje</strong>, bijvoorbeeld een finca en een appartement aan de kust. Kies een leverancier waarbij het tegoed tussen beide aansluitingen gedeeld kan worden.</li>
+    <li><strong>Het hele jaar bewoond, ’s avonds veel verbruik.</strong> Een <a href="/nl/kosten/thuisbatterij/">thuisbatterij</a> levert meer op dan een virtuele batterij. Kies een contract met een lage prijs in de piek- en normaaluren.</li>
+    <li><strong>Elektrische auto.</strong> Kies een tarief met een goedkoop dal (’s nachts en in het weekend) en laad overdag op de zon. Zie hieronder.</li>
+    <li><strong>Vakantieverhuur.</strong> Gasten verbruiken veel, vaak juist in de zomer als de panelen het meest leveren. Een vaste prijs per kWh geeft het meeste overzicht. Met een slimme laadpaal of energiebeheer voorkomt u dat de airco de hele dag op volle kracht staat.</li>
+    <li><strong>Geen zonnepanelen.</strong> Dan speelt de virtuele batterij geen rol. Vergelijk dan alleen de prijs per kWh, het vastrecht en uw vermogen, en kijk of PVPC goedkoper uitkomt.</li>
+  </ul>
+
+  <h2 id="tarief">Daluren, vermogen en de laadpaal</h2>
+  <p>Bijna elke Spaanse woning heeft het nettarief 2.0TD. Daarbij verschilt de prijs per tijdstip:</p>
+  <table class="prices">
+    <thead><tr><th>Periode</th><th>Werkdagen</th><th>Prijs</th></tr></thead>
+    <tbody>
+      <tr><td>Piek (<em>punta</em>, P1)</td><td>10:00 – 14:00 en 18:00 – 22:00</td><td>Hoogst</td></tr>
+      <tr><td>Normaal (<em>llano</em>, P2)</td><td>08:00 – 10:00, 14:00 – 18:00 en 22:00 – 24:00</td><td>Midden</td></tr>
+      <tr><td>Dal (<em>valle</em>, P3)</td><td>00:00 – 08:00, en het hele weekend en op nationale feestdagen</td><td>Laagst</td></tr>
+    </tbody>
+  </table>
+  <p>Daarnaast betaalt u vastrecht voor het <strong>vermogen</strong> (<em>potencia contratada</em>), in kW. Dat kunt u voor de daluren hoger instellen dan overdag. Handig voor een <a href="/nl/kosten/laadpaal/">laadpaal</a>: ’s nachts laden met meer vermogen, zonder overdag voor dat vermogen te betalen. Een te hoog vermogen kost elke maand geld, ook als u er niet bent; een te laag vermogen laat de hoofdschakelaar uitslaan.</p>
+  <p>Sommige leveranciers hebben speciale tarieven voor elektrische auto’s, met een heel lage prijs in de nacht. Kijk dan ook naar de prijs in de andere uren, want die is vaak hoger. Met zonnepanelen, een thuisbatterij en een laadpaal loont het om alles op elkaar af te stemmen: zie <a href="/nl/kosten/slim-energiebeheer/">slim energiebeheer</a>.</p>
+
+  <h2 id="laadpaal">Laadpaal via de energieleverancier</h2>
+  <p>Grote leveranciers verkopen ook een laadpaal met installatie, vaak samen met een speciaal autotarief. In zo’n pakket zit een vast aantal meters kabel tussen de meterkast en de laadpaal. Is de afstand groter, bijvoorbeeld in een parkeergarage onder een appartementencomplex of bij een carport achter op een finca, dan betaalt u per extra meter bij. Vraag daarom altijd een offerte met de werkelijke afstand.</p>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Leverancier</th><th>Pakket</th><th>Inbegrepen kabel</th><th>Prijs vanaf</th><th>Peildatum</th></tr></thead>
+    <tbody>
+      <tr><td>Endesa</td><td>Waybox, 7,4 of 22 kW, met keuringsbewijs (CIE)</td><td>Woning: tot 20 m. Parkeergarage: tot 20 m (Mini) of 50 m</td><td>€ 1.099</td><td>Nov. 2026</td></tr>
+      <tr><td>Repsol</td><td>Laadpaal met vermogensbegrenzer (<em>balanceo</em>), eenfase</td><td>Niet vermeld, op offerte</td><td>€ 2.011 (woning), € 2.066 (garage), incl. btw</td><td>Nov. 2026</td></tr>
+      <tr><td>Iberdrola</td><td>Laadpaal kopen of huren, installatie op offerte via hun rekentool</td><td>Afhankelijk van de afstand</td><td>Op offerte</td><td>Nov. 2026</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Endesa geeft bij het pakket 30% korting op het autotarief <em>Tarifa Recarga en Casa</em>, een vast bedrag per maand voor een bundel kWh. Zo’n bundel is gunstig als u veel thuis laadt, maar minder als u ook zonnepanelen heeft en overdag op de zon laadt. U bent niet verplicht de laadpaal bij uw energieleverancier te kopen: elke erkende installateur mag hem plaatsen, en het contract kunt u los daarvan kiezen. Wat een laadpaal kost en wat een extra meter kabel doorgaans kost, ziet u op <a href="/nl/kosten/laadpaal/">kosten laadpaal</a>.</p>
+
+  <h2 id="overstappen">Overstappen als buitenlandse eigenaar</h2>
+  <ul class="checks">
+    <li>U heeft een NIE nodig en de CUPS-code van de aansluiting (staat op elke rekening)</li>
+    <li>Overstappen is gratis; de nieuwe leverancier zegt het oude contract op</li>
+    <li>Controleer of uw huidige contract een <em>permanencia</em> met boete heeft</li>
+    <li>Maak het tegoed in uw virtuele batterij eerst op: het gaat bij overstappen meestal verloren</li>
+    <li>Kijk op uw rekening naar extra diensten (<em>servicios adicionales</em>), zoals onderhoudscontracten die u niet gevraagd heeft</li>
+    <li>Vraag of de klantenservice Engels spreekt en of u alles online kunt regelen</li>
+    <li>Staat de aansluiting nog op naam van de vorige eigenaar? Dan is een naamswijziging (<em>cambio de titular</em>) nodig, en daarvoor soms een geldig keuringsbewijs van de elektra</li>
+  </ul>
+  <p>Is de installatie oud of heeft u geen geldig keuringsbewijs (<em>boletín</em>)? Zie <a href="/nl/kosten/elektra-vernieuwen/">elektra vernieuwen</a>.</p>
+
+  <h2 id="zelf">Zelf vergelijken</h2>
+  <p>De Spaanse toezichthouder CNMC heeft een onafhankelijke vergelijker: <a href="https://comparador.cnmc.gob.es/" rel="noopener" target="_blank">comparador.cnmc.gob.es</a>. U vult uw postcode, vermogen en verbruik per periode in en ziet alle aanbiedingen, ook met zelfopwekking. Uw verbruik per uur kunt u downloaden in de online omgeving van uw netbeheerder (bij e-distribución heet die <em>Área Privada</em>).</p>
+  <p>Wilt u het niet zelf uitzoeken? Stuur ons een recente rekening, dan zeggen wij wat er opvalt en wat zonnepanelen, een batterij of een ander tarief zouden opleveren.</p>
+
+  <h2 id="bronnen">Bronnen en peildatum</h2>
+  <ul>
+    <li>Octopus Energy: <a href="https://octopusenergy.es/precios/tarifa-solar" rel="noopener" target="_blank">octopusenergy.es, tarifa solar</a>, geraadpleegd 5 november 2026.</li>
+    <li>Kosten, geldigheid en delen van de virtuele batterij per leverancier: <a href="https://tuexcedente.es/bateria-virtual/" rel="noopener" target="_blank">tuexcedente.es</a>, met verwijzingen naar de websites van de leveranciers, stand september 2026 (Endesa: prijzen 22 juli 2026; Iberdrola: wijziging per 7 september 2026).</li>
+    <li>Vergoeding voor teruglevering en kosten Repsol en Endesa: <a href="https://selectra.es/autoconsumo/tarifas/bateria-virtual/comercializadoras" rel="noopener" target="_blank">Selectra</a>, bijgewerkt 2 juli 2026. Selectra noemde de virtuele batterij van Endesa toen nog gratis.</li>
+    <li>TotalEnergies en Naturgy: <a href="https://veredictosolar.com/mejor-tarifa-bateria-virtual/" rel="noopener" target="_blank">Veredicto Solar</a>, bijgewerkt 30 september 2026.</li>
+    <li>Kosten en pakket van de laadpalen van Endesa en Repsol: <a href="https://www.endesa.com/es/movilidad-electrica/cargador.html" rel="noopener" target="_blank">endesa.com</a> en <a href="https://www.repsol.es/particulares/asesoramiento-consumo/instalar-punto-recarga-en-garaje/" rel="noopener" target="_blank">repsol.es</a>, geraadpleegd 5 november 2026.</li>
+    <li>Regeling voor compensatie: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2019-5089" rel="noopener" target="_blank">Real Decreto 244/2019</a>. PVPC-formule: <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-14048" rel="noopener" target="_blank">Real Decreto 446/2023</a>.</li>
+  </ul>
+  <p class="note">Deze vergelijking is algemene informatie en geen advies om voor een bepaalde leverancier te kiezen. Prijzen en voorwaarden wijzigen regelmatig; controleer ze altijd bij de leverancier voordat u een contract afsluit. Ziet u een fout of een gewijzigde voorwaarde? Mail ons via info@axarquiahome.com, dan passen we het aan. Wij verkopen geen energiecontracten en zijn aan geen enkele leverancier gebonden.</p>
+</Guide>

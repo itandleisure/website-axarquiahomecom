@@ -1,0 +1,115 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'was', label: 'Was ist eine virtuelle Batterie?' },
+  { id: 'verrechnung', label: 'Die Grundlage: Verrechnung von Überschüssen' },
+  { id: 'unterschied', label: 'Was die virtuelle Batterie dazu bringt' },
+  { id: 'beispiel', label: 'Rechenbeispiel: ein Ferienhaus in Torrox' },
+  { id: 'echte-batterie', label: 'Virtuelle oder echte Batterie?' },
+  { id: 'wallbox', label: 'Zusammen mit einer Wallbox' },
+  { id: 'anmelden', label: 'So richten Sie es ein' },
+  { id: 'pruefen', label: 'Worauf Sie achten' },
+];
+
+const faq = [
+  {
+    q: 'Bekomme ich Geld für eingespeisten Solarstrom ausgezahlt?',
+    a: 'Nicht in der normalen Regelung für Privathaushalte. Eingespeister Strom wird mit Ihrer Rechnung verrechnet, aber eine Rechnung wird nie negativ. Mit einer virtuellen Batterie bleibt der Rest als Guthaben in Euro für spätere Rechnungen erhalten. Eine Auszahlung gibt es nur, wenn Sie sich als Stromerzeuger registrieren, was sich für ein Wohnhaus selten lohnt.',
+  },
+  {
+    q: 'Ist die virtuelle Batterie gesetzlich geregelt?',
+    a: 'Nein. Das Gesetz regelt nur die monatliche Verrechnung der Überschüsse (Real Decreto 244/2019). Die virtuelle Batterie ist eine Zusatzleistung des Stromanbieters mit eigenen Bedingungen. Deshalb unterscheiden sich Kosten, Gültigkeit des Guthabens und Verwendungsmöglichkeiten von Anbieter zu Anbieter.',
+  },
+  {
+    q: 'Gibt es eine virtuelle Batterie im regulierten PVPC-Tarif?',
+    a: 'Nein. Im PVPC erhalten Sie zwar die gesetzliche Verrechnung zum stündlichen Marktpreis, aber was am Monatsende übrig bleibt, verfällt. Eine virtuelle Batterie bieten nur Anbieter auf dem freien Markt an.',
+  },
+  {
+    q: 'Verliere ich mein Guthaben, wenn ich den Anbieter wechsle?',
+    a: 'Bei fast allen Anbietern ja. Das Guthaben gehört zum Anbieter, nicht zum Anschluss. Brauchen Sie es also vorher möglichst auf, oder wechseln Sie in einem Monat, in dem es niedrig ist.',
+  },
+  {
+    q: 'Kann ich das Guthaben meines Hauses in Spanien für mein Haus in Deutschland nutzen?',
+    a: 'Nein. Teilen geht nur zwischen Anschlüssen in Spanien beim selben Anbieter und oft nur auf denselben Vertragsinhaber. Manche Anbieter erlauben es für eine Zweitwohnung oder sogar für den Gasvertrag.',
+  },
+];
+---
+<Guide lang="de" slug="virtuelle-batterie-spanien" toc={toc} faq={faq} dienst="energiebeheer" ctaTitle="Mehr aus Ihrer Solaranlage holen?" ctaText="Wir sehen uns Ihre Anlage, Ihren Verbrauch und Ihren Vertrag an und sagen Ihnen ehrlich, ob eine virtuelle Batterie, ein Batteriespeicher oder ein anderer Tarif am meisten bringt.">
+  <h2 id="was">Was ist eine virtuelle Batterie?</h2>
+  <p>Eine Solaranlage in der Axarquía erzeugt tagsüber oft mehr Strom, als Sie gerade verbrauchen. Vor allem in einem Ferienhaus, das einen Teil des Jahres leer steht. Dieser Überschuss geht ins Netz. In Spanien bekommen Sie dafür eine Vergütung, aber nur so weit, bis Ihre Rechnung bei null steht. Was darüber hinausgeht, verfällt.</p>
+  <p>Eine <strong>virtuelle Batterie</strong> (<em>batería virtual</em>, bei manchen Anbietern <em>monedero solar</em> oder <em>Solar Wallet</em>) löst das. Der Anbieter schreibt den Betrag, den Sie nicht verrechnen konnten, als Guthaben in Euro gut. Dieses Guthaben nutzen Sie in einem späteren Monat, etwa im Winter, wenn die Anlage weniger liefert, oder wenn Sie selbst vor Ort sind und mehr verbrauchen.</p>
+  <p>Es ist also keine Batterie voller Strom, sondern ein Sparschwein voller Geld. Dieser Unterschied ist wichtig, wenn Sie sie mit einem echten Batteriespeicher vergleichen.</p>
+
+  <h2 id="verrechnung">Die Grundlage: Verrechnung von Überschüssen</h2>
+  <p>Fast jedes Haus mit Solaranlage in Spanien fällt unter die Regelung <em>autoconsumo con excedentes acogido a compensación simplificada</em> aus dem Real Decreto 244/2019. Kurz gesagt:</p>
+  <ul>
+    <li>Die Regelung gilt für Anlagen bis 100 kW, also für jedes Wohnhaus.</li>
+    <li>Jeden Monat wird der eingespeiste Strom mit einem Preis pro kWh bewertet. Im regulierten Tarif (PVPC) ist das der stündliche Marktpreis, auf dem freien Markt der Preis aus Ihrem Vertrag, oft zwischen 0,03 und 0,08 € pro kWh.</li>
+    <li>Dieser Betrag wird von den <strong>Energiekosten</strong> Ihrer Rechnung abgezogen. Der Leistungspreis (<em>término de potencia</em>), die Zählermiete und die Steuern darauf bleiben.</li>
+    <li>Die Energiekosten sinken höchstens auf null. Es wird nie Geld ausgezahlt, und ohne virtuelle Batterie verfällt der Rest am Monatsende.</li>
+  </ul>
+  <p>Zum Vergleich: Für Strom aus dem Netz zahlen Sie auf dem freien Markt meist 0,12 bis 0,30 € pro kWh, je nach Tarif und Uhrzeit. Eine selbst verbrauchte kWh ist also drei- bis fünfmal so viel wert wie eine eingespeiste.</p>
+
+  <h2 id="unterschied">Was die virtuelle Batterie dazu bringt</h2>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th></th><th>Nur Verrechnung</th><th>Mit virtueller Batterie</th></tr></thead>
+    <tbody>
+      <tr><td>Überschuss am Monatsende</td><td>Verfällt</td><td>Bleibt als Guthaben</td></tr>
+      <tr><td>Was Sie verrechnen können</td><td>Nur die Energiekosten</td><td>Bei vielen Anbietern auch Leistungspreis und andere Posten</td></tr>
+      <tr><td>Teilen mit einem anderen Anschluss</td><td>Nein</td><td>Bei manchen Anbietern</td></tr>
+      <tr><td>Kosten</td><td>Keine</td><td>Kostenlos bis einige Euro im Monat</td></tr>
+      <tr><td>Erhältlich bei</td><td>Jedem Anbieter und im PVPC</td><td>Nur freier Markt, Bedingungen je Anbieter</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Welche Anbieter eine virtuelle Batterie anbieten und zu welchen Bedingungen, sehen Sie in unserem <a href="/de/ratgeber/stromanbieter-spanien-vergleich/">Vergleich der Stromanbieter in Spanien</a>.</p>
+
+  <h2 id="beispiel">Rechenbeispiel: ein Ferienhaus in Torrox</h2>
+  <p>Ein Haus mit 4 kWp Solarmodulen erzeugt in der Axarquía etwa 6.000 kWh im Jahr. Die Eigentümer sind von Oktober bis April vor Ort und vermieten im Sommer einige Wochen. Sie verbrauchen etwa 1.800 kWh Solarstrom direkt und speisen 4.200 kWh ein. Die Vergütung beträgt 0,06 € pro kWh.</p>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Zeitraum</th><th>Wert der Einspeisung</th><th>Verrechenbare Energiekosten</th><th>Ohne virtuelle Batterie</th></tr></thead>
+    <tbody>
+      <tr><td>Mai bis September (Haus meist leer)</td><td>ca. 160 €</td><td>ca. 40 €</td><td>ca. 120 € verfallen</td></tr>
+      <tr><td>Oktober bis April (bewohnt)</td><td>ca. 90 €</td><td>ca. 260 €</td><td>Alles verrechnet</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Ohne virtuelle Batterie gehen in diesem Beispiel rund 120 € im Jahr verloren. Mit ihr wird dieser Betrag in die Wintermonate übertragen und darf bei vielen Anbietern auch den Leistungspreis bezahlen. Je öfter das Haus leer steht, desto mehr bringt die virtuelle Batterie. Die Zahlen sind Richtwerte: Ihr eigener Verbrauch, der Vertrag und die Ausrichtung der Module machen viel aus.</p>
+
+  <h2 id="echte-batterie">Virtuelle oder echte Batterie?</h2>
+  <p>Ein echter Batteriespeicher speichert Strom, eine virtuelle Batterie speichert Geld. Eine kWh in Ihrem Speicher spart abends den vollen Preis von 0,15 bis 0,30 €. Dieselbe kWh in einer virtuellen Batterie ist 0,03 bis 0,08 € wert. Trotzdem ist der echte Speicher nicht immer die bessere Wahl:</p>
+  <ul>
+    <li><strong>Ganzjährig bewohnt, abends hoher Verbrauch</strong> (Klimaanlage, Kochen, Wallbox)? Dann amortisiert sich ein Batteriespeicher am schnellsten. Siehe <a href="/de/kosten/batteriespeicher/">was ein Batteriespeicher kostet</a>.</li>
+    <li><strong>Steht das Haus monatelang leer?</strong> Dann ist der Speicher schnell voll und bringt wenig. Eine kostenlose virtuelle Batterie fängt den Überschuss ohne Investition auf.</li>
+    <li><strong>Das Beste aus beiden:</strong> Mit Batteriespeicher und virtueller Batterie geht der Strom zuerst ins Haus, dann in den Speicher, und nur der Rest ins Netz, wo er als Guthaben erhalten bleibt.</li>
+    <li><strong>Stromausfall:</strong> Ein echter Speicher mit Notstromfunktion hält Kühlschrank, Alarmanlage und Router bei einem Ausfall am Laufen. Eine virtuelle Batterie nicht. In den Hügeln der Axarquía fällt der Strom nach einem Sturm regelmäßig aus.</li>
+  </ul>
+  <p>Mehr zu Solaranlagen, Ertrag und Amortisation finden Sie unter <a href="/de/kosten/solaranlage/">Kosten Solaranlage</a>. Kein Netzanschluss? Dann gibt es auch nichts einzuspeisen: siehe <a href="/de/ratgeber/autark-leben-spanien/">autark leben in Spanien</a>.</p>
+
+  <h2 id="wallbox">Zusammen mit einer Wallbox</h2>
+  <p>Ein Elektroauto, das tagsüber zu Hause steht, ist die günstigste Art, den eigenen Solarstrom zu nutzen: Jede kWh im Auto ist eine kWh, die Sie nicht für ein paar Cent einspeisen. Eine intelligente Wallbox lädt mit dem Solarüberschuss und schaltet nachts auf den günstigen Niedertarif um. Sind Sie tagsüber unterwegs, fängt die virtuelle Batterie den Überschuss auf und bezahlt das Nachtladen mit. Siehe <a href="/de/kosten/wallbox/">was eine Wallbox kostet</a> und wie <a href="/de/kosten/intelligentes-energiemanagement/">intelligentes Energiemanagement</a> Solaranlage, Speicher, Wallbox und Klimaanlage aufeinander abstimmt.</p>
+
+  <h2 id="anmelden">So richten Sie es ein</h2>
+  <ol>
+    <li><strong>Anlage anmelden.</strong> Der Installateur stellt das Installationszertifikat (<em>certificado de instalación</em>, CIE) aus und meldet die Anlage im Eigenverbrauchsregister der Junta de Andalucía an.</li>
+    <li><strong>Netzbetreiber.</strong> In der Provinz Málaga ist das fast überall e-distribución. Er stellt Ihren Anschluss auf Eigenverbrauch mit Verrechnung um. Das geschieht meist automatisch nach der Anmeldung, kann aber einige Wochen bis einige Monate dauern.</li>
+    <li><strong>Anbieter.</strong> Sie wählen einen Vertrag mit Verrechnung und, wenn gewünscht, einer virtuellen Batterie. Bei manchen Anbietern schicken Sie das CIE selbst, bei anderen läuft es automatisch.</li>
+    <li><strong>Erste Rechnungen prüfen.</strong> Suchen Sie eine Zeile mit <em>compensación de excedentes</em> oder <em>energía vertida</em>. Fehlt sie nach zwei Monaten, ist die Anmeldung irgendwo hängen geblieben.</li>
+  </ol>
+  <p>Wir übernehmen die Anmeldung bei der Installation einer <a href="/de/kosten/solaranlage/">Solaranlage</a> und prüfen bei bestehenden Anlagen, ob die Verrechnung funktioniert. Das geht öfter schief, als man denkt, besonders bei älteren Anlagen oder nach einem Verkauf.</p>
+
+  <h2 id="pruefen">Worauf Sie achten</h2>
+  <ul class="checks">
+    <li>Der Preis pro kWh für eingespeisten Strom, und ob er fest ist oder dem Markt folgt</li>
+    <li>Die monatlichen Kosten der virtuellen Batterie oder einer Pflicht-Zusatzleistung</li>
+    <li>Was Sie mit dem Guthaben bezahlen dürfen: nur Energie oder auch Leistungspreis und Steuern</li>
+    <li>Wie lange das Guthaben gültig bleibt und was beim Wechsel passiert</li>
+    <li>Ob Sie das Guthaben mit einer Zweitwohnung in Spanien teilen können</li>
+    <li>Der Preis des Stroms, den Sie beziehen: Eine hohe Vergütung bei einem teuren Tarif bringt unterm Strich oft weniger</li>
+    <li>Eine Mindestlaufzeit (<em>permanencia</em>) oder Wechselgebühr</li>
+  </ul>
+  <p class="note">Dieser Ratgeber ist eine allgemeine Information, Stand November 2026. Anbieter ändern Preise und Bedingungen regelmäßig; prüfen Sie immer die aktuellen Bedingungen, bevor Sie einen Vertrag abschließen. Wir verkaufen keine Energieverträge und sind an keinen Anbieter gebunden.</p>
+</Guide>

@@ -1,0 +1,97 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'waarom', label: 'Waarom winterklaar maken?' },
+  { id: 'herfst', label: 'Checklist herfst: vóór de eerste regen' },
+  { id: 'vertrek', label: 'Checklist bij vertrek' },
+  { id: 'winter', label: 'Wat er in de winter mis kan gaan' },
+  { id: 'storm', label: 'Checklist na een storm' },
+  { id: 'voorjaar', label: 'Checklist voorjaar en zomer' },
+  { id: 'toezicht', label: 'Wie houdt een oogje in het zeil?' },
+];
+
+const faq = [
+  {
+    q: 'Moet ik het water aftappen zoals in Nederland?',
+    a: 'Aan de kust vriest het vrijwel nooit, dus aftappen is daar niet nodig. Sluit wel de hoofdkraan tegen lekkages. In de bergdorpen boven 500 meter kan het ’s nachts vriezen: laat leidingen buiten en in onverwarmde ruimtes aftappen of isoleren.',
+  },
+  {
+    q: 'Stroom aan of uit laten als ik weg ben?',
+    a: 'Meestal aan, voor de koelkast of vriezer, het alarm, een ontvochtiger, de zwembadpomp en een slimme meter of camera. Zet de boiler en andere apparaten die u niet nodig heeft wel uit.',
+  },
+  {
+    q: 'Wat kost het om mijn huis winterklaar te laten maken?',
+    a: 'Een controle met schoonmaken van goten en afvoeren, testen van het dakterras en klaarzetten van het huis kost doorgaans € 100 tot € 300. Reparaties die daarbij gevonden worden, krijgt u eerst als offerte.',
+  },
+];
+---
+<Guide slug="huis-winterklaar-spanje" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Uw huis winterklaar laten maken?" ctaText="Wij lopen de checklist voor u na, maken foto’s en houden het huis in de gaten zolang u weg bent.">
+  <h2 id="waarom">Waarom winterklaar maken?</h2>
+  <p>De winter in de Axarquía is zacht, maar voor een huis is het het zwaarste seizoen. Na een droge zomer valt in oktober en november de meeste regen, soms in een paar uur. Dan blijkt waar het dakterras lekt, of de goten verstopt zitten en of de afwatering rond het huis werkt. Daarna volgt een koele, vochtige periode waarin een gesloten huis muf wordt en gaat schimmelen.</p>
+  <p>Wie de winter in Nederland, België of elders doorbrengt, ziet dat pas bij terugkomst. Met een paar vaste controles in het najaar voorkomt u de meeste schade. Hieronder staan de checklists die wij zelf gebruiken.</p>
+
+  <h2 id="herfst">Checklist herfst: vóór de eerste regen</h2>
+  <p>Doe dit in september of begin oktober, vóór de eerste zware bui.</p>
+  <ul class="checks">
+    <li>Goten, regenpijpen en putjes op het dakterras schoonmaken</li>
+    <li>Dakterras nalopen op scheuren, losse tegels en open voegen</li>
+    <li>Pannendak controleren op verschoven of gebroken pannen</li>
+    <li>Afwateringsgoten en roosters op terras en oprit vrijmaken</li>
+    <li>Drainage langs de achtermuur en achter keermuren controleren</li>
+    <li>Ramen, deuren en luiken nalopen op kitwerk en sluiting</li>
+    <li><a href="/nl/kosten/schoorsteen-en-houtkachel/">Schoorsteen laten vegen</a> als u een houtkachel heeft</li>
+    <li>Airco laten reinigen en op verwarmen testen</li>
+  </ul>
+  <p>Twijfelt u over het dak of het dakterras? Lees <a href="/nl/problemen/daklekkage/">wat u doet bij een daklekkage</a> en <a href="/nl/kosten/dak-en-dakterras/">wat herstel kost</a>.</p>
+
+  <h2 id="vertrek">Checklist bij vertrek</h2>
+  <ul class="checks">
+    <li>Hoofdkraan water dicht; op een finca de pomp uit, tenzij de tuin water nodig heeft</li>
+    <li>Boiler uit</li>
+    <li>Koelkast leeg en op een kier, of laten draaien met iemand die controleert</li>
+    <li>Ontvochtiger aan, met een slang naar de afvoer</li>
+    <li>Ventilatieroosters open, ramen en luiken dicht</li>
+    <li>Matrassen rechtop of afgedekt, kussens en textiel in afgesloten kasten</li>
+    <li>Kostbaarheden opgeborgen, alarm aan</li>
+    <li>Zwembad afgedekt of onderhoud geregeld</li>
+    <li>Tuinmeubelen, parasols en losse spullen binnen of vastgezet</li>
+    <li>Sleutels en contactgegevens bij uw sleutelbeheerder</li>
+  </ul>
+  <p>In de bergdorpen boven ongeveer 500 meter, zoals Cómpeta, Canillas of Alfarnate, kan het ’s nachts vriezen. Tap daar leidingen buiten en in onverwarmde ruimtes af.</p>
+
+  <h2 id="winter">Wat er in de winter mis kan gaan</h2>
+  <ul>
+    <li><strong>Lekkage na storm:</strong> water dat wekenlang door een plafond trekt. Zie <a href="/nl/problemen/daklekkage/">daklekkage</a>.</li>
+    <li><strong>Vocht en schimmel:</strong> een gesloten, koud huis zonder ventilatie. Zie <a href="/nl/problemen/vocht-en-schimmel/">vocht en schimmel</a>.</li>
+    <li><strong>Stroomstoring:</strong> de vriezer ontdooit, het alarm valt uit. Zie <a href="/nl/problemen/stroom-valt-uit/">stroom valt uit</a>.</li>
+    <li><strong>Wateroverlast:</strong> modder tegen de achtermuur of een keermuur die scheurt. Zie <a href="/nl/problemen/wateroverlast-en-keermuur/">wateroverlast en keermuur</a>.</li>
+    <li><strong>Inbraak of kraak:</strong> een huis dat zichtbaar leegstaat. Zie <a href="/nl/problemen/inbraak-en-kraak-leeg-huis/">inbraak en krakers</a>.</li>
+  </ul>
+
+  <h2 id="storm">Checklist na een storm</h2>
+  <p>Na een zware regen- of stormwaarschuwing van AEMET (code oranje of rood) is het verstandig dat iemand binnen een paar dagen gaat kijken.</p>
+  <ul class="checks">
+    <li>Plafonds en muren onder het dak en dakterras op natte plekken</li>
+    <li>Goten en putjes vrij, geen water op het dakterras</li>
+    <li>Keermuren, hellingen en de toegangsweg</li>
+    <li>Groepenkast: staat alles nog aan?</li>
+    <li>Ramen, luiken en zonneschermen</li>
+    <li>Bomen en takken op of tegen het huis</li>
+    <li>Foto’s maken voor de verzekering: zie de gids <a href="/nl/gidsen/verzekering-huis-spanje/">verzekering en schade</a></li>
+  </ul>
+
+  <h2 id="voorjaar">Checklist voorjaar en zomer</h2>
+  <ul class="checks">
+    <li>Zwembad opstarten, filter en pomp controleren</li>
+    <li>Airco reinigen vóór de warme maanden</li>
+    <li>Perceel schoonmaken: in Andalusië is het verplicht om droog onkruid rond het huis te verwijderen tegen bosbrand</li>
+    <li>Tuinbewatering op de zomerstand</li>
+    <li>Zonnepanelen schoonspuiten na stof en Saharazand</li>
+    <li>Verhuurt u: beerput, waterdruk en airco testen vóór de eerste gasten</li>
+  </ul>
+  <p>Per maand ziet u wat het weer doet en wat u aan uw huis doet op <a href="/nl/weer/">weer en klimaat in de Axarquía</a>.</p>
+
+  <h2 id="toezicht">Wie houdt een oogje in het zeil?</h2>
+  <p>Een buurman die af en toe kijkt, is goud waard. Maar na een storm, bij een lekkage of een stroomstoring wilt u iemand die direct kan handelen, foto’s stuurt en een vakman kan inschakelen. Dat is <a href="/nl/sleutelbeheer/">sleutelbeheer</a>: vaste controles volgens deze checklists, een verslag met foto’s, en vóór uw komst een huis dat gelucht, schoon en klaar is.</p>
+</Guide>
