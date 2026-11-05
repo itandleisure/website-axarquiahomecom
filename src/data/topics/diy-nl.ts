@@ -459,4 +459,111 @@ export const diyNl: Topic[] = [
     minutes: 5,
     published: '2026-11-05',
   },
+  {
+    key: 'watertank',
+    slug: 'watertank-plaatsen-en-aansluiten',
+    title: 'Een watertank plaatsen en aansluiten op uw finca',
+    seoTitle: 'Watertank plaatsen in Spanje: aansluiten, watercontract en drinkwater',
+    short: 'Watertank plaatsen',
+    description: 'Een watertank (depósito of aljibe) bij uw finca in de Axarquía? Waar uw water vandaan komt, waar u op let bij een watercontract, hoe u de tank plaatst en aansluit en hoe u er drinkwater van maakt.',
+    lead: 'Veel huizen buiten de dorpen in de Axarquía hangen niet aan het waterleidingnet. Ze krijgen water van een comunidad de regantes of een tankwagen, of hebben een eigen put. Een eigen watertank is dan het hart van het huis.',
+    keyword: 'watertank finca spanje',
+    dienst: 'onderhoud',
+    onderwerp: 'Ik wil een watertank laten plaatsen en aansluiten.',
+    answer: 'Een <strong>watertank</strong> (<em>depósito</em> of <em>aljibe</em>) vangt het water op dat u krijgt, en een <strong>drukpomp</strong> brengt het naar de kranen. Buiten het dorp sluit u vaak een <strong>contract voor een vaste hoeveelheid water per week</strong> af, bijvoorbeeld bij de comunidad de regantes. Met een <strong>vlotterkraan</strong> stopt de toevoer als de tank vol is. Heeft u een <strong>eigen put</strong>, dan is zo’n contract niet nodig. Water dat niet uit het net komt, maakt u met <strong>filters en een uv-lamp</strong> geschikt om te drinken.',
+    sections: [
+      {
+        id: 'bronnen',
+        h: 'Waar komt uw water vandaan?',
+        table: {
+          head: ['Bron', 'Hoe het werkt', 'Let op'],
+          rows: [
+            ['Waterleidingnet van de gemeente', 'Aansluiting met meter; de tank is dan alleen een reserve', 'Alleen in en rond de dorpen en in woonwijken'],
+            ['Comunidad de regantes (irrigatiewater)', 'U sluit een contract af voor een hoeveelheid per week; het water komt op vaste momenten (<em>turno</em>) via een meter in uw tank', 'Bedoeld voor de landbouw, geen drinkwater; in droge jaren kan de hoeveelheid omlaag'],
+            ['Tankwagen (<em>camión cisterna</em>)', 'U bestelt een vracht water als de tank leeg raakt', 'De wagen moet tot bij de tank kunnen komen'],
+            ['Eigen put of bron (<em>pozo</em>)', 'Een pomp haalt het water op en vult de tank', 'Geen contract nodig, wel een registratie of vergunning; laat het water testen'],
+            ['Regenwater', 'Opvang van het dak in een oude of nieuwe <em>aljibe</em>', 'Mooi als aanvulling, in de zomer niet genoeg'],
+          ],
+        },
+      },
+      {
+        id: 'contract',
+        h: 'Waar let u op bij een watercontract?',
+        html: `<p>Hoe het precies gaat, verschilt per comunidad en per gebied. Soms is het veel water, soms weinig. Zorg dat u vooraf helderheid heeft over deze punten:</p>
+<ul>
+<li><strong>Hoeveel water</strong> u per week krijgt, en of u later meer kunt afnemen. Reken voor een huishouden op 100 tot 150 liter per persoon per dag, plus de tuin en een eventueel zwembad.</li>
+<li><strong>Wanneer</strong> het water komt: een vaste dag en tijd (<em>turno</em>), of doorlopend.</li>
+<li><strong>Wat er gebeurt bij droogte</strong>: in 2023 en 2024 kregen veel gebruikers in de Axarquía minder water. Vraag hoe dat geregeld is.</li>
+<li><strong>Wie de leiding onderhoudt</strong> tot aan uw tank, en waar de meter (<em>contador</em>) staat.</li>
+<li><strong>Bij aankoop van een finca</strong>: staat het recht op water op het perceel, en wordt het op uw naam gezet? Vraag het na bij de comunidad en uw advocaat. Lees ook de gids <a href="/nl/gidsen/finca-kopen-in-spanje/">finca kopen in Spanje</a>.</li>
+</ul>`,
+      },
+      {
+        id: 'stop',
+        h: 'Een stop op de tank',
+        html: `<p>Zonder stop loopt de tank bij elke levering over, of blijft er water lopen dat u wel betaalt. Daarom zet u er een stop op:</p>
+<ul>
+<li>Een <strong>vlotterkraan</strong> (<em>válvula de boya</em> of <em>flotador</em>) sluit de toevoer zodra de tank vol is.</li>
+<li>Een <strong>afsluiter</strong> op de toevoer, zodat u de tank kunt afsluiten als u weg bent of als u hem schoonmaakt.</li>
+<li>Een <strong>overloop</strong> met afvoer weg van het huis, voor als de vlotter ooit blijft hangen.</li>
+</ul>`,
+      },
+      {
+        id: 'kiezen',
+        h: 'Welke tank kiest u?',
+        table: {
+          head: ['Type', 'Geschikt voor', 'Let op'],
+          rows: [
+            ['Kunststof tank (polyethyleen), bovengronds', 'Snel te plaatsen, ook op moeilijk bereikbare plekken', 'Kies een donkere, ondoorzichtige tank tegen algen, geschikt voor drinkwater (<em>apto uso alimentario</em>)'],
+            ['Kunststof tank, ingegraven', 'Uit het zicht, water blijft koel', 'Graafwerk; de tank moet geschikt zijn om in te graven'],
+            ['Gemetselde of betonnen <em>aljibe</em>', 'Grote voorraad, traditioneel op fincas', 'Vaak al aanwezig; laat een oude aljibe controleren en opnieuw waterdicht maken'],
+          ],
+        },
+        after: '<p>Kies de maat op uw verbruik tussen twee leveringen, plus een reserve voor een week zonder water. Voor een stel zonder zwembad volstaat vaak een paar duizend liter; met tuin, gasten of verhuur heeft u al snel tien- tot twintigduizend liter nodig.</p>',
+      },
+      {
+        id: 'stappen',
+        h: 'Plaatsen en aansluiten, stap voor stap',
+        html: `<ol>
+<li><strong>Plek kiezen.</strong> Hoger dan het huis geeft vanzelf wat druk; lager kan ook, met een drukpomp. Zorg dat de leverancier of de tankwagen er kan komen.</li>
+<li><strong>Ondergrond.</strong> Een vlakke, gewapende betonplaat. Elke 1.000 liter weegt 1.000 kilo.</li>
+<li><strong>Toevoer.</strong> Sluit de leiding van de meter aan op de tank, met afsluiter en vlotterkraan.</li>
+<li><strong>Overloop en ontluchting.</strong> Een overloop met afvoer en een ontluchting met een hor tegen insecten.</li>
+<li><strong>Uitgang.</strong> Een afsluiter, een terugslagklep en een zuigleiding naar de pomp.</li>
+<li><strong>Drukpomp.</strong> Een pomp met drukvat of een pomp met frequentieregeling, in een droog en schaduwrijk hokje. De stroom laat u aansluiten door een erkend installateur.</li>
+<li><strong>Filters.</strong> Een sedimentfilter vóór het huis, en voor drinkwater een koolfilter en een uv-lamp.</li>
+<li><strong>Leidingen.</strong> Graaf ze in of scherm ze af tegen zon; kunststof leidingen in de zon worden bros en het water wordt warm.</li>
+</ol>`,
+      },
+      {
+        id: 'drinkwater',
+        h: 'Drinkwater uit de tank',
+        html: '<p>Water van een comunidad de regantes, een put of regen is geen drinkwater zolang het niet is gefilterd. Gebruik een sedimentfilter, een koolfilter en een uv-lamp, of een doseerpomp met chloor. Laat het water af en toe testen in een laboratorium. Maak de tank elk jaar schoon en houd hem dicht en donker: stilstaand, warm water geeft kans op <a href="/nl/problemen/legionella/">legionella</a>.</p>',
+      },
+      {
+        id: 'vergunning',
+        h: 'Vergunning',
+        html: '<p>Een kunststof tank plaatsen valt meestal onder kleine werken, met een melding (<em>declaración responsable</em>) bij de gemeente. Een grote gemetselde of betonnen aljibe kan een bouwvergunning nodig hebben, zeker op landelijke grond. Een eigen put boren of in gebruik nemen moet u melden of laten vergunnen bij de waterautoriteit van de Junta de Andalucía. Vraag het na voordat u begint.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Hoeveel water heb ik per week nodig?', a: 'Reken op 100 tot 150 liter per persoon per dag in huis, dus voor twee personen ongeveer 1.500 tot 2.000 liter per week. Een tuin, gasten of een zwembad kunnen dat verveelvoudigen, vooral in de zomer.' },
+      { q: 'Kan ik het water van de regantes drinken?', a: 'Niet zonder meer. Het is bedoeld voor de landbouw en wordt niet gecontroleerd als drinkwater. Met filters en een uv-lamp kunt u het geschikt maken, en laat het af en toe testen.' },
+      { q: 'Heb ik een contract nodig als ik een eigen put heb?', a: 'Nee, dan komt het water uit uw eigen bron. Veel eigenaren nemen wel een tank als buffer, zodat de pomp niet steeds aanslaat en u een voorraad heeft als de put in de zomer minder geeft.' },
+    ],
+    links: [
+      { href: '/nl/gidsen/finca-kopen-in-spanje/', label: 'Gids: finca kopen in Spanje' },
+      { href: '/nl/problemen/legionella/', label: 'Legionella in tank en leidingen' },
+      { href: '/nl/sleutelbeheer/', label: 'Sleutelbeheer: tank en pomp in de gaten houden als u weg bent' },
+    ],
+    related: ['costs:water', 'problems:legionella', 'diy:zwembad'],
+    sources: [
+      { name: 'Real Decreto Legislativo 1/2001, Ley de Aguas (o.a. eigen putten)', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2001-14276' },
+      { name: 'Real Decreto 3/2023 over de kwaliteit van drinkwater', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2023-628' },
+    ],
+    ctaTitle: 'Watertank laten plaatsen?',
+    ctaText: 'Wij plaatsen en sluiten de tank voor u aan, met vlotter, pomp en filters, en denken mee over de wateraansluiting.',
+    minutes: 7,
+    published: '2026-11-05',
+  },
 ];

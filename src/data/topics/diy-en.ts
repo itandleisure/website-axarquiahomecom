@@ -459,4 +459,111 @@ export const diyEn: Topic[] = [
     minutes: 5,
     published: '2026-11-05',
   },
+  {
+    key: 'watertank',
+    slug: 'installing-a-water-tank',
+    title: 'Installing and connecting a water tank at your finca',
+    seoTitle: 'Installing a water tank in Spain: connection, water contract and drinking water',
+    short: 'Installing a water tank',
+    description: 'A water tank (depósito or aljibe) at your finca in the Axarquía? Where your water comes from, what to check in a water contract, how to install and connect the tank and how to make the water drinkable.',
+    lead: 'Many houses outside the villages of the Axarquía are not on mains water. They get water from a comunidad de regantes or a water tanker, or have their own well. Your own water tank is then the heart of the house.',
+    keyword: 'water tank finca spain',
+    dienst: 'onderhoud',
+    onderwerp: 'I would like a water tank installed and connected.',
+    answer: 'A <strong>water tank</strong> (<em>depósito</em> or <em>aljibe</em>) stores the water you receive, and a <strong>pressure pump</strong> takes it to the taps. Outside the village you often sign a <strong>contract for a fixed amount of water per week</strong>, for example with the comunidad de regantes. A <strong>float valve</strong> stops the supply once the tank is full. If you have <strong>your own well</strong>, you do not need such a contract. Water that does not come from the mains you make drinkable with <strong>filters and a UV lamp</strong>.',
+    sections: [
+      {
+        id: 'sources',
+        h: 'Where does your water come from?',
+        table: {
+          head: ['Source', 'How it works', 'Watch out for'],
+          rows: [
+            ['Town mains', 'Connection with a meter; the tank is then only a reserve', 'Only in and around the villages and in residential areas'],
+            ['Comunidad de regantes (irrigation water)', 'You sign a contract for an amount per week; the water arrives at set times (<em>turno</em>) through a meter into your tank', 'Meant for farming, not drinking water; in dry years the amount can be cut'],
+            ['Water tanker (<em>camión cisterna</em>)', 'You order a load of water when the tank runs low', 'The tanker must be able to reach the tank'],
+            ['Own well or spring (<em>pozo</em>)', 'A pump draws the water and fills the tank', 'No contract needed, but registration or a licence is; have the water tested'],
+            ['Rainwater', 'Collected from the roof into an old or new <em>aljibe</em>', 'A good extra, not enough in summer'],
+          ],
+        },
+      },
+      {
+        id: 'contract',
+        h: 'What to check in a water contract',
+        html: `<p>How it works differs per comunidad and per area. Sometimes it is a lot of water, sometimes very little. Make sure you are clear on these points before you start:</p>
+<ul>
+<li><strong>How much water</strong> you get per week, and whether you can take more later. Allow 100 to 150 litres per person per day for a household, plus the garden and any pool.</li>
+<li><strong>When</strong> the water comes: a set day and time (<em>turno</em>), or continuously.</li>
+<li><strong>What happens in a drought</strong>: in 2023 and 2024 many users in the Axarquía received less water. Ask how this is handled.</li>
+<li><strong>Who maintains the pipe</strong> up to your tank, and where the meter (<em>contador</em>) is.</li>
+<li><strong>When buying a finca</strong>: is the water right attached to the plot, and will it be transferred to your name? Check with the comunidad and your lawyer. See also our guide to <a href="/en/guides/buying-a-finca-in-spain/">buying a finca in Spain</a>.</li>
+</ul>`,
+      },
+      {
+        id: 'stop',
+        h: 'A stop on the tank',
+        html: `<p>Without a stop the tank overflows at every delivery, or water keeps running that you do pay for. So you fit a stop:</p>
+<ul>
+<li>A <strong>float valve</strong> (<em>válvula de boya</em> or <em>flotador</em>) closes the supply as soon as the tank is full.</li>
+<li>A <strong>stopcock</strong> on the supply, so you can shut the tank off when you are away or cleaning it.</li>
+<li>An <strong>overflow</strong> draining away from the house, in case the float ever sticks.</li>
+</ul>`,
+      },
+      {
+        id: 'choose',
+        h: 'Which tank to choose',
+        table: {
+          head: ['Type', 'Suits', 'Watch out for'],
+          rows: [
+            ['Plastic tank (polyethylene), above ground', 'Quick to install, even in hard-to-reach places', 'Choose a dark, opaque tank against algae, approved for drinking water (<em>apto uso alimentario</em>)'],
+            ['Plastic tank, buried', 'Out of sight, water stays cool', 'Digging; the tank must be designed to be buried'],
+            ['Masonry or concrete <em>aljibe</em>', 'Large storage, traditional on fincas', 'Often already there; have an old aljibe checked and re-waterproofed'],
+          ],
+        },
+        after: '<p>Size the tank on what you use between two deliveries, plus a reserve for a week without water. For a couple without a pool a few thousand litres is often enough; with a garden, guests or rentals you soon need ten to twenty thousand litres.</p>',
+      },
+      {
+        id: 'steps',
+        h: 'Installing and connecting, step by step',
+        html: `<ol>
+<li><strong>Location.</strong> Higher than the house gives some pressure for free; lower works too, with a pressure pump. Make sure the supplier or tanker can get there.</li>
+<li><strong>Base.</strong> A level, reinforced concrete slab. Every 1,000 litres weighs 1,000 kilos.</li>
+<li><strong>Supply.</strong> Connect the pipe from the meter to the tank, with a stopcock and float valve.</li>
+<li><strong>Overflow and vent.</strong> An overflow with a drain and a vent with an insect screen.</li>
+<li><strong>Outlet.</strong> A stopcock, a non-return valve and a suction pipe to the pump.</li>
+<li><strong>Pressure pump.</strong> A pump with a pressure vessel or a variable-speed pump, in a dry, shaded housing. Have the power connected by an authorised electrician.</li>
+<li><strong>Filters.</strong> A sediment filter before the house, and for drinking water a carbon filter and a UV lamp.</li>
+<li><strong>Pipes.</strong> Bury them or shield them from the sun; plastic pipes in the sun become brittle and the water gets warm.</li>
+</ol>`,
+      },
+      {
+        id: 'drinking-water',
+        h: 'Drinking water from the tank',
+        html: '<p>Water from a comunidad de regantes, a well or rain is not drinking water until it has been treated. Use a sediment filter, a carbon filter and a UV lamp, or a chlorine dosing pump. Have the water tested by a laboratory from time to time. Clean the tank every year and keep it closed and dark: still, warm water carries a risk of <a href="/en/problems/legionella/">legionella</a>.</p>',
+      },
+      {
+        id: 'permit',
+        h: 'Permit',
+        html: '<p>Installing a plastic tank is usually minor works, with a notification (<em>declaración responsable</em>) to the town hall. A large masonry or concrete aljibe may need a building permit, especially on rural land. Drilling or using your own well must be registered with or licensed by the water authority of the Junta de Andalucía. Check before you start.</p>',
+      },
+    ],
+    faq: [
+      { q: 'How much water do I need per week?', a: 'Allow 100 to 150 litres per person per day indoors, so roughly 1,500 to 2,000 litres a week for two people. A garden, guests or a pool can multiply that, especially in summer.' },
+      { q: 'Can I drink the water from the regantes?', a: 'Not as it comes. It is meant for farming and is not checked as drinking water. With filters and a UV lamp you can make it suitable, and have it tested from time to time.' },
+      { q: 'Do I need a contract if I have my own well?', a: 'No, the water then comes from your own source. Many owners still have a tank as a buffer, so the pump does not keep cutting in and you have a supply when the well gives less in summer.' },
+    ],
+    links: [
+      { href: '/en/guides/buying-a-finca-in-spain/', label: 'Guide: buying a finca in Spain' },
+      { href: '/en/problems/legionella/', label: 'Legionella in tanks and pipes' },
+      { href: '/en/key-holding/', label: 'Key holding: tank and pump checked while you are away' },
+    ],
+    related: ['costs:water', 'problems:legionella', 'diy:zwembad'],
+    sources: [
+      { name: 'Real Decreto Legislativo 1/2001, Ley de Aguas (incl. private wells)', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2001-14276' },
+      { name: 'Real Decreto 3/2023 on drinking water quality', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2023-628' },
+    ],
+    ctaTitle: 'Have a water tank installed?',
+    ctaText: 'We install and connect the tank for you, with float valve, pump and filters, and help you sort out the water supply.',
+    minutes: 7,
+    published: '2026-11-05',
+  },
 ];
