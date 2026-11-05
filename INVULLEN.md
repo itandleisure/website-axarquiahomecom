@@ -17,6 +17,7 @@ en op de pagina's in een geel blok "Nog aanleveren". Zodra alles klopt, zet je
 ## Van Frans
 - [ ] Naam, KvK-nummer en adres van de onderneming (privacyverklaring)
 - [ ] Apps Script web-app URL (zie `apps-script/README.md`)
+- [ ] Dashboard-URL voor /statistiek/ in `statsDashboardUrl` (zie `apps-script/statistieken/README.md`)
 - [ ] E-mailadres info@axarquiahome.com laten doorsturen naar je eigen mailbox
 - [ ] Privacyverklaring één keer laten nakijken
 
