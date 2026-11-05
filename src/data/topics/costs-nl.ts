@@ -700,4 +700,145 @@ export const costsNl: Topic[] = [
     minutes: 5,
     published: '2026-11-05',
   },
+  {
+    key: 'water',
+    slug: 'watertank-en-beerput',
+    title: 'Wat kosten een watertank, boorput en beerput in Spanje?',
+    seoTitle: 'Water en afvoer op een finca in Spanje: kosten watertank, boorput en beerput (2026)',
+    short: 'Watertank en beerput',
+    description: 'Wat kost water en afvoer op een finca in de Axarquía? Prijzen voor een watertank, het herstellen van een regenbak (aljibe), een boorput, pomp en filter, en een septic tank of kleine zuivering.',
+    lead: 'Veel fincas in de Axarquía hangen niet aan de waterleiding of het riool. Na de droogte van de afgelopen jaren willen eigenaren meer zekerheid over hun water, en oude beerputten voldoen vaak niet meer. Zo ziet de rekening eruit.',
+    keyword: 'watertank finca spanje',
+    dienst: 'onderhoud',
+    onderwerp: 'Ik wil graag een prijs voor water of afvoer op mijn finca (watertank, put of beerput).',
+    answer: 'Een kunststof watertank van 10.000 liter kost geplaatst en aangesloten <strong>€ 1.500 tot € 4.000</strong>. Een pomp met drukvat <strong>€ 600 tot € 1.500</strong>. Een nieuwe septic tank <strong>€ 2.500 tot € 6.000</strong>, een compacte zuivering <strong>€ 4.000 tot € 9.000</strong>. Een boorput met vergunning loopt al snel op tot <strong>€ 10.000 tot € 30.000</strong>. Bedragen exclusief btw.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Prijzen water',
+        table: {
+          head: ['Wat', 'Wat het inhoudt', 'Indicatie'],
+          rows: [
+            ['Kunststof watertank 5.000 liter', 'Bovengronds, op een betonvloer, aangesloten', '€ 900 – € 2.000'],
+            ['Kunststof watertank 10.000 – 20.000 liter', 'Bovengronds of half ingegraven', '€ 1.500 – € 5.000'],
+            ['Gemetselde regenbak (aljibe) herstellen', 'Reinigen, scheuren dichten, waterdichte coating', '€ 2.000 – € 8.000'],
+            ['Nieuwe ondergrondse regenbak', 'Beton, 20 – 40 m³, met opvang van het dak', '€ 8.000 – € 20.000'],
+            ['Pomp met drukvat', 'Constante druk in huis', '€ 600 – € 1.500'],
+            ['Filter en uv-lamp', 'Drinkwater uit tank of put', '€ 800 – € 2.000'],
+            ['Boorput (pozo)', 'Vergunning, boren, pomp, leiding', '€ 10.000 – € 30.000'],
+          ],
+          note: 'Boren kost meestal € 100 – € 200 per meter, en in de Axarquía is 80 tot 150 meter diep niet ongewoon. Er is geen garantie dat u water vindt.',
+        },
+      },
+      {
+        id: 'afvoer',
+        h: 'Prijzen afvoer',
+        table: {
+          head: ['Wat', 'Wat het inhoudt', 'Indicatie'],
+          rows: [
+            ['Beerput legen', 'Zuigwagen, afvoer naar een erkende verwerker', '€ 150 – € 300'],
+            ['Nieuwe septic tank (fosa séptica)', '2.000 – 4.000 liter, met infiltratieveld of filter', '€ 2.500 – € 6.000'],
+            ['Compacte zuivering (depuradora)', 'Biologische zuivering, schoner effluent', '€ 4.000 – € 9.000'],
+            ['Aansluiten op het riool', 'Als er riolering in de buurt ligt', '€ 1.500 – € 6.000'],
+          ],
+          note: 'Een oude, gemetselde beerput zonder bodem voldoet meestal niet aan de regels. De gemeente of de Junta kan bij een verbouwing of klacht vragen om hem te vervangen.',
+        },
+      },
+      {
+        id: 'regels',
+        h: 'Vergunningen en regels',
+        html: `<ul>
+<li><strong>Boorput:</strong> u heeft een vergunning of inschrijving nodig bij de waterautoriteit van de Junta de Andalucía. Een put zonder papieren kan bij verkoop of controle problemen geven. Bij kleine onttrekkingen voor eigen gebruik is de procedure eenvoudiger.</li>
+<li><strong>Afvoer:</strong> een septic tank of zuivering moet waterdicht zijn en mag het grond- of rivierwater niet vervuilen. Voor lozen in de bodem kan een vergunning nodig zijn.</li>
+<li><strong>Bij aankoop:</strong> laat de waterbron en de beerput altijd meenemen in de <a href="/nl/aankoopkeuring/">aankoopkeuring</a>.</li>
+</ul>`,
+      },
+    ],
+    faq: [
+      { q: 'Hoe groot moet mijn watertank zijn?', a: 'Reken op 100 tot 150 liter per persoon per dag, plus de tuin en het zwembad. Twee personen zonder zwembad verbruiken zo’n 1.000 liter per week of meer. Een tank van 10.000 liter geeft dan een paar weken buffer tussen leveringen.' },
+      { q: 'Hoe vaak moet een beerput geleegd worden?', a: 'Meestal eens per twee tot vier jaar, afhankelijk van het formaat en hoe vaak het huis bewoond is. Bij verhuur vaker.' },
+      { q: 'Is water uit een tank drinkbaar?', a: 'Alleen met een goede filter en eventueel een uv-lamp, en als de tank schoon en afgesloten is. Laat het water af en toe testen.' },
+    ],
+    links: [
+      { href: '/nl/gidsen/off-grid-wonen-spanje/', label: 'Gids: off-grid wonen in Spanje' },
+      { href: '/nl/gidsen/finca-kopen-in-spanje/', label: 'Gids: finca kopen in Spanje' },
+      { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
+    ],
+    related: ['problems:waterdruk', 'problems:beerput', 'costs:keermuur'],
+    sources: [
+      { name: 'CYPE, Generador de Precios (bouwprijzen Spanje)', url: 'https://generadordeprecios.info/' },
+      { name: 'Junta de Andalucía, water en waterrechten', url: 'https://www.juntadeandalucia.es/medioambiente/portal/areas-tematicas/agua' },
+    ],
+    ctaTitle: 'Water of afvoer op uw finca regelen?',
+    ctaText: 'Vertel ons hoe het huis nu aan water komt en waar het afvalwater heen gaat. U krijgt een voorstel en een prijs.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'keermuur',
+    slug: 'keermuur-en-afwatering',
+    title: 'Wat kost een keermuur of afwatering in Spanje?',
+    seoTitle: 'Keermuur en afwatering in Spanje: kosten voor muren, drainage en toegangsweg (2026)',
+    short: 'Keermuur en afwatering',
+    description: 'Wat kost een keermuur, drainage of een verharde toegangsweg op een finca in de Axarquía? Prijzen voor beton, natuursteen en schanskorven, en wat u doet na stormschade.',
+    lead: 'In de Axarquía staan veel huizen tegen een helling. Een keermuur die het begeeft, water dat na een storm tegen het huis loopt of een weg die wegspoelt: het zijn grote klussen, maar met goede afwatering te voorkomen.',
+    keyword: 'keermuur spanje',
+    dienst: 'onderhoud',
+    onderwerp: 'Ik wil graag een prijs voor een keermuur, drainage of de toegangsweg.',
+    answer: 'Een betonnen keermuur van 1,5 tot 2 meter hoog kost in de Axarquía meestal <strong>€ 400 tot € 1.200 per strekkende meter</strong>, inclusief fundering en drainage. Een natuurstenen muur <strong>€ 150 tot € 350 per m²</strong> muuroppervlak. Een afwateringsgoot <strong>€ 60 tot € 150 per meter</strong>, een betonnen toegangsweg <strong>€ 40 tot € 70 per m²</strong>. Bedragen exclusief btw.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Prijzen per klus',
+        table: {
+          head: ['Klus', 'Wat het inhoudt', 'Indicatie'],
+          rows: [
+            ['Betonnen keermuur 1,5 – 2 m', 'Fundering, gewapend beton, drainage erachter', '€ 400 – € 1.200 per m'],
+            ['Natuurstenen muur', 'Gemetseld of gestapeld, passend bij de streek', '€ 150 – € 350 per m²'],
+            ['Schanskorven (gaviones)', 'Stalen korven met steen, snel en doorlatend', '€ 120 – € 250 per m²'],
+            ['Ingestorte muur herstellen', 'Puin ruimen, nieuwe fundering, opnieuw opbouwen', '€ 2.000 – € 10.000+'],
+            ['Drainage achter een muur of langs het huis', 'Drainbuis, grind, filterdoek', '€ 40 – € 80 per m'],
+            ['Afwateringsgoot (canaleta)', 'Goot met rooster dwars over terras of oprit', '€ 60 – € 150 per m'],
+            ['Toegangsweg in beton', 'Grondwerk, wapening, beton met profiel', '€ 40 – € 70 per m²'],
+          ],
+          note: 'Voor een keermuur van meer dan ongeveer 1,5 meter of bij een woning vraagt de gemeente meestal een bouwvergunning met een berekening van een architect of ingenieur.',
+        },
+      },
+      {
+        id: 'waarom',
+        h: 'Waarom keermuren bezwijken',
+        html: `<ul>
+<li><strong>Geen drainage.</strong> Regenwater hoopt zich op achter de muur en drukt hem om. Dit is verreweg de meest voorkomende oorzaak.</li>
+<li><strong>Te lichte fundering</strong> of een muur zonder wapening, vaak gebouwd zonder berekening.</li>
+<li><strong>Zware regen na droogte.</strong> Een DANA in het najaar brengt in een paar uur meer water dan de grond aankan.</li>
+<li><strong>Wortels en begroeiing</strong> die de muur uit elkaar duwen.</li>
+</ul>
+<p>Lees ook <a href="/nl/problemen/wateroverlast-en-keermuur/">wat u doet bij wateroverlast of een scheurende keermuur</a>.</p>`,
+      },
+      {
+        id: 'vergunning',
+        h: 'Vergunning en buitengebied',
+        html: '<p>Op landelijke grond gelden strenge regels. Herstel van een bestaande muur kan meestal met een melding, een nieuwe muur of een nieuwe weg vraagt vaak een vergunning. Bij een huis met AFO-status mogen alleen werken die nodig zijn voor veiligheid en onderhoud. Zie de pagina <em>Bouwvergunning</em> van uw gemeente onder <a href="/nl/plaatsen/">Plaatsen</a> en de gids <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren</a>.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Dekt de verzekering een ingestorte keermuur?', a: 'Soms. Veel opstalpolissen dekken stormschade, maar sluiten schade door slecht onderhoud of ontbrekende drainage uit. Bij uitzonderlijke regen kan het Consorcio de Compensación de Seguros betalen. Lees de gids over verzekering en schade.' },
+      { q: 'Kan een oude natuurstenen muur blijven staan?', a: 'Vaak wel, als hij nog recht staat en water door de voegen kan. Een bolle muur, verschoven stenen of scheuren zijn signalen om te laten kijken.' },
+      { q: 'Wanneer kan ik dit werk het best laten doen?', a: 'In het voorjaar of de zomer, als de grond droog is. Na een storm moet het soms direct, om verdere schade te voorkomen.' },
+    ],
+    links: [
+      { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
+      { href: '/nl/gidsen/finca-kopen-in-spanje/', label: 'Gids: finca kopen in Spanje' },
+      { href: '/nl/weer/oktober/', label: 'Het weer in oktober: de eerste zware regen' },
+    ],
+    related: ['problems:wateroverlast', 'costs:water', 'problems:scheuren'],
+    sources: [
+      { name: 'CYPE, Generador de Precios (bouwprijzen Spanje)', url: 'https://generadordeprecios.info/' },
+      { name: 'Código Técnico de la Edificación, DB SE-C Cimientos (funderingen en keermuren)', url: 'https://www.codigotecnico.org/' },
+    ],
+    ctaTitle: 'Een keermuur of afwatering nodig?',
+    ctaText: 'Stuur foto’s van de muur of de plek waar het water heen loopt. U krijgt advies en een prijs.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
 ];

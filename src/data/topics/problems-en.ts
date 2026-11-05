@@ -559,4 +559,240 @@ export const problemsEn: Topic[] = [
     minutes: 5,
     published: '2026-11-05',
   },
+  {
+    key: 'waterdruk',
+    slug: 'no-water-or-low-pressure',
+    title: 'No water or low water pressure in your house in Spain',
+    seoTitle: 'No water or low water pressure in a house in Spain: causes, fixes and costs',
+    short: 'No water or low pressure',
+    description: 'No water, or only a trickle, from the tap in your house in the Axarquía? How to find the cause: an outage, an empty tank, a dry well, a broken pump or a leak, and what the fix costs.',
+    lead: 'You arrive, turn on the tap and nothing comes out, or just a trickle. On a finca with a tank or well, but also in a village house on mains water, it happens more often than you would think.',
+    keyword: 'no water house spain',
+    dienst: 'onderhoud',
+    onderwerp: 'I have no water or low water pressure in my house.',
+    answer: 'On mains water it is usually an <strong>outage or interruption in the village</strong>, a closed main valve or a leak. On a finca with a tank or well it is often an <strong>empty tank</strong>, a <strong>broken or dry-running pump</strong>, a <strong>blocked filter</strong> or a well that yields less in summer.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'What is the cause?',
+        table: {
+          head: ['What you see', 'Likely cause'],
+          rows: [
+            ['No water, and the neighbours have none either', 'Outage or planned interruption by the water company'],
+            ['No water after a long absence', 'Main valve closed, or cut off for an unpaid bill'],
+            ['Pump keeps switching on and off', 'Pressure vessel without air, or a leak in the pipe'],
+            ['Pump runs but no water comes', 'Tank or well empty, or the pump is drawing air'],
+            ['Pressure slowly dropping, cloudy water', 'Blocked filter or limescale in pipes and taps'],
+            ['High water bill or a wet patch in the garden', 'Leak in the supply pipe'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'What you can do yourself',
+        html: `<ul>
+<li>Ask the neighbours or the municipal water company whether there is an outage.</li>
+<li>Check the main valve at the water meter and the valve after the tank.</li>
+<li>Check how much water is left in the tank. Order a tanker in good time.</li>
+<li>Switch off the pump if it is running dry, or it will burn out.</li>
+<li>Check whether the meter turns while all taps are closed: then there is a leak.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'The fix and what it costs',
+        table: {
+          head: ['Fix', 'For', 'Guide price'],
+          rows: [
+            ['Finding and repairing a leak', 'Leaking pipe', '€200 – €1,000'],
+            ['Replacing or re-pressurising the pressure vessel', 'Pump that keeps cycling', '€150 – €500'],
+            ['New pump with pressure vessel', 'Broken pump', '€600 – €1,500'],
+            ['New filter, water softener', 'Low pressure, limescale', '€150 – €1,500'],
+            ['Larger or extra water tank', 'Tank keeps running empty', 'see <a href="/en/costs/water-tank-and-septic-tank/">water tank costs</a>'],
+            ['Dry-run protection and level alarm', 'Protect the pump, alert when the tank is empty', '€150 – €400'],
+          ],
+          note: 'Guide prices excluding VAT.',
+        },
+      },
+      {
+        id: 'leeg',
+        h: 'When you are away',
+        html: '<p>A leak in an empty house can run for months, and a pump that runs dry breaks down. When you leave, close the main valve and switch off the pump, unless the garden needs water. With <a href="/en/key-holding/">key holding</a> someone checks the meter, tank and pump regularly, and gets the house ready before you arrive.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Why does the water sometimes go off in summer?', a: 'After dry years, town halls in the Axarquía can cut the water at night or at set hours to save it. A small buffer tank with a pump covers that.' },
+      { q: 'What does a water tanker cost?', a: 'Expect €4 to €10 per m³ including delivery, depending on the distance and the access track.' },
+      { q: 'Can I have my well drilled deeper?', a: 'Sometimes, but it needs a permit and is no guarantee of more water. First have the pump and pipework checked.' },
+    ],
+    links: [
+      { href: '/en/maintenance/', label: 'Maintenance and repairs' },
+      { href: '/en/costs/water-tank-and-septic-tank/', label: 'Cost of a water tank, borehole and septic tank' },
+      { href: '/en/guides/off-grid-living-spain/', label: 'Guide: off-grid living in Spain' },
+    ],
+    related: ['costs:water', 'problems:beerput', 'problems:stroom'],
+    sources: [
+      { name: 'Junta de Andalucía, water and water rights', url: 'https://www.juntadeandalucia.es/medioambiente/portal/areas-tematicas/agua' },
+    ],
+    ctaTitle: 'No water or low pressure?',
+    ctaText: 'Tell us how your house gets its water and what happens. A plumber will find the cause.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'beerput',
+    slug: 'septic-tank-problems',
+    title: 'Septic tank full or smelly: what now?',
+    seoTitle: 'Septic tank full or smelly at your house in Spain: causes, fixes and costs',
+    short: 'Septic tank',
+    description: 'A sewage smell around your house in the Axarquía, or slow drains? How to recognise a full or broken septic tank (fosa séptica), what to do yourself and what emptying or replacing costs.',
+    lead: 'On many fincas and in some village houses the waste water goes to a septic tank in the garden. As long as it works, nobody thinks about it. Until it starts to smell or the toilet stops flushing.',
+    keyword: 'septic tank spain',
+    dienst: 'onderhoud',
+    onderwerp: 'My septic tank is full or smells.',
+    answer: 'A smell, slow drains or gurgling usually point to a <strong>full septic tank</strong>: emptying costs €150 to €300. If the problem stays, or there is water on the ground above the tank, the <strong>soakaway is blocked</strong> or the tank is broken. A new septic tank costs €2,500 to €6,000.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'What is going on?',
+        table: {
+          head: ['What you see or smell', 'Likely cause'],
+          rows: [
+            ['Sewage smell in the garden, toilet flushes slowly', 'Septic tank full'],
+            ['Wet, green or smelly patch above the tank', 'Soakaway blocked or tank leaking'],
+            ['Sewage smell indoors, especially in the bathroom', 'Trap dried out or no vent pipe'],
+            ['Gurgling drains or sink', 'Blockage or full tank'],
+            ['Problem shortly after a let or a party', 'Too much water or fat in a short time'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'What you can do yourself',
+        html: `<ul>
+<li>After a long absence, run all taps and the shower briefly: a dried-out trap lets sewage smells through.</li>
+<li>Do not flush wet wipes, fat or large amounts of bleach: they kill the bacteria in the tank.</li>
+<li>Do not drive or park over the tank or soakaway.</li>
+<li>Note when the tank was last emptied.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'The fix and what it costs',
+        table: {
+          head: ['Fix', 'For', 'Guide price'],
+          rows: [
+            ['Emptying the septic tank', 'Full tank', '€150 – €300'],
+            ['Unblocking the drain', 'Blocked pipe', '€100 – €300'],
+            ['Fitting a vent pipe', 'Smell indoors', '€200 – €600'],
+            ['Renewing the soakaway', 'Wet patch above the soakaway', '€1,500 – €4,000'],
+            ['New septic tank or treatment plant', 'Broken or undersized tank', 'see <a href="/en/costs/water-tank-and-septic-tank/">septic tank costs</a>'],
+          ],
+          note: 'Guide prices excluding VAT.',
+        },
+      },
+      {
+        id: 'verhuur',
+        h: 'Letting and selling',
+        html: '<p>If you let the house, a full house uses as much water in a week as you do in a month. Have the tank checked before the season. When selling, a good buyer will ask about the drainage: a broken or non-compliant septic tank is a reason to negotiate on price. See also the guide <a href="/en/guides/selling-a-house-in-spain/">selling a house in Spain</a>.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Does a septic tank need regular emptying?', a: 'Yes, usually every two to four years. Do not wait until it overflows: that blocks the soakaway too.' },
+      { q: 'Do I need septic tank starters or bacteria?', a: 'Usually not. A healthy tank keeps itself going. They can help after a period of heavy bleach or cleaning product use.' },
+      { q: 'Is my old cesspit still allowed?', a: 'A brick-built pit without a base, where waste water runs straight into the ground, usually does not meet current rules. Replacement can be required during a renovation or after a complaint.' },
+    ],
+    links: [
+      { href: '/en/maintenance/', label: 'Maintenance and repairs' },
+      { href: '/en/costs/water-tank-and-septic-tank/', label: 'Cost of a water tank, borehole and septic tank' },
+      { href: '/en/property-survey/', label: 'Pre-purchase survey' },
+    ],
+    related: ['costs:water', 'problems:waterdruk', 'problems:vocht'],
+    sources: [
+      { name: 'Junta de Andalucía, discharges and waste water', url: 'https://www.juntadeandalucia.es/medioambiente/portal/areas-tematicas/agua' },
+    ],
+    ctaTitle: 'Septic tank problems?',
+    ctaText: 'Tell us what you see and smell, and send a photo of the spot. We arrange emptying, repair or replacement.',
+    minutes: 4,
+    published: '2026-11-05',
+  },
+  {
+    key: 'wateroverlast',
+    slug: 'flooding-and-retaining-walls',
+    title: 'Flooding after heavy rain and a cracking retaining wall',
+    seoTitle: 'Flooding and retaining walls in Spain: what to do after heavy rain or a DANA',
+    short: 'Flooding and retaining walls',
+    description: 'Water against or inside your house after heavy rain, a washed-out access track or a retaining wall that cracks or leans? What to do straight away, how to prevent it and what repairs cost in the Axarquía.',
+    lead: 'In autumn more rain can fall in a few hours than in the whole summer. On a slope that water takes the shortest way down, and sometimes that runs against or through your house.',
+    keyword: 'flooding house spain',
+    dienst: 'onderhoud',
+    onderwerp: 'I have flooding or a retaining wall that is cracking.',
+    answer: 'Flooding on a slope is almost always caused by <strong>missing or blocked drainage</strong>: water from the hillside, terrace or track with nowhere to go. A retaining wall that cracks, bulges or leans usually has <strong>no drainage</strong> behind it. Have it checked quickly: after the next downpour it may give way.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Warning signs',
+        table: {
+          head: ['What you see', 'What it means'],
+          rows: [
+            ['Mud or water against the back wall after rain', 'Water from the slope has no drain along the house'],
+            ['Wet wall indoors after rain, on the hill side', 'Penetrating damp: soil and water against the wall'],
+            ['Retaining wall bulging, leaning or with diagonal cracks', 'Water pressure behind the wall, risk of collapse'],
+            ['Water coming out of the joints at the base of the wall', 'The wall drains, which is good; no water at all is the risk'],
+            ['Gullies in the access track', 'Run-off without a channel or cross drain'],
+          ],
+        },
+      },
+      {
+        id: 'direct',
+        h: 'What to do straight away',
+        html: `<ul>
+<li>Keep away from a retaining wall that moves or cracks, and do not park below or above it.</li>
+<li>Clear gutters, gullies and gratings of leaves and mud.</li>
+<li>Divert water temporarily away from the house with sandbags or a trench.</li>
+<li>Take dated photos of the damage for the insurer.</li>
+<li>In danger or with major damage after a storm: call 112.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'The fix and what it costs',
+        table: {
+          head: ['Fix', 'For', 'Guide price'],
+          rows: [
+            ['Drainage along the back wall', 'Water and damp on the hill side', '€40 – €80 per m'],
+            ['Drainage channel on terrace or drive', 'Water running towards the house', '€60 – €150 per m'],
+            ['Drainage behind an existing retaining wall', 'Wall without drainage', '€80 – €200 per m'],
+            ['Repairing or rebuilding a retaining wall', 'Cracking or collapsed wall', 'see <a href="/en/costs/retaining-wall-and-drainage/">retaining wall costs</a>'],
+            ['Repairing the access track with channels', 'Washed-out track', '€40 – €70 per m²'],
+          ],
+          note: 'Guide prices excluding VAT.',
+        },
+      },
+      {
+        id: 'verzekering',
+        h: 'Insurance and the Consorcio',
+        html: '<p>In Spain, damage from exceptional rain, floods or storms is often paid not by the insurer itself but by the <em>Consorcio de Compensación de Seguros</em>, a state fund. You do need a buildings or contents policy for that. Report the damage as soon as possible and keep photos and invoices.</p>',
+      },
+    ],
+    faq: [
+      { q: 'What is a DANA?', a: 'A pocket of cold air high in the atmosphere which, mainly from September to November, brings short, heavy downpours. More than 100 mm can fall in a few hours.' },
+      { q: 'Who is responsible for a retaining wall on the boundary?', a: 'That depends on who built the wall and whose land it holds back. Check the title deeds and the land registry, and talk to the neighbours before you repair it.' },
+      { q: 'Can I prevent this?', a: 'Yes. Have gutters, gullies and drainage checked and cleaned before the autumn. That is a standard part of maintenance and key holding.' },
+    ],
+    links: [
+      { href: '/en/maintenance/', label: 'Maintenance and repairs' },
+      { href: '/en/key-holding/', label: 'Key holding and property checks' },
+      { href: '/en/weather/september/', label: 'The weather in September: DANA and the first rain' },
+    ],
+    related: ['costs:keermuur', 'problems:daklekkage', 'problems:scheuren'],
+    sources: [
+      { name: 'Consorcio de Compensación de Seguros, damage from extraordinary events', url: 'https://www.consorseguros.es/' },
+      { name: 'AEMET, what is a DANA', url: 'https://www.aemet.es/' },
+    ],
+    ctaTitle: 'Flooding or a cracking retaining wall?',
+    ctaText: 'Send photos of the wall or of where the water runs. We will come and look and give you a price.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
 ];

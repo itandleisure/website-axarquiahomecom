@@ -559,4 +559,240 @@ export const problemsDe: Topic[] = [
     minutes: 5,
     published: '2026-11-05',
   },
+  {
+    key: 'waterdruk',
+    slug: 'kein-wasser-oder-wasserdruck',
+    title: 'Kein Wasser oder zu wenig Wasserdruck in Ihrem Haus in Spanien',
+    seoTitle: 'Kein Wasser oder niedriger Wasserdruck im Haus in Spanien: Ursachen, Lösungen und Kosten',
+    short: 'Kein Wasser oder Wasserdruck',
+    description: 'Kommt in Ihrem Haus in der Axarquía kein oder kaum Wasser aus dem Hahn? So finden Sie die Ursache: Störung, leerer Tank, trockener Brunnen, defekte Pumpe oder Leck, und was die Lösung kostet.',
+    lead: 'Sie kommen an, drehen den Hahn auf und es kommt nichts, oder nur ein dünner Strahl. Auf einer Finca mit Tank oder Brunnen, aber auch in einem Dorfhaus mit Wasserleitung passiert das öfter, als man denkt.',
+    keyword: 'kein wasser haus spanien',
+    dienst: 'onderhoud',
+    onderwerp: 'Ich habe kein Wasser oder zu wenig Wasserdruck im Haus.',
+    answer: 'Bei einem Haus mit Wasserleitung ist es meist eine <strong>Störung oder Unterbrechung im Ort</strong>, ein geschlossener Haupthahn oder ein Leck. Auf einer Finca mit Tank oder Brunnen ist es oft ein <strong>leerer Tank</strong>, eine <strong>defekte oder trocken gelaufene Pumpe</strong>, ein <strong>verstopfter Filter</strong> oder ein Brunnen, der im Sommer weniger liefert.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Woran liegt es?',
+        table: {
+          head: ['Was Sie sehen', 'Wahrscheinliche Ursache'],
+          rows: [
+            ['Kein Wasser, und die Nachbarn auch nicht', 'Störung oder geplante Unterbrechung des Wasserversorgers'],
+            ['Kein Wasser nach langer Abwesenheit', 'Haupthahn zu, oder gesperrt wegen einer offenen Rechnung'],
+            ['Pumpe schaltet ständig ein und aus', 'Druckkessel ohne Luft, oder ein Leck in der Leitung'],
+            ['Pumpe läuft, aber es kommt kein Wasser', 'Tank oder Brunnen leer, oder die Pumpe zieht Luft'],
+            ['Druck sinkt langsam, Wasser trüb', 'Filter verstopft oder Kalk in Leitungen und Hähnen'],
+            ['Hohe Wasserrechnung oder nasse Stelle im Garten', 'Leck in der Zuleitung'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'Was Sie selbst tun können',
+        html: `<ul>
+<li>Fragen Sie die Nachbarn oder den Wasserversorger der Gemeinde, ob es eine Störung gibt.</li>
+<li>Prüfen Sie den Haupthahn am Wasserzähler und den Hahn nach dem Tank.</li>
+<li>Sehen Sie nach, wie viel Wasser noch im Tank ist. Bestellen Sie rechtzeitig einen Tankwagen.</li>
+<li>Schalten Sie die Pumpe aus, wenn sie trocken läuft, sonst brennt sie durch.</li>
+<li>Prüfen Sie, ob der Zähler läuft, während alle Hähne zu sind: Dann gibt es ein Leck.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'Die Lösung und was sie kostet',
+        table: {
+          head: ['Lösung', 'Bei', 'Richtwert'],
+          rows: [
+            ['Leck suchen und reparieren', 'Undichte Leitung', '200 – 1.000 €'],
+            ['Druckkessel ersetzen oder neu befüllen', 'Pumpe, die ständig anspringt', '150 – 500 €'],
+            ['Neue Pumpe mit Druckkessel', 'Defekte Pumpe', '600 – 1.500 €'],
+            ['Filter ersetzen, Entkalker einbauen', 'Niedriger Druck, Kalk', '150 – 1.500 €'],
+            ['Größerer oder zusätzlicher Tank', 'Tank ständig leer', 'siehe <a href="/de/kosten/wassertank-und-klaergrube/">Kosten Wassertank</a>'],
+            ['Trockenlaufschutz und Füllstandsmelder', 'Pumpe schützen, Meldung bei leerem Tank', '150 – 400 €'],
+          ],
+          note: 'Richtwerte ohne Mehrwertsteuer.',
+        },
+      },
+      {
+        id: 'leeg',
+        h: 'Wenn Sie nicht da sind',
+        html: '<p>Ein Leck in einem leeren Haus kann monatelang laufen, und eine trocken laufende Pumpe geht kaputt. Schließen Sie bei der Abreise den Haupthahn und schalten Sie die Pumpe aus, es sei denn, der Garten braucht Wasser. Mit der <a href="/de/hausbetreuung/">Hausbetreuung</a> prüft jemand regelmäßig Zähler, Tank und Pumpe und bereitet das Haus vor Ihrer Ankunft vor.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Warum fällt im Sommer manchmal das Wasser aus?', a: 'Nach trockenen Jahren können Gemeinden in der Axarquía das Wasser nachts oder zu bestimmten Zeiten abstellen, um zu sparen. Ein kleiner Puffertank mit Pumpe gleicht das aus.' },
+      { q: 'Was kostet ein Tankwagen Wasser?', a: 'Rechnen Sie mit 4 bis 10 € pro m³ inklusive Lieferung, je nach Entfernung und Zufahrt.' },
+      { q: 'Kann ich meinen Brunnen tiefer bohren lassen?', a: 'Manchmal, aber dafür ist eine Genehmigung nötig, und es ist keine Garantie für mehr Wasser. Lassen Sie zuerst Pumpe und Leitung prüfen.' },
+    ],
+    links: [
+      { href: '/de/instandhaltung/', label: 'Instandhaltung und Reparaturen' },
+      { href: '/de/kosten/wassertank-und-klaergrube/', label: 'Kosten Wassertank, Brunnen und Klärgrube' },
+      { href: '/de/ratgeber/autark-leben-spanien/', label: 'Ratgeber: autark leben in Spanien' },
+    ],
+    related: ['costs:water', 'problems:beerput', 'problems:stroom'],
+    sources: [
+      { name: 'Junta de Andalucía, Wasser und Wasserrechte', url: 'https://www.juntadeandalucia.es/medioambiente/portal/areas-tematicas/agua' },
+    ],
+    ctaTitle: 'Kein Wasser oder zu wenig Druck?',
+    ctaText: 'Sagen Sie uns, wie Ihr Haus an Wasser kommt und was passiert. Ein Installateur findet die Ursache.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'beerput',
+    slug: 'klaergrube-voll-oder-riecht',
+    title: 'Klärgrube voll oder riecht: was tun?',
+    seoTitle: 'Klärgrube voll oder riecht an Ihrem Haus in Spanien: Ursachen, Lösungen und Kosten',
+    short: 'Klärgrube',
+    description: 'Riecht es rund um Ihr Haus in der Axarquía nach Abwasser, oder läuft der Abfluss langsam? So erkennen Sie eine volle oder defekte Klärgrube (fosa séptica), was Sie selbst tun und was Leeren oder Ersetzen kostet.',
+    lead: 'Auf vielen Fincas und in manchen Dorfhäusern läuft das Abwasser in eine Klärgrube im Garten. Solange sie funktioniert, denkt niemand daran. Bis es riecht oder die Toilette nicht mehr abläuft.',
+    keyword: 'klärgrube spanien',
+    dienst: 'onderhoud',
+    onderwerp: 'Meine Klärgrube ist voll oder riecht.',
+    answer: 'Geruch, ein langsamer Abfluss oder gluckernde Rohre deuten meist auf eine <strong>volle Klärgrube</strong>: Leeren kostet 150 bis 300 €. Bleibt das Problem, oder steht Wasser auf dem Boden über der Grube, ist die <strong>Versickerung verstopft</strong> oder die Grube defekt. Eine neue Klärgrube kostet 2.500 bis 6.000 €.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Was ist los?',
+        table: {
+          head: ['Was Sie sehen oder riechen', 'Wahrscheinliche Ursache'],
+          rows: [
+            ['Abwassergeruch im Garten, Toilette läuft langsam ab', 'Klärgrube voll'],
+            ['Nasse, grüne oder riechende Stelle über der Grube', 'Versickerung verstopft oder Grube undicht'],
+            ['Abwassergeruch im Haus, vor allem im Bad', 'Siphon ausgetrocknet oder fehlende Entlüftung'],
+            ['Gluckernder Abfluss oder Spüle', 'Verstopfung oder volle Grube'],
+            ['Problem kurz nach Vermietung oder einem Fest', 'Zu viel Wasser oder Fett in kurzer Zeit'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'Was Sie selbst tun können',
+        html: `<ul>
+<li>Lassen Sie nach langer Abwesenheit alle Hähne und die Dusche kurz laufen: Ein ausgetrockneter Siphon lässt Abwassergeruch durch.</li>
+<li>Spülen Sie keine Feuchttücher, kein Fett und nicht viel Bleiche herunter: Das tötet die Bakterien in der Grube.</li>
+<li>Fahren und parken Sie nicht über der Grube oder der Versickerung.</li>
+<li>Notieren Sie, wann die Grube zuletzt geleert wurde.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'Die Lösung und was sie kostet',
+        table: {
+          head: ['Lösung', 'Bei', 'Richtwert'],
+          rows: [
+            ['Klärgrube leeren', 'Volle Grube', '150 – 300 €'],
+            ['Abfluss freimachen', 'Verstopfte Leitung', '100 – 300 €'],
+            ['Entlüftung einbauen', 'Geruch im Haus', '200 – 600 €'],
+            ['Versickerung erneuern', 'Nasse Stelle über der Versickerung', '1.500 – 4.000 €'],
+            ['Neue Klärgrube oder Kläranlage', 'Defekte oder zu kleine Grube', 'siehe <a href="/de/kosten/wassertank-und-klaergrube/">Kosten Klärgrube</a>'],
+          ],
+          note: 'Richtwerte ohne Mehrwertsteuer.',
+        },
+      },
+      {
+        id: 'verhuur',
+        h: 'Bei Vermietung und Verkauf',
+        html: '<p>Vermieten Sie das Haus, verbraucht ein volles Haus in einer Woche so viel Wasser wie Sie in einem Monat. Lassen Sie die Grube vor der Saison prüfen. Beim Verkauf fragt ein guter Käufer nach dem Abwasser: Eine defekte oder unzulässige Grube ist ein Grund, über den Preis zu reden. Lesen Sie auch den Ratgeber <a href="/de/ratgeber/haus-verkaufen-spanien/">Haus verkaufen in Spanien</a>.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Muss eine Klärgrube regelmäßig geleert werden?', a: 'Ja, meist alle zwei bis vier Jahre. Warten Sie nicht, bis sie überläuft: Dann verstopft auch die Versickerung.' },
+      { q: 'Brauche ich Klärgrubenstarter oder Bakterien?', a: 'Meist nicht. Eine gesunde Grube hält sich selbst in Gang. Sie können nach einer Zeit mit viel Bleiche oder Reinigungsmittel helfen.' },
+      { q: 'Ist meine alte Grube noch zulässig?', a: 'Eine gemauerte Grube ohne Boden, aus der das Abwasser direkt in den Boden läuft, entspricht meist nicht den heutigen Regeln. Bei einem Umbau oder einer Beschwerde kann der Ersatz verlangt werden.' },
+    ],
+    links: [
+      { href: '/de/instandhaltung/', label: 'Instandhaltung und Reparaturen' },
+      { href: '/de/kosten/wassertank-und-klaergrube/', label: 'Kosten Wassertank, Brunnen und Klärgrube' },
+      { href: '/de/immobiliengutachten/', label: 'Gutachten vor dem Kauf' },
+    ],
+    related: ['costs:water', 'problems:waterdruk', 'problems:vocht'],
+    sources: [
+      { name: 'Junta de Andalucía, Einleitungen und Abwasser', url: 'https://www.juntadeandalucia.es/medioambiente/portal/areas-tematicas/agua' },
+    ],
+    ctaTitle: 'Probleme mit der Klärgrube?',
+    ctaText: 'Sagen Sie uns, was Sie sehen und riechen, und schicken Sie ein Foto der Stelle. Wir organisieren Leeren, Reparatur oder Ersatz.',
+    minutes: 4,
+    published: '2026-11-05',
+  },
+  {
+    key: 'wateroverlast',
+    slug: 'wasserschaden-und-stuetzmauer',
+    title: 'Wasser am Haus nach Starkregen und eine reißende Stützmauer',
+    seoTitle: 'Wasserschaden und Stützmauer in Spanien: was tun nach Starkregen oder einer DANA?',
+    short: 'Wasserschaden und Stützmauer',
+    description: 'Wasser am oder im Haus nach Starkregen, eine weggespülte Zufahrt oder eine Stützmauer, die reißt oder sich neigt? Was Sie sofort tun, wie Sie vorbeugen und was die Reparatur in der Axarquía kostet.',
+    lead: 'Im Herbst kann in wenigen Stunden mehr Regen fallen als im ganzen Sommer. Am Hang sucht sich das Wasser den kürzesten Weg nach unten, und der führt manchmal gegen oder durch Ihr Haus.',
+    keyword: 'wasserschaden haus spanien',
+    dienst: 'onderhoud',
+    onderwerp: 'Ich habe Wasser am Haus oder eine Stützmauer, die reißt.',
+    answer: 'Wasser am Haus am Hang kommt fast immer von <strong>fehlender oder verstopfter Entwässerung</strong>: Wasser vom Hang, von der Terrasse oder vom Weg, das keinen Abfluss hat. Eine Stützmauer, die reißt, sich ausbeult oder neigt, hat meist <strong>keine Drainage</strong> dahinter. Lassen Sie das schnell prüfen: Beim nächsten Starkregen kann sie nachgeben.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Warnzeichen',
+        table: {
+          head: ['Was Sie sehen', 'Was es bedeutet'],
+          rows: [
+            ['Schlamm oder Wasser an der Rückwand nach Regen', 'Wasser vom Hang hat keinen Abfluss am Haus'],
+            ['Nasse Wand innen nach Regen, auf der Hangseite', 'Eindringende Feuchtigkeit: Erde und Wasser an der Wand'],
+            ['Stützmauer beult aus, neigt sich oder hat schräge Risse', 'Wasserdruck hinter der Mauer, Einsturzgefahr'],
+            ['Wasser tritt unten aus den Fugen der Mauer', 'Die Mauer entwässert, das ist gut; gar kein Wasser ist das Risiko'],
+            ['Rinnen in der Zufahrt', 'Abfließendes Wasser ohne Rinne oder Querablauf'],
+          ],
+        },
+      },
+      {
+        id: 'direct',
+        h: 'Was Sie sofort tun',
+        html: `<ul>
+<li>Halten Sie Abstand von einer Stützmauer, die sich bewegt oder reißt, und parken Sie nicht darunter oder darüber.</li>
+<li>Machen Sie Rinnen, Abläufe und Gitter frei von Laub und Schlamm.</li>
+<li>Leiten Sie Wasser vorübergehend mit Sandsäcken oder einem Graben vom Haus weg.</li>
+<li>Machen Sie datierte Fotos der Schäden für die Versicherung.</li>
+<li>Bei Gefahr oder großen Schäden nach einem Sturm: Rufen Sie 112 an.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'Die Lösung und was sie kostet',
+        table: {
+          head: ['Lösung', 'Bei', 'Richtwert'],
+          rows: [
+            ['Drainage entlang der Rückwand', 'Wasser und Feuchtigkeit auf der Hangseite', '40 – 80 € pro m'],
+            ['Entwässerungsrinne auf Terrasse oder Einfahrt', 'Wasser, das zum Haus läuft', '60 – 150 € pro m'],
+            ['Drainage hinter einer bestehenden Stützmauer', 'Mauer ohne Entwässerung', '80 – 200 € pro m'],
+            ['Stützmauer reparieren oder neu bauen', 'Reißende oder eingestürzte Mauer', 'siehe <a href="/de/kosten/stuetzmauer-und-entwaesserung/">Kosten Stützmauer</a>'],
+            ['Zufahrt mit Rinnen instand setzen', 'Weggespülter Weg', '40 – 70 € pro m²'],
+          ],
+          note: 'Richtwerte ohne Mehrwertsteuer.',
+        },
+      },
+      {
+        id: 'verzekering',
+        h: 'Versicherung und das Consorcio',
+        html: '<p>In Spanien zahlt bei Schäden durch außergewöhnlichen Regen, Überschwemmung oder Sturm oft nicht der Versicherer selbst, sondern das <em>Consorcio de Compensación de Seguros</em>, ein staatlicher Fonds. Dafür brauchen Sie aber eine Gebäude- oder Hausratversicherung. Melden Sie den Schaden so schnell wie möglich und bewahren Sie Fotos und Rechnungen auf.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Was ist eine DANA?', a: 'Ein Kaltlufttropfen in großer Höhe, der vor allem von September bis November kurze, heftige Regengüsse bringt. In wenigen Stunden können dann über 100 mm fallen.' },
+      { q: 'Wer ist für eine Stützmauer an der Grundstücksgrenze verantwortlich?', a: 'Das hängt davon ab, wer die Mauer gebaut hat und wessen Boden sie hält. Sehen Sie in die Eigentumsurkunde und das Kataster und sprechen Sie mit den Nachbarn, bevor Sie reparieren.' },
+      { q: 'Kann ich vorbeugen?', a: 'Ja. Lassen Sie Rinnen, Abläufe und Drainage vor dem Herbst prüfen und reinigen. Das gehört fest zur Instandhaltung und Hausbetreuung.' },
+    ],
+    links: [
+      { href: '/de/instandhaltung/', label: 'Instandhaltung und Reparaturen' },
+      { href: '/de/hausbetreuung/', label: 'Hausbetreuung und Schlüsselservice' },
+      { href: '/de/wetter/september/', label: 'Das Wetter im September: DANA und erster Regen' },
+    ],
+    related: ['costs:keermuur', 'problems:daklekkage', 'problems:scheuren'],
+    sources: [
+      { name: 'Consorcio de Compensación de Seguros, Schäden durch außergewöhnliche Ereignisse', url: 'https://www.consorseguros.es/' },
+      { name: 'AEMET, was ist eine DANA', url: 'https://www.aemet.es/' },
+    ],
+    ctaTitle: 'Wasser am Haus oder eine reißende Stützmauer?',
+    ctaText: 'Schicken Sie Fotos der Mauer oder der Stelle, wo das Wasser hinläuft. Wir sehen es uns an und nennen Ihnen einen Preis.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
 ];

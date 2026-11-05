@@ -559,4 +559,240 @@ export const problemsNl: Topic[] = [
     minutes: 5,
     published: '2026-11-05',
   },
+  {
+    key: 'waterdruk',
+    slug: 'geen-water-of-waterdruk',
+    title: 'Geen water of te weinig waterdruk in uw huis in Spanje',
+    seoTitle: 'Geen water of lage waterdruk in huis in Spanje: oorzaken, oplossingen en kosten',
+    short: 'Geen water of waterdruk',
+    description: 'Komt er geen of weinig water uit de kraan in uw huis in de Axarquía? Zo vindt u de oorzaak: storing, lege tank, droge put, kapotte pomp of lekkage, en wat de oplossing kost.',
+    lead: 'U komt aan, draait de kraan open en er komt niets, of alleen een dun straaltje. Op een finca met tank of put, maar ook in een dorpshuis aan de waterleiding, gebeurt dat vaker dan u denkt.',
+    keyword: 'geen water spanje huis',
+    dienst: 'onderhoud',
+    onderwerp: 'Ik heb geen water of te weinig waterdruk in mijn huis.',
+    answer: 'Bij een huis aan de waterleiding is het meestal een <strong>storing of onderbreking in het dorp</strong>, een dichte hoofdkraan of een lekkage. Op een finca met tank of put is het vaak een <strong>lege tank</strong>, een <strong>kapotte of drooggelopen pomp</strong>, een <strong>vol filter</strong> of een put die in de zomer minder geeft.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Waar ligt het aan?',
+        table: {
+          head: ['Wat u ziet', 'Waarschijnlijke oorzaak'],
+          rows: [
+            ['Geen water, en de buren ook niet', 'Storing of geplande onderbreking van het waterbedrijf'],
+            ['Geen water na lange afwezigheid', 'Hoofdkraan dicht, of afgesloten wegens een onbetaalde rekening'],
+            ['Pomp slaat steeds aan en af', 'Drukvat zonder lucht, of een lek in de leiding'],
+            ['Pomp draait, maar er komt geen water', 'Tank of put leeg, of de pomp trekt lucht'],
+            ['Druk langzaam minder, water troebel', 'Filter vol of kalk in leidingen en kranen'],
+            ['Hoge waterrekening of natte plek in de tuin', 'Lekkage in de toevoerleiding'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'Wat u zelf kunt doen',
+        html: `<ul>
+<li>Vraag de buren of het gemeentelijk waterbedrijf of er een storing is.</li>
+<li>Controleer de hoofdkraan bij de watermeter en de kraan na de tank.</li>
+<li>Kijk in de tank hoeveel water er nog in zit. Bestel op tijd een tankwagen bij.</li>
+<li>Zet de pomp uit als hij droog draait, anders brandt hij door.</li>
+<li>Kijk of de watermeter draait terwijl alle kranen dicht zijn: dan is er een lek.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'De oplossing en wat die kost',
+        table: {
+          head: ['Oplossing', 'Bij', 'Indicatie'],
+          rows: [
+            ['Lekkage zoeken en repareren', 'Lek in de leiding', '€ 200 – € 1.000'],
+            ['Drukvat vervangen of op druk brengen', 'Pomp die steeds aanslaat', '€ 150 – € 500'],
+            ['Nieuwe pomp met drukvat', 'Kapotte pomp', '€ 600 – € 1.500'],
+            ['Filter vervangen, ontkalker plaatsen', 'Lage druk, kalk', '€ 150 – € 1.500'],
+            ['Grotere of extra watertank', 'Tank steeds leeg', 'zie <a href="/nl/kosten/watertank-en-beerput/">kosten watertank</a>'],
+            ['Droogloopbeveiliging en niveaumelder', 'Pomp beschermen, melding bij lege tank', '€ 150 – € 400'],
+          ],
+          note: 'Indicaties exclusief btw.',
+        },
+      },
+      {
+        id: 'leeg',
+        h: 'Als u er niet bent',
+        html: '<p>Een lek in een leeg huis kan maanden doorlopen, en een pomp die droog draait gaat kapot. Sluit bij vertrek de hoofdkraan en zet de pomp uit, tenzij de tuin water nodig heeft. Met <a href="/nl/sleutelbeheer/">sleutelbeheer</a> kijkt iemand regelmatig naar de meter, de tank en de pomp, en wordt het huis vóór uw komst weer klaargezet.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Waarom valt het water in de zomer soms uit?', a: 'Na droge jaren kunnen gemeenten in de Axarquía het water ’s nachts of op bepaalde uren afsluiten om te besparen. Een kleine buffertank met pomp vangt dat op.' },
+      { q: 'Wat kost een tankwagen water?', a: 'Reken op € 4 tot € 10 per m³ inclusief transport, afhankelijk van de afstand en de toegangsweg.' },
+      { q: 'Kan ik mijn put dieper laten boren?', a: 'Soms, maar daar is een vergunning voor nodig en het is geen garantie op meer water. Laat eerst kijken of de pomp en de leiding in orde zijn.' },
+    ],
+    links: [
+      { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
+      { href: '/nl/kosten/watertank-en-beerput/', label: 'Kosten watertank, boorput en beerput' },
+      { href: '/nl/gidsen/off-grid-wonen-spanje/', label: 'Gids: off-grid wonen in Spanje' },
+    ],
+    related: ['costs:water', 'problems:beerput', 'problems:stroom'],
+    sources: [
+      { name: 'Junta de Andalucía, water en waterrechten', url: 'https://www.juntadeandalucia.es/medioambiente/portal/areas-tematicas/agua' },
+    ],
+    ctaTitle: 'Geen water of te weinig druk?',
+    ctaText: 'Vertel ons hoe uw huis aan water komt en wat er gebeurt. Een loodgieter zoekt de oorzaak.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'beerput',
+    slug: 'beerput-vol-of-stinkt',
+    title: 'Beerput vol of stinkt: wat nu?',
+    seoTitle: 'Beerput vol of stinkt in uw huis in Spanje: oorzaken, oplossingen en kosten',
+    short: 'Beerput',
+    description: 'Ruikt het naar riool rond uw huis in de Axarquía, of loopt de afvoer traag? Zo herkent u een volle of kapotte beerput (fosa séptica), wat u zelf doet en wat legen of vervangen kost.',
+    lead: 'Op veel fincas en in sommige dorpshuizen gaat het afvalwater naar een beerput in de tuin. Zolang hij werkt, denkt niemand eraan. Tot het gaat stinken of de wc niet meer doorspoelt.',
+    keyword: 'beerput spanje',
+    dienst: 'onderhoud',
+    onderwerp: 'Mijn beerput is vol of stinkt.',
+    answer: 'Stank, een trage afvoer of borrelende putten wijzen meestal op een <strong>volle beerput</strong>: laten legen kost € 150 tot € 300. Blijft het probleem, of staat er water op de grond boven de put, dan is het <strong>infiltratieveld verstopt</strong> of de put kapot. Een nieuwe septic tank kost € 2.500 tot € 6.000.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Wat is er aan de hand?',
+        table: {
+          head: ['Wat u ziet of ruikt', 'Waarschijnlijke oorzaak'],
+          rows: [
+            ['Rioollucht in de tuin, wc spoelt traag', 'Beerput vol'],
+            ['Natte, groene of stinkende plek boven de put', 'Infiltratieveld verstopt of put lekt'],
+            ['Rioollucht binnen, vooral in de badkamer', 'Sifon drooggevallen of ontluchting ontbreekt'],
+            ['Borrelende afvoer of gootsteen', 'Verstopping of volle put'],
+            ['Probleem kort na verhuur of een feest', 'Te veel water of vet in korte tijd'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'Wat u zelf kunt doen',
+        html: `<ul>
+<li>Laat na een lange afwezigheid alle kranen en de douche even lopen: een opgedroogde sifon laat rioollucht door.</li>
+<li>Spoel geen vochtige doekjes, vet of bleek in grote hoeveelheden door: dat doodt de bacteriën in de put.</li>
+<li>Rijd en parkeer niet boven de put of het infiltratieveld.</li>
+<li>Noteer wanneer de put voor het laatst is geleegd.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'De oplossing en wat die kost',
+        table: {
+          head: ['Oplossing', 'Bij', 'Indicatie'],
+          rows: [
+            ['Beerput legen', 'Volle put', '€ 150 – € 300'],
+            ['Afvoer ontstoppen', 'Verstopte leiding', '€ 100 – € 300'],
+            ['Ontluchting plaatsen', 'Rioollucht binnen', '€ 200 – € 600'],
+            ['Infiltratieveld vernieuwen', 'Natte plek boven het veld', '€ 1.500 – € 4.000'],
+            ['Nieuwe septic tank of zuivering', 'Kapotte of te kleine put', 'zie <a href="/nl/kosten/watertank-en-beerput/">kosten beerput</a>'],
+          ],
+          note: 'Indicaties exclusief btw.',
+        },
+      },
+      {
+        id: 'verhuur',
+        h: 'Bij verhuur en verkoop',
+        html: '<p>Verhuurt u het huis, dan gebruikt een vol huis in een week net zoveel water als u in een maand. Laat de put vóór het seizoen controleren. Bij verkoop vraagt een goede koper naar de afvoer: een kapotte of niet-toegestane beerput is een reden om over de prijs te praten. Lees ook de gids <a href="/nl/gidsen/huis-verkopen-spanje/">huis verkopen in Spanje</a>.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Moet een beerput regelmatig geleegd worden?', a: 'Ja, meestal eens per twee tot vier jaar. Wacht niet tot hij overloopt: dan raakt ook het infiltratieveld verstopt.' },
+      { q: 'Zijn beerputstarters of bacteriën nodig?', a: 'Meestal niet. Een gezonde put houdt zichzelf op gang. Ze kunnen helpen na een periode met veel bleek of schoonmaakmiddel.' },
+      { q: 'Is mijn oude beerput nog toegestaan?', a: 'Een gemetselde put zonder bodem, waar het afvalwater direct de grond in loopt, voldoet meestal niet aan de huidige regels. Bij een verbouwing of klacht kan vervanging worden geëist.' },
+    ],
+    links: [
+      { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
+      { href: '/nl/kosten/watertank-en-beerput/', label: 'Kosten watertank, boorput en beerput' },
+      { href: '/nl/aankoopkeuring/', label: 'Aankoopkeuring' },
+    ],
+    related: ['costs:water', 'problems:waterdruk', 'problems:vocht'],
+    sources: [
+      { name: 'Junta de Andalucía, lozingen en afvalwater', url: 'https://www.juntadeandalucia.es/medioambiente/portal/areas-tematicas/agua' },
+    ],
+    ctaTitle: 'Problemen met de beerput?',
+    ctaText: 'Vertel ons wat u ziet en ruikt, en stuur een foto van de plek. We regelen legen, reparatie of vervanging.',
+    minutes: 4,
+    published: '2026-11-05',
+  },
+  {
+    key: 'wateroverlast',
+    slug: 'wateroverlast-en-keermuur',
+    title: 'Wateroverlast na zware regen en een scheurende keermuur',
+    seoTitle: 'Wateroverlast en keermuur in Spanje: wat doen na zware regen of een DANA?',
+    short: 'Wateroverlast en keermuur',
+    description: 'Water tegen of in uw huis na zware regen, een weggespoelde toegangsweg of een keermuur die scheurt of helt? Wat u direct doet, hoe u het voorkomt en wat herstel kost in de Axarquía.',
+    lead: 'In de herfst kan in een paar uur meer regen vallen dan in de hele zomer. Op een helling zoekt dat water de kortste weg naar beneden, en die loopt soms tegen of door uw huis.',
+    keyword: 'wateroverlast spanje',
+    dienst: 'onderhoud',
+    onderwerp: 'Ik heb wateroverlast of een keermuur die scheurt.',
+    answer: 'Wateroverlast op een helling komt bijna altijd door <strong>afwatering die ontbreekt of verstopt is</strong>: water van de helling, het terras of de weg dat geen uitweg heeft. Een keermuur die scheurt, bol staat of helt, heeft meestal <strong>geen drainage</strong> erachter. Laat dat snel nakijken: na de volgende bui kan hij bezwijken.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Signalen',
+        table: {
+          head: ['Wat u ziet', 'Wat het betekent'],
+          rows: [
+            ['Modder of water tegen de achtermuur na regen', 'Water van de helling heeft geen afvoer langs het huis'],
+            ['Natte muur binnen na regen, aan de bergkant', 'Doorslaand vocht: grond en water tegen de muur'],
+            ['Keermuur staat bol, helt of heeft schuine scheuren', 'Druk van water achter de muur, risico op bezwijken'],
+            ['Water komt uit de voegen onderaan de muur', 'Muur draineert, dat is goed; geen water is juist een risico'],
+            ['Geulen in de toegangsweg', 'Afstromend water zonder goot of dwarsdrempel'],
+          ],
+        },
+      },
+      {
+        id: 'direct',
+        h: 'Wat u direct doet',
+        html: `<ul>
+<li>Houd afstand van een keermuur die beweegt of scheurt, en parkeer er niet onder of boven.</li>
+<li>Maak goten, putjes en roosters vrij van bladeren en modder.</li>
+<li>Leid water tijdelijk af met zandzakken of een greppel, weg van het huis.</li>
+<li>Maak foto’s van de schade, met datum, voor de verzekering.</li>
+<li>Bij gevaar of grote schade na een storm: bel 112.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'De oplossing en wat die kost',
+        table: {
+          head: ['Oplossing', 'Bij', 'Indicatie'],
+          rows: [
+            ['Drainage langs de achtermuur', 'Water en vocht aan de bergkant', '€ 40 – € 80 per m'],
+            ['Afwateringsgoot op terras of oprit', 'Water dat naar het huis loopt', '€ 60 – € 150 per m'],
+            ['Drainage achter een bestaande keermuur', 'Muur zonder afvoer', '€ 80 – € 200 per m'],
+            ['Keermuur herstellen of herbouwen', 'Scheurende of ingestorte muur', 'zie <a href="/nl/kosten/keermuur-en-afwatering/">kosten keermuur</a>'],
+            ['Toegangsweg herstellen met goten', 'Weggespoelde weg', '€ 40 – € 70 per m²'],
+          ],
+          note: 'Indicaties exclusief btw.',
+        },
+      },
+      {
+        id: 'verzekering',
+        h: 'Verzekering en het Consorcio',
+        html: '<p>Schade door uitzonderlijke regen, overstroming of storm wordt in Spanje vaak niet door de verzekeraar zelf betaald, maar door het <em>Consorcio de Compensación de Seguros</em>, een staatsfonds. Daarvoor moet u wel een opstal- of inboedelverzekering hebben. Meld de schade zo snel mogelijk en bewaar foto’s en facturen.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Wat is een DANA?', a: 'Een koudeluchtbel hoog in de atmosfeer die vooral in september tot november korte, zware regenbuien geeft. In een paar uur kan dan meer dan 100 mm vallen.' },
+      { q: 'Wie is verantwoordelijk voor een keermuur op de grens?', a: 'Dat hangt af van wie de muur heeft gebouwd en welke grond hij tegenhoudt. Kijk in de eigendomsakte en het kadaster, en overleg met de buren voordat u gaat herstellen.' },
+      { q: 'Kan ik dit voorkomen?', a: 'Ja. Laat vóór het najaar goten, putten en de drainage controleren en schoonmaken. Dat is een vast onderdeel van onderhoud en sleutelbeheer.' },
+    ],
+    links: [
+      { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
+      { href: '/nl/sleutelbeheer/', label: 'Sleutelbeheer en toezicht' },
+      { href: '/nl/weer/september/', label: 'Het weer in september: DANA en eerste regen' },
+    ],
+    related: ['costs:keermuur', 'problems:daklekkage', 'problems:scheuren'],
+    sources: [
+      { name: 'Consorcio de Compensación de Seguros, schade door uitzonderlijke gebeurtenissen', url: 'https://www.consorseguros.es/' },
+      { name: 'AEMET, wat is een DANA', url: 'https://www.aemet.es/' },
+    ],
+    ctaTitle: 'Wateroverlast of een keermuur die scheurt?',
+    ctaText: 'Stuur foto’s van de muur of de plek waar het water heen loopt. We komen kijken en geven een prijs.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
 ];

@@ -700,4 +700,145 @@ export const costsDe: Topic[] = [
     minutes: 5,
     published: '2026-11-05',
   },
+  {
+    key: 'water',
+    slug: 'wassertank-und-klaergrube',
+    title: 'Was kosten Wassertank, Brunnen und Klärgrube in Spanien?',
+    seoTitle: 'Wasser und Abwasser auf einer Finca in Spanien: Kosten für Wassertank, Brunnen und Klärgrube (2026)',
+    short: 'Wassertank und Klärgrube',
+    description: 'Was kosten Wasser und Abwasser auf einer Finca in der Axarquía? Preise für einen Wassertank, die Sanierung einer Zisterne (aljibe), einen Brunnen, Pumpe und Filter sowie eine Klärgrube oder Kleinkläranlage.',
+    lead: 'Viele Fincas in der Axarquía hängen nicht an Wasserleitung oder Kanalisation. Nach der Dürre der letzten Jahre wollen Eigentümer mehr Sicherheit beim Wasser, und alte Klärgruben entsprechen oft nicht mehr den Vorschriften. So sieht die Rechnung aus.',
+    keyword: 'wassertank finca spanien',
+    dienst: 'onderhoud',
+    onderwerp: 'Ich hätte gern ein Angebot für Wasser oder Abwasser auf meiner Finca (Wassertank, Brunnen oder Klärgrube).',
+    answer: 'Ein Kunststofftank mit 10.000 Litern kostet aufgestellt und angeschlossen <strong>1.500 bis 4.000 €</strong>. Eine Pumpe mit Druckkessel <strong>600 bis 1.500 €</strong>. Eine neue Klärgrube <strong>2.500 bis 6.000 €</strong>, eine Kleinkläranlage <strong>4.000 bis 9.000 €</strong>. Ein Brunnen mit Genehmigung kommt schnell auf <strong>10.000 bis 30.000 €</strong>. Beträge ohne Mehrwertsteuer.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Preise Wasser',
+        table: {
+          head: ['Was', 'Was dazugehört', 'Richtwert'],
+          rows: [
+            ['Kunststofftank 5.000 Liter', 'Oberirdisch, auf Betonplatte, angeschlossen', '900 – 2.000 €'],
+            ['Kunststofftank 10.000 – 20.000 Liter', 'Oberirdisch oder halb eingegraben', '1.500 – 5.000 €'],
+            ['Gemauerte Zisterne (aljibe) sanieren', 'Reinigen, Risse schließen, Abdichtung', '2.000 – 8.000 €'],
+            ['Neue unterirdische Zisterne', 'Beton, 20 – 40 m³, mit Dachwasser', '8.000 – 20.000 €'],
+            ['Pumpe mit Druckkessel', 'Konstanter Druck im Haus', '600 – 1.500 €'],
+            ['Filter und UV-Lampe', 'Trinkwasser aus Tank oder Brunnen', '800 – 2.000 €'],
+            ['Brunnen (pozo)', 'Genehmigung, Bohrung, Pumpe, Leitung', '10.000 – 30.000 €'],
+          ],
+          note: 'Bohren kostet meist 100 – 200 € pro Meter, und in der Axarquía sind 80 bis 150 Meter Tiefe nicht ungewöhnlich. Es gibt keine Garantie, dass Sie Wasser finden.',
+        },
+      },
+      {
+        id: 'afvoer',
+        h: 'Preise Abwasser',
+        table: {
+          head: ['Was', 'Was dazugehört', 'Richtwert'],
+          rows: [
+            ['Klärgrube leeren', 'Saugwagen, Entsorgung bei einem zugelassenen Betrieb', '150 – 300 €'],
+            ['Neue Klärgrube (fosa séptica)', '2.000 – 4.000 Liter, mit Versickerung oder Filter', '2.500 – 6.000 €'],
+            ['Kleinkläranlage (depuradora)', 'Biologische Reinigung, saubereres Abwasser', '4.000 – 9.000 €'],
+            ['Anschluss an die Kanalisation', 'Wenn ein Kanal in der Nähe liegt', '1.500 – 6.000 €'],
+          ],
+          note: 'Eine alte, gemauerte Grube ohne Boden entspricht meist nicht den Vorschriften. Gemeinde oder Junta können bei einem Umbau oder einer Beschwerde den Ersatz verlangen.',
+        },
+      },
+      {
+        id: 'regels',
+        h: 'Genehmigungen und Regeln',
+        html: `<ul>
+<li><strong>Brunnen:</strong> Sie brauchen eine Genehmigung oder Eintragung bei der Wasserbehörde der Junta de Andalucía. Ein Brunnen ohne Papiere kann beim Verkauf oder bei einer Kontrolle Probleme machen. Für kleine Entnahmen zum Eigenbedarf ist das Verfahren einfacher.</li>
+<li><strong>Abwasser:</strong> Eine Klärgrube oder Kläranlage muss dicht sein und darf Grund- oder Flusswasser nicht verschmutzen. Für die Versickerung kann eine Genehmigung nötig sein.</li>
+<li><strong>Beim Kauf:</strong> Lassen Sie Wasserquelle und Klärgrube immer im <a href="/de/immobiliengutachten/">Gutachten vor dem Kauf</a> prüfen.</li>
+</ul>`,
+      },
+    ],
+    faq: [
+      { q: 'Wie groß muss mein Wassertank sein?', a: 'Rechnen Sie mit 100 bis 150 Litern pro Person und Tag, plus Garten und Pool. Zwei Personen ohne Pool verbrauchen etwa 1.000 Liter pro Woche oder mehr. Ein Tank mit 10.000 Litern gibt dann einige Wochen Puffer zwischen den Lieferungen.' },
+      { q: 'Wie oft muss eine Klärgrube geleert werden?', a: 'Meist alle zwei bis vier Jahre, je nach Größe und wie oft das Haus bewohnt ist. Bei Vermietung öfter.' },
+      { q: 'Ist Wasser aus einem Tank trinkbar?', a: 'Nur mit einem guten Filter und eventuell einer UV-Lampe, und wenn der Tank sauber und geschlossen ist. Lassen Sie das Wasser ab und zu testen.' },
+    ],
+    links: [
+      { href: '/de/ratgeber/autark-leben-spanien/', label: 'Ratgeber: autark leben in Spanien' },
+      { href: '/de/ratgeber/finca-kaufen-spanien/', label: 'Ratgeber: Finca kaufen in Spanien' },
+      { href: '/de/instandhaltung/', label: 'Instandhaltung und Reparaturen' },
+    ],
+    related: ['problems:waterdruk', 'problems:beerput', 'costs:keermuur'],
+    sources: [
+      { name: 'CYPE, Generador de Precios (Baupreise Spanien)', url: 'https://generadordeprecios.info/' },
+      { name: 'Junta de Andalucía, Wasser und Wasserrechte', url: 'https://www.juntadeandalucia.es/medioambiente/portal/areas-tematicas/agua' },
+    ],
+    ctaTitle: 'Wasser oder Abwasser auf Ihrer Finca regeln?',
+    ctaText: 'Sagen Sie uns, wie das Haus jetzt an Wasser kommt und wohin das Abwasser geht. Sie erhalten einen Vorschlag und einen Preis.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'keermuur',
+    slug: 'stuetzmauer-und-entwaesserung',
+    title: 'Was kostet eine Stützmauer oder Entwässerung in Spanien?',
+    seoTitle: 'Stützmauer und Entwässerung in Spanien: Kosten für Mauern, Drainage und Zufahrt (2026)',
+    short: 'Stützmauer und Entwässerung',
+    description: 'Was kostet eine Stützmauer, eine Drainage oder eine betonierte Zufahrt auf einer Finca in der Axarquía? Preise für Beton, Naturstein und Gabionen, und was Sie nach Sturmschäden tun.',
+    lead: 'In der Axarquía stehen viele Häuser am Hang. Eine Stützmauer, die nachgibt, Wasser, das nach einem Sturm gegen das Haus läuft, oder ein Weg, der weggespült wird: Das sind große Arbeiten, die sich mit guter Entwässerung vermeiden lassen.',
+    keyword: 'stützmauer spanien kosten',
+    dienst: 'onderhoud',
+    onderwerp: 'Ich hätte gern ein Angebot für eine Stützmauer, Drainage oder die Zufahrt.',
+    answer: 'Eine Stützmauer aus Beton mit 1,5 bis 2 Metern Höhe kostet in der Axarquía meist <strong>400 bis 1.200 € pro laufendem Meter</strong>, inklusive Fundament und Drainage. Eine Natursteinmauer <strong>150 bis 350 € pro m²</strong> Mauerfläche. Eine Entwässerungsrinne <strong>60 bis 150 € pro Meter</strong>, eine Betonzufahrt <strong>40 bis 70 € pro m²</strong>. Beträge ohne Mehrwertsteuer.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Preise je Arbeit',
+        table: {
+          head: ['Arbeit', 'Was dazugehört', 'Richtwert'],
+          rows: [
+            ['Stützmauer aus Beton 1,5 – 2 m', 'Fundament, Stahlbeton, Drainage dahinter', '400 – 1.200 € pro m'],
+            ['Natursteinmauer', 'Gemauert oder trocken geschichtet, im örtlichen Stil', '150 – 350 € pro m²'],
+            ['Gabionen (gaviones)', 'Stahlkörbe mit Steinen, schnell und wasserdurchlässig', '120 – 250 € pro m²'],
+            ['Eingestürzte Mauer wiederaufbauen', 'Schutt räumen, neues Fundament, neu aufbauen', '2.000 – 10.000 €+'],
+            ['Drainage hinter einer Mauer oder am Haus', 'Drainrohr, Kies, Filtervlies', '40 – 80 € pro m'],
+            ['Entwässerungsrinne (canaleta)', 'Rinne mit Gitter quer über Terrasse oder Einfahrt', '60 – 150 € pro m'],
+            ['Zufahrt aus Beton', 'Erdarbeiten, Bewehrung, Beton mit Profil', '40 – 70 € pro m²'],
+          ],
+          note: 'Für eine Stützmauer über etwa 1,5 Metern oder direkt am Haus verlangt die Gemeinde meist eine Baugenehmigung mit Berechnung durch einen Architekten oder Ingenieur.',
+        },
+      },
+      {
+        id: 'waarom',
+        h: 'Warum Stützmauern versagen',
+        html: `<ul>
+<li><strong>Keine Drainage.</strong> Regenwasser staut sich hinter der Mauer und drückt sie um. Das ist mit Abstand die häufigste Ursache.</li>
+<li><strong>Zu schwaches Fundament</strong> oder eine Mauer ohne Bewehrung, oft ohne Berechnung gebaut.</li>
+<li><strong>Starkregen nach Trockenheit.</strong> Eine DANA im Herbst bringt in wenigen Stunden mehr Wasser, als der Boden aufnehmen kann.</li>
+<li><strong>Wurzeln und Bewuchs</strong>, die die Mauer auseinanderdrücken.</li>
+</ul>
+<p>Lesen Sie auch, <a href="/de/probleme/wasserschaden-und-stuetzmauer/">was Sie bei Wasserschäden oder einer reißenden Stützmauer tun</a>.</p>`,
+      },
+      {
+        id: 'vergunning',
+        h: 'Genehmigung und Außenbereich',
+        html: '<p>Auf ländlichem Grund gelten strenge Regeln. Die Reparatur einer bestehenden Mauer geht meist mit einer Meldung, eine neue Mauer oder ein neuer Weg braucht oft eine Genehmigung. Bei einem Haus mit AFO-Status sind nur Arbeiten für Sicherheit und Instandhaltung erlaubt. Siehe die Seite <em>Baugenehmigung</em> Ihrer Gemeinde unter <a href="/de/orte/">Orte</a> und den Ratgeber <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Zahlt die Versicherung eine eingestürzte Stützmauer?', a: 'Manchmal. Viele Gebäudeversicherungen decken Sturmschäden, schließen aber Schäden durch mangelnde Instandhaltung oder fehlende Drainage aus. Bei außergewöhnlichem Regen kann das Consorcio de Compensación de Seguros zahlen. Lesen Sie den Ratgeber zu Versicherung und Schäden.' },
+      { q: 'Kann eine alte Natursteinmauer stehen bleiben?', a: 'Oft ja, wenn sie noch gerade steht und Wasser durch die Fugen kann. Eine Ausbeulung, verschobene Steine oder Risse sind Gründe, sie prüfen zu lassen.' },
+      { q: 'Wann lässt man diese Arbeiten am besten machen?', a: 'Im Frühjahr oder Sommer, wenn der Boden trocken ist. Nach einem Sturm muss es manchmal sofort sein, um weitere Schäden zu vermeiden.' },
+    ],
+    links: [
+      { href: '/de/instandhaltung/', label: 'Instandhaltung und Reparaturen' },
+      { href: '/de/ratgeber/finca-kaufen-spanien/', label: 'Ratgeber: Finca kaufen in Spanien' },
+      { href: '/de/wetter/oktober/', label: 'Das Wetter im Oktober: der erste Starkregen' },
+    ],
+    related: ['problems:wateroverlast', 'costs:water', 'problems:scheuren'],
+    sources: [
+      { name: 'CYPE, Generador de Precios (Baupreise Spanien)', url: 'https://generadordeprecios.info/' },
+      { name: 'Código Técnico de la Edificación, DB SE-C Cimientos (Fundamente und Stützmauern)', url: 'https://www.codigotecnico.org/' },
+    ],
+    ctaTitle: 'Eine Stützmauer oder Entwässerung nötig?',
+    ctaText: 'Schicken Sie Fotos der Mauer oder der Stelle, wo das Wasser hinläuft. Sie erhalten eine Beratung und einen Preis.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
 ];

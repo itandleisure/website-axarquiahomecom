@@ -1,0 +1,97 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'waarom', label: 'Warum winterfest machen?' },
+  { id: 'herfst', label: 'Checkliste Herbst: vor dem ersten Regen' },
+  { id: 'vertrek', label: 'Checkliste bei der Abreise' },
+  { id: 'winter', label: 'Was im Winter schiefgehen kann' },
+  { id: 'storm', label: 'Checkliste nach einem Sturm' },
+  { id: 'voorjaar', label: 'Checkliste Frühjahr und Sommer' },
+  { id: 'toezicht', label: 'Wer behält das Haus im Blick?' },
+];
+
+const faq = [
+  {
+    q: 'Muss ich das Wasser ablassen wie zu Hause?',
+    a: 'An der Küste friert es so gut wie nie, Ablassen ist dort also nicht nötig. Schließen Sie aber den Haupthahn gegen Lecks. In Bergdörfern über 500 Metern kann es nachts frieren: Lassen Sie Außenleitungen und Leitungen in unbeheizten Räumen entleeren oder dämmen.',
+  },
+  {
+    q: 'Strom an- oder ausschalten, wenn ich weg bin?',
+    a: 'Meist an, für Kühl- oder Gefrierschrank, Alarmanlage, Luftentfeuchter, Poolpumpe und einen smarten Zähler oder eine Kamera. Schalten Sie aber den Boiler und andere Geräte aus, die Sie nicht brauchen.',
+  },
+  {
+    q: 'Was kostet es, das Haus winterfest machen zu lassen?',
+    a: 'Eine Kontrolle mit Reinigung von Rinnen und Abläufen, Prüfung der Dachterrasse und Vorbereitung des Hauses kostet meist 100 bis 300 €. Reparaturen, die dabei auffallen, erhalten Sie zuerst als Angebot.',
+  },
+];
+---
+<Guide lang="de" slug="haus-winterfest-spanien" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Ihr Haus winterfest machen lassen?" ctaText="Wir gehen die Checkliste für Sie durch, machen Fotos und behalten das Haus im Blick, solange Sie weg sind.">
+  <h2 id="waarom">Warum winterfest machen?</h2>
+  <p>Der Winter in der Axarquía ist mild, aber für ein Haus ist er die härteste Jahreszeit. Nach einem trockenen Sommer fällt im Oktober und November der meiste Regen, manchmal in wenigen Stunden. Dann zeigt sich, wo die Dachterrasse undicht ist, ob die Rinnen verstopft sind und ob die Entwässerung ums Haus funktioniert. Danach folgt eine kühle, feuchte Zeit, in der ein verschlossenes Haus muffig wird und schimmelt.</p>
+  <p>Wer den Winter in Deutschland oder anderswo verbringt, sieht das erst bei der Rückkehr. Mit ein paar festen Kontrollen im Herbst vermeiden Sie die meisten Schäden. Unten stehen die Checklisten, die wir selbst verwenden.</p>
+
+  <h2 id="herfst">Checkliste Herbst: vor dem ersten Regen</h2>
+  <p>Erledigen Sie das im September oder Anfang Oktober, vor dem ersten Starkregen.</p>
+  <ul class="checks">
+    <li>Regenrinnen, Fallrohre und Abläufe auf der Dachterrasse reinigen</li>
+    <li>Dachterrasse auf Risse, lose Fliesen und offene Fugen prüfen</li>
+    <li>Ziegeldach auf verrutschte oder gebrochene Ziegel prüfen</li>
+    <li>Entwässerungsrinnen und Gitter auf Terrasse und Einfahrt freimachen</li>
+    <li>Drainage an der Rückwand und hinter Stützmauern prüfen</li>
+    <li>Fenster, Türen und Läden auf Fugen und Schließen prüfen</li>
+    <li>Schornstein fegen lassen, wenn Sie einen Holzofen haben</li>
+    <li>Klimaanlage reinigen und im Heizbetrieb testen lassen</li>
+  </ul>
+  <p>Unsicher beim Dach oder der Dachterrasse? Lesen Sie, <a href="/de/probleme/undichtes-dach/">was Sie bei einem undichten Dach tun</a> und <a href="/de/kosten/dach-und-dachterrasse/">was die Reparatur kostet</a>.</p>
+
+  <h2 id="vertrek">Checkliste bei der Abreise</h2>
+  <ul class="checks">
+    <li>Haupthahn zu; auf einer Finca die Pumpe aus, es sei denn, der Garten braucht Wasser</li>
+    <li>Boiler aus</li>
+    <li>Kühlschrank leer und einen Spalt offen, oder laufen lassen, wenn jemand kontrolliert</li>
+    <li>Luftentfeuchter an, mit Schlauch zum Abfluss</li>
+    <li>Lüftungsgitter offen, Fenster und Läden zu</li>
+    <li>Matratzen hochkant oder abgedeckt, Kissen und Textilien in geschlossenen Schränken</li>
+    <li>Wertsachen weggeschlossen, Alarmanlage an</li>
+    <li>Pool abgedeckt oder Pflege organisiert</li>
+    <li>Gartenmöbel, Sonnenschirme und lose Gegenstände drinnen oder gesichert</li>
+    <li>Schlüssel und Kontaktdaten bei Ihrer Hausbetreuung</li>
+  </ul>
+  <p>In Bergdörfern über etwa 500 Metern, wie Cómpeta, Canillas oder Alfarnate, kann es nachts frieren. Entleeren Sie dort Außenleitungen und Leitungen in unbeheizten Räumen.</p>
+
+  <h2 id="winter">Was im Winter schiefgehen kann</h2>
+  <ul>
+    <li><strong>Undichtigkeit nach Sturm:</strong> Wasser, das wochenlang durch eine Decke zieht. Siehe <a href="/de/probleme/undichtes-dach/">undichtes Dach</a>.</li>
+    <li><strong>Feuchtigkeit und Schimmel:</strong> ein geschlossenes, kaltes Haus ohne Lüftung. Siehe <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit und Schimmel</a>.</li>
+    <li><strong>Stromausfall:</strong> der Gefrierschrank taut ab, die Alarmanlage fällt aus. Siehe <a href="/de/probleme/strom-faellt-aus/">Strom fällt aus</a>.</li>
+    <li><strong>Wasser am Haus:</strong> Schlamm an der Rückwand oder eine reißende Stützmauer. Siehe <a href="/de/probleme/wasserschaden-und-stuetzmauer/">Wasserschaden und Stützmauer</a>.</li>
+    <li><strong>Einbruch oder Besetzung:</strong> ein Haus, das sichtbar leer steht. Siehe <a href="/de/probleme/einbruch-und-hausbesetzer/">Einbruch und Hausbesetzer</a>.</li>
+  </ul>
+
+  <h2 id="storm">Checkliste nach einem Sturm</h2>
+  <p>Nach einer Unwetterwarnung von AEMET (Stufe Orange oder Rot) ist es klug, wenn innerhalb weniger Tage jemand nachsieht.</p>
+  <ul class="checks">
+    <li>Decken und Wände unter Dach und Dachterrasse auf nasse Stellen</li>
+    <li>Rinnen und Abläufe frei, kein stehendes Wasser auf der Dachterrasse</li>
+    <li>Stützmauern, Hänge und die Zufahrt</li>
+    <li>Sicherungskasten: Ist noch alles eingeschaltet?</li>
+    <li>Fenster, Läden und Markisen</li>
+    <li>Bäume und Äste auf oder am Haus</li>
+    <li>Fotos für die Versicherung: siehe den Ratgeber <a href="/de/ratgeber/hausversicherung-spanien/">Versicherung und Schäden</a></li>
+  </ul>
+
+  <h2 id="voorjaar">Checkliste Frühjahr und Sommer</h2>
+  <ul class="checks">
+    <li>Pool in Betrieb nehmen, Filter und Pumpe prüfen</li>
+    <li>Klimaanlage vor den warmen Monaten reinigen</li>
+    <li>Grundstück räumen: In Andalusien ist es Pflicht, trockenes Gestrüpp rund ums Haus gegen Waldbrände zu entfernen</li>
+    <li>Bewässerung auf Sommerbetrieb stellen</li>
+    <li>Solarmodule nach Staub und Saharasand abspritzen</li>
+    <li>Bei Vermietung: Klärgrube, Wasserdruck und Klimaanlage vor den ersten Gästen testen</li>
+  </ul>
+  <p>Monat für Monat, was das Wetter macht und was Sie an Ihrem Haus tun, steht unter <a href="/de/wetter/">Wetter und Klima in der Axarquía</a>.</p>
+
+  <h2 id="toezicht">Wer behält das Haus im Blick?</h2>
+  <p>Ein Nachbar, der ab und zu nachsieht, ist Gold wert. Aber nach einem Sturm, bei einem Leck oder Stromausfall wollen Sie jemanden, der sofort handeln kann, Fotos schickt und einen Handwerker einschaltet. Das ist die <a href="/de/hausbetreuung/">Hausbetreuung</a>: feste Kontrollen nach diesen Checklisten, ein Bericht mit Fotos und vor Ihrer Ankunft ein Haus, das gelüftet, sauber und bereit ist.</p>
+</Guide>

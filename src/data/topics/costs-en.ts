@@ -700,4 +700,145 @@ export const costsEn: Topic[] = [
     minutes: 5,
     published: '2026-11-05',
   },
+  {
+    key: 'water',
+    slug: 'water-tank-and-septic-tank',
+    title: 'How much do a water tank, borehole and septic tank cost in Spain?',
+    seoTitle: 'Water and waste water on a finca in Spain: water tank, borehole and septic tank costs (2026)',
+    short: 'Water tank and septic tank',
+    description: 'What do water and drainage cost on a finca in the Axarquía? Prices for a water tank, repairing a cistern (aljibe), a borehole, pump and filter, and a septic tank or small treatment plant.',
+    lead: 'Many fincas in the Axarquía are not on mains water or mains drainage. After the drought of recent years owners want more certainty about their water, and old septic tanks often no longer meet the rules. This is what it costs.',
+    keyword: 'water tank finca spain',
+    dienst: 'onderhoud',
+    onderwerp: 'I would like a price for water or drainage on my finca (water tank, well or septic tank).',
+    answer: 'A 10,000 litre plastic water tank costs <strong>€1,500 to €4,000</strong> installed and connected. A pump with pressure vessel <strong>€600 to €1,500</strong>. A new septic tank <strong>€2,500 to €6,000</strong>, a compact treatment plant <strong>€4,000 to €9,000</strong>. A borehole with a permit easily comes to <strong>€10,000 to €30,000</strong>. Prices excluding VAT.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Water prices',
+        table: {
+          head: ['Item', 'What it includes', 'Guide price'],
+          rows: [
+            ['Plastic water tank 5,000 litres', 'Above ground, on a concrete base, connected', '€900 – €2,000'],
+            ['Plastic water tank 10,000 – 20,000 litres', 'Above ground or half buried', '€1,500 – €5,000'],
+            ['Repair a built cistern (aljibe)', 'Cleaning, sealing cracks, waterproof coating', '€2,000 – €8,000'],
+            ['New underground cistern', 'Concrete, 20 – 40 m³, collecting roof water', '€8,000 – €20,000'],
+            ['Pump with pressure vessel', 'Constant pressure in the house', '€600 – €1,500'],
+            ['Filter and UV lamp', 'Drinking water from tank or well', '€800 – €2,000'],
+            ['Borehole (pozo)', 'Permit, drilling, pump, pipework', '€10,000 – €30,000'],
+          ],
+          note: 'Drilling usually costs €100 – €200 per metre, and 80 to 150 metres deep is not unusual in the Axarquía. There is no guarantee you will find water.',
+        },
+      },
+      {
+        id: 'afvoer',
+        h: 'Waste water prices',
+        table: {
+          head: ['Item', 'What it includes', 'Guide price'],
+          rows: [
+            ['Emptying a septic tank', 'Tanker, disposal at a licensed plant', '€150 – €300'],
+            ['New septic tank (fosa séptica)', '2,000 – 4,000 litres, with soakaway or filter', '€2,500 – €6,000'],
+            ['Compact treatment plant (depuradora)', 'Biological treatment, cleaner outflow', '€4,000 – €9,000'],
+            ['Connecting to mains drainage', 'If there is a sewer nearby', '€1,500 – €6,000'],
+          ],
+          note: 'An old brick-built cesspit without a base usually does not meet the rules. The town hall or the Junta can require replacement during a renovation or after a complaint.',
+        },
+      },
+      {
+        id: 'regels',
+        h: 'Permits and rules',
+        html: `<ul>
+<li><strong>Borehole:</strong> you need a permit or registration with the Junta de Andalucía water authority. A well without paperwork can cause problems on sale or inspection. For small private abstraction the procedure is simpler.</li>
+<li><strong>Waste water:</strong> a septic tank or treatment plant must be watertight and must not pollute ground or river water. Discharging into the ground can need a permit.</li>
+<li><strong>When buying:</strong> always have the water source and septic tank included in the <a href="/en/property-survey/">pre-purchase survey</a>.</li>
+</ul>`,
+      },
+    ],
+    faq: [
+      { q: 'How big should my water tank be?', a: 'Allow 100 to 150 litres per person per day, plus the garden and pool. Two people without a pool use about 1,000 litres a week or more. A 10,000 litre tank then gives a few weeks’ buffer between deliveries.' },
+      { q: 'How often does a septic tank need emptying?', a: 'Usually every two to four years, depending on its size and how often the house is used. More often if you rent it out.' },
+      { q: 'Is tank water drinkable?', a: 'Only with a good filter and possibly a UV lamp, and if the tank is clean and closed. Have the water tested now and then.' },
+    ],
+    links: [
+      { href: '/en/guides/off-grid-living-spain/', label: 'Guide: off-grid living in Spain' },
+      { href: '/en/guides/buying-a-finca-in-spain/', label: 'Guide: buying a finca in Spain' },
+      { href: '/en/maintenance/', label: 'Maintenance and repairs' },
+    ],
+    related: ['problems:waterdruk', 'problems:beerput', 'costs:keermuur'],
+    sources: [
+      { name: 'CYPE, Generador de Precios (Spanish building prices)', url: 'https://generadordeprecios.info/' },
+      { name: 'Junta de Andalucía, water and water rights', url: 'https://www.juntadeandalucia.es/medioambiente/portal/areas-tematicas/agua' },
+    ],
+    ctaTitle: 'Sorting out water or drainage on your finca?',
+    ctaText: 'Tell us how the house gets its water now and where the waste water goes. You get a proposal and a price.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'keermuur',
+    slug: 'retaining-wall-and-drainage',
+    title: 'How much does a retaining wall or drainage cost in Spain?',
+    seoTitle: 'Retaining walls and drainage in Spain: costs for walls, drains and access tracks (2026)',
+    short: 'Retaining wall and drainage',
+    description: 'What does a retaining wall, drainage or a concrete access track cost on a finca in the Axarquía? Prices for concrete, natural stone and gabions, and what to do after storm damage.',
+    lead: 'Many houses in the Axarquía stand against a slope. A retaining wall that gives way, water running against the house after a storm or a track that washes out: these are big jobs, but good drainage prevents them.',
+    keyword: 'retaining wall spain cost',
+    dienst: 'onderhoud',
+    onderwerp: 'I would like a price for a retaining wall, drainage or the access track.',
+    answer: 'A concrete retaining wall 1.5 to 2 metres high usually costs <strong>€400 to €1,200 per linear metre</strong> in the Axarquía, including foundations and drainage. A natural stone wall <strong>€150 to €350 per m²</strong> of wall face. A drainage channel <strong>€60 to €150 per metre</strong>, a concrete access track <strong>€40 to €70 per m²</strong>. Prices excluding VAT.',
+    sections: [
+      {
+        id: 'prijzen',
+        h: 'Prices by job',
+        table: {
+          head: ['Job', 'What it includes', 'Guide price'],
+          rows: [
+            ['Concrete retaining wall 1.5 – 2 m', 'Foundations, reinforced concrete, drainage behind', '€400 – €1,200 per m'],
+            ['Natural stone wall', 'Mortared or dry-stone, in local style', '€150 – €350 per m²'],
+            ['Gabions (gaviones)', 'Steel cages filled with stone, quick and free-draining', '€120 – €250 per m²'],
+            ['Rebuilding a collapsed wall', 'Clearing rubble, new foundations, rebuilding', '€2,000 – €10,000+'],
+            ['Drainage behind a wall or along the house', 'Drain pipe, gravel, filter fabric', '€40 – €80 per m'],
+            ['Drainage channel (canaleta)', 'Channel with grating across terrace or drive', '€60 – €150 per m'],
+            ['Concrete access track', 'Groundwork, reinforcement, textured concrete', '€40 – €70 per m²'],
+          ],
+          note: 'For a retaining wall over about 1.5 metres, or one next to a house, the town hall usually requires a building permit with calculations by an architect or engineer.',
+        },
+      },
+      {
+        id: 'waarom',
+        h: 'Why retaining walls fail',
+        html: `<ul>
+<li><strong>No drainage.</strong> Rainwater builds up behind the wall and pushes it over. This is by far the most common cause.</li>
+<li><strong>Foundations too light</strong> or a wall without reinforcement, often built without calculations.</li>
+<li><strong>Heavy rain after drought.</strong> An autumn DANA can bring more water in a few hours than the ground can take.</li>
+<li><strong>Roots and vegetation</strong> pushing the wall apart.</li>
+</ul>
+<p>See also <a href="/en/problems/flooding-and-retaining-walls/">what to do about flooding or a cracking retaining wall</a>.</p>`,
+      },
+      {
+        id: 'vergunning',
+        h: 'Permits and rural land',
+        html: '<p>Strict rules apply on rural land. Repairing an existing wall can usually be done with a notification; a new wall or a new track often needs a permit. On a house with AFO status only work needed for safety and maintenance is allowed. See the <em>Building permit</em> page of your municipality under <a href="/en/places/">Places</a> and the guide <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation</a>.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Does insurance cover a collapsed retaining wall?', a: 'Sometimes. Many buildings policies cover storm damage but exclude damage from poor maintenance or missing drainage. For exceptional rain the Consorcio de Compensación de Seguros may pay. See the guide on insurance and damage.' },
+      { q: 'Can an old stone wall stay?', a: 'Often, if it is still straight and water can get through the joints. Bulging, displaced stones or cracks are signs to have it looked at.' },
+      { q: 'When is the best time for this work?', a: 'Spring or summer, when the ground is dry. After a storm it sometimes has to be done straight away to prevent further damage.' },
+    ],
+    links: [
+      { href: '/en/maintenance/', label: 'Maintenance and repairs' },
+      { href: '/en/guides/buying-a-finca-in-spain/', label: 'Guide: buying a finca in Spain' },
+      { href: '/en/weather/october/', label: 'The weather in October: the first heavy rain' },
+    ],
+    related: ['problems:wateroverlast', 'costs:water', 'problems:scheuren'],
+    sources: [
+      { name: 'CYPE, Generador de Precios (Spanish building prices)', url: 'https://generadordeprecios.info/' },
+      { name: 'Código Técnico de la Edificación, DB SE-C Cimientos (foundations and retaining walls)', url: 'https://www.codigotecnico.org/' },
+    ],
+    ctaTitle: 'Need a retaining wall or drainage?',
+    ctaText: 'Send photos of the wall or of where the water runs. You get advice and a price.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
 ];
