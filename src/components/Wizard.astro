@@ -230,7 +230,7 @@ const perDienst = Object.fromEntries(groepen.map(([k, g]) => [k, {
           </div>
           <div class="field" style="margin-top:20px">
             <label for="type" data-type-label>{T.typeLabel}</label>
-            <select id="type" name="type_woning" aria-label={T.typeLabel}>
+            <select id="type" name="type_woning" aria-label={T.typeLabel} required>
               <option value="">{T.typeChoose}</option>
               {T.typen.map((t, i) => <option value={NL.typen[i]}>{t}</option>)}
             </select>
@@ -448,7 +448,7 @@ const perDienst = Object.fromEntries(groepen.map(([k, g]) => [k, {
         }
       } else if (f instanceof HTMLInputElement && f.type === 'checkbox') {
         if (!f.checked) { errorEl.textContent = M.consent; return false; }
-      } else if (f instanceof HTMLSelectElement && f.closest('[data-q]') && !f.value) {
+      } else if (f instanceof HTMLSelectElement && !f.value) {
         errorEl.textContent = M.choose;
         f.focus();
         return false;
@@ -471,13 +471,21 @@ const perDienst = Object.fromEntries(groepen.map(([k, g]) => [k, {
     return true;
   }
 
+  function onlyQuestion(radio: HTMLInputElement): boolean {
+    const others = Array.from(steps[index].querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>('input, select, textarea'))
+      .filter((f) => f.name !== radio.name && f.type !== 'hidden' && !f.disabled && !off(f) && !f.closest('.hp'));
+    return others.length === 0;
+  }
+
   next.addEventListener('click', () => { if (valid(index)) show(index + 1); });
   prev.addEventListener('click', () => show(index - 1));
   form.addEventListener('change', (e) => {
     const t = e.target as HTMLInputElement;
     if (t.name === 'dienst') applyDienst();
     else if (t.closest('[data-groep]')) { applyShowIf(); syncDisabled(); }
-    if (t.type === 'radio' && index < 2) setTimeout(() => valid(index) && show(index + 1), 180);
+    // Alleen automatisch door als de stap uit één keuzevraag bestaat (stap 1). Staan er meer vragen
+    // in de stap, zoals het type woning in stap 2, dan gaat de klant zelf verder met Volgende.
+    if (t.type === 'radio' && onlyQuestion(t)) setTimeout(() => valid(index) && show(index + 1), 180);
   });
 
   // Foto's verkleinen in de browser (max. 1600 px) zodat het versturen snel gaat
