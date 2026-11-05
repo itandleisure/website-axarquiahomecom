@@ -1,12 +1,11 @@
 ---
 import Guide from '../../../components/Guide.astro';
-import Todo from '../../../components/Todo.astro';
 
 const toc = [
   { id: 'kurz', label: 'Kurze Antwort' },
   { id: 'typisch', label: 'Warum Häuser hier schwierig sind' },
   { id: 'massnahmen', label: 'Die Maßnahmen im Überblick' },
-  { id: 'kosten', label: 'Was teuer ist und was nicht' },
+  { id: 'kosten', label: 'Was kostet es in Ihrem Haus?' },
   { id: 'treppenlift', label: 'Treppenlift, Plattformlift oder Hauslift' },
   { id: 'regeln', label: 'Genehmigung, MwSt. und Eigentümergemeinschaft' },
   { id: 'vorgehen', label: 'So gehen Sie vor' },
@@ -61,29 +60,28 @@ const faq = [
     <li>Ein Notrufknopf oder eine smarte Türklingel, damit Familie oder Nachbarn mit nach dem Rechten sehen können.</li>
   </ul>
 
-  <h2 id="kosten">Was teuer ist und was nicht</h2>
-  <p>Jedes Haus ist anders, deshalb nennen wir keine Beträge, sondern eine Preisklasse. So sehen Sie schnell, wo Sie mit wenig Geld viel erreichen und was eine größere Investition ist.</p>
+  <h2 id="kosten">Was kostet es in Ihrem Haus?</h2>
+  <p>Was es kostet, hängt ganz von Ihrem Haus ab: wie der Abfluss verläuft, was unter den Fliesen liegt, wie gut das Haus erreichbar ist und was Sie sich wünschen. Deshalb nennen wir hier keine Beträge. Das sind die Möglichkeiten:</p>
   <table class="prices">
-    <thead><tr><th>Maßnahme</th><th>Was sie löst</th><th>Preisklasse</th></tr></thead>
+    <thead><tr><th>Maßnahme</th><th>Was sie löst</th></tr></thead>
     <tbody>
-      <tr><td>Haltegriffe, Duschsitz, höheres WC</td><td>Sicher duschen und aufstehen</td><td>€</td></tr>
-      <tr><td>Handläufe auf beiden Seiten der Treppe</td><td>Weniger Sturzgefahr</td><td>€</td></tr>
-      <tr><td>Licht mit Bewegungsmeldern, Notrufknopf</td><td>Sehen, wohin man tritt, Hilfe rufen können</td><td>€</td></tr>
-      <tr><td>Rutschhemmende Behandlung vorhandener Fliesen</td><td>Weniger glatt im Haus und am Pool</td><td>€</td></tr>
-      <tr><td>Schwellen entfernen, Übergänge angleichen</td><td>Kein Stolpern mehr, Platz für den Rollator</td><td>€€</td></tr>
-      <tr><td>Rampe oder angepasste Außentreppe</td><td>Bequem ins Haus und auf die Terrasse</td><td>€€</td></tr>
-      <tr><td>Innentüren verbreitern</td><td>Durchgang für Rollator oder Rollstuhl</td><td>€€</td></tr>
-      <tr><td>Wanne oder Duschtasse durch bodengleiche Dusche ersetzen</td><td>Kein Einstieg mehr</td><td>€€</td></tr>
-      <tr><td>Treppenlift, gerade Treppe</td><td>Treppe bleibt ohne Steigen nutzbar</td><td>€€</td></tr>
-      <tr><td>Komplettes, schwellenloses und angepasstes Bad</td><td>Ein Bad für die nächsten zwanzig Jahre</td><td>€€€</td></tr>
-      <tr><td>Treppenlift für eine kurvige Treppe oder draußen</td><td>Schiene nach Maß, wetterfest</td><td>€€€</td></tr>
-      <tr><td>Schlafzimmer mit Bad im Erdgeschoss</td><td>Wohnen auf einer Ebene</td><td>€€€€</td></tr>
-      <tr><td>Plattformlift oder kleiner Hauslift</td><td>Jede Etage erreichbar, auch mit Rollstuhl</td><td>€€€€</td></tr>
+      <tr><td>Haltegriffe, Duschsitz, höheres WC</td><td>Sicher duschen und aufstehen</td></tr>
+      <tr><td>Handläufe auf beiden Seiten der Treppe</td><td>Weniger Sturzgefahr</td></tr>
+      <tr><td>Licht mit Bewegungsmeldern, Notrufknopf</td><td>Sehen, wohin man tritt, Hilfe rufen können</td></tr>
+      <tr><td>Rutschhemmende Behandlung vorhandener Fliesen</td><td>Weniger glatt im Haus und am Pool</td></tr>
+      <tr><td>Schwellen entfernen, Übergänge angleichen</td><td>Kein Stolpern mehr, Platz für den Rollator</td></tr>
+      <tr><td>Rampe oder angepasste Außentreppe</td><td>Bequem ins Haus und auf die Terrasse</td></tr>
+      <tr><td>Innentüren verbreitern</td><td>Durchgang für Rollator oder Rollstuhl</td></tr>
+      <tr><td>Wanne oder Duschtasse durch bodengleiche Dusche ersetzen</td><td>Kein Einstieg mehr</td></tr>
+      <tr><td>Treppenlift, gerade Treppe</td><td>Treppe bleibt ohne Steigen nutzbar</td></tr>
+      <tr><td>Komplettes, schwellenloses und angepasstes Bad</td><td>Ein Bad für die nächsten zwanzig Jahre</td></tr>
+      <tr><td>Treppenlift für eine kurvige Treppe oder draußen</td><td>Schiene nach Maß, wetterfest</td></tr>
+      <tr><td>Schlafzimmer mit Bad im Erdgeschoss</td><td>Wohnen auf einer Ebene</td></tr>
+      <tr><td>Plattformlift oder kleiner Hauslift</td><td>Jede Etage erreichbar, auch mit Rollstuhl</td></tr>
     </tbody>
   </table>
-  <p class="note">€ = kleine Arbeit · €€ = mittlerer Umbau · €€€ = größerer Umbau · €€€€ = große Investition. Was es in Ihrem Haus kostet, hängt davon ab, wie der Abfluss verläuft, was unter den Fliesen liegt und wie gut das Haus erreichbar ist. Nach einer Besichtigung bekommen Sie ein Angebot pro Maßnahme.</p>
-  <Todo label="controle van de prijsklassen (vooral traplift en huislift) door het bouwbedrijf." />
   <p>Mehr über ein neues Bad lesen Sie unter <a href="/de/kosten/bad-renovieren/">Bad renovieren</a>.</p>
+  <p><strong>Möchten Sie wissen, was es in Ihrem Haus kostet?</strong> Schicken Sie uns Fotos und Ihre Wünsche über das <a href="/de/anfrage/?dienst=renovatie">Anfrageformular</a>. Sie bekommen ein kostenloses, unverbindliches Angebot pro Position und entscheiden selbst, was zuerst kommt.</p>
 
   <h2 id="treppenlift">Treppenlift, Plattformlift oder Hauslift</h2>
   <ul>

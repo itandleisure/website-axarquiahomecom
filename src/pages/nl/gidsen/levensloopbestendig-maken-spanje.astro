@@ -1,12 +1,11 @@
 ---
 import Guide from '../../../components/Guide.astro';
-import Todo from '../../../components/Todo.astro';
 
 const toc = [
   { id: 'kort', label: 'Kort antwoord' },
   { id: 'typisch', label: 'Waarom huizen hier lastig zijn' },
   { id: 'ingrepen', label: 'De ingrepen op een rij' },
-  { id: 'kosten', label: 'Wat is duur en wat valt mee?' },
+  { id: 'kosten', label: 'Wat kost het in uw huis?' },
   { id: 'traplift', label: 'Traplift, plateaulift of huislift' },
   { id: 'regels', label: 'Vergunning, btw en de VvE' },
   { id: 'aanpak', label: 'Zo pakt u het aan' },
@@ -61,29 +60,28 @@ const faq = [
     <li>Een alarmknop of slimme deurbel, zodat familie of een buurman kan meekijken.</li>
   </ul>
 
-  <h2 id="kosten">Wat is duur en wat valt mee?</h2>
-  <p>Elk huis is anders, dus we geven geen bedragen maar een prijsklasse. Zo ziet u snel waar u met weinig geld veel bereikt en wat een grotere investering is.</p>
+  <h2 id="kosten">Wat kost het in uw huis?</h2>
+  <p>Wat het kost, hangt helemaal af van uw huis: hoe de afvoer loopt, wat er onder de tegels zit, hoe bereikbaar de woning is en wat u zelf wilt. Daarom noemen we hier geen bedragen. Dit zijn de mogelijkheden:</p>
   <table class="prices">
-    <thead><tr><th>Ingreep</th><th>Wat het oplost</th><th>Prijsklasse</th></tr></thead>
+    <thead><tr><th>Ingreep</th><th>Wat het oplost</th></tr></thead>
     <tbody>
-      <tr><td>Steunbeugels, douchezitting, hoger toilet</td><td>Veilig douchen en opstaan</td><td>€</td></tr>
-      <tr><td>Leuningen aan beide kanten van de trap</td><td>Minder kans op vallen</td><td>€</td></tr>
-      <tr><td>Verlichting met bewegingsmelders, alarmknop</td><td>Zien waar u loopt, hulp kunnen roepen</td><td>€</td></tr>
-      <tr><td>Antislipbehandeling van bestaande tegels</td><td>Minder glad binnen en rond het zwembad</td><td>€</td></tr>
-      <tr><td>Drempels weg en overgangen gelijk maken</td><td>Niet meer struikelen, ruimte voor rollator</td><td>€€</td></tr>
-      <tr><td>Hellingbaan of aangepaste buitentrap</td><td>Makkelijk naar binnen en naar het terras</td><td>€€</td></tr>
-      <tr><td>Binnendeuren verbreden</td><td>Doorgang voor rollator of rolstoel</td><td>€€</td></tr>
-      <tr><td>Bad of douchebak vervangen door inloopdouche</td><td>Geen opstap meer</td><td>€€</td></tr>
-      <tr><td>Traplift, rechte trap</td><td>Trap blijft bruikbaar zonder klimmen</td><td>€€</td></tr>
-      <tr><td>Complete badkamer drempelloos en aangepast</td><td>Een badkamer voor de komende twintig jaar</td><td>€€€</td></tr>
-      <tr><td>Traplift voor een trap met bocht, of buiten</td><td>Rail op maat, weerbestendig</td><td>€€€</td></tr>
-      <tr><td>Slaapkamer met badkamer op de begane grond</td><td>Wonen op één verdieping</td><td>€€€€</td></tr>
-      <tr><td>Plateaulift of kleine huislift</td><td>Alle verdiepingen bereikbaar, ook met rolstoel</td><td>€€€€</td></tr>
+      <tr><td>Steunbeugels, douchezitting, hoger toilet</td><td>Veilig douchen en opstaan</td></tr>
+      <tr><td>Leuningen aan beide kanten van de trap</td><td>Minder kans op vallen</td></tr>
+      <tr><td>Verlichting met bewegingsmelders, alarmknop</td><td>Zien waar u loopt, hulp kunnen roepen</td></tr>
+      <tr><td>Antislipbehandeling van bestaande tegels</td><td>Minder glad binnen en rond het zwembad</td></tr>
+      <tr><td>Drempels weg en overgangen gelijk maken</td><td>Niet meer struikelen, ruimte voor rollator</td></tr>
+      <tr><td>Hellingbaan of aangepaste buitentrap</td><td>Makkelijk naar binnen en naar het terras</td></tr>
+      <tr><td>Binnendeuren verbreden</td><td>Doorgang voor rollator of rolstoel</td></tr>
+      <tr><td>Bad of douchebak vervangen door inloopdouche</td><td>Geen opstap meer</td></tr>
+      <tr><td>Traplift, rechte trap</td><td>Trap blijft bruikbaar zonder klimmen</td></tr>
+      <tr><td>Complete badkamer drempelloos en aangepast</td><td>Een badkamer voor de komende twintig jaar</td></tr>
+      <tr><td>Traplift voor een trap met bocht, of buiten</td><td>Rail op maat, weerbestendig</td></tr>
+      <tr><td>Slaapkamer met badkamer op de begane grond</td><td>Wonen op één verdieping</td></tr>
+      <tr><td>Plateaulift of kleine huislift</td><td>Alle verdiepingen bereikbaar, ook met rolstoel</td></tr>
     </tbody>
   </table>
-  <p class="note">€ = kleine klus · €€ = gemiddelde verbouwing · €€€ = forse verbouwing · €€€€ = grote investering. Wat het in uw huis kost, hangt af van hoe de afvoer loopt, wat er onder de tegels zit en hoe bereikbaar de woning is. Na een bezoek krijgt u een offerte per ingreep.</p>
-  <Todo label="controle van de prijsklassen (vooral traplift en huislift) door het bouwbedrijf." />
   <p>Meer over een nieuwe badkamer leest u in <a href="/nl/kosten/badkamer-renoveren/">badkamer renoveren</a>.</p>
+  <p><strong>Benieuwd wat het in uw huis kost?</strong> Stuur ons foto’s en uw wensen via het <a href="/nl/aanvraag/?dienst=renovatie">aanvraagformulier</a>. U krijgt een vrijblijvende offerte per onderdeel, zodat u zelf kiest wat eerst moet.</p>
 
   <h2 id="traplift">Traplift, plateaulift of huislift</h2>
   <ul>

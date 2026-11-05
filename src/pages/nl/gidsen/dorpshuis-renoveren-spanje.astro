@@ -1,6 +1,5 @@
 ---
 import Guide from '../../../components/Guide.astro';
-import Todo from '../../../components/Todo.astro';
 
 const toc = [
   { id: 'kort', label: 'Kort antwoord' },
@@ -9,7 +8,7 @@ const toc = [
   { id: 'straatjes', label: 'Smalle straatjes zonder bouwtoegang' },
   { id: 'dak', label: 'Dak en dakterras' },
   { id: 'regels', label: 'Regels in de oude dorpskern' },
-  { id: 'kosten', label: 'Wat is duur en wat valt mee?' },
+  { id: 'kosten', label: 'Wat kost het in uw huis?' },
   { id: 'tips', label: 'Tips voor kopers' },
 ];
 
@@ -80,28 +79,25 @@ const faq = [
   </ul>
   <p>Binnenwerk valt meestal onder een eenvoudige melding. Alles wat aan de buitenkant zichtbaar verandert, of ingrijpt in de constructie, vraagt meestal een vergunning met een tekening van een architect. Wij werken daarvoor met een vaste architect en gestor die de regels per gemeente kennen.</p>
 
-  <h2 id="kosten">Wat is duur en wat valt mee?</h2>
-  <p>Geen twee dorpshuizen zijn gelijk, dus we geven geen bedragen maar een prijsklasse. Zo ziet u waar het grote geld zit.</p>
+  <h2 id="kosten">Wat kost het in uw huis?</h2>
+  <p>Wat het kost, hangt helemaal af van uw huis: hoe de afvoer loopt, wat er onder de tegels zit, hoe bereikbaar de woning is en wat u zelf wilt. Daarom noemen we hier geen bedragen. Dit zijn de mogelijkheden:</p>
   <table class="prices">
-    <thead><tr><th>Onderdeel</th><th>Wanneer nodig</th><th>Prijsklasse</th></tr></thead>
+    <thead><tr><th>Onderdeel</th><th>Wanneer nodig</th></tr></thead>
     <tbody>
-      <tr><td>Vergunning voor container of steiger op straat</td><td>Bij bijna elke verbouwing in de oude kern</td><td>€</td></tr>
-      <tr><td>Balken behandelen tegen houtworm of termieten</td><td>Bij gaatjes, houtmeel of hol klinkend hout</td><td>€</td></tr>
-      <tr><td>Muren ventileren, kalkverf in plaats van plastic verf</td><td>Bij bladderende verf en vochtplekken</td><td>€</td></tr>
-      <tr><td>Enkele balken vervangen of koppen versterken</td><td>Bij doorbuigen of rotte uiteinden</td><td>€€</td></tr>
-      <tr><td>Oude pleister eraf, nieuwe kalkpleister</td><td>Bij hardnekkig vocht en zoutkorsten</td><td>€€</td></tr>
-      <tr><td>Injecteren tegen optrekkend vocht</td><td>Bij vocht onderin de muur</td><td>€€</td></tr>
-      <tr><td>Dakterras opnieuw waterdicht maken</td><td>Bij lekkage of vochtplekken in het plafond eronder</td><td>€€</td></tr>
-      <tr><td>Toeslag voor bereikbaarheid (alles met de hand)</td><td>In straatjes zonder toegang voor een busje</td><td>€€</td></tr>
-      <tr><td>Hele houten vloer of plafond vernieuwen</td><td>Als veel balken slecht zijn</td><td>€€€</td></tr>
-      <tr><td>Dak van dakpannen vernieuwen met isolatie</td><td>Bij oude, lekkende of doorgezakte daken</td><td>€€€</td></tr>
-      <tr><td>Elektra en waterleidingen volledig vernieuwen</td><td>Bij vrijwel elk huis ouder dan 30 jaar</td><td>€€€</td></tr>
-      <tr><td>Totaalrenovatie</td><td>Alles eruit: balken, leidingen, indeling, dak</td><td>€€€€</td></tr>
+      <tr><td>Vergunning voor container of steiger op straat</td><td>Bij bijna elke verbouwing in de oude kern</td></tr>
+      <tr><td>Balken behandelen tegen houtworm of termieten</td><td>Bij gaatjes, houtmeel of hol klinkend hout</td></tr>
+      <tr><td>Muren ventileren, kalkverf in plaats van plastic verf</td><td>Bij bladderende verf en vochtplekken</td></tr>
+      <tr><td>Enkele balken vervangen of koppen versterken</td><td>Bij doorbuigen of rotte uiteinden</td></tr>
+      <tr><td>Oude pleister eraf, nieuwe kalkpleister</td><td>Bij hardnekkig vocht en zoutkorsten</td></tr>
+      <tr><td>Injecteren tegen optrekkend vocht</td><td>Bij vocht onderin de muur</td></tr>
+      <tr><td>Dakterras opnieuw waterdicht maken</td><td>Bij lekkage of vochtplekken in het plafond eronder</td></tr>
+      <tr><td>Hele houten vloer of plafond vernieuwen</td><td>Als veel balken slecht zijn</td></tr>
+      <tr><td>Dak van dakpannen vernieuwen met isolatie</td><td>Bij oude, lekkende of doorgezakte daken</td></tr>
+      <tr><td>Elektra en waterleidingen volledig vernieuwen</td><td>Bij vrijwel elk huis ouder dan 30 jaar</td></tr>
+      <tr><td>Totaalrenovatie</td><td>Alles eruit: balken, leidingen, indeling, dak</td></tr>
     </tbody>
   </table>
-  <p class="note">€ = kleine klus · €€ = gemiddelde klus · €€€ = forse verbouwing · €€€€ = grote investering. Bij oude huizen komt pas bij het slopen aan het licht hoe het er echt voor staat; houd altijd een buffer aan.</p>
-  <Todo label="controle van de prijsklassen door het bouwbedrijf." />
-  <p>Wilt u toch een eerste begroting in euro’s? Kijk dan bij <a href="/nl/gidsen/kosten-huis-renoveren-spanje/">wat kost een huis renoveren</a> of vraag een offerte na een bezoek.</p>
+  <p><strong>Benieuwd wat het in uw huis kost?</strong> Stuur ons foto’s en uw wensen via het <a href="/nl/aanvraag/?dienst=renovatie">aanvraagformulier</a>. U krijgt een vrijblijvende offerte per onderdeel, zodat u zelf kiest wat eerst moet.</p>
 
   <h2 id="tips">Tips voor kopers</h2>
   <ul>

@@ -1,6 +1,5 @@
 ---
 import Guide from '../../../components/Guide.astro';
-import Todo from '../../../components/Todo.astro';
 
 const toc = [
   { id: 'kurz', label: 'Kurze Antwort' },
@@ -9,7 +8,7 @@ const toc = [
   { id: 'gassen', label: 'Enge Gassen ohne Baustellenzufahrt' },
   { id: 'dach', label: 'Dach und Dachterrasse' },
   { id: 'regeln', label: 'Regeln im alten Ortskern' },
-  { id: 'kosten', label: 'Was teuer ist und was nicht' },
+  { id: 'kosten', label: 'Was kostet es in Ihrem Haus?' },
   { id: 'tipps', label: 'Tipps für Käufer' },
 ];
 
@@ -80,28 +79,25 @@ const faq = [
   </ul>
   <p>Innenarbeiten fallen meist unter eine einfache Anzeige. Alles, was außen sichtbar verändert wird oder in die Statik eingreift, braucht meist eine Genehmigung mit Plänen eines Architekten. Wir arbeiten dafür mit einem festen Architekten und Gestor, die die Regeln jeder Gemeinde kennen.</p>
 
-  <h2 id="kosten">Was teuer ist und was nicht</h2>
-  <p>Kein Dorfhaus gleicht dem anderen, deshalb nennen wir keine Beträge, sondern eine Preisklasse. So sehen Sie, wo das große Geld steckt.</p>
+  <h2 id="kosten">Was kostet es in Ihrem Haus?</h2>
+  <p>Was es kostet, hängt ganz von Ihrem Haus ab: wie der Abfluss verläuft, was unter den Fliesen liegt, wie gut das Haus erreichbar ist und was Sie sich wünschen. Deshalb nennen wir hier keine Beträge. Das sind die Möglichkeiten:</p>
   <table class="prices">
-    <thead><tr><th>Position</th><th>Wann nötig</th><th>Preisklasse</th></tr></thead>
+    <thead><tr><th>Position</th><th>Wann nötig</th></tr></thead>
     <tbody>
-      <tr><td>Genehmigung für Container oder Gerüst auf der Straße</td><td>Bei fast jeder Renovierung im Ortskern</td><td>€</td></tr>
-      <tr><td>Balken gegen Holzwurm oder Termiten behandeln</td><td>Bei Löchern, Holzmehl oder hohl klingendem Holz</td><td>€</td></tr>
-      <tr><td>Mauern lüften, Kalkfarbe statt Kunststofffarbe</td><td>Bei abblätternder Farbe und feuchten Flecken</td><td>€</td></tr>
-      <tr><td>Einzelne Balken ersetzen oder Köpfe verstärken</td><td>Bei Durchhängen oder verfaulten Enden</td><td>€€</td></tr>
-      <tr><td>Alten Putz entfernen, neuer Kalkputz</td><td>Bei hartnäckiger Feuchtigkeit und Salzkrusten</td><td>€€</td></tr>
-      <tr><td>Injektion gegen aufsteigende Feuchtigkeit</td><td>Bei Feuchtigkeit unten in der Mauer</td><td>€€</td></tr>
-      <tr><td>Dachterrasse neu abdichten</td><td>Bei Undichtigkeit oder Flecken an der Decke darunter</td><td>€€</td></tr>
-      <tr><td>Zuschlag für Erreichbarkeit (alles von Hand)</td><td>In Gassen ohne Zufahrt für einen Transporter</td><td>€€</td></tr>
-      <tr><td>Ganzen Holzboden oder ganze Decke erneuern</td><td>Wenn viele Balken schlecht sind</td><td>€€€</td></tr>
-      <tr><td>Ziegeldach mit Dämmung erneuern</td><td>Bei alten, undichten oder durchgesackten Dächern</td><td>€€€</td></tr>
-      <tr><td>Elektrik und Wasserleitungen komplett erneuern</td><td>Bei fast jedem Haus über 30 Jahre</td><td>€€€</td></tr>
-      <tr><td>Komplettrenovierung</td><td>Alles raus: Balken, Leitungen, Aufteilung, Dach</td><td>€€€€</td></tr>
+      <tr><td>Genehmigung für Container oder Gerüst auf der Straße</td><td>Bei fast jeder Renovierung im Ortskern</td></tr>
+      <tr><td>Balken gegen Holzwurm oder Termiten behandeln</td><td>Bei Löchern, Holzmehl oder hohl klingendem Holz</td></tr>
+      <tr><td>Mauern lüften, Kalkfarbe statt Kunststofffarbe</td><td>Bei abblätternder Farbe und feuchten Flecken</td></tr>
+      <tr><td>Einzelne Balken ersetzen oder Köpfe verstärken</td><td>Bei Durchhängen oder verfaulten Enden</td></tr>
+      <tr><td>Alten Putz entfernen, neuer Kalkputz</td><td>Bei hartnäckiger Feuchtigkeit und Salzkrusten</td></tr>
+      <tr><td>Injektion gegen aufsteigende Feuchtigkeit</td><td>Bei Feuchtigkeit unten in der Mauer</td></tr>
+      <tr><td>Dachterrasse neu abdichten</td><td>Bei Undichtigkeit oder Flecken an der Decke darunter</td></tr>
+      <tr><td>Ganzen Holzboden oder ganze Decke erneuern</td><td>Wenn viele Balken schlecht sind</td></tr>
+      <tr><td>Ziegeldach mit Dämmung erneuern</td><td>Bei alten, undichten oder durchgesackten Dächern</td></tr>
+      <tr><td>Elektrik und Wasserleitungen komplett erneuern</td><td>Bei fast jedem Haus über 30 Jahre</td></tr>
+      <tr><td>Komplettrenovierung</td><td>Alles raus: Balken, Leitungen, Aufteilung, Dach</td></tr>
     </tbody>
   </table>
-  <p class="note">€ = kleine Arbeit · €€ = mittlere Arbeit · €€€ = größerer Umbau · €€€€ = große Investition. Bei alten Häusern zeigt sich der wahre Zustand erst beim Abbruch; planen Sie immer eine Reserve ein.</p>
-  <Todo label="controle van de prijsklassen door het bouwbedrijf." />
-  <p>Sie möchten doch ein erstes Budget in Euro? Siehe <a href="/de/ratgeber/renovierungskosten-spanien/">Was kostet die Renovierung eines Hauses in Spanien</a>, oder fragen Sie nach einer Besichtigung ein Angebot an.</p>
+  <p><strong>Möchten Sie wissen, was es in Ihrem Haus kostet?</strong> Schicken Sie uns Fotos und Ihre Wünsche über das <a href="/de/anfrage/?dienst=renovatie">Anfrageformular</a>. Sie bekommen ein kostenloses, unverbindliches Angebot pro Position und entscheiden selbst, was zuerst kommt.</p>
 
   <h2 id="tipps">Tipps für Käufer</h2>
   <ul>
