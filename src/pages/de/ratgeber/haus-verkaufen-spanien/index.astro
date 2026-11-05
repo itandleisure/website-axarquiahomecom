@@ -1,0 +1,120 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
+
+const toc = [
+  { id: 'warum', label: 'Warum Vorbereitung sich lohnt' },
+  { id: 'schritte', label: 'Plan in fünf Phasen' },
+  { id: 'unterlagen', label: 'Unterlagen und Legalisierung' },
+  { id: 'reparaturen', label: 'Reparaturen, die sich lohnen' },
+  { id: 'kosten', label: 'Kosten für den Verkäufer' },
+  { id: 'ferne', label: 'Verkaufen aus dem Ausland' },
+  { id: 'mehr', label: 'Weiterlesen' },
+  { id: 'quellen', label: 'Quellen' },
+];
+
+const faq = [
+  {
+    q: 'Wie lange dauert es, ein Haus in der Axarquía zu verkaufen?',
+    a: 'Das ist sehr unterschiedlich. Eine gut bepreiste Wohnung an der Küste ist manchmal in wenigen Monaten verkauft. Eine Finca auf dem Land steht oft ein Jahr oder länger zum Verkauf, besonders wenn der rechtliche Status Fragen aufwirft. Rechnen Sie zusätzlich mit ein bis drei Monaten zwischen dem Vorvertrag (arras) und dem Notar.',
+  },
+  {
+    q: 'Muss ich mein Haus vor dem Verkauf renovieren?',
+    a: 'Meist nicht komplett. Was sich lohnt, ist die Behebung sichtbarer Mängel (Feuchtigkeit, Undichtigkeiten, Risse, defekte Installationen) und ein frischer Eindruck: Anstrich, Garten und Pool in Ordnung. Eine komplett neue Küche oder ein neues Bad holen Sie selten wieder herein. Die Seite zum Renovieren vor dem Verkauf zeigt, was sich lohnt und was nicht.',
+  },
+  {
+    q: 'Kann ich ein Haus mit AFO-Status verkaufen?',
+    a: 'Ja. Ein Haus mit einer AFO-Erklärung (DAFO) des Rathauses ist verkäuflich und kann im Eigentumsregister eingetragen werden. Ohne diese Erklärung ist der Verkauf schwieriger: Viele Käufer und Banken springen ab. Beginnen Sie den Antrag deshalb rechtzeitig, denn er dauert oft Monate.',
+  },
+  {
+    q: 'Wer zahlt die Plusvalía beim Verkauf?',
+    a: 'Die kommunale Plusvalía (Steuer auf den Wertzuwachs des Bodens) zahlt grundsätzlich der Verkäufer. Seit November 2021 zahlen Sie nichts, wenn nachweislich kein Wertzuwachs vorliegt, und Sie können die günstigere von zwei Berechnungsmethoden wählen.',
+  },
+  {
+    q: 'Ich wohne nicht in Spanien. Warum behält der Käufer 3 % ein?',
+    a: 'Ist der Verkäufer nicht in Spanien steuerlich ansässig, muss der Käufer 3 % des Kaufpreises einbehalten und an das spanische Finanzamt abführen, als Vorauszahlung auf Ihre Steuer auf den Gewinn. Danach geben Sie selbst eine Erklärung ab. War Ihre Steuer niedriger als die 3 %, können Sie die Differenz zurückfordern.',
+  },
+];
+---
+<Guide lang="de" slug="haus-verkaufen-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Ihr Haus verkaufsfertig machen?" ctaText="Wir sehen uns Ihr Haus an, sagen Ihnen, welche Reparaturen sich lohnen, und führen sie aus, auch wenn Sie im Ausland sind. Sie bekommen vorab einen Preis.">
+  <h2 id="warum">Warum Vorbereitung sich lohnt</h2>
+  <p>Käufer von Häusern in der Axarquía sind oft Ausländer wie Sie. Sie sind vorsichtig, denn sie haben von Häusern ohne Genehmigung und versteckten Mängeln gehört. Ihr Anwalt prüft die Unterlagen, und immer mehr Käufer lassen ein <a href="/de/immobiliengutachten/">Immobiliengutachten</a> machen. Jedes Problem, das dabei auftaucht, wird zum Grund, den Preis zu drücken oder abzuspringen.</p>
+  <p>Wer dem zuvorkommt, hat drei Vorteile:</p>
+  <ul>
+    <li><strong>Schneller verkauft.</strong> Liegen die Unterlagen bereit, kann der Käufer direkt zum Notar. Ein fehlendes Dokument oder ein AFO-Verfahren kostet schnell Monate.</li>
+    <li><strong>Stärker in der Verhandlung.</strong> Ein behobener Mangel ist kein Verhandlungspunkt mehr. Ein Feuchtigkeitsfleck, dessen Behebung 800 € kostet, drückt den Preis in der Verhandlung oft um Tausende Euro.</li>
+    <li><strong>Weniger Risiko danach.</strong> Nach spanischem Recht haftet der Verkäufer für versteckte Mängel. Was Sie haben beheben lassen und ehrlich angeben, kann später kein Anspruch mehr werden.</li>
+  </ul>
+
+  <h2 id="schritte">Plan in fünf Phasen</h2>
+  <ol>
+    <li><strong>Sechs bis zwölf Monate vorher: Unterlagen prüfen.</strong> Fordern Sie eine Nota simple beim Eigentumsregister an und vergleichen Sie sie mit dem Kataster und mit dem, was tatsächlich steht. Gibt es Anbauten, eine geschlossene Terrasse oder einen Pool ohne Genehmigung? Dann beginnen Sie jetzt mit der Legalisierung oder einem AFO-Antrag.</li>
+    <li><strong>Drei bis sechs Monate vorher: prüfen und reparieren.</strong> Lassen Sie das Haus ansehen, als wären Sie selbst der Käufer. Beheben Sie, was ein Käufer finden würde: Undichtigkeiten, Feuchtigkeit, Risse, Elektrik, die nicht den Vorschriften entspricht. Siehe <a href="/de/instandhaltung/">Instandhaltung und Reparaturen</a>.</li>
+    <li><strong>Ein bis zwei Monate vorher: auffrischen und präsentieren.</strong> Streichen, Garten und Pool in Ordnung, Kaputtes ersetzen, persönliche Dinge wegräumen. Erst dann Fotos machen lassen.</li>
+    <li><strong>Zum Verkauf anbieten.</strong> Lassen Sie den Energieausweis erstellen (Pflicht, sobald Sie inserieren), wählen Sie einen Makler und klären Sie, wer Besichtigungen übernimmt, wenn Sie nicht da sind.</li>
+    <li><strong>Vom Angebot zum Notar.</strong> Nach der Einigung unterschreiben Sie meist einen Vorvertrag (<em>contrato de arras</em>) und erhalten eine Anzahlung, oft 10 %. Beim Notar folgen Urkunde und Zahlung. Sorgen Sie dafür, dass alle Unterlagen, Rechnungen und Schlüssel bereitliegen.</li>
+  </ol>
+
+  <h2 id="unterlagen">Unterlagen und Legalisierung</h2>
+  <p>Die meiste Arbeit steckt in den Unterlagen. Kurz gesagt brauchen Sie:</p>
+  <ul>
+    <li>Ihre Eigentumsurkunde (<em>escritura</em>) und eine aktuelle <em>nota simple</em> aus dem Eigentumsregister.</li>
+    <li>Eine Beschreibung in Kataster und Register, die dem tatsächlichen Zustand entspricht.</li>
+    <li>Den Nachweis, dass das Haus bewohnt werden darf: eine Bezugsgenehmigung oder -erklärung, bei einem alten Haus einen Altersnachweis oder die AFO-Erklärung.</li>
+    <li>Den Energieausweis (<em>certificado de eficiencia energética</em>).</li>
+    <li>Den letzten Bescheid der Grundsteuer (IBI) und aktuelle Wasser- und Stromrechnungen.</li>
+    <li>Bei einer Wohnung: eine Bescheinigung der Eigentümergemeinschaft, dass keine Rückstände bestehen.</li>
+  </ul>
+  <p>Stimmt die Fläche in den Papieren nicht mit der Wirklichkeit überein oder wurde ohne Genehmigung gebaut, muss das vor dem Verkauf bereinigt werden. Auf dem Land geht es oft um den AFO-Status; lesen Sie dazu unseren Ratgeber <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>. Die vollständige Liste, mit wer was ausstellt und was es kostet, finden Sie auf der Seite <a href="/de/ratgeber/haus-verkaufen-spanien/unterlagen/">Unterlagen für den Verkauf</a>.</p>
+
+  <h2 id="reparaturen">Reparaturen, die sich lohnen</h2>
+  <p>Ein gepflegt wirkendes Haus bekommt mehr Besichtigungen und bessere Angebote. Das heißt nicht, dass Sie umbauen müssen. In der Axarquía lohnen sich vor allem:</p>
+  <ul>
+    <li><strong>Mängel beheben</strong>, die ein Käufer oder Gutachter findet: <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit und Schimmel</a>, <a href="/de/probleme/undichtes-dach/">undichtes Dach</a>, <a href="/de/probleme/risse-in-waenden/">Risse</a>, ein undichter Pool.</li>
+    <li><strong>Streichen</strong>, innen und außen. Ein frisch geweißtes Haus wirkt sofort Jahre jünger.</li>
+    <li><strong>Außenbereich</strong>: Dachterrasse dicht und sauber, Garten gepflegt, Pool klar.</li>
+    <li><strong>Kleine Erneuerungen</strong>: Wasserhähne, Türklinken, Lampen, kaputte Fliesen, Küchenfronten.</li>
+  </ul>
+  <p>Große Umbauten kurz vor dem Verkauf holen Sie meist nicht wieder herein, denn Käufer wollen Küche oder Bad oft selbst wählen. Ausnahme: ein Haus, das so veraltet ist, dass nur Käufer mit Umbauplänen es in Betracht ziehen. Abwägungen und Richtpreise finden Sie auf der Seite <a href="/de/ratgeber/haus-verkaufen-spanien/renovieren-vor-dem-verkauf/">Renovieren vor dem Verkauf</a>.</p>
+
+  <h2 id="kosten">Kosten für den Verkäufer</h2>
+  <p>Bei einem Verkauf in Spanien zahlt der Käufer die Grunderwerbsteuer und meist Notar und Register. Auf Sie als Verkäufer kommen diese Kosten zu:</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Kostenpunkt</th><th>Richtwert</th><th>Erläuterung</th></tr></thead>
+    <tbody>
+      <tr><td>Makler</td><td>Oft 3 % bis 6 % zzgl. 21 % MwSt.</td><td>Verhandelbar; an der Costa del Sol sind 5 % üblich</td></tr>
+      <tr><td>Plusvalía (Gemeinde)</td><td>Einige hundert bis einige tausend Euro</td><td>Steuer auf den Wertzuwachs des Bodens; nichts bei nachweislichem Verlust</td></tr>
+      <tr><td>Steuer auf den Gewinn</td><td>19 % des Gewinns für Nichtresidenten</td><td>In Spanien Ansässige zahlen 19 % bis 30 % über die Einkommensteuer</td></tr>
+      <tr><td>Energieausweis</td><td>Meist 80 € – 250 €</td><td>Pflicht beim Anbieten</td></tr>
+      <tr><td>Nota simple</td><td>Etwa 10 € – 15 €</td><td>Online beim Register anzufordern</td></tr>
+      <tr><td>Ablösung der Hypothek</td><td>Je nach Bank</td><td>Einschließlich Löschung im Register</td></tr>
+      <tr><td>Legalisierung oder AFO</td><td>Sehr unterschiedlich</td><td>Architekt, Gebühren und eventuelle Anpassungen</td></tr>
+      <tr><td>Reparaturen und Auffrischung</td><td>Nach Wahl</td><td>Vorab kalkulieren, siehe die Seite zum Renovieren</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Richtwerte, geprüft am 5. November 2026. Steuern hängen von Ihrer Situation ab; lassen Sie sich von einem spanischen Steuerberater oder Gestor eine Berechnung machen.</p>
+  <p>Wohnen Sie nicht in Spanien, behält der Käufer 3 % des Kaufpreises ein und führt sie als Vorauszahlung auf Ihre Steuer an das spanische Finanzamt ab. Innerhalb einiger Monate nach dem Verkauf geben Sie selbst eine Erklärung ab (<em>modelo 210</em>) und fordern zu viel Einbehaltenes zurück. Klären Sie auch, wie der Verkauf in Ihrer Steuererklärung in Deutschland, Österreich oder der Schweiz zu behandeln ist.</p>
+
+  <h2 id="ferne">Verkaufen aus dem Ausland</h2>
+  <p>Viele Eigentümer in der Axarquía verkaufen, während sie in Deutschland, Österreich, der Schweiz oder anderswo leben. Das klappt gut, wenn Sie einiges regeln:</p>
+  <ul>
+    <li><strong>Jemand mit Schlüssel.</strong> Makler wollen das Haus zeigen können. Jemand muss es vorher öffnen, lüften, im Sommer die Klimaanlage einschalten und danach abschließen. Mit der <a href="/de/hausbetreuung/">Hausbetreuung</a> haben Sie dafür einen festen Ansprechpartner, auch wenn Sie mit mehreren Maklern arbeiten.</li>
+    <li><strong>Das Haus bewohnt wirken lassen.</strong> Ein Haus, das monatelang leer steht, zieht Einbrecher und manchmal Hausbesetzer an. Siehe <a href="/de/probleme/einbruch-und-hausbesetzer/">Einbruch und Hausbesetzer</a>.</li>
+    <li><strong>Pflege weiterlaufen lassen.</strong> Ein grüner Pool oder ein verwilderter Garten am Besichtigungstag kostet Sie einen Käufer. Lassen Sie <a href="/de/pool/">Pool</a> und Garten bis zur Übergabe pflegen.</li>
+    <li><strong>Vollmacht.</strong> Sie müssen nicht selbst zum Notar. Mit einer Vollmacht (<em>poder</em>) kann Ihr Anwalt für Sie unterschreiben. Diese unterzeichnen Sie bei einem spanischen Notar oder bei einem Notar zu Hause mit Apostille.</li>
+  </ul>
+
+  <h2 id="mehr">Weiterlesen</h2>
+  <p>Die zwei wichtigsten Teile behandeln wir auf eigenen Seiten:</p>
+  <GuideChildren lang="de" parent="haus-verkaufen-spanien" />
+  <p>Möchten Sie zuerst wissen, was Ihr Haus braucht? Wir sehen es uns mit den Augen eines Käufers an und nennen Ihnen einen Preis für das, was zu tun ist. Danach entscheiden Sie. Fragen Sie ein <a href="/de/anfrage/?dienst=renovatie">Angebot für die Renovierung</a> oder eine <a href="/de/anfrage/?dienst=onderhoud">Reparatur</a> an, oder sehen Sie sich <a href="/de/renovierung/">Renovierung</a> und <a href="/de/instandhaltung/">Instandhaltung</a> an.</p>
+
+  <h2 id="quellen">Quellen</h2>
+  <ul>
+    <li>Plusvalía: Real Decreto-ley 26/2021 (BOE, 9. November 2021), neue Berechnung und Befreiung ohne Wertzuwachs.</li>
+    <li>3-%-Einbehalt und 19 % für Nichtresidenten: Real Decreto Legislativo 5/2004 (Gesetz über die Einkommensteuer für Nichtresidenten), Artikel 25; Formulare 211 und 210 der Agencia Tributaria.</li>
+    <li>Energieausweis: Real Decreto 390/2021 (BOE, 2. Juni 2021).</li>
+    <li>Bezug in Andalusien: Ley 7/2021 (LISTA), Artikel 138 und neunte Zusatzbestimmung.</li>
+  </ul>
+  <p class="note">Geprüft am 5. November 2026. Dieser Ratgeber gibt allgemeine Informationen und ist keine Rechts- oder Steuerberatung. Regeln und Sätze können sich ändern; lassen Sie Ihre Situation von einem Anwalt, Gestor oder Steuerberater prüfen.</p>
+</Guide>

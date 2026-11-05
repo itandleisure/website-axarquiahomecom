@@ -1,0 +1,106 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'checklist', label: 'De checklist in één tabel' },
+  { id: 'eigendom', label: 'Eigendom: escritura en nota simple' },
+  { id: 'kadaster', label: 'Kadaster en register gelijktrekken' },
+  { id: 'ocupacion', label: 'Mag het huis bewoond worden?' },
+  { id: 'afo', label: 'Zonder vergunning gebouwd: AFO' },
+  { id: 'energielabel', label: 'Energielabel' },
+  { id: 'lasten', label: 'IBI, vereniging en rekeningen' },
+  { id: 'belasting', label: 'Plusvalía en de 3% inhouding' },
+  { id: 'bronnen', label: 'Bronnen' },
+];
+
+const faq = [
+  {
+    q: 'Is een cédula de habitabilidad nodig om in Andalusië te verkopen?',
+    a: 'Nee, die bestaat in Andalusië niet. Andere regio’s, zoals Catalonië en Valencia, kennen wel zo’n bewoonbaarheidsverklaring. In Andalusië gaat het om de licentie of verklaring van ingebruikname (ocupación of utilización) bij de gemeente. Voor oudere huizen volstaat vaak een bewijs dat het huis al lang bestaat.',
+  },
+  {
+    q: 'Hoe lang is een energielabel geldig?',
+    a: 'In principe tien jaar. Heeft u in die tijd veel aan het huis veranderd, zoals nieuwe ramen, isolatie of een warmtepomp, dan is een nieuw label vaak gunstiger, omdat het huis dan beter scoort.',
+  },
+  {
+    q: 'Wat gebeurt er als het oppervlak in het register niet klopt?',
+    a: 'De notaris kan de akte vaak toch passeren, maar de koper en zijn bank zullen vragen stellen. Gaat het om een aanbouw zonder vergunning, dan kan de bank weigeren te financieren of de waarde lager taxeren. Laat het vóór de verkoop rechtzetten met een verklaring van nieuwbouw (declaración de obra nueva) en, waar nodig, legalisatie.',
+  },
+  {
+    q: 'Hoe vraag ik de 3% inhouding terug?',
+    a: 'Met formulier 210 bij de Spaanse belastingdienst. Daarin geeft u de aankoopprijs, de verkoopprijs en de kosten op. Is de belasting over uw winst lager dan de ingehouden 3%, dan krijgt u het verschil terug. Dat duurt vaak enkele maanden. Een gestor of belastingadviseur kan het voor u regelen.',
+  },
+];
+---
+<Guide slug="huis-verkopen-spanje-papieren" toc={toc} faq={faq} dienst="legalisatie" ctaTitle="Kloppen de papieren van uw huis niet?" ctaText="Wij bekijken wat er staat en wat er in de papieren staat, en brengen u in contact met de architect met wie we samenwerken voor legalisatie, AFO en energielabel.">
+  <h2 id="checklist">De checklist in één tabel</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Document</th><th>Waar te krijgen</th><th>Waarom</th></tr></thead>
+    <tbody>
+      <tr><td>Eigendomsakte (<em>escritura</em>)</td><td>Uw eigen archief of de notaris die de akte passeerde</td><td>Bewijs van eigendom en aankoopprijs</td></tr>
+      <tr><td><em>Nota simple</em></td><td>Registro de la Propiedad, online</td><td>Eigenaar, oppervlak, hypotheken en beslagen</td></tr>
+      <tr><td>Kadastrale gegevens (<em>referencia catastral</em>)</td><td>Sede Electrónica del Catastro</td><td>Moet overeenkomen met register en werkelijkheid</td></tr>
+      <tr><td>Licentie of verklaring van ingebruikname</td><td>Gemeente</td><td>Bewijs dat het huis bewoond mag worden</td></tr>
+      <tr><td>AFO-verklaring (indien van toepassing)</td><td>Gemeente</td><td>Voor huizen die zonder vergunning zijn gebouwd</td></tr>
+      <tr><td>Energielabel</td><td>Erkende technicus, daarna geregistreerd bij de Junta de Andalucía</td><td>Verplicht bij adverteren en verkoop</td></tr>
+      <tr><td>Laatste IBI-aanslag</td><td>Gemeente of Patronato de Recaudación van Málaga</td><td>Bewijs dat de onroerendgoedbelasting is betaald</td></tr>
+      <tr><td>Verklaring van de vereniging</td><td>Beheerder van de <em>comunidad</em></td><td>Bij appartementen: geen achterstand</td></tr>
+      <tr><td>Rekeningen water, stroom, afval</td><td>Leveranciers en gemeente</td><td>Overzetten op naam van de koper</td></tr>
+      <tr><td>NIE en paspoort</td><td>U zelf</td><td>Identificatie bij de notaris</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="eigendom">Eigendom: escritura en nota simple</h2>
+  <p>Zoek uw eigendomsakte op. Kwijt? Dan vraagt u een kopie (<em>copia simple</em> of <em>copia autorizada</em>) aan bij de notaris die destijds de akte passeerde. Vraag daarnaast een recente <em>nota simple</em> op bij het eigendomsregister. Dat kan online via de site van de Registradores en kost ongeveer € 10 tot € 15. Controleer daarin:</p>
+  <ul>
+    <li>of u (en eventueel uw partner) als eigenaar staat, en in welke verhouding;</li>
+    <li>of er nog een hypotheek op staat. Ook een afgeloste hypotheek blijft in het register staan tot u hem laat doorhalen (<em>cancelación registral</em>). Regel dat vooraf of laat het bij de notaris meenemen;</li>
+    <li>of er beslagen of andere lasten op staan;</li>
+    <li>welk oppervlak en welke gebouwen er staan beschreven.</li>
+  </ul>
+  <p>Is een van de eigenaars overleden? Dan moet eerst de erfenis in Spanje zijn afgehandeld en ingeschreven voordat u kunt verkopen. Dat kost vaak maanden.</p>
+
+  <h2 id="kadaster">Kadaster en register gelijktrekken</h2>
+  <p>In Spanje zijn er twee registraties: het kadaster (<em>Catastro</em>), dat voor de belasting de grond en gebouwen beschrijft, en het eigendomsregister (<em>Registro de la Propiedad</em>), dat het eigendom vastlegt. In de Axarquía komen die vaak niet overeen met wat er werkelijk staat, vooral bij oudere huizen en fincas. Een veranda die is dichtgemaakt, een extra slaapkamer, een garage of een zwembad staan er dan niet in.</p>
+  <p>Voor een koper en diens bank is dat een rood signaal. Er zijn grofweg twee situaties:</p>
+  <ul>
+    <li><strong>Gebouwd met vergunning, maar nooit ingeschreven.</strong> Dan laat u een verklaring van nieuwbouw (<em>declaración de obra nueva</em>) opmaken bij de notaris, met een certificaat van een architect, en laat u die inschrijven. Het kadaster wordt daarna bijgewerkt.</li>
+    <li><strong>Gebouwd zonder vergunning.</strong> Dan is legaliseren nodig, of, als de termijn voor handhaving is verstreken, een AFO-verklaring. Zie hieronder.</li>
+  </ul>
+
+  <h2 id="ocupacion">Mag het huis bewoond worden?</h2>
+  <p>In Andalusië bestaat geen <em>cédula de habitabilidad</em>, anders dan in sommige andere regio’s. Wat telt is dat het huis volgens de gemeente in gebruik genomen mag worden. Sinds de Andalusische ruimtelijkeordeningswet LISTA (Ley 7/2021) gebeurt dat voor de meeste gebouwen met een verklaring van ingebruikname (<em>declaración responsable de ocupación</em>) in plaats van een licentie. Nerja en andere gemeenten in de Axarquía hebben er formulieren voor, ook voor bestaande huizen.</p>
+  <p>Bij de verkoop van een bestaand huis vragen de notaris, de koper of diens bank vaak naar de licentie van eerste ingebruikname (<em>licencia de primera ocupación</em>) of een vergelijkbaar bewijs. Bij een oud huis kan een certificaat van ouderdom van een architect (<em>certificado de antigüedad</em>) volstaan. Welk document precies nodig is, hangt af van de gemeente en het bouwjaar. Vraag het daarom vooraf na bij de gemeente of de notaris. Zonder zo’n bewijs kunnen ook de nutsbedrijven lastig doen bij het overzetten van water en stroom.</p>
+
+  <h2 id="afo">Zonder vergunning gebouwd: AFO</h2>
+  <p>Veel huizen op het platteland van de Axarquía zijn geheel of deels zonder vergunning gebouwd. Is de termijn waarbinnen de gemeente kan optreden verstreken, dan kan de gemeente verklaren dat het huis de status <em>asimilado a fuera de ordenación</em> (AFO) heeft. Met die verklaring kan het huis worden ingeschreven, aangesloten en verkocht.</p>
+  <p>Voor een verkoop is het verschil groot. Zonder AFO-verklaring zijn er weinig kopers en vrijwel geen banken die financieren. Met de verklaring wordt het een gewone, zij het beperkte, woning. De aanvraag loopt via een architect en duurt vaak maanden, soms langer. Begin er dus ruim voor de verkoop mee. Hoe het werkt, wat mag en wat niet, leest u in onze gids <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren in Andalusië</a>.</p>
+
+  <h2 id="energielabel">Energielabel</h2>
+  <p>Sinds 2013 is een energielabel (<em>certificado de eficiencia energética</em>) verplicht als u een huis verkoopt of verhuurt. Volgens het huidige Real Decreto 390/2021 moet het label al in de advertentie staan, dus ook op de site van de makelaar. Een erkende technicus maakt het label na een bezoek; daarna wordt het geregistreerd bij de Junta de Andalucía. De kosten liggen meestal tussen € 80 en € 250, afhankelijk van de grootte van het huis. Het label is tien jaar geldig.</p>
+  <p>Een slecht label (E, F of G) is gebruikelijk bij oudere huizen in de Axarquía en geen reden om niet te verkopen. Heeft u net nieuwe ramen, isolatie, een <a href="/nl/kosten/airco-en-warmtepomp/">warmtepomp</a> of zonnepanelen, laat het label dan daarna maken.</p>
+
+  <h2 id="lasten">IBI, vereniging en rekeningen</h2>
+  <ul>
+    <li><strong>IBI.</strong> Neem het laatste betaalde aanslagbiljet van de onroerendgoedbelasting mee. In de provincie Málaga int het Patronato Provincial de Recaudación de IBI voor de meeste gemeenten. Onbetaalde IBI blijft op het huis rusten, dus de koper wil zekerheid.</li>
+    <li><strong>Vereniging van eigenaars.</strong> Bij een appartement of een huis in een complex is een verklaring van de beheerder nodig dat u geen achterstand heeft. Dat staat in de wet op het appartementsrecht (Ley 49/1960, artikel 9). Meld ook geplande extra heffingen (<em>derramas</em>); de koper ziet ze toch in de notulen.</li>
+    <li><strong>Water, stroom, gas, internet.</strong> Zorg voor de laatste rekeningen en de contractnummers. Spreek met de koper af wanneer de contracten worden overgezet, en zeg uw eigen contracten en automatische betalingen pas daarna op.</li>
+    <li><strong>Gemeentelijke afvalheffing</strong> (<em>basura</em>): in veel gemeenten een aparte aanslag. Ook die moet betaald zijn.</li>
+  </ul>
+
+  <h2 id="belasting">Plusvalía en de 3% inhouding</h2>
+  <p><strong>Plusvalía municipal.</strong> De gemeente heft belasting op de waardestijging van de grond tussen aankoop en verkoop. Die betaalt de verkoper, en u doet binnen dertig werkdagen na de verkoop aangifte bij de gemeente. Sinds Real Decreto-ley 26/2021 kunt u kiezen tussen twee rekenmethodes, en betaalt u niets als u kunt aantonen dat de grond niet in waarde is gestegen (bijvoorbeeld bij verkoop met verlies). Woont u niet in Spanje, dan houdt de koper het bedrag vaak in bij de notaris en betaalt het namens u.</p>
+  <p><strong>Belasting op de winst.</strong> Over de winst (verkoopprijs min aankoopprijs en kosten) betaalt een niet-inwoner van Spanje 19% inkomstenbelasting voor niet-inwoners. Omdat de fiscus u na de verkoop niet makkelijk kan bereiken, moet de koper 3% van de koopprijs inhouden en binnen een maand aan de belastingdienst betalen (formulier 211). U doet daarna zelf aangifte met formulier 210. Is de belasting lager dan de 3%, dan krijgt u het verschil terug; is hij hoger, dan betaalt u bij.</p>
+  <p>Woont u wel in Spanje, dan valt de winst onder de gewone inkomstenbelasting (IRPF), met tarieven van 19% tot 30% en vrijstellingen, bijvoorbeeld bij herinvestering in een nieuwe eigen woning of als u 65 jaar of ouder bent en het uw hoofdverblijf was. Laat de berekening in beide gevallen door een gestor of belastingadviseur maken.</p>
+
+  <h2 id="bronnen">Bronnen</h2>
+  <ul>
+    <li>Ley 7/2021 de impulso para la sostenibilidad del territorio de Andalucía (LISTA), artikel 138 en negende aanvullende bepaling (ingebruikname en akten).</li>
+    <li>Real Decreto 390/2021 (BOE, 2 juni 2021): energielabel bij verkoop en in advertenties.</li>
+    <li>Real Decreto-ley 26/2021 (BOE, 9 november 2021): plusvalía municipal.</li>
+    <li>Real Decreto Legislativo 5/2004, artikel 25: tarief van 19% en inhouding van 3% bij verkoop door niet-inwoners; formulieren 210 en 211 van de Agencia Tributaria.</li>
+    <li>Ley 49/1960 de Propiedad Horizontal, artikel 9: verklaring van de vereniging van eigenaars.</li>
+    <li>Gemeente Nerja: formulier declaración responsable de ocupación o utilización de edificaciones existentes (2023).</li>
+  </ul>
+  <p class="note">Gecontroleerd op 5 november 2026. Deze pagina geeft algemene informatie en is geen juridisch of fiscaal advies. Welke documenten de notaris precies vraagt, verschilt per gemeente en per huis. Laat een advocaat of gestor uw situatie beoordelen voordat u een koopcontract tekent.</p>
+</Guide>
