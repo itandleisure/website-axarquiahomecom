@@ -347,6 +347,12 @@ const budgetten = T.budgetten;
     const t = form.querySelector<HTMLTextAreaElement>('#omschrijving')!;
     t.value = M.pakket.replace('{x}', pakket);
   }
+  // Vrije tekst vanaf een kosten- of probleempagina (?onderwerp=…), alleen als het veld nog leeg is
+  const onderwerp = params.get('onderwerp');
+  if (onderwerp) {
+    const t = form.querySelector<HTMLTextAreaElement>('#omschrijving')!;
+    if (!t.value) t.value = onderwerp.slice(0, 300);
+  }
 
   function show(i: number) {
     index = i;

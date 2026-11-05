@@ -22,6 +22,8 @@ import { guideList, guideHref } from '../../../data/guides';
   <section class="section">
     <div class="wrap">
       <div class="cards">
+        <a class="card" href="/en/costs/"><h3>Costs by job</h3><p>What does a bathroom, kitchen, pool, air conditioning, roof or outdoor kitchen cost in the Axarquía? With worked examples and sources.</p><span class="more">See the prices →</span></a>
+        <a class="card" href="/en/problems/"><h3>Problems with your home</h3><p>Damp, roof leaks, cracks, termites, legionella or break-ins: how to spot them, first steps and costs.</p><span class="more">See the problems →</span></a>
         {guideList('en').map((g) => (
           <a class="card" href={guideHref('en', g)}>
             <h3>{g.title}</h3>
