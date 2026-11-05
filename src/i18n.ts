@@ -58,7 +58,7 @@ export const nav: Record<Lang, { href: string; label: string }[]> = {
     { href: '/de/hausbetreuung/', label: 'Hausbetreuung' },
     { href: '/de/immobiliengutachten/', label: 'Gutachten' },
     { href: '/de/pool/', label: 'Pool' },
-    { href: '/de/instandhaltung/', label: 'Instandhaltung' },
+    { href: '/de/instandhaltung/', label: 'Wartung' },
     { href: '/de/ratgeber/', label: 'Ratgeber' },
     { href: '/de/ueber-uns/', label: 'Über uns' },
   ],
