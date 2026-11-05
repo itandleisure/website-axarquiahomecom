@@ -1,0 +1,166 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'short', label: 'Short answer' },
+  { id: 'which-house', label: 'Which houses work' },
+  { id: 'purchase', label: 'Purchase: costs and checks' },
+  { id: 'renovation', label: 'Permits and renovation' },
+  { id: 'financing', label: 'Financing and running costs' },
+  { id: 'selling', label: 'Selling costs' },
+  { id: 'tax', label: 'Tax on the profit' },
+  { id: 'example', label: 'Worked example' },
+  { id: 'timeline', label: 'Timeline' },
+  { id: 'risks', label: 'The biggest risks' },
+  { id: 'checklist', label: 'Checklist' },
+];
+
+const faq = [
+  {
+    q: 'Is flipping houses in the Axarquía profitable?',
+    a: 'It can be, but the margin is smaller than many people expect. Buying costs (around 10%), selling costs (around 6 to 7% including VAT on the agent’s fee) and tax on the profit easily take 15 to 20% of the sale price between them. The profit is made mainly when you buy: a house bought clearly below market value, with a renovation that has been properly priced in advance.',
+  },
+  {
+    q: 'How much tax do I pay on the profit?',
+    a: 'If you are not resident in Spain, you pay 19% on the gain in Spain. As a Spanish tax resident, the gain falls in the savings band of IRPF (19 to 30%). Through a Spanish company, corporation tax applies. As the seller you also pay the municipal plusvalía. Your home country may tax the gain too, usually with a credit for the Spanish tax. Have this worked out by a tax adviser beforehand.',
+  },
+  {
+    q: 'What is the 3% withholding on a sale?',
+    a: 'If you sell as a non-resident, the buyer withholds 3% of the price and pays it to the Spanish tax office as an advance on your capital gains tax. If your tax is lower, you reclaim the difference through a tax return (modelo 210). That often takes months, so allow for it in your cash flow.',
+  },
+  {
+    q: 'Is there a lower transfer tax rate for flippers?',
+    a: 'In Andalusia, a 2% rate instead of 7% applies to professional property companies that book the home as stock and resell it within five years. You must already be registered as a property business (IAE) when you buy and be able to prove it to the notary. Private buyers pay the normal 7%.',
+  },
+  {
+    q: 'Can I flip a house with AFO status?',
+    a: 'It is difficult. You may maintain and modernise an AFO house, but not enlarge it. Many buyers find it harder to get a mortgage on one, and the sale price is often lower. So do not count on adding a bedroom or a pool to push up the value.',
+  },
+];
+---
+<Guide lang="en" slug="flipping-houses-in-spain" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Got your eye on a house to do up?" ctaText="Have it surveyed before you make an offer. You get a list of defects with a price indication for the renovation, so you know whether the numbers add up.">
+  <h2 id="short">Short answer</h2>
+  <p>Buying a house, renovating it and selling at a profit can work in the Axarquía, but only if three things are right: you buy clearly below market value, the property’s paperwork is in order, and the renovation is priced before you buy. Between purchase and sale, 15 to 20% of the sale price quickly disappears in taxes, notary, agent and capital gains tax. A renovation that runs 20% over budget, or a sale that takes six months longer, eats the rest of the margin.</p>
+  <p>This guide lists everything you need to think about. For the details of each step, we refer to our other guides.</p>
+
+  <h2 id="which-house">Which houses work</h2>
+  <ul>
+    <li><strong>Village houses</strong> in popular white villages (Nerja, Frigiliana, Cómpeta, Torrox) and in Vélez-Málaga: often dated, with a roof terrace and character. Buyers look for them, but watch out for damp, old beams and poor access for building materials.</li>
+    <li><strong>Apartments</strong> on the coast (Torre del Mar, Caleta de Vélez, Rincón de la Victoria, Torrox Costa): simpler to renovate, a large pool of buyers and quicker to sell. The margin per property is usually smaller. Work on the building’s façade, roof or pipes depends on the community of owners.</li>
+    <li><strong>Rural fincas</strong>: the most potential, but also the most risk. Many fincas have extensions without a permit or <a href="/en/guides/afo-legalisation-andalusia/">AFO status</a>, their own well or septic tank and a difficult access track. The buyer market is smaller and selling takes longer.</li>
+  </ul>
+  <p>If you are torn between these types, read <a href="/en/guides/finca-apartment-or-village-house/">finca, apartment or village house</a>. When buying, look at recent sale prices in the same street or urbanisation, not at asking prices.</p>
+
+  <h2 id="purchase">Purchase: costs and checks</h2>
+  <p>For a resale property in Andalusia you pay 7% transfer tax (ITP), plus notary, land registry, lawyer and gestoría. Allow 9 to 11% on top of the purchase price in total. The full breakdown is in our guide to <a href="/en/guides/buying-costs-in-spain/">buying costs in Spain</a>.</p>
+  <p>If you operate as a professional property business, Andalusia’s 2% rate may apply. The conditions: you are registered under a property heading of the IAE when you buy, you book the home as stock, and you resell within five years by notarial deed. If you cannot prove this to the notary, you pay 7%. Have a tax adviser assess this in advance.</p>
+  <h3>What to check before you sign</h3>
+  <ul>
+    <li><strong>Legal status</strong>: does what is built match the land registry (nota simple) and the cadastre (catastro)? Are there permits for extensions, or an AFO certificate from the town hall? The next buyer and their bank will ask the same questions.</li>
+    <li><strong>Zoning and options</strong>: may you extend, build a pool or change the layout? If not, the profit has to come from modernising.</li>
+    <li><strong>Structural condition</strong>: roof, damp, cracks, wiring, plumbing, drains or septic tank. This is where the big surprises are. A <a href="/en/property-survey/">property survey</a> gives you a price indication for each defect, which you can also use to negotiate.</li>
+    <li><strong>Debts and charges</strong>: unpaid IBI, community fees, mortgages or embargoes. Your lawyer checks this.</li>
+    <li><strong>Get-out clauses</strong>: put in the preliminary contract (arras) that you can withdraw if the survey or the legal checks are unfavourable.</li>
+  </ul>
+
+  <h2 id="renovation">Permits and renovation</h2>
+  <p>Since Andalusia’s LISTA law (Ley 7/2021), much work inside an existing home only needs a prior declaration to the town hall (<em>declaración responsable</em>). Think of a new kitchen or bathroom, tiling and new installations. Work on the structure or façade, or an extension, needs a building permit (<em>licencia de obra</em>) with an architect’s project. That takes more time and money. You can read the rules per municipality on its building permit page, for example <a href="/en/places/velez-malaga/building-permit/">Vélez-Málaga</a> and <a href="/en/places/nerja/building-permit/">Nerja</a>.</p>
+  <p>What comes on top of the builder’s bill:</p>
+  <ul>
+    <li><strong>Municipal construction tax (ICIO) and fees</strong>: usually a few per cent of the building cost.</li>
+    <li><strong>Architect or aparejador</strong>: for work that needs a permit, and often useful for sign-off too.</li>
+    <li><strong>VAT on the renovation</strong>: as a private owner you pay 10% VAT on renovating a home, subject to conditions. Through a company it is usually 21%. Because the sale of a resale home is VAT-exempt, you cannot reclaim that VAT either.</li>
+    <li><strong>Energy certificate</strong>: required as soon as you advertise the house for sale.</li>
+    <li><strong>Contingency</strong>: allow at least 10 to 15%, and more for older village houses and fincas.</li>
+  </ul>
+  <p>For realistic amounts per item, see <a href="/en/guides/renovation-costs-spain/">renovation costs in Spain</a>. With the <a href="/en/costs/calculator/">cost calculator</a> you can draw up a first budget in a few minutes.</p>
+  <p>For a flip, spend on what buyers see and pay for: a light, fresh kitchen and bathroom, good air conditioning, a tidy outdoor space, dry walls and a roof that does not leak. Leave out expensive luxuries you will not earn back.</p>
+
+  <h2 id="financing">Financing and running costs</h2>
+  <p>Spanish banks usually lend non-residents 60 to 70% of the valuation, and rarely finance the renovation. So a flip is largely done with your own money. A mortgage adds valuation and bank fees, and sometimes an early repayment charge. Have that included in the offer.</p>
+  <p>As long as you own the house, you also pay running costs: IBI, refuse tax, insurance, water and electricity, community fees where applicable and, as a non-resident, the annual tax on the property (IRNR). An empty house needs looking after; see <a href="/en/key-holding/">key holding</a>.</p>
+
+  <h2 id="selling">Selling costs</h2>
+  <table class="prices">
+    <thead><tr><th>Item</th><th>Indication</th></tr></thead>
+    <tbody>
+      <tr><td>Estate agent</td><td>3 – 6% + 21% IVA</td></tr>
+      <tr><td>Plusvalía municipal (town hall)</td><td>a few hundred to a few thousand euros</td></tr>
+      <tr><td>Energy certificate</td><td>€100 – €300</td></tr>
+      <tr><td>Repaying the mortgage and cancelling it at the registry</td><td>a few hundred euros</td></tr>
+      <tr><td>Lawyer or gestoría for the sale</td><td>€500 – €1,500</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Indications based on typical rates in the province of Málaga, November 2026.</p>
+  <p>The <strong>plusvalía municipal</strong> is a municipal tax on the increase in the land value, paid by the seller. Since late 2021, sales within one year are taxed as well. You choose between a calculation based on the cadastral value and one based on the actual gain; the lower one counts. If you sell at a loss you pay nothing, provided you prove it with the deeds.</p>
+
+  <h2 id="tax">Tax on the profit</h2>
+  <p>The gain is the sale price minus selling costs, minus the purchase price, buying costs and renovation costs (with invoices). Running costs such as IBI and insurance usually do not count for a private seller. How much tax you pay depends on how you do the flip:</p>
+  <table class="prices">
+    <thead><tr><th>Situation</th><th>Tax in Spain</th></tr></thead>
+    <tbody>
+      <tr><td>Private individual, non-resident</td><td>19% on the gain (IRNR)</td></tr>
+      <tr><td>Private individual, Spanish tax resident</td><td>19 – 30% in the IRPF savings band</td></tr>
+      <tr><td>Spanish company (S.L.)</td><td>corporation tax, generally 25%</td></tr>
+    </tbody>
+  </table>
+  <p>Two things to watch. First, the <strong>3% withholding</strong>: if you sell as a non-resident, the buyer withholds 3% of the price as an advance on your tax. You reclaim any overpayment through a tax return (modelo 210), but that often takes months. Second, if you buy and sell regularly, the tax office may treat it as a business activity rather than a capital gain, at higher rates. Your home country will look at the gain too: in the UK, for example, a UK resident reports the gain for capital gains tax with a credit for the Spanish tax. Have this assessed in advance.</p>
+
+  <h2 id="example">Worked example: village house for €180,000</h2>
+  <p>A dated village house, bought by a private individual who does not live in Spain, renovated and sold after about a year. All amounts are indications.</p>
+  <table class="prices">
+    <tbody>
+      <tr><td>Purchase price</td><td>€180,000</td></tr>
+      <tr><td>Buying costs (ITP 7%, notary, registry, lawyer, gestoría)</td><td>€16,900</td></tr>
+      <tr><td>Renovation incl. 10% IVA</td><td>€60,000</td></tr>
+      <tr><td>Architect, ICIO and fees</td><td>€6,000</td></tr>
+      <tr><td>Contingency (10%)</td><td>€6,000</td></tr>
+      <tr><td>Running costs during the project</td><td>€2,500</td></tr>
+      <tr><td><strong>Total investment</strong></td><td><strong>€271,400</strong></td></tr>
+      <tr><td>Sale price</td><td>€320,000</td></tr>
+      <tr><td>Selling costs (agent 5% + IVA, plusvalía, energy certificate)</td><td>− €20,500</td></tr>
+      <tr><td><strong>Proceeds after selling costs</strong></td><td><strong>€299,500</strong></td></tr>
+      <tr><td>Profit before tax</td><td>€28,100</td></tr>
+      <tr><td>Tax 19% (on €30,600, running costs not deductible)</td><td>− €5,800</td></tr>
+      <tr><td><strong>Net profit</strong></td><td><strong>€22,300 (about 8%)</strong></td></tr>
+    </tbody>
+  </table>
+  <p>What this shows: on an investment of over €270,000, about €22,000 is left after a year’s work. Sell 5% lower (€304,000) and the profit roughly halves. If the renovation runs 20% over, even less is left. On top of that, the buyer withholds €9,600 (3%) of the price, part of which you only get back months later.</p>
+
+  <h2 id="timeline">Timeline</h2>
+  <table class="prices">
+    <thead><tr><th>Phase</th><th>Indication</th></tr></thead>
+    <tbody>
+      <tr><td>Searching, survey and purchase</td><td>1 – 3 months</td></tr>
+      <tr><td>Design, quotes and declaration or permit</td><td>1 – 4 months</td></tr>
+      <tr><td>Renovation</td><td>3 – 6 months</td></tr>
+      <tr><td>Sale through to completion</td><td>3 – 9 months</td></tr>
+      <tr><td><strong>Total</strong></td><td><strong>about 9 – 18 months</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Spring and autumn are the busiest selling seasons, when foreign buyers come to view. Ideally, plan to finish before then. In summer, building work partly stops in many villages.</p>
+
+  <h2 id="risks">The biggest risks</h2>
+  <ul>
+    <li><strong>Paperwork not in order</strong>: an extension without a permit makes the house harder to sell and to finance for the next buyer.</li>
+    <li><strong>Hidden defects</strong>: damp, woodworm and termites in old beams, a leaking roof, wiring without earthing.</li>
+    <li><strong>Delays</strong>: waiting for a permit or a builder means longer running costs and getting your money back later.</li>
+    <li><strong>The market</strong>: prices can fall during your project, and some locations (remote fincas) sell slowly.</li>
+    <li><strong>Water</strong>: after the 2022 to 2024 drought, buyers pay more attention to water supply, especially for fincas with their own well or no mains connection.</li>
+    <li><strong>Empty property</strong>: an empty house attracts burglars and squatters. Arrange supervision and good locks.</li>
+    <li><strong>Liability after the sale</strong>: as the seller you are liable for hidden defects. Good, documented work with invoices protects you.</li>
+  </ul>
+
+  <h2 id="checklist">Checklist</h2>
+  <ol>
+    <li>Set the expected sale price from recent sales, not asking prices.</li>
+    <li>Work backwards: sale price minus selling costs, tax, renovation, contingency and your target profit gives your maximum offer.</li>
+    <li>Have the house surveyed and the renovation priced before you sign.</li>
+    <li>Have an independent lawyer check the legal status, debts and charges.</li>
+    <li>Decide with a tax adviser beforehand: private individual or company, and what that means in Spain and at home.</li>
+    <li>Arrange the declaration or permit before work starts.</li>
+    <li>Keep every invoice: they reduce the taxable gain.</li>
+    <li>Allow for the 3% withholding in your cash flow.</li>
+  </ol>
+  <p class="note">This guide gives general information based on the rules in Andalusia and Spain in November 2026. Sources: Andalusian Ley 5/2021 (ITP 7%, and 2% for property companies), Ley 7/2021 (LISTA), Real Decreto-ley 26/2021 (plusvalía), and the Spanish tax agency (Agencia Tributaria) for IRPF, IRNR and the 3% withholding. Rates and rules can change. It is not tax or legal advice; have your own situation assessed by a lawyer and a tax adviser.</p>
+</Guide>

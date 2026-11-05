@@ -171,6 +171,18 @@ export const guides: GuideMeta[] = [
     minutes: 7,
     published: '2026-11-05',
   },
+  // Flipgids: achteraan in nl/en/de, zodat de volgorde van de Zweedse lijst klopt.
+  {
+    slug: 'huis-flippen-spanje',
+    title: 'Huizen flippen in de Axarquía: kopen, opknappen en verkopen',
+    seoTitle: 'Huis flippen in Spanje (Axarquía): kosten, belasting en rekenvoorbeeld',
+    short: 'Huis flippen',
+    description: 'Een huis kopen, opknappen en verkopen in de Axarquía: aankoopkosten, legale status, vergunning, verbouwing, verkoopkosten, belasting over de winst en een rekenvoorbeeld.',
+    lead: 'Een verouderd dorpshuis kopen, het opknappen en met winst verkopen: het klinkt eenvoudig. In de praktijk gaat er tussen aankoop en verkoop een flink deel van de marge op aan belastingen en kosten. Dit is waar u allemaal aan moet denken.',
+    keyword: 'huis flippen spanje',
+    minutes: 10,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesEn: GuideMeta[] = [
@@ -324,6 +336,17 @@ export const guidesEn: GuideMeta[] = [
     minutes: 7,
     published: '2026-11-05',
   },
+  {
+    slug: 'flipping-houses-in-spain',
+    title: 'Flipping houses in the Axarquía: buy, renovate and sell',
+    seoTitle: 'Flipping a house in Spain (Axarquía): costs, tax and a worked example',
+    short: 'Flipping houses',
+    description: 'Buying, renovating and selling a house in the Axarquía: purchase costs, legal status, permits, renovation, selling costs, tax on the profit and a worked example.',
+    lead: 'Buy a tired village house, do it up and sell it at a profit: it sounds simple. In practice, a large share of the margin goes on taxes and costs between purchase and sale. This is everything you need to think about.',
+    keyword: 'flipping houses in spain',
+    minutes: 10,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesDe: GuideMeta[] = [
@@ -475,6 +498,17 @@ export const guidesDe: GuideMeta[] = [
     lead: 'Ein Ferienhaus steht einen Großteil des Jahres leer. Die Frage ist also nicht nur, wo Sie gern sind, sondern auch, was passiert, während Sie nicht da sind.',
     keyword: 'ferienhaus in spanien kaufen',
     minutes: 7,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'immobilien-flippen-spanien',
+    title: 'Immobilien flippen in der Axarquía: kaufen, sanieren, verkaufen',
+    seoTitle: 'Haus flippen in Spanien (Axarquía): Kosten, Steuern und Rechenbeispiel',
+    short: 'Immobilien flippen',
+    description: 'Ein Haus in der Axarquía kaufen, sanieren und verkaufen: Kaufnebenkosten, Legalität, Genehmigung, Sanierung, Verkaufskosten, Steuer auf den Gewinn und ein Rechenbeispiel.',
+    lead: 'Ein altes Dorfhaus kaufen, herrichten und mit Gewinn verkaufen: Das klingt einfach. In der Praxis geht zwischen Kauf und Verkauf ein großer Teil der Marge für Steuern und Kosten drauf. Hier steht alles, woran Sie denken müssen.',
+    keyword: 'immobilien flippen spanien',
+    minutes: 10,
     published: '2026-11-05',
   },
 ];

@@ -1,0 +1,166 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort antwoord' },
+  { id: 'welk-huis', label: 'Welk huis leent zich ervoor' },
+  { id: 'aankoop', label: 'Aankoop: kosten en controles' },
+  { id: 'verbouwing', label: 'Vergunning en verbouwing' },
+  { id: 'financiering', label: 'Financiering en vaste lasten' },
+  { id: 'verkoop', label: 'Verkoopkosten' },
+  { id: 'belasting', label: 'Belasting over de winst' },
+  { id: 'voorbeeld', label: 'Rekenvoorbeeld' },
+  { id: 'doorlooptijd', label: 'Doorlooptijd' },
+  { id: 'risicos', label: 'De grootste risico’s' },
+  { id: 'checklist', label: 'Checklist' },
+];
+
+const faq = [
+  {
+    q: 'Is huizen flippen in de Axarquía winstgevend?',
+    a: 'Het kan, maar de marge is kleiner dan veel mensen denken. Kosten koper (circa 10%), verkoopkosten (circa 6 tot 7% inclusief btw over de makelaar) en belasting over de winst gaan er samen al snel 15 tot 20% van de verkoopprijs af. Winst maakt u vooral bij de inkoop: een huis dat duidelijk onder de marktwaarde wordt gekocht, met een verbouwing die vooraf goed is begroot.',
+  },
+  {
+    q: 'Hoeveel belasting betaal ik over de winst?',
+    a: 'Woont u niet in Spanje, dan betaalt u in Spanje 19% over de winst. Als Spaans belastinginwoner valt de winst in de spaarbox van de IRPF (19 tot 30%). Via een Spaanse vennootschap geldt de vennootschapsbelasting. Daarnaast betaalt u als verkoper de gemeentelijke plusvalía. Laat dit vooraf doorrekenen door een fiscalist, ook voor de gevolgen in Nederland.',
+  },
+  {
+    q: 'Wat is de 3% inhouding bij verkoop?',
+    a: 'Verkoopt u als niet-inwoner, dan houdt de koper 3% van de koopprijs in en draagt die af aan de Spaanse belastingdienst. Dat is een voorschot op uw winstbelasting. Is de belasting lager, dan vraagt u het verschil terug via aangifte (modelo 210). Dat duurt vaak maanden, dus houd er rekening mee in uw kasplanning.',
+  },
+  {
+    q: 'Bestaat er een lager overdrachtstarief voor flippers?',
+    a: 'In Andalusië bestaat een tarief van 2% in plaats van 7% voor professionele vastgoedbedrijven die de woning als voorraad boeken en binnen vijf jaar doorverkopen. U moet daarvoor bij de aankoop al als vastgoedbedrijf staan ingeschreven (IAE) en het kunnen aantonen bij de notaris. Voor een particulier geldt gewoon 7%.',
+  },
+  {
+    q: 'Kan ik een huis met AFO-status flippen?',
+    a: 'Dat is lastig. U mag een AFO-huis onderhouden en moderniseren, maar niet vergroten. Veel kopers krijgen er moeilijker een hypotheek voor, en de verkoopprijs ligt vaak lager. Reken dus niet op een extra slaapkamer of zwembad om de waarde op te krikken.',
+  },
+];
+---
+<Guide slug="huis-flippen-spanje" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Een huis op het oog om op te knappen?" ctaText="Laat het vóór het bod keuren. U krijgt een overzicht van de gebreken met een prijsindicatie voor de verbouwing, zodat u weet of de som klopt.">
+  <h2 id="kort">Kort antwoord</h2>
+  <p>Een huis kopen, opknappen en met winst verkopen kan in de Axarquía, maar alleen als drie dingen kloppen: u koopt duidelijk onder de marktwaarde, de papieren van het huis zijn in orde, en de verbouwing is vóór de aankoop begroot. Tussen aankoop en verkoop verdwijnt al snel 15 tot 20% van de verkoopprijs aan belastingen, notaris, makelaar en winstbelasting. Een verbouwing die 20% duurder uitvalt of een verkoop die een halfjaar langer duurt, eet de rest van de marge op.</p>
+  <p>Deze gids zet alles op een rij waar u aan moet denken. Voor de details per stap verwijzen we naar onze andere gidsen.</p>
+
+  <h2 id="welk-huis">Welk huis leent zich ervoor</h2>
+  <ul>
+    <li><strong>Dorpshuizen</strong> in populaire witte dorpen (Nerja, Frigiliana, Cómpeta, Torrox) en in Vélez-Málaga: vaak verouderd, met dakterras en karakter. Kopers zoeken ze, maar let op vocht, oude balken en slechte bereikbaarheid voor bouwmateriaal.</li>
+    <li><strong>Appartementen</strong> aan de kust (Torre del Mar, Caleta de Vélez, Rincón de la Victoria, Torrox Costa): eenvoudiger te verbouwen, grote groep kopers en vlotter te verkopen. De marge per object is meestal kleiner. Werk aan gevel, dak of leidingen van het gebouw hangt af van de vereniging van eigenaars.</li>
+    <li><strong>Finca’s op het platteland</strong>: het grootste potentieel, maar ook het grootste risico. Veel finca’s hebben uitbreidingen zonder vergunning of een <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO-status</a>, een eigen put of septische put en een lastige toegangsweg. De kopersmarkt is kleiner en verkopen duurt langer.</li>
+  </ul>
+  <p>Twijfelt u tussen deze typen, lees dan <a href="/nl/gidsen/finca-appartement-of-dorpshuis/">finca, appartement of dorpshuis</a>. Kijk bij de inkoop naar recente verkoopprijzen in dezelfde straat of urbanisatie, niet naar vraagprijzen.</p>
+
+  <h2 id="aankoop">Aankoop: kosten en controles</h2>
+  <p>Bij een bestaande woning betaalt u in Andalusië 7% overdrachtsbelasting (ITP), plus notaris, register, advocaat en gestoría. Reken in totaal met 9 tot 11% bovenop de koopprijs. De volledige uitsplitsing staat in onze gids <a href="/nl/gidsen/kosten-koper-spanje/">kosten koper in Spanje</a>.</p>
+  <p>Werkt u als professioneel vastgoedbedrijf, dan kan het Andalusische tarief van 2% gelden. De voorwaarden: u staat bij de aankoop ingeschreven in een vastgoedrubriek van de IAE, u boekt de woning als voorraad, en u verkoopt binnen vijf jaar per notariële akte. Kunt u dat bij de notaris niet aantonen, dan betaalt u 7%. Laat dit vooraf door een fiscalist beoordelen.</p>
+  <h3>Wat u vóór het tekenen controleert</h3>
+  <ul>
+    <li><strong>Legale status</strong>: komt wat er staat overeen met het kadaster (catastro) en het eigendomsregister (nota simple)? Zijn er vergunningen voor uitbreidingen, of een AFO-verklaring van de gemeente? Een koper na u en diens bank stellen dezelfde vragen.</li>
+    <li><strong>Bestemming en mogelijkheden</strong>: mag u vergroten, een zwembad bouwen of de indeling wijzigen? Zo niet, dan moet de winst uit modernisering komen.</li>
+    <li><strong>Bouwkundige staat</strong>: dak, vocht, scheuren, elektra, leidingen, riolering of septische put. Hier zitten de grote onverwachte kosten. Een <a href="/nl/aankoopkeuring/">aankoopkeuring</a> geeft u per gebrek een prijsindicatie, die u ook bij het onderhandelen gebruikt.</li>
+    <li><strong>Schulden en lasten</strong>: openstaande IBI, bijdragen aan de vereniging van eigenaars, hypotheken of beslagen. Uw advocaat controleert dit.</li>
+    <li><strong>Ontbindende voorwaarden</strong>: neem in het voorlopig contract (arras) op dat u kunt afzien als de keuring of de juridische controle tegenvalt.</li>
+  </ul>
+
+  <h2 id="verbouwing">Vergunning en verbouwing</h2>
+  <p>Sinds de Andalusische wet LISTA (Ley 7/2021) volstaat voor veel werk binnen een bestaande woning een melding vooraf bij de gemeente (<em>declaración responsable</em>). Denk aan een nieuwe keuken of badkamer, tegelwerk en nieuwe installaties. Voor werk aan de constructie, de gevel of een uitbreiding heeft u een vergunning (<em>licencia de obra</em>) met een project van een architect nodig. Dat kost meer tijd en geld. Per gemeente leest u de regels op de pagina Bouwvergunning, bijvoorbeeld voor <a href="/nl/plaatsen/velez-malaga/bouwvergunning/">Vélez-Málaga</a> en <a href="/nl/plaatsen/nerja/bouwvergunning/">Nerja</a>.</p>
+  <p>Wat er naast de aannemer bij komt:</p>
+  <ul>
+    <li><strong>Gemeentelijke bouwbelasting (ICIO) en leges</strong>: meestal enkele procenten van de bouwkosten.</li>
+    <li><strong>Architect of aparejador</strong>: voor vergunningsplichtig werk, en vaak ook nuttig voor de oplevering.</li>
+    <li><strong>Btw over de verbouwing</strong>: als particulier betaalt u voor renovatie van een woning onder voorwaarden 10% btw. Werkt u via een bedrijf, dan is dat meestal 21%. Omdat de verkoop van een bestaande woning niet onder de btw valt, kunt u die btw dan ook niet terugvragen.</li>
+    <li><strong>Energielabel</strong>: verplicht zodra u het huis te koop aanbiedt.</li>
+    <li><strong>Onvoorzien</strong>: reken met minstens 10 tot 15% buffer, bij oudere dorpshuizen en finca’s eerder meer.</li>
+  </ul>
+  <p>Een goed beeld van de bedragen per post vindt u in <a href="/nl/gidsen/kosten-huis-renoveren-spanje/">wat kost renoveren in Spanje</a>. Met de <a href="/nl/kosten/rekentool/">rekentool</a> maakt u in een paar minuten een eerste begroting.</p>
+  <p>Kies bij een flip voor wat kopers zien en waar ze voor betalen: een lichte, frisse keuken en badkamer, goede airco, nette buitenruimte, droge muren en een dak dat niet lekt. Dure luxe die u niet terugverdient, laat u weg.</p>
+
+  <h2 id="financiering">Financiering en vaste lasten</h2>
+  <p>Spaanse banken financieren voor niet-inwoners meestal 60 tot 70% van de taxatiewaarde, en zelden de verbouwing. Een flip doet u dus grotendeels met eigen geld. Met een hypotheek komen er taxatie- en bankkosten bij, en soms een boete bij vroeg aflossen. Laat dat in de offerte opnemen.</p>
+  <p>Zolang het huis van u is, betaalt u ook vaste lasten: IBI, afvalheffing, verzekering, water en stroom, eventueel de vereniging van eigenaars en, als niet-inwoner, de jaarlijkse belasting over de woning (IRNR). Een leeg huis heeft toezicht nodig; zie <a href="/nl/sleutelbeheer/">sleutelbeheer</a>.</p>
+
+  <h2 id="verkoop">Verkoopkosten</h2>
+  <table class="prices">
+    <thead><tr><th>Post</th><th>Indicatie</th></tr></thead>
+    <tbody>
+      <tr><td>Makelaar</td><td>3 – 6% + 21% IVA</td></tr>
+      <tr><td>Plusvalía municipal (gemeente)</td><td>enkele honderden tot enkele duizenden euro’s</td></tr>
+      <tr><td>Energielabel</td><td>€ 100 – € 300</td></tr>
+      <tr><td>Aflossen hypotheek en doorhalen in het register</td><td>enkele honderden euro’s</td></tr>
+      <tr><td>Advocaat of gestoría bij de verkoop</td><td>€ 500 – € 1.500</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Indicaties op basis van gangbare tarieven in de provincie Málaga, november 2026.</p>
+  <p>De <strong>plusvalía municipal</strong> is een gemeentelijke belasting op de waardestijging van de grond, te betalen door de verkoper. Sinds eind 2021 wordt ook verkoop binnen een jaar belast. U kiest tussen een berekening op basis van de kadastrale waarde en een op basis van de werkelijke winst; de laagste telt. Verkoopt u met verlies, dan betaalt u niets, mits u dat met de aktes aantoont.</p>
+
+  <h2 id="belasting">Belasting over de winst</h2>
+  <p>De winst is de verkoopprijs min verkoopkosten, min de aankoopprijs, de kosten koper en de verbouwingskosten (met facturen). Vaste lasten zoals IBI en verzekering tellen voor een particulier meestal niet mee. Hoeveel belasting u betaalt, hangt af van hoe u de flip doet:</p>
+  <table class="prices">
+    <thead><tr><th>Situatie</th><th>Belasting in Spanje</th></tr></thead>
+    <tbody>
+      <tr><td>Particulier, niet-inwoner</td><td>19% over de winst (IRNR)</td></tr>
+      <tr><td>Particulier, Spaans belastinginwoner</td><td>19 – 30% in de spaarbox van de IRPF</td></tr>
+      <tr><td>Spaanse vennootschap (S.L.)</td><td>vennootschapsbelasting, algemeen 25%</td></tr>
+    </tbody>
+  </table>
+  <p>Twee dingen om op te letten. Ten eerste de <strong>3% inhouding</strong>: verkoopt u als niet-inwoner, dan houdt de koper 3% van de koopprijs in als voorschot op uw belasting. Te veel betaald krijgt u via aangifte (modelo 210) terug, maar dat duurt vaak maanden. Ten tweede: koopt en verkoopt u structureel, dan kan de belastingdienst het als ondernemingsactiviteit zien in plaats van als vermogenswinst, met hogere tarieven. Dat geldt ook in Nederland: een Spaans huis valt normaal in box 3 met aftrek ter voorkoming van dubbele belasting, maar wie regelmatig flipt, kan in box 1 terechtkomen. Laat dit vooraf beoordelen.</p>
+
+  <h2 id="voorbeeld">Rekenvoorbeeld: dorpshuis van € 180.000</h2>
+  <p>Een verouderd dorpshuis, gekocht door een particulier die niet in Spanje woont, gerenoveerd en na ongeveer een jaar verkocht. Alle bedragen zijn indicaties.</p>
+  <table class="prices">
+    <tbody>
+      <tr><td>Koopprijs</td><td>€ 180.000</td></tr>
+      <tr><td>Kosten koper (ITP 7%, notaris, register, advocaat, gestoría)</td><td>€ 16.900</td></tr>
+      <tr><td>Verbouwing incl. 10% IVA</td><td>€ 60.000</td></tr>
+      <tr><td>Architect, ICIO en leges</td><td>€ 6.000</td></tr>
+      <tr><td>Onvoorzien (10%)</td><td>€ 6.000</td></tr>
+      <tr><td>Vaste lasten tijdens het project</td><td>€ 2.500</td></tr>
+      <tr><td><strong>Totale investering</strong></td><td><strong>€ 271.400</strong></td></tr>
+      <tr><td>Verkoopprijs</td><td>€ 320.000</td></tr>
+      <tr><td>Verkoopkosten (makelaar 5% + IVA, plusvalía, energielabel)</td><td>− € 20.500</td></tr>
+      <tr><td><strong>Opbrengst na verkoopkosten</strong></td><td><strong>€ 299.500</strong></td></tr>
+      <tr><td>Winst vóór belasting</td><td>€ 28.100</td></tr>
+      <tr><td>Belasting 19% (over € 30.600, de vaste lasten tellen niet mee)</td><td>− € 5.800</td></tr>
+      <tr><td><strong>Netto winst</strong></td><td><strong>€ 22.300 (circa 8%)</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Wat dit laat zien: op een investering van ruim € 270.000 blijft na een jaar werk circa € 22.000 over. Verkoopt u 5% lager (€ 304.000), dan halveert de winst ruwweg. Valt de verbouwing 20% duurder uit, dan blijft er nog minder over. Van de koopprijs houdt de koper bovendien € 9.600 in (3%), waarvan u een deel pas maanden later terugkrijgt.</p>
+
+  <h2 id="doorlooptijd">Doorlooptijd</h2>
+  <table class="prices">
+    <thead><tr><th>Fase</th><th>Indicatie</th></tr></thead>
+    <tbody>
+      <tr><td>Zoeken, keuren en aankoop</td><td>1 – 3 maanden</td></tr>
+      <tr><td>Ontwerp, offertes en melding of vergunning</td><td>1 – 4 maanden</td></tr>
+      <tr><td>Verbouwing</td><td>3 – 6 maanden</td></tr>
+      <tr><td>Verkoop tot de notaris</td><td>3 – 9 maanden</td></tr>
+      <tr><td><strong>Totaal</strong></td><td><strong>circa 9 – 18 maanden</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Het voorjaar en het najaar zijn de drukste verkoopseizoenen, als buitenlandse kopers komen kijken. Plan de oplevering liefst daarvoor. In de zomer ligt in veel dorpen het bouwwerk deels stil.</p>
+
+  <h2 id="risicos">De grootste risico’s</h2>
+  <ul>
+    <li><strong>Papieren niet in orde</strong>: een uitbreiding zonder vergunning maakt het huis moeilijker verkoopbaar en financierbaar voor de volgende koper.</li>
+    <li><strong>Verborgen gebreken</strong>: vocht, houtworm en termieten in oude balken, een dak dat lekt, elektra zonder aarding.</li>
+    <li><strong>Uitloop</strong>: wachten op een vergunning of een aannemer betekent langer vaste lasten en later geld terug.</li>
+    <li><strong>De markt</strong>: prijzen kunnen dalen tijdens uw project, en sommige plekken (afgelegen finca’s) verkopen traag.</li>
+    <li><strong>Water</strong>: na de droogte van 2022 tot 2024 letten kopers meer op de watervoorziening, zeker bij finca’s met een eigen put of zonder aansluiting.</li>
+    <li><strong>Leegstand</strong>: een leeg huis trekt inbrekers en krakers aan. Zorg voor toezicht en goede sloten.</li>
+    <li><strong>Garantie na verkoop</strong>: als verkoper bent u aansprakelijk voor verborgen gebreken. Goed en aantoonbaar werk, met facturen, beschermt u.</li>
+  </ul>
+
+  <h2 id="checklist">Checklist</h2>
+  <ol>
+    <li>Bepaal de verwachte verkoopprijs op basis van recente verkopen, niet vraagprijzen.</li>
+    <li>Reken terug: verkoopprijs min verkoopkosten, belasting, verbouwing, buffer en gewenste winst geeft uw maximale bod.</li>
+    <li>Laat het huis keuren en de verbouwing begroten vóór u tekent.</li>
+    <li>Laat een onafhankelijke advocaat de legale status, schulden en lasten nagaan.</li>
+    <li>Kies vooraf met een fiscalist: particulier of vennootschap, en wat dat in Spanje en Nederland betekent.</li>
+    <li>Regel de melding of vergunning voordat de verbouwing start.</li>
+    <li>Bewaar alle facturen: ze verlagen de belastbare winst.</li>
+    <li>Houd rekening met de 3% inhouding in uw kasplanning.</li>
+  </ol>
+  <p class="note">Deze gids geeft algemene informatie op basis van de regels in Andalusië en Spanje in november 2026. Bronnen: Andalusische Ley 5/2021 (ITP 7% en 2% voor vastgoedbedrijven), Ley 7/2021 (LISTA), Real Decreto-ley 26/2021 (plusvalía), en de Spaanse belastingdienst (Agencia Tributaria) voor IRPF, IRNR en de 3% inhouding. Tarieven en regels kunnen wijzigen. Het is geen fiscaal of juridisch advies; laat uw eigen situatie beoordelen door een advocaat en een fiscalist.</p>
+</Guide>
