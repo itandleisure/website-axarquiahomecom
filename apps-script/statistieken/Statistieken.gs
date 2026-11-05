@@ -4,8 +4,8 @@
  * Haalt elke nacht automatisch op:
  *  - Google Search Console: klikken, vertoningen, posities en zoekwoorden per taal
  *  - Bing Webmaster Tools: klikken en zoekwoorden (optioneel, met API-sleutel)
- *  - Plausible: bezoekers en bronnen per taal, inclusief verkeer uit ChatGPT,
- *    Perplexity enz. (optioneel, met API-sleutel)
+ *  - Google Analytics 4 of Plausible: bezoekers en bronnen per taal, inclusief
+ *    verkeer uit ChatGPT, Perplexity enz. (optioneel)
  *  - Aanvragen uit de sheet "Aanvragen axarquiahome.com" (optioneel)
  * en ontvangt elke week van een Claude-routine:
  *  - Ubersuggest: posities van de gevolgde zoekwoorden en AI-zichtbaarheid
@@ -28,7 +28,7 @@ const CONFIG = {
   DAGEN_VERVERSEN: 60,
 };
 // Sleutels staan NIET in de code maar in Projectinstellingen > Scripteigenschappen:
-//   BING_API_KEY, PLAUSIBLE_API_KEY, AANVRAGEN_SHEET_ID, TOKEN (maakt setup() zelf aan)
+//   GA4_PROPERTY_ID, BING_API_KEY, PLAUSIBLE_API_KEY, AANVRAGEN_SHEET_ID, TOKEN (maakt setup() zelf aan)
 
 const AI_BRONNEN = /chatgpt|openai|perplexity|gemini|bard|copilot|claude|anthropic|deepseek|you\.com|phind|mistral|grok/i;
 
@@ -64,7 +64,8 @@ function setup() {
 function ververs() {
   stap_('Search Console', haalSearchConsole_);
   if (prop_('BING_API_KEY')) stap_('Bing', haalBing_);
-  if (prop_('PLAUSIBLE_API_KEY')) stap_('Plausible', haalPlausible_);
+  if (prop_('GA4_PROPERTY_ID')) stap_('Google Analytics', haalGA4_);
+  else if (prop_('PLAUSIBLE_API_KEY')) stap_('Plausible', haalPlausible_);
 }
 
 function stap_(naam, fn) {
@@ -158,7 +159,51 @@ function bingDatum_(s) {
   return m ? Number(m[1]) : 0;
 }
 
-// ===== Plausible (cookieloze bezoekersstatistieken) =====
+// ===== Google Analytics 4 =====
+// Telt alleen bezoekers die cookies accepteren (consent mode), dus lager dan het echte aantal.
+function haalGA4_() {
+  const start = dag_(-CONFIG.DAGEN_VERVERSEN);
+  const eind = dag_(0);
+  const talen = ['alle'].concat(Object.keys(CONFIG.TALEN));
+  const nieuw = [];
+  const bronnen = [];
+  talen.forEach((t) => {
+    const filter = t === 'alle' ? undefined
+      : { filter: { fieldName: 'landingPage', stringFilter: { matchType: 'BEGINS_WITH', value: CONFIG.TALEN[t] } } };
+    ga4_({ dateRanges: [{ startDate: start, endDate: eind }], dimensions: [{ name: 'date' }],
+      metrics: [{ name: 'activeUsers' }, { name: 'sessions' }, { name: 'screenPageViews' }], dimensionFilter: filter, limit: 1000 })
+      .forEach((r) => {
+        const d = r.dimensionValues[0].value;
+        nieuw.push([d.slice(0, 4) + '-' + d.slice(4, 6) + '-' + d.slice(6, 8), t,
+          Number(r.metricValues[0].value), Number(r.metricValues[1].value), Number(r.metricValues[2].value)]);
+      });
+    ga4_({ dateRanges: [{ startDate: '28daysAgo', endDate: 'today' }], dimensions: [{ name: 'sessionSource' }],
+      metrics: [{ name: 'activeUsers' }], dimensionFilter: filter, limit: 50,
+      orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }] })
+      .forEach((r) => {
+        const bron = r.dimensionValues[0].value;
+        bronnen.push([t, bron, Number(r.metricValues[0].value), AI_BRONNEN.test(bron) ? 'ja' : 'nee']);
+      });
+  });
+  upsert_('bezDag', nieuw, (r) => r[0] + '|' + r[1]);
+  vervang_('bronnen', bronnen);
+  return nieuw.length + ' dagregels';
+}
+
+function ga4_(body) {
+  const id = String(prop_('GA4_PROPERTY_ID')).replace(/\D/g, '');
+  const res = UrlFetchApp.fetch('https://analyticsdata.googleapis.com/v1beta/properties/' + id + ':runReport', {
+    method: 'post',
+    contentType: 'application/json',
+    headers: { Authorization: 'Bearer ' + ScriptApp.getOAuthToken() },
+    payload: JSON.stringify(body),
+    muteHttpExceptions: true,
+  });
+  if (res.getResponseCode() !== 200) throw new Error('Google Analytics ' + res.getResponseCode() + ': ' + res.getContentText().slice(0, 300));
+  return JSON.parse(res.getContentText()).rows || [];
+}
+
+// ===== Plausible (cookieloze bezoekersstatistieken, alternatief voor GA4) =====
 function haalPlausible_() {
   const start = dag_(-CONFIG.DAGEN_VERVERSEN);
   const eind = dag_(0);
@@ -251,7 +296,7 @@ function data_() {
   const uit = {};
   Object.keys(TABS).forEach((k) => (uit[k] = k === 'log' ? lees(k).slice(-20) : lees(k)));
   uit.aanvragen = aanvragen_();
-  uit.plausible = !!prop_('PLAUSIBLE_API_KEY');
+  uit.bezoekersBron = prop_('GA4_PROPERTY_ID') ? 'Google Analytics' : prop_('PLAUSIBLE_API_KEY') ? 'Plausible' : '';
   uit.bingActief = !!prop_('BING_API_KEY');
   uit.bijgewerkt = Utilities.formatDate(new Date(), 'Europe/Madrid', 'd MMM yyyy HH:mm');
   return uit;
