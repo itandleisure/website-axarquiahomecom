@@ -209,6 +209,18 @@ export const guides: GuideMeta[] = [
     minutes: 7,
     published: '2026-11-05',
   },
+  // Stappenplan huis kopen. Achteraan in nl/en/de, zelfde volgorde.
+  {
+    slug: 'huis-kopen-in-spanje',
+    title: 'Huis kopen in Spanje: het stappenplan voor de Axarquía',
+    seoTitle: 'Huis kopen in Spanje: stappenplan van NIE tot notaris (2026)',
+    short: 'Stappenplan huis kopen',
+    description: 'Alle stappen om als buitenlander een huis te kopen in de Axarquía: NIE, bankrekening, advocaat, nota simple, legaliteit en AFO, keuring, arras, notaris, belastingen en registratie.',
+    lead: 'Een huis kopen in Spanje gaat anders dan in Nederland of België. De notaris controleert minder, de makelaar werkt voor de verkoper en een aanbouw zonder vergunning is op het platteland eerder regel dan uitzondering. Met dit stappenplan weet u wat er in welke volgorde moet gebeuren.',
+    keyword: 'huis kopen in spanje',
+    minutes: 13,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesEn: GuideMeta[] = [
@@ -399,6 +411,18 @@ export const guidesEn: GuideMeta[] = [
     minutes: 7,
     published: '2026-11-05',
   },
+  // Step-by-step buying guide. Last in nl/en/de, same order.
+  {
+    slug: 'buying-a-house-in-spain',
+    title: 'Buying a house in Spain: the step-by-step guide for the Axarquía',
+    seoTitle: 'Buying a house in Spain: step by step from NIE to notary (2026)',
+    short: 'Step-by-step buying guide',
+    description: 'Every step to buying a home in the Axarquía as a foreigner: NIE, bank account, lawyer, nota simple, legal status and AFO, survey, arras contract, notary, taxes and registration.',
+    lead: 'Buying a house in Spain works differently from back home. The notary checks less, the estate agent works for the seller, and in the countryside an extension without a permit is the rule rather than the exception. This guide tells you what has to happen, and in what order.',
+    keyword: 'buying a house in spain',
+    minutes: 13,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesDe: GuideMeta[] = [
@@ -587,6 +611,18 @@ export const guidesDe: GuideMeta[] = [
     lead: 'Käufer schauen zuerst mit den Augen und danach mit einem Gutachter. Kleine sichtbare Mängel kosten Sie bei der Verhandlung oft mehr als die Reparatur. Eine komplett neue Küche holen Sie selten wieder herein.',
     keyword: 'vor dem verkauf renovieren',
     minutes: 7,
+    published: '2026-11-05',
+  },
+  // Schritt-für-Schritt-Ratgeber Hauskauf. Am Ende in nl/en/de, gleiche Reihenfolge.
+  {
+    slug: 'haus-kaufen-spanien',
+    title: 'Haus kaufen in Spanien: Schritt für Schritt in der Axarquía',
+    seoTitle: 'Haus kaufen in Spanien: Ablauf von NIE bis Notar (2026)',
+    short: 'Hauskauf Schritt für Schritt',
+    description: 'Alle Schritte zum Hauskauf in der Axarquía als Ausländer: NIE, Bankkonto, Anwalt, Nota simple, Legalität und AFO, Gutachten, Arras-Vertrag, Notar, Steuern und Eintragung.',
+    lead: 'Ein Hauskauf in Spanien läuft anders als in Deutschland. Der Notar prüft weniger, der Makler arbeitet für den Verkäufer, und auf dem Land ist ein Anbau ohne Genehmigung eher die Regel als die Ausnahme. Mit diesem Ablaufplan wissen Sie, was in welcher Reihenfolge zu tun ist.',
+    keyword: 'haus kaufen spanien',
+    minutes: 13,
     published: '2026-11-05',
   },
 ];

@@ -1,0 +1,174 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'ueberblick', label: 'Der Ablauf auf einen Blick' },
+  { id: 'vorbereitung', label: 'Phase 1: Vorbereitung' },
+  { id: 'suche', label: 'Phase 2: Suchen und Angebot' },
+  { id: 'pruefung', label: 'Phase 3: Die Immobilie prüfen' },
+  { id: 'arras', label: 'Phase 4: Der Arras-Vertrag' },
+  { id: 'notar', label: 'Phase 5: Beim Notar' },
+  { id: 'danach', label: 'Phase 6: Nach der Übergabe' },
+  { id: 'ausland', label: 'Kaufen aus dem Ausland' },
+  { id: 'quellen', label: 'Quellen' },
+];
+
+const faq = [
+  {
+    q: 'Wie lange dauert ein Hauskauf in Spanien?',
+    a: 'Sobald Sie eine Immobilie gefunden haben, rechnen Sie mit zwei bis drei Monaten bis zum Notartermin. NIE und Bankkonto erledigen Sie am besten schon vorher. Bei einer Finca mit offenen Genehmigungsfragen oder mit Finanzierung dauert es oft länger.',
+  },
+  {
+    q: 'Dürfen Ausländer in Spanien ein Haus kaufen?',
+    a: 'Ja. Für EU-Bürger gibt es keine Beschränkungen, und auch Schweizer und andere Nicht-EU-Bürger dürfen kaufen. Sie benötigen eine NIE-Nummer. Ein Hauskauf gibt kein Aufenthaltsrecht; das ist eine eigene Frage.',
+  },
+  {
+    q: 'Brauche ich wirklich einen eigenen Anwalt?',
+    a: 'Vorgeschrieben ist er nicht, aber sehr zu empfehlen. Der Makler wird meist vom Verkäufer bezahlt, und der Notar prüft vor allem die formale Richtigkeit der Urkunde. Ein unabhängiger Anwalt prüft Lasten, Legalität und Vertrag. Rechnen Sie mit etwa 1 % des Kaufpreises plus Mehrwertsteuer.',
+  },
+  {
+    q: 'Was passiert, wenn ich nach dem Arras-Vertrag zurücktrete?',
+    a: 'Bei den üblichen arras penitenciales verlieren Sie die Anzahlung, meist 10 % des Kaufpreises. Tritt der Verkäufer zurück, zahlt er das Doppelte zurück. Lassen Sie deshalb die rechtliche Prüfung und das Gutachten vor der Unterschrift machen oder vereinbaren Sie Bedingungen im Vertrag.',
+  },
+  {
+    q: 'Welche Kaufnebenkosten fallen in Andalusien an?',
+    a: 'Bei einer Bestandsimmobilie etwa 10 %: 7 % Grunderwerbsteuer (ITP) plus Notar, Register, Anwalt und Gestoría. Bei einem Neubau vom Bauträger zahlen Sie 10 % Mehrwertsteuer plus 1,2 % Stempelsteuer. Bei älteren Häusern kommt meist ein Renovierungsbudget hinzu.',
+  },
+  {
+    q: 'Muss der Käufer die Plusvalía zahlen?',
+    a: 'Normalerweise nicht: Die kommunale Plusvalía ist Sache des Verkäufers. Ist der Verkäufer jedoch nicht in Spanien ansässig, muss der Käufer sie für ihn an die Gemeinde abführen und behält den Betrag vom Kaufpreis ein. Dasselbe gilt für den Einbehalt von 3 % für das spanische Finanzamt. Ihr Anwalt regelt das beim Notar.',
+  },
+];
+---
+<Guide lang="de" slug="haus-kaufen-spanien" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Ein Haus im Blick?" ctaText="Lassen Sie es begutachten, bevor Sie den Arras-Vertrag unterschreiben. Sie erhalten einen Bericht über den Zustand des Hauses mit einer Preisschätzung für die nötigen Arbeiten.">
+  <p>Sie suchen zuerst einen Überblick über Regionen und Preise in der Provinz? Lesen Sie <a href="/de/ratgeber/immobilie-kaufen-malaga/">Immobilie kaufen in Málaga und Andalusien</a>. Noch unsicher beim Haustyp? Dann hilft <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/">Finca, Wohnung oder Dorfhaus</a>. Dieser Ratgeber behandelt den Kauf selbst: was Sie regeln, was Sie prüfen lassen und was Sie bezahlen.</p>
+
+  <h2 id="ueberblick">Der Ablauf auf einen Blick</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Schritt</th><th>Wer</th><th>Rechnen Sie mit</th></tr></thead>
+    <tbody>
+      <tr><td>1. NIE-Nummer beantragen</td><td>Sie oder Ihr Anwalt</td><td>1 Tag bis einige Wochen</td></tr>
+      <tr><td>2. Spanisches Bankkonto eröffnen</td><td>Sie</td><td>1 Tag bis 2 Wochen</td></tr>
+      <tr><td>3. Budget und ggf. Finanzierung</td><td>Sie, Bank oder Vermittler</td><td>2 bis 6 Wochen</td></tr>
+      <tr><td>4. Unabhängigen Anwalt wählen</td><td>Sie</td><td>Vor dem Angebot</td></tr>
+      <tr><td>5. Suchen, besichtigen, Angebot</td><td>Sie, mit Maklern</td><td>Wochen bis Monate</td></tr>
+      <tr><td>6. Reservierung</td><td>Sie und der Makler</td><td>Bei Einigung über den Preis</td></tr>
+      <tr><td>7. Rechtliche Prüfung: Register, Kataster, Lasten</td><td>Anwalt</td><td>1 bis 3 Wochen</td></tr>
+      <tr><td>8. Legalität: Genehmigungen und AFO</td><td>Anwalt, ggf. Architekt</td><td>1 bis 4 Wochen</td></tr>
+      <tr><td>9. Bautechnisches Gutachten</td><td>Gutachter oder Baufirma</td><td>1 bis 2 Wochen</td></tr>
+      <tr><td>10. Arras-Vertrag und Anzahlung</td><td>Anwalt und Verkäufer</td><td>Meist 10 % des Preises</td></tr>
+      <tr><td>11. Escritura beim Notar</td><td>Notar, Sie (oder Bevollmächtigter)</td><td>4 bis 10 Wochen nach der Arras</td></tr>
+      <tr><td>12. Steuern zahlen und eintragen</td><td>Anwalt oder Gestoría</td><td>Direkt nach dem Notar</td></tr>
+      <tr><td>13. Versorger und Gemeinde</td><td>Sie, Anwalt oder Hausbetreuung</td><td>Erste Wochen nach der Übergabe</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Richtwerte aus der Praxis in der Provinz Málaga. Bei einer Finca oder einer Finanzierung dauert es oft länger.</p>
+
+  <h2 id="vorbereitung">Phase 1: Vorbereitung</h2>
+  <h3>Schritt 1: NIE-Nummer</h3>
+  <p>Die <em>Número de Identidad de Extranjero</em> (NIE) ist Ihre spanische Steuer-Identifikationsnummer. Ohne sie können Sie keine Urkunde unterschreiben, keine Steuern zahlen und oft kein Konto eröffnen. Sie beantragen sie bei der Polizei (<em>Policía Nacional</em>, Oficina de Extranjería) in Spanien oder beim spanischen Konsulat in Ihrem Heimatland. Die Gebühr beträgt rund 12 € (Formular 790, Code 012; der Betrag wird jährlich angepasst).</p>
+  <p>Termine bei der Polizei in der Provinz Málaga sind teils schwer zu bekommen. Viele Käufer lassen den Antrag deshalb per Vollmacht von ihrem Anwalt stellen. Wenn Sie nach Spanien ziehen, brauchen Sie später zusätzlich eine Aufenthaltsregistrierung; siehe <a href="/de/ratgeber/auswandern-nach-spanien/">Auswandern nach Spanien</a>.</p>
+
+  <h3>Schritt 2: Spanisches Bankkonto</h3>
+  <p>Ein spanisches Konto ist gesetzlich nicht vorgeschrieben, in der Praxis aber unverzichtbar. Darüber laufen die Anzahlung, der Bankscheck oder die Überweisung beim Notar und später Grundsteuer (IBI), Wasser, Strom und Gemeinschaftsbeiträge per Lastschrift. Als Nichtresident eröffnen Sie ein Konto für <em>no residentes</em>. Die Bank fragt nach der Herkunft Ihres Geldes; halten Sie Kontoauszüge oder den Kaufvertrag Ihrer bisherigen Immobilie bereit.</p>
+
+  <h3>Schritt 3: Budget und Finanzierung</h3>
+  <p>Rechnen Sie bei einer Bestandsimmobilie mit <strong>etwa 10 % Nebenkosten auf den Kaufpreis</strong> und bei einem älteren Haus mit einem Renovierungsbudget. Die Aufschlüsselung finden Sie in <a href="/de/ratgeber/kaufnebenkosten-spanien/">Kaufnebenkosten in Spanien</a>, Richtpreise für Bauarbeiten in <a href="/de/ratgeber/renovierungskosten-spanien/">Renovierungskosten in Spanien</a> und im <a href="/de/kosten/rechner/">Kostenrechner</a>.</p>
+  <p>Brauchen Sie eine Hypothek? Spanische Banken finanzieren Nichtresidenten meist 60 bis 70 % des Schätzwerts oder Kaufpreises, je nachdem, was niedriger ist. Den Rest und alle Nebenkosten zahlen Sie aus Eigenmitteln. Die Bank lässt die Immobilie von einem zugelassenen Gutachter bewerten. Beantragen Sie die Finanzierung vor der Arras oder vereinbaren Sie darin, dass Sie ohne Strafe zurücktreten können, falls die Bank ablehnt.</p>
+
+  <h3>Schritt 4: Ein unabhängiger Anwalt</h3>
+  <p>In Spanien arbeitet der Makler für den Verkäufer, der auch die Provision zahlt. Der Notar ist neutral und prüft vor allem die formale Richtigkeit der Urkunde, nicht ob das Haus legal gebaut wurde oder in gutem Zustand ist. Wählen Sie deshalb einen eigenen Anwalt (<em>abogado</em>), der nicht vom Makler vermittelt wurde, Deutsch oder Englisch spricht und ländliche Immobilien in der Axarquía kennt. Prüfen Sie, ob er bei der Anwaltskammer (<em>Colegio de Abogados</em>) eingetragen und berufshaftpflichtversichert ist. Üblich sind etwa 1 % des Kaufpreises plus 21 % Mehrwertsteuer.</p>
+
+  <h2 id="suche">Phase 2: Suchen und Angebot</h2>
+  <h3>Schritt 5: Suchen und besichtigen</h3>
+  <p>Die meisten Häuser in der Axarquía stehen auf Portalen wie Idealista, Fotocasa und Kyero, oft bei mehreren Maklern gleichzeitig und manchmal zu unterschiedlichen Preisen. Besichtigen Sie ein Haus möglichst mehr als einmal, auch im Winter oder nach Regen: Dann sehen Sie Feuchtigkeit, Undichtigkeiten und den Zustand der Zufahrt. Fahren Sie die Strecke zum nächsten Supermarkt, Gesundheitszentrum und zur Küste. Die Orte vergleichen Sie auf unseren <a href="/de/orte/">Ortsseiten</a>.</p>
+  <h3>Schritt 6: Angebot und Reservierung</h3>
+  <p>Angebote laufen über den Makler. Bei Einigung verlangt er oft eine kleine Reservierungszahlung, etwa 3.000 bis 6.000 €, um das Haus vom Markt zu nehmen. Lassen Sie Ihren Anwalt vorher mitlesen und halten Sie schriftlich fest, dass Sie das Geld zurückbekommen, falls die rechtliche Prüfung oder das Gutachten Probleme ergibt. Zahlen Sie möglichst auf das Treuhandkonto Ihres Anwalts, nicht direkt an den Verkäufer.</p>
+
+  <h2 id="pruefung">Phase 3: Die Immobilie prüfen</h2>
+  <p>Das ist die wichtigste Phase. Was Sie jetzt finden, können Sie noch in der Verhandlung nutzen, oder Sie steigen aus, ohne Geld zu verlieren.</p>
+  <h3>Schritt 7: Register, Kataster und Lasten</h3>
+  <ul>
+    <li><strong>Nota simple.</strong> Der Auszug aus dem Eigentumsregister (<em>Registro de la Propiedad</em>) zeigt Eigentümer, Grundstücksgröße und ob Hypotheken, Pfändungen oder Dienstbarkeiten eingetragen sind. Sie oder Ihr Anwalt beantragen ihn online beim Colegio de Registradores für etwa 10 bis 15 €.</li>
+    <li><strong>Kataster.</strong> Der <em>Catastro</em> beschreibt Grundstück und Gebäude für die Steuer. Vergleichen Sie Kataster, Register und Wirklichkeit. Stehen im Kataster 90 m² und das Haus hat 140 m², wurde wahrscheinlich ohne Genehmigung angebaut.</li>
+    <li><strong>Schulden, die übergehen.</strong> Unbezahlte Grundsteuer (IBI) haftet am Haus, ebenso rückständige Gemeinschaftsbeiträge für das laufende Jahr und die drei Vorjahre. Verlangen Sie den letzten IBI-Bescheid und bei Wohnung oder Urbanisation eine Bescheinigung der Eigentümergemeinschaft, dass keine Rückstände bestehen.</li>
+    <li><strong>Mieter und Bewohner.</strong> Prüfen Sie, dass das Haus leer übergeben wird und kein Mietvertrag oder Ferienvermietung weiterläuft.</li>
+  </ul>
+
+  <h3>Schritt 8: Legalität, Genehmigungen und AFO</h3>
+  <p>Viele Häuser in der Axarquía stehen auf ländlichem Boden (<em>suelo rústico</em>), wo früher zahlreiche Häuser, Anbauten und Pools ohne Genehmigung entstanden sind. Ihr Anwalt prüft bei der Gemeinde, ob Haus und Nebengebäude genehmigt sind. Wenn nicht, gibt es grob drei Fälle:</p>
+  <ul>
+    <li><strong>Das Haus hat bereits eine AFO-Erklärung (DAFO).</strong> Die Gemeinde hat bestätigt, dass nicht mehr dagegen vorgegangen werden kann. Es darf bewohnt und im Register eingetragen werden, aber nicht einfach erweitert.</li>
+    <li><strong>Das Haus kommt für AFO in Frage, hat sie aber noch nicht.</strong> Dann sollten Sie vereinbaren, dass der Verkäufer das Verfahren vor dem Notar abschließt, oder Kosten und Zeit im Preis berücksichtigen. AFO-Verfahren dauern oft Monate.</li>
+    <li><strong>Es läuft ein Verfahren der Bauaufsicht oder es handelt sich um eine unzulässige Parzellierung.</strong> Dann kann ein Bußgeld oder sogar Abriss drohen. Finger weg, es sei denn, Ihr Anwalt ist sicher, dass es sich lösen lässt.</li>
+  </ul>
+  <p>Wollen Sie später anbauen, einen Pool bauen oder ein Gästehaus einrichten? Lassen Sie vorher prüfen, was auf dem Grundstück erlaubt ist. Auf ländlichem Boden ist ein Neubau in Andalusien in der Regel nicht zulässig, ebenso wenig die Erweiterung eines Hauses mit AFO-Status. Mehr dazu in <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung in Andalusien</a> und für Landhäuser in <a href="/de/ratgeber/finca-kaufen-spanien/">Finca kaufen in Spanien</a>.</p>
+  <p>Verlangen Sie auch den Energieausweis (<em>certificado de eficiencia energética</em>): Der Verkäufer muss ihn erstellen lassen und Ihnen übergeben.</p>
+
+  <h3>Schritt 9: Bautechnisches Gutachten</h3>
+  <p>Ein Gutachten ist in Spanien nicht vorgeschrieben, und der Makler wird es nicht vorschlagen. Gerade deshalb lohnt es sich. Ein Gutachter prüft Feuchtigkeit und Schimmel, Dach und Dachterrasse, Risse, Elektrik, Wasser und Abwasser, Klärgrube, Pool und bei älteren Häusern Holzwurm und Termiten. Typische Befunde in der Axarquía sind <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit und Schimmel</a>, <a href="/de/probleme/undichtes-dach/">undichte Dächer</a> und <a href="/de/probleme/risse-in-waenden/">Risse in Wänden</a>.</p>
+  <p>Mit unserem <a href="/de/immobiliengutachten/">Immobiliengutachten</a> erhalten Sie einen Bericht mit Fotos und einer Preisschätzung für die nötigen Arbeiten. Diese Zahl nutzen Sie in der Verhandlung, und Sie wissen vor der Unterschrift, was das Haus wirklich kostet. Die Kommunikation läuft auf Englisch oder Niederländisch. <a href="/de/anfrage/?dienst=aankoopkeuring">Gutachten anfragen</a>.</p>
+
+  <h2 id="arras">Phase 4: Der Arras-Vertrag</h2>
+  <h3>Schritt 10: Privater Kaufvertrag und Anzahlung</h3>
+  <p>Sind die Prüfungen in Ordnung, unterschreiben Sie den privaten Kaufvertrag, meist einen <em>contrato de arras penitenciales</em>, und leisten eine Anzahlung, üblicherweise 10 % des Preises. Der Vertrag legt Preis, Notartermin und mitverkaufte Gegenstände (Möbel, Geräte) fest. Treten Sie zurück, verlieren Sie die Anzahlung. Tritt der Verkäufer zurück, zahlt er Ihnen das Doppelte zurück.</p>
+  <p>Halten Sie in der Arras fest, was vor dem Notar noch geschehen muss, etwa die Ablösung der Hypothek des Verkäufers, der Abschluss eines AFO-Verfahrens oder die Reparatur eines Mangels. Auch ein Finanzierungsvorbehalt ist möglich. Unterschreiben Sie nie eine Arras, bevor Ihr Anwalt die Nota simple und die Genehmigungen gesehen hat.</p>
+
+  <h2 id="notar">Phase 5: Beim Notar</h2>
+  <h3>Schritt 11: Escritura de compraventa</h3>
+  <p>Beim Notar unterschreiben Sie die Kaufurkunde (<em>escritura pública de compraventa</em>). In der Praxis wählt meist der Käufer den Notar. Kurz vor dem Termin holt der Notar einen aktuellen Registerstand ein, damit in letzter Minute keine neuen Lasten dazukommen. Was bei der Unterschrift geschieht:</p>
+  <ul>
+    <li><strong>Zahlung.</strong> Sie zahlen den Rest per Bankscheck oder Überweisung. Der Notar hält in der Urkunde fest, wie alles, einschließlich der Anzahlung, bezahlt wurde. Zahlen Sie immer über die Bank: Beim Kauf von einem Unternehmen sind Barzahlungen sogar auf 1.000 € begrenzt.</li>
+    <li><strong>3 % Einbehalt bei nicht ansässigem Verkäufer.</strong> Wohnt der Verkäufer nicht in Spanien, behalten Sie 3 % des Kaufpreises ein und zahlen sie innerhalb eines Monats an das spanische Finanzamt (Formular 211). Sonst kann das Finanzamt den Betrag aus der Immobilie holen.</li>
+    <li><strong>Plusvalía.</strong> Die kommunale Steuer auf den Wertzuwachs des Bodens trägt der Verkäufer. Ist er nicht ansässig, müssen Sie als Käufer sie für ihn abführen; behalten Sie den Betrag also vom Kaufpreis ein.</li>
+    <li><strong>Schlüssel.</strong> Nach der Unterschrift sind Sie Eigentümer und erhalten die Schlüssel. Lassen Sie die Schlösser austauschen, denn Sie wissen nicht, wer noch einen Schlüssel hat.</li>
+  </ul>
+  <p>Sie müssen nicht persönlich anwesend sein. Mit einer Vollmacht (<em>poder notarial</em>) kann Ihr Anwalt für Sie unterschreiben. Die Urkunde ist auf Spanisch; wenn Sie kein Spanisch sprechen, haben Sie Anspruch auf einen Dolmetscher oder eine Übersetzung.</p>
+
+  <h2 id="danach">Phase 6: Nach der Übergabe</h2>
+  <h3>Schritt 12: Steuern zahlen und eintragen</h3>
+  <p>Nach dem Notar zahlt Ihr Anwalt oder die Gestoría die Steuer und lässt die Urkunde im Eigentumsregister eintragen. Erst mit der Eintragung sind Sie auch gegenüber Dritten als Eigentümer geschützt.</p>
+  <ul>
+    <li><strong>Bestandsimmobilie:</strong> 7 % Grunderwerbsteuer (<em>Impuesto de Transmisiones Patrimoniales</em>, ITP) an die Junta de Andalucía, erklärt mit Formular 600 bei der Agencia Tributaria de Andalucía innerhalb der gesetzlichen Frist. Lassen Sie das direkt nach dem Notar erledigen: Verspätung kostet einen Zuschlag.</li>
+    <li><strong>Neubau vom Bauträger:</strong> 10 % Mehrwertsteuer (IVA), die Sie an den Bauträger zahlen, plus 1,2 % Stempelsteuer (<em>Actos Jurídicos Documentados</em>, AJD) an die Junta.</li>
+    <li><strong>Notar und Register:</strong> nach amtlichen Gebührentabellen, zusammen meist 1.000 bis 2.500 €.</li>
+  </ul>
+  <p>Die vollständige Aufstellung mit Rechenbeispiel finden Sie in <a href="/de/ratgeber/kaufnebenkosten-spanien/">Kaufnebenkosten in Spanien</a>.</p>
+
+  <h3>Schritt 13: Versorger, Gemeinde und laufende Kosten</h3>
+  <ul>
+    <li><strong>Wasser und Strom</strong> mit einer Kopie der Urkunde und Ihrer NIE auf Ihren Namen umschreiben. War der Strom lange abgeschaltet, kann der Netzbetreiber ein neues Elektro-Zertifikat (<em>boletín</em>) verlangen; dafür muss die Anlage manchmal erst angepasst werden.</li>
+    <li><strong>IBI und Müllgebühr</strong> bei der Gemeinde oder dem Steueramt der Provinz (in Málaga das Patronato de Recaudación Provincial) auf Ihren Namen umschreiben, mit Lastschrift.</li>
+    <li><strong>Eigentümergemeinschaft</strong>: Ihre Daten an die Verwaltung melden.</li>
+    <li><strong>Versicherung</strong>: Gebäude- und Hausratversicherung ab dem Notartermin abschließen.</li>
+    <li><strong>Jährliche Steuer für Nichtresidenten</strong>: Wohnen Sie nicht in Spanien, geben Sie jedes Jahr eine Erklärung (Formular 210) über ein fiktives Einkommen aus der Immobilie ab, auch wenn Sie nicht vermieten.</li>
+  </ul>
+  <p>Möchten Sie vermieten? Prüfen Sie vor dem Kauf, ob Gemeinde und Eigentümergemeinschaft Ferienvermietung erlauben, und planen Sie die Registrierung für Ferienvermietung ein.</p>
+
+  <h3>Schritt 14: Renovieren und Betreuung</h3>
+  <p>Wenn Sie renovieren möchten, am besten bevor Sie einziehen. Für die meisten Arbeiten brauchen Sie eine Anzeige oder Genehmigung der Gemeinde; auf ländlichem Boden und bei AFO-Status gelten zusätzliche Grenzen. Wir machen aus dem Gutachten einen Kostenvoranschlag und führen die <a href="/de/renovierung/">Renovierung</a> aus, auch wenn Sie im Ausland sind. Wenn Sie nicht da sind, behält die <a href="/de/hausbetreuung/">Hausbetreuung</a> das Haus im Blick. <a href="/de/anfrage/?dienst=renovatie">Renovierung anfragen</a>.</p>
+
+  <h2 id="ausland">Kaufen aus dem Ausland</h2>
+  <p>Viele Käufer in der Axarquía erledigen den Großteil des Kaufs von zu Hause aus. Das klappt mit ein paar Vorkehrungen:</p>
+  <ul>
+    <li><strong>Vollmacht.</strong> Mit einem <em>poder notarial</em> kann Ihr Anwalt die NIE beantragen, das Konto eröffnen sowie Arras und Urkunde unterschreiben. Sie unterschreiben die Vollmacht bei einem spanischen Notar oder bei einem Notar in Ihrem Heimatland mit Apostille. Beschränken Sie sie auf diesen Kauf.</li>
+    <li><strong>Geld überweisen.</strong> Zahlen Sie aus einer anderen Währung, etwa Franken, sichern Sie den Kurs vorher ab. Überweisen Sie große Beträge rechtzeitig: Banken prüfen die Herkunft, das kann Tage dauern.</li>
+    <li><strong>Jemand vor Ort.</strong> Ein Gutachter oder eine Baufirma, die das Haus ansieht und Sie mit Fotos und Videos auf dem Laufenden hält, bewahrt Sie davor, sich nur auf die Fotos des Maklers zu verlassen.</li>
+  </ul>
+  <p>Haben Sie ein Haus im Blick? Wir übernehmen das <a href="/de/immobiliengutachten/">Immobiliengutachten</a>, kalkulieren die Renovierung und helfen nach dem Kauf mit <a href="/de/renovierung/">Renovierung</a>, <a href="/de/instandhaltung/">Instandhaltung</a> und <a href="/de/hausbetreuung/">Hausbetreuung</a>. Senden Sie Ihre Frage über das <a href="/de/anfrage/?dienst=aankoopkeuring">Anfrageformular</a> oder per E-Mail an <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+
+  <h2 id="quellen">Quellen</h2>
+  <ul>
+    <li>NIE: Real Decreto 557/2011 (Ausländerverordnung), Artikel 206; Gebühr über Formular 790, Code 012 (Ministerio del Interior).</li>
+    <li>7 % ITP und 1,2 % AJD in Andalusien: Ley 5/2021 de Tributos Cedidos de la Comunidad Autónoma de Andalucía (BOJA, 22. Oktober 2021). 10 % Mehrwertsteuer auf neue Wohnungen: Ley 37/1992 (Mehrwertsteuergesetz), Artikel 91.</li>
+    <li>Arras: Código Civil, Artikel 1454.</li>
+    <li>Schulden der Eigentümergemeinschaft: Ley 49/1960 de Propiedad Horizontal, Artikel 9.1.e. IBI haftet an der Immobilie: Real Decreto Legislativo 2/2004 (Gesetz über die Kommunalfinanzen), Artikel 64.</li>
+    <li>Plusvalía und der Käufer als Steuerschuldner anstelle eines nicht ansässigen Verkäufers: Real Decreto Legislativo 2/2004, Artikel 106.2.</li>
+    <li>3 % Einbehalt bei nicht ansässigem Verkäufer: Real Decreto Legislativo 5/2004 (Gesetz über die Einkommensteuer für Nichtresidenten), Artikel 25.2; Formular 211 der Agencia Tributaria.</li>
+    <li>Bargeldgrenze: Ley 7/2012, Artikel 7, geändert durch Ley 11/2021.</li>
+    <li>Energieausweis: Real Decreto 390/2021.</li>
+    <li>Bauen auf ländlichem Boden und AFO in Andalusien: Ley 7/2021 de Impulso para la Sostenibilidad del Territorio de Andalucía (LISTA) und Decreto 550/2022 (Durchführungsverordnung).</li>
+    <li>Nota simple: Colegio de Registradores (registradores.org). Kataster: Sede Electrónica del Catastro.</li>
+  </ul>
+  <p class="note">Geprüft am 5. November 2026. Dieser Ratgeber bietet allgemeine Informationen und ist keine Rechts-, Steuer- oder Finanzberatung. Regeln und Sätze können sich ändern; lassen Sie Ihren Kauf von einem unabhängigen Anwalt begleiten und fragen Sie einen Steuerberater nach Ihrer Situation.</p>
+</Guide>

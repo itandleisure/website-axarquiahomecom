@@ -1,0 +1,174 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'overzicht', label: 'Het stappenplan in één oogopslag' },
+  { id: 'voorbereiden', label: 'Fase 1: voorbereiden' },
+  { id: 'zoeken', label: 'Fase 2: zoeken en bieden' },
+  { id: 'controleren', label: 'Fase 3: het huis laten controleren' },
+  { id: 'arras', label: 'Fase 4: het arras-contract' },
+  { id: 'notaris', label: 'Fase 5: de notaris' },
+  { id: 'na', label: 'Fase 6: na de overdracht' },
+  { id: 'afstand', label: 'Kopen vanuit het buitenland' },
+  { id: 'bronnen', label: 'Bronnen' },
+];
+
+const faq = [
+  {
+    q: 'Hoelang duurt het om een huis in Spanje te kopen?',
+    a: 'Reken vanaf het moment dat u een huis gevonden heeft op twee tot drie maanden tot de notaris. Het NIE-nummer en de bankrekening kunt u het beste al eerder regelen. Bij een finca met vragen over vergunningen, of als u een hypotheek nodig heeft, duurt het vaak langer.',
+  },
+  {
+    q: 'Kan ik als buitenlander zomaar een huis kopen in Spanje?',
+    a: 'Ja. Er gelden geen beperkingen voor EU-burgers, en ook Britten en andere niet-EU-burgers mogen gewoon een huis kopen. U heeft wel een NIE-nummer nodig. Een huis kopen geeft geen recht om in Spanje te wonen; dat is een aparte kwestie van verblijfsrecht.',
+  },
+  {
+    q: 'Heb ik echt een eigen advocaat nodig?',
+    a: 'Het is niet verplicht, maar wel sterk aan te raden. De makelaar wordt meestal door de verkoper betaald en de notaris controleert vooral of de akte formeel klopt. Een onafhankelijke advocaat controleert of het huis vrij is van schulden, of het legaal gebouwd is en of het contract u beschermt. Reken op ongeveer 1% van de koopprijs plus btw.',
+  },
+  {
+    q: 'Wat gebeurt er als ik me terugtrek na het tekenen van de arras?',
+    a: 'Bij de gangbare arras penitenciales verliest u de aanbetaling, meestal 10% van de koopprijs. Trekt de verkoper zich terug, dan moet hij het dubbele terugbetalen. Laat daarom de controles en de bouwkundige keuring doen vóór u de arras tekent, of neem ontbindende voorwaarden op in het contract.',
+  },
+  {
+    q: 'Wat kost het kopen van een huis in Andalusië bovenop de prijs?',
+    a: 'Voor een bestaande woning ongeveer 10%: 7% overdrachtsbelasting (ITP), plus notaris, register, advocaat en gestoría. Bij nieuwbouw van een projectontwikkelaar betaalt u 10% btw plus 1,2% zegelbelasting. Daarnaast komt bij oudere huizen vaak een verbouwbudget.',
+  },
+  {
+    q: 'Moet de koper de plusvalía betalen?',
+    a: 'Normaal niet: de gemeentelijke plusvalía is voor de verkoper. Woont de verkoper niet in Spanje, dan moet u als koper de plusvalía wel aan de gemeente afdragen, en houdt u dat bedrag in op de koopprijs. Hetzelfde geldt voor de inhouding van 3% voor de Spaanse fiscus. Uw advocaat regelt dit bij de notaris.',
+  },
+];
+---
+<Guide slug="huis-kopen-in-spanje" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Een huis op het oog?" ctaText="Laat het keuren vóór u de arras tekent. U krijgt een rapport in het Nederlands met de staat van het huis en een prijsindicatie voor wat er moet gebeuren.">
+  <p>Zoekt u eerst een overzicht van de gebieden en prijzen in de provincie? Lees dan <a href="/nl/gidsen/huis-kopen-malaga-andalusie/">huis kopen in Málaga en Andalusië</a>. Twijfelt u nog over het type huis, kijk dan bij <a href="/nl/gidsen/finca-appartement-of-dorpshuis/">finca, appartement of dorpshuis</a>. Deze gids gaat over het koopproces zelf: wat u regelt, wat u laat controleren en wat u betaalt.</p>
+
+  <h2 id="overzicht">Het stappenplan in één oogopslag</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Stap</th><th>Wie doet het</th><th>Reken op</th></tr></thead>
+    <tbody>
+      <tr><td>1. NIE-nummer aanvragen</td><td>U zelf of uw advocaat</td><td>1 dag tot enkele weken</td></tr>
+      <tr><td>2. Spaanse bankrekening openen</td><td>U zelf</td><td>1 dag tot 2 weken</td></tr>
+      <tr><td>3. Budget en eventueel hypotheek</td><td>U, bank of hypotheekadviseur</td><td>2 tot 6 weken</td></tr>
+      <tr><td>4. Onafhankelijke advocaat kiezen</td><td>U zelf</td><td>Vóór u biedt</td></tr>
+      <tr><td>5. Zoeken, bezichtigen en bieden</td><td>U, met makelaars</td><td>Weken tot maanden</td></tr>
+      <tr><td>6. Reservering</td><td>U en de makelaar</td><td>Bij akkoord op de prijs</td></tr>
+      <tr><td>7. Juridisch onderzoek: register, kadaster, schulden</td><td>Advocaat</td><td>1 tot 3 weken</td></tr>
+      <tr><td>8. Legaliteit: vergunningen en AFO</td><td>Advocaat, eventueel architect</td><td>1 tot 4 weken</td></tr>
+      <tr><td>9. Bouwkundige keuring</td><td>Bouwkundige of bouwbedrijf</td><td>1 tot 2 weken</td></tr>
+      <tr><td>10. Arras-contract en aanbetaling</td><td>Advocaat en verkoper</td><td>Meestal 10% van de prijs</td></tr>
+      <tr><td>11. Escritura bij de notaris</td><td>Notaris, u (of gevolmachtigde)</td><td>4 tot 10 weken na de arras</td></tr>
+      <tr><td>12. Belasting betalen en inschrijven</td><td>Advocaat of gestoría</td><td>Direct na de notaris</td></tr>
+      <tr><td>13. Nutsvoorzieningen en gemeente</td><td>U, advocaat of sleutelbeheerder</td><td>Eerste weken na de notaris</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">De doorlooptijden zijn indicaties uit de praktijk in de provincie Málaga. Bij een finca of een hypotheek duurt het vaak langer.</p>
+
+  <h2 id="voorbereiden">Fase 1: voorbereiden</h2>
+  <h3>Stap 1: NIE-nummer</h3>
+  <p>Het <em>Número de Identidad de Extranjero</em> (NIE) is uw Spaanse identificatienummer voor alles wat met belasting te maken heeft. Zonder NIE kunt u geen akte tekenen, geen belasting betalen en vaak ook geen bankrekening openen. U vraagt het aan bij de politie (<em>Policía Nacional</em>, Oficina de Extranjería) in Spanje, of bij het Spaanse consulaat in uw eigen land. De leges zijn ongeveer € 12 (formulier 790, code 012; het bedrag wordt jaarlijks bijgesteld).</p>
+  <p>Afspraken bij de politie in de provincie Málaga zijn soms moeilijk te krijgen. Veel kopers laten de aanvraag daarom met een volmacht door hun advocaat doen. Gaat u in Spanje wonen, dan heeft u later ook een verblijfsregistratie nodig; zie <a href="/nl/gidsen/emigreren-naar-spanje/">emigreren naar Spanje</a>.</p>
+
+  <h3>Stap 2: Spaanse bankrekening</h3>
+  <p>Een Spaanse rekening is niet wettelijk verplicht, maar in de praktijk onmisbaar. Daarmee betaalt u de aanbetaling, de bankcheque of overboeking bij de notaris, en later de onroerendgoedbelasting (IBI), water, stroom en de vereniging van eigenaars via automatische incasso. Als niet-inwoner opent u een rekening voor <em>no residentes</em>. De bank vraagt naar de herkomst van uw geld; houd bankafschriften of een verkoopakte van uw huidige huis bij de hand.</p>
+
+  <h3>Stap 3: budget en eventueel hypotheek</h3>
+  <p>Reken bij een bestaande woning op <strong>ongeveer 10% bovenop de koopprijs</strong> aan belastingen en kosten, en bij een ouder huis op een verbouwbudget. De opbouw ziet u in <a href="/nl/gidsen/kosten-koper-spanje/">kosten koper Spanje</a> en de richtprijzen voor verbouwen in <a href="/nl/gidsen/kosten-huis-renoveren-spanje/">wat kost renoveren in Spanje</a> en de <a href="/nl/kosten/rekentool/">rekentool</a>.</p>
+  <p>Heeft u een hypotheek nodig? Spaanse banken lenen aan niet-inwoners meestal tot 60 à 70% van de taxatiewaarde of koopprijs (de laagste van de twee). De rest, plus alle kosten, betaalt u uit eigen middelen. De bank laat het huis taxeren door een erkend taxatiebureau. Vraag de hypotheek aan vóór u de arras tekent, of spreek in de arras af dat u zonder boete kunt afzien als de hypotheek niet doorgaat.</p>
+
+  <h3>Stap 4: een onafhankelijke advocaat</h3>
+  <p>In Spanje werkt de makelaar voor de verkoper, die ook de courtage betaalt. De notaris is neutraal en controleert vooral of de akte formeel in orde is, niet of het huis legaal gebouwd is of in goede staat verkeert. Kies daarom een eigen advocaat (<em>abogado</em>) die niet door de makelaar is aangedragen, die uw taal of Engels spreekt en die ervaring heeft met landelijke woningen in de Axarquía. Controleer of de advocaat is ingeschreven bij de orde van advocaten (<em>Colegio de Abogados</em>) en een beroepsaansprakelijkheidsverzekering heeft. Een gangbaar tarief is ongeveer 1% van de koopprijs plus 21% btw.</p>
+
+  <h2 id="zoeken">Fase 2: zoeken en bieden</h2>
+  <h3>Stap 5: zoeken en bezichtigen</h3>
+  <p>De meeste huizen in de Axarquía staan op portalen als Idealista, Fotocasa en Kyero, vaak bij meerdere makelaars tegelijk en soms voor verschillende prijzen. Bezoek een huis bij voorkeur meer dan eens, ook in de winter of na regen: dan ziet u vocht, lekkages en de staat van de toegangsweg. Rijd de route naar de dichtstbijzijnde supermarkt, het gezondheidscentrum en de kust. Vergelijk de dorpen op onze <a href="/nl/plaatsen/">plaatsenpagina’s</a>.</p>
+  <h3>Stap 6: bod en reservering</h3>
+  <p>Biedingen gaan via de makelaar. Bij een akkoord vraagt de makelaar vaak een kleine reserveringsbetaling, bijvoorbeeld € 3.000 tot € 6.000, om het huis van de markt te halen. Laat uw advocaat vooraf meelezen en zorg dat op papier staat dat u dit bedrag terugkrijgt als het juridisch onderzoek of de keuring problemen oplevert. Betaal bij voorkeur op de derdenrekening van uw advocaat, niet rechtstreeks aan de verkoper.</p>
+
+  <h2 id="controleren">Fase 3: het huis laten controleren</h2>
+  <p>Dit is de belangrijkste fase. Alles wat u nu vindt, kunt u nog gebruiken om te onderhandelen of om af te haken zonder geld te verliezen.</p>
+  <h3>Stap 7: register, kadaster en schulden</h3>
+  <ul>
+    <li><strong>Nota simple.</strong> Een uittreksel uit het eigendomsregister (<em>Registro de la Propiedad</em>) laat zien wie de eigenaar is, hoe groot het perceel is en of er een hypotheek, beslag of erfdienstbaarheid op rust. U of uw advocaat vraagt het online aan via het College van Registradores voor ongeveer € 10 tot € 15.</li>
+    <li><strong>Kadaster.</strong> Het kadaster (<em>Catastro</em>) beschrijft het perceel en de gebouwen voor de belastingen. Vergelijk kadaster, register en werkelijkheid. Staan er in het kadaster 90 m² en in werkelijkheid 140 m², dan is er waarschijnlijk zonder vergunning bijgebouwd.</li>
+    <li><strong>Schulden die meegaan.</strong> Onbetaalde onroerendgoedbelasting (IBI) blijft aan het huis hangen, net als achterstallige bijdragen aan de vereniging van eigenaars over het lopende jaar en de drie jaar ervoor. Vraag het laatste IBI-biljet en, bij een appartement of urbanisatie, een verklaring van de vereniging dat er geen achterstand is.</li>
+    <li><strong>Huurders en bewoners.</strong> Controleer of het huis leeg wordt opgeleverd en of er geen huurcontract of toeristische verhuur doorloopt.</li>
+  </ul>
+
+  <h3>Stap 8: legaliteit, vergunningen en AFO</h3>
+  <p>In de Axarquía staan veel huizen op landelijke grond (<em>suelo rústico</em>). Daar zijn in het verleden veel huizen, aanbouwen en zwembaden gebouwd zonder vergunning. Uw advocaat controleert bij de gemeente of het huis en alle bijgebouwen vergund zijn. Is dat niet zo, dan zijn er grofweg drie situaties:</p>
+  <ul>
+    <li><strong>Het huis heeft al een AFO-verklaring (DAFO).</strong> De gemeente heeft dan vastgesteld dat er niet meer tegen kan worden opgetreden. Het huis mag bewoond worden en kan in het register worden ingeschreven, maar u mag niet zomaar uitbreiden.</li>
+    <li><strong>Het huis komt in aanmerking voor AFO, maar heeft die nog niet.</strong> Dan is het verstandig om af te spreken dat de verkoper de procedure afrondt vóór de notaris, of om de kosten en de tijd in de prijs te verrekenen. Een AFO-procedure duurt vaak maanden.</li>
+    <li><strong>Er loopt een handhavingsprocedure of het gaat om een verboden perceelsplitsing.</strong> Dan kan het risico op een boete of zelfs sloop reëel zijn. Afblijven, tenzij uw advocaat zeker weet dat het goed komt.</li>
+  </ul>
+  <p>Wilt u later uitbreiden, een zwembad bouwen of een gastenverblijf maken? Laat dan vooraf nagaan wat er op dit perceel mag. Op landelijke grond is een nieuwe woning bouwen in Andalusië in de regel niet toegestaan, en uitbreiden van een huis met AFO-status evenmin. Lees meer in <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren in Andalusië</a> en, voor landelijke huizen, <a href="/nl/gidsen/finca-kopen-in-spanje/">finca kopen in Spanje</a>.</p>
+  <p>Vraag ook naar het energielabel (<em>certificado de eficiencia energética</em>): de verkoper is verplicht het te laten maken en aan u te geven.</p>
+
+  <h3>Stap 9: bouwkundige keuring</h3>
+  <p>Een bouwkundige keuring is in Spanje niet verplicht en de makelaar zal er niet om vragen. Juist daarom is hij nuttig. Een keurder kijkt naar vocht en schimmel, het dak en het dakterras, scheuren, de elektra, het water en de afvoer, de septische put, het zwembad en, bij oudere huizen, houtworm en termieten. Typische vondsten in de Axarquía zijn <a href="/nl/problemen/vocht-en-schimmel/">vocht en schimmel</a>, <a href="/nl/problemen/daklekkage/">daklekkages</a> en <a href="/nl/problemen/scheuren-in-muren/">scheuren in muren</a>.</p>
+  <p>Met onze <a href="/nl/aankoopkeuring/">aankoopkeuring</a> krijgt u een rapport in het Nederlands, met foto’s en een prijsindicatie voor wat er moet gebeuren. Die prijs kunt u gebruiken in de onderhandeling, en u weet vóór het tekenen wat het huis u echt gaat kosten. <a href="/nl/aanvraag/?dienst=aankoopkeuring">Vraag een keuring aan</a>.</p>
+
+  <h2 id="arras">Fase 4: het arras-contract</h2>
+  <h3>Stap 10: voorlopig koopcontract en aanbetaling</h3>
+  <p>Zijn de controles goed, dan tekent u het voorlopige koopcontract, meestal een <em>contrato de arras penitenciales</em>. U betaalt daarbij een aanbetaling, gebruikelijk 10% van de koopprijs. Het contract legt de prijs, de datum van de notaris en wat er wordt meeverkocht vast (meubels, apparatuur). Trekt u zich terug, dan bent u de aanbetaling kwijt. Trekt de verkoper zich terug, dan betaalt hij u het dubbele terug.</p>
+  <p>Laat in de arras opnemen wat er voor de notaris nog moet gebeuren, bijvoorbeeld het aflossen van de hypotheek van de verkoper, het afronden van een AFO-procedure of het repareren van een gebrek. Een ontbindende voorwaarde voor uw hypotheek kan ook. Teken nooit een arras voordat uw advocaat de nota simple en de vergunningen heeft gezien.</p>
+
+  <h2 id="notaris">Fase 5: de notaris</h2>
+  <h3>Stap 11: escritura de compraventa</h3>
+  <p>Bij de notaris tekent u de koopakte (<em>escritura pública de compraventa</em>). De koper kiest in de praktijk meestal de notaris. Vlak voor de afspraak vraagt de notaris een actuele stand op bij het register, zodat er op het laatste moment geen nieuwe schuld of beslag tussen kan komen. Wat er bij het tekenen gebeurt:</p>
+  <ul>
+    <li><strong>Betaling.</strong> U betaalt het restant met een bankcheque of overboeking. De notaris legt in de akte vast hoe er is betaald, inclusief de aanbetaling. Betaal altijd via de bank: koopt u van een bedrijf, dan is contant betalen zelfs beperkt tot € 1.000.</li>
+    <li><strong>3% inhouding bij een niet-ingezeten verkoper.</strong> Woont de verkoper niet in Spanje, dan houdt u 3% van de koopprijs in en betaalt u die binnen een maand aan de Spaanse fiscus (formulier 211). Doet u dat niet, dan kan de fiscus het bedrag op het huis verhalen.</li>
+    <li><strong>Plusvalía.</strong> De gemeentelijke belasting op de waardestijging van de grond is voor de verkoper. Is de verkoper niet-ingezetene, dan bent u als koper verplicht die namens hem af te dragen; houd het bedrag daarom in op de koopprijs.</li>
+    <li><strong>Sleutels.</strong> Na het tekenen bent u eigenaar en krijgt u de sleutels. Laat de sloten vervangen, want u weet niet wie er nog een sleutel heeft.</li>
+  </ul>
+  <p>U hoeft niet zelf aanwezig te zijn. Met een volmacht (<em>poder notarial</em>) kan uw advocaat namens u tekenen. De akte is in het Spaans; u heeft recht op een tolk of vertaling als u geen Spaans spreekt.</p>
+
+  <h2 id="na">Fase 6: na de overdracht</h2>
+  <h3>Stap 12: belastingen betalen en inschrijven</h3>
+  <p>Na de notaris betaalt uw advocaat of gestoría de belasting en schrijft de akte in bij het eigendomsregister. Pas na inschrijving bent u ook tegenover derden beschermd als eigenaar.</p>
+  <ul>
+    <li><strong>Bestaande woning:</strong> 7% overdrachtsbelasting (<em>Impuesto de Transmisiones Patrimoniales</em>, ITP) aan de Junta de Andalucía. Aangifte en betaling met formulier 600 bij de Agencia Tributaria de Andalucía, binnen de wettelijke termijn na de akte. Laat uw advocaat of gestoría dit direct na de notaris doen: te laat betalen kost een toeslag.</li>
+    <li><strong>Nieuwbouw van een projectontwikkelaar:</strong> 10% btw (IVA), die u aan de ontwikkelaar betaalt, plus 1,2% zegelbelasting (<em>Actos Jurídicos Documentados</em>, AJD) aan de Junta.</li>
+    <li><strong>Notaris en register:</strong> volgens wettelijke tarieven, samen meestal € 1.000 tot € 2.500.</li>
+  </ul>
+  <p>De volledige kostenopbouw met rekenvoorbeeld staat in <a href="/nl/gidsen/kosten-koper-spanje/">kosten koper Spanje</a>.</p>
+
+  <h3>Stap 13: nutsvoorzieningen, gemeente en jaarlijkse lasten</h3>
+  <ul>
+    <li><strong>Water en stroom</strong> op uw naam zetten met een kopie van de akte en uw NIE. Was de stroom langer afgesloten, dan kan het netbedrijf een nieuw elektriciteitscertificaat (<em>boletín</em>) vragen; daarvoor moet de installatie soms eerst worden aangepast.</li>
+    <li><strong>IBI en afvalheffing</strong> bij de gemeente of bij het belastingkantoor van de provincie (in Málaga het Patronato de Recaudación Provincial) op uw naam zetten, met automatische incasso.</li>
+    <li><strong>Vereniging van eigenaars</strong>: geef uw gegevens door bij de beheerder.</li>
+    <li><strong>Verzekering</strong>: regel een opstal- en inboedelverzekering vanaf de dag van de notaris.</li>
+    <li><strong>Jaarlijkse belasting voor niet-inwoners</strong>: woont u niet in Spanje, dan doet u elk jaar aangifte (formulier 210) over een fictief inkomen uit uw huis, ook als u niet verhuurt.</li>
+  </ul>
+  <p>Wilt u het huis verhuren? Controleer dan vóór de aankoop of de gemeente en de vereniging van eigenaars toeristische verhuur toestaan, en houd rekening met de registratie voor vakantieverhuur.</p>
+
+  <h3>Stap 14: verbouwen en toezicht</h3>
+  <p>Wilt u verbouwen, doe het dan liefst voordat u erin trekt. Voor de meeste werkzaamheden heeft u een melding of vergunning van de gemeente nodig; op landelijke grond en bij een huis met AFO-status gelden extra beperkingen. Wij maken op basis van de keuring een begroting en voeren de <a href="/nl/renovatie/">renovatie</a> uit, ook als u in het buitenland bent. En als u er niet bent, houdt <a href="/nl/sleutelbeheer/">sleutelbeheer</a> het huis in de gaten. <a href="/nl/aanvraag/?dienst=renovatie">Vraag een offerte voor renovatie aan</a>.</p>
+
+  <h2 id="afstand">Kopen vanuit het buitenland</h2>
+  <p>Veel kopers in de Axarquía regelen het grootste deel van de aankoop vanuit huis. Dat kan, met een paar voorzorgen:</p>
+  <ul>
+    <li><strong>Volmacht.</strong> Een <em>poder notarial</em> laat uw advocaat het NIE aanvragen, de bankrekening regelen, de arras en de akte tekenen. U kunt de volmacht bij een Spaanse notaris tekenen, of bij een notaris in uw eigen land met een apostille. Beperk de volmacht tot deze aankoop.</li>
+    <li><strong>Geld overmaken.</strong> Spreek de koers vooraf vast als u vanuit een andere valuta betaalt, en maak de grote bedragen op tijd over: banken controleren de herkomst en dat kan dagen kosten.</li>
+    <li><strong>Iemand ter plaatse.</strong> Een keurder of bouwbedrijf dat het huis bekijkt en u met foto’s en video op de hoogte houdt, voorkomt dat u alleen op de foto’s van de makelaar vaart.</li>
+  </ul>
+  <p>Heeft u een huis op het oog? Wij doen de <a href="/nl/aankoopkeuring/">aankoopkeuring</a>, begroten de verbouwing en helpen na de aankoop met <a href="/nl/renovatie/">renovatie</a>, <a href="/nl/onderhoud/">onderhoud</a> en <a href="/nl/sleutelbeheer/">sleutelbeheer</a>. Stuur uw vraag via het <a href="/nl/aanvraag/?dienst=aankoopkeuring">aanvraagformulier</a> of mail naar <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+
+  <h2 id="bronnen">Bronnen</h2>
+  <ul>
+    <li>NIE: Real Decreto 557/2011 (reglement vreemdelingenwet), artikel 206; leges via formulier 790, code 012 (Ministerio del Interior).</li>
+    <li>Overdrachtsbelasting 7% en AJD 1,2% in Andalusië: Ley 5/2021 de Tributos Cedidos de la Comunidad Autónoma de Andalucía (BOJA, 22 oktober 2021). Btw 10% op nieuwe woningen: Ley 37/1992 (wet op de btw), artikel 91.</li>
+    <li>Arras: Código Civil, artikel 1454.</li>
+    <li>Schulden van de vereniging van eigenaars: Ley 49/1960 de Propiedad Horizontal, artikel 9.1.e. IBI gaat mee met het huis: Real Decreto Legislativo 2/2004 (wet gemeentelijke belastingen), artikel 64.</li>
+    <li>Plusvalía en de koper als plaatsvervanger bij een niet-ingezeten verkoper: Real Decreto Legislativo 2/2004, artikel 106.2.</li>
+    <li>Inhouding van 3% bij een niet-ingezeten verkoper: Real Decreto Legislativo 5/2004 (wet belasting niet-inwoners), artikel 25.2; formulier 211 van de Agencia Tributaria.</li>
+    <li>Grens voor contante betalingen: Ley 7/2012, artikel 7, zoals gewijzigd door Ley 11/2021.</li>
+    <li>Energielabel: Real Decreto 390/2021.</li>
+    <li>Bouwen op landelijke grond en AFO in Andalusië: Ley 7/2021 de Impulso para la Sostenibilidad del Territorio de Andalucía (LISTA) en Decreto 550/2022 (uitvoeringsreglement).</li>
+    <li>Nota simple: Colegio de Registradores (registradores.org). Kadaster: Sede Electrónica del Catastro.</li>
+  </ul>
+  <p class="note">Gecontroleerd op 5 november 2026. Deze gids geeft algemene informatie en is geen juridisch, fiscaal of financieel advies. Regels en tarieven kunnen veranderen; laat uw aankoop begeleiden door een onafhankelijke advocaat en vraag een belastingadviseur naar uw eigen situatie.</p>
+</Guide>
