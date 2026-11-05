@@ -22,7 +22,7 @@ export interface Place {
 
 export const places: Place[] = [
   // Golf A: gemeenten
-  { slug: 'nerja', name: 'Nerja', kind: 'gemeente', setting: 'coast', coastal: true, wave: 'A', villages: ['Maro'] },
+  { slug: 'nerja', name: 'Nerja', kind: 'gemeente', setting: 'coast', coastal: true, wave: 'A', villages: ['Maro'], built: true },
   { slug: 'frigiliana', name: 'Frigiliana', kind: 'gemeente', setting: 'hills', wave: 'A' },
   { slug: 'velez-malaga', name: 'Vélez-Málaga', kind: 'gemeente', setting: 'coast', coastal: true, wave: 'A', villages: ['Torre del Mar', 'Caleta de Vélez', 'Benajarafe', 'Almayate', 'Chilches', 'Lagos', 'Trapiche', 'Cajiz'] },
   { slug: 'torrox', name: 'Torrox', kind: 'gemeente', setting: 'hills', coastal: true, wave: 'A', villages: ['Torrox Costa', 'El Morche'] },
@@ -64,8 +64,14 @@ export const places: Place[] = [
   { slug: 'alfarnatejo', name: 'Alfarnatejo', kind: 'gemeente', setting: 'inland', wave: 'C' },
 ];
 
+export type PlacePage = 'overview' | 'see' | 'living';
+export const placeSub: Record<Exclude<PlacePage, 'overview'>, Record<Lang, string>> = {
+  see: { nl: 'zien-en-doen', en: 'things-to-do', de: 'sehenswuerdigkeiten' },
+  living: { nl: 'wonen', en: 'living', de: 'wohnen' },
+};
 export const placeBase: Record<Lang, string> = { nl: '/nl/plaatsen/', en: '/en/places/', de: '/de/orte/' };
-export const placeHref = (lang: Lang, p: Place) => `${placeBase[lang]}${p.slug}/`;
+export const placeHref = (lang: Lang, p: Place, page: PlacePage = 'overview') =>
+  `${placeBase[lang]}${p.slug}/${page === 'overview' ? '' : `${placeSub[page][lang]}/`}`;
 export const placeBySlug = (slug: string) => places.find((p) => p.slug === slug);
 
 export const settingLabels: Record<Lang, Record<Setting, string>> = {

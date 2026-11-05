@@ -1,6 +1,7 @@
 // Talen, vertaalde routes en vaste teksten van de site.
 import { guides, guidesBy, guideHref } from './data/guides';
-import { places, placeBase } from './data/places';
+import { places, placeHref, type PlacePage } from './data/places';
+import { placeContent } from './data/place-content';
 export type Lang = 'nl' | 'en' | 'de';
 export const langs: Lang[] = ['nl', 'en', 'de'];
 export const langNames: Record<Lang, string> = { nl: 'Nederlands', en: 'English', de: 'Deutsch' };
@@ -26,7 +27,21 @@ export const routes: Partial<Record<Lang, string>>[] = [
     Object.fromEntries(langs.filter((l) => guidesBy[l][i]).map((l) => [l, guideHref(l, guidesBy[l][i])])),
   ),
   // Plaatsen (pagina's bestaan alleen voor plaatsen met built: true)
-  ...places.filter((p) => p.built).map((p) => Object.fromEntries(langs.map((l) => [l, `${placeBase[l]}${p.slug}/`]))),
+  ...places
+    .filter((p) => p.built)
+    .flatMap((p) =>
+      (['overview', 'see', 'living'] as PlacePage[]).map((page) =>
+        Object.fromEntries(
+          langs
+            .filter((l) => {
+              const c = placeContent[p.slug]?.[l];
+              return c && (page === 'overview' || c[page]);
+            })
+            .map((l) => [l, placeHref(l, p, page)]),
+        ),
+      ),
+    )
+    .filter((r) => Object.keys(r).length > 0),
 ];
 
 export function alternatesFor(path: string): Partial<Record<Lang, string>> {

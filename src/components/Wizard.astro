@@ -1,5 +1,6 @@
 ---
 import { site, isFilled } from '../data/site';
+import { places } from '../data/places';
 import { path, type Lang } from '../i18n';
 
 interface Props { lang?: Lang; }
@@ -196,7 +197,7 @@ const budgetten = T.budgetten;
             <label for="plaats">{T.plaats}</label>
             <select id="plaats" name="plaats" required>
               <option value="">{T.plaatsChoose}</option>
-              {site.villages.map((v) => <option>{v}</option>)}
+              {[...places].sort((a, b) => a.name.localeCompare(b.name, 'es')).map((p) => <option data-slug={p.slug}>{p.name}</option>)}
               {T.plaatsExtra.map((p) => <option>{p}</option>)}
             </select>
           </div>
@@ -286,6 +287,11 @@ const budgetten = T.budgetten;
   if (pre) {
     const r = form.querySelector<HTMLInputElement>(`input[name="dienst"][value="${CSS.escape(pre)}"]`);
     if (r) r.checked = true;
+  }
+  const plaats = params.get('plaats');
+  if (plaats) {
+    const o = form.querySelector<HTMLOptionElement>(`#plaats option[data-slug="${CSS.escape(plaats)}"]`);
+    if (o) o.selected = true;
   }
   const pakket = params.get('pakket');
   if (pakket) {

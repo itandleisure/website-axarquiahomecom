@@ -1,0 +1,13 @@
+---
+import PlacePage from '../../../../../components/PlacePage.astro';
+import { places, type Place } from '../../../../../data/places';
+import { placeContent } from '../../../../../data/place-content';
+
+export function getStaticPaths() {
+  return places
+    .filter((p) => { const c = placeContent[p.slug]?.de; return p.built && c?.see; })
+    .map((p) => ({ params: { slug: p.slug }, props: { place: p } }));
+}
+const { place } = Astro.props as { place: Place };
+---
+<PlacePage lang="de" place={place} page="see" />
