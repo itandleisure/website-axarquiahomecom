@@ -2,12 +2,14 @@
 import { site, isFilled } from '../data/site';
 import { places } from '../data/places';
 import { path, type Lang } from '../i18n';
+import { vragen, pakketAlias, type Dienst } from '../data/keuzehulp';
+import { contactTeksten } from '../data/contactformulier';
 
 interface Props { lang?: Lang; }
 const lang = Astro.props.lang ?? 'nl';
 const endpoint = isFilled(site.leadEndpoint) ? site.leadEndpoint : '';
 
-const T = {
+const ALL = {
   nl: {
     step: 'Stap', of: 'van',
     q1: 'Waarmee kunnen we u helpen?',
@@ -36,13 +38,7 @@ const T = {
     q3: 'Waar staat de woning?', plaats: 'Plaats', plaatsChoose: 'Kies een plaats',
     plaatsExtra: ['Andere plaats in de Axarquía', 'Elders in de provincie Málaga', 'Weet ik nog niet'],
     adres: 'Adres of link naar de woning', optional: '(optioneel)', adresPh: 'Bijvoorbeeld een link van Idealista of Kyero',
-    q4: 'Wanneer en met welk budget?', planningLabel: 'Wanneer wilt u beginnen?', choose: 'Kies',
-    planning: ['Zo snel mogelijk', 'Binnen 3 maanden', 'Over 3 tot 6 maanden', 'Over meer dan 6 maanden', 'Weet ik nog niet'],
-    budgetLabel: 'Welk budget heeft u ongeveer in gedachten?', budgetChoose: 'Kies (optioneel)',
-    budgetten: ['Tot € 5.000', '€ 5.000 – € 20.000', '€ 20.000 – € 50.000', '€ 50.000 – € 100.000', 'Meer dan € 100.000', 'Weet ik nog niet'],
-    budgetHint: 'Dit helpt ons om u direct een realistisch voorstel te doen.',
-    q5: 'Vertel iets meer', omschrijving: 'Wat wilt u laten doen?',
-    omschrijvingPh: 'Bijvoorbeeld: badkamer en keuken vernieuwen, dakterras lekt, sleutelbeheer van oktober tot april…',
+    q5: 'Vertel iets meer', omschrijving: 'Wat moeten we nog meer weten?', kies: 'Kies',
     fotos: 'Foto’s', fotosOpt: '(optioneel, maximaal 5)', fotosHint: 'Foto’s helpen ons om sneller een prijs te geven.',
     q6: 'Hoe kunnen we u bereiken?', naam: 'Naam', email: 'E-mail', telefoon: 'Telefoon', telPh: '+31 6 … of +34 …',
     contact: 'Hoe wilt u benaderd worden?', contactOpts: ['Bellen', 'WhatsApp', 'E-mail'],
@@ -58,7 +54,6 @@ const T = {
       notLinked: 'Het formulier is nog niet gekoppeld (testversie). Uw aanvraag is niet verstuurd.',
       sending: 'Bezig met versturen…',
       failed: 'Versturen is niet gelukt. Controleer uw internetverbinding of mail ons op info@axarquiahome.com.',
-      pakket: 'Interesse in sleutelbeheer, pakket {x}.',
     },
   },
   en: {
@@ -89,13 +84,7 @@ const T = {
     q3: 'Where is the property?', plaats: 'Town', plaatsChoose: 'Choose a town',
     plaatsExtra: ['Elsewhere in the Axarquía', 'Elsewhere in Málaga province', 'Not sure yet'],
     adres: 'Address or link to the listing', optional: '(optional)', adresPh: 'For example a link from Idealista, Kyero or Rightmove',
-    q4: 'When, and what budget?', planningLabel: 'When would you like to start?', choose: 'Choose',
-    planning: ['As soon as possible', 'Within 3 months', 'In 3 to 6 months', 'In more than 6 months', 'Not sure yet'],
-    budgetLabel: 'Roughly what budget do you have in mind?', budgetChoose: 'Choose (optional)',
-    budgetten: ['Up to €5,000', '€5,000 – €20,000', '€20,000 – €50,000', '€50,000 – €100,000', 'Over €100,000', 'Not sure yet'],
-    budgetHint: 'This helps us come back to you with a realistic proposal.',
-    q5: 'Tell us a little more', omschrijving: 'What would you like done?',
-    omschrijvingPh: 'For example: new bathroom and kitchen, roof terrace leaking, key holding from October to April…',
+    q5: 'Tell us a little more', omschrijving: 'Anything else we should know?', kies: 'Choose',
     fotos: 'Photos', fotosOpt: '(optional, up to 5)', fotosHint: 'Photos help us give you a price sooner.',
     q6: 'How can we reach you?', naam: 'Name', email: 'Email', telefoon: 'Phone', telPh: '+44 7… or +34 …',
     contact: 'How would you like us to contact you?', contactOpts: ['Phone call', 'WhatsApp', 'Email'],
@@ -111,7 +100,6 @@ const T = {
       notLinked: 'The form is not connected yet (test version). Your request has not been sent.',
       sending: 'Sending…',
       failed: 'Sending failed. Please check your connection or email us at info@axarquiahome.com.',
-      pakket: 'Interested in key holding, {x} package.',
     },
   },
   de: {
@@ -142,13 +130,7 @@ const T = {
     q3: 'Wo steht die Immobilie?', plaats: 'Ort', plaatsChoose: 'Ort wählen',
     plaatsExtra: ['Anderer Ort in der Axarquía', 'Anderswo in der Provinz Málaga', 'Weiß ich noch nicht'],
     adres: 'Adresse oder Link zur Immobilie', optional: '(optional)', adresPh: 'Zum Beispiel ein Link von Idealista, Kyero oder ImmoScout24',
-    q4: 'Wann und mit welchem Budget?', planningLabel: 'Wann möchten Sie beginnen?', choose: 'Bitte wählen',
-    planning: ['So bald wie möglich', 'Innerhalb von 3 Monaten', 'In 3 bis 6 Monaten', 'In mehr als 6 Monaten', 'Weiß ich noch nicht'],
-    budgetLabel: 'Welches Budget haben Sie ungefähr vorgesehen?', budgetChoose: 'Bitte wählen (optional)',
-    budgetten: ['Bis 5.000 €', '5.000 – 20.000 €', '20.000 – 50.000 €', '50.000 – 100.000 €', 'Mehr als 100.000 €', 'Weiß ich noch nicht'],
-    budgetHint: 'So können wir Ihnen gleich einen realistischen Vorschlag machen.',
-    q5: 'Erzählen Sie uns etwas mehr', omschrijving: 'Was möchten Sie machen lassen?',
-    omschrijvingPh: 'Zum Beispiel: Bad und Küche erneuern, Dachterrasse undicht, Hausbetreuung von Oktober bis April…',
+    q5: 'Erzählen Sie uns etwas mehr', omschrijving: 'Was sollten wir noch wissen?', kies: 'Bitte wählen',
     fotos: 'Fotos', fotosOpt: '(optional, höchstens 5)', fotosHint: 'Mit Fotos können wir Ihnen schneller einen Preis nennen.',
     q6: 'Wie erreichen wir Sie?', naam: 'Name', email: 'E-Mail', telefoon: 'Telefon', telPh: '+49 … oder +34 …',
     contact: 'Wie dürfen wir Sie kontaktieren?', contactOpts: ['Anruf', 'WhatsApp', 'E-Mail'],
@@ -164,7 +146,6 @@ const T = {
       notLinked: 'Das Formular ist noch nicht verbunden (Testversion). Ihre Anfrage wurde nicht gesendet.',
       sending: 'Wird gesendet…',
       failed: 'Das Senden ist fehlgeschlagen. Bitte prüfen Sie Ihre Internetverbindung oder schreiben Sie uns an info@axarquiahome.com.',
-      pakket: 'Interesse an Hausbetreuung, Paket {x}.',
     },
   },
   sv: {
@@ -195,13 +176,7 @@ const T = {
     q3: 'Var ligger bostaden?', plaats: 'Ort', plaatsChoose: 'Välj ort',
     plaatsExtra: ['Annan ort i Axarquía', 'Någon annanstans i provinsen Málaga', 'Vet inte än'],
     adres: 'Adress eller länk till bostaden', optional: '(valfritt)', adresPh: 'Till exempel en länk från Idealista, Kyero eller Hemnet',
-    q4: 'När och med vilken budget?', planningLabel: 'När vill du börja?', choose: 'Välj',
-    planning: ['Så snart som möjligt', 'Inom 3 månader', 'Om 3 till 6 månader', 'Om mer än 6 månader', 'Vet inte än'],
-    budgetLabel: 'Ungefär vilken budget har du tänkt dig?', budgetChoose: 'Välj (valfritt)',
-    budgetten: ['Upp till 5 000 €', '5 000 – 20 000 €', '20 000 – 50 000 €', '50 000 – 100 000 €', 'Mer än 100 000 €', 'Vet inte än'],
-    budgetHint: 'Då kan vi direkt ge dig ett realistiskt förslag.',
-    q5: 'Berätta lite mer', omschrijving: 'Vad vill du få gjort?',
-    omschrijvingPh: 'Till exempel: nytt badrum och kök, takterrassen läcker, tillsyn från oktober till april…',
+    q5: 'Berätta lite mer', omschrijving: 'Något mer vi bör veta?', kies: 'Välj',
     fotos: 'Foton', fotosOpt: '(valfritt, högst 5)', fotosHint: 'Med foton kan vi snabbare ge dig ett pris.',
     q6: 'Hur når vi dig?', naam: 'Namn', email: 'E-post', telefoon: 'Telefon', telPh: '+46 … eller +34 …',
     contact: 'Hur vill du bli kontaktad?', contactOpts: ['Samtal', 'WhatsApp', 'E-post'],
@@ -217,41 +192,47 @@ const T = {
       notLinked: 'Formuläret är inte kopplat än (testversion). Din förfrågan har inte skickats.',
       sending: 'Skickar…',
       failed: 'Det gick inte att skicka. Kontrollera din anslutning eller mejla oss på info@axarquiahome.com.',
-      pakket: 'Intresserad av tillsyn, paketet {x}.',
     },
   },
-}[lang];
-const diensten = T.diensten;
-const situaties = T.situaties;
-const typen = T.typen;
-const planning = T.planning;
-const budgetten = T.budgetten;
+};
+const T = ALL[lang];
+const NL = ALL.nl;
+const C = contactTeksten[lang];
+const groepen = Object.entries(vragen) as [Dienst, (typeof vragen)[Dienst]][];
+// Per dienst: titel van stap 4, voorbeeldtekst in stap 5 en welke algemene vragen erbij horen
+const perDienst = Object.fromEntries(groepen.map(([k, g]) => [k, {
+  legend: g.legend[lang],
+  ph: g.placeholder[lang],
+  situatie: g.situatie !== false,
+  fotos: g.fotos !== false,
+}]));
 ---
-      <form id="keuzehulp" class="wizard" data-endpoint={endpoint} data-thanks={path(lang, 'thanks')} data-msgs={JSON.stringify(T.msgs)} novalidate>
+      <p class="wizard-alt">{C.fromWizard} <a href={path(lang, 'contact')}>{C.fromWizardLink}</a>.</p>
+      <form id="keuzehulp" class="wizard" data-endpoint={endpoint} data-thanks={path(lang, 'thanks')} data-msgs={JSON.stringify(T.msgs)} data-diensten={JSON.stringify(perDienst)} data-pakket={JSON.stringify(pakketAlias)} novalidate>
         <div class="step-count" aria-live="polite">{T.step} <span data-current>1</span> {T.of} <span data-total>6</span></div>
         <div class="progress" aria-hidden="true"><span></span></div>
 
         <fieldset class="wstep" data-step="1">
           <legend>{T.q1}</legend>
           <div class="choices">
-            {diensten.map((d) => (
+            {T.diensten.map((d) => (
               <label class="choice"><input type="radio" name="dienst" value={d.v} required /><span>{d.t}<small>{d.s}</small></span></label>
             ))}
           </div>
         </fieldset>
 
         <fieldset class="wstep" data-step="2" hidden>
-          <legend>{T.q2}</legend>
-          <div class="choices">
-            {situaties.map((d) => (
+          <legend data-legend2 data-alt={T.typeLabel}>{T.q2}</legend>
+          <div class="choices" data-situatie>
+            {T.situaties.map((d) => (
               <label class="choice"><input type="radio" name="situatie" value={d.v} required /><span>{d.t}{d.s && <small>{d.s}</small>}</span></label>
             ))}
           </div>
           <div class="field" style="margin-top:20px">
-            <label for="type">{T.typeLabel}</label>
-            <select id="type" name="type_woning">
+            <label for="type" data-type-label>{T.typeLabel}</label>
+            <select id="type" name="type_woning" aria-label={T.typeLabel}>
               <option value="">{T.typeChoose}</option>
-              {typen.map((t) => <option>{t}</option>)}
+              {T.typen.map((t, i) => <option value={NL.typen[i]}>{t}</option>)}
             </select>
           </div>
         </fieldset>
@@ -263,7 +244,7 @@ const budgetten = T.budgetten;
             <select id="plaats" name="plaats" required>
               <option value="">{T.plaatsChoose}</option>
               {[...places].sort((a, b) => a.name.localeCompare(b.name, 'es')).map((p) => <option data-slug={p.slug}>{p.name}</option>)}
-              {T.plaatsExtra.map((p) => <option>{p}</option>)}
+              {T.plaatsExtra.map((p, i) => <option value={NL.plaatsExtra[i]}>{p}</option>)}
             </select>
           </div>
           <div class="field">
@@ -273,31 +254,46 @@ const budgetten = T.budgetten;
         </fieldset>
 
         <fieldset class="wstep" data-step="4" hidden>
-          <legend>{T.q4}</legend>
-          <div class="field">
-            <label for="planning">{T.planningLabel}</label>
-            <select id="planning" name="planning" required>
-              <option value="">{T.choose}</option>
-              {planning.map((p) => <option>{p}</option>)}
-            </select>
-          </div>
-          <div class="field" data-budget>
-            <label for="budget">{T.budgetLabel}</label>
-            <select id="budget" name="budget">
-              <option value="">{T.budgetChoose}</option>
-              {budgetten.map((b) => <option>{b}</option>)}
-            </select>
-            <p class="hint">{T.budgetHint}</p>
-          </div>
+          <legend data-legend4>{T.q1}</legend>
+          {groepen.map(([key, g]) => (
+            <div data-groep={key} hidden>
+              {g.vragen.map((v) => {
+                const id = `${key}-${v.name}`;
+                return (
+                  <div class="field" data-q={v.name} data-nl={v.label.nl} data-kind={v.kind} data-required={v.required ? '1' : undefined} data-show-if={v.showIf ? JSON.stringify(v.showIf) : undefined}>
+                    {v.kind === 'select' ? (
+                      <>
+                        <label for={id}>{v.label[lang]}</label>
+                        <select id={id} name={v.name} required={v.required} disabled>
+                          <option value="">{T.kies}</option>
+                          {v.options.map((o) => <option value={o.t.nl}>{o.t[lang]}</option>)}
+                        </select>
+                      </>
+                    ) : (
+                      <>
+                        <p class="qlabel" id={id}>{v.label[lang]}</p>
+                        <div class="choices" role={v.kind === 'radio' ? 'radiogroup' : 'group'} aria-labelledby={id}>
+                          {v.options.map((o) => (
+                            <label class="choice"><input type={v.kind === 'radio' ? 'radio' : 'checkbox'} name={v.name} value={o.t.nl} disabled /><span>{o.t[lang]}{o.s && <small>{o.s[lang]}</small>}</span></label>
+                          ))}
+                        </div>
+                      </>
+                    )}
+                    {v.hint && <p class="hint">{v.hint[lang]}</p>}
+                  </div>
+                );
+              })}
+            </div>
+          ))}
         </fieldset>
 
         <fieldset class="wstep" data-step="5" hidden>
           <legend>{T.q5}</legend>
           <div class="field">
-            <label for="omschrijving">{T.omschrijving}</label>
-            <textarea id="omschrijving" name="omschrijving" rows="5" placeholder={T.omschrijvingPh}></textarea>
+            <label for="omschrijving">{T.omschrijving} <span class="note">{T.optional}</span></label>
+            <textarea id="omschrijving" name="omschrijving" rows="5"></textarea>
           </div>
-          <div class="field">
+          <div class="field" data-foto>
             <label for="fotos">{T.fotos} <span class="note">{T.fotosOpt}</span></label>
             <input id="fotos" type="file" accept="image/*" multiple />
             <p class="hint">{T.fotosHint}</p>
@@ -314,7 +310,7 @@ const budgetten = T.budgetten;
             <div class="field">
               <label for="contact">{T.contact}</label>
               <select id="contact" name="contactvoorkeur">
-                {T.contactOpts.map((o) => <option>{o}</option>)}
+                {T.contactOpts.map((o, i) => <option value={NL.contactOpts[i]}>{o}</option>)}
               </select>
             </div>
           </div>
@@ -331,7 +327,16 @@ const budgetten = T.budgetten;
         </div>
       </form>
 
+<style>
+  .wizard-alt { margin: -12px 0 20px; color: var(--muted); }
+  .qlabel { font-weight: 600; margin: 0 0 8px; }
+  [data-groep] .field + .field { margin-top: 22px; }
+</style>
+
 <script>
+  import { sendLead, newId } from '../scripts/send-lead';
+
+  type DienstInfo = { legend: string; ph: string; situatie: boolean; fotos: boolean };
   const form = document.getElementById('keuzehulp') as HTMLFormElement;
   const steps = Array.from(form.querySelectorAll<HTMLFieldSetElement>('.wstep'));
   const prev = form.querySelector<HTMLButtonElement>('[data-prev]')!;
@@ -341,12 +346,54 @@ const budgetten = T.budgetten;
   const bar = form.querySelector<HTMLElement>('.progress span')!;
   const cur = form.querySelector<HTMLElement>('[data-current]')!;
   const fotoInput = form.querySelector<HTMLInputElement>('#fotos')!;
+  const fotoField = form.querySelector<HTMLElement>('[data-foto]')!;
   const thumbs = form.querySelector<HTMLElement>('[data-thumbs]')!;
+  const omschrijving = form.querySelector<HTMLTextAreaElement>('#omschrijving')!;
+  const legend2 = form.querySelector<HTMLElement>('[data-legend2]')!;
+  const legend2Text = legend2.textContent ?? '';
+  const typeLabel = form.querySelector<HTMLElement>('[data-type-label]')!;
+  const situatieBox = form.querySelector<HTMLElement>('[data-situatie]')!;
+  const legend4 = form.querySelector<HTMLElement>('[data-legend4]')!;
+  const groepen = Array.from(form.querySelectorAll<HTMLElement>('[data-groep]'));
+  const M = JSON.parse(form.dataset.msgs || '{}');
+  const D: Record<string, DienstInfo> = JSON.parse(form.dataset.diensten || '{}');
+  const pakketAlias: Record<string, string> = JSON.parse(form.dataset.pakket || '{}');
   let index = 0;
   let photos: { name: string; type: string; data: string }[] = [];
-  const M = JSON.parse(form.dataset.msgs || '{}');
 
-  // Voorkeuze via ?dienst=…&pakket=…
+  const dienst = () => (form.elements.namedItem('dienst') as RadioNodeList).value;
+  /** Staat dit veld in een deel dat voor deze dienst niet van toepassing is? */
+  const off = (el: Element) => !!el.closest('[data-groep][hidden], [data-show-if][hidden], [data-situatie][hidden], [data-foto][hidden]');
+
+  // Velden die niet van toepassing zijn uitschakelen: ze worden dan niet gecontroleerd en niet verstuurd
+  function syncDisabled() {
+    form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('[data-groep] input, [data-groep] select, [data-situatie] input')
+      .forEach((f) => (f.disabled = off(f)));
+  }
+
+  function applyShowIf() {
+    form.querySelectorAll<HTMLElement>('[data-show-if]').forEach((el) => {
+      const c = JSON.parse(el.dataset.showIf!) as { name: string; values: string[] };
+      const v = el.closest('[data-groep]')?.querySelector<HTMLInputElement>(`input[name="${c.name}"]:checked`)?.value;
+      el.hidden = !v || !c.values.includes(v);
+    });
+  }
+
+  function applyDienst() {
+    const d = dienst();
+    const info = D[d] ?? { legend: '', ph: '', situatie: true, fotos: true };
+    groepen.forEach((g) => (g.hidden = g.dataset.groep !== d));
+    legend4.textContent = info.legend;
+    omschrijving.placeholder = info.ph;
+    situatieBox.hidden = !info.situatie;
+    legend2.textContent = info.situatie ? legend2Text : (legend2.dataset.alt ?? legend2Text);
+    typeLabel.hidden = !info.situatie;
+    fotoField.hidden = !info.fotos;
+    applyShowIf();
+    syncDisabled();
+  }
+
+  // Voorkeuze via ?dienst=…&plaats=…&pakket=…
   const params = new URLSearchParams(location.search);
   const pre = params.get('dienst');
   if (pre) {
@@ -358,17 +405,17 @@ const budgetten = T.budgetten;
     const o = form.querySelector<HTMLOptionElement>(`#plaats option[data-slug="${CSS.escape(plaats)}"]`);
     if (o) o.selected = true;
   }
-  const pakket = params.get('pakket');
+  const pakket = pakketAlias[(params.get('pakket') ?? '').toLowerCase()];
   if (pakket) {
-    const t = form.querySelector<HTMLTextAreaElement>('#omschrijving')!;
-    t.value = M.pakket.replace('{x}', pakket);
+    const r = form.querySelector<HTMLInputElement>(`[data-groep="sleutelbeheer"] input[name="pakket"][value="${CSS.escape(pakket)}"]`);
+    if (r) r.checked = true;
   }
-  // Budget vanaf de rekentool (?budget=0…4, de volgorde van de budgetkeuzes)
+  // Budget vanaf de rekentool (?budget=0…4, de volgorde van de budgetkeuzes), bij de budgetvraag van de gekozen dienst
   const budgetParam = params.get('budget');
   if (budgetParam && /^\d$/.test(budgetParam)) {
-    const sel = form.querySelector<HTMLSelectElement>('#budget')!;
+    const sel = form.querySelector<HTMLSelectElement>(`[data-groep="${CSS.escape(dienst())}"] select[name="budget"]`);
     const i = Number(budgetParam) + 1;
-    if (i < sel.options.length - 1) sel.selectedIndex = i;
+    if (sel && i < sel.options.length - 1) sel.selectedIndex = i;
   }
   // Vrije tekst vanaf een kosten- of probleempagina (?onderwerp=…), alleen als het veld nog leeg is
   const onderwerp = params.get('onderwerp');
@@ -376,6 +423,7 @@ const budgetten = T.budgetten;
     const t = form.querySelector<HTMLTextAreaElement>('#omschrijving')!;
     if (!t.value) t.value = onderwerp.slice(0, 500);
   }
+  applyDienst();
 
   function show(i: number) {
     index = i;
@@ -386,15 +434,13 @@ const budgetten = T.budgetten;
     bar.style.width = `${((i + 1) / steps.length) * 100}%`;
     cur.textContent = String(i + 1);
     errorEl.textContent = '';
-    // Budget is niet relevant bij sleutelbeheer en keuring
-    const dienst = (form.elements.namedItem('dienst') as RadioNodeList).value;
-    const budget = form.querySelector<HTMLElement>('[data-budget]')!;
-    budget.hidden = dienst === 'sleutelbeheer' || dienst === 'aankoopkeuring';
   }
 
   function valid(i: number): boolean {
-    const fields = Array.from(steps[i].querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>('[required]'));
+    const step = steps[i];
+    const fields = Array.from(step.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>('[required]'));
     for (const f of fields) {
+      if (f.disabled || off(f)) continue;
       if (f instanceof HTMLInputElement && f.type === 'radio') {
         if (!(form.elements.namedItem(f.name) as RadioNodeList).value) {
           errorEl.textContent = M.choose;
@@ -402,10 +448,23 @@ const budgetten = T.budgetten;
         }
       } else if (f instanceof HTMLInputElement && f.type === 'checkbox') {
         if (!f.checked) { errorEl.textContent = M.consent; return false; }
+      } else if (f instanceof HTMLSelectElement && f.closest('[data-q]') && !f.value) {
+        errorEl.textContent = M.choose;
+        f.focus();
+        return false;
       } else if (!f.value.trim() || !f.checkValidity()) {
         const label = form.querySelector(`label[for="${f.id}"]`)?.textContent?.trim() ?? M.thisField;
         errorEl.textContent = M.fill.replace('{x}', M.keepCase ? label : label.toLowerCase());
         f.focus();
+        return false;
+      }
+    }
+    // Keuzevragen (rondjes en vinkjes) in stap 4: minstens één antwoord
+    for (const q of Array.from(step.querySelectorAll<HTMLElement>('[data-q][data-required]'))) {
+      if (off(q) || q.dataset.kind === 'select') continue;
+      if (!q.querySelector('input:checked')) {
+        errorEl.textContent = M.choose;
+        q.querySelector<HTMLInputElement>('input')?.focus();
         return false;
       }
     }
@@ -416,6 +475,8 @@ const budgetten = T.budgetten;
   prev.addEventListener('click', () => show(index - 1));
   form.addEventListener('change', (e) => {
     const t = e.target as HTMLInputElement;
+    if (t.name === 'dienst') applyDienst();
+    else if (t.closest('[data-groep]')) { applyShowIf(); syncDisabled(); }
     if (t.type === 'radio' && index < 2) setTimeout(() => valid(index) && show(index + 1), 180);
   });
 
@@ -446,19 +507,41 @@ const budgetten = T.budgetten;
     }
   });
 
+  /** Antwoorden op de dienstvragen als leesbare regels voor het bouwbedrijf (altijd in het Nederlands). */
+  function details(fd: FormData): string[] {
+    const groep = groepen.find((g) => !g.hidden);
+    if (!groep) return [];
+    const regels: string[] = [];
+    groep.querySelectorAll<HTMLElement>('[data-q]').forEach((q) => {
+      const name = q.dataset.q!;
+      if (off(q) || name === 'planning' || name === 'budget') return;
+      const vals = fd.getAll(name).map(String).filter(Boolean);
+      if (vals.length) regels.push(`${q.dataset.nl}: ${vals.join(', ')}`);
+    });
+    return regels;
+  }
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!valid(index)) return;
     const endpoint = form.dataset.endpoint;
-    const data: Record<string, unknown> = Object.fromEntries(new FormData(form).entries());
-    if (data.website) return; // spam
-    delete data.website;
+    const fd = new FormData(form);
+    if (fd.get('website')) return; // spam
+    const regels = details(fd);
+    const data: Record<string, unknown> = {};
+    const skip = new Set(['website', ...Array.from(groepen.flatMap((g) => Array.from(g.querySelectorAll<HTMLElement>('[data-q]'))))
+      .map((q) => q.dataset.q!).filter((n) => n !== 'planning' && n !== 'budget')]);
+    for (const [k, v] of fd.entries()) if (!skip.has(k) && typeof v === 'string') data[k] = v;
+    if (dienst() === 'aankoopkeuring' && !data.situatie) data.situatie = 'koper';
+    // De dienstvragen komen bovenaan de omschrijving, zodat ze in de sheet en de mail staan
+    const toelichting = String(data.omschrijving ?? '').trim();
+    data.omschrijving = [regels.join('\n'), toelichting && `Toelichting klant:\n${toelichting}`].filter(Boolean).join('\n\n');
     data.taal = document.documentElement.lang;
     data.pagina = document.referrer || location.href;
     data.utm = location.search;
-    data.fotos = photos;
+    data.fotos = fotoField.hidden ? [] : photos;
     // Uniek id: het script negeert een tweede inzending met hetzelfde id
-    data.id = (crypto.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}`);
+    data.id = newId();
 
     if (!endpoint) {
       errorEl.textContent = M.notLinked;
@@ -468,22 +551,12 @@ const budgetten = T.budgetten;
     submit.disabled = true;
     const label = submit.textContent;
     submit.textContent = M.sending;
-    const body = JSON.stringify(data);
-    try {
-      // text/plain voorkomt een CORS-preflight bij Google Apps Script
-      const res = await fetch(endpoint, { method: 'POST', body, headers: { 'Content-Type': 'text/plain;charset=utf-8' } });
-      const json = await res.json().catch(() => ({ ok: res.ok }));
-      if (!json.ok) throw new Error(json.error || 'Versturen mislukt');
+    if (await sendLead(endpoint, data)) {
       location.href = form.dataset.thanks!;
-    } catch {
-      try {
-        await fetch(endpoint, { method: 'POST', body, mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' } });
-        location.href = form.dataset.thanks!;
-      } catch {
-        submit.disabled = false;
-        submit.textContent = label;
-        errorEl.textContent = M.failed;
-      }
+    } else {
+      submit.disabled = false;
+      submit.textContent = label;
+      errorEl.textContent = M.failed;
     }
   });
 

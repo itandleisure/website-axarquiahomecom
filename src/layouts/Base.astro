@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { site, isFilled } from '../data/site';
+import { contactTeksten } from '../data/contactformulier';
 import { ui, nav as navs, services as svcs, alternatesFor, langs, langNames, path as route, type Lang } from '../i18n';
 import { hubAlternates, topicUi, type TopicLang } from '../data/topics';
 
@@ -188,6 +189,7 @@ const englishContact: Partial<Record<Lang, string>> = { sv: 'Kontakten sker på 
           <p class="footer-title">{t.fContact}</p>
           <ul>
             <li><a href={route(lang, 'request')}>{t.fRequest}</a></li>
+            <li><a href={route(lang, 'contact')}>{contactTeksten[lang].footer}</a></li>
             {isFilled(c.whatsapp) && <li><a href={`https://wa.me/${c.whatsapp}`}>WhatsApp</a></li>}
             {isFilled(c.phone) && <li><a href={`tel:${c.phone.replace(/\s/g, '')}`}>{c.phone}</a></li>}
             <li><a href={`mailto:${site.operator.email}`}>{site.operator.email}</a></li>
