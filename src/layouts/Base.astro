@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { site, isFilled } from '../data/site';
 import { ui, nav as navs, services as svcs, alternatesFor, langs, langNames, path as route, type Lang } from '../i18n';
+import { hubAlternates, topicUi, type TopicLang } from '../data/topics';
 
 interface Props {
   title: string;
@@ -19,6 +20,9 @@ const { title, description, path, lang = 'nl', alternates = {}, jsonLd = [], noi
 const canonical = new URL(path, site.url).href;
 const allAlternates: Partial<Record<string, string>> = { ...alternatesFor(path), ...alternates, [lang]: path };
 const t = ui[lang];
+// Link naar de zelf-doen-gidsen in de footer, alleen in talen waarin die er zijn
+const diyHub = (hubAlternates('diy') as Partial<Record<Lang, string>>)[lang];
+const diyLabel = diyHub ? topicUi[lang as TopicLang].hub.diy : '';
 const tools = [site.clarityId && 'Microsoft Clarity', site.gaId && 'Google Analytics'].filter(Boolean);
 const toolList = (and: string) => tools.join(` ${and} `);
 const cookieText = {
@@ -194,6 +198,7 @@ const englishContact: Partial<Record<Lang, string>> = { sv: 'Kontakten sker på 
           <p class="footer-title">{t.fAbout}</p>
           <ul>
             <li><a href={route(lang, 'guides')}>{t.fGuides}</a></li>
+            {diyHub && <li><a href={diyHub}>{diyLabel}</a></li>}
             <li><a href={route(lang, 'about')}>{t.fAboutUs}</a></li>
             <li><a href={route(lang, 'projects')}>{t.fProjects}</a></li>
             <li><a href={route(lang, 'privacy')}>{t.fPrivacy}</a></li>

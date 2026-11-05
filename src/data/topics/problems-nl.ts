@@ -479,4 +479,472 @@ export const problemsNl: Topic[] = [
     minutes: 6,
     published: '2026-11-05',
   },
+  {
+    key: 'stroom',
+    slug: 'stroom-valt-uit',
+    title: 'Stroom valt steeds uit in uw huis in Spanje: oorzaak en oplossing',
+    seoTitle: 'Stroom valt steeds uit in huis in Spanje: oorzaken, oplossingen en kosten',
+    short: 'Stroom valt uit',
+    description: 'Valt de stroom in uw huis in de Axarquía steeds uit? Zo herkent u een te laag vermogen, een aardlekschakelaar die afslaat of een storing op het net, wat u zelf doet en wat de oplossing kost.',
+    lead: 'De waterkoker aan, de airco aan, en het huis is donker. Of de stroom valt uit na een regenbui terwijl u in Nederland bent. Bijna altijd zit er een van vier oorzaken achter.',
+    keyword: 'stroom valt uit spanje',
+    dienst: 'energie',
+    onderwerp: 'De stroom valt steeds uit in mijn huis.',
+    answer: 'Valt de stroom uit als u veel apparaten tegelijk aanzet, dan is uw <strong>aansluitvermogen te laag</strong>. Slaat de <strong>aardlekschakelaar</strong> af, vaak na regen, dan lekt er ergens stroom naar de aarde, meestal via buitenverlichting, een boiler of een vochtige contactdoos. Is het hele dorp donker, dan is het een <strong>storing op het net</strong>.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Waarom valt de stroom uit?',
+        table: {
+          head: ['Wat u ziet', 'Waarschijnlijke oorzaak'],
+          rows: [
+            ['Stroom valt uit als airco, oven en waterkoker tegelijk aan staan', 'Te laag aansluitvermogen (potencia contratada) of een overbelaste groep'],
+            ['Aardlekschakelaar (diferencial) slaat af, vaak na regen of ’s nachts', 'Lekstroom: vocht in buitenlampen, contactdozen of een apparaat'],
+            ['Eén groep slaat steeds af als één apparaat aan gaat', 'Defect apparaat, bijvoorbeeld boiler, zwembadpomp of koelkast'],
+            ['Stroom valt uit bij onweer of storm', 'Overspanning of storing op het net'],
+            ['Het hele huis en de buren zijn donker', 'Storing bij de netbeheerder (in de Axarquía meestal e-distribución)'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'Wat u zelf kunt doen',
+        html: `<ul>
+<li>Kijk in de groepenkast welke schakelaar omlaag staat: de hoofdschakelaar (te veel vermogen), de aardlekschakelaar of één groep.</li>
+<li>Slaat de aardlekschakelaar af: zet alle groepen uit, de aardlekschakelaar aan, en zet de groepen één voor één weer aan. Bij de groep waarbij hij weer afslaat, zit het probleem.</li>
+<li>Trek bij die groep alle stekkers eruit en probeer opnieuw. Zo vindt u het apparaat dat lekt.</li>
+<li>Is het hele dorp donker, meld de storing bij de netbeheerder. Het nummer staat op uw stroomrekening.</li>
+<li>Werk nooit zelf aan de groepenkast of aan natte contactdozen.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'De oplossing en wat die kost',
+        table: {
+          head: ['Oplossing', 'Bij', 'Indicatie'],
+          rows: [
+            ['Storing zoeken door een elektricien', 'Aardlekschakelaar die blijft afslaan', '€ 80 – € 250'],
+            ['Waterdichte buitenlampen en contactdozen', 'Lekstroom na regen', '€ 60 – € 150 per punt'],
+            ['Aansluitvermogen verhogen, met boletín', 'Te laag vermogen', '€ 150 – € 500'],
+            ['Extra groep of nieuwe groepenkast', 'Overbelaste groep', '€ 150 – € 1.000'],
+            ['Overspanningsbeveiliging', 'Storing bij onweer', '€ 150 – € 400'],
+            ['Complete elektra vernieuwen', 'Oude installatie zonder aarding', 'zie <a href="/nl/kosten/elektra-vernieuwen/">kosten elektra</a>'],
+          ],
+          note: 'Indicaties exclusief btw.',
+        },
+      },
+      {
+        id: 'leeg',
+        h: 'Stroomuitval in een leegstaand huis',
+        html: '<p>Valt de stroom uit terwijl u er niet bent, dan ontdooit de vriezer, stopt de zwembadpomp en valt het alarm na een tijd uit. Twee dingen helpen: een slimme meter of stroomsensor die u een melding stuurt, en iemand die snel ter plaatse kan zijn. Met <a href="/nl/sleutelbeheer/">sleutelbeheer</a> komt er iemand langs die de groepenkast weer aanzet en kijkt wat de oorzaak was.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Wat betekent ICP in mijn groepenkast?', a: 'De ICP (Interruptor de Control de Potencia) was de schakelaar die het vermogen begrensde. Tegenwoordig doet de slimme meter van de netbeheerder dat. Bij te veel vermogen schakelt de meter uit en na een paar seconden vaak vanzelf weer in.' },
+      { q: 'Hoeveel vermogen heb ik nodig?', a: 'Voor een appartement zonder airco is 3,45 tot 4,6 kW meestal genoeg. Met airco en inductie 5,75 kW, en met een warmtepomp, zwembadpomp of laadpaal 7 tot 9,2 kW.' },
+      { q: 'Mag ik het vermogen verhogen zonder nieuw boletín?', a: 'Soms. Als de installatie al voor het nieuwe vermogen is goedgekeurd, gaat het met een telefoontje naar de leverancier. Is ze ouder dan twintig jaar of niet geschikt, dan vraagt de netbeheerder om een nieuw boletín.' },
+    ],
+    links: [
+      { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
+      { href: '/nl/sleutelbeheer/', label: 'Sleutelbeheer en toezicht' },
+      { href: '/nl/kosten/zonnepanelen/', label: 'Kosten zonnepanelen' },
+    ],
+    related: ['costs:elektra', 'problems:vocht', 'problems:inbraak'],
+    sources: [
+      { name: 'e-distribución, storing melden', url: 'https://www.edistribucion.com/es/averias.html' },
+      { name: 'CNMC, het boletín eléctrico: wat het is en waarvoor', url: 'https://cnmc.es/sites/default/files/editor_contenidos/Energia/Consumidores/3.2%20Bolet%C3%ADn%20el%C3%A9ctrico%2C%20qu%C3%A9%20es%20y%20para%20qu%C3%A9%20sirve.pdf' },
+    ],
+    ctaTitle: 'Stroom valt steeds uit?',
+    ctaText: 'Stuur een foto van uw groepenkast en vertel wanneer het gebeurt. Een elektricien zoekt de oorzaak.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'waterdruk',
+    slug: 'geen-water-of-waterdruk',
+    title: 'Geen water of te weinig waterdruk in uw huis in Spanje',
+    seoTitle: 'Geen water of lage waterdruk in huis in Spanje: oorzaken, oplossingen en kosten',
+    short: 'Geen water of waterdruk',
+    description: 'Komt er geen of weinig water uit de kraan in uw huis in de Axarquía? Zo vindt u de oorzaak: storing, lege tank, droge put, kapotte pomp of lekkage, en wat de oplossing kost.',
+    lead: 'U komt aan, draait de kraan open en er komt niets, of alleen een dun straaltje. Op een finca met tank of put, maar ook in een dorpshuis aan de waterleiding, gebeurt dat vaker dan u denkt.',
+    keyword: 'geen water spanje huis',
+    dienst: 'onderhoud',
+    onderwerp: 'Ik heb geen water of te weinig waterdruk in mijn huis.',
+    answer: 'Bij een huis aan de waterleiding is het meestal een <strong>storing of onderbreking in het dorp</strong>, een dichte hoofdkraan of een lekkage. Op een finca met tank of put is het vaak een <strong>lege tank</strong>, een <strong>kapotte of drooggelopen pomp</strong>, een <strong>vol filter</strong> of een put die in de zomer minder geeft.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Waar ligt het aan?',
+        table: {
+          head: ['Wat u ziet', 'Waarschijnlijke oorzaak'],
+          rows: [
+            ['Geen water, en de buren ook niet', 'Storing of geplande onderbreking van het waterbedrijf'],
+            ['Geen water na lange afwezigheid', 'Hoofdkraan dicht, of afgesloten wegens een onbetaalde rekening'],
+            ['Pomp slaat steeds aan en af', 'Drukvat zonder lucht, of een lek in de leiding'],
+            ['Pomp draait, maar er komt geen water', 'Tank of put leeg, of de pomp trekt lucht'],
+            ['Druk langzaam minder, water troebel', 'Filter vol of kalk in leidingen en kranen'],
+            ['Hoge waterrekening of natte plek in de tuin', 'Lekkage in de toevoerleiding'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'Wat u zelf kunt doen',
+        html: `<ul>
+<li>Vraag de buren of het gemeentelijk waterbedrijf of er een storing is.</li>
+<li>Controleer de hoofdkraan bij de watermeter en de kraan na de tank.</li>
+<li>Kijk in de tank hoeveel water er nog in zit. Bestel op tijd een tankwagen bij.</li>
+<li>Zet de pomp uit als hij droog draait, anders brandt hij door.</li>
+<li>Kijk of de watermeter draait terwijl alle kranen dicht zijn: dan is er een lek.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'De oplossing en wat die kost',
+        table: {
+          head: ['Oplossing', 'Bij', 'Indicatie'],
+          rows: [
+            ['Lekkage zoeken en repareren', 'Lek in de leiding', '€ 200 – € 1.000'],
+            ['Drukvat vervangen of op druk brengen', 'Pomp die steeds aanslaat', '€ 150 – € 500'],
+            ['Nieuwe pomp met drukvat', 'Kapotte pomp', '€ 600 – € 1.500'],
+            ['Filter vervangen, ontkalker plaatsen', 'Lage druk, kalk', '€ 150 – € 1.500'],
+            ['Grotere of extra watertank', 'Tank steeds leeg', 'zie <a href="/nl/kosten/watertank-en-beerput/">kosten watertank</a>'],
+            ['Droogloopbeveiliging en niveaumelder', 'Pomp beschermen, melding bij lege tank', '€ 150 – € 400'],
+          ],
+          note: 'Indicaties exclusief btw.',
+        },
+      },
+      {
+        id: 'leeg',
+        h: 'Als u er niet bent',
+        html: '<p>Een lek in een leeg huis kan maanden doorlopen, en een pomp die droog draait gaat kapot. Sluit bij vertrek de hoofdkraan en zet de pomp uit, tenzij de tuin water nodig heeft. Met <a href="/nl/sleutelbeheer/">sleutelbeheer</a> kijkt iemand regelmatig naar de meter, de tank en de pomp, en wordt het huis vóór uw komst weer klaargezet.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Waarom valt het water in de zomer soms uit?', a: 'Na droge jaren kunnen gemeenten in de Axarquía het water ’s nachts of op bepaalde uren afsluiten om te besparen. Een kleine buffertank met pomp vangt dat op.' },
+      { q: 'Wat kost een tankwagen water?', a: 'Reken op € 4 tot € 10 per m³ inclusief transport, afhankelijk van de afstand en de toegangsweg.' },
+      { q: 'Kan ik mijn put dieper laten boren?', a: 'Soms, maar daar is een vergunning voor nodig en het is geen garantie op meer water. Laat eerst kijken of de pomp en de leiding in orde zijn.' },
+    ],
+    links: [
+      { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
+      { href: '/nl/kosten/watertank-en-beerput/', label: 'Kosten watertank, boorput en beerput' },
+      { href: '/nl/gidsen/off-grid-wonen-spanje/', label: 'Gids: off-grid wonen in Spanje' },
+    ],
+    related: ['costs:water', 'problems:beerput', 'problems:stroom'],
+    sources: [
+      { name: 'Junta de Andalucía, water en waterrechten', url: 'https://www.juntadeandalucia.es/medioambiente/portal/areas-tematicas/agua' },
+    ],
+    ctaTitle: 'Geen water of te weinig druk?',
+    ctaText: 'Vertel ons hoe uw huis aan water komt en wat er gebeurt. Een loodgieter zoekt de oorzaak.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'beerput',
+    slug: 'beerput-vol-of-stinkt',
+    title: 'Beerput vol of stinkt: wat nu?',
+    seoTitle: 'Beerput vol of stinkt in uw huis in Spanje: oorzaken, oplossingen en kosten',
+    short: 'Beerput',
+    description: 'Ruikt het naar riool rond uw huis in de Axarquía, of loopt de afvoer traag? Zo herkent u een volle of kapotte beerput (fosa séptica), wat u zelf doet en wat legen of vervangen kost.',
+    lead: 'Op veel fincas en in sommige dorpshuizen gaat het afvalwater naar een beerput in de tuin. Zolang hij werkt, denkt niemand eraan. Tot het gaat stinken of de wc niet meer doorspoelt.',
+    keyword: 'beerput spanje',
+    dienst: 'onderhoud',
+    onderwerp: 'Mijn beerput is vol of stinkt.',
+    answer: 'Stank, een trage afvoer of borrelende putten wijzen meestal op een <strong>volle beerput</strong>: laten legen kost € 150 tot € 300. Blijft het probleem, of staat er water op de grond boven de put, dan is het <strong>infiltratieveld verstopt</strong> of de put kapot. Een nieuwe septic tank kost € 2.500 tot € 6.000.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Wat is er aan de hand?',
+        table: {
+          head: ['Wat u ziet of ruikt', 'Waarschijnlijke oorzaak'],
+          rows: [
+            ['Rioollucht in de tuin, wc spoelt traag', 'Beerput vol'],
+            ['Natte, groene of stinkende plek boven de put', 'Infiltratieveld verstopt of put lekt'],
+            ['Rioollucht binnen, vooral in de badkamer', 'Sifon drooggevallen of ontluchting ontbreekt'],
+            ['Borrelende afvoer of gootsteen', 'Verstopping of volle put'],
+            ['Probleem kort na verhuur of een feest', 'Te veel water of vet in korte tijd'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'Wat u zelf kunt doen',
+        html: `<ul>
+<li>Laat na een lange afwezigheid alle kranen en de douche even lopen: een opgedroogde sifon laat rioollucht door.</li>
+<li>Spoel geen vochtige doekjes, vet of bleek in grote hoeveelheden door: dat doodt de bacteriën in de put.</li>
+<li>Rijd en parkeer niet boven de put of het infiltratieveld.</li>
+<li>Noteer wanneer de put voor het laatst is geleegd.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'De oplossing en wat die kost',
+        table: {
+          head: ['Oplossing', 'Bij', 'Indicatie'],
+          rows: [
+            ['Beerput legen', 'Volle put', '€ 150 – € 300'],
+            ['Afvoer ontstoppen', 'Verstopte leiding', '€ 100 – € 300'],
+            ['Ontluchting plaatsen', 'Rioollucht binnen', '€ 200 – € 600'],
+            ['Infiltratieveld vernieuwen', 'Natte plek boven het veld', '€ 1.500 – € 4.000'],
+            ['Nieuwe septic tank of zuivering', 'Kapotte of te kleine put', 'zie <a href="/nl/kosten/watertank-en-beerput/">kosten beerput</a>'],
+          ],
+          note: 'Indicaties exclusief btw.',
+        },
+      },
+      {
+        id: 'verhuur',
+        h: 'Bij verhuur en verkoop',
+        html: '<p>Verhuurt u het huis, dan gebruikt een vol huis in een week net zoveel water als u in een maand. Laat de put vóór het seizoen controleren. Bij verkoop vraagt een goede koper naar de afvoer: een kapotte of niet-toegestane beerput is een reden om over de prijs te praten. Lees ook de gids <a href="/nl/gidsen/huis-verkopen-spanje/">huis verkopen in Spanje</a>.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Moet een beerput regelmatig geleegd worden?', a: 'Ja, meestal eens per twee tot vier jaar. Wacht niet tot hij overloopt: dan raakt ook het infiltratieveld verstopt.' },
+      { q: 'Zijn beerputstarters of bacteriën nodig?', a: 'Meestal niet. Een gezonde put houdt zichzelf op gang. Ze kunnen helpen na een periode met veel bleek of schoonmaakmiddel.' },
+      { q: 'Is mijn oude beerput nog toegestaan?', a: 'Een gemetselde put zonder bodem, waar het afvalwater direct de grond in loopt, voldoet meestal niet aan de huidige regels. Bij een verbouwing of klacht kan vervanging worden geëist.' },
+    ],
+    links: [
+      { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
+      { href: '/nl/kosten/watertank-en-beerput/', label: 'Kosten watertank, boorput en beerput' },
+      { href: '/nl/aankoopkeuring/', label: 'Aankoopkeuring' },
+    ],
+    related: ['costs:water', 'problems:waterdruk', 'problems:vocht'],
+    sources: [
+      { name: 'Junta de Andalucía, lozingen en afvalwater', url: 'https://www.juntadeandalucia.es/medioambiente/portal/areas-tematicas/agua' },
+    ],
+    ctaTitle: 'Problemen met de beerput?',
+    ctaText: 'Vertel ons wat u ziet en ruikt, en stuur een foto van de plek. We regelen legen, reparatie of vervanging.',
+    minutes: 4,
+    published: '2026-11-05',
+  },
+  {
+    key: 'wateroverlast',
+    slug: 'wateroverlast-en-keermuur',
+    title: 'Wateroverlast na zware regen en een scheurende keermuur',
+    seoTitle: 'Wateroverlast en keermuur in Spanje: wat doen na zware regen of een DANA?',
+    short: 'Wateroverlast en keermuur',
+    description: 'Water tegen of in uw huis na zware regen, een weggespoelde toegangsweg of een keermuur die scheurt of helt? Wat u direct doet, hoe u het voorkomt en wat herstel kost in de Axarquía.',
+    lead: 'In de herfst kan in een paar uur meer regen vallen dan in de hele zomer. Op een helling zoekt dat water de kortste weg naar beneden, en die loopt soms tegen of door uw huis.',
+    keyword: 'wateroverlast spanje',
+    dienst: 'onderhoud',
+    onderwerp: 'Ik heb wateroverlast of een keermuur die scheurt.',
+    answer: 'Wateroverlast op een helling komt bijna altijd door <strong>afwatering die ontbreekt of verstopt is</strong>: water van de helling, het terras of de weg dat geen uitweg heeft. Een keermuur die scheurt, bol staat of helt, heeft meestal <strong>geen drainage</strong> erachter. Laat dat snel nakijken: na de volgende bui kan hij bezwijken.',
+    sections: [
+      {
+        id: 'herkennen',
+        h: 'Signalen',
+        table: {
+          head: ['Wat u ziet', 'Wat het betekent'],
+          rows: [
+            ['Modder of water tegen de achtermuur na regen', 'Water van de helling heeft geen afvoer langs het huis'],
+            ['Natte muur binnen na regen, aan de bergkant', 'Doorslaand vocht: grond en water tegen de muur'],
+            ['Keermuur staat bol, helt of heeft schuine scheuren', 'Druk van water achter de muur, risico op bezwijken'],
+            ['Water komt uit de voegen onderaan de muur', 'Muur draineert, dat is goed; geen water is juist een risico'],
+            ['Geulen in de toegangsweg', 'Afstromend water zonder goot of dwarsdrempel'],
+          ],
+        },
+      },
+      {
+        id: 'direct',
+        h: 'Wat u direct doet',
+        html: `<ul>
+<li>Houd afstand van een keermuur die beweegt of scheurt, en parkeer er niet onder of boven.</li>
+<li>Maak goten, putjes en roosters vrij van bladeren en modder.</li>
+<li>Leid water tijdelijk af met zandzakken of een greppel, weg van het huis.</li>
+<li>Maak foto’s van de schade, met datum, voor de verzekering.</li>
+<li>Bij gevaar of grote schade na een storm: bel 112.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'De oplossing en wat die kost',
+        table: {
+          head: ['Oplossing', 'Bij', 'Indicatie'],
+          rows: [
+            ['Drainage langs de achtermuur', 'Water en vocht aan de bergkant', '€ 40 – € 80 per m'],
+            ['Afwateringsgoot op terras of oprit', 'Water dat naar het huis loopt', '€ 60 – € 150 per m'],
+            ['Drainage achter een bestaande keermuur', 'Muur zonder afvoer', '€ 80 – € 200 per m'],
+            ['Keermuur herstellen of herbouwen', 'Scheurende of ingestorte muur', 'zie <a href="/nl/kosten/keermuur-en-afwatering/">kosten keermuur</a>'],
+            ['Toegangsweg herstellen met goten', 'Weggespoelde weg', '€ 40 – € 70 per m²'],
+          ],
+          note: 'Indicaties exclusief btw.',
+        },
+      },
+      {
+        id: 'verzekering',
+        h: 'Verzekering en het Consorcio',
+        html: '<p>Schade door uitzonderlijke regen, overstroming of storm wordt in Spanje vaak niet door de verzekeraar zelf betaald, maar door het <em>Consorcio de Compensación de Seguros</em>, een staatsfonds. Daarvoor moet u wel een opstal- of inboedelverzekering hebben. Meld de schade zo snel mogelijk en bewaar foto’s en facturen.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Wat is een DANA?', a: 'Een koudeluchtbel hoog in de atmosfeer die vooral in september tot november korte, zware regenbuien geeft. In een paar uur kan dan meer dan 100 mm vallen.' },
+      { q: 'Wie is verantwoordelijk voor een keermuur op de grens?', a: 'Dat hangt af van wie de muur heeft gebouwd en welke grond hij tegenhoudt. Kijk in de eigendomsakte en het kadaster, en overleg met de buren voordat u gaat herstellen.' },
+      { q: 'Kan ik dit voorkomen?', a: 'Ja. Laat vóór het najaar goten, putten en de drainage controleren en schoonmaken. Dat is een vast onderdeel van onderhoud en sleutelbeheer.' },
+    ],
+    links: [
+      { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
+      { href: '/nl/sleutelbeheer/', label: 'Sleutelbeheer en toezicht' },
+      { href: '/nl/weer/september/', label: 'Het weer in september: DANA en eerste regen' },
+    ],
+    related: ['costs:keermuur', 'problems:daklekkage', 'problems:scheuren'],
+    sources: [
+      { name: 'Consorcio de Compensación de Seguros, schade door uitzonderlijke gebeurtenissen', url: 'https://www.consorseguros.es/' },
+      { name: 'AEMET, wat is een DANA', url: 'https://www.aemet.es/' },
+    ],
+    ctaTitle: 'Wateroverlast of een keermuur die scheurt?',
+    ctaText: 'Stuur foto’s van de muur of de plek waar het water heen loopt. We komen kijken en geven een prijs.',
+    minutes: 5,
+    published: '2026-11-05',
+  },
+  {
+    key: 'schoorsteen',
+    slug: 'schoorsteen-rookt-terug',
+    title: 'Schoorsteen rookt terug of trekt slecht: oorzaak en oplossing',
+    seoTitle: 'Schoorsteen of houtkachel rookt terug in Spanje: oorzaken en oplossingen',
+    short: 'Schoorsteen rookt terug',
+    description: 'Komt de rook de kamer in bij uw open haard of houtkachel in de Axarquía? Zo vindt u de oorzaak: koud kanaal, nat hout, te weinig lucht, wind of een vuile schoorsteen. Wat u zelf doet en wat de oplossing kost.',
+    lead: 'U steekt de haard aan en binnen een paar minuten hangt de kamer vol rook. Bij een huis dat maanden dicht heeft gezeten komt dat vaak voor. Meestal zit er een van vijf oorzaken achter, en de meeste zijn eenvoudig op te lossen.',
+    keyword: 'schoorsteen rookt terug',
+    dienst: 'schoorsteen',
+    onderwerp: 'Mijn schoorsteen of kachel rookt terug.',
+    answer: 'Rookt de haard alleen bij het aansteken, dan is het <strong>kanaal nog koud</strong>. Rookt hij steeds, dan is de schoorsteen vaak <strong>vuil of verstopt</strong> door roet of een nest, komt er <strong>te weinig lucht</strong> in de kamer, of <strong>blaast de wind</strong> de rook terug. Laat de schoorsteen eerst vegen en controleren: dat kost € 60 tot € 120 en lost het vaak al op.',
+    sections: [
+      {
+        id: 'oorzaak',
+        h: 'Waarom rookt de schoorsteen terug?',
+        table: {
+          head: ['Wat u ziet', 'Waarschijnlijke oorzaak'],
+          rows: [
+            ['Rook alleen bij het aansteken', 'Koud rookkanaal, vooral bij een buitenmuur of na lang stilstaan'],
+            ['Rook steeds, ook als het vuur goed brandt', 'Vuil of verstopt kanaal: roet, teer, een nest of losse stenen'],
+            ['Beter als er een raam op een kier staat', 'Te weinig luchttoevoer: een goed afgesloten huis of een afzuigkap die lucht wegzuigt'],
+            ['Alleen bij wind uit één richting', 'Wind die de rook terugdrukt, door een hogere buur, een helling of een te korte schoorsteen'],
+            ['Veel rook, sissend en zwart vuur', 'Nat hout'],
+            ['Rookgeur in een andere kamer of bij de buren', 'Scheur in het kanaal: laat dit direct controleren'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'Wat u zelf kunt doen',
+        html: `<ul>
+<li><strong>Warm het kanaal voor</strong> met een prop brandende krant onder in de schoorsteen, en begin met klein, droog aanmaakhout.</li>
+<li><strong>Zet een raam op een kier</strong> in de kamer en zet de afzuigkap in de keuken uit.</li>
+<li><strong>Stook droog hout</strong> met minder dan 20% vocht, zoals olijf- of amandelhout dat een jaar heeft gedroogd.</li>
+<li><strong>Kijk omhoog</strong> met een zaklamp als de haard koud is: ziet u geen licht, dan zit er iets in het kanaal.</li>
+<li><strong>Hang een koolmonoxidemelder</strong> op in de kamer met de haard of kachel. Die kost € 25 tot € 50.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'Oplossingen en kosten',
+        table: {
+          head: ['Oplossing', 'Wanneer', 'Indicatie'],
+          rows: [
+            ['Schoorsteen vegen en controleren', 'Altijd de eerste stap', '€ 60 – € 120'],
+            ['Windkap of trekkap plaatsen', 'Bij terugslag door wind', '€ 150 – € 400'],
+            ['Schoorsteen verlengen', 'Als de schoorsteen te laag boven het dak of de nok uitkomt', '€ 300 – € 1.200'],
+            ['Luchtrooster of buitenluchtaansluiting', 'Bij te weinig luchttoevoer', '€ 100 – € 400'],
+            ['Rvs-binnenbuis plaatsen', 'Bij een te wijd, gescheurd of lekkend kanaal', '€ 1.000 – € 2.500'],
+          ],
+          note: 'Meer prijzen voor vegen, herstel en een nieuwe kachel: zie <a href="/nl/kosten/schoorsteen-en-houtkachel/">kosten schoorsteen en houtkachel</a>.',
+        },
+      },
+      {
+        id: 'gevaar',
+        h: 'Wanneer is het gevaarlijk?',
+        html: '<p>Rook in huis is hinderlijk, maar koolmonoxide ziet en ruikt u niet. Krijgt u hoofdpijn, wordt u duizelig of misselijk bij de haard, ga dan naar buiten en stook niet meer tot de schoorsteen is gecontroleerd. Ruikt u rook in een andere kamer of bij de buren, of ziet u roetvlekken op een muur, dan is het kanaal waarschijnlijk gescheurd.</p>',
+      },
+    ],
+    faq: [
+      { q: 'Waarom rookt de haard alleen in het begin van de winter?', a: 'Een kanaal dat maanden koud en vochtig is geweest, trekt slecht tot het opgewarmd is. Ook kan er in het voorjaar een nest in zijn gebouwd. Laat de schoorsteen in september of oktober vegen.' },
+      { q: 'Helpt een windkap altijd?', a: 'Alleen als de wind de oorzaak is. Bij een vuil kanaal of te weinig luchttoevoer helpt een windkap niet. Laat daarom eerst de oorzaak vaststellen.' },
+      { q: 'Kan een houtkachel in een oude open haard?', a: 'Ja, vaak wel, met een rvs-binnenbuis door de bestaande schoorsteen. Dat lost meteen de meeste rookproblemen op en geeft veel meer warmte.' },
+    ],
+    links: [
+      { href: '/nl/kosten/schoorsteen-en-houtkachel/', label: 'Kosten schoorsteen en houtkachel' },
+      { href: '/nl/gidsen/huis-winterklaar-spanje/', label: 'Gids: huis winterklaar maken' },
+      { href: '/nl/onderhoud/', label: 'Onderhoud en reparaties' },
+    ],
+    related: ['costs:schoorsteen', 'problems:tocht', 'problems:vocht'],
+    sources: [
+      { name: 'BOE, RITE (installaties voor verwarming)', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2007-15820' },
+    ],
+    ctaTitle: 'Schoorsteen rookt terug?',
+    ctaText: 'Stuur een foto van de haard of kachel en van de schoorsteen op het dak, en vertel wanneer het gebeurt. U krijgt advies en een prijs.',
+    minutes: 4,
+    published: '2026-11-05',
+  },
+  {
+    key: 'tocht',
+    slug: 'tocht-en-condens-bij-ramen',
+    title: 'Tocht en condens bij ramen in uw huis in Spanje: oorzaak en oplossing',
+    seoTitle: 'Tocht, kou en condens bij ramen in Spanje: oorzaken en oplossingen',
+    short: 'Tocht en condens bij ramen',
+    description: 'Druppelen uw ramen in de winter en tocht het in uw huis in de Axarquía? Zo komt het door enkel glas en koude aluminium kozijnen, wat u zelf doet en wat nieuwe ramen of glas kosten.',
+    lead: 'Spaanse huizen zijn gebouwd voor de zomer. In de winter zit u achter enkel glas in dunne aluminium kozijnen, met een koude tocht langs de vloer en ’s ochtends plassen water op de vensterbank. Dat is niet alleen onprettig, het leidt ook tot schimmel.',
+    keyword: 'condens ramen spanje',
+    dienst: 'ramen',
+    onderwerp: 'Ik heb last van tocht of condens bij mijn ramen.',
+    answer: 'Condens op ramen komt door <strong>vochtige binnenlucht op een koud oppervlak</strong>: enkel glas en aluminium kozijnen zonder thermische onderbreking. Tocht komt meestal door <strong>versleten afdichting en kieren</strong> rond kozijnen en rolluikkasten. Ventileren en kitten helpen een eind; de echte oplossing is dubbel glas in een geïsoleerd kozijn, vanaf ongeveer € 400 per raam.',
+    sections: [
+      {
+        id: 'oorzaak',
+        h: 'Waar komt het door?',
+        table: {
+          head: ['Wat u ziet', 'Waarschijnlijke oorzaak'],
+          rows: [
+            ['Druppels op het glas, vooral ’s ochtends', 'Enkel glas en vochtige lucht van slapen, koken en douchen'],
+            ['Water en zwarte plekjes op het kozijn', 'Aluminium kozijn zonder thermische onderbreking: het metaal is ijskoud'],
+            ['Tocht langs het raam', 'Versleten borstels of rubbers, kieren tussen kozijn en muur'],
+            ['Koude lucht uit de rolluikkast', 'Ongeïsoleerde rolluikkast (cajón de persiana)'],
+            ['Schimmel in de hoek rond het raam', 'Koudebrug in de muur en te weinig ventilatie'],
+          ],
+        },
+      },
+      {
+        id: 'zelf',
+        h: 'Wat u zelf kunt doen',
+        html: `<ul>
+<li><strong>Ventileer elke dag</strong> tien minuten met de ramen tegen elkaar open, ook in de winter.</li>
+<li><strong>Veeg condens ’s ochtends weg</strong> zodat het niet in het kozijn of de muur trekt.</li>
+<li><strong>Gebruik een ontvochtiger</strong> in slaapkamers en in een huis dat leegstaat.</li>
+<li><strong>Vervang tochtborstels en rubbers</strong> van schuiframen en kit kieren tussen kozijn en muur.</li>
+<li><strong>Isoleer de rolluikkast</strong> met isolatieplaat en tochtstrip.</li>
+</ul>`,
+      },
+      {
+        id: 'oplossing',
+        h: 'Oplossingen en kosten',
+        table: {
+          head: ['Oplossing', 'Toelichting', 'Indicatie'],
+          rows: [
+            ['Afdichting en kitwerk vernieuwen', 'Per raam, borstels, rubbers en kit', '€ 50 – € 150'],
+            ['Rolluikkast isoleren', 'Per kast', '€ 80 – € 200'],
+            ['Dubbel glas in bestaand kozijn', 'Als het kozijn nog goed en geschikt is', '€ 100 – € 250 per m²'],
+            ['Nieuw raam met dubbel glas', 'Aluminium RPT of PVC, ongeveer 120 × 120 cm', '€ 350 – € 800'],
+          ],
+          note: 'Meer over materialen, glas en vergunning: zie <a href="/nl/kosten/ramen-en-kozijnen/">kosten ramen en kozijnen</a>.',
+        },
+      },
+    ],
+    faq: [
+      { q: 'Is condens op ramen erg?', a: 'Een beetje condens op een koude ochtend is normaal. Druppelt het elke dag en wordt het kozijn of de muur zwart, dan ontstaat schimmel. Dan is meer ventilatie of beter glas nodig.' },
+      { q: 'Lost dubbel glas alle condens op?', a: 'Het meeste wel, omdat het glas aan de binnenkant warmer blijft. Is de lucht in huis heel vochtig, dan blijft ventileren nodig. Zie ook vocht en schimmel.' },
+      { q: 'Helpen nieuwe ramen ook in de zomer?', a: 'Ja. Met zonwerend dubbel glas en rolluiken blijft het huis koeler, zodat de airco minder hoeft te draaien.' },
+    ],
+    links: [
+      { href: '/nl/kosten/ramen-en-kozijnen/', label: 'Kosten ramen en kozijnen' },
+      { href: '/nl/problemen/vocht-en-schimmel/', label: 'Vocht en schimmel' },
+      { href: '/nl/gidsen/huis-winterklaar-spanje/', label: 'Gids: huis winterklaar maken' },
+    ],
+    related: ['costs:ramen', 'problems:vocht', 'costs:airco'],
+    sources: [
+      { name: 'Código Técnico de la Edificación, DB HE (energiebesparing)', url: 'https://www.codigotecnico.org/DocumentosCTE/AhorroEnergia.html' },
+      { name: 'IDAE, subsidies voor energiebesparing in woningen', url: 'https://www.idae.es/ayudas-y-financiacion' },
+    ],
+    ctaTitle: 'Last van tocht of condens?',
+    ctaText: 'Stuur foto’s van uw ramen en de plekken met condens of schimmel. U krijgt advies en een prijs.',
+    minutes: 4,
+    published: '2026-11-05',
+  },
 ];

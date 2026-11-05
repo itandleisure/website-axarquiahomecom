@@ -40,7 +40,7 @@ interface Ctx {
   villages: string[];
   m: Municipal;
   /** Links naar andere pagina's, al per taal opgebouwd */
-  links: { request: (dienst?: string) => string; renovation: string; keyholding: string; survey: string; pool: string; maintenance: string; afo: string; renoCosts: string; buyCosts: string; finca: string; permit: string; practical: string };
+  links: { request: (dienst?: string) => string; renovation: string; keyholding: string; survey: string; pool: string; maintenance: string; afo: string; renoCosts: string; buyCosts: string; finca: string; permit: string; practical: string; permitGuide: string };
 }
 
 function permit(lang: MunicipalLang, c: Ctx): MunicipalText {
@@ -82,6 +82,9 @@ function permit(lang: MunicipalLang, c: Ctx): MunicipalText {
       { h: `Waar u het aanvraagt in ${name}`, p: [
         `U dient de aanvraag of melding in bij het gemeentehuis (<em>Ayuntamiento de ${name}</em>)${m.address ? `, ${addr}` : ''}${m.phone ? `, telefoon ${m.phone}` : ''}. Digitaal kan het via het elektronische loket (<em>sede electrónica</em>) op ${site(m)}; daarvoor hebt u een digitaal certificaat nodig. De meeste eigenaren laten de aanvraag doen door hun architect of aannemer.`,
         `In kleinere gemeenten beoordeelt vaak een technicus van de Diputación de Málaga de aanvraag. Vraag bij het gemeentehuis welke stukken zij precies willen zien; dat verschilt per gemeente.`,
+      ] },
+      { h: 'Wie u nodig hebt', p: [
+        `Voor een melding volstaat meestal een aannemer; verandert de elektra, dan geeft een erkend elektricien een installatiecertificaat af. Vraagt het werk een bouwproject, zoals een uitbouw, een extra verdieping of werk aan de constructie, dan zijn een architect en een <em>arquitecto técnico</em> verplicht, en zodra er meer dan één bedrijf op de bouw werkt ook een veiligheidscoördinator. Per type werk staat het in onze gids <a href="${links.permitGuide}">verbouwen in Andalusië: welke vergunning en wie u nodig hebt</a>, met alle stappen tot en met de notaris.`,
       ] },
       { h: 'Huizen in het buitengebied', p: [
         `Staat uw huis buiten de bebouwde kom, op <em>suelo rústico</em>? Dan zijn de regels strenger. Een melding volstaat daar alleen voor werken die het huis zuiniger maken, zoals isolatie of zonnepanelen, zonder extra vierkante meters. Voor al het andere is een vergunning nodig, en uitbreiden mag vaak niet. Is het huis ooit zonder vergunning gebouwd of uitgebreid, lees dan eerst onze gids over <a href="${links.afo}">AFO en legaliseren</a>.`,
@@ -131,6 +134,9 @@ function permit(lang: MunicipalLang, c: Ctx): MunicipalText {
         `You file the application or notification with the town hall (<em>Ayuntamiento de ${name}</em>)${m.address ? `, ${addr}` : ''}${m.phone ? `, phone +34 ${m.phone}` : ''}. Online it goes through the council’s e-office (<em>sede electrónica</em>) at ${site(m)}, which needs a digital certificate. Most owners let their architect or builder file it.`,
         'In smaller municipalities a technician from the Diputación de Málaga often reviews the application. Ask the town hall exactly which documents they want; it varies by council.',
       ] },
+      { h: 'Who you need', p: [
+        `For a notification a builder is usually enough; if the wiring changes, a certified electrician issues an installation certificate. If the work needs a building project, such as an extension, an extra floor or structural work, an architect and an <em>arquitecto técnico</em> are required, plus a health and safety coordinator as soon as more than one company is on site. Our guide <a href="${links.permitGuide}">renovating in Andalusia: which permit you need and who does what</a> covers each type of work and every step up to the notary.`,
+      ] },
       { h: 'Houses in the countryside', p: [
         `Is your house outside the town, on <em>suelo rústico</em>? Then the rules are stricter. A notification is only enough for works that make the house more energy efficient, such as insulation or solar panels, without adding floor space. Everything else needs a permit, and extensions are often not allowed. If the house was ever built or extended without a permit, read our guide to <a href="${links.afo}">AFO and legalisation</a> first.`,
       ] },
@@ -178,6 +184,9 @@ function permit(lang: MunicipalLang, c: Ctx): MunicipalText {
       { h: `Wo Sie in ${name} beantragen`, p: [
         `Antrag oder Anzeige reichen Sie beim Rathaus ein (<em>Ayuntamiento de ${name}</em>)${m.address ? `, ${addr}` : ''}${m.phone ? `, Telefon +34 ${m.phone}` : ''}. Online geht es über das elektronische Amt (<em>sede electrónica</em>) auf ${site(m)}; dafür brauchen Sie ein digitales Zertifikat. Meist reicht der Architekt oder die Baufirma den Antrag ein.`,
         'In kleineren Gemeinden prüft oft ein Techniker der Diputación de Málaga den Antrag. Fragen Sie im Rathaus, welche Unterlagen genau verlangt werden; das ist je Gemeinde verschieden.',
+      ] },
+      { h: 'Wen Sie brauchen', p: [
+        `Für eine Anzeige reicht meist eine Baufirma; ändert sich die Elektrik, stellt ein zugelassener Elektriker ein Installationszertifikat aus. Braucht die Arbeit ein Bauprojekt, etwa ein Anbau, ein zusätzliches Stockwerk oder Eingriffe in die Statik, sind ein Architekt und ein <em>Arquitecto técnico</em> Pflicht, und sobald mehr als eine Firma auf der Baustelle arbeitet auch ein Sicherheitskoordinator. Unser Ratgeber <a href="${links.permitGuide}">Umbauen in Andalusien: welche Genehmigung und wen Sie brauchen</a> erklärt jede Art von Arbeit und alle Schritte bis zum Notar.`,
       ] },
       { h: 'Häuser im Außenbereich', p: [
         `Steht Ihr Haus außerhalb des Ortes, auf <em>suelo rústico</em>? Dann gelten strengere Regeln. Eine Anzeige reicht dort nur für Arbeiten, die das Haus energieeffizienter machen, etwa Dämmung oder Solaranlagen, ohne zusätzliche Fläche. Alles andere braucht eine Genehmigung, und Anbauen ist oft nicht erlaubt. Wurde das Haus je ohne Genehmigung gebaut oder erweitert, lesen Sie zuerst unseren Ratgeber zu <a href="${links.afo}">AFO und Legalisierung</a>.`,
