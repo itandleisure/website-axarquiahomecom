@@ -1,0 +1,83 @@
+---
+import Guide from '../../../components/Guide.astro';
+import Todo from '../../../components/Todo.astro';
+
+const toc = [
+  { id: 'per-m2', label: 'Prijzen per m²' },
+  { id: 'onderdelen', label: 'Prijzen per onderdeel' },
+  { id: 'factoren', label: 'Wat bepaalt de prijs' },
+  { id: 'vergunning', label: 'Vergunningen en btw' },
+  { id: 'afstand', label: 'Verbouwen op afstand' },
+  { id: 'besparen', label: 'Zo houdt u de kosten in de hand' },
+];
+
+const faq = [
+  {
+    q: 'Is verbouwen in Spanje goedkoper dan in Nederland?',
+    a: 'De arbeidskosten liggen in Andalusië lager dan in Nederland, maar materialen kosten ongeveer hetzelfde en soms meer, zeker als u Noord-Europese kwaliteit wilt. Per saldo is verbouwen vaak iets goedkoper, maar het verschil is kleiner dan veel mensen denken.',
+  },
+  {
+    q: 'Hoeveel btw betaal ik over een verbouwing?',
+    a: 'Het standaardtarief is 21%. Voor renovatie- en herstelwerk aan een woning voor particulier gebruik geldt onder voorwaarden 10%, met name als de materialen niet meer dan 40% van het totaal uitmaken. Uw aannemer hoort dit correct toe te passen.',
+  },
+  {
+    q: 'Moet ik vooraf betalen?',
+    a: 'Een aanbetaling bij de start is gebruikelijk, bijvoorbeeld voor materialen. Daarna betaalt u bij voorkeur in termijnen per afgerond onderdeel, nooit grote bedragen voor werk dat nog niet is gedaan.',
+  },
+];
+---
+<Guide slug="kosten-huis-renoveren-spanje" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Een prijs voor uw huis?" ctaText="Stuur ons foto’s en uw wensen. U krijgt een offerte per onderdeel, zodat u zelf kunt kiezen wat eerst moet.">
+  <h2 id="per-m2">Prijzen per m²</h2>
+  <p>Als eerste houvast werken we met drie niveaus. De bedragen zijn indicaties voor de Axarquía in 2026, inclusief materiaal en arbeid en exclusief btw.</p>
+  <table class="prices">
+    <thead><tr><th>Niveau</th><th>Wat het inhoudt</th><th>Per m²</th></tr></thead>
+    <tbody>
+      <tr><td>Opfrissen</td><td>Schilderwerk, nieuwe vloer, kleine reparaties, sanitair vervangen</td><td>€ 250 – € 500</td></tr>
+      <tr><td>Middelgrote renovatie</td><td>Badkamer en keuken nieuw, elektra deels, ramen, afwerking</td><td>€ 600 – € 1.000</td></tr>
+      <tr><td>Totaalrenovatie</td><td>Alles eruit: leidingen, elektra, isolatie, indeling, dak</td><td>€ 1.000 – € 1.600</td></tr>
+    </tbody>
+  </table>
+  <Todo label="bevestiging van deze bedragen door het bouwbedrijf." />
+  <p>Een dorpshuis van 120 m² dat helemaal opnieuw moet, kost dus al snel € 120.000 tot € 190.000. Een appartement van 80 m² opfrissen met een nieuwe badkamer kan voor een fractie daarvan.</p>
+
+  <h2 id="onderdelen">Prijzen per onderdeel</h2>
+  <table class="prices">
+    <thead><tr><th>Onderdeel</th><th>Indicatie</th></tr></thead>
+    <tbody>
+      <tr><td>Nieuwe badkamer</td><td>€ 6.000 – € 25.000</td></tr>
+      <tr><td>Nieuwe keuken</td><td>€ 8.000 – € 30.000</td></tr>
+      <tr><td>Elektra volledig vernieuwen (woning)</td><td>€ 6.000 – € 15.000</td></tr>
+      <tr><td>Dak of dakterras opnieuw waterdicht maken</td><td>€ 1.500 – € 20.000</td></tr>
+      <tr><td>Ramen vervangen door dubbel glas</td><td>€ 3.000 – € 15.000</td></tr>
+      <tr><td>Nieuw zwembad</td><td>€ 20.000 – € 50.000</td></tr>
+      <tr><td>Airco (meerdere ruimtes)</td><td>€ 3.000 – € 10.000</td></tr>
+      <tr><td>Septische put of zuiveringsinstallatie</td><td>€ 3.000 – € 10.000</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Indicaties exclusief btw. Een offerte na een bezoek is altijd nauwkeuriger.</p>
+
+  <h2 id="factoren">Wat bepaalt de prijs</h2>
+  <ul>
+    <li><strong>Bereikbaarheid</strong>: een dorpshuis in een smal straatje in Frigiliana of een finca aan een onverharde bergweg betekent alles met de hand of met kleine wagens aanvoeren. Dat kost tijd.</li>
+    <li><strong>Wat u tegenkomt</strong>: bij oude huizen komt pas bij het slopen aan het licht hoe het met balken, leidingen en fundering staat. Houd 10 tot 15% buffer aan.</li>
+    <li><strong>Materiaalkeuze</strong>: Spaanse tegels en sanitair zijn betaalbaar en goed; Noord-Europese merken en maatwerk kosten meer.</li>
+    <li><strong>Vergunning</strong>: grotere ingrepen vragen een project van een architect, met bijbehorende kosten en doorlooptijd.</li>
+    <li><strong>Seizoen</strong>: veel eigenaren willen vóór de zomer klaar zijn. Wie in het najaar begint, heeft vaak meer keuze in planning.</li>
+  </ul>
+
+  <h2 id="vergunning">Vergunningen en btw</h2>
+  <p>Voor kleine werken zonder structurele ingrepen volstaat in de meeste gemeentes een melding (<em>declaración responsable</em>). Voor grotere verbouwingen, uitbreidingen of een zwembad heeft u een bouwvergunning nodig, met een project van een architect. De gemeente rekent een bouwleges (ICIO) van enkele procenten over de bouwsom.</p>
+  <p>Over renovatiewerk aan een woning voor eigen gebruik geldt onder voorwaarden het verlaagde btw-tarief van 10% in plaats van 21%. Uw aannemer moet dit correct toepassen.</p>
+
+  <h2 id="afstand">Verbouwen op afstand</h2>
+  <p>De meeste van onze klanten zijn tijdens de verbouwing in Nederland. Dat werkt goed als u vooraf een duidelijke offerte per onderdeel heeft, één aanspreekpunt, wekelijkse foto’s en betaling per afgerond onderdeel. Spreek ook af hoe meerwerk wordt gemeld en goedgekeurd: altijd schriftelijk, met een prijs, vóór het wordt uitgevoerd.</p>
+
+  <h2 id="besparen">Zo houdt u de kosten in de hand</h2>
+  <ul>
+    <li>Laat het huis vóór de aankoop keuren, zodat u weet wat er speelt.</li>
+    <li>Maak keuzes vóór de start: wijzigingen tijdens het werk zijn de grootste kostenpost.</li>
+    <li>Combineer werk: bij een nieuwe badkamer is het moment om ook de leidingen te vervangen.</li>
+    <li>Werk met een vaste prijs per onderdeel in plaats van op uurbasis.</li>
+    <li>Plan in het najaar of de winter, als de agenda’s ruimer zijn.</li>
+  </ul>
+</Guide>

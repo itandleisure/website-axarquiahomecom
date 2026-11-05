@@ -1,0 +1,75 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'wat', label: 'Wat betekent AFO?' },
+  { id: 'waarom', label: 'Waarom zoveel huizen geen vergunning hebben' },
+  { id: 'mag', label: 'Wat mag wel en niet' },
+  { id: 'procedure', label: 'De procedure in grote lijnen' },
+  { id: 'koper', label: 'Als koper: waar let u op' },
+  { id: 'eigenaar', label: 'Als eigenaar: verbouwen met AFO' },
+];
+
+const faq = [
+  {
+    q: 'Is een huis met AFO-status legaal?',
+    a: 'Niet in de zin dat het met vergunning is gebouwd. Wel erkent de gemeente dat er niet meer tegen kan worden opgetreden. Het huis mag worden bewoond, verkocht, ingeschreven en aangesloten op water en stroom. Uitbreiden of herbouwen mag in principe niet.',
+  },
+  {
+    q: 'Kan ik een hypotheek krijgen op een huis met AFO?',
+    a: 'Soms. Banken zijn terughoudender dan bij een volledig vergund huis, en de voorwaarden verschillen per bank. Met een officiële AFO-verklaring en inschrijving in het register is de kans een stuk groter dan zonder.',
+  },
+  {
+    q: 'Hoelang duurt een AFO-procedure?',
+    a: 'Dat verschilt per gemeente. Reken op enkele maanden tot meer dan een jaar, afhankelijk van de drukte bij de gemeente en de volledigheid van het dossier.',
+  },
+  {
+    q: 'Wat kost een AFO-procedure?',
+    a: 'De kosten bestaan uit het technisch rapport van een architect of aparejador, de gemeentelijke leges en eventueel inschrijving in het register. Samen loopt dat vaak op tot enkele duizenden euro’s, meer als er eerst herstelwerk nodig is.',
+  },
+];
+---
+<Guide slug="afo-legaliseren-andalusie" toc={toc} faq={faq} dienst="legalisatie" ctaTitle="Twijfels over de papieren van een huis?" ctaText="Wij kijken mee en brengen u in contact met de architect met wie we samenwerken.">
+  <h2 id="wat">Wat betekent AFO?</h2>
+  <p>AFO staat voor <em>asimilado a fuera de ordenación</em>, letterlijk “gelijkgesteld aan buiten de ordening”. Het is een status voor gebouwen die zonder (juiste) vergunning zijn gebouwd, maar waartegen de overheid niet meer kan optreden omdat de termijn daarvoor is verstreken. In Andalusië is die termijn voor de meeste gevallen zes jaar na het voltooien van het bouwwerk. De status is vastgelegd in de Andalusische ruimtelijke-ordeningswet LISTA (Ley 7/2021).</p>
+  <p>De gemeente stelt de status vast met een officiële verklaring. Daarna kan het huis worden ingeschreven in het eigendomsregister met vermelding van de AFO-situatie, en mag het worden aangesloten op water en stroom.</p>
+
+  <h2 id="waarom">Waarom zoveel huizen geen vergunning hebben</h2>
+  <p>Op landelijke grond in Andalusië is bouwen altijd sterk beperkt geweest. Toch zijn er in de afgelopen decennia tienduizenden huizen gebouwd of uitgebreid zonder vergunning: een schuur die woning werd, een extra verdieping, een zwembad of een overdekt terras. Lang werd daar weinig tegen gedaan. Naar schatting staan er in Andalusië zo’n 300.000 woningen in deze situatie, veel daarvan in gebieden als de Axarquía.</p>
+
+  <h2 id="mag">Wat mag wel en niet</h2>
+  <table class="prices">
+    <thead><tr><th>Wel</th><th>Niet</th></tr></thead>
+    <tbody>
+      <tr><td>Bewonen en verhuren (lange termijn)</td><td>Uitbreiden of extra verdieping</td></tr>
+      <tr><td>Verkopen en inschrijven in het register</td><td>Afbreken en herbouwen</td></tr>
+      <tr><td>Aansluiten op water en stroom (waar beschikbaar)</td><td>Nieuwe bijgebouwen of zwembad</td></tr>
+      <tr><td>Onderhoud en herstel (dak, leidingen, afwerking)</td><td>Werk dat de waarde of omvang wezenlijk vergroot</td></tr>
+    </tbody>
+  </table>
+  <p>Precies welke werken zijn toegestaan, verschilt per geval en per gemeente. Vraag altijd vooraf advies en een melding of vergunning aan.</p>
+  <p>Belangrijk: niet elk huis komt in aanmerking. Staat het in beschermd natuurgebied, in een overstromingsgebied, op openbare grond of in een zone met bijzondere risico’s, dan geldt de termijn vaak niet en kan de overheid nog steeds optreden.</p>
+
+  <h2 id="procedure">De procedure in grote lijnen</h2>
+  <ol>
+    <li><strong>Onderzoek</strong>: een architect of aparejador stelt vast wat er staat, wanneer het is gebouwd en of het in aanmerking komt.</li>
+    <li><strong>Technisch rapport</strong>: met tekeningen, foto’s, bewijs van de bouwdatum (bijvoorbeeld luchtfoto’s of het kadaster) en een verklaring dat het gebouw veilig en bewoonbaar is.</li>
+    <li><strong>Aanvraag bij de gemeente</strong>: met het rapport en de leges.</li>
+    <li><strong>Eventueel herstelwerk</strong>: soms eist de gemeente eerst aanpassingen, bijvoorbeeld aan de septische put of de veiligheid.</li>
+    <li><strong>Verklaring en inschrijving</strong>: na de AFO-verklaring wordt de situatie ingeschreven in het eigendomsregister.</li>
+  </ol>
+
+  <h2 id="koper">Als koper: waar let u op</h2>
+  <ul>
+    <li>Vergelijk wat er staat met de beschrijving in het kadaster en het eigendomsregister. Elk verschil moet worden verklaard.</li>
+    <li>Vraag naar de AFO-verklaring van de gemeente, of naar de vergunningen. Een belofte van de verkoper is niet genoeg.</li>
+    <li>Ga uit van wat er nu staat: als u later wilt uitbreiden of een zwembad wilt bouwen, kan dat waarschijnlijk niet.</li>
+    <li>Laat een onafhankelijke advocaat en een architect meekijken, en neem de uitkomst op in het koopcontract (arras) als ontbindende voorwaarde.</li>
+    <li>Houd rekening met de waarde: een huis met AFO-status is bij verkoop vaak minder waard dan een vergelijkbaar vergund huis.</li>
+  </ul>
+  <p>Meer over het kopen van een landelijk huis leest u in de gids <a href="/nl/gidsen/finca-kopen-in-spanje/">finca kopen in Spanje</a>.</p>
+
+  <h2 id="eigenaar">Als eigenaar: verbouwen met AFO</h2>
+  <p>Ook met AFO-status kunt u uw huis goed onderhouden en moderniseren: een nieuw dak, een nieuwe badkamer en keuken, isolatie, nieuwe elektra. Wat niet mag, is het huis groter maken. Wij stemmen per project af wat er mag, en zorgen voor de juiste melding bij de gemeente. Zie <a href="/nl/renovatie/">renovatie en verbouwing</a>.</p>
+  <p class="note">Deze gids geeft algemene uitleg en is geen juridisch advies. Het oordeel over een specifieke woning komt van een architect of advocaat. Regels kunnen per gemeente verschillen en veranderen.</p>
+</Guide>

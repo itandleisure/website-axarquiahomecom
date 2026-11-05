@@ -1,0 +1,78 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'regio', label: 'Waar ligt de Axarquía?' },
+  { id: 'dorpen', label: 'De dorpen vergeleken' },
+  { id: 'klimaat', label: 'Klimaat en seizoenen' },
+  { id: 'kosten', label: 'Kosten van levensonderhoud' },
+  { id: 'zorg', label: 'Zorg en voorzieningen' },
+  { id: 'bereikbaarheid', label: 'Bereikbaarheid' },
+  { id: 'huizen', label: 'Wat voor huizen er staan' },
+];
+
+const faq = [
+  {
+    q: 'Wat is het mooiste dorp in de Axarquía?',
+    a: 'Dat hangt af van wat u zoekt. Frigiliana wordt vaak het mooiste witte dorp genoemd, Cómpeta is geliefd bij buitenlanders vanwege de sfeer en de bergen, en Nerja combineert strand en voorzieningen. Kom kijken in verschillende seizoenen voordat u kiest.',
+  },
+  {
+    q: 'Is de Axarquía goedkoper dan de rest van de Costa del Sol?',
+    a: 'Over het algemeen wel. Huizen in Torre del Mar, Torrox of de bergdorpen zijn per m² goedkoper dan in Marbella, Estepona of Benalmádena. Nerja en populaire delen van Frigiliana zijn wel flink in prijs gestegen.',
+  },
+  {
+    q: 'Hoe zit het met water na de droogte?',
+    a: 'De Axarquía had tussen 2023 en begin 2026 te maken met ernstige droogte en beperkingen in het watergebruik. Die zijn in maart 2026 na een natte winter opgeheven. Aan de kust en in de dorpen is het gemeentelijke water betrouwbaar; bij fincas in het binnenland is water een aandachtspunt.',
+  },
+];
+
+const dorpen = [
+  { n: 'Nerja', t: 'Kust', d: 'Levendige kustplaats met stranden, de Balcón de Europa en alle voorzieningen. Populair bij Britten en Scandinaviërs. De duurste plek in de Axarquía.' },
+  { n: 'Frigiliana', t: 'Bergdorp, 6 km van zee', d: 'Wit dorp tegen de berg, met steile straatjes en uitzicht op zee. Veel buitenlandse bewoners en dagjesmensen.' },
+  { n: 'Cómpeta', t: 'Bergdorp, 650 m hoogte', d: 'Bruisend dorp met een grote internationale gemeenschap, koeler in de zomer, veel fincas in de omgeving. Bekend om de zoete wijn.' },
+  { n: 'Torrox', t: 'Kust en dorp', d: 'Torrox Costa aan zee met appartementen en een lange boulevard; Torrox Pueblo als wit dorp iets landinwaarts. Veel Duitse inwoners.' },
+  { n: 'Torre del Mar', t: 'Kust', d: 'Ontspannen badplaats met een lange boulevard en veel Spaanse vakantiegangers. Goede prijs-kwaliteit.' },
+  { n: 'Vélez-Málaga', t: 'Hoofdstad van de regio', d: 'Echte Spaanse stad met ziekenhuis, markt en winkels. Weinig toeristen, wel alle voorzieningen.' },
+  { n: 'Rincón de la Victoria', t: 'Kust, vlak bij Málaga', d: 'Dicht bij de stad, ideaal als u vaak naar Málaga of het vliegveld moet. Veel Spaanse gezinnen.' },
+  { n: 'Algarrobo', t: 'Kust en dorp', d: 'Klein en rustig, met Algarrobo Costa aan zee en Mezquitilla. Betaalbaar en authentiek.' },
+];
+---
+<Guide slug="wonen-in-de-axarquia" toc={toc} faq={faq} ctaTitle="Een huis in de Axarquía op het oog?" ctaText="Wij kennen elk dorp en elk type huis. Laat het keuren of vraag een prijs voor de verbouwing.">
+  <h2 id="regio">Waar ligt de Axarquía?</h2>
+  <p>De Axarquía is de oostelijke punt van de provincie Málaga, tussen de stad Málaga en de grens met Granada. Het gebied loopt van de kust bij Rincón de la Victoria en Nerja omhoog de bergen in, tot de Sierra Tejeda en Almijara op ruim 2.000 meter. Er liggen 31 gemeentes, van badplaatsen tot kleine bergdorpen met een paar honderd inwoners.</p>
+  <p>Het landschap is groen voor Andalusische begrippen: op de hellingen groeien avocado’s, mango’s, olijven en druiven. Het is een gebied waar het Spaanse dorpsleven nog volop bestaat, met een grote internationale gemeenschap ernaast.</p>
+
+  <h2 id="dorpen">De dorpen vergeleken</h2>
+  <div class="cards" style="margin-bottom:1.5em">
+    {dorpen.map((d) => (
+      <div class="card">
+        <h3>{d.n}</h3>
+        <p class="note" style="margin-top:-0.4em">{d.t}</p>
+        <p>{d.d}</p>
+      </div>
+    ))}
+  </div>
+
+  <h2 id="klimaat">Klimaat en seizoenen</h2>
+  <p>De Axarquía heeft een van de mildste klimaten van Europa. De bergen houden koude noordenwind tegen. In de winter is het overdag aan de kust meestal 15 tot 19 graden, ’s nachts koelt het af tot een graad of acht. In de bergdorpen is het een paar graden kouder, en een stenen huis zonder isolatie kan dan behoorlijk kil zijn. In juli en augustus loopt het aan de kust op tot rond de 30 graden; af en toe waait de hete <em>terral</em> uit het binnenland en wordt het een paar dagen veel warmer.</p>
+  <p>Regen valt vooral tussen oktober en april, soms in korte, heftige buien. Dat is ook het moment waarop lekkages aan daken en terrassen aan het licht komen.</p>
+
+  <h2 id="kosten">Kosten van levensonderhoud</h2>
+  <p>Boodschappen, uit eten en diensten zijn in de Axarquía merkbaar goedkoper dan in Nederland. Een menu del día kost in een dorp nog vaak rond de € 12 tot € 15. Energie is vergelijkbaar of iets goedkoper, al kan airco in de zomer de rekening opdrijven. Huren zijn de laatste jaren flink gestegen door de vraag van buitenlanders en vakantieverhuur.</p>
+  <p>Houd als eigenaar rekening met vaste lasten als onroerendgoedbelasting (IBI), afvalheffing, verzekering, en bij een appartement de bijdrage aan de vereniging van eigenaars. Zie de gids <a href="/nl/gidsen/kosten-koper-spanje/">kosten koper</a> voor een overzicht.</p>
+
+  <h2 id="zorg">Zorg en voorzieningen</h2>
+  <p>Elke grotere gemeente heeft een gezondheidscentrum (<em>centro de salud</em>). Het regionale ziekenhuis staat in Vélez-Málaga; voor specialistische zorg gaat u naar de ziekenhuizen in Málaga. Er zijn ook privéklinieken met Engelssprekende artsen, onder meer in Nerja, Torre del Mar en Málaga. Supermarkten, bouwmarkten en grotere winkels vindt u in Vélez-Málaga, Torre del Mar en Nerja.</p>
+
+  <h2 id="bereikbaarheid">Bereikbaarheid</h2>
+  <p>De snelweg A-7 loopt langs de kust en verbindt de Axarquía met Málaga en Granada. Van Torre del Mar rijdt u in ongeveer 40 minuten naar het vliegveld van Málaga, van Nerja in een uur, van Cómpeta in ruim een uur. Vanaf Málaga vliegen er het hele jaar dagelijks rechtstreekse vluchten naar Amsterdam, Eindhoven en Rotterdam. Openbaar vervoer is beperkt tot bussen; voor de bergdorpen heeft u een auto nodig.</p>
+
+  <h2 id="huizen">Wat voor huizen er staan</h2>
+  <ul>
+    <li><strong>Appartementen aan de kust</strong>, vaak uit de jaren zeventig tot negentig, met gedeeld zwembad.</li>
+    <li><strong>Dorpshuizen</strong> in de witte dorpen: smal, hoog, met dikke muren, een dakterras en soms nauwelijks bereikbaar met de auto.</li>
+    <li><strong>Villa’s</strong> op de hellingen boven de kust, met tuin en zwembad.</li>
+    <li><strong>Fincas en cortijos</strong> in het binnenland, met grond, olijf- of avocadobomen en soms zonder aansluiting op het net. Lees eerst onze gids <a href="/nl/gidsen/finca-kopen-in-spanje/">finca kopen</a>.</li>
+  </ul>
+  <p>Het merendeel van de huizen is ouder dan dertig jaar. Reken bij aankoop op werk aan badkamer, keuken, elektra of dak. Wij helpen met <a href="/nl/aankoopkeuring/">keuringen</a>, <a href="/nl/renovatie/">renovaties</a> en <a href="/nl/sleutelbeheer/">sleutelbeheer</a> in de hele regio.</p>
+</Guide>

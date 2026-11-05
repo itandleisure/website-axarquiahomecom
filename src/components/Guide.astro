@@ -1,0 +1,70 @@
+---
+// Layout voor een gids (artikel) met kruimelpad, inhoudsopgave, FAQ en Article-schema.
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Faq from './Faq.astro';
+import Cta from './Cta.astro';
+import { site } from '../data/site';
+import { guides } from '../data/guides';
+
+interface Props {
+  slug: string;
+  toc: { id: string; label: string }[];
+  faq?: { q: string; a: string }[];
+  dienst?: string;
+  ctaTitle?: string;
+  ctaText?: string;
+}
+const { slug, toc, faq = [], dienst, ctaTitle, ctaText } = Astro.props;
+const g = guides.find((x) => x.slug === slug)!;
+const path = `/nl/gidsen/${slug}/`;
+const article = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: g.title,
+  description: g.description,
+  inLanguage: 'nl',
+  datePublished: g.published,
+  dateModified: g.updated ?? g.published,
+  author: { '@type': 'Organization', name: site.brand, url: site.url },
+  publisher: { '@id': `${site.url}/#bedrijf` },
+  mainEntityOfPage: new URL(path, site.url).href,
+};
+const related = guides.filter((x) => x.slug !== slug).slice(0, 3);
+const fmt = (d: string) => new Date(d).toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base title={g.seoTitle ?? g.title} description={g.description} path={path} jsonLd={[article]}>
+  <Breadcrumbs items={[{ name: 'Gidsen', href: '/nl/gidsen/' }, { name: g.short, href: path }]} />
+  <article class="section guide" style="padding-top:24px">
+    <div class="wrap guide-grid">
+      <div class="prose">
+        <p class="eyebrow">Gids · {g.minutes} minuten lezen</p>
+        <h1>{g.title}</h1>
+        <p class="lead">{g.lead}</p>
+        <p class="note">Bijgewerkt op {fmt(g.updated ?? g.published)}</p>
+        <slot />
+      </div>
+      <aside class="toc">
+        <p class="footer-title" style="color:var(--ink)">In deze gids</p>
+        <ol>{toc.map((t) => <li><a href={`#${t.id}`}>{t.label}</a></li>)}</ol>
+        <a class="btn btn-small" href={dienst ? `/nl/aanvraag/?dienst=${dienst}` : '/nl/aanvraag/'}>Vraag advies aan</a>
+      </aside>
+    </div>
+  </article>
+  {faq.length > 0 && <Faq items={faq} />}
+  <Cta dienst={dienst} title={ctaTitle} text={ctaText} />
+  <section class="section">
+    <div class="wrap">
+      <h2>Lees ook</h2>
+      <div class="cards">
+        {related.map((r) => (
+          <a class="card" href={`/nl/gidsen/${r.slug}/`}>
+            <h3>{r.title}</h3>
+            <p>{r.description}</p>
+            <span class="more">Lees de gids →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

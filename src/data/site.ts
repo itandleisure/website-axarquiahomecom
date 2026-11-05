@@ -77,7 +77,7 @@ export const nav = [
   { href: '/nl/aankoopkeuring/', label: 'Aankoopkeuring' },
   { href: '/nl/zwembad/', label: 'Zwembad' },
   { href: '/nl/onderhoud/', label: 'Onderhoud' },
-  { href: '/nl/projecten/', label: 'Projecten' },
+  { href: '/nl/gidsen/', label: 'Gidsen' },
   { href: '/nl/over-ons/', label: 'Over ons' },
 ];
 

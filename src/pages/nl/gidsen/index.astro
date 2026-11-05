@@ -1,0 +1,34 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import Cta from '../../../components/Cta.astro';
+import { guides } from '../../../data/guides';
+---
+<Base
+  title="Gidsen: kopen, verbouwen en wonen in Spanje"
+  description="Praktische gidsen in het Nederlands over emigreren, een huis of finca kopen, kosten koper, renoveren en legaliseren in de Axarquía en de rest van Andalusië."
+  path="/nl/gidsen/"
+>
+  <Breadcrumbs items={[{ name: 'Gidsen', href: '/nl/gidsen/' }]} />
+  <Hero
+    eyebrow="Gidsen"
+    title="Alles wat u wilt weten <em>vóór u koopt of verbouwt</em>"
+    lead="Geschreven door mensen die er wonen en bouwen. Geen verkooppraatjes, wel de dingen waar Nederlanders in Spanje in de praktijk tegenaan lopen."
+    cta="Stel uw vraag"
+  />
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        {guides.map((g) => (
+          <a class="card" href={`/nl/gidsen/${g.slug}/`}>
+            <h3>{g.title}</h3>
+            <p>{g.description}</p>
+            <span class="more">Lees de gids ({g.minutes} min) →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Cta />
+</Base>

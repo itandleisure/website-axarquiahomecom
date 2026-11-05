@@ -1,0 +1,63 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'waarom', label: 'Waarom overwinteren in de Axarquía' },
+  { id: 'regels', label: 'Hoelang mag u blijven?' },
+  { id: 'zorg', label: 'Zorg en verzekering' },
+  { id: 'huis', label: 'Een eigen huis of huren' },
+  { id: 'weg', label: 'Uw huis als u terug bent in Nederland' },
+  { id: 'checklist', label: 'Checklist bij vertrek' },
+];
+
+const faq = [
+  {
+    q: 'Moet ik me in Spanje inschrijven als ik overwinter?',
+    a: 'Blijft u korter dan drie maanden aaneengesloten, dan hoeft u zich als EU-burger niet in te schrijven. Blijft u langer, dan geldt formeel de inschrijvingsplicht in het register voor EU-burgers. Het NIE-nummer heeft u sowieso nodig als u een huis koopt of langdurig huurt.',
+  },
+  {
+    q: 'Blijf ik verzekerd via mijn Nederlandse zorgverzekering?',
+    a: 'Ja, zolang u in Nederland ingeschreven blijft. Met de Europese gezondheidskaart (EHIC) op de achterkant van uw zorgpas kunt u terecht in de Spaanse publieke zorg. Veel overwinteraars nemen daarnaast een reisverzekering met dekking voor langere verblijven.',
+  },
+  {
+    q: 'Wat kost sleutelbeheer voor de maanden dat ik weg ben?',
+    a: 'Een basispakket met een controle per twee weken kost doorgaans enkele tientallen euro’s per maand. Op onze pagina sleutelbeheer ziet u de pakketten. U kunt ze alleen afnemen voor de maanden dat u niet in Spanje bent.',
+  },
+];
+---
+<Guide slug="overwinteren-in-spanje" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Terug naar Nederland, maar uw huis in goede handen?" ctaText="Met sleutelbeheer controleren we uw huis regelmatig en grijpen we in als er iets mis is.">
+  <h2 id="waarom">Waarom overwinteren in de Axarquía</h2>
+  <p>Terwijl het in Nederland grijs en nat is, schijnt aan de oostkust van Málaga bijna elke dag de zon. Overdag is het in januari en februari meestal 15 tot 19 graden, warm genoeg om buiten te lunchen. De Axarquía is rustiger dan Benidorm of de westelijke Costa del Sol, en de dorpen zijn in de winter gewoon bewoond: de bakker, de markt en het café blijven open.</p>
+  <p>Populaire plekken om te overwinteren zijn Nerja, Torrox Costa en Torre del Mar aan de kust, en voor wie van wandelen houdt Cómpeta en Frigiliana. Lees meer in <a href="/nl/gidsen/wonen-in-de-axarquia/">wonen in de Axarquía</a>.</p>
+
+  <h2 id="regels">Hoelang mag u blijven?</h2>
+  <p>Als EU-burger mag u onbeperkt naar Spanje reizen. Er zijn wel grenzen die gevolgen hebben:</p>
+  <ul>
+    <li><strong>Langer dan 3 maanden</strong> aaneengesloten in Spanje: formeel moet u zich dan inschrijven in het Spaanse register voor EU-burgers.</li>
+    <li><strong>Meer dan 183 dagen per jaar</strong> in Spanje: u kunt fiscaal inwoner van Spanje worden, met aangifte over uw wereldinkomen.</li>
+    <li><strong>Verwacht u 8 van de 12 maanden buiten Nederland</strong> te zijn, dan moet u zich in Nederland uitschrijven, met gevolgen voor zorgverzekering, AOW-opbouw en toeslagen.</li>
+  </ul>
+  <p>De meeste overwinteraars blijven daarom drie tot vier maanden. Wie langer wil, laat de gevolgen het best doorrekenen door een adviseur.</p>
+
+  <h2 id="zorg">Zorg en verzekering</h2>
+  <p>Zolang u in Nederland ingeschreven staat, blijft u verzekerd via uw Nederlandse zorgverzekering. Met de Europese gezondheidskaart (EHIC) kunt u naar de Spaanse huisarts en het ziekenhuis. Neem uw medicijnen mee voor de hele periode, met een medicijnpaspoort, en check of uw reisverzekering een verblijf van meerdere maanden dekt.</p>
+
+  <h2 id="huis">Een eigen huis of huren</h2>
+  <p>Huren voor drie maanden in de winter is goed te doen; buiten het hoogseizoen zijn de prijzen lager. Wie elk jaar terugkomt, kiest vaak voor een eigen appartement of huis. Dat staat dan wel acht of negen maanden per jaar leeg, en dat vraagt aandacht.</p>
+
+  <h2 id="weg">Uw huis als u terug bent in Nederland</h2>
+  <p>Een leeg huis aan de Costa del Sol heeft het zwaar. Lekkages na een storm, vocht en schimmel als er niet gelucht wordt, een zwembad dat groen wordt, een stroomstoring waardoor de vriezer ontdooit, of ongewenste bezoekers. Zonder iemand ter plaatse ontdekt u dat pas als u terugkomt.</p>
+  <p>Met <a href="/nl/sleutelbeheer/">sleutelbeheer</a> controleren wij uw huis volgens een vast schema. U krijgt na elk bezoek foto’s en een kort verslag. Is er iets mis, dan lossen we het op na uw akkoord. En vóór uw komst zetten we het huis klaar: lucht, water, stroom en desgewenst schoon en met boodschappen in de koelkast.</p>
+
+  <h2 id="checklist">Checklist bij vertrek</h2>
+  <ul class="checks">
+    <li>Hoofdkraan water dicht, boiler uit</li>
+    <li>Koelkast leeg en open, of laten draaien met iemand die controleert</li>
+    <li>Ramen en luiken dicht, ventilatieroosters open tegen vocht</li>
+    <li>Kostbaarheden opgeborgen, alarm aan</li>
+    <li>Zwembad: afgedekt of onderhoud geregeld</li>
+    <li>Tuin: irrigatie op een timer of iemand die het bijhoudt</li>
+    <li>Sleutel en contactgegevens bij uw sleutelbeheerder</li>
+    <li>Automatische incasso’s voor IBI, water en stroom gecontroleerd</li>
+  </ul>
+</Guide>

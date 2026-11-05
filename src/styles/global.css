@@ -46,17 +46,18 @@ ul, ol { padding-left: 1.2em; }
 
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 50; background: rgb(255 255 255 / 0.96); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
-.header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 68px; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 68px; }
 .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--terra); font-family: var(--serif); font-size: 1.35rem; }
 .logo span { color: var(--ink); }
 .logo b, .footer-brand b { color: var(--terra); font-weight: 700; }
 .menu-toggle { display: none; background: none; border: 0; width: 44px; height: 44px; padding: 12px 10px; cursor: pointer; }
 .menu-toggle span { display: block; height: 2px; background: var(--ink); margin: 4px 0; border-radius: 2px; }
 .menu { display: flex; align-items: center; gap: 22px; }
-.menu ul { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
-.menu ul a { text-decoration: none; color: var(--ink); font-size: 0.97rem; }
+.menu ul { display: flex; gap: 16px; list-style: none; margin: 0; padding: 0; }
+.menu ul a { text-decoration: none; color: var(--ink); font-size: 0.97rem; white-space: nowrap; }
+.menu .btn, .logo { white-space: nowrap; }
 .menu ul a:hover, .menu ul a[aria-current='page'] { color: var(--terra); }
-@media (max-width: 980px) {
+@media (max-width: 1100px) {
   .menu-toggle { display: block; }
   .menu { display: none; position: absolute; left: 0; right: 0; top: 68px; background: var(--white); border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; padding: 12px 20px 20px; gap: 12px; box-shadow: var(--shadow); }
   .menu.open { display: flex; }
@@ -98,7 +99,9 @@ a.card:hover { transform: translateY(-2px); border-color: var(--terra); color: v
 .prices { width: 100%; border-collapse: collapse; margin: 1em 0 0.5em; font-size: 1rem; }
 .prices th, .prices td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
 .prices th { font-weight: 600; color: var(--muted); font-size: 0.9rem; }
-.prices td:last-child { white-space: nowrap; font-weight: 600; }
+.prices td:last-child { font-weight: 600; }
+@media (min-width: 600px) { .prices td:last-child { white-space: nowrap; } }
+.prose { overflow-wrap: break-word; }
 .note { font-size: 0.9rem; color: var(--muted); }
 .packages { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 1.5em; }
 .package { border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; background: var(--white); box-shadow: var(--shadow); display: flex; flex-direction: column; }
@@ -183,3 +186,16 @@ a.card:hover { transform: translateY(-2px); border-color: var(--terra); color: v
 .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .thumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 .thumbs img { width: 76px; height: 76px; object-fit: cover; border-radius: 8px; }
+
+/* Gidsen */
+.guide-grid { display: grid; gap: 40px; grid-template-columns: 1fr; }
+@media (min-width: 1000px) { .guide-grid { grid-template-columns: minmax(0, 1fr) 260px; } }
+.guide .prose h2 { scroll-margin-top: 90px; }
+.guide .prose ol, .guide .prose ul { margin-bottom: 1.2em; }
+.guide .prose li { margin-bottom: 0.35em; }
+.toc { position: sticky; top: 90px; align-self: start; background: var(--sand); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; font-size: 0.95rem; }
+.toc ol { padding-left: 1.2em; margin: 0 0 16px; }
+.toc li { margin-bottom: 6px; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { color: var(--terra); }
+@media (max-width: 999px) { .toc { position: static; order: -1; } }

@@ -1,0 +1,86 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'waarom', label: 'Waarom een finca anders is' },
+  { id: 'legaliteit', label: 'Is het huis legaal?' },
+  { id: 'water', label: 'Water: put, aansluiting of tank' },
+  { id: 'toegang', label: 'Toegangsweg en buren' },
+  { id: 'afvoer', label: 'Septische put en afvoer' },
+  { id: 'stroom', label: 'Stroom en internet' },
+  { id: 'staat', label: 'Bouwkundige staat' },
+  { id: 'checklist', label: 'Checklist vóór u tekent' },
+];
+
+const faq = [
+  {
+    q: 'Wat is het verschil tussen een finca en een cortijo?',
+    a: 'Finca betekent eigenlijk “stuk grond” en wordt in het Nederlands gebruikt voor elk landelijk huis met grond. Een cortijo is een traditionele Andalusische boerderij, vaak met bijgebouwen. Juridisch gaat het om hetzelfde: een woning op landelijke grond (suelo rústico), waarvoor strengere bouwregels gelden dan in een dorp.',
+  },
+  {
+    q: 'Kan ik een finca kopen die niet volledig legaal is?',
+    a: 'Dat kan, maar u moet precies weten wat u koopt. Een huis met AFO-status is geregistreerd en bewoonbaar, maar u mag het niet uitbreiden. Een huis zonder vergunning en zonder AFO kan problemen geven bij hypotheek, aansluitingen en verkoop. Laat het vooraf onderzoeken door een onafhankelijke advocaat en architect.',
+  },
+  {
+    q: 'Mag ik een zwembad aanleggen bij mijn finca?',
+    a: 'Alleen als het bestemmingsplan en de status van het huis dat toelaten en u een vergunning krijgt. Bij woningen met AFO-status mag doorgaans niet worden bijgebouwd. Een zwembad dat er al staat zonder vergunning, valt vaak onder dezelfde AFO-regeling als het huis.',
+  },
+  {
+    q: 'Hoeveel kost het om een finca op te knappen?',
+    a: 'Dat varieert enorm. Een finca die bewoond is en goed onderhouden, vraagt soms alleen een nieuwe badkamer en schilderwerk. Een vervallen cortijo kan meer kosten dan de aankoop zelf. Met een aankoopkeuring weet u het vooraf. Zie ook onze gids over renovatiekosten.',
+  },
+];
+---
+<Guide slug="finca-kopen-in-spanje" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Een finca op het oog?" ctaText="Wij keuren de finca vóór u tekent: constructie, water, afvoer, toegang en wat het opknappen kost.">
+  <h2 id="waarom">Waarom een finca anders is</h2>
+  <p>Een appartement aan de kust is relatief eenvoudig: het gebouw heeft een vergunning, water en stroom komen van het net, en de vereniging van eigenaars regelt het onderhoud van de gemeenschappelijke delen. Bij een finca bent u voor alles zelf verantwoordelijk. En omdat veel landelijke huizen in de Axarquía in de loop van de tijd stap voor stap zijn uitgebreid, zonder dat iemand naar vergunningen vroeg, is er meer uit te zoeken.</p>
+  <p>Dat betekent niet dat u er niet aan moet beginnen. Het betekent wel dat u een paar dingen grondig moet laten controleren voordat u het voorlopige koopcontract (<em>contrato de arras</em>) tekent. Bij het tekenen daarvan betaalt u meestal 10% aanbetaling, die u kwijt bent als u zich daarna terugtrekt.</p>
+
+  <h2 id="legaliteit">Is het huis legaal?</h2>
+  <p>Dit is de belangrijkste vraag. Op landelijke grond (<em>suelo no urbanizable</em> of <em>suelo rústico</em>) mag in Andalusië maar heel beperkt worden gebouwd. Veel bestaande fincas zijn dan ook geheel of gedeeltelijk zonder vergunning gebouwd of uitgebreid.</p>
+  <p>Er zijn grofweg drie situaties:</p>
+  <ul>
+    <li><strong>Volledig vergund</strong>: het huis, inclusief aanbouwen, zwembad en schuren, heeft de juiste vergunningen en staat zo in het kadaster (<em>Catastro</em>) en het eigendomsregister (<em>Registro de la Propiedad</em>).</li>
+    <li><strong>AFO-status</strong>: het huis is zonder vergunning gebouwd, maar de termijn waarbinnen de gemeente kan optreden is verstreken. Het heeft een officiële verklaring “asimilado a fuera de ordenación”. Het is bewoonbaar, verkoopbaar en kan worden aangesloten, maar uitbreiden mag niet. Lees meer in onze gids <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren</a>.</li>
+    <li><strong>Niet geregeld</strong>: er is geen vergunning en geen AFO-verklaring. Soms kan dat alsnog worden aangevraagd, soms niet (bijvoorbeeld in beschermd natuurgebied of in een overstromingsgebied). Dit is het grootste risico.</li>
+  </ul>
+  <p>Wat u laat controleren: vraag een <em>nota simple</em> op bij het eigendomsregister (eigenaar, beslagen, hypotheken, beschreven oppervlak), vergelijk die met het kadaster en met wat er in werkelijkheid staat, en vraag bij de gemeente of er procedures lopen. Klopt het oppervlak in de papieren niet met de werkelijkheid, dan is er vrijwel zeker zonder vergunning gebouwd.</p>
+
+  <h2 id="water">Water: put, aansluiting of tank</h2>
+  <p>De Axarquía heeft jaren van droogte achter de rug. In 2023 tot begin 2026 golden strenge beperkingen, die in maart 2026 na een natte winter zijn opgeheven. Water blijft bij een finca een punt van aandacht. Er zijn verschillende bronnen:</p>
+  <ul>
+    <li><strong>Aansluiting op het gemeentelijk net</strong>: het meest betrouwbaar, maar lang niet overal beschikbaar.</li>
+    <li><strong>Irrigatiewater</strong> van een <em>comunidad de regantes</em>: water voor de landbouw, vaak met een aandeel per perceel. Formeel niet bedoeld als drinkwater.</li>
+    <li><strong>Eigen put of bron</strong>: alleen legaal als die is geregistreerd of er een concessie voor is. Vraag naar de papieren en laat de waterkwaliteit testen.</li>
+    <li><strong>Tank met levering per vrachtwagen</strong>: werkt, maar kost geld en vraagt planning.</li>
+  </ul>
+  <p>Vraag de verkoper hoeveel water er de afgelopen zomers beschikbaar was, en of het rechtsgeldig bij het huis hoort. Een finca met prachtig uitzicht maar zonder betrouwbaar water verliest snel zijn charme.</p>
+
+  <h2 id="toegang">Toegangsweg en buren</h2>
+  <p>Hoe komt u bij het huis? Loopt de weg over openbare grond (<em>camino público</em>) of over het land van de buren? In dat laatste geval moet er een recht van overpad (<em>servidumbre de paso</em>) in het register staan. Vraag ook wie de weg onderhoudt. Na zware regen kunnen onverharde wegen in de bergen onbegaanbaar worden, en een vrachtwagen met bouwmateriaal of een betonmixer moet er ook kunnen komen.</p>
+
+  <h2 id="afvoer">Septische put en afvoer</h2>
+  <p>De meeste fincas zijn niet aangesloten op het riool. Ze hebben een septische put (<em>fosa séptica</em>) of een kleine zuiveringsinstallatie. Oudere putten lekken soms in de grond, wat tegenwoordig niet meer is toegestaan. Laat controleren waar de put ligt, in welke staat hij is en of hij voldoet. Een nieuwe, waterdichte tank of zuiveringsinstallatie kost al snel een paar duizend euro.</p>
+
+  <h2 id="stroom">Stroom en internet</h2>
+  <p>Is het huis op het net aangesloten, en met welk vermogen? Sommige fincas draaien op zonnepanelen met accu’s en een generator. Dat kan prima werken, maar check de capaciteit als u airco, een zwembadpomp of een elektrische auto wilt. Voor internet is er in de bergen vaak geen glasvezel; 4G/5G of satellietinternet is dan de oplossing. Test de ontvangst ter plekke.</p>
+
+  <h2 id="staat">Bouwkundige staat</h2>
+  <p>Oude fincas zijn vaak gebouwd met natuursteen, leem en houten balken. Charmant, maar gevoelig voor vocht, houtworm en scheuren door werkende grond op hellingen. Platte daken en terrassen lekken na verloop van tijd. En de elektra voldoet regelmatig niet aan de huidige normen. Een <a href="/nl/aankoopkeuring/">aankoopkeuring</a> brengt dit in kaart, met per gebrek een prijs voor herstel. Daarmee kunt u ook onderhandelen over de prijs.</p>
+
+  <h2 id="checklist">Checklist vóór u tekent</h2>
+  <ul class="checks">
+    <li>Nota simple uit het eigendomsregister opgevraagd</li>
+    <li>Kadaster en register vergeleken met wat er werkelijk staat</li>
+    <li>Vergunningen of AFO-verklaring gezien, ook voor zwembad en aanbouwen</li>
+    <li>Bij de gemeente gecheckt of er procedures lopen</li>
+    <li>Waterbron, rechten en papieren duidelijk</li>
+    <li>Toegangsweg en recht van overpad gecontroleerd</li>
+    <li>Septische put geïnspecteerd</li>
+    <li>Stroomaansluiting en internet getest</li>
+    <li>Energielabel (certificado energético) ontvangen; dat is verplicht bij verkoop</li>
+    <li>Bouwkundige keuring met prijsindicatie voor herstel</li>
+    <li>Onafhankelijke advocaat ingeschakeld (niet die van de makelaar)</li>
+  </ul>
+  <p class="note">Deze gids geeft algemene informatie en is geen juridisch advies. Het oordeel over een specifieke woning komt van een advocaat of architect.</p>
+</Guide>
