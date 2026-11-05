@@ -1,0 +1,10 @@
+---
+import WeatherPage from '../../../../../components/WeatherPage.astro';
+import { weatherPlaces } from '../../../../../data/weather';
+
+export function getStaticPaths() {
+  return weatherPlaces.map((w) => ({ params: { slug: w.slug } }));
+}
+const { slug } = Astro.params as { slug: string };
+---
+<WeatherPage lang="en" place={slug} />

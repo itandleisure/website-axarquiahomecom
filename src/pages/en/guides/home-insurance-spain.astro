@@ -1,0 +1,79 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'welke', label: 'Which insurance do you need?' },
+  { id: 'leeg', label: 'Watch out when the house is empty' },
+  { id: 'consorcio', label: 'Storms and floods: the Consorcio' },
+  { id: 'niet', label: 'What is usually not covered' },
+  { id: 'melden', label: 'Making a claim: step by step' },
+  { id: 'herstel', label: 'Repairs after damage' },
+];
+
+const faq = [
+  {
+    q: 'Is buildings insurance compulsory in Spain?',
+    a: 'For a home with a mortgage the bank requires buildings cover (seguro de hogar with continente). Without a mortgage it is not compulsory, but strongly advisable. In an apartment block the comunidad insures the building; you then mainly insure your contents and liability.',
+  },
+  {
+    q: 'What does home insurance cost in Spain?',
+    a: 'For an apartment or village house usually €150 to €400 a year, for a villa or finca with a pool €300 to €800 or more. It depends on the rebuild value, contents, location and cover.',
+  },
+  {
+    q: 'Does my UK insurance cover my house in Spain?',
+    a: 'Usually not. A UK home policy covers a property in the UK. For a house in Spain you take out a Spanish policy, or an international policy that explicitly covers Spain.',
+  },
+  {
+    q: 'Do I need to tell the insurer about holiday lets?',
+    a: 'Yes. A standard home policy often does not cover damage by tenants or liability towards guests. For letting you need an adapted policy.',
+  },
+];
+---
+<Guide lang="en" slug="home-insurance-spain" toc={toc} faq={faq} dienst="onderhoud" ctaTitle="Damage to your house in Spain?" ctaText="We assess the damage, take photos and prepare a repair quote you can submit to the insurer.">
+  <p>This is general information, not insurance advice. Always read the terms of your own policy and ask an independent adviser if in doubt.</p>
+
+  <h2 id="welke">Which insurance do you need?</h2>
+  <p>In Spain home insurance is called <em>seguro de hogar</em>. It usually has three parts:</p>
+  <ul>
+    <li><strong>Buildings (<em>continente</em>):</strong> the structure itself, including roof, walls, fixed installations, pool and garden walls.</li>
+    <li><strong>Contents (<em>contenido</em>):</strong> furniture, appliances and belongings.</li>
+    <li><strong>Liability (<em>responsabilidad civil</em>):</strong> damage you or your house cause to others, such as a leak into the neighbours’ flat.</li>
+  </ul>
+  <p>If you live in an apartment block, the building is usually insured through the owners’ association (<em>comunidad</em>). Ask for the policy and check what it covers, such as the roof and facade.</p>
+  <p>Insure the building for its <strong>rebuild value</strong>, not the purchase price. For a finca with cheap land and an expensive rebuild the difference can be large. If you are under-insured, any payout is reduced proportionally.</p>
+
+  <h2 id="leeg">Watch out when the house is empty</h2>
+  <p>Many Spanish policies have an <strong>unoccupancy clause</strong>. If the house stands empty for longer than a set period, often 30 to 90 consecutive days, part of the cover lapses, for example for burglary or water damage. Check this carefully if you spend the winter or summer away.</p>
+  <p>Insurers also expect you to limit damage. A leak that goes unnoticed for months is sometimes not covered, or only partly. Regular checks through <a href="/en/key-holding/">key holding</a>, with reports and photos, help with a claim.</p>
+
+  <h2 id="consorcio">Storms and floods: the Consorcio</h2>
+  <p>Damage from extraordinary natural events, such as a flood, a severe storm with gusts above 120 km/h or an earthquake, is not paid by your insurer in Spain but by the <em>Consorcio de Compensación de Seguros</em>. This is a state fund financed through a surcharge on every policy.</p>
+  <ul>
+    <li>You are only entitled to it if you have home insurance.</li>
+    <li>You report the damage directly to the Consorcio, online or by phone, not to your insurer.</li>
+    <li>Ordinary rain or storm damage below that threshold falls under your own policy, if it covers it.</li>
+  </ul>
+
+  <h2 id="niet">What is usually not covered</h2>
+  <ul>
+    <li>Wear and tear and poor maintenance, such as a roof terrace with old, cracked tiles</li>
+    <li>Gradual damage, such as damp or mould from condensation</li>
+    <li>Termites and other pests</li>
+    <li>Damage from unpermitted building work, or to a part of the house that is not legal</li>
+    <li>A retaining wall that fails because it had no drainage</li>
+  </ul>
+  <p>Good maintenance is not only cheaper, it also makes the difference in a claim. See the <a href="/en/guides/preparing-your-spanish-home-for-winter/">checklists for preparing your home for winter</a>.</p>
+
+  <h2 id="melden">Making a claim: step by step</h2>
+  <ol>
+    <li><strong>Limit the damage:</strong> turn off the water, switch off power at a leak, cover the roof terrace.</li>
+    <li><strong>Take dated photos and videos</strong> of the damage and its cause.</li>
+    <li><strong>Report the damage within 7 days</strong> to your insurer, or to the Consorcio for an extraordinary event. That deadline is set in Spanish insurance law.</li>
+    <li><strong>Do not throw anything away</strong> before the loss adjuster (<em>perito</em>) has visited, unless it is dangerous.</li>
+    <li><strong>Get a repair quote</strong> and keep all invoices.</li>
+  </ol>
+
+  <h2 id="herstel">Repairs after damage</h2>
+  <p>The insurer usually sends its own loss adjuster and sometimes its own repair firm. You can often choose a firm yourself and submit their quote. If you are not in Spain, it helps to have someone on site to meet the adjuster, show the damage and oversee the repair.</p>
+  <p>After damage we prepare a report with photos and an itemised quote you can submit to the insurer or the Consorcio, and carry out the repair: from <a href="/en/problems/roof-leaks/">roof leaks</a> and <a href="/en/problems/damp-and-mould/">damp</a> to <a href="/en/problems/flooding-and-retaining-walls/">flooding and a collapsed retaining wall</a>.</p>
+</Guide>

@@ -1,0 +1,115 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'what', label: 'What is a virtual battery?' },
+  { id: 'compensation', label: 'The basis: compensation for exported power' },
+  { id: 'difference', label: 'What a virtual battery adds' },
+  { id: 'example', label: 'Worked example: a holiday home in Torrox' },
+  { id: 'real-battery', label: 'Virtual or real home battery?' },
+  { id: 'ev', label: 'Together with an EV charger' },
+  { id: 'setup', label: 'How to set it up' },
+  { id: 'check', label: 'What to check' },
+];
+
+const faq = [
+  {
+    q: 'Do I get paid for the solar power I export?',
+    a: 'Not under the standard scheme for homes. Exported power is offset against your bill, but a bill never goes below zero. With a virtual battery you keep what is left over as credit in euros for later bills. You only get money paid into your bank account if you register as an electricity producer, which is rarely worth it for a home.',
+  },
+  {
+    q: 'Are virtual batteries regulated by law?',
+    a: 'No. The law only covers the monthly compensation for exported power (Real Decreto 244/2019). A virtual battery is an extra service from the electricity supplier, with its own terms. That is why the cost, how long the credit lasts and what you can use it for differ between suppliers.',
+  },
+  {
+    q: 'Can I get a virtual battery on the regulated PVPC tariff?',
+    a: 'No. On PVPC you do get the legal compensation at the hourly market price, but whatever is left over at the end of the month is lost. Only suppliers on the free market offer a virtual battery.',
+  },
+  {
+    q: 'Do I lose my credit if I switch supplier?',
+    a: 'With almost every supplier, yes. The credit belongs to the supplier, not to the connection. Use up as much of it as you can first, or switch in a month when it is low.',
+  },
+  {
+    q: 'Can I use the credit from my Spanish home for my home in the UK?',
+    a: 'No. Sharing only works between connections in Spain with the same supplier, and often only in the name of the same account holder. Some suppliers allow it for a second home or even your gas contract.',
+  },
+];
+---
+<Guide lang="en" slug="virtual-battery-spain" toc={toc} faq={faq} dienst="energiebeheer" ctaTitle="Get more out of your solar panels?" ctaText="We look at your installation, your usage and your contract, and tell you honestly whether a virtual battery, a home battery or a different tariff pays off most.">
+  <h2 id="what">What is a virtual battery?</h2>
+  <p>Solar panels in the Axarquía often produce more power during the day than you use at that moment. Especially in a holiday home that stands empty part of the year. That extra power goes into the grid. In Spain you are compensated for it, but only up to the point where your bill reaches zero. Anything beyond that is lost.</p>
+  <p>A <strong>virtual battery</strong> (<em>batería virtual</em>, called a <em>monedero solar</em> or <em>solar wallet</em> by some suppliers) solves this. The supplier puts the amount you could not offset into a credit balance in euros. You use that credit in a later month, for example in winter when the panels produce less, or when you are in Spain yourself and use more.</p>
+  <p>So it is not a battery full of electricity but a savings pot full of money. That difference matters when you compare it with a real home battery.</p>
+
+  <h2 id="compensation">The basis: compensation for exported power</h2>
+  <p>Almost every home with solar panels in Spain falls under the scheme <em>autoconsumo con excedentes acogido a compensación simplificada</em>, from Real Decreto 244/2019. In short:</p>
+  <ul>
+    <li>The scheme applies to installations up to 100 kW, so to any home.</li>
+    <li>Each month the power you export is valued at a price per kWh. On the regulated tariff (PVPC) that is the hourly market price; on the free market it is the price in your contract, often between €0.03 and €0.08 per kWh.</li>
+    <li>That amount is deducted from the <strong>energy cost</strong> on your bill. The standing charge for your contracted power (<em>término de potencia</em>), the meter rental and the taxes on them stay.</li>
+    <li>The energy cost can go down to zero but no further. Money is never paid out, and without a virtual battery anything left over is lost at the end of the month.</li>
+  </ul>
+  <p>For comparison: for power you take from the grid you usually pay €0.12 to €0.30 per kWh on the free market, depending on the tariff and the time of day. A kWh you use yourself is therefore worth three to five times as much as a kWh you export.</p>
+
+  <h2 id="difference">What a virtual battery adds</h2>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th></th><th>Compensation only</th><th>With a virtual battery</th></tr></thead>
+    <tbody>
+      <tr><td>Surplus at the end of the month</td><td>Lost</td><td>Kept as credit</td></tr>
+      <tr><td>What you can offset</td><td>Energy cost only</td><td>With many suppliers also the standing charge and other items</td></tr>
+      <tr><td>Sharing with another connection</td><td>No</td><td>With some suppliers</td></tr>
+      <tr><td>Cost</td><td>None</td><td>Free to a few euros a month</td></tr>
+      <tr><td>Available from</td><td>Every supplier and PVPC</td><td>Free market only, terms vary</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Which suppliers offer a virtual battery and on what terms is shown in our <a href="/en/guides/electricity-providers-spain-compared/">comparison of electricity providers in Spain</a>.</p>
+
+  <h2 id="example">Worked example: a holiday home in Torrox</h2>
+  <p>A home with 4 kWp of solar panels produces around 6,000 kWh a year in the Axarquía. The owners are there from October to April and let the house for a few weeks in summer. They use around 1,800 kWh of the solar power directly and export 4,200 kWh. The export rate is €0.06 per kWh.</p>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Period</th><th>Export worth</th><th>Energy cost to offset</th><th>Without a virtual battery</th></tr></thead>
+    <tbody>
+      <tr><td>May to September (house mostly empty)</td><td>approx. €160</td><td>approx. €40</td><td>approx. €120 lost</td></tr>
+      <tr><td>October to April (occupied)</td><td>approx. €90</td><td>approx. €260</td><td>All offset</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Without a virtual battery about €120 a year is lost in this example. With one, that amount carries over to the winter months, and with many suppliers it can also pay the standing charge. The more often the house is empty, the more a virtual battery is worth. These figures are indicative: your own usage, the contract and the orientation of the panels make a big difference.</p>
+
+  <h2 id="real-battery">Virtual or real home battery?</h2>
+  <p>A real home battery stores electricity; a virtual battery stores money. A kWh in your home battery saves the full price of €0.15 to €0.30 in the evening. The same kWh in a virtual battery is worth €0.03 to €0.08. Even so, the real battery is not always the better choice:</p>
+  <ul>
+    <li><strong>Living there all year with high evening use</strong> (air con, cooking, an EV charger)? A home battery pays back fastest. See <a href="/en/costs/home-battery/">what a home battery costs</a>.</li>
+    <li><strong>House empty for months?</strong> A home battery is soon full and earns little. A free virtual battery absorbs the surplus without any investment.</li>
+    <li><strong>The best of both:</strong> with a home battery and a virtual battery, solar power goes to your house first, then to the battery, and only what is left goes to the grid, where it is kept as credit.</li>
+    <li><strong>Power cuts:</strong> a real battery with backup keeps the fridge, alarm and router running during an outage. A virtual battery does not. In the Axarquía hills the power regularly goes off after a storm.</li>
+  </ul>
+  <p>More on solar panels, output and payback is on <a href="/en/costs/solar-panels/">solar panel costs</a>. No grid connection? Then there is nothing to export: see <a href="/en/guides/off-grid-living-spain/">off-grid living in Spain</a>.</p>
+
+  <h2 id="ev">Together with an EV charger</h2>
+  <p>An electric car parked at home during the day is the cheapest way to use your own solar power: every kWh in the car is one you do not export for a few cents. A smart charger runs on the solar surplus and switches to the cheap off-peak rate at night. If you drive off during the day, the virtual battery catches the surplus and helps pay for night charging. See <a href="/en/costs/ev-charger/">what an EV charger costs</a> and how <a href="/en/costs/smart-energy-management/">smart energy management</a> makes panels, battery, charger and air con work together.</p>
+
+  <h2 id="setup">How to set it up</h2>
+  <ol>
+    <li><strong>Register the installation.</strong> The installer issues the installation certificate (<em>certificado de instalación</em>, CIE) and registers it in the Junta de Andalucía self-consumption register.</li>
+    <li><strong>Grid operator.</strong> In the province of Málaga this is almost everywhere e-distribución. It updates your connection to self-consumption with compensation. This usually happens automatically after registration, but can take a few weeks to a few months.</li>
+    <li><strong>Supplier.</strong> You choose a contract with compensation and, if you want, a virtual battery. With some suppliers you send the CIE yourself; with others it happens automatically.</li>
+    <li><strong>Check your first bills.</strong> Look for a line saying <em>compensación de excedentes</em> or <em>energía vertida</em>. If it is not there after two months, the registration has got stuck somewhere.</li>
+  </ol>
+  <p>We handle the registration when we install <a href="/en/costs/solar-panels/">solar panels</a>, and check on existing installations whether compensation is working. It goes wrong more often than you might think, especially with older installations or after a sale.</p>
+
+  <h2 id="check">What to check</h2>
+  <ul class="checks">
+    <li>The price per kWh for exported power, and whether it is fixed or follows the market</li>
+    <li>The monthly cost of the virtual battery, or a required add-on service</li>
+    <li>What the credit can pay for: energy only, or also standing charge and taxes</li>
+    <li>How long the credit stays valid, and what happens if you switch</li>
+    <li>Whether you can share the credit with a second home in Spain</li>
+    <li>The price of the power you do buy: a high export rate on an expensive tariff often works out worse overall</li>
+    <li>Any minimum contract term (<em>permanencia</em>) or exit fee</li>
+  </ul>
+  <p class="note">This guide is general information, updated in November 2026. Suppliers change their prices and terms regularly; always check the current terms before signing a contract. We do not sell energy contracts and are not tied to any supplier.</p>
+</Guide>

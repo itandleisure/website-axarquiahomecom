@@ -1,0 +1,134 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'winter', label: 'Waarom verwarmen in Zuid-Spanje?' },
+  { id: 'vergelijking', label: 'Alle soorten verwarming vergeleken' },
+  { id: 'airco', label: 'Airco en warmtepomp' },
+  { id: 'aerotermia', label: 'Aerotermia en vloerverwarming' },
+  { id: 'hout', label: 'Houtkachel en open haard' },
+  { id: 'pellet', label: 'Pelletkachel' },
+  { id: 'gas', label: 'Gaskachel op butaan' },
+  { id: 'elektrisch', label: 'Elektrische kachels en infraroodpanelen' },
+  { id: 'kiezen', label: 'Wat past bij uw huis?' },
+  { id: 'koelen', label: 'Koel blijven in de zomer' },
+];
+
+const faq = [
+  {
+    q: 'Wat is de goedkoopste manier om te verwarmen in Spanje?',
+    a: 'Per kWh warmte zijn een airco met warmtepomp en een houtkachel met eigen of goedkoop hout het goedkoopst, rond € 0,05 tot € 0,07. Met zonnepanelen wordt de airco overdag nog goedkoper. Een gewone elektrische kachel is het duurst, rond € 0,18 per kWh.',
+  },
+  {
+    q: 'Is een butaankachel gevaarlijk?',
+    a: 'Niet als u hem goed gebruikt: altijd met wat ventilatie, nooit in een slaapkamer of badkamer en met een kachel die een zuurstofbeveiliging heeft. Hang er een koolmonoxidemelder bij. Een butaankachel geeft wel veel vocht af, wat condens en schimmel geeft.',
+  },
+  {
+    q: 'Heb ik vloerverwarming nodig in Spanje?',
+    a: 'Nodig niet, maar plavuizen vloeren zijn in de winter koud. Elektrische vloerverwarming in de badkamer is een betaalbare luxe. Voor een heel huis is vloerverwarming met een warmtepomp (aerotermia) comfortabel en zuinig, vooral bij een grote verbouwing.',
+  },
+  {
+    q: 'Kan ik verwarmen op een finca zonder stroomnet?',
+    a: 'Ja. Een houtkachel werkt zonder stroom en is daar de standaard. Een pelletkachel heeft een beetje stroom nodig. Een airco kan alleen op zonnige dagen of met een grote thuisbatterij. Zie de gids off-grid wonen.',
+  },
+];
+---
+<Guide slug="verwarmen-en-koelen-spanje" toc={toc} faq={faq} dienst="energie" ctaTitle="Advies over verwarmen of koelen?" ctaText="Vertel ons hoe groot uw huis is, waar het staat en hoe u het gebruikt. U krijgt advies over de beste verwarming en een prijs.">
+  <h2 id="winter">Waarom verwarmen in Zuid-Spanje?</h2>
+  <p>Overdag is het in de Axarquía ook in januari vaak 16 tot 18 graden in de zon. Maar ’s avonds en ’s nachts zakt het naar 6 tot 10 graden aan de kust, en in de bergdorpen soms tot rond het vriespunt. Spaanse huizen zijn gebouwd om koel te blijven: dikke muren, plavuizen vloeren, enkel glas en vaak geen centrale verwarming. Binnen is het in de winter daardoor vaak kouder dan buiten in de middagzon.</p>
+  <p>Er is dus niet één beste verwarming. Het hangt af van uw huis, hoe vaak u er bent en of u een of twee kamers warm wilt hebben of het hele huis. Hieronder vergelijken we alle gangbare soorten.</p>
+
+  <h2 id="vergelijking">Alle soorten verwarming vergeleken</h2>
+  <p>Indicaties voor 2026. De kosten per kWh warmte rekenen met stroom van € 0,18 per kWh, een fles butaan van ongeveer € 17 en gedroogd olijfhout van € 150 tot € 250 per ton.</p>
+  <div class="table-scroll">
+  <table class="prices">
+    <thead><tr><th>Soort</th><th>Verwarmt</th><th>Aanschaf en plaatsen</th><th>Per kWh warmte</th></tr></thead>
+    <tbody>
+      <tr><td>Airco met warmtepomp (split)</td><td>Per kamer, of meerdere met multisplit</td><td>€ 1.000 – € 2.000 per ruimte</td><td>± € 0,05 – € 0,06</td></tr>
+      <tr><td>Aerotermia met vloerverwarming</td><td>Hele huis</td><td>€ 10.000 – € 20.000</td><td>± € 0,05 – € 0,06</td></tr>
+      <tr><td>Houtkachel</td><td>Woonkamer, met warme lucht ook een deel van het huis</td><td>€ 2.500 – € 6.000</td><td>± € 0,05 – € 0,07</td></tr>
+      <tr><td>Pelletkachel</td><td>Woonkamer, of het hele huis met radiatoren</td><td>€ 3.000 – € 7.000</td><td>± € 0,08 – € 0,09</td></tr>
+      <tr><td>Gaskachel op butaan</td><td>Eén kamer</td><td>€ 80 – € 200</td><td>± € 0,10 – € 0,12</td></tr>
+      <tr><td>Infraroodpaneel</td><td>Eén kamer of plek</td><td>€ 150 – € 500 per paneel</td><td>± € 0,18</td></tr>
+      <tr><td>Elektrische kachel of oliegevulde radiator</td><td>Eén kamer</td><td>€ 30 – € 200</td><td>± € 0,18</td></tr>
+      <tr><td>Elektrische vloerverwarming</td><td>Badkamer of één kamer</td><td>€ 40 – € 70 per m²</td><td>± € 0,18</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Met <a href="/nl/kosten/zonnepanelen/">zonnepanelen</a> wordt alles wat op stroom draait overdag een stuk goedkoper, en met <a href="/nl/kosten/slim-energiebeheer/">slim energiebeheer</a> verwarmt het huis precies op de goedkoopste uren voor.</p>
+
+  <h2 id="airco">Airco en warmtepomp</h2>
+  <p>Bijna elke moderne airco in Spanje is een warmtepomp (<em>bomba de calor</em>): hij koelt in de zomer en verwarmt in de winter. Uit 1 kWh stroom haalt hij 3 tot 4 kWh warmte. Aan de kust, waar het zelden vriest, werkt dat het hele jaar goed.</p>
+  <ul>
+    <li><strong>Voordelen:</strong> goedkoop in gebruik, snel warm, ook koelen in de zomer, geen geur, op afstand aan te zetten en goed te combineren met zonnepanelen.</li>
+    <li><strong>Nadelen:</strong> blaast lucht, wat sommige mensen niet prettig vinden; verwarmt van boven, zodat de vloer koud blijft; buitenunit op gevel of dak.</li>
+    <li><strong>Geschikt voor:</strong> vrijwel elk appartement en huis aan de kust, en als aanvulling in de bergen.</li>
+  </ul>
+  <p>Prijzen per type staan op <a href="/nl/kosten/airco-en-warmtepomp/">kosten airco en warmtepomp</a>.</p>
+
+  <h2 id="aerotermia">Aerotermia en vloerverwarming</h2>
+  <p><em>Aerotermia</em> is een warmtepomp die water verwarmt in plaats van lucht. Dat water gaat naar vloerverwarming, radiatoren en vaak ook naar de boiler voor warm water. Het is de Spaanse versie van centrale verwarming, maar zuinig.</p>
+  <ul>
+    <li><strong>Voordelen:</strong> het hele huis gelijkmatig warm, warme voeten op plavuizen, stil, geen geur, ook warm water, en met zonnepanelen heel voordelig.</li>
+    <li><strong>Nadelen:</strong> hoge aanschaf; vloerverwarming vraagt een nieuwe vloer, dus vooral zinvol bij een grote verbouwing of nieuwbouw. Warmt langzaam op, dus minder geschikt voor een huis dat u maar af en toe gebruikt.</li>
+    <li><strong>Geschikt voor:</strong> een huis dat u het hele jaar bewoont, of dat u toch helemaal renoveert.</li>
+  </ul>
+  <p>Wilt u alleen warme voeten in de badkamer, dan is een elektrische verwarmingsmat onder de tegels een goedkope oplossing.</p>
+
+  <h2 id="hout">Houtkachel en open haard</h2>
+  <p>In de dorpen en op de fincas is de houtkachel nog steeds favoriet. Olijfhout van het snoeien is in de Axarquía goed te krijgen.</p>
+  <ul>
+    <li><strong>Voordelen:</strong> sfeer, stralingswarmte die ook dikke muren opwarmt, goedkoop met eigen of lokaal hout, werkt zonder stroom.</li>
+    <li><strong>Nadelen:</strong> hout halen, opslaan en drogen; as en stof; houtrook ruikt, ook bij de buren; de schoorsteen moet elk jaar geveegd worden. Verwarmt vooral de kamer waar hij staat.</li>
+    <li><strong>Geschikt voor:</strong> dorpshuizen en fincas, bergdorpen, off-grid.</li>
+  </ul>
+  <p>Een <strong>open haard</strong> is gezellig, maar haalt maar 10 tot 20% van de warmte uit het hout en zuigt warme lucht de schoorsteen in. Een inzethaard of houtkachel in de bestaande haard geeft drie tot vier keer zoveel warmte. Zie <a href="/nl/kosten/schoorsteen-en-houtkachel/">kosten schoorsteen en houtkachel</a> en, als hij rookt, <a href="/nl/problemen/schoorsteen-rookt-terug/">schoorsteen rookt terug</a>.</p>
+
+  <h2 id="pellet">Pelletkachel</h2>
+  <p>Een pelletkachel brandt geperste houtkorrels uit een voorraadbak, met een thermostaat en een timer.</p>
+  <ul>
+    <li><strong>Voordelen:</strong> automatisch, schoner dan hout, regelbaar op temperatuur, op afstand aan te zetten, zakken pellets zijn makkelijk te kopen en op te slaan. Een hydro-pelletkachel verwarmt via radiatoren het hele huis.</li>
+    <li><strong>Nadelen:</strong> heeft stroom nodig voor de ventilator en de ontsteking; het zoemt hoorbaar; onderhoud en jaarlijks vegen; duurder in aanschaf dan een houtkachel.</li>
+    <li><strong>Geschikt voor:</strong> wie de warmte van een kachel wil zonder het gesjouw met hout, ook in een huis dat u op afstand wilt voorverwarmen.</li>
+  </ul>
+
+  <h2 id="gas">Gaskachel op butaan</h2>
+  <p>De verplaatsbare kachel met een oranje fles butaan erin staat in veel Spaanse huizen.</p>
+  <ul>
+    <li><strong>Voordelen:</strong> goedkoop te kopen, snel warm, verplaatsbaar, werkt zonder stroom.</li>
+    <li><strong>Nadelen:</strong> geeft veel waterdamp af, wat condens en schimmel geeft; gasgeur; risico op koolmonoxide, dus altijd ventileren en nooit in een slaap- of badkamer; flessen sjouwen en omwisselen.</li>
+    <li><strong>Geschikt voor:</strong> af en toe een kamer snel warm maken, als noodoplossing. Niet als vaste verwarming in een huis dat al vochtig is.</li>
+  </ul>
+  <p>Kampt u met vocht? Lees <a href="/nl/problemen/vocht-en-schimmel/">vocht en schimmel</a> en <a href="/nl/problemen/tocht-en-condens-bij-ramen/">tocht en condens bij ramen</a>.</p>
+
+  <h2 id="elektrisch">Elektrische kachels en infraroodpanelen</h2>
+  <ul>
+    <li><strong>Oliegevulde radiator of convector:</strong> goedkoop te kopen en makkelijk, maar duur in gebruik. Handig voor een logeerkamer die u een paar keer per jaar gebruikt.</li>
+    <li><strong>Infraroodpaneel:</strong> een plat paneel aan muur of plafond dat mensen en muren verwarmt in plaats van de lucht, zoals de zon. Voelt bij een lagere luchttemperatuur al warm, geen luchtstroom en geen geur. Per kWh even duur als andere elektrische verwarming, maar zuinig als u alleen de plek verwarmt waar u zit. Goed voor badkamer, werkplek of terras.</li>
+    <li><strong>Let op het vermogen:</strong> een paar elektrische kachels tegelijk kan de stroom laten uitvallen. Zie <a href="/nl/problemen/stroom-valt-uit/">stroom valt steeds uit</a>.</li>
+  </ul>
+
+  <h2 id="kiezen">Wat past bij uw huis?</h2>
+  <table class="prices">
+    <thead><tr><th>Situatie</th><th>Ons advies</th></tr></thead>
+    <tbody>
+      <tr><td>Appartement aan de kust</td><td>Airco met warmtepomp in woonkamer en slaapkamers, eventueel elektrische vloerverwarming in de badkamer</td></tr>
+      <tr><td>Vakantiehuis, een paar maanden per jaar</td><td>Airco met warmtepomp, op afstand aan te zetten zodat het warm is als u aankomt</td></tr>
+      <tr><td>Dorpshuis met dikke muren</td><td>Houtkachel of pelletkachel in de woonkamer, airco in de slaapkamers</td></tr>
+      <tr><td>Hele jaar bewoond, grote verbouwing</td><td>Aerotermia met vloerverwarming, met zonnepanelen</td></tr>
+      <tr><td>Finca in de bergen</td><td>Houtkachel als basis, airco of pelletkachel als aanvulling</td></tr>
+      <tr><td>Off-grid finca</td><td>Houtkachel, airco alleen overdag op zonnestroom; zie <a href="/nl/gidsen/off-grid-wonen-spanje/">off-grid wonen</a></td></tr>
+    </tbody>
+  </table>
+  <p>Welke verwarming u ook kiest: goede <a href="/nl/kosten/ramen-en-kozijnen/">ramen met dubbel glas</a> en het dichten van tocht schelen vaak meer dan een zwaardere kachel.</p>
+
+  <h2 id="koelen">Koel blijven in de zomer</h2>
+  <p>In juli en augustus is het aan de kust 28 tot 32 graden en in het binnenland soms boven 38. Alleen een airco koelt echt, maar er is meer:</p>
+  <ul>
+    <li><strong>Rolluiken en zonwering</strong> overdag dicht aan de zon- en westkant.</li>
+    <li><strong>’s Nachts luchten</strong> als het buiten koeler is, en overdag alles dicht.</li>
+    <li><strong>Plafondventilatoren</strong> voelen 3 tot 4 graden koeler en verbruiken weinig.</li>
+    <li><strong>Zonwerend glas</strong> en een geïsoleerd dak of dakterras houden de hitte buiten.</li>
+    <li><strong>Een airco op zonnepanelen</strong> koelt precies als de zon het hardst schijnt, dus bijna gratis.</li>
+  </ul>
+</Guide>
