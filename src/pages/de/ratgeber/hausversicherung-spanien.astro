@@ -1,0 +1,79 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'welke', label: 'Welche Versicherungen brauchen Sie?' },
+  { id: 'leeg', label: 'Achtung, wenn das Haus leer steht' },
+  { id: 'consorcio', label: 'Sturm und Überschwemmung: das Consorcio' },
+  { id: 'niet', label: 'Was meist nicht gedeckt ist' },
+  { id: 'melden', label: 'Schaden melden: Schritt für Schritt' },
+  { id: 'herstel', label: 'Reparatur nach einem Schaden' },
+];
+
+const faq = [
+  {
+    q: 'Ist eine Gebäudeversicherung in Spanien Pflicht?',
+    a: 'Bei einer Immobilie mit Hypothek verlangt die Bank eine Gebäudeversicherung (seguro de hogar mit continente). Ohne Hypothek ist sie keine Pflicht, aber sehr zu empfehlen. In einer Wohnanlage versichert die comunidad das Gebäude; Sie versichern dann vor allem Hausrat und Haftpflicht.',
+  },
+  {
+    q: 'Was kostet eine Hausversicherung in Spanien?',
+    a: 'Für eine Wohnung oder ein Dorfhaus meist 150 bis 400 € im Jahr, für eine Villa oder Finca mit Pool 300 bis 800 € oder mehr. Das hängt vom Wiederaufbauwert, dem Hausrat, der Lage und der Deckung ab.',
+  },
+  {
+    q: 'Deckt meine deutsche Versicherung mein Haus in Spanien?',
+    a: 'Meist nicht. Eine deutsche Wohngebäude- oder Hausratversicherung gilt für eine Wohnung in Deutschland. Für ein Haus in Spanien schließen Sie eine spanische Police ab, oder eine internationale Police, die Spanien ausdrücklich deckt.',
+  },
+  {
+    q: 'Muss ich die Ferienvermietung der Versicherung melden?',
+    a: 'Ja. Eine normale Hausversicherung deckt oft keine Schäden durch Mieter und keine Haftung gegenüber Gästen. Für die Vermietung brauchen Sie eine angepasste Police.',
+  },
+];
+---
+<Guide lang="de" slug="hausversicherung-spanien" toc={toc} faq={faq} dienst="onderhoud" ctaTitle="Schaden an Ihrem Haus in Spanien?" ctaText="Wir begutachten den Schaden, machen Fotos und erstellen ein Angebot für die Reparatur, das Sie bei der Versicherung einreichen können.">
+  <p>Dies sind allgemeine Informationen, keine Versicherungsberatung. Lesen Sie immer die Bedingungen Ihrer eigenen Police und fragen Sie im Zweifel einen unabhängigen Berater.</p>
+
+  <h2 id="welke">Welche Versicherungen brauchen Sie?</h2>
+  <p>In Spanien heißt die Hausversicherung <em>seguro de hogar</em>. Sie besteht meist aus drei Teilen:</p>
+  <ul>
+    <li><strong>Gebäude (<em>continente</em>):</strong> das Gebäude selbst, mit Dach, Mauern, festen Installationen, Pool und Gartenmauern.</li>
+    <li><strong>Hausrat (<em>contenido</em>):</strong> Möbel, Geräte und Gegenstände im Haus.</li>
+    <li><strong>Haftpflicht (<em>responsabilidad civil</em>):</strong> Schäden, die Sie oder Ihr Haus bei anderen verursachen, etwa ein Wasserschaden beim Nachbarn.</li>
+  </ul>
+  <p>Wohnen Sie in einer Wohnanlage, ist das Gebäude meist über die Eigentümergemeinschaft (<em>comunidad</em>) versichert. Lassen Sie sich die Police zeigen und prüfen Sie, was sie deckt, etwa Dach und Fassade.</p>
+  <p>Versichern Sie das Gebäude auf den <strong>Wiederaufbauwert</strong>, nicht auf den Kaufpreis. Bei einer Finca mit günstigem Grund und teurem Wiederaufbau kann das stark abweichen. Sind Sie unterversichert, wird im Schadenfall anteilig weniger gezahlt.</p>
+
+  <h2 id="leeg">Achtung, wenn das Haus leer steht</h2>
+  <p>Viele spanische Policen haben eine <strong>Leerstandsklausel</strong>. Steht das Haus länger als einen bestimmten Zeitraum leer, oft 30 bis 90 Tage am Stück, entfällt ein Teil der Deckung, zum Beispiel für Einbruch oder Wasserschäden. Lesen Sie das genau nach, wenn Sie den Winter oder Sommer nicht in Spanien verbringen.</p>
+  <p>Außerdem erwarten Versicherer, dass Sie Schäden begrenzen. Ein Leck, das monatelang unbemerkt bleibt, wird manchmal nicht oder nur teilweise ersetzt. Regelmäßige Kontrollen durch die <a href="/de/hausbetreuung/">Hausbetreuung</a>, mit Berichten und Fotos, helfen bei einem Schadenfall.</p>
+
+  <h2 id="consorcio">Sturm und Überschwemmung: das Consorcio</h2>
+  <p>Schäden durch außergewöhnliche Naturereignisse, etwa eine Überschwemmung, einen schweren Sturm mit Böen über 120 km/h oder ein Erdbeben, zahlt in Spanien nicht Ihr Versicherer, sondern das <em>Consorcio de Compensación de Seguros</em>. Das ist ein staatlicher Fonds, der über einen Zuschlag auf jede Police finanziert wird.</p>
+  <ul>
+    <li>Sie haben nur Anspruch, wenn Sie eine Hausversicherung haben.</li>
+    <li>Sie melden den Schaden direkt beim Consorcio, online oder telefonisch, nicht bei Ihrem Versicherer.</li>
+    <li>Normale Regen- oder Sturmschäden unter dieser Grenze fallen unter Ihre eigene Police, wenn sie das deckt.</li>
+  </ul>
+
+  <h2 id="niet">Was meist nicht gedeckt ist</h2>
+  <ul>
+    <li>Verschleiß und mangelnde Instandhaltung, etwa eine Dachterrasse mit alten, gerissenen Fliesen</li>
+    <li>Allmählich entstandene Schäden, etwa Feuchtigkeit oder Schimmel durch Kondenswasser</li>
+    <li>Termiten und anderes Ungeziefer</li>
+    <li>Schäden durch ungenehmigte Bauarbeiten oder an einem Teil des Hauses, der nicht legal ist</li>
+    <li>Eine Stützmauer, die wegen fehlender Drainage einstürzt</li>
+  </ul>
+  <p>Gute Instandhaltung ist also nicht nur günstiger, sondern macht auch beim Schadenfall den Unterschied. Siehe die <a href="/de/ratgeber/haus-winterfest-spanien/">Checklisten, um Ihr Haus winterfest zu machen</a>.</p>
+
+  <h2 id="melden">Schaden melden: Schritt für Schritt</h2>
+  <ol>
+    <li><strong>Schaden begrenzen:</strong> Wasser abstellen, bei einem Leck den Strom aus, Dachterrasse abdecken.</li>
+    <li><strong>Datierte Fotos und Videos</strong> von Schaden und Ursache machen.</li>
+    <li><strong>Den Schaden innerhalb von 7 Tagen melden</strong>, bei Ihrem Versicherer oder bei einem außergewöhnlichen Ereignis beim Consorcio. Diese Frist steht im spanischen Versicherungsgesetz.</li>
+    <li><strong>Nichts wegwerfen</strong>, bevor der Gutachter (<em>perito</em>) da war, es sei denn, es ist gefährlich.</li>
+    <li><strong>Ein Angebot für die Reparatur einholen</strong> und alle Rechnungen aufbewahren.</li>
+  </ol>
+
+  <h2 id="herstel">Reparatur nach einem Schaden</h2>
+  <p>Der Versicherer schickt meist einen eigenen Gutachter und manchmal auch einen eigenen Handwerksbetrieb. Oft dürfen Sie aber auch selbst einen Betrieb wählen und dessen Angebot einreichen. Sind Sie nicht in Spanien, ist es hilfreich, wenn jemand vor Ort den Gutachter empfängt, den Schaden zeigt und die Reparatur begleitet.</p>
+  <p>Wir erstellen nach einem Schaden einen Bericht mit Fotos und ein Angebot je Posten, das Sie bei der Versicherung oder dem Consorcio einreichen können, und führen die Reparatur aus: vom <a href="/de/probleme/undichtes-dach/">undichten Dach</a> und <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit</a> bis zu <a href="/de/probleme/wasserschaden-und-stuetzmauer/">Wasserschäden und einer eingestürzten Stützmauer</a>.</p>
+</Guide>
