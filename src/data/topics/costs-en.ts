@@ -553,6 +553,8 @@ export const costsEn: Topic[] = [
       { href: '/en/renovation/', label: 'Renovation and building work' },
       { href: '/en/costs/air-conditioning-and-heat-pumps/', label: 'Cost of air con and heat pumps' },
       { href: '/en/guides/off-grid-living-spain/', label: 'Guide: off-grid living in Spain' },
+      { href: '/en/guides/virtual-battery-spain/', label: 'Guide: virtual battery and export compensation' },
+      { href: '/en/guides/electricity-providers-spain-compared/', label: 'Guide: electricity providers compared' },
     ],
     related: ['costs:thuisbatterij', 'costs:laadpaal', 'costs:energiebeheer'],
     sources: [
@@ -719,6 +721,8 @@ export const costsEn: Topic[] = [
       { href: '/en/costs/solar-panels/', label: 'Cost of solar panels' },
       { href: '/en/guides/off-grid-living-spain/', label: 'Guide: off-grid living in Spain' },
       { href: '/en/problems/power-keeps-tripping/', label: 'Power keeps tripping' },
+      { href: '/en/guides/virtual-battery-spain/', label: 'Guide: virtual battery and export compensation' },
+      { href: '/en/guides/electricity-providers-spain-compared/', label: 'Guide: electricity providers compared' },
     ],
     related: ['costs:zonnepanelen', 'costs:laadpaal', 'costs:energiebeheer'],
     sources: [
@@ -959,6 +963,7 @@ export const costsEn: Topic[] = [
       { href: '/en/costs/solar-panels/', label: 'Cost of solar panels' },
       { href: '/en/costs/home-battery/', label: 'Cost of a home battery' },
       { href: '/en/guides/off-grid-living-spain/', label: 'Guide: off-grid living in Spain' },
+      { href: '/en/guides/electricity-providers-spain-compared/#charger', label: 'Guide: EV chargers from energy suppliers' },
     ],
     related: ['costs:zonnepanelen', 'costs:thuisbatterij', 'costs:energiebeheer'],
     sources: [
@@ -1039,6 +1044,8 @@ export const costsEn: Topic[] = [
       { href: '/en/costs/solar-panels/', label: 'Cost of solar panels' },
       { href: '/en/costs/home-battery/', label: 'Cost of a home battery' },
       { href: '/en/costs/ev-charger/', label: 'Cost of an EV charger' },
+      { href: '/en/guides/electricity-providers-spain-compared/', label: 'Guide: electricity providers compared' },
+      { href: '/en/guides/virtual-battery-spain/', label: 'Guide: virtual battery and export compensation' },
     ],
     related: ['costs:zonnepanelen', 'costs:thuisbatterij', 'costs:laadpaal'],
     sources: [

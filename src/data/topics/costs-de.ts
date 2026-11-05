@@ -553,6 +553,8 @@ export const costsDe: Topic[] = [
       { href: '/de/renovierung/', label: 'Renovierung und Umbau' },
       { href: '/de/kosten/klimaanlage-und-waermepumpe/', label: 'Kosten Klimaanlage und Wärmepumpe' },
       { href: '/de/ratgeber/autark-leben-spanien/', label: 'Ratgeber: autark leben in Spanien' },
+      { href: '/de/ratgeber/virtuelle-batterie-spanien/', label: 'Ratgeber: virtuelle Batterie und Einspeisevergütung' },
+      { href: '/de/ratgeber/stromanbieter-spanien-vergleich/', label: 'Ratgeber: Stromanbieter im Vergleich' },
     ],
     related: ['costs:thuisbatterij', 'costs:laadpaal', 'costs:energiebeheer'],
     sources: [
@@ -719,6 +721,8 @@ export const costsDe: Topic[] = [
       { href: '/de/kosten/solaranlage/', label: 'Kosten Solaranlage' },
       { href: '/de/ratgeber/autark-leben-spanien/', label: 'Ratgeber: autark leben in Spanien' },
       { href: '/de/probleme/strom-faellt-aus/', label: 'Strom fällt ständig aus' },
+      { href: '/de/ratgeber/virtuelle-batterie-spanien/', label: 'Ratgeber: virtuelle Batterie und Einspeisevergütung' },
+      { href: '/de/ratgeber/stromanbieter-spanien-vergleich/', label: 'Ratgeber: Stromanbieter im Vergleich' },
     ],
     related: ['costs:zonnepanelen', 'costs:laadpaal', 'costs:energiebeheer'],
     sources: [
@@ -959,6 +963,7 @@ export const costsDe: Topic[] = [
       { href: '/de/kosten/solaranlage/', label: 'Kosten Solaranlage' },
       { href: '/de/kosten/batteriespeicher/', label: 'Kosten Batteriespeicher' },
       { href: '/de/ratgeber/autark-leben-spanien/', label: 'Ratgeber: autark leben in Spanien' },
+      { href: '/de/ratgeber/stromanbieter-spanien-vergleich/#wallbox', label: 'Ratgeber: Wallbox über den Stromanbieter' },
     ],
     related: ['costs:zonnepanelen', 'costs:thuisbatterij', 'costs:energiebeheer'],
     sources: [
@@ -1039,6 +1044,8 @@ export const costsDe: Topic[] = [
       { href: '/de/kosten/solaranlage/', label: 'Kosten Solaranlage' },
       { href: '/de/kosten/batteriespeicher/', label: 'Kosten Batteriespeicher' },
       { href: '/de/kosten/wallbox/', label: 'Kosten Wallbox' },
+      { href: '/de/ratgeber/stromanbieter-spanien-vergleich/', label: 'Ratgeber: Stromanbieter im Vergleich' },
+      { href: '/de/ratgeber/virtuelle-batterie-spanien/', label: 'Ratgeber: virtuelle Batterie und Einspeisevergütung' },
     ],
     related: ['costs:zonnepanelen', 'costs:thuisbatterij', 'costs:laadpaal'],
     sources: [
