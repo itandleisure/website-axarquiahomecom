@@ -47,15 +47,20 @@ export const site = {
   // Google Analytics 4 Measurement ID (G-...). Laadt ook pas na toestemming. Leeg = uit.
   gaId: 'G-YSBXSHM7SS',
 
+  // Voorbeelden van plaatsen in het werkgebied: de hele Axarquía, niet gebonden aan één bouwbedrijf.
   villages: [
     'Nerja',
-    'Cómpeta',
     'Frigiliana',
     'Torrox',
+    'Cómpeta',
     'Torre del Mar',
     'Vélez-Málaga',
     'Rincón de la Victoria',
     'Algarrobo',
+    'Viñuela',
+    'Comares',
+    'Canillas de Aceituno',
+    'Periana',
   ],
 };
 

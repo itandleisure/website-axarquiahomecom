@@ -132,7 +132,7 @@ function mailKlant_(d) {
     },
     de: {
       subject: 'Wir haben Ihre Anfrage erhalten',
-      body: `<p>Guten Tag ${esc_(d.naam)},</p><p>vielen Dank für Ihre Anfrage. Innerhalb von 24 Stunden meldet sich jemand aus unserem Team bei Ihnen, um den nächsten Schritt zu besprechen.</p><p>Mit freundlichen Grüßen<br>Axarquía Home</p>`,
+      body: `<p>Guten Tag ${esc_(d.naam)},</p><p>vielen Dank für Ihre Anfrage. Innerhalb von 24 Stunden meldet sich jemand aus unserem Team bei Ihnen, um den nächsten Schritt zu besprechen. Wir antworten auf Englisch oder Niederländisch.</p><p>Mit freundlichen Grüßen<br>Axarquía Home</p>`,
     },
     sv: {
       subject: 'Vi har tagit emot din förfrågan',

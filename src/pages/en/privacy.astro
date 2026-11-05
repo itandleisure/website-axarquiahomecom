@@ -4,7 +4,6 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Todo from '../../components/Todo.astro';
 import { site } from '../../data/site';
 const o = site.operator;
-const c = site.company;
 ---
 <Base
   title="Privacy and terms"
@@ -16,12 +15,12 @@ const c = site.company;
   <section class="section">
     <div class="wrap prose">
       <h1>Privacy and terms</h1>
-      <Todo label="gegevens van de onderneming van Frans en het bouwbedrijf. Laat deze tekst één keer nakijken door een AVG-jurist." />
+      <Todo label="gegevens van de onderneming van Frans. Laat deze tekst één keer nakijken door een AVG-jurist." />
       <p>Last updated: 5 November 2026.</p>
 
       <h2>Who we are</h2>
       <p>The website {site.domain} is run by {o.name}, {o.address}, registered with the Netherlands Chamber of Commerce under number {o.kvk} (“Axarquía Home”). You can reach us at <a href={`mailto:${o.email}`}>{o.email}</a>.</p>
-      <p>Axarquía Home does not carry out building work itself. Work is carried out by our regular partner {c.legalName}, {c.cif}, {c.street}, {c.postalCode} {c.town}, Spain (“the building company”).</p>
+      <p>Axarquía Home does not carry out building work itself. Work is carried out by a carefully selected building company in the Axarquía that we work with (“the building company”). If you would like to know which company is handling your request, we will tell you on request.</p>
 
       <h2>What data we process</h2>
       <p>When you fill in our request form we process the information you give us: your name, email address, phone number, the address or town of the property, a description of your plans, your budget and timescale, and any photos. We also record the date and the page you made the request from.</p>
@@ -30,7 +29,7 @@ const c = site.company;
       <p>We only use this data to deal with your request: to call or email you, arrange a visit and prepare a quote. The legal basis is your consent (Article 6(1)(a) GDPR), which you give by ticking the box on the form, and taking steps at your request before entering into a contract (Article 6(1)(b)).</p>
 
       <h2>Who we share your data with</h2>
-      <p>Your request is automatically passed on to the building company, who will contact you and prepare the quote. If your request falls outside the building company’s work (for example solar panels, air conditioning or a removal), we only pass it on to one other partner if you have agreed to this on the form.</p>
+      <p>Your request is automatically passed on to the building company, who will contact you and prepare the quote. If your request falls outside the building company’s work (for example solar panels or a removal), we only pass it on to one other partner if you have agreed to this on the form.</p>
       <p>Requests are stored in Axarquía Home’s Google Workspace (Google Sheets and Google Drive). Google processes this data on our behalf. We do not sell your data and do not use it for newsletters without your separate consent.</p>
 
       <h2>How long we keep data</h2>

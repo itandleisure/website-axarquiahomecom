@@ -206,7 +206,7 @@ export const ui = {
     cta: 'Kostenlose Anfrage',
     ctaWizard: 'Anfrage starten',
     ctaTitle: 'Erzählen Sie uns von Ihrem Vorhaben',
-    ctaText: 'Beantworten Sie ein paar kurze Fragen. Innerhalb von 24 Stunden meldet sich ein deutschsprachiger Ansprechpartner bei Ihnen, unverbindlich.',
+    ctaText: 'Beantworten Sie ein paar kurze Fragen. Innerhalb von 24 Stunden melden wir uns bei Ihnen, unverbindlich und auf Englisch oder Niederländisch.',
     faq: 'Häufige Fragen',
     servicesTitle: 'Was wir für Sie tun',
     more: 'Mehr zu',

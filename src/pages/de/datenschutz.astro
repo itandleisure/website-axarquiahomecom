@@ -4,7 +4,6 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Todo from '../../components/Todo.astro';
 import { site } from '../../data/site';
 const o = site.operator;
-const c = site.company;
 ---
 <Base
   title="Impressum, Datenschutz und Bedingungen"
@@ -16,12 +15,12 @@ const c = site.company;
   <section class="section">
     <div class="wrap prose">
       <h1>Impressum, Datenschutz und Bedingungen</h1>
-      <Todo label="gegevens van de onderneming van Frans en het bouwbedrijf. Laat deze tekst één keer nakijken door een AVG-jurist." />
+      <Todo label="gegevens van de onderneming van Frans. Laat deze tekst één keer nakijken door een AVG-jurist." />
       <p>Stand: 5. November 2026.</p>
 
       <h2 id="impressum">Impressum</h2>
       <p>Die Website {site.domain} wird betrieben von {o.name}, {o.address}, eingetragen bei der niederländischen Handelskammer (Kamer van Koophandel) unter der Nummer {o.kvk} („Axarquía Home“). E-Mail: <a href={`mailto:${o.email}`}>{o.email}</a>.</p>
-      <p>Axarquía Home führt selbst keine Bauarbeiten aus. Die Arbeiten führt unser fester Partner {c.legalName}, {c.cif}, {c.street}, {c.postalCode} {c.town}, Spanien („das Bauunternehmen“) aus.</p>
+      <p>Axarquía Home führt selbst keine Bauarbeiten aus. Die Arbeiten führt ein sorgfältig ausgewähltes Bauunternehmen in der Axarquía aus, mit dem wir zusammenarbeiten („das Bauunternehmen“). Auf Wunsch teilen wir Ihnen mit, welches Unternehmen Ihre Anfrage bearbeitet.</p>
 
       <h2>Welche Daten wir verarbeiten</h2>
       <p>Wenn Sie unser Anfrageformular ausfüllen, verarbeiten wir die Angaben, die Sie machen: Name, E-Mail-Adresse, Telefonnummer, Adresse oder Ort der Immobilie, eine Beschreibung Ihres Vorhabens, Budget und Zeitrahmen sowie eventuelle Fotos. Außerdem speichern wir das Datum und die Seite, von der aus Sie angefragt haben.</p>
@@ -30,7 +29,7 @@ const c = site.company;
       <p>Wir nutzen diese Daten nur, um Ihre Anfrage zu bearbeiten: um Sie anzurufen oder Ihnen zu schreiben, eine Besichtigung zu vereinbaren und ein Angebot zu erstellen. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie mit dem Häkchen im Formular geben, sowie die Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO).</p>
 
       <h2>An wen wir Ihre Daten weitergeben</h2>
-      <p>Ihre Anfrage wird automatisch an das Bauunternehmen weitergeleitet, das sich bei Ihnen meldet und das Angebot erstellt. Gehört Ihre Anfrage nicht zu den Leistungen des Bauunternehmens (zum Beispiel Solaranlage, Klimaanlage oder Umzug), leiten wir sie nur dann an einen anderen Partner weiter, wenn Sie dem im Formular zugestimmt haben.</p>
+      <p>Ihre Anfrage wird automatisch an das Bauunternehmen weitergeleitet, das sich bei Ihnen meldet und das Angebot erstellt. Gehört Ihre Anfrage nicht zu den Leistungen des Bauunternehmens (zum Beispiel Solaranlage oder Umzug), leiten wir sie nur dann an einen anderen Partner weiter, wenn Sie dem im Formular zugestimmt haben.</p>
       <p>Anfragen werden im Google Workspace von Axarquía Home (Google Sheets und Google Drive) gespeichert. Google verarbeitet diese Daten in unserem Auftrag. Wir verkaufen Ihre Daten nicht und nutzen sie ohne Ihre gesonderte Einwilligung nicht für Newsletter.</p>
 
       <h2>Speicherdauer</h2>

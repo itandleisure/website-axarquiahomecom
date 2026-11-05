@@ -36,9 +36,9 @@ const c = site.company;
           <li>{isFilled(c.town) ? `Sitz in ${c.town}` : c.town}</li>
           <li>{isFilled(c.yearsInRegion) ? `${c.yearsInRegion} Jahre in der Region` : c.yearsInRegion}</li>
           <li>Gebiet: {site.villages.join(', ')}</li>
-          <li>Sprachen: Deutsch, Niederländisch, Englisch und Spanisch</li>
+          <li>Sprachen: Niederländisch, Englisch und Spanisch</li>
         </ul>
-        <Todo label="bevestiging dat er een Duitstalige contactpersoon is." />
+        <p class="note">Der Kontakt läuft auf Englisch oder Niederländisch.</p>
       </div>
     </div>
   </section>
