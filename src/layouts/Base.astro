@@ -19,6 +19,11 @@ const { title, description, path, lang = 'nl', alternates = {}, jsonLd = [], noi
 const canonical = new URL(path, site.url).href;
 const allAlternates: Partial<Record<string, string>> = { ...alternatesFor(path), ...alternates, [lang]: path };
 const t = ui[lang];
+const cookieText = {
+  nl: { text: 'Mogen we met Microsoft Clarity bijhouden hoe u deze site gebruikt? Dat plaatst cookies en helpt ons de site te verbeteren.', yes: 'Accepteren', no: 'Weigeren', more: 'Meer in de privacyverklaring', settings: 'Cookie-instellingen' },
+  en: { text: 'May we use Microsoft Clarity to see how you use this site? It places cookies and helps us improve the site.', yes: 'Accept', no: 'Decline', more: 'More in the privacy statement', settings: 'Cookie settings' },
+  de: { text: 'Dürfen wir mit Microsoft Clarity erfassen, wie Sie diese Website nutzen? Dabei werden Cookies gesetzt; es hilft uns, die Website zu verbessern.', yes: 'Akzeptieren', no: 'Ablehnen', more: 'Mehr in der Datenschutzerklärung', settings: 'Cookie-Einstellungen' },
+}[lang];
 const nav = navs[lang];
 const others = langs
   .filter((l) => l !== lang)
@@ -75,11 +80,16 @@ const current = Astro.url.pathname;
     {schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
     {site.clarityId && (
       <script is:inline define:vars={{ id: site.clarityId }}>
-        (function (c, l, a, r, i, t, y) {
-          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
-          t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
-          y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, 'clarity', 'script', id);
+        window.axhLoadClarity = function () {
+          if (window.clarity) return;
+          (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+            t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+          })(window, document, 'clarity', 'script', id);
+          window.clarity('consent');
+        };
+        try { if (localStorage.getItem('axh-consent') === 'yes') window.axhLoadClarity(); } catch (e) {}
       </script>
     )}
   </head>
@@ -172,6 +182,7 @@ const current = Astro.url.pathname;
             <li><a href={route(lang, 'about')}>{t.fAboutUs}</a></li>
             <li><a href={route(lang, 'projects')}>{t.fProjects}</a></li>
             <li><a href={route(lang, 'privacy')}>{t.fPrivacy}</a></li>
+            {site.clarityId && <li><button type="button" class="link-btn" data-cookie-open>{cookieText.settings}</button></li>}
           </ul>
         </div>
       </div>
@@ -179,5 +190,42 @@ const current = Astro.url.pathname;
         <p>© {new Date().getFullYear()} {site.brand}. {t.builtBy(isFilled(c.name) ? c.name : t.builtByDefault)}</p>
       </div>
     </footer>
+    {site.clarityId && (
+      <div class="cookie-bar" role="region" aria-label={cookieText.settings} hidden>
+        <div class="wrap cookie-inner">
+          <p>{cookieText.text} <a href={route(lang, 'privacy')}>{cookieText.more}</a></p>
+          <div class="cookie-actions">
+            <button type="button" class="btn btn-ghost" data-cookie="no">{cookieText.no}</button>
+            <button type="button" class="btn" data-cookie="yes">{cookieText.yes}</button>
+          </div>
+        </div>
+      </div>
+      <script is:inline>
+        (function () {
+          var bar = document.querySelector('.cookie-bar');
+          var get = function () { try { return localStorage.getItem('axh-consent'); } catch (e) { return null; } };
+          var set = function (v) { try { localStorage.setItem('axh-consent', v); } catch (e) {} };
+          if (!get()) bar.hidden = false;
+          bar.addEventListener('click', function (e) {
+            var b = e.target.closest('[data-cookie]'); if (!b) return;
+            var v = b.getAttribute('data-cookie'), was = get();
+            set(v); bar.hidden = true;
+            if (v === 'yes') window.axhLoadClarity && window.axhLoadClarity();
+            else if (was === 'yes') {
+              if (window.clarity) window.clarity('consent', false);
+              document.cookie.split(';').forEach(function (c) {
+                var n = c.split('=')[0].trim();
+                if (/^_cl|^CLID$|^MUID$/.test(n)) document.cookie = n + '=; Max-Age=0; path=/; domain=.' + location.hostname.replace(/^www\./, '');
+                document.cookie = n + '=; Max-Age=0; path=/';
+              });
+              location.reload();
+            }
+          });
+          document.addEventListener('click', function (e) {
+            if (e.target.closest('[data-cookie-open]')) { bar.hidden = false; bar.querySelector('[data-cookie="yes"]').focus(); }
+          });
+        })();
+      </script>
+    )}
   </body>
 </html>
