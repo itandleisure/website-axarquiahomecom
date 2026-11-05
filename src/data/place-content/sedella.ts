@@ -153,5 +153,51 @@ const content: PlaceContent = {
       { q: 'Wann ist das Dorffest von Sedella?', a: 'Am ersten Augustwochenende, zu Ehren der Virgen de la Esperanza.' },
     ],
   },
+  sv: {
+    title: 'Sedella: bo i en lugn bergsby nedanför La Maroma',
+    description: 'Allt om Sedella: den lilla vita bergsbyn nedanför Sierra de Tejeda, Casa Torreón, den internationella gemenskapen, bostadspriser och att köpa och renovera på 650 meter.',
+    lead: 'Sedella ligger på 650 meters höjd mot Sierra de Tejeda, med toppen av La Maroma ovanför och Axarquía nedanför. En liten, välskött by där en tredjedel av invånarna kommer från utlandet.',
+    intro: [
+      'Sedella ligger i naturparken Sierras de Tejeda, Almijara y Alhama, mellan <a href="/sv/orter/canillas-de-aceituno/">Canillas de Aceituno</a> och <a href="/sv/orter/salares/">Salares</a>, cirka 61 kilometer från Málaga. Från byn ser du ut över Axarquías kullar mot havet.',
+      'Byn är liten och vit, med branta gränder och två iögonfallande torn: kyrkan San Andrés från 1500-talet och Casa Torreón, ett gammalt hus med ett mudéjartorn. Vid kapellet för Virgen de la Esperanza finns rester av en morisk borg, och längst ner i byn ligger de gamla tvättplatserna och en stenbro som kan vara från romersk tid.',
+      'Sedella har cirka 600 invånare, och en tredjedel har utländskt medborgarskap. Byn är känd för sina traditioner: under påskveckan tystnar klockorna och träskallror går runt i stället, och på Kristi lekamens dag bygger invånarna altare på gatorna.',
+    ],
+    facts: [
+      ['Invånare', 'cirka 600 (2025)'],
+      ['Utländska invånare', 'cirka en tredjedel'],
+      ['Läge', 'berg, 646 m'],
+      ['Málaga', 'cirka 61 km'],
+      ['Grannbyar', 'Canillas de Aceituno, Salares'],
+      ['Prisnivå', 'låg, cirka 1 800 € per m²'],
+    ],
+    forWhom: 'För dig som söker tystnad, bergsluft och vandringsleder från ytterdörren, och som inte behöver service runt hörnet. Sedella passar dig som vill ha ett byhus eller en finca i bergen och uppskattar en liten, sammansvetsad gemenskap.',
+    living: {
+      title: 'Bo i Sedella: byhus, fincor och priser',
+      description: 'Köpa bostad i Sedella? Vilka bostäder som finns, vad de kostar, var du hittar service och vad du ska tänka på med fincor och renovering i naturparken.',
+      lead: 'Sedella är prisvärt och vackert beläget, men långt från allt. Den som köper här väljer medvetet bergslivet.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'I byn byhus i flera våningar, ofta med takterrass och utsikt. På sluttningarna runt omkring fincor och lanthus med oliv- och mandelträd.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 1 800 € per m² (RealAdvisor), ungefär hälften av nivån vid kusten. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a> och, för ett gammalt hus, en <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringsbudget</a>.',
+        ] },
+        { h: 'Service', p: [
+          'Sedella har lite service: ett par barer och en liten affär. För att handla och gå till läkaren åker du till Canillas de Aceituno eller byarna runt La Viñuela-sjön, och till Vélez-Málaga för sjukhuset. Bil är ett måste.',
+        ] },
+        { h: 'Se upp med fincor', p: [
+          'Större delen av kommunen ligger i naturparken, där det är strikta regler för att bygga och bygga ut. Låt kontrollera den rättsliga statusen, tillfartsvägen och vattenförsörjningen innan du köper. Läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+        ] },
+        { h: 'Renovera i Sedella', p: [
+          'På 650 meter är vintrarna svala och det kan regna kraftigt. Ett tätt tak, isolering och uppvärmning är viktigt vid en renovering. Gränderna är smala och branta, vilket gör det svårare att få in material. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Vad finns att se i Sedella?', a: 'Casa Torreón med sitt mudéjartorn, kyrkan San Andrés, resterna av den moriska borgen vid kapellet för Virgen de la Esperanza och de gamla tvättplatserna. Byn är också en bra utgångspunkt för vandringar i Sierra de Tejeda.' },
+      { q: 'Bor det utlänningar i Sedella?', a: 'Ja, 2022 hade cirka en tredjedel av invånarna utländskt medborgarskap.' },
+      { q: 'När är Sedellas byfest?', a: 'Den första helgen i augusti, till ära för Virgen de la Esperanza.' },
+    ],
+  },
 };
 export default content;

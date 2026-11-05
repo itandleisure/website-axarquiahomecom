@@ -86,5 +86,29 @@ const content: PlaceContent = {
       { q: 'Was ist die Romería de la Purísima?', a: 'Eine Wallfahrt Ende Mai oder Anfang Juni, bei der die Bewohner eine Nacht am Fluss Benamargosa zelten.' },
     ],
   },
+  sv: {
+    title: 'Benamargosa: bo bland avokadoträden i floddalen',
+    description: 'Allt om Benamargosa: flodbyn som var en av de första i Axarquía att odla avokado och mango, bron med tio valv, bostadspriser och att köpa och renovera i dalen.',
+    lead: 'Benamargosa ligger lågt i dalen längs floden med samma namn, omgiven av terrasser med avokado, mango och cherimoya. Det var en av de första byarna i Axarquía som gick över till tropisk frukt.',
+    intro: [
+      'Benamargosa ligger under hundra meters höjd vid floden Benamargosa, norr om <a href="/sv/orter/velez-malaga/">Vélez-Málaga</a>. Byn har cirka 1 550 invånare och omges av gröna sluttningar fulla av fruktodlingar. Benamargosa var en av pionjärerna inom odling av avokado och mango, som i dag präglar landskapet i hela Axarquía.',
+      'I byn finns kyrkan La Encarnación och kapellet San Sebastián, och i utkanten Arcos de la Huerta och Puente de los Diez Ojos, en bro med tio valv över floden. Invånarna har smeknamnet ”Gibraltar el Chico” eftersom många förr smugglade tobak från Gibraltar. Den finaste festen är romería de la Purísima i slutet av maj eller början av juni, då byn campar en natt vid floden.',
+      'Bostäderna till salu är byhus och lanthus bland odlingarna, ibland med en tomt med fruktträd. I oktober 2026 låg det genomsnittliga utgångspriset kring 1 550 € per m² (RealAdvisor). Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a>. Har du ett lanthus, se upp med vattenrättigheterna: avokado kräver mycket vatten och under torra år är bevattningsvattnet knappt. Läs också vår guide om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a>.',
+      'Byn har grundläggande service; till sjukhuset, större affärer och kusten kör du till Vélez-Málaga och Torre del Mar. Hus nära floden kan drabbas av fukt, så låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+    ],
+    facts: [
+      ['Invånare', 'cirka 1 550 (2025)'],
+      ['Läge', 'kullar, floddal, 96 m'],
+      ['Känt för', 'avokado, mango, cherimoya'],
+      ['Sevärt', 'Puente de los Diez Ojos'],
+      ['Största fest', 'romería de la Purísima'],
+      ['Prisnivå', 'låg, cirka 1 550 € per m²'],
+    ],
+    forWhom: 'För dig som vill bo i en grön floddal, i ett lanthus bland fruktträden, med Vélez-Málaga och kusten inom räckhåll.',
+    faq: [
+      { q: 'Kan man köpa en finca med avokado i Benamargosa?', a: 'Ja, det finns många tomter med avokado och mango runt byn. Kontrollera dock vattenrättigheterna noga, för utan bevattningsvatten är en sådan odling inte värd mycket.' },
+      { q: 'Vad är romería de la Purísima?', a: 'En vallfärd i slutet av maj eller början av juni, då invånarna campar en natt vid floden Benamargosa.' },
+    ],
+  },
 };
 export default content;

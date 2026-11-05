@@ -85,5 +85,29 @@ const content: PlaceContent = {
       { q: 'Wann ist der Tag der Rosine in El Borge?', a: 'Mitte September, um die Zeit, wenn die Rosinen des Jahres fertig sind.' },
     ],
   },
+  sv: {
+    title: 'El Borge: bo i banditens russinby',
+    description: 'Allt om El Borge: den vita byn bland russinvingårdarna, Russindagen, legenden om El Bizco, bostadspriser och att köpa och renovera i kullarna.',
+    lead: 'El Borge är en liten vit by bland russinvingårdarna i Axarquía. Varje år firar den Russindagen och håller minnet vid liv av sin mest kända invånare, 1800-talsbanditen El Bizco.',
+    intro: [
+      'El Borge ligger på 257 meters höjd i kullarna mellan <a href="/sv/orter/almachar/">Almáchar</a>, <a href="/sv/orter/cutar/">Cútar</a> och <a href="/sv/orter/comares/">Comares</a> och hör till domsagan Vélez-Málaga. Byn har nästan tusen invånare. Det går buss till Málaga.',
+      'I centrum står kyrkan Nuestra Señora del Rosario från början av 1500-talet. Runt byn finns sluttningar med moscateldruvor som här torkas till russin, och El Borge ligger längs Ruta de la Pasa. På Russindagen i mitten av september kan besökare smaka russin och se hur de tillverkas. Byn är också stolt över El Bizco de El Borge, en bandit från 1800-talet som lever kvar i den lokala folkloren.',
+      'Bostäderna till salu är byhus och lanthus på sluttningarna, ofta med en bit vingård eller olivträd. I oktober 2026 låg det genomsnittliga utgångspriset kring 1 850 € per m² (RealAdvisor). Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a> och, för ett gammalt hus, en <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringsbudget</a>. Har du ett lanthus, kontrollera tillstånden, tillfartsvägen och vattenförsörjningen; läs vår guide om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a>.',
+      'För att handla, gå till läkaren och till sjukhuset är du beroende av Vélez-Málaga och de större byarna i närheten. Gamla byhus har ofta tjocka, fuktiga väggar och träbjälkar som behöver bytas; låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+    ],
+    facts: [
+      ['Invånare', 'nästan 1 000 (2025)'],
+      ['Läge', 'kullar, 257 m'],
+      ['Känt för', 'russin, El Bizco'],
+      ['Sevärt', 'kyrkan Nuestra Señora del Rosario'],
+      ['Kollektivtrafik', 'buss till Málaga'],
+      ['Prisnivå', 'låg till medel, cirka 1 850 € per m²'],
+    ],
+    forWhom: 'För dig som söker en liten, lugn by bland vingårdarna, med egen karaktär och Vélez-Málaga inom räckhåll.',
+    faq: [
+      { q: 'Vem var El Bizco de El Borge?', a: 'En bandit från 1800-talet som lever kvar i Axarquías folklore. Byn använder honom som sin symbol.' },
+      { q: 'När är Russindagen i El Borge?', a: 'I mitten av september, ungefär när årets russin är klara.' },
+    ],
+  },
 };
 export default content;

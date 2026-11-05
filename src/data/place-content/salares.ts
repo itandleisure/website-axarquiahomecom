@@ -85,5 +85,29 @@ const content: PlaceContent = {
       { q: 'Wann sind die Feste in Salares?', a: 'Santa Ana am 26. Juli, San Antón am 17. Januar und das andalusische Festival um den 20. September, mit Markt und Handwerk.' },
     ],
   },
+  sv: {
+    title: 'Salares: bo i en liten mudéjarby i bergen',
+    description: 'Allt om Salares: bergsbyn med tvåhundra invånare och en minaret från morisk tid, den gamla bron, den andalusiska festivalen, bostadspriser och att köpa i naturparken.',
+    lead: 'Med färre än tvåhundra invånare är Salares en av de minsta byarna i Axarquía. Det som gör den stor: en minaret som i århundraden har rest sig över taken och en dal som knappt har förändrats sedan morerna.',
+    intro: [
+      'Salares ligger på 540 meters höjd i naturparken Sierras de Tejeda, Almijara y Alhama, mellan <a href="/sv/orter/sedella/">Sedella</a> och <a href="/sv/orter/canillas-de-albaida/">Canillas de Albaida</a>, cirka 34 kilometer från Vélez-Málaga och 63 kilometer från Málaga. Byn ligger längs Ruta Mudéjar, vägen förbi de moriska tornen i östra Axarquía.',
+      'Tornet på kyrkan Santa Ana var från början minareten i en moské och är sedan 1979 ett nationellt monument. När kyrkan restaurerades 1991 hittades målningar från 1500-talet under kalklagren. Nedanför byn spänner en gammal bro över floden; folk kallar den den romerska bron, men den är från medeltiden. Varje höst firar byn sitt moriska förflutna med en andalusisk festival med marknad och hantverk.',
+      'Det är sällan hus kommer ut till försäljning i Salares. När det händer handlar det om gamla byhus eller lanthus på terrasserna runt byn. I oktober 2026 låg det genomsnittliga utgångspriset kring 1 550 € per m² (RealAdvisor), en av de lägsta nivåerna i Axarquía. Eftersom kommunen ligger i naturparken är det strikta regler för att bygga och bygga ut; låt kontrollera husets rättsliga status noga före köpet och läs vår guide om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a>.',
+      'Service finns knappt. För att handla, gå till läkaren eller äta ute kör du till Canillas de Albaida och Cómpeta eller till byarna runt La Viñuela-sjön. Gamla byhus här har ofta tjocka väggar som håller kvar fukt och tak som behöver bytas, så låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+    ],
+    facts: [
+      ['Invånare', 'cirka 190 (2025)'],
+      ['Läge', 'berg, 540 m'],
+      ['Vélez-Málaga', 'cirka 34 km'],
+      ['Málaga', 'cirka 63 km'],
+      ['Sevärt', 'minaret, medeltida bro'],
+      ['Prisnivå', 'låg, cirka 1 550 € per m²'],
+    ],
+    forWhom: 'För dig som söker stillheten i en mycket liten bergsby, omgiven av natur och historia, och som inte har något emot att ta bilen till allt.',
+    faq: [
+      { q: 'Vad finns att se i Salares?', a: 'Minareten på kyrkan Santa Ana, ett nationellt monument, och den medeltida bron över floden. Salares ligger längs Ruta Mudéjar och är en bra utgångspunkt för vandringar i naturparken.' },
+      { q: 'När är festerna i Salares?', a: 'Santa Ana den 26 juli, San Antón den 17 januari och den andalusiska festivalen kring den 20 september, med marknad och hantverk.' },
+    ],
+  },
 };
 export default content;

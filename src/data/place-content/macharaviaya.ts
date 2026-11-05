@@ -87,5 +87,29 @@ const content: PlaceContent = {
       { q: 'Wie weit ist Macharaviaya von der Küste entfernt?', a: 'Das Dorf liegt in den Hügeln direkt über Rincón de la Victoria und Benajarafe; die Strände sind eine kurze Autofahrt entfernt.' },
     ],
   },
+  sv: {
+    title: 'Macharaviaya: bo i ”lilla Madrid” ovanför kusten',
+    description: 'Allt om Macharaviaya: byn där familjen Gálvez bodde, den amerikanska självständigheten och den kungliga spelkortsfabriken, museet, bostadspriser och att köpa nära Rincón de la Victoria.',
+    lead: 'Macharaviaya är en liten vit by i kullarna ovanför Rincón de la Victoria med en förvånansvärt stor historia. På 1700-talet bodde familjen Gálvez här, och byn fick smeknamnet ”lilla Madrid”.',
+    intro: [
+      'Macharaviaya ligger på cirka 235 meters höjd i kullarna mellan <a href="/sv/orter/rincon-de-la-victoria/">Rincón de la Victoria</a> och <a href="/sv/orter/velez-malaga/">Vélez-Málaga</a>, nära kusten och Málaga. Med drygt 500 invånare är det en av de minsta byarna i Axarquía.',
+      'På 1700-talet hade familjen Gálvez från Macharaviaya höga ämbeten i Spanien och de amerikanska kolonierna. Bernardo de Gálvez spelade en viktig roll i det amerikanska frihetskriget. Familjen lät bygga om kyrkan San Jacinto och grundade här en kunglig spelkortsfabrik, som hade monopol på att sälja spelkort till Amerika. Familjemedlemmar ligger begravda i kryptan under kyrkan, och Museo de los Gálvez berättar deras historia. Varje år kring den 4 juli firar byn den amerikanska självständigheten med en rekonstruktion av slaget vid Pensacola. Poeten Salvador Rueda föddes i byn Benaque.',
+      'Det är inte ofta hus kommer ut till försäljning här. Det handlar om byhus samt villor och lanthus på sluttningarna, ofta med havsutsikt. I oktober 2026 låg det genomsnittliga utgångspriset kring 2 150 € per m² (RealAdvisor). Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a>. Har du ett hus utanför byn, låt kontrollera tillstånd, tillfartsväg och vattenförsörjning; läs vår guide om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a>.',
+      'För att handla, till skolor och läkare kör du till Rincón de la Victoria eller Benajarafe vid kusten, och till Málaga för storstaden. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+    ],
+    facts: [
+      ['Invånare', 'drygt 500 (2025)'],
+      ['Läge', 'kullar, cirka 235 m'],
+      ['Gränsar till', 'Rincón de la Victoria, Vélez-Málaga'],
+      ['Känt för', 'familjen Gálvez, spelkortsfabriken'],
+      ['Sevärt', 'kyrkan San Jacinto, Museo de los Gálvez'],
+      ['Prisnivå', 'medel, cirka 2 150 € per m²'],
+    ],
+    forWhom: 'För dig som söker en liten, lugn by med historia, nära stränderna i Rincón de la Victoria och staden Málaga.',
+    faq: [
+      { q: 'Varför firar Macharaviaya den amerikanska självständigheten?', a: 'Eftersom Bernardo de Gálvez, från en familj i Macharaviaya, spelade en viktig roll i det amerikanska frihetskriget. Byn uppmärksammar det kring den 4 juli med en rekonstruktion av slaget vid Pensacola.' },
+      { q: 'Hur långt är det från Macharaviaya till kusten?', a: 'Byn ligger i kullarna direkt ovanför Rincón de la Victoria och Benajarafe; stränderna är en kort bilresa bort.' },
+    ],
+  },
 };
 export default content;

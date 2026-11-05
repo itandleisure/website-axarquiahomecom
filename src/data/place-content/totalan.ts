@@ -85,5 +85,29 @@ const content: PlaceContent = {
       { q: 'Was ist Chanfaina?', a: 'Ein Eintopf, den Totalán am letzten Sonntag im November mit einem eigenen Fest feiert.' },
     ],
   },
+  sv: {
+    title: 'Totalán: bo i en liten by nära Málaga',
+    description: 'Allt om Totalán: den lilla vita byn i kullarna vid Málaga, den förhistoriska dösen, chanfainafesten, bostadspriser och att köpa och renovera nära staden.',
+    lead: 'Totalán är en av provinsens minsta byar, men centrala Málaga ligger bara tjugo minuter till en halvtimme bort med bil. En lugn plats i kullarna för dig som vill ha staden nära.',
+    intro: [
+      'Totalán ligger på 281 meters höjd i kullarna i Axarquías västra utkant, mellan Málaga och <a href="/sv/orter/rincon-de-la-victoria/">Rincón de la Victoria</a>. Längs vägen är det cirka 22 kilometer till centrala Málaga. Byn har cirka 800 invånare.',
+      'Nära byn finns dösen Cerro de la Corona, en förhistorisk grav som är fem till sex tusen år gammal och där man hittat kvarlevor av nio personer och vapen från kopparåldern. År 1483 besegrade den moriske sultanen El Zagal en del av en kristen armé på Totaláns mark. Den mest kända festen är Fiesta de la Chanfaina den sista söndagen i november, till ära för byns gryta.',
+      'Eftersom Málaga ligger nära är priserna högre än i de flesta byar i Axarquía. I oktober 2026 låg det genomsnittliga utgångspriset kring 2 500 € per m² (RealAdvisor). Till salu finns byhus, villor och lanthus på sluttningarna, ofta med utsikt över kullarna mot havet. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a>. Har du ett hus utanför byn, låt kontrollera tillstånd, tillfartsväg och vattenförsörjning; läs vår guide om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+      'För att handla, till skolor och sjukhus är du beroende av Málaga och Rincón de la Victoria. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+    ],
+    facts: [
+      ['Invånare', 'cirka 800 (2025)'],
+      ['Läge', 'kullar, 281 m'],
+      ['Centrala Málaga', 'cirka 22 km'],
+      ['Sevärt', 'dösen Cerro de la Corona'],
+      ['Största fest', 'Fiesta de la Chanfaina (november)'],
+      ['Prisnivå', 'medel, cirka 2 500 € per m²'],
+    ],
+    forWhom: 'För dig som vill bo i en liten kullby men behöver vara i Málaga varje dag eller ofta.',
+    faq: [
+      { q: 'Hur långt är det från Totalán till Málaga?', a: 'Cirka 22 kilometer längs vägen till centrum, under en halvtimme med bil.' },
+      { q: 'Vad är chanfaina?', a: 'En gryta som Totalán firar med en egen fest den sista söndagen i november.' },
+    ],
+  },
 };
 export default content;

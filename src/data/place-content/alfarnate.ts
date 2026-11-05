@@ -85,5 +85,29 @@ const content: PlaceContent = {
       { q: 'Was ist die Venta de Alfarnate?', a: 'Ein Gasthaus aus dem 17. Jahrhundert am alten Camino Real zwischen Málaga und Granada, heute ein Restaurant mit einem Museum über die andalusischen Banditen.' },
     ],
   },
+  sv: {
+    title: 'Alfarnate: bo på högslätten bland körsbärsträden',
+    description: 'Allt om Alfarnate: byn på nästan 900 meter i norra Axarquía, det historiska värdshuset Venta de Alfarnate, körsbärsblomningen, bostadspriser och att köpa och renovera i höglandet.',
+    lead: 'Alfarnate ligger på nästan 900 meters höjd på en högslätt omgiven av berg, längst i norr i Axarquía. På våren färgar körsbärsträden slätten vit, och vid den gamla kungsvägen till Granada står ett av Andalusiens äldsta värdshus.',
+    intro: [
+      'Alfarnate ligger på 888 meters höjd, en av de högst belägna byarna i provinsen Málaga. Den ligger på en liten slätt mellan bergen, cirka 54 kilometer och en timmes bilresa från Málaga. Klimatet är helt annorlunda än vid kusten: svala somrar, kalla vintrar och ibland snö.',
+      'Vid vägen utanför byn står Venta de Alfarnate, ett värdshus vid den gamla Camino Real mellan Málaga och Granada. Dagens byggnad är från 1600-talet och nämns redan 1699. Det är fortfarande en restaurang, med ett litet museum om banditerna som en gång strövade i dessa berg. Körsbärsodlingar omger byn: på våren blommar de i massor, och vid skörden firar Alfarnate sin Fiesta de la Cereza.',
+      'Bostäderna i Alfarnate är främst rymliga byhus och gårdar med mark. I oktober 2026 låg det genomsnittliga utgångspriset kring 1 600 € per m² (RealAdvisor), bland de lägre nivåerna i Axarquía. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a> och, för ett gammalt hus, en <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringsbudget</a>.',
+      'På den här höjden är en renovering något annat än vid kusten: god isolering, dubbelglas, ett tak som klarar snö och regn och uppvärmning för vintern är nödvändigt. För större service kör du till Málaga, eller till Vélez-Málaga via <a href="/sv/orter/periana/">Periana</a>. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+    ],
+    facts: [
+      ['Invånare', 'cirka 1 000 (2025)'],
+      ['Läge', 'inland, 888 m'],
+      ['Málaga', 'cirka 54 km, ungefär en timme'],
+      ['Sevärt', 'Venta de Alfarnate'],
+      ['Känt för', 'körsbär och körsbärsblomning'],
+      ['Prisnivå', 'låg, cirka 1 600 € per m²'],
+    ],
+    forWhom: 'För dig som söker höglandet och fyra riktiga årstider, med gott om utrymme och låga priser, och som inte behöver ha kusten runt hörnet.',
+    faq: [
+      { q: 'Snöar det i Alfarnate?', a: 'Ibland, ja. På nästan 900 meter är vintrarna kalla och det snöar då och då. Somrarna är i gengäld svalare än vid kusten.' },
+      { q: 'Vad är Venta de Alfarnate?', a: 'Ett värdshus från 1600-talet vid den gamla Camino Real mellan Málaga och Granada, i dag en restaurang med ett museum om de andalusiska banditerna.' },
+    ],
+  },
 };
 export default content;

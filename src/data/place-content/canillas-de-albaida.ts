@@ -210,5 +210,70 @@ const content: PlaceContent = {
       { q: 'Was ist die Fábrica de la Luz?', a: 'Ein Erholungsgebiet am Fluss Turvilla, an der Stelle eines alten Wasserkraftwerks, mit Picknickplätzen und Wanderwegen.' },
     ],
   },
+  sv: {
+    title: 'Canillas de Albaida: bo i Cómpetas lugna granne',
+    description: 'Allt om Canillas de Albaida: den lilla vita byn bredvid Cómpeta, Fábrica de la Luz, vandring i naturparken, bostadspriser och att köpa och renovera i bergen.',
+    lead: 'Canillas de Albaida ligger några kilometer från Cómpeta, men känns som en annan värld: mindre, lugnare och djupare in i bergen. En tredjedel av invånarna kommer från utlandet.',
+    intro: [
+      'Canillas de Albaida ligger på cirka 600 meters höjd i naturparken Sierras de Tejeda, Almijara y Alhama, två kilometer fågelvägen från <a href="/sv/orter/competa/">Cómpeta</a> och cirka 54 kilometer från Málaga. Ovanför byn reser sig bergen till Albucaz, 1 756 meter högt.',
+      'Byn började som en morisk jordbruksbosättning som hette Albaida. År 1569 anslöt sig dess morisker till upproret som slogs ned vid Peñón de Frigiliana. Den vita byn med trappgränder, kyrka och kapell har knappt vuxit sedan dess.',
+      'Här bor cirka 800 personer, och en tredjedel har utländskt medborgarskap. En del bor i byn, resten i småbyar och på fincor på sluttningarna, som Santa Ana och Los Llanos.',
+    ],
+    facts: [
+      ['Invånare', 'cirka 800 (2025)'],
+      ['Utländska invånare', 'cirka en tredjedel'],
+      ['Läge', 'berg, cirka 600 m'],
+      ['Cómpeta', 'cirka 3 km längs vägen'],
+      ['Málaga', 'cirka 54 km'],
+      ['Prisnivå', 'låg till medel, cirka 2 050 € per m²'],
+    ],
+    forWhom: 'För dig som vill ha Cómpetas atmosfär och service nära men själv hellre bor i en lugnare by. Canillas de Albaida passar naturälskare och vandrare som söker ett byhus eller en finca i bergen.',
+    see: {
+      title: 'Se och göra i Canillas de Albaida: Fábrica de la Luz och bergsstigar',
+      description: 'Vad du kan göra i Canillas de Albaida: rekreationsområdet Fábrica de la Luz, Ermita de Santa Ana, den medeltida bron på Camino de las Cuestas och vandring i naturparken.',
+      lead: 'Canillas de Albaida är en by för att vandra: genom gränderna, längs floden och upp i bergen.',
+      items: [
+        { name: 'Fábrica de la Luz', text: 'Ett rekreationsområde vid floden Turvilla, där ett litet vattenkraftverk låg fram till 1970-talet. Här finns picknickplatser och startpunkten för vandringar in i naturparken.' },
+        { name: 'Ermita de Santa Ana', text: 'Ett kapell från 1500-talet i utkanten av byn, en av de äldsta byggnaderna i Canillas.' },
+        { name: 'Kyrkan och Ermita de San Antón', text: 'Byns kyrka Nuestra Señora de la Expectación från 1500- och 1600-talen, och kapellet San Antón från 1600-talet.' },
+        { name: 'Puente Cuestas', text: 'En medeltida bro på Camino de las Cuestas, en gammal stig som användes redan under morisk tid.' },
+        { name: 'Vandra till Cómpeta och bergen', text: 'En stig förbinder Canillas med Cómpeta, och leder går från byn upp mot topparna i Sierra de Almijara.' },
+      ],
+      fiestas: [
+        { name: 'San Antón', when: 'mitten av januari', text: 'festen för djurens skyddshelgon.' },
+        { name: 'Virgen de las Salves', when: 'februari', text: 'till minne av bönerna efter jordbävningen 1884.' },
+        { name: 'San Juan', when: '24 juni', text: 'byn beger sig ut på picknick på landet.' },
+        { name: 'Feria Virgen del Rosario', when: 'första veckan i augusti', text: 'sommarfesten till ära för skyddshelgonet.' },
+        { name: 'Candelarias', when: '7 och 8 september', text: 'ljus vid gårdarnas dörrar för att markera slutet på vinskörden.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Canillas de Albaida: byhus, fincor och priser',
+      description: 'Köpa bostad i Canillas de Albaida? Vilka bostäder som finns, vad de kostar, service i byn och i Cómpeta, och vad du ska tänka på med fincor i naturparken.',
+      lead: 'Canillas de Albaida är billigare än Cómpeta, samtidigt som Cómpetas affärer och restauranger ligger några minuter bort.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'I byn små vita byhus med takterrass, ofta med utsikt över dalen mot havet. På sluttningarna fincor och lanthus med vinrankor, oliv- och mandelträd, en del med pool.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 2 050 € per m² (RealAdvisor), lägre än i Cómpeta. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a> och, för ett gammalt byhus, en <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringsbudget</a>.',
+        ] },
+        { h: 'Service', p: [
+          'Själva byn har inte mycket: en consultorio, några barer och en liten affär. För vardagsinköp, restauranger och apotek åker de flesta invånare till Cómpeta, några minuter med bil. Till sjukhuset åker du till Vélez-Málaga.',
+        ] },
+        { h: 'Se upp med fincor', p: [
+          'Större delen av kommunen ligger i naturparken. Nybyggen och tillbyggnader är kraftigt begränsade där, och inte alla fincor är helt lagliga. Låt kontrollera status, tillfartsväg och vattenförsörjning innan du köper. Läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+        ] },
+        { h: 'Renovera i Canillas de Albaida', p: [
+          'Byns gränder är smala och branta, så material körs in på små kärror eller bärs för hand. Gamla hus har ofta fuktiga väggar och tak som behöver bytas. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Hur långt är det från Canillas de Albaida till Cómpeta?', a: 'Cirka tre kilometer längs vägen, några minuter med bil. Det finns också en gångstig mellan byarna.' },
+      { q: 'Är Canillas de Albaida billigare än Cómpeta?', a: 'Ja, de genomsnittliga utgångspriserna är lägre, samtidigt som Cómpetas service finns runt hörnet.' },
+      { q: 'Vad är Fábrica de la Luz?', a: 'Ett rekreationsområde vid floden Turvilla, där ett gammalt vattenkraftverk låg, med picknickplatser och vandringsleder.' },
+    ],
+  },
 };
 export default content;

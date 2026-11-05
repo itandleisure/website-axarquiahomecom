@@ -86,5 +86,29 @@ const content: PlaceContent = {
       { q: 'Ist Benamocarra günstig?', a: 'Ja, die durchschnittlichen Angebotspreise lagen im Oktober 2026 bei rund 1.350 € pro m², einem der niedrigsten Niveaus der Axarquía.' },
     ],
   },
+  sv: {
+    title: 'Benamocarra: prisvärt boende nära Vélez-Málaga',
+    description: 'Allt om Benamocarra: musikbyn fem kilometer från Vélez-Málaga, utsikten från Cerro de la Jaula, några av de lägsta bostadspriserna i Axarquía och vad du ska veta om att köpa och renovera.',
+    lead: 'Benamocarra är en livlig by med drygt 3 000 invånare, fem kilometer från Vélez-Málaga. Det är en av de billigaste orterna i Axarquía, samtidigt som staden och stränderna ligger nära.',
+    intro: [
+      'Benamocarra ligger på 126 meters höjd i kullarna vid kanten av Vélezflodens slätt, cirka fem kilometer från <a href="/sv/orter/velez-malaga/">Vélez-Málaga</a> och 35 kilometer från Málaga. Det är en kompakt by med vita gator och en stor kyrka, omgiven av odlingar med avokado, mango och citrus.',
+      'Benamocarra är känd som en musikby. Här föddes kompositören och organisten Eduardo Ocón, och i början av 1800-talet grundades här en av provinsens äldsta orkestrar. Länge hade byn också den enda teatern i Axarquía. Från Cerro de la Jaula, en kulle vid byn, ser du ut över bergen, slätten och kusten. Den största festen är den för Cristo de la Salud i slutet av oktober.',
+      'Köpare i Benamocarra hittar främst byhus och radhus, plus några lanthus bland odlingarna. I oktober 2026 låg det genomsnittliga utgångspriset kring 1 350 € per m² (RealAdvisor), en av de lägsta nivåerna i Axarquía. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a> och, för ett gammalt hus, en <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringsbudget</a>.',
+      'Byn har egna affärer, barer, vårdcentral och skolor. Till sjukhuset, stora stormarknader och stranden når du Vélez-Málaga och Torre del Mar inom en kvart. Äldre byhus har ofta föråldrade rör och elledningar och tak som behöver ses över; låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+    ],
+    facts: [
+      ['Invånare', 'cirka 3 200 (2025)'],
+      ['Läge', 'kullar, 126 m'],
+      ['Vélez-Málaga', 'cirka 5 km'],
+      ['Málaga', 'cirka 35 km'],
+      ['Känt för', 'musik, Eduardo Ocón'],
+      ['Prisnivå', 'låg, cirka 1 350 € per m²'],
+    ],
+    forWhom: 'För dig som söker ett prisvärt hem i en riktig spansk by, med Vélez-Málagas service och kusten en kort bilresa bort. Passar bra för att bo här året runt.',
+    faq: [
+      { q: 'Hur långt är det från Benamocarra till stranden?', a: 'Cirka fem kilometer till Vélez-Málaga och en kvart med bil till stränderna i Torre del Mar.' },
+      { q: 'Är Benamocarra billigt?', a: 'Ja, det genomsnittliga utgångspriset låg i oktober 2026 kring 1 350 € per m², en av de lägsta nivåerna i Axarquía.' },
+    ],
+  },
 };
 export default content;

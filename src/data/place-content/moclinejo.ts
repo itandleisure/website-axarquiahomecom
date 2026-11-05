@@ -87,5 +87,29 @@ const content: PlaceContent = {
       { q: 'Wie weit ist Moclinejo von Málaga entfernt?', a: 'Etwa 27 Kilometer über die Straße, rund eine halbe Stunde mit dem Auto.' },
     ],
   },
+  sv: {
+    title: 'Moclinejo: bo bland vingårdarna en halvtimme från Málaga',
+    description: 'Allt om Moclinejo: vinbyn med eget bodegamuseum, vinodlarnas fest, El Valdés, bostadspriser och att köpa och renovera i kullarna nära Málaga.',
+    lead: 'Moclinejo är en vinby på en kulltopp omgiven av sluttningar med moscateldruvor. Málaga ligger cirka en halvtimme bort, Rincón de la Victoria ännu närmare.',
+    intro: [
+      'Moclinejo ligger på 447 meters höjd i kullarna ovanför <a href="/sv/orter/rincon-de-la-victoria/">Rincón de la Victoria</a>, cirka 27 kilometer från Málaga längs vägen. Förutom byn omfattar kommunen några mindre byar, där El Valdés är den största. Tillsammans har de drygt 1 200 invånare.',
+      'Moclinejo kretsar kring druvan. Moscateldruvor för vin och russin växer på de branta sluttningarna, och byn är en port till Ruta de la Pasa och Ruta del Vino. Du kan besöka Museo Bodega Antonio Muñoz Cabrera, en familjevingård. Gatorna runt kyrkan Nuestra Señora de Gracia är dekorerade med kakelfasader, och i El Valdés visar Casa Museo Axarquía gamla bruksföremål. Den största festen är Fiesta de Viñeros den andra söndagen i september, en hyllning till vinodlarna. I dalen nära byn, La Hoya de los Muertos, led en kristen armé ett tungt nederlag 1483.',
+      'Tack vare det korta avståndet till Málaga och kusten är Moclinejo dyrare än de flesta kullbyar. I oktober 2026 låg det genomsnittliga utgångspriset kring 2 600 € per m² (RealAdvisor). Till salu finns byhus, villor med havsutsikt och lanthus bland vingårdarna. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a>. Har du en villa eller ett lanthus, låt kontrollera tillstånd och tillfartsväg; läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+      'För att handla, till skolor och läkare kör du till Rincón de la Victoria, och till Málaga för sjukhuset. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+    ],
+    facts: [
+      ['Invånare', 'drygt 1 200 (2025)'],
+      ['Byar', 'Moclinejo, El Valdés och småbyar'],
+      ['Läge', 'kullar, 447 m'],
+      ['Málaga', 'cirka 27 km'],
+      ['Känt för', 'moscatelvin och russin'],
+      ['Prisnivå', 'medel, cirka 2 600 € per m²'],
+    ],
+    forWhom: 'För dig som vill bo i kullarna bland vingårdarna, med stränderna i Rincón de la Victoria och staden Málaga inom en halvtimme.',
+    faq: [
+      { q: 'Vad är Fiesta de Viñeros?', a: 'Vinodlarnas fest den andra söndagen i september, med vin, russin, musik och traditionell druvpressning.' },
+      { q: 'Hur långt är det från Moclinejo till Málaga?', a: 'Cirka 27 kilometer längs vägen, ungefär en halvtimmes bilresa.' },
+    ],
+  },
 };
 export default content;

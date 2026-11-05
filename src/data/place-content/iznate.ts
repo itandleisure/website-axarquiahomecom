@@ -85,5 +85,29 @@ const content: PlaceContent = {
       { q: 'Was ist die Fuente de los Tres Deseos?', a: 'Ein Brunnen maurischen Ursprungs in Iznate. Der Legende nach gehen drei Wünsche in Erfüllung, wenn Sie drei Münzen hineinwerfen.' },
     ],
   },
+  sv: {
+    title: 'Iznate: bo i en liten kullby nära kusten',
+    description: 'Allt om Iznate: den vita byn tolv kilometer från Vélez-Málaga, De tre önskningarnas fontän, moscateldruvans fest, bostadspriser och att köpa och renovera i kullarna.',
+    lead: 'Iznate är en liten vit by på en ås ovanför Benamocarra och Vélez-Málaga, med havsutsikt och moriska fontäner i gatorna. Härifrån är du på stranden på en kvart.',
+    intro: [
+      'Iznate ligger på 300 meters höjd i kullarna väster om <a href="/sv/orter/velez-malaga/">Vélez-Málaga</a>, cirka tolv kilometer från staden och 33 kilometer från Málaga. Med drygt 900 invånare är det en lugn by med några barer, en kyrka och gränder med utsikt över kullarna mot kusten.',
+      'Kyrkan San Gregorio VII är från slutet av 1500-talet. I och runt byn finns fontäner av moriskt ursprung, och den mest kända är Fuente de los Tres Deseos: enligt legenden får den som kastar i tre mynt tre önskningar uppfyllda. Den största festen är Viernes de Dolores, fredagen före påskveckan. Förr kretsade Iznate kring moscateldruvan; i dag dominerar avokado och mango, men byn firar fortfarande Moscateldruvans dag.',
+      'Bostäderna till salu är byhus samt villor och lanthus på sluttningarna, ofta med havsutsikt. I oktober 2026 låg det genomsnittliga utgångspriset kring 2 100 € per m² (RealAdvisor), något högre än i byarna längre in i landet eftersom kusten ligger så nära. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a>. Har du en villa eller ett lanthus utanför byn är det viktigt att kontrollera tillstånden; läs vår guide om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+      'För att handla, till sjukhuset och till skolor kör du till Vélez-Málaga, och till Torre del Mar eller Benajarafe för stranden. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper: i villor från 1990-talet är läckande tak och terrasser och föråldrade pooler de vanliga problemen.',
+    ],
+    facts: [
+      ['Invånare', 'drygt 900 (2025)'],
+      ['Läge', 'kullar, 300 m'],
+      ['Vélez-Málaga', 'cirka 12 km'],
+      ['Málaga', 'cirka 33 km'],
+      ['Sevärt', 'Fuente de los Tres Deseos'],
+      ['Prisnivå', 'medel, cirka 2 100 € per m²'],
+    ],
+    forWhom: 'För dig som vill bo i en liten by med havsutsikt, nära Vélez-Málaga, stränderna och motorvägen till Málaga.',
+    faq: [
+      { q: 'Hur långt är det från Iznate till stranden?', a: 'Cirka en kvart med bil till stränderna i Torre del Mar och Benajarafe.' },
+      { q: 'Vad är Fuente de los Tres Deseos?', a: 'En fontän av moriskt ursprung i Iznate. Enligt legenden går tre önskningar i uppfyllelse om du kastar i tre mynt.' },
+    ],
+  },
 };
 export default content;

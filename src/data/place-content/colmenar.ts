@@ -200,5 +200,67 @@ const content: PlaceContent = {
       { q: 'Kann man von Colmenar aus in den Montes de Málaga wandern?', a: 'Ja, der Naturpark beginnt südlich des Dorfes. Wege führen durch Kiefernwälder und an alten Weingütern vorbei in Richtung Málaga.' },
     ],
   },
+  sv: {
+    title: 'Colmenar: bergsliv en halvtimme från Málaga',
+    description: 'Allt om Colmenar: bergsbyn bakom Montes de Málaga, Ermita de la Candelaria, honung och charkuterier, bostadspriser och vad du ska veta om att köpa och renovera.',
+    lead: 'Colmenar ligger på nästan 700 meters höjd bakom Montes de Málaga. Det är en av de största byarna i Axarquías inland, med Málaga cirka en halvtimme bort med bil.',
+    intro: [
+      'Colmenar ligger i västra Axarquía, på norra sidan av naturparken Montes de Málaga, cirka 32 kilometer från Málaga. Byn ligger i en sluttning på 696 meter, bland olivlundar, vingårdar och sädesfält.',
+      'Namnet kommer från bikupor (<em>colmenas</em>), och honung är fortfarande en känd produkt här, liksom vin, olivolja och charkuterier. Ovanför byn står Ermita de la Candelaria, ett kapell från 1600-talet med utsikt mot Sierra de Tejeda och, klara dagar, Sierra Nevada.',
+      'Med drygt 3 600 invånare har Colmenar mer service än de flesta bergsbyar. Tack vare den korta bilresan till Málaga bor här också människor som arbetar i staden.',
+    ],
+    facts: [
+      ['Invånare', 'drygt 3 600 (2025)'],
+      ['Läge', 'inland, 696 m'],
+      ['Málaga', 'cirka 32 km, ungefär en halvtimme'],
+      ['Vélez-Málaga', 'cirka 44 km'],
+      ['Känt för', 'honung, vin och charkuterier'],
+      ['Prisnivå', 'låg, cirka 1 750 € per m²'],
+    ],
+    forWhom: 'För dig som vill bo i bergen men ha Málaga, flygplatsen och stadens sjukhus inom räckhåll. Colmenar passar dig som söker en prisvärd bostad med utrymme och inte har något emot inlandets svalare klimat.',
+    see: {
+      title: 'Se och göra i Colmenar: Candelaria, honung och Montes de Málaga',
+      description: 'Vad du kan göra i Colmenar: Ermita de la Candelaria, kyrkan La Asunción, honungsmuseet, vandra i Montes de Málaga och festen för nytt vin och korv.',
+      lead: 'Colmenar är en bra bas för Montes de Málaga och har några egna platser som är värda ett besök.',
+      items: [
+        { name: 'Ermita de la Candelaria', text: 'Kapellet från 1600-talet på kullen ovanför byn är ett lokalt monument. Utsikten sträcker sig över Axarquía till Sierra de Tejeda och Sierra Nevada.' },
+        { name: 'Kyrkan La Asunción', text: 'Byns kyrka påbörjades på 1500-talet och har en barock <em>camarín</em>, ett rikt dekorerat kapell bakom altaret.' },
+        { name: 'Museo de la Miel', text: 'Honungsmuseet berättar om biodlingen som gav byn dess namn. Där kan du också köpa lokal honung.' },
+        { name: 'Montes de Málaga', text: 'Naturparken mellan Colmenar och Málaga har vandringsleder genom tallskog och förbi gamla vingårdar, och ventas längs den gamla vägen där du kan äta.' },
+      ],
+      fiestas: [
+        { name: 'Virgen de la Candelaria och San Blas', when: 'början av februari', text: 'skyddshelgonens fest vid kapellet ovanför byn.' },
+        { name: 'Feria de agosto', when: 'augusti', text: 'en sommarferia i fyra dagar.' },
+        { name: 'Fiesta del mosto y la chacina', when: 'andra söndagen i december', text: 'provsmakning av nytt vin och lokala charkuterier, vid tiden för den traditionella slakten.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Colmenar: byhus, lanthus och priser',
+      description: 'Köpa bostad i Colmenar? Vilka bostäder som finns, vad de kostar, service i byn och vad du ska tänka på med lanthus och renovering på 700 meter.',
+      lead: 'Colmenar kombinerar låga priser med Málaga en halvtimme bort. I Axarquía är det en ovanlig kombination.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'I byn byhus och några nyare bostäder och lägenheter. Utanför byn lanthus och cortijos med olivträd, vinrankor eller åkrar, ofta med mycket mark.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 1 750 € per m² (RealAdvisor), ungefär hälften av nivån vid kusten. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a> och, för ett gammalt hus, en <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringsbudget</a>.',
+        ] },
+        { h: 'Service', p: [
+          'Colmenar har vårdcentral, apotek, livsmedelsbutiker, banker och skolor. För sjukhus och större affärer kör du till Málaga.',
+        ] },
+        { h: 'Se upp med lanthus', p: [
+          'För ett hus utanför byn, kontrollera den rättsliga statusen, tillfartsvägen och vattenförsörjningen. Läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+        ] },
+        { h: 'Renovera i Colmenar', p: [
+          'På 700 meter kan det bli riktigt kallt på vintern. Isolering, dubbelglas och bra uppvärmning är viktigt vid en renovering här, liksom ett tak som håller ute regn och kyla. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Hur långt är det från Colmenar till Málaga?', a: 'Cirka 32 kilometer, ungefär en halvtimme med bil. Det gör Colmenar till en av de bergsbyar som är lättast att nå från staden.' },
+      { q: 'Är det kallt i Colmenar?', a: 'På vintern är det kallare än vid kusten, på grund av höjden på nästan 700 meter. På sommaren är det behagligare än nere vid havet.' },
+      { q: 'Kan man vandra i Montes de Málaga från Colmenar?', a: 'Ja, naturparken börjar söder om byn. Leder går genom tallskog och förbi gamla vingårdar mot Málaga.' },
+    ],
+  },
 };
 export default content;

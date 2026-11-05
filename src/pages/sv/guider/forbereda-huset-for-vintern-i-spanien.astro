@@ -1,0 +1,95 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'varfor', label: 'Varför förbereda för vintern?' },
+  { id: 'host', label: 'Checklista för hösten: före det första regnet' },
+  { id: 'avresa', label: 'Checklista när du åker hem' },
+  { id: 'vinter', label: 'Det här kan gå fel på vintern' },
+  { id: 'storm', label: 'Checklista efter en storm' },
+  { id: 'var', label: 'Checklista för våren och sommaren' },
+  { id: 'tillsyn', label: 'Vem håller ett öga på huset?' },
+];
+
+const faq = [
+  {
+    q: 'Ska jag tömma vattensystemet som hemma i Sverige?',
+    a: 'Vid kusten fryser det nästan aldrig, så där behövs ingen tömning. Stäng däremot huvudkranen mot läckor. I bergsbyar över 500 meter kan det frysa på natten: låt tömma eller isolera utomhusrör och rör i ouppvärmda rum.',
+  },
+  {
+    q: 'Ska strömmen vara på eller av medan jag är borta?',
+    a: 'Oftast på, för kyl eller frys, larmet, en avfuktare, poolpumpen och en smart mätare eller kamera. Stäng däremot av varmvattenberedaren och andra apparater som inte behövs.',
+  },
+  {
+    q: 'Vad kostar det att få huset förberett för vintern?',
+    a: 'En kontroll inklusive rensning av hängrännor och brunnar, test av takterrassen och iordningställande av huset kostar oftast 100 till 300 €. Eventuella reparationer som upptäcks får du en offert på först.',
+  },
+];
+---
+<Guide lang="sv" slug="forbereda-huset-for-vintern-i-spanien" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Vill du få huset förberett för vintern?" ctaText="Vi går igenom checklistan åt dig, tar foton och håller ett öga på huset medan du är borta.">
+  <h2 id="varfor">Varför förbereda för vintern?</h2>
+  <p>Vintern i Axarquía är mild, men för ett hus är det den tuffaste årstiden. Efter en torr sommar faller det mesta regnet i oktober och november, ibland på några timmar. Det är då du märker var takterrassen läcker, om hängrännorna är igensatta och om dräneringen runt huset fungerar. Sedan kommer en sval, fuktig period då ett stängt hus blir unket och möglar.</p>
+  <p>Tillbringar du vintern i Sverige märker du det först när du kommer tillbaka. Några rutinkontroller på hösten förebygger de flesta skadorna. Här är checklistorna vi själva använder.</p>
+
+  <h2 id="host">Checklista för hösten: före det första regnet</h2>
+  <p>Gör det här i september eller början av oktober, före det första kraftiga skyfallet.</p>
+  <ul class="checks">
+    <li>Rensa hängrännor, stuprör och brunnarna på takterrassen</li>
+    <li>Kontrollera takterrassen efter sprickor, lösa plattor och öppna fogar</li>
+    <li>Kontrollera ett tegeltak efter förskjutna eller trasiga pannor</li>
+    <li>Rensa avloppsrännor och galler på terrasser och uppfart</li>
+    <li>Kontrollera dräneringen längs bakväggen och bakom stödmurar</li>
+    <li>Kontrollera tätning och stängning av fönster, dörrar och luckor</li>
+    <li>Låt sota skorstenen om du har en braskamin</li>
+    <li>Låt rengöra luftkonditioneringen och testa den på värme</li>
+  </ul>
+
+  <h2 id="avresa">Checklista när du åker hem</h2>
+  <ul class="checks">
+    <li>Huvudkranen för vatten stängd; på en finca, pumpen av om inte trädgården behöver vatten</li>
+    <li>Varmvattenberedaren av</li>
+    <li>Kylskåpet tömt och på glänt, eller igång med någon som tittar till det</li>
+    <li>Avfuktaren på, med en slang till avloppet</li>
+    <li>Ventiler öppna, fönster och luckor stängda</li>
+    <li>Madrasser på högkant eller övertäckta, kuddar och textilier i stängda skåp</li>
+    <li>Värdesaker undanlagda, larmet på</li>
+    <li>Poolen övertäckt eller skötseln ordnad</li>
+    <li>Trädgårdsmöbler, parasoller och lösa föremål inne eller fastsatta</li>
+    <li>Nycklar och kontaktuppgifter hos den som har tillsyn över huset</li>
+  </ul>
+  <p>I bergsbyar över cirka 500 meter, som Cómpeta, Canillas eller Alfarnate, kan det frysa på natten. Töm där utomhusrör och rör i ouppvärmda rum.</p>
+
+  <h2 id="vinter">Det här kan gå fel på vintern</h2>
+  <ul>
+    <li><strong>Läckor efter en storm:</strong> vatten som sipprar genom ett tak i flera veckor.</li>
+    <li><strong>Fukt och mögel:</strong> ett stängt, kallt hus utan ventilation.</li>
+    <li><strong>Strömavbrott:</strong> frysen tinar, larmet går offline.</li>
+    <li><strong>Översvämning:</strong> lera mot bakväggen eller en stödmur som spricker.</li>
+    <li><strong>Inbrott eller ockupanter:</strong> ett hus som synbart står tomt.</li>
+  </ul>
+
+  <h2 id="storm">Checklista efter en storm</h2>
+  <p>Efter kraftigt regn eller en stormvarning från AEMET (orange eller röd) är det klokt att låta någon titta till huset inom några dagar.</p>
+  <ul class="checks">
+    <li>Tak och väggar under taket och takterrassen: blöta fläckar?</li>
+    <li>Hängrännor och brunnar fria, inget stående vatten på takterrassen</li>
+    <li>Stödmurar, slänter och tillfartsvägen</li>
+    <li>Elcentralen: är allt fortfarande på?</li>
+    <li>Fönster, luckor och markiser</li>
+    <li>Träd och grenar på eller mot huset</li>
+    <li>Foton till försäkringsbolaget: se guiden <a href="/sv/guider/hemforsakring-i-spanien/">försäkring och skador</a></li>
+  </ul>
+
+  <h2 id="var">Checklista för våren och sommaren</h2>
+  <ul class="checks">
+    <li>Starta poolen, kontrollera filter och pump</li>
+    <li>Rengör luftkonditioneringen före de varma månaderna</li>
+    <li>Röj tomten: i Andalusien är du skyldig att ta bort torr vegetation runt huset för att förebygga skogsbränder</li>
+    <li>Ställ om bevattningen till sommarläge</li>
+    <li>Spola av solpanelerna efter damm och Saharasand</li>
+    <li>Hyr du ut: testa septiktank, vattentryck och luftkonditionering före de första gästerna</li>
+  </ul>
+
+  <h2 id="tillsyn">Vem håller ett öga på huset?</h2>
+  <p>En granne som tittar in då och då är guld värd. Men efter en storm, en läcka eller ett strömavbrott vill du ha någon som kan agera direkt, skicka foton och kalla in en hantverkare. Det är <a href="/sv/tillsyn/">tillsyn</a>: regelbundna kontroller enligt de här checklistorna, en rapport med foton och, innan du kommer, ett hus som är vädrat, rent och klart.</p>
+</Guide>

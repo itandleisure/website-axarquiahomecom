@@ -202,5 +202,68 @@ const content: PlaceContent = {
       { q: 'Wie weit ist Canillas de Aceituno von der Küste entfernt?', a: 'Nach Torre del Mar sind es etwa 45 Minuten mit dem Auto, über den Stausee La Viñuela und Vélez-Málaga.' },
     ],
   },
+  sv: {
+    title: 'Canillas de Aceituno: bo vid foten av La Maroma',
+    description: 'Allt om Canillas de Aceituno: bergsbyn nedanför den högsta toppen i provinsen Málaga, Casa de los Diezmos, Blodkorvens dag, bostadspriser och att köpa i bergen.',
+    lead: 'Canillas de Aceituno klamrar sig fast på sidan av Sierra de Tejeda, precis nedanför La Maroma, som med 2 068 meter är provinsen Málagas högsta berg. Det är en äkta bergsby med mudéjarvalv, branta gränder och utsikt ner mot havet.',
+    intro: [
+      'Canillas de Aceituno ligger i naturparken Sierras de Tejeda, Almijara y Alhama, ovanför <a href="/sv/orter/vinuela/">La Viñuela</a>-sjön och cirka 60 kilometer från Málaga. Ovanför byn reser sig La Maroma, toppen som vandrare från hela regionen bestiger härifrån.',
+      'Byn härstammar från morisk tid och har behållit den karaktären väl: smala vita gränder, överbyggda passager och Casa de los Diezmos, ett hus från 1500-talet med ett mudéjartorn som lokalt kallas Casa de la Reina Mora. Kyrkan byggdes där den gamla moskén låg.',
+      'Canillas har cirka 1 800 invånare, och en fjärdedel har utländskt medborgarskap. Byarna Rubite och Posada de Granadillo hör också till kommunen.',
+    ],
+    facts: [
+      ['Invånare', 'cirka 1 800 (2025)'],
+      ['Utländska invånare', 'cirka en fjärdedel'],
+      ['Läge', 'berg, nedanför La Maroma (2 068 m)'],
+      ['Málaga', 'cirka 60 km'],
+      ['La Viñuela-sjön', 'cirka 10 minuter'],
+      ['Prisnivå', 'låg, cirka 1 800 € per m²'],
+    ],
+    forWhom: 'För vandrare och naturälskare som vill bo i en levande spansk by, med bergen utanför dörren och kusten 45 minuter bort. Vill du ha byliv, titta på ett byhus; vill du ha utrymme, på en finca på sluttningarna.',
+    see: {
+      title: 'Se och göra i Canillas de Aceituno: La Maroma, mudéjar och blodkorv',
+      description: 'Vad du kan göra i Canillas de Aceituno: bestigningen av La Maroma, Casa de los Diezmos, kyrkan Rosario, Cueva de la Fájara och Blodkorvens dag.',
+      lead: 'Canillas är startpunkten för den mest kända bergsvandringen i Axarquía, men det finns mycket att se utan att klättra.',
+      items: [
+        { name: 'La Maroma', text: 'Bestigningen av provinsens högsta topp (2 068 m) börjar i byn. Det är en lång och krävande dagsvandring med mycket stigning. Från toppen ser du en klar dag Sierra Nevada och Afrikas kust. Undvik sommarhettan och ta med gott om vatten.' },
+        { name: 'Casa de los Diezmos', text: 'Tiondehuset från 1500-talet, även kallat Casa de la Reina Mora, med ett mudéjartorn med blindvalv. Det är byns mest kända byggnad.' },
+        { name: 'Kyrkan Nuestra Señora del Rosario', text: 'En gotisk mudéjarkyrka på platsen där moskén en gång stod.' },
+        { name: 'Casa Esgrafiada och borgen', text: 'Ett mudéjarhus med sgraffitodekor på fasaden och, högre upp i byn, resterna av den gamla borgen.' },
+        { name: 'Cueva de la Fájara', text: 'En grotta cirka fyra kilometer från byn, med spår av förhistorisk bosättning.' },
+      ],
+      fiestas: [
+        { name: 'Día de la Morcilla', when: 'sista söndagen i april', text: 'byn bjuder på sin blodkorv under festen för Virgen de la Cabeza. Tusentals besökare kommer.' },
+        { name: 'Romería de San Isidro', when: 'mitten av maj', text: 'en vallfärd ut på landsbygden med dekorerade vagnar.' },
+        { name: 'Feria', when: 'augusti', text: 'byns sommarfest.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Canillas de Aceituno: byhus, fincor och priser',
+      description: 'Köpa bostad i Canillas de Aceituno? Vilka bostäder som finns, vad de kostar, service i byn och vad du ska tänka på med en finca eller en renovering i bergen.',
+      lead: 'Canillas de Aceituno är en av de mest prisvärda bergsbyarna i Axarquía. Du bor bland spanjorer, med en liten internationell gemenskap och natur runt omkring.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'I byn gamla byhus, ofta smala och höga, med takterrass eller patio. På sluttningarna runt omkring fincor och cortijos med oliv- och mandelträd och utsikt över sjön mot havet.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 1 800 € per m² (RealAdvisor), ungefär hälften av nivån i Nerja eller Frigiliana. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a> och, för ett gammalt byhus, en <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringsbudget</a>.',
+        ] },
+        { h: 'Service', p: [
+          'Byn har en consultorio, apotek, små affärer, barer och en grundskola. För storhandling, gymnasium och sjukhus åker du till Vélez-Málaga, ungefär en halvtimme med bil.',
+        ] },
+        { h: 'Se upp med fincor', p: [
+          'Större delen av kommunen ligger i eller intill naturparken. Att bygga och bygga ut där är strikt reglerat, och inte alla hus utanför byn är helt lagliga. Låt kontrollera fastighetens status, tillfartsvägen och vattenförsörjningen innan du köper. Läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+        ] },
+        { h: 'Renovera i Canillas de Aceituno', p: [
+          'Gränderna i den gamla byn är smala och branta. Stora lastbilar kommer inte in, så material levereras med mindre fordon eller bärs in för hand. Gamla hus har ofta tjocka väggar av sten och lera som håller kvar fukt. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Kan man bestiga La Maroma från Canillas de Aceituno?', a: 'Ja, den klassiska leden till toppen börjar i byn. Räkna med en lång och krävande dagsvandring med mycket stigning.' },
+      { q: 'Vad är Blodkorvens dag?', a: 'Den sista söndagen i april bjuder byn på blodkorv (morcilla) under festen för Virgen de la Cabeza. Det är årets mest välbesökta fest.' },
+      { q: 'Hur långt är det från Canillas de Aceituno till kusten?', a: 'Till Torre del Mar är det cirka 45 minuter med bil, via La Viñuela-sjön och Vélez-Málaga.' },
+    ],
+  },
 };
 export default content;

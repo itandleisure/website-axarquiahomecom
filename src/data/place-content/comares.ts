@@ -199,5 +199,67 @@ const content: PlaceContent = {
       { q: 'Ist Comares günstig?', a: 'Im Vergleich zur Küste ja. Die durchschnittlichen Angebotspreise lagen im Oktober 2026 bei rund 1.700 € pro m², in Frigiliana fast beim Doppelten.' },
     ],
   },
+  sv: {
+    title: 'Comares: bo på Axarquías balkong',
+    description: 'Allt om Comares: den vita byn på 700 meter med utsikt över hela Axarquía, den moriska historien, bostadspriser, fincor och vad du ska veta om att köpa och renovera.',
+    lead: 'Comares ligger som en vit krona på en bergstopp över 700 meter upp. Från byn ser du ut över hela Axarquía ända till havet, och därför kallas den regionens balkong.',
+    intro: [
+      'Comares är en av de högst belägna byarna i Axarquía, på 703 meter, cirka 25 kilometer ovanför <a href="/sv/orter/velez-malaga/">Vélez-Málaga</a> och 39 kilometer från Málaga. Vägen slingrar sig upp genom olivlundar och mandelträd, och på toppen ligger en by med smala vita gränder runt en kyrka och resterna av en morisk borg.',
+      'På 800-talet var Comares ett fäste för Omar ben Hafsun, rebellen som i åratal trotsade kalifatet i Córdoba. Byn gav sig inte åt de kristna arméerna förrän 1487. Fotavtryck i keramik i gatorna leder besökare förbi platserna från den historien.',
+      'Byn har cirka 1 350 invånare, och nästan fyra av tio har utländskt medborgarskap. Många av dem bor inte i själva byn utan på cortijos och fincor på sluttningarna runt omkring.',
+    ],
+    facts: [
+      ['Invånare', 'cirka 1 350 (2025)'],
+      ['Utländska invånare', 'nästan 40 %'],
+      ['Läge', 'berg, 703 m'],
+      ['Vélez-Málaga', 'cirka 25 km'],
+      ['Málaga', 'cirka 39 km'],
+      ['Prisnivå', 'låg, cirka 1 700 € per m²'],
+    ],
+    forWhom: 'För dig som värdesätter lugn, utrymme och utsikt mer än att ha stranden runt hörnet. Comares passar dig som söker en finca med mark eller ett byhus med takterrass och inte har något emot att köra ner för storhandlingen.',
+    see: {
+      title: 'Se och göra i Comares: utsiktsplatser, moriska lämningar och vandringar',
+      description: 'Vad du kan göra i Comares: utsikten från Axarquías balkong, resterna av alcazaban, kyrkan La Encarnación, fotavtrycksleden och festerna.',
+      lead: 'Comares är framför allt en plats för att se sig omkring: på själva byn, på historien i murarna och på utsikten över regionen.',
+      items: [
+        { name: 'Utsikten', text: 'Från torgen och byns kant ser du en klar dag hela Axarquía: kullar med olivträd, La Viñuela-sjön, kusten och ibland till och med Sierra Nevada.' },
+        { name: 'Alcazaban', text: 'Av den moriska borgen finns Torre del Homenaje och delar av muren kvar. De arabiska valven vid plaza Verdiales och resterna av coracha vid Fuente Gorda hör till samma fästning.' },
+        { name: 'Kyrkan La Encarnación', text: 'Byns kyrka från 1500-talet står där den gamla moriska borgen låg och är byns hjärta.' },
+        { name: 'Meseta de Mazmúllar', text: 'På platån Mazmúllar strax ovanför byn finns arkeologiska lämningar från 1000-talet och en gammal cistern (<em>aljibe</em>).' },
+        { name: 'Vandring', text: 'Gamla mulåsnestigar leder från Comares genom olivlundarna ner till dalarna. De är som vackrast på våren, när mandelträden blommar.' },
+      ],
+      fiestas: [
+        { name: 'San Hilario', when: '13 januari', text: 'skyddshelgonets dag.' },
+        { name: 'Fiestas patronales', when: '23 och 24 augusti', text: 'byns sommarfest, med musik och verdiales.' },
+      ],
+    },
+    living: {
+      title: 'Bo i Comares: byhus, fincor och priser',
+      description: 'Köpa bostad i Comares? Vilka bostäder som finns, vad de kostar, hur lätt byn är att nå och vad du ska tänka på med fincor och renovering på 700 meter.',
+      lead: 'Comares är en av de mest prisvärda orterna i Axarquía, med en utsikt som vore ovärderlig vid kusten. Baksidan är att du kör ner från berget för nästan allt.',
+      sections: [
+        { h: 'Vilka bostäder som finns', p: [
+          'I själva byn främst gamla byhus i flera våningar, ofta med takterrass och utsikt. Utanför byn cortijos och fincor med oliv- och mandelträd, från enkla lanthus till renoverade villor med pool.',
+        ] },
+        { h: 'Vad en bostad kostar', p: [
+          'I oktober 2026 låg det genomsnittliga utgångspriset kring 1 700 € per m² (RealAdvisor), mindre än hälften av nivån i Nerja eller Frigiliana. Ett byhus som behöver renoveras kan fortfarande köpas för en blygsam summa. Räkna med cirka 10 % i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">köpkostnader</a> och, för ett gammalt hus, en rejäl <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringsbudget</a>.',
+        ] },
+        { h: 'Service och tillgänglighet', p: [
+          'Byn har en consultorio (vårdmottagning), några affärer och barer och en grundskola. För stormarknad, gymnasium och sjukhus kör du till Vélez-Málaga, cirka en halvtimme längs en slingrig bergsväg. Málaga och flygplatsen ligger ungefär 45 minuter till en timme bort.',
+        ] },
+        { h: 'Se upp med fincor', p: [
+          'Många lanthus runt Comares har byggts ut under årens lopp. Kontrollera vid köpet att allt är lagligt, i vilket skick tillfartsvägen är och varifrån vattnet kommer. Läs våra guider om att <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a> och om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.',
+        ] },
+        { h: 'Renovera i Comares', p: [
+          'På 700 meter kan vintrarna vara kalla och fuktiga. Isolering, bra fönster och uppvärmning är ingen lyx vid en renovering här. I byn är gränderna smala och branta, så det tar extra tid att få in material. Låt <a href="/sv/besiktning/">besiktiga</a> huset innan du köper, särskilt med gamla väggar och tak.',
+        ] },
+      ],
+    },
+    faq: [
+      { q: 'Hur långt är det från Comares till havet?', a: 'Cirka 25 kilometer till Vélez-Málaga och kusten vid Torre del Mar, ungefär en halvtimme längs en slingrig väg.' },
+      { q: 'Bor det många utlänningar i Comares?', a: 'Ja. 2022 hade nästan 40 % av invånarna utländskt medborgarskap, främst britter och nordeuropéer, och många av dem bor på fincor utanför byn.' },
+      { q: 'Är Comares billigt?', a: 'Jämfört med kusten, ja. Det genomsnittliga utgångspriset låg i oktober 2026 kring 1 700 € per m², mot nästan det dubbla i Frigiliana.' },
+    ],
+  },
 };
 export default content;
