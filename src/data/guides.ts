@@ -98,13 +98,13 @@ export const guides: GuideMeta[] = [
   },
   {
     slug: 'afo-legaliseren-andalusie',
-    title: 'AFO en legaliseren in Andalusië uitgelegd',
-    seoTitle: 'AFO-status in Andalusië: wat betekent het en wat mag wel en niet?',
-    short: 'AFO en legaliseren',
-    description: 'Wat betekent AFO (asimilado a fuera de ordenación) bij een huis in Andalusië? Wat mag u wel en niet, hoe verloopt de procedure en waar let u op als koper?',
-    lead: 'Naar schatting 300.000 woningen in Andalusië zijn niet volledig vergund. Veel daarvan staan op het platteland, ook in de Axarquía. Wat betekent dat voor u als koper of eigenaar?',
-    keyword: 'afo andalusie',
-    minutes: 8,
+    title: 'Huis legaliseren in Andalusië: AFO, kosten en gevolgen',
+    seoTitle: 'Huis legaliseren in Spanje (Andalusië): AFO, kosten, hypotheek en risico’s',
+    short: 'Huis legaliseren en AFO',
+    description: 'Hoe legaliseert u een huis in Andalusië? Legalisatie of AFO, de stappen, wie u nodig hebt, kosten en doorlooptijd, en wat het betekent als u een huis zonder vergunning koopt.',
+    lead: 'Veel huizen in de Axarquía zijn (deels) zonder vergunning gebouwd. Hoe legaliseert u zo’n huis, wat kost dat, en wat betekent het voor hypotheek, verkoop en verhuur als u er een koopt?',
+    keyword: 'huis legaliseren spanje',
+    minutes: 12,
     published: '2026-11-05',
   },
   // Keuzegids met deelpagina's per doelgroep. Staat in nl/en/de achteraan, zodat de volgorde van de Zweedse lijst klopt.
@@ -348,6 +348,18 @@ export const guides: GuideMeta[] = [
     minutes: 10,
     published: '2026-11-05',
   },
+  // Vergunningengids. Achteraan in nl/en/de, zelfde positie.
+  {
+    slug: 'vergunning-verbouwen-andalusie',
+    title: 'Verbouwen in Andalusië: welke vergunning en wie u nodig hebt',
+    seoTitle: 'Vergunning voor verbouwen of uitbouw in Spanje (Andalusië): regels en stappen 2026',
+    short: 'Vergunning en verbouwen',
+    description: 'Hebt u voor uw verbouwing of uitbouw in Andalusië een vergunning nodig? Per type werk: melding of licencia de obra, wanneer een architect verplicht is, en alle stappen tot en met de notaris.',
+    lead: 'Een nieuwe badkamer mag u in Andalusië dezelfde dag beginnen. Voor een uitbouw hebt u een architect, een vergunning en een paar maanden geduld nodig. Hier leest u welk werk welke route volgt, wie u erbij nodig hebt en wat er officieel moet gebeuren.',
+    keyword: 'vergunning verbouwen spanje',
+    minutes: 9,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesEn: GuideMeta[] = [
@@ -431,13 +443,13 @@ export const guidesEn: GuideMeta[] = [
   },
   {
     slug: 'afo-legalisation-andalusia',
-    title: 'AFO status and legalisation in Andalusia explained',
-    seoTitle: 'AFO status in Andalusia: what it means and what you can (not) do',
-    short: 'AFO explained',
-    description: 'What does AFO (asimilado a fuera de ordenación) mean for a home in Andalusia? What you can and cannot do, how the procedure works and what to watch for as a buyer.',
-    lead: 'An estimated 300,000 homes in Andalusia do not have full planning permission. Many are in the countryside, including in the Axarquía. What does that mean for you as a buyer or owner?',
+    title: 'Legalising a house in Andalusia: AFO, costs and consequences',
+    seoTitle: 'Legalising a property in Spain (Andalusia): AFO, costs, mortgage and risks',
+    short: 'Legalisation and AFO',
+    description: 'How do you legalise a house in Andalusia? Legalisation or AFO, the steps, who you need, costs and timescale, and what it means to buy a house without planning permission.',
+    lead: 'Many houses in the Axarquía were built partly without a permit. How do you legalise one, what does it cost, and what does buying one mean for your mortgage, resale and letting?',
     keyword: 'afo andalucia',
-    minutes: 8,
+    minutes: 12,
     published: '2026-11-05',
   },
   // Decision guide with sub-pages per audience (kept last in nl/en/de so the Swedish list stays aligned).
@@ -676,6 +688,18 @@ export const guidesEn: GuideMeta[] = [
     minutes: 10,
     published: '2026-11-05',
   },
+  // Permit guide. Kept last in nl/en/de, same position.
+  {
+    slug: 'building-permits-renovation-andalusia',
+    title: 'Renovating in Andalusia: which permit you need and who does what',
+    seoTitle: 'Building permits for renovations and extensions in Spain (Andalusia): rules and steps 2026',
+    short: 'Permits and renovation',
+    description: 'Do you need a permit for your renovation or extension in Andalusia? By type of work: notification or licencia de obra, when an architect is required, and every step up to the notary.',
+    lead: 'In Andalusia you can start a new bathroom the day you file. An extension needs an architect, a permit and a few months of patience. Here is which work follows which route, who you need and what has to happen officially.',
+    keyword: 'building permit spain renovation',
+    minutes: 9,
+    published: '2026-11-05',
+  },
 ];
 
 export const guidesDe: GuideMeta[] = [
@@ -759,13 +783,13 @@ export const guidesDe: GuideMeta[] = [
   },
   {
     slug: 'afo-legalisierung-andalusien',
-    title: 'AFO-Status und Legalisierung in Andalusien erklärt',
-    seoTitle: 'AFO-Status in Andalusien: was er bedeutet und was erlaubt ist',
-    short: 'AFO erklärt',
-    description: 'Was bedeutet AFO (asimilado a fuera de ordenación) für ein Haus in Andalusien? Was erlaubt ist und was nicht, wie das Verfahren abläuft und worauf Käufer achten sollten.',
-    lead: 'Schätzungsweise 300.000 Häuser in Andalusien haben keine vollständige Baugenehmigung. Viele davon stehen auf dem Land, auch in der Axarquía. Was bedeutet das für Sie als Käufer oder Eigentümer?',
+    title: 'Haus legalisieren in Andalusien: AFO, Kosten und Folgen',
+    seoTitle: 'Haus legalisieren in Spanien (Andalusien): AFO, Kosten, Hypothek und Risiken',
+    short: 'Legalisierung und AFO',
+    description: 'Wie legalisiert man ein Haus in Andalusien? Legalisierung oder AFO, die Schritte, wen Sie brauchen, Kosten und Dauer, und was der Kauf eines Hauses ohne Baugenehmigung bedeutet.',
+    lead: 'Viele Häuser in der Axarquía wurden teilweise ohne Genehmigung gebaut. Wie legalisiert man ein solches Haus, was kostet das, und was bedeutet der Kauf für Hypothek, Weiterverkauf und Vermietung?',
     keyword: 'afo andalusien',
-    minutes: 8,
+    minutes: 12,
     published: '2026-11-05',
   },
   // Entscheidungshilfe mit Unterseiten je Zielgruppe (in nl/en/de am Ende, damit die schwedische Liste passt).
@@ -1002,6 +1026,18 @@ export const guidesDe: GuideMeta[] = [
     lead: 'Mit einer Solaranlage macht die Wahl des Stromanbieters in Spanien einen großen Unterschied: was Sie für Einspeisung bekommen, ob der Überschuss erhalten bleibt und was Sie im Winter zahlen. Wir stellen die bekanntesten Anbieter nebeneinander.',
     keyword: 'stromanbieter spanien',
     minutes: 10,
+    published: '2026-11-05',
+  },
+  // Genehmigungs-Ratgeber. In nl/en/de am Ende, gleiche Position.
+  {
+    slug: 'baugenehmigung-umbau-andalusien',
+    title: 'Umbauen in Andalusien: welche Genehmigung und wen Sie brauchen',
+    seoTitle: 'Baugenehmigung für Umbau oder Anbau in Spanien (Andalusien): Regeln und Schritte 2026',
+    short: 'Genehmigung und Umbau',
+    description: 'Brauchen Sie für Umbau oder Anbau in Andalusien eine Genehmigung? Je Art der Arbeiten: Anzeige oder Licencia de obra, wann ein Architekt Pflicht ist und alle Schritte bis zum Notar.',
+    lead: 'Ein neues Bad dürfen Sie in Andalusien am Tag der Anzeige beginnen. Für einen Anbau brauchen Sie einen Architekten, eine Genehmigung und einige Monate Geduld. Hier lesen Sie, welche Arbeit welchen Weg geht, wen Sie brauchen und was offiziell geschehen muss.',
+    keyword: 'baugenehmigung spanien',
+    minutes: 9,
     published: '2026-11-05',
   },
 ];

@@ -1,0 +1,79 @@
+---
+// Quellen: siehe die niederländische Fassung (src/pages/nl/gidsen/vergunning-verbouwen-andalusie.astro).
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Anzeige oder Genehmigung?' },
+  { id: 'tabelle', label: 'Je Art der Arbeiten' },
+  { id: 'wer', label: 'Wen Sie brauchen' },
+  { id: 'schritte', label: 'Die Schritte bei einem Anbau' },
+  { id: 'aussenbereich', label: 'Fincas und Außenbereich' },
+  { id: 'gemeinde', label: 'Kosten und Regeln je Gemeinde' },
+];
+
+const faq = [
+  { q: 'Brauche ich für einen Anbau in Spanien eine Baugenehmigung?', a: 'Ja. Ein Anbau, eine Erweiterung oder ein zusätzliches Stockwerk braucht in Andalusien immer eine Licencia de obra der Gemeinde, mit einem Projekt eines Architekten. Sie dürfen erst beginnen, wenn die Genehmigung erteilt ist und das Ausführungsprojekt bei der Gemeinde liegt.' },
+  { q: 'Ist bei einem Umbau ein Architekt Pflicht?', a: 'Nur wenn die Arbeiten ein Bauprojekt brauchen: Neubau, Anbau, Eingriffe in die Statik, eine andere Fassade oder eine Nutzungsänderung. Dann sind für ein Wohnhaus ein Architekt und ein Arquitecto técnico Pflicht. Für eine neue Küche oder ein neues Bad nicht.' },
+  { q: 'Kann ich den Antrag selbst stellen?', a: 'Ja, meist reicht ihn aber der Architekt oder die Baufirma für Sie ein, auch online. Sie unterschreiben eine Vollmacht.' },
+  { q: 'Was, wenn der Anbau nie genehmigt wurde?', a: 'Dann kann die Gemeinde bis sechs Jahre nach dem Bau einschreiten. Danach kann das Haus als AFO anerkannt werden. Das ist keine Legalisierung: Sie dürfen es instand halten und umbauen, aber nicht weiter vergrößern.' },
+  { q: 'Muss ein Anbau ins Kataster und in die Urkunde?', a: 'Ins Kataster (Catastro) immer. In Urkunde und Eigentumsregister ist es keine Pflicht, aber sinnvoll: Beim Verkauf fragt der Notar danach, und ohne Genehmigung und Abschlusszertifikat geht das nicht.' },
+];
+---
+<Guide slug="baugenehmigung-umbau-andalusien" lang="de" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Umbauen oder anbauen?" ctaText="Beschreiben Sie Ihr Vorhaben. Wir klären, welche Genehmigung nötig ist, kümmern uns um den Architekten und führen die Arbeiten aus.">
+  <h2 id="kurz">Anzeige oder Genehmigung?</h2>
+  <p>In Andalusien legt das Baugesetz LISTA (Ley 7/2021) fest, welchen Weg ein Umbau geht. Es gibt zwei:</p>
+  <ul>
+    <li><strong>Anzeige</strong> (<em>declaración responsable</em>, vor Ort oft noch <em>obra menor</em>): für kleine Arbeiten ohne Bauprojekt und für Arbeiten in einem bestehenden, legalen Haus im Ort, die Größe, Höhe und Zahl der Wohnungen nicht ändern. Sie reichen die Anzeige mit den Unterlagen ein und dürfen am selben Tag beginnen. Die Gemeinde prüft nachträglich.</li>
+    <li><strong>Genehmigung</strong> (<em>licencia de obra</em>, oft <em>obra mayor</em> genannt): für alles andere, etwa Neubau, Anbau oder ein zusätzliches Stockwerk und Eingriffe in die Statik. Die Gemeinde muss innerhalb von drei Monaten ab vollständigem Antrag entscheiden. Sie dürfen erst beginnen, wenn die Genehmigung erteilt ist.</li>
+  </ul>
+  <p>Wen Sie brauchen, hängt an einer Frage: Braucht die Arbeit ein Bauprojekt? Nach dem spanischen Baugesetz (LOE) ist das so bei Neubau, bei Arbeiten, die Fassade, Volumen oder Statik wesentlich ändern, bei einer Nutzungsänderung und bei geschützten Gebäuden. Dann sind ein Architekt und ein <em>Arquitecto técnico</em> Pflicht.</p>
+
+  <h2 id="tabelle">Je Art der Arbeiten</h2>
+  <p>Für ein legales Haus im Ort. Was genau zu einer Anzeige gehört, regelt die Satzung der Gemeinde.</p>
+  <table class="prices">
+    <thead><tr><th>Arbeiten</th><th>Weg</th><th>Wen Sie brauchen</th></tr></thead>
+    <tbody>
+      <tr><td>Neue Küche oder neues Bad, ohne Wände zu versetzen</td><td>Anzeige</td><td>Baufirma; zugelassener Elektriker, wenn die Installation sich ändert</td></tr>
+      <tr><td>Fliesen, Putz, Anstrich, Fenster in gleicher Größe</td><td>Anzeige, teils befreit</td><td>Baufirma</td></tr>
+      <tr><td>Dach oder Terrasse abdichten, ohne Eingriff in die Statik</td><td>Anzeige</td><td>Baufirma; bei Gerüst oft ein Techniker</td></tr>
+      <tr><td>Grundriss ändern, ohne tragende Wände und ohne neue Wohnung</td><td>Anzeige</td><td>Baufirma, mit Zeichnung</td></tr>
+      <tr><td>Solaranlage, Dämmung, Wärmepumpe</td><td>Anzeige, auch im Außenbereich</td><td>Installateur; zugelassener Elektriker</td></tr>
+      <tr><td>Tragende Wand entfernen, neue Decke oder Balken</td><td>Genehmigung</td><td>Architekt, Arquitecto técnico, Baufirma</td></tr>
+      <tr><td>Anbau, Erweiterung, zusätzliches Stockwerk, Terrasse schließen</td><td>Genehmigung</td><td>Architekt, Arquitecto técnico, Baufirma</td></tr>
+      <tr><td>Pool</td><td>In der Regel Genehmigung</td><td>Techniker mit Projekt; welcher, ist je Gemeinde verschieden</td></tr>
+      <tr><td>Abriss (nicht geschützt)</td><td>Anzeige</td><td>Techniker mit Abrissprojekt</td></tr>
+    </tbody>
+  </table>
+  <p>Gerüst oder Container auf öffentlichem Grund brauchen oft eine eigene Erlaubnis der Gemeinde. Bausteuer (ICIO) auf die Baukosten zahlen Sie immer, auch bei einer Anzeige.</p>
+
+  <h2 id="wer">Wen Sie brauchen</h2>
+  <ul>
+    <li><strong>Architekt</strong> (<em>arquitecto</em>): erstellt das Projekt und leitet die Arbeiten. Pflicht bei jeder Arbeit an einem Wohnhaus, die ein Projekt braucht.</li>
+    <li><strong>Arquitecto técnico</strong> (auch <em>aparejador</em>): leitet die Ausführung auf der Baustelle und prüft die Qualität. Pflicht neben dem Architekten. Zusammen bilden sie die <em>dirección facultativa</em>.</li>
+    <li><strong>Sicherheitskoordinator</strong> (<em>coordinador de seguridad y salud</em>): Pflicht, sobald mehr als eine Firma oder ein Selbstständiger auf der Baustelle arbeitet. Jedes Projekt enthält auch eine Sicherheitsstudie.</li>
+    <li><strong>Berufskammer</strong> (<em>colegio</em>): stempelt das Ausführungsprojekt und das Abschlusszertifikat (das <em>visado</em>). Pflicht bei jeder Arbeit mit Projekt, auch bei einer Legalisierung.</li>
+    <li><strong>Zugelassener Elektriker</strong>: stellt für eine neue oder geänderte Installation ein Installationszertifikat aus, das bei der Junta de Andalucía registriert wird. Ohne dieses Zertifikat gibt es keinen neuen Stromvertrag.</li>
+    <li><strong>Baufirma</strong>: führt die Arbeiten aus, mit oder ohne Projekt.</li>
+  </ul>
+
+  <h2 id="schritte">Die Schritte bei einem Anbau</h2>
+  <ol>
+    <li><strong>Machbarkeit</strong>: Der Architekt prüft im Bebauungsplan (PGOU), wie viel auf dem Grundstück gebaut werden darf, und ob das Haus selbst legal ist.</li>
+    <li><strong>Basisprojekt und Antrag</strong>: Mit einem <em>proyecto básico</em> beantragt der Architekt die Genehmigung bei der Gemeinde.</li>
+    <li><strong>Prüfung</strong>: Ein Techniker und ein Jurist der Gemeinde, in kleinen Gemeinden oft der Diputación de Málaga, geben ihr Gutachten ab. Die Gemeinde entscheidet innerhalb von drei Monaten ab vollständigem Antrag. Sie zahlen ICIO und Gebühren.</li>
+    <li><strong>Ausführungsprojekt</strong>: Mit der Genehmigung allein dürfen Sie noch nicht bauen. Zuerst geht das Ausführungsprojekt (<em>proyecto de ejecución</em>) mit Visado an die Gemeinde, zusammen mit der Anzeige des Baubeginns.</li>
+    <li><strong>Bauen</strong>: Beginn innerhalb eines Jahres, Fertigstellung innerhalb von drei Jahren, sofern die Genehmigung nichts anderes sagt. Eine Verlängerung ist möglich.</li>
+    <li><strong>Abnahme</strong>: Architekt und Arquitecto técnico unterschreiben das Abschlusszertifikat (<em>certificado final de obra</em>). Damit zeigen Sie der Gemeinde die Nutzung an.</li>
+    <li><strong>Kataster und Notar</strong>: Die neue Fläche muss ins Catastro. Soll sie auch in Urkunde und Eigentumsregister, lassen Sie eine Urkunde über die <em>ampliación de obra nueva</em> erstellen. Der Notar verlangt dafür Genehmigung, Abschlusszertifikat und Nachweis der Nutzungsanzeige. Das erspart viel Ärger, wenn Sie später <a href="/de/ratgeber/haus-verkaufen-spanien/">verkaufen</a>.</li>
+  </ol>
+  <p>Bei einer Anzeige geht es schneller: Baufirma oder Techniker reichen sie mit den Unterlagen ein, Sie zahlen die ICIO und können beginnen.</p>
+
+  <h2 id="aussenbereich">Fincas und Außenbereich</h2>
+  <p>Viele Fincas in der Axarquía stehen auf <em>suelo rústico</em>. Dort reicht eine Anzeige nur für Arbeiten, die das Haus energieeffizienter machen, etwa Dämmung oder Solaranlagen, ohne zusätzliche Fläche. Alles andere braucht eine Genehmigung, und Anbauen ist oft gar nicht erlaubt.</p>
+  <p>Wurde ein Haus oder Anbau je ohne Genehmigung gebaut, kann die Gemeinde bis sechs Jahre nach dem Bau einschreiten. Danach kann das Haus als AFO anerkannt werden. Bis zu dieser Anerkennung dürfen keine Arbeiten daran stattfinden. Danach dürfen Sie es instand halten und umbauen, auch an der Statik, aber nicht vergrößern. Mehr im Ratgeber <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>. Sie kaufen eine Finca? Lassen Sie vorher mit einem <a href="/de/immobiliengutachten/">Gutachten</a> prüfen, ob das Gebaute zu den Papieren passt.</p>
+
+  <h2 id="gemeinde">Kosten und Regeln je Gemeinde</h2>
+  <p>Die Regeln oben gelten in ganz Andalusien. Bausteuer (ICIO) und Gebühren sind je Gemeinde verschieden: In der Axarquía liegt die ICIO zwischen 2 % und 4 % der Baukosten. Für jeden Ort finden Sie Satz, Rechenbeispiele und die Adresse des Rathauses auf der Seite Baugenehmigung, etwa für <a href="/de/orte/nerja/baugenehmigung/">Nerja</a>, <a href="/de/orte/competa/baugenehmigung/">Cómpeta</a> oder <a href="/de/orte/velez-malaga/baugenehmigung/">Vélez-Málaga</a>. Alle Orte stehen in der <a href="/de/orte/">Übersicht</a>. Was die Arbeiten selbst kosten, lesen Sie unter <a href="/de/ratgeber/renovierungskosten-spanien/">Renovierungskosten</a>.</p>
+  <p>Wir übernehmen den ganzen Ablauf: Wir prüfen, ob Ihr Vorhaben eine Anzeige oder Genehmigung braucht, kümmern uns um Architekt und Antrag und führen die Arbeiten aus. Siehe <a href="/de/renovierung/">Renovierung</a> und <a href="/de/pool/">Poolbau</a>.</p>
+  <p class="note">Dieser Ratgeber gibt allgemeine Informationen auf Grundlage des andalusischen und spanischen Rechts mit Stand 5. November 2026 (LISTA, LOE, RD 1000/2010, RD 1627/1997, REBT, Ley del Catastro, Ley de Suelo). Er ist keine Rechtsberatung; über ein konkretes Vorhaben entscheiden Architekt und Gemeinde.</p>
+</Guide>
