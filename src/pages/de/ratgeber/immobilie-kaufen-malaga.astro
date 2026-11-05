@@ -1,0 +1,66 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'regionen', label: 'Die Regionen der Provinz Málaga' },
+  { id: 'preise', label: 'Was kostet eine Immobilie?' },
+  { id: 'ablauf', label: 'Der Kauf Schritt für Schritt' },
+  { id: 'fallen', label: 'Fallstricke für ausländische Käufer' },
+  { id: 'danach', label: 'Nach dem Kauf' },
+];
+
+const faq = [
+  {
+    q: 'Wo sind Immobilien in der Provinz Málaga am günstigsten?',
+    a: 'Im Hinterland und in der östlichen Axarquía sind Häuser pro m² am günstigsten. Am teuersten ist die westliche Costa del Sol rund um Marbella und Estepona. Auch in der Stadt Málaga sind die Preise in den letzten Jahren stark gestiegen.',
+  },
+  {
+    q: 'Brauche ich einen Makler?',
+    a: 'In Spanien zahlt meist der Verkäufer die Maklerprovision, der Makler arbeitet also für den Verkäufer. Beauftragen Sie deshalb einen eigenen, unabhängigen Anwalt und lassen Sie die Immobilie von jemandem begutachten, der nicht am Verkauf verdient.',
+  },
+  {
+    q: 'Wie lange dauert ein Kauf?',
+    a: 'Von der Unterschrift unter den Reservierungsvertrag (arras) bis zum Notartermin vergehen meist sechs bis zehn Wochen. Mit Hypothek oder bei einer Finca mit rechtlichen Fragen kann es länger dauern.',
+  },
+];
+---
+<Guide lang="de" slug="immobilie-kaufen-malaga" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Eine Immobilie gefunden?" ctaText="Lassen Sie sie begutachten, bevor Sie die Arras unterschreiben. Sie bekommen einen Bericht über den Zustand und was die Instandsetzung kostet.">
+  <h2 id="regionen">Die Regionen der Provinz Málaga</h2>
+  <h3>Westliche Costa del Sol</h3>
+  <p>Von Torremolinos über Benalmádena, Fuengirola und Marbella bis Estepona. Belebt und international, mit vielen Neubauten, Golfplätzen und Einrichtungen. Die höchsten Preise der Provinz.</p>
+  <h3>Die Stadt Málaga</h3>
+  <p>Eine lebendige Stadt mit Kultur, Universität, wachsender Tech-Branche und dem Flughafen vor der Tür. Die Preise sind in den letzten Jahren stark gestiegen, und angeboten werden vor allem Wohnungen.</p>
+  <h3>Die Axarquía (östliche Costa del Sol)</h3>
+  <p>Von Rincón de la Victoria bis Nerja, plus die Bergdörfer dahinter. Spanischer geprägt, weniger Hochhäuser und pro m² günstiger als der Westen. Dorfhäuser, Villen an den Hängen und Fincas im Hinterland. Siehe <a href="/de/ratgeber/leben-in-der-axarquia/">Leben in der Axarquía</a>.</p>
+  <h3>Das Hinterland</h3>
+  <p>Rund um Antequera, Ronda und Álora. Platz, Ruhe und niedrigere Preise, aber weiter vom Meer und vom Flughafen entfernt und im Winter kälter.</p>
+
+  <h2 id="preise">Was kostet eine Immobilie?</h2>
+  <p>Die Preise unterscheiden sich stark nach Lage und Typ. Als grobe Orientierung: Eine Wohnung an der Küste der Axarquía gibt es ab etwa 200.000 €, ein Dorfhaus in den Hügeln ab etwa 150.000 €, und Villen und sanierte Fincas mit Meerblick erreichen schnell 400.000 € bis weit über 1 Million €. Portale wie Idealista, Kyero oder der Auslandsbereich von ImmoScout24 geben ein aktuelles Bild. Angebotspreise liegen oft über dem, was am Ende gezahlt wird.</p>
+  <p>Rechnen Sie zum Kaufpreis rund 10% Nebenkosten hinzu (siehe <a href="/de/ratgeber/kaufnebenkosten-spanien/">Kaufnebenkosten in Spanien</a>) und bei älteren Häusern ein Renovierungsbudget.</p>
+
+  <h2 id="ablauf">Der Kauf Schritt für Schritt</h2>
+  <ol>
+    <li><strong>NIE-Nummer und Bankkonto</strong>: Ohne NIE können Sie nicht kaufen.</li>
+    <li><strong>Suche und Besichtigungen</strong>: Kommen Sie mehrmals, auch außerhalb der Saison.</li>
+    <li><strong>Angebot und Reservierung</strong>: Ist man sich einig, verlangt der Makler manchmal eine kleine Reservierungszahlung, damit die Immobilie vom Markt genommen wird.</li>
+    <li><strong>Prüfung (Due Diligence)</strong>: Ihr Anwalt prüft Grundbuch, Catastro, Genehmigungen, Schulden und offene Verfahren. Lassen Sie in dieser Phase auch das <a href="/de/immobiliengutachten/">Gutachten</a> erstellen.</li>
+    <li><strong>Contrato de arras</strong>: der Reservierungsvertrag, meist mit 10% Anzahlung. Treten Sie zurück, verlieren Sie diese; tritt der Verkäufer zurück, zahlt er das Doppelte zurück.</li>
+    <li><strong>Hypothek</strong> (falls nötig): Wertgutachten und Zusage der Bank.</li>
+    <li><strong>Escritura beim Notar</strong>: Sie zahlen den Rest, bekommen die Schlüssel und werden Eigentümer.</li>
+    <li><strong>Eintragung und Steuern</strong>: Ihr Anwalt oder die Gestoría zahlt die ITP und lässt die Urkunde ins Grundbuch eintragen.</li>
+  </ol>
+
+  <h2 id="fallen">Fallstricke für ausländische Käufer</h2>
+  <ul>
+    <li><strong>Kein eigener Anwalt</strong>: Makler und Notar vertreten nicht Ihre Interessen.</li>
+    <li><strong>Illegale Anbauten</strong>: ein zusätzliches Schlafzimmer, eine überdachte Terrasse oder ein Pool ohne Genehmigung. Vor allem bei Fincas; siehe <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>.</li>
+    <li><strong>Schulden auf der Immobilie</strong>: Nicht gezahlte IBI oder Gemeinschaftskosten gehen auf den neuen Eigentümer über. Lassen Sie das prüfen.</li>
+    <li><strong>Versteckte Mängel</strong>: Ein Haus, das Sie im Juli besichtigen, wirkt trocken; im Februar zeigt sich, dass die Wände feucht sind.</li>
+    <li><strong>Ferienvermietung</strong>: Wenn Sie vermieten wollen, prüfen Sie vorher, ob Rathaus und Eigentümergemeinschaft das erlauben. Die Regeln wurden in den letzten Jahren verschärft, und seit 2025 ist eine landesweite Registrierungsnummer Pflicht.</li>
+  </ul>
+
+  <h2 id="danach">Nach dem Kauf</h2>
+  <p>Melden Sie Wasser, Strom und Gemeindesteuern auf Ihren Namen um, am besten per Lastschrift. Planen Sie die Renovierung, möglichst vor dem Einzug. Und sorgen Sie dafür, dass jemand nach dem Haus sieht, wenn Sie in Deutschland sind. Bei allen drei Dingen helfen wir: <a href="/de/renovierung/">Renovierung</a>, <a href="/de/instandhaltung/">Instandhaltung</a> und <a href="/de/hausbetreuung/">Hausbetreuung</a>.</p>
+  <p class="note">Dieser Ratgeber gibt allgemeine Informationen und ist keine Rechts- oder Finanzberatung.</p>
+</Guide>

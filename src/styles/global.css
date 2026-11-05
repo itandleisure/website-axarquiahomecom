@@ -53,16 +53,16 @@ ul, ol { padding-left: 1.2em; }
 .menu-toggle { display: none; background: none; border: 0; width: 44px; height: 44px; padding: 12px 10px; cursor: pointer; }
 .menu-toggle span { display: block; height: 2px; background: var(--ink); margin: 4px 0; border-radius: 2px; }
 .menu { display: flex; align-items: center; gap: 16px; }
-.menu ul { display: flex; gap: 14px; list-style: none; margin: 0; padding: 0; }
-.menu ul a { text-decoration: none; color: var(--ink); font-size: 0.97rem; white-space: nowrap; }
+.menu .nav-list { display: flex; gap: 14px; list-style: none; margin: 0; padding: 0; }
+.menu .nav-list a { text-decoration: none; color: var(--ink); font-size: 0.97rem; white-space: nowrap; }
 .menu .btn, .logo { white-space: nowrap; }
-.menu ul a:hover, .menu ul a[aria-current='page'] { color: var(--terra); }
+.menu .nav-list a:hover, .menu .nav-list a[aria-current='page'] { color: var(--terra); }
 @media (max-width: 1180px) {
   .menu-toggle { display: block; }
   .menu { display: none; position: absolute; left: 0; right: 0; top: 68px; background: var(--white); border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; padding: 12px 20px 20px; gap: 12px; box-shadow: var(--shadow); }
   .menu.open { display: flex; }
-  .menu ul { flex-direction: column; gap: 0; }
-  .menu ul a { display: block; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .menu .nav-list { flex-direction: column; gap: 0; }
+  .menu .nav-list a { display: block; padding: 10px 0; border-bottom: 1px solid var(--line); }
   .menu .btn { text-align: center; }
 }
 
@@ -200,6 +200,8 @@ a.card:hover { transform: translateY(-2px); border-color: var(--terra); color: v
 .toc a:hover { color: var(--terra); }
 @media (max-width: 999px) { .toc { position: static; order: -1; } }
 
-.lang-switch { font-size: 0.85rem; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--line); border-radius: 6px; padding: 3px 7px; }
-.lang-switch:hover { color: var(--terra); border-color: var(--terra); }
+.lang-switch { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+.lang-switch a { display: block; font-size: 0.8rem; font-weight: 700; color: var(--muted); text-decoration: none; border: 1px solid var(--line); border-radius: 6px; padding: 3px 6px; }
+.lang-switch a:hover { color: var(--terra); border-color: var(--terra); }
+.footer-langs { display: flex; gap: 14px; flex-wrap: wrap; }
 @media (max-width: 1180px) { .lang-switch { align-self: flex-start; } }

@@ -1,0 +1,92 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Die kurze Antwort' },
+  { id: 'steuer', label: 'Grunderwerbsteuer oder Mehrwertsteuer' },
+  { id: 'notar', label: 'Notar, Grundbuch und Anwalt' },
+  { id: 'beispiel', label: 'Rechenbeispiel' },
+  { id: 'laufend', label: 'Laufende Kosten für Eigentümer' },
+  { id: 'renovierung', label: 'Renovierung: die vergessene Position' },
+  { id: 'tipps', label: 'So sparen Sie' },
+];
+
+const faq = [
+  {
+    q: 'Wie hoch sind die Kaufnebenkosten in Andalusien?',
+    a: 'Bei einer Bestandsimmobilie rechnen Sie mit etwa 9 bis 11% des Kaufpreises: 7% Grunderwerbsteuer (ITP) plus Notar, Grundbuch, Anwalt und gegebenenfalls Hypothekenkosten. Bei einem Neubau vom Bauträger zahlen Sie 10% Mehrwertsteuer (IVA) plus 1,2% Stempelsteuer (AJD).',
+  },
+  {
+    q: 'Wer zahlt die Plusvalía?',
+    a: 'Die kommunale Wertzuwachssteuer auf den Boden (plusvalía municipal) muss gesetzlich der Verkäufer zahlen. Achten Sie darauf, dass der Kaufvertrag sie nicht auf Sie abwälzt.',
+  },
+  {
+    q: 'Was ist der Einbehalt von 3%?',
+    a: 'Kaufen Sie von einem Verkäufer, der nicht in Spanien ansässig ist, müssen Sie 3% des Kaufpreises einbehalten und im Namen des Verkäufers an das spanische Finanzamt abführen. Ihr Anwalt oder der Notar regelt das. Für Sie sind das keine Zusatzkosten, der Betrag geht vom Kaufpreis an den Verkäufer ab.',
+  },
+  {
+    q: 'Bekomme ich als Deutscher eine spanische Hypothek?',
+    a: 'Ja, spanische Banken finanzieren auch Nichtresidenten, meist bis 60 bis 70% des Werts. Sie brauchen also neben den Nebenkosten einen beträchtlichen Eigenanteil.',
+  },
+];
+---
+<Guide lang="de" slug="kaufnebenkosten-spanien" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Wissen, was die Immobilie wirklich kostet?" ctaText="Mit einem Gutachten vor dem Kauf bekommen Sie einen Preis für alles, was instand gesetzt werden muss, bevor Sie unterschreiben.">
+  <h2 id="kurz">Die kurze Antwort</h2>
+  <p>Kaufen Sie eine Bestandsimmobilie in Andalusien, rechnen Sie mit <strong>rund 10% zusätzlich zum Kaufpreis</strong> für Steuern und Gebühren. Bei einem Haus für 300.000 € sind das etwa 30.000 €. Muss an der Immobilie etwas gemacht werden, und bei älteren Häusern in der Axarquía ist das eher die Regel als die Ausnahme, kommt ein Renovierungsbudget dazu.</p>
+
+  <h2 id="steuer">Grunderwerbsteuer oder Mehrwertsteuer</h2>
+  <h3>Bestandsimmobilie: 7% ITP</h3>
+  <p>Beim Kauf einer gebrauchten Immobilie zahlen Sie die Grunderwerbsteuer <em>Impuesto de Transmisiones Patrimoniales</em> (ITP). In Andalusien ist das seit 2021 ein fester Satz von 7%. In einigen besonderen Fällen gilt ein niedrigerer Satz; Ihr Anwalt kann prüfen, ob das auf Sie zutrifft.</p>
+  <h3>Neubau: 10% IVA plus 1,2% AJD</h3>
+  <p>Kaufen Sie einen Neubau direkt vom Bauträger, zahlen Sie statt ITP 10% Mehrwertsteuer (<em>IVA</em>). Dazu kommt die Stempelsteuer <em>Actos Jurídicos Documentados</em> (AJD), in Andalusien 1,2%.</p>
+
+  <h2 id="notar">Notar, Grundbuch und Anwalt</h2>
+  <table class="prices">
+    <thead><tr><th>Position</th><th>Richtwert</th></tr></thead>
+    <tbody>
+      <tr><td>Notar (escritura)</td><td>600 – 1.500 €</td></tr>
+      <tr><td>Grundbuch (Registro de la Propiedad)</td><td>400 – 1.000 €</td></tr>
+      <tr><td>Unabhängiger Anwalt</td><td>etwa 1% + IVA</td></tr>
+      <tr><td>Gestoría (Steuerzahlungen und Eintragung)</td><td>300 – 600 €</td></tr>
+      <tr><td>Wertgutachten und Kosten bei Hypothek</td><td>400 – 1.000 € + Bankgebühren</td></tr>
+      <tr><td>NIE und Bankkonto</td><td>0 – 200 €</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Richtwerte auf Basis üblicher Tarife in der Provinz Málaga. Die genauen Beträge hängen von Kaufpreis und Komplexität ab.</p>
+  <p>Der spanische Notar prüft Identität und Zahlung, aber nicht, ob die Immobilie legal oder in gutem Zustand ist. Ein eigener, unabhängiger Anwalt ist deshalb kein Luxus. Wählen Sie einen, der nicht vom Makler empfohlen wurde. Anders als in Deutschland gibt es kein Notaranderkonto als Standard: Bezahlt wird meist per Bankscheck oder Überweisung beim Notartermin.</p>
+
+  <h2 id="beispiel">Rechenbeispiel: ein Dorfhaus für 250.000 €</h2>
+  <table class="prices">
+    <tbody>
+      <tr><td>Kaufpreis</td><td>250.000 €</td></tr>
+      <tr><td>ITP 7%</td><td>17.500 €</td></tr>
+      <tr><td>Notar und Grundbuch</td><td>1.800 €</td></tr>
+      <tr><td>Anwalt (1% + IVA)</td><td>3.025 €</td></tr>
+      <tr><td>Gestoría und Sonstiges</td><td>700 €</td></tr>
+      <tr><td><strong>Nebenkosten gesamt</strong></td><td><strong>23.025 € (9,2%)</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Mit Hypothek kommen Wertgutachten und Bankgebühren dazu.</p>
+
+  <h2 id="laufend">Laufende Kosten für Eigentümer</h2>
+  <ul>
+    <li><strong>IBI</strong>: die Grundsteuer, ein Prozentsatz des Katasterwerts. Meist einige hundert Euro im Jahr.</li>
+    <li><strong>Müllabfuhr</strong> (basura): von einigen zehn bis über hundert Euro im Jahr.</li>
+    <li><strong>Einkommensteuer für Nichtresidenten (IRNR)</strong>: Sind Sie in Spanien nicht steuerlich ansässig, zahlen Sie jedes Jahr Steuer auf ein fiktives Einkommen aus Ihrem Haus, auch wenn Sie es nicht vermieten. Für Ansässige der EU (also auch aus Deutschland und Österreich) beträgt der Satz 19% auf 1,1% oder 2% des Katasterwerts; für Ansässige der Schweiz 24%. Bei Vermietung gelten andere Regeln.</li>
+    <li><strong>Gemeinschaftskosten</strong> (comunidad): bei Wohnungen und Urbanisationen von 50 € bis über 300 € im Monat.</li>
+    <li><strong>Versicherung, Wasser, Strom und Internet</strong>.</li>
+    <li><strong>Pflege und Kontrolle</strong>: Ein leerstehendes Haus braucht Aufmerksamkeit. Siehe <a href="/de/hausbetreuung/">Hausbetreuung</a>.</li>
+  </ul>
+
+  <h2 id="renovierung">Renovierung: die vergessene Position</h2>
+  <p>Viele Käufer rechnen die Nebenkosten sorgfältig durch und vergessen, dass auch am Haus etwas zu tun ist. Ein dreißig Jahre altes Bad, Elektrik ohne Erdung, ein undichtes Dach: Das sind Positionen von einigen tausend bis zu einigen zehntausend Euro. Lassen Sie sich vor dem Kauf ein Gutachten mit Reparaturpreisen erstellen und lesen Sie unseren Ratgeber <a href="/de/ratgeber/renovierungskosten-spanien/">Renovierungskosten in Spanien</a>.</p>
+
+  <h2 id="tipps">So sparen Sie</h2>
+  <ul>
+    <li>Lassen Sie die Immobilie begutachten und nutzen Sie die Mängel in der Verhandlung.</li>
+    <li>Prüfen Sie, ob der Katasterwert realistisch ist; er bestimmt Ihre jährlichen Steuern.</li>
+    <li>Lassen Sie die Plusvalía beim Verkäufer, wie es das Gesetz vorsieht.</li>
+    <li>Planen Sie die Renovierung vor dem Einzug: Arbeiten in einem bewohnten Haus sind teurer und aufwendiger.</li>
+  </ul>
+  <p class="note">Dieser Ratgeber gibt allgemeine Informationen auf Basis der Regeln in Andalusien im November 2026. Sätze können sich ändern. Er ist keine Steuer- oder Rechtsberatung.</p>
+</Guide>

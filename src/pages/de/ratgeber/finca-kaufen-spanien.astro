@@ -1,0 +1,86 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'anders', label: 'Warum eine Finca anders ist' },
+  { id: 'legal', label: 'Ist das Haus legal?' },
+  { id: 'wasser', label: 'Wasser: Brunnen, Netz oder Tank' },
+  { id: 'zufahrt', label: 'Zufahrtswege und Nachbarn' },
+  { id: 'abwasser', label: 'Klärgrube und Abwasser' },
+  { id: 'strom', label: 'Strom und Internet' },
+  { id: 'zustand', label: 'Baulicher Zustand' },
+  { id: 'checkliste', label: 'Checkliste vor der Unterschrift' },
+];
+
+const faq = [
+  {
+    q: 'Was ist der Unterschied zwischen Finca und Cortijo?',
+    a: 'Finca heißt wörtlich „Grundstück“ und wird für jedes Landhaus mit Land verwendet. Ein Cortijo ist ein traditionelles andalusisches Bauernhaus, oft mit Nebengebäuden. Rechtlich ist beides dasselbe: ein Haus auf ländlichem Boden (suelo rústico), wo viel strengere Bauregeln gelten als im Ort.',
+  },
+  {
+    q: 'Kann ich eine Finca kaufen, die nicht ganz legal ist?',
+    a: 'Das können Sie, aber Sie müssen genau wissen, was Sie kaufen. Ein Haus mit AFO-Status ist eingetragen und bewohnbar, darf aber nicht erweitert werden. Ein Haus ohne Genehmigung und ohne AFO kann Probleme bei Hypothek, Anschlüssen und Wiederverkauf machen. Lassen Sie es vorher von einem unabhängigen Anwalt und Architekten prüfen.',
+  },
+  {
+    q: 'Darf ich bei meiner Finca einen Pool bauen?',
+    a: 'Nur wenn Bebauungsplan und Status des Hauses es zulassen und Sie eine Genehmigung bekommen. Bei Häusern mit AFO-Status darf in der Regel nichts Neues gebaut werden. Ein Pool, der ohne Genehmigung schon besteht, fällt oft unter dieselbe AFO-Regelung wie das Haus.',
+  },
+  {
+    q: 'Was kostet die Sanierung einer Finca?',
+    a: 'Das ist sehr unterschiedlich. Eine bewohnte, gepflegte Finca braucht vielleicht nur ein neues Bad und einen Anstrich. Ein verfallener Cortijo kann mehr kosten als der Kauf selbst. Ein Gutachten vor dem Kauf sagt es Ihnen vorher. Siehe auch unseren Ratgeber zu den Renovierungskosten.',
+  },
+];
+---
+<Guide lang="de" slug="finca-kaufen-spanien" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Eine Finca im Auge?" ctaText="Wir begutachten sie vor der Unterschrift: Bausubstanz, Wasser, Abwasser, Zufahrt und was die Instandsetzung kostet.">
+  <h2 id="anders">Warum eine Finca anders ist</h2>
+  <p>Eine Wohnung an der Küste ist relativ einfach: Das Gebäude hat seine Genehmigungen, Wasser und Strom kommen aus dem Netz, und die Eigentümergemeinschaft kümmert sich um die Gemeinschaftsflächen. Bei einer Finca sind Sie für alles selbst verantwortlich. Und weil viele Landhäuser in der Axarquía über die Jahre Stück für Stück erweitert wurden, ohne dass jemand nach Genehmigungen fragte, gibt es mehr zu prüfen.</p>
+  <p>Das heißt nicht, dass Sie die Finger davon lassen sollten. Es heißt aber, dass Sie einige Dinge gründlich prüfen lassen sollten, bevor Sie den Reservierungsvertrag (<em>contrato de arras</em>) unterschreiben. Dabei zahlen Sie meist 10% an, die Sie verlieren, wenn Sie danach zurücktreten.</p>
+
+  <h2 id="legal">Ist das Haus legal?</h2>
+  <p>Das ist die wichtigste Frage. Auf ländlichem Boden (<em>suelo no urbanizable</em> oder <em>suelo rústico</em>) ist Bauen in Andalusien stark eingeschränkt, deshalb wurden viele bestehende Fincas ganz oder teilweise ohne Genehmigung gebaut oder erweitert.</p>
+  <p>Grob gibt es drei Situationen:</p>
+  <ul>
+    <li><strong>Vollständig genehmigt</strong>: Das Haus mit Anbauten, Pool und Nebengebäuden hat die richtigen Genehmigungen und ist so im Catastro und im Grundbuch (<em>Registro de la Propiedad</em>) eingetragen.</li>
+    <li><strong>AFO-Status</strong>: Das Haus wurde ohne Genehmigung gebaut, aber die Frist, in der die Behörden einschreiten können, ist abgelaufen. Es hat eine offizielle Erklärung „asimilado a fuera de ordenación“. Es darf bewohnt, verkauft und angeschlossen, aber nicht erweitert werden. Siehe unseren Ratgeber <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>.</li>
+    <li><strong>Nicht legalisiert</strong>: keine Genehmigung und keine AFO-Erklärung. Manchmal lässt sich das noch beantragen, manchmal nicht (etwa in einem Naturschutzgebiet oder Überschwemmungsgebiet). Das ist das größte Risiko.</li>
+  </ul>
+  <p>Was Sie prüfen: Holen Sie eine <em>nota simple</em> aus dem Grundbuch (Eigentümer, Lasten, Hypotheken, eingetragene Fläche), vergleichen Sie sie mit dem Catastro und mit dem, was tatsächlich dasteht, und fragen Sie im Rathaus nach offenen Verfahren. Stimmt die Fläche auf dem Papier nicht mit der Wirklichkeit überein, wurde fast sicher etwas ohne Genehmigung gebaut.</p>
+
+  <h2 id="wasser">Wasser: Brunnen, Netz oder Tank</h2>
+  <p>Die Axarquía hat Jahre der Dürre hinter sich. Von 2023 bis Anfang 2026 galten strenge Einschränkungen, die im März 2026 nach einem nassen Winter aufgehoben wurden. Wasser bleibt bei jeder Finca ein zentrales Thema. Mögliche Quellen:</p>
+  <ul>
+    <li><strong>Anschluss an das öffentliche Netz</strong>: am zuverlässigsten, aber längst nicht überall verfügbar.</li>
+    <li><strong>Bewässerungswasser</strong> einer <em>comunidad de regantes</em>: landwirtschaftliches Wasser, oft ein Anteil pro Parzelle. Formal nicht als Trinkwasser gedacht.</li>
+    <li><strong>Eigener Brunnen oder Quelle</strong>: nur legal, wenn eingetragen oder genehmigt. Lassen Sie sich die Papiere zeigen und die Wasserqualität prüfen.</li>
+    <li><strong>Tank, der per Lkw gefüllt wird</strong>: funktioniert, kostet aber Geld und Planung.</li>
+  </ul>
+  <p>Fragen Sie den Verkäufer, wie viel Wasser in den letzten Sommern verfügbar war und ob das Recht darauf rechtlich zur Immobilie gehört. Eine Finca mit traumhafter Aussicht, aber ohne verlässliches Wasser verliert schnell ihren Reiz.</p>
+
+  <h2 id="zufahrt">Zufahrtswege und Nachbarn</h2>
+  <p>Wie kommen Sie zum Haus? Führt der Weg über öffentlichen Grund (<em>camino público</em>) oder über das Land eines Nachbarn? Im zweiten Fall sollte ein Wegerecht (<em>servidumbre de paso</em>) im Grundbuch stehen. Fragen Sie auch, wer den Weg instand hält. Nach Starkregen können unbefestigte Bergwege unpassierbar werden, und auch ein Lkw mit Baumaterial oder ein Betonmischer muss durchkommen.</p>
+
+  <h2 id="abwasser">Klärgrube und Abwasser</h2>
+  <p>Die meisten Fincas sind nicht an die Kanalisation angeschlossen. Sie haben eine Klärgrube (<em>fosa séptica</em>) oder eine kleine Kläranlage. Ältere Gruben lecken manchmal in den Boden, was nicht mehr erlaubt ist. Lassen Sie prüfen, wo die Grube liegt, in welchem Zustand sie ist und ob sie den Vorschriften entspricht. Eine neue dichte Grube oder Kläranlage kostet schnell ein paar tausend Euro.</p>
+
+  <h2 id="strom">Strom und Internet</h2>
+  <p>Ist das Haus ans Stromnetz angeschlossen, und mit welcher Leistung? Manche Fincas laufen mit Solarpaneelen, Batterien und Generator. Das kann gut funktionieren, aber prüfen Sie die Kapazität, wenn Sie Klimaanlage, Poolpumpe oder ein Elektroauto wollen. In den Bergen gibt es oft keine Glasfaser; dann sind 4G/5G oder Satelliteninternet die Lösung. Testen Sie den Empfang vor Ort.</p>
+
+  <h2 id="zustand">Baulicher Zustand</h2>
+  <p>Alte Fincas sind oft aus Stein, Lehm und Holzbalken gebaut. Charmant, aber anfällig für Feuchtigkeit, Holzwurm und Risse, wo sich der Boden am Hang bewegt. Flachdächer und Terrassen werden mit der Zeit undicht, und die Elektrik entspricht oft nicht den aktuellen Vorschriften. Ein <a href="/de/immobiliengutachten/">Gutachten vor dem Kauf</a> zeigt das auf, mit einem Preis für jeden Mangel, den Sie auch in der Verhandlung nutzen können.</p>
+
+  <h2 id="checkliste">Checkliste vor der Unterschrift</h2>
+  <ul class="checks">
+    <li>Nota simple aus dem Grundbuch angefordert</li>
+    <li>Catastro und Grundbuch mit der Wirklichkeit verglichen</li>
+    <li>Genehmigungen oder AFO-Erklärung gesehen, auch für Pool und Anbauten</li>
+    <li>Im Rathaus nach offenen Verfahren gefragt</li>
+    <li>Wasserquelle, Rechte und Papiere geklärt</li>
+    <li>Zufahrtsweg und Wegerecht geprüft</li>
+    <li>Klärgrube kontrolliert</li>
+    <li>Stromversorgung und Internet getestet</li>
+    <li>Energieausweis (certificado energético) erhalten; er ist beim Verkauf Pflicht</li>
+    <li>Bautechnisches Gutachten mit Reparaturpreisen</li>
+    <li>Unabhängigen Anwalt beauftragt (nicht den, den der Makler empfiehlt)</li>
+  </ul>
+  <p class="note">Dieser Ratgeber gibt allgemeine Informationen und ist keine Rechtsberatung. Das Urteil über eine bestimmte Immobilie kommt von einem Anwalt oder Architekten.</p>
+</Guide>

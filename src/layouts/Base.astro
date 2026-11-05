@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import { site, isFilled } from '../data/site';
-import { ui, nav as navs, services as svcs, alternatesFor, path as route, type Lang } from '../i18n';
+import { ui, nav as navs, services as svcs, alternatesFor, langs, langNames, path as route, type Lang } from '../i18n';
 
 interface Props {
   title: string;
@@ -20,10 +20,11 @@ const canonical = new URL(path, site.url).href;
 const allAlternates: Partial<Record<string, string>> = { ...alternatesFor(path), ...alternates, [lang]: path };
 const t = ui[lang];
 const nav = navs[lang];
-const other: Lang = lang === 'nl' ? 'en' : 'nl';
-const otherHref = allAlternates[other] ?? route(other, 'home');
+const others = langs
+  .filter((l) => l !== lang)
+  .map((l) => ({ l, href: allAlternates[l] ?? route(l, 'home') }));
 const robots = !site.launchReady || noindex ? 'noindex, nofollow' : 'index, follow';
-const fullTitle = path === '/nl/' || path === '/en/' ? title : `${title} | ${site.brand}`;
+const fullTitle = langs.some((l) => path === `/${l}/`) ? title : `${title} | ${site.brand}`;
 
 const c = site.company;
 const organization: Record<string, unknown> = {
@@ -33,7 +34,7 @@ const organization: Record<string, unknown> = {
   name: site.brand,
   url: site.url,
   areaServed: site.villages.map((v) => ({ '@type': 'Place', name: `${v}, Málaga, España` })),
-  knowsLanguage: ['nl', 'en', 'es'],
+  knowsLanguage: ['nl', 'en', 'de', 'es'],
 };
 if (isFilled(c.phone)) organization.telephone = c.phone;
 if (isFilled(c.email)) organization.email = c.email;
@@ -85,12 +86,16 @@ const current = Astro.url.pathname;
           <span></span><span></span><span></span>
         </button>
         <nav id="hoofdmenu" class="menu" aria-label={t.mainMenu}>
-          <ul>
+          <ul class="nav-list">
             {nav.map((n) => (
               <li><a href={n.href} aria-current={current === n.href ? 'page' : undefined}>{n.label}</a></li>
             ))}
           </ul>
-          <a class="lang-switch" href={otherHref} hreflang={other} lang={other} title={t.otherLangLabel}>{other.toUpperCase()}</a>
+          <ul class="lang-switch" aria-label={t.langLabel}>
+            {others.map((o) => (
+              <li><a href={o.href} hreflang={o.l} lang={o.l} title={`${ui[o.l].readIn} ${langNames[o.l]}`}>{o.l.toUpperCase()}</a></li>
+            ))}
+          </ul>
           <a class="btn btn-small" href={route(lang, 'request')}>{t.cta}</a>
         </nav>
         <script>
@@ -113,7 +118,7 @@ const current = Astro.url.pathname;
         <div>
           <p class="footer-brand">Axarquía<b>Home</b></p>
           <p>{t.tagline}</p>
-          <p><a href={otherHref} hreflang={other}>{t.otherLang}</a></p>
+          <p class="footer-langs">{others.map((o) => <a href={o.href} hreflang={o.l} lang={o.l}>{langNames[o.l]}</a>)}</p>
         </div>
         <div>
           <p class="footer-title">{t.fServices}</p>
@@ -134,8 +139,8 @@ const current = Astro.url.pathname;
           <p class="footer-title">{t.fAbout}</p>
           <ul>
             <li><a href={route(lang, 'guides')}>{t.fGuides}</a></li>
-            <li><a href={lang === 'nl' ? '/nl/over-ons/' : '/en/about-us/'}>{t.fAboutUs}</a></li>
-            <li><a href={lang === 'nl' ? '/nl/projecten/' : '/en/projects/'}>{t.fProjects}</a></li>
+            <li><a href={route(lang, 'about')}>{t.fAboutUs}</a></li>
+            <li><a href={route(lang, 'projects')}>{t.fProjects}</a></li>
             <li><a href={route(lang, 'privacy')}>{t.fPrivacy}</a></li>
           </ul>
         </div>

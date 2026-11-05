@@ -1,4 +1,5 @@
-// Overzicht van alle gidsen. Volgorde = volgorde op /nl/gidsen/.
+// Overzicht van alle gidsen. De volgorde is in elke taal gelijk: de gids op
+// positie i is de vertaling van de gids op positie i in de andere talen.
 export interface GuideMeta {
   slug: string;
   title: string;
@@ -10,14 +11,11 @@ export interface GuideMeta {
   minutes: number;
   published: string;
   updated?: string;
-  /** slug van de vertaling in de andere taal */
-  alt?: string;
 }
 
 export const guides: GuideMeta[] = [
   {
     slug: 'emigreren-naar-spanje',
-    alt: 'moving-to-spain-from-the-uk',
     title: 'Emigreren naar Spanje: de complete gids voor de Axarquía en Costa del Sol',
     seoTitle: 'Emigreren naar Spanje (Costa del Sol en Axarquía): stappenplan 2026',
     short: 'Emigreren naar Spanje',
@@ -29,7 +27,6 @@ export const guides: GuideMeta[] = [
   },
   {
     slug: 'finca-kopen-in-spanje',
-    alt: 'buying-a-finca-in-spain',
     title: 'Finca kopen in Spanje: legaliteit, water, toegang en keuring',
     seoTitle: 'Finca kopen in Spanje: waar u op moet letten (checklist)',
     short: 'Finca kopen',
@@ -41,7 +38,6 @@ export const guides: GuideMeta[] = [
   },
   {
     slug: 'kosten-koper-spanje',
-    alt: 'buying-costs-in-spain',
     title: 'Kosten koper in Spanje: wat u bovenop de prijs betaalt (en wat verbouwen kost)',
     seoTitle: 'Kosten koper Spanje 2026: belasting, notaris en verbouwen',
     short: 'Kosten koper Spanje',
@@ -53,7 +49,6 @@ export const guides: GuideMeta[] = [
   },
   {
     slug: 'kosten-huis-renoveren-spanje',
-    alt: 'renovation-costs-spain',
     title: 'Wat kost een huis renoveren in Spanje?',
     seoTitle: 'Wat kost een huis renoveren in Spanje? Prijzen per m² (2026)',
     short: 'Kosten renoveren',
@@ -65,7 +60,6 @@ export const guides: GuideMeta[] = [
   },
   {
     slug: 'wonen-in-de-axarquia',
-    alt: 'living-in-the-axarquia',
     title: 'Wonen in de Axarquía: dorpen, kosten, zorg en klimaat',
     seoTitle: 'Wonen in Spanje: de Axarquía bij Málaga (dorpen, kosten, zorg)',
     short: 'Wonen in de Axarquía',
@@ -77,7 +71,6 @@ export const guides: GuideMeta[] = [
   },
   {
     slug: 'overwinteren-in-spanje',
-    alt: 'wintering-in-spain',
     title: 'Overwinteren in Spanje: zo regelt u het, en zo blijft uw huis in orde',
     seoTitle: 'Overwinteren in Spanje: tips voor de Costa del Sol en uw huis',
     short: 'Overwinteren',
@@ -89,7 +82,6 @@ export const guides: GuideMeta[] = [
   },
   {
     slug: 'huis-kopen-malaga-andalusie',
-    alt: 'buying-property-in-malaga',
     title: 'Huis kopen in Málaga en Andalusië: gebieden, prijzen en het koopproces',
     seoTitle: 'Huis kopen in Málaga en Andalusië: gebieden, prijzen, stappen',
     short: 'Huis kopen in Málaga',
@@ -101,7 +93,6 @@ export const guides: GuideMeta[] = [
   },
   {
     slug: 'afo-legaliseren-andalusie',
-    alt: 'afo-legalisation-andalusia',
     title: 'AFO en legaliseren in Andalusië uitgelegd',
     seoTitle: 'AFO-status in Andalusië: wat betekent het en wat mag wel en niet?',
     short: 'AFO en legaliseren',
@@ -116,7 +107,6 @@ export const guides: GuideMeta[] = [
 export const guidesEn: GuideMeta[] = [
   {
     slug: 'moving-to-spain-from-the-uk',
-    alt: 'emigreren-naar-spanje',
     title: 'Moving to Spain from the UK: a complete guide for the Axarquía and Costa del Sol',
     seoTitle: 'Moving to Spain from the UK after Brexit: step-by-step guide (2026)',
     short: 'Moving to Spain',
@@ -128,7 +118,6 @@ export const guidesEn: GuideMeta[] = [
   },
   {
     slug: 'buying-a-finca-in-spain',
-    alt: 'finca-kopen-in-spanje',
     title: 'Buying a finca in Spain: legal status, water, access and survey',
     seoTitle: 'Buying a finca in Spain: what to check before you sign',
     short: 'Buying a finca',
@@ -140,7 +129,6 @@ export const guidesEn: GuideMeta[] = [
   },
   {
     slug: 'buying-costs-in-spain',
-    alt: 'kosten-koper-spanje',
     title: 'The costs of buying a property in Spain (and what renovation adds)',
     seoTitle: 'Costs of buying property in Spain 2026: taxes, notary and fees',
     short: 'Buying costs',
@@ -152,7 +140,6 @@ export const guidesEn: GuideMeta[] = [
   },
   {
     slug: 'renovation-costs-spain',
-    alt: 'kosten-huis-renoveren-spanje',
     title: 'How much does it cost to renovate a house in Spain?',
     seoTitle: 'Renovation costs in Spain: prices per m² (2026)',
     short: 'Renovation costs',
@@ -164,7 +151,6 @@ export const guidesEn: GuideMeta[] = [
   },
   {
     slug: 'living-in-the-axarquia',
-    alt: 'wonen-in-de-axarquia',
     title: 'Living in the Axarquía: towns, costs, healthcare and climate',
     seoTitle: 'Living in the Axarquía, Málaga: towns compared, costs and healthcare',
     short: 'Living in the Axarquía',
@@ -176,7 +162,6 @@ export const guidesEn: GuideMeta[] = [
   },
   {
     slug: 'wintering-in-spain',
-    alt: 'overwinteren-in-spanje',
     title: 'Wintering in Spain: the 90-day rule, and keeping your home in order',
     seoTitle: 'Wintering in Spain after Brexit: the 90/180 rule and your home',
     short: 'Wintering in Spain',
@@ -188,7 +173,6 @@ export const guidesEn: GuideMeta[] = [
   },
   {
     slug: 'buying-property-in-malaga',
-    alt: 'huis-kopen-malaga-andalusie',
     title: 'Buying property in Málaga and Andalusia: areas, prices and the process',
     seoTitle: 'Buying property in Málaga province: areas, prices and steps',
     short: 'Buying in Málaga',
@@ -200,7 +184,6 @@ export const guidesEn: GuideMeta[] = [
   },
   {
     slug: 'afo-legalisation-andalusia',
-    alt: 'afo-legaliseren-andalusie',
     title: 'AFO status and legalisation in Andalusia explained',
     seoTitle: 'AFO status in Andalusia: what it means and what you can (not) do',
     short: 'AFO explained',
@@ -211,3 +194,97 @@ export const guidesEn: GuideMeta[] = [
     published: '2026-11-05',
   },
 ];
+
+export const guidesDe: GuideMeta[] = [
+  {
+    slug: 'auswandern-nach-spanien',
+    title: 'Auswandern nach Spanien: der komplette Ratgeber für die Axarquía und die Costa del Sol',
+    seoTitle: 'Auswandern nach Spanien (Costa del Sol, Axarquía): Schritt für Schritt 2026',
+    short: 'Auswandern nach Spanien',
+    description: 'Schritt für Schritt nach Spanien auswandern: NIE, Anmeldung, Steuern, Krankenversicherung, Wohnen und ein Haus finden in der Axarquía und an der Costa del Sol.',
+    lead: 'Jedes Jahr ziehen tausende Deutsche, Österreicher und Schweizer an die spanische Sonne. Dieser Ratgeber zeigt alle Schritte, vom ersten Behördengang bis zum bezugsfertigen Haus.',
+    keyword: 'auswandern nach spanien',
+    minutes: 11,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'finca-kaufen-spanien',
+    title: 'Finca kaufen in Spanien: Legalität, Wasser, Zufahrt und Gutachten',
+    seoTitle: 'Finca kaufen in Spanien: worauf Sie vor der Unterschrift achten müssen',
+    short: 'Finca kaufen',
+    description: 'Eine Finca in Andalusien kaufen? Was Sie prüfen müssen: Genehmigungen und AFO-Status, Wasser und Brunnen, Zufahrtswege, Klärgrube, Gutachten und Renovierungskosten.',
+    lead: 'Eine Finca in den Hügeln der Axarquía ist für viele ein Traum. Doch bei einem Landhaus gibt es weit mehr zu prüfen als bei einer Wohnung an der Küste.',
+    keyword: 'finca kaufen spanien',
+    minutes: 10,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'kaufnebenkosten-spanien',
+    title: 'Kaufnebenkosten in Spanien (und was eine Renovierung dazu kostet)',
+    seoTitle: 'Kaufnebenkosten Spanien 2026: Steuern, Notar und Gebühren',
+    short: 'Kaufnebenkosten',
+    description: 'Was zahlen Sie beim Hauskauf in Spanien zusätzlich zum Kaufpreis? Grunderwerbsteuer in Andalusien, Notar, Grundbuch, Anwalt, laufende Kosten für Nichtresidenten und Renovierung.',
+    lead: 'Rechnen Sie bei einer Bestandsimmobilie in Andalusien mit rund 10% Nebenkosten auf den Kaufpreis, und oft mit einem ordentlichen Betrag für die Sanierung. So setzen sich die Kosten zusammen.',
+    keyword: 'kaufnebenkosten spanien',
+    minutes: 8,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'renovierungskosten-spanien',
+    title: 'Was kostet es, ein Haus in Spanien zu renovieren?',
+    seoTitle: 'Renovierungskosten in Spanien: Preise pro m² (2026)',
+    short: 'Renovierungskosten',
+    description: 'Richtpreise für Renovierungen in der Axarquía: pro m², Bad, Küche, Dach, Pool und Finca. Dazu, was den Preis bestimmt und wie Sie die Kosten im Griff behalten.',
+    lead: 'Die Frage, die jeder Käufer stellt: Was kostet die Sanierung? Die ehrliche Antwort beginnt mit „Das kommt darauf an“, aber wir können Ihnen realistische Spannen nennen.',
+    keyword: 'haus renovieren spanien kosten',
+    minutes: 8,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'leben-in-der-axarquia',
+    title: 'Leben in der Axarquía: Orte, Lebenshaltungskosten, Gesundheit und Klima',
+    seoTitle: 'Leben in der Axarquía (Málaga): Orte im Vergleich, Kosten und Ärzte',
+    short: 'Leben in der Axarquía',
+    description: 'Wie lebt es sich in der Axarquía östlich von Málaga? Die Orte im Vergleich, Lebenshaltungskosten, Gesundheitsversorgung, Klima und Anreise aus Deutschland.',
+    lead: 'Weiße Dörfer vor den Bergen, Avocados und Mangos an den Hängen und das Meer zwanzig Minuten entfernt. Was die Axarquía so beliebt macht und welcher Ort zu Ihnen passt.',
+    keyword: 'axarquia leben',
+    minutes: 9,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'ueberwintern-in-spanien',
+    title: 'Überwintern in Spanien: was Sie regeln müssen und wer nach Ihrem Haus sieht',
+    seoTitle: 'Überwintern in Spanien: Anmeldung, Versicherung und Ihr Haus',
+    short: 'Überwintern in Spanien',
+    description: 'Den Winter an der Costa del Sol verbringen: was Sie bei Aufenthalt, Steuern und Krankenversicherung beachten müssen, und wie Ihr Haus versorgt ist, wenn Sie wieder zu Hause sind.',
+    lead: 'Der Winter in der Axarquía ist mild und sonnig. Viele Deutsche verbringen dort jedes Jahr einige Monate. Was müssen Sie regeln, und wer kümmert sich um das Haus, wenn Sie wieder abreisen?',
+    keyword: 'überwintern in spanien',
+    minutes: 7,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'immobilie-kaufen-malaga',
+    title: 'Immobilie kaufen in Málaga und Andalusien: Regionen, Preise und Ablauf',
+    seoTitle: 'Haus kaufen in der Provinz Málaga: Regionen, Preise und Ablauf',
+    short: 'Kaufen in Málaga',
+    description: 'Ein Haus in der Provinz Málaga kaufen: die wichtigsten Regionen, was Immobilien ungefähr kosten und wie der Kauf in Spanien Schritt für Schritt abläuft.',
+    lead: 'Die Provinz Málaga gehört zu den beliebtesten Orten Europas für ein Haus in der Sonne. Von Marbella im Westen bis Nerja im Osten: So finden Sie sich zurecht.',
+    keyword: 'immobilie kaufen malaga',
+    minutes: 10,
+    published: '2026-11-05',
+  },
+  {
+    slug: 'afo-legalisierung-andalusien',
+    title: 'AFO-Status und Legalisierung in Andalusien erklärt',
+    seoTitle: 'AFO-Status in Andalusien: was er bedeutet und was erlaubt ist',
+    short: 'AFO erklärt',
+    description: 'Was bedeutet AFO (asimilado a fuera de ordenación) für ein Haus in Andalusien? Was erlaubt ist und was nicht, wie das Verfahren abläuft und worauf Käufer achten sollten.',
+    lead: 'Schätzungsweise 300.000 Häuser in Andalusien haben keine vollständige Baugenehmigung. Viele davon stehen auf dem Land, auch in der Axarquía. Was bedeutet das für Sie als Käufer oder Eigentümer?',
+    keyword: 'afo andalusien',
+    minutes: 8,
+    published: '2026-11-05',
+  },
+];
+
+import type { Lang } from '../i18n';
+export const guidesBy: Record<Lang, GuideMeta[]> = { nl: guides, en: guidesEn, de: guidesDe };

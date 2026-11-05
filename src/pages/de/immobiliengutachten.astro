@@ -1,0 +1,107 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site, dePrice } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Sind Gutachten vor dem Kauf in Spanien üblich?',
+    a: 'Nein, und genau deshalb lohnt sich eines. In Spanien kaufen Sie eine Immobilie normalerweise wie gesehen. Mängel, die Sie nach dem Notartermin entdecken, sind fast immer Ihr Problem. Ein Gutachten vor der Unterzeichnung des Reservierungsvertrags (contrato de arras) erspart teure Überraschungen.',
+  },
+  {
+    q: 'Was kostet ein Gutachten?',
+    a: `Die meisten Gutachten kosten zwischen ${dePrice(prices.keuring)}, je nach Größe und danach, ob es sich um eine Wohnung, ein Dorfhaus oder eine Finca handelt. Sie bekommen vorab einen Festpreis.`,
+  },
+  {
+    q: 'Prüfen Sie, ob das Haus legal ist?',
+    a: 'Wir prüfen, ob das Vorhandene mit den Eintragungen (Catastro und Grundbuch) übereinstimmt, und achten auf Anzeichen für Bauarbeiten ohne Genehmigung. Das rechtliche Urteil, etwa in einem AFO-Verfahren, kommt von dem Architekten oder Anwalt, mit dem wir zusammenarbeiten.',
+  },
+  {
+    q: 'Wie schnell können Sie begutachten?',
+    a: 'Meist innerhalb einer Woche nach Ihrer Anfrage, oft schneller. Sie müssen nicht dabei sein: Wir vereinbaren den Zugang mit dem Makler oder Verkäufer und schicken Ihnen den Bericht digital.',
+  },
+  {
+    q: 'Bekomme ich auch einen Preis für die Arbeiten?',
+    a: 'Ja, das ist der große Vorteil eines Gutachtens durch ein Bauunternehmen. Der Bericht nennt für jeden Mangel einen Richtpreis für die Behebung. So wissen Sie, was die Immobilie wirklich kostet, und können entsprechend verhandeln.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Immobiliengutachten vor dem Kauf',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['de', 'nl', 'en'],
+};
+---
+<Base
+  title="Immobiliengutachten in Spanien: wissen, was Sie kaufen"
+  description="Gutachten vor dem Kauf für Häuser und Fincas in der Axarquía. Ein Bericht auf Deutsch mit Fotos, Mängeln und Kosten für die Behebung. Auch wenn Sie nicht in Spanien sind."
+  path="/de/immobiliengutachten/"
+  lang="de"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="de" items={[{ name: 'Immobiliengutachten', href: '/de/immobiliengutachten/' }]} />
+  <Hero
+    lang="de"
+    eyebrow="Gutachten vor dem Kauf"
+    title="Prüfen lassen, <em>bevor Sie unterschreiben</em>"
+    lead="In Spanien kaufen Sie eine Immobilie wie gesehen. Wir begutachten sie vor dem Kauf und sagen Ihnen klar, was in Ordnung ist, was nicht und was die Behebung kostet."
+    cta="Gutachten anfragen"
+    ctaHref="/de/anfrage/?dienst=aankoopkeuring"
+  />
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>Was wir prüfen</h2>
+        <ul class="checks">
+          <li><strong>Bausubstanz</strong>: Risse, Setzungen, tragende Wände und Balken.</li>
+          <li><strong>Dach und Terrassen</strong>: Undichtigkeiten, Dämmung und Entwässerung.</li>
+          <li><strong>Feuchtigkeit</strong>: aufsteigende Feuchte, Kondenswasser und Schimmel.</li>
+          <li><strong>Elektrik</strong>: Erdung, Sicherungskasten und ob sie den aktuellen Vorschriften entspricht.</li>
+          <li><strong>Wasser und Abwasser</strong>: Leitungen, Druck, Warmwasserbereiter, Klärgrube oder Kanalanschluss.</li>
+          <li><strong>Pool und Außenbereich</strong>: Undichtigkeiten, Technik und Mauern.</li>
+          <li><strong>Eintragung</strong>: Stimmt das Vorhandene mit dem Catastro überein?</li>
+        </ul>
+        <h2>Fincas brauchen besondere Sorgfalt</h2>
+        <p>Bei einem Landhaus in der Axarquía gibt es mehr zu prüfen als bei einer Wohnung. Woher kommt das Wasser, und ist das legal? Ist der Zufahrtsweg öffentlich, oder führt er über das Grundstück des Nachbarn? Sind Anbau und Pool genehmigt? Gibt es eine Klärgrube, die den Vorschriften entspricht? Wir gehen alles systematisch durch und ziehen bei Bedarf unseren Architekten hinzu.</p>
+      </div>
+      <div class="box">
+        <h3>Was Sie bekommen</h3>
+        <ul class="checks">
+          <li>Einen Bericht auf Deutsch, mit Fotos</li>
+          <li>Für jeden Mangel: wie ernst er ist und was die Behebung kostet</li>
+          <li>Hinweise, was Sie in der Verhandlung ansprechen können</li>
+          <li>Ein Telefon- oder Videogespräch, um alles durchzugehen</li>
+        </ul>
+        <p class="price" style="font-family:var(--serif);font-size:1.4rem;color:var(--terra-dark);margin:0.4em 0">{dePrice(prices.keuring)}</p>
+        <p class="note">Festpreis, vorab vereinbart, je nach Art und Größe der Immobilie.</p>
+        <Todo label="bevestiging prijs, naam van de partner-aparejador of architect, en of het rapport in het Duits kan." />
+        <a class="btn" href="/de/anfrage/?dienst=aankoopkeuring">Gutachten anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="de"
+    title="Von der Anfrage zum Bericht"
+    steps={[
+      { t: 'Anfrage', d: 'Schicken Sie uns den Link zum Inserat und Ihre Fragen.' },
+      { t: 'Termin', d: 'Wir vereinbaren die Besichtigung mit dem Makler oder Verkäufer.' },
+      { t: 'Begutachtung', d: 'Eine gründliche Prüfung innen und außen, mit Fotos und Messungen.' },
+      { t: 'Bericht und Gespräch', d: 'Sie bekommen den Bericht innerhalb weniger Tage, und wir gehen ihn gemeinsam durch.' },
+    ]}
+  />
+
+  <Faq items={faq} lang="de" />
+  <Cta lang="de" dienst="aankoopkeuring" title="Eine Immobilie gefunden?" text="Schicken Sie uns den Link oder die Adresse. Innerhalb von 24 Stunden sagen wir Ihnen, wann wir begutachten können und was es kostet." />
+  <Services lang="de" exclude="immobiliengutachten" title="Nach dem Kauf" />
+</Base>

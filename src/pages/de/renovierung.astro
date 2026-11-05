@@ -1,0 +1,107 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site, dePrice } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Was kostet es, ein Haus in der Axarquía zu renovieren?',
+    a: `Das hängt stark vom Zustand der Immobilie ab. Eine Wohnung aufzufrischen kann ein paar tausend Euro kosten, die Komplettsanierung einer alten Finca deutlich über 100.000 €. Die meisten Renovierungen, die wir ausführen, liegen zwischen ${dePrice(prices.renovatieTotaal)}. Nach einer Besichtigung erhalten Sie ein nach Positionen aufgeschlüsseltes Angebot.`,
+  },
+  {
+    q: 'Brauche ich in Spanien eine Genehmigung für eine Renovierung?',
+    a: 'Fast immer. Für kleinere Arbeiten reicht meist eine Anzeige beim Rathaus (declaración responsable oder licencia de obra menor). Größere Arbeiten oder Anbauten brauchen eine Baugenehmigung mit einem Projekt von einem Architekten. Wir prüfen, was Ihr Projekt braucht, und kümmern uns um den Antrag.',
+  },
+  {
+    q: 'Können die Arbeiten ausgeführt werden, während ich in Deutschland bin?',
+    a: 'Ja, die meisten unserer Kunden sind während der Arbeiten nicht in Spanien. Sie haben einen festen Projektleiter, bekommen jede Woche Fotos und Videos, und wir sprechen per Telefon oder Videoanruf. Sie zahlen in Raten, jeweils nach Abschluss eines Bauabschnitts.',
+  },
+  {
+    q: 'Wie lange dauert eine Renovierung?',
+    a: 'Ein Bad oder eine Küche dauert meist einige Wochen. Eine Komplettsanierung dauert in der Regel drei bis sechs Monate, je nach Genehmigung und Umfang. Das Angebot enthält einen Zeitplan.',
+  },
+  {
+    q: 'Kann ich meine Finca erweitern?',
+    a: 'Das hängt vom rechtlichen Status des Hauses und vom Bebauungsplan ab. Landhäuser mit AFO-Status dürfen in der Regel nicht erweitert werden. Lassen Sie das vor dem Kauf prüfen. Wir arbeiten mit einem Architekten zusammen, der jede Immobilie beurteilen kann.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Renovierung und Umbau',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['de', 'nl', 'en'],
+};
+---
+<Base
+  title="Haus renovieren in Spanien mit deutschsprachigem Ansprechpartner"
+  description="Renovieren in der Axarquía: Komplettsanierung, Bäder, Küchen und Fincas in Nerja, Cómpeta, Frigiliana, Torrox und Umgebung. Klare Angebote, ein Projektleiter, Ansprechpartner auf Deutsch."
+  path="/de/renovierung/"
+  lang="de"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="de" items={[{ name: 'Renovierung', href: '/de/renovierung/' }]} />
+  <Hero
+    lang="de"
+    eyebrow="Renovierung und Umbau"
+    title="Renovieren in Spanien, <em>ohne Kopfschmerzen</em>"
+    lead="Sie haben ein Haus in der Axarquía gekauft, oder haben es vor, und es muss etwas gemacht werden. Wir übernehmen das ganze Projekt, von Planung und Genehmigung bis zur letzten Fliese."
+    cta="Angebot anfragen"
+    ctaHref="/de/anfrage/?dienst=renovatie"
+  />
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>Was wir renovieren</h2>
+        <p>Die meisten Häuser, die ausländische Käufer in der Axarquía erwerben, sind über dreißig Jahre alt. Dorfhäuser in Cómpeta und Frigiliana mit dicken Mauern und kleinen Fenstern, Wohnungen an der Küste in Torre del Mar und Nerja, Fincas in den Hügeln mit eigenem Brunnen. Jeder Typ hat seine eigenen Schwachstellen, und wir kennen sie gut.</p>
+        <ul class="checks">
+          <li><strong>Komplettsanierung</strong>: Leitungen, Elektrik, Dämmung, Grundriss und Ausbau.</li>
+          <li><strong>Bäder und Küchen</strong>: Planung, Rückbau, Einbau und Fertigstellung.</li>
+          <li><strong>Finca-Sanierung</strong>: Feuchtigkeit, Dächer, Terrassen, Wasser und Abwasser.</li>
+          <li><strong>Fenster und Dämmung</strong>: keine kalten Winter mehr hinter Einfachverglasung.</li>
+          <li><strong>Terrassen, Pergolen und Überdachungen</strong>: mehr Leben draußen, auch im Juli.</li>
+        </ul>
+        <h2>Worauf ausländische Käufer stoßen</h2>
+        <p>Feuchte Wände, alte Elektrik ohne Erdung, Dächer, die beim ersten Regen undicht sind, oder ein Anbau ohne Genehmigung. Das sieht man bei einer Besichtigung im Sommer nicht. Wir gehen das mit Ihnen durch, sagen Ihnen, was dringend ist und was warten kann, und nennen Ihnen für jede Position einen Preis.</p>
+      </div>
+      <div class="box">
+        <h3>Richtpreise</h3>
+        <table class="prices">
+          <tbody>
+            <tr><td>Komplettsanierung</td><td>{dePrice(prices.renovatieTotaal)}</td></tr>
+            <tr><td>Renovierung pro m²</td><td>{prices.renovatiePerM2}</td></tr>
+            <tr><td>Neues Bad</td><td>{dePrice(prices.badkamer)}</td></tr>
+            <tr><td>Neue Küche</td><td>{prices.keuken}</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Richtpreise inklusive Material und Arbeit, ohne Mehrwertsteuer (IVA). Der tatsächliche Preis hängt vom Zustand der Immobilie und Ihren Wünschen ab. Sie bekommen immer zuerst ein Angebot.</p>
+        <Todo label="prijzen per m² en keuken van het bouwbedrijf, en bevestiging van de andere bedragen." />
+        <a class="btn" href="/de/anfrage/?dienst=renovatie">Angebot anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="de"
+    title="So läuft eine Renovierung ab"
+    steps={[
+      { t: 'Kennenlernen', d: 'Erzählen Sie uns in unserem kurzen Formular, was Sie vorhaben. Wir melden uns innerhalb von 24 Stunden.' },
+      { t: 'Besichtigung', d: 'Wir messen auf, machen Fotos und besprechen Ihre Wünsche, vor Ort oder per Video.' },
+      { t: 'Angebot und Genehmigung', d: 'Ein aufgeschlüsseltes Angebot und ein Zeitplan. Wir beantragen die Genehmigung beim Rathaus.' },
+      { t: 'Bau und Übergabe', d: 'Ein Projektleiter, wöchentliche Fotoberichte und Zahlung nach Bauabschnitten.' },
+    ]}
+  />
+
+  <Faq items={faq} lang="de" />
+  <Cta lang="de" dienst="renovatie" title="Pläne für Ihr Haus?" />
+  <Services lang="de" exclude="renovierung" title="Das könnte Sie auch interessieren" />
+</Base>

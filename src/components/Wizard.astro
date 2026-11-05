@@ -105,6 +105,55 @@ const T = {
       pakket: 'Interested in key holding, {x} package.',
     },
   },
+  de: {
+    step: 'Schritt', of: 'von',
+    q1: 'Wobei können wir Ihnen helfen?',
+    diensten: [
+      { v: 'renovatie', t: 'Renovierung oder Umbau', s: 'Ganzes Haus oder ein Teil' },
+      { v: 'badkamer-keuken', t: 'Bad oder Küche', s: 'Erneuern oder umbauen' },
+      { v: 'sleutelbeheer', t: 'Hausbetreuung', s: 'Kontrolle, wenn Sie weg sind' },
+      { v: 'aankoopkeuring', t: 'Gutachten vor dem Kauf', s: 'Prüfung vor der Unterschrift' },
+      { v: 'zwembad', t: 'Pool', s: 'Bauen, reparieren oder pflegen' },
+      { v: 'onderhoud', t: 'Reparatur oder Instandhaltung', s: 'Dach, Undichtigkeit, Grundstück, Garten' },
+      { v: 'legalisatie', t: 'Genehmigung oder Legalisierung', s: 'AFO, Anbau, Energieausweis' },
+      { v: 'anders', t: 'Etwas anderes', s: 'Solaranlage, Klimaanlage, Umzug…' },
+    ],
+    q2: 'Wie ist Ihre Situation?',
+    situaties: [
+      { v: 'eigenaar', t: 'Ich habe bereits ein Haus in Spanien' },
+      { v: 'koper', t: 'Ich möchte ein Haus kaufen', s: 'Oder habe eines im Auge' },
+      { v: 'orienterend', t: 'Ich informiere mich noch' },
+    ],
+    typeLabel: 'Um welche Art von Immobilie geht es?', typeChoose: 'Typ wählen',
+    typen: ['Wohnung', 'Dorfhaus', 'Villa', 'Finca oder Landhaus', 'Anderes'],
+    q3: 'Wo steht die Immobilie?', plaats: 'Ort', plaatsChoose: 'Ort wählen',
+    plaatsExtra: ['Anderer Ort in der Axarquía', 'Anderswo in der Provinz Málaga', 'Weiß ich noch nicht'],
+    adres: 'Adresse oder Link zur Immobilie', optional: '(optional)', adresPh: 'Zum Beispiel ein Link von Idealista, Kyero oder ImmoScout24',
+    q4: 'Wann und mit welchem Budget?', planningLabel: 'Wann möchten Sie beginnen?', choose: 'Bitte wählen',
+    planning: ['So bald wie möglich', 'Innerhalb von 3 Monaten', 'In 3 bis 6 Monaten', 'In mehr als 6 Monaten', 'Weiß ich noch nicht'],
+    budgetLabel: 'Welches Budget haben Sie ungefähr vorgesehen?', budgetChoose: 'Bitte wählen (optional)',
+    budgetten: ['Bis 5.000 €', '5.000 – 20.000 €', '20.000 – 50.000 €', '50.000 – 100.000 €', 'Mehr als 100.000 €', 'Weiß ich noch nicht'],
+    budgetHint: 'So können wir Ihnen gleich einen realistischen Vorschlag machen.',
+    q5: 'Erzählen Sie uns etwas mehr', omschrijving: 'Was möchten Sie machen lassen?',
+    omschrijvingPh: 'Zum Beispiel: Bad und Küche erneuern, Dachterrasse undicht, Hausbetreuung von Oktober bis April…',
+    fotos: 'Fotos', fotosOpt: '(optional, höchstens 5)', fotosHint: 'Mit Fotos können wir Ihnen schneller einen Preis nennen.',
+    q6: 'Wie erreichen wir Sie?', naam: 'Name', email: 'E-Mail', telefoon: 'Telefon', telPh: '+49 … oder +34 …',
+    contact: 'Wie dürfen wir Sie kontaktieren?', contactOpts: ['Anruf', 'WhatsApp', 'E-Mail'],
+    hp: 'Dieses Feld bitte leer lassen',
+    consent: 'Ich bin einverstanden, dass meine Anfrage an das Bauunternehmen von Axarquía Home weitergeleitet wird, das sich bei mir meldet. Siehe die',
+    privacy: 'Datenschutzerklärung',
+    consentPartner: 'Falls meine Anfrage nicht zu den Leistungen des Bauunternehmens gehört, darf sie an einen anderen Fachpartner weitergeleitet werden.',
+    prev: 'Zurück', next: 'Weiter', submit: 'Anfrage senden',
+    msgs: {
+      choose: 'Bitte wählen Sie eine der Optionen, um fortzufahren.',
+      consent: 'Bitte stimmen Sie der Weiterleitung Ihrer Anfrage zu.',
+      fill: 'Bitte füllen Sie das Feld „{x}“ aus.', thisField: 'dieses Feld', keepCase: true,
+      notLinked: 'Das Formular ist noch nicht verbunden (Testversion). Ihre Anfrage wurde nicht gesendet.',
+      sending: 'Wird gesendet…',
+      failed: 'Das Senden ist fehlgeschlagen. Bitte prüfen Sie Ihre Internetverbindung oder schreiben Sie uns an info@axarquiahome.com.',
+      pakket: 'Interesse an Hausbetreuung, Paket {x}.',
+    },
+  },
 }[lang];
 const diensten = T.diensten;
 const situaties = T.situaties;
@@ -271,7 +320,7 @@ const budgetten = T.budgetten;
         if (!f.checked) { errorEl.textContent = M.consent; return false; }
       } else if (!f.value.trim() || !f.checkValidity()) {
         const label = form.querySelector(`label[for="${f.id}"]`)?.textContent?.trim() ?? M.thisField;
-        errorEl.textContent = M.fill.replace('{x}', label.toLowerCase());
+        errorEl.textContent = M.fill.replace('{x}', M.keepCase ? label : label.toLowerCase());
         f.focus();
         return false;
       }

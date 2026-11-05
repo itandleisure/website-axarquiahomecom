@@ -78,3 +78,9 @@ export const enPrice = (s: string) =>
   s.startsWith(TODO)
     ? s
     : s.replace(/(\d)\.(\d{3})/g, '$1,$2').replace(/€ /g, '€').replace(' per jaar', ' per year').replace(' per maand', ' per month');
+
+/** Zet een Nederlandse prijsnotatie om naar Duitse (€ 20.000 → 20.000 €). */
+export const dePrice = (s: string) =>
+  s.startsWith(TODO)
+    ? s
+    : s.replace(/€ ([\d.]+)/g, '$1 €').replace(' per jaar', ' pro Jahr').replace(' per maand', ' pro Monat');

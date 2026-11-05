@@ -1,0 +1,62 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'warum', label: 'Warum in der Axarquía überwintern' },
+  { id: 'regeln', label: 'Aufenthalt und Anmeldung' },
+  { id: 'gesundheit', label: 'Krankenversicherung' },
+  { id: 'haus', label: 'Eigenes Haus oder mieten' },
+  { id: 'weg', label: 'Ihr Haus, wenn Sie wieder zu Hause sind' },
+  { id: 'checkliste', label: 'Checkliste vor der Abreise' },
+];
+
+const faq = [
+  {
+    q: 'Wie lange darf ich als Deutscher in Spanien überwintern?',
+    a: 'Als EU-Bürger gibt es keine feste Höchstdauer. Bleiben Sie länger als drei Monate, sind Sie verpflichtet, sich im Ausländerregister eintragen zu lassen. Achten Sie außerdem auf die 183-Tage-Grenze: Darüber werden Sie in der Regel in Spanien steuerpflichtig.',
+  },
+  {
+    q: 'Bin ich in Spanien über meine Krankenkasse versichert?',
+    a: 'Mit der Europäischen Krankenversicherungskarte (EHIC) auf der Rückseite Ihrer Gesundheitskarte haben Sie bei einem vorübergehenden Aufenthalt Anspruch auf medizinisch notwendige Behandlungen im öffentlichen spanischen System. Viele Auslandsreisekrankenversicherungen gelten nur für Reisen von einigen Wochen; für einen Aufenthalt von mehreren Monaten brauchen Sie oft einen eigenen Langzeittarif.',
+  },
+  {
+    q: 'Was kostet die Hausbetreuung für die Monate, in denen ich weg bin?',
+    a: 'Ein Basispaket mit einer Kontrolle alle zwei Wochen kostet meist einige zehn Euro im Monat. Die Pakete finden Sie auf unserer Seite Hausbetreuung. Sie können sie nur für die Monate buchen, in denen Sie nicht in Spanien sind.',
+  },
+];
+---
+<Guide lang="de" slug="ueberwintern-in-spanien" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Wieder nach Hause, und Ihr Haus in guten Händen?" ctaText="Mit der Hausbetreuung kontrollieren wir Ihr Haus regelmäßig und greifen ein, wenn etwas nicht stimmt.">
+  <h2 id="warum">Warum in der Axarquía überwintern</h2>
+  <p>Während Deutschland grau und kalt ist, scheint an der Küste östlich von Málaga fast jeden Tag die Sonne. Im Januar und Februar liegen die Tagestemperaturen meist bei 15 bis 19 Grad, warm genug für ein Mittagessen draußen. Die Axarquía ist ruhiger als Benidorm oder die westliche Costa del Sol, und die Orte bleiben im Winter belebt: Bäcker, Markt und Café haben geöffnet.</p>
+  <p>Beliebte Orte zum Überwintern sind Nerja, Torrox Costa und Torre del Mar an der Küste und, für Wanderer, Cómpeta und Frigiliana. In Torrox Costa gibt es seit Jahrzehnten eine große deutsche Überwinterer-Gemeinschaft. Mehr dazu in <a href="/de/ratgeber/leben-in-der-axarquia/">Leben in der Axarquía</a>.</p>
+
+  <h2 id="regeln">Aufenthalt und Anmeldung</h2>
+  <p>Als Bürger der EU dürfen Sie so lange in Spanien bleiben, wie Sie möchten. Es gibt keine 90-Tage-Regel wie für Briten oder Amerikaner. Ein paar Dinge sollten Sie trotzdem beachten:</p>
+  <ul>
+    <li>Bleiben Sie <strong>länger als drei Monate</strong>, müssen Sie sich im Zentralregister für Ausländer eintragen lassen (<em>Certificado de Registro de Ciudadano de la UE</em>).</li>
+    <li>Ab <strong>183 Tagen</strong> im Kalenderjahr werden Sie in der Regel in Spanien steuerpflichtig. Wer seinen Wohnsitz in Deutschland behalten will, bleibt darunter.</li>
+    <li>Als Eigentümer, der nicht in Spanien ansässig ist, zahlen Sie trotzdem jährlich die Einkommensteuer für Nichtresidenten für Ihr spanisches Haus.</li>
+  </ul>
+
+  <h2 id="gesundheit">Krankenversicherung</h2>
+  <p>Mit der Europäischen Krankenversicherungskarte (EHIC) haben Sie Anspruch auf medizinisch notwendige Versorgung im öffentlichen spanischen Gesundheitssystem. Privatärzte und Privatkliniken deckt sie nicht ab. Prüfen Sie, ob Ihre Auslandsreisekrankenversicherung einen Aufenthalt von mehreren Monaten abdeckt; viele Tarife gelten nur für einige Wochen am Stück. Nehmen Sie genug von Ihren Medikamenten für den ganzen Zeitraum mit, mit einer Kopie des Rezepts.</p>
+
+  <h2 id="haus">Eigenes Haus oder mieten</h2>
+  <p>Drei Monate im Winter zu mieten ist gut machbar, und außerhalb der Sommersaison sind die Preise niedriger. Wer jedes Jahr wiederkommt, kauft oft eine Wohnung oder ein Haus. Diese Immobilie steht dann aber acht oder neun Monate im Jahr leer und braucht Betreuung.</p>
+
+  <h2 id="weg">Ihr Haus, wenn Sie wieder zu Hause sind</h2>
+  <p>Ein leerstehendes Haus an der Costa del Sol hat es schwer. Undichtigkeiten nach einem Sturm, Feuchtigkeit und Schimmel, wenn nicht gelüftet wird, ein Pool, der grün wird, ein Stromausfall, der die Gefriertruhe auftauen lässt, oder ungebetene Gäste. Ist niemand vor Ort, merken Sie es erst bei Ihrer Rückkehr.</p>
+  <p>Mit der <a href="/de/hausbetreuung/">Hausbetreuung</a> kontrollieren wir Ihr Haus nach festem Plan. Nach jedem Besuch bekommen Sie Fotos und einen kurzen Bericht. Stimmt etwas nicht, beheben wir es nach Ihrer Zustimmung. Und vor Ihrer Ankunft machen wir das Haus bereit: gelüftet, Wasser und Strom an und auf Wunsch geputzt, mit ein paar Einkäufen im Kühlschrank.</p>
+
+  <h2 id="checkliste">Checkliste vor der Abreise</h2>
+  <ul class="checks">
+    <li>Hauptwasserhahn zu, Warmwasserbereiter aus</li>
+    <li>Kühlschrank leer und offen, oder laufend mit jemandem, der nachsieht</li>
+    <li>Fenster und Rollläden zu, Lüftungsöffnungen gegen Feuchtigkeit offen</li>
+    <li>Wertsachen weggeräumt, Alarmanlage an</li>
+    <li>Pool abgedeckt oder Pflege geregelt</li>
+    <li>Gartenbewässerung mit Zeitschaltuhr oder jemand, der sich kümmert</li>
+    <li>Schlüssel und Kontaktdaten bei Ihrer Hausbetreuung</li>
+    <li>Lastschriften für IBI, Wasser und Strom geprüft</li>
+  </ul>
+</Guide>
