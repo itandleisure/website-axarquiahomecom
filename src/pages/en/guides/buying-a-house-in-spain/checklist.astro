@@ -1,0 +1,115 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import BuyingChecklist from '../../../../components/BuyingChecklist.astro';
+import { buyingChecklist } from '../../../../data/buying-checklist';
+
+const toc = [
+  { id: 'how', label: 'How to use this list' },
+  { id: 'legal-test', label: 'The legality test: three situations' },
+  ...buyingChecklist.map((t) => ({ id: t.id.en, label: t.title.en })),
+  { id: 'by-type', label: 'Extra points by type of property' },
+  { id: 'survey', label: 'Let us check it for you' },
+  { id: 'sources', label: 'Sources' },
+];
+
+const faq = [
+  {
+    q: 'Do I need to ask these questions if I have a lawyer?',
+    a: 'Your lawyer checks the paperwork: registry, cadastre, permits and debts. But questions about the house itself, such as damp, leaks, water and the access road, are best asked at the viewing. That way you know early whether the house is worth pursuing, before you spend money.',
+  },
+  {
+    q: 'Can I rely on what the seller tells me?',
+    a: 'A verbal answer is a start, not proof. Ask for the document (licence, AFO declaration, nota simple, invoices) or a written confirmation, and have the key points included in the arras contract. A written statement by the seller that turns out to be untrue can become a claim later.',
+  },
+  {
+    q: 'What is the difference between licencia de primera ocupación and declaración responsable?',
+    a: 'The town hall used to issue a first occupation licence. Since the Andalusian LISTA law of December 2021, most new or renovated homes only need a declaration (declaración responsable de ocupación) by the owner with an architect’s certificate. Older houses sometimes have neither; then a certificate of age or an AFO declaration may be needed.',
+  },
+];
+---
+<Guide lang="en" slug="buying-a-house-in-spain-checklist" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Want us to check this for you?" ctaText="With a property survey we check the condition of the house, see whether what stands there matches the paperwork, and price the work it needs. You get a report in English.">
+  <h2 id="how">How to use this list</h2>
+  <p>This checklist goes with our <a href="/en/guides/buying-a-house-in-spain/">step-by-step guide to buying a house in Spain</a>. Take it to the viewing, on your phone or printed. Ask the agent or the seller. If they do not speak English, read out the Spanish sentence or send it by WhatsApp or email.</p>
+  <p>Three phrases that always come in handy:</p>
+  <ul>
+    <li><q lang="es">¿Me lo puede confirmar por escrito, por favor?</q> Could you confirm that in writing, please?</li>
+    <li><q lang="es">¿Me puede enviar una copia del documento?</q> Could you send me a copy of the document?</li>
+    <li><q lang="es">Mi abogado lo va a comprobar.</q> My lawyer is going to check this.</li>
+  </ul>
+  <p>An answer only counts once it is on paper. Have your own lawyer check the key answers and record them in the private purchase contract (arras).</p>
+
+  <h2 id="legal-test">The legality test: three situations</h2>
+  <p>If anything was built without a permit (an extension, an enclosed terrace, a pool or the whole house), first establish which of three situations the property is in. That decides whether you can fix the problem, live with it, or should walk away.</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Situation</th><th>What it means</th><th>For you as buyer</th></tr></thead>
+    <tbody>
+      <tr><td><strong>1. Can be legalised</strong></td><td>What was built fits the zoning plan. The owner can apply for a retrospective permit.</td><td>Fully legal afterwards. Agree that the seller sorts it before completion, or reflect the cost in the price.</td></tr>
+      <tr><td><strong>2. AFO</strong></td><td>It does not fit the plan, but the six-year enforcement period has passed. The town hall can issue an AFO declaration.</td><td>The house may stay and be lived in, but not extended. A mortgage is harder, and holiday letting needs the town hall’s express consent.</td></tr>
+      <tr><td><strong>3. Never time-barred</strong></td><td>On land where no time limit applies, such as the coastal strip, flood zones or protected nature, and with an illegal plot subdivision.</td><td>Demolition remains possible at any time. Do not buy unless your lawyer is certain it does not apply.</td></tr>
+    </tbody>
+  </table></div>
+  <p>The questions to ask:</p>
+  <ul>
+    <li><q lang="es">¿Lo construido sin licencia es compatible con el planeamiento? ¿Se puede legalizar?</q> Does what was built without a permit fit the zoning plan? Can it be legalised?</li>
+    <li><q lang="es">¿Cuándo se terminó la obra? ¿Han pasado más de seis años? ¿Tiene ya la resolución de AFO?</q> When was it built? More than six years ago? Is there already an AFO declaration?</li>
+    <li><q lang="es">¿Está la parcela en zona de costa, zona inundable, espacio natural protegido o suelo de especial protección?</q> Is the plot in the coastal strip, a flood zone or a protected area?</li>
+    <li><q lang="es">¿La parcela procede de una segregación o parcelación con licencia?</q> Was the plot split off with a permit?</li>
+  </ul>
+  <p>The seller’s answer is a start; your lawyer checks it with the town hall. Costs, timescales and the procedure for each situation are in <a href="/en/guides/afo-legalisation-andalusia/">AFO status and legalisation in Andalusia</a>.</p>
+
+  <BuyingChecklist lang="en" theme={0} />
+  <p>Read more about legal status in <a href="/en/guides/afo-legalisation-andalusia/">AFO status and legalisation in Andalusia</a> and, for a country home, <a href="/en/guides/buying-a-finca-in-spain/">buying a finca in Spain</a>. The town pages under <a href="/en/places/">places</a> also cover local building permit rules.</p>
+
+  <BuyingChecklist lang="en" theme={1} />
+  <p>What you pay on top of the price is in <a href="/en/guides/buying-costs-in-spain/">the costs of buying in Spain</a>.</p>
+
+  <BuyingChecklist lang="en" theme={2} />
+  <p>These questions nearly always get a reassuring answer. That is why you have the house inspected as well. Read more about <a href="/en/problems/damp-and-mould/">damp and mould</a>, <a href="/en/problems/roof-leaks/">roof leaks</a>, <a href="/en/problems/cracks-in-walls/">cracks in walls</a> and <a href="/en/problems/termites/">termites</a>.</p>
+
+  <BuyingChecklist lang="en" theme={3} />
+
+  <BuyingChecklist lang="en" theme={4} />
+  <p>Taking over a running B&amp;B or holiday let? Then there are many more questions; see <a href="/en/guides/buying-a-house-in-spain/buying-a-bed-and-breakfast/">buying an existing B&amp;B</a>.</p>
+
+  <h2 id="by-type">Extra points by type of property</h2>
+  <h3>Apartment</h3>
+  <ul>
+    <li><strong>Community minutes.</strong> <q lang="es">¿Me puede enviar las actas de las tres últimas juntas de la comunidad?</q> They show planned works, disputes and arrears.</li>
+    <li><strong>State of the building.</strong> <q lang="es">¿Tiene el edificio la inspección técnica (ITE) favorable?</q> An unfavourable inspection often means an extra levy for the facade, roof or pipes.</li>
+    <li><strong>Parking and storage.</strong> <q lang="es">¿La plaza de garaje y el trastero están inscritos en el Registro y se incluyen en la venta?</q></li>
+    <li><strong>Holiday letting.</strong> Since April 2025, new tourist lets in an apartment building need prior consent from three fifths of the community. <q lang="es">¿Permiten los estatutos de la comunidad el alquiler turístico?</q></li>
+  </ul>
+  <h3>Finca</h3>
+  <ul>
+    <li>Always run the legality test above, for the house and for every outbuilding and the pool.</li>
+    <li>Water, drainage, access and power are a finca’s biggest costs; see the questions under <a href="#countryside">water, drainage and access</a>.</li>
+    <li>Ask about the boundaries: <q lang="es">¿Están los límites de la finca marcados y coinciden con el Catastro?</q></li>
+    <li>Read more in <a href="/en/guides/buying-a-finca-in-spain/">buying a finca in Spain</a>.</li>
+  </ul>
+  <h3>B&amp;B or holiday let</h3>
+  <ul>
+    <li>Run the legality test for every guest room: rooms without permits cannot be let legally. A house with AFO status can only be let to tourists with the town hall’s express consent.</li>
+    <li><q lang="es">¿Con qué número está inscrito en el Registro de Turismo de Andalucía, y para cuántas plazas?</q></li>
+    <li>Buying a B&amp;B that is already running? Check the accounts, booking channels and reviews too; see <a href="/en/guides/buying-a-house-in-spain/buying-a-bed-and-breakfast/">buying an existing B&amp;B</a>. Starting your own? Read <a href="/en/guides/finca-apartment-or-village-house/bed-and-breakfast/">starting a B&amp;B</a>.</li>
+  </ul>
+
+  <h2 id="survey">Let us check it for you</h2>
+  <p>A seller who says the roof has never leaked may honestly believe it. A surveyor looks at what is really there. In our <a href="/en/property-survey/">property survey</a> we check the technical points on this list for you:</p>
+  <ul class="checks">
+    <li>Damp, leaks, cracks, termites and woodworm</li>
+    <li>Roof and roof terrace, windows, wiring, water and drainage, pool</li>
+    <li>For a finca: water source, septic tank and access road</li>
+    <li>Whether floor area and outbuildings match the deed and cadastre, as a flag for your lawyer</li>
+    <li>A price estimate for each defect, so you can negotiate</li>
+  </ul>
+  <p>You get a report in English with photos, even if you are not in Spain yourself. <a href="/en/request/?dienst=aankoopkeuring">Request a property survey</a> or email <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+  <h2 id="sources">Sources</h2>
+  <ul>
+    <li>Six-year enforcement period and land with no time limit: Ley 7/2021 (LISTA), article 153; AFO: Decreto 550/2022.</li>
+    <li>Occupancy by declaration (declaración responsable): Ley 7/2021 (LISTA), article 138.</li>
+    <li>Tourist letting of an AFO house only with town hall consent: Decreto 28/2016, article 1.3.d, as amended by Decreto 31/2024.</li>
+    <li>Three-fifths community consent for tourist lets: Ley 49/1960 de Propiedad Horizontal, article 17.12, as amended by Ley Orgánica 1/2025.</li>
+    <li>Community debts: Ley 49/1960, article 9.1.e. IBI attaches to the property: Real Decreto Legislativo 2/2004, article 64.</li>
+  </ul>
+  <p class="note">Checked on 5 November 2026. This checklist gives general information and does not replace legal advice. The legal checks of registry, permits and debts belong with an independent lawyer.</p>
+</Guide>

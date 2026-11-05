@@ -1,0 +1,19 @@
+---
+// Eén thema uit de aankoopchecklist: per punt de vraag, de Spaanse zin en waarom het ertoe doet.
+import { buyingChecklist } from '../data/buying-checklist';
+import type { Lang } from '../i18n';
+interface Props { theme: number; lang?: Lang; }
+const lang = (Astro.props.lang ?? 'nl') as 'nl' | 'en' | 'de';
+const t = buyingChecklist[Astro.props.theme];
+const label = { nl: 'In het Spaans', en: 'In Spanish', de: 'Auf Spanisch' }[lang];
+---
+<h2 id={t.id[lang]}>{t.title[lang]}</h2>
+<ol class="ask-list">
+  {t.items.map((i) => (
+    <li>
+      <strong>{i.q[lang]}</strong>
+      <p class="ask-es"><span class="ask-label">{label}:</span> <q lang="es">{i.es}</q></p>
+      <p class="ask-why">{i.why[lang]}</p>
+    </li>
+  ))}
+</ol>
