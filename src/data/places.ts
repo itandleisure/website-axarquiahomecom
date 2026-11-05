@@ -64,10 +64,13 @@ export const places: Place[] = [
   { slug: 'alfarnatejo', name: 'Alfarnatejo', kind: 'gemeente', setting: 'inland', wave: 'C', built: true },
 ];
 
-export type PlacePage = 'overview' | 'see' | 'living';
+export type PlacePage = 'overview' | 'see' | 'living' | 'permit' | 'practical';
 export const placeSub: Record<Exclude<PlacePage, 'overview'>, Record<Lang, string>> = {
   see: { nl: 'zien-en-doen', en: 'things-to-do', de: 'sehenswuerdigkeiten', sv: 'se-och-gora' },
   living: { nl: 'wonen', en: 'living', de: 'wohnen', sv: 'bo' },
+  // Alleen voor gemeenten, met data uit src/data/municipal.ts (nog niet in het Zweeds)
+  permit: { nl: 'bouwvergunning', en: 'building-permit', de: 'baugenehmigung', sv: 'bygglov' },
+  practical: { nl: 'praktisch', en: 'practical-guide', de: 'praktisches', sv: 'praktiskt' },
 };
 export const placeBase: Record<Lang, string> = { nl: '/nl/plaatsen/', en: '/en/places/', de: '/de/orte/', sv: '/sv/orter/' };
 export const placeHref = (lang: Lang, p: Place, page: PlacePage = 'overview') =>

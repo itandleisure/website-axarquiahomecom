@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro';
 import { site } from '../data/site';
 import { places, placeBase, placeHref, type PlacePage } from '../data/places';
 import { placeContent } from '../data/place-content';
+import { hasMunicipalPages } from '../data/place-tabs';
 
 // Alle .astro-pagina's onder /nl/, /en/, /de/ en /sv/, behalve bedankt.
 // Dynamische routes ([slug]) komen er niet vanzelf in; de plaatspagina's voegen we hieronder toe vanuit de plaatsenlijst.
@@ -16,6 +17,7 @@ const placePaths = places
       const c = (placeContent[p.slug] as Partial<Record<PlaceLang, { see?: unknown; living?: unknown }>> | undefined)?.[lang];
       if (!c) return [];
       const subs: PlacePage[] = ['overview', ...(c.see ? (['see'] as const) : []), ...(c.living ? (['living'] as const) : [])];
+      if (hasMunicipalPages(lang, p)) subs.push('permit', 'practical');
       return subs.map((page) => placeHref(lang, p, page));
     }),
   );
