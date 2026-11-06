@@ -130,7 +130,8 @@ a.card:hover { transform: translateY(-2px); border-color: var(--terra); color: v
 
 /* Dorpen */
 .villages { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
-.villages li { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 6px 16px; }
+.villages li a { display: block; background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 6px 16px; color: var(--terra-dark); text-decoration: none; transition: border-color 0.15s, background 0.15s; }
+.villages li a:hover, .villages li a:focus-visible { border-color: var(--terra); background: var(--sand); color: var(--terra-dark); }
 
 /* FAQ */
 .faq details { border-bottom: 1px solid var(--line); padding: 16px 0; }
