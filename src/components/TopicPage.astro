@@ -1,5 +1,7 @@
 ---
 // Kosten-, probleem- of zelf-doen-pagina: kort antwoord, secties met tabellen, FAQ, bronnen, links en CTA.
+import ArticlePhoto from './ArticlePhoto.astro';
+import { topicPhotos } from '../data/topic-photos';
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import Faq from './Faq.astro';
@@ -34,10 +36,11 @@ const calcHref = kind === 'costs' && calcs.some((c) => c.key === t.key) ? `${cal
 const guidePaths = new Set(guidesBy[lang].map((g) => guideHref(lang, g)));
 const links = t.links.filter((l) => !l.href.startsWith(guideBase[lang]) || guidePaths.has(l.href));
 const related = t.related.map((r) => topicByRef(r, lang)).filter((x) => !!x);
+const photo = topicPhotos(kind, t.key, lang);
 const article = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  image: `${site.url}/og-image.png`,
+  image: photo.lead ? new URL(photo.lead.og, site.url).href : `${site.url}/og-image.png`,
   headline: t.title,
   description: t.description,
   inLanguage: lang,
@@ -48,7 +51,7 @@ const article = {
   mainEntityOfPage: new URL(path, site.url).href,
 };
 ---
-<Base title={t.seoTitle} description={t.description} path={path} lang={lang} alternates={topicAlternates(kind, t.key)} jsonLd={[article]}>
+<Base title={t.seoTitle} description={t.description} path={path} lang={lang} alternates={topicAlternates(kind, t.key)} jsonLd={[article]} ogImage={photo.lead?.og} ogImageAlt={photo.lead?.alt}>
   <Breadcrumbs lang={lang} items={[{ name: u.hub[kind], href: hub }, { name: t.short, href: path }]} />
   <article class="section guide" style="padding-top:24px">
     <div class="wrap guide-grid">
@@ -57,6 +60,7 @@ const article = {
         <h1>{t.title}</h1>
         <p class="lead">{t.lead}</p>
         <p class="note">{u.updated} {fmt(t.updated ?? t.published)}</p>
+        <ArticlePhoto photo={photo.lead} lead />
         <div class="answer">
           <p class="answer-title">{u.shortAnswer}</p>
           <p set:html={t.answer} />
@@ -71,9 +75,10 @@ const article = {
           </div>
         )}
         {kind === 'costs' && lang === 'nl' && <Todo label="bevestiging van deze bedragen door het bouwbedrijf." />}
-        {t.sections.map((s) => (
+        {t.sections.map((s, i) => (
           <>
             <h2 id={s.id}>{s.h}</h2>
+            {photo.inline?.section === i && <ArticlePhoto photo={photo.inline.photo} />}
             {s.html && <Fragment set:html={s.html} />}
             {s.table && (
               <div class="table-scroll">

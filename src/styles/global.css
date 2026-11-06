@@ -99,6 +99,10 @@ ul, ol { padding-left: 1.2em; }
 .gallery { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
 .gallery figure { margin: 0; }
 .gallery img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
+.article-photo { margin: 1.4em 0; }
+.article-photo.inline { max-width: 520px; }
+.article-photo.inline img { aspect-ratio: 3 / 2; }
+.article-photo img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius); }
 .trust { display: flex; flex-wrap: wrap; gap: 10px 26px; list-style: none; padding: 0; margin: 2em 0 0; color: var(--muted); font-size: 0.95rem; }
 .trust li::before { content: '✓'; color: var(--olive); font-weight: 700; margin-right: 6px; }
 
