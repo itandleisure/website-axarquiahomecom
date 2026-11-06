@@ -1,0 +1,19 @@
+---
+// Fotoreeks onder de inhoud van een plaatspagina (foto's uit src/data/place-photos.ts).
+import type { ResolvedPhoto } from '../data/place-photos';
+interface Props { photos: ResolvedPhoto[]; label: string; }
+const { photos, label } = Astro.props;
+---
+{photos.length > 0 && (
+  <section class="section photo-strip" aria-label={label}>
+    <div class="wrap">
+      <div class="gallery">
+        {photos.map((p) => (
+          <figure>
+            <img src={p.src} srcset={p.srcset} sizes="(min-width: 1120px) 350px, (min-width: 640px) 45vw, calc(100vw - 40px)" alt={p.alt} width="1200" height="1200" loading="lazy" decoding="async" style={`object-position: ${p.focus}`} />
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+)}

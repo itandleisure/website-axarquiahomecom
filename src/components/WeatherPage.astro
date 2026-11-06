@@ -5,6 +5,7 @@ import { fitTitle, fitDesc } from '../data/seo';
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import Hero from './Hero.astro';
+import { photosFor } from '../data/place-photos';
 import Faq from './Faq.astro';
 import Cta from './Cta.astro';
 import { placeBySlug, placeHref } from '../data/places';
@@ -202,10 +203,12 @@ const rows = climate.map((_, i) => ({ i, ...climateFor(i, alt) }));
 const c = month !== undefined ? climate[month] : undefined;
 const req = (dienst: string) => `${request}?${new URLSearchParams({ dienst, ...(place ? { plaats: place.slug } : {}) })}`;
 const placeName = (slug: string) => placeBySlug(slug)?.name ?? slug;
+// Foto van de plaats als hero en deelafbeelding (src/data/place-photos.ts)
+const heroPhoto = place ? photosFor(place.slug, 'weather', lang)[0] : undefined;
 ---
-<Base title={title} description={description} path={self} lang={lang} alternates={alternates}>
+<Base title={title} description={description} path={self} lang={lang} alternates={alternates} ogImage={heroPhoto?.og} ogImageAlt={heroPhoto?.alt}>
   <Breadcrumbs lang={lang} items={crumbs} />
-  <Hero lang={lang} eyebrow={mode === 'place' ? `${n} · Axarquía` : 'Axarquía · Costa del Sol'} title={h1} lead={lead} ctaHref={req('onderhoud')} cta={svc[4].title} secondary={svc[1].title} secondaryHref={req('sleutelbeheer')}>
+  <Hero lang={lang} eyebrow={mode === 'place' ? `${n} · Axarquía` : 'Axarquía · Costa del Sol'} title={h1} lead={lead} ctaHref={req('onderhoud')} cta={svc[4].title} secondary={svc[1].title} secondaryHref={req('sleutelbeheer')} image={heroPhoto}>
     {tabs.length > 1 && (
       <nav class="place-tabs" aria-label={n}>
         {tabs.map((t) => <a href={t.href} aria-current={t.current ? 'page' : undefined}>{t.label}</a>)}

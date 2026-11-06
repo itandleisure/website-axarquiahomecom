@@ -15,9 +15,12 @@ interface Props {
   alternates?: Partial<Record<Lang, string>>;
   jsonLd?: object[];
   noindex?: boolean;
+  /** Deelafbeelding (1200 x 630), pad vanaf de root; standaard /og-image.png */
+  ogImage?: string;
+  ogImageAlt?: string;
 }
 
-const { title, description, path, lang = 'nl', alternates = {}, jsonLd = [], noindex = false } = Astro.props;
+const { title, description, path, lang = 'nl', alternates = {}, jsonLd = [], noindex = false, ogImageAlt } = Astro.props;
 const canonical = new URL(path, site.url).href;
 const allAlternates: Partial<Record<string, string>> = { ...alternatesFor(path), ...alternates, [lang]: path };
 const t = ui[lang];
@@ -42,7 +45,7 @@ const isHome = langs.some((l) => path === `/${l}/`);
 const withBrand = `${title} | ${site.brand}`;
 const fullTitle = isHome || withBrand.length > 60 ? title : withBrand;
 const ogLocale = { nl: 'nl_NL', en: 'en_GB', de: 'de_DE', sv: 'sv_SE' }[lang];
-const ogImage = new URL('/og-image.png', site.url).href;
+const ogImage = new URL(Astro.props.ogImage ?? '/og-image.png', site.url).href;
 
 const c = site.company;
 const organization: Record<string, unknown> = {
@@ -107,7 +110,7 @@ const englishContact: Partial<Record<Lang, string>> = { sv: 'Kontakten sker på 
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content={site.brand} />
+    <meta property="og:image:alt" content={ogImageAlt ?? site.brand} />
     <meta name="twitter:card" content="summary_large_image" />
     {schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
     {(site.clarityId || site.gaId) && (

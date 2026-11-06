@@ -6,6 +6,8 @@ import Hero from './Hero.astro';
 import Faq from './Faq.astro';
 import Cta from './Cta.astro';
 import Todo from './Todo.astro';
+import PhotoStrip from './PhotoStrip.astro';
+import { photosFor } from '../data/place-photos';
 import { places, placeBySlug, placeHref, type Place, type PlacePage } from '../data/places';
 import { placeContent } from '../data/place-content';
 import { services, path as route, type Lang } from '../i18n';
@@ -82,17 +84,22 @@ const buyerGuides = guidesBy[lang].filter((_, i) => [1, 2, 3, 7].includes(i));
 const roadIndex = guidesBy.nl.findIndex((g) => g.slug === 'toegangsweg-finca-spanje');
 const roadGuide = place.setting !== 'coast' && roadIndex >= 0 ? guideAt(lang, roadIndex) : undefined;
 
-const placeLd = {
+// Foto's: de eerste is de hero en de deelafbeelding, de rest komt in een fotoreeks
+const [heroPhoto, ...morePhotos] = photosFor(place.slug, page === 'see' || page === 'living' ? page : 'overview', lang);
+const photosLabel = { nl: `Foto's van ${place.name}`, en: `Photos of ${place.name}`, de: `Fotos von ${place.name}`, sv: `Bilder från ${place.name}` }[lang];
+
+const placeLd: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': 'Place',
   name: place.name,
   containedInPlace: { '@type': 'AdministrativeArea', name: parent ? `${parent.name}, Axarquía, Málaga` : 'Axarquía, Málaga' },
   url: new URL(self, site.url).href,
 };
+if (heroPhoto) placeLd.image = new URL(heroPhoto.og, site.url).href;
 ---
-<Base title={title} description={description} path={self} lang={lang} jsonLd={page === 'overview' ? [placeLd] : []}>
+<Base title={title} description={description} path={self} lang={lang} jsonLd={page === 'overview' ? [placeLd] : []} ogImage={heroPhoto?.og} ogImageAlt={heroPhoto?.alt}>
   <Breadcrumbs lang={lang} items={crumbs} />
-  <Hero lang={lang} eyebrow={parent ? `${place.name} · ${parent.name}` : 'Axarquía'} title={h1} lead={lead} ctaHref={`${request}?plaats=${place.slug}`}>
+  <Hero lang={lang} eyebrow={parent ? `${place.name} · ${parent.name}` : 'Axarquía'} title={h1} lead={lead} ctaHref={`${request}?plaats=${place.slug}`} image={heroPhoto}>
     {tabs.length > 1 && (
       <nav class="place-tabs" aria-label={place.name}>
         {tabs.map((t) => (
@@ -155,6 +162,8 @@ const placeLd = {
       </div>
     </section>
   )}
+
+  <PhotoStrip photos={morePhotos} label={photosLabel} />
 
   <section class="section alt">
     <div class="wrap">

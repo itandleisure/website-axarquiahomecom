@@ -5,6 +5,7 @@ import { fitTitle, fitDesc } from '../data/seo';
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import Hero from './Hero.astro';
+import { photosFor } from '../data/place-photos';
 import Faq from './Faq.astro';
 import Cta from './Cta.astro';
 import { places, placeHref, type Place } from '../data/places';
@@ -176,10 +177,12 @@ const eventLd = {
   name: T.year,
   itemListElement: events.map((e, i) => ({ '@type': 'ListItem', position: i + 1, name: nameOf(e, lang) })),
 };
+// Foto van de plaats als hero en deelafbeelding (src/data/place-photos.ts)
+const heroPhoto = photosFor(place.slug, 'fiestas', lang)[0];
 ---
-<Base title={T.title} description={T.description} path={self} lang={lang} alternates={alternates} jsonLd={[eventLd]}>
+<Base title={T.title} description={T.description} path={self} lang={lang} alternates={alternates} jsonLd={[eventLd]} ogImage={heroPhoto?.og} ogImageAlt={heroPhoto?.alt}>
   <Breadcrumbs lang={lang} items={crumbs} />
-  <Hero lang={lang} eyebrow={`${n} · Axarquía`} title={T.h1} lead={data.intro[lang]} ctaHref={req('aankoopkeuring')} cta={T.cards[0].b} secondary={T.cards[1].b} secondaryHref={req('sleutelbeheer')}>
+  <Hero lang={lang} eyebrow={`${n} · Axarquía`} title={T.h1} lead={data.intro[lang]} ctaHref={req('aankoopkeuring')} cta={T.cards[0].b} secondary={T.cards[1].b} secondaryHref={req('sleutelbeheer')} image={heroPhoto}>
     {tabs.length > 1 && (
       <nav class="place-tabs" aria-label={n}>
         {tabs.map((t) => <a href={t.href} aria-current={t.current ? 'page' : undefined}>{t.label}</a>)}
