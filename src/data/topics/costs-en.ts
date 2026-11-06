@@ -536,7 +536,7 @@ export const costsEn: Topic[] = [
 <li><strong>Permit.</strong> Panels on the roof of an existing, legal home in Andalusia usually only need a simple notification (<em>declaración responsable</em>) to the town hall. Ground-mounted panels, a rural finca or a house with AFO status can need more. See the <em>Building permit</em> page of your municipality under <a href="/en/places/">Places</a>.</li>
 <li><strong>Registration.</strong> The installer registers the system with the Junta de Andalucía and provides the electrical certificate (<em>boletín</em>). You then ask your supplier for the export credit.</li>
 <li><strong>Tax discounts.</strong> Many town halls give a few years’ discount on property tax (<em>bonificación del IBI</em>) and on building tax (ICIO) for solar panels. The amount varies by municipality.</li>
-<li><strong>Grants.</strong> Spanish and EU grants for self-consumption change often and sometimes run out quickly. Ask what is available when you get your quote.</li>
+<li><strong>Grants.</strong> Spanish and EU grants for self-consumption change often and sometimes run out quickly. For what is available in 2026, see <a href="/en/guides/energy-efficiency-grants-spain/">energy efficiency grants in Spain</a>.</li>
 </ul>`,
       },
       {
@@ -1182,7 +1182,7 @@ export const costsEn: Topic[] = [
 <li><strong>Replacing windows</strong> at the same size is usually a simple notification to the town hall (<em>declaración responsable</em> or <em>obra menor</em>).</li>
 <li><strong>In a historic centre</strong>, such as in Frigiliana or Cómpeta, there are often rules on colour and material, such as timber or a wood colour.</li>
 <li><strong>In an apartment block</strong> the facade must stay uniform. Ask the <em>comunidad</em> which colour and model are allowed.</li>
-<li><strong>Grants:</strong> there are regular schemes and an income tax (IRPF) deduction for energy-saving renovations. Ask what is available when you get a quote.</li>
+<li><strong>Grants:</strong> there are regular schemes and an income tax (IRPF) deduction for energy-saving renovations. For what is available in 2026, see <a href="/en/guides/energy-efficiency-grants-spain/">energy efficiency grants in Spain</a>.</li>
 </ul>`,
       },
     ],
