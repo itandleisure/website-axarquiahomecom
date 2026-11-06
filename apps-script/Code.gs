@@ -39,6 +39,8 @@ function doPost(e) {
     // Spam en dubbele inzendingen tegenhouden
     if (d.website) return json_({ ok: true });
     if (!d.naam || !d.email || d.toestemming !== 'ja') return json_({ ok: false, error: 'Verplichte velden ontbreken' });
+    // Contactformulier: telefoon en bericht zijn ook verplicht
+    if (d.dienst === 'contact' && (!d.telefoon || !d.omschrijving)) return json_({ ok: false, error: 'Verplichte velden ontbreken' });
     const cache = CacheService.getScriptCache();
     if (d.id && cache.get(d.id)) return json_({ ok: true, dubbel: true });
 

@@ -2,7 +2,7 @@
 import { site, isFilled } from '../data/site';
 import { places } from '../data/places';
 import { path, type Lang } from '../i18n';
-import { vragen, pakketAlias, type Dienst } from '../data/keuzehulp';
+import { vragen, type Dienst } from '../data/keuzehulp';
 import { contactTeksten } from '../data/contactformulier';
 
 interface Props { lang?: Lang; }
@@ -208,7 +208,7 @@ const perDienst = Object.fromEntries(groepen.map(([k, g]) => [k, {
 }]));
 ---
       <p class="wizard-alt">{C.fromWizard} <a href={path(lang, 'contact')}>{C.fromWizardLink}</a>.</p>
-      <form id="keuzehulp" class="wizard" data-endpoint={endpoint} data-thanks={path(lang, 'thanks')} data-msgs={JSON.stringify(T.msgs)} data-diensten={JSON.stringify(perDienst)} data-pakket={JSON.stringify(pakketAlias)} novalidate>
+      <form id="keuzehulp" class="wizard" data-endpoint={endpoint} data-thanks={path(lang, 'thanks')} data-msgs={JSON.stringify(T.msgs)} data-diensten={JSON.stringify(perDienst)} novalidate>
         <div class="step-count" aria-live="polite">{T.step} <span data-current>1</span> {T.of} <span data-total>6</span></div>
         <div class="progress" aria-hidden="true"><span></span></div>
 
@@ -357,7 +357,6 @@ const perDienst = Object.fromEntries(groepen.map(([k, g]) => [k, {
   const groepen = Array.from(form.querySelectorAll<HTMLElement>('[data-groep]'));
   const M = JSON.parse(form.dataset.msgs || '{}');
   const D: Record<string, DienstInfo> = JSON.parse(form.dataset.diensten || '{}');
-  const pakketAlias: Record<string, string> = JSON.parse(form.dataset.pakket || '{}');
   let index = 0;
   let photos: { name: string; type: string; data: string }[] = [];
 
@@ -393,7 +392,7 @@ const perDienst = Object.fromEntries(groepen.map(([k, g]) => [k, {
     syncDisabled();
   }
 
-  // Voorkeuze via ?dienst=…&plaats=…&pakket=…
+  // Voorkeuze via ?dienst=…&plaats=…
   const params = new URLSearchParams(location.search);
   const pre = params.get('dienst');
   if (pre) {
@@ -404,11 +403,6 @@ const perDienst = Object.fromEntries(groepen.map(([k, g]) => [k, {
   if (plaats) {
     const o = form.querySelector<HTMLOptionElement>(`#plaats option[data-slug="${CSS.escape(plaats)}"]`);
     if (o) o.selected = true;
-  }
-  const pakket = pakketAlias[(params.get('pakket') ?? '').toLowerCase()];
-  if (pakket) {
-    const r = form.querySelector<HTMLInputElement>(`[data-groep="sleutelbeheer"] input[name="pakket"][value="${CSS.escape(pakket)}"]`);
-    if (r) r.checked = true;
   }
   // Budget vanaf de rekentool (?budget=0…4, de volgorde van de budgetkeuzes), bij de budgetvraag van de gekozen dienst
   const budgetParam = params.get('budget');
