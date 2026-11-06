@@ -14,10 +14,12 @@ interface Props {
   toc: { id: string; label: string }[];
   faq?: { q: string; a: string }[];
   dienst?: string;
+  /** Vrije tekst die alvast in de aanvraag komt (?onderwerp=…) */
+  onderwerp?: string;
   ctaTitle?: string;
   ctaText?: string;
 }
-const { slug, toc, faq = [], dienst, ctaTitle, ctaText } = Astro.props;
+const { slug, toc, faq = [], dienst, onderwerp, ctaTitle, ctaText } = Astro.props;
 const lang: Lang = Astro.props.lang ?? 'nl';
 const t = ui[lang];
 const list = guidesBy[lang];
@@ -64,12 +66,12 @@ const request = route(lang, 'request');
       <aside class="toc">
         <p class="footer-title" style="color:var(--ink)">{t.inGuide}</p>
         <ol>{toc.map((x) => <li><a href={`#${x.id}`}>{x.label}</a></li>)}</ol>
-        <a class="btn btn-small" href={dienst ? `${request}?dienst=${dienst}` : request}>{t.askAdvice}</a>
+        <a class="btn btn-small" href={dienst ? `${request}?dienst=${dienst}${onderwerp ? `&onderwerp=${encodeURIComponent(onderwerp)}` : ''}` : request}>{t.askAdvice}</a>
       </aside>
     </div>
   </article>
   {faq.length > 0 && <Faq items={faq} lang={lang} />}
-  <Cta lang={lang} dienst={dienst} title={ctaTitle} text={ctaText} />
+  <Cta lang={lang} dienst={dienst} onderwerp={onderwerp} title={ctaTitle} text={ctaText} />
   <section class="section">
     <div class="wrap">
       <h2>{t.readAlso}</h2>

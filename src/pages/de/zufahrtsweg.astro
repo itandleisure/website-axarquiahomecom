@@ -1,0 +1,114 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Steps from '../../components/Steps.astro';
+import Services from '../../components/Services.astro';
+import { site } from '../../data/site';
+
+const onderwerp = 'Ich möchte Hilfe beim Zufahrtsweg zu meiner Finca (Reparatur, Entwässerung oder Befestigung).';
+const anfrage = '/de/anfrage/?dienst=onderhoud&onderwerp=' + encodeURIComponent(onderwerp);
+
+const faq = [
+  {
+    q: 'Was kostet es, einen Zufahrtsweg reparieren zu lassen?',
+    a: 'Das hängt stark von der Länge ab, wie steil der Weg ist, wie gut Maschinen und Betonmischer hinkommen und wie viel Entwässerung nötig ist. Deshalb nennen wir keinen Festpreis. Mit ein paar Fotos und der Lage geben wir Ihnen schnell eine erste Einschätzung, und nach einem Besuch erhalten Sie einen Vorschlag pro Wegabschnitt.',
+  },
+  {
+    q: 'Der Weg gehört der Gemeinde oder mehreren Nachbarn. Können Sie trotzdem helfen?',
+    a: 'Ja. Wir machen einen Vorschlag für den ganzen Weg, in Abschnitte aufgeteilt, den Sie mit den Nachbarn oder der Gemeinde teilen können. So sieht jeder, was passiert, und die Kosten lassen sich fair verteilen. Bei einem öffentlichen Weg holen wir zuerst die Zustimmung des Ayuntamiento ein.',
+  },
+  {
+    q: 'Muss ich selbst vor Ort sein?',
+    a: 'Nein. Wir arbeiten mit Fotos vor, während und nach den Arbeiten. Sie geben den Vorschlag frei, wir führen ihn aus, auch wenn Sie nicht in Spanien sind.',
+  },
+  {
+    q: 'Brauche ich eine Genehmigung?',
+    a: 'Für normale Pflege meist nicht. Für Betonieren, Verbreitern, einen neuen Weg, Arbeiten an einem öffentlichen Weg oder an einem Bachbett oft schon. Wir klären vorab, was nötig ist, und kümmern uns um den Antrag.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Zufahrtsweg zur Finca reparieren, befestigen und instand halten',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['en', 'nl', 'es'],
+};
+---
+<Base
+  title="Zufahrtsweg zur Finca reparieren und pflegen"
+  description="Schlaglöcher, Rinnen oder ein zu steiler Camino? Wir reparieren, befestigen und pflegen den Zufahrtsweg zu Ihrer Finca in der Axarquía, mit guter Entwässerung."
+  path="/de/zufahrtsweg/"
+  lang="de"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="de" items={[{ name: 'Zufahrtsweg', href: '/de/zufahrtsweg/' }]} />
+  <Hero
+    lang="de"
+    eyebrow="Zufahrtsweg und Einfahrt"
+    title="Ein Weg zu Ihrer Finca, <em>der das ganze Jahr befahrbar ist</em>"
+    lead="Nach dem Regen ist der Camino wieder voller Rinnen, oder das Auto kommt den steilen Hang nicht hoch. Wir reparieren den Weg, regeln die Entwässerung und halten ihn in Schuss, auch wenn Sie nicht da sind."
+    cta="Hilfe beim Zufahrtsweg"
+    ctaHref={anfrage}
+    secondary="Zum Ratgeber"
+    secondaryHref="/de/ratgeber/zufahrtsweg-finca-spanien/"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h2 class="h3">Reparatur nach dem Regen</h2>
+          <p>Rinnen, Löcher und ausgespülte Stellen mit Zahorra füllen und verdichten, damit der Weg wieder befahrbar ist.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Entwässerung</h2>
+          <p>Seitengräben, Querrinnen, Durchlässe unter dem Weg und ein geschützter Auslauf. So bleibt das Wasser vom Weg fern und die Reparatur hält.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Betonieren</h2>
+          <p>Steile Stücke, Kurven und Stellen, die immer wieder ausspülen, mit bewehrtem Beton und rauer Oberfläche für Grip befestigen.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Ränder und Böschungen</h2>
+          <p>Einen absackenden Rand oder eine bröckelnde Böschung mit einer Stützmauer oder Steinböschung sichern.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Regelmäßige Pflege</h2>
+          <p>Jeden Herbst Gräben und Durchlässe räumen, nach einem Sturm kontrollieren, im Frühjahr den Bewuchs zurückschneiden. Gut kombinierbar mit der <a href="/de/hausbetreuung/">Hausbetreuung</a>.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Nachbarn, Gemeinde und Genehmigung</h2>
+          <p>Ein Vorschlag, den Sie mit den Nachbarn oder der Gemeinde teilen können, und wir klären, welche Genehmigung nötig ist.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="de"
+    title="So gehen wir vor"
+    steps={[
+      { t: 'Sie schicken Fotos', d: 'Ein paar Fotos vom Weg, von den Problemstellen und die Lage. Dann können wir schon mitdenken.' },
+      { t: 'Wir schauen es uns an', d: 'Wir gehen den Weg ab und prüfen, woher das Wasser kommt, wie steil es ist und ob der Betonmischer hinkommt.' },
+      { t: 'Vorschlag pro Abschnitt', d: 'Sie erhalten einen Vorschlag, in Abschnitte aufgeteilt, den Sie mit den Nachbarn teilen können. Wir klären, ob eine Genehmigung nötig ist.' },
+      { t: 'Ausführung und Pflege', d: 'Wir führen die Arbeiten aus und schicken Fotos. Danach halten wir den Weg in Schuss, wenn Sie möchten.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Erst das Wasser, dann der Weg</h2>
+      <p>Fast alle Schäden an einem Camino entstehen durch Wasser. Wer nur die Löcher füllen lässt, findet den Schotter nach dem nächsten Sturm unten am Hang. Deshalb schauen wir immer zuerst auf die Entwässerung und erst danach auf den Belag. Mehr über Eigentum, Kosten, Regeln und die Wahl zwischen Schotter und Beton lesen Sie im Ratgeber <a href="/de/ratgeber/zufahrtsweg-finca-spanien/">der Zufahrtsweg zu Ihrer Finca</a>.</p>
+      <p>Sie kaufen eine Finca? Lassen Sie den Zufahrtsweg im <a href="/de/immobiliengutachten/">Gutachten vor dem Kauf</a> mitprüfen, und lesen Sie <a href="/de/ratgeber/finca-kaufen-spanien/">Finca kaufen in Spanien</a>. Welche Regeln in Ihrer Gemeinde gelten, finden Sie unter <a href="/de/orte/">Orte</a>.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="de" />
+  <Cta lang="de" dienst="onderhoud" onderwerp={onderwerp} title="Wir helfen Ihnen bei der Umsetzung" text="Sagen Sie uns, wo der Weg zu Ihrer Finca Probleme macht. Mit ein paar Fotos beraten wir Sie schnell zu Reparatur, Entwässerung oder Befestigung." />
+  <Services lang="de" title="Auch interessant" />
+</Base>

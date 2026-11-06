@@ -1,0 +1,114 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Steps from '../../components/Steps.astro';
+import Services from '../../components/Services.astro';
+import { site } from '../../data/site';
+
+const onderwerp = 'I would like help with the access road to my finca (repair, drainage or surfacing).';
+const request = '/en/request/?dienst=onderhoud&onderwerp=' + encodeURIComponent(onderwerp);
+
+const faq = [
+  {
+    q: 'What does it cost to have an access road repaired?',
+    a: 'That depends heavily on the length, how steep the road is, how easily machinery and the concrete mixer can reach it, and how much drainage is needed. That is why we do not quote a fixed price. With a few photos and the location we can quickly give a first estimate, and after a visit you receive a proposal per section of road.',
+  },
+  {
+    q: 'The road belongs to the town hall or to several neighbours. Can you still help?',
+    a: 'Yes. We make one proposal for the whole road, split into sections, that you can share with your neighbours or the town hall. Everyone can see what will happen and the costs can be divided fairly. On a public road we first ask the ayuntamiento for permission.',
+  },
+  {
+    q: 'Do I need to be there?',
+    a: 'No. We work with photos before, during and after the job. You approve the proposal and we carry it out, even while you are abroad.',
+  },
+  {
+    q: 'Is a permit required?',
+    a: 'For ordinary maintenance usually not. For concreting, widening, a new road, work on a public road or work near a stream bed it often is. We check in advance what is needed and handle the application.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Finca access road repair, surfacing and maintenance',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['en', 'nl', 'es'],
+};
+---
+<Base
+  title="Finca access road repair and maintenance"
+  description="Potholes, gullies or a camino too steep for your car? We repair, surface and maintain the access road to your finca in the Axarquía, with proper drainage."
+  path="/en/access-road/"
+  lang="en"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="en" items={[{ name: 'Access road', href: '/en/access-road/' }]} />
+  <Hero
+    lang="en"
+    eyebrow="Access road and driveway"
+    title="A road to your finca <em>you can use all year round</em>"
+    lead="After the rain the camino is full of gullies again, or the car will not make it up the steep slope. We repair the road, sort out the drainage and keep it in shape, even when you are away."
+    cta="Help with your access road"
+    ctaHref={request}
+    secondary="Read the guide"
+    secondaryHref="/en/guides/finca-access-road-spain/"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h2 class="h3">Repairs after the rain</h2>
+          <p>Gullies, potholes and washed-out stretches filled and compacted with zahorra, so the road is passable again.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Drainage</h2>
+          <p>Side ditches, cross drains, culverts under the road and a protected outfall. That keeps the water off the road and the repair in place.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Concreting</h2>
+          <p>Steep sections, bends and spots that keep washing out surfaced with reinforced concrete and a rough finish for grip.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Edges and banks</h2>
+          <p>A subsiding edge or crumbling bank secured with a retaining wall or stone embankment.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Regular maintenance</h2>
+          <p>Ditches and culverts cleared every autumn, a check after a storm and vegetation cut back in spring. Easy to combine with <a href="/en/key-holding/">key holding</a>.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Neighbours, town hall and permits</h2>
+          <p>One proposal you can share with your neighbours or the town hall, and we find out which permission is needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="en"
+    title="How we go about it"
+    steps={[
+      { t: 'You send photos', d: 'A few photos of the road, the spots where it goes wrong and the location. That lets us start thinking along with you.' },
+      { t: 'We come and look', d: 'We walk the road and look at where the water comes from, how steep it is and whether the concrete mixer can get there.' },
+      { t: 'Proposal per section', d: 'You receive a proposal split into sections that you can share with the neighbours. We check whether a permit is needed.' },
+      { t: 'Work and maintenance', d: 'We carry out the work and send photos. Afterwards we keep the road in shape, if you wish.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Water first, then the road</h2>
+      <p>Almost all damage to a camino is caused by water. If you only have the holes filled, the gravel ends up at the bottom of the slope after the next storm. That is why we always look at the drainage first, and only then at the surface. Read more about ownership, who pays, the rules and the choice between gravel and concrete in the guide <a href="/en/guides/finca-access-road-spain/">the access road to your finca</a>.</p>
+      <p>Buying a finca? Have the access road included in the <a href="/en/property-survey/">pre-purchase survey</a>, and read <a href="/en/guides/buying-a-finca-in-spain/">buying a finca in Spain</a>. Want to know the rules in your municipality? See <a href="/en/places/">places</a>.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="en" />
+  <Cta lang="en" dienst="onderhoud" onderwerp={onderwerp} title="We help you make it happen" text="Tell us where the road to your finca is causing problems. With a few photos we can quickly advise on repair, drainage or surfacing." />
+  <Services lang="en" title="You may also like" />
+</Base>

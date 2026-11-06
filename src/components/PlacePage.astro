@@ -10,7 +10,7 @@ import { places, placeBySlug, placeHref, type Place, type PlacePage } from '../d
 import { placeContent } from '../data/place-content';
 import { services, path as route, type Lang } from '../i18n';
 import { site } from '../data/site';
-import { guidesBy, guideHref } from '../data/guides';
+import { guidesBy, guideHref, guideAt } from '../data/guides';
 import { placeTabs } from '../data/place-tabs';
 import { fiestaHref, fiestaSlugFor } from '../data/fiestas';
 
@@ -78,6 +78,9 @@ const nearby = places
   .filter((p) => p.municipality === place.slug || place.municipality === p.slug || (p.municipality && p.municipality === place.municipality) || p.setting === place.setting)
   .slice(0, 4);
 const buyerGuides = guidesBy[lang].filter((_, i) => [1, 2, 3, 7].includes(i));
+// Buiten de kust liggen veel huizen aan een camino: daar ook de gids over de toegangsweg
+const roadIndex = guidesBy.nl.findIndex((g) => g.slug === 'toegangsweg-finca-spanje');
+const roadGuide = place.setting !== 'coast' && roadIndex >= 0 ? guideAt(lang, roadIndex) : undefined;
 
 const placeLd = {
   '@context': 'https://schema.org',
@@ -146,6 +149,7 @@ const placeLd = {
           <ul class="checks">
             {tabs.filter((t) => t.page === 'permit' || t.page === 'practical').map((t) => <li><a href={t.href}>{t.label}</a></li>)}
             {buyerGuides.map((g) => <li><a href={guideHref(lang, g)}>{g.short}</a></li>)}
+            {roadGuide && <li><a href={guideHref(lang, roadGuide)}>{roadGuide.short}</a></li>}
           </ul>
         </div>
       </div>

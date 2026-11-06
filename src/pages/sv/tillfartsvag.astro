@@ -1,0 +1,114 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Steps from '../../components/Steps.astro';
+import Services from '../../components/Services.astro';
+import { site } from '../../data/site';
+
+const onderwerp = 'Jag vill ha hjälp med tillfartsvägen till min finca (lagning, avvattning eller beläggning).';
+const forfragan = '/sv/forfragan/?dienst=onderhoud&onderwerp=' + encodeURIComponent(onderwerp);
+
+const faq = [
+  {
+    q: 'Vad kostar det att laga en tillfartsväg?',
+    a: 'Det beror mycket på längden, hur brant vägen är, hur lätt maskiner och betongbil kommer fram och hur mycket avvattning som behövs. Därför anger vi inget fast pris. Med några foton och platsen kan vi snabbt ge en första bedömning, och efter ett besök får du ett förslag per vägsträcka.',
+  },
+  {
+    q: 'Vägen ägs av kommunen eller av flera grannar. Kan ni ändå hjälpa till?',
+    a: 'Ja. Vi gör ett förslag för hela vägen, uppdelat i sträckor, som du kan dela med grannarna eller kommunen. Då ser alla vad som ska göras och kostnaden kan fördelas rättvist. På en allmän väg ber vi först ayuntamiento om tillstånd.',
+  },
+  {
+    q: 'Måste jag vara på plats?',
+    a: 'Nej. Vi arbetar med foton före, under och efter arbetet. Du godkänner förslaget och vi utför det, även när du är i Sverige.',
+  },
+  {
+    q: 'Behövs det tillstånd?',
+    a: 'För vanligt underhåll oftast inte. För betonggjutning, breddning, en ny väg, arbete på en allmän väg eller vid en bäckfåra ofta ja. Vi tar reda på i förväg vad som krävs och sköter ansökan.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Laga, belägga och underhålla tillfartsväg till finca',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['en', 'nl', 'es'],
+};
+---
+<Base
+  title="Laga och underhålla tillfartsvägen till din finca"
+  description="Gropar, raviner eller en för brant camino? Vi lagar, belägger och underhåller tillfartsvägen till din finca i Axarquía, med bra avvattning."
+  path="/sv/tillfartsvag/"
+  lang="sv"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="sv" items={[{ name: 'Tillfartsväg', href: '/sv/tillfartsvag/' }]} />
+  <Hero
+    lang="sv"
+    eyebrow="Tillfartsväg och uppfart"
+    title="En väg till din finca <em>som fungerar året runt</em>"
+    lead="Efter regnet är vägen full av raviner igen, eller så kommer bilen inte upp för den branta backen. Vi lagar vägen, ordnar avvattningen och håller den i skick, även när du inte är där."
+    cta="Hjälp med tillfartsvägen"
+    ctaHref={forfragan}
+    secondary="Läs guiden"
+    secondaryHref="/sv/guider/tillfartsvag-finca-spanien/"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h2 class="h3">Lagning efter regnet</h2>
+          <p>Raviner, gropar och bortspolade partier fylls och packas med zahorra, så att vägen går att köra på igen.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Avvattning</h2>
+          <p>Sidodiken, tvärrännor, trummor under vägen och ett skyddat utlopp. Så hålls vattnet borta från vägen och lagningen ligger kvar.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Betonggjutning</h2>
+          <p>Branta partier, kurvor och ställen som spolas bort om och om igen beläggs med armerad betong och grov yta för grepp.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Kanter och slänter</h2>
+          <p>En vägkant som sjunker eller en slänt som smular säkras med en stödmur eller stenslänt.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Regelbundet underhåll</h2>
+          <p>Diken och trummor rensas varje höst, kontroll efter en storm och växtligheten beskärs på våren. Lätt att kombinera med <a href="/sv/tillsyn/">tillsyn</a>.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Grannar, kommun och tillstånd</h2>
+          <p>Ett förslag som du kan dela med grannarna eller kommunen, och vi tar reda på vilket tillstånd som behövs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="sv"
+    title="Så går vi till väga"
+    steps={[
+      { t: 'Du skickar foton', d: 'Några foton på vägen, ställena där det blir fel och platsen. Då kan vi redan börja tänka med dig.' },
+      { t: 'Vi kommer och tittar', d: 'Vi går längs vägen och ser var vattnet kommer ifrån, hur brant det är och om betongbilen kommer fram.' },
+      { t: 'Förslag per sträcka', d: 'Du får ett förslag uppdelat i sträckor som du kan dela med grannarna. Vi kontrollerar om tillstånd behövs.' },
+      { t: 'Utförande och underhåll', d: 'Vi utför arbetet och skickar foton. Efteråt håller vi vägen i skick, om du vill.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Först vattnet, sedan vägen</h2>
+      <p>Nästan alla skador på en camino orsakas av vatten. Om du bara låter fylla hålen ligger gruset längst ner i backen efter nästa storm. Därför tittar vi alltid först på avvattningen och först därefter på beläggningen. Mer om ägande, vem som betalar, reglerna och valet mellan grus och betong läser du i guiden <a href="/sv/guider/tillfartsvag-finca-spanien/">tillfartsvägen till din finca</a>.</p>
+      <p>Ska du köpa en finca? Låt tillfartsvägen ingå i <a href="/sv/besiktning/">besiktningen före köp</a>, och läs <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca i Spanien</a>. Vill du veta vilka regler som gäller i din kommun? Se <a href="/sv/orter/">orter</a>.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="sv" />
+  <Cta lang="sv" dienst="onderhoud" onderwerp={onderwerp} title="Vi hjälper dig att genomföra det" text="Berätta var vägen till din finca ställer till problem. Med några foton kan vi snabbt ge råd om lagning, avvattning eller beläggning." />
+  <Services lang="sv" title="Också intressant" />
+</Base>

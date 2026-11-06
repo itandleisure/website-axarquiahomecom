@@ -1,0 +1,120 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'oversikt', label: 'Problem och lösningar i korthet' },
+  { id: 'agande', label: 'Vem äger vägen, och vem betalar?' },
+  { id: 'vatten', label: 'Vatten är den största fienden' },
+  { id: 'avvattning', label: 'Avvattning: diken, tvärrännor och trummor' },
+  { id: 'belaggning', label: 'Grus, zahorra eller betong?' },
+  { id: 'tillstand', label: 'Tillstånd och regler' },
+  { id: 'grannar', label: 'Dela kostnaden med grannarna' },
+  { id: 'underhall', label: 'Underhåll under året' },
+];
+
+const faq = [
+  {
+    q: 'Kommunen äger vägen men gör ingenting. Vad kan jag göra?',
+    a: 'Anmäl skadan skriftligt till ayuntamiento, med foton och platsangivelse. Många kommuner i Axarquía har liten budget för landsvägar. I praktiken blir det ofta så att de boende låter utföra arbetet, ibland med material eller ett bidrag från kommunen. Arbete på en allmän väg får bara göras med kommunens tillstånd, så fråga först.',
+  },
+  {
+    q: 'Måste jag betala för en väg över grannens mark?',
+    a: 'Om du har vägrätt (servidumbre de paso) är det enligt den spanska civillagen du som användare som betalar det underhåll som behövs för att kunna använda vägen. Använder flera hus vägen delar de på kostnaden i proportion. Står något annat i lagfarten eller i en överenskommelse gäller den.',
+  },
+  {
+    q: 'Kan jag inte bara gjuta hela vägen i betong?',
+    a: 'Det går, men det är inte alltid klokt eller tillåtet. Betong är perfekt för branta partier och kurvor, men utan bra avvattning spolas marken under ändå bort. På landsbygdsmark, vid en bäckfåra eller i en naturpark krävs ofta tillstånd. Den bästa lösningen är oftast en kombination: betong där det är brant, packat grus på de flatare partierna och bra avvattning överallt.',
+  },
+  {
+    q: 'När är det bäst att laga vägen?',
+    a: 'Helst i slutet av sommaren eller tidigt på hösten, före det kraftiga regnet från oktober till mars. Då är dikena rensade och hålen lagade när vattnet kommer. Efter en storm (DANA) är det viktigt att snabbt laga de värsta ravinerna, eftersom varje nytt skyfall gör skadan större.',
+  },
+];
+
+const onderwerp = 'Jag vill ha hjälp med tillfartsvägen till min finca (lagning, avvattning eller beläggning).';
+---
+<Guide lang="sv" slug="tillfartsvag-finca-spanien" toc={toc} faq={faq} dienst="onderhoud" onderwerp={onderwerp} ctaTitle="Vill du få tillfartsvägen lagad?" ctaText="Skicka några foton på vägen och berätta var problemet är. Vi kommer och tittar, gör ett förslag som du också kan dela med grannarna och hjälper dig att genomföra det.">
+  <h2 id="oversikt">Problem och lösningar i korthet</h2>
+  <p>De flesta fincor i bergen i Axarquía nås via en <em>camino</em>: en grusväg eller delvis betongväg som går från den asfalterade vägen fram till huset. Så länge det är torrt märker du knappt av den. Efter höstens första ordentliga skyfall kan vägen plötsligt vara full av raviner, gropar och lösa stenar. Här är de vanligaste problemen och vad man kan göra åt dem. Vill du få det åtgärdat? <a href="/sv/tillfartsvag/">Vi hjälper dig att genomföra det</a>.</p>
+  <table class="prices">
+    <thead><tr><th>Problem</th><th>Lösning</th></tr></thead>
+    <tbody>
+      <tr><td>Raviner längs med vägen</td><td>Led bort vattnet med tvärrännor och ett sidodike, fyll sedan och packa ravinerna</td></tr>
+      <tr><td>Gropar</td><td>Gräv ur, fyll med zahorra (bärlagergrus) och packa; på betong gjuts det om lokalt</td></tr>
+      <tr><td>Brant parti där bilen slirar</td><td>Gjut betong med grov yta så att däcken får grepp</td></tr>
+      <tr><td>Vägen spolas bort vid en bäck eller torr fåra</td><td>Vägtrumma (rör under vägen) eller ett betongvad (<em>badén</em>)</td></tr>
+      <tr><td>Vägkanten rasar</td><td>Stödmur eller stenslänt, och se till att vattnet inte längre rinner över kanten</td></tr>
+      <tr><td>Sprucken eller trasig betong</td><td>Bryt upp och gjut om lokalt; ta reda på varför den sprack (vatten under plattan, för tunn, ingen armering)</td></tr>
+      <tr><td>Buskar och grenar över vägen</td><td>Beskär varje år, så att även brandbil, tankbil eller lastbil kommer fram</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="agande">Vem äger vägen, och vem betalar?</h2>
+  <p>Innan något görs med vägen måste det vara klart vem som äger den. Det avgör vem som får arbeta på den, vem som betalar och vilket tillstånd som behövs. Grovt finns det fyra situationer:</p>
+  <ul>
+    <li><strong>Allmän väg (<em>camino público</em>)</strong>: vägen tillhör kommunen och finns i dess vägregister. I fastighetsregistrets karta (<em>Catastro</em>) har en sådan väg ofta ett eget fastighetsnummer. Underhållet är i princip kommunens ansvar, men i praktiken händer lite på många landsvägar. Du får inte bara arbeta på den själv; du behöver tillstånd från ayuntamiento.</li>
+    <li><strong>Väg över en grannes mark (<em>servidumbre de paso</em>)</strong>: du har vägrätt, som ska stå i lagfarten och i fastighetsregistret. Den som använder rätten betalar normalt det underhåll som behövs för att använda vägen, om inte lagfarten säger något annat.</li>
+    <li><strong>Väg som delas av flera hus</strong>: ibland ägs vägen gemensamt, eller så har de boende en förening (<em>comunidad de camino</em> eller <em>de usuarios</em>). Kostnaderna delas då enligt stadgar eller överenskommelser, ofta efter antal hus eller efter den sträcka var och en använder.</li>
+    <li><strong>Egen uppfart på egen tomt</strong>: den är helt din, men även där kan tillstånd behövas, till exempel för betong eller en mur.</li>
+  </ul>
+  <p>Osäker på vilken situation det gäller? Titta i lagfarten (<em>escritura</em>), <em>nota simple</em> från fastighetsregistret och Catastro-kartan, eller fråga kommunen. Håller du på att köpa? Läs då också <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca i Spanien</a>: tillfartsvägen hör till kontrollerna innan du skriver på.</p>
+
+  <h2 id="vatten">Vatten är den största fienden</h2>
+  <p>Nästan alla skador på en camino orsakas av vatten. I Axarquía faller det mesta regnet under några veckor mellan oktober och mars, ofta i korta, kraftiga skurar eller vid en <em>DANA</em>. Vattnet tar kortaste vägen nedåt, och det är ofta själva vägen. Det för bort det fina materialet, gräver en ravin i mitten eller längs kanten, och vid nästa skyfall blir ravinen djupare.</p>
+  <p>Därför räcker det inte att bara fylla hålen. Utan avvattning ligger det nya gruset längst ner i backen efter nästa storm. Grundregeln: ordna vattnet först, sedan vägen.</p>
+
+  <h2 id="avvattning">Avvattning: diken, tvärrännor och trummor</h2>
+  <p>Bra avvattning får bort vattnet från vägen så snabbt som möjligt, innan det får fart. De viktigaste delarna:</p>
+  <ul>
+    <li><strong>Lutning</strong>: vägen lutar lätt åt ena sidan, eller är välvd åt båda sidorna, så att vattnet inte blir stående i mitten.</li>
+    <li><strong>Sidodike (<em>cuneta</em>)</strong>: ett dike eller en betongränna på bergsidan av vägen som samlar upp och leder bort vattnet.</li>
+    <li><strong>Tvärrännor</strong>: snedställda betongtrösklar eller galler tvärs över vägen med jämna mellanrum, som leder vattnet åt sidan. På branta partier sitter de tätare.</li>
+    <li><strong>Vägtrumma (<em>caño</em> eller <em>tubo</em>)</strong>: ett rör under vägen där en bäck eller ett dike korsar den. Den måste vara stor nog för ett kraftigt skyfall och hållas ren.</li>
+    <li><strong>Utlopp</strong>: där vattnet lämnar vägen lägger du sten, så att det inte spolar bort slänten bredvid vägen.</li>
+  </ul>
+  <p>Finns det en hög, smulande slänt bredvid vägen eller sjunker kanten, kan en stödmur med dränering behövas. Det ingår i vårt <a href="/sv/underhall/">underhåll och reparationer</a>.</p>
+
+  <h2 id="belaggning">Grus, zahorra eller betong?</h2>
+  <p>Vilken beläggning som passar beror främst på hur brant vägen är, hur mycket trafik den har och hur mycket underhåll du vill lägga ner.</p>
+  <table class="prices">
+    <thead><tr><th>Beläggning</th><th>Bra att veta</th></tr></thead>
+    <tbody>
+      <tr><td>Jord eller löst grus</td><td>Billigt, men spolas snabbt bort och ger damm och gropar; bara på flacka partier</td></tr>
+      <tr><td><em>Zahorra</em> (bärlagergrus), packad</td><td>Den vanliga lösningen för grusvägar; med bra avvattning håller den i åratal, med lite efterarbete ibland</td></tr>
+      <tr><td>Armerad betong</td><td>För branta partier, kurvor och ställen som spolas bort om och om igen; grov yta för grepp</td></tr>
+      <tr><td>Hjulspår i betong</td><td>Två betongremsor med grus eller grönt emellan; mindre betong, mindre hårdgjord yta</td></tr>
+      <tr><td>Asfalt</td><td>För långa vägar med mycket trafik; för en enda finca sällan värt kostnaden och maskinerna</td></tr>
+    </tbody>
+  </table>
+  <p>Med betong är detaljerna viktiga: en välpackad grund, armeringsnät, tillräcklig tjocklek för tung trafik (en betongbil eller tankbil väger mycket), dilatationsfogar mot sprickor och en grov, borstad eller räfflad yta. En slät betongplatta i en brant backe är hal som is när det regnar. Och betongbilen måste kunna komma fram: på smala vägar används ibland mindre bilar eller en pump.</p>
+
+  <h2 id="tillstand">Tillstånd och regler</h2>
+  <p>Vanligt underhåll, som att fylla hål och rensa diken, kan oftast göras utan pappersarbete. Större ingrepp är en annan sak:</p>
+  <ul>
+    <li><strong>Gjuta betong, bredda eller anlägga en ny väg</strong> på landsbygdsmark (<em>suelo rústico</em>) kräver normalt en anmälan eller ett tillstånd från kommunen. Se reglerna i <a href="/sv/orter/">din kommun</a>.</li>
+    <li><strong>Arbete på en allmän väg</strong> får bara göras med tillstånd från ayuntamiento.</li>
+    <li><strong>Vid en bäck eller torr fåra (<em>arroyo</em>, <em>rambla</em>)</strong> har Junta de Andalucías vattenmyndighet ett ord med i laget. En trumma eller ett vad i en fåra kräver ofta deras tillstånd.</li>
+    <li><strong>Fädrivningsväg (<em>vía pecuaria</em>)</strong>: vissa gamla vägar är historiska fädrivningsvägar som ägs av Junta. Där får du inte bara belägga vägen.</li>
+    <li><strong>I eller nära en naturpark</strong>, som Sierras de Tejeda, Almijara y Alhama ovanför Cómpeta, Canillas och Frigiliana, gäller extra regler.</li>
+  </ul>
+  <p>Vi tar reda på i förväg vad som krävs och sköter ansökan, så att du inte får böter i efterhand. Mer om tillstånd läser du i <a href="/sv/guider/bygglov-renovering-andalusien/">bygglov för renovering i Andalusien</a>.</p>
+
+  <h2 id="grannar">Dela kostnaden med grannarna</h2>
+  <p>När flera hus använder samma camino är arbetet ofta bara möjligt om alla är med. Några tips för att det ska gå smidigt:</p>
+  <ul>
+    <li><strong>Ett förslag för hela vägen</strong>, uppdelat i sträckor. Då ser alla vad som ska göras och kostnaden kan fördelas rättvist, till exempel efter den sträcka var och en använder.</li>
+    <li><strong>Skriftliga överenskommelser</strong>: vem betalar vad, vem beställer arbetet och hur sköts underhållet efteråt. En enkel skriftlig överenskommelse sparar år av krångel.</li>
+    <li><strong>Fråga kommunen</strong>, om det är en allmän väg, om de bidrar med material eller pengar när de boende låter utföra arbetet. Det händer regelbundet i Axarquía.</li>
+    <li><strong>Vill inte alla vara med?</strong> Låt då först göra den sträcka du själv behöver, med avvattning som inte skickar vattnet till grannarna.</li>
+  </ul>
+  <p>Vi gör gärna ett förslag som du kan dela med grannarna, på engelska, nederländska eller spanska.</p>
+
+  <h2 id="underhall">Underhåll under året</h2>
+  <p>En väg som får lite uppmärksamhet varje år håller mycket längre än en som lagas först efter skadan. Ett enkelt schema:</p>
+  <ul>
+    <li><strong>September och oktober</strong>: rensa sidodiken, tvärrännor och trummor och fyll små hål. Då är vägen redo för regnet.</li>
+    <li><strong>Efter varje kraftigt skyfall eller storm</strong>: kontrollera om nya raviner har bildats och om trummorna är igensatta. En liten lagning nu förhindrar en stor senare.</li>
+    <li><strong>Våren</strong>: beskär växtligheten längs vägen så att brandkåren kommer fram, och planera större reparationer före sommaren.</li>
+  </ul>
+  <p>Är du borta en stor del av året? Med <a href="/sv/tillsyn/">tillsyn</a> kör någon ändå regelbundet på din väg och kan berätta direkt efter en storm hur det ser ut. Läs också hur du <a href="/sv/guider/forbereda-huset-for-vintern-i-spanien/">förbereder huset för vintern</a>.</p>
+</Guide>

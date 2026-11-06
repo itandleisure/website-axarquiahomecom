@@ -1,0 +1,120 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'overzicht', label: 'Problemen en oplossingen op een rij' },
+  { id: 'eigendom', label: 'Van wie is de weg, en wie betaalt?' },
+  { id: 'water', label: 'Water is de grootste vijand' },
+  { id: 'afwatering', label: 'Afwatering: goten, dwarsgoten en duikers' },
+  { id: 'verharding', label: 'Grind, zahorra of beton?' },
+  { id: 'vergunning', label: 'Vergunning en regels' },
+  { id: 'buren', label: 'Kosten delen met de buren' },
+  { id: 'onderhoud', label: 'Onderhoud door het jaar' },
+];
+
+const faq = [
+  {
+    q: 'De gemeente is eigenaar van de camino, maar doet niets. Wat kan ik doen?',
+    a: 'Meld de schade schriftelijk bij het ayuntamiento, met foto’s en de ligging. Veel gemeenten in de Axarquía hebben weinig budget voor landelijke wegen. Vaak komt het erop neer dat de bewoners het werk laten doen, soms met materiaal of een bijdrage van de gemeente. Werk aan een openbare weg mag alleen met toestemming van de gemeente, dus vraag die eerst.',
+  },
+  {
+    q: 'Moet ik meebetalen aan een weg over het land van de buren?',
+    a: 'Als u een recht van overpad (servidumbre de paso) heeft, bent u volgens het Spaanse burgerlijk wetboek degene die het onderhoud betaalt dat nodig is om de weg te gebruiken. Gebruiken meerdere huizen de weg, dan delen zij de kosten naar verhouding. Staat er in de akte of een afspraak iets anders, dan geldt die afspraak.',
+  },
+  {
+    q: 'Kan ik de hele weg niet gewoon betonneren?',
+    a: 'Het kan, maar het is niet altijd verstandig of toegestaan. Beton is ideaal voor steile stukken en bochten, maar zonder goede afwatering spoelt de grond eronder alsnog weg. Op landelijke grond, bij een beekbedding of in een natuurpark is vaak een vergunning nodig. Vaak is de beste oplossing een combinatie: beton waar het steil is, verdicht grind op de vlakke stukken en overal goede afwatering.',
+  },
+  {
+    q: 'Wanneer laat ik de weg het beste herstellen?',
+    a: 'Het liefst eind van de zomer of begin van de herfst, vóór de zware regen van oktober tot en met maart. Dan zijn de goten schoon en de gaten dicht als het water komt. Na een storm (DANA) is snel herstel van de ergste geulen belangrijk, omdat elke volgende bui de schade groter maakt.',
+  },
+];
+
+const onderwerp = 'Ik wil hulp bij de toegangsweg naar mijn finca (herstel, afwatering of verharding).';
+---
+<Guide slug="toegangsweg-finca-spanje" toc={toc} faq={faq} dienst="onderhoud" onderwerp={onderwerp} ctaTitle="Uw toegangsweg laten herstellen?" ctaText="Stuur een paar foto’s van de weg en vertel waar het misgaat. Wij komen kijken, maken een voorstel dat u ook met de buren kunt delen, en helpen u het te realiseren.">
+  <h2 id="overzicht">Problemen en oplossingen op een rij</h2>
+  <p>De meeste fincas in de heuvels van de Axarquía liggen aan een <em>camino</em>: een onverharde of deels betonnen weg die van de asfaltweg naar het huis loopt. Zolang het droog is, merkt u er weinig van. Na de eerste stevige herfstbui kan de weg ineens vol geulen, gaten en losse stenen liggen. Dit zijn de bekendste problemen en wat eraan te doen is. Wilt u het laten aanpakken? <a href="/nl/toegangsweg/">Wij helpen u het te realiseren</a>.</p>
+  <table class="prices">
+    <thead><tr><th>Probleem</th><th>Oplossing</th></tr></thead>
+    <tbody>
+      <tr><td>Geulen in de lengte van de weg</td><td>Water van de weg af leiden met dwarsgoten en een zijgoot, daarna de geulen vullen en verdichten</td></tr>
+      <tr><td>Gaten en kuilen</td><td>Uitgraven, vullen met zahorra (steenslag met fijn materiaal) en aantrillen; bij beton plaatselijk opnieuw storten</td></tr>
+      <tr><td>Steil stuk waar de auto doorslipt</td><td>Betonneren met een ruwe afwerking, zodat banden grip houden</td></tr>
+      <tr><td>Weg spoelt weg bij een beekje of droge bedding</td><td>Duiker (buis onder de weg) of een betonnen doorwaadplaats (<em>badén</em>)</td></tr>
+      <tr><td>Rand van de weg zakt weg</td><td>Steunmuur of stenen talud, en het water niet meer over de rand laten lopen</td></tr>
+      <tr><td>Gescheurd of gebroken beton</td><td>Plaatselijk uitbreken en opnieuw storten; nagaan waarom het brak (water onder de plaat, te dun, geen wapening)</td></tr>
+      <tr><td>Struiken en takken over de weg</td><td>Jaarlijks terugsnoeien, zodat ook een brandweerwagen, waterwagen of bouwvrachtwagen erdoor kan</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="eigendom">Van wie is de weg, en wie betaalt?</h2>
+  <p>Voordat er iets aan de weg gebeurt, moet duidelijk zijn van wie hij is. Dat bepaalt wie er mag werken, wie betaalt en welke toestemming nodig is. Er zijn grofweg vier situaties:</p>
+  <ul>
+    <li><strong>Openbare weg (<em>camino público</em>)</strong>: de weg is van de gemeente en staat in haar inventaris van wegen. In het kadaster (<em>Catastro</em>) heeft zo’n weg vaak een eigen perceelnummer. Het onderhoud is in principe een taak van de gemeente, maar in de praktijk gebeurt er op veel landelijke wegen weinig. U mag er niet zomaar zelf aan werken; daarvoor is toestemming van het ayuntamiento nodig.</li>
+    <li><strong>Weg over het land van een buurman (<em>servidumbre de paso</em>)</strong>: u heeft een recht van overpad, dat in de eigendomsakte en het register hoort te staan. Wie het recht gebruikt, betaalt in de regel het onderhoud dat nodig is om de weg te kunnen gebruiken, tenzij in de akte iets anders is afgesproken.</li>
+    <li><strong>Gedeelde weg met meerdere huizen</strong>: soms is de weg gezamenlijk eigendom of hebben de bewoners een vereniging (<em>comunidad de camino</em> of <em>de usuarios</em>). Dan worden de kosten verdeeld volgens de statuten of de afspraken, vaak naar het aantal huizen of het stuk weg dat ieder gebruikt.</li>
+    <li><strong>Eigen oprit op uw eigen perceel</strong>: die is helemaal voor uzelf, maar ook daar kan een vergunning nodig zijn voor bijvoorbeeld beton of een muur.</li>
+  </ul>
+  <p>Weet u niet zeker welke situatie het is? Kijk in de eigendomsakte (<em>escritura</em>), de <em>nota simple</em> van het register en de kaart van het kadaster, of vraag het na bij de gemeente. Koopt u nog, lees dan ook <a href="/nl/gidsen/finca-kopen-in-spanje/">finca kopen in Spanje</a>: de toegangsweg hoort bij de controles vóór de koop.</p>
+
+  <h2 id="water">Water is de grootste vijand</h2>
+  <p>Bijna alle schade aan een camino komt door water. In de Axarquía valt de meeste regen in een paar weken tussen oktober en maart, vaak in korte, hevige buien of een <em>DANA</em>. Het water zoekt de kortste weg naar beneden, en dat is vaak de weg zelf. Het neemt het fijne materiaal mee, slijpt een geul in het midden of langs de rand, en bij de volgende bui wordt die geul dieper.</p>
+  <p>Daarom heeft het weinig zin om alleen de gaten te vullen. Zonder afwatering ligt het nieuwe grind na de volgende storm onderaan de helling. De vaste regel: eerst het water regelen, dan de weg.</p>
+
+  <h2 id="afwatering">Afwatering: goten, dwarsgoten en duikers</h2>
+  <p>Goede afwatering zorgt dat het water zo snel mogelijk van de weg af gaat, voordat het snelheid krijgt. De belangrijkste onderdelen:</p>
+  <ul>
+    <li><strong>Afschot</strong>: de weg loopt licht schuin naar één kant, of bol naar beide kanten, zodat het water niet in het midden blijft staan.</li>
+    <li><strong>Zijgoot (<em>cuneta</em>)</strong>: een greppel of betonnen goot langs de bergkant van de weg die het water opvangt en afvoert.</li>
+    <li><strong>Dwarsgoten</strong>: schuine betonnen ribbels of roosters dwars over de weg, om de zoveel meter, die het water naar de zijkant sturen. Op steile stukken staan ze dichter bij elkaar.</li>
+    <li><strong>Duiker (<em>caño</em> of <em>tubo</em>)</strong>: een buis onder de weg door, waar een beekje of zijgoot de weg kruist. Hij moet groot genoeg zijn voor een flinke bui en goed schoon gehouden worden.</li>
+    <li><strong>Uitstroom</strong>: waar het water de weg verlaat, legt u stenen neer, zodat het de helling naast de weg niet wegspoelt.</li>
+  </ul>
+  <p>Ligt er naast de weg een hoge, afbrokkelende helling of zakt de rand weg, dan kan een <a href="/nl/kosten/keermuur-en-afwatering/">keermuur met afwatering</a> nodig zijn.</p>
+
+  <h2 id="verharding">Grind, zahorra of beton?</h2>
+  <p>Welke verharding past, hangt vooral af van hoe steil de weg is, hoeveel verkeer erover gaat en hoeveel u wilt onderhouden.</p>
+  <table class="prices">
+    <thead><tr><th>Verharding</th><th>Goed om te weten</th></tr></thead>
+    <tbody>
+      <tr><td>Losse grond of grind</td><td>Goedkoop, maar spoelt snel weg en geeft stof en gaten; alleen op vlakke stukken</td></tr>
+      <tr><td><em>Zahorra</em> (steenslag met fijn materiaal), verdicht</td><td>De gangbare oplossing voor onverharde caminos; met goede afwatering jaren mee, wel af en toe bijwerken</td></tr>
+      <tr><td>Beton met wapeningsnet</td><td>Voor steile stukken, bochten en plekken waar het water steeds wegspoelt; ruwe afwerking voor grip</td></tr>
+      <tr><td>Betonnen rijsporen</td><td>Twee betonnen stroken met grind of groen ertussen; minder beton, minder verhard oppervlak</td></tr>
+      <tr><td>Asfalt</td><td>Voor lange, drukke wegen; voor één finca meestal niet de moeite door de kosten en de machines</td></tr>
+    </tbody>
+  </table>
+  <p>Bij beton gaat het om de details: een goed verdichte ondergrond, een wapeningsnet, voldoende dikte voor zwaar verkeer (een betonmixer of waterwagen weegt veel), dilatatievoegen tegen scheuren en een ruwe, geborstelde of gegroefde afwerking. Een gladde betonplaat op een steile helling is in de regen glad als ijs. En de betonmixer moet de plek wel kunnen bereiken: op smalle wegen wordt soms met kleinere wagens of een pomp gewerkt.</p>
+
+  <h2 id="vergunning">Vergunning en regels</h2>
+  <p>Gewoon onderhoud, zoals gaten vullen en goten schoonmaken, kan meestal zonder papierwerk. Voor grotere ingrepen ligt dat anders:</p>
+  <ul>
+    <li><strong>Betonneren, verbreden of een nieuwe weg</strong> op landelijke grond (<em>suelo rústico</em>) vraagt in de regel een melding of vergunning van de gemeente. Zie de regels van <a href="/nl/plaatsen/">uw gemeente</a>.</li>
+    <li><strong>Werk aan een openbare weg</strong> mag alleen met toestemming van het ayuntamiento.</li>
+    <li><strong>Bij een beek of droge bedding (<em>arroyo</em>, <em>rambla</em>)</strong> geldt het waterbeheer van de Junta de Andalucía. Een duiker of doorwaadplaats in een bedding vraagt vaak hun toestemming.</li>
+    <li><strong>Veedrift (<em>vía pecuaria</em>)</strong>: sommige oude wegen zijn van oudsher veedriften en eigendom van de Junta. Daar mag u niet zomaar verharden.</li>
+    <li><strong>In of bij een natuurpark</strong>, zoals de Sierras de Tejeda, Almijara y Alhama boven Cómpeta, Canillas en Frigiliana, gelden extra regels.</li>
+  </ul>
+  <p>Wij zoeken vooraf uit wat er nodig is en regelen de aanvraag, zodat u niet achteraf een boete krijgt. Meer over vergunningen leest u in <a href="/nl/gidsen/vergunning-verbouwen-andalusie/">verbouwen in Andalusië: welke vergunning</a>.</p>
+
+  <h2 id="buren">Kosten delen met de buren</h2>
+  <p>Gebruiken meerdere huizen dezelfde camino, dan is het werk vaak alleen haalbaar als iedereen meedoet. Een paar tips om dat soepel te laten lopen:</p>
+  <ul>
+    <li><strong>Eén voorstel voor de hele weg</strong>, opgedeeld in stukken. Dan ziet iedereen wat er gebeurt en kan de verdeling eerlijk worden gemaakt, bijvoorbeeld naar het stuk dat ieder gebruikt.</li>
+    <li><strong>Afspraken op papier</strong>: wie betaalt wat, wie geeft opdracht, en hoe gaat het met het onderhoud daarna. Een eenvoudige schriftelijke afspraak voorkomt jaren gedoe.</li>
+    <li><strong>Vraag de gemeente</strong> bij een openbare weg of zij materiaal of een bijdrage leveren als de bewoners het werk laten doen. Dat gebeurt in de Axarquía regelmatig.</li>
+    <li><strong>Niet iedereen wil meedoen?</strong> Laat dan eerst het stuk doen dat u zelf nodig heeft, met afwatering die het water niet naar de buren stuurt.</li>
+  </ul>
+  <p>Wij maken graag een voorstel dat u met de buren kunt delen, in het Nederlands, Engels of Spaans.</p>
+
+  <h2 id="onderhoud">Onderhoud door het jaar</h2>
+  <p>Een weg die elk jaar een beetje aandacht krijgt, gaat veel langer mee dan een weg die pas na de schade wordt hersteld. Een eenvoudig schema:</p>
+  <ul>
+    <li><strong>September en oktober</strong>: zijgoten, dwarsgoten en duikers leegmaken, kleine gaten vullen. Dan is de weg klaar voor de regen.</li>
+    <li><strong>Na elke zware bui of storm</strong>: kijken of er geulen zijn ontstaan en of duikers niet verstopt zitten. Klein herstel nu voorkomt groot herstel straks.</li>
+    <li><strong>Voorjaar</strong>: begroeiing langs de weg terugsnoeien, zodat de brandweer erdoor kan, en grotere reparaties plannen vóór de zomer. Combineer dit met het <a href="/nl/gidsen/tuin-en-perceel-spanje/">brandveilig maken van het perceel</a>.</li>
+  </ul>
+  <p>Bent u een groot deel van het jaar niet in Spanje? Met <a href="/nl/sleutelbeheer/">sleutelbeheer</a> rijdt er toch al iemand regelmatig over uw weg, die na een storm meteen kan laten weten hoe het ervoor staat. Lees ook hoe u <a href="/nl/gidsen/huis-winterklaar-spanje/">uw huis winterklaar maakt</a>.</p>
+</Guide>
