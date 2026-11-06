@@ -140,16 +140,6 @@ export const vragen: Record<Dienst, DienstVragen> = {
           o('Buitenkeuken', 'Outdoor kitchen', 'Außenküche', 'Utekök'),
         ],
       },
-      {
-        name: 'aanpak',
-        kind: 'radio',
-        label: tx('Wat is de bedoeling?', 'What do you have in mind?', 'Was schwebt Ihnen vor?', 'Vad har du tänkt dig?'),
-        options: [
-          o('Alles vernieuwen', 'Replace everything', 'Alles erneuern', 'Byta ut allt'),
-          o('Deels vernieuwen of opknappen', 'Partly renew or refresh', 'Teilweise erneuern oder auffrischen', 'Delvis förnya eller fräscha upp'),
-          o('Indeling veranderen', 'Change the layout', 'Grundriss ändern', 'Ändra planlösningen'),
-        ],
-      },
       planningStart,
       budget(),
     ],
@@ -171,18 +161,6 @@ export const vragen: Record<Dienst, DienstVragen> = {
     situatie: true,
     fotos: false,
     vragen: [
-      {
-        name: 'pakket',
-        kind: 'radio',
-        required: true,
-        label: tx('Welk pakket spreekt u aan?', 'Which package appeals to you?', 'Welches Paket spricht Sie an?', 'Vilket paket passar dig?'),
-        options: [
-          o('Basis', 'Basic', 'Basis', 'Bas', tx('Controle elke 2 weken', 'Check every 2 weeks', 'Kontrolle alle 2 Wochen', 'Kontroll varannan vecka')),
-          o('Plus', 'Plus', 'Plus', 'Plus', tx('Wekelijks, post, huis klaarzetten', 'Weekly, post, house made ready', 'Wöchentlich, Post, Haus vorbereiten', 'Varje vecka, post, huset förberett')),
-          o('Compleet', 'Complete', 'Komplett', 'Komplett', tx('Ook zwembad, tuin en schoonmaak', 'Also pool, garden and cleaning', 'Auch Pool, Garten und Reinigung', 'Även pool, trädgård och städning')),
-          o('Weet ik nog niet', 'Not sure yet', 'Weiß ich noch nicht', 'Vet inte än', tx('Wij adviseren u graag', 'We are happy to advise', 'Wir beraten Sie gern', 'Vi ger gärna råd')),
-        ],
-      },
       {
         name: 'aanwezig',
         kind: 'select',
@@ -274,24 +252,6 @@ export const vragen: Record<Dienst, DienstVragen> = {
           o('Geen haast', 'No rush', 'Keine Eile', 'Ingen brådska'),
         ],
       },
-      {
-        name: 'aandacht',
-        kind: 'checks',
-        label: tx(
-          'Waar moeten we extra op letten?',
-          'Anything to check in particular?',
-          'Worauf sollen wir besonders achten?',
-          'Något särskilt vi ska kontrollera?',
-        ),
-        hint: tx('Optioneel, meerdere antwoorden mogelijk.', 'Optional, tick all that apply.', 'Optional, Mehrfachauswahl möglich.', 'Valfritt, flera svar möjliga.'),
-        options: [
-          o('Vocht en lekkage', 'Damp and leaks', 'Feuchtigkeit und Undichtigkeiten', 'Fukt och läckor'),
-          o('Dak en constructie', 'Roof and structure', 'Dach und Konstruktion', 'Tak och konstruktion'),
-          o('Vergunningen en legaliteit (AFO)', 'Permits and legal status (AFO)', 'Genehmigungen und Legalität (AFO)', 'Tillstånd och laglighet (AFO)'),
-          o('Zwembad', 'Pool', 'Pool', 'Pool'),
-          o('Kosten van een verbouwing', 'Cost of renovation work', 'Kosten einer Renovierung', 'Kostnad för renovering'),
-        ],
-      },
     ],
     placeholder: tx(
       'Bijvoorbeeld: finca bij Cómpeta, de bezichtiging is op 12 maart en de notaris staat gepland voor april…',
@@ -362,15 +322,6 @@ export const vragen: Record<Dienst, DienstVragen> = {
           o('Niet dringend', 'Not urgent', 'Nicht dringend', 'Inte brådskande'),
         ],
       },
-      {
-        name: 'frequentie',
-        kind: 'radio',
-        label: tx('Eenmalig of vaker?', 'One-off or regular?', 'Einmalig oder regelmäßig?', 'En gång eller regelbundet?'),
-        options: [
-          o('Eenmalige klus', 'One-off job', 'Einmaliger Auftrag', 'Engångsjobb'),
-          o('Regelmatig onderhoud', 'Regular maintenance', 'Regelmäßige Wartung', 'Regelbundet underhåll'),
-        ],
-      },
     ],
     placeholder: tx(
       'Bijvoorbeeld: na de regen komt er water door het plafond van de slaapkamer…',
@@ -401,17 +352,6 @@ export const vragen: Record<Dienst, DienstVragen> = {
           o('Vergunning voor een verbouwing', 'Permit for building work', 'Baugenehmigung für einen Umbau', 'Bygglov för ombyggnad'),
           o('Energielabel', 'Energy certificate', 'Energieausweis', 'Energideklaration'),
           o('Weet ik niet, graag advies', 'Not sure, please advise', 'Weiß ich nicht, bitte beraten', 'Vet inte, vill ha råd'),
-        ],
-      },
-      {
-        name: 'reden',
-        kind: 'radio',
-        label: tx('Waarom is het nodig?', 'Why do you need it?', 'Wofür brauchen Sie es?', 'Varför behövs det?'),
-        options: [
-          o('Ik ga verkopen', 'I am selling', 'Ich verkaufe', 'Jag ska sälja'),
-          o('Ik ga kopen', 'I am buying', 'Ich kaufe', 'Jag ska köpa'),
-          o('Ik wil verbouwen', 'I want to build or renovate', 'Ich möchte umbauen', 'Jag vill bygga om'),
-          o('Alles in orde maken', 'Just to get everything in order', 'Einfach alles in Ordnung bringen', 'Få allt i ordning'),
         ],
       },
       {
@@ -450,17 +390,6 @@ export const vragen: Record<Dienst, DienstVragen> = {
           o('Rolluiken of luiken', 'Roller shutters or shutters', 'Rollläden oder Fensterläden', 'Rullgardiner eller fönsterluckor'),
           o('Horren', 'Fly screens', 'Insektenschutz', 'Insektsnät'),
           o('Reparatie of tocht', 'Repair or draughts', 'Reparatur oder Zugluft', 'Reparation eller drag'),
-        ],
-      },
-      {
-        name: 'aantal',
-        kind: 'select',
-        label: tx('Om hoeveel ramen gaat het ongeveer?', 'Roughly how many windows?', 'Um wie viele Fenster geht es ungefähr?', 'Ungefär hur många fönster?'),
-        options: [
-          o('1 tot 3', '1 to 3', '1 bis 3', '1 till 3'),
-          o('4 tot 10', '4 to 10', '4 bis 10', '4 till 10'),
-          o('Meer dan 10', 'More than 10', 'Mehr als 10', 'Fler än 10'),
-          weetNiet,
         ],
       },
       planningStart,
@@ -531,16 +460,6 @@ export const vragen: Record<Dienst, DienstVragen> = {
           o('Storing of reparatie', 'Fault or repair', 'Störung oder Reparatur', 'Fel eller reparation'),
         ],
       },
-      {
-        name: 'verbruik',
-        kind: 'select',
-        label: tx('Hoe wordt de woning gebruikt?', 'How is the property used?', 'Wie wird die Immobilie genutzt?', 'Hur används bostaden?'),
-        options: [
-          o('Ik woon er het hele jaar', 'I live there all year', 'Ich wohne dort das ganze Jahr', 'Jag bor där hela året'),
-          o('Een deel van het jaar', 'Part of the year', 'Einen Teil des Jahres', 'En del av året'),
-          o('Verhuur', 'Holiday let', 'Vermietung', 'Uthyrning'),
-        ],
-      },
       planningStart,
       budget(),
     ],
@@ -568,17 +487,6 @@ export const vragen: Record<Dienst, DienstVragen> = {
           o('Warmtepomp of airco', 'Heat pump or air con', 'Wärmepumpe oder Klimaanlage', 'Värmepump eller luftkonditionering'),
           o('Zwembadpomp', 'Pool pump', 'Poolpumpe', 'Poolpump'),
           o('Laadpaal', 'EV charger', 'Wallbox', 'Laddbox'),
-        ],
-      },
-      {
-        name: 'rekening',
-        kind: 'select',
-        label: tx('Hoe hoog is uw stroomrekening ongeveer?', 'Roughly how high is your electricity bill?', 'Wie hoch ist Ihre Stromrechnung ungefähr?', 'Ungefär hur hög är din elräkning?'),
-        options: [
-          o('Tot € 75 per maand', 'Up to €75 a month', 'Bis 75 € im Monat', 'Upp till 75 € i månaden'),
-          o('€ 75 – € 150 per maand', '€75 – €150 a month', '75 – 150 € im Monat', '75 – 150 € i månaden'),
-          o('Meer dan € 150 per maand', 'Over €150 a month', 'Mehr als 150 € im Monat', 'Mer än 150 € i månaden'),
-          weetNiet,
         ],
       },
       planningStart,
@@ -619,11 +527,4 @@ export const vragen: Record<Dienst, DienstVragen> = {
       'Till exempel: luftkonditionering i sovrummen och vardagsrummet…',
     ),
   },
-};
-
-/** ?pakket=… van de sleutelbeheerpagina's (alle talen) naar de Nederlandse waarde. */
-export const pakketAlias: Record<string, string> = {
-  basis: 'Basis', basic: 'Basis', bas: 'Basis',
-  plus: 'Plus',
-  compleet: 'Compleet', complete: 'Compleet', komplett: 'Compleet',
 };
