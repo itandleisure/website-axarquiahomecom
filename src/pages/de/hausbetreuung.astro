@@ -5,15 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
 import Services from '../../components/Services.astro';
-import Todo from '../../components/Todo.astro';
 import { prices, site, dePrice } from '../../data/site';
-
-const p = prices.sleutelbeheer;
-const packages = [
-  { name: 'Basis', price: dePrice(p.basis), items: ['Kontrolle alle 2 Wochen', 'Fenster öffnen und lüften', 'Prüfung auf Undichtigkeiten, Feuchtigkeit und Einbruch', 'Kurzer Bericht mit Fotos', 'Sichere Schlüsselaufbewahrung'] },
-  { name: 'Plus', price: dePrice(p.plus), featured: true, items: ['Alles aus Basis, aber wöchentlich', 'Zusätzliche Kontrolle nach Sturm oder Starkregen', 'Post abholen und weiterleiten', 'Haus vor Ihrer Ankunft vorbereiten', 'Kleine Reparaturen sofort erledigt'] },
-  { name: 'Komplett', price: dePrice(p.compleet), items: ['Alles aus Plus', 'Pool- und Gartenpflege', 'Handwerker und Lieferungen hereinlassen', 'Reinigung vor und nach Ihrem Aufenthalt', 'Fester Ansprechpartner per WhatsApp'] },
-];
 
 const faq = [
   {
@@ -22,7 +14,7 @@ const faq = [
   },
   {
     q: 'Was kostet Hausbetreuung in Spanien?',
-    a: 'Ein einfaches Paket mit einer Kontrolle alle zwei Wochen kostet meist einige zehn Euro im Monat. Größere Pakete mit Garten, Pool und Reinigung kosten mehr. Unsere Pakete sehen Sie oben; Reparaturen und Reinigung außerhalb des Pakets werden nur nach Ihrer Zustimmung gesondert berechnet.',
+    a: 'Der Preis hängt davon ab, wie oft wir kommen und was wir sonst für Sie erledigen. Eine einfache Kontrolle alle zwei Wochen kostet meist einige zehn Euro im Monat; mit Garten, Pool und Reinigung mehr. Nach Ihrer Anfrage erhalten Sie ein Angebot nach Maß. Reparaturen und Reinigung darüber hinaus werden nur nach Ihrer Zustimmung berechnet.',
   },
   {
     q: 'Ist mein Schlüssel sicher?',
@@ -70,19 +62,21 @@ const service = {
 
   <section class="section">
     <div class="wrap">
-      <h2>Unsere Pakete</h2>
-      <p class="section-intro">Wählen Sie, was zu Ihnen passt. Alle Pakete sind monatlich kündbar und lassen sich auf die Monate beschränken, in denen Sie nicht da sind.</p>
-      <Todo label="pakketten en maandprijzen van het bouwbedrijf (de inhoud hieronder is een voorstel)." />
-      <div class="packages">
-        {packages.map((pk) => (
-          <div class={`package${pk.featured ? ' featured' : ''}`}>
-            <h3>{pk.name}</h3>
-            <p class="price">{pk.price}</p>
-            <ul class="checks">{pk.items.map((i) => <li>{i}</li>)}</ul>
-            <a class={`btn${pk.featured ? '' : ' btn-ghost'}`} href={`/de/anfrage/?dienst=sleutelbeheer&pakket=${pk.name.toLowerCase()}`}>{pk.name} wählen</a>
-          </div>
-        ))}
-      </div>
+      <h2>Was wir für Sie tun</h2>
+      <p class="section-intro">Wir stimmen die Betreuung auf Ihre Situation ab: wie oft, welche Extras und nur für die Monate, in denen Sie nicht da sind. Monatlich kündbar.</p>
+      <ul class="checks">
+        <li>Regelmäßige Kontrolle der Immobilie</li>
+        <li>Fenster öffnen und lüften</li>
+        <li>Prüfung auf Undichtigkeiten, Feuchtigkeit und Einbruch</li>
+        <li>Kurzer Bericht mit Fotos nach jedem Besuch</li>
+        <li>Zusätzliche Kontrolle nach Sturm oder Starkregen</li>
+        <li>Post abholen und weiterleiten</li>
+        <li>Haus vor Ihrer Ankunft vorbereiten</li>
+        <li>Pool- und Gartenpflege</li>
+        <li>Handwerker und Lieferungen hereinlassen</li>
+        <li>Reinigung vor und nach Ihrem Aufenthalt</li>
+      </ul>
+      <p><a class="btn" href="/de/anfrage/?dienst=sleutelbeheer">Hausbetreuung anfragen</a></p>
     </div>
   </section>
 

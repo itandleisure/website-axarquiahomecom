@@ -5,15 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
 import Services from '../../components/Services.astro';
-import Todo from '../../components/Todo.astro';
 import { prices, site } from '../../data/site';
-
-const p = prices.sleutelbeheer;
-const packages = [
-  { name: 'Basic', key: 'basis', price: p.basis, items: ['Property check every 2 weeks', 'Open windows and air the house', 'Check for leaks, damp and break-ins', 'Short report with photos', 'Key kept securely'] },
-  { name: 'Plus', key: 'plus', price: p.plus, featured: true, items: ['Everything in Basic, but weekly', 'Extra check after storms or heavy rain', 'Collect and forward post', 'House made ready for your arrival', 'Small repairs sorted straight away'] },
-  { name: 'Complete', key: 'compleet', price: p.compleet, items: ['Everything in Plus', 'Pool and garden looked after', 'Let in engineers and deliveries', 'Cleaning before and after your stay', 'Named contact on WhatsApp'] },
-];
 
 const faq = [
   {
@@ -22,7 +14,7 @@ const faq = [
   },
   {
     q: 'How much does key holding cost in Spain?',
-    a: 'A simple package with a check every two weeks usually costs a few tens of euros a month. Larger packages with garden, pool and cleaning cost more. You can see our packages above; repairs and cleaning outside the package are charged separately, only after you agree.',
+    a: 'The price depends on how often we visit and what else we do for you. A simple check every two weeks usually costs a few tens of euros a month; with garden, pool and cleaning it costs more. After your request you get a tailored proposal. Repairs and cleaning on top are only charged after you agree.',
   },
   {
     q: 'Is my key safe?',
@@ -70,19 +62,21 @@ const service = {
 
   <section class="section">
     <div class="wrap">
-      <h2>Our packages</h2>
-      <p class="section-intro">Choose what suits you. All packages can be cancelled monthly and can cover just the months you are away.</p>
-      <Todo label="pakketten en maandprijzen van het bouwbedrijf (de inhoud hieronder is een voorstel)." />
-      <div class="packages">
-        {packages.map((pk) => (
-          <div class={`package${pk.featured ? ' featured' : ''}`}>
-            <h3>{pk.name}</h3>
-            <p class="price">{pk.price}</p>
-            <ul class="checks">{pk.items.map((i) => <li>{i}</li>)}</ul>
-            <a class={`btn${pk.featured ? '' : ' btn-ghost'}`} href={`/en/request/?dienst=sleutelbeheer&pakket=${pk.name.toLowerCase()}`}>Choose {pk.name}</a>
-          </div>
-        ))}
-      </div>
+      <h2>What we do for you</h2>
+      <p class="section-intro">We tailor the checks to your situation: how often, which extras, and only for the months you are away. Cancel monthly.</p>
+      <ul class="checks">
+        <li>Regular checks on your property</li>
+        <li>Open windows and air the house</li>
+        <li>Check for leaks, damp and break-ins</li>
+        <li>Short report with photos after every visit</li>
+        <li>Extra check after storms or heavy rain</li>
+        <li>Collect and forward post</li>
+        <li>House made ready for your arrival</li>
+        <li>Pool and garden looked after</li>
+        <li>Let in engineers and deliveries</li>
+        <li>Cleaning before and after your stay</li>
+      </ul>
+      <p><a class="btn" href="/en/request/?dienst=sleutelbeheer">Request key holding</a></p>
     </div>
   </section>
 
