@@ -27,13 +27,11 @@ const t = ui[lang];
 // Link naar de zelf-doen-gidsen in de footer, alleen in talen waarin die er zijn
 const diyHub = (hubAlternates('diy') as Partial<Record<Lang, string>>)[lang];
 const diyLabel = diyHub ? topicUi[lang as TopicLang].hub.diy : '';
-const tools = [site.clarityId && 'Microsoft Clarity', site.gaId && 'Google Analytics'].filter(Boolean);
-const toolList = (and: string) => tools.join(` ${and} `);
 const cookieText = {
-  nl: { text: `Mogen we met ${toolList('en')} bijhouden hoe u deze site gebruikt? Dat plaatst cookies en helpt ons de site te verbeteren.`, yes: 'Accepteren', no: 'Weigeren', more: 'Meer in de privacyverklaring', settings: 'Cookie-instellingen' },
-  en: { text: `May we use ${toolList('and')} to see how you use this site? It places cookies and helps us improve the site.`, yes: 'Accept', no: 'Decline', more: 'More in the privacy statement', settings: 'Cookie settings' },
-  sv: { text: `Får vi använda ${toolList('och')} för att se hur du använder webbplatsen? Det sätter cookies och hjälper oss att förbättra sidan.`, yes: 'Godkänn', no: 'Avböj', more: 'Mer i integritetspolicyn', settings: 'Cookie-inställningar' },
-  de: { text: `Dürfen wir mit ${toolList('und')} erfassen, wie Sie diese Website nutzen? Dabei werden Cookies gesetzt; es hilft uns, die Website zu verbessern.`, yes: 'Akzeptieren', no: 'Ablehnen', more: 'Mehr in der Datenschutzerklärung', settings: 'Cookie-Einstellungen' },
+  nl: { text: 'Mogen we cookies gebruiken om te zien hoe bezoekers deze site gebruiken? Zo kunnen we hem verbeteren.', yes: 'Accepteren', no: 'Weigeren', more: 'Meer in de privacyverklaring', settings: 'Cookie-instellingen' },
+  en: { text: 'May we use cookies to see how visitors use this site? It helps us make it better.', yes: 'Accept', no: 'Decline', more: 'More in the privacy statement', settings: 'Cookie settings' },
+  sv: { text: 'Får vi använda cookies för att se hur besökare använder webbplatsen? Det hjälper oss att göra den bättre.', yes: 'Godkänn', no: 'Avböj', more: 'Mer i integritetspolicyn', settings: 'Cookie-inställningar' },
+  de: { text: 'Dürfen wir Cookies verwenden, um zu sehen, wie Besucher diese Website nutzen? So können wir sie verbessern.', yes: 'Akzeptieren', no: 'Ablehnen', more: 'Mehr in der Datenschutzerklärung', settings: 'Cookie-Einstellungen' },
 }[lang];
 const nav = navs[lang];
 const others = langs
