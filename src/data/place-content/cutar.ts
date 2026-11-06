@@ -16,7 +16,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Cútar: wonen in een klein Moors dorp in het rivierdal',
-    description: 'Alles over Cútar: het kleine dorp met een Arabische fontein, de mudéjarkerk, het Monfí-feest, de internationale gemeenschap, woningprijzen en kopen en verbouwen.',
+    description: 'Alles over Cútar: klein dorp met een Arabische fontein, de mudéjarkerk, het Monfí-feest, de internationale gemeenschap en woningprijzen.',
     lead: 'Cútar is een klein wit dorp boven het dal van de Benamargosa, met een Arabische fontein en een kerk op het hoogste punt. Elk najaar herleeft het Moorse verleden tijdens het Monfí-feest.',
     intro: [
       'Cútar ligt op 331 meter hoogte in de heuvels van de centrale Axarquía, tussen <a href="/nl/plaatsen/el-borge/">El Borge</a>, <a href="/nl/plaatsen/benamargosa/">Benamargosa</a> en <a href="/nl/plaatsen/comares/">Comares</a>, ongeveer 40 kilometer van Málaga. Er wonen ongeveer 600 mensen, van wie bijna drie op de tien een buitenlandse nationaliteit hebben.',
@@ -40,7 +40,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Cútar: living in a small Moorish village in the river valley',
-    description: 'All about Cútar: the small village with an Arab fountain, the Mudéjar church, the Monfí festival, its international community, property prices and buying and renovating.',
+    description: 'All about Cútar: small village with an Arab fountain, the Mudéjar church, the Monfí festival, its international community and property prices.',
     lead: 'Cútar is a small white village above the Benamargosa valley, with an Arab fountain and a church at its highest point. Every autumn its Moorish past comes alive during the Monfí festival.',
     intro: [
       'Cútar lies at 331 metres in the hills of the central Axarquía, between <a href="/en/places/el-borge/">El Borge</a>, <a href="/en/places/benamargosa/">Benamargosa</a> and <a href="/en/places/comares/">Comares</a>, about 40 kilometres from Málaga. About 600 people live here, nearly three in ten of them foreign nationals.',
@@ -64,7 +64,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Cútar: Wohnen in einem kleinen maurischen Dorf im Flusstal',
-    description: 'Alles über Cútar: das kleine Dorf mit arabischem Brunnen, die Mudéjar-Kirche, das Monfí-Fest, die internationale Gemeinschaft, Immobilienpreise sowie Kauf und Renovierung.',
+    description: 'Alles über Cútar: kleines Dorf mit arabischem Brunnen, Mudéjar-Kirche, Monfí-Fest, internationale Gemeinschaft, Immobilienpreise und Renovierung.',
     lead: 'Cútar ist ein kleines weißes Dorf über dem Tal des Benamargosa, mit einem arabischen Brunnen und einer Kirche am höchsten Punkt. Jeden Herbst wird beim Monfí-Fest die maurische Vergangenheit lebendig.',
     intro: [
       'Cútar liegt auf 331 Metern in den Hügeln der zentralen Axarquía, zwischen <a href="/de/orte/el-borge/">El Borge</a>, <a href="/de/orte/benamargosa/">Benamargosa</a> und <a href="/de/orte/comares/">Comares</a>, etwa 40 Kilometer von Málaga entfernt. Hier leben rund 600 Menschen, fast drei von zehn mit ausländischer Staatsangehörigkeit.',

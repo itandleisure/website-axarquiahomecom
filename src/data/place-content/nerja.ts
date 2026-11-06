@@ -14,7 +14,7 @@ const content: PlaceContent = {
     'https://realadvisor.es/es/precios-viviendas/municipio-nerja',
   ],
   nl: {
-    title: 'Nerja: wonen, kopen en verbouwen in de populairste kustplaats van de Axarquía',
+    title: 'Nerja: wonen, huis kopen en verbouwen aan de kust',
     description: 'Alles over Nerja: ligging, sfeer, stranden, de grotten, woningprijzen en wat u moet weten als u er een huis wilt kopen of verbouwen.',
     lead: 'Het bekendste kustplaatsje van de Axarquía: witte straatjes rond het Balcón de Europa, kleine baaien onder de rotsen en een groot internationaal gezelschap dat er het hele jaar woont.',
     intro: [
@@ -32,7 +32,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'Voor wie aan zee wil wonen met alles op loopafstand: winkels, restaurants, artsen en een grote internationale gemeenschap. Ook geschikt als u geen auto wilt gebruiken. Wie rust en ruimte zoekt, kijkt eerder naar de dorpen in de heuvels erachter.',
     see: {
-      title: 'Zien en doen in Nerja: grotten, stranden en het Balcón de Europa',
+      title: 'Zien en doen in Nerja: grotten, stranden, Balcón de Europa',
       description: 'De mooiste bezienswaardigheden in Nerja: de Cueva de Nerja, het Balcón de Europa, Burriana, de kliffen van Maro, Río Chíllar en de fiesta’s door het jaar.',
       lead: 'Grotten met misschien wel de oudste schilderingen van Europa, een uitzichtpunt boven zee en een wandeling door een rivier. Nerja heeft genoeg voor meer dan een lang weekend.',
       items: [
@@ -80,7 +80,7 @@ const content: PlaceContent = {
     ],
   },
   en: {
-    title: 'Nerja: living, buying and renovating in the Axarquía’s favourite coastal town',
+    title: 'Nerja: living, buying and renovating on the coast',
     description: 'All about Nerja: setting, character, beaches, the caves, property prices and what to know if you want to buy or renovate a home there.',
     lead: 'The best-known town on the Axarquía coast: white streets around the Balcón de Europa, small coves below the cliffs and a large international community that lives here all year round.',
     intro: [
@@ -98,8 +98,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'People who want to live by the sea with everything within walking distance: shops, restaurants, doctors and a large international community. It also works if you would rather not drive. If you want peace and space, look at the villages in the hills behind instead.',
     see: {
-      title: 'Things to do in Nerja: caves, beaches and the Balcón de Europa',
-      description: 'The best things to see and do in Nerja: the Nerja caves, the Balcón de Europa, Burriana beach, the Maro cliffs, the Río Chíllar walk and fiestas through the year.',
+      title: 'Things to do in Nerja: caves, beaches, Balcón de Europa',
+      description: 'The best things to do in Nerja: the Nerja caves, Balcón de Europa, Burriana beach, the Maro cliffs, the Río Chíllar walk and fiestas through the year.',
       lead: 'Caves with what may be the oldest paintings in Europe, a viewpoint above the sea and a walk up a river. Nerja has enough for more than a long weekend.',
       items: [
         { name: 'Balcón de Europa', text: 'The viewpoint on a rock in the heart of town, with palm trees, an old cannon and views along the coast far to the west. Steps lead down from here to the small beaches of Calahonda and El Salón.' },
@@ -146,7 +146,7 @@ const content: PlaceContent = {
     ],
   },
   de: {
-    title: 'Nerja: Wohnen, Kaufen und Renovieren im beliebtesten Küstenort der Axarquía',
+    title: 'Nerja: Wohnen, Kaufen und Renovieren an der Küste',
     description: 'Alles über Nerja: Lage, Charakter, Strände, die Höhle, Immobilienpreise und was Sie wissen sollten, wenn Sie dort ein Haus kaufen oder renovieren möchten.',
     lead: 'Der bekannteste Küstenort der Axarquía: weiße Gassen rund um den Balcón de Europa, kleine Buchten unter den Felsen und eine große internationale Gemeinschaft, die das ganze Jahr hier lebt.',
     intro: [
@@ -165,7 +165,7 @@ const content: PlaceContent = {
     forWhom: 'Für alle, die am Meer wohnen möchten und alles zu Fuß erreichen wollen: Geschäfte, Restaurants, Ärzte und eine große internationale Gemeinschaft. Auch ohne Auto gut machbar. Wer Ruhe und Platz sucht, schaut sich eher die Dörfer in den Hügeln dahinter an.',
     see: {
       title: 'Sehenswertes in Nerja: Höhle, Strände und Balcón de Europa',
-      description: 'Die schönsten Sehenswürdigkeiten in Nerja: die Höhle von Nerja, der Balcón de Europa, der Strand Burriana, die Steilküste von Maro, der Río Chíllar und die Feste im Jahreslauf.',
+      description: 'Die schönsten Sehenswürdigkeiten in Nerja: Höhle von Nerja, Balcón de Europa, Strand Burriana, Steilküste von Maro, Río Chíllar und die Feste im Jahr.',
       lead: 'Eine Höhle mit vielleicht den ältesten Malereien Europas, ein Aussichtspunkt über dem Meer und eine Wanderung durch einen Fluss. Nerja hat genug für mehr als ein langes Wochenende.',
       items: [
         { name: 'Balcón de Europa', text: 'Der Aussichtspunkt auf einem Felsen mitten im Zentrum, mit Palmen, einer alten Kanone und Blick weit die Küste entlang nach Westen. Von hier führen Treppen zu den kleinen Stränden Calahonda und El Salón.' },
@@ -185,7 +185,7 @@ const content: PlaceContent = {
     },
     living: {
       title: 'Wohnen in Nerja: Immobilien, Preise, Viertel und Versorgung',
-      description: 'Ein Haus in Nerja kaufen? Welche Immobilien es gibt, was sie ungefähr kosten, welche Viertel passen und was Sie über Renovierung und Ferienvermietung wissen sollten.',
+      description: 'Haus in Nerja kaufen? Welche Immobilien es gibt, was sie ungefähr kosten, welche Viertel passen und was Sie über Renovierung und Ferienvermietung wissen.',
       lead: 'Nerja ist der teuerste Ort der Axarquía, aber auch der Ort, an dem man am leichtesten ohne Auto lebt. Ein Überblick für Käufer und Eigentümer.',
       sections: [
         { h: 'Welche Immobilien es gibt', p: [
@@ -212,7 +212,7 @@ const content: PlaceContent = {
     ],
   },
   sv: {
-    title: 'Nerja: bo, köpa och renovera på Axarquías populäraste kustort',
+    title: 'Nerja: bo, köpa och renovera hus vid kusten',
     description: 'Allt om Nerja: läge, stämning, stränder, grottorna, bostadspriser och vad du behöver veta om du vill köpa eller renovera ett hus där.',
     lead: 'Axarquías mest kända kustort: vita gränder kring Balcón de Europa, små vikar under klipporna och en stor internationell gemenskap som bor här året runt.',
     intro: [

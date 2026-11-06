@@ -16,8 +16,8 @@ const content: PlaceContent = {
     'https://realadvisor.es/es/precios-viviendas/municipio-canillas-de-albaida',
   ],
   nl: {
-    title: 'Canillas de Albaida: wonen in het stille buurdorp van Cómpeta',
-    description: 'Alles over Canillas de Albaida: het kleine witte dorp naast Cómpeta, de Fábrica de la Luz, wandelen in het natuurpark, woningprijzen en kopen en verbouwen in de bergen.',
+    title: 'Canillas de Albaida: wonen in het buurdorp van Cómpeta',
+    description: 'Alles over Canillas de Albaida: wit dorp naast Cómpeta, de Fábrica de la Luz, wandelen in het natuurpark, woningprijzen en kopen in de bergen.',
     lead: 'Canillas de Albaida ligt op een paar kilometer van Cómpeta, maar voelt als een andere wereld: kleiner, stiller en dieper in de bergen. Een derde van de inwoners komt uit het buitenland.',
     intro: [
       'Canillas de Albaida ligt op ongeveer 600 meter hoogte in het natuurpark Sierras de Tejeda, Almijara y Alhama, op twee kilometer hemelsbreed van <a href="/nl/plaatsen/competa/">Cómpeta</a> en ongeveer 54 kilometer van Málaga. Boven het dorp rijzen de bergen tot de Albucaz op, 1.756 meter hoog.',
@@ -34,8 +34,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'Voor wie de sfeer en de voorzieningen van Cómpeta dichtbij wil hebben, maar zelf liever in een stiller dorp woont. Canillas de Albaida past bij natuurliefhebbers en wandelaars die een dorpshuis of een finca in de bergen zoeken.',
     see: {
-      title: 'Zien en doen in Canillas de Albaida: Fábrica de la Luz en bergpaden',
-      description: 'Wat te doen in Canillas de Albaida: het recreatiegebied Fábrica de la Luz, de Ermita de Santa Ana, de middeleeuwse brug op het Camino de las Cuestas en wandelen in het natuurpark.',
+      title: 'Zien en doen in Canillas de Albaida: bergwandelingen',
+      description: 'Wat te doen in Canillas de Albaida: de Fábrica de la Luz, de Ermita de Santa Ana, de middeleeuwse brug en wandelen in het natuurpark.',
       lead: 'Canillas de Albaida is een dorp om te wandelen: door de straatjes, langs de rivier en de bergen in.',
       items: [
         { name: 'Fábrica de la Luz', text: 'Een recreatiegebied aan de rivier de Turvilla, waar tot in de jaren zeventig een kleine waterkrachtcentrale stond. Er zijn picknickplaatsen en het is het vertrekpunt van wandelingen het natuurpark in.' },
@@ -53,8 +53,8 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Wonen in Canillas de Albaida: dorpshuizen, finca’s en prijzen',
-      description: 'Een huis kopen in Canillas de Albaida? Welke woningen er zijn, wat ze kosten, de voorzieningen in het dorp en in Cómpeta, en waar u op let bij finca’s in het natuurpark.',
+      title: 'Wonen in Canillas de Albaida: woningen en prijzen',
+      description: 'Een huis kopen in Canillas de Albaida? Woningen, prijzen, voorzieningen in het dorp en in Cómpeta, en waar u op let bij finca’s in het natuurpark.',
       lead: 'Canillas de Albaida is goedkoper dan Cómpeta, terwijl de winkels en restaurants van Cómpeta op een paar minuten liggen.',
       sections: [
         { h: 'Wat voor woningen er zijn', p: [
@@ -82,7 +82,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Canillas de Albaida: living in Cómpeta’s quiet neighbour',
-    description: 'All about Canillas de Albaida: the small white village next to Cómpeta, the Fábrica de la Luz, walking in the natural park, property prices and buying and renovating in the mountains.',
+    description: 'All about Canillas de Albaida: white village next to Cómpeta, the Fábrica de la Luz, walking in the natural park, property prices and buying.',
     lead: 'Canillas de Albaida is a few kilometres from Cómpeta, but feels like another world: smaller, quieter and deeper in the mountains. A third of its residents come from abroad.',
     intro: [
       'Canillas de Albaida lies at about 600 metres in the Sierras de Tejeda, Almijara y Alhama natural park, two kilometres as the crow flies from <a href="/en/places/competa/">Cómpeta</a> and about 54 kilometres from Málaga. Above the village the mountains rise to the Albucaz, 1,756 metres high.',
@@ -99,8 +99,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'People who want Cómpeta’s atmosphere and facilities close by but would rather live in a quieter village themselves. Canillas de Albaida suits nature lovers and walkers looking for a village house or a finca in the mountains.',
     see: {
-      title: 'Things to do in Canillas de Albaida: Fábrica de la Luz and mountain paths',
-      description: 'What to do in Canillas de Albaida: the Fábrica de la Luz recreation area, the Ermita de Santa Ana, the medieval bridge on the Camino de las Cuestas and walking in the natural park.',
+      title: 'Things to do in Canillas de Albaida: mountain walks',
+      description: 'What to do in Canillas de Albaida: the Fábrica de la Luz, the Ermita de Santa Ana, the medieval bridge and walking in the natural park.',
       lead: 'Canillas de Albaida is a village for walking: through the lanes, along the river and up into the mountains.',
       items: [
         { name: 'Fábrica de la Luz', text: 'A recreation area on the Turvilla river, where a small hydroelectric plant stood until the 1970s. There are picnic spots and it is the starting point for walks into the natural park.' },
@@ -118,8 +118,8 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Living in Canillas de Albaida: village houses, fincas and prices',
-      description: 'Buying a home in Canillas de Albaida? The types of property, what they cost, the facilities in the village and in Cómpeta, and what to watch for with fincas in the natural park.',
+      title: 'Living in Canillas de Albaida: homes and prices',
+      description: 'Buying a home in Canillas de Albaida? Types of property, prices, facilities in the village and Cómpeta, and what to watch for with fincas.',
       lead: 'Canillas de Albaida is cheaper than Cómpeta, while Cómpeta’s shops and restaurants are a few minutes away.',
       sections: [
         { h: 'Types of property', p: [
@@ -146,8 +146,8 @@ const content: PlaceContent = {
     ],
   },
   de: {
-    title: 'Canillas de Albaida: Wohnen im stillen Nachbardorf von Cómpeta',
-    description: 'Alles über Canillas de Albaida: das kleine weiße Dorf neben Cómpeta, die Fábrica de la Luz, Wandern im Naturpark, Immobilienpreise und Kaufen und Renovieren in den Bergen.',
+    title: 'Canillas de Albaida: Wohnen im Nachbardorf von Cómpeta',
+    description: 'Alles über Canillas de Albaida: weißes Dorf neben Cómpeta, Fábrica de la Luz, Wandern im Naturpark, Immobilienpreise und Kaufen in den Bergen.',
     lead: 'Canillas de Albaida liegt nur wenige Kilometer von Cómpeta entfernt, fühlt sich aber wie eine andere Welt an: kleiner, stiller und tiefer in den Bergen. Ein Drittel der Einwohner kommt aus dem Ausland.',
     intro: [
       'Canillas de Albaida liegt auf etwa 600 Metern im Naturpark Sierras de Tejeda, Almijara y Alhama, zwei Kilometer Luftlinie von <a href="/de/orte/competa/">Cómpeta</a> und etwa 54 Kilometer von Málaga entfernt. Über dem Dorf steigen die Berge bis zum Albucaz auf, 1.756 Meter hoch.',
@@ -164,8 +164,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'Für alle, die die Atmosphäre und die Einrichtungen von Cómpeta in der Nähe haben, selbst aber lieber in einem stilleren Dorf wohnen möchten. Canillas de Albaida passt zu Naturfreunden und Wanderern, die ein Dorfhaus oder eine Finca in den Bergen suchen.',
     see: {
-      title: 'Sehenswertes in Canillas de Albaida: Fábrica de la Luz und Bergpfade',
-      description: 'Was man in Canillas de Albaida unternehmen kann: das Erholungsgebiet Fábrica de la Luz, die Ermita de Santa Ana, die mittelalterliche Brücke am Camino de las Cuestas und Wandern im Naturpark.',
+      title: 'Canillas de Albaida: Fábrica de la Luz und Bergpfade',
+      description: 'Was man in Canillas de Albaida unternehmen kann: Fábrica de la Luz, Ermita de Santa Ana, die mittelalterliche Brücke und Wandern im Naturpark.',
       lead: 'Canillas de Albaida ist ein Dorf zum Wandern: durch die Gassen, am Fluss entlang und hinauf in die Berge.',
       items: [
         { name: 'Fábrica de la Luz', text: 'Ein Erholungsgebiet am Fluss Turvilla, wo bis in die 1970er-Jahre ein kleines Wasserkraftwerk stand. Es gibt Picknickplätze, und hier beginnen Wanderungen in den Naturpark.' },
@@ -184,7 +184,7 @@ const content: PlaceContent = {
     },
     living: {
       title: 'Wohnen in Canillas de Albaida: Dorfhäuser, Fincas und Preise',
-      description: 'Ein Haus in Canillas de Albaida kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung im Dorf und in Cómpeta und worauf Sie bei Fincas im Naturpark achten sollten.',
+      description: 'Haus in Canillas de Albaida kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung und worauf Sie bei Fincas im Naturpark achten sollten.',
       lead: 'Canillas de Albaida ist günstiger als Cómpeta, während die Geschäfte und Restaurants von Cómpeta nur wenige Minuten entfernt sind.',
       sections: [
         { h: 'Welche Immobilien es gibt', p: [
@@ -229,8 +229,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'För dig som vill ha Cómpetas atmosfär och service nära men själv hellre bor i en lugnare by. Canillas de Albaida passar naturälskare och vandrare som söker ett byhus eller en finca i bergen.',
     see: {
-      title: 'Se och göra i Canillas de Albaida: Fábrica de la Luz och bergsstigar',
-      description: 'Vad du kan göra i Canillas de Albaida: rekreationsområdet Fábrica de la Luz, Ermita de Santa Ana, den medeltida bron på Camino de las Cuestas och vandring i naturparken.',
+      title: 'Se och göra i Canillas de Albaida: bergsvandring',
+      description: 'Vad du kan göra i Canillas de Albaida: Fábrica de la Luz, Ermita de Santa Ana, den medeltida bron och vandring i naturparken.',
       lead: 'Canillas de Albaida är en by för att vandra: genom gränderna, längs floden och upp i bergen.',
       items: [
         { name: 'Fábrica de la Luz', text: 'Ett rekreationsområde vid floden Turvilla, där ett litet vattenkraftverk låg fram till 1970-talet. Här finns picknickplatser och startpunkten för vandringar in i naturparken.' },

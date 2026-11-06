@@ -15,7 +15,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Comares: wonen op het balkon van de Axarquía',
-    description: 'Alles over Comares: het witte dorp op 700 meter met uitzicht over de hele Axarquía, de Moorse geschiedenis, woningprijzen, finca’s en waar u op let bij kopen en verbouwen.',
+    description: 'Alles over Comares: wit dorp op 700 meter met uitzicht over de Axarquía, de Moorse geschiedenis, woningprijzen, finca’s en kopen en verbouwen.',
     lead: 'Comares ligt als een witte kroon op een bergtop van ruim 700 meter. Vanaf het dorp kijkt u over de hele Axarquía tot aan de zee, en daarom heet het het balkon van de streek.',
     intro: [
       'Comares is een van de hoogst gelegen dorpen van de Axarquía, op 703 meter, ongeveer 25 kilometer boven <a href="/nl/plaatsen/velez-malaga/">Vélez-Málaga</a> en 39 kilometer van Málaga. De weg omhoog slingert door olijfgaarden en amandelbomen, en bovenaan wacht een dorp van smalle witte straatjes rond een kerk en de resten van een Moorse burcht.',
@@ -32,8 +32,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'Voor wie rust, ruimte en uitzicht belangrijker vindt dan het strand om de hoek. Comares past bij mensen die een finca met land zoeken of een dorpshuis met dakterras, en die het niet erg vinden om voor de grote boodschappen naar beneden te rijden.',
     see: {
-      title: 'Zien en doen in Comares: uitzichtpunten, Moorse resten en wandelingen',
-      description: 'Wat te doen in Comares: het uitzicht vanaf het balkon van de Axarquía, de resten van de alcazaba, de kerk La Encarnación, de route van de voetstappen en de fiesta’s.',
+      title: 'Zien en doen in Comares: uitzichtpunten en wandelingen',
+      description: 'Wat te doen in Comares: het uitzicht over de Axarquía, de resten van de alcazaba, de kerk La Encarnación, de route van de voetstappen en de fiesta’s.',
       lead: 'Comares is vooral een plek om rond te kijken: naar het dorp zelf, naar de geschiedenis in de muren en naar het uitzicht over de streek.',
       items: [
         { name: 'Het uitzicht', text: 'Vanaf de pleinen en de rand van het dorp ziet u bij helder weer de hele Axarquía: de heuvels met olijfbomen, het stuwmeer van La Viñuela, de kust en soms zelfs de Sierra Nevada.' },
@@ -77,7 +77,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Comares: living on the balcony of the Axarquía',
-    description: 'All about Comares: the white village at 700 metres with views over the whole Axarquía, its Moorish history, property prices, fincas and what to know about buying and renovating.',
+    description: 'All about Comares: white village at 700 metres with views over the Axarquía, its Moorish history, property prices, fincas and tips on buying.',
     lead: 'Comares sits like a white crown on a mountain top more than 700 metres up. From the village you look out over the whole Axarquía to the sea, which is why it is called the balcony of the region.',
     intro: [
       'Comares is one of the highest villages in the Axarquía, at 703 metres, about 25 kilometres above <a href="/en/places/velez-malaga/">Vélez-Málaga</a> and 39 kilometres from Málaga. The road winds up through olive groves and almond trees, and at the top is a village of narrow white lanes around a church and the remains of a Moorish castle.',
@@ -94,7 +94,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'People who value peace, space and views more than having the beach around the corner. Comares suits those looking for a finca with land or a village house with a roof terrace, who do not mind driving down for the big shop.',
     see: {
-      title: 'Things to do in Comares: viewpoints, Moorish remains and walks',
+      title: 'Things to do in Comares: viewpoints and walks',
       description: 'What to do in Comares: the view from the balcony of the Axarquía, the remains of the alcazaba, La Encarnación church, the footprint trail and the fiestas.',
       lead: 'Comares is above all a place to look around: at the village itself, at the history in its walls and at the view over the region.',
       items: [
@@ -139,7 +139,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Comares: Wohnen auf dem Balkon der Axarquía',
-    description: 'Alles über Comares: das weiße Dorf auf 700 Metern mit Blick über die ganze Axarquía, seine maurische Geschichte, Immobilienpreise, Fincas und was Sie zu Kauf und Renovierung wissen sollten.',
+    description: 'Alles über Comares: weißes Dorf auf 700 Metern mit Blick über die Axarquía, maurische Geschichte, Immobilienpreise, Fincas und Tipps zum Kauf.',
     lead: 'Comares liegt wie eine weiße Krone auf einem Berggipfel in gut 700 Metern Höhe. Vom Dorf blicken Sie über die ganze Axarquía bis zum Meer, deshalb heißt es der Balkon der Region.',
     intro: [
       'Comares ist eines der höchstgelegenen Dörfer der Axarquía, auf 703 Metern, etwa 25 Kilometer oberhalb von <a href="/de/orte/velez-malaga/">Vélez-Málaga</a> und 39 Kilometer von Málaga entfernt. Die Straße windet sich durch Oliven- und Mandelhaine nach oben, und oben wartet ein Dorf aus schmalen weißen Gassen rund um eine Kirche und die Reste einer maurischen Burg.',
@@ -156,7 +156,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'Für alle, denen Ruhe, Platz und Aussicht wichtiger sind als der Strand um die Ecke. Comares passt zu Menschen, die eine Finca mit Land oder ein Dorfhaus mit Dachterrasse suchen und nichts dagegen haben, für den Großeinkauf ins Tal zu fahren.',
     see: {
-      title: 'Sehenswertes in Comares: Aussichtspunkte, maurische Reste und Wanderungen',
+      title: 'Sehenswertes in Comares: Aussicht, Mauren, Wandern',
       description: 'Was man in Comares unternehmen kann: der Blick vom Balkon der Axarquía, die Reste der Alcazaba, die Kirche La Encarnación, der Weg der Fußspuren und die Feste.',
       lead: 'Comares ist vor allem ein Ort zum Schauen: auf das Dorf selbst, auf die Geschichte in seinen Mauern und auf den Blick über die Region.',
       items: [
@@ -173,7 +173,7 @@ const content: PlaceContent = {
     },
     living: {
       title: 'Wohnen in Comares: Dorfhäuser, Fincas und Preise',
-      description: 'Ein Haus in Comares kaufen? Welche Immobilien es gibt, was sie kosten, wie gut das Dorf erreichbar ist und worauf Sie bei Fincas und Renovierungen auf 700 Metern achten sollten.',
+      description: 'Haus in Comares kaufen? Welche Immobilien es gibt, was sie kosten, wie gut das Dorf erreichbar ist und worauf Sie bei Fincas auf 700 Metern achten.',
       lead: 'Comares gehört zu den günstigsten Orten der Axarquía, mit einer Aussicht, die an der Küste unbezahlbar wäre. Dafür fahren Sie für fast alles den Berg hinunter.',
       sections: [
         { h: 'Welche Immobilien es gibt', p: [
@@ -201,7 +201,7 @@ const content: PlaceContent = {
   },
   sv: {
     title: 'Comares: bo på Axarquías balkong',
-    description: 'Allt om Comares: den vita byn på 700 meter med utsikt över hela Axarquía, den moriska historien, bostadspriser, fincor och vad du ska veta om att köpa och renovera.',
+    description: 'Allt om Comares: vit by på 700 meter med utsikt över Axarquía, den moriska historien, bostadspriser, fincor och att köpa och renovera.',
     lead: 'Comares ligger som en vit krona på en bergstopp över 700 meter upp. Från byn ser du ut över hela Axarquía ända till havet, och därför kallas den regionens balkong.',
     intro: [
       'Comares är en av de högst belägna byarna i Axarquía, på 703 meter, cirka 25 kilometer ovanför <a href="/sv/orter/velez-malaga/">Vélez-Málaga</a> och 39 kilometer från Málaga. Vägen slingrar sig upp genom olivlundar och mandelträd, och på toppen ligger en by med smala vita gränder runt en kyrka och resterna av en morisk borg.',
@@ -218,7 +218,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'För dig som värdesätter lugn, utrymme och utsikt mer än att ha stranden runt hörnet. Comares passar dig som söker en finca med mark eller ett byhus med takterrass och inte har något emot att köra ner för storhandlingen.',
     see: {
-      title: 'Se och göra i Comares: utsiktsplatser, moriska lämningar och vandringar',
+      title: 'Se och göra i Comares: utsiktsplatser och vandringar',
       description: 'Vad du kan göra i Comares: utsikten från Axarquías balkong, resterna av alcazaban, kyrkan La Encarnación, fotavtrycksleden och festerna.',
       lead: 'Comares är framför allt en plats för att se sig omkring: på själva byn, på historien i murarna och på utsikten över regionen.',
       items: [

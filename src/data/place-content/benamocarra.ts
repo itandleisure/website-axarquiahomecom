@@ -16,7 +16,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Benamocarra: betaalbaar wonen vlak bij Vélez-Málaga',
-    description: 'Alles over Benamocarra: het muziekdorp op vijf kilometer van Vélez-Málaga, het uitzicht vanaf de Cerro de la Jaula, de laagste woningprijzen van de Axarquía en waar u op let bij kopen en verbouwen.',
+    description: 'Alles over Benamocarra: muziekdorp bij Vélez-Málaga, het uitzicht vanaf de Cerro de la Jaula, lage woningprijzen en waar u op let bij kopen.',
     lead: 'Benamocarra is een levendig dorp van ruim 3.000 inwoners op vijf kilometer van Vélez-Málaga. Het is een van de goedkoopste plaatsen van de Axarquía, terwijl de stad en de stranden om de hoek liggen.',
     intro: [
       'Benamocarra ligt op 126 meter hoogte in de heuvels aan de rand van de vega van de rivier de Vélez, ongeveer vijf kilometer van <a href="/nl/plaatsen/velez-malaga/">Vélez-Málaga</a> en 35 kilometer van Málaga. Het is een compact dorp met witte straten, een grote kerk en rondom de boomgaarden met avocado’s, mango’s en citrus.',
@@ -40,7 +40,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Benamocarra: affordable living close to Vélez-Málaga',
-    description: 'All about Benamocarra: the music village five kilometres from Vélez-Málaga, the view from the Cerro de la Jaula, some of the lowest property prices in the Axarquía and what to know about buying and renovating.',
+    description: 'All about Benamocarra: music village near Vélez-Málaga, the view from the Cerro de la Jaula, low property prices and tips on buying and renovating.',
     lead: 'Benamocarra is a lively village of just over 3,000 people, five kilometres from Vélez-Málaga. It is one of the cheapest places in the Axarquía, while the town and the beaches are close by.',
     intro: [
       'Benamocarra lies at 126 metres in the hills on the edge of the Vélez river plain, about five kilometres from <a href="/en/places/velez-malaga/">Vélez-Málaga</a> and 35 kilometres from Málaga. It is a compact village of white streets and a large church, surrounded by orchards of avocados, mangoes and citrus.',
@@ -64,7 +64,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Benamocarra: günstig wohnen nahe Vélez-Málaga',
-    description: 'Alles über Benamocarra: das Musikdorf fünf Kilometer von Vélez-Málaga, der Blick vom Cerro de la Jaula, einige der niedrigsten Immobilienpreise der Axarquía und was Sie zu Kauf und Renovierung wissen sollten.',
+    description: 'Alles über Benamocarra: Musikdorf bei Vélez-Málaga, der Blick vom Cerro de la Jaula, niedrige Immobilienpreise und Tipps zu Kauf und Renovierung.',
     lead: 'Benamocarra ist ein lebendiges Dorf mit gut 3.000 Einwohnern, fünf Kilometer von Vélez-Málaga entfernt. Es gehört zu den günstigsten Orten der Axarquía, während Stadt und Strände nah sind.',
     intro: [
       'Benamocarra liegt auf 126 Metern in den Hügeln am Rand der Flussebene des Vélez, etwa fünf Kilometer von <a href="/de/orte/velez-malaga/">Vélez-Málaga</a> und 35 Kilometer von Málaga entfernt. Es ist ein kompaktes Dorf mit weißen Straßen und einer großen Kirche, umgeben von Plantagen mit Avocados, Mangos und Zitrusfrüchten.',
@@ -88,7 +88,7 @@ const content: PlaceContent = {
   },
   sv: {
     title: 'Benamocarra: prisvärt boende nära Vélez-Málaga',
-    description: 'Allt om Benamocarra: musikbyn fem kilometer från Vélez-Málaga, utsikten från Cerro de la Jaula, några av de lägsta bostadspriserna i Axarquía och vad du ska veta om att köpa och renovera.',
+    description: 'Allt om Benamocarra: musikbyn nära Vélez-Málaga, utsikten från Cerro de la Jaula, låga bostadspriser och vad du ska veta om att köpa och renovera.',
     lead: 'Benamocarra är en livlig by med drygt 3 000 invånare, fem kilometer från Vélez-Málaga. Det är en av de billigaste orterna i Axarquía, samtidigt som staden och stränderna ligger nära.',
     intro: [
       'Benamocarra ligger på 126 meters höjd i kullarna vid kanten av Vélezflodens slätt, cirka fem kilometer från <a href="/sv/orter/velez-malaga/">Vélez-Málaga</a> och 35 kilometer från Málaga. Det är en kompakt by med vita gator och en stor kyrka, omgiven av odlingar med avokado, mango och citrus.',

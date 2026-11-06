@@ -16,7 +16,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Arenas en Daimalos: wonen onder het kasteel van Bentomiz',
-    description: 'Alles over Arenas en Daimalos: de ruïne van het Castillo de Bentomiz, de mudéjarkerken, het muilezelfeest, woningprijzen en kopen op tien kilometer van Vélez-Málaga.',
+    description: 'Alles over Arenas en Daimalos: het Castillo de Bentomiz, de mudéjarkerken, het muilezelfeest, woningprijzen en kopen vlak bij Vélez-Málaga.',
     lead: 'Arenas ligt op 500 meter tegen de berg Bentomiz, met de ruïne van een Moorse burcht erboven en Vélez-Málaga op tien kilometer. Samen met het buurdorpje Daimalos is het een rustige plek dicht bij de kust.',
     intro: [
       'Arenas ligt in de heuvels ten noorden van <a href="/nl/plaatsen/velez-malaga/">Vélez-Málaga</a>, op ongeveer tien kilometer van de stad en 48 kilometer van Málaga. Bij de gemeente horen ook Daimalos, twee kilometer verderop, en het verspreide Los Vados aan de oude weg naar Viñuela. Samen hebben ze ongeveer 1.300 inwoners.',
@@ -41,7 +41,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Arenas and Daimalos: living below Bentomiz castle',
-    description: 'All about Arenas and Daimalos: the ruins of the Castillo de Bentomiz, the Mudéjar churches, the mule fair, property prices and buying ten kilometres from Vélez-Málaga.',
+    description: 'All about Arenas and Daimalos: Castillo de Bentomiz, the Mudéjar churches, the mule fair, property prices and buying near Vélez-Málaga.',
     lead: 'Arenas sits at 500 metres against Mount Bentomiz, with the ruins of a Moorish castle above and Vélez-Málaga ten kilometres away. Together with the neighbouring hamlet of Daimalos, it is a quiet spot close to the coast.',
     intro: [
       'Arenas lies in the hills north of <a href="/en/places/velez-malaga/">Vélez-Málaga</a>, about ten kilometres from the town and 48 kilometres from Málaga. The municipality also includes Daimalos, two kilometres further on, and the scattered Los Vados on the old road to Viñuela. Together they have about 1,300 residents.',
@@ -66,7 +66,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Arenas und Daimalos: Wohnen unter der Burg von Bentomiz',
-    description: 'Alles über Arenas und Daimalos: die Ruine des Castillo de Bentomiz, die Mudéjar-Kirchen, das Maultierfest, Immobilienpreise und Kaufen zehn Kilometer von Vélez-Málaga.',
+    description: 'Alles über Arenas und Daimalos: Castillo de Bentomiz, die Mudéjar-Kirchen, das Maultierfest, Immobilienpreise und Kaufen nahe Vélez-Málaga.',
     lead: 'Arenas liegt auf 500 Metern am Berg Bentomiz, mit der Ruine einer maurischen Burg darüber und Vélez-Málaga in zehn Kilometern Entfernung. Zusammen mit dem Nachbarweiler Daimalos ist es ein ruhiger Ort nah an der Küste.',
     intro: [
       'Arenas liegt in den Hügeln nördlich von <a href="/de/orte/velez-malaga/">Vélez-Málaga</a>, etwa zehn Kilometer von der Stadt und 48 Kilometer von Málaga entfernt. Zur Gemeinde gehören auch Daimalos, zwei Kilometer weiter, und das verstreute Los Vados an der alten Straße nach Viñuela. Zusammen haben sie rund 1.300 Einwohner.',

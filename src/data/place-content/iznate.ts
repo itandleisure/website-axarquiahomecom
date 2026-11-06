@@ -15,7 +15,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Iznate: wonen in een klein heuveldorp vlak bij de kust',
-    description: 'Alles over Iznate: het witte dorp op twaalf kilometer van Vélez-Málaga, de Fuente de los Tres Deseos, het muskaatdruivenfeest, woningprijzen en kopen en verbouwen in de heuvels.',
+    description: 'Alles over Iznate: wit dorp bij Vélez-Málaga, de Fuente de los Tres Deseos, het muskaatdruivenfeest, woningprijzen en kopen in de heuvels.',
     lead: 'Iznate is een klein wit dorp op een heuvelrug boven Benamocarra en Vélez-Málaga, met uitzicht op zee en Moorse fonteinen in de straten. Vanaf hier bent u in een kwartier aan het strand.',
     intro: [
       'Iznate ligt op 300 meter hoogte in de heuvels ten westen van <a href="/nl/plaatsen/velez-malaga/">Vélez-Málaga</a>, ongeveer twaalf kilometer van de stad en 33 kilometer van Málaga. Met ruim 900 inwoners is het een rustig dorp met een paar bars, een kerk en straatjes met uitzicht over de heuvels naar de kust.',
@@ -39,7 +39,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Iznate: living in a small hill village close to the coast',
-    description: 'All about Iznate: the white village twelve kilometres from Vélez-Málaga, the Fountain of Three Wishes, the muscatel grape festival, property prices and buying and renovating in the hills.',
+    description: 'All about Iznate: white village near Vélez-Málaga, the Fountain of Three Wishes, the muscatel grape festival, property prices and buying in the hills.',
     lead: 'Iznate is a small white village on a ridge above Benamocarra and Vélez-Málaga, with sea views and Moorish fountains in its streets. From here you are on the beach in a quarter of an hour.',
     intro: [
       'Iznate lies at 300 metres in the hills west of <a href="/en/places/velez-malaga/">Vélez-Málaga</a>, about twelve kilometres from the town and 33 kilometres from Málaga. With just over 900 residents it is a quiet village with a few bars, a church and lanes looking over the hills to the coast.',
@@ -63,7 +63,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Iznate: Wohnen in einem kleinen Hügeldorf nahe der Küste',
-    description: 'Alles über Iznate: das weiße Dorf zwölf Kilometer von Vélez-Málaga, der Brunnen der drei Wünsche, das Muskattraubenfest, Immobilienpreise sowie Kauf und Renovierung in den Hügeln.',
+    description: 'Alles über Iznate: weißes Dorf bei Vélez-Málaga, der Brunnen der drei Wünsche, das Muskattraubenfest, Immobilienpreise sowie Kauf und Renovierung.',
     lead: 'Iznate ist ein kleines weißes Dorf auf einem Höhenrücken über Benamocarra und Vélez-Málaga, mit Meerblick und maurischen Brunnen in den Gassen. Von hier sind Sie in einer Viertelstunde am Strand.',
     intro: [
       'Iznate liegt auf 300 Metern in den Hügeln westlich von <a href="/de/orte/velez-malaga/">Vélez-Málaga</a>, etwa zwölf Kilometer von der Stadt und 33 Kilometer von Málaga entfernt. Mit gut 900 Einwohnern ist es ein ruhiges Dorf mit ein paar Bars, einer Kirche und Gassen mit Blick über die Hügel bis zur Küste.',
@@ -87,7 +87,7 @@ const content: PlaceContent = {
   },
   sv: {
     title: 'Iznate: bo i en liten kullby nära kusten',
-    description: 'Allt om Iznate: den vita byn tolv kilometer från Vélez-Málaga, De tre önskningarnas fontän, moscateldruvans fest, bostadspriser och att köpa och renovera i kullarna.',
+    description: 'Allt om Iznate: vit by nära Vélez-Málaga, De tre önskningarnas fontän, moscateldruvans fest, bostadspriser och att köpa i kullarna.',
     lead: 'Iznate är en liten vit by på en ås ovanför Benamocarra och Vélez-Málaga, med havsutsikt och moriska fontäner i gatorna. Härifrån är du på stranden på en kvart.',
     intro: [
       'Iznate ligger på 300 meters höjd i kullarna väster om <a href="/sv/orter/velez-malaga/">Vélez-Málaga</a>, cirka tolv kilometer från staden och 33 kilometer från Málaga. Med drygt 900 invånare är det en lugn by med några barer, en kyrka och gränder med utsikt över kullarna mot kusten.',

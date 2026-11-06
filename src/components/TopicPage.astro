@@ -37,6 +37,7 @@ const related = t.related.map((r) => topicByRef(r, lang)).filter((x) => !!x);
 const article = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  image: `${site.url}/og-image.png`,
   headline: t.title,
   description: t.description,
   inLanguage: lang,

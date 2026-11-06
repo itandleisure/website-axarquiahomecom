@@ -14,7 +14,7 @@ const content: PlaceContent = {
     'https://realadvisor.es/es/precios-viviendas/municipio-rincon-de-la-victoria',
   ],
   nl: {
-    title: 'Rincón de la Victoria: wonen en kopen aan zee, vlak bij Málaga',
+    title: 'Rincón de la Victoria: wonen aan zee bij Málaga',
     description: 'Alles over Rincón de la Victoria: stranden, de Cueva del Tesoro, de ligging op een kwartier van Málaga, woningprijzen en waar u op let bij kopen en verbouwen.',
     lead: 'Rincón de la Victoria is de eerste plaats van de Axarquía als u vanuit Málaga naar het oosten rijdt: een kuststad met een lange boulevard, op een kwartier van de stad.',
     intro: [
@@ -32,7 +32,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'Voor wie aan zee wil wonen en Málaga dichtbij wil hebben, voor werk, school, cultuur of de luchthaven. Populair bij gezinnen en bij mensen die vaak heen en weer vliegen.',
     see: {
-      title: 'Zien en doen in Rincón de la Victoria: Cueva del Tesoro, stranden en de boulevard',
+      title: 'Zien en doen in Rincón de la Victoria: grot en stranden',
       description: 'Wat te doen in Rincón de la Victoria: de Cueva del Tesoro, de Casa Fuerte de Bezmiliana, de stranden en de boulevard met de oude spoortunnels.',
       lead: 'Rincón is een plek voor strand en boulevard, met een paar bezienswaardigheden die verder weinig mensen kennen.',
       items: [
@@ -48,7 +48,7 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Wonen in Rincón de la Victoria: appartementen, rijtjeshuizen en villa’s',
+      title: 'Wonen in Rincón de la Victoria: woningen en prijzen',
       description: 'Een huis kopen in Rincón de la Victoria? Welke woningen er zijn, wat ze kosten, voorzieningen en waar u op let bij kopen en verbouwen.',
       lead: 'Rincón is gewild door de nabijheid van Málaga. Er is veel nieuwbouw, en de prijzen zijn de laatste jaren flink gestegen.',
       sections: [
@@ -76,8 +76,8 @@ const content: PlaceContent = {
     ],
   },
   en: {
-    title: 'Rincón de la Victoria: living and buying by the sea, close to Málaga',
-    description: 'All about Rincón de la Victoria: beaches, the Cueva del Tesoro, its location a quarter of an hour from Málaga, property prices and what to know about buying and renovating.',
+    title: 'Rincón de la Victoria: living by the sea near Málaga',
+    description: 'All about Rincón de la Victoria: beaches, the Cueva del Tesoro, 15 minutes from Málaga, property prices and what to know about buying and renovating.',
     lead: 'Rincón de la Victoria is the first town in the Axarquía as you drive east from Málaga: a seaside town with a long promenade, a quarter of an hour from the city.',
     intro: [
       'Rincón lies on the western edge of the Axarquía, about sixteen kilometres from central Málaga. The municipality has over 52,000 residents and has grown fast in recent decades, mainly through families who work in Málaga. On the coast are <a href="/en/places/la-cala-del-moral/">La Cala del Moral</a>, Rincón itself and Torre de Benagalbón; in the hills is the old village of Benagalbón, which gave the municipality its name until 1949.',
@@ -94,7 +94,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'People who want to live by the sea with Málaga close by, for work, school, culture or the airport. Popular with families and with people who fly back and forth often.',
     see: {
-      title: 'Things to do in Rincón de la Victoria: Cueva del Tesoro, beaches and the promenade',
+      title: 'Things to do in Rincón de la Victoria: caves and beaches',
       description: 'What to do in Rincón de la Victoria: the Cueva del Tesoro, the Casa Fuerte de Bezmiliana, the beaches and the promenade with the old railway tunnels.',
       lead: 'Rincón is a place for beach and promenade, with a few sights that few people know about.',
       items: [
@@ -110,7 +110,7 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Living in Rincón de la Victoria: apartments, townhouses and villas',
+      title: 'Living in Rincón de la Victoria: homes and prices',
       description: 'Buying a home in Rincón de la Victoria? The types of property, what they cost, facilities and what to watch for when buying and renovating.',
       lead: 'Rincón is in demand because Málaga is so close. There is a lot of new building, and prices have risen sharply in recent years.',
       sections: [
@@ -138,8 +138,8 @@ const content: PlaceContent = {
     ],
   },
   de: {
-    title: 'Rincón de la Victoria: Wohnen und Kaufen am Meer, nahe Málaga',
-    description: 'Alles über Rincón de la Victoria: Strände, die Cueva del Tesoro, die Lage eine Viertelstunde von Málaga, Immobilienpreise und was Sie zu Kauf und Renovierung wissen sollten.',
+    title: 'Rincón de la Victoria: Wohnen am Meer nahe Málaga',
+    description: 'Alles über Rincón de la Victoria: Strände, Cueva del Tesoro, 15 Minuten von Málaga, Immobilienpreise und Tipps zu Kauf und Renovierung.',
     lead: 'Rincón de la Victoria ist der erste Ort der Axarquía, wenn Sie von Málaga nach Osten fahren: eine Küstenstadt mit langer Promenade, eine Viertelstunde von der Stadt.',
     intro: [
       'Rincón liegt am Westrand der Axarquía, etwa sechzehn Kilometer vom Zentrum Málagas. Die Gemeinde hat gut 52.000 Einwohner und ist in den letzten Jahrzehnten stark gewachsen, vor allem durch Familien, die in Málaga arbeiten. An der Küste liegen <a href="/de/orte/la-cala-del-moral/">La Cala del Moral</a>, Rincón selbst und Torre de Benagalbón; in den Hügeln das alte Dorf Benagalbón, nach dem die Gemeinde bis 1949 benannt war.',
@@ -156,7 +156,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'Für alle, die am Meer wohnen und Málaga in der Nähe haben möchten, für Arbeit, Schule, Kultur oder den Flughafen. Beliebt bei Familien und bei Menschen, die oft hin- und herfliegen.',
     see: {
-      title: 'Sehenswertes in Rincón de la Victoria: Cueva del Tesoro, Strände und Promenade',
+      title: 'Rincón de la Victoria: Cueva del Tesoro und Strände',
       description: 'Was man in Rincón de la Victoria unternehmen kann: die Cueva del Tesoro, die Casa Fuerte de Bezmiliana, die Strände und die Promenade mit den alten Bahntunneln.',
       lead: 'Rincón ist ein Ort für Strand und Promenade, mit einigen Sehenswürdigkeiten, die nur wenige kennen.',
       items: [
@@ -172,7 +172,7 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Wohnen in Rincón de la Victoria: Apartments, Reihenhäuser und Villen',
+      title: 'Wohnen in Rincón de la Victoria: Preise und Viertel',
       description: 'Ein Haus in Rincón de la Victoria kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung und worauf Sie bei Kauf und Renovierung achten sollten.',
       lead: 'Rincón ist wegen der Nähe zu Málaga gefragt. Es wird viel neu gebaut, und die Preise sind in den letzten Jahren stark gestiegen.',
       sections: [
@@ -218,7 +218,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'För dig som vill bo vid havet med Málaga nära, för arbete, skola, kultur eller flygplatsen. Populärt bland barnfamiljer och bland dem som ofta flyger fram och tillbaka.',
     see: {
-      title: 'Se och göra i Rincón de la Victoria: Cueva del Tesoro, stränder och strandpromenaden',
+      title: 'Se och göra i Rincón de la Victoria: grotta och stränder',
       description: 'Vad du kan göra i Rincón de la Victoria: Cueva del Tesoro, Casa Fuerte de Bezmiliana, stränderna och strandpromenaden med de gamla järnvägstunnlarna.',
       lead: 'Rincón är en plats för strand och strandpromenad, med några sevärdheter som få känner till.',
       items: [

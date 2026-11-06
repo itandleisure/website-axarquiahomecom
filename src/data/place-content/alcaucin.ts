@@ -18,7 +18,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Alcaucín: wonen onder de Sierra de Tejeda',
-    description: 'Alles over Alcaucín: het bergdorp met een grote Britse gemeenschap, het Castillo de Zalía, El Alcázar, woningprijzen en waar u extra op let bij een huis in het buitengebied.',
+    description: 'Alles over Alcaucín: bergdorp met een grote Britse gemeenschap, Castillo de Zalía, El Alcázar, woningprijzen en kopen in het buitengebied.',
     lead: 'Alcaucín ligt tegen de Sierra de Tejeda, met de rotswanden van het natuurpark recht achter het dorp en het stuwmeer van La Viñuela beneden. Ruim vier op de tien inwoners komen uit het buitenland, de meesten uit Groot-Brittannië.',
     intro: [
       'Alcaucín ligt op 510 meter hoogte aan de noordoostkant van de Axarquía, ongeveer 54 kilometer van Málaga en vlak boven het stuwmeer van <a href="/nl/plaatsen/vinuela/">La Viñuela</a>. Achter het dorp begint het natuurpark Sierras de Tejeda, Almijara y Alhama, en de weg naar Granada loopt hier over de pas van Zafarraya.',
@@ -35,8 +35,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'Voor wie in de bergen wil wonen met een Engelstalige gemeenschap om zich heen, veel natuur en ruime huizen voor een lage prijs. Alcaucín past bij wie een villa of landhuis met uitzicht zoekt en bereid is de papieren grondig te laten controleren.',
     see: {
-      title: 'Zien en doen in Alcaucín: Castillo de Zalía, El Alcázar en de Tejeda',
-      description: 'Wat te doen in Alcaucín: de ruïne van het Castillo de Zalía, het recreatiegebied El Alcázar, wandelen in de Sierra de Tejeda, de Fuente de los Cinco Caños en het kastanjefeest.',
+      title: 'Zien en doen in Alcaucín: Castillo de Zalía, El Alcázar',
+      description: 'Wat te doen in Alcaucín: Castillo de Zalía, El Alcázar, wandelen in de Sierra de Tejeda, de Fuente de los Cinco Caños en het kastanjefeest.',
       lead: 'Alcaucín is een dorp voor buitenmensen: wandelen, picknicken en klimmen staan hier voorop.',
       items: [
         { name: 'Castillo de Zalía', text: 'De resten van een vesting die al in de oudheid bestond en door de Moren werd herbouwd. De katholieke koningen veroverden haar in 1485. De ruïne ligt op een heuvel met uitzicht over het dal van de Guaro.' },
@@ -54,7 +54,7 @@ const content: PlaceContent = {
     },
     living: {
       title: 'Wonen in Alcaucín: villa’s, landhuizen en prijzen',
-      description: 'Een huis kopen in Alcaucín? Welke woningen er zijn, wat ze kosten, de voorzieningen en waarom u bij een huis in het buitengebied de vergunningen extra goed moet laten controleren.',
+      description: 'Een huis kopen in Alcaucín? Welke woningen er zijn, wat ze kosten, de voorzieningen en waarom u vergunningen in het buitengebied extra laat controleren.',
       lead: 'In Alcaucín krijgt u veel ruimte en uitzicht voor uw geld. Maar nergens in de Axarquía is goed onderzoek naar de legale status van een huis zo belangrijk als hier.',
       sections: [
         { h: 'Wat voor woningen er zijn', p: [
@@ -82,7 +82,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Alcaucín: living below the Sierra de Tejeda',
-    description: 'All about Alcaucín: the mountain village with a large British community, the Castillo de Zalía, El Alcázar, property prices and what to watch especially closely with a house in the countryside.',
+    description: 'All about Alcaucín: mountain village with a large British community, Castillo de Zalía, El Alcázar, property prices and buying in the countryside.',
     lead: 'Alcaucín sits against the Sierra de Tejeda, with the natural park’s rock faces right behind the village and La Viñuela reservoir below. More than four in ten residents come from abroad, most of them from Britain.',
     intro: [
       'Alcaucín lies at 510 metres on the north-eastern side of the Axarquía, about 54 kilometres from Málaga and just above <a href="/en/places/vinuela/">La Viñuela</a> reservoir. Behind the village begins the Sierras de Tejeda, Almijara y Alhama natural park, and the road to Granada crosses the Zafarraya pass here.',
@@ -99,8 +99,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'People who want to live in the mountains among an English-speaking community, with plenty of nature and spacious houses at a low price. Alcaucín suits those looking for a villa or country house with a view who are willing to have the paperwork checked thoroughly.',
     see: {
-      title: 'Things to do in Alcaucín: Castillo de Zalía, El Alcázar and the Tejeda',
-      description: 'What to do in Alcaucín: the ruins of the Castillo de Zalía, the El Alcázar recreation area, walking in the Sierra de Tejeda, the Fuente de los Cinco Caños and the chestnut festival.',
+      title: 'Things to do in Alcaucín: Castillo de Zalía, El Alcázar',
+      description: 'What to do in Alcaucín: Castillo de Zalía, El Alcázar, walking in the Sierra de Tejeda, the Fuente de los Cinco Caños and the chestnut festival.',
       lead: 'Alcaucín is a village for outdoor people: walking, picnics and climbing come first here.',
       items: [
         { name: 'Castillo de Zalía', text: 'The remains of a fortress that already existed in antiquity and was rebuilt by the Moors. The Catholic Monarchs took it in 1485. The ruin stands on a hill overlooking the Guaro valley.' },
@@ -146,7 +146,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Alcaucín: Wohnen unter der Sierra de Tejeda',
-    description: 'Alles über Alcaucín: das Bergdorf mit großer britischer Gemeinschaft, das Castillo de Zalía, El Alcázar, Immobilienpreise und worauf Sie bei einem Haus im Außenbereich besonders achten sollten.',
+    description: 'Alles über Alcaucín: Bergdorf mit britischer Gemeinschaft, Castillo de Zalía, El Alcázar, Immobilienpreise und Tipps für ein Haus im Außenbereich.',
     lead: 'Alcaucín liegt an der Sierra de Tejeda, mit den Felswänden des Naturparks direkt hinter dem Dorf und dem Stausee La Viñuela darunter. Mehr als vier von zehn Einwohnern kommen aus dem Ausland, die meisten aus Großbritannien.',
     intro: [
       'Alcaucín liegt auf 510 Metern an der Nordostseite der Axarquía, etwa 54 Kilometer von Málaga entfernt und direkt oberhalb des Stausees von <a href="/de/orte/vinuela/">La Viñuela</a>. Hinter dem Dorf beginnt der Naturpark Sierras de Tejeda, Almijara y Alhama, und die Straße nach Granada führt hier über den Pass von Zafarraya.',
@@ -163,8 +163,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'Für alle, die in den Bergen wohnen möchten, mit einer englischsprachigen Gemeinschaft, viel Natur und geräumigen Häusern zu niedrigen Preisen. Alcaucín passt zu allen, die eine Villa oder ein Landhaus mit Aussicht suchen und bereit sind, die Unterlagen gründlich prüfen zu lassen.',
     see: {
-      title: 'Sehenswertes in Alcaucín: Castillo de Zalía, El Alcázar und die Tejeda',
-      description: 'Was man in Alcaucín unternehmen kann: die Ruine des Castillo de Zalía, das Erholungsgebiet El Alcázar, Wandern in der Sierra de Tejeda, die Fuente de los Cinco Caños und das Kastanienfest.',
+      title: 'Sehenswertes in Alcaucín: Castillo de Zalía, El Alcázar',
+      description: 'Was man in Alcaucín unternehmen kann: Castillo de Zalía, El Alcázar, Wandern in der Sierra de Tejeda, die Fuente de los Cinco Caños und das Kastanienfest.',
       lead: 'Alcaucín ist ein Dorf für Naturmenschen: Wandern, Picknick und Klettern stehen hier an erster Stelle.',
       items: [
         { name: 'Castillo de Zalía', text: 'Die Reste einer Festung, die schon in der Antike bestand und von den Mauren wieder aufgebaut wurde. Die Katholischen Könige eroberten sie 1485. Die Ruine liegt auf einem Hügel mit Blick über das Tal des Guaro.' },
@@ -182,7 +182,7 @@ const content: PlaceContent = {
     },
     living: {
       title: 'Wohnen in Alcaucín: Villen, Landhäuser und Preise',
-      description: 'Ein Haus in Alcaucín kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung und warum Sie die Genehmigungen bei einem Haus im Außenbereich besonders gründlich prüfen lassen sollten.',
+      description: 'Haus in Alcaucín kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung und warum Sie Genehmigungen im Außenbereich gründlich prüfen sollten.',
       lead: 'In Alcaucín bekommen Sie viel Platz und Aussicht für Ihr Geld. Aber nirgends in der Axarquía ist die Prüfung des rechtlichen Status eines Hauses so wichtig wie hier.',
       sections: [
         { h: 'Welche Immobilien es gibt', p: [
@@ -210,7 +210,7 @@ const content: PlaceContent = {
   },
   sv: {
     title: 'Alcaucín: bo nedanför Sierra de Tejeda',
-    description: 'Allt om Alcaucín: bergsbyn med en stor brittisk gemenskap, Castillo de Zalía, El Alcázar, bostadspriser och vad du ska kontrollera extra noga med ett hus på landsbygden.',
+    description: 'Allt om Alcaucín: bergsby med en stor brittisk gemenskap, Castillo de Zalía, El Alcázar, bostadspriser och att köpa hus på landsbygden.',
     lead: 'Alcaucín ligger mot Sierra de Tejeda, med naturparkens klippväggar precis bakom byn och La Viñuela-sjön nedanför. Mer än fyra av tio invånare kommer från utlandet, de flesta från Storbritannien.',
     intro: [
       'Alcaucín ligger på 510 meters höjd i nordöstra Axarquía, cirka 54 kilometer från Málaga och strax ovanför <a href="/sv/orter/vinuela/">La Viñuela</a>-sjön. Bakom byn börjar naturparken Sierras de Tejeda, Almijara y Alhama, och vägen till Granada går här över passet vid Zafarraya.',
@@ -227,8 +227,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'För dig som vill bo i bergen bland en engelskspråkig gemenskap, med mycket natur och rymliga hus till lågt pris. Alcaucín passar dig som söker en villa eller ett lanthus med utsikt och är beredd att låta kontrollera papperen grundligt.',
     see: {
-      title: 'Se och göra i Alcaucín: Castillo de Zalía, El Alcázar och Tejeda',
-      description: 'Vad du kan göra i Alcaucín: ruinerna av Castillo de Zalía, rekreationsområdet El Alcázar, vandra i Sierra de Tejeda, Fuente de los Cinco Caños och kastanjefesten.',
+      title: 'Se och göra i Alcaucín: Castillo de Zalía, El Alcázar',
+      description: 'Vad du kan göra i Alcaucín: Castillo de Zalía, El Alcázar, vandra i Sierra de Tejeda, Fuente de los Cinco Caños och kastanjefesten.',
       lead: 'Alcaucín är en by för friluftsmänniskor: vandring, picknick och klättring kommer först här.',
       items: [
         { name: 'Castillo de Zalía', text: 'Resterna av en fästning som fanns redan under antiken och byggdes om av morerna. De katolska monarkerna intog den 1485. Ruinen står på en kulle med utsikt över Guarodalen.' },

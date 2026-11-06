@@ -20,7 +20,8 @@ Gebouwd met [Astro](https://astro.build) als statische site, gepubliceerd via Gi
 ```sh
 npm install
 npm run dev      # http://localhost:4321/nl/
-npm run build    # bouwt naar dist/
+npm run build    # bouwt naar dist/ (inclusief sitemap.xml)
+npm run seo      # controleert titels, descriptions, koppen en canonicals in dist/
 ```
 
 ## Publiceren

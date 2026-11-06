@@ -17,7 +17,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Macharaviaya: wonen in het “kleine Madrid” boven de kust',
-    description: 'Alles over Macharaviaya: het dorp van de familie Gálvez, de Amerikaanse onafhankelijkheid en de koninklijke speelkaartenfabriek, het museum, woningprijzen en kopen vlak bij Rincón de la Victoria.',
+    description: 'Alles over Macharaviaya: dorp van de familie Gálvez en de koninklijke speelkaartenfabriek, het museum, woningprijzen en kopen bij Rincón.',
     lead: 'Macharaviaya is een klein wit dorp in de heuvels boven Rincón de la Victoria met een verrassend grote geschiedenis. In de achttiende eeuw kwam hier de familie Gálvez vandaan, die het dorp de bijnaam “klein Madrid” bezorgde.',
     intro: [
       'Macharaviaya ligt op ongeveer 235 meter hoogte in de heuvels tussen <a href="/nl/plaatsen/rincon-de-la-victoria/">Rincón de la Victoria</a> en <a href="/nl/plaatsen/velez-malaga/">Vélez-Málaga</a>, op korte afstand van de kust en Málaga. Het is met ruim 500 inwoners een van de kleinste dorpen van de Axarquía.',
@@ -41,7 +41,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Macharaviaya: living in the “little Madrid” above the coast',
-    description: 'All about Macharaviaya: the village of the Gálvez family, American independence and the royal playing-card factory, the museum, property prices and buying close to Rincón de la Victoria.',
+    description: 'All about Macharaviaya: village of the Gálvez family and the royal playing-card factory, the museum, property prices and buying near Rincón.',
     lead: 'Macharaviaya is a small white village in the hills above Rincón de la Victoria with a surprisingly big history. In the eighteenth century it was home to the Gálvez family, who earned it the nickname “little Madrid”.',
     intro: [
       'Macharaviaya lies at about 235 metres in the hills between <a href="/en/places/rincon-de-la-victoria/">Rincón de la Victoria</a> and <a href="/en/places/velez-malaga/">Vélez-Málaga</a>, a short distance from the coast and Málaga. With just over 500 residents, it is one of the smallest villages in the Axarquía.',
@@ -65,7 +65,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Macharaviaya: Wohnen im „kleinen Madrid“ über der Küste',
-    description: 'Alles über Macharaviaya: das Dorf der Familie Gálvez, die amerikanische Unabhängigkeit und die königliche Spielkartenfabrik, das Museum, Immobilienpreise und Kaufen nahe Rincón de la Victoria.',
+    description: 'Alles über Macharaviaya: das Dorf der Familie Gálvez, die königliche Spielkartenfabrik, das Museum, Immobilienpreise und Kaufen nahe Rincón.',
     lead: 'Macharaviaya ist ein kleines weißes Dorf in den Hügeln über Rincón de la Victoria mit einer überraschend großen Geschichte. Im 18. Jahrhundert stammte von hier die Familie Gálvez, die dem Dorf den Beinamen „kleines Madrid“ einbrachte.',
     intro: [
       'Macharaviaya liegt auf etwa 235 Metern in den Hügeln zwischen <a href="/de/orte/rincon-de-la-victoria/">Rincón de la Victoria</a> und <a href="/de/orte/velez-malaga/">Vélez-Málaga</a>, nicht weit von der Küste und Málaga. Mit gut 500 Einwohnern ist es eines der kleinsten Dörfer der Axarquía.',
@@ -89,7 +89,7 @@ const content: PlaceContent = {
   },
   sv: {
     title: 'Macharaviaya: bo i ”lilla Madrid” ovanför kusten',
-    description: 'Allt om Macharaviaya: byn där familjen Gálvez bodde, den amerikanska självständigheten och den kungliga spelkortsfabriken, museet, bostadspriser och att köpa nära Rincón de la Victoria.',
+    description: 'Allt om Macharaviaya: familjen Gálvez by och den kungliga spelkortsfabriken, museet, bostadspriser och att köpa nära Rincón de la Victoria.',
     lead: 'Macharaviaya är en liten vit by i kullarna ovanför Rincón de la Victoria med en förvånansvärt stor historia. På 1700-talet bodde familjen Gálvez här, och byn fick smeknamnet ”lilla Madrid”.',
     intro: [
       'Macharaviaya ligger på cirka 235 meters höjd i kullarna mellan <a href="/sv/orter/rincon-de-la-victoria/">Rincón de la Victoria</a> och <a href="/sv/orter/velez-malaga/">Vélez-Málaga</a>, nära kusten och Málaga. Med drygt 500 invånare är det en av de minsta byarna i Axarquía.',

@@ -16,7 +16,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Benamargosa: wonen tussen de avocado’s in het rivierdal',
-    description: 'Alles over Benamargosa: het dorp aan de rivier dat als een van de eersten in de Axarquía avocado’s en mango’s teelde, de brug met tien bogen, woningprijzen en kopen en verbouwen in het dal.',
+    description: 'Alles over Benamargosa: dorp aan de rivier met avocado’s en mango’s, de brug met tien bogen, woningprijzen en kopen en verbouwen in het dal.',
     lead: 'Benamargosa ligt laag in het dal van de gelijknamige rivier, omringd door terrassen vol avocado’s, mango’s en cherimoya’s. Het was een van de eerste dorpen in de Axarquía die op tropisch fruit overstapten.',
     intro: [
       'Benamargosa ligt op nog geen honderd meter hoogte aan de rivier de Benamargosa, ten noorden van <a href="/nl/plaatsen/velez-malaga/">Vélez-Málaga</a>. Het dorp telt ongeveer 1.550 inwoners en wordt omringd door groene hellingen met boomgaarden. Benamargosa was een van de pioniers met de teelt van avocado en mango, die nu het landschap van de hele Axarquía bepaalt.',
@@ -40,7 +40,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Benamargosa: living among the avocados in the river valley',
-    description: 'All about Benamargosa: the riverside village that was among the first in the Axarquía to grow avocados and mangoes, the ten-arch bridge, property prices and buying and renovating in the valley.',
+    description: 'All about Benamargosa: riverside village of avocados and mangoes, the ten-arch bridge, property prices and buying and renovating in the valley.',
     lead: 'Benamargosa lies low in the valley of the river of the same name, surrounded by terraces of avocados, mangoes and cherimoyas. It was one of the first villages in the Axarquía to switch to tropical fruit.',
     intro: [
       'Benamargosa lies at under a hundred metres on the Benamargosa river, north of <a href="/en/places/velez-malaga/">Vélez-Málaga</a>. The village has about 1,550 residents and is surrounded by green slopes covered in orchards. Benamargosa was one of the pioneers of growing avocado and mango, which now shape the landscape of the whole Axarquía.',
@@ -64,7 +64,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Benamargosa: Wohnen zwischen Avocados im Flusstal',
-    description: 'Alles über Benamargosa: das Dorf am Fluss, das als eines der ersten in der Axarquía Avocados und Mangos anbaute, die Brücke mit zehn Bögen, Immobilienpreise sowie Kauf und Renovierung im Tal.',
+    description: 'Alles über Benamargosa: Dorf am Fluss mit Avocados und Mangos, die Brücke mit zehn Bögen, Immobilienpreise sowie Kauf und Renovierung im Tal.',
     lead: 'Benamargosa liegt tief im Tal des gleichnamigen Flusses, umgeben von Terrassen voller Avocados, Mangos und Cherimoyas. Es war eines der ersten Dörfer der Axarquía, die auf tropische Früchte umstiegen.',
     intro: [
       'Benamargosa liegt auf weniger als hundert Metern am Fluss Benamargosa, nördlich von <a href="/de/orte/velez-malaga/">Vélez-Málaga</a>. Das Dorf hat rund 1.550 Einwohner und ist von grünen Hängen mit Plantagen umgeben. Benamargosa war einer der Vorreiter beim Anbau von Avocado und Mango, die heute die Landschaft der ganzen Axarquía prägen.',

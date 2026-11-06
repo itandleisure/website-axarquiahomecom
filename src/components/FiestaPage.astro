@@ -1,6 +1,7 @@
 ---
 // Feestpagina van één gemeente: het feestjaar, algemene feesten, CTA's naar diensten en FAQ.
 // De feesten staan in src/data/fiestas/places/<slug>.ts
+import { fitTitle, fitDesc } from '../data/seo';
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import Hero from './Hero.astro';
@@ -36,8 +37,8 @@ const T = {
   nl: {
     places: 'Plaatsen', feesten: 'Feesten', overview: 'Overzicht', see: 'Zien en doen', living: 'Wonen',
     h1: `Feesten in ${n}`,
-    title: `Feesten in ${n}: ${nameOf(main, 'nl')}, feria en fiesta’s door het jaar`,
-    description: `Alle jaarlijkse feesten van ${n} op een rij: ${listNames(events.slice(0, 4), 'en')}. Wanneer ze zijn, wat er gebeurt en wat handig is als u er een huis heeft of zoekt.`,
+    title: fitTitle(`Feesten in ${n}: ${nameOf(main, 'nl')} en meer`, `Feesten in ${n}: feria en fiesta’s door het jaar`, `Feesten in ${n}: alle fiesta’s`),
+    description: fitDesc(`Alle jaarlijkse feesten van ${n}: ${listNames(events.slice(0, 4), 'en')}. Wanneer ze zijn en wat er gebeurt.`, `Alle jaarlijkse feesten van ${n}: ${listNames(events.slice(0, 3), 'en')}. Wanneer ze zijn en wat er gebeurt.`, `Alle jaarlijkse feesten van ${n}: ${listNames(events.slice(0, 2), 'en')} en meer. Wanneer ze zijn en wat er gebeurt.`),
     year: `Het feestjaar in ${n}`, highlight: 'Het bekendste feest',
     note: 'Datums verschillen soms per jaar. De gemeente (ayuntamiento) maakt het programma meestal een paar weken vooraf bekend.',
     general: 'Feesten die u overal in de Axarquía ziet',
@@ -66,8 +67,8 @@ const T = {
   en: {
     places: 'Places', feesten: 'Fiestas', overview: 'Overview', see: 'Things to do', living: 'Living',
     h1: `Fiestas in ${n}`,
-    title: `Fiestas in ${n}: ${nameOf(main, 'en')}, the feria and festivals through the year`,
-    description: `All of ${n}’s annual fiestas in one place: ${listNames(events.slice(0, 4), 'and')}. When they are, what happens, and what is useful if you own or are looking for a home there.`,
+    title: fitTitle(`Fiestas in ${n}: ${nameOf(main, 'en')} and more`, `Fiestas in ${n}: the feria and festivals by month`, `Fiestas in ${n}: every festival`),
+    description: fitDesc(`All of ${n}’s annual fiestas: ${listNames(events.slice(0, 4), 'and')}. When they are and what happens.`, `All of ${n}’s annual fiestas: ${listNames(events.slice(0, 3), 'and')}. When they are and what happens.`, `All of ${n}’s annual fiestas: ${listNames(events.slice(0, 2), 'and')} and more. When they are and what happens.`),
     year: `The fiesta year in ${n}`, highlight: 'Best-known fiesta',
     note: 'Dates sometimes change from year to year. The town hall (ayuntamiento) usually publishes the programme a few weeks ahead.',
     general: 'Fiestas you will see all over the Axarquía',
@@ -96,8 +97,8 @@ const T = {
   de: {
     places: 'Orte', feesten: 'Feste', overview: 'Überblick', see: 'Sehenswertes', living: 'Wohnen',
     h1: `Feste in ${n}`,
-    title: `Feste in ${n}: ${nameOf(main, 'de')}, Feria und Fiestas im Jahreslauf`,
-    description: `Alle jährlichen Feste von ${n} auf einen Blick: ${listNames(events.slice(0, 4), 'und')}. Wann sie stattfinden, was passiert und was nützlich ist, wenn Sie dort ein Haus haben oder suchen.`,
+    title: fitTitle(`Feste in ${n}: ${nameOf(main, 'de')} und mehr`, `Feste in ${n}: Feria und Fiestas im Jahreslauf`, `Feste in ${n}: alle Fiestas`),
+    description: fitDesc(`Alle jährlichen Feste von ${n}: ${listNames(events.slice(0, 4), 'und')}. Wann sie stattfinden und was passiert.`, `Alle jährlichen Feste von ${n}: ${listNames(events.slice(0, 3), 'und')}. Wann sie stattfinden und was passiert.`, `Alle jährlichen Feste von ${n}: ${listNames(events.slice(0, 2), 'und')} und mehr. Wann sie stattfinden und was passiert.`),
     year: `Das Festjahr in ${n}`, highlight: 'Das bekannteste Fest',
     note: 'Die Termine ändern sich manchmal von Jahr zu Jahr. Die Gemeinde (Ayuntamiento) veröffentlicht das Programm meist einige Wochen vorher.',
     general: 'Feste, die Sie überall in der Axarquía erleben',
@@ -126,8 +127,8 @@ const T = {
   sv: {
     places: 'Orter', feesten: 'Fester', overview: 'Översikt', see: 'Se och göra', living: 'Bo',
     h1: `Fester i ${n}`,
-    title: `Fester i ${n}: ${nameOf(main, 'sv')}, feria och fiestor under året`,
-    description: `Alla årliga fester i ${n} samlade: ${listNames(events.slice(0, 4), 'och')}. När de är, vad som händer och vad som är bra att veta om du har eller letar efter ett hus där.`,
+    title: fitTitle(`Fester i ${n}: ${nameOf(main, 'sv')} med mera`, `Fester i ${n}: feria och fiestor under året`, `Fester i ${n}: alla fiestor`),
+    description: fitDesc(`Alla årliga fester i ${n}: ${listNames(events.slice(0, 4), 'och')}. När de är och vad som händer.`, `Alla årliga fester i ${n}: ${listNames(events.slice(0, 3), 'och')}. När de är och vad som händer.`, `Alla årliga fester i ${n}: ${listNames(events.slice(0, 2), 'och')} med mera. När de är och vad som händer.`),
     year: `Feståret i ${n}`, highlight: 'Den mest kända festen',
     note: 'Datumen ändras ibland från år till år. Kommunen (ayuntamiento) publicerar oftast programmet några veckor i förväg.',
     general: 'Fester du ser överallt i Axarquía',

@@ -15,7 +15,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Riogordo: wonen in het dorp van het passiespel El Paso',
-    description: 'Alles over Riogordo: het passiespel El Paso, de Tajo de Gómer, het dorp op een half uur van Málaga, woningprijzen en waar u op let bij kopen en verbouwen in het binnenland.',
+    description: 'Alles over Riogordo: het passiespel El Paso, de Tajo de Gómer, een half uur van Málaga, woningprijzen en kopen en verbouwen in het binnenland.',
     lead: 'Riogordo is een rustig landbouwdorp in het westen van de Axarquía, op een half uur van Málaga. Elk voorjaar speelt het halve dorp het passiespel El Paso, waarvoor bezoekers van heinde en verre komen.',
     intro: [
       'Riogordo ligt op 381 meter hoogte in een dal aan de westkant van de Axarquía, ongeveer 36 kilometer van Málaga en 30 kilometer van <a href="/nl/plaatsen/velez-malaga/">Vélez-Málaga</a>. Rond het dorp liggen olijfgaarden en graanvelden, met de rots van de Tajo de Gómer (1.129 meter) als baken in het landschap.',
@@ -32,8 +32,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'Voor wie een echt Spaans dorp zoekt, met lage prijzen en Málaga dichterbij dan vanuit de meeste dorpen in de Axarquía. Riogordo past bij mensen die rust en ruimte willen en het dorpsleven graag meemaken.',
     see: {
-      title: 'Zien en doen in Riogordo: El Paso, het museum en de Tajo de Gómer',
-      description: 'Wat te doen in Riogordo: het passiespel El Paso in de Goede Week, het etnografisch museum in de oude olijfmolen, wandelen naar de Tajo de Gómer en de dorpsfeesten.',
+      title: 'Zien en doen in Riogordo: El Paso en Tajo de Gómer',
+      description: 'Wat te doen in Riogordo: het passiespel El Paso, het museum in de oude olijfmolen, wandelen naar de Tajo de Gómer en de dorpsfeesten.',
       lead: 'Riogordo is het hele jaar een rustig dorp, met een paar dagen per jaar waarop het helemaal tot leven komt.',
       items: [
         { name: 'El Paso de Riogordo', text: 'Op Goede Vrijdag en Stille Zaterdag speelt het dorp in de open lucht het lijdensverhaal na, met honderden inwoners als acteurs en figuranten. Het is een van de bekendste passiespelen van Andalusië en trekt elk jaar duizenden toeschouwers.' },
@@ -79,7 +79,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Riogordo: living in the village of the El Paso passion play',
-    description: 'All about Riogordo: the El Paso passion play, the Tajo de Gómer, a village half an hour from Málaga, property prices and what to know about buying and renovating inland.',
+    description: 'All about Riogordo: the El Paso passion play, the Tajo de Gómer, half an hour from Málaga, property prices and tips on buying and renovating.',
     lead: 'Riogordo is a quiet farming village in the west of the Axarquía, half an hour from Málaga. Every spring half the village performs the El Paso passion play, which draws visitors from far and wide.',
     intro: [
       'Riogordo lies at 381 metres in a valley on the western side of the Axarquía, about 36 kilometres from Málaga and 30 kilometres from <a href="/en/places/velez-malaga/">Vélez-Málaga</a>. Around the village are olive groves and grain fields, with the rock of the Tajo de Gómer (1,129 metres) as a landmark.',
@@ -96,7 +96,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'People looking for a real Spanish village, with low prices and Málaga closer than from most villages in the Axarquía. Riogordo suits those who want peace and space and enjoy taking part in village life.',
     see: {
-      title: 'Things to do in Riogordo: El Paso, the museum and the Tajo de Gómer',
+      title: 'Things to do in Riogordo: El Paso and Tajo de Gómer',
       description: 'What to do in Riogordo: the El Paso passion play at Easter, the ethnographic museum in the old olive mill, walking to the Tajo de Gómer and the village fiestas.',
       lead: 'Riogordo is a quiet village all year, with a few days a year when it comes fully to life.',
       items: [
@@ -143,7 +143,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Riogordo: Wohnen im Dorf des Passionsspiels El Paso',
-    description: 'Alles über Riogordo: das Passionsspiel El Paso, der Tajo de Gómer, ein Dorf eine halbe Stunde von Málaga, Immobilienpreise und was Sie zu Kauf und Renovierung im Hinterland wissen sollten.',
+    description: 'Alles über Riogordo: Passionsspiel El Paso, Tajo de Gómer, eine halbe Stunde von Málaga, Immobilienpreise und Tipps zu Kauf und Renovierung.',
     lead: 'Riogordo ist ein ruhiges Bauerndorf im Westen der Axarquía, eine halbe Stunde von Málaga entfernt. Jedes Frühjahr spielt das halbe Dorf das Passionsspiel El Paso, zu dem Besucher von weit her kommen.',
     intro: [
       'Riogordo liegt auf 381 Metern in einem Tal an der Westseite der Axarquía, etwa 36 Kilometer von Málaga und 30 Kilometer von <a href="/de/orte/velez-malaga/">Vélez-Málaga</a> entfernt. Rund um das Dorf liegen Olivenhaine und Getreidefelder, mit dem Felsen des Tajo de Gómer (1.129 Meter) als Wahrzeichen.',
@@ -160,8 +160,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'Für alle, die ein echtes spanisches Dorf suchen, mit niedrigen Preisen und Málaga näher als von den meisten Dörfern der Axarquía. Riogordo passt zu Menschen, die Ruhe und Platz möchten und das Dorfleben gern mitmachen.',
     see: {
-      title: 'Sehenswertes in Riogordo: El Paso, das Museum und der Tajo de Gómer',
-      description: 'Was man in Riogordo unternehmen kann: das Passionsspiel El Paso in der Karwoche, das Volkskundemuseum in der alten Ölmühle, Wandern zum Tajo de Gómer und die Dorffeste.',
+      title: 'Sehenswertes in Riogordo: El Paso und Tajo de Gómer',
+      description: 'Was man in Riogordo unternehmen kann: Passionsspiel El Paso, das Volkskundemuseum in der alten Ölmühle, Wandern zum Tajo de Gómer und die Dorffeste.',
       lead: 'Riogordo ist das ganze Jahr über ein ruhiges Dorf, mit ein paar Tagen im Jahr, an denen es richtig lebendig wird.',
       items: [
         { name: 'El Paso de Riogordo', text: 'Am Karfreitag und Karsamstag spielt das Dorf unter freiem Himmel die Passionsgeschichte nach, mit Hunderten Einwohnern als Darsteller und Statisten. Es ist eines der bekanntesten Passionsspiele Andalusiens und zieht jedes Jahr Tausende Zuschauer an.' },
@@ -179,7 +179,7 @@ const content: PlaceContent = {
     },
     living: {
       title: 'Wohnen in Riogordo: Dorfhäuser, Cortijos und Preise',
-      description: 'Ein Haus in Riogordo kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung im Dorf und worauf Sie bei einem Cortijo oder einem alten Dorfhaus achten sollten.',
+      description: 'Haus in Riogordo kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung und worauf Sie bei einem Cortijo oder alten Dorfhaus achten sollten.',
       lead: 'Riogordo gehört zu den günstigsten Orten der Axarquía, während Málaga nur gut eine halbe Stunde entfernt ist. Das macht das Dorf interessant für alle, die ein großes Haus mit kleinem Budget suchen.',
       sections: [
         { h: 'Welche Immobilien es gibt', p: [

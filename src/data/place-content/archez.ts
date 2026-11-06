@@ -16,7 +16,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Árchez: wonen in het kleinste dorp van de provincie Málaga',
-    description: 'Alles over Árchez: het kleine dorp aan de rivier met een van de mooiste mudéjarminaretten van Andalusië, de ligging tussen Cómpeta en Sayalonga, woningprijzen en kopen en verbouwen.',
+    description: 'Alles over Árchez: dorp aan de rivier met een van de mooiste mudéjarminaretten van Andalusië, tussen Cómpeta en Sayalonga, en woningprijzen.',
     lead: 'Árchez is de kleinste gemeente van de provincie Málaga: een handvol witte straatjes in een dal aan de rivier, met een Moorse minaret als kerktoren. Rustiger wordt het in de Axarquía niet.',
     intro: [
       'Árchez ligt op ongeveer 435 meter hoogte in het dal van de Turvilla, tussen <a href="/nl/plaatsen/competa/">Cómpeta</a>, <a href="/nl/plaatsen/canillas-de-albaida/">Canillas de Albaida</a> en <a href="/nl/plaatsen/sayalonga/">Sayalonga</a>. Naar Vélez-Málaga is het ongeveer 21 kilometer, naar Málaga 52. Met een oppervlakte van nog geen vijf vierkante kilometer is het de kleinste gemeente van de provincie.',
@@ -34,7 +34,7 @@ const content: PlaceContent = {
     forWhom: 'Voor wie echt rust zoekt in een klein dorp, met Cómpeta en Sayalonga als buurdorpen voor de dagelijkse dingen. Árchez past bij mensen die een dorpshuis of een klein landhuis zoeken en het niet erg vinden dat het aanbod beperkt is.',
     living: {
       title: 'Wonen in Árchez: dorpshuizen, landhuizen en prijzen',
-      description: 'Een huis kopen in Árchez? Welke woningen er zijn, wat ze kosten, waar u de voorzieningen vindt en waar u op let bij verbouwen in een klein bergdorp aan de rivier.',
+      description: 'Een huis kopen in Árchez? Welke woningen er zijn, wat ze kosten, waar u de voorzieningen vindt en waar u op let bij verbouwen in een klein bergdorp.',
       lead: 'In Árchez komt maar zelden een huis te koop. Wie hier woont, kiest voor stilte en neemt de rit naar Cómpeta of de kust voor lief.',
       sections: [
         { h: 'Wat voor woningen er zijn', p: [
@@ -62,7 +62,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Árchez: living in the smallest village in Málaga province',
-    description: 'All about Árchez: the small riverside village with one of the finest Mudéjar minarets in Andalusia, its setting between Cómpeta and Sayalonga, property prices and buying and renovating.',
+    description: 'All about Árchez: riverside village with one of the finest Mudéjar minarets in Andalusia, between Cómpeta and Sayalonga, and property prices.',
     lead: 'Árchez is the smallest municipality in the province of Málaga: a handful of white lanes in a river valley, with a Moorish minaret for a church tower. The Axarquía does not get quieter than this.',
     intro: [
       'Árchez lies at about 435 metres in the Turvilla valley, between <a href="/en/places/competa/">Cómpeta</a>, <a href="/en/places/canillas-de-albaida/">Canillas de Albaida</a> and <a href="/en/places/sayalonga/">Sayalonga</a>. Vélez-Málaga is about 21 kilometres away, Málaga 52. With an area of under five square kilometres, it is the smallest municipality in the province.',
@@ -80,7 +80,7 @@ const content: PlaceContent = {
     forWhom: 'People looking for real peace in a small village, with Cómpeta and Sayalonga as neighbours for everyday needs. Árchez suits those looking for a village house or small country house who do not mind that the choice is limited.',
     living: {
       title: 'Living in Árchez: village houses, country houses and prices',
-      description: 'Buying a home in Árchez? The types of property, what they cost, where to find facilities and what to watch for when renovating in a small riverside mountain village.',
+      description: 'Buying a home in Árchez? The types of property, what they cost, where to find facilities and what to watch for when renovating in a mountain village.',
       lead: 'Houses rarely come up for sale in Árchez. Those who live here choose silence and accept the drive to Cómpeta or the coast.',
       sections: [
         { h: 'Types of property', p: [
@@ -108,7 +108,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Árchez: Wohnen im kleinsten Dorf der Provinz Málaga',
-    description: 'Alles über Árchez: das kleine Dorf am Fluss mit einem der schönsten Mudéjar-Minarette Andalusiens, die Lage zwischen Cómpeta und Sayalonga, Immobilienpreise sowie Kauf und Renovierung.',
+    description: 'Alles über Árchez: kleines Dorf am Fluss mit einem der schönsten Mudéjar-Minarette Andalusiens, zwischen Cómpeta und Sayalonga, und Immobilienpreise.',
     lead: 'Árchez ist die kleinste Gemeinde der Provinz Málaga: eine Handvoll weißer Gassen in einem Flusstal, mit einem maurischen Minarett als Kirchturm. Ruhiger wird es in der Axarquía nicht.',
     intro: [
       'Árchez liegt auf etwa 435 Metern im Tal der Turvilla, zwischen <a href="/de/orte/competa/">Cómpeta</a>, <a href="/de/orte/canillas-de-albaida/">Canillas de Albaida</a> und <a href="/de/orte/sayalonga/">Sayalonga</a>. Nach Vélez-Málaga sind es etwa 21 Kilometer, nach Málaga 52. Mit einer Fläche von nicht einmal fünf Quadratkilometern ist es die kleinste Gemeinde der Provinz.',
@@ -126,7 +126,7 @@ const content: PlaceContent = {
     forWhom: 'Für alle, die echte Ruhe in einem kleinen Dorf suchen, mit Cómpeta und Sayalonga als Nachbarn für den Alltag. Árchez passt zu Menschen, die ein Dorfhaus oder ein kleines Landhaus suchen und sich nicht daran stören, dass das Angebot begrenzt ist.',
     living: {
       title: 'Wohnen in Árchez: Dorfhäuser, Landhäuser und Preise',
-      description: 'Ein Haus in Árchez kaufen? Welche Immobilien es gibt, was sie kosten, wo Sie die Versorgung finden und worauf Sie bei einer Renovierung in einem kleinen Bergdorf am Fluss achten sollten.',
+      description: 'Haus in Árchez kaufen? Welche Immobilien es gibt, was sie kosten, wo Sie die Versorgung finden und worauf Sie bei einer Renovierung im Bergdorf achten.',
       lead: 'In Árchez kommt nur selten ein Haus auf den Markt. Wer hier wohnt, entscheidet sich für Stille und nimmt die Fahrt nach Cómpeta oder an die Küste in Kauf.',
       sections: [
         { h: 'Welche Immobilien es gibt', p: [

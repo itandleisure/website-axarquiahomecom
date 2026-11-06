@@ -16,7 +16,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Periana: wonen tussen olijven en perziken boven het meer',
-    description: 'Alles over Periana: het dorp boven het stuwmeer van La Viñuela, de verdial-olijfolie en perziken, de gehuchten Mondrón en Guaro, woningprijzen en kopen op het platteland.',
+    description: 'Alles over Periana: dorp boven het stuwmeer van La Viñuela, verdial-olijfolie en perziken, de gehuchten Mondrón en Guaro, en woningprijzen.',
     lead: 'Periana ligt op een uitloper van de Sierra de Alhama, met het stuwmeer van La Viñuela aan de voet. Het is een werkend landbouwdorp, bekend om zijn olijfolie en de beste perziken van Spanje.',
     intro: [
       'Periana ligt op 550 meter hoogte in het noorden van de Axarquía, ongeveer 58 kilometer van Málaga. Vanuit het dorp kijkt u omlaag naar het stuwmeer van <a href="/nl/plaatsen/vinuela/">La Viñuela</a> en over de heuvels tot aan zee. Achter het dorp rijzen de bergen van de Sierra de Alhama en de Sierra de Enmedio op.',
@@ -33,8 +33,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'Voor wie het echte platteland zoekt, met ruimte, een stuk grond en een dorp waar het leven om de oogst draait. Periana past bij mensen die een cortijo of finca met olijfbomen willen en de kust niet elke dag nodig hebben.',
     see: {
-      title: 'Zien en doen in Periana: Baños de Vilo, olijfolie en perziken',
-      description: 'Wat te doen in Periana: de ruïnes van het kuuroord Baños de Vilo, de duizendjarige olijfbomen van Mondrón, de bergpas Puerto del Sol, het stuwmeer en de perzikenfeesten.',
+      title: 'Zien en doen in Periana: Baños de Vilo en olijfolie',
+      description: 'Wat te doen in Periana: kuuroord Baños de Vilo, de duizendjarige olijfbomen van Mondrón, de Puerto del Sol, het stuwmeer en de perzikenfeesten.',
       lead: 'Periana is geen toeristendorp. Juist daarom is het een goede plek om te zien hoe het binnenland van de Axarquía leeft.',
       items: [
         { name: 'Baños de Vilo', text: 'Mineraalbronnen die in de achttiende en negentiende eeuw een bekend kuuroord waren. Van het badhuis staan nog muren en een bassin, op een mooie plek in het groen.' },
@@ -80,7 +80,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Periana: living among olives and peaches above the lake',
-    description: 'All about Periana: the village above La Viñuela reservoir, its verdial olive oil and peaches, the hamlets of Mondrón and Guaro, property prices and buying in the countryside.',
+    description: 'All about Periana: village above La Viñuela reservoir, its verdial olive oil and peaches, the hamlets of Mondrón and Guaro, and property prices.',
     lead: 'Periana sits on a spur of the Sierra de Alhama, with La Viñuela reservoir at its feet. It is a working farming village, known for its olive oil and for some of the best peaches in Spain.',
     intro: [
       'Periana lies at 550 metres in the north of the Axarquía, about 58 kilometres from Málaga. From the village you look down on <a href="/en/places/vinuela/">La Viñuela</a> reservoir and across the hills to the sea. Behind it rise the mountains of the Sierra de Alhama and the Sierra de Enmedio.',
@@ -97,8 +97,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'People looking for the real countryside, with space, a piece of land and a village where life follows the harvest. Periana suits those who want a cortijo or finca with olive trees and do not need the coast every day.',
     see: {
-      title: 'Things to do in Periana: Baños de Vilo, olive oil and peaches',
-      description: 'What to do in Periana: the ruins of the Baños de Vilo spa, the thousand-year-old olive trees of Mondrón, the Puerto del Sol pass, the reservoir and the peach festivals.',
+      title: 'Things to do in Periana: Baños de Vilo and olive oil',
+      description: 'What to do in Periana: the Baños de Vilo spa ruins, the ancient olive trees of Mondrón, the Puerto del Sol pass, the reservoir and the peach festivals.',
       lead: 'Periana is not a tourist village. That is exactly why it is a good place to see how the Axarquía’s interior lives.',
       items: [
         { name: 'Baños de Vilo', text: 'Mineral springs that were a well-known spa in the eighteenth and nineteenth centuries. Walls and a pool survive from the bathhouse, in a lovely green spot.' },
@@ -115,7 +115,7 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Living in Periana: cortijos, fincas, village houses and prices',
+      title: 'Living in Periana: cortijos, fincas and prices',
       description: 'Buying a home in Periana? The types of property, what they cost, the village facilities and what to watch for with a cortijo or finca in the interior.',
       lead: 'In Periana you get a lot of house and land for your money. You live among Spaniards, about 45 minutes from the coast.',
       sections: [
@@ -144,7 +144,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Periana: Wohnen zwischen Oliven und Pfirsichen über dem See',
-    description: 'Alles über Periana: das Dorf oberhalb des Stausees La Viñuela, das Verdial-Olivenöl und die Pfirsiche, die Weiler Mondrón und Guaro, Immobilienpreise und Kaufen auf dem Land.',
+    description: 'Alles über Periana: Dorf über dem Stausee La Viñuela, Verdial-Olivenöl und Pfirsiche, die Weiler Mondrón und Guaro und Immobilienpreise.',
     lead: 'Periana liegt auf einem Ausläufer der Sierra de Alhama, mit dem Stausee La Viñuela zu seinen Füßen. Es ist ein arbeitendes Bauerndorf, bekannt für sein Olivenöl und einige der besten Pfirsiche Spaniens.',
     intro: [
       'Periana liegt auf 550 Metern im Norden der Axarquía, etwa 58 Kilometer von Málaga entfernt. Vom Dorf blicken Sie hinunter auf den Stausee von <a href="/de/orte/vinuela/">La Viñuela</a> und über die Hügel bis zum Meer. Hinter dem Dorf erheben sich die Berge der Sierra de Alhama und der Sierra de Enmedio.',
@@ -161,8 +161,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'Für alle, die das echte Land suchen, mit Platz, einem Stück Grund und einem Dorf, in dem sich das Leben um die Ernte dreht. Periana passt zu Menschen, die einen Cortijo oder eine Finca mit Olivenbäumen möchten und die Küste nicht jeden Tag brauchen.',
     see: {
-      title: 'Sehenswertes in Periana: Baños de Vilo, Olivenöl und Pfirsiche',
-      description: 'Was man in Periana unternehmen kann: die Ruinen des Kurbads Baños de Vilo, die tausendjährigen Olivenbäume von Mondrón, der Pass Puerto del Sol, der Stausee und die Pfirsichfeste.',
+      title: 'Sehenswertes in Periana: Baños de Vilo und Olivenöl',
+      description: 'Was man in Periana unternehmen kann: Kurbad Baños de Vilo, tausendjährige Olivenbäume von Mondrón, Puerto del Sol, der Stausee und die Pfirsichfeste.',
       lead: 'Periana ist kein Touristendorf. Gerade deshalb ist es ein guter Ort, um zu sehen, wie das Hinterland der Axarquía lebt.',
       items: [
         { name: 'Baños de Vilo', text: 'Mineralquellen, die im 18. und 19. Jahrhundert ein bekanntes Kurbad waren. Vom Badehaus stehen noch Mauern und ein Becken, an einem schönen Ort im Grünen.' },
@@ -180,7 +180,7 @@ const content: PlaceContent = {
     },
     living: {
       title: 'Wohnen in Periana: Cortijos, Fincas, Dorfhäuser und Preise',
-      description: 'Ein Haus in Periana kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung im Dorf und worauf Sie bei einem Cortijo oder einer Finca im Hinterland achten sollten.',
+      description: 'Haus in Periana kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung und worauf Sie bei einem Cortijo oder einer Finca achten sollten.',
       lead: 'In Periana bekommen Sie viel Haus und Land für Ihr Geld. Sie wohnen unter Spaniern, etwa eine Dreiviertelstunde von der Küste entfernt.',
       sections: [
         { h: 'Welche Immobilien es gibt', p: [

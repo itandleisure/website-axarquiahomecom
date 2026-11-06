@@ -7,7 +7,7 @@ import { guideList, guideHref } from '../../../data/guides';
 ---
 <Base
   title="Ratgeber: Kaufen, Renovieren und Leben in Spanien"
-  description="Praktische Ratgeber auf Deutsch zum Auswandern nach Spanien, zum Kauf eines Hauses oder einer Finca, zu Kaufnebenkosten, Renovierung und Legalisierung in der Axarquía und im übrigen Andalusien."
+  description="Ratgeber zum Auswandern nach Spanien, Haus- oder Fincakauf, Kaufnebenkosten, Renovierung und Legalisierung in der Axarquía und Andalusien."
   path="/de/ratgeber/"
   lang="de"
 >
@@ -22,11 +22,11 @@ import { guideList, guideHref } from '../../../data/guides';
   <section class="section">
     <div class="wrap">
       <div class="cards">
-        <a class="card" href="/de/kosten/"><h3>Kosten nach Gewerk</h3><p>Was kosten Bad, Küche, Pool, Klimaanlage, Dach oder Außenküche in der Axarquía? Mit Rechenbeispielen und Quellen.</p><span class="more">Zu den Preisen →</span></a>
-        <a class="card" href="/de/probleme/"><h3>Probleme mit Ihrem Haus</h3><p>Feuchtigkeit, undichtes Dach, Risse, Termiten, Legionellen oder Einbruch: erkennen, erste Schritte und Kosten.</p><span class="more">Zu den Problemen →</span></a>
+        <a class="card" href="/de/kosten/"><h2 class="h3">Kosten nach Gewerk</h2><p>Was kosten Bad, Küche, Pool, Klimaanlage, Dach oder Außenküche in der Axarquía? Mit Rechenbeispielen und Quellen.</p><span class="more">Zu den Preisen →</span></a>
+        <a class="card" href="/de/probleme/"><h2 class="h3">Probleme mit Ihrem Haus</h2><p>Feuchtigkeit, undichtes Dach, Risse, Termiten, Legionellen oder Einbruch: erkennen, erste Schritte und Kosten.</p><span class="more">Zu den Problemen →</span></a>
         {guideList('de').map((g) => (
           <a class="card" href={guideHref('de', g)}>
-            <h3>{g.title}</h3>
+            <h2 class="h3">{g.title}</h2>
             <p>{g.description}</p>
             <span class="more">Zum Ratgeber ({g.minutes} Min.) →</span>
           </a>

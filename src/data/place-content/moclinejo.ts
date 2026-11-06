@@ -16,8 +16,8 @@ const content: PlaceContent = {
     'https://realadvisor.es/es/precios-viviendas/municipio-moclinejo',
   ],
   nl: {
-    title: 'Moclinejo: wonen tussen de wijngaarden op een half uur van Málaga',
-    description: 'Alles over Moclinejo: het wijndorp met een eigen bodega-museum, het Feest van de Wijnboeren, El Valdés, woningprijzen en kopen en verbouwen in de heuvels dicht bij Málaga.',
+    title: 'Moclinejo: wonen tussen de wijngaarden bij Málaga',
+    description: 'Alles over Moclinejo: wijndorp met bodega-museum, het Feest van de Wijnboeren, El Valdés, woningprijzen en kopen in de heuvels bij Málaga.',
     lead: 'Moclinejo is een wijndorp op een heuveltop, omringd door hellingen met muskaatdruiven. Málaga ligt op ongeveer een half uur, Rincón de la Victoria nog dichterbij.',
     intro: [
       'Moclinejo ligt op 447 meter hoogte in de heuvels boven <a href="/nl/plaatsen/rincon-de-la-victoria/">Rincón de la Victoria</a>, ongeveer 27 kilometer van Málaga over de weg. Bij de gemeente horen naast het dorp een paar buurtschappen, waarvan El Valdés de grootste is. Samen tellen ze ruim 1.200 inwoners.',
@@ -40,8 +40,8 @@ const content: PlaceContent = {
     ],
   },
   en: {
-    title: 'Moclinejo: living among the vineyards half an hour from Málaga',
-    description: 'All about Moclinejo: the wine village with its own bodega museum, the Winegrowers’ Festival, El Valdés, property prices and buying and renovating in the hills close to Málaga.',
+    title: 'Moclinejo: living among the vineyards near Málaga',
+    description: 'All about Moclinejo: wine village with a bodega museum, the Winegrowers’ Festival, El Valdés, property prices and buying in the hills near Málaga.',
     lead: 'Moclinejo is a hilltop wine village surrounded by slopes of muscatel grapes. Málaga is about half an hour away, Rincón de la Victoria closer still.',
     intro: [
       'Moclinejo lies at 447 metres in the hills above <a href="/en/places/rincon-de-la-victoria/">Rincón de la Victoria</a>, about 27 kilometres from Málaga by road. Besides the village, the municipality includes a few hamlets, the largest being El Valdés. Together they have just over 1,200 residents.',
@@ -64,8 +64,8 @@ const content: PlaceContent = {
     ],
   },
   de: {
-    title: 'Moclinejo: Wohnen zwischen Weinbergen, eine halbe Stunde von Málaga',
-    description: 'Alles über Moclinejo: das Weindorf mit eigenem Bodega-Museum, das Fest der Winzer, El Valdés, Immobilienpreise sowie Kauf und Renovierung in den Hügeln nahe Málaga.',
+    title: 'Moclinejo: Wohnen zwischen Weinbergen nahe Málaga',
+    description: 'Alles über Moclinejo: Weindorf mit Bodega-Museum, das Fest der Winzer, El Valdés, Immobilienpreise sowie Kauf und Renovierung nahe Málaga.',
     lead: 'Moclinejo ist ein Weindorf auf einer Hügelkuppe, umgeben von Hängen mit Muskattrauben. Málaga liegt etwa eine halbe Stunde entfernt, Rincón de la Victoria noch näher.',
     intro: [
       'Moclinejo liegt auf 447 Metern in den Hügeln über <a href="/de/orte/rincon-de-la-victoria/">Rincón de la Victoria</a>, etwa 27 Kilometer von Málaga über die Straße. Zur Gemeinde gehören neben dem Dorf einige Weiler, der größte ist El Valdés. Zusammen haben sie gut 1.200 Einwohner.',

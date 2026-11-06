@@ -15,7 +15,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Sayalonga: wonen in het mispeldorp boven de kust',
-    description: 'Alles over Sayalonga en Corumbela: de ronde begraafplaats, de Dag van de Mispel, de grote internationale gemeenschap, woningprijzen en waar u op let bij kopen en verbouwen.',
+    description: 'Alles over Sayalonga en Corumbela: de ronde begraafplaats, de Dag van de Mispel, de internationale gemeenschap, woningprijzen en kopen en verbouwen.',
     lead: 'Sayalonga ligt in een groen dal vol mispel- en avocadobomen, tussen Cómpeta en de kust. Bijna de helft van de inwoners komt uit het buitenland, en toch is het een echt Andalusisch dorp gebleven.',
     intro: [
       'Sayalonga ligt op ongeveer 360 meter hoogte op een heuvelrug tussen <a href="/nl/plaatsen/competa/">Cómpeta</a> en de kust bij <a href="/nl/plaatsen/algarrobo/">Algarrobo</a> en <a href="/nl/plaatsen/torrox/">Torrox</a>. Het dal eromheen staat vol mispelbomen (<em>nísperos</em>), avocado’s en mango’s, en in het voorjaar is het hier groener dan in de meeste dorpen van de streek.',
@@ -32,8 +32,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'Voor wie een dorp in de heuvels zoekt met de zee dichtbij en een grote internationale gemeenschap, maar zonder de drukte van Frigiliana of Cómpeta. Sayalonga past goed bij mensen die een villa of finca met uitzicht willen, op korte afstand van de stranden.',
     see: {
-      title: 'Zien en doen in Sayalonga: de ronde begraafplaats, Corumbela en de mispel',
-      description: 'Wat te doen in Sayalonga: de ronde begraafplaats, het smalste steegje van de Axarquía, de minaret van Corumbela, wandelingen door het dal en de Dag van de Mispel.',
+      title: 'Zien en doen in Sayalonga: ronde begraafplaats, Corumbela',
+      description: 'Wat te doen in Sayalonga: de ronde begraafplaats, het smalste steegje van de Axarquía, de minaret van Corumbela, wandelen en de Dag van de Mispel.',
       lead: 'Sayalonga is klein, maar heeft een paar bezienswaardigheden die u nergens anders ziet.',
       items: [
         { name: 'Cementerio Redondo', text: 'Een van de weinige ronde begraafplaatsen van Spanje, met de nissen in een cirkel rond een open middenplein. Naast de begraafplaats ligt een uitzichtpunt over het dal.' },
@@ -79,7 +79,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Sayalonga: living in the loquat village above the coast',
-    description: 'All about Sayalonga and Corumbela: the round cemetery, Loquat Day, the large international community, property prices and what to know about buying and renovating.',
+    description: 'All about Sayalonga and Corumbela: the round cemetery, Loquat Day, the international community, property prices and tips on buying and renovating.',
     lead: 'Sayalonga sits in a green valley full of loquat and avocado trees, between Cómpeta and the coast. Almost half its residents come from abroad, yet it has remained a real Andalusian village.',
     intro: [
       'Sayalonga lies at about 360 metres on a ridge between <a href="/en/places/competa/">Cómpeta</a> and the coast at <a href="/en/places/algarrobo/">Algarrobo</a> and <a href="/en/places/torrox/">Torrox</a>. The valley around it is full of loquat trees (<em>nísperos</em>), avocados and mangoes, and in spring it is greener here than in most villages in the region.',
@@ -96,7 +96,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'People looking for a hill village close to the sea with a large international community, but without the crowds of Frigiliana or Cómpeta. Sayalonga suits those who want a villa or finca with a view, a short drive from the beaches.',
     see: {
-      title: 'Things to do in Sayalonga: the round cemetery, Corumbela and loquats',
+      title: 'Things to do in Sayalonga: round cemetery, Corumbela',
       description: 'What to do in Sayalonga: the round cemetery, the narrowest alley in the Axarquía, the Corumbela minaret, walks through the valley and Loquat Day.',
       lead: 'Sayalonga is small, but it has a few sights you will not find anywhere else.',
       items: [
@@ -114,7 +114,7 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Living in Sayalonga: villas, fincas, village houses and prices',
+      title: 'Living in Sayalonga: villas, fincas and prices',
       description: 'Buying a home in Sayalonga or Corumbela? The types of property, what they cost, the facilities and what to watch for with a finca or a renovation in the hills.',
       lead: 'Sayalonga sits between the coast and the mountain villages on price. You pay for the green surroundings and the short drive to the sea.',
       sections: [
@@ -143,7 +143,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Sayalonga: Wohnen im Mispeldorf oberhalb der Küste',
-    description: 'Alles über Sayalonga und Corumbela: der runde Friedhof, der Tag der Mispel, die große internationale Gemeinschaft, Immobilienpreise und was Sie zu Kauf und Renovierung wissen sollten.',
+    description: 'Alles über Sayalonga und Corumbela: runder Friedhof, Tag der Mispel, internationale Gemeinschaft, Immobilienpreise und Tipps zu Kauf und Renovierung.',
     lead: 'Sayalonga liegt in einem grünen Tal voller Mispel- und Avocadobäume, zwischen Cómpeta und der Küste. Fast die Hälfte der Einwohner kommt aus dem Ausland, und doch ist es ein echtes andalusisches Dorf geblieben.',
     intro: [
       'Sayalonga liegt auf etwa 360 Metern auf einem Höhenrücken zwischen <a href="/de/orte/competa/">Cómpeta</a> und der Küste bei <a href="/de/orte/algarrobo/">Algarrobo</a> und <a href="/de/orte/torrox/">Torrox</a>. Das Tal ringsum ist voller Mispelbäume (<em>nísperos</em>), Avocados und Mangos, und im Frühjahr ist es hier grüner als in den meisten Dörfern der Region.',
@@ -160,8 +160,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'Für alle, die ein Dorf in den Hügeln mit dem Meer in der Nähe und einer großen internationalen Gemeinschaft suchen, aber ohne den Trubel von Frigiliana oder Cómpeta. Sayalonga passt gut zu Menschen, die eine Villa oder Finca mit Aussicht möchten, nicht weit von den Stränden.',
     see: {
-      title: 'Sehenswertes in Sayalonga: runder Friedhof, Corumbela und Mispeln',
-      description: 'Was man in Sayalonga unternehmen kann: der runde Friedhof, die engste Gasse der Axarquía, das Minarett von Corumbela, Wanderungen durch das Tal und der Tag der Mispel.',
+      title: 'Sehenswertes in Sayalonga: runder Friedhof, Corumbela',
+      description: 'Was man in Sayalonga unternehmen kann: runder Friedhof, die engste Gasse der Axarquía, das Minarett von Corumbela, Wanderungen und der Tag der Mispel.',
       lead: 'Sayalonga ist klein, hat aber ein paar Sehenswürdigkeiten, die Sie nirgendwo sonst finden.',
       items: [
         { name: 'Cementerio Redondo', text: 'Einer der wenigen runden Friedhöfe Spaniens, mit den Grabnischen im Kreis um einen offenen Innenhof. Daneben liegt ein Aussichtspunkt über das Tal.' },
@@ -179,7 +179,7 @@ const content: PlaceContent = {
     },
     living: {
       title: 'Wohnen in Sayalonga: Villen, Fincas, Dorfhäuser und Preise',
-      description: 'Ein Haus in Sayalonga oder Corumbela kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung und worauf Sie bei einer Finca oder Renovierung in den Hügeln achten sollten.',
+      description: 'Haus in Sayalonga oder Corumbela kaufen? Immobilien, Preise, Versorgung und worauf Sie bei einer Finca oder Renovierung in den Hügeln achten.',
       lead: 'Sayalonga liegt preislich zwischen der Küste und den Bergdörfern. Sie zahlen für die grüne Umgebung und die kurze Fahrt zum Meer.',
       sections: [
         { h: 'Welche Immobilien es gibt', p: [
@@ -207,7 +207,7 @@ const content: PlaceContent = {
   },
   sv: {
     title: 'Sayalonga: bo i mispelbyn ovanför kusten',
-    description: 'Allt om Sayalonga och Corumbela: den runda kyrkogården, Mispelns dag, den stora internationella gemenskapen, bostadspriser och vad du ska veta om att köpa och renovera.',
+    description: 'Allt om Sayalonga och Corumbela: den runda kyrkogården, Mispelns dag, den internationella gemenskapen, bostadspriser och att köpa och renovera.',
     lead: 'Sayalonga ligger i en grön dal full av mispel- och avokadoträd, mellan Cómpeta och kusten. Nästan hälften av invånarna kommer från utlandet, men det har förblivit en äkta andalusisk by.',
     intro: [
       'Sayalonga ligger på cirka 360 meters höjd på en ås mellan <a href="/sv/orter/competa/">Cómpeta</a> och kusten vid <a href="/sv/orter/algarrobo/">Algarrobo</a> och <a href="/sv/orter/torrox/">Torrox</a>. Dalen runt byn är full av japanska mispelträd (<em>nísperos</em>), avokado och mango, och på våren är det grönare här än i de flesta byar i regionen.',
@@ -224,7 +224,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'För dig som söker en kullby nära havet med en stor internationell gemenskap, men utan trängseln i Frigiliana eller Cómpeta. Sayalonga passar dig som vill ha en villa eller finca med utsikt, en kort bilresa från stränderna.',
     see: {
-      title: 'Se och göra i Sayalonga: den runda kyrkogården, Corumbela och mispel',
+      title: 'Se och göra i Sayalonga: runda kyrkogården, Corumbela',
       description: 'Vad du kan göra i Sayalonga: den runda kyrkogården, Axarquías smalaste gränd, minareten i Corumbela, vandringar genom dalen och Mispelns dag.',
       lead: 'Sayalonga är liten, men har några sevärdheter som du inte hittar någon annanstans.',
       items: [

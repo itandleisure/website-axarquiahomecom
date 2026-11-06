@@ -15,7 +15,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'El Borge: wonen in het rozijnendorp van de bandiet',
-    description: 'Alles over El Borge: het witte dorp tussen de rozijnenwijngaarden, de Dag van de Rozijn, de legende van El Bizco, woningprijzen en kopen en verbouwen in de heuvels.',
+    description: 'Alles over El Borge: wit dorp tussen de rozijnenwijngaarden, de Dag van de Rozijn, de legende van El Bizco, woningprijzen en kopen in de heuvels.',
     lead: 'El Borge is een klein wit dorp tussen de rozijnenwijngaarden van de Axarquía. Het dorp viert elk jaar de Dag van de Rozijn en koestert de herinnering aan zijn beroemdste inwoner, de negentiende-eeuwse bandiet El Bizco.',
     intro: [
       'El Borge ligt op 257 meter hoogte in de heuvels tussen <a href="/nl/plaatsen/almachar/">Almáchar</a>, <a href="/nl/plaatsen/cutar/">Cútar</a> en <a href="/nl/plaatsen/comares/">Comares</a>, en hoort bij het gerechtelijk district van Vélez-Málaga. Het dorp telt bijna duizend inwoners. Er rijdt een bus naar Málaga.',
@@ -63,7 +63,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'El Borge: Wohnen im Rosinendorf des Banditen',
-    description: 'Alles über El Borge: das weiße Dorf zwischen den Rosinenweinbergen, der Tag der Rosine, die Legende von El Bizco, Immobilienpreise sowie Kauf und Renovierung in den Hügeln.',
+    description: 'Alles über El Borge: weißes Dorf zwischen Rosinenweinbergen, der Tag der Rosine, die Legende von El Bizco, Immobilienpreise und Renovierung.',
     lead: 'El Borge ist ein kleines weißes Dorf zwischen den Rosinenweinbergen der Axarquía. Jedes Jahr feiert es den Tag der Rosine und hält die Erinnerung an seinen berühmtesten Bewohner wach, den Banditen El Bizco aus dem 19. Jahrhundert.',
     intro: [
       'El Borge liegt auf 257 Metern in den Hügeln zwischen <a href="/de/orte/almachar/">Almáchar</a>, <a href="/de/orte/cutar/">Cútar</a> und <a href="/de/orte/comares/">Comares</a> und gehört zum Gerichtsbezirk Vélez-Málaga. Das Dorf hat knapp tausend Einwohner. Ein Bus fährt nach Málaga.',

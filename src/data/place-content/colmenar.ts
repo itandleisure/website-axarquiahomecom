@@ -16,7 +16,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Colmenar: wonen in de bergen op een half uur van Málaga',
-    description: 'Alles over Colmenar: het bergdorp achter de Montes de Málaga, de Ermita de la Candelaria, honing en vleeswaren, woningprijzen en wat u moet weten over kopen en verbouwen.',
+    description: 'Alles over Colmenar: bergdorp achter de Montes de Málaga, de Ermita de la Candelaria, honing en vleeswaren, woningprijzen en kopen en verbouwen.',
     lead: 'Colmenar ligt op bijna 700 meter achter de Montes de Málaga. Het is een van de grootste dorpen in het binnenland van de Axarquía, met Málaga op ongeveer een half uur rijden.',
     intro: [
       'Colmenar ligt in het westen van de Axarquía, aan de noordkant van het natuurpark Montes de Málaga, ongeveer 32 kilometer van Málaga. Het dorp ligt op een helling op 696 meter, tussen olijfgaarden, wijngaarden en graanvelden.',
@@ -33,8 +33,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'Voor wie in de bergen wil wonen maar Málaga, de luchthaven en de ziekenhuizen van de stad binnen bereik wil houden. Colmenar past bij mensen die een betaalbaar huis met ruimte zoeken en het koelere klimaat van het binnenland niet erg vinden.',
     see: {
-      title: 'Zien en doen in Colmenar: de Candelaria, honing en de Montes de Málaga',
-      description: 'Wat te doen in Colmenar: de Ermita de la Candelaria, de kerk La Asunción, het honingmuseum, wandelen in de Montes de Málaga en het feest van de most en de worst.',
+      title: 'Zien en doen in Colmenar: Candelaria en honingmuseum',
+      description: 'Wat te doen in Colmenar: de Ermita de la Candelaria, de kerk La Asunción, het honingmuseum, wandelen in de Montes de Málaga en het feest van most en worst.',
       lead: 'Colmenar is een goed vertrekpunt voor de Montes de Málaga en heeft zelf een paar plekken die een bezoek waard zijn.',
       items: [
         { name: 'Ermita de la Candelaria', text: 'De kapel uit de zeventiende eeuw op de heuvel boven het dorp is een lokaal monument. Het uitzicht reikt over de Axarquía tot aan de Sierra de Tejeda en de Sierra Nevada.' },
@@ -50,7 +50,7 @@ const content: PlaceContent = {
     },
     living: {
       title: 'Wonen in Colmenar: dorpshuizen, landhuizen en prijzen',
-      description: 'Een huis kopen in Colmenar? Welke woningen er zijn, wat ze kosten, de voorzieningen in het dorp en waar u op let bij landelijke huizen en verbouwen op 700 meter.',
+      description: 'Een huis kopen in Colmenar? Welke woningen er zijn, wat ze kosten, de voorzieningen in het dorp en waar u op let bij landelijke huizen op 700 meter.',
       lead: 'Colmenar combineert lage prijzen met Málaga op een half uur. Dat is in de Axarquía een zeldzame combinatie.',
       sections: [
         { h: 'Wat voor woningen er zijn', p: [
@@ -78,7 +78,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Colmenar: mountain living half an hour from Málaga',
-    description: 'All about Colmenar: the mountain village behind the Montes de Málaga, the Ermita de la Candelaria, honey and cured meats, property prices and what to know about buying and renovating.',
+    description: 'All about Colmenar: mountain village behind the Montes de Málaga, the Ermita de la Candelaria, honey and cured meats, and property prices.',
     lead: 'Colmenar sits at almost 700 metres behind the Montes de Málaga. It is one of the largest villages in the Axarquía’s interior, with Málaga about half an hour’s drive away.',
     intro: [
       'Colmenar lies in the west of the Axarquía, on the northern side of the Montes de Málaga natural park, about 32 kilometres from Málaga. The village sits on a slope at 696 metres, among olive groves, vineyards and grain fields.',
@@ -95,8 +95,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'People who want to live in the mountains but keep Málaga, the airport and the city’s hospitals within reach. Colmenar suits those looking for an affordable home with space who do not mind the cooler inland climate.',
     see: {
-      title: 'Things to do in Colmenar: the Candelaria, honey and the Montes de Málaga',
-      description: 'What to do in Colmenar: the Ermita de la Candelaria, La Asunción church, the honey museum, walking in the Montes de Málaga and the festival of new wine and sausages.',
+      title: 'Things to do in Colmenar: Candelaria and honey museum',
+      description: 'What to do in Colmenar: the Ermita de la Candelaria, La Asunción church, the honey museum, walking in the Montes de Málaga and the new wine festival.',
       lead: 'Colmenar is a good base for the Montes de Málaga and has a few places of its own worth a visit.',
       items: [
         { name: 'Ermita de la Candelaria', text: 'The seventeenth-century chapel on the hill above the village is a local monument. The view stretches across the Axarquía to the Sierra de Tejeda and the Sierra Nevada.' },
@@ -111,7 +111,7 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Living in Colmenar: village houses, country houses and prices',
+      title: 'Living in Colmenar: village houses and prices',
       description: 'Buying a home in Colmenar? The types of property, what they cost, the village facilities and what to watch for with country houses and renovation at 700 metres.',
       lead: 'Colmenar combines low prices with Málaga half an hour away. In the Axarquía that is a rare combination.',
       sections: [
@@ -140,7 +140,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Colmenar: Wohnen in den Bergen, eine halbe Stunde von Málaga',
-    description: 'Alles über Colmenar: das Bergdorf hinter den Montes de Málaga, die Ermita de la Candelaria, Honig und Wurstwaren, Immobilienpreise und was Sie zu Kauf und Renovierung wissen sollten.',
+    description: 'Alles über Colmenar: Bergdorf hinter den Montes de Málaga, Ermita de la Candelaria, Honig und Wurst, Immobilienpreise und Tipps zu Kauf und Renovierung.',
     lead: 'Colmenar liegt auf fast 700 Metern hinter den Montes de Málaga. Es ist eines der größten Dörfer im Hinterland der Axarquía, Málaga ist etwa eine halbe Stunde entfernt.',
     intro: [
       'Colmenar liegt im Westen der Axarquía, an der Nordseite des Naturparks Montes de Málaga, etwa 32 Kilometer von Málaga entfernt. Das Dorf liegt an einem Hang auf 696 Metern, zwischen Olivenhainen, Weinbergen und Getreidefeldern.',
@@ -157,8 +157,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'Für alle, die in den Bergen wohnen, aber Málaga, den Flughafen und die Krankenhäuser der Stadt in Reichweite behalten möchten. Colmenar passt zu Menschen, die ein bezahlbares Haus mit Platz suchen und das kühlere Klima des Hinterlands nicht scheuen.',
     see: {
-      title: 'Sehenswertes in Colmenar: Candelaria, Honig und die Montes de Málaga',
-      description: 'Was man in Colmenar unternehmen kann: die Ermita de la Candelaria, die Kirche La Asunción, das Honigmuseum, Wandern in den Montes de Málaga und das Fest von Most und Wurst.',
+      title: 'Sehenswertes in Colmenar: Candelaria und Honigmuseum',
+      description: 'Was man in Colmenar unternehmen kann: Ermita de la Candelaria, Kirche La Asunción, Honigmuseum, Wandern in den Montes de Málaga und das Fest von Most und Wurst.',
       lead: 'Colmenar ist ein guter Ausgangspunkt für die Montes de Málaga und hat selbst einige Orte, die einen Besuch lohnen.',
       items: [
         { name: 'Ermita de la Candelaria', text: 'Die Kapelle aus dem 17. Jahrhundert auf dem Hügel über dem Dorf ist ein lokales Denkmal. Der Blick reicht über die Axarquía bis zur Sierra de Tejeda und zur Sierra Nevada.' },
@@ -174,7 +174,7 @@ const content: PlaceContent = {
     },
     living: {
       title: 'Wohnen in Colmenar: Dorfhäuser, Landhäuser und Preise',
-      description: 'Ein Haus in Colmenar kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung im Dorf und worauf Sie bei Landhäusern und Renovierungen auf 700 Metern achten sollten.',
+      description: 'Haus in Colmenar kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung im Dorf und worauf Sie bei Landhäusern auf 700 Metern achten.',
       lead: 'Colmenar verbindet niedrige Preise mit Málaga in einer halben Stunde. In der Axarquía ist das eine seltene Kombination.',
       sections: [
         { h: 'Welche Immobilien es gibt', p: [
@@ -219,7 +219,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'För dig som vill bo i bergen men ha Málaga, flygplatsen och stadens sjukhus inom räckhåll. Colmenar passar dig som söker en prisvärd bostad med utrymme och inte har något emot inlandets svalare klimat.',
     see: {
-      title: 'Se och göra i Colmenar: Candelaria, honung och Montes de Málaga',
+      title: 'Se och göra i Colmenar: Candelaria och honung',
       description: 'Vad du kan göra i Colmenar: Ermita de la Candelaria, kyrkan La Asunción, honungsmuseet, vandra i Montes de Málaga och festen för nytt vin och korv.',
       lead: 'Colmenar är en bra bas för Montes de Málaga och har några egna platser som är värda ett besök.',
       items: [
