@@ -1,6 +1,7 @@
 // Teksten voor de pagina's Bouwvergunning en Praktisch wonen per gemeente, in NL, EN en DE.
 // De teksten zijn gelijk voor alle gemeenten; de cijfers en het gemeentehuis komen uit src/data/municipal.ts.
 // Feiten en bronnen staan bovenaan municipal.ts. HTML in alinea's is toegestaan.
+import { fitTitle, fitDesc } from './seo';
 import type { Lang } from '../i18n';
 import { municipal, municipalChecked, municipalTaxYear, imputationRate, icioRange, ibiRange, type Municipal } from './municipal';
 
@@ -51,8 +52,8 @@ function permit(lang: MunicipalLang, c: Ctx): MunicipalText {
   const range = `${pct(lang, icioRange.min)}–${pct(lang, icioRange.max)}`;
   const addr = [m.address, `${m.postcode} ${name}`].filter(Boolean).join(', ');
   if (lang === 'nl') return {
-    title: `Bouwvergunning in ${name}: licencia de obra, kosten en doorlooptijd`,
-    description: `Verbouwen in ${name}? Wanneer u een licencia de obra of een declaración responsable nodig hebt, wat de bouwbelasting (ICIO ${icio}) kost, hoe lang het duurt en waar u het aanvraagt.`,
+    title: fitTitle(`Bouwvergunning in ${name}: licencia de obra en kosten`, `Bouwvergunning in ${name}: kosten en doorlooptijd`, `Bouwvergunning ${name}: kosten en duur`),
+    description: fitDesc(`Verbouwen in ${name}? Wanneer u een licencia de obra of declaración responsable nodig hebt, wat de bouwbelasting (ICIO ${icio}) kost en hoe lang het duurt.`, `Verbouwen in ${name}? Wanneer u een licencia de obra nodig hebt, wat de bouwbelasting (ICIO ${icio}) kost en hoe lang het duurt.`),
     h1: `Bouwvergunning in ${name}`,
     lead: `Wie in ${name} gaat verbouwen, heeft bijna altijd iets van het gemeentehuis nodig. Voor kleine klussen volstaat een melding, voor grotere werken een vergunning. De gemeente rekent ${icio} bouwbelasting over de bouwkosten.`,
     factsTitle: `${name} in het kort`,
@@ -102,8 +103,8 @@ function permit(lang: MunicipalLang, c: Ctx): MunicipalText {
     sources: `Bronnen: tarieven ${municipalTaxYear} uit de <em>Consulta de información impositiva municipal</em> van het Spaanse ministerie van Financiën; adres uit de <em>Base de Datos General de Entidades Locales</em>; regels uit de Ley 7/2021 (LISTA), art. 137 tot 141. Gecontroleerd op ${date(lang)}. Tarieven kunnen per 1 januari wijzigen; de belastingverordening van de gemeente is leidend.${m.addressChecked === false ? ' Het adres van het gemeentehuis komt uit een ouder gemeentelijk bericht; bel voor de zekerheid even.' : ''}`,
   };
   if (lang === 'en') return {
-    title: `Building permit in ${name}: licencia de obra, costs and timing`,
-    description: `Renovating in ${name}? When you need a licencia de obra or a declaración responsable, what the building tax (ICIO ${icio}) costs, how long it takes and where to apply.`,
+    title: fitTitle(`Building permit in ${name}: licencia de obra and costs`, `Building permit in ${name}: costs and timing`, `${name} building permit: costs and timing`),
+    description: fitDesc(`Renovating in ${name}? When you need a licencia de obra or a declaración responsable, what the building tax (ICIO ${icio}) costs and how long it takes.`, `Renovating in ${name}? When you need a licencia de obra, what the building tax (ICIO ${icio}) costs and how long it takes.`),
     h1: `Building permit in ${name}`,
     lead: `If you are renovating in ${name}, you almost always need something from the town hall. Small jobs only need a notification, larger works need a permit. The council charges ${icio} building tax on the cost of the works.`,
     factsTitle: `${name} at a glance`,
@@ -153,8 +154,8 @@ function permit(lang: MunicipalLang, c: Ctx): MunicipalText {
     sources: `Sources: ${municipalTaxYear} rates from the Spanish Ministry of Finance (<em>Consulta de información impositiva municipal</em>); address from the <em>Base de Datos General de Entidades Locales</em>; rules from Ley 7/2021 (LISTA), articles 137 to 141. Checked on ${date(lang)}. Rates can change on 1 January; the council’s tax bylaw is what counts.${m.addressChecked === false ? ' The town hall address comes from an older council notice; call ahead to be sure.' : ''}`,
   };
   return {
-    title: `Baugenehmigung in ${name}: Licencia de obra, Kosten und Dauer`,
-    description: `Umbauen in ${name}? Wann Sie eine Licencia de obra oder eine Declaración responsable brauchen, was die Bausteuer (ICIO ${icio}) kostet, wie lange es dauert und wo Sie sie beantragen.`,
+    title: fitTitle(`Baugenehmigung in ${name}: Licencia de obra und Kosten`, `Baugenehmigung in ${name}: Kosten und Dauer`, `Baugenehmigung ${name}: Kosten und Dauer`),
+    description: fitDesc(`Umbauen in ${name}? Wann Sie eine Licencia de obra oder Declaración responsable brauchen, was die Bausteuer (ICIO ${icio}) kostet und wie lange es dauert.`, `Umbauen in ${name}? Wann Sie eine Licencia de obra brauchen, was die Bausteuer (ICIO ${icio}) kostet und wie lange es dauert.`),
     h1: `Baugenehmigung in ${name}`,
     lead: `Wer in ${name} umbaut, braucht fast immer etwas vom Rathaus. Für kleine Arbeiten reicht eine Anzeige, für größere eine Genehmigung. Die Gemeinde erhebt ${icio} Bausteuer auf die Baukosten.`,
     factsTitle: `${name} auf einen Blick`,
@@ -219,8 +220,8 @@ function practical(lang: MunicipalLang, c: Ctx): MunicipalText {
   const also = c.villages.length ? c.villages.join(', ') : '';
   const contactRow: [string, string] = [{ nl: 'Gemeentehuis', en: 'Town hall', de: 'Rathaus' }[lang], [m.phone ? (lang === 'nl' ? m.phone : `+34 ${m.phone}`) : '', site(m)].filter(Boolean).join('<br>')];
   if (lang === 'nl') return {
-    title: `Praktisch wonen in ${name}: IBI, afval, water en padrón`,
-    description: `Een huis in ${name}? Wat u betaalt aan IBI (${ibi}), wat niet-residenten aan belasting kwijt zijn, en hoe het zit met afval, water, internet en inschrijving bij de gemeente.`,
+    title: fitTitle(`Praktisch wonen in ${name}: IBI, afval, water en padrón`, `Praktisch wonen in ${name}: IBI, afval en water`, `Praktisch wonen in ${name}: IBI en afval`, `Wonen in ${name}: IBI en afval`),
+    description: fitDesc(`Een huis in ${name}? Wat u betaalt aan IBI (${ibi}), wat niet-residenten aan belasting kwijt zijn, en hoe het zit met afval, water en de padrón.`, `Een huis in ${name}? Wat u betaalt aan IBI (${ibi}) en als niet-resident, en hoe het zit met afval, water en de padrón.`),
     h1: `Praktisch wonen in ${name}`,
     lead: `De vaste lasten en het papierwerk van een huis in ${name} op een rij: de onroerendgoedbelasting, de belasting voor niet-residenten, afval, water, internet en de inschrijving bij de gemeente.`,
     factsTitle: `${name} in het kort`,
@@ -273,8 +274,8 @@ function practical(lang: MunicipalLang, c: Ctx): MunicipalText {
     sources: `Bronnen: tarieven ${municipalTaxYear} en herzieningsjaar uit de <em>Consulta de información impositiva municipal</em> van het Spaanse ministerie van Financiën; adres uit de <em>Base de Datos General de Entidades Locales</em>; belasting niet-residenten volgens de Ley 35/2006 (IRPF), art. 85 en aanvullende bepaling 55. Gecontroleerd op ${date(lang)}. Tarieven kunnen per 1 januari wijzigen.`,
   };
   if (lang === 'en') return {
-    title: `Practical guide to ${name}: IBI, rubbish tax, water and padrón`,
-    description: `Own a home in ${name}? What you pay in IBI (${ibi}), what non-residents pay in tax, and how rubbish collection, water, internet and registering with the council work.`,
+    title: fitTitle(`Practical guide to ${name}: IBI, rubbish tax and water`, `Practical guide to ${name}: IBI and rubbish tax`, `${name} practical guide: IBI and rubbish tax`, `${name}: IBI and rubbish tax`),
+    description: fitDesc(`Own a home in ${name}? What you pay in IBI (${ibi}), what non-residents pay in tax, and how rubbish, water and the padrón work.`, `Own a home in ${name}? What you pay in IBI (${ibi}) and as a non-resident, and how rubbish and water work.`),
     h1: `Practical guide to ${name}`,
     lead: `The running costs and paperwork of a home in ${name} in one place: property tax, non-resident tax, rubbish, water, internet and registering with the council.`,
     factsTitle: `${name} at a glance`,
@@ -327,8 +328,8 @@ function practical(lang: MunicipalLang, c: Ctx): MunicipalText {
     sources: `Sources: ${municipalTaxYear} rates and revaluation year from the Spanish Ministry of Finance (<em>Consulta de información impositiva municipal</em>); address from the <em>Base de Datos General de Entidades Locales</em>; non-resident tax under Ley 35/2006 (IRPF), article 85 and additional provision 55. Checked on ${date(lang)}. Rates can change on 1 January.`,
   };
   return {
-    title: `Praktisches für ${name}: IBI, Müllgebühr, Wasser und Padrón`,
-    description: `Ein Haus in ${name}? Was Sie an IBI (${ibi}) zahlen, welche Steuer Nichtresidenten zahlen und wie Müll, Wasser, Internet und die Anmeldung bei der Gemeinde funktionieren.`,
+    title: fitTitle(`Praktisches für ${name}: IBI, Müllgebühr und Wasser`, `Praktisches für ${name}: IBI und Müllgebühr`, `${name}: IBI und Müllgebühr`),
+    description: fitDesc(`Ein Haus in ${name}? Was Sie an IBI (${ibi}) zahlen, welche Steuer Nichtresidenten zahlen und wie Müll, Wasser und der Padrón funktionieren.`, `Ein Haus in ${name}? Was Sie an IBI (${ibi}) und als Nichtresident zahlen und wie Müll und Wasser funktionieren.`),
     h1: `Praktisches für ${name}`,
     lead: `Laufende Kosten und Papierkram eines Hauses in ${name} auf einen Blick: Grundsteuer, Steuer für Nichtresidenten, Müll, Wasser, Internet und die Anmeldung bei der Gemeinde.`,
     factsTitle: `${name} auf einen Blick`,

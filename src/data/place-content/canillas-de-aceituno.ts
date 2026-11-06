@@ -15,7 +15,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Canillas de Aceituno: wonen aan de voet van La Maroma',
-    description: 'Alles over Canillas de Aceituno: het bergdorp onder de hoogste top van de provincie Málaga, de Casa de los Diezmos, de Dag van de Morcilla, woningprijzen en kopen in de bergen.',
+    description: 'Alles over Canillas de Aceituno: bergdorp onder La Maroma, de Casa de los Diezmos, de Dag van de Morcilla, woningprijzen en kopen in de bergen.',
     lead: 'Canillas de Aceituno ligt tegen de flank van de Sierra de Tejeda, recht onder La Maroma, met 2.068 meter de hoogste berg van de provincie Málaga. Het is een echt bergdorp met mudéjarbogen, steile straatjes en uitzicht tot aan zee.',
     intro: [
       'Canillas de Aceituno ligt in het natuurpark Sierras de Tejeda, Almijara y Alhama, boven het stuwmeer van <a href="/nl/plaatsen/vinuela/">La Viñuela</a> en op ongeveer 60 kilometer van Málaga. Boven het dorp rijst La Maroma op, de top die wandelaars uit de hele regio vanaf hier beklimmen.',
@@ -32,8 +32,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'Voor wandelaars en natuurliefhebbers die in een levend Spaans dorp willen wonen, met de bergen achter de deur en de kust op drie kwartier. Wie het dorpsleven zoekt, kijkt naar een dorpshuis; wie ruimte wil, naar een finca op de hellingen.',
     see: {
-      title: 'Zien en doen in Canillas de Aceituno: La Maroma, mudéjar en morcilla',
-      description: 'Wat te doen in Canillas de Aceituno: de beklimming van La Maroma, de Casa de los Diezmos, de kerk van de Rozenkrans, de Cueva de la Fájara en de Dag van de Morcilla.',
+      title: 'Zien en doen in Canillas de Aceituno: La Maroma',
+      description: 'Wat te doen in Canillas de Aceituno: La Maroma beklimmen, de Casa de los Diezmos, de Rozenkranskerk, de Cueva de la Fájara en de Dag van de Morcilla.',
       lead: 'Canillas is het startpunt voor de bekendste bergtocht van de Axarquía, maar ook zonder klimmen is er genoeg te zien.',
       items: [
         { name: 'La Maroma', text: 'De beklimming van de hoogste top van de provincie (2.068 m) begint in het dorp. Het is een lange, zware dagtocht met veel hoogteverschil. Wie de top haalt, ziet bij helder weer de Sierra Nevada en de Afrikaanse kust. Ga niet in de zomerhitte en neem genoeg water mee.' },
@@ -49,8 +49,8 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Wonen in Canillas de Aceituno: dorpshuizen, finca’s en prijzen',
-      description: 'Een huis kopen in Canillas de Aceituno? Welke woningen er zijn, wat ze kosten, de voorzieningen in het dorp en waar u op let bij een finca of een renovatie in de bergen.',
+      title: 'Wonen in Canillas de Aceituno: woningen en prijzen',
+      description: 'Een huis kopen in Canillas de Aceituno? Woningen, prijzen, voorzieningen in het dorp en waar u op let bij een finca of renovatie in de bergen.',
       lead: 'Canillas de Aceituno is een van de betaalbaarste bergdorpen van de Axarquía. U woont hier tussen Spanjaarden, met een kleine internationale gemeenschap en de natuur om u heen.',
       sections: [
         { h: 'Wat voor woningen er zijn', p: [
@@ -78,7 +78,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Canillas de Aceituno: living at the foot of La Maroma',
-    description: 'All about Canillas de Aceituno: the mountain village below the highest peak in Málaga province, the Casa de los Diezmos, the Morcilla Day, property prices and buying in the mountains.',
+    description: 'All about Canillas de Aceituno: mountain village below La Maroma, the Casa de los Diezmos, Morcilla Day, property prices and buying in the mountains.',
     lead: 'Canillas de Aceituno clings to the side of the Sierra de Tejeda, right below La Maroma, at 2,068 metres the highest mountain in the province of Málaga. It is a true mountain village of Mudéjar arches, steep lanes and views down to the sea.',
     intro: [
       'Canillas de Aceituno lies in the Sierras de Tejeda, Almijara y Alhama natural park, above <a href="/en/places/vinuela/">La Viñuela</a> reservoir and about 60 kilometres from Málaga. Above the village rises La Maroma, the peak walkers from across the region climb from here.',
@@ -95,7 +95,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'Walkers and nature lovers who want to live in a living Spanish village, with the mountains on the doorstep and the coast 45 minutes away. If you want village life, look at a village house; if you want space, at a finca on the slopes.',
     see: {
-      title: 'Things to do in Canillas de Aceituno: La Maroma, Mudéjar and morcilla',
+      title: 'Things to do in Canillas de Aceituno: La Maroma',
       description: 'What to do in Canillas de Aceituno: the climb up La Maroma, the Casa de los Diezmos, the Rosary church, the Cueva de la Fájara and the Morcilla Day.',
       lead: 'Canillas is the starting point for the best-known mountain hike in the Axarquía, but there is plenty to see without climbing.',
       items: [
@@ -112,8 +112,8 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Living in Canillas de Aceituno: village houses, fincas and prices',
-      description: 'Buying a home in Canillas de Aceituno? The types of property, what they cost, the village facilities and what to watch for with a finca or a renovation in the mountains.',
+      title: 'Living in Canillas de Aceituno: homes and prices',
+      description: 'Buying a home in Canillas de Aceituno? Types of property, prices, village facilities and what to watch for with a finca or renovation in the mountains.',
       lead: 'Canillas de Aceituno is one of the most affordable mountain villages in the Axarquía. You live among Spaniards, with a small international community and nature all around.',
       sections: [
         { h: 'Types of property', p: [
@@ -141,7 +141,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Canillas de Aceituno: Wohnen am Fuß der Maroma',
-    description: 'Alles über Canillas de Aceituno: das Bergdorf unter dem höchsten Gipfel der Provinz Málaga, die Casa de los Diezmos, der Tag der Morcilla, Immobilienpreise und Kaufen in den Bergen.',
+    description: 'Alles über Canillas de Aceituno: Bergdorf unter La Maroma, die Casa de los Diezmos, der Tag der Morcilla, Immobilienpreise und Kaufen in den Bergen.',
     lead: 'Canillas de Aceituno liegt an der Flanke der Sierra de Tejeda, direkt unter der Maroma, mit 2.068 Metern der höchste Berg der Provinz Málaga. Es ist ein echtes Bergdorf mit Mudéjar-Bögen, steilen Gassen und Blick bis zum Meer.',
     intro: [
       'Canillas de Aceituno liegt im Naturpark Sierras de Tejeda, Almijara y Alhama, oberhalb des Stausees von <a href="/de/orte/vinuela/">La Viñuela</a> und etwa 60 Kilometer von Málaga entfernt. Über dem Dorf erhebt sich die Maroma, der Gipfel, den Wanderer aus der ganzen Region von hier aus besteigen.',
@@ -158,8 +158,8 @@ const content: PlaceContent = {
     ],
     forWhom: 'Für Wanderer und Naturfreunde, die in einem lebendigen spanischen Dorf wohnen möchten, mit den Bergen vor der Tür und der Küste in einer Dreiviertelstunde. Wer Dorfleben sucht, schaut nach einem Dorfhaus; wer Platz möchte, nach einer Finca an den Hängen.',
     see: {
-      title: 'Sehenswertes in Canillas de Aceituno: Maroma, Mudéjar und Morcilla',
-      description: 'Was man in Canillas de Aceituno unternehmen kann: die Besteigung der Maroma, die Casa de los Diezmos, die Rosenkranzkirche, die Cueva de la Fájara und der Tag der Morcilla.',
+      title: 'Canillas de Aceituno: Maroma, Mudéjar und Morcilla',
+      description: 'Was man in Canillas de Aceituno unternehmen kann: Aufstieg zur Maroma, Casa de los Diezmos, Rosenkranzkirche, Cueva de la Fájara und Tag der Morcilla.',
       lead: 'Canillas ist der Ausgangspunkt der bekanntesten Bergtour der Axarquía, doch auch ohne Gipfel gibt es genug zu sehen.',
       items: [
         { name: 'La Maroma', text: 'Der Aufstieg auf den höchsten Gipfel der Provinz (2.068 m) beginnt im Dorf. Es ist eine lange, anstrengende Tagestour mit vielen Höhenmetern. Vom Gipfel sehen Sie bei klarem Wetter die Sierra Nevada und die afrikanische Küste. Meiden Sie die Sommerhitze und nehmen Sie genug Wasser mit.' },
@@ -175,8 +175,8 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Wohnen in Canillas de Aceituno: Dorfhäuser, Fincas und Preise',
-      description: 'Ein Haus in Canillas de Aceituno kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung im Dorf und worauf Sie bei einer Finca oder Renovierung in den Bergen achten sollten.',
+      title: 'Wohnen in Canillas de Aceituno: Häuser und Preise',
+      description: 'Haus in Canillas de Aceituno kaufen? Immobilien, Preise, Versorgung im Dorf und worauf Sie bei einer Finca oder Renovierung in den Bergen achten.',
       lead: 'Canillas de Aceituno gehört zu den günstigsten Bergdörfern der Axarquía. Sie wohnen hier unter Spaniern, mit einer kleinen internationalen Gemeinschaft und viel Natur ringsum.',
       sections: [
         { h: 'Welche Immobilien es gibt', p: [
@@ -221,7 +221,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'För vandrare och naturälskare som vill bo i en levande spansk by, med bergen utanför dörren och kusten 45 minuter bort. Vill du ha byliv, titta på ett byhus; vill du ha utrymme, på en finca på sluttningarna.',
     see: {
-      title: 'Se och göra i Canillas de Aceituno: La Maroma, mudéjar och blodkorv',
+      title: 'Se och göra i Canillas de Aceituno: La Maroma',
       description: 'Vad du kan göra i Canillas de Aceituno: bestigningen av La Maroma, Casa de los Diezmos, kyrkan Rosario, Cueva de la Fájara och Blodkorvens dag.',
       lead: 'Canillas är startpunkten för den mest kända bergsvandringen i Axarquía, men det finns mycket att se utan att klättra.',
       items: [

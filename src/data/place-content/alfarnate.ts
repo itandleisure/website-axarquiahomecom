@@ -15,7 +15,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Alfarnate: wonen op de hoogvlakte tussen de kersenbomen',
-    description: 'Alles over Alfarnate: het dorp op bijna 900 meter in het noorden van de Axarquía, de historische Venta de Alfarnate, de kersenbloesem, woningprijzen en kopen en verbouwen in het hoogland.',
+    description: 'Alles over Alfarnate: dorp op bijna 900 meter, de historische Venta de Alfarnate, de kersenbloesem, woningprijzen en kopen in het hoogland.',
     lead: 'Alfarnate ligt op bijna 900 meter in een hoogvlakte omringd door bergen, helemaal in het noorden van de Axarquía. In het voorjaar kleuren de kersenbomen de vlakte wit, en aan de oude koninklijke weg naar Granada staat een van de oudste herbergen van Andalusië.',
     intro: [
       'Alfarnate ligt op 888 meter hoogte, een van de hoogst gelegen dorpen van de provincie Málaga. Het dorp ligt in een kleine vlakte tussen de bergen, ongeveer 54 kilometer en een uur rijden van Málaga. Het klimaat is hier heel anders dan aan de kust: koele zomers, koude winters en soms sneeuw.',
@@ -39,7 +39,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Alfarnate: living on the high plain among the cherry trees',
-    description: 'All about Alfarnate: the village at almost 900 metres in the north of the Axarquía, the historic Venta de Alfarnate, the cherry blossom, property prices and buying and renovating in the highlands.',
+    description: 'All about Alfarnate: village at almost 900 metres, the historic Venta de Alfarnate, the cherry blossom, property prices and buying in the highlands.',
     lead: 'Alfarnate sits at almost 900 metres on a high plain ringed by mountains, in the far north of the Axarquía. In spring the cherry trees turn the plain white, and on the old royal road to Granada stands one of the oldest inns in Andalusia.',
     intro: [
       'Alfarnate lies at 888 metres, one of the highest villages in the province of Málaga. It sits on a small plain between the mountains, about 54 kilometres and an hour’s drive from Málaga. The climate here is very different from the coast: cool summers, cold winters and occasional snow.',
@@ -63,7 +63,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Alfarnate: Wohnen auf der Hochebene zwischen Kirschbäumen',
-    description: 'Alles über Alfarnate: das Dorf auf fast 900 Metern im Norden der Axarquía, die historische Venta de Alfarnate, die Kirschblüte, Immobilienpreise sowie Kauf und Renovierung im Hochland.',
+    description: 'Alles über Alfarnate: Dorf auf fast 900 Metern, die historische Venta de Alfarnate, die Kirschblüte, Immobilienpreise sowie Kauf und Renovierung.',
     lead: 'Alfarnate liegt auf fast 900 Metern in einer von Bergen umgebenen Hochebene, ganz im Norden der Axarquía. Im Frühjahr färben die Kirschbäume die Ebene weiß, und an der alten Königsstraße nach Granada steht eines der ältesten Gasthäuser Andalusiens.',
     intro: [
       'Alfarnate liegt auf 888 Metern und ist eines der höchstgelegenen Dörfer der Provinz Málaga. Es liegt in einer kleinen Ebene zwischen den Bergen, etwa 54 Kilometer und eine Autostunde von Málaga entfernt. Das Klima ist hier ganz anders als an der Küste: kühle Sommer, kalte Winter und manchmal Schnee.',
@@ -87,7 +87,7 @@ const content: PlaceContent = {
   },
   sv: {
     title: 'Alfarnate: bo på högslätten bland körsbärsträden',
-    description: 'Allt om Alfarnate: byn på nästan 900 meter i norra Axarquía, det historiska värdshuset Venta de Alfarnate, körsbärsblomningen, bostadspriser och att köpa och renovera i höglandet.',
+    description: 'Allt om Alfarnate: by på nästan 900 meter, värdshuset Venta de Alfarnate, körsbärsblomningen, bostadspriser och att köpa i höglandet.',
     lead: 'Alfarnate ligger på nästan 900 meters höjd på en högslätt omgiven av berg, längst i norr i Axarquía. På våren färgar körsbärsträden slätten vit, och vid den gamla kungsvägen till Granada står ett av Andalusiens äldsta värdshus.',
     intro: [
       'Alfarnate ligger på 888 meters höjd, en av de högst belägna byarna i provinsen Málaga. Den ligger på en liten slätt mellan bergen, cirka 54 kilometer och en timmes bilresa från Málaga. Klimatet är helt annorlunda än vid kusten: svala somrar, kalla vintrar och ibland snö.',

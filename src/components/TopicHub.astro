@@ -43,21 +43,21 @@ const itemList = {
       <div class="cards">
         {calcCard && (
           <a class="card" href={calcPath[lang]}>
-            <h3>{calcCard.title}</h3>
+            <h2 class="h3">{calcCard.title}</h2>
             <p>{calcCard.text}</p>
             <span class="more">{u.read} →</span>
           </a>
         )}
         {list.map((t) => (
           <a class="card" href={topicHref(kind, lang, t)}>
-            <h3>{t.title}</h3>
+            <h2 class="h3">{t.title}</h2>
             <p>{t.description}</p>
             <span class="more">{u.read} →</span>
           </a>
         ))}
         {extra.map((e) => (
           <a class="card" href={e.href}>
-            <h3>{e.title}</h3>
+            <h2 class="h3">{e.title}</h2>
             <p>{e.text}</p>
             <span class="more">{u.read} →</span>
           </a>

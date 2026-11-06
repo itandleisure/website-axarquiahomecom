@@ -14,7 +14,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Cómpeta: wonen en kopen in het bergdorp van de Axarquía',
-    description: 'Alles over Cómpeta: het witte bergdorp op 640 meter, de grote internationale gemeenschap, de Noche del Vino, woningprijzen en wat kopen en verbouwen in de bergen vraagt.',
+    description: 'Alles over Cómpeta: wit bergdorp op 640 meter, internationale gemeenschap, Noche del Vino, woningprijzen en wat kopen en verbouwen in de bergen vraagt.',
     lead: 'Op 640 meter hoogte, aan de voet van de Sierra Almijara, ligt Cómpeta: een wit bergdorp met wijngaarden, uitzicht tot aan zee en bijna de helft buitenlandse inwoners.',
     intro: [
       'Cómpeta ligt hoog in het oosten van de Axarquía, tegen de bergen van het natuurpark Sierras de Tejeda, Almijara y Alhama. Vanaf het dorp kijkt u over de heuvels met wijngaarden en olijfbomen naar de zee. De kust bij Torrox en Algarrobo is ongeveer een halfuur rijden over een bochtige weg.',
@@ -75,8 +75,8 @@ const content: PlaceContent = {
     ],
   },
   en: {
-    title: 'Cómpeta: living and buying in the Axarquía’s mountain village',
-    description: 'All about Cómpeta: the white mountain village at 640 metres, its large international community, the Noche del Vino, property prices and what buying and renovating in the mountains involves.',
+    title: 'Cómpeta: living and buying in a mountain village',
+    description: 'All about Cómpeta: white mountain village at 640 metres, its international community, the Noche del Vino, property prices and renovating in the hills.',
     lead: 'At 640 metres, at the foot of the Sierra Almijara, lies Cómpeta: a white mountain village with vineyards, views to the sea and nearly half its residents from abroad.',
     intro: [
       'Cómpeta sits high in the east of the Axarquía, against the mountains of the Sierras de Tejeda, Almijara y Alhama natural park. From the village you look over hills of vines and olive trees to the sea. The coast at Torrox and Algarrobo is about half an hour away on a winding road.',
@@ -93,7 +93,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'People looking for peace, nature and views, who do not mind driving half an hour to the beach. Cómpeta attracts year-round residents: everything is close by in the village and there is a large international community.',
     see: {
-      title: 'Things to do in Cómpeta: wine, mountains and the Noche del Vino',
+      title: 'Things to do in Cómpeta: wine, hiking, Noche del Vino',
       description: 'What to do in Cómpeta: the Plaza Almijara, walking up La Maroma and in the Sierra Almijara, the wineries and the Noche del Vino on 15 August.',
       lead: 'Cómpeta is a base for the mountains, and a place to sit on a square with a glass of the local sweet wine.',
       items: [
@@ -138,7 +138,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Cómpeta: Wohnen und Kaufen im Bergdorf der Axarquía',
-    description: 'Alles über Cómpeta: das weiße Bergdorf auf 640 Metern, die große internationale Gemeinschaft, die Noche del Vino, Immobilienpreise und was Kauf und Renovierung in den Bergen bedeuten.',
+    description: 'Alles über Cómpeta: weißes Bergdorf auf 640 Metern, internationale Gemeinschaft, Noche del Vino, Immobilienpreise und Kaufen und Renovieren in den Bergen.',
     lead: 'Auf 640 Metern, am Fuß der Sierra Almijara, liegt Cómpeta: ein weißes Bergdorf mit Weinbergen, Blick bis zum Meer und fast zur Hälfte ausländischen Einwohnern.',
     intro: [
       'Cómpeta liegt hoch im Osten der Axarquía, an den Bergen des Naturparks Sierras de Tejeda, Almijara y Alhama. Vom Dorf aus blicken Sie über Hügel mit Reben und Olivenbäumen bis zum Meer. Die Küste bei Torrox und Algarrobo ist etwa eine halbe Stunde über eine kurvige Straße entfernt.',
@@ -156,7 +156,7 @@ const content: PlaceContent = {
     forWhom: 'Für alle, die Ruhe, Natur und Aussicht suchen und für den Strand gern eine halbe Stunde fahren. Cómpeta zieht Menschen an, die das ganze Jahr hier leben: Im Dorf ist alles nah und es gibt eine große internationale Gemeinschaft.',
     see: {
       title: 'Sehenswertes in Cómpeta: Wein, Berge und die Noche del Vino',
-      description: 'Was man in Cómpeta unternehmen kann: die Plaza Almijara, Wandern auf La Maroma und in der Sierra Almijara, die Weinkellereien und die Noche del Vino am 15. August.',
+      description: 'Was man in Cómpeta unternehmen kann: die Plaza Almijara, Wandern auf La Maroma und in der Sierra Almijara, die Weinkellereien und die Noche del Vino am 15.',
       lead: 'Cómpeta ist ein Ausgangspunkt für die Berge und ein Ort, um mit einem Glas süßem Wein aus der Gegend auf einem Platz zu sitzen.',
       items: [
         { name: 'Plaza Almijara und Kirche', text: 'Der Platz vor der Kirche Nuestra Señora de la Asunción aus dem 16. Jahrhundert mit ihrem schlanken Turm im Mudéjar-Stil ist das Herz des Dorfes, umgeben von Terrassen und engen weißen Gassen.' },
@@ -200,7 +200,7 @@ const content: PlaceContent = {
   },
   sv: {
     title: 'Cómpeta: bo och köpa i Axarquías bergsby',
-    description: 'Allt om Cómpeta: den vita bergsbyn på 640 meter, den stora internationella gemenskapen, Noche del Vino, bostadspriser och vad köp och renovering i bergen innebär.',
+    description: 'Allt om Cómpeta: vit bergsby på 640 meter, internationell gemenskap, Noche del Vino, bostadspriser och vad köp och renovering i bergen innebär.',
     lead: 'På 640 meters höjd, vid foten av Sierra Almijara, ligger Cómpeta: en vit bergsby med vinodlingar, utsikt ner till havet och nästan hälften av invånarna från utlandet.',
     intro: [
       'Cómpeta ligger högt upp i östra Axarquía, mot bergen i naturparken Sierras de Tejeda, Almijara y Alhama. Från byn ser du ut över kullar med vinrankor och olivträd ända ner till havet. Kusten vid Torrox och Algarrobo når du på cirka en halvtimme längs en slingrig väg.',

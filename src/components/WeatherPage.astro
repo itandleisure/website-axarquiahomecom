@@ -1,6 +1,7 @@
 ---
 // Weer en klimaat: regiopagina (geen maand, geen plaats), maandpagina (month) of plaatspagina (place).
 // Gegevens en teksten staan in src/data/weather.ts
+import { fitTitle, fitDesc } from '../data/seo';
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import Hero from './Hero.astro';
@@ -30,15 +31,15 @@ const home = { nl: 'Nederland (De Bilt)', en: 'London', de: 'Berlin' }[lang];
 const T = {
   nl: {
     crumb: 'Weer', places: 'Plaatsen', weer: 'Weer',
-    hubTitle: 'Weer en klimaat in de Axarquía per maand: temperatuur, zon, regen en zee',
-    hubDesc: 'Hoe is het weer in de Axarquía en aan de Costa del Sol rond Nerja, Torrox en Torre del Mar? Temperatuur, zonuren, regen en zeewater per maand, aan de kust en in de bergen.',
+    hubTitle: 'Weer en klimaat in de Axarquía per maand',
+    hubDesc: 'Hoe is het weer in de Axarquía rond Nerja, Torrox en Torre del Mar? Temperatuur, zonuren, regen en zeewater per maand, aan de kust en in de bergen.',
     hubH1: 'Weer en klimaat in de <em>Axarquía</em>, maand voor maand',
     hubLead: 'Meer dan 300 zonnige dagen per jaar, zachte winters en warme zomers met een zeebries. Hier ziet u per maand wat u kunt verwachten, aan de kust en in de bergdorpen, en wat het weer betekent voor uw huis.',
-    monthTitle: (m: string) => `Weer in de Axarquía in ${m}: temperatuur, zon en zee (Nerja, Torrox, Torre del Mar)`,
-    monthDesc: (m: string, c: typeof climate[number]) => `Het weer in ${m} aan de oostkust van de Costa del Sol: gemiddeld ${c.max} °C overdag, ${c.min} °C ’s nachts, ${c.sun} uur zon per dag en zeewater van ${c.sea} °C. Met de bergdorpen en wat u in ${m} aan uw huis doet.`,
+    monthTitle: (m: string) => fitTitle(`Weer in de Axarquía in ${m}: temperatuur, zon en zee`, `Weer Axarquía in ${m}: temperatuur, zon en zee`),
+    monthDesc: (m: string, c: typeof climate[number]) => `Het weer in ${m} rond Nerja en Torre del Mar: gemiddeld ${c.max} °C overdag, ${c.min} °C ’s nachts, ${c.sun} uur zon per dag en zeewater van ${c.sea} °C.`,
     monthH1: (m: string) => `Het weer in de Axarquía in <em>${m}</em>`,
-    placeTitle: `Weer en klimaat in ${n} per maand: temperatuur, zon, regen en zee`,
-    placeDesc: `Hoe is het weer in ${n}? Gemiddelde temperatuur, zonuren, regen en zeewater per maand, en wat het klimaat betekent voor een huis in ${n}.`,
+    placeTitle: fitTitle(`Weer en klimaat in ${n} per maand: temperatuur en zon`, `Weer en klimaat in ${n} per maand`),
+    placeDesc: fitDesc(`Hoe is het weer in ${n}? Gemiddelde temperatuur, zonuren, regen en zeewater per maand, en wat het klimaat betekent voor een huis in ${n}.`, `Hoe is het weer in ${n}? Gemiddelde temperatuur, zonuren, regen en zeewater per maand, en wat het klimaat betekent voor uw huis.`),
     placeH1: `Weer en klimaat in <em>${n}</em>`,
     stats: { max: 'Overdag', min: '’s Nachts', sun: 'Zon per dag', sea: 'Zeewater', rain: 'Regendagen' },
     hours: 'uur', days: 'dagen',
@@ -78,15 +79,15 @@ const T = {
   },
   en: {
     crumb: 'Weather', places: 'Places', weer: 'Weather',
-    hubTitle: 'Axarquía weather and climate by month: temperature, sun, rain and sea',
-    hubDesc: 'What is the weather like in the Axarquía and on the Costa del Sol around Nerja, Torrox and Torre del Mar? Temperature, sunshine, rain and sea temperature by month, on the coast and in the mountains.',
+    hubTitle: 'Axarquía weather and climate by month',
+    hubDesc: 'What is the weather like in the Axarquía around Nerja, Torrox and Torre del Mar? Temperature, sunshine, rain and sea temperature by month, coast and mountains.',
     hubH1: 'Weather and climate in the <em>Axarquía</em>, month by month',
     hubLead: 'More than 300 sunny days a year, mild winters and warm summers with a sea breeze. Here you can see what to expect each month, on the coast and in the mountain villages, and what the weather means for your home.',
-    monthTitle: (m: string) => `Axarquía weather in ${m}: temperature, sun and sea (Nerja, Torrox, Torre del Mar)`,
-    monthDesc: (m: string, c: typeof climate[number]) => `The weather in ${m} on the eastern Costa del Sol: on average ${c.max} °C in the day, ${c.min} °C at night, ${c.sun} hours of sun a day and a sea temperature of ${c.sea} °C. Including the mountain villages and what to do to your home in ${m}.`,
+    monthTitle: (m: string) => fitTitle(`Axarquía weather in ${m}: temperature, sun and sea`, `Axarquía weather in ${m}: sun and sea`),
+    monthDesc: (m: string, c: typeof climate[number]) => `The weather in ${m} around Nerja and Torre del Mar: on average ${c.max} °C in the day, ${c.min} °C at night, ${c.sun} hours of sun a day and a ${c.sea} °C sea.`,
     monthH1: (m: string) => `Axarquía weather in <em>${m}</em>`,
-    placeTitle: `${n} weather and climate by month: temperature, sun, rain and sea`,
-    placeDesc: `What is the weather like in ${n}? Average temperature, sunshine, rain and sea temperature by month, and what the climate means for a home in ${n}.`,
+    placeTitle: fitTitle(`${n} weather and climate by month: temperature and sun`, `${n} weather and climate by month`),
+    placeDesc: fitDesc(`What is the weather like in ${n}? Average temperature, sunshine, rain and sea temperature by month, and what the climate means for a home in ${n}.`, `What is the weather like in ${n}? Average temperature, sunshine, rain and sea temperature by month, and what it means for your home.`),
     placeH1: `Weather and climate in <em>${n}</em>`,
     stats: { max: 'Daytime', min: 'Night', sun: 'Sun a day', sea: 'Sea', rain: 'Rainy days' },
     hours: 'hours', days: 'days',
@@ -126,15 +127,15 @@ const T = {
   },
   de: {
     crumb: 'Wetter', places: 'Orte', weer: 'Wetter',
-    hubTitle: 'Wetter und Klima in der Axarquía nach Monat: Temperatur, Sonne, Regen und Meer',
-    hubDesc: 'Wie ist das Wetter in der Axarquía und an der Costa del Sol rund um Nerja, Torrox und Torre del Mar? Temperatur, Sonnenstunden, Regen und Wassertemperatur nach Monat, an der Küste und in den Bergen.',
+    hubTitle: 'Wetter und Klima in der Axarquía nach Monat',
+    hubDesc: 'Wie ist das Wetter in der Axarquía rund um Nerja, Torrox und Torre del Mar? Temperatur, Sonnenstunden, Regen und Wassertemperatur nach Monat, Küste und Berge.',
     hubH1: 'Wetter und Klima in der <em>Axarquía</em>, Monat für Monat',
     hubLead: 'Mehr als 300 Sonnentage im Jahr, milde Winter und warme Sommer mit Meeresbrise. Hier sehen Sie für jeden Monat, was Sie erwartet, an der Küste und in den Bergdörfern, und was das Wetter für Ihr Haus bedeutet.',
-    monthTitle: (m: string) => `Wetter in der Axarquía im ${m}: Temperatur, Sonne und Meer (Nerja, Torrox, Torre del Mar)`,
-    monthDesc: (m: string, c: typeof climate[number]) => `Das Wetter im ${m} an der östlichen Costa del Sol: im Schnitt ${c.max} °C am Tag, ${c.min} °C in der Nacht, ${c.sun} Stunden Sonne am Tag und ${c.sea} °C Wassertemperatur. Mit den Bergdörfern und was Sie im ${m} an Ihrem Haus tun.`,
+    monthTitle: (m: string) => fitTitle(`Wetter in der Axarquía im ${m}: Temperatur, Sonne, Meer`, `Wetter in der Axarquía im ${m}: Sonne und Meer`),
+    monthDesc: (m: string, c: typeof climate[number]) => `Das Wetter im ${m} rund um Nerja und Torre del Mar: im Schnitt ${c.max} °C am Tag, ${c.min} °C in der Nacht, ${c.sun} Stunden Sonne am Tag und ${c.sea} °C Wasser.`,
     monthH1: (m: string) => `Das Wetter in der Axarquía im <em>${m}</em>`,
-    placeTitle: `Wetter und Klima in ${n} nach Monat: Temperatur, Sonne, Regen und Meer`,
-    placeDesc: `Wie ist das Wetter in ${n}? Durchschnittstemperatur, Sonnenstunden, Regen und Wassertemperatur nach Monat, und was das Klima für ein Haus in ${n} bedeutet.`,
+    placeTitle: fitTitle(`Wetter und Klima in ${n} nach Monat: Temperatur, Sonne`, `Wetter und Klima in ${n} nach Monat`, `Wetter in ${n} nach Monat`),
+    placeDesc: fitDesc(`Wie ist das Wetter in ${n}? Durchschnittstemperatur, Sonnenstunden, Regen und Wassertemperatur nach Monat, und was das Klima für ein Haus in ${n} bedeutet.`, `Wie ist das Wetter in ${n}? Temperatur, Sonnenstunden, Regen und Wassertemperatur nach Monat, und was das Klima für Ihr Haus bedeutet.`),
     placeH1: `Wetter und Klima in <em>${n}</em>`,
     stats: { max: 'Tagsüber', min: 'Nachts', sun: 'Sonne pro Tag', sea: 'Wasser', rain: 'Regentage' },
     hours: 'Std.', days: 'Tage',

@@ -17,7 +17,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Sedella: wonen in een stil bergdorp onder de Maroma',
-    description: 'Alles over Sedella: het kleine witte bergdorp onder de Sierra de Tejeda, de Casa Torreón, de internationale gemeenschap, woningprijzen en kopen en verbouwen op 650 meter.',
+    description: 'Alles over Sedella: wit bergdorp onder de Sierra de Tejeda, de Casa Torreón, de internationale gemeenschap, woningprijzen en kopen en verbouwen.',
     lead: 'Sedella ligt op 650 meter tegen de Sierra de Tejeda, met de top van La Maroma erboven en de Axarquía aan zijn voeten. Een klein, verzorgd dorp waar een derde van de inwoners uit het buitenland komt.',
     intro: [
       'Sedella ligt in het natuurpark Sierras de Tejeda, Almijara y Alhama, tussen <a href="/nl/plaatsen/canillas-de-aceituno/">Canillas de Aceituno</a> en Salares, ongeveer 61 kilometer van Málaga. Vanaf het dorp kijkt u over de heuvels van de Axarquía tot aan zee.',
@@ -63,7 +63,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Sedella: living in a quiet mountain village below La Maroma',
-    description: 'All about Sedella: the small white mountain village below the Sierra de Tejeda, the Casa Torreón, its international community, property prices and buying and renovating at 650 metres.',
+    description: 'All about Sedella: white mountain village below the Sierra de Tejeda, the Casa Torreón, its international community, property prices and buying.',
     lead: 'Sedella sits at 650 metres against the Sierra de Tejeda, with the summit of La Maroma above it and the Axarquía at its feet. A small, well-kept village where a third of the residents come from abroad.',
     intro: [
       'Sedella lies in the Sierras de Tejeda, Almijara y Alhama natural park, between <a href="/en/places/canillas-de-aceituno/">Canillas de Aceituno</a> and Salares, about 61 kilometres from Málaga. From the village you look across the hills of the Axarquía to the sea.',
@@ -109,7 +109,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Sedella: Wohnen in einem stillen Bergdorf unter der Maroma',
-    description: 'Alles über Sedella: das kleine weiße Bergdorf unter der Sierra de Tejeda, die Casa Torreón, die internationale Gemeinschaft, Immobilienpreise sowie Kauf und Renovierung auf 650 Metern.',
+    description: 'Alles über Sedella: weißes Bergdorf unter der Sierra de Tejeda, Casa Torreón, internationale Gemeinschaft, Immobilienpreise sowie Kauf und Renovierung.',
     lead: 'Sedella liegt auf 650 Metern an der Sierra de Tejeda, mit dem Gipfel der Maroma darüber und der Axarquía zu seinen Füßen. Ein kleines, gepflegtes Dorf, in dem ein Drittel der Einwohner aus dem Ausland kommt.',
     intro: [
       'Sedella liegt im Naturpark Sierras de Tejeda, Almijara y Alhama, zwischen <a href="/de/orte/canillas-de-aceituno/">Canillas de Aceituno</a> und Salares, etwa 61 Kilometer von Málaga entfernt. Vom Dorf blicken Sie über die Hügel der Axarquía bis zum Meer.',
@@ -127,7 +127,7 @@ const content: PlaceContent = {
     forWhom: 'Für alle, die Stille, Bergluft und Wanderwege ab der Haustür suchen und keine Einrichtungen um die Ecke brauchen. Sedella passt zu Menschen, die ein Dorfhaus oder eine Finca in den Bergen möchten und eine kleine, enge Gemeinschaft schätzen.',
     living: {
       title: 'Wohnen in Sedella: Dorfhäuser, Fincas und Preise',
-      description: 'Ein Haus in Sedella kaufen? Welche Immobilien es gibt, was sie kosten, wo Sie die Versorgung finden und worauf Sie bei Fincas und Renovierungen im Naturpark achten sollten.',
+      description: 'Haus in Sedella kaufen? Welche Immobilien es gibt, was sie kosten, wo Sie die Versorgung finden und worauf Sie bei Fincas im Naturpark achten sollten.',
       lead: 'Sedella ist bezahlbar und schön gelegen, aber weit weg von allem. Wer hier kauft, entscheidet sich bewusst für das Bergleben.',
       sections: [
         { h: 'Welche Immobilien es gibt', p: [
@@ -155,7 +155,7 @@ const content: PlaceContent = {
   },
   sv: {
     title: 'Sedella: bo i en lugn bergsby nedanför La Maroma',
-    description: 'Allt om Sedella: den lilla vita bergsbyn nedanför Sierra de Tejeda, Casa Torreón, den internationella gemenskapen, bostadspriser och att köpa och renovera på 650 meter.',
+    description: 'Allt om Sedella: vit bergsby nedanför Sierra de Tejeda, Casa Torreón, den internationella gemenskapen, bostadspriser och att köpa och renovera.',
     lead: 'Sedella ligger på 650 meters höjd mot Sierra de Tejeda, med toppen av La Maroma ovanför och Axarquía nedanför. En liten, välskött by där en tredjedel av invånarna kommer från utlandet.',
     intro: [
       'Sedella ligger i naturparken Sierras de Tejeda, Almijara y Alhama, mellan <a href="/sv/orter/canillas-de-aceituno/">Canillas de Aceituno</a> och <a href="/sv/orter/salares/">Salares</a>, cirka 61 kilometer från Málaga. Från byn ser du ut över Axarquías kullar mot havet.',

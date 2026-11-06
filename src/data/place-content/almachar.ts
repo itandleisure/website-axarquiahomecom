@@ -15,7 +15,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Almáchar: wonen in het dorp van de rozijnen en de ajoblanco',
-    description: 'Alles over Almáchar: het witte dorp tussen de rozijnenwijngaarden, de Dag van de Ajoblanco, woningprijzen en wat u moet weten over kopen en verbouwen in de heuvels.',
+    description: 'Alles over Almáchar: wit dorp tussen de rozijnenwijngaarden, de Dag van de Ajoblanco, woningprijzen en kopen en verbouwen in de heuvels.',
     lead: 'Almáchar ligt tussen steile hellingen vol wijnstokken waar al eeuwen rozijnen worden gedroogd. Elk jaar in september viert het dorp de Dag van de Ajoblanco, de koude amandel-knoflooksoep van de streek.',
     intro: [
       'Almáchar ligt op 246 meter hoogte in de heuvels van de westelijke Axarquía, ongeveer 35 kilometer van Málaga over de weg. Het dorp heeft bijna 2.000 inwoners en ligt op de Ruta de la Pasa, de route langs de rozijnendorpen. Op de hellingen eromheen staan zo’n 300 hectare muskaatdruiven, die hier in de zon worden gedroogd tot rozijnen. Steeds meer percelen worden avocado- of mangoboomgaard.',
@@ -63,7 +63,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Almáchar: Wohnen im Dorf der Rosinen und des Ajoblanco',
-    description: 'Alles über Almáchar: das weiße Dorf zwischen den Rosinenweinbergen, der Tag des Ajoblanco, Immobilienpreise und was Sie zu Kauf und Renovierung in den Hügeln wissen sollten.',
+    description: 'Alles über Almáchar: weißes Dorf zwischen Rosinenweinbergen, der Tag des Ajoblanco, Immobilienpreise und Tipps zu Kauf und Renovierung.',
     lead: 'Almáchar liegt zwischen steilen Hängen voller Reben, an denen seit Jahrhunderten Rosinen getrocknet werden. Jedes Jahr im September feiert das Dorf den Tag des Ajoblanco, der kalten Mandel-Knoblauch-Suppe der Region.',
     intro: [
       'Almáchar liegt auf 246 Metern in den Hügeln der westlichen Axarquía, etwa 35 Kilometer von Málaga über die Straße. Das Dorf hat fast 2.000 Einwohner und liegt an der Ruta de la Pasa, der Route durch die Rosinendörfer. An den Hängen ringsum wachsen rund 300 Hektar Muskattrauben, die hier in der Sonne zu Rosinen getrocknet werden. Immer mehr Flächen werden zu Avocado- oder Mangoplantagen.',

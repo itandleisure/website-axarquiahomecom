@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { site } from '../data/site';
+import { projects } from '../data/projects';
 import { places, placeBase, placeHref, type PlacePage } from '../data/places';
 import { placeContent } from '../data/place-content';
 import { fiestas, fiestaHref, fiestaSub } from '../data/fiestas';
@@ -40,12 +41,13 @@ export const GET: APIRoute = () => {
   const staticPaths = Object.keys(pages)
     .filter((f) => !f.includes('['))
     .map((f) => f.replace(/^\.\//, '/').replace(/index\.astro$/, '').replace(/\.astro$/, '/'))
-    .filter((p) => !/\/(bedankt|thank-you|danke|tack)\//.test(p));
+    .filter((p) => !/\/(bedankt|thank-you|danke|tack)\//.test(p))
+    // Projectpagina's staan op noindex zolang er geen projecten zijn
+    .filter((p) => projects.length > 0 || !/^\/(nl\/projecten|en\/projects|de\/projekte|sv\/projekt)\/$/.test(p));
   const paths = [...new Set([...staticPaths, ...placePaths, ...fiestaPaths, ...topicPaths, ...weatherPaths])].sort();
-  const today = new Date().toISOString().slice(0, 10);
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${paths.map((p) => `  <url><loc>${site.url}${p}</loc><lastmod>${today}</lastmod></url>`).join('\n')}
+${paths.map((p) => `  <url><loc>${site.url}${p}</loc></url>`).join('\n')}
 </urlset>
 `;
   return new Response(xml, { headers: { 'Content-Type': 'application/xml; charset=utf-8' } });

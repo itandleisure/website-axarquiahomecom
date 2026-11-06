@@ -15,7 +15,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Alfarnatejo: wonen in het stille hoogland van de Axarquía',
-    description: 'Alles over Alfarnatejo: het kleine bergdorp naast Alfarnate, de rotsschuilplaatsen van Vilo, het gazpachofeest, de laagste woningprijzen van de Axarquía en kopen en verbouwen in de bergen.',
+    description: 'Alles over Alfarnatejo: klein bergdorp naast Alfarnate, de rotsschuilplaatsen van Vilo, het gazpachofeest en de laagste woningprijzen van de Axarquía.',
     lead: 'Alfarnatejo is met ongeveer 350 inwoners een van de kleinste dorpen van de Axarquía, hoog in de bergen in het noordwesten van de streek. Hier vindt u rust, ruimte en de laagste woningprijzen van de regio.',
     intro: [
       'Alfarnatejo ligt hoog in de bergen in het noordwesten van de Axarquía, naast <a href="/nl/plaatsen/alfarnate/">Alfarnate</a> en ongeveer 50 kilometer van Málaga. Het dorp telt ongeveer 350 inwoners en ligt tussen akkers, olijfgaarden en kale bergruggen. Het klimaat is dat van het binnenland: warme zomers, koude winters.',
@@ -39,7 +39,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Alfarnatejo: living in the quiet highlands of the Axarquía',
-    description: 'All about Alfarnatejo: the small mountain village next to Alfarnate, the Vilo rock shelters, the gazpacho festival, the lowest property prices in the Axarquía and buying and renovating in the mountains.',
+    description: 'All about Alfarnatejo: small mountain village next to Alfarnate, the Vilo rock shelters, the gazpacho festival and the lowest property prices around.',
     lead: 'With about 350 residents, Alfarnatejo is one of the smallest villages in the Axarquía, high in the mountains in the north-west of the region. Here you find peace, space and the lowest property prices in the area.',
     intro: [
       'Alfarnatejo lies high in the mountains in the north-west of the Axarquía, next to <a href="/en/places/alfarnate/">Alfarnate</a> and about 50 kilometres from Málaga. The village has about 350 residents and sits among fields, olive groves and bare mountain ridges. The climate is that of the interior: warm summers, cold winters.',
@@ -63,7 +63,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Alfarnatejo: Wohnen im stillen Hochland der Axarquía',
-    description: 'Alles über Alfarnatejo: das kleine Bergdorf neben Alfarnate, die Felsunterstände von Vilo, das Gazpacho-Fest, die niedrigsten Immobilienpreise der Axarquía sowie Kauf und Renovierung in den Bergen.',
+    description: 'Alles über Alfarnatejo: kleines Bergdorf neben Alfarnate, Felsunterstände von Vilo, Gazpacho-Fest, die niedrigsten Immobilienpreise der Axarquía.',
     lead: 'Mit rund 350 Einwohnern ist Alfarnatejo eines der kleinsten Dörfer der Axarquía, hoch in den Bergen im Nordwesten der Region. Hier finden Sie Ruhe, Platz und die niedrigsten Immobilienpreise der Gegend.',
     intro: [
       'Alfarnatejo liegt hoch in den Bergen im Nordwesten der Axarquía, neben <a href="/de/orte/alfarnate/">Alfarnate</a> und etwa 50 Kilometer von Málaga entfernt. Das Dorf hat rund 350 Einwohner und liegt zwischen Feldern, Olivenhainen und kahlen Bergrücken. Das Klima ist das des Hinterlands: warme Sommer, kalte Winter.',
@@ -87,7 +87,7 @@ const content: PlaceContent = {
   },
   sv: {
     title: 'Alfarnatejo: bo i Axarquías lugna högland',
-    description: 'Allt om Alfarnatejo: den lilla bergsbyn bredvid Alfarnate, klippskyddet Vilo, gazpachofesten, de lägsta bostadspriserna i Axarquía och att köpa och renovera i bergen.',
+    description: 'Allt om Alfarnatejo: liten bergsby bredvid Alfarnate, klippskyddet Vilo, gazpachofesten och de lägsta bostadspriserna i Axarquía.',
     lead: 'Med cirka 350 invånare är Alfarnatejo en av de minsta byarna i Axarquía, högt uppe i bergen i regionens nordvästra del. Här hittar du lugn, utrymme och de lägsta bostadspriserna i området.',
     intro: [
       'Alfarnatejo ligger högt uppe i bergen i nordvästra Axarquía, bredvid <a href="/sv/orter/alfarnate/">Alfarnate</a> och cirka 50 kilometer från Málaga. Byn har cirka 350 invånare och ligger bland åkrar, olivlundar och kala bergskammar. Klimatet är inlandets: varma somrar, kalla vintrar.',

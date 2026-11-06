@@ -15,7 +15,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Salares: wonen in een klein mudéjardorp in de bergen',
-    description: 'Alles over Salares: het bergdorp van tweehonderd inwoners met een minaret uit de Moorse tijd, de Romeinse brug, het Andalusische festival, woningprijzen en kopen in het natuurpark.',
+    description: 'Alles over Salares: klein bergdorp met een Moorse minaret, de Romeinse brug, het Andalusische festival, woningprijzen en kopen in het natuurpark.',
     lead: 'Salares is met nog geen tweehonderd inwoners een van de kleinste dorpen van de Axarquía. Wat het groot maakt: een minaret die al eeuwen boven de daken uitsteekt en een dal dat sinds de Moren nauwelijks is veranderd.',
     intro: [
       'Salares ligt op 540 meter in het natuurpark Sierras de Tejeda, Almijara y Alhama, tussen <a href="/nl/plaatsen/sedella/">Sedella</a> en <a href="/nl/plaatsen/canillas-de-albaida/">Canillas de Albaida</a>, ongeveer 34 kilometer van Vélez-Málaga en 63 kilometer van Málaga. Het dorp ligt aan de Ruta Mudéjar, de route langs de Moorse torens van de oostelijke Axarquía.',
@@ -39,7 +39,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Salares: living in a small Mudéjar mountain village',
-    description: 'All about Salares: the mountain village of two hundred people with a Moorish-era minaret, the old bridge, the Andalusí festival, property prices and buying in the natural park.',
+    description: 'All about Salares: tiny mountain village with a Moorish-era minaret, the old bridge, the Andalusí festival, property prices and buying in the park.',
     lead: 'With fewer than two hundred residents, Salares is one of the smallest villages in the Axarquía. What makes it big: a minaret that has risen above the rooftops for centuries and a valley that has barely changed since the Moors.',
     intro: [
       'Salares lies at 540 metres in the Sierras de Tejeda, Almijara y Alhama natural park, between <a href="/en/places/sedella/">Sedella</a> and <a href="/en/places/canillas-de-albaida/">Canillas de Albaida</a>, about 34 kilometres from Vélez-Málaga and 63 kilometres from Málaga. The village is on the Ruta Mudéjar, the route past the Moorish towers of the eastern Axarquía.',
@@ -63,7 +63,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Salares: Wohnen in einem kleinen Mudéjar-Bergdorf',
-    description: 'Alles über Salares: das Bergdorf mit zweihundert Einwohnern und einem Minarett aus maurischer Zeit, die alte Brücke, das andalusische Festival, Immobilienpreise und Kaufen im Naturpark.',
+    description: 'Alles über Salares: Bergdorf mit maurischem Minarett, die alte Brücke, das andalusische Festival, Immobilienpreise und Kaufen im Naturpark.',
     lead: 'Mit weniger als zweihundert Einwohnern ist Salares eines der kleinsten Dörfer der Axarquía. Was es groß macht: ein Minarett, das seit Jahrhunderten über die Dächer ragt, und ein Tal, das sich seit den Mauren kaum verändert hat.',
     intro: [
       'Salares liegt auf 540 Metern im Naturpark Sierras de Tejeda, Almijara y Alhama, zwischen <a href="/de/orte/sedella/">Sedella</a> und <a href="/de/orte/canillas-de-albaida/">Canillas de Albaida</a>, etwa 34 Kilometer von Vélez-Málaga und 63 Kilometer von Málaga entfernt. Das Dorf liegt an der Ruta Mudéjar, der Route entlang der maurischen Türme der östlichen Axarquía.',
@@ -87,7 +87,7 @@ const content: PlaceContent = {
   },
   sv: {
     title: 'Salares: bo i en liten mudéjarby i bergen',
-    description: 'Allt om Salares: bergsbyn med tvåhundra invånare och en minaret från morisk tid, den gamla bron, den andalusiska festivalen, bostadspriser och att köpa i naturparken.',
+    description: 'Allt om Salares: liten bergsby med en minaret från morisk tid, den gamla bron, den andalusiska festivalen, bostadspriser och att köpa i naturparken.',
     lead: 'Med färre än tvåhundra invånare är Salares en av de minsta byarna i Axarquía. Det som gör den stor: en minaret som i århundraden har rest sig över taken och en dal som knappt har förändrats sedan morerna.',
     intro: [
       'Salares ligger på 540 meters höjd i naturparken Sierras de Tejeda, Almijara y Alhama, mellan <a href="/sv/orter/sedella/">Sedella</a> och <a href="/sv/orter/canillas-de-albaida/">Canillas de Albaida</a>, cirka 34 kilometer från Vélez-Málaga och 63 kilometer från Málaga. Byn ligger längs Ruta Mudéjar, vägen förbi de moriska tornen i östra Axarquía.',

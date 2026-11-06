@@ -7,7 +7,7 @@ export const ontwerpNl: GuideMeta[] = [
   {
     slug: '3d-ontwerp-verbouwing',
     title: 'Uw verbouwing vooraf zien: 3D-ontwerp en sfeerimpressies',
-    seoTitle: '3D-tekening van uw verbouwing laten maken in Spanje: zo werkt het',
+    seoTitle: '3D-tekening van uw verbouwing in Spanje: zo werkt het',
     short: '3D-ontwerp verbouwing',
     description: 'Zie vooraf hoe uw huis in de Axarquía wordt na de verbouwing. Wat een 3D-ontwerp en sfeerimpressies zijn, wat AI wel en niet kan, en wat het u oplevert.',
     lead: 'Een verbouwing op afstand is lastig voor te stellen. Met een 3D-ontwerp en sfeerimpressies ziet u vooraf hoe uw huis wordt, en maakt u keuzes voordat er één muur gesloopt is.',
@@ -37,7 +37,7 @@ export const ontwerpDe: GuideMeta[] = [
     title: 'Den Umbau vorher sehen: 3D-Planung und Visualisierungen',
     seoTitle: '3D-Planung für Ihren Umbau in Spanien: so funktioniert es',
     short: '3D-Planung Umbau',
-    description: 'Sehen Sie vorab, wie Ihr Haus in der Axarquía nach dem Umbau aussieht. Was 3D-Planung und Visualisierungen sind, was KI kann und was nicht, und was es Ihnen bringt.',
+    description: 'Sehen Sie vorab, wie Ihr Haus in der Axarquía nach dem Umbau aussieht: was 3D-Planung und Visualisierungen sind und was KI kann und was nicht.',
     lead: 'Ein Umbau aus der Ferne ist schwer vorstellbar. Mit einer 3D-Planung und Visualisierungen sehen Sie vorab, wie Ihr Haus wird, und entscheiden, bevor die erste Wand fällt.',
     keyword: '3d planung umbau',
     minutes: 7,

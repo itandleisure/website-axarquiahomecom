@@ -17,7 +17,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Viñuela: wonen en kopen aan het meer van de Axarquía',
-    description: 'Alles over Viñuela: het stuwmeer, de dorpen Viñuela, Los Romanes en Los Gómez, de grote Britse gemeenschap, woningprijzen en waar u op let bij landelijke huizen.',
+    description: 'Alles over Viñuela: het stuwmeer, de dorpen Viñuela, Los Romanes en Los Gómez, de Britse gemeenschap, woningprijzen en waar u op let bij landelijke huizen.',
     lead: 'Midden in de Axarquía ligt het grootste meer van de provincie Málaga, met daaromheen glooiende heuvels, olijfbomen en het dorp Viñuela. Hier krijgt u veel ruimte voor uw geld.',
     intro: [
       'Viñuela is een kleine gemeente van ruim 2.000 inwoners in het binnenland, ongeveer twintig minuten van de kust bij Torre del Mar. Het dorp ligt op zo’n 150 meter hoogte aan de oever van het Embalse de La Viñuela, het grootste stuwmeer van de provincie. Daarachter rijst de bergrug van La Maroma op.',
@@ -35,7 +35,7 @@ const content: PlaceContent = {
     forWhom: 'Voor wie ruimte, rust en natuur zoekt en een auto heeft. Ideaal voor een villa of landhuis met zwembad en grond, met de kust en Vélez-Málaga op twintig minuten.',
     see: {
       title: 'Zien en doen in Viñuela: het meer, wandelen en verdiales',
-      description: 'Wat te doen in Viñuela: rond het Embalse de La Viñuela wandelen en fietsen, kajakken, het Museo de los Verdiales in Los Romanes en de feria’s van de drie dorpen.',
+      description: 'Wat te doen in Viñuela: rond het stuwmeer wandelen en fietsen, kajakken, het Museo de los Verdiales in Los Romanes en de feria’s van de drie dorpen.',
       lead: 'In Viñuela draait alles om het meer: wandelen langs de oever, picknicken onder de pijnbomen of het water op met een kajak.',
       items: [
         { name: 'Embalse de La Viñuela', text: 'Het grootste stuwmeer van de provincie, met turquoise water tegen de achtergrond van La Maroma. Rond het meer liggen picknickplaatsen en wandel- en fietsroutes; op het water kunt u kajakken en suppen.' },
@@ -80,7 +80,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Viñuela: living and buying by the Axarquía’s lake',
-    description: 'All about Viñuela: the reservoir, the villages of Viñuela, Los Romanes and Los Gómez, the large British community, property prices and what to watch for with rural homes.',
+    description: 'All about Viñuela: the reservoir, the villages of Viñuela, Los Romanes and Los Gómez, the British community, property prices and buying rural homes.',
     lead: 'In the middle of the Axarquía lies the largest lake in the province of Málaga, surrounded by rolling hills, olive trees and the village of Viñuela. Here you get plenty of space for your money.',
     intro: [
       'Viñuela is a small inland municipality of just over 2,000 residents, about twenty minutes from the coast at Torre del Mar. The village sits at about 150 metres on the shore of the Embalse de La Viñuela, the largest reservoir in the province, with the La Maroma ridge rising behind it.',
@@ -98,7 +98,7 @@ const content: PlaceContent = {
     forWhom: 'People looking for space, peace and nature who have a car. Ideal for a villa or country house with a pool and land, with the coast and Vélez-Málaga twenty minutes away.',
     see: {
       title: 'Things to do in Viñuela: the lake, walking and verdiales',
-      description: 'What to do in Viñuela: walking and cycling around the Embalse de La Viñuela, kayaking, the Museo de los Verdiales in Los Romanes and the ferias of the three villages.',
+      description: 'What to do in Viñuela: walking and cycling around the reservoir, kayaking, the Museo de los Verdiales in Los Romanes and the ferias of three villages.',
       lead: 'In Viñuela everything revolves around the lake: walking along the shore, picnicking under the pines or getting out on the water in a kayak.',
       items: [
         { name: 'Embalse de La Viñuela', text: 'The largest reservoir in the province, with turquoise water against the backdrop of La Maroma. Around the lake are picnic areas and walking and cycling routes; on the water you can kayak and paddleboard.' },
@@ -143,7 +143,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Viñuela: Wohnen und Kaufen am See der Axarquía',
-    description: 'Alles über Viñuela: der Stausee, die Dörfer Viñuela, Los Romanes und Los Gómez, die große britische Gemeinschaft, Immobilienpreise und worauf Sie bei ländlichen Häusern achten sollten.',
+    description: 'Alles über Viñuela: Stausee, die Dörfer Viñuela, Los Romanes und Los Gómez, britische Gemeinschaft, Immobilienpreise und Tipps für Landhäuser.',
     lead: 'Mitten in der Axarquía liegt der größte See der Provinz Málaga, umgeben von sanften Hügeln, Olivenbäumen und dem Dorf Viñuela. Hier bekommen Sie viel Platz für Ihr Geld.',
     intro: [
       'Viñuela ist eine kleine Gemeinde im Landesinneren mit gut 2.000 Einwohnern, etwa zwanzig Minuten von der Küste bei Torre del Mar. Das Dorf liegt auf etwa 150 Metern am Ufer des Embalse de La Viñuela, des größten Stausees der Provinz, dahinter erhebt sich der Bergrücken von La Maroma.',
@@ -161,7 +161,7 @@ const content: PlaceContent = {
     forWhom: 'Für alle, die Platz, Ruhe und Natur suchen und ein Auto haben. Ideal für eine Villa oder ein Landhaus mit Pool und Grundstück, mit der Küste und Vélez-Málaga zwanzig Minuten entfernt.',
     see: {
       title: 'Sehenswertes in Viñuela: der See, Wandern und Verdiales',
-      description: 'Was man in Viñuela unternehmen kann: Wandern und Radfahren am Embalse de La Viñuela, Kajak, das Museo de los Verdiales in Los Romanes und die Ferias der drei Dörfer.',
+      description: 'Was man in Viñuela unternehmen kann: Wandern und Radfahren am Stausee, Kajak, das Museo de los Verdiales in Los Romanes und die Ferias der drei Dörfer.',
       lead: 'In Viñuela dreht sich alles um den See: am Ufer wandern, unter Pinien picknicken oder mit dem Kajak aufs Wasser.',
       items: [
         { name: 'Embalse de La Viñuela', text: 'Der größte Stausee der Provinz, mit türkisfarbenem Wasser vor der Kulisse von La Maroma. Rund um den See gibt es Picknickplätze sowie Wander- und Radwege; auf dem Wasser können Sie Kajak fahren und stehpaddeln.' },
@@ -206,7 +206,7 @@ const content: PlaceContent = {
   },
   sv: {
     title: 'Viñuela: bo och köpa vid Axarquías sjö',
-    description: 'Allt om Viñuela: reservoaren, byarna Viñuela, Los Romanes och Los Gómez, den stora brittiska gemenskapen, bostadspriser och vad du ska tänka på med hus på landet.',
+    description: 'Allt om Viñuela: reservoaren, byarna Viñuela, Los Romanes och Los Gómez, den brittiska gemenskapen, bostadspriser och vad du tänker på med hus på landet.',
     lead: 'Mitt i Axarquía ligger den största sjön i provinsen Málaga, omgiven av böljande kullar, olivträd och byn Viñuela. Här får du mycket utrymme för pengarna.',
     intro: [
       'Viñuela är en liten inlandskommun med drygt 2 000 invånare, cirka tjugo minuter från kusten vid Torre del Mar. Byn ligger på cirka 150 meters höjd vid stranden av Embalse de La Viñuela, provinsens största reservoar, med bergskammen La Maroma bakom.',

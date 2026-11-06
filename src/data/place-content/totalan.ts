@@ -15,7 +15,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Totalán: wonen in een klein dorp vlak bij Málaga',
-    description: 'Alles over Totalán: het kleine witte dorp in de Montes de Málaga, de prehistorische dolmen, het chanfainafeest, woningprijzen en kopen en verbouwen dicht bij de stad.',
+    description: 'Alles over Totalán: wit dorp in de Montes de Málaga, de prehistorische dolmen, het chanfainafeest, woningprijzen en kopen en verbouwen bij de stad.',
     lead: 'Totalán is een van de kleinste dorpen van de provincie, maar het centrum van Málaga ligt op twintig minuten tot een half uur rijden. Een rustige plek in de heuvels voor wie de stad dichtbij wil houden.',
     intro: [
       'Totalán ligt op 281 meter hoogte in de heuvels aan de westrand van de Axarquía, tussen Málaga en <a href="/nl/plaatsen/rincon-de-la-victoria/">Rincón de la Victoria</a>. Over de weg is het ongeveer 22 kilometer naar het centrum van Málaga. Het dorp telt ongeveer 800 inwoners.',
@@ -39,7 +39,7 @@ const content: PlaceContent = {
   },
   en: {
     title: 'Totalán: living in a small village close to Málaga',
-    description: 'All about Totalán: the small white village in the Málaga hills, the prehistoric dolmen, the chanfaina festival, property prices and buying and renovating close to the city.',
+    description: 'All about Totalán: white village in the Málaga hills, the prehistoric dolmen, the chanfaina festival, property prices and buying close to the city.',
     lead: 'Totalán is one of the smallest villages in the province, yet central Málaga is only twenty minutes to half an hour’s drive away. A quiet spot in the hills for those who want to keep the city close.',
     intro: [
       'Totalán lies at 281 metres in the hills on the western edge of the Axarquía, between Málaga and <a href="/en/places/rincon-de-la-victoria/">Rincón de la Victoria</a>. By road it is about 22 kilometres to central Málaga. The village has about 800 residents.',
@@ -63,7 +63,7 @@ const content: PlaceContent = {
   },
   de: {
     title: 'Totalán: Wohnen in einem kleinen Dorf nahe Málaga',
-    description: 'Alles über Totalán: das kleine weiße Dorf in den Hügeln von Málaga, der prähistorische Dolmen, das Chanfaina-Fest, Immobilienpreise sowie Kauf und Renovierung nahe der Stadt.',
+    description: 'Alles über Totalán: weißes Dorf in den Hügeln von Málaga, der prähistorische Dolmen, das Chanfaina-Fest, Immobilienpreise sowie Kauf und Renovierung.',
     lead: 'Totalán ist eines der kleinsten Dörfer der Provinz, doch das Zentrum von Málaga ist nur zwanzig Minuten bis eine halbe Stunde entfernt. Ein ruhiger Ort in den Hügeln für alle, die die Stadt in der Nähe behalten möchten.',
     intro: [
       'Totalán liegt auf 281 Metern in den Hügeln am Westrand der Axarquía, zwischen Málaga und <a href="/de/orte/rincon-de-la-victoria/">Rincón de la Victoria</a>. Über die Straße sind es etwa 22 Kilometer bis ins Zentrum von Málaga. Das Dorf hat rund 800 Einwohner.',
