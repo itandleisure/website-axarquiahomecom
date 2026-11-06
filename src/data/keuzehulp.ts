@@ -15,6 +15,7 @@ export type Dienst =
   | 'renovatie'
   | 'badkamer-keuken'
   | 'sleutelbeheer'
+  | 'verhuurbeheer'
   | 'aankoopkeuring'
   | 'zwembad'
   | 'onderhoud'
@@ -215,6 +216,73 @@ export const vragen: Record<Dienst, DienstVragen> = {
       'For example: we are there from May to October, the rest of the year a check every two weeks please…',
       'Zum Beispiel: Wir sind von Mai bis Oktober da, den Rest des Jahres bitte alle zwei Wochen eine Kontrolle…',
       'Till exempel: vi är där maj till oktober, resten av året gärna en kontroll varannan vecka…',
+    ),
+  },
+
+  verhuurbeheer: {
+    legend: tx(
+      'Welk verhuurbeheer zoekt u?',
+      'What kind of rental management are you looking for?',
+      'Welchen Vermietungsservice suchen Sie?',
+      'Vilken uthyrningsservice söker du?',
+    ),
+    situatie: true,
+    fotos: true,
+    vragen: [
+      {
+        name: 'beheer',
+        kind: 'radio',
+        required: true,
+        label: tx('Wat wilt u uitbesteden?', 'What would you like us to handle?', 'Was möchten Sie abgeben?', 'Vad vill du lämna över?'),
+        options: [
+          o('Alleen schoonmaak en wissels', 'Cleaning and changeovers only', 'Nur Reinigung und Gästewechsel', 'Bara städning och gästbyten', tx('Ik doe zelf de boekingen', 'I handle the bookings myself', 'Die Buchungen mache ich selbst', 'Jag sköter bokningarna själv')),
+          o('Volledig verhuurbeheer', 'Full rental management', 'Komplette Vermietungsverwaltung', 'Fullständig förvaltning', tx('Ook gastencontact en boekingen', 'Including guest contact and bookings', 'Auch Gästekontakt und Buchungen', 'Även gästkontakt och bokningar')),
+          o('Weet ik nog niet, graag advies', 'Not sure yet, please advise', 'Weiß ich noch nicht, bitte beraten', 'Vet inte än, vill ha råd'),
+        ],
+      },
+      {
+        name: 'verhuur',
+        kind: 'select',
+        required: true,
+        label: tx('Verhuurt u de woning al?', 'Do you already let the property?', 'Vermieten Sie die Immobilie schon?', 'Hyr du redan ut bostaden?'),
+        options: [
+          o('Ja, met een toeristische registratie (VUT)', 'Yes, with a tourist registration (VUT)', 'Ja, mit touristischer Registrierung (VUT)', 'Ja, med turistregistrering (VUT)'),
+          o('Ja, maar zonder registratie', 'Yes, but without registration', 'Ja, aber ohne Registrierung', 'Ja, men utan registrering'),
+          o('Nog niet, ik wil beginnen', 'Not yet, I want to start', 'Noch nicht, ich möchte beginnen', 'Inte än, jag vill börja'),
+        ],
+      },
+      {
+        name: 'extras',
+        kind: 'checks',
+        label: tx('Wat moet er verder geregeld worden?', 'Anything else we should take care of?', 'Was soll sonst noch erledigt werden?', 'Vad mer ska skötas?'),
+        hint: tx('Optioneel, meerdere antwoorden mogelijk.', 'Optional, tick all that apply.', 'Optional, Mehrfachauswahl möglich.', 'Valfritt, flera svar möjliga.'),
+        options: [
+          o('Sleuteloverdracht aan gasten', 'Handing keys to guests', 'Schlüsselübergabe an Gäste', 'Nyckelöverlämning till gäster'),
+          o('Beddengoed en handdoeken leveren', 'Supplying bed linen and towels', 'Bettwäsche und Handtücher stellen', 'Leverera sänglinne och handdukar'),
+          o('Zwembad', 'Pool', 'Pool', 'Pool'),
+          o('Tuin', 'Garden', 'Garten', 'Trädgård'),
+          o('Sleutelbeheer als er geen gasten zijn', 'Key holding when there are no guests', 'Hausbetreuung, wenn keine Gäste da sind', 'Tillsyn när det inte finns gäster'),
+          o('Huis verhuurklaar maken', 'Getting the house ready to let', 'Haus für die Vermietung herrichten', 'Göra huset redo för uthyrning'),
+        ],
+      },
+      {
+        name: 'planning',
+        kind: 'select',
+        required: true,
+        label: tx('Vanaf wanneer?', 'From when?', 'Ab wann?', 'Från när?'),
+        options: [
+          o('Zo snel mogelijk', 'As soon as possible', 'So bald wie möglich', 'Så snart som möjligt'),
+          o('Voor het komende seizoen', 'Before the coming season', 'Vor der kommenden Saison', 'Före kommande säsong'),
+          o('Vanaf een bepaalde maand (zie toelichting)', 'From a specific month (see notes)', 'Ab einem bestimmten Monat (siehe Hinweis)', 'Från en viss månad (se beskrivning)'),
+          weetNiet,
+        ],
+      },
+    ],
+    placeholder: tx(
+      'Bijvoorbeeld: appartement met 2 slaapkamers in Torrox Costa, we verhuren via Airbnb van april tot oktober, gemiddeld een wissel per week…',
+      'For example: 2-bedroom apartment in Torrox Costa, we let it on Airbnb from April to October, about one changeover a week…',
+      'Zum Beispiel: Wohnung mit 2 Schlafzimmern in Torrox Costa, wir vermieten über Airbnb von April bis Oktober, etwa ein Wechsel pro Woche…',
+      'Till exempel: lägenhet med 2 sovrum i Torrox Costa, vi hyr ut via Airbnb april till oktober, ungefär ett byte i veckan…',
     ),
   },
 

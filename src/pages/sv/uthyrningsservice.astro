@@ -1,0 +1,134 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Steps from '../../components/Steps.astro';
+import Services from '../../components/Services.astro';
+import { site } from '../../data/site';
+
+const aanvraag = '/sv/forfragan/?dienst=verhuurbeheer';
+
+const faq = [
+  {
+    "q": "Vad kostar uthyrningsservice?",
+    "a": "Det beror på husets storlek, hur ofta gästerna byts och vad du själv vill fortsätta göra. Sköter du bokningarna själv betalar du ett fast pris per byte. Vid fullständig förvaltning tar vi en procentandel av hyresintäkterna. Efter din förfrågan får du ett skräddarsytt förslag."
+  },
+  {
+    "q": "Jag sköter bokningarna själv. Kan ni bara göra städningen?",
+    "a": "Ja. Du delar din kalender från Airbnb, Booking.com eller din webbplats med oss. Varje byte hamnar då automatiskt i vår planering, och vi ser till att huset är klart för nästa gäst."
+  },
+  {
+    "q": "Vad händer om en gäst har sönder något?",
+    "a": "Vi skickar foton efter kontrollen. Små saker fixar vi direkt; vid större skador får du ett pris först. Med fotona kan du kräva ersättning via plattformen eller depositionen."
+  },
+  {
+    "q": "Kan jag fortfarande bo i huset själv?",
+    "a": "Självklart. Du blockerar veckorna i kalendern och vi gör i ordning huset för dig."
+  },
+  {
+    "q": "Behöver jag tillstånd för att hyra ut?",
+    "a": "Ja, för semesteruthyrning måste huset vara registrerat som vivienda de uso turístico. Vi kontrollerar om ditt hus uppfyller kraven och anpassar det vid behov."
+  }
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: "Uthyrningsservice semesterbostad: gästbyten, städning, nyckelöverlämning och underhåll",
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en', 'de', 'es'],
+};
+---
+<Base
+  title="Uthyrningsservice för semesterboende i Axarquía"
+  description="Hyr du ut ditt hus i Nerja, Torrox eller någon annanstans i Axarquía? Vi sköter gästbyten, städning, sänglinne, nycklar och reparationer på plats."
+  path="/sv/uthyrningsservice/"
+  lang="sv"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="sv" items={[{ name: "Uthyrningsservice", href: '/sv/uthyrningsservice/' }]} />
+  <Hero
+    lang="sv"
+    eyebrow="Uthyrningsservice"
+    title="Hyr ut ditt hus, <em>vi sköter det på plats</em>"
+    lead="Du bor i Sverige och hyr ut ditt hus i Axarquía till semestergäster. Vi ser till att det är rent, komplett och i ordning mellan gästerna, och lagar det när något går sönder."
+    cta="Fråga om uthyrningsservice"
+    ctaHref={aanvraag}
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Två sätt att samarbeta med oss</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Bara gästbytena</h3>
+          <p>Du sköter själv annonserna och bokningarna på Booking.com, Airbnb eller din egen webbplats. Vi kommer vid varje byte: städar, byter sänglinne och handdukar, kontrollerar och gör i ordning för nästa gäst.</p>
+        </div>
+        <div class="card">
+          <h3>Fullständig uthyrningsförvaltning</h3>
+          <p>Vi tar också över gästkontakten, ankomsttiderna och nyckelöverlämningen, och kan sköta annonserna och gästregistreringen. Du får en översikt varje månad.</p>
+        </div>
+      </div>
+      <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 18px;">
+        <div class="card">
+          <h3>Städning och linne</h3>
+          <p>En ordentlig städning efter varje avresa, rent sänglinne och handdukar, och det nödvändigaste påfyllt.</p>
+        </div>
+        <div class="card">
+          <h3>Nyckelöverlämning</h3>
+          <p>Vi tar emot gästerna personligen, eller använder ett nyckelskåp eller smart lås så att de kan checka in själva.</p>
+        </div>
+        <div class="card">
+          <h3>Kontroll efter avresa</h3>
+          <p>Vi går igenom huset efter skador och saknade saker och skickar foton till dig.</p>
+        </div>
+        <div class="card">
+          <h3>Fel och reparationer</h3>
+          <p>En droppande kran, en luftkonditionering som slutat fungera, en trasig dörr: eftersom vi själva är byggföretaget fixar vi det snabbt.</p>
+        </div>
+        <div class="card">
+          <h3>Pool och trädgård</h3>
+          <p>En klar pool och en välskött trädgård, så att huset ser bra ut för varje gäst.</p>
+        </div>
+        <div class="card">
+          <h3>Redo för uthyrning</h3>
+          <p>Luftkonditionering i sovrummen, brandvarnare, mörkläggning eller ett extra badrum: vi anpassar huset så att det uppfyller reglerna för semesteruthyrning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Uthyrningsservice eller tillsyn: vad är skillnaden?</h2>
+      <p><strong>Tillsyn</strong> är för den tid huset står tomt. Vi förvarar nyckeln, kontrollerar huset regelbundet efter läckor, fukt och inbrott, och agerar när något är fel.</p>
+      <p><strong>Uthyrningsservice</strong> är för den tid gäster kommer och går. Då handlar det om bytena: städning, linne, nycklar och ett hus som ser perfekt ut vid varje ankomst.</p>
+      <p>Många ägare kombinerar de två: uthyrningsservice under säsongen och <a href="/sv/tillsyn/">tillsyn</a> de månader ingen är där. Då har du en kontaktperson hela året.</p>
+    </div>
+  </section>
+
+  <Steps lang="sv"
+    title="Så fungerar det"
+    steps={[
+      { t: "Du berättar om ditt hus", d: "Var det ligger, hur många sovrum det har och om du sköter bokningarna själv. Då vet vi vad du behöver." },
+      { t: "Vi kommer och tittar", d: "Vi besöker huset, gör en inventering och säger ärligt vad som behövs för uthyrningen." },
+      { t: "Du får ett förslag", d: "Ett skräddarsytt förslag med ett tydligt pris per byte eller för hela förvaltningen." },
+      { t: "Vi kopplar din kalender", d: "Varje bokning hamnar automatiskt i vår planering, så att inget byte missas." },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Får jag hyra ut mitt hus hur som helst?</h2>
+      <p>Nej. För semesteruthyrning i Andalusien måste bostaden vara registrerad som <em>vivienda de uso turístico</em> hos Junta de Andalucía, och numret ska stå i varje annons. Ligger huset i en bostadsrättsliknande samfällighet och börjar du hyra ut efter april 2025 måste ägarföreningen godkänna det först. Gäster ska registreras hos polisen inom 24 timmar.</p>
+      <p>Om din kommun har extra regler ser du under <a href="/sv/orter/">orter</a>. Vill du göra om huset först? Läs om <a href="/sv/renovering/">renovering</a>.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="sv" />
+  <Cta lang="sv" dienst="verhuurbeheer" title="Hyr ut utan att behöva vara där" text="Berätta om ditt hus och hur du hyr ut i dag. Du får ett förslag för gästbytena eller för hela förvaltningen." />
+  <Services lang="sv" exclude="uthyrningsservice" title="Kanske också intressant" />
+</Base>

@@ -25,6 +25,7 @@ export const routes: Partial<Record<Lang, string>>[] = [
   { nl: '/nl/zien-en-doen/', en: '/en/things-to-do/', de: '/de/sehenswuerdigkeiten/', sv: '/sv/se-och-gora/' },
   { nl: '/nl/contact/', en: '/en/contact/', de: '/de/kontakt/', sv: '/sv/kontakt/' },
   { nl: '/nl/toegangsweg/', en: '/en/access-road/', de: '/de/zufahrtsweg/', sv: '/sv/tillfartsvag/' },
+  { nl: '/nl/verhuurbeheer/', en: '/en/holiday-rental-management/', de: '/de/vermietungsservice/', sv: '/sv/uthyrningsservice/' },
   // Gidsen staan in alle talen in dezelfde volgorde (zie src/data/guides.ts)
   ...guidesBy.nl.map((_, i) =>
     Object.fromEntries(langs.filter((l) => guideAt(l, i)).map((l) => [l, guideHref(l, guideAt(l, i)!)])),
@@ -69,6 +70,7 @@ export const nav: Record<Lang, NavItem[]> = {
     { href: '/nl/#diensten', label: 'Diensten', children: [
       { href: '/nl/renovatie/', label: 'Renovatie' },
       { href: '/nl/sleutelbeheer/', label: 'Sleutelbeheer' },
+      { href: '/nl/verhuurbeheer/', label: 'Verhuurbeheer' },
       { href: '/nl/aankoopkeuring/', label: 'Aankoopkeuring' },
       { href: '/nl/zwembad/', label: 'Zwembad' },
       { href: '/nl/onderhoud/', label: 'Onderhoud' },
@@ -84,6 +86,7 @@ export const nav: Record<Lang, NavItem[]> = {
     { href: '/en/#services', label: 'Services', children: [
       { href: '/en/renovation/', label: 'Renovation' },
       { href: '/en/key-holding/', label: 'Key holding' },
+      { href: '/en/holiday-rental-management/', label: 'Rental management' },
       { href: '/en/property-survey/', label: 'Property survey' },
       { href: '/en/swimming-pool/', label: 'Swimming pools' },
       { href: '/en/maintenance/', label: 'Maintenance' },
@@ -99,6 +102,7 @@ export const nav: Record<Lang, NavItem[]> = {
     { href: '/de/#leistungen', label: 'Leistungen', children: [
       { href: '/de/renovierung/', label: 'Renovierung' },
       { href: '/de/hausbetreuung/', label: 'Hausbetreuung' },
+      { href: '/de/vermietungsservice/', label: 'Vermietungsservice' },
       { href: '/de/immobiliengutachten/', label: 'Gutachten' },
       { href: '/de/pool/', label: 'Pool' },
       { href: '/de/instandhaltung/', label: 'Instandhaltung' },
@@ -114,6 +118,7 @@ export const nav: Record<Lang, NavItem[]> = {
     { href: '/sv/#tjanster', label: 'Tjänster', children: [
       { href: '/sv/renovering/', label: 'Renovering' },
       { href: '/sv/tillsyn/', label: 'Tillsyn' },
+      { href: '/sv/uthyrningsservice/', label: 'Uthyrningsservice' },
       { href: '/sv/besiktning/', label: 'Besiktning' },
       { href: '/sv/pool/', label: 'Pool' },
       { href: '/sv/underhall/', label: 'Underhåll' },
@@ -134,6 +139,7 @@ export const services: Record<Lang, { href: string; title: string; text: string 
     { href: '/nl/aankoopkeuring/', title: 'Aankoopkeuring', text: 'Laat een huis keuren voordat u tekent. U weet wat u koopt en wat het opknappen gaat kosten.' },
     { href: '/nl/zwembad/', title: 'Zwembad bouwen en onderhoud', text: 'Een nieuw zwembad, een oud bad dat weer moet werken, of vast onderhoud terwijl u weg bent.' },
     { href: '/nl/onderhoud/', title: 'Onderhoud en reparaties', text: 'Daken, lekkages, terrassen, perceel en tuin. Ook als u zelf niet in Spanje bent.' },
+    { href: '/nl/verhuurbeheer/', title: 'Verhuurbeheer', text: 'U verhuurt uw huis aan vakantiegasten, wij doen ter plaatse de wissels: schoonmaak, beddengoed, sleutels en reparaties.' },
   ],
   en: [
     { href: '/en/renovation/', title: 'Renovation and building work', text: 'From a tired village house to a finca that needs starting over. One English-speaking team, one point of contact.' },
@@ -141,6 +147,7 @@ export const services: Record<Lang, { href: string; title: string; text: string 
     { href: '/en/property-survey/', title: 'Pre-purchase survey', text: 'Have the property surveyed before you sign. Know what you are buying and what it will cost to put right.' },
     { href: '/en/swimming-pool/', title: 'Swimming pools', text: 'A new pool, an old one that needs to work again, or regular maintenance while you are away.' },
     { href: '/en/maintenance/', title: 'Maintenance and repairs', text: 'Roofs, leaks, terraces, land and gardens. Even when you are not in Spain.' },
+    { href: '/en/holiday-rental-management/', title: 'Holiday rental management', text: 'You let your home to holiday guests, we handle the changeovers on the spot: cleaning, linen, keys and repairs.' },
   ],
   de: [
     { href: '/de/renovierung/', title: 'Renovierung und Umbau', text: 'Vom in die Jahre gekommenen Dorfhaus bis zur Finca, die von Grund auf neu gemacht werden muss. Ein Team, ein Ansprechpartner.' },
@@ -148,6 +155,7 @@ export const services: Record<Lang, { href: string; title: string; text: string 
     { href: '/de/immobiliengutachten/', title: 'Gutachten vor dem Kauf', text: 'Lassen Sie das Haus prüfen, bevor Sie unterschreiben. Sie wissen, was Sie kaufen und was die Sanierung kostet.' },
     { href: '/de/pool/', title: 'Poolbau und Poolpflege', text: 'Ein neuer Pool, ein alter, der wieder funktionieren soll, oder die regelmäßige Pflege, während Sie weg sind.' },
     { href: '/de/instandhaltung/', title: 'Instandhaltung und Reparaturen', text: 'Dächer, Undichtigkeiten, Terrassen, Grundstück und Garten. Auch wenn Sie nicht in Spanien sind.' },
+    { href: '/de/vermietungsservice/', title: 'Vermietungsservice', text: 'Sie vermieten an Urlaubsgäste, wir übernehmen vor Ort die Gästewechsel: Reinigung, Wäsche, Schlüssel und Reparaturen.' },
   ],
   sv: [
     { href: '/sv/renovering/', title: 'Renovering och ombyggnad', text: 'Från ett slitet byhus till en finca som behöver göras om från grunden. Ett team, en kontaktperson.' },
@@ -155,6 +163,7 @@ export const services: Record<Lang, { href: string; title: string; text: string 
     { href: '/sv/besiktning/', title: 'Besiktning före köp', text: 'Låt besiktiga huset innan du skriver på. Då vet du vad du köper och vad det kostar att åtgärda.' },
     { href: '/sv/pool/', title: 'Poolbygge och poolskötsel', text: 'En ny pool, en gammal som ska fungera igen eller regelbunden skötsel medan du är borta.' },
     { href: '/sv/underhall/', title: 'Underhåll och reparationer', text: 'Tak, läckor, terrasser, tomt och trädgård. Även när du inte är i Spanien.' },
+    { href: '/sv/uthyrningsservice/', title: 'Uthyrningsservice', text: 'Du hyr ut till semestergäster, vi sköter gästbytena på plats: städning, linne, nycklar och reparationer.' },
   ],
 };
 

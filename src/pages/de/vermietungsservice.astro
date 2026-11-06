@@ -1,0 +1,136 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Steps from '../../components/Steps.astro';
+import Services from '../../components/Services.astro';
+import { site } from '../../data/site';
+
+const aanvraag = '/de/anfrage/?dienst=verhuurbeheer';
+
+const faq = [
+  {
+    "q": "Was kostet der Vermietungsservice?",
+    "a": "Das hängt von der Größe des Hauses ab, wie oft die Gäste wechseln und was Sie selbst übernehmen möchten. Machen Sie die Buchungen selbst, zahlen Sie einen festen Preis pro Wechsel. Bei der kompletten Verwaltung berechnen wir einen Prozentsatz der Mieteinnahmen. Nach Ihrer Anfrage erhalten Sie ein Angebot nach Maß."
+  },
+  {
+    "q": "Ich mache die Buchungen selbst. Können Sie nur die Reinigung übernehmen?",
+    "a": "Ja. Sie teilen Ihren Kalender von Airbnb, Booking.com oder Ihrer Website mit uns. Jeder Wechsel landet dann automatisch in unserer Planung, und wir sorgen dafür, dass das Haus für den nächsten Gast bereit ist."
+  },
+  {
+    "q": "Was ist, wenn ein Gast etwas beschädigt?",
+    "a": "Wir schicken Ihnen nach der Kontrolle Fotos. Kleinigkeiten beheben wir sofort; bei größeren Schäden bekommen Sie zuerst einen Preis. Mit den Fotos können Sie den Schaden über die Plattform oder die Kaution geltend machen."
+  },
+  {
+    "q": "Kann ich selbst noch in meinem Haus wohnen?",
+    "a": "Natürlich. Sie blockieren die Wochen im Kalender und wir bereiten das Haus für Sie vor."
+  },
+  {
+    "q": "Brauche ich eine Lizenz für die Vermietung?",
+    "a": "Ja, für die Ferienvermietung muss das Haus als vivienda de uso turístico registriert sein. Wir prüfen, ob Ihr Haus die Anforderungen erfüllt, und passen es bei Bedarf an."
+  }
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: "Vermietungsservice Ferienhaus: Gästewechsel, Reinigung, Schlüsselübergabe und Instandhaltung",
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en', 'de', 'es'],
+};
+---
+<Base
+  title="Vermietungsservice für Ferienhäuser in der Axarquía"
+  description="Sie vermieten Ihr Haus in Nerja, Torrox oder anderswo in der Axarquía? Wir übernehmen Gästewechsel, Reinigung, Wäsche, Schlüssel und Reparaturen vor Ort."
+  path="/de/vermietungsservice/"
+  lang="de"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="de" items={[{ name: "Vermietungsservice", href: '/de/vermietungsservice/' }]} />
+  <Hero
+    lang="de"
+    eyebrow="Vermietungsservice"
+    title="Ihr Haus vermieten, <em>wir kümmern uns vor Ort</em>"
+    lead="Sie wohnen im Ausland und vermieten Ihr Haus in der Axarquía an Urlaubsgäste. Wir sorgen dafür, dass es zwischen den Gästen sauber, vollständig und in Ordnung ist, und reparieren, wenn etwas kaputtgeht."
+    cta="Vermietungsservice anfragen"
+    ctaHref={aanvraag}
+    secondary="Zum Vermietungsratgeber"
+    secondaryHref="/de/ratgeber/immobilie-in-spanien-vermieten/"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Zwei Wege der Zusammenarbeit</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Nur die Gästewechsel</h3>
+          <p>Sie kümmern sich selbst um Inserate und Buchungen auf Booking.com, Airbnb oder Ihrer eigenen Website. Wir kommen bei jedem Wechsel: reinigen, Bettwäsche und Handtücher wechseln, kontrollieren und alles für den nächsten Gast vorbereiten.</p>
+        </div>
+        <div class="card">
+          <h3>Komplette Vermietungsverwaltung</h3>
+          <p>Wir übernehmen auch den Gästekontakt, die Ankunftszeiten und die Schlüsselübergabe und können die Inserate und die Gästeregistrierung betreuen. Sie erhalten eine monatliche Übersicht.</p>
+        </div>
+      </div>
+      <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 18px;">
+        <div class="card">
+          <h3>Reinigung und Wäsche</h3>
+          <p>Nach jeder Abreise eine gründliche Reinigung, frische Bettwäsche und Handtücher, und das Nötigste aufgefüllt.</p>
+        </div>
+        <div class="card">
+          <h3>Schlüsselübergabe</h3>
+          <p>Gäste persönlich empfangen, oder ein Schlüsselsafe oder Smart Lock, damit sie selbst einchecken können.</p>
+        </div>
+        <div class="card">
+          <h3>Kontrolle nach Abreise</h3>
+          <p>Wir prüfen das Haus auf Schäden und fehlende Gegenstände und schicken Ihnen Fotos.</p>
+        </div>
+        <div class="card">
+          <h3>Störungen und Reparaturen</h3>
+          <p>Ein tropfender Hahn, eine Klimaanlage, die nicht läuft, eine kaputte Tür: Weil wir selbst Handwerker sind, beheben wir das schnell.</p>
+        </div>
+        <div class="card">
+          <h3>Pool und Garten</h3>
+          <p>Ein klarer Pool und ein gepflegter Garten, damit das Haus für jeden Gast gut aussieht.</p>
+        </div>
+        <div class="card">
+          <h3>Fit für die Vermietung</h3>
+          <p>Klimaanlage in den Schlafzimmern, Rauchmelder, Verdunkelung oder ein zusätzliches Bad: Wir passen Ihr Haus an, damit es die Regeln für Ferienvermietung erfüllt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Vermietungsservice oder Hausbetreuung: was ist der Unterschied?</h2>
+      <p>Die <strong>Hausbetreuung</strong> ist für die Zeit, in der Ihr Haus leer steht. Wir verwahren den Schlüssel, kontrollieren das Haus regelmäßig auf Undichtigkeiten, Feuchtigkeit und Einbruch und handeln, wenn etwas nicht stimmt.</p>
+      <p>Der <strong>Vermietungsservice</strong> ist für die Zeit, in der Gäste kommen und gehen. Dann geht es um die Wechsel: Reinigung, Wäsche, Schlüssel und ein Haus, das bei jeder Ankunft perfekt aussieht.</p>
+      <p>Viele Eigentümer kombinieren beides: Vermietungsservice in der Saison und <a href="/de/hausbetreuung/">Hausbetreuung</a> in den Monaten, in denen niemand da ist. So haben Sie das ganze Jahr einen Ansprechpartner.</p>
+    </div>
+  </section>
+
+  <Steps lang="de"
+    title="So funktioniert es"
+    steps={[
+      { t: "Sie erzählen von Ihrem Haus", d: "Wo es liegt, wie viele Schlafzimmer es hat und ob Sie die Buchungen selbst machen. Dann wissen wir, was Sie brauchen." },
+      { t: "Wir schauen es uns an", d: "Wir besichtigen das Haus, erstellen ein Inventar und sagen Ihnen ehrlich, was für die Vermietung noch fehlt." },
+      { t: "Sie erhalten ein Angebot", d: "Ein Angebot nach Maß, mit einem klaren Preis pro Wechsel oder für die komplette Verwaltung." },
+      { t: "Wir verknüpfen Ihren Kalender", d: "Jede Buchung landet automatisch in unserer Planung, damit kein Wechsel verpasst wird." },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Darf ich mein Haus einfach vermieten?</h2>
+      <p>Nein. Für die Ferienvermietung in Andalusien muss die Immobilie als <em>vivienda de uso turístico</em> bei der Junta de Andalucía registriert sein, und die Nummer muss in jedem Inserat stehen. Liegt das Haus in einer Wohnanlage und beginnen Sie nach April 2025 mit der Vermietung, muss die Eigentümergemeinschaft zuerst zustimmen. Gäste müssen innerhalb von 24 Stunden bei der Polizei gemeldet werden.</p>
+      <p>Mehr zu Regeln, Steuern und Einnahmen lesen Sie im Ratgeber <a href="/de/ratgeber/immobilie-in-spanien-vermieten/">Immobilie in Spanien vermieten</a>. Ob Ihre Gemeinde zusätzliche Regeln hat, sehen Sie unter <a href="/de/orte/">Orte</a>.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="de" />
+  <Cta lang="de" dienst="verhuurbeheer" title="Vermieten, ohne vor Ort sein zu müssen" text="Erzählen Sie uns von Ihrem Haus und wie Sie jetzt vermieten. Sie erhalten ein Angebot für die Gästewechsel oder die komplette Verwaltung." />
+  <Services lang="de" exclude="vermietungsservice" title="Das könnte Sie auch interessieren" />
+</Base>
