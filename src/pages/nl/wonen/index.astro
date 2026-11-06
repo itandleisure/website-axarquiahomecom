@@ -1,5 +1,6 @@
 ---
 import Guide from '../../../components/Guide.astro';
+import { placeLinkByName } from '../../../data/place-links';
 
 const toc = [
   { id: 'regio', label: 'Waar ligt de Axarquía?' },
@@ -45,11 +46,11 @@ const dorpen = [
   <h2 id="dorpen">De dorpen vergeleken</h2>
   <div class="cards" style="margin-bottom:1.5em">
     {dorpen.map((d) => (
-      <div class="card">
+      <a class="card" href={placeLinkByName('nl', d.n, 'living')}>
         <h3>{d.n}</h3>
         <p class="note" style="margin-top:-0.4em">{d.t}</p>
         <p>{d.d}</p>
-      </div>
+      </a>
     ))}
   </div>
 

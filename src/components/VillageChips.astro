@@ -1,18 +1,12 @@
 ---
-// Plaatsnamen uit het werkgebied als klikbare chips. Een plaats met een eigen pagina linkt daarheen,
-// een plaats waarvan de pagina nog niet bestaat linkt naar het overzicht van alle plaatsen.
+// Plaatsnamen uit het werkgebied als klikbare chips naar de plaatspagina.
 import type { Lang } from '../i18n';
 import { site } from '../data/site';
-import { places, placeHref, placeBase } from '../data/places';
-import { placeContent } from '../data/place-content';
+import { placeLinkByName } from '../data/place-links';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
-const href = (name: string) => {
-  const p = places.find((x) => x.name === name);
-  return p && p.built && placeContent[p.slug]?.[lang] ? placeHref(lang, p) : placeBase[lang];
-};
 ---
 <ul class="villages">
-  {site.villages.map((v) => <li><a href={href(v)}>{v}</a></li>)}
+  {site.villages.map((v) => <li><a href={placeLinkByName(lang, v)}>{v}</a></li>)}
 </ul>

@@ -1,4 +1,5 @@
 ---
+import PlaceName from '../../../components/PlaceName.astro';
 // Bronnen (geraadpleegd 5 november 2026):
 // - LISTA, Ley 7/2021 (BOE-A-2022-1316): art. 151 (legalisatie), 152 (termijn herstelprocedure 1 jaar),
 //   153 (6 jaar, uitzonderingen), 173 (AFO-erkenning, 6 maanden, stilzwijgen = afwijzing, geen aansluitingen of werk vooraf),
@@ -115,9 +116,9 @@ const faq = [
   <table class="prices">
     <thead><tr><th>Gemeente</th><th>Leges AFO</th><th>Bij € 40.000</th></tr></thead>
     <tbody>
-      <tr><td>Nerja</td><td>3,5% van de bouwkosten, minimaal € 750</td><td>€ 1.400</td></tr>
-      <tr><td>Torrox</td><td>€ 750 (boven € 60.000 bouwkosten: 1,25%) plus 3,25% van de bouwkosten</td><td>€ 2.050</td></tr>
-      <tr><td>Vélez-Málaga</td><td>7,5% van de bouwkosten</td><td>€ 3.000</td></tr>
+      <tr><td><PlaceName lang="nl" name="Nerja" /></td><td>3,5% van de bouwkosten, minimaal € 750</td><td>€ 1.400</td></tr>
+      <tr><td><PlaceName lang="nl" name="Torrox" /></td><td>€ 750 (boven € 60.000 bouwkosten: 1,25%) plus 3,25% van de bouwkosten</td><td>€ 2.050</td></tr>
+      <tr><td><PlaceName lang="nl" name="Vélez-Málaga" /></td><td>7,5% van de bouwkosten</td><td>€ 3.000</td></tr>
     </tbody>
   </table>
   <p>De bouwkosten zijn niet wat het destijds kostte, maar wat de architect opgeeft, met als ondergrens de vaste bedragen per m² die de gemeente of het college van architecten hanteert. De bedragen komen uit de belastingverordeningen die de gemeenten publiceren (Nerja 2020, Torrox 2013, Vélez-Málaga 2014). Verordeningen worden soms aangepast, dus vraag het actuele tarief na bij de gemeente. Voor de andere gemeenten zoeken wij het op als u een concreet huis hebt. Alles bij elkaar komt een AFO-traject meestal uit op enkele duizenden euro’s, meer als er herstelwerk nodig is. Een legalisatie met project kost meer, maar levert ook meer op.</p>
