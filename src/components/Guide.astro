@@ -1,5 +1,7 @@
 ---
 // Layout voor een gids (artikel) met kruimelpad, inhoudsopgave, FAQ en Article-schema.
+import ArticlePhoto from './ArticlePhoto.astro';
+import { guidePhoto } from '../data/topic-photos';
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import Faq from './Faq.astro';
@@ -26,10 +28,11 @@ const list = guidesBy[lang];
 const g = list.find((x) => x.slug === slug)!;
 const base = route(lang, 'guides');
 const path = guideHref(lang, g);
+const photo = guidePhoto(slug, lang);
 const article = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  image: `${site.url}/og-image.png`,
+  image: photo ? new URL(photo.og, site.url).href : `${site.url}/og-image.png`,
   headline: g.title,
   description: g.description,
   inLanguage: lang,
@@ -52,7 +55,7 @@ const crumbs = parent
 const fmt = (d: string) => new Date(d).toLocaleDateString(t.dateLocale, { day: 'numeric', month: 'long', year: 'numeric' });
 const request = route(lang, 'request');
 ---
-<Base title={g.seoTitle ?? g.title} description={g.description} path={path} lang={lang} jsonLd={[article]}>
+<Base title={g.seoTitle ?? g.title} description={g.description} path={path} lang={lang} jsonLd={[article]} ogImage={photo?.og} ogImageAlt={photo?.alt}>
   <Breadcrumbs lang={lang} items={crumbs} />
   <article class="section guide" style="padding-top:24px">
     <div class="wrap guide-grid">
@@ -61,6 +64,7 @@ const request = route(lang, 'request');
         <h1>{g.title}</h1>
         <p class="lead">{g.lead}</p>
         <p class="note">{t.updated} {fmt(g.updated ?? g.published)}</p>
+        <ArticlePhoto photo={photo} lead />
         <slot />
       </div>
       <aside class="toc">
