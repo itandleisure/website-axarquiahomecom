@@ -6,6 +6,7 @@ import HomeMenu from '../../components/HomeMenu.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
+import VillageChips from '../../components/VillageChips.astro';
 import { site } from '../../data/site';
 
 const faq = [
@@ -91,9 +92,7 @@ const faq = [
     <div class="wrap">
       <h2>Ons werkgebied</h2>
       <p class="section-intro">Van de kust tot de bergdorpen: we werken in de hele Axarquía, inclusief fincas op het platteland waar water, toegang en vergunningen extra aandacht vragen.</p>
-      <ul class="villages">
-        {site.villages.map((v) => <li>{v}</li>)}
-      </ul>
+      <VillageChips lang="nl" />
     </div>
   </section>
 

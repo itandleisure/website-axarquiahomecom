@@ -6,6 +6,7 @@ import HomeMenu from '../../components/HomeMenu.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
+import VillageChips from '../../components/VillageChips.astro';
 import { site } from '../../data/site';
 
 const faq = [
@@ -94,9 +95,7 @@ const faq = [
     <div class="wrap">
       <h2>Wo wir arbeiten</h2>
       <p class="section-intro">Von der Küste bis in die Bergdörfer: Wir sind in der ganzen Axarquía tätig, auch bei Landhäusern, bei denen Wasser, Zufahrt und Genehmigungen besondere Aufmerksamkeit brauchen.</p>
-      <ul class="villages">
-        {site.villages.map((v) => <li>{v}</li>)}
-      </ul>
+      <VillageChips lang="de" />
     </div>
   </section>
 
