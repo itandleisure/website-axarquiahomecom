@@ -1,0 +1,120 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'ueberblick', label: 'Probleme und Lösungen im Überblick' },
+  { id: 'eigentum', label: 'Wem gehört der Weg, und wer zahlt?' },
+  { id: 'wasser', label: 'Wasser ist der größte Feind' },
+  { id: 'entwaesserung', label: 'Entwässerung: Gräben, Querrinnen und Durchlässe' },
+  { id: 'belag', label: 'Schotter, Zahorra oder Beton?' },
+  { id: 'genehmigung', label: 'Genehmigung und Regeln' },
+  { id: 'nachbarn', label: 'Kosten mit den Nachbarn teilen' },
+  { id: 'pflege', label: 'Pflege im Laufe des Jahres' },
+];
+
+const faq = [
+  {
+    q: 'Der Camino gehört der Gemeinde, aber sie tut nichts. Was kann ich tun?',
+    a: 'Melden Sie den Schaden schriftlich beim Ayuntamiento, mit Fotos und Lageangabe. Viele Gemeinden in der Axarquía haben wenig Geld für Feldwege. In der Praxis lassen die Anwohner die Arbeiten oft selbst ausführen, manchmal mit Material oder einem Zuschuss der Gemeinde. Arbeiten an einem öffentlichen Weg sind nur mit Zustimmung der Gemeinde erlaubt, fragen Sie also zuerst nach.',
+  },
+  {
+    q: 'Muss ich mich an einem Weg über das Land des Nachbarn beteiligen?',
+    a: 'Wenn Sie ein Wegerecht (servidumbre de paso) haben, zahlen nach dem spanischen Zivilgesetzbuch Sie als Nutzer die Instandhaltung, die für die Nutzung des Weges nötig ist. Nutzen mehrere Häuser den Weg, teilen sie die Kosten anteilig. Steht in der Urkunde oder einer Vereinbarung etwas anderes, gilt diese Vereinbarung.',
+  },
+  {
+    q: 'Kann ich nicht einfach den ganzen Weg betonieren?',
+    a: 'Das geht, ist aber nicht immer sinnvoll oder erlaubt. Beton ist ideal für steile Abschnitte und Kurven, doch ohne gute Entwässerung wird der Untergrund trotzdem ausgespült. Auf ländlichem Boden, an einem Bachbett oder in einem Naturpark ist oft eine Genehmigung nötig. Die beste Lösung ist meist eine Kombination: Beton, wo es steil ist, verdichteter Schotter auf den flachen Stücken und überall eine gute Entwässerung.',
+  },
+  {
+    q: 'Wann lasse ich den Weg am besten reparieren?',
+    a: 'Am besten Ende des Sommers oder Anfang Herbst, vor dem starken Regen von Oktober bis März. Dann sind die Gräben sauber und die Löcher zu, wenn das Wasser kommt. Nach einem Sturm (DANA) ist es wichtig, die schlimmsten Rinnen schnell zu reparieren, denn jeder weitere Regen vergrößert den Schaden.',
+  },
+];
+
+const onderwerp = 'Ich möchte Hilfe beim Zufahrtsweg zu meiner Finca (Reparatur, Entwässerung oder Befestigung).';
+---
+<Guide lang="de" slug="zufahrtsweg-finca-spanien" toc={toc} faq={faq} dienst="onderhoud" onderwerp={onderwerp} ctaTitle="Zufahrtsweg reparieren lassen?" ctaText="Schicken Sie uns ein paar Fotos vom Weg und sagen Sie, wo es hakt. Wir schauen ihn uns an, machen einen Vorschlag, den Sie auch mit den Nachbarn teilen können, und helfen Ihnen bei der Umsetzung.">
+  <h2 id="ueberblick">Probleme und Lösungen im Überblick</h2>
+  <p>Die meisten Fincas in den Hügeln der Axarquía liegen an einem <em>Camino</em>: einem unbefestigten oder teilweise betonierten Weg, der von der Asphaltstraße zum Haus führt. Solange es trocken ist, merken Sie wenig davon. Nach dem ersten kräftigen Herbstregen kann der Weg plötzlich voller Rinnen, Löcher und loser Steine sein. Das sind die häufigsten Probleme und was dagegen hilft. Möchten Sie es angehen lassen? <a href="/de/zufahrtsweg/">Wir helfen Ihnen bei der Umsetzung</a>.</p>
+  <table class="prices">
+    <thead><tr><th>Problem</th><th>Lösung</th></tr></thead>
+    <tbody>
+      <tr><td>Rinnen in Längsrichtung des Weges</td><td>Das Wasser mit Querrinnen und einem Seitengraben vom Weg leiten, dann die Rinnen füllen und verdichten</td></tr>
+      <tr><td>Schlaglöcher</td><td>Ausheben, mit Zahorra (Schotter mit Feinanteil) füllen und verdichten; bei Beton stellenweise neu gießen</td></tr>
+      <tr><td>Steiles Stück, auf dem das Auto durchdreht</td><td>Betonieren mit rauer Oberfläche, damit die Reifen greifen</td></tr>
+      <tr><td>Weg wird an einem Bach oder trockenen Bachbett ausgespült</td><td>Durchlass (Rohr unter dem Weg) oder eine betonierte Furt (<em>Badén</em>)</td></tr>
+      <tr><td>Wegrand bricht ab</td><td>Stützmauer oder Steinböschung, und das Wasser nicht mehr über den Rand laufen lassen</td></tr>
+      <tr><td>Gerissener oder gebrochener Beton</td><td>Stellenweise ausbrechen und neu gießen; klären, warum er brach (Wasser unter der Platte, zu dünn, keine Bewehrung)</td></tr>
+      <tr><td>Sträucher und Äste über dem Weg</td><td>Jährlich zurückschneiden, damit auch Feuerwehr, Tankwagen oder Baustellen-Lkw durchkommen</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="eigentum">Wem gehört der Weg, und wer zahlt?</h2>
+  <p>Bevor am Weg gearbeitet wird, muss klar sein, wem er gehört. Davon hängt ab, wer daran arbeiten darf, wer zahlt und welche Genehmigung nötig ist. Grob gibt es vier Situationen:</p>
+  <ul>
+    <li><strong>Öffentlicher Weg (<em>camino público</em>)</strong>: Der Weg gehört der Gemeinde und steht in ihrem Wegeverzeichnis. Im Kataster (<em>Catastro</em>) hat ein solcher Weg oft eine eigene Flurstücknummer. Die Instandhaltung ist grundsätzlich Sache der Gemeinde, doch in der Praxis passiert auf vielen Feldwegen wenig. Sie dürfen nicht einfach selbst daran arbeiten; dafür brauchen Sie die Zustimmung des Ayuntamiento.</li>
+    <li><strong>Weg über das Land eines Nachbarn (<em>servidumbre de paso</em>)</strong>: Sie haben ein Wegerecht, das in der Eigentumsurkunde und im Grundbuch stehen sollte. Wer das Recht nutzt, zahlt in der Regel die Instandhaltung, die für die Nutzung nötig ist, sofern die Urkunde nichts anderes vorsieht.</li>
+    <li><strong>Gemeinsamer Weg mehrerer Häuser</strong>: Manchmal gehört der Weg mehreren gemeinsam, oder die Anwohner haben eine Gemeinschaft (<em>comunidad de camino</em> oder <em>de usuarios</em>). Dann werden die Kosten nach Satzung oder Absprache verteilt, oft nach Zahl der Häuser oder nach dem Wegstück, das jeder nutzt.</li>
+    <li><strong>Eigene Einfahrt auf dem eigenen Grundstück</strong>: Die gehört ganz Ihnen, aber auch dort kann zum Beispiel für Beton oder eine Mauer eine Genehmigung nötig sein.</li>
+  </ul>
+  <p>Unsicher, welche Situation vorliegt? Schauen Sie in die Urkunde (<em>escritura</em>), die <em>nota simple</em> aus dem Grundbuch und die Katasterkarte, oder fragen Sie bei der Gemeinde nach. Sind Sie noch beim Kauf, lesen Sie auch <a href="/de/ratgeber/finca-kaufen-spanien/">Finca kaufen in Spanien</a>: Der Zufahrtsweg gehört zu den Prüfungen vor der Unterschrift.</p>
+
+  <h2 id="wasser">Wasser ist der größte Feind</h2>
+  <p>Fast alle Schäden an einem Camino entstehen durch Wasser. In der Axarquía fällt der meiste Regen in wenigen Wochen zwischen Oktober und März, oft in kurzen, heftigen Schauern oder bei einer <em>DANA</em>. Das Wasser sucht den kürzesten Weg nach unten, und das ist oft der Weg selbst. Es nimmt das Feinmaterial mit, gräbt eine Rinne in die Mitte oder entlang des Randes, und beim nächsten Regen wird sie tiefer.</p>
+  <p>Deshalb bringt es wenig, nur die Löcher zu füllen. Ohne Entwässerung liegt der neue Schotter nach dem nächsten Sturm unten am Hang. Die Grundregel: erst das Wasser regeln, dann den Weg.</p>
+
+  <h2 id="entwaesserung">Entwässerung: Gräben, Querrinnen und Durchlässe</h2>
+  <p>Eine gute Entwässerung bringt das Wasser so schnell wie möglich vom Weg, bevor es Fahrt aufnimmt. Die wichtigsten Elemente:</p>
+  <ul>
+    <li><strong>Quergefälle</strong>: Der Weg fällt leicht zu einer Seite ab oder ist zur Mitte gewölbt, damit kein Wasser in der Mitte stehen bleibt.</li>
+    <li><strong>Seitengraben (<em>cuneta</em>)</strong>: ein Graben oder eine Betonrinne an der Bergseite, die das Wasser auffängt und ableitet.</li>
+    <li><strong>Querrinnen</strong>: schräge Betonschwellen oder Roste quer über den Weg, alle paar Meter, die das Wasser zur Seite leiten. Auf steilen Stücken liegen sie dichter beieinander.</li>
+    <li><strong>Durchlass (<em>caño</em> oder <em>tubo</em>)</strong>: ein Rohr unter dem Weg, wo ein Bach oder Graben ihn kreuzt. Es muss groß genug für einen Starkregen sein und sauber gehalten werden.</li>
+    <li><strong>Auslauf</strong>: Wo das Wasser den Weg verlässt, legen Sie Steine aus, damit es den Hang neben dem Weg nicht ausspült.</li>
+  </ul>
+  <p>Gibt es neben dem Weg eine hohe, bröckelnde Böschung oder sackt der Rand ab, kann eine <a href="/de/kosten/stuetzmauer-und-entwaesserung/">Stützmauer mit Entwässerung</a> nötig sein.</p>
+
+  <h2 id="belag">Schotter, Zahorra oder Beton?</h2>
+  <p>Welcher Belag passt, hängt vor allem davon ab, wie steil der Weg ist, wie viel Verkehr darüber geht und wie viel Pflege Sie leisten möchten.</p>
+  <table class="prices">
+    <thead><tr><th>Belag</th><th>Gut zu wissen</th></tr></thead>
+    <tbody>
+      <tr><td>Erde oder loser Schotter</td><td>Günstig, wird aber schnell ausgespült und gibt Staub und Löcher; nur auf flachen Stücken</td></tr>
+      <tr><td><em>Zahorra</em> (Schotter mit Feinanteil), verdichtet</td><td>Die übliche Lösung für unbefestigte Caminos; mit guter Entwässerung hält sie Jahre, ab und zu nacharbeiten</td></tr>
+      <tr><td>Beton mit Bewehrungsmatte</td><td>Für steile Stücke, Kurven und Stellen, die immer wieder ausspülen; raue Oberfläche für Grip</td></tr>
+      <tr><td>Betonfahrspuren</td><td>Zwei Betonstreifen mit Schotter oder Grün dazwischen; weniger Beton, weniger versiegelte Fläche</td></tr>
+      <tr><td>Asphalt</td><td>Für lange, viel befahrene Wege; für eine einzelne Finca wegen Kosten und Maschinen selten lohnend</td></tr>
+    </tbody>
+  </table>
+  <p>Beim Beton kommt es auf die Details an: ein gut verdichteter Unterbau, eine Bewehrungsmatte, genug Stärke für schweren Verkehr (ein Betonmischer oder Tankwagen ist schwer), Dehnfugen gegen Risse und eine raue, gebesenete oder gerillte Oberfläche. Eine glatte Betonplatte an einem steilen Hang ist im Regen glatt wie Eis. Und der Betonmischer muss die Stelle erreichen können: Auf schmalen Wegen wird manchmal mit kleineren Fahrzeugen oder einer Pumpe gearbeitet.</p>
+
+  <h2 id="genehmigung">Genehmigung und Regeln</h2>
+  <p>Normale Pflege, wie Löcher füllen und Gräben säubern, geht meist ohne Papierkram. Bei größeren Eingriffen ist das anders:</p>
+  <ul>
+    <li><strong>Betonieren, verbreitern oder einen neuen Weg anlegen</strong> auf ländlichem Boden (<em>suelo rústico</em>) erfordert in der Regel eine Anzeige oder Genehmigung der Gemeinde. Siehe die Regeln <a href="/de/orte/">Ihrer Gemeinde</a>.</li>
+    <li><strong>Arbeiten an einem öffentlichen Weg</strong> sind nur mit Zustimmung des Ayuntamiento erlaubt.</li>
+    <li><strong>An einem Bach oder trockenen Bachbett (<em>arroyo</em>, <em>rambla</em>)</strong> ist die Wasserbehörde der Junta de Andalucía zuständig. Ein Durchlass oder eine Furt im Bachbett braucht oft deren Genehmigung.</li>
+    <li><strong>Viehtrieb (<em>vía pecuaria</em>)</strong>: Manche alten Wege sind historische Viehtriebe im Eigentum der Junta. Dort dürfen Sie nicht einfach befestigen.</li>
+    <li><strong>In oder bei einem Naturpark</strong>, etwa den Sierras de Tejeda, Almijara y Alhama oberhalb von Cómpeta, Canillas und Frigiliana, gelten zusätzliche Regeln.</li>
+  </ul>
+  <p>Wir klären vorab, was nötig ist, und kümmern uns um den Antrag, damit Sie hinterher kein Bußgeld bekommen. Mehr zu Genehmigungen lesen Sie in <a href="/de/ratgeber/baugenehmigung-umbau-andalusien/">Baugenehmigung für den Umbau in Andalusien</a>.</p>
+
+  <h2 id="nachbarn">Kosten mit den Nachbarn teilen</h2>
+  <p>Nutzen mehrere Häuser denselben Camino, ist die Arbeit oft nur machbar, wenn alle mitmachen. Ein paar Tipps, damit das reibungslos läuft:</p>
+  <ul>
+    <li><strong>Ein Vorschlag für den ganzen Weg</strong>, in Abschnitte aufgeteilt. So sieht jeder, was passiert, und die Kosten lassen sich fair verteilen, zum Beispiel nach dem Wegstück, das jeder nutzt.</li>
+    <li><strong>Absprachen schriftlich festhalten</strong>: wer was zahlt, wer den Auftrag erteilt und wie die Pflege danach läuft. Eine einfache schriftliche Vereinbarung erspart jahrelangen Ärger.</li>
+    <li><strong>Fragen Sie die Gemeinde</strong> bei einem öffentlichen Weg, ob sie Material oder einen Zuschuss beisteuert, wenn die Anwohner die Arbeiten ausführen lassen. Das kommt in der Axarquía regelmäßig vor.</li>
+    <li><strong>Nicht alle machen mit?</strong> Dann lassen Sie zuerst das Stück machen, das Sie selbst brauchen, mit einer Entwässerung, die das Wasser nicht zu den Nachbarn schickt.</li>
+  </ul>
+  <p>Wir erstellen gern einen Vorschlag, den Sie mit den Nachbarn teilen können, auf Englisch, Niederländisch oder Spanisch.</p>
+
+  <h2 id="pflege">Pflege im Laufe des Jahres</h2>
+  <p>Ein Weg, der jedes Jahr ein wenig Aufmerksamkeit bekommt, hält viel länger als einer, der erst nach dem Schaden repariert wird. Ein einfacher Plan:</p>
+  <ul>
+    <li><strong>September und Oktober</strong>: Seitengräben, Querrinnen und Durchlässe räumen, kleine Löcher füllen. Dann ist der Weg bereit für den Regen.</li>
+    <li><strong>Nach jedem Starkregen oder Sturm</strong>: prüfen, ob neue Rinnen entstanden sind und ob Durchlässe verstopft sind. Eine kleine Reparatur jetzt verhindert eine große später.</li>
+    <li><strong>Frühjahr</strong>: Bewuchs am Weg zurückschneiden, damit die Feuerwehr durchkommt, und größere Reparaturen vor dem Sommer planen. Verbinden Sie das mit dem <a href="/de/ratgeber/garten-und-grundstueck-spanien/">brandsicheren Grundstück</a>.</li>
+  </ul>
+  <p>Sind Sie einen Großteil des Jahres nicht in Spanien? Mit der <a href="/de/hausbetreuung/">Hausbetreuung</a> fährt ohnehin regelmäßig jemand über Ihren Weg und kann Ihnen nach einem Sturm sofort sagen, wie es aussieht. Lesen Sie auch, wie Sie <a href="/de/ratgeber/haus-winterfest-spanien/">Ihr Haus winterfest machen</a>.</p>
+</Guide>

@@ -308,6 +308,7 @@ export const vragen: Record<Dienst, DienstVragen> = {
           o('Loodgieter of elektra', 'Plumbing or electrics', 'Sanitär oder Elektrik', 'VVS eller el'),
           o('Ramen, deuren of kozijnen', 'Windows or doors', 'Fenster oder Türen', 'Fönster eller dörrar'),
           o('Perceel, tuin of snoeien', 'Land, garden or pruning', 'Grundstück, Garten oder Baumschnitt', 'Tomt, trädgård eller beskärning'),
+          o('Toegangsweg of oprit', 'Access road or driveway', 'Zufahrtsweg oder Einfahrt', 'Tillfartsväg eller uppfart'),
           o('Iets anders', 'Something else', 'Etwas anderes', 'Något annat'),
         ],
       },

@@ -1,0 +1,111 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Steps from '../../components/Steps.astro';
+import Services from '../../components/Services.astro';
+import { site } from '../../data/site';
+
+const onderwerp = 'Ik wil hulp bij de toegangsweg naar mijn finca (herstel, afwatering of verharding).';
+const aanvraag = '/nl/aanvraag/?dienst=onderhoud&onderwerp=' + encodeURIComponent(onderwerp);
+
+const faq = [
+  {
+    q: 'Wat kost het om een toegangsweg te laten herstellen?',
+    a: 'Dat hangt sterk af van de lengte, hoe steil de weg is, hoe bereikbaar hij is voor machines en de betonmixer, en hoeveel afwatering er nodig is. Daarom noemen we geen vaste prijs. Met een paar foto’s en de ligging kunnen we snel een eerste inschatting geven, en na een bezoek krijgt u een voorstel per stuk weg.',
+  },
+  {
+    q: 'De weg is van de gemeente of van meerdere buren. Kunnen jullie dan ook helpen?',
+    a: 'Ja. We maken één voorstel voor de hele weg, opgedeeld in stukken, dat u met de buren of de gemeente kunt delen. Zo kan iedereen zien wat er gebeurt en kunnen de kosten eerlijk worden verdeeld. Bij een openbare weg vragen we eerst toestemming aan het ayuntamiento.',
+  },
+  {
+    q: 'Moet ik er zelf bij zijn?',
+    a: 'Nee. We werken met foto’s vóór, tijdens en na het werk. U geeft akkoord op het voorstel en wij voeren het uit, ook als u in Nederland bent.',
+  },
+  {
+    q: 'Is er een vergunning nodig?',
+    a: 'Voor gewoon onderhoud meestal niet. Voor betonneren, verbreden, een nieuwe weg, werk aan een openbare weg of werk bij een beekbedding vaak wel. Wij zoeken vooraf uit wat er nodig is en regelen de aanvraag.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Toegangsweg naar finca herstellen, verharden en onderhouden',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en', 'es'],
+};
+---
+<Base
+  title="Toegangsweg finca herstellen en onderhouden"
+  description="Gaten, geulen of een te steile camino naar uw finca in de Axarquía? Wij herstellen, verharden en onderhouden de weg, met goede afwatering."
+  path="/nl/toegangsweg/"
+  jsonLd={[service]}
+>
+  <Breadcrumbs items={[{ name: 'Toegangsweg', href: '/nl/toegangsweg/' }]} />
+  <Hero
+    eyebrow="Toegangsweg en oprit"
+    title="Een weg naar uw finca <em>waar u het hele jaar over kunt</em>"
+    lead="Na de regen ligt de camino weer vol geulen, of de auto komt de steile helling niet op. Wij herstellen de weg, regelen de afwatering en houden hem bij, ook als u er niet bent."
+    cta="Hulp bij uw toegangsweg"
+    ctaHref={aanvraag}
+    secondary="Lees de gids"
+    secondaryHref="/nl/gidsen/toegangsweg-finca-spanje/"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h2 class="h3">Herstel na de regen</h2>
+          <p>Geulen, gaten en weggespoelde stukken vullen en verdichten met zahorra, zodat de weg weer berijdbaar is.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Afwatering</h2>
+          <p>Zijgoten, dwarsgoten, duikers onder de weg en een beschermde uitstroom. Zo blijft het water van de weg af en blijft het herstel liggen.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Betonneren</h2>
+          <p>Steile stukken, bochten en plekken die steeds wegspoelen verharden met gewapend beton en een ruwe afwerking voor grip.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Randen en taluds</h2>
+          <p>Een wegzakkende rand of afbrokkelende helling vastzetten met een steunmuur of stenen talud.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Vast onderhoud</h2>
+          <p>Elk najaar goten en duikers schoon, na een storm een controle, in het voorjaar de begroeiing terug. Goed te combineren met <a href="/nl/sleutelbeheer/">sleutelbeheer</a>.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Buren, gemeente en vergunning</h2>
+          <p>Eén voorstel dat u met de buren of de gemeente kunt delen, en wij zoeken uit welke toestemming er nodig is.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    title="Zo pakken we het aan"
+    steps={[
+      { t: 'U stuurt foto’s', d: 'Een paar foto’s van de weg, de plekken waar het misgaat en de ligging. Dan kunnen we al meedenken.' },
+      { t: 'Wij komen kijken', d: 'We lopen de weg af en kijken waar het water vandaan komt, hoe steil het is en of de betonmixer erbij kan.' },
+      { t: 'Voorstel per stuk weg', d: 'U krijgt een voorstel, opgedeeld in stukken, dat u met de buren kunt delen. Wij zoeken uit of er een vergunning nodig is.' },
+      { t: 'Uitvoering en onderhoud', d: 'We voeren het werk uit en sturen foto’s. Daarna houden we de weg bij, als u dat wilt.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Eerst het water, dan de weg</h2>
+      <p>Bijna alle schade aan een camino komt door water. Wie alleen de gaten laat vullen, ziet het grind na de volgende storm onderaan de helling liggen. Daarom kijken we altijd eerst naar de afwatering, en pas daarna naar de verharding. Meer over eigendom, wie betaalt, de regels en de keuze tussen grind en beton leest u in de gids <a href="/nl/gidsen/toegangsweg-finca-spanje/">de toegangsweg naar uw finca</a>.</p>
+      <p>Koopt u een finca? Laat de toegangsweg dan meenemen in de <a href="/nl/aankoopkeuring/">aankoopkeuring</a>, en lees <a href="/nl/gidsen/finca-kopen-in-spanje/">finca kopen in Spanje</a>. Wilt u weten welke regels uw gemeente hanteert? Kijk bij <a href="/nl/plaatsen/">plaatsen</a>.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} />
+  <Cta dienst="onderhoud" onderwerp={onderwerp} title="Wij helpen u het te realiseren" text="Vertel ons waar de weg naar uw finca problemen geeft. Met een paar foto’s kunnen we snel meedenken over herstel, afwatering of verharding." />
+  <Services title="Ook interessant" />
+</Base>

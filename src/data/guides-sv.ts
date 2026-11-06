@@ -78,4 +78,16 @@ export const guidesSvExtra: GuideMeta[] = [
     minutes: 7,
     published,
   },
+  {
+    of: 'toegangsweg-finca-spanje',
+    slug: 'tillfartsvag-finca-spanien',
+    title: 'Tillfartsvägen till din finca: underhåll, avvattning och vem som betalar',
+    seoTitle: 'Tillfartsväg till finca i Spanien: underhåll och kostnad',
+    short: 'Tillfartsväg till finca',
+    description: 'Gropar, raviner eller en för brant camino? Så håller du vägen till din finca i Axarquía farbar, och så fungerar ägande, grannar och tillstånd.',
+    lead: 'En finca är bara så lättillgänglig som vägen dit. Ett enda kraftigt skyfall kan lämna en grusväg full av raviner. Här läser du hur du håller vägen i skick, vilka lösningarna är och vem som ska betala.',
+    keyword: 'tillfartsväg finca spanien',
+    minutes: 9,
+    published: '2026-11-06',
+  },
 ];
