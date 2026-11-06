@@ -1,4 +1,5 @@
 ---
+import { placeLinkIfExists } from '../data/place-links';
 // Pagina Bouwvergunning of Praktisch wonen van één gemeente.
 // Cijfers uit src/data/municipal.ts, teksten uit src/data/municipal-text.ts.
 import Base from '../layouts/Base.astro';
@@ -80,7 +81,7 @@ const dienst = kind === 'permit' ? 'renovatie' : 'sleutelbeheer';
       <div class="box">
         <h3>{t.factsTitle}</h3>
         <table class="prices"><tbody>
-          {t.facts.map(([k, v]) => <tr><td>{k}</td><td set:html={v} /></tr>)}
+          {t.facts.map(([k, v]) => { const href = placeLinkIfExists(lang, v); return <tr><td>{k}</td>{href ? <td><a href={href}>{v}</a></td> : <td set:html={v} />}</tr>; })}
         </tbody></table>
       </div>
     </div>

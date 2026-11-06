@@ -1,0 +1,11 @@
+---
+// Plaatsnaam in lopende lijsten: een link naar de plaatspagina als die bestaat, anders gewone tekst.
+import type { Lang } from '../i18n';
+import type { PlacePage } from '../data/places';
+import { placeLinkIfExists } from '../data/place-links';
+
+interface Props { lang: Lang; name: string; page?: PlacePage }
+const { lang, name, page = 'overview' } = Astro.props;
+const href = placeLinkIfExists(lang, name, page);
+---
+{href ? <a href={href}>{name}</a> : name}

@@ -1,4 +1,5 @@
 ---
+import PlaceName from '../../../components/PlaceName.astro';
 // Sources: see the Dutch version (src/pages/nl/gidsen/afo-legaliseren-andalusie.astro).
 import Guide from '../../../components/Guide.astro';
 
@@ -106,9 +107,9 @@ const faq = [
   <table class="prices">
     <thead><tr><th>Town</th><th>AFO fee</th><th>At €40,000</th></tr></thead>
     <tbody>
-      <tr><td>Nerja</td><td>3.5% of construction cost, minimum €750</td><td>€1,400</td></tr>
-      <tr><td>Torrox</td><td>€750 (above €60,000 construction cost: 1.25%) plus 3.25% of construction cost</td><td>€2,050</td></tr>
-      <tr><td>Vélez-Málaga</td><td>7.5% of construction cost</td><td>€3,000</td></tr>
+      <tr><td><PlaceName lang="en" name="Nerja" /></td><td>3.5% of construction cost, minimum €750</td><td>€1,400</td></tr>
+      <tr><td><PlaceName lang="en" name="Torrox" /></td><td>€750 (above €60,000 construction cost: 1.25%) plus 3.25% of construction cost</td><td>€2,050</td></tr>
+      <tr><td><PlaceName lang="en" name="Vélez-Málaga" /></td><td>7.5% of construction cost</td><td>€3,000</td></tr>
     </tbody>
   </table>
   <p>The construction cost is not what it cost at the time, but what the architect declares, with a floor set by the fixed amounts per m² used by the council or the architects’ association. The figures come from the tax bylaws the councils publish (Nerja 2020, Torrox 2013, Vélez-Málaga 2014). Bylaws are sometimes amended, so check the current rate with the council. For other towns we look it up once you have a specific house. Altogether an AFO process usually costs a few thousand euros, more if repairs are needed. Legalisation with a project costs more, but also gives you more.</p>

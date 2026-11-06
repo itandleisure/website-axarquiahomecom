@@ -1,4 +1,5 @@
 ---
+import PlaceName from '../../../components/PlaceName.astro';
 // Quellen: siehe die niederländische Fassung (src/pages/nl/gidsen/afo-legaliseren-andalusie.astro).
 import Guide from '../../../components/Guide.astro';
 
@@ -106,9 +107,9 @@ const faq = [
   <table class="prices">
     <thead><tr><th>Gemeinde</th><th>AFO-Gebühr</th><th>Bei 40.000 €</th></tr></thead>
     <tbody>
-      <tr><td>Nerja</td><td>3,5 % der Baukosten, mindestens 750 €</td><td>1.400 €</td></tr>
-      <tr><td>Torrox</td><td>750 € (über 60.000 € Baukosten: 1,25 %) plus 3,25 % der Baukosten</td><td>2.050 €</td></tr>
-      <tr><td>Vélez-Málaga</td><td>7,5 % der Baukosten</td><td>3.000 €</td></tr>
+      <tr><td><PlaceName lang="de" name="Nerja" /></td><td>3,5 % der Baukosten, mindestens 750 €</td><td>1.400 €</td></tr>
+      <tr><td><PlaceName lang="de" name="Torrox" /></td><td>750 € (über 60.000 € Baukosten: 1,25 %) plus 3,25 % der Baukosten</td><td>2.050 €</td></tr>
+      <tr><td><PlaceName lang="de" name="Vélez-Málaga" /></td><td>7,5 % der Baukosten</td><td>3.000 €</td></tr>
     </tbody>
   </table>
   <p>Die Baukosten sind nicht, was der Bau damals gekostet hat, sondern was der Architekt angibt, mit den festen Beträgen je m² der Gemeinde oder der Architektenkammer als Untergrenze. Die Beträge stammen aus den von den Gemeinden veröffentlichten Gebührensatzungen (Nerja 2020, Torrox 2013, Vélez-Málaga 2014). Satzungen werden manchmal geändert, fragen Sie daher den aktuellen Satz bei der Gemeinde nach. Für andere Gemeinden suchen wir ihn heraus, sobald Sie ein konkretes Haus haben. Insgesamt kostet ein AFO-Verfahren meist einige tausend Euro, mehr, wenn Reparaturen nötig sind. Eine Legalisierung mit Projekt kostet mehr, bringt aber auch mehr.</p>
