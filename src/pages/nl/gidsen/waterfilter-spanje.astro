@@ -1,0 +1,119 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort antwoord' },
+  { id: 'kraanwater', label: 'Kun je het kraanwater drinken?' },
+  { id: 'test', label: 'Begin met een watertest' },
+  { id: 'soorten', label: 'De soorten waterfilters' },
+  { id: 'vergelijking', label: 'Alle filters vergeleken' },
+  { id: 'putwater', label: 'Water uit een put of tank' },
+  { id: 'advies', label: 'Welk filter past bij u?' },
+  { id: 'onderhoud', label: 'Onderhoud' },
+];
+
+const faq = [
+  {
+    q: 'Is een osmosefilter gezond?',
+    a: 'Osmosewater is zeer zuiver, maar bevat ook bijna geen mineralen meer. Voor wie gevarieerd eet is dat geen probleem. Veel systemen hebben een remineralisatiefilter dat er weer wat calcium en magnesium aan toevoegt; dat verbetert ook de smaak.',
+  },
+  {
+    q: 'Verspilt een osmosefilter veel water?',
+    a: 'Oudere systemen spoelden 3 tot 4 liter weg voor elke liter drinkwater. Moderne systemen komen op 1 tot 2 liter, en sommige direct-flow modellen nog minder. Op een finca met een eigen tank kunt u het spoelwater ook opvangen voor de tuin.',
+  },
+  {
+    q: 'Kan ik onthard water drinken?',
+    a: 'Een ontharder vervangt kalk door een kleine hoeveelheid natrium. Voor koken en wassen is dat prima. Als drinkwater raden we het af voor baby’s en mensen met een zoutarm dieet. De gebruikelijke oplossing: een ontharder voor het hele huis en een osmosekraantje in de keuken voor drinkwater.',
+  },
+  {
+    q: 'Is een filter goedkoper dan flessenwater?',
+    a: 'Meestal wel, als u er een groot deel van het jaar woont. Twee personen kopen al snel meer dan duizend liter flessenwater per jaar, plus het sjouwen en het plastic. Een osmosefilter heeft zich dan binnen een paar jaar terugverdiend. Voor een appartement dat u een paar weken per jaar gebruikt, is een filterkan voldoende.',
+  },
+];
+---
+<Guide slug="waterfilter-spanje" toc={toc} faq={faq} dienst="anders" ctaTitle="Schoon drinkwater uit uw eigen kraan?" ctaText="Wij laten uw water testen en adviseren een filter dat past bij uw water, uw huis en hoe vaak u er bent. Inclusief plaatsing.">
+  <h2 id="kort">Kort antwoord</h2>
+  <p>Veel buitenlanders in de Axarquía kopen water in flessen, omdat het kraanwater naar chloor smaakt, hard is of uit een eigen put komt. Een waterfilter is makkelijker en op termijn goedkoper. Er zijn vier niveaus: een <strong>filterkan</strong>, een <strong>filter onder het aanrecht</strong>, een <strong>osmosefilter</strong> voor zuiver drinkwater en een <strong>systeem voor het hele huis</strong> met ontharder, en bij putwater een UV-lamp. Welke u nodig heeft, hangt af van waar uw water vandaan komt.</p>
+
+  <h2 id="kraanwater">Kun je het kraanwater drinken?</h2>
+  <p>Het antwoord hangt af van de bron:</p>
+  <ul>
+    <li><strong>Gemeentelijk leidingwater</strong> wordt gecontroleerd en moet voldoen aan de Spaanse drinkwaterregels (RD 3/2023). Het is dus in principe drinkbaar. Maar het smaakt vaak naar chloor en is in grote delen van de Axarquía <strong>hard</strong>: het bevat veel kalk. Na droge periodes kan de smaak ook wisselen.</li>
+    <li><strong>Het laatste stuk</strong> is vaak het probleem: oude <a href="/nl/gidsen/leidingen-en-boiler-vervangen-spanje/">ijzeren of loden leidingen</a>, of een watertank op het dak die al jaren niet is schoongemaakt. Dan is goed water bij de meter toch niet meer goed bij uw kraan.</li>
+    <li><strong>Water uit een eigen put of bron</strong> (<em>pozo</em>) op een finca wordt door niemand gecontroleerd. In een landbouwgebied als de Axarquía kan het nitraat, bacteriën of bestrijdingsmiddelen bevatten. Drink het niet zonder test en zuivering.</li>
+    <li><strong>Water uit een tank</strong> die wordt gevuld door een tankwagen (<em>cuba</em>) is meestal drinkwater bij levering, maar de kwaliteit hangt af van de staat van uw tank.</li>
+  </ul>
+  <p>Daarom drinken veel mensen flessenwater. Begrijpelijk, maar u sjouwt elke week pakken water en houdt een berg plastic over.</p>
+
+  <h2 id="test">Begin met een watertest</h2>
+  <p>Koop geen filter op de gok. Een test laat zien wat er in uw water zit en dus wat het filter moet doen.</p>
+  <table class="prices">
+    <thead><tr><th>Test</th><th>Wat u leert</th></tr></thead>
+    <tbody>
+      <tr><td>Teststrips of TDS-meter</td><td>Hardheid, opgeloste stoffen, chloor</td></tr>
+      <tr><td>Basisanalyse door laboratorium</td><td>Hardheid, nitraat, pH, bacteriën (E. coli)</td></tr>
+      <tr><td>Uitgebreide analyse</td><td>Plus zware metalen (lood) en bestrijdingsmiddelen</td></tr>
+    </tbody>
+  </table>
+  <p>Bij gemeentelijk water volstaan vaak een TDS-meter en een hardheidstest. Bij putwater is een laboratoriumanalyse een must, en daarna eens per jaar herhalen.</p>
+
+  <h2 id="soorten">De soorten waterfilters</h2>
+  <h3>1. Filterkan</h3>
+  <p>Een kan met een koolstoffilter in het deksel. U vult hem met kraanwater en na een paar minuten is het gefilterd. Haalt de chloorsmaak weg en een deel van de kalk. <strong>Haalt geen bacteriën, nitraat of lood weg.</strong> Ideaal om mee te beginnen of voor een appartement dat u een paar weken per jaar gebruikt. Het filter vervangt u ongeveer elke maand.</p>
+  <h3>2. Kraanfilter of filter onder het aanrecht</h3>
+  <p>Een filter op de kraan, of beter: een koolstofblokfilter in het keukenkastje met een apart drinkwaterkraantje op het aanrecht. Haalt chloor, geur, sediment en een deel van lood en bestrijdingsmiddelen weg. U heeft direct gefilterd water zonder te wachten. Het patroon vervangt u elke 6 tot 12 maanden.</p>
+  <h3>3. Omgekeerde osmose (ósmosis inversa)</h3>
+  <p>Het populairste systeem in Spaanse keukens. Het water gaat door voorfilters en daarna door een membraan met zulke kleine poriën dat bijna alles achterblijft: kalk, zouten, nitraat, lood, bacteriën en virussen. Het resultaat is water zoals uit de fles. Het systeem staat in het keukenkastje met een eigen kraantje. Er zijn eenvoudige modellen met een opslagtank en duurdere direct-flow modellen zonder tank, die minder water verspillen. Voorfilters gaan jaarlijks, het membraan om de 2 à 4 jaar.</p>
+  <h3>4. Systeem voor het hele huis</h3>
+  <p>Een installatie op de hoofdleiding, direct na de watermeter of de pomp. Al het water in huis wordt behandeld: douche, wasmachine, boiler en kranen. Zo’n systeem bestaat uit een of meer van deze onderdelen:</p>
+  <ul>
+    <li><strong>Sedimentfilter</strong>: vangt zand, roest en vuil op. Beschermt kranen en apparaten.</li>
+    <li><strong>Koolstoffilter</strong> voor het hele huis: haalt chloor en geur uit al het water, ook onder de douche.</li>
+    <li><strong>Ontharder</strong> (<em>descalcificador</em>): haalt de kalk eruit met een harsbed dat zichzelf met zout schoonspoelt. Geen kalk meer op tegels en kranen, en uw boiler, wasmachine en vaatwasser gaan langer mee. In de Axarquía met zijn harde water een van de nuttigste investeringen. U vult een paar keer per jaar zout bij.</li>
+    <li><strong>UV-lamp</strong>: doodt bacteriën en virussen met ultraviolet licht, zonder chemicaliën. Nodig bij putwater of bronwater. De lamp gaat elk jaar vervangen.</li>
+  </ul>
+  <p>Een veelgekozen combinatie: <strong>een ontharder voor het hele huis en een osmosefilter in de keuken</strong> voor drinkwater.</p>
+
+  <h2 id="vergelijking">Alle filters vergeleken</h2>
+  <p>Meer sterren betekent schoner water.</p>
+  <table class="prices">
+    <thead><tr><th>Systeem</th><th>Haalt weg</th><th>Zuiverheid</th></tr></thead>
+    <tbody>
+      <tr><td>Filterkan</td><td>Chloorsmaak, deel kalk</td><td>★</td></tr>
+      <tr><td>Filter onder aanrecht (koolstof)</td><td>Chloor, geur, sediment, deel lood</td><td>★★</td></tr>
+      <tr><td>Omgekeerde osmose</td><td>Bijna alles, ook nitraat en bacteriën</td><td>★★★★</td></tr>
+      <tr><td>Sediment- en koolstoffilter hele huis</td><td>Zand, roest, chloor</td><td>★★</td></tr>
+      <tr><td>Ontharder hele huis</td><td>Kalk</td><td>★ (beschermt het huis)</td></tr>
+      <tr><td>UV-lamp</td><td>Bacteriën en virussen</td><td>★★★</td></tr>
+      <tr><td>Compleet systeem finca met put</td><td>Alles</td><td>★★★★</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Wilt u een waterfilter laten plaatsen?</strong> Wij laten uw water testen, adviseren het filter dat past bij uw water en uw huis en zorgen voor de plaatsing. <a href="/nl/aanvraag/?dienst=anders">Vertel ons waar uw water vandaan komt</a>.</p>
+
+  <h2 id="putwater">Water uit een put of tank</h2>
+  <p>Op veel fincas komt het water uit een eigen put, een bron, een gemeenschappelijke irrigatieleiding of een tank die door een tankwagen wordt gevuld. Dan is filteren geen luxe. Een veilig systeem bestaat uit vier stappen:</p>
+  <ol>
+    <li><strong>Sedimentfilter</strong> tegen zand en deeltjes.</li>
+    <li><strong>Koolstoffilter</strong> tegen geur, smaak en een deel van de chemische stoffen.</li>
+    <li><strong>Ontharder</strong> als het water hard is.</li>
+    <li><strong>UV-lamp</strong> als laatste stap tegen bacteriën. Voor drinkwater daarnaast een osmosefilter in de keuken, zeker bij nitraat.</li>
+  </ol>
+  <p>Houd ook de tank zelf schoon: laat hem eens per jaar of twee jaar leegmaken en reinigen. Een oude tank van <a href="/nl/gidsen/asbest-uralita-dak-spanje/">uralita</a> vervangt u beter door kunststof. Meer over watertanks en putten leest u bij <a href="/nl/kosten/watertank-en-beerput/">watertank, boorput en beerput</a> en <a href="/nl/zelf-doen/watertank-plaatsen-en-aansluiten/">een watertank plaatsen en aansluiten</a>.</p>
+
+  <h2 id="advies">Welk filter past bij u?</h2>
+  <table class="prices">
+    <thead><tr><th>Uw situatie</th><th>Ons advies</th></tr></thead>
+    <tbody>
+      <tr><td>Appartement aan de kust, een paar weken per jaar</td><td>Filterkan of kraanfilter</td></tr>
+      <tr><td>Huis aan het leidingwater, u woont er (half) permanent</td><td>Osmose in de keuken, eventueel een ontharder voor het hele huis</td></tr>
+      <tr><td>Veel kalk op tegels en kranen, boiler snel kapot</td><td>Ontharder voor het hele huis</td></tr>
+      <tr><td>Finca met eigen put of bron</td><td>Eerst een labtest, dan sediment, koolstof, ontharder, UV en osmose</td></tr>
+      <tr><td>Watertank gevuld door tankwagen</td><td>Sedimentfilter, UV-lamp en osmose; tank regelmatig reinigen</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="onderhoud">Onderhoud</h2>
+  <p>Een filter dat niet wordt onderhouden is slechter dan geen filter: bacteriën groeien in een oud filterpatroon. Zet de vervangdata in uw agenda, of laat het regelen. Staat het huis lang leeg, spoel dan bij aankomst alle kranen een paar minuten door en gooi het eerste water uit de osmosetank weg. Bij <a href="/nl/sleutelbeheer/">sleutelbeheer</a> kunnen het doorspoelen en het vervangen van filters worden meegenomen.</p>
+  <p class="note">Deze gids geeft algemene informatie voor de Axarquía in november 2026. Het is geen medisch advies. Laat bij twijfel over uw drinkwater altijd een laboratoriumtest doen.</p>
+</Guide>

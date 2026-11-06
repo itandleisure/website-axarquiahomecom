@@ -5,15 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
 import Services from '../../components/Services.astro';
-import Todo from '../../components/Todo.astro';
 import { prices, site, dePrice } from '../../data/site';
-
-const p = prices.sleutelbeheer;
-const packages = [
-  { name: 'Basis', price: dePrice(p.basis), items: ['Kontrolle alle 2 Wochen', 'Fenster öffnen und lüften', 'Prüfung auf Undichtigkeiten, Feuchtigkeit und Einbruch', 'Kurzer Bericht mit Fotos', 'Sichere Schlüsselaufbewahrung'] },
-  { name: 'Plus', price: dePrice(p.plus), featured: true, items: ['Alles aus Basis, aber wöchentlich', 'Zusätzliche Kontrolle nach Sturm oder Starkregen', 'Post abholen und weiterleiten', 'Haus vor Ihrer Ankunft vorbereiten', 'Kleine Reparaturen sofort erledigt'] },
-  { name: 'Komplett', price: dePrice(p.compleet), items: ['Alles aus Plus', 'Pool- und Gartenpflege', 'Handwerker und Lieferungen hereinlassen', 'Reinigung vor und nach Ihrem Aufenthalt', 'Fester Ansprechpartner per WhatsApp'] },
-];
 
 const faq = [
   {
@@ -22,7 +14,7 @@ const faq = [
   },
   {
     q: 'Was kostet Hausbetreuung in Spanien?',
-    a: 'Ein einfaches Paket mit einer Kontrolle alle zwei Wochen kostet meist einige zehn Euro im Monat. Größere Pakete mit Garten, Pool und Reinigung kosten mehr. Unsere Pakete sehen Sie oben; Reparaturen und Reinigung außerhalb des Pakets werden nur nach Ihrer Zustimmung gesondert berechnet.',
+    a: 'Der Preis hängt davon ab, wie oft wir kommen und was wir sonst für Sie erledigen. Eine einfache Kontrolle alle zwei Wochen kostet meist einige zehn Euro im Monat; mit Garten, Pool und Reinigung mehr. Nach Ihrer Anfrage erhalten Sie ein Angebot nach Maß. Reparaturen und Reinigung darüber hinaus werden nur nach Ihrer Zustimmung berechnet.',
   },
   {
     q: 'Ist mein Schlüssel sicher?',
@@ -36,6 +28,10 @@ const faq = [
     q: 'Kann ich monatlich kündigen?',
     a: 'Ja, die Hausbetreuung ist monatlich kündbar. Viele Eigentümer nutzen sie nur für die Monate, in denen sie in Deutschland sind.',
   },
+  {
+    q: 'Übernehmen Sie auch die Vermietungsverwaltung?',
+    a: 'Ja. Vermieten Sie Ihr Haus als Ferienwohnung oder an einen festen Mieter, regeln wir alles vor Ort: Gäste empfangen und Absprachen treffen, Reinigung, Bettwäsche und Handtücher, Kontrollen nach der Abreise, Störungen und Reparaturen.',
+  },
 ];
 
 const service = {
@@ -48,8 +44,8 @@ const service = {
 };
 ---
 <Base
-  title="Hausbetreuung in Spanien: Ihr Haus in der Axarquía, kontrolliert während Sie weg sind"
-  description="Hausbetreuung und Schlüsselservice in Nerja, Cómpeta, Frigiliana, Torrox und der ganzen Axarquía. Regelmäßige Kontrollen, Fotoberichte und schnelle Hilfe nach Unwetter oder Wasserschaden. Monatlich kündbar."
+  title="Hausbetreuung in Spanien: Ihr Haus in der Axarquía"
+  description="Hausbetreuung und Schlüsselservice in Nerja, Cómpeta, Torrox und der ganzen Axarquía: feste Kontrollen, Fotoberichte, schnelle Hilfe. Monatlich kündbar."
   path="/de/hausbetreuung/"
   lang="de"
   jsonLd={[service]}
@@ -66,19 +62,21 @@ const service = {
 
   <section class="section">
     <div class="wrap">
-      <h2>Unsere Pakete</h2>
-      <p class="section-intro">Wählen Sie, was zu Ihnen passt. Alle Pakete sind monatlich kündbar und lassen sich auf die Monate beschränken, in denen Sie nicht da sind.</p>
-      <Todo label="pakketten en maandprijzen van het bouwbedrijf (de inhoud hieronder is een voorstel)." />
-      <div class="packages">
-        {packages.map((pk) => (
-          <div class={`package${pk.featured ? ' featured' : ''}`}>
-            <h3>{pk.name}</h3>
-            <p class="price">{pk.price}</p>
-            <ul class="checks">{pk.items.map((i) => <li>{i}</li>)}</ul>
-            <a class={`btn${pk.featured ? '' : ' btn-ghost'}`} href={`/de/anfrage/?dienst=sleutelbeheer&pakket=${pk.name.toLowerCase()}`}>{pk.name} wählen</a>
-          </div>
-        ))}
-      </div>
+      <h2>Was wir für Sie tun</h2>
+      <p class="section-intro">Wir stimmen die Betreuung auf Ihre Situation ab: wie oft, welche Extras und nur für die Monate, in denen Sie nicht da sind. Monatlich kündbar.</p>
+      <ul class="checks">
+        <li>Regelmäßige Kontrolle der Immobilie</li>
+        <li>Fenster öffnen und lüften</li>
+        <li>Prüfung auf Undichtigkeiten, Feuchtigkeit und Einbruch</li>
+        <li>Kurzer Bericht mit Fotos nach jedem Besuch</li>
+        <li>Zusätzliche Kontrolle nach Sturm oder Starkregen</li>
+        <li>Post abholen und weiterleiten</li>
+        <li>Haus vor Ihrer Ankunft vorbereiten</li>
+        <li>Pool- und Gartenpflege</li>
+        <li>Handwerker und Lieferungen hereinlassen</li>
+        <li>Reinigung vor und nach Ihrem Aufenthalt</li>
+      </ul>
+      <p><a class="btn" href="/de/anfrage/?dienst=sleutelbeheer">Hausbetreuung anfragen</a></p>
     </div>
   </section>
 
@@ -87,9 +85,11 @@ const service = {
       <div class="prose">
         <h2>Warum Hausbetreuung in der Axarquía wichtig ist</h2>
         <p>Ein leerstehendes Haus an der Costa del Sol hat es schwer. Im Winter bringt der Regen Undichtigkeiten und Feuchtigkeit, im Sommer sorgt die Hitze für Probleme mit Pool, Garten und Dach. Nach einem Sturm liegen Äste auf der Terrasse, oder ein Stromausfall lässt die Gefriertruhe auftauen.</p>
+        <p>Siehe auch unsere Checklisten, um <a href="/de/ratgeber/haus-winterfest-spanien/">das Haus winterfest zu machen</a>, und was Sie zur <a href="/de/ratgeber/hausversicherung-spanien/">Versicherung bei Leerstand</a> wissen sollten.</p>
         <p>Ist niemand vor Ort, merken Sie das erst bei Ihrer Rückkehr. Mit Hausbetreuung sehen wir es innerhalb von ein bis zwei Wochen, nach Unwettern oft früher.</p>
         <h2>Mehr als nur ein Schlüssel</h2>
         <p>Weil wir auch das Bauunternehmen sind, können wir Probleme sofort beheben. Kein Suchen nach einem Klempner, der Sie versteht, kein Einholen von drei Angeboten aus der Ferne. Sie bekommen Fotos und einen Preis, und nach Ihrer Zustimmung wird es erledigt.</p>
+        <p>Sie vermieten Ihr Haus? Dann übernehmen wir auch die Vermietung vor Ort: Gäste empfangen, Reinigung und Handtücher. Lesen Sie unseren Ratgeber <a href="/de/ratgeber/immobilie-in-spanien-vermieten/">Immobilie in Spanien vermieten</a> und den <a href="/de/ratgeber/steuerkalender-spanien/">Steuerkalender</a> zu den Fristen für IBI und Erklärungen.</p>
       </div>
       <div class="box">
         <h3>Was Sie nach jedem Besuch bekommen</h3>

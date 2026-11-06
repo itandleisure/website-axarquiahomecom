@@ -5,15 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
 import Services from '../../components/Services.astro';
-import Todo from '../../components/Todo.astro';
 import { prices, site, svPrice } from '../../data/site';
-
-const p = prices.sleutelbeheer;
-const packages = [
-  { name: 'Bas', price: svPrice(p.basis), items: ['Kontroll varannan vecka', 'Öppna fönster och vädra', 'Koll på läckor, fukt och inbrott', 'Kort rapport med foton', 'Säker förvaring av nycklar'] },
-  { name: 'Plus', price: svPrice(p.plus), featured: true, items: ['Allt i Bas, men varje vecka', 'Extra kontroll efter storm eller skyfall', 'Hämta och vidarebefordra post', 'Förbereda huset inför din ankomst', 'Små reparationer åtgärdas direkt'] },
-  { name: 'Komplett', price: svPrice(p.compleet), items: ['Allt i Plus', 'Pool- och trädgårdsskötsel', 'Släppa in hantverkare och leveranser', 'Städning före och efter din vistelse', 'Fast kontaktperson via WhatsApp'] },
-];
 
 const faq = [
   {
@@ -22,7 +14,7 @@ const faq = [
   },
   {
     q: 'Vad kostar tillsyn av hus i Spanien?',
-    a: 'Ett enkelt paket med kontroll varannan vecka kostar oftast några tiotals euro i månaden. Större paket med trädgård, pool och städning kostar mer. Våra paket ser du ovan; reparationer och städning utanför paketet debiteras bara separat efter ditt godkännande.',
+    a: 'Priset beror på hur ofta vi kommer och vad vi i övrigt gör åt dig. En enkel kontroll varannan vecka kostar oftast några tiotals euro i månaden; med trädgård, pool och städning blir det mer. Efter din förfrågan får du ett skräddarsytt förslag. Reparationer och städning utöver det debiteras bara efter ditt godkännande.',
   },
   {
     q: 'Är min nyckel säker?',
@@ -48,8 +40,8 @@ const service = {
 };
 ---
 <Base
-  title="Tillsyn av hus i Spanien: ditt hus i Axarquía kontrolleras när du är borta"
-  description="Tillsyn och nyckelservice i Nerja, Torrox, Frigiliana, Cómpeta och hela Axarquía. Regelbundna kontroller, fotorapporter och snabb hjälp efter storm eller vattenskada. Uppsägning per månad."
+  title="Tillsyn av hus i Spanien: ditt hus i Axarquía"
+  description="Tillsyn och nyckelservice i Nerja, Torrox, Cómpeta och hela Axarquía: regelbundna kontroller, fotorapporter och snabb hjälp efter storm. Uppsägning per månad."
   path="/sv/tillsyn/"
   lang="sv"
   jsonLd={[service]}
@@ -66,19 +58,21 @@ const service = {
 
   <section class="section">
     <div class="wrap">
-      <h2>Våra paket</h2>
-      <p class="section-intro">Välj det som passar dig. Alla paket kan sägas upp per månad och kan begränsas till de månader du inte är där.</p>
-      <Todo label="pakketten en maandprijzen van het bouwbedrijf (de inhoud hieronder is een voorstel)." />
-      <div class="packages">
-        {packages.map((pk) => (
-          <div class={`package${pk.featured ? ' featured' : ''}`}>
-            <h3>{pk.name}</h3>
-            <p class="price">{pk.price}</p>
-            <ul class="checks">{pk.items.map((i) => <li>{i}</li>)}</ul>
-            <a class={`btn${pk.featured ? '' : ' btn-ghost'}`} href={`/sv/forfragan/?dienst=sleutelbeheer&pakket=${pk.name.toLowerCase()}`}>Välj {pk.name}</a>
-          </div>
-        ))}
-      </div>
+      <h2>Det här gör vi för dig</h2>
+      <p class="section-intro">Vi anpassar tillsynen efter din situation: hur ofta, vilka tillägg och bara för de månader du inte är där. Kan sägas upp per månad.</p>
+      <ul class="checks">
+        <li>Regelbunden kontroll av bostaden</li>
+        <li>Öppna fönster och vädra</li>
+        <li>Koll på läckor, fukt och inbrott</li>
+        <li>Kort rapport med foton efter varje besök</li>
+        <li>Extra kontroll efter storm eller skyfall</li>
+        <li>Hämta och vidarebefordra post</li>
+        <li>Förbereda huset inför din ankomst</li>
+        <li>Pool- och trädgårdsskötsel</li>
+        <li>Släppa in hantverkare och leveranser</li>
+        <li>Städning före och efter din vistelse</li>
+      </ul>
+      <p><a class="btn" href="/sv/forfragan/?dienst=sleutelbeheer">Begär tillsyn</a></p>
     </div>
   </section>
 

@@ -1,0 +1,134 @@
+---
+import ArticlePhoto from '../../../components/ArticlePhoto.astro';
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort antwoord' },
+  { id: 'waarom', label: 'Waarom Spaanse huizen koud zijn' },
+  { id: 'dak', label: 'Het dak isoleren' },
+  { id: 'muren', label: 'De muren isoleren' },
+  { id: 'voorzetwand', label: 'Een voorzetwand plaatsen' },
+  { id: 'kosten', label: 'Overzicht van de kosten' },
+  { id: 'vocht', label: 'Isoleren zonder vochtproblemen' },
+  { id: 'volgorde', label: 'Waar begint u?' },
+];
+
+const faq = [
+  {
+    q: 'Wat levert isoleren op in een warm land?',
+    a: 'Meer dan u denkt. Een goed geïsoleerd dak houdt ’s zomers de hitte buiten en ’s winters de warmte binnen. In een ongeïsoleerd huis in de Axarquía bespaart u met dak- en muurisolatie vaak 30 tot 50% op verwarmen en koelen, en het huis voelt in beide seizoenen veel prettiger.',
+  },
+  {
+    q: 'Heb ik een vergunning nodig om te isoleren?',
+    a: 'Isoleren aan de binnenkant, zoals een voorzetwand of een verlaagd plafond, valt meestal onder een eenvoudige melding (declaración responsable) of obra menor. Isoleren aan de buitenkant verandert de gevel en heeft meestal een vergunning nodig. In beschermde dorpskernen kan de gemeente eisen stellen aan de afwerking en de kleur.',
+  },
+  {
+    q: 'Hoeveel ruimte kost een voorzetwand?',
+    a: 'Een voorzetwand van gipsplaat op een metalen profiel met 4 tot 5 cm isolatie wordt in totaal 6 tot 8 cm dik. In een kamer van 4 × 4 meter waarin u twee buitenmuren isoleert, verliest u ongeveer 0,5 m² vloer.',
+  },
+  {
+    q: 'Krijg ik subsidie of belastingvoordeel?',
+    a: 'Bent u fiscaal inwoner van Spanje, dan kon u de afgelopen jaren een deel van de kosten van energiebesparende verbouwingen aftrekken van de inkomstenbelasting (IRPF), met een energielabel vóór en na het werk. Die regeling is een aantal keer verlengd. Vraag uw gestor of hij in uw situatie nog geldt. Voor niet-inwoners is er meestal geen voordeel.',
+  },
+];
+---
+<Guide slug="huis-isoleren-spanje" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Een huis dat ’s winters warm en ’s zomers koel blijft?" ctaText="Wij kijken waar uw huis de meeste warmte verliest en geven u een prijs voor dak, muren of voorzetwanden.">
+  <h2 id="kort">Kort antwoord</h2>
+  <p>De meeste huizen in de Axarquía van vóór 2007 hebben weinig of geen isolatie. Begin bij het <strong>dak</strong>: daar komt ’s zomers de hitte binnen en gaat ’s winters de warmte weg. Daarna de <strong>buitenmuren</strong>, aan de buitenkant met een isolatiesysteem of aan de binnenkant met een <strong>voorzetwand</strong>. Hieronder ziet u per methode wat het inhoudt en wat het oplevert.</p>
+
+  <h2 id="waarom">Waarom Spaanse huizen koud zijn</h2>
+  <p>Wie voor het eerst een winter in Spanje doorbrengt, schrikt vaak: buiten is het 18 graden in de zon, binnen 13 graden en klam. Oudere Spaanse huizen zijn gebouwd om ’s zomers koel te blijven. Ze hebben tegelvloeren, enkele muren van baksteen of natuursteen, enkel glas en een dak zonder isolatie. Pas sinds de bouwregels van 2006 (<em>Código Técnico de la Edificación</em>) is isolatie bij nieuwbouw verplicht.</p>
+  <p>Het gevolg: in de winter is het binnen kouder dan buiten overdag, met <a href="/nl/problemen/vocht-en-schimmel/">vocht en schimmel</a> als bijwerking. In de zomer warmt een plat dak of een dakterras zo op dat de bovenverdieping ’s nachts niet meer afkoelt.</p>
+
+  <h2 id="dak">Het dak isoleren</h2>
+  <p>Het dak geeft de meeste winst voor het minste geld. Er zijn drie gangbare manieren:</p>
+  <h3>Aan de binnenkant: verlaagd plafond</h3>
+  <p>Onder het bestaande plafond komt een frame met minerale wol of houtvezel, afgewerkt met gipsplaat. Het dak zelf blijft ongemoeid. Geschikt als de kamer hoog genoeg is.</p>
+  <h3>Op een plat dak of dakterras: omgekeerd dak</h3>
+  <p>Op de bestaande dakbedekking komen harde isolatieplaten (XPS) en daarop nieuwe tegels of grind. Dit is de beste oplossing voor de typische platte daken in de Axarquía, en combineert u het best met het vernieuwen van de waterdichte laag.</p>
+  <h3>Bij een nieuw pannendak</h3>
+  <p>Gaat het dak er toch af, bijvoorbeeld door lekkage of <a href="/nl/gidsen/asbest-uralita-dak-spanje/">uralita</a>, dan isoleert u tegelijk tussen of op de balken. Dat is het slimste moment: de isolatie gaat in één moeite mee. Zie ook <a href="/nl/kosten/dak-en-dakterras/">kosten dak en dakterras</a>.</p>
+  <h3>Snelle winst: reflecterende dakverf</h3>
+  <p>Een witte, reflecterende coating op een plat dak houdt in de zomer veel hitte buiten. Het is geen vervanging van isolatie, maar wel een snelle verbetering.</p>
+
+  <h2 id="muren">De muren isoleren</h2>
+  <h3>Aan de buitenkant (SATE)</h3>
+  <p>Een isolatiesysteem op de gevel (<em>SATE</em>, in Nederland ETICS) met isolatieplaten en een stuclaag. Het werkt het best, want de muur blijft warm en koudebruggen verdwijnen. U verliest binnen geen ruimte. Nadeel: de gevel verandert en er is een vergunning nodig.</p>
+  <h3>In de spouw</h3>
+  <p>Huizen uit de jaren zeventig tot 2000 hebben soms een dubbele muur met een luchtspouw (<em>cámara de aire</em>). Die kan worden volgeblazen met isolatiekorrels of schuim via kleine gaatjes. Snel en betaalbaar, maar alleen als er echt een spouw is. Een vakman controleert dat met een boorgaatje of camera.</p>
+  <h3>Aan de binnenkant</h3>
+  <p>Kan of mag de buitenkant niet veranderen, of heeft u een dorpshuis tussen de buren, dan isoleert u van binnenuit. Dat kan met isolerende pleisters (kurk- of kalkpleister, 2 tot 4 cm) of, meestal beter, met een voorzetwand.</p>
+
+  <h2 id="voorzetwand">Een voorzetwand plaatsen</h2>
+  <ArticlePhoto name="isolatie-glaswol-close-up" lang="nl" />
+  <p>Een voorzetwand (<em>trasdosado</em>) is een tweede wandje vlak voor de bestaande buitenmuur. Het is de meest gekozen manier om een bestaand Spaans huis van binnenuit te isoleren.</p>
+  <h3>Hoe het werkt</h3>
+  <ul>
+    <li>Tegen of vlak voor de muur komt een frame van <strong>metalen profielen</strong> (of hout).</li>
+    <li>Tussen de profielen komt <strong>isolatie</strong>: minerale wol, houtvezel of PIR-platen, meestal 4 tot 6 cm.</li>
+    <li>Aan de warme kant komt een <strong>dampremmende folie</strong>, zodat vocht uit de kamer niet in de koude muur condenseert.</li>
+    <li>Daarop gaat <strong>gipsplaat</strong> (<em>pladur</em>), in badkamers en keukens vochtbestendige plaat. Daarna stucen en schilderen.</li>
+  </ul>
+  <p>Er bestaan ook <strong>kant-en-klare isolatieplaten</strong>: gipsplaat met een laag isolatie erop gelijmd, die direct tegen een vlakke muur worden geplakt. Dat is dunner en sneller, maar alleen geschikt voor een droge, vlakke muur.</p>
+  <h3>Voordelen</h3>
+  <ul>
+    <li>De kamer warmt veel sneller op; de muur voelt niet meer koud aan.</li>
+    <li>U kunt er meteen nieuwe leidingen en stopcontacten in wegwerken.</li>
+    <li>Geen vergunning voor de gevel nodig; het werk kan per kamer.</li>
+    <li>Scheve, gescheurde of lelijke muren zijn in één keer strak.</li>
+  </ul>
+  <h3>Aandachtspunten</h3>
+  <ul>
+    <li>U verliest 6 tot 10 cm per muur.</li>
+    <li>Plinten, stopcontacten, radiatoren en vensterbanken moeten worden verplaatst of aangepast.</li>
+    <li><strong>Los eerst vocht op.</strong> Een voorzetwand voor een natte muur verbergt het probleem en maakt het erger. Bij oude natuurstenen muren met optrekkend vocht kiest u een dampopen systeem (houtvezel, kurk, kalk) en een geventileerde spouw.</li>
+  </ul>
+  <h3>Uitvoeringen voorzetwand</h3>
+  <table class="prices">
+    <thead><tr><th>Uitvoering</th><th>Geschikt voor</th></tr></thead>
+    <tbody>
+      <tr><td>Gipsplaat met geplakte isolatie</td><td>Droge, vlakke muren; snel klaar</td></tr>
+      <tr><td>Metalen profiel, minerale wol, gipsplaat</td><td>De standaard; ruimte voor leidingen</td></tr>
+      <tr><td>Dampopen systeem (houtvezel of kurk, kalk)</td><td>Oude natuurstenen muren</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Een voorzetwand kunt u per kamer laten plaatsen. Begin met de kamers die u in de winter het meest gebruikt, zoals de woonkamer en de slaapkamer.</p>
+
+  <h2 id="kosten">Alle opties vergeleken</h2>
+  <p>Meer sterren betekent meer comfort en een grotere besparing.</p>
+  <table class="prices">
+    <thead><tr><th>Maatregel</th><th>Effect</th></tr></thead>
+    <tbody>
+      <tr><td>Reflecterende dakcoating</td><td>★★ (vooral zomer)</td></tr>
+      <tr><td>Spouwmuur volblazen</td><td>★★★</td></tr>
+      <tr><td>Isolerende kalk- of kurkpleister</td><td>★★</td></tr>
+      <tr><td>Verlaagd plafond met isolatie</td><td>★★★</td></tr>
+      <tr><td>Voorzetwand binnen</td><td>★★★</td></tr>
+      <tr><td>Plat dak of dakterras isoleren (omgekeerd dak)</td><td>★★★★</td></tr>
+      <tr><td>Buitengevelisolatie (SATE)</td><td>★★★★</td></tr>
+      <tr><td>Nieuw pannendak met isolatie</td><td>★★★★</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Moeten er eerst vocht of scheuren worden opgelost, dan gaat dat voor. Voor een verkoop of verhuur heeft u ook een energielabel (<em>certificado energético</em>) nodig.</p>
+  <p>Vergeet de ramen niet: enkel glas in een oud kozijn laat meer warmte door dan een hele muur. Zie <a href="/nl/kosten/ramen-en-kozijnen/">ramen en kozijnen</a>. En met isolatie werkt een <a href="/nl/kosten/airco-en-warmtepomp/">warmtepomp of airco</a> veel zuiniger; lees ook <a href="/nl/gidsen/verwarmen-en-koelen-spanje/">verwarmen en koelen in Spanje</a>.</p>
+
+  <p><strong>Wilt u uw huis laten isoleren?</strong> Wij kijken waar uw huis de meeste warmte verliest en zorgen dat het goed wordt uitgevoerd, van dak tot voorzetwand. <a href="/nl/aanvraag/?dienst=renovatie">Vertel ons wat u wilt aanpakken</a>.</p>
+
+  <h2 id="vocht">Isoleren zonder vochtproblemen</h2>
+  <p>Een geïsoleerd huis is luchtdichter. Dat is goed voor de warmte, maar vocht moet ergens heen. Let daarom op:</p>
+  <ul>
+    <li><strong>Ventilatie</strong>: roosters in de ramen of een afzuiger in badkamer en keuken.</li>
+    <li><strong>Eerst oorzaken van vocht oplossen</strong>: een lekkend dak, een kapotte regenpijp of optrekkend vocht.</li>
+    <li><strong>Het juiste materiaal</strong>: bij oude stenen muren dampopen werken.</li>
+    <li><strong>Een huis dat lang leeg staat</strong> heeft baat bij een ontvochtiger of af en toe luchten. Dat kan via <a href="/nl/sleutelbeheer/">sleutelbeheer</a>.</li>
+  </ul>
+
+  <h2 id="volgorde">Waar begint u?</h2>
+  <ol>
+    <li>Het <strong>dak</strong>, zeker bij de bovenste verdieping of een dakterras.</li>
+    <li>De <strong>ramen</strong> als er nog enkel glas zit.</li>
+    <li>De <strong>buitenmuren</strong> van de kamers die u in de winter het meest gebruikt, bijvoorbeeld met een voorzetwand.</li>
+    <li>Pas daarna de <strong>verwarming</strong> kiezen: een geïsoleerd huis heeft een kleinere installatie nodig.</li>
+  </ol>
+  <p class="note">Deze gids geeft algemene informatie voor de Axarquía in november 2026. Regels kunnen wijzigen.</p>
+</Guide>

@@ -1,0 +1,53 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'mag', label: 'Mag een buitenkeuken?' },
+  { id: 'brand', label: 'Brandseizoen: barbecueverbod' },
+  { id: 'opties', label: 'Wat zijn de mogelijkheden?' },
+  { id: 'tips', label: 'Waar u op let' },
+];
+
+const faq = [
+  { q: 'Heb ik een vergunning nodig voor een buitenkeuken in Spanje?', a: 'Voor een gemetselde buitenkeuken zonder dak is in veel gemeenten een melding (declaración responsable) genoeg. Komt er een vaste overkapping boven, dan vraagt dat meestal een vergunning. In een complex moet ook de VvE akkoord zijn.' },
+  { q: 'Mag ik in de zomer barbecueën op mijn finca?', a: 'Van 1 juni tot 15 oktober geldt in Andalusië een hoog brandgevaar. Dan is vuur maken verboden in bos- en natuurgebied en in een strook van 400 meter daaromheen, ook voor barbecues. Veel fincas in de Axarquía liggen in die strook. Vraag bij uw gemeente wat er voor uw perceel geldt.' },
+  { q: 'Is een gas- of elektrische barbecue wel toegestaan?', a: 'Die zijn minder riskant dan houtskool, maar of ze onder het verbod vallen, hangt af van de situatie en de regels van dat jaar. Vraag het na bij de gemeente of de Junta, en houd altijd een tuinslang of blusser bij de hand.' },
+];
+---
+<Guide slug="bouwen-op-eigen-grond-buitenkeuken" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Een buitenkeuken laten bouwen?" ctaText="Vertel waar hij moet komen en wat erin moet. Wij maken een ontwerp en bouwen hem, inclusief water en stroom.">
+  <h2 id="mag">Mag een buitenkeuken?</h2>
+  <p>Bij een vrijstaand huis meestal wel. Hoe u het regelt, hangt af van wat u bouwt:</p>
+  <ul>
+    <li><strong>Losse barbecue of verrijdbare buitenkeuken</strong>: geen vergunning nodig.</li>
+    <li><strong>Gemetselde buitenkeuken zonder dak</strong>: vaak een melding (<em>declaración responsable</em>) bij de gemeente.</li>
+    <li><strong>Buitenkeuken met vaste overkapping</strong>: de overkapping vraagt meestal een vergunning en telt mee in de bouwruimte. Zie <a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/carport-en-pergola/">carport, overkapping en pergola</a>.</li>
+  </ul>
+  <p>Op een finca (<em>suelo rústico</em>) gelden dezelfde stappen, maar een overkapping mag alleen bij een legaal huis en als er nog bouwruimte is. In een appartementencomplex hangt alles af van de VvE: lees <a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/barbecue-appartement/">barbecue in een appartementencomplex</a>.</p>
+
+  <h2 id="brand">Brandseizoen: barbecueverbod</h2>
+  <p>Dit vergeten veel nieuwe eigenaren. Van <strong>1 juni tot 15 oktober</strong> geldt in Andalusië de periode van hoog brandgevaar. In die periode is vuur maken verboden in bos- en natuurgebied (<em>terreno forestal</em>) en in de strook van <strong>400 meter</strong> daaromheen (<em>zona de influencia forestal</em>). Dat geldt ook voor barbecues. In droge jaren kan de Junta de Andalucía de periode verlengen.</p>
+  <p>In de heuvels van de Axarquía liggen veel fincas in of vlak bij zo'n zone. Vraag bij de gemeente of uw perceel erin ligt en wat er voor een vaste barbecue bij uw huis geldt. Een buitenkeuken met een gas- of elektrische grill naast de houtskoolbarbecue maakt u minder afhankelijk van het seizoen.</p>
+
+  <h2 id="opties">Wat zijn de mogelijkheden?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Optie</th><th>Goed om te weten</th></tr></thead>
+    <tbody>
+      <tr><td>Losse gas- of houtskoolbarbecue</td><td>Geen bouwwerk, verplaatsbaar.</td></tr>
+      <tr><td>Gemetseld blok met barbecue en werkblad</td><td>De klassieke Andalusische <em>barbacoa de obra</em>.</td></tr>
+      <tr><td>Complete buitenkeuken met spoelbak, stroom en koelkast</td><td>Water en afvoer aanleggen is vaak het grootste deel van het werk.</td></tr>
+      <tr><td>Met pizzaoven, natuursteen en verlichting</td><td>Voor wie veel buiten kookt en ontvangt.</td></tr>
+      <tr><td>Met vaste overkapping of lamellendak</td><td>Ook bruikbaar bij felle zon en regen. Vergunning meestal nodig.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Wilt u dit laten realiseren? Vertel ons wat u wilt. Wij zoeken uit wat er mag, regelen de vergunning en bouwen het voor u.</strong> <a href="/nl/aanvraag/?dienst=renovatie">Neem contact op →</a></p>
+
+  <h2 id="tips">Waar u op let</h2>
+  <ul>
+    <li><strong>Materialen</strong>: zon, zout aan de kust en regen in de winter. Kies roestvrij staal, natuursteen of keramiek, geen gewoon hout of spaanplaat.</li>
+    <li><strong>Afvoer</strong>: op een finca met septische put moet het afvoerwater daar goed op aansluiten. Vet en etensresten horen er niet in.</li>
+    <li><strong>Plek en wind</strong>: zet de barbecue zo dat de rook niet naar het huis, het zwembad of de buren waait, en niet onder een overhangend dak of bomen.</li>
+    <li><strong>Stroom</strong>: buitenstopcontacten moeten waterdicht zijn en apart beveiligd, aangelegd door een erkende elektricien.</li>
+  </ul>
+  <p>Terug naar het overzicht: <a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/">bouwen op eigen grond</a>.</p>
+</Guide>

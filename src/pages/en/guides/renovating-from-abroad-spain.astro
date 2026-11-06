@@ -1,0 +1,125 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'short', label: 'Short answer' },
+  { id: 'builder', label: 'Choosing a builder' },
+  { id: 'quotes', label: 'Comparing quotes' },
+  { id: 'contract', label: 'What to agree in writing' },
+  { id: 'paying', label: 'Paying in stages' },
+  { id: 'updates', label: 'Staying informed' },
+  { id: 'costs', label: 'What needs arranging besides the work' },
+  { id: 'handover', label: 'Handover and after' },
+];
+
+const faq = [
+  {
+    q: 'Do I need to be in Spain during the renovation?',
+    a: 'No. It is wise to be there at the start and at handover, or to have someone look on your behalf. In between you can follow the work through photos, video and a single point of contact.',
+  },
+  {
+    q: 'What deposit is normal for a builder in Spain?',
+    a: 'Usually 20 to 30% at the start, mainly for materials. After that, pay per completed stage and hold back 5 to 10% until after handover. A builder who asks for most of the price up front is a warning sign.',
+  },
+  {
+    q: 'Can I pay a builder in cash?',
+    a: 'Don’t. Always pay by bank transfer against an invoice with VAT. Without an invoice you have no guarantee, no proof for the permit and problems later when you sell, because you cannot show what the renovation cost.',
+  },
+  {
+    q: 'Do I need a power of attorney?',
+    a: 'Not always. For permits and utility connections, a power of attorney (poder notarial) for a gestor can be handy, so you do not have to fly over for every signature. You can have one drawn up at a Spanish consulate or a notary in your home country.',
+  },
+];
+---
+<Guide lang="en" slug="renovating-from-abroad-spain" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Renovating while you are at home?" ctaText="Tell us what needs doing to your house. We take care of the renovation, with one English-speaking point of contact and weekly photos of the progress.">
+  <h2 id="short">Short answer</h2>
+  <p>Renovating from abroad works well when four things are right: <strong>a builder you can check, a quote broken down per item, payment in stages for completed work and regular updates with photos</strong>. What goes wrong with renovations in Spain almost always comes down to vague agreements: a lump sum without a breakdown, extras agreed verbally, or too much paid up front.</p>
+  <p>This guide explains how to choose a builder, compare quotes fairly, what to agree in writing and how to stay in control from home.</p>
+
+  <h2 id="builder">Choosing a builder</h2>
+  <p>In the Axarquía, large building firms, small crews and independent handymen work side by side. For a sizeable renovation you want someone who can show you:</p>
+  <ul class="checks">
+    <li>A Spanish company or tax number (<em>CIF</em> or <em>NIF</em>) and invoices with VAT.</li>
+    <li>Registration as a company or self-employed with Spanish social security, so the people on your site are insured.</li>
+    <li>Liability insurance (<em>seguro de responsabilidad civil</em>). Ask for a copy.</li>
+    <li>References from owners who also renovated from abroad, and photos of finished work nearby.</li>
+    <li>A single point of contact who speaks your language and replies within a day.</li>
+    <li>A working relationship with an architect and gestor for permits, so you do not have to coordinate everyone yourself.</li>
+  </ul>
+  <p>Be careful with the cheapest price from someone without company details. It looks like a bargain until something goes wrong and there is no one to hold responsible.</p>
+
+  <h2 id="quotes">Comparing quotes</h2>
+  <p>Ask for two or three quotes based on the same description. A good quote (<em>presupuesto</em>) is broken down per item (<em>partida</em>) and says what is and is not included. Watch for these differences:</p>
+  <table class="prices">
+    <thead><tr><th>Check</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>VAT: 10% or 21%</td><td>Renovation of a home for private use can, under conditions, be charged at 10%. Always compare prices including VAT.</td></tr>
+      <tr><td>Rubble removal and skip</td><td>Often forgotten, and in a village with narrow streets it can add up.</td></tr>
+      <tr><td>Permit and fees</td><td>Are the notification or permit and the municipal tax (ICIO) included, or extra?</td></tr>
+      <tr><td>Materials</td><td>Are brand and type of tiles, sanitaryware and taps listed, or just “standard”? A provisional sum for materials makes comparing hard.</td></tr>
+      <tr><td>Scaffolding, protection and cleaning</td><td>Included or separate?</td></tr>
+      <tr><td>Schedule</td><td>Start date, duration and what happens if there is a delay.</td></tr>
+    </tbody>
+  </table>
+  <p>If one quote is much lower than the rest, ask what is missing. The difference is usually in what it leaves out.</p>
+
+  <h2 id="contract">What to agree in writing</h2>
+  <ul>
+    <li><strong>The itemised quote</strong> as the basis, with a fixed price per item.</li>
+    <li><strong>A schedule</strong> with start, milestones and completion date.</li>
+    <li><strong>The payment plan</strong> tied to completed work, not to dates.</li>
+    <li><strong>Extras only in writing</strong>: a price by WhatsApp or email, carried out only after your approval. Old houses almost always reveal something; keep a 10 to 15% buffer.</li>
+    <li><strong>Guarantee</strong>: Spain has statutory liability for building defects, but agree your own guarantee period on the work as well.</li>
+    <li><strong>Keys and access</strong>: who has a key, who locks up, who sets the alarm?</li>
+  </ul>
+
+  <h2 id="paying">Paying in stages</h2>
+  <p>A safe and common schedule for a medium-sized renovation looks roughly like this:</p>
+  <table class="prices">
+    <thead><tr><th>Moment</th><th>Share of the price</th></tr></thead>
+    <tbody>
+      <tr><td>At the start (materials, preparation)</td><td>20 – 30%</td></tr>
+      <tr><td>After demolition and first fix (pipes, wiring, walls)</td><td>25 – 30%</td></tr>
+      <tr><td>After finishing (tiles, sanitaryware, kitchen)</td><td>25 – 30%</td></tr>
+      <tr><td>After handover and the last snags are fixed</td><td>5 – 10%</td></tr>
+    </tbody>
+  </table>
+  <p class="note">A guideline, not a fixed rule. For small jobs a single payment on completion is normal.</p>
+  <p>Only pay each stage once you have seen photos of the work you are paying for. Always pay by bank transfer against an invoice with VAT, never in cash. You will need those invoices later: for the guarantee, the permit and when you sell the house.</p>
+
+  <h2 id="updates">Staying informed</h2>
+  <p>When you renovate from abroad, good communication matters more than price. Agree in advance on:</p>
+  <ul>
+    <li><strong>One point of contact</strong> in English or Dutch, not a changing site foreman.</li>
+    <li><strong>Weekly photos and short videos</strong> of progress, including what later disappears behind tiles or plaster, such as pipes and wiring.</li>
+    <li><strong>A video call</strong> for the key choices: tiles, kitchen layout, where sockets go.</li>
+    <li><strong>A shared list</strong> of choices, extras and payments, so you always know where you stand.</li>
+  </ul>
+  <p>That is how we work too: most of our clients are not in Spain while their house is being renovated. Our team has twenty years of experience in the Axarquía, works to Dutch quality standards with a regular architect and gestor, and you have one point of contact who speaks your language.</p>
+
+  <h2 id="costs">What needs arranging besides the work</h2>
+  <p>Besides the renovation itself, there are things that need arranging and are often missing from a quote. With us, they are part of one approach:</p>
+  <table class="prices">
+    <thead><tr><th>Item</th><th>When</th></tr></thead>
+    <tbody>
+      <tr><td>Notification for minor works (declaración responsable)</td><td>Interior work without structural changes</td></tr>
+      <tr><td>Power of attorney at a notary</td><td>If a gestor signs on your behalf</td></tr>
+      <tr><td>Skip or rubble removal</td><td>Any renovation with demolition</td></tr>
+      <tr><td>Gestor for applications and paperwork</td><td>Permit, connections, registrations</td></tr>
+      <tr><td>Municipal building fees and tax (ICIO)</td><td>With a permit, a percentage of the building cost</td></tr>
+      <tr><td>Architect: project and supervision</td><td>For permit work, extensions or a pool</td></tr>
+      <tr><td>Contingency for the unexpected</td><td>Always, especially in old houses</td></tr>
+    </tbody>
+  </table>
+  <p>What the renovation itself costs is covered in <a href="/en/guides/renovation-costs-spain/">what does it cost to renovate a house in Spain</a>.</p>
+  <p><strong>Want to have this done?</strong> Tell us what needs doing and where your house is. We help you make it happen, from the first visit to handover, even while you are at home. <a href="/en/request/?dienst=renovatie">Tell us about your plans</a>.</p>
+
+  <h2 id="handover">Handover and after</h2>
+  <ol>
+    <li><strong>Walk through the house together</strong>, in person or on a video call, and make a snag list.</li>
+    <li><strong>Pay the last instalment</strong> only once those snags are fixed.</li>
+    <li><strong>Collect all the paperwork</strong>: invoices, guarantees, the electrical certificate (<em>boletín</em>) if the wiring was renewed, and the completion documents if there was a permit.</li>
+    <li><strong>Have the house watched afterwards</strong>. You want to spot small leaks or cracks in the first months. With <a href="/en/key-holding/">key holding</a> someone checks regularly.</li>
+  </ol>
+  <p>Not sure whether you need a permit? Read about <a href="/en/renovation/">renovation</a> first, or send us your question.</p>
+</Guide>

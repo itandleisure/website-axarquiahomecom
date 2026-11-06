@@ -1,0 +1,60 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kern', label: 'Worum es geht' },
+  { id: 'gesundheit', label: 'Gesundheit und Versorgung' },
+  { id: 'autofahren', label: 'Autofahren im Alter' },
+  { id: 'treppen', label: 'Treppen und Barrierefreiheit' },
+  { id: 'unterhalt', label: 'Unterhalt' },
+  { id: 'sozial', label: 'Soziales Leben' },
+  { id: 'verkauf', label: 'Später wieder verkaufen' },
+  { id: 'rat', label: 'Unser Rat je Haustyp' },
+];
+
+const faq = [
+  {
+    q: 'Wo ist das nächste Krankenhaus in der Axarquía?',
+    a: 'Das regionale Krankenhaus (Hospital Comarcal de la Axarquía) steht in Vélez-Málaga. Für Fachbehandlungen fahren Sie in die Krankenhäuser in Málaga. Jede größere Gemeinde hat ein Gesundheitszentrum, und unter anderem in Nerja, Torre del Mar und Málaga gibt es Privatkliniken mit englisch- und teils deutschsprachigen Ärzten.',
+  },
+  {
+    q: 'Kann ich ein Dorfhaus so umbauen, dass ich weniger Treppen steigen muss?',
+    a: 'Oft ja, aber nicht immer. Manchmal lassen sich Schlafzimmer und Bad ins Erdgeschoss verlegen, oder ein Treppenlift passt hinein. Ein Aufzug ist in einem schmalen Dorfhaus meist schwierig. Lassen Sie beim Immobiliengutachten gleich prüfen, was möglich ist und was es kostet.',
+  },
+  {
+    q: 'Was ist, wenn ich später seltener in Spanien bin?',
+    a: 'Dann werden Unterhalt und Betreuung wichtiger. Eine Wohnung können Sie ruhig ein paar Monate abschließen. Eine Finca oder ein Dorfhaus braucht jemanden, der regelmäßig nachsieht, lüftet und nach einem Sturm das Dach prüft. Dafür gibt es die Hausbetreuung.',
+  },
+];
+---
+<Guide lang="de" slug="finca-wohnung-oder-dorfhaus-rentner" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Ein Haus für die nächsten zwanzig Jahre?" ctaText="Wir begutachten das Haus vor der Unterschrift und prüfen gleich, wie es sich anpassen lässt, wenn Treppen oder Unterhalt schwerer fallen.">
+  <h2 id="kern">Worum es geht</h2>
+  <p>Viele Ruheständler kaufen in der Axarquía das Haus, von dem sie immer geträumt haben: eine Finca mit Olivenbäumen und Meerblick. Das kann eine wunderbare Wahl sein. Aber Sie wählen ein Haus für vielleicht zwanzig Jahre oder länger. Fragen Sie sich: Passt dieses Haus auch noch, wenn ich in zehn Jahren nicht mehr gern Auto fahre oder einer von uns Pflege braucht? Bleiben Sie nicht das ganze Jahr, lesen Sie auch unseren Ratgeber <a href="/de/ratgeber/ueberwintern-in-spanien/">Überwintern in Spanien</a>.</p>
+
+  <h2 id="gesundheit">Gesundheit und Versorgung</h2>
+  <p>An der Küste und in den größeren Dörfern haben Sie ein Gesundheitszentrum, eine Apotheke und oft Privatkliniken in der Nähe. Das regionale Krankenhaus steht in Vélez-Málaga; von der Küste sind Sie schnell dort, aus den Bergdörfern rechnen Sie mit einer halben bis Dreiviertelstunde. Von einer abgelegenen Finca dauert es länger, und ein Krankenwagen muss das Haus auch finden und erreichen können. Geben Sie Adresse und Route immer genau an.</p>
+
+  <h2 id="autofahren">Autofahren im Alter</h2>
+  <p>Auf einer Finca ist das Auto Ihre Lebensader: Einkaufen, Arzt, Freunde. Kurvige Bergstraßen und eine Schotterpiste sind mit sechzig kein Problem, mit achtundsiebzig vielleicht schon. Im Dorf oder an der Küste erledigen Sie vieles zu Fuß, und Busse fahren nach Vélez-Málaga und Málaga. Wer jetzt eine Finca wählt, sollte schon überlegen, wohin er später ziehen würde.</p>
+
+  <h2 id="treppen">Treppen und Barrierefreiheit</h2>
+  <p>Hier schneidet das klassische Dorfhaus schlecht ab: schmal und hoch, mit steilen Treppen zu den Schlafzimmern und der Dachterrasse, und oft einer steilen Gasse bis zur Haustür. Eine Wohnung mit Aufzug, in Gehweite der Versorgung, ist am zukunftssichersten. Eine ebenerdige Finca oder Villa kann auch gut passen, wenn die Straße dorthin gut ist.</p>
+  <p>Denken Sie beim Umbau gleich voraus: eine bodengleiche Dusche statt einer Wanne, keine Schwellen, Schlafzimmer und Bad im Erdgeschoss. Bei einer <a href="/de/renovierung/">Renovierung</a> kostet das wenig extra, und später viel weniger als ein gesonderter Umbau.</p>
+
+  <h2 id="unterhalt">Unterhalt</h2>
+  <p>Eine Finca braucht viel Unterhalt: Grundstück, Bäume, <a href="/de/ratgeber/zufahrtsweg-finca-spanien/">Zufahrt</a>, Wasseranlage, Klärgrube und oft einen Pool. Das macht Freude, solange Sie es selbst tun, und ist ein fester Kostenpunkt, sobald Sie es auslagern. Ein Dorfhaus braucht vor allem Aufmerksamkeit für Dach, Dachterrasse und Feuchtigkeit. Bei einer Wohnung regelt die Eigentümergemeinschaft das meiste gegen ein monatliches Hausgeld. Für ein realistisches Bild der jährlichen Kosten siehe den Hauptratgeber und unsere Seite <a href="/de/instandhaltung/">Instandhaltung</a>.</p>
+
+  <h2 id="sozial">Soziales Leben</h2>
+  <p>Einsamkeit wird oft unterschätzt. Im Dorf sehen Sie jeden Tag Menschen: auf dem Markt, in der Bar, beim Bäcker. An der Küste gibt es viele Clubs und Vereine anderer Ausländer, von Wandergruppen bis zu Bridgeclubs. Auf einer Finca hängt der Kontakt vom Auto und von Ihrer eigenen Initiative ab. Das passt zu manchen, zu anderen nicht. Und denken Sie an die Situation, dass einer der Partner allein zurückbleibt.</p>
+
+  <h2 id="verkauf">Später wieder verkaufen</h2>
+  <p>Wohnungen und Dorfhäuser an beliebten Orten verkaufen sich meist leichter als abgelegene Fincas. Finca-Käufer sind kritischer, vor allem beim rechtlichen Status und beim Wasser. Eine Finca mit geregeltem AFO-Status und guten Papieren verkauft sich besser. Bewahren Sie daher alle Unterlagen zu Genehmigungen, Gutachten und Umbauten auf. Mehr in unserem Ratgeber <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>.</p>
+
+  <h2 id="rat">Unser Rat je Haustyp</h2>
+  <ul>
+    <li><strong>Wohnung</strong>: die sorgloseste Wahl für die lange Frist, vor allem mit Aufzug und Versorgung in Gehweite. Auch leicht abzuschließen, wenn Sie ein paar Monate nach Hause fahren.</li>
+    <li><strong>Dorfhaus</strong>: gesellig und voller Charakter, aber achten Sie auf Treppen und steile Gassen. Wählen Sie eines mit Schlafzimmer und Bad unten, oder eines, das sich so umbauen lässt.</li>
+    <li><strong>Finca</strong>: wunderbar, solange Sie fit sind und gern draußen arbeiten. Wählen Sie eine nahe einem Dorf, mit guter Straße, ebenerdig und mit geregelten Papieren. Und klären Sie, wer den Unterhalt übernimmt, wenn Sie es nicht mehr wollen.</li>
+  </ul>
+  <p>Fahren Sie im Sommer oder über die Feiertage nach Hause? Mit <a href="/de/hausbetreuung/">Hausbetreuung</a> sieht regelmäßig jemand nach dem Rechten, auch nach Sturm oder starkem Regen.</p>
+</Guide>

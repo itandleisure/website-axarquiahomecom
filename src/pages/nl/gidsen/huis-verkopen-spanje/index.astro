@@ -1,0 +1,120 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
+
+const toc = [
+  { id: 'waarom', label: 'Waarom voorbereiden loont' },
+  { id: 'stappen', label: 'Stappenplan in vijf fasen' },
+  { id: 'papieren', label: 'Papieren en legalisatie' },
+  { id: 'opknappen', label: 'Opknappen: wat loont' },
+  { id: 'kosten', label: 'Kosten voor de verkoper' },
+  { id: 'afstand', label: 'Verkopen vanuit het buitenland' },
+  { id: 'deelpaginas', label: 'Verder lezen' },
+  { id: 'bronnen', label: 'Bronnen' },
+];
+
+const faq = [
+  {
+    q: 'Hoe lang duurt het om een huis in de Axarquía te verkopen?',
+    a: 'Dat verschilt sterk. Een goed geprijsd appartement aan de kust is soms binnen een paar maanden verkocht. Een finca op het platteland staat vaak een jaar of langer te koop, zeker als er vragen zijn over de legale status. Reken daarnaast op een tot drie maanden tussen het voorlopig koopcontract (arras) en de notaris.',
+  },
+  {
+    q: 'Moet ik mijn huis laten renoveren voordat ik het verkoop?',
+    a: 'Meestal niet volledig. Wat loont zijn reparaties van zichtbare gebreken (vocht, lekkage, scheuren, kapotte installaties) en een frisse uitstraling: schilderen, tuin en zwembad op orde. Een complete nieuwe keuken of badkamer verdient u zelden terug. Op de deelpagina over opknappen staat wat wel en niet loont.',
+  },
+  {
+    q: 'Kan ik een huis met AFO-status verkopen?',
+    a: 'Ja. Een huis met een AFO-verklaring (DAFO) van de gemeente is verkoopbaar en kan in het eigendomsregister worden ingeschreven. Zonder die verklaring is verkopen lastiger: veel kopers en banken haken dan af. Begin daarom ruim voor de verkoop met de aanvraag, want die duurt vaak maanden.',
+  },
+  {
+    q: 'Wie betaalt de plusvalía bij verkoop?',
+    a: 'De gemeentelijke plusvalía (impuesto sobre el incremento del valor de los terrenos) betaalt in principe de verkoper. Sinds november 2021 betaalt u niets als er aantoonbaar geen waardestijging is, en kunt u kiezen voor de goedkoopste van twee rekenmethodes.',
+  },
+  {
+    q: 'Ik woon niet in Spanje. Waarom houdt de koper 3% in?',
+    a: 'Als de verkoper geen fiscaal inwoner van Spanje is, moet de koper 3% van de koopprijs inhouden en aan de Spaanse fiscus betalen, als voorschot op uw belasting over de winst. Daarna doet u zelf aangifte. Was uw belasting lager dan die 3%, dan kunt u het verschil terugvragen.',
+  },
+];
+---
+<Guide slug="huis-verkopen-spanje" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Uw huis verkoopklaar maken?" ctaText="Wij bekijken uw huis, zeggen welke reparaties lonen en voeren ze uit, ook als u in het buitenland bent. U krijgt vooraf een prijs.">
+  <h2 id="waarom">Waarom voorbereiden loont</h2>
+  <p>Kopers van een huis in de Axarquía zijn vaak buitenlanders zoals u. Ze zijn voorzichtig, want ze hebben verhalen gehoord over huizen zonder vergunning en verborgen gebreken. Hun advocaat vraagt de papieren op en steeds meer kopers laten een <a href="/nl/aankoopkeuring/">aankoopkeuring</a> doen. Elk probleem dat zo boven tafel komt, wordt een reden om de prijs te laten zakken of af te haken.</p>
+  <p>Wie dat voor is, heeft drie voordelen:</p>
+  <ul>
+    <li><strong>Sneller verkocht.</strong> Als de papieren klaarliggen, kan de koper direct naar de notaris. Een ontbrekend document of een AFO-procedure kost al gauw maanden.</li>
+    <li><strong>Sterker bij de onderhandeling.</strong> Een gerepareerd gebrek is geen onderhandelpunt meer. Een vochtplek die € 800 kost om te herstellen, haalt in de onderhandeling vaak duizenden euro’s van de prijs.</li>
+    <li><strong>Minder risico achteraf.</strong> Volgens het Spaanse recht staat u als verkoper in voor verborgen gebreken. Wat u heeft laten herstellen en wat u eerlijk meldt, kan later geen claim meer worden.</li>
+  </ul>
+
+  <h2 id="stappen">Stappenplan in vijf fasen</h2>
+  <ol>
+    <li><strong>Zes tot twaalf maanden vooraf: papieren nalopen.</strong> Vraag een nota simple op bij het eigendomsregister en vergelijk die met het kadaster en met wat er werkelijk staat. Zijn er aanbouwen, een dichtgemaakt terras of een zwembad zonder vergunning? Begin dan nu met legaliseren of een AFO-aanvraag.</li>
+    <li><strong>Drie tot zes maanden vooraf: laten keuren en herstellen.</strong> Laat het huis bekijken alsof u zelf de koper bent. Herstel wat een koper zou vinden: lekkages, vocht, scheuren, elektra die niet aan de regels voldoet. Zie <a href="/nl/onderhoud/">onderhoud en reparaties</a>.</li>
+    <li><strong>Eén tot twee maanden vooraf: opknappen en presenteren.</strong> Schilderen, tuin en zwembad op orde, kapotte dingen vervangen, persoonlijke spullen opruimen. Dan pas foto’s laten maken.</li>
+    <li><strong>Te koop zetten.</strong> Laat het energielabel maken (verplicht zodra u adverteert), kies een makelaar en spreek af wie de bezichtigingen doet als u er niet bent.</li>
+    <li><strong>Van bod naar notaris.</strong> Na akkoord tekent u meestal een voorlopig koopcontract (<em>contrato de arras</em>) en ontvangt u een aanbetaling, vaak 10%. Bij de notaris volgen de akte en de betaling. Zorg dat alle papieren, rekeningen en sleutels klaarliggen.</li>
+  </ol>
+
+  <h2 id="papieren">Papieren en legalisatie</h2>
+  <p>Het belangrijkste werk zit in de papieren. In het kort heeft u nodig:</p>
+  <ul>
+    <li>Uw eigendomsakte (<em>escritura</em>) en een recente <em>nota simple</em> uit het eigendomsregister.</li>
+    <li>Een omschrijving in kadaster en register die overeenkomt met wat er staat.</li>
+    <li>Bewijs dat het huis bewoond mag worden: een licentie of verklaring van ingebruikname, of bij een oud huis een bewijs van ouderdom of de AFO-verklaring.</li>
+    <li>Het energielabel (<em>certificado de eficiencia energética</em>).</li>
+    <li>Het laatste aanslagbiljet van de onroerendgoedbelasting (IBI) en recente rekeningen van water en stroom.</li>
+    <li>Bij een appartement: een verklaring van de vereniging van eigenaars dat u geen achterstand heeft.</li>
+  </ul>
+  <p>Klopt het oppervlak in de papieren niet met de werkelijkheid, of is er zonder vergunning gebouwd? Dan moet dat vóór de verkoop worden rechtgezet. Op landelijke grond gaat het vaak om de AFO-status; lees daarover onze gids <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren</a>. De volledige lijst, met wie wat afgeeft en wat het kost, staat op de deelpagina <a href="/nl/gidsen/huis-verkopen-spanje/papieren/">papieren voor de verkoop</a>.</p>
+
+  <h2 id="opknappen">Opknappen: wat loont</h2>
+  <p>Een huis dat er verzorgd uitziet, krijgt meer bezichtigingen en betere biedingen. Dat betekent niet dat u moet verbouwen. In de Axarquía lonen vooral:</p>
+  <ul>
+    <li><strong>Gebreken herstellen</strong> die een koper of keurder vindt: <a href="/nl/problemen/vocht-en-schimmel/">vocht en schimmel</a>, <a href="/nl/problemen/daklekkage/">daklekkage</a>, <a href="/nl/problemen/scheuren-in-muren/">scheuren</a>, een zwembad dat lekt.</li>
+    <li><strong>Witten</strong>, binnen en buiten. Een vers gewit huis oogt direct jaren jonger.</li>
+    <li><strong>Buitenruimte</strong>: dakterras waterdicht en schoon, tuin bijgewerkt, zwembad helder.</li>
+    <li><strong>Kleine vervangingen</strong>: kranen, deurklinken, lampen, kapotte tegels, keukenfronten.</li>
+  </ul>
+  <p>Grote verbouwingen vlak voor de verkoop verdient u meestal niet terug, want een koper wil vaak zijn eigen keuken of badkamer kiezen. Uitzondering: een huis dat zo verouderd is dat alleen kopers die willen verbouwen het overwegen. Lees de afwegingen en richtprijzen op de deelpagina <a href="/nl/gidsen/huis-verkopen-spanje/opknappen/">opknappen voor de verkoop</a>.</p>
+
+  <h2 id="kosten">Kosten voor de verkoper</h2>
+  <p>Bij een verkoop in Spanje betaalt de koper de overdrachtsbelasting en meestal de notaris en het register. Voor u als verkoper zijn er deze kosten:</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Kostenpost</th><th>Richtbedrag</th><th>Toelichting</th></tr></thead>
+    <tbody>
+      <tr><td>Makelaar</td><td>Vaak 3% tot 6% plus 21% btw</td><td>Vrij te onderhandelen; aan de Costa del Sol is 5% gangbaar</td></tr>
+      <tr><td>Plusvalía (gemeente)</td><td>Enkele honderden tot enkele duizenden euro’s</td><td>Belasting op de waardestijging van de grond; niets bij aantoonbaar verlies</td></tr>
+      <tr><td>Belasting op de winst</td><td>19% van de winst voor niet-inwoners</td><td>Inwoners van Spanje betalen 19% tot 30% via de inkomstenbelasting</td></tr>
+      <tr><td>Energielabel</td><td>Meestal € 80 – € 250</td><td>Verplicht bij te koop zetten</td></tr>
+      <tr><td>Nota simple</td><td>Ongeveer € 10 – € 15</td><td>Online aan te vragen bij het register</td></tr>
+      <tr><td>Aflossen hypotheek</td><td>Verschilt per bank</td><td>Inclusief kosten om de hypotheek uit het register te laten halen</td></tr>
+      <tr><td>Legalisatie of AFO</td><td>Verschilt sterk</td><td>Architect, leges en eventuele aanpassingen</td></tr>
+      <tr><td>Reparaties en opknappen</td><td>Naar keuze</td><td>Vooraf begroten, zie de deelpagina opknappen</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Richtbedragen, gecontroleerd op 5 november 2026. Belastingen hangen af van uw situatie; vraag een Spaanse belastingadviseur of gestor om een berekening.</p>
+  <p>Woont u niet in Spanje, dan houdt de koper 3% van de koopprijs in en betaalt die aan de Spaanse fiscus als voorschot op uw belasting. Binnen enkele maanden na de verkoop doet u zelf aangifte (<em>modelo 210</em>) en vraagt u terug wat te veel is ingehouden. Woont u in Nederland, vraag dan ook na hoe de verkoop in uw Nederlandse aangifte doorwerkt.</p>
+
+  <h2 id="afstand">Verkopen vanuit het buitenland</h2>
+  <p>Veel eigenaars in de Axarquía verkopen terwijl ze in Nederland, België of elders wonen. Dat kan prima, als u een paar dingen regelt:</p>
+  <ul>
+    <li><strong>Iemand met de sleutel.</strong> Makelaars willen het huis kunnen laten zien. Iemand moet het huis vooraf openen, luchten, de airco aanzetten in de zomer en na afloop afsluiten. Met <a href="/nl/sleutelbeheer/">sleutelbeheer</a> heeft u daarvoor één vast aanspreekpunt, ook als u met meerdere makelaars werkt.</li>
+    <li><strong>Het huis bewoond laten lijken.</strong> Een huis dat maanden leeg staat, trekt inbrekers en soms krakers aan. Zie <a href="/nl/problemen/inbraak-en-kraak-leeg-huis/">inbraak en kraak bij een leeg huis</a>.</li>
+    <li><strong>Onderhoud doorlopen.</strong> Een groen zwembad of een overwoekerde tuin op de dag van een bezichtiging kost u een koper. Laat <a href="/nl/zwembad/">zwembad</a> en tuin bijhouden tot de dag van overdracht.</li>
+    <li><strong>Volmacht.</strong> U hoeft niet zelf bij de notaris te zijn. Met een volmacht (<em>poder</em>) kan uw advocaat namens u tekenen. Zo’n volmacht tekent u bij een Spaanse notaris of bij een notaris thuis met een apostille.</li>
+  </ul>
+
+  <h2 id="deelpaginas">Verder lezen</h2>
+  <p>De twee belangrijkste onderdelen werken we uit op aparte pagina’s:</p>
+  <GuideChildren parent="huis-verkopen-spanje" />
+  <p>Wilt u eerst weten wat uw huis nodig heeft? Wij bekijken het met de ogen van een koper en geven een prijs voor wat er moet gebeuren. Daarna kunt u kiezen wat u laat doen. Vraag een <a href="/nl/aanvraag/?dienst=renovatie">offerte voor renovatie</a> of <a href="/nl/aanvraag/?dienst=onderhoud">reparatie</a>, of kijk naar <a href="/nl/renovatie/">renovatie</a> en <a href="/nl/onderhoud/">onderhoud</a>.</p>
+
+  <h2 id="bronnen">Bronnen</h2>
+  <ul>
+    <li>Plusvalía: Real Decreto-ley 26/2021 (BOE, 9 november 2021), nieuwe berekening en vrijstelling bij geen waardestijging.</li>
+    <li>Inhouding van 3% en tarief van 19% voor niet-inwoners: Real Decreto Legislativo 5/2004 (wet op de belasting voor niet-inwoners), artikel 25; formulieren 211 en 210 van de Agencia Tributaria.</li>
+    <li>Energielabel: Real Decreto 390/2021 (BOE, 2 juni 2021).</li>
+    <li>Ingebruikname in Andalusië: Ley 7/2021 (LISTA), artikel 138 en negende aanvullende bepaling.</li>
+  </ul>
+  <p class="note">Gecontroleerd op 5 november 2026. Deze gids geeft algemene informatie en is geen juridisch of fiscaal advies. Regels en tarieven kunnen veranderen; laat uw situatie beoordelen door een advocaat, gestor of belastingadviseur.</p>
+</Guide>

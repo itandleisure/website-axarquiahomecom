@@ -1,0 +1,120 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'overview', label: 'Problems and solutions at a glance' },
+  { id: 'ownership', label: 'Who owns the road, and who pays?' },
+  { id: 'water', label: 'Water is the main enemy' },
+  { id: 'drainage', label: 'Drainage: ditches, cross drains and culverts' },
+  { id: 'surface', label: 'Gravel, zahorra or concrete?' },
+  { id: 'permits', label: 'Permits and rules' },
+  { id: 'neighbours', label: 'Sharing costs with the neighbours' },
+  { id: 'maintenance', label: 'Maintenance through the year' },
+];
+
+const faq = [
+  {
+    q: 'The town hall owns the camino but does nothing. What can I do?',
+    a: 'Report the damage to the ayuntamiento in writing, with photos and the location. Many municipalities in the Axarquía have little budget for rural roads. In practice it often comes down to the residents having the work done, sometimes with materials or a contribution from the town hall. Work on a public road is only allowed with the town hall’s permission, so ask for that first.',
+  },
+  {
+    q: 'Do I have to pay towards a road across my neighbour’s land?',
+    a: 'If you have a right of way (servidumbre de paso), the Spanish Civil Code says that you, as the user, pay for the maintenance needed to use the road. If several houses use it, they share the costs proportionally. If the deeds or an agreement say otherwise, that agreement applies.',
+  },
+  {
+    q: 'Can I not simply concrete the whole road?',
+    a: 'You can, but it is not always wise or allowed. Concrete is ideal for steep sections and bends, but without proper drainage the ground underneath still washes away. On rural land, near a stream bed or in a natural park a permit is often required. The best solution is usually a mix: concrete where it is steep, compacted aggregate on the flatter parts and good drainage everywhere.',
+  },
+  {
+    q: 'When is the best time to have the road repaired?',
+    a: 'Ideally at the end of summer or early autumn, before the heavy rain from October to March. That way the ditches are clear and the holes filled when the water comes. After a storm (DANA), quick repair of the worst gullies matters, because every following downpour makes the damage worse.',
+  },
+];
+
+const onderwerp = 'I would like help with the access road to my finca (repair, drainage or surfacing).';
+---
+<Guide lang="en" slug="finca-access-road-spain" toc={toc} faq={faq} dienst="onderhoud" onderwerp={onderwerp} ctaTitle="Want your access road repaired?" ctaText="Send us a few photos of the road and tell us where it goes wrong. We come and take a look, make a proposal you can also share with the neighbours, and help you make it happen.">
+  <h2 id="overview">Problems and solutions at a glance</h2>
+  <p>Most fincas in the hills of the Axarquía are reached by a <em>camino</em>: an unpaved or partly concreted track that runs from the tarmac road to the house. As long as it is dry, you barely notice it. After the first proper autumn downpour, the track can suddenly be full of gullies, potholes and loose stones. These are the most common problems and what can be done about them. Want it sorted? <a href="/en/access-road/">We help you make it happen</a>.</p>
+  <table class="prices">
+    <thead><tr><th>Problem</th><th>Solution</th></tr></thead>
+    <tbody>
+      <tr><td>Gullies running along the road</td><td>Lead the water off the road with cross drains and a side ditch, then fill and compact the gullies</td></tr>
+      <tr><td>Potholes</td><td>Dig out, fill with zahorra (graded aggregate) and compact; on concrete, recast locally</td></tr>
+      <tr><td>Steep section where the car spins</td><td>Concrete with a rough finish so tyres keep their grip</td></tr>
+      <tr><td>Road washes out at a stream or dry bed</td><td>Culvert (pipe under the road) or a concrete ford (<em>badén</em>)</td></tr>
+      <tr><td>Edge of the road collapsing</td><td>Retaining wall or stone embankment, and stop the water running over the edge</td></tr>
+      <tr><td>Cracked or broken concrete</td><td>Break out and recast locally; find out why it broke (water under the slab, too thin, no reinforcement)</td></tr>
+      <tr><td>Bushes and branches over the road</td><td>Cut back every year, so a fire engine, water tanker or delivery lorry can also get through</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="ownership">Who owns the road, and who pays?</h2>
+  <p>Before any work is done, it has to be clear who owns the road. That decides who may work on it, who pays and which permission is needed. Broadly, there are four situations:</p>
+  <ul>
+    <li><strong>Public road (<em>camino público</em>)</strong>: the road belongs to the municipality and is on its inventory of roads. In the land registry map (<em>Catastro</em>) such a road often has its own plot number. Maintenance is in principle the town hall’s job, but in practice little happens on many rural roads. You may not simply work on it yourself; you need the ayuntamiento’s permission.</li>
+    <li><strong>Road across a neighbour’s land (<em>servidumbre de paso</em>)</strong>: you have a right of way, which should be in the title deeds and the property register. Whoever uses the right normally pays for the maintenance needed to use the road, unless the deeds say otherwise.</li>
+    <li><strong>Road shared by several houses</strong>: sometimes the road is jointly owned, or the residents have an association (<em>comunidad de camino</em> or <em>de usuarios</em>). Costs are then split according to the statutes or the agreements, often by number of houses or by the stretch each one uses.</li>
+    <li><strong>Your own drive on your own plot</strong>: that is entirely yours, but even there a permit may be needed for concrete or a wall, for example.</li>
+  </ul>
+  <p>Not sure which it is? Check the title deeds (<em>escritura</em>), the <em>nota simple</em> from the property register and the Catastro map, or ask the town hall. Still buying? Then also read <a href="/en/guides/buying-a-finca-in-spain/">buying a finca in Spain</a>: the access road is one of the checks before you sign.</p>
+
+  <h2 id="water">Water is the main enemy</h2>
+  <p>Almost all damage to a camino is caused by water. In the Axarquía most rain falls in a few weeks between October and March, often in short, violent downpours or a <em>DANA</em> storm. Water takes the shortest route downhill, and that is often the road itself. It carries away the fine material, cuts a gully down the middle or along the edge, and with the next downpour that gully gets deeper.</p>
+  <p>That is why filling the holes on its own achieves little. Without drainage, the new gravel ends up at the bottom of the slope after the next storm. The golden rule: sort out the water first, then the road.</p>
+
+  <h2 id="drainage">Drainage: ditches, cross drains and culverts</h2>
+  <p>Good drainage gets the water off the road as quickly as possible, before it picks up speed. The main elements:</p>
+  <ul>
+    <li><strong>Camber</strong>: the road slopes slightly to one side, or is crowned towards both sides, so water does not sit in the middle.</li>
+    <li><strong>Side ditch (<em>cuneta</em>)</strong>: a ditch or concrete channel along the uphill side of the road that collects and carries off the water.</li>
+    <li><strong>Cross drains</strong>: angled concrete ridges or grates across the road every so many metres that turn the water to the side. On steep sections they are closer together.</li>
+    <li><strong>Culvert (<em>caño</em> or <em>tubo</em>)</strong>: a pipe under the road where a stream or ditch crosses it. It must be large enough for a heavy downpour and kept clear.</li>
+    <li><strong>Outfall</strong>: where the water leaves the road, place stones so it does not wash away the slope beside the road.</li>
+  </ul>
+  <p>If there is a high, crumbling bank beside the road or the edge is subsiding, a <a href="/en/costs/retaining-wall-and-drainage/">retaining wall with drainage</a> may be needed.</p>
+
+  <h2 id="surface">Gravel, zahorra or concrete?</h2>
+  <p>The right surface depends mainly on how steep the road is, how much traffic uses it and how much maintenance you are willing to do.</p>
+  <table class="prices">
+    <thead><tr><th>Surface</th><th>Good to know</th></tr></thead>
+    <tbody>
+      <tr><td>Bare earth or loose gravel</td><td>Cheap, but washes away quickly and gives dust and potholes; only on flat stretches</td></tr>
+      <tr><td><em>Zahorra</em> (graded aggregate), compacted</td><td>The standard solution for unpaved caminos; with good drainage it lasts for years, with some touching up now and then</td></tr>
+      <tr><td>Reinforced concrete</td><td>For steep sections, bends and spots that keep washing out; rough finish for grip</td></tr>
+      <tr><td>Concrete wheel tracks</td><td>Two concrete strips with gravel or greenery in between; less concrete, less sealed surface</td></tr>
+      <tr><td>Asphalt</td><td>For long, busy roads; for a single finca rarely worth the cost and the machinery</td></tr>
+    </tbody>
+  </table>
+  <p>With concrete, the details matter: a well-compacted base, reinforcement mesh, enough thickness for heavy traffic (a concrete mixer or water tanker weighs a lot), expansion joints against cracking and a rough, brushed or grooved finish. A smooth concrete slab on a steep slope is as slippery as ice in the rain. And the concrete mixer has to be able to reach the spot: on narrow tracks smaller trucks or a pump are sometimes used.</p>
+
+  <h2 id="permits">Permits and rules</h2>
+  <p>Ordinary maintenance, such as filling holes and clearing ditches, can usually be done without paperwork. Bigger jobs are a different matter:</p>
+  <ul>
+    <li><strong>Concreting, widening or building a new road</strong> on rural land (<em>suelo rústico</em>) normally needs a notification or permit from the town hall. See the rules for <a href="/en/places/">your municipality</a>.</li>
+    <li><strong>Work on a public road</strong> is only allowed with the ayuntamiento’s permission.</li>
+    <li><strong>Near a stream or dry river bed (<em>arroyo</em>, <em>rambla</em>)</strong> the water authority of the Junta de Andalucía has a say. A culvert or ford in a river bed often needs their permission.</li>
+    <li><strong>Drove road (<em>vía pecuaria</em>)</strong>: some old tracks are historic drove roads owned by the Junta. You may not simply surface them.</li>
+    <li><strong>In or near a natural park</strong>, such as the Sierras de Tejeda, Almijara y Alhama above Cómpeta, Canillas and Frigiliana, extra rules apply.</li>
+  </ul>
+  <p>We check in advance what is needed and handle the application, so you do not get a fine afterwards. More on permits in <a href="/en/guides/building-permits-renovation-andalusia/">building permits for renovation in Andalusia</a>.</p>
+
+  <h2 id="neighbours">Sharing costs with the neighbours</h2>
+  <p>When several houses use the same camino, the work is often only feasible if everyone joins in. A few tips to make that go smoothly:</p>
+  <ul>
+    <li><strong>One proposal for the whole road</strong>, split into sections. Everyone can see what will happen, and the costs can be divided fairly, for example by the stretch each household uses.</li>
+    <li><strong>Agreements in writing</strong>: who pays what, who places the order, and how maintenance works afterwards. A simple written agreement saves years of hassle.</li>
+    <li><strong>Ask the town hall</strong>, if it is a public road, whether they will supply materials or contribute when the residents have the work done. That happens regularly in the Axarquía.</li>
+    <li><strong>Not everyone wants to join in?</strong> Then have the stretch you need done first, with drainage that does not send the water to the neighbours.</li>
+  </ul>
+  <p>We are happy to make a proposal you can share with your neighbours, in English, Dutch or Spanish.</p>
+
+  <h2 id="maintenance">Maintenance through the year</h2>
+  <p>A road that gets a little attention every year lasts much longer than one that is only repaired after the damage. A simple schedule:</p>
+  <ul>
+    <li><strong>September and October</strong>: clear side ditches, cross drains and culverts and fill small holes, so the road is ready for the rain.</li>
+    <li><strong>After every heavy downpour or storm</strong>: check for new gullies and blocked culverts. A small repair now prevents a big one later.</li>
+    <li><strong>Spring</strong>: cut back vegetation along the road so the fire brigade can get through, and plan bigger repairs before the summer. Combine this with <a href="/en/guides/garden-and-plot-spain/">making your plot fire-safe</a>.</li>
+  </ul>
+  <p>Away for much of the year? With <a href="/en/key-holding/">key holding</a> someone drives along your road regularly anyway, and can tell you straight after a storm how things look. Also read how to <a href="/en/guides/preparing-your-spanish-home-for-winter/">prepare your Spanish home for winter</a>.</p>
+</Guide>

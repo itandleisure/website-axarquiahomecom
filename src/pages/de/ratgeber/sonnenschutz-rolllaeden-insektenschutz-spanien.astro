@@ -1,0 +1,76 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'ueberblick', label: 'Alle Möglichkeiten im Überblick' },
+  { id: 'toldos', label: 'Markisen und Pergolen' },
+  { id: 'persianas', label: 'Rollläden und Fensterläden' },
+  { id: 'fliegengitter', label: 'Fliegengitter gegen Mücken' },
+  { id: 'wind', label: 'Wind, Sonne und Salz' },
+  { id: 'regeln', label: 'Braucht man eine Erlaubnis?' },
+];
+
+const faq = [
+  {
+    q: 'Braucht eine Markise einen Windsensor?',
+    a: 'Bei einer elektrischen Markise empfehlen wir ihn dringend. Der Terral (heißer Landwind) und der Levante (Ostwind) können in der Axarquía unerwartet stark wehen. Ein Windsensor fährt die Markise automatisch ein, auch wenn Sie nicht zu Hause sind. Eine Markise, die bei einer Böe offen steht, ist in Minuten kaputt.',
+  },
+  {
+    q: 'Mein Rollladen geht nicht mehr hoch. Muss er komplett raus?',
+    a: 'Fast nie. Meist ist der Gurt (cinta) verschlissen oder gerissen, oder einige Lamellen sind verrutscht. Das ist schnell und günstig ersetzt. Bei einem defekten Motor wird nur der Motor getauscht.',
+  },
+  {
+    q: 'Welches Fliegengitter eignet sich für eine Schiebetür zur Terrasse?',
+    a: 'Eine Plissee-Fliegengittertür. Sie schiebt sich wie eine Ziehharmonika zur Seite, hat eine niedrige Schwelle und bleibt stehen, wo Sie sie loslassen. Ein Rollo-Fliegengitter vor einer breiten Tür springt leichter aus der Führung.',
+  },
+];
+---
+<Guide slug="sonnenschutz-rolllaeden-insektenschutz-spanien" lang="de" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Sonnenschutz, Rollläden oder Fliegengitter?" ctaText="Sagen Sie uns, um welche Fenster und Türen es geht, gern mit ein paar Fotos. Wir kommen zum Aufmaß und beraten Sie, was zu Ihrem Haus passt.">
+  <h2 id="ueberblick">Alle Möglichkeiten im Überblick</h2>
+  <p>Ein Überblick, was es gibt und wofür es gut ist. Möchten Sie das machen lassen? <a href="/de/anfrage/">Sagen Sie uns, was Sie vorhaben</a>, und wir helfen Ihnen bei der Umsetzung.</p>
+  <table class="prices">
+    <thead><tr><th>Möglichkeit</th><th>Wofür</th></tr></thead>
+    <tbody>
+      <tr><td>Fallarmmarkise oder Vordach über einem Fenster</td><td>Sonne von Fenster oder Balkon fernhalten</td></tr>
+      <tr><td>Gelenkarmmarkise (<em>toldo</em>), von Hand</td><td>Schatten auf Terrasse oder Balkon</td></tr>
+      <tr><td>Gelenkarmmarkise, elektrisch mit Windsensor</td><td>Dasselbe, fährt bei Wind selbst ein</td></tr>
+      <tr><td>Pergola mit Schiebedach aus Stoff</td><td>Großer fester Schattenplatz auf der Terrasse</td></tr>
+      <tr><td>Lamellenpergola (<em>pérgola bioclimática</em>)</td><td>Schatten, Belüftung und trocken bei Regen, das ganze Jahr</td></tr>
+      <tr><td>Rollladen (<em>persiana</em>) mit Gurt</td><td>Sonne, Hitze und Einblicke abhalten, mehr Sicherheit</td></tr>
+      <tr><td>Rollladen mit Motor</td><td>Dasselbe, per Schalter, Fernbedienung oder App</td></tr>
+      <tr><td>Aluminium-Fensterläden (<em>mallorquinas</em>)</td><td>Licht und Luft rein, Sonne raus; andalusischer Stil</td></tr>
+      <tr><td>Senkrechtmarkise (Zip-Screen) vor dem Fenster</td><td>Sonne draußen, Aussicht bleibt; hält auch Insekten ab</td></tr>
+      <tr><td>Festes Fliegengitter oder Rollo (<em>mosquitera</em>)</td><td>Mücken an Fenstern draußen halten</td></tr>
+      <tr><td>Plissee-Fliegengittertür</td><td>Mücken an Terrassen- oder Schiebetür draußen halten</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="toldos">Markisen und Pergolen</h2>
+  <p>Die <strong>Gelenkarmmarkise</strong> ist der Klassiker: ein Tuch, das auf zwei Armen über die Terrasse ausfährt. Wählen Sie UV-beständiges Acryltuch: Billiges Polyester bleicht in der andalusischen Sonne in wenigen Sommern aus. Eine <strong>Kassettenmarkise</strong> umschließt das Tuch im eingefahrenen Zustand; das hält Staub und Vögel fern und verlängert die Lebensdauer.</p>
+  <p>Eine <strong>Pergola</strong> schafft einen festen Schattenplatz. Mit Stoffdach ist sie eine bezahlbare Zwischenlösung; eine <strong>Lamellenpergola</strong> aus Aluminium kippt ihre Lamellen für Sonne oder Schatten und schließt bei Regen. Sie ist die teuerste, aber auch die vollständigste Wahl für eine Terrasse, die Sie das ganze Jahr nutzen. Kombinierbar mit einer <a href="/de/kosten/aussenkueche/">Außenküche</a>.</p>
+
+  <h2 id="persianas">Rollläden und Fensterläden</h2>
+  <p>Fast jedes spanische Haus hat <strong>Rollläden</strong> (<em>persianas</em>): aus PVC, Aluminium oder bei neueren Häusern isoliertem Aluminium. Sie halten im Sommer die Hitze draußen, im Winter die Wärme drinnen und erschweren Einbrüche. Geschlossene Rollläden zeigen aber auch, dass ein Haus leer steht; mit Motor und Zeitschaltuhr öffnen und schließen sie zu wechselnden Zeiten. Mehr dazu unter <a href="/de/ratgeber/einbruchschutz-haus-spanien/">Einbruchschutz</a>.</p>
+  <p><strong>Fensterläden</strong> (<em>mallorquinas</em>, mit kippbaren Lamellen) passen zu Dorfhäusern und Fincas. Sie lassen Luft durch und halten die Sonne draußen, aus Holz (schön, aber pflegeintensiv) oder Aluminium in Holzoptik (praktisch wartungsfrei).</p>
+  <p>Werden Ihre Fenster ohnehin erneuert? Planen Sie die Rollläden gleich im neuen Rahmen ein; das ist günstiger als nachträglich. Siehe auch <a href="/de/renovierung/">Renovierung</a>.</p>
+
+  <h2 id="fliegengitter">Fliegengitter gegen Mücken</h2>
+  <p>Die Axarquía hat Mücken und seit einigen Jahren auch die Tigermücke, die tagsüber sticht. Fliegengitter sind kein Luxus. Es gibt grob drei Arten:</p>
+  <ul>
+    <li><strong>Festes Gitter</strong> im Rahmen, ins oder vors Fenster geklemmt: günstig und einfach, aber das Fenster lässt sich schlechter öffnen.</li>
+    <li><strong>Rollo</strong>: rollt sich in eine Kassette über dem Fenster auf. Praktisch für Fenster, die Sie oft öffnen.</li>
+    <li><strong>Plissee</strong>: schiebt sich wie eine Ziehharmonika zur Seite. Ideal für Terrassen- und Schiebetüren.</li>
+  </ul>
+  <p>Selbst montieren? Ein festes Gitter oder Rollo bringen Sie mit einer Bohrmaschine gut selbst an; Baumärkte verkaufen Sets zum Zuschneiden. Messen Sie sorgfältig: Spanische Fensterrahmen sind selten rechtwinklig.</p>
+
+  <h2 id="wind">Wind, Sonne und Salz</h2>
+  <ul>
+    <li><strong>Wind</strong>: Fahren Sie Markisen immer ein, wenn Sie weggehen. Bei elektrischen Markisen ein Windsensor, bei einem leerstehenden Haus eventuell eine Markise, die Sie bei der Abreise ganz verstauen.</li>
+    <li><strong>Sonne</strong>: Wählen Sie Tuch, Kunststoffe und Motoren für Südeuropa. Billige Gitter und Kunststoffteile werden in der Sonne spröde.</li>
+    <li><strong>Salz</strong>: An der Küste (Nerja, Torrox Costa, Torre del Mar) rostet alles, was nicht aus lackiertem Aluminium oder Edelstahl ist. Fragen Sie nach meerwasserbeständigen Ausführungen.</li>
+    <li><strong>Pflege</strong>: Spülen Sie Tuch und Führungen ein- bis zweimal im Jahr ab und prüfen Sie die Befestigung in der Wand. Einen gelockerten Anker bemerken Sie erst, wenn die Markise herausgerissen ist.</li>
+  </ul>
+
+  <h2 id="regeln">Braucht man eine Erlaubnis?</h2>
+  <p>Bei einem freistehenden Haus meist nicht. In einer Wohnung oder einem Reihenhaus mit Eigentümergemeinschaft (<em>comunidad de propietarios</em>) bestimmt diese oft Farbe und Modell der Markisen, weil sie das Erscheinungsbild des Gebäudes ändern. Fragen Sie zuerst, was erlaubt ist. In den historischen Ortskernen der weißen Dörfer kann die Gemeinde Vorgaben zu Farbe und Material von Läden und Markisen haben. Eine feste Pergola kann eine Anzeige oder Genehmigung erfordern; siehe <a href="/de/orte/">Ihre Gemeinde</a>.</p>
+</Guide>

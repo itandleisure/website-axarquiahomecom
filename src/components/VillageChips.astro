@@ -1,0 +1,12 @@
+---
+// Plaatsnamen uit het werkgebied als klikbare chips naar de plaatspagina.
+import type { Lang } from '../i18n';
+import { site } from '../data/site';
+import { placeLinkByName } from '../data/place-links';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+---
+<ul class="villages">
+  {site.villages.map((v) => <li><a href={placeLinkByName(lang, v)}>{v}</a></li>)}
+</ul>

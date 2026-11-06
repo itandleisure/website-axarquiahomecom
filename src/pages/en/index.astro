@@ -2,9 +2,11 @@
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
 import Services from '../../components/Services.astro';
+import HomeMenu from '../../components/HomeMenu.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
+import VillageChips from '../../components/VillageChips.astro';
 import { site } from '../../data/site';
 
 const faq = [
@@ -31,8 +33,8 @@ const faq = [
 ];
 ---
 <Base
-  title="English-speaking builders in the Axarquía | Renovation, key holding and surveys"
-  description="Buying, renovating or looking after a home in the Axarquía? English-speaking builders for renovation, pre-purchase surveys, key holding and maintenance in Nerja, Cómpeta, Frigiliana, Torrox and nearby."
+  title="Builders in the Axarquía: Renovation & Key Holding"
+  description="Buying, renovating or looking after a home in the Axarquía? English-speaking builders for renovation, surveys, key holding and maintenance near Nerja."
   path="/en/"
   lang="en"
 >
@@ -51,6 +53,8 @@ const faq = [
       <li>Photo updates while you are away</li>
     </ul>
   </Hero>
+
+  <HomeMenu lang="en" />
 
   <div id="services"><Services lang="en" /></div>
 
@@ -91,9 +95,7 @@ const faq = [
     <div class="wrap">
       <h2>Where we work</h2>
       <p class="section-intro">From the coast to the mountain villages: we cover the whole Axarquía, including country properties where water, access and permits need extra attention.</p>
-      <ul class="villages">
-        {site.villages.map((v) => <li>{v}</li>)}
-      </ul>
+      <VillageChips lang="en" />
     </div>
   </section>
 

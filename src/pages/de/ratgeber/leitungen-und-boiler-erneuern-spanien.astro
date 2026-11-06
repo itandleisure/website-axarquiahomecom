@@ -1,0 +1,119 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Die kurze Antwort' },
+  { id: 'leitungen', label: 'Welche Leitungen liegen in Ihrem Haus?' },
+  { id: 'anzeichen', label: 'Anzeichen, dass es Zeit ist' },
+  { id: 'erneuern', label: 'Leitungen erneuern: so läuft es ab' },
+  { id: 'boiler', label: 'Warmwasser: welcher Boiler?' },
+  { id: 'vergleich', label: 'Boiler im Vergleich' },
+  { id: 'arbeiten', label: 'Arbeiten, bei denen wir helfen' },
+  { id: 'tipps', label: 'Tipps für ein Ferienhaus' },
+];
+
+const faq = [
+  {
+    q: 'Sind Bleileitungen gefährlich?',
+    a: 'Ja. Blei gelangt ins Trinkwasser, vor allem wenn das Wasser lange in der Leitung gestanden hat. Nach den neuen spanischen Trinkwasserregeln (RD 3/2023) müssen Bleileitungen ersetzt werden. Sehen Sie graue, weiche Rohre, die sich mit einem Schlüssel einritzen lassen, lassen Sie sie austauschen und trinken Sie bis dahin kein Leitungswasser.',
+  },
+  {
+    q: 'Elektroboiler oder Wärmepumpenboiler: was ist günstiger?',
+    a: 'In der Anschaffung ist ein elektrischer Termo deutlich günstiger. Im Betrieb braucht ein Wärmepumpenboiler nur etwa ein Drittel des Stroms. Wohnen Sie das ganze Jahr dort, hat er sich nach einigen Jahren bezahlt gemacht. Für ein Ferienhaus, das nur ein paar Monate im Jahr genutzt wird, ist ein guter Termo mit Zeitschaltuhr oder smarter Steckdose oft die vernünftigste Wahl.',
+  },
+  {
+    q: 'Wie lange hält ein Boiler?',
+    a: 'Ein elektrischer Termo hält in der Axarquía meist 8 bis 12 Jahre. Das harte Wasser ist sein größter Feind: Kalk und eine verbrauchte Anode. Lassen Sie die Anode alle 2 bis 3 Jahre prüfen; das verlängert die Lebensdauer deutlich. Ein Wärmepumpenboiler hält 15 Jahre oder länger.',
+  },
+  {
+    q: 'Müssen für neue Leitungen die Wände geöffnet werden?',
+    a: 'Meist ja, für die Leitungen in der Wand. Es werden Schlitze (rozas) gefräst, die danach wieder verschlossen und verputzt werden. Alternativen sind Aufputzleitungen oder Leitungen hinter Sockelleisten oder einer Vorsatzschale. Bei einer Bad- oder Küchenrenovierung geht alles in einem Arbeitsgang.',
+  },
+];
+---
+<Guide lang="de" slug="leitungen-und-boiler-erneuern-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Alte Leitungen oder ein Boiler, der schlappmacht?" ctaText="Wir beurteilen die Installation, beraten Sie zum passenden Boiler und kümmern uns um die Ausführung.">
+  <h2 id="kurz">Die kurze Antwort</h2>
+  <p>In vielen älteren Häusern in der Axarquía liegen noch <strong>verzinkte Eisen- oder sogar Bleileitungen</strong>. Sie rosten, verkalken und lecken. Neue Mehrschichtverbundrohre aus Kunststoff lösen das für Jahrzehnte, am besten zusammen mit einer Bad- oder Küchenrenovierung. Für Warmwasser wählen Sie zwischen einem günstigen <strong>elektrischen Termo</strong>, der viel Strom braucht, und einem teureren, aber sparsamen <strong>Wärmepumpenboiler</strong> oder einer <strong>Solaranlage für Warmwasser</strong>.</p>
+
+  <h2 id="leitungen">Welche Leitungen liegen in Ihrem Haus?</h2>
+  <table class="prices">
+    <thead><tr><th>Material</th><th>So erkennen Sie es</th><th>Empfehlung</th></tr></thead>
+    <tbody>
+      <tr><td>Blei (<em>plomo</em>)</td><td>Mattgrau, weich, leicht einzuritzen. Häuser von vor etwa 1975.</td><td>Immer ersetzen</td></tr>
+      <tr><td>Verzinktes Eisen (<em>hierro galvanizado</em>)</td><td>Grau, hart, mit Gewinde. Sechziger bis achtziger Jahre.</td><td>Ersetzen, rostet von innen</td></tr>
+      <tr><td>Kupfer (<em>cobre</em>)</td><td>Rotbraun, gelötet. Siebziger Jahre bis 2000.</td><td>Oft noch gut; auf grüne Ablagerungen und kleine Lecks prüfen</td></tr>
+      <tr><td>Kunststoff (PEX, Mehrschichtverbund)</td><td>Weiß, rot/blau oder grau, mit Pressfittings. Nach 2000.</td><td>Gut</td></tr>
+    </tbody>
+  </table>
+  <p>Das Abwasser ist ein eigenes Thema. In alten Häusern besteht es oft aus Gusseisen, Steinzeug oder <a href="/de/ratgeber/asbest-uralita-dach-spanien/">Asbestzement (Uralita)</a> und ist zu eng. Bei einer Bad- oder Küchenrenovierung wird es meist mit erneuert.</p>
+
+  <h2 id="anzeichen">Anzeichen, dass es Zeit ist</h2>
+  <ul>
+    <li>Braunes oder rostiges Wasser, wenn Sie nach längerer Abwesenheit den Hahn aufdrehen.</li>
+    <li>Immer weniger Wasserdruck, vor allem im Obergeschoss. Siehe auch <a href="/de/probleme/kein-wasser-oder-wasserdruck/">kein Wasser oder zu wenig Druck</a>.</li>
+    <li>Feuchte Stellen an Wänden oder Böden oder eine plötzlich steigende Wasserrechnung. Lesen Sie zuerst <a href="/de/ratgeber/wasserschaden-spanien/">was bei einem Wasserschaden zu tun ist</a>.</li>
+    <li>Bleileitungen, oder Sie wissen es nicht und das Haus ist von vor 1980.</li>
+    <li>Der Boiler tickt oder blubbert, das Wasser wird weniger heiß oder darunter ist Rost.</li>
+  </ul>
+
+  <h2 id="erneuern">Leitungen erneuern: so läuft es ab</h2>
+  <ol>
+    <li><strong>Bestandsaufnahme</strong>: Wo kommt das Wasser ins Haus, wo verlaufen die Leitungen, in welchem Zustand ist das Abwasser?</li>
+    <li><strong>Planung</strong>: ein neuer Verteiler (<em>colector</em>) am Hauptabsperrhahn, mit eigener Leitung und eigenem Ventil für jeden Raum. Bei einem Leck sperren Sie dann nur einen Raum ab.</li>
+    <li><strong>Verlegung</strong>: Mehrschichtverbundrohr in Wand- oder Bodenschlitzen oder auf Putz. Warmwasserleitungen werden gedämmt.</li>
+    <li><strong>Druckprüfung</strong>: Vor dem Schließen der Wände wird das System unter Druck getestet.</li>
+    <li><strong>Fertigstellung</strong>: Schlitze schließen, verputzen, streichen.</li>
+  </ol>
+  <p>Eine Wohnung dauert ein bis zwei Wochen, ein Haus zwei bis drei. Den größten Aufwand macht nicht das Rohr, sondern das Stemmen, Verputzen und Fliesen drumherum. Deshalb ist es sinnvoll, Leitungen bei einer <a href="/de/kosten/bad-renovieren/">Bad-</a> oder <a href="/de/kosten/kueche-renovieren/">Küchenrenovierung</a> zu erneuern.</p>
+
+  <h2 id="boiler">Warmwasser: welcher Boiler?</h2>
+  <h3>Elektroboiler (termo eléctrico)</h3>
+  <p>Der Standard in Spanien: ein Speicher mit 50 bis 100 Litern, beheizt mit einem Heizstab. Günstig, einfach und überall zu reparieren. Nachteil: Er braucht viel Strom und hält das Wasser den ganzen Tag warm.</p>
+  <h3>Gas-Durchlauferhitzer mit Butan (calentador)</h3>
+  <p>Auf Fincas ohne Gasanschluss oft an Butanflaschen angeschlossen. Sofort warmes Wasser ohne Speicher, aber Sie müssen Flaschen wechseln und die Anlage regelmäßig prüfen lassen. Wird immer seltener gewählt.</p>
+  <h3>Wärmepumpenboiler (termo aerotérmico)</h3>
+  <p>Ein Speicher mit 200 bis 300 Litern mit einer kleinen Wärmepumpe obendrauf. Er holt Wärme aus der Luft und braucht etwa ein Drittel des Stroms eines normalen Termos. Im milden Klima der Axarquía funktioniert er das ganze Jahr gut. Er braucht allerdings Platz: einen Abstellraum, eine Garage oder einen Technikraum, oder einen Anschluss an die Außenluft.</p>
+  <h3>Solarboiler (termosifón)</h3>
+  <p>Ein Kollektor mit Speicher auf dem Dach. Bei mehr als 300 Sonnentagen im Jahr liefert er den größten Teil Ihres Warmwassers kostenlos. Auf einem Dorfdach müssen Platz und Tragfähigkeit vorhanden sein.</p>
+  <h3>Termo mit eigenem Solarstrom</h3>
+  <p>Haben Sie eine <a href="/de/kosten/solaranlage/">Solaranlage</a>, kann ein intelligenter Regler überschüssigen Strom in den Termo leiten. So wird der einfache Termo im Betrieb fast kostenlos.</p>
+
+  <h2 id="vergleich">Boiler im Vergleich</h2>
+  <p>Mehr Sterne bedeuten niedrigere Energiekosten.</p>
+  <table class="prices">
+    <thead><tr><th>System</th><th>Sparsamkeit</th><th>Lebensdauer</th></tr></thead>
+    <tbody>
+      <tr><td>Elektrischer Termo</td><td>★</td><td>8 – 12 Jahre</td></tr>
+      <tr><td>Butan-Durchlauferhitzer</td><td>★★</td><td>10 – 15 Jahre</td></tr>
+      <tr><td>Termo mit Solarstromregler</td><td>★★★★ (mit Solaranlage)</td><td>8 – 12 Jahre</td></tr>
+      <tr><td>Solarboiler (termosifón)</td><td>★★★★</td><td>15 – 20 Jahre</td></tr>
+      <tr><td>Wärmepumpenboiler</td><td>★★★★</td><td>15 – 20 Jahre</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Wohnen Sie das ganze Jahr dort, lohnt sich ein sparsames System. Nutzen Sie das Haus ein paar Monate im Jahr, ist ein guter Termo mit Zeitschaltuhr oft die vernünftigste Wahl.</p>
+  <p>Ein Wärmepumpenboiler passt gut zu einer <a href="/de/kosten/klimaanlage-und-waermepumpe/">Wärmepumpe für die Heizung</a>. Mehr zum ganzen Energiebild lesen Sie in <a href="/de/ratgeber/heizen-und-kuehlen-spanien/">Heizen und Kühlen in Spanien</a>.</p>
+
+  <h2 id="arbeiten">Arbeiten, bei denen wir helfen</h2>
+  <p>Von der kleinen Reparatur bis zur kompletten neuen Wasserleitung:</p>
+  <ul>
+    <li>Anode des Termos tauschen und entkalken</li>
+    <li>Druckminderer an der Hauptleitung</li>
+    <li>Neuer Verteiler mit einem Ventil pro Raum</li>
+    <li>Druckerhöhungsanlage (grupo de presión)</li>
+    <li>Neues Abwasser in Bad oder Küche</li>
+    <li>Neue Wasserleitungen in einer Wohnung</li>
+    <li>Neue Wasserleitungen in einem Haus</li>
+  </ul>
+  <p class="note">Wie viel Arbeit es ist, hängt vor allem von der Größe des Hauses ab, davon, wie viele Wände und Böden geöffnet werden müssen, und ob neue Fliesen nötig sind.</p>
+  <p><strong>Möchten Sie Leitungen oder Boiler erneuern lassen?</strong> Wir sehen uns an, was in Ihrem Haus steckt, empfehlen den Boiler, der zu Ihrer Nutzung passt, und kümmern uns um die Ausführung. <a href="/de/anfrage/?dienst=renovatie">Erzählen Sie uns, worum es geht</a>.</p>
+
+  <h2 id="tipps">Tipps für ein Ferienhaus</h2>
+  <ul>
+    <li><strong>Hauptabsperrhahn zu</strong>, wenn Sie abreisen, und den Termo aus. Eine smarte Steckdose schaltet ihn am Tag vor Ihrer Ankunft wieder ein.</li>
+    <li><strong>Legionellen</strong>: Wasser, das wochenlang in einem lauwarmen Speicher steht, ist ein Risiko. Lassen Sie den Boiler nach der Ankunft einige Stunden auf mindestens 60 °C laufen und alle Hähne durchspülen. Siehe <a href="/de/probleme/legionellen/">Legionellen</a>.</li>
+    <li><strong>Hartes Wasser</strong>: Eine <a href="/de/ratgeber/wasserfilter-spanien/">Enthärtungsanlage</a> schützt Boiler, Leitungen und Armaturen.</li>
+    <li><strong>Ein Wassermelder</strong> unter Boiler und Spülmaschine meldet ein Leck aufs Handy. Eine kleine Anschaffung, die viel Schaden verhindern kann.</li>
+    <li>Lassen Sie während Ihrer Abwesenheit die Hähne durchspülen und den Zähler kontrollieren. Das gehört zur <a href="/de/hausbetreuung/">Hausbetreuung</a>.</li>
+  </ul>
+  <p class="note">Dieser Ratgeber gibt allgemeine Informationen für die Axarquía im November 2026.</p>
+</Guide>

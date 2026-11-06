@@ -30,7 +30,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'Voor wie rustig aan zee wil wonen, met de voorzieningen van Torre del Mar en Vélez-Málaga dichtbij. Het dorp en de heuvels eromheen passen bij wie een Spaans dorp en uitzicht zoekt, op korte afstand van het strand.',
     see: {
-      title: 'Zien en doen in Algarrobo: Fenicische geschiedenis, stranden en de Quema',
+      title: 'Zien en doen in Algarrobo: Feniciërs, stranden, Quema',
       description: 'Wat te doen in Algarrobo: het witte dorp, de Fenicische vindplaatsen bij Mezquitilla en Trayamar, de uitkijktorens aan de kust en de feesten.',
       lead: 'Algarrobo is klein, maar heeft een van de oudste geschiedenissen van de kust.',
       items: [
@@ -46,7 +46,7 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Wonen in Algarrobo: appartementen aan zee, dorpshuizen en villa’s',
+      title: 'Wonen in Algarrobo: appartementen, dorpshuizen, villa’s',
       description: 'Een huis kopen in Algarrobo of Algarrobo Costa? Welke woningen er zijn, wat ze kosten, voorzieningen en waar u op let bij kopen en verbouwen.',
       lead: 'Algarrobo is wat betaalbaarder dan Torrox en Nerja, met een kust die rustiger is dan Torre del Mar.',
       sections: [
@@ -73,7 +73,7 @@ const content: PlaceContent = {
     ],
   },
   en: {
-    title: 'Algarrobo: living and buying between the white village and Algarrobo Costa',
+    title: 'Algarrobo: living and buying in the village and on the coast',
     description: 'All about Algarrobo: the white village, Algarrobo Costa and Mezquitilla, the Phoenician history, property prices and what to know about buying and renovating.',
     lead: 'Algarrobo is a small municipality with two faces: a white village among the avocado trees and, three kilometres on, a quiet coast with apartments and a beach.',
     intro: [
@@ -91,7 +91,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'People who want to live quietly by the sea, with the facilities of Torre del Mar and Vélez-Málaga close by. The village and the hills around it suit people looking for a Spanish village and views, a short drive from the beach.',
     see: {
-      title: 'Things to do in Algarrobo: Phoenician history, beaches and the Quema',
+      title: 'Things to do in Algarrobo: history, beaches, Quema',
       description: 'What to do in Algarrobo: the white village, the Phoenician sites at Mezquitilla and Trayamar, the coastal watchtowers and the fiestas.',
       lead: 'Algarrobo is small, but has one of the oldest histories on the coast.',
       items: [
@@ -107,7 +107,7 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Living in Algarrobo: seaside apartments, village houses and villas',
+      title: 'Living in Algarrobo: apartments, village houses, villas',
       description: 'Buying a home in Algarrobo or Algarrobo Costa? The types of property, what they cost, facilities and what to watch for when buying and renovating.',
       lead: 'Algarrobo is a little more affordable than Torrox and Nerja, with a coast that is quieter than Torre del Mar.',
       sections: [
@@ -134,8 +134,8 @@ const content: PlaceContent = {
     ],
   },
   de: {
-    title: 'Algarrobo: Wohnen und Kaufen zwischen weißem Dorf und Algarrobo Costa',
-    description: 'Alles über Algarrobo: das weiße Dorf, Algarrobo Costa und Mezquitilla, die phönizische Geschichte, Immobilienpreise und was Sie zu Kauf und Renovierung wissen sollten.',
+    title: 'Algarrobo: Wohnen und Kaufen in Dorf und Algarrobo Costa',
+    description: 'Alles über Algarrobo: weißes Dorf, Algarrobo Costa und Mezquitilla, phönizische Geschichte, Immobilienpreise und Tipps zu Kauf und Renovierung.',
     lead: 'Algarrobo ist eine kleine Gemeinde mit zwei Gesichtern: ein weißes Dorf zwischen Avocadobäumen und, drei Kilometer weiter, eine ruhige Küste mit Apartments und Strand.',
     intro: [
       'Algarrobo liegt zwischen <a href="/de/orte/torrox/">Torrox</a> und <a href="/de/orte/velez-malaga/">Vélez-Málaga</a>. Das Dorf selbst liegt etwa dreieinhalb Kilometer landeinwärts, mit engen weißen Gassen und einer Kirche auf einem Hügel. Am Meer liegen Algarrobo Costa und das Fischerdorf Mezquitilla, direkt neben <a href="/de/orte/caleta-de-velez/">Caleta de Vélez</a> und seinem Hafen.',
@@ -152,7 +152,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'Für alle, die ruhig am Meer wohnen möchten, mit den Einrichtungen von Torre del Mar und Vélez-Málaga in der Nähe. Das Dorf und die Hügel ringsum passen zu allen, die ein spanisches Dorf und Aussicht suchen, nicht weit vom Strand.',
     see: {
-      title: 'Sehenswertes in Algarrobo: phönizische Geschichte, Strände und die Quema',
+      title: 'Sehenswertes in Algarrobo: Phönizier, Strände, Quema',
       description: 'Was man in Algarrobo unternehmen kann: das weiße Dorf, die phönizischen Fundstätten bei Mezquitilla und Trayamar, die Wachtürme an der Küste und die Feste.',
       lead: 'Algarrobo ist klein, hat aber eine der ältesten Geschichten der Küste.',
       items: [
@@ -168,8 +168,8 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Wohnen in Algarrobo: Apartments am Meer, Dorfhäuser und Villen',
-      description: 'Ein Haus in Algarrobo oder Algarrobo Costa kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung und worauf Sie bei Kauf und Renovierung achten sollten.',
+      title: 'Wohnen in Algarrobo: Apartments, Dorfhäuser, Villen',
+      description: 'Haus in Algarrobo oder Algarrobo Costa kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung und worauf Sie bei Kauf und Renovierung achten.',
       lead: 'Algarrobo ist etwas günstiger als Torrox und Nerja, mit einer Küste, die ruhiger ist als Torre del Mar.',
       sections: [
         { h: 'Welche Immobilien es gibt', p: [
@@ -195,7 +195,7 @@ const content: PlaceContent = {
     ],
   },
   sv: {
-    title: 'Algarrobo: bo och köpa mellan den vita byn och Algarrobo Costa',
+    title: 'Algarrobo: bo och köpa i byn och vid Algarrobo Costa',
     description: 'Allt om Algarrobo: den vita byn, Algarrobo Costa och Mezquitilla, den feniciska historien, bostadspriser och vad du ska veta om köp och renovering.',
     lead: 'Algarrobo är en liten kommun med två ansikten: en vit by bland avokadoträden och, tre kilometer bort, en lugn kust med lägenheter och strand.',
     intro: [
@@ -213,7 +213,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'För dig som vill bo lugnt vid havet, med servicen i Torre del Mar och Vélez-Málaga nära. Byn och kullarna runt omkring passar dig som söker en spansk by och utsikt, en kort bilresa från stranden.',
     see: {
-      title: 'Se och göra i Algarrobo: fenicisk historia, stränder och Quema',
+      title: 'Se och göra i Algarrobo: historia, stränder, Quema',
       description: 'Vad du kan göra i Algarrobo: den vita byn, de feniciska fyndplatserna vid Mezquitilla och Trayamar, vakttornen vid kusten och fiestorna.',
       lead: 'Algarrobo är litet, men har en av de äldsta historierna längs kusten.',
       items: [

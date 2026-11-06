@@ -1,18 +1,28 @@
 ---
 import { ui, path, type Lang } from '../i18n';
-interface Props { lang?: Lang; eyebrow?: string; title: string; lead: string; cta?: string; ctaHref?: string; secondary?: string; secondaryHref?: string; }
-const { lang = 'nl', eyebrow, title, lead, secondary, secondaryHref } = Astro.props;
+import type { ResolvedPhoto } from '../data/place-photos';
+interface Props { lang?: Lang; eyebrow?: string; title: string; lead: string; cta?: string; ctaHref?: string; secondary?: string; secondaryHref?: string; image?: ResolvedPhoto; }
+const { lang = 'nl', eyebrow, title, lead, secondary, secondaryHref, image } = Astro.props;
 const cta = Astro.props.cta ?? ui[lang].cta;
 const ctaHref = Astro.props.ctaHref ?? path(lang, 'request');
 ---
-<section class="hero">
+<section class:list={['hero', { 'hero-photo': image }]}>
   <div class="wrap">
-    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
-    <h1 set:html={title} />
-    <p class="lead">{lead}</p>
-    <div class="hero-actions">
-      <a class="btn" href={ctaHref}>{cta}</a>
-      {secondary && secondaryHref && <a class="btn btn-ghost" href={secondaryHref}>{secondary}</a>}
+    <div class="hero-grid">
+      <div class="hero-text">
+        {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+        <h1 set:html={title} />
+        <p class="lead">{lead}</p>
+        <div class="hero-actions">
+          <a class="btn" href={ctaHref}>{cta}</a>
+          {secondary && secondaryHref && <a class="btn btn-ghost" href={secondaryHref}>{secondary}</a>}
+        </div>
+      </div>
+      {image && (
+        <figure class="hero-img">
+          <img src={image.src} srcset={image.srcset} sizes="(min-width: 860px) 440px, calc(100vw - 40px)" alt={image.alt} width="1200" height="1200" loading="eager" fetchpriority="high" decoding="async" style={`object-position: ${image.focus}`} />
+        </figure>
+      )}
     </div>
     <slot />
   </div>

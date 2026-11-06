@@ -1,0 +1,11 @@
+---
+import FiestaPage from '../../../../../components/FiestaPage.astro';
+import { places, type Place } from '../../../../../data/places';
+import { fiestas } from '../../../../../data/fiestas';
+
+export function getStaticPaths() {
+  return places.filter((p) => fiestas[p.slug]).map((p) => ({ params: { slug: p.slug }, props: { place: p } }));
+}
+const { place } = Astro.props as { place: Place };
+---
+<FiestaPage lang="en" place={place} />

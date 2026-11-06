@@ -1,0 +1,385 @@
+---
+// Rekentool: de bezoeker kiest een klus, krijgt een bandbreedte en gaat met één klik naar
+// het aanvraagformulier, met dienst, plaats, budget en de berekening al ingevuld.
+// Alles draait in de browser; de bedragen staan in src/data/calculator.ts.
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Faq from './Faq.astro';
+import Cta from './Cta.astro';
+import { site } from '../data/site';
+import { places } from '../data/places';
+import { calcs, calcPath, renovationGuidePath, budgetBounds } from '../data/calculator';
+import { topicBase, topicUi, topicHref, topics, requestPath, pricesChecked, type TopicLang } from '../data/topics';
+
+interface Props { lang: TopicLang; }
+const { lang } = Astro.props;
+const u = topicUi[lang];
+
+const T = {
+  nl: {
+    seoTitle: 'Rekentool renovatie en zwembad: wat kost het in de Axarquía?',
+    description: 'Bereken in een minuut wat een badkamer, keuken, zwembad, airco, dak of hele renovatie in de Axarquía ongeveer kost.',
+    crumb: 'Rekentool',
+    eyebrow: 'Rekentool',
+    h1: 'Wat kost uw verbouwing? Bereken het in een minuut',
+    lead: 'Kies wat u wilt laten doen en krijg direct een prijsindicatie voor de Axarquía. Klopt het ongeveer met uw plan? Vraag dan met één klik een offerte op maat aan.',
+    q1: 'Wat wilt u laten doen?',
+    q2: 'Welke uitvoering?',
+    qExtra: 'Extra’s',
+    place: 'Waar staat de woning?',
+    placeOpt: '(optioneel)',
+    placeChoose: 'Kies een plaats',
+    resultTitle: 'Uw indicatie',
+    perUnit: 'per',
+    base: 'Basis',
+    total: 'Totaal',
+    exVat: 'exclusief btw',
+    vatNote: 'Exclusief btw. Bij renovatie van een woning is dat meestal 10%, bij nieuwbouw zoals een zwembad 21%.',
+    buffer: 'Houd daarnaast ongeveer 10% aan voor onvoorziene zaken, zoals vocht of oude leidingen die pas bij het slopen zichtbaar worden.',
+    cta: 'Vraag een offerte aan met deze berekening',
+    ctaSub: 'Gratis en vrijblijvend. Uw keuze en de indicatie staan al in het formulier.',
+    readMore: 'Meer uitleg en rekenvoorbeelden',
+    prefix: 'Via de rekentool',
+    indic: 'Indicatie',
+    rooms: 'kamers',
+    count: '×',
+    disclaimerTitle: 'Hoe rekenen we?',
+    disclaimer: 'De bedragen zijn indicaties voor de Axarquía, inclusief materiaal en arbeid en exclusief btw. Ze komen uit onze kostenoverzichten, die zijn gebaseerd op Spaanse prijsgidsen en wat we in de praktijk zien. De rekentool geeft een bandbreedte, geen offerte: bereikbaarheid, de staat van het huis en uw materiaalkeuze maken het verschil. Een offerte na een bezoek of op basis van foto’s is altijd nauwkeuriger. Prijzen nagekeken op',
+    allCosts: 'Alle kostenoverzichten',
+    guide: 'Gids: wat kost een huis renoveren in Spanje?',
+    faq: [
+      { q: 'Hoe nauwkeurig is de rekentool?', a: 'De rekentool geeft een realistische bandbreedte voor de Axarquía, gebaseerd op Spaanse prijsgidsen en projecten in de regio. De echte prijs hangt af van de staat van het huis, de bereikbaarheid en uw materiaalkeuze. Met foto’s of na een bezoek krijgt u een offerte per onderdeel.' },
+      { q: 'Welk btw-tarief geldt in Spanje voor een verbouwing?', a: 'Voor renovatie van een woning voor particulier gebruik geldt onder voorwaarden 10% btw (IVA), als de materialen niet meer dan 40% van het totaal zijn. Voor nieuwbouw, zoals een nieuw zwembad, en voor losse levering geldt meestal 21%.' },
+      { q: 'Wat gebeurt er als ik een offerte aanvraag?', a: 'Uw keuze en de indicatie staan al in het formulier. U vult nog een paar gegevens in en binnen 24 uur neemt een Nederlandstalige collega contact met u op. De aanvraag is gratis en vrijblijvend.' },
+      { q: 'Heb ik een vergunning nodig?', a: 'Voor een badkamer of keuken zonder constructieve wijziging volstaat meestal een melding (declaración responsable). Een nieuw zwembad, een aanbouw of een nieuw dak vraagt een bouwvergunning met een project. De regels verschillen per gemeente.' },
+    ],
+  },
+  en: {
+    seoTitle: 'Renovation and pool cost calculator for the Axarquía (2026)',
+    description: 'Work out in a minute what a bathroom, kitchen, swimming pool, air con, roof or full renovation costs in the Axarquía.',
+    crumb: 'Calculator',
+    eyebrow: 'Cost calculator',
+    h1: 'What will your project cost? Work it out in a minute',
+    lead: 'Choose what you want done and get a guide price for the Axarquía straight away. Does it roughly fit your plans? Then ask for a tailored quote in one click.',
+    q1: 'What would you like done?',
+    q2: 'Which option?',
+    qExtra: 'Extras',
+    place: 'Where is the property?',
+    placeOpt: '(optional)',
+    placeChoose: 'Choose a town',
+    resultTitle: 'Your estimate',
+    perUnit: 'per',
+    base: 'Base',
+    total: 'Total',
+    exVat: 'excluding VAT',
+    vatNote: 'Excluding VAT. For renovating a home this is usually 10%, for new construction such as a pool 21%.',
+    buffer: 'Keep about 10% aside for surprises, such as damp or old pipes that only show up once work starts.',
+    cta: 'Ask for a quote with this estimate',
+    ctaSub: 'Free and without obligation. Your choice and the estimate are already in the form.',
+    readMore: 'More detail and worked examples',
+    prefix: 'Via the calculator',
+    indic: 'Estimate',
+    rooms: 'rooms',
+    count: '×',
+    disclaimerTitle: 'How we calculate',
+    disclaimer: 'Figures are guide prices for the Axarquía, including materials and labour and excluding VAT. They come from our cost guides, which are based on Spanish price guides and what we see in practice. The calculator gives a range, not a quote: access, the state of the house and your choice of materials make the difference. A quote after a visit, or based on photos, is always more accurate. Prices checked on',
+    allCosts: 'All cost guides',
+    guide: 'Guide: what does renovating a house in Spain cost?',
+    faq: [
+      { q: 'How accurate is the calculator?', a: 'It gives a realistic range for the Axarquía, based on Spanish price guides and projects in the area. The real price depends on the state of the house, access and your choice of materials. With photos or after a visit you get a quote broken down by item.' },
+      { q: 'What VAT rate applies to building work in Spain?', a: 'Renovation of a private home qualifies for 10% VAT (IVA) under certain conditions, if materials are no more than 40% of the total. New construction, such as a new pool, and supply-only usually carry 21%.' },
+      { q: 'What happens when I ask for a quote?', a: 'Your choice and the estimate are already in the form. You add a few details and someone will contact you within 24 hours. The request is free and without obligation.' },
+      { q: 'Do I need a permit?', a: 'A bathroom or kitchen without structural changes usually only needs a notification (declaración responsable). A new pool, an extension or a new roof needs a building permit with plans. Rules differ between town halls.' },
+    ],
+  },
+  de: {
+    seoTitle: 'Kostenrechner Renovierung und Pool in der Axarquía (2026)',
+    description: 'Berechnen Sie in einer Minute, was ein Bad, eine Küche, ein Pool, eine Klimaanlage, ein Dach oder eine Komplettsanierung in der Axarquía ungefähr kostet.',
+    crumb: 'Rechner',
+    eyebrow: 'Kostenrechner',
+    h1: 'Was kostet Ihr Vorhaben? In einer Minute berechnet',
+    lead: 'Wählen Sie, was gemacht werden soll, und erhalten Sie sofort einen Richtpreis für die Axarquía. Passt es ungefähr zu Ihrem Plan? Dann fragen Sie mit einem Klick ein Angebot an.',
+    q1: 'Was möchten Sie machen lassen?',
+    q2: 'Welche Ausführung?',
+    qExtra: 'Extras',
+    place: 'Wo steht die Immobilie?',
+    placeOpt: '(optional)',
+    placeChoose: 'Ort wählen',
+    resultTitle: 'Ihr Richtwert',
+    perUnit: 'pro',
+    base: 'Basis',
+    total: 'Gesamt',
+    exVat: 'ohne MwSt.',
+    vatNote: 'Ohne MwSt. Bei der Renovierung eines Wohnhauses meist 10 %, bei Neubau wie einem Pool 21 %.',
+    buffer: 'Planen Sie zusätzlich etwa 10 % für Unvorhergesehenes ein, etwa Feuchtigkeit oder alte Leitungen, die erst beim Abbruch sichtbar werden.',
+    cta: 'Angebot mit dieser Berechnung anfragen',
+    ctaSub: 'Kostenlos und unverbindlich. Ihre Auswahl und der Richtwert stehen schon im Formular.',
+    readMore: 'Mehr Erklärung und Rechenbeispiele',
+    prefix: 'Über den Kostenrechner',
+    indic: 'Richtwert',
+    rooms: 'Räume',
+    count: '×',
+    disclaimerTitle: 'Wie wir rechnen',
+    disclaimer: 'Die Beträge sind Richtwerte für die Axarquía, inklusive Material und Arbeit und ohne MwSt. Sie stammen aus unseren Kostenübersichten, die auf spanischen Preisportalen und unserer Erfahrung vor Ort beruhen. Der Rechner gibt eine Spanne, kein Angebot: Zufahrt, Zustand des Hauses und Materialwahl machen den Unterschied. Ein Angebot nach einer Besichtigung oder anhand von Fotos ist immer genauer. Preise geprüft am',
+    allCosts: 'Alle Kostenübersichten',
+    guide: 'Ratgeber: Was kostet eine Renovierung in Spanien?',
+    faq: [
+      { q: 'Wie genau ist der Rechner?', a: 'Er gibt eine realistische Spanne für die Axarquía, basierend auf spanischen Preisportalen und Projekten in der Region. Der tatsächliche Preis hängt vom Zustand des Hauses, der Zufahrt und Ihrer Materialwahl ab. Mit Fotos oder nach einer Besichtigung erhalten Sie ein Angebot nach Positionen.' },
+      { q: 'Welcher Mehrwertsteuersatz gilt in Spanien für Bauarbeiten?', a: 'Für die Renovierung einer privat genutzten Wohnung gilt unter Bedingungen 10 % MwSt. (IVA), wenn das Material nicht mehr als 40 % der Summe ausmacht. Für Neubau, etwa einen neuen Pool, und reine Lieferung gelten meist 21 %.' },
+      { q: 'Was passiert, wenn ich ein Angebot anfrage?', a: 'Ihre Auswahl und der Richtwert stehen schon im Formular. Sie ergänzen ein paar Angaben, und innerhalb von 24 Stunden meldet sich jemand bei Ihnen. Die Anfrage ist kostenlos und unverbindlich.' },
+      { q: 'Brauche ich eine Genehmigung?', a: 'Für Bad oder Küche ohne Eingriff in die Statik genügt meist eine Anzeige (declaración responsable). Ein neuer Pool, ein Anbau oder ein neues Dach brauchen eine Baugenehmigung mit Projekt. Die Regeln unterscheiden sich je Gemeinde.' },
+    ],
+  },
+}[lang];
+
+const locale = u.dateLocale;
+const path = calcPath[lang];
+const hub = topicBase.costs[lang];
+const fmt = (d: string) => new Date(d).toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' });
+
+// Link per klus naar de kostenpagina (of de gids voor de hele woning)
+const moreHref = (key: string) => {
+  const t = topics.costs[lang].find((x) => x.key === key);
+  return t ? topicHref('costs', lang, t) : renovationGuidePath[lang];
+};
+
+// Alleen wat de browser nodig heeft, in de taal van de pagina
+const data = calcs.map((c) => ({
+  key: c.key,
+  dienst: c.dienst,
+  label: c.label[lang],
+  more: moreHref(c.key),
+  qty: c.qty && { label: c.qty.label[lang], unit: c.qty.unitLabel[lang], def: c.qty.def, min: c.qty.min, max: c.qty.max, all: !!c.qty.all },
+  options: c.options.map((o) => ({ id: o.id, label: o.label[lang], hint: o.hint?.[lang] ?? '', min: o.min, max: o.max, unit: o.unit })),
+  extras: c.extras.map((e) => ({ id: e.id, label: e.label[lang], min: e.min ?? 0, max: e.max ?? 0, pct: e.pct ?? null })),
+}));
+const msgs = {
+  perUnit: T.perUnit, base: T.base, total: T.total, exVat: T.exVat,
+  prefix: T.prefix, indic: T.indic, rooms: T.rooms, count: T.count,
+};
+const placeOptions = [...places].sort((a, b) => a.name.localeCompare(b.name, 'es'));
+
+const app = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: T.h1,
+  description: T.description,
+  url: new URL(path, site.url).href,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Any',
+  inLanguage: lang,
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+  publisher: { '@id': `${site.url}/#bedrijf` },
+};
+---
+<Base title={T.seoTitle} description={T.description} path={path} lang={lang} alternates={{ ...calcPath }} jsonLd={[app]}>
+  <Breadcrumbs lang={lang} items={[{ name: u.hub.costs, href: hub }, { name: T.crumb, href: path }]} />
+  <section class="section" style="padding-top:24px">
+    <div class="wrap">
+      <p class="eyebrow">{T.eyebrow}</p>
+      <h1>{T.h1}</h1>
+      <p class="lead" style="max-width:720px">{T.lead}</p>
+
+      <form
+        id="rekentool"
+        class="calc"
+        data-calcs={JSON.stringify(data)}
+        data-msgs={JSON.stringify(msgs)}
+        data-locale={locale}
+        data-request={requestPath[lang]}
+        data-budgets={JSON.stringify(budgetBounds)}
+        onsubmit="return false"
+      >
+        <div class="calc-main">
+          <fieldset class="calc-step">
+            <legend>{T.q1}</legend>
+            <div class="choices calc-kinds">
+              {calcs.map((c, i) => (
+                <label class="choice"><input type="radio" name="klus" value={c.key} checked={i === 0} /><span>{c.label[lang]}<small>{c.sub[lang]}</small></span></label>
+              ))}
+            </div>
+          </fieldset>
+
+          <fieldset class="calc-step">
+            <legend>{T.q2}</legend>
+            <div class="choices calc-options" data-options></div>
+            <div class="field calc-qty" data-qty-wrap hidden>
+              <label for="calc-qty" data-qty-label></label>
+              <div class="calc-qty-row">
+                <input id="calc-qty" type="number" inputmode="numeric" data-qty />
+                <span data-qty-unit></span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="calc-step" data-extras-wrap hidden>
+            <legend>{T.qExtra}</legend>
+            <div class="calc-extras" data-extras></div>
+          </fieldset>
+
+          <div class="calc-row">
+            <div class="field">
+              <label for="calc-plaats">{T.place} <span class="note">{T.placeOpt}</span></label>
+              <select id="calc-plaats" data-plaats>
+                <option value="">{T.placeChoose}</option>
+                {placeOptions.map((p) => <option value={p.slug}>{p.name}</option>)}
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <aside class="calc-result" aria-live="polite">
+          <p class="answer-title">{T.resultTitle}</p>
+          <p class="calc-total" data-total>–</p>
+          <p class="note">{T.vatNote}</p>
+          <ul class="calc-lines" data-lines></ul>
+          <p class="note">{T.buffer}</p>
+          <a class="btn calc-cta" data-cta href={requestPath[lang]}>{T.cta}</a>
+          <p class="note">{T.ctaSub}</p>
+          <p class="note"><a data-more href={hub}>{T.readMore} →</a></p>
+        </aside>
+      </form>
+
+      <div class="prose" style="margin-top:40px">
+        <aside class="sources">
+          <h2 class="h3">{T.disclaimerTitle}</h2>
+          <p class="note">{T.disclaimer} {fmt(pricesChecked)}.</p>
+          <ul class="note">
+            {topics.costs[lang].map((t) => <li><a href={topicHref('costs', lang, t)}>{t.title}</a></li>)}
+            <li><a href={renovationGuidePath[lang]}>{T.guide}</a></li>
+          </ul>
+          <p class="note"><a href={hub}>{T.allCosts} →</a></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+  <Faq items={T.faq} lang={lang} />
+  <Cta lang={lang} />
+</Base>
+
+<script>
+  type Opt = { id: string; label: string; hint: string; min: number; max: number; unit: 'fixed' | 'm2' | 'each' };
+  type Extra = { id: string; label: string; min: number; max: number; pct: [number, number] | null };
+  type Calc = {
+    key: string; dienst: string; label: string; more: string;
+    qty?: { label: string; unit: string; def: number; min: number; max: number; all: boolean };
+    options: Opt[]; extras: Extra[];
+  };
+
+  const form = document.querySelector<HTMLFormElement>('#rekentool');
+  if (form) {
+    const calcs: Calc[] = JSON.parse(form.dataset.calcs || '[]');
+    const M = JSON.parse(form.dataset.msgs || '{}');
+    const budgets: number[] = JSON.parse(form.dataset.budgets || '[]');
+    const locale = form.dataset.locale || 'nl-NL';
+    const money = new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+    const $ = <T extends HTMLElement>(s: string) => form.querySelector<T>(s)!;
+    const optionsEl = $('[data-options]');
+    const extrasWrap = $('[data-extras-wrap]');
+    const extrasEl = $('[data-extras]');
+    const qtyWrap = $('[data-qty-wrap]');
+    const qtyInput = $<HTMLInputElement>('[data-qty]');
+    const plaatsSel = $<HTMLSelectElement>('[data-plaats]');
+    const cta = $<HTMLAnchorElement>('[data-cta]');
+    const more = $<HTMLAnchorElement>('[data-more]');
+    const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+
+    // Afronden: grof genoeg om geen schijnprecisie te geven
+    const step = (n: number) => (n < 2000 ? 50 : n < 20000 ? 100 : 500);
+    const down = (n: number) => Math.floor(n / step(n)) * step(n);
+    const up = (n: number) => Math.ceil(n / step(n)) * step(n);
+    const range = (a: number, b: number) => `${money.format(down(a))} – ${money.format(up(b))}`;
+
+    let calc = calcs[0];
+
+    function renderKind() {
+      const k = (form!.elements.namedItem('klus') as RadioNodeList).value;
+      calc = calcs.find((c) => c.key === k) ?? calcs[0];
+      optionsEl.innerHTML = calc.options
+        .map((o, i) => `<label class="choice"><input type="radio" name="optie" value="${o.id}"${i === (calc.options.length > 2 ? 1 : 0) ? ' checked' : ''} /><span>${esc(o.label)}${o.hint ? `<small>${esc(o.hint)}</small>` : ''}</span></label>`)
+        .join('');
+      extrasEl.innerHTML = calc.extras
+        .map((e) => `<label class="calc-check"><input type="checkbox" name="extra" value="${e.id}" /> <span>${esc(e.label)}</span></label>`)
+        .join('');
+      extrasWrap.hidden = calc.extras.length === 0;
+      if (calc.qty) {
+        $('[data-qty-label]').textContent = calc.qty.label;
+        $('[data-qty-unit]').textContent = calc.qty.unit;
+        qtyInput.min = String(calc.qty.min);
+        qtyInput.max = String(calc.qty.max);
+        qtyInput.value = String(calc.qty.def);
+      }
+      more.href = calc.more;
+      update();
+    }
+
+    function update() {
+      const optId = (form!.elements.namedItem('optie') as RadioNodeList | null)?.value;
+      const opt = calc.options.find((o) => o.id === optId) ?? calc.options[0];
+      const usesQty = !!calc.qty && (calc.qty.all || opt.unit !== 'fixed');
+      qtyWrap.hidden = !usesQty;
+      let qty = 1;
+      if (usesQty && calc.qty) {
+        const v = parseInt(qtyInput.value, 10);
+        qty = Math.min(calc.qty.max, Math.max(calc.qty.min, Number.isFinite(v) ? v : calc.qty.def));
+      }
+      const mult = usesQty ? qty : 1;
+      const baseMin = opt.min * mult;
+      const baseMax = opt.max * mult;
+      const unitTxt = opt.unit === 'm2' ? ` (${money.format(opt.min)} – ${money.format(opt.max)} ${M.perUnit} m²)` : '';
+      const lines: string[] = [`<li><span>${esc(opt.label)}${usesQty ? ` ${M.count} ${qty}${calc.qty?.unit ? ' ' + esc(calc.qty.unit) : ''}` : ''}${unitTxt}</span><strong>${range(baseMin, baseMax)}</strong></li>`];
+      let min = baseMin;
+      let max = baseMax;
+      const chosen: string[] = [];
+      form!.querySelectorAll<HTMLInputElement>('input[name="extra"]:checked').forEach((cb) => {
+        const e = calc.extras.find((x) => x.id === cb.value);
+        if (!e) return;
+        const eMin = e.pct ? (baseMin * e.pct[0]) / 100 : e.min;
+        const eMax = e.pct ? (baseMax * e.pct[1]) / 100 : e.max;
+        min += eMin;
+        max += eMax;
+        chosen.push(e.label.replace(/\s*\(.*\)$/, ''));
+        lines.push(`<li><span>+ ${esc(e.label)}</span><strong>${range(eMin, eMax)}</strong></li>`);
+      });
+      $('[data-total]').textContent = range(min, max);
+      $('[data-lines]').innerHTML = lines.join('');
+
+      // Doorlink naar het aanvraagformulier met alles vooringevuld
+      const mid = (min + max) / 2;
+      let b = 0;
+      budgets.forEach((bound, i) => { if (mid >= bound) b = i; });
+      const choice = opt.label + (usesQty ? ` ${M.count} ${qty}${calc.qty?.unit ? ' ' + calc.qty.unit : ''}` : '');
+      const onderwerp = `${M.prefix}: ${calc.label}, ${[choice, ...chosen].join(' + ')}. ${M.indic}: ${range(min, max)} ${M.exVat}.`;
+      const q = new URLSearchParams({ dienst: calc.dienst, onderwerp, budget: String(b) });
+      if (plaatsSel.value) q.set('plaats', plaatsSel.value);
+      cta.href = `${form!.dataset.request}?${q.toString()}`;
+
+      // Onthoud de keuze in het adres, zodat een gedeelde link dezelfde klus opent
+      const url = new URL(location.href);
+      url.searchParams.set('klus', calc.key);
+      history.replaceState(null, '', url);
+    }
+
+    // Voorkeuze via ?klus=badkamer (vanaf een kostenpagina) en ?plaats=…
+    const params = new URLSearchParams(location.search);
+    const pre = params.get('klus');
+    if (pre) {
+      const r = form.querySelector<HTMLInputElement>(`input[name="klus"][value="${CSS.escape(pre)}"]`);
+      if (r) r.checked = true;
+    }
+    const prePlaats = params.get('plaats');
+    if (prePlaats && plaatsSel.querySelector(`option[value="${CSS.escape(prePlaats)}"]`)) plaatsSel.value = prePlaats;
+
+    form.addEventListener('change', (e) => {
+      const t = e.target as HTMLInputElement;
+      if (t.name === 'klus') renderKind();
+      else update();
+    });
+    qtyInput.addEventListener('input', update);
+    cta.addEventListener('click', () => {
+      const w = window as unknown as { gtag?: (...a: unknown[]) => void };
+      w.gtag?.('event', 'calculator_quote', { klus: calc.key });
+    });
+    renderKind();
+  }
+</script>

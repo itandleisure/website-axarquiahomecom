@@ -1,0 +1,110 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort svar' },
+  { id: 'bjalkar', label: 'Gamla träbjälkar' },
+  { id: 'fukt', label: 'Fukt i gamla väggar' },
+  { id: 'grander', label: 'Smala gränder utan tillfart' },
+  { id: 'tak', label: 'Tak och takterrass' },
+  { id: 'regler', label: 'Regler i den gamla bykärnan' },
+  { id: 'vi', label: 'Vad vi kan göra för dig' },
+  { id: 'tips', label: 'Tips för köpare' },
+];
+
+const faq = [
+  {
+    q: 'Är det dyrt att renovera ett byhus?',
+    a: 'Det beror främst på skicket på bjälkar, tak och väggar och på tillfarten. En totalrenovering är en stor investering; en uppfräschning med nytt badrum och kök kostar en bråkdel av det. Eftersom material ofta måste bäras in för hand kostar varje jobb i en bykärna något mer än på andra ställen. Vi kommer gärna och tittar på vad ditt hus behöver.',
+  },
+  {
+    q: 'Måste gamla träbjälkar alltid bytas?',
+    a: 'Nej. Bjälkar kan ofta sitta kvar om de är friska, eventuellt med behandling mot trämask eller termiter och förstärkning av ändarna i väggen. Byte behövs bara när en bjälke svackar, spricker eller har ruttnat i ändarna. Låt alltid bedöma det innan du stänger ett tak eller lägger ett tungt golv.',
+  },
+  {
+    q: 'Varför kommer fukten tillbaka efter omputsning?',
+    a: 'Gamla stenväggar måste kunna andas. Om en sådan vägg putsas med cementbruk eller målas med plastfärg stängs fukten inne och kommer tillbaka som flagnande färg, mögel eller vita saltutfällningar. Kalkputs och kalkfärg låter väggen torka ut.',
+  },
+  {
+    q: 'Får jag ändra fasaden på mitt byhus?',
+    a: 'I skyddade bykärnor som Frigiliana, och i de gamla centrumen i många andra byar, finns regler för fasader, fönster, färger och tak. Ett större fönster, en ny balkong eller en påbyggnad på takterrassen kräver nästan alltid tillstånd. Kontrollera först med kommunen eller låt arkitekten undersöka det.',
+  },
+];
+---
+<Guide lang="sv" slug="renovera-byhus-i-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Har du köpt ett byhus, eller har du ett i sikte?" ctaText="Vi tittar på bjälkar, väggar och tak, säger ärligt vad som behöver göras och utför det åt dig, även om gränden är för smal för en skåpbil.">
+  <h2 id="kort">Kort svar</h2>
+  <p>Ett byhus i Axarquía är oftast flera årtionden till flera hundra år gammalt, byggt av sten, kalk och träbjälkar, i en gränd dit ingen lastbil kommer. Därför är en renovering annorlunda än i en villa. De tre viktigaste sakerna är <strong>skicket på träbjälkarna, fukt i väggarna och tillfarten</strong>. Om allt måste bäras in för hand kostar varje jobb märkbart mer än i ett hus vid en vanlig gata.</p>
+  <p>Den goda nyheten: ett byhus som renoverats med rätt material är svalt på sommaren, torrt på vintern och behåller sitt värde.</p>
+
+  <h2 id="bjalkar">Gamla träbjälkar</h2>
+  <p>Golv och tak i gamla byhus vilar ofta på träbjälkar (<em>vigas</em>) med vass, brädor eller små tegelvalv emellan. Vackert, men känsligt.</p>
+  <ul>
+    <li><strong>Trämask och termiter</strong>: små hål och trämjöl tyder på trämask (<em>carcoma</em>). Termiter syns ofta inte utifrån; träet låter ihåligt och smular sönder.</li>
+    <li><strong>Ruttna bjälkändar</strong>: den del av bjälken som sitter inne i väggen är mest utsatt. Om fukt tränger in i väggen ruttnar bjälken just där, utom synhåll.</li>
+    <li><strong>Svackor</strong>: ett golv som gungar eller ett tak som tydligt hänger ner är ett tecken på att det bör kontrolleras.</li>
+  </ul>
+  <p>Åtgärden beror på vad som hittas: behandling mot insekter, förstärkning av ändarna med stål eller ett nytt upplag, byte av några bjälkar eller ett helt nytt bjälklag. Låt bedöma detta innan ett tungt klinkergolv, ett badkar eller en plaskpool hamnar på takterrassen.</p>
+
+  <h2 id="fukt">Fukt i gamla väggar</h2>
+  <p>Gamla väggar är ofta 50 till 70 cm tjocka, av sten med kalk- eller lerbruk, utan grund i vår mening och utan fuktspärr. Fukt stiger upp från marken, kommer genom en gemensam vägg med grannen eller uppifrån genom taket.</p>
+  <ul>
+    <li><strong>Låt väggen andas</strong>: använd kalkputs och kalkfärg, inte cement eller plastfärg. Det är det vanligaste misstaget vid renoveringar.</li>
+    <li><strong>Åtgärda orsaken</strong>: ett läckande avlopp, en dålig takterrass eller en gata som höjts mot fasaden. Först därefter är det meningsfullt att torka ut.</li>
+    <li><strong>Ventilera</strong>: byhus är djupa med få fönster. Ett litet ventilationssystem eller ventiler gör stor skillnad.</li>
+    <li><strong>Injektering mot uppstigande fukt</strong>: kan hjälpa vid ett tydligt fuktproblem längst ner på väggen, men är inget mirakelmedel.</li>
+  </ul>
+
+  <h2 id="grander">Smala gränder utan tillfart</h2>
+  <p>I de gamla centrumen i Cómpeta, Frigiliana, Canillas de Albaida eller Árchez kommer ingen skåpbil in, än mindre en lastbil. Allt går med skottkärra, liten bandtruck eller på någons axel, uppför gränden och uppför trapporna. Det får konsekvenser:</p>
+  <ul>
+    <li><strong>Fler arbetstimmar</strong>: sand, cement, kakel och byggavfall flyttas ofta flera gånger.</li>
+    <li><strong>Mindre leveranser</strong>: material kommer i små säckar, vilket kostar mer än bulk.</li>
+    <li><strong>Bortforsling av byggavfall</strong>: i storsäckar till en plats där en container är tillåten.</li>
+    <li><strong>Tillstånd för allmän väg</strong>: för container, ställning eller att tillfälligt stänga gatan kräver kommunen ett tillstånd (<em>ocupación de vía pública</em>).</li>
+    <li><strong>Stora föremål</strong>: en bänkskiva, ett stort fönster eller en värmepump måste ibland bäras in i delar, eller lyftas in med en liten kran över taken.</li>
+    <li><strong>Grannar</strong>: i en gränd där alla känner varandra hjälper det att i förväg berätta för grannarna vad som ska hända och hur länge.</li>
+  </ul>
+
+  <h2 id="tak">Tak och takterrass</h2>
+  <p>Många byhus har en platt takterrass (<em>azotea</em>) eller ett tak av arabiska tegelpannor på träbjälkar. Läckor sitter oftast vid brunnen, längs uppvikningarna eller i anslutningen mot grannen. Att täta om en takterrass förebygger mycket fukt i rummen under.</p>
+
+  <h2 id="regler">Regler i den gamla bykärnan</h2>
+  <p>De vita byarna är en del av sitt eget värde, och kommunerna skyddar det. I skyddade centrum som Frigiliana och i de gamla centrumen i andra byar finns regler för:</p>
+  <ul>
+    <li>Färgen på fasaden (vitkalkad) och på fönster och dörrar.</li>
+    <li>Storlek och typ av fönster, luckor och balkonger.</li>
+    <li>Takpannor, skorstenar och påbyggnader på takterrassen.</li>
+    <li>Synliga installationer som luftkonditioneringsaggregat, solpaneler och paraboler mot gatan.</li>
+  </ul>
+  <p>Invändiga arbeten kräver oftast bara en enkel anmälan. Allt som synligt ändrar utsidan, eller rör konstruktionen, kräver oftast ett tillstånd med ritningar av en arkitekt; se <a href="/sv/guider/bygglov-renovering-andalusien/">tillstånd och renovering i Andalusien</a>. Vi arbetar med en fast arkitekt och gestor som känner till reglerna i varje kommun.</p>
+
+  <h2 id="vi">Vad vi kan göra för dig</h2>
+  <p>Det här är jobben vi utför i gamla byhus i Axarquía, även i gränder dit ingen skåpbil kommer:</p>
+  <table class="prices">
+    <thead><tr><th>Post</th><th>När det behövs</th></tr></thead>
+    <tbody>
+      <tr><td>Tillstånd för container eller ställning på gatan</td><td>Nästan varje renovering i den gamla kärnan</td></tr>
+      <tr><td>Behandla bjälkar mot trämask eller termiter</td><td>Hål, trämjöl eller ihåligt ljudande trä</td></tr>
+      <tr><td>Låta väggar andas, kalkfärg i stället för plastfärg</td><td>Flagnande färg och fuktfläckar</td></tr>
+      <tr><td>Byta några bjälkar eller förstärka ändarna</td><td>Svackor eller ruttna ändar</td></tr>
+      <tr><td>Knacka ner gammal puts, ny kalkputs</td><td>Ihållande fukt och saltutfällningar</td></tr>
+      <tr><td>Injektering mot uppstigande fukt</td><td>Fukt längst ner på väggen</td></tr>
+      <tr><td>Täta om takterrassen</td><td>Läckor eller fuktfläckar i taket under</td></tr>
+      <tr><td>Förnya ett helt träbjälklag eller tak</td><td>När många bjälkar är i dåligt skick</td></tr>
+      <tr><td>Förnya ett tegeltak med isolering</td><td>Gamla, läckande eller svackande tak</td></tr>
+      <tr><td>Dra om el och rör i hela huset</td><td>Nästan alla hus äldre än 30 år</td></tr>
+      <tr><td>Totalrenovering</td><td>Allt ut: bjälkar, rör, planlösning, tak</td></tr>
+    </tbody>
+  </table>
+  <p>Riktpriser för de vanligaste jobben finns i <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">vad det kostar att renovera ett hus i Spanien</a>.</p>
+  <p><strong>Vill du få det här gjort?</strong> Berätta vad som behöver göras och var ditt hus ligger. Vi hjälper dig hela vägen, från första besöket till överlämningen, även medan du är hemma. <a href="/sv/forfragan/?dienst=renovatie">Berätta om dina planer</a>.</p>
+
+  <h2 id="tips">Tips för köpare</h2>
+  <ul>
+    <li><strong>Låt besiktiga huset innan du skriver under</strong>, med särskild uppmärksamhet på bjälkar, fukt och tak. Se <a href="/sv/besiktning/">besiktning</a>.</li>
+    <li><strong>Gå vägen själv</strong> från närmaste ställe där en skåpbil kan stanna till ytterdörren. Ju längre och brantare, desto mer kostar varje jobb.</li>
+    <li><strong>Kontrollera papperen</strong>: stämmer det som finns med fastighetsregistret och katastret? Påbyggnader på takterrasser har inte alltid tillstånd.</li>
+    <li><strong>Tänk framåt</strong>: många trappor är charmiga nu, men kanske inte om femton år.</li>
+    <li><strong>Renovera stegvis om det behövs</strong>: tak, bjälkar och fukt först, ytskikt sedan. Resten kan göras medan du är borta; läs <a href="/sv/guider/renovera-pa-distans-i-spanien/">renovera på distans</a>.</li>
+  </ul>
+</Guide>

@@ -1,5 +1,7 @@
 ---
 // Layout voor een gids (artikel) met kruimelpad, inhoudsopgave, FAQ en Article-schema.
+import ArticlePhoto from './ArticlePhoto.astro';
+import { guidePhoto } from '../data/topic-photos';
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import Faq from './Faq.astro';
@@ -14,19 +16,23 @@ interface Props {
   toc: { id: string; label: string }[];
   faq?: { q: string; a: string }[];
   dienst?: string;
+  /** Vrije tekst die alvast in de aanvraag komt (?onderwerp=…) */
+  onderwerp?: string;
   ctaTitle?: string;
   ctaText?: string;
 }
-const { slug, toc, faq = [], dienst, ctaTitle, ctaText } = Astro.props;
+const { slug, toc, faq = [], dienst, onderwerp, ctaTitle, ctaText } = Astro.props;
 const lang: Lang = Astro.props.lang ?? 'nl';
 const t = ui[lang];
 const list = guidesBy[lang];
 const g = list.find((x) => x.slug === slug)!;
 const base = route(lang, 'guides');
 const path = guideHref(lang, g);
+const photo = guidePhoto(slug, lang);
 const article = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  image: photo ? new URL(photo.og, site.url).href : `${site.url}/og-image.png`,
   headline: g.title,
   description: g.description,
   inLanguage: lang,
@@ -36,12 +42,21 @@ const article = {
   publisher: { '@id': `${site.url}/#bedrijf` },
   mainEntityOfPage: new URL(path, site.url).href,
 };
-const related = guideList(lang).filter((x) => x.slug !== slug).slice(0, 3);
+// Een deelpagina (met parent) verwijst naar de hoofdgids en de andere deelpagina's.
+const parent = g.parent ? list.find((x) => x.slug === g.parent) : undefined;
+const related = parent
+  ? [parent, ...list.filter((x) => x.parent === g.parent && x.slug !== slug)]
+  : guideList(lang).filter((x) => x.slug !== slug).slice(0, 3);
+const crumbs = parent
+  ? [{ name: t.guidesCrumb, href: base }, { name: parent.short, href: guideHref(lang, parent) }, { name: g.short, href: path }]
+  : g.path
+    ? [{ name: g.short, href: path }]
+    : [{ name: t.guidesCrumb, href: base }, { name: g.short, href: path }];
 const fmt = (d: string) => new Date(d).toLocaleDateString(t.dateLocale, { day: 'numeric', month: 'long', year: 'numeric' });
 const request = route(lang, 'request');
 ---
-<Base title={g.seoTitle ?? g.title} description={g.description} path={path} lang={lang} jsonLd={[article]}>
-  <Breadcrumbs lang={lang} items={g.path ? [{ name: g.short, href: path }] : [{ name: t.guidesCrumb, href: base }, { name: g.short, href: path }]} />
+<Base title={g.seoTitle ?? g.title} description={g.description} path={path} lang={lang} jsonLd={[article]} ogImage={photo?.og} ogImageAlt={photo?.alt}>
+  <Breadcrumbs lang={lang} items={crumbs} />
   <article class="section guide" style="padding-top:24px">
     <div class="wrap guide-grid">
       <div class="prose">
@@ -49,17 +64,18 @@ const request = route(lang, 'request');
         <h1>{g.title}</h1>
         <p class="lead">{g.lead}</p>
         <p class="note">{t.updated} {fmt(g.updated ?? g.published)}</p>
+        <ArticlePhoto photo={photo} lead />
         <slot />
       </div>
       <aside class="toc">
         <p class="footer-title" style="color:var(--ink)">{t.inGuide}</p>
         <ol>{toc.map((x) => <li><a href={`#${x.id}`}>{x.label}</a></li>)}</ol>
-        <a class="btn btn-small" href={dienst ? `${request}?dienst=${dienst}` : request}>{t.askAdvice}</a>
+        <a class="btn btn-small" href={dienst ? `${request}?dienst=${dienst}${onderwerp ? `&onderwerp=${encodeURIComponent(onderwerp)}` : ''}` : request}>{t.askAdvice}</a>
       </aside>
     </div>
   </article>
   {faq.length > 0 && <Faq items={faq} lang={lang} />}
-  <Cta lang={lang} dienst={dienst} title={ctaTitle} text={ctaText} />
+  <Cta lang={lang} dienst={dienst} onderwerp={onderwerp} title={ctaTitle} text={ctaText} />
   <section class="section">
     <div class="wrap">
       <h2>{t.readAlso}</h2>

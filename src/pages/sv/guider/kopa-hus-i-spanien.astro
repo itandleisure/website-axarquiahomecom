@@ -1,0 +1,174 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'oversikt', label: 'Stegen i korthet' },
+  { id: 'forbered', label: 'Fas 1: förberedelser' },
+  { id: 'sok', label: 'Fas 2: söka och lägga bud' },
+  { id: 'kontroll', label: 'Fas 3: kontrollera bostaden' },
+  { id: 'arras', label: 'Fas 4: arras-avtalet' },
+  { id: 'notarie', label: 'Fas 5: notarien' },
+  { id: 'efter', label: 'Fas 6: efter tillträdet' },
+  { id: 'distans', label: 'Köpa på distans' },
+  { id: 'kallor', label: 'Källor' },
+];
+
+const faq = [
+  {
+    q: 'Hur lång tid tar det att köpa hus i Spanien?',
+    a: 'När du har hittat en bostad, räkna med två till tre månader fram till tillträdet hos notarien. Ordna gärna NIE och bankkonto i förväg. En finca med frågor kring tillstånd, eller ett köp med bolån, tar ofta längre tid.',
+  },
+  {
+    q: 'Får svenskar köpa bostad i Spanien?',
+    a: 'Ja. För EU-medborgare finns inga begränsningar. Du behöver däremot ett NIE-nummer. Att äga en bostad ger dig ingen rätt att bo i Spanien; att bli resident är en separat fråga.',
+  },
+  {
+    q: 'Behöver jag verkligen en egen advokat?',
+    a: 'Det är inget krav, men starkt rekommenderat. Mäklaren betalas oftast av säljaren och notarien kontrollerar främst att köpebrevet är formellt korrekt. En oberoende advokat kontrollerar att bostaden är fri från skulder, lagligt byggd och att avtalet skyddar dig. Räkna med cirka 1 % av priset plus moms.',
+  },
+  {
+    q: 'Vad händer om jag drar mig ur efter att ha skrivit arras-avtalet?',
+    a: 'Med de vanliga arras penitenciales förlorar du handpenningen, normalt 10 % av priset. Drar säljaren sig ur måste hen betala tillbaka det dubbla. Låt därför göra de juridiska kontrollerna och besiktningen innan du skriver under, eller skriv in villkor i avtalet.',
+  },
+  {
+    q: 'Vad kostar ett köp i Andalusien utöver priset?',
+    a: 'För en begagnad bostad cirka 10 %: 7 % överlåtelseskatt (ITP) plus notarie, fastighetsregister, advokat och gestoría. För en nyproducerad bostad köpt av en byggherre betalar du 10 % moms plus 1,2 % stämpelskatt. Äldre hus behöver dessutom oftast en renoveringsbudget.',
+  },
+  {
+    q: 'Betalar köparen plusvalía?',
+    a: 'Normalt inte: den kommunala plusvalía-skatten betalas av säljaren. Men om säljaren inte är bosatt i Spanien måste köparen betala den till kommunen för säljarens räkning och hålla inne beloppet från priset. Detsamma gäller de 3 % som ska hållas inne för den spanska skattemyndigheten. Din advokat ordnar detta hos notarien.',
+  },
+];
+---
+<Guide lang="sv" slug="kopa-hus-i-spanien" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Hittat ett hus du gillar?" ctaText="Låt besiktiga det innan du skriver under arras-avtalet. Du får en rapport om husets skick, med ett riktpris för de arbeten som behövs.">
+  <p>Vill du först ha en överblick över områden och priser i provinsen? Läs <a href="/sv/guider/kopa-bostad-i-malaga/">köpa bostad i Málaga och Andalusien</a>. Den här guiden handlar om själva köpprocessen: vad du ordnar, vad du låter kontrollera och vad du betalar.</p>
+
+  <h2 id="oversikt">Stegen i korthet</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Steg</th><th>Vem gör det</th><th>Räkna med</th></tr></thead>
+    <tbody>
+      <tr><td>1. Ansök om NIE-nummer</td><td>Du eller din advokat</td><td>1 dag till några veckor</td></tr>
+      <tr><td>2. Öppna ett spanskt bankkonto</td><td>Du</td><td>1 dag till 2 veckor</td></tr>
+      <tr><td>3. Budget och eventuellt bolån</td><td>Du, banken eller en förmedlare</td><td>2 till 6 veckor</td></tr>
+      <tr><td>4. Välj en oberoende advokat</td><td>Du</td><td>Innan du lägger bud</td></tr>
+      <tr><td>5. Söka, visa och lägga bud</td><td>Du, med mäklare</td><td>Veckor till månader</td></tr>
+      <tr><td>6. Reservation</td><td>Du och mäklaren</td><td>När priset är överenskommet</td></tr>
+      <tr><td>7. Juridiska kontroller: register, kataster, skulder</td><td>Advokat</td><td>1 till 3 veckor</td></tr>
+      <tr><td>8. Rättslig status: tillstånd och AFO</td><td>Advokat, eventuellt arkitekt</td><td>1 till 4 veckor</td></tr>
+      <tr><td>9. Besiktning</td><td>Besiktningsman eller byggfirma</td><td>1 till 2 veckor</td></tr>
+      <tr><td>10. Arras-avtal och handpenning</td><td>Advokat och säljare</td><td>Oftast 10 % av priset</td></tr>
+      <tr><td>11. Escritura hos notarien</td><td>Notarie, du (eller ditt ombud)</td><td>4 till 10 veckor efter arras</td></tr>
+      <tr><td>12. Betala skatter och registrera</td><td>Advokat eller gestoría</td><td>Direkt efter notarien</td></tr>
+      <tr><td>13. Abonnemang och kommunen</td><td>Du, din advokat eller tillsynsfirma</td><td>De första veckorna efter tillträdet</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Tiderna är typiska för provinsen Málaga. En finca eller ett bolån tar ofta längre tid.</p>
+
+  <h2 id="forbered">Fas 1: förberedelser</h2>
+  <h3>Steg 1: NIE-nummer</h3>
+  <p><em>Número de Identidad de Extranjero</em> (NIE) är ditt spanska skatteregistreringsnummer. Utan det kan du inte skriva under ett köpebrev, betala skatt och ofta inte öppna ett bankkonto. Du ansöker hos polisen (<em>Policía Nacional</em>, Oficina de Extranjería) i Spanien, eller på det spanska konsulatet hemma. Avgiften är cirka 12 € (blankett 790, kod 012; beloppet justeras varje år).</p>
+  <p>Det kan vara svårt att få en tid hos polisen i provinsen Málaga, så många köpare låter sin advokat ansöka med fullmakt. Tänker du bo i Spanien måste du senare också registrera dig som resident; se <a href="/sv/guider/flytta-till-spanien/">flytta till Spanien</a>.</p>
+
+  <h3>Steg 2: spanskt bankkonto</h3>
+  <p>Ett spanskt konto är inget lagkrav, men i praktiken klarar du dig inte utan. Du använder det för handpenningen, bankchecken eller överföringen hos notarien och senare för fastighetsskatten (IBI), vatten, el och samfällighetsavgifter via autogiro. Som icke-resident öppnar du ett konto för <em>no residentes</em>. Banken frågar varifrån pengarna kommer, så ha kontoutdrag eller köpekontraktet för din nuvarande bostad till hands.</p>
+
+  <h3>Steg 3: budget och bolån</h3>
+  <p>För en begagnad bostad, räkna med <strong>cirka 10 % utöver priset</strong> i skatter och avgifter, plus en renoveringsbudget för ett äldre hus. Uppdelningen finns i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">kostnader vid husköp i Spanien</a>, och riktpriser för byggarbeten i <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">vad det kostar att renovera ett hus i Spanien</a>.</p>
+  <p>Behöver du bolån? Spanska banker lånar oftast ut 60 till 70 % av värderingen eller priset, det som är lägst, till icke-residenter. Resten, plus alla kostnader, betalar du med egna medel. Banken låter en godkänd värderingsman värdera bostaden. Ansök innan du skriver under arras-avtalet, eller avtala i arras att du kan dra dig ur utan påföljd om lånet nekas.</p>
+
+  <h3>Steg 4: en oberoende advokat</h3>
+  <p>I Spanien arbetar mäklaren för säljaren, som också betalar provisionen. Notarien är neutral och kontrollerar främst att köpebrevet är formellt i ordning, inte om huset är lagligt byggt eller i gott skick. Välj därför en egen advokat (<em>abogado</em>) som inte har introducerats av mäklaren, som talar ett språk du förstår och som känner till lantliga fastigheter i Axarquía. Kontrollera att advokaten är registrerad i advokatsamfundet (<em>Colegio de Abogados</em>) och har ansvarsförsäkring. Ett vanligt arvode är cirka 1 % av priset plus 21 % moms.</p>
+
+  <h2 id="sok">Fas 2: söka och lägga bud</h2>
+  <h3>Steg 5: söka och gå på visning</h3>
+  <p>De flesta bostäder i Axarquía annonseras på portaler som Idealista, Fotocasa och Kyero, ofta hos flera mäklare samtidigt och ibland till olika priser. Besök gärna en bostad mer än en gång, även på vintern eller efter regn: då ser du fukt, läckor och skicket på tillfartsvägen. Kör vägen till närmaste stormarknad, vårdcentral och kusten. Jämför orterna på våra <a href="/sv/orter/">ortssidor</a>.</p>
+  <h3>Steg 6: bud och reservation</h3>
+  <p>Bud går via mäklaren. När ni är överens om priset ber mäklaren ofta om en mindre reservationsavgift, till exempel 3 000 till 6 000 €, för att ta huset från marknaden. Låt din advokat läsa papperen först och se till att det står att du får tillbaka pengarna om de juridiska kontrollerna eller besiktningen visar problem. Betala in på din advokats klientkonto i stället för direkt till säljaren.</p>
+
+  <h2 id="kontroll">Fas 3: kontrollera bostaden</h2>
+  <p>Det här är den viktigaste fasen. Allt du hittar nu kan du fortfarande använda i förhandlingen, eller så kan du dra dig ur utan att förlora pengar.</p>
+  <h3>Steg 7: register, kataster och skulder</h3>
+  <ul>
+    <li><strong>Nota simple.</strong> Ett utdrag ur fastighetsregistret (<em>Registro de la Propiedad</em>) visar vem som äger bostaden, tomtens storlek och om det finns ett lån, en belastning eller ett servitut på den. Du eller din advokat kan beställa det online hos Colegio de Registradores för cirka 10 till 15 €.</li>
+    <li><strong>Kataster.</strong> <em>Catastro</em> beskriver tomten och byggnaderna i skattesyfte. Jämför katastret, registret och verkligheten. Står det 90 m² i katastret och huset är 140 m², har någon troligen byggt ut utan tillstånd.</li>
+    <li><strong>Skulder som går över på dig.</strong> Obetald fastighetsskatt (IBI) följer med fastigheten, liksom obetalda samfällighetsavgifter för innevarande år och de tre föregående. Be om den senaste IBI-räkningen och, för en lägenhet eller urbanisation, ett intyg från samfälligheten om att det inte finns några skulder.</li>
+    <li><strong>Hyresgäster och boende.</strong> Kontrollera att huset lämnas över tomt och att ingen hyresrätt eller semesteruthyrning fortsätter.</li>
+  </ul>
+
+  <h3>Steg 8: rättslig status, tillstånd och AFO</h3>
+  <p>Många bostäder i Axarquía står på landsbygdsmark (<em>suelo rústico</em>), där många hus, tillbyggnader och pooler byggdes utan tillstånd förr. Din advokat kontrollerar hos kommunen om huset och varje uthus har tillstånd. Om inte finns det i stort sett tre situationer:</p>
+  <ul>
+    <li><strong>Huset har redan en AFO-förklaring (DAFO).</strong> Kommunen har bekräftat att man inte längre kan ingripa. Huset får bebos och kan registreras, men du kan inte bara bygga ut det.</li>
+    <li><strong>Huset uppfyller kraven för AFO men har ingen förklaring ännu.</strong> Då är det klokt att avtala att säljaren slutför processen före notarien, eller att låta kostnaden och tiden återspeglas i priset. AFO-processer tar ofta flera månader.</li>
+    <li><strong>Det pågår ett ärende om ingripande, eller tomten är en olaglig avstyckning.</strong> Då kan risken för böter eller till och med rivning vara verklig. Avstå, såvida inte din advokat är säker på att det går att lösa.</li>
+  </ul>
+  <p>Vill du senare bygga ut, bygga en pool eller ett gästhus? Kontrollera först vad som är tillåtet på just den tomten. På landsbygdsmark i Andalusien är det i regel inte tillåtet att bygga ett nytt bostadshus, och inte heller att bygga ut ett hus med AFO-status. Läs mer i <a href="/sv/guider/afo-andalusien/">AFO-status och legalisering i Andalusien</a> och, för lantställen, <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca i Spanien</a>.</p>
+  <p>Be också om energicertifikatet (<em>certificado de eficiencia energética</em>): säljaren måste låta upprätta ett och lämna det till dig.</p>
+
+  <h3>Steg 9: besiktning</h3>
+  <p>Besiktning är inget krav i Spanien och mäklaren kommer inte att föreslå någon. Just därför är den värdefull. En besiktningsman tittar på fukt och mögel, tak och takterrass, sprickor, el, vatten och avlopp, septiktanken, poolen och, i äldre hus, trämask och termiter. Vanliga fynd i Axarquía är fukt och mögel, läckande tak och sprickor i väggar.</p>
+  <p>Vår <a href="/sv/besiktning/">besiktning</a> ger dig en rapport med foton och ett riktpris för de arbeten som behövs. Den siffran kan du använda i förhandlingen, och du vet före undertecknandet vad huset verkligen kommer att kosta dig. <a href="/sv/forfragan/?dienst=aankoopkeuring">Beställ en besiktning</a>.</p>
+
+  <h2 id="arras">Fas 4: arras-avtalet</h2>
+  <h3>Steg 10: privat köpeavtal och handpenning</h3>
+  <p>Om kontrollerna är okej skriver du under det privata köpeavtalet, oftast ett <em>contrato de arras penitenciales</em>, och betalar en handpenning, vanligtvis 10 % av priset. Avtalet fastställer priset, datumet hos notarien och vad som ingår (möbler, vitvaror). Drar du dig ur förlorar du handpenningen. Drar säljaren sig ur betalar hen tillbaka det dubbla.</p>
+  <p>Låt arras-avtalet ange vad som ska ske före tillträdet, till exempel att säljaren löser sitt lån, slutför en AFO-process eller åtgärdar ett fel. Ett villkor om ditt bolån kan också skrivas in. Skriv aldrig under ett arras-avtal innan din advokat har sett nota simple och tillstånden.</p>
+
+  <h2 id="notarie">Fas 5: notarien</h2>
+  <h3>Steg 11: escritura de compraventa</h3>
+  <p>Hos notarien skriver du under köpebrevet (<em>escritura pública de compraventa</em>). I praktiken väljer köparen oftast notarie. Strax före mötet hämtar notarien ett aktuellt registerutdrag, så att ingen ny skuld eller belastning kan smyga sig in i sista stund. Det här händer vid undertecknandet:</p>
+  <ul>
+    <li><strong>Betalning.</strong> Du betalar resten med bankcheck eller banköverföring. Notarien antecknar i köpebrevet hur allt, inklusive handpenningen, har betalats. Betala alltid via banken: vid köp från ett företag är kontantbetalningar till och med begränsade till 1 000 €.</li>
+    <li><strong>3 % innehållande vid icke-resident säljare.</strong> Om säljaren inte bor i Spanien håller du inne 3 % av priset och betalar in det till den spanska skattemyndigheten inom en månad (blankett 211). Gör du inte det kan skattemyndigheten kräva in beloppet från fastigheten.</li>
+    <li><strong>Plusvalía.</strong> Den kommunala skatten på markens värdeökning betalas av säljaren. Om säljaren inte är resident måste du som köpare betala den för säljarens räkning, så håll inne beloppet från priset.</li>
+    <li><strong>Nycklar.</strong> När papperen är underskrivna är du ägare och får nycklarna. Byt lås, för du vet aldrig vem mer som har en nyckel.</li>
+  </ul>
+  <p>Du behöver inte vara där personligen. Med en fullmakt (<em>poder notarial</em>) kan din advokat skriva under för din räkning. Köpebrevet är på spanska; du har rätt till tolk eller översättning om du inte talar spanska.</p>
+
+  <h2 id="efter">Fas 6: efter tillträdet</h2>
+  <h3>Steg 12: betala skatterna och registrera</h3>
+  <p>Efter notarien betalar din advokat eller gestoría skatten och registrerar köpebrevet i fastighetsregistret. Först när det är registrerat är du skyddad som ägare gentemot tredje part.</p>
+  <ul>
+    <li><strong>Begagnad bostad:</strong> 7 % överlåtelseskatt (<em>Impuesto de Transmisiones Patrimoniales</em>, ITP) till Junta de Andalucía, deklarerad på blankett 600 hos Agencia Tributaria de Andalucía inom den lagstadgade fristen. Låt det göras direkt efter notarien: sen betalning ger en tilläggsavgift.</li>
+    <li><strong>Nyproduktion från en byggherre:</strong> 10 % moms (IVA), som betalas till byggherren, plus 1,2 % stämpelskatt (<em>Actos Jurídicos Documentados</em>, AJD) till Junta.</li>
+    <li><strong>Notarie och fastighetsregister:</strong> enligt officiella taxor, tillsammans oftast 1 000 till 2 500 €.</li>
+  </ul>
+  <p>Hela uppdelningen med ett räkneexempel finns i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">kostnader vid husköp i Spanien</a>.</p>
+
+  <h3>Steg 13: abonnemang, kommunen och årliga kostnader</h3>
+  <ul>
+    <li><strong>Vatten och el</strong> förs över i ditt namn med en kopia av köpebrevet och ditt NIE. Om strömmen har varit avstängd länge kan nätbolaget begära ett nytt elintyg (<em>boletín</em>), vilket ibland innebär att installationen måste uppgraderas först.</li>
+    <li><strong>IBI och sophämtningsavgift</strong> förs över i ditt namn hos kommunen eller provinsens skattekontor (i Málaga Patronato de Recaudación Provincial), med autogiro.</li>
+    <li><strong>Samfälligheten</strong>: ge dina uppgifter till förvaltaren.</li>
+    <li><strong>Försäkring</strong>: teckna byggnads- och hemförsäkring från tillträdesdagen. Läs mer i <a href="/sv/guider/hemforsakring-i-spanien/">hemförsäkring i Spanien</a>.</li>
+    <li><strong>Årlig skatt för icke-residenter</strong>: om du inte bor i Spanien lämnar du en deklaration varje år (blankett 210) på en schablonintäkt från bostaden, även om du inte hyr ut den.</li>
+  </ul>
+  <p>Vill du hyra ut bostaden? Kontrollera före köpet om kommunen och samfälligheten tillåter semesteruthyrning, och räkna med registreringen för semesteruthyrning.</p>
+
+  <h3>Steg 14: renovering och tillsyn av huset</h3>
+  <p>Vill du renovera gör du det helst innan du flyttar in. De flesta arbeten kräver en anmälan eller ett tillstånd från kommunen, och landsbygdsmark och AFO-status ger extra begränsningar; se <a href="/sv/guider/bygglov-renovering-andalusien/">tillstånd och renovering i Andalusien</a>. Vi gör om besiktningen till en offert och utför <a href="/sv/renovering/">renoveringen</a>, även medan du är hemma i Sverige. När du inte är där håller <a href="/sv/tillsyn/">tillsynen</a> ett öga på huset. <a href="/sv/forfragan/?dienst=renovatie">Begär en offert på renovering</a>.</p>
+
+  <h2 id="distans">Köpa på distans</h2>
+  <p>Många köpare i Axarquía sköter större delen av köpet hemifrån. Det fungerar bra med några försiktighetsåtgärder:</p>
+  <ul>
+    <li><strong>Fullmakt.</strong> Med en <em>poder notarial</em> kan din advokat ansöka om NIE, öppna bankkontot och skriva under arras-avtalet och köpebrevet. Du kan skriva under den hos en spansk notarie, eller hos en notarius publicus hemma med apostille. Begränsa den till just det här köpet.</li>
+    <li><strong>Överföra pengar.</strong> Betalar du från kronor, lås växelkursen i förväg och skicka stora belopp i god tid: bankerna kontrollerar varifrån pengarna kommer, och det kan ta flera dagar.</li>
+    <li><strong>Någon på plats.</strong> En besiktningsman eller byggfirma som inspekterar huset och håller dig uppdaterad med foton och video gör att du inte bara behöver lita på mäklarens bilder.</li>
+  </ul>
+  <p>Har du ett hus i sikte? Vi gör <a href="/sv/besiktning/">besiktningen</a>, prissätter renoveringen och hjälper efter köpet med <a href="/sv/renovering/">renovering</a>, <a href="/sv/underhall/">underhåll</a> och <a href="/sv/tillsyn/">tillsyn</a>. Skicka din fråga via <a href="/sv/forfragan/?dienst=aankoopkeuring">förfrågningsformuläret</a> eller mejla <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+
+  <h2 id="kallor">Källor</h2>
+  <ul>
+    <li>NIE: Real Decreto 557/2011 (utlänningsförordningen), artikel 206; avgift via blankett 790, kod 012 (Ministerio del Interior).</li>
+    <li>7 % överlåtelseskatt och 1,2 % AJD i Andalusien: Ley 5/2021 de Tributos Cedidos de la Comunidad Autónoma de Andalucía (BOJA, 22 oktober 2021). 10 % moms på nya bostäder: Ley 37/1992 (momslagen), artikel 91.</li>
+    <li>Arras: Código Civil, artikel 1454.</li>
+    <li>Skulder till samfälligheten: Ley 49/1960 de Propiedad Horizontal, artikel 9.1.e. IBI följer fastigheten: Real Decreto Legislativo 2/2004 (lagen om lokal finansiering), artikel 64.</li>
+    <li>Plusvalía och köparen som ersättare för en icke-resident säljare: Real Decreto Legislativo 2/2004, artikel 106.2.</li>
+    <li>3 % innehållande vid icke-resident säljare: Real Decreto Legislativo 5/2004 (lagen om inkomstskatt för icke-residenter), artikel 25.2; blankett 211 hos Agencia Tributaria.</li>
+    <li>Gräns för kontantbetalning: Ley 7/2012, artikel 7, ändrad genom Ley 11/2021.</li>
+    <li>Energicertifikat: Real Decreto 390/2021.</li>
+    <li>Byggande på landsbygdsmark och AFO i Andalusien: Ley 7/2021 de Impulso para la Sostenibilidad del Territorio de Andalucía (LISTA) och Decreto 550/2022 (tillämpningsförordning).</li>
+    <li>Nota simple: Colegio de Registradores (registradores.org). Kataster: Sede Electrónica del Catastro.</li>
+  </ul>
+  <p class="note">Kontrollerad den 5 november 2026. Den här guiden ger allmän information och är inte juridisk, skattemässig eller finansiell rådgivning. Regler och skattesatser kan ändras; låt en oberoende advokat sköta ditt köp och fråga en skatterådgivare om din egen situation.</p>
+</Guide>

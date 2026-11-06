@@ -33,7 +33,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'Voor wie aan zee wil wonen met alles op loopafstand, of juist in een levendig wit dorp met de kust op een paar minuten. Torrox Costa is populair bij overwinteraars; het dorp en de heuvels eromheen bij wie het hele jaar in Spanje woont.',
     see: {
-      title: 'Zien en doen in Torrox: stranden, Romeinse resten en de Día de las Migas',
+      title: 'Zien en doen in Torrox: stranden, Romeinen, Migas',
       description: 'Wat te doen in Torrox: de stranden van Torrox Costa en El Morche, de vuurtoren en Caviclum, het witte dorp en de feesten.',
       lead: 'In Torrox wisselt u makkelijk strand en dorp af: ’s ochtends de boulevard, ’s middags de pleinen en steegjes van het oude dorp.',
       items: [
@@ -50,7 +50,7 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Wonen in Torrox: appartementen aan zee, dorpshuizen en villa’s',
+      title: 'Wonen in Torrox: appartementen, dorpshuizen, villa’s',
       description: 'Een huis kopen in Torrox? Het aanbod in Torrox Costa en Torrox Pueblo, de prijzen, voorzieningen en waar u op let bij oudere complexen en landelijke woningen.',
       lead: 'Torrox heeft veel aanbod in alle soorten, met prijzen onder die van Nerja. De meeste buitenlanders kopen een appartement aan de kust of een villa in de heuvels.',
       sections: [
@@ -78,7 +78,7 @@ const content: PlaceContent = {
     ],
   },
   en: {
-    title: 'Torrox: living and buying between the white village and Torrox Costa',
+    title: 'Torrox: living and buying in Pueblo and Torrox Costa',
     description: 'All about Torrox: Torrox Pueblo and Torrox Costa, the climate, the large international community, property prices and what to know about buying and renovating.',
     lead: 'Torrox is often called the village with the best climate in Europe. It is two worlds: a white village in the hills and a resort with a promenade and beach.',
     intro: [
@@ -96,7 +96,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'People who want to live by the sea with everything within walking distance, or in a lively white village with the coast a few minutes away. Torrox Costa is popular with winter residents; the village and the hills around it with people who live in Spain year-round.',
     see: {
-      title: 'Things to do in Torrox: beaches, Roman remains and the Día de las Migas',
+      title: 'Things to do in Torrox: beaches, Romans, Día de las Migas',
       description: 'What to do in Torrox: the beaches of Torrox Costa and El Morche, the lighthouse and Caviclum, the white village and the fiestas.',
       lead: 'In Torrox it is easy to mix beach and village: the promenade in the morning, the squares and lanes of the old village in the afternoon.',
       items: [
@@ -113,7 +113,7 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Living in Torrox: seaside apartments, village houses and villas',
+      title: 'Living in Torrox: apartments, village houses, villas',
       description: 'Buying a home in Torrox? What is on offer in Torrox Costa and Torrox Pueblo, prices, facilities and what to watch for in older complexes and rural homes.',
       lead: 'Torrox has plenty of every type of property, at prices below Nerja. Most foreign buyers choose an apartment on the coast or a villa in the hills.',
       sections: [
@@ -141,8 +141,8 @@ const content: PlaceContent = {
     ],
   },
   de: {
-    title: 'Torrox: Wohnen und Kaufen zwischen weißem Dorf und Torrox Costa',
-    description: 'Alles über Torrox: Torrox Pueblo und Torrox Costa, das Klima, die große deutsche Gemeinschaft, Immobilienpreise und was Sie zu Kauf und Renovierung wissen sollten.',
+    title: 'Torrox: Wohnen und Kaufen in Pueblo und Torrox Costa',
+    description: 'Alles über Torrox: Torrox Pueblo und Torrox Costa, das Klima, die große deutsche Gemeinschaft, Immobilienpreise und Tipps zu Kauf und Renovierung.',
     lead: 'Torrox gilt als der Ort mit dem besten Klima Europas. Er besteht aus zwei Welten: einem weißen Dorf in den Hügeln und einem Badeort mit Promenade und Strand.',
     intro: [
       'Die Gemeinde Torrox liegt zwischen <a href="/de/orte/nerja/">Nerja</a> und <a href="/de/orte/algarrobo/">Algarrobo</a>. Das alte Dorf, Torrox Pueblo, liegt etwa vier Kilometer landeinwärts an den Hügeln. Am Meer liegen <a href="/de/orte/torrox-costa/">Torrox Costa</a> und El Morche, mit Apartmentanlagen, einer langen Promenade und breiten Stränden.',
@@ -159,7 +159,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'Für alle, die am Meer wohnen möchten und alles zu Fuß erreichen wollen, oder lieber in einem lebendigen weißen Dorf mit der Küste wenige Minuten entfernt. Torrox Costa ist bei Überwinterern beliebt; das Dorf und die Hügel ringsum bei Menschen, die das ganze Jahr in Spanien leben.',
     see: {
-      title: 'Sehenswertes in Torrox: Strände, römische Reste und der Día de las Migas',
+      title: 'Sehenswertes in Torrox: Strände, Römer, Día de las Migas',
       description: 'Was man in Torrox unternehmen kann: die Strände von Torrox Costa und El Morche, Leuchtturm und Caviclum, das weiße Dorf und die Feste.',
       lead: 'In Torrox lassen sich Strand und Dorf leicht verbinden: morgens die Promenade, nachmittags die Plätze und Gassen des alten Dorfes.',
       items: [
@@ -177,7 +177,7 @@ const content: PlaceContent = {
     },
     living: {
       title: 'Wohnen in Torrox: Apartments am Meer, Dorfhäuser und Villen',
-      description: 'Ein Haus in Torrox kaufen? Das Angebot in Torrox Costa und Torrox Pueblo, Preise, Versorgung und worauf Sie bei älteren Anlagen und ländlichen Häusern achten sollten.',
+      description: 'Haus in Torrox kaufen? Das Angebot in Torrox Costa und Torrox Pueblo, Preise, Versorgung und worauf Sie bei älteren Anlagen und Landhäusern achten.',
       lead: 'Torrox hat ein großes Angebot aller Art, zu Preisen unter denen von Nerja. Die meisten ausländischen Käufer wählen ein Apartment an der Küste oder eine Villa in den Hügeln.',
       sections: [
         { h: 'Welche Immobilien es gibt', p: [
@@ -222,7 +222,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'För dig som vill bo vid havet med allt på gångavstånd, eller i en livlig vit by med kusten några minuter bort. Torrox Costa är populärt bland dem som övervintrar; byn och kullarna runt omkring bland dem som bor i Spanien året runt.',
     see: {
-      title: 'Se och göra i Torrox: stränder, romerska lämningar och Día de las Migas',
+      title: 'Se och göra i Torrox: stränder, romare, Día de las Migas',
       description: 'Vad du kan göra i Torrox: stränderna i Torrox Costa och El Morche, fyren och Caviclum, den vita byn och fiestorna.',
       lead: 'I Torrox är det lätt att växla mellan strand och by: strandpromenaden på förmiddagen, torgen och gränderna i gamla byn på eftermiddagen.',
       items: [

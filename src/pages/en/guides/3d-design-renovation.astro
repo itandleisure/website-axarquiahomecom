@@ -1,0 +1,95 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'why', label: 'Why see it before you build' },
+  { id: 'what', label: 'What you get: plans, 3D and visualisations' },
+  { id: 'ai', label: 'What AI can and cannot do' },
+  { id: 'benefits', label: 'What it gives you' },
+  { id: 'steps', label: 'How it works, step by step' },
+  { id: 'prepare', label: 'What you can prepare yourself' },
+];
+
+const faq = [
+  {
+    q: 'Do I need to be in Spain to have a 3D design made?',
+    a: 'No. The house is measured and photographed on site. After that, meetings and decisions can take place by video call and email, in English.',
+  },
+  {
+    q: 'Is a 3D design the same as the drawings for a building permit?',
+    a: 'No. A 3D design and visualisations show how the result will look. The permit needs technical drawings. The advantage of working with an architect is that both are based on the same measurements and the same design.',
+  },
+  {
+    q: 'Can I compare different options?',
+    a: 'Yes, that is exactly what a 3D design is good for. You can see two layouts or two colour schemes side by side before you decide. With AI, variations of the look and feel are often quicker to produce than they used to be.',
+  },
+  {
+    q: 'Can I rely on an AI visualisation?',
+    a: 'For the look and feel, yes. For measurements, no. AI can render a room convincingly, but it does not know where a load-bearing wall or a drain is. That is why the images are always checked and worked out by the architect.',
+  },
+  {
+    q: 'Is a 3D design useful for a house with AFO status?',
+    a: 'Yes, as long as the house does not get bigger. Within the existing walls, a good design helps you make the most of the space. Read more in the guide on AFO and legalisation.',
+  },
+];
+
+const request = '/en/request/?dienst=renovatie&onderwerp=' + encodeURIComponent('I would like a 3D design and visualisations of my renovation.');
+---
+<Guide lang="en" slug="3d-design-renovation" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Would you like to have this done?" ctaText="We help you make it happen. Our architect creates the design and the visualisations, and then we take care of the work.">
+  <h2 id="why">Why see it before you build</h2>
+  <p>Most people renovating a house in the Axarquía still live in the UK or elsewhere in Northern Europe. You see the house a few times a year, discuss things remotely and have to choose tiles, kitchens and layouts you only know from a photo. A floor plan with measurements says very little. Most of us only really understand a space once we can see it.</p>
+  <p>On top of that, an old village house or finca is rarely straight and square. Walls lean, ceilings are low and the light falls differently than you expect. A 3D design shows what is actually possible in your house, not in a standard home.</p>
+
+  <h2 id="what">What you get: plans, 3D and visualisations</h2>
+  <p>Broadly, there are three kinds of images. They complement each other.</p>
+  <table class="prices">
+    <thead><tr><th>Type</th><th>What it shows</th><th>What it is for</th></tr></thead>
+    <tbody>
+      <tr><td>Floor plan and section</td><td>Layout, measurements, walls, windows and doors</td><td>Basis for the design and later for the permit</td></tr>
+      <tr><td>3D model</td><td>The house from every angle, which you can look through</td><td>Judging layout and proportions</td></tr>
+      <tr><td>Visualisation</td><td>A realistic image with materials, colours and light</td><td>Choosing how it should look and feel</td></tr>
+    </tbody>
+  </table>
+  <p>A visualisation (often called a <em>render</em>) looks like a photo of the finished result: the new kitchen with the sea view, the roof terrace with the pergola, the bathroom with the tile you have in mind. That makes it easy to say “yes, that’s it” or “no, a bit lighter”.</p>
+
+  <h2 id="ai">What AI can and cannot do</h2>
+  <p>Artificial intelligence has made creating visualisations much faster. From a photo of the current room, AI can quickly show how it would look with different floors, walls or furniture. That is useful early on, while you are still looking for a style.</p>
+  <p>But AI also has clear limits:</p>
+  <ul>
+    <li>An AI image is not to scale. It may move a window or make a room look bigger than it is.</li>
+    <li>AI does not know where load-bearing walls, pipes and drains are, or what the town hall allows.</li>
+    <li>An AI image is not a construction drawing. Builders cannot work from it and the town hall will not accept it.</li>
+  </ul>
+  <p>That is why it works best when an architect uses AI as a tool, and checks and develops the images based on the real measurements of your house. You get the speed of AI and the reliability of a professional.</p>
+
+  <h2 id="benefits">What it gives you</h2>
+  <ul>
+    <li><strong>Decisions made in advance.</strong> You decide on layout, materials and colours before work starts, not halfway through under time pressure.</li>
+    <li><strong>Fewer extras and surprises.</strong> A lot of extra work comes from the result turning out differently from what someone imagined. A clear picture up front avoids many of those changes.</li>
+    <li><strong>Everyone knows what is intended.</strong> A picture says more than a description, also for the Spanish tradespeople. Language matters less.</li>
+    <li><strong>A better basis for the permit.</strong> The design and the technical drawings match. It is clear straight away what needs a permit and what does not, for example with a house that has <a href="/en/guides/afo-legalisation-andalusia/">AFO status</a>.</li>
+    <li><strong>Peace of mind when renovating from abroad.</strong> You know what is being built, even when you are not there.</li>
+    <li><strong>Help when selling.</strong> Selling? Visualisations show buyers what the house could become. See also <a href="/en/guides/selling-a-house-in-spain/repairs-before-selling/">repairs before selling</a>.</li>
+  </ul>
+
+  <h2 id="steps">How it works, step by step</h2>
+  <ol>
+    <li><strong>Your wishes.</strong> You tell us what you want: which rooms, which atmosphere, what needs to improve. Photos and examples help.</li>
+    <li><strong>Measuring on site.</strong> The house is measured and photographed, so the design is based on the real situation.</li>
+    <li><strong>First sketch and options.</strong> You receive a first layout, often with a few options to compare.</li>
+    <li><strong>3D model and visualisations.</strong> The chosen direction is worked out in 3D, with images of the main rooms.</li>
+    <li><strong>Fine-tuning.</strong> You say what you would like changed, until the picture matches what you have in mind.</li>
+    <li><strong>Technical drawings and the work itself.</strong> The final design becomes the basis for the permit and for the renovation.</li>
+  </ol>
+  <p>How detailed the design needs to be depends on your project. For a new bathroom one good visualisation is often enough; for a full <a href="/en/renovation/">renovation</a> of a finca a complete 3D model pays off.</p>
+
+  <h2 id="prepare">What you can prepare yourself</h2>
+  <ul>
+    <li>Photos of every room, including ceilings, floors and the view from the windows.</li>
+    <li>Floor plans or drawings you received when you bought the house, if you have them.</li>
+    <li>Examples of what you like: pictures from magazines, the internet or houses you have seen.</li>
+    <li>A short list of what is a must, what is optional and what you would rather avoid.</li>
+    <li>How you will use the house: living there, wintering, letting or selling.</li>
+  </ul>
+  <p><strong>Would you like to see your renovation in 3D first?</strong> We help you make it happen, from the first design to the last tile. <a href={request}>Tell us what you have in mind</a>.</p>
+</Guide>

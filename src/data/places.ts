@@ -38,36 +38,39 @@ export const places: Place[] = [
   { slug: 'torrox-costa', name: 'Torrox Costa', kind: 'kern', municipality: 'torrox', setting: 'coast', coastal: true, wave: 'A', built: true },
   { slug: 'la-cala-del-moral', name: 'La Cala del Moral', kind: 'kern', municipality: 'rincon-de-la-victoria', setting: 'coast', coastal: true, wave: 'A', built: true },
   // Golf B
-  { slug: 'comares', name: 'Comares', kind: 'gemeente', setting: 'mountains', wave: 'B' },
-  { slug: 'canillas-de-aceituno', name: 'Canillas de Aceituno', kind: 'gemeente', setting: 'mountains', wave: 'B' },
-  { slug: 'sayalonga', name: 'Sayalonga', kind: 'gemeente', setting: 'hills', wave: 'B', villages: ['Corumbela'] },
-  { slug: 'periana', name: 'Periana', kind: 'gemeente', setting: 'inland', wave: 'B', villages: ['Mondrón', 'Guaro'] },
-  { slug: 'riogordo', name: 'Riogordo', kind: 'gemeente', setting: 'inland', wave: 'B' },
-  { slug: 'colmenar', name: 'Colmenar', kind: 'gemeente', setting: 'inland', wave: 'B' },
-  { slug: 'alcaucin', name: 'Alcaucín', kind: 'gemeente', setting: 'mountains', wave: 'B', villages: ['Puente de Salía'] },
-  { slug: 'canillas-de-albaida', name: 'Canillas de Albaida', kind: 'gemeente', setting: 'mountains', wave: 'B' },
-  { slug: 'archez', name: 'Árchez', kind: 'gemeente', setting: 'mountains', wave: 'B' },
-  { slug: 'sedella', name: 'Sedella', kind: 'gemeente', setting: 'mountains', wave: 'B' },
+  { slug: 'comares', name: 'Comares', kind: 'gemeente', setting: 'mountains', wave: 'B', built: true },
+  { slug: 'canillas-de-aceituno', name: 'Canillas de Aceituno', kind: 'gemeente', setting: 'mountains', wave: 'B', built: true },
+  { slug: 'sayalonga', name: 'Sayalonga', kind: 'gemeente', setting: 'hills', wave: 'B', villages: ['Corumbela'], built: true },
+  { slug: 'periana', name: 'Periana', kind: 'gemeente', setting: 'inland', wave: 'B', villages: ['Mondrón', 'Guaro'], built: true },
+  { slug: 'riogordo', name: 'Riogordo', kind: 'gemeente', setting: 'inland', wave: 'B', built: true },
+  { slug: 'colmenar', name: 'Colmenar', kind: 'gemeente', setting: 'inland', wave: 'B', built: true },
+  { slug: 'alcaucin', name: 'Alcaucín', kind: 'gemeente', setting: 'mountains', wave: 'B', villages: ['Puente Don Manuel'], built: true },
+  { slug: 'canillas-de-albaida', name: 'Canillas de Albaida', kind: 'gemeente', setting: 'mountains', wave: 'B', built: true },
+  { slug: 'archez', name: 'Árchez', kind: 'gemeente', setting: 'mountains', wave: 'B', built: true },
+  { slug: 'sedella', name: 'Sedella', kind: 'gemeente', setting: 'mountains', wave: 'B', built: true },
   // Golf C
-  { slug: 'salares', name: 'Salares', kind: 'gemeente', setting: 'mountains', wave: 'C' },
-  { slug: 'arenas', name: 'Arenas', kind: 'gemeente', setting: 'hills', wave: 'C', villages: ['Daimalos'] },
-  { slug: 'benamocarra', name: 'Benamocarra', kind: 'gemeente', setting: 'hills', wave: 'C' },
-  { slug: 'benamargosa', name: 'Benamargosa', kind: 'gemeente', setting: 'hills', wave: 'C' },
-  { slug: 'almachar', name: 'Almáchar', kind: 'gemeente', setting: 'hills', wave: 'C' },
-  { slug: 'el-borge', name: 'El Borge', kind: 'gemeente', setting: 'hills', wave: 'C' },
-  { slug: 'cutar', name: 'Cútar', kind: 'gemeente', setting: 'hills', wave: 'C' },
-  { slug: 'iznate', name: 'Iznate', kind: 'gemeente', setting: 'hills', wave: 'C' },
-  { slug: 'macharaviaya', name: 'Macharaviaya', kind: 'gemeente', setting: 'hills', wave: 'C' },
-  { slug: 'moclinejo', name: 'Moclinejo', kind: 'gemeente', setting: 'hills', wave: 'C' },
-  { slug: 'totalan', name: 'Totalán', kind: 'gemeente', setting: 'hills', wave: 'C' },
-  { slug: 'alfarnate', name: 'Alfarnate', kind: 'gemeente', setting: 'inland', wave: 'C' },
-  { slug: 'alfarnatejo', name: 'Alfarnatejo', kind: 'gemeente', setting: 'inland', wave: 'C' },
+  { slug: 'salares', name: 'Salares', kind: 'gemeente', setting: 'mountains', wave: 'C', built: true },
+  { slug: 'arenas', name: 'Arenas', kind: 'gemeente', setting: 'hills', wave: 'C', villages: ['Daimalos'], built: true },
+  { slug: 'benamocarra', name: 'Benamocarra', kind: 'gemeente', setting: 'hills', wave: 'C', built: true },
+  { slug: 'benamargosa', name: 'Benamargosa', kind: 'gemeente', setting: 'hills', wave: 'C', built: true },
+  { slug: 'almachar', name: 'Almáchar', kind: 'gemeente', setting: 'hills', wave: 'C', built: true },
+  { slug: 'el-borge', name: 'El Borge', kind: 'gemeente', setting: 'hills', wave: 'C', built: true },
+  { slug: 'cutar', name: 'Cútar', kind: 'gemeente', setting: 'hills', wave: 'C', built: true },
+  { slug: 'iznate', name: 'Iznate', kind: 'gemeente', setting: 'hills', wave: 'C', built: true },
+  { slug: 'macharaviaya', name: 'Macharaviaya', kind: 'gemeente', setting: 'hills', wave: 'C', built: true },
+  { slug: 'moclinejo', name: 'Moclinejo', kind: 'gemeente', setting: 'hills', wave: 'C', built: true },
+  { slug: 'totalan', name: 'Totalán', kind: 'gemeente', setting: 'hills', wave: 'C', built: true },
+  { slug: 'alfarnate', name: 'Alfarnate', kind: 'gemeente', setting: 'inland', wave: 'C', built: true },
+  { slug: 'alfarnatejo', name: 'Alfarnatejo', kind: 'gemeente', setting: 'inland', wave: 'C', built: true },
 ];
 
-export type PlacePage = 'overview' | 'see' | 'living';
+export type PlacePage = 'overview' | 'see' | 'living' | 'permit' | 'practical';
 export const placeSub: Record<Exclude<PlacePage, 'overview'>, Record<Lang, string>> = {
   see: { nl: 'zien-en-doen', en: 'things-to-do', de: 'sehenswuerdigkeiten', sv: 'se-och-gora' },
   living: { nl: 'wonen', en: 'living', de: 'wohnen', sv: 'bo' },
+  // Alleen voor gemeenten, met data uit src/data/municipal.ts (nog niet in het Zweeds)
+  permit: { nl: 'bouwvergunning', en: 'building-permit', de: 'baugenehmigung', sv: 'bygglov' },
+  practical: { nl: 'praktisch', en: 'practical-guide', de: 'praktisches', sv: 'praktiskt' },
 };
 export const placeBase: Record<Lang, string> = { nl: '/nl/plaatsen/', en: '/en/places/', de: '/de/orte/', sv: '/sv/orter/' };
 export const placeHref = (lang: Lang, p: Place, page: PlacePage = 'overview') =>

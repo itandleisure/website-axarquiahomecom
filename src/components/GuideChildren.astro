@@ -1,0 +1,17 @@
+---
+// Kaarten naar de deelpagina's van een gids (bijv. per doelgroep).
+import { guidesBy, guideHref } from '../data/guides';
+import { ui, type Lang } from '../i18n';
+interface Props { parent: string; lang?: Lang; }
+const lang: Lang = Astro.props.lang ?? 'nl';
+const children = guidesBy[lang].filter((g) => g.parent === Astro.props.parent);
+---
+<div class="cards" style="margin:1.2em 0 1.8em">
+  {children.map((c) => (
+    <a class="card" href={guideHref(lang, c)}>
+      <h3>{c.short}</h3>
+      <p>{c.description}</p>
+      <span class="more">{ui[lang].readGuide} →</span>
+    </a>
+  ))}
+</div>

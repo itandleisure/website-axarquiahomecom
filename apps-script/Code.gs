@@ -1,5 +1,5 @@
 /**
- * Axarquía Home: aanvragen uit de keuzehulp opslaan en doorsturen.
+ * Axarquía Home: aanvragen uit de keuzehulp en het contactformulier opslaan en doorsturen.
  *
  * Plak dit in Extensies > Apps Script van de Google Sheet "Aanvragen axarquiahome.com".
  * Zie apps-script/README.md voor de stappen.
@@ -39,6 +39,8 @@ function doPost(e) {
     // Spam en dubbele inzendingen tegenhouden
     if (d.website) return json_({ ok: true });
     if (!d.naam || !d.email || d.toestemming !== 'ja') return json_({ ok: false, error: 'Verplichte velden ontbreken' });
+    // Contactformulier: telefoon en bericht zijn ook verplicht
+    if (d.dienst === 'contact' && (!d.telefoon || !d.omschrijving)) return json_({ ok: false, error: 'Verplichte velden ontbreken' });
     const cache = CacheService.getScriptCache();
     if (d.id && cache.get(d.id)) return json_({ ok: true, dubbel: true });
 
@@ -96,6 +98,8 @@ function bewaarFotos_(d) {
 }
 
 function mailBouwbedrijf_(d, fotoLinks, rijNummer) {
+  // Berichten van het gewone contactformulier hebben dienst "contact"
+  const contact = d.dienst === 'contact';
   const regels = [
     ['Dienst', d.dienst], ['Situatie', d.situatie], ['Type woning', d.type_woning], ['Plaats', d.plaats],
     ['Adres/link', d.adres], ['Planning', d.planning], ['Budget', d.budget], ['Omschrijving', d.omschrijving],
@@ -103,7 +107,7 @@ function mailBouwbedrijf_(d, fotoLinks, rijNummer) {
     ['Taal', d.taal], ['Toestemming partner', d.toestemming_partner || 'nee'],
   ].filter(([, v]) => v);
   const html = `
-    <p><b>Nieuwe aanvraag via axarquiahome.com</b> (regel ${rijNummer} in de sheet)</p>
+    <p><b>${contact ? 'Nieuw contactbericht' : 'Nieuwe aanvraag'} via axarquiahome.com</b> (regel ${rijNummer} in de sheet)</p>
     <table cellpadding="6" style="border-collapse:collapse">${regels.map(([k, v]) =>
       `<tr><td style="color:#666;vertical-align:top">${k}</td><td>${esc_(v).replace(/\n/g, '<br>')}</td></tr>`).join('')}
     </table>
@@ -115,7 +119,9 @@ function mailBouwbedrijf_(d, fotoLinks, rijNummer) {
     cc: CONFIG.MAIL_KOPIE,
     replyTo: d.email,
     name: CONFIG.AFZENDER,
-    subject: `Nieuwe aanvraag: ${d.dienst || 'onbekend'} in ${d.plaats || 'onbekend'} (${d.naam})`,
+    subject: contact
+      ? `Nieuw contactbericht van ${d.naam}`
+      : `Nieuwe aanvraag: ${d.dienst || 'onbekend'} in ${d.plaats || 'onbekend'} (${d.naam})`,
     htmlBody: html,
   });
 }

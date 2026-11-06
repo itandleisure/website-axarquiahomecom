@@ -1,0 +1,247 @@
+---
+// Over ons-pagina in alle talen. Het bouwbedrijf wordt bewust niet bij naam genoemd
+// (partner ligt nog niet vast): geen namen, adres of telefoon, contact via info@.
+import Base from '../layouts/Base.astro';
+import Hero from './Hero.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Cta from './Cta.astro';
+import { site } from '../data/site';
+import { team } from '../data/team';
+import { path, type Lang } from '../i18n';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const years = site.experienceYears;
+const email = site.operator.email;
+const villages = site.villages.join(', ');
+
+const copy = {
+  nl: {
+    title: `Over ons: ${years} jaar bouwen met Nederlandse kwaliteit`,
+    description: `Een vakkundig team onder Nederlandse leiding met ${years} jaar ervaring. Wij bouwen en renoveren in de Axarquía volgens Nederlandse normen en afspraken.`,
+    crumb: 'Over ons',
+    eyebrow: 'Over ons',
+    h1: 'Bouwen met <em>Nederlandse kwaliteit</em> in de Axarquía',
+    lead: `Een team onder Nederlandse leiding met ${years} jaar ervaring. Wij werken in Spanje zoals we het in Nederland gewend zijn: degelijk, netjes en met heldere afspraken.`,
+    storyH: 'Wie wij zijn',
+    story: [
+      `Axarquía Home is het aanspreekpunt voor buitenlandse huiseigenaren en kopers in de Axarquía. De uitvoering ligt in handen van een vakkundig team onder Nederlandse leiding, met ${years} jaar ervaring in de bouw.`,
+      'Wij weten hoe het is om als Nederlander een huis in Spanje te hebben. De zoektocht naar een betrouwbare aannemer, offertes die niet kloppen, een vakman die niet komt opdagen. Daarom werken wij anders.',
+      'Wij bouwen altijd volgens de Nederlandse standaarden en de kwaliteit die we in Nederland gewend zijn. Dat betekent goede materialen, nette afwerking, een opgeruimde bouwplaats en werk dat jaren meegaat. Uiteraard voldoet alles ook aan de Spaanse bouwregels.',
+      'Daarbij kennen we de regio: de lokale bouwwijze, het klimaat, de vergunningen en de vakmensen. Zo combineren we Nederlandse degelijkheid met Spaanse kennis van zaken.',
+    ],
+    boxH: 'In het kort',
+    facts: [
+      `${years} jaar ervaring in de bouw`,
+      'Nederlandse leiding',
+      'Bouwen volgens Nederlandse standaarden en kwaliteit',
+      'Eén vast aanspreekpunt',
+      'Talen: Nederlands, Engels en Spaans',
+      `Werkgebied: de hele Axarquía, o.a. ${villages}`,
+    ],
+    contact: 'Contact:',
+    valuesH: 'Waar u op kunt rekenen',
+    values: [
+      { h: 'Nederlandse kwaliteit', p: 'Wij werken met dezelfde eisen aan materiaal, afwerking en vakmanschap als in Nederland. Geen half werk, ook niet waar het niet direct zichtbaar is.' },
+      { h: 'Duidelijke communicatie', p: 'U spreekt met ons in het Nederlands of Engels. U weet altijd wat er gebeurt, wat het kost en wanneer het klaar is, ook als u niet in Spanje bent.' },
+      { h: 'Heldere afspraken', p: 'Een offerte die u kunt lezen, met wat er wel en niet in zit. Wat we afspreken, leggen we vast. Zo voorkomt u verrassingen achteraf.' },
+      { h: 'Kennis van de regio', p: 'Wij kennen de Axarquía: oude dorpshuizen, fincas op het land, de regels voor vergunningen en de lokale leveranciers.' },
+    ],
+    stepsH: 'Zo werken wij',
+    steps: [
+      { h: 'Uw aanvraag', p: 'U vertelt via het formulier wat u wilt laten doen. Wij nemen contact met u op.' },
+      { h: 'Bezoek en offerte', p: 'We bekijken het huis en u krijgt een duidelijke offerte met planning.' },
+      { h: 'Uitvoering', p: 'Een vast aanspreekpunt houdt u op de hoogte, met foto’s als u er niet bent.' },
+      { h: 'Oplevering', p: 'We lopen het werk samen na. Pas als het goed is, is het klaar.' },
+    ],
+    teamH: 'Het team',
+  },
+  en: {
+    title: `About us: ${years} years of building to Dutch standards`,
+    description: `A skilled, Dutch-led team with ${years} years of experience, building and renovating in the Axarquía to Dutch standards, with clear agreements in English or Dutch.`,
+    crumb: 'About us',
+    eyebrow: 'About us',
+    h1: 'Building to <em>Dutch standards</em> in the Axarquía',
+    lead: `A Dutch-led team with ${years} years of experience. We work in Spain the way we are used to in the Netherlands: solid, tidy and with clear agreements.`,
+    storyH: 'Who we are',
+    story: [
+      `Axarquía Home is the point of contact for overseas homeowners and buyers in the Axarquía. The work itself is carried out by a skilled, Dutch-led team with ${years} years of experience in building.`,
+      'We know what it is like to own a home in Spain as a foreigner. The search for a reliable builder, quotes that do not add up, a tradesman who never turns up. That is why we work differently.',
+      'We always build to Dutch standards and the quality the Dutch are known for. That means good materials, a neat finish, a tidy site and work that lasts for years. And of course everything meets Spanish building regulations too.',
+      'We also know the area: local building methods, the climate, permits and tradespeople. So you get Dutch reliability combined with local know-how.',
+    ],
+    boxH: 'At a glance',
+    facts: [
+      `${years} years of building experience`,
+      'Dutch management',
+      'Built to Dutch standards and quality',
+      'One named point of contact',
+      'Languages: English, Dutch and Spanish',
+      `Area: the whole Axarquía, including ${villages}`,
+    ],
+    contact: 'Contact:',
+    valuesH: 'What you can count on',
+    values: [
+      { h: 'Dutch quality', p: 'We apply the same standards for materials, finish and workmanship as in the Netherlands. No cutting corners, not even where it does not show.' },
+      { h: 'Clear communication', p: 'You deal with us in English or Dutch. You always know what is happening, what it costs and when it will be finished, even when you are not in Spain.' },
+      { h: 'Clear agreements', p: 'A quote you can actually read, showing what is and is not included. What we agree, we put in writing. No surprises afterwards.' },
+      { h: 'Local knowledge', p: 'We know the Axarquía: old village houses, country fincas, the rules for permits and the local suppliers.' },
+    ],
+    stepsH: 'How we work',
+    steps: [
+      { h: 'Your request', p: 'Tell us through the form what you would like done. We will get in touch.' },
+      { h: 'Visit and quote', p: 'We look at the property and you receive a clear quote with a schedule.' },
+      { h: 'The work', p: 'One point of contact keeps you updated, with photos when you are away.' },
+      { h: 'Handover', p: 'We check the work together. It is only finished when it is right.' },
+    ],
+    teamH: 'The team',
+  },
+  de: {
+    title: `Über uns: ${years} Jahre Bauen mit niederländischer Qualität`,
+    description: `Ein erfahrenes Team unter niederländischer Leitung mit ${years} Jahren Erfahrung. Wir bauen und renovieren in der Axarquía mit klaren Absprachen.`,
+    crumb: 'Über uns',
+    eyebrow: 'Über uns',
+    h1: 'Bauen mit <em>niederländischer Qualität</em> in der Axarquía',
+    lead: `Ein Team unter niederländischer Leitung mit ${years} Jahren Erfahrung. Wir arbeiten in Spanien so, wie wir es aus den Niederlanden gewohnt sind: solide, sauber und mit klaren Absprachen.`,
+    storyH: 'Wer wir sind',
+    story: [
+      `Axarquía Home ist die Anlaufstelle für ausländische Hauseigentümer und Käufer in der Axarquía. Die Arbeiten führt ein erfahrenes Team unter niederländischer Leitung aus, mit ${years} Jahren Erfahrung im Bau.`,
+      'Wir wissen, wie es ist, als Ausländer ein Haus in Spanien zu besitzen. Die Suche nach einem zuverlässigen Bauunternehmen, Angebote, die nicht aufgehen, der Handwerker, der nicht kommt. Deshalb arbeiten wir anders.',
+      'Wir bauen immer nach niederländischen Standards und in der Qualität, die wir aus den Niederlanden gewohnt sind. Das heißt: gute Materialien, saubere Ausführung, eine aufgeräumte Baustelle und Arbeit, die lange hält. Selbstverständlich entspricht alles auch den spanischen Bauvorschriften.',
+      'Dazu kennen wir die Region: die örtliche Bauweise, das Klima, die Genehmigungen und die Handwerker. So verbinden wir niederländische Gründlichkeit mit Ortskenntnis.',
+    ],
+    boxH: 'Auf einen Blick',
+    facts: [
+      `${years} Jahre Erfahrung im Bau`,
+      'Niederländische Leitung',
+      'Bauen nach niederländischen Standards und Qualität',
+      'Ein fester Ansprechpartner',
+      'Kontakt auf Englisch oder Niederländisch',
+      `Gebiet: die ganze Axarquía, u. a. ${villages}`,
+    ],
+    contact: 'Kontakt:',
+    valuesH: 'Darauf können Sie sich verlassen',
+    values: [
+      { h: 'Niederländische Qualität', p: 'Wir stellen an Material, Ausführung und Handwerk dieselben Anforderungen wie in den Niederlanden. Keine halben Sachen, auch nicht dort, wo man es nicht sofort sieht.' },
+      { h: 'Klare Kommunikation', p: 'Sie sprechen mit uns auf Englisch oder Niederländisch. Sie wissen immer, was passiert, was es kostet und wann es fertig ist, auch wenn Sie nicht in Spanien sind.' },
+      { h: 'Klare Absprachen', p: 'Ein verständliches Angebot, aus dem hervorgeht, was enthalten ist und was nicht. Was wir vereinbaren, halten wir schriftlich fest.' },
+      { h: 'Ortskenntnis', p: 'Wir kennen die Axarquía: alte Dorfhäuser, Fincas auf dem Land, die Regeln für Genehmigungen und die örtlichen Lieferanten.' },
+    ],
+    stepsH: 'So arbeiten wir',
+    steps: [
+      { h: 'Ihre Anfrage', p: 'Sie beschreiben im Formular, was Sie machen lassen möchten. Wir melden uns bei Ihnen.' },
+      { h: 'Besichtigung und Angebot', p: 'Wir sehen uns das Haus an und Sie erhalten ein klares Angebot mit Zeitplan.' },
+      { h: 'Ausführung', p: 'Ein fester Ansprechpartner hält Sie auf dem Laufenden, mit Fotos, wenn Sie nicht da sind.' },
+      { h: 'Abnahme', p: 'Wir gehen die Arbeiten gemeinsam durch. Fertig ist es erst, wenn es stimmt.' },
+    ],
+    teamH: 'Das Team',
+  },
+  sv: {
+    title: `Om oss: ${years} års byggande med nederländsk kvalitet`,
+    description: `Ett erfaret team under nederländsk ledning med ${years} års erfarenhet. Vi bygger och renoverar i Axarquía enligt nederländsk standard, med tydliga avtal.`,
+    crumb: 'Om oss',
+    eyebrow: 'Om oss',
+    h1: 'Vi bygger med <em>nederländsk kvalitet</em> i Axarquía',
+    lead: `Ett team under nederländsk ledning med ${years} års erfarenhet. Vi arbetar i Spanien som vi är vana vid i Nederländerna: gediget, prydligt och med tydliga överenskommelser.`,
+    storyH: 'Vilka vi är',
+    story: [
+      `Axarquía Home är kontaktpunkten för utländska husägare och köpare i Axarquía. Arbetet utförs av ett erfaret team under nederländsk ledning, med ${years} års erfarenhet av byggande.`,
+      'Vi vet hur det är att äga ett hus i Spanien som utlänning. Att leta efter en pålitlig byggare, offerter som inte går ihop, hantverkaren som aldrig dyker upp. Därför arbetar vi annorlunda.',
+      'Vi bygger alltid enligt nederländsk standard och den kvalitet vi är vana vid hemifrån. Det betyder bra material, snygg finish, en städad arbetsplats och arbete som håller i många år. Självklart uppfyller allt även de spanska byggreglerna.',
+      'Vi känner också trakten: det lokala byggsättet, klimatet, tillstånden och hantverkarna. Så får du nederländsk noggrannhet med lokal kunskap.',
+    ],
+    boxH: 'I korthet',
+    facts: [
+      `${years} års erfarenhet av byggande`,
+      'Nederländsk ledning',
+      'Byggt enligt nederländsk standard och kvalitet',
+      'En fast kontaktperson',
+      'Kontakt på engelska eller nederländska',
+      `Område: hela Axarquía, bl.a. ${villages}`,
+    ],
+    contact: 'Kontakt:',
+    valuesH: 'Det kan du räkna med',
+    values: [
+      { h: 'Nederländsk kvalitet', p: 'Vi ställer samma krav på material, finish och hantverk som i Nederländerna. Inget halvdant arbete, inte ens där det inte syns.' },
+      { h: 'Tydlig kommunikation', p: 'Du pratar med oss på engelska eller nederländska. Du vet alltid vad som händer, vad det kostar och när det är klart, även när du inte är i Spanien.' },
+      { h: 'Tydliga överenskommelser', p: 'En offert som går att förstå, med vad som ingår och inte. Det vi kommer överens om skriver vi ner.' },
+      { h: 'Lokal kunskap', p: 'Vi känner Axarquía: gamla byhus, fincor på landet, reglerna för tillstånd och de lokala leverantörerna.' },
+    ],
+    stepsH: 'Så arbetar vi',
+    steps: [
+      { h: 'Din förfrågan', p: 'Berätta i formuläret vad du vill få gjort. Vi hör av oss.' },
+      { h: 'Besök och offert', p: 'Vi tittar på huset och du får en tydlig offert med tidsplan.' },
+      { h: 'Utförande', p: 'En fast kontaktperson håller dig uppdaterad, med foton när du är borta.' },
+      { h: 'Slutbesiktning', p: 'Vi går igenom arbetet tillsammans. Det är klart först när det är rätt.' },
+    ],
+    teamH: 'Teamet',
+  },
+}[lang];
+
+const pagePath = path(lang, 'about');
+const role = (m: (typeof team)[number]) => ({ nl: m.role, en: m.roleEn, de: m.roleDe, sv: m.roleSv }[lang] ?? m.role);
+const bio = (m: (typeof team)[number]) => ({ nl: m.bio, en: m.bioEn, de: m.bioDe, sv: m.bioSv }[lang] ?? m.bio);
+---
+<Base title={copy.title} description={copy.description} path={pagePath} lang={lang}>
+  <Breadcrumbs lang={lang} items={[{ name: copy.crumb, href: pagePath }]} />
+  <Hero lang={lang} eyebrow={copy.eyebrow} title={copy.h1} lead={copy.lead} />
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>{copy.storyH}</h2>
+        {copy.story.map((p) => <p>{p}</p>)}
+      </div>
+      <div class="box">
+        <h3>{copy.boxH}</h3>
+        <ul class="checks">
+          {copy.facts.map((f) => <li>{f}</li>)}
+        </ul>
+        <p class="note">{copy.contact} <a href={`mailto:${email}`}>{email}</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="section alt">
+    <div class="wrap">
+      <h2>{copy.valuesH}</h2>
+      <div class="cards">
+        {copy.values.map((v) => (
+          <div class="card">
+            <h3>{v.h}</h3>
+            <p>{v.p}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <h2>{copy.stepsH}</h2>
+      <ol class="steps">
+        {copy.steps.map((s) => (
+          <li>
+            <h3>{s.h}</h3>
+            <p>{s.p}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+  {team.length > 0 && (
+    <section class="section alt">
+      <div class="wrap">
+        <h2>{copy.teamH}</h2>
+        <div class="cards">
+          {team.map((m) => (
+            <div class="card">
+              {m.photo && <img src={m.photo} alt={m.name} loading="lazy" width="400" height="400" style="border-radius:10px;margin-bottom:14px" />}
+              <h3>{m.name}</h3>
+              <p class="note">{role(m)}</p>
+              <p>{bio(m)}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+  <Cta lang={lang} />
+</Base>

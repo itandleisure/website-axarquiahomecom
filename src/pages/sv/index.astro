@@ -5,6 +5,7 @@ import Services from '../../components/Services.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
+import VillageChips from '../../components/VillageChips.astro';
 import Todo from '../../components/Todo.astro';
 import { site } from '../../data/site';
 
@@ -32,8 +33,8 @@ const faq = [
 ];
 ---
 <Base
-  title="Hantverkare i Axarquía | Renovering, tillsyn och besiktning vid Nerja"
-  description="Köpa, renovera eller låta någon sköta ditt hus i Axarquía? Ett team för renovering, besiktning före köp, tillsyn och underhåll i Nerja, Torrox, Frigiliana, Cómpeta och omgivningarna."
+  title="Hantverkare i Axarquía: renovering och tillsyn av hus"
+  description="Köpa, renovera eller låta någon sköta ditt hus i Axarquía? Renovering, besiktning före köp, tillsyn och underhåll i Nerja, Torrox och omgivningarna."
   path="/sv/"
   lang="sv"
 >
@@ -94,9 +95,7 @@ const faq = [
     <div class="wrap">
       <h2>Här arbetar vi</h2>
       <p class="section-intro">Från kusten till bergsbyarna: vi arbetar i hela Axarquía, även med lantställen där vatten, tillfartsväg och tillstånd kräver extra uppmärksamhet.</p>
-      <ul class="villages">
-        {site.villages.map((v) => <li>{v}</li>)}
-      </ul>
+      <VillageChips lang="sv" />
     </div>
   </section>
 
