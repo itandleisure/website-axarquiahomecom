@@ -52,7 +52,7 @@ export const site = {
   // URL van de web-app "Dashboard" uit apps-script/statistieken (eindigt op /exec).
   // Wordt getoond op /statistiek/. Geen geheim: alleen jouw Google-account ziet er cijfers.
   // Leeg = /statistiek/ toont uitleg in plaats van het dashboard.
-  statsDashboardUrl: '',
+  statsDashboardUrl: 'https://script.google.com/macros/s/AKfycbzyzH9nke4qy05RwvmARr7Pq-bP4gjatbNNl_mg5RziEk3b86J8FN_0pm3ZWB7YHXXkSQ/exec',
 
   // Voorbeelden van plaatsen in het werkgebied: de hele Axarquía, niet gebonden aan één bouwbedrijf.
   villages: [
