@@ -1,0 +1,77 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort svar' },
+  { id: 'vecka', label: 'Vad som ska göras varje vecka' },
+  { id: 'sasong', label: 'Poolskötsel per säsong' },
+  { id: 'vatten', label: 'Kalk, salt och vattenrestriktioner' },
+  { id: 'borta', label: 'När du är hemma i Sverige' },
+  { id: 'problem', label: 'Känna igen problem' },
+  { id: 'vem', label: 'Göra själv eller anlita någon' },
+];
+
+const faq = [
+  {
+    q: 'Ska jag tömma poolen på vintern?',
+    a: 'Nej, inte i Axarquía. En tom pool torkar ut i solen, ytskiktet kan spricka och vid högt grundvatten kan bassängen till och med röra sig. Låt vattnet vara kvar, sänk det gärna till strax under skimmern, använd ett vintermedel och låt pumpen gå några timmar om dagen.',
+  },
+  {
+    q: 'Hur mycket vatten förlorar en pool normalt?',
+    a: 'Genom avdunstning förlorar en öppen pool lätt en halv centimeter per dag under en spansk sommar, mer under varma och blåsiga dagar. Sjunker nivån märkbart även med överdrag eller på vintern, gör hinktestet. Förlorar poolen mer än hinken finns det troligen en läcka.',
+  },
+  {
+    q: 'Vad kostar poolskötsel i Spanien?',
+    a: 'Det beror på poolens storlek, systemet (klor eller salt), hur ofta någon kommer och om kemikalier ingår. Be om ett månadspris för ett fast antal besök, med och utan medel. Via förfrågan får du ett förslag som passar, även bara för de månader du är borta.',
+  },
+];
+---
+<Guide lang="sv" slug="poolskotsel-i-spanien" toc={toc} faq={faq} dienst="zwembad" onderwerp="Poolskötsel" ctaTitle="En klar pool, även när du inte är där?" ctaText="Berätta hur stor din pool är och när du är i Spanien. Du får ett förslag på regelbunden skötsel, separat eller tillsammans med tillsyn.">
+  <h2 id="kort">Kort svar</h2>
+  <p>Poolskötsel i Spanien handlar om tre saker: <strong>hålla vattnet i balans, hålla filtret igång och hålla poolen ren</strong>. Under högsäsong betyder det minst ett besök i veckan, på vintern räcker ofta varannan vecka. Skillnaden mot Sverige är förhållandena: mycket sol, hårt vatten, damm och löv från sluttningarna, och långa perioder då ägaren inte är där.</p>
+  <p>Gäller det en ny pool eller en pool som behöver lagas efter flera år av torka, se vår sida om <a href="/sv/pool/">poolbygge, poolrenovering och poolskötsel</a>.</p>
+
+  <h2 id="vecka">Vad som ska göras varje vecka</h2>
+  <ul class="checks">
+    <li><strong>Mät vattnet</strong>: pH mellan 7,2 och 7,6 och fritt klor runt 1 till 1,5 mg/l. Med teststickor eller ett testkit tar det två minuter.</li>
+    <li><strong>Töm skimmer- och pumpkorgar</strong>: löv, insekter och bougainvillea täpper snabbt till dem.</li>
+    <li><strong>Botten och väggar</strong>: borsta och dammsug, eller låt en robot köra, så att alger inte får fäste.</li>
+    <li><strong>Vattennivå</strong>: vattnet ska stå mitt i skimmeröppningen. För lågt och pumpen suger luft.</li>
+    <li><strong>Filter</strong>: håll koll på manometern. Stiger trycket är det dags att backspola (contralavado).</li>
+    <li><strong>Pumptid</strong>: på sommaren går pumpen ofta åtta timmar eller mer per dag, på vintern några timmar.</li>
+  </ul>
+
+  <h2 id="sasong">Poolskötsel per säsong</h2>
+  <h3>Vår: starta upp</h3>
+  <p>Från mars eller april värms vattnet upp och alger växer snabbare. Rengör poolen grundligt, backspola filtret, kontrollera pump och packningar och ge en chockbehandling. Kommer du först i juni, låt starta poolen en vecka innan, så är den klar när du kommer.</p>
+  <h3>Sommar: den tuffaste säsongen</h3>
+  <p>Sol, värme och badare förbrukar mycket klor. Mät oftare, fyll på avdunstat vatten och se upp för damm: efter en dag med vind från Afrika (calima) kan det ligga ett lager på botten. Vid mycket användning, som vid uthyrning, är två besök i veckan ingen lyx.</p>
+  <h3>Höst och vinter: lugnt, men inte stilla</h3>
+  <p>Töm inte poolen i Axarquía. Sänk nivån till strax under skimmern om du vill, använd ett vintermedel och täck poolen mot löv. Pumpen fortsätter att gå några timmar om dagen. Efter kraftigt regn på hösten är en extra kontroll klok. Läs mer i <a href="/sv/guider/forbereda-huset-for-vintern-i-spanien/">förbereda huset för vintern</a>.</p>
+
+  <h2 id="vatten">Kalk, salt och vattenrestriktioner</h2>
+  <p>Kranvattnet i stora delar av Axarquía är hårt. Det ger vita ränder vid vattenlinjen, täpper till filter och gör ytskiktet strävt. Håll pH i den lägre delen av intervallet, använd vid behov ett avkalkningsmedel och byt filtersand eller patron i tid.</p>
+  <p>Många ägare väljer <strong>saltklorering</strong>. Den gör eget klor av salt och du slipper bära dunkar. Även den kräver skötsel: elektroden kalkar igen och behöver rengöras regelbundet, och pH mäter du fortfarande.</p>
+  <p>Under torkan 2023 till början av 2026 fick pooler i Axarquía ofta inte fyllas med kranvatten. Kontrollera med kommunen om det finns restriktioner innan du fyller på. Ett överdrag sparar mycket avdunstning och därmed vatten.</p>
+
+  <h2 id="borta">När du är hemma i Sverige</h2>
+  <p>En pool utan skötsel är grön inom två till tre veckor. Då hjälper bara en kraftig chockbehandling, ibland tömning, och det kostar mer än skötseln som hade förhindrat det. De största riskerna när ingen tittar till poolen:</p>
+  <ul>
+    <li>En pump som inte startar igen efter ett strömavbrott, så att vattnet står still.</li>
+    <li>En läcka som märks först när nivån sjunker under skimmern och pumpen går torr.</li>
+    <li>Ett igensatt filter efter en storm eller calima.</li>
+  </ul>
+  <p>Låt därför kontrollera poolen även utanför säsongen, separat eller tillsammans med <a href="/sv/tillsyn/">tillsyn av huset</a>. Be om ett foto av vattnet och manometern efter varje besök. Kontakten med oss sker på engelska eller nederländska.</p>
+
+  <h2 id="problem">Känna igen problem</h2>
+  <ul>
+    <li><strong>Grönt vatten</strong>: för lite klor eller ett filter som inte fungerar. Chockbehandling, borstning och filtret igång tills vattnet är klart.</li>
+    <li><strong>Grumligt vatten</strong>: ofta för högt pH eller kalk. Mät först, korrigera sedan.</li>
+    <li><strong>Nivån sjunker snabbare än normalt</strong>: gör hinktestet. Ställ en hink med vatten på poolens trappsteg, markera nivån inne och ute och jämför efter ett dygn. Sjunker poolen mer finns en läcka i bassängen eller rören.</li>
+    <li><strong>Pumpen låter eller stänger av</strong>: ofta luft i systemet på grund av låg nivå eller ett otätt lock.</li>
+    <li><strong>Lösa plattor eller sprickor</strong>: laga snabbt. Vatten bakom ytskiktet gör skadan större.</li>
+  </ul>
+
+  <h2 id="vem">Göra själv eller anlita någon</h2>
+  <p>Bor du i Spanien och är där ofta går den veckovisa skötseln bra att göra själv. Låt ändå tekniken, som pump, filter, saltsystem och värme, kontrolleras en gång om året. Är du borta en stor del av året, eller hyr du ut huset, är fast skötsel av en poolspecialist (piscinero) det säkraste valet. Kontrollera hur ofta någon kommer, om kemikalier ingår, att du får en kort rapport med foto och vem du ringer vid ett fel.</p>
+</Guide>

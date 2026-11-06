@@ -1,0 +1,91 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'short', label: 'Short answer' },
+  { id: 'weekly', label: 'What needs doing every week' },
+  { id: 'seasons', label: 'Maintenance by season' },
+  { id: 'water', label: 'Limescale, salt and water restrictions' },
+  { id: 'away', label: 'While you are away' },
+  { id: 'problems', label: 'Spotting problems' },
+  { id: 'who', label: 'Do it yourself or hire someone' },
+];
+
+const faq = [
+  {
+    q: 'Should I drain my pool for the winter?',
+    a: 'No, not in the Axarquía. An empty pool dries out in the sun, the finish can crack and with high groundwater the shell can even shift. Keep the water in, lower it to just below the skimmer if you like, add a winter treatment and let the pump run a few hours a day.',
+  },
+  {
+    q: 'How much water does a pool normally lose?',
+    a: 'Through evaporation an open pool easily loses half a centimetre a day in a Spanish summer, more on hot, windy days. If the level also drops noticeably with a cover on or in winter, do the bucket test. If the pool loses more than the bucket, there is probably a leak.',
+  },
+  {
+    q: 'How much does pool maintenance cost in Spain?',
+    a: 'It depends on the size of the pool, the system (chlorine or salt), how often someone visits and whether chemicals are included. Ask for a monthly price for a fixed number of visits, with and without products. Send us a request and you will get a proposal that fits, including for just the months you are away.',
+  },
+  {
+    q: 'Can pool maintenance be combined with key holding?',
+    a: 'Yes. For owners who spend part of the year elsewhere that is usually the easiest option: the same visit checks the house and looks after the pool, and you get one report with photos.',
+  },
+];
+---
+<Guide lang="en" slug="pool-maintenance-spain" toc={toc} faq={faq} dienst="zwembad" onderwerp="Pool maintenance" ctaTitle="A clear pool, even when you are not there?" ctaText="Tell us how big your pool is and when you are in Spain. You will get a proposal for regular maintenance, on its own or together with key holding.">
+  <h2 id="short">Short answer</h2>
+  <p>Pool maintenance in Spain comes down to three things: <strong>keeping the water balanced, keeping the filter working and keeping the pool clean</strong>. In high season that means at least one visit a week; in winter every two weeks is often enough. What makes it different from home is the setting: lots of sun, hard water, dust and leaves from the hillsides, and long stretches when the owner is not around.</p>
+  <p>If you need a new pool or a pool that has to be repaired after years of drought, see our page on <a href="/en/swimming-pool/">pool building, renovation and maintenance</a>.</p>
+
+  <h2 id="weekly">What needs doing every week</h2>
+  <ul class="checks">
+    <li><strong>Test the water</strong>: pH between 7.2 and 7.6 and free chlorine at roughly 1 to 1.5 mg/l. With strips or a test kit it takes two minutes.</li>
+    <li><strong>Empty the skimmer and pump baskets</strong>: leaves, insects and bougainvillea petals block them quickly.</li>
+    <li><strong>Floor and walls</strong>: brush and vacuum, or let a robot run, so algae cannot take hold.</li>
+    <li><strong>Water level</strong>: it should sit halfway up the skimmer opening. Too low and the pump sucks in air.</li>
+    <li><strong>Filter</strong>: watch the pressure gauge. When the pressure rises it is time to backwash (contralavado).</li>
+    <li><strong>Pump hours</strong>: in summer the pump often runs eight hours or more a day, in winter a few hours.</li>
+  </ul>
+
+  <h2 id="seasons">Maintenance by season</h2>
+  <h3>Spring: starting up</h3>
+  <p>From March or April the water warms up and algae grow faster. Clean the pool thoroughly, backwash the filter, check the pump and seals and give it a shock treatment. Let the water circulate for a few days before swimming. Arriving in June? Have the pool started a week earlier so it is clear when you get there.</p>
+  <h3>Summer: the hardest season</h3>
+  <p>Sun, heat and swimmers use up a lot of chlorine. Test more often, top up evaporated water and watch for dust: after a day of wind from Africa (calima) there can be a layer on the bottom. With heavy use, such as holiday lets, twice a week is not overdoing it.</p>
+  <h3>Autumn and winter: quiet, not idle</h3>
+  <p>Do not drain the pool in the Axarquía. Lower the level to just below the skimmer if you like, add a winterising product and cover the pool against leaves. The pump keeps running a few hours a day. After heavy autumn rain an extra check is wise: mud and leaves can turn the water green overnight. See also <a href="/en/guides/preparing-your-spanish-home-for-winter/">preparing your Spanish home for winter</a>.</p>
+
+  <h2 id="water">Limescale, salt and water restrictions</h2>
+  <p>Tap water in much of the Axarquía is hard. That leaves white lines at the waterline, clogs filters and roughens the finish. Keep the pH at the low end of the range, use an anti-scale product if needed and have the filter sand or cartridge replaced in good time.</p>
+  <p>Many owners choose a <strong>salt chlorination system</strong>. It makes its own chlorine from salt and saves carrying containers around. It still needs looking after: the cell scales up and needs regular cleaning, and you still test the pH.</p>
+  <p>During the drought from 2023 to early 2026, pools in the Axarquía often could not be filled with mains water. Check with your town hall whether restrictions apply before topping up, and ask about a water tanker if needed. A cover saves a lot of evaporation, and so water.</p>
+
+  <h2 id="away">While you are away</h2>
+  <p>A pool without maintenance turns green within two to three weeks. Then only a heavy shock treatment helps, sometimes draining, and that costs more than the maintenance that would have prevented it. The biggest risks when nobody checks:</p>
+  <ul>
+    <li>A pump that does not restart after a power cut, leaving the water standing still.</li>
+    <li>A leak that only shows when the level drops below the skimmer and the pump runs dry.</li>
+    <li>A clogged filter after a storm or calima.</li>
+  </ul>
+  <p>So have the pool checked outside the season too, either on its own or together with <a href="/en/key-holding/">key holding</a>, where the same visit also checks the house. Ask for a photo of the water and the pressure gauge after each visit, so you can see for yourself that all is well.</p>
+
+  <h2 id="problems">Spotting problems</h2>
+  <ul>
+    <li><strong>Green water</strong>: too little chlorine or a filter that is not working well. Shock treatment, brushing and running the filter until the water is clear again.</li>
+    <li><strong>Cloudy or milky water</strong>: often a high pH or limescale. Test first, then correct.</li>
+    <li><strong>Level dropping faster than normal</strong>: do the bucket test. Put a bucket of water on the pool steps, mark the level inside and outside and compare after a day. If the pool drops more, there is a leak in the shell or the pipes.</li>
+    <li><strong>Noisy pump or pump cutting out</strong>: often air in the system from a low level or a leaking lid, sometimes worn bearings.</li>
+    <li><strong>Loose tiles or cracks</strong>: have them repaired quickly. Water behind the finish makes the damage worse.</li>
+  </ul>
+  <p>For leaks, cracks or a pool that has stood empty for a long time, an inspection with a leak test is the first step. That falls under <a href="/en/swimming-pool/">pool renovation</a>.</p>
+
+  <h2 id="who">Do it yourself or hire someone</h2>
+  <p>If you live in Spain and are there most of the time, weekly maintenance is easy to do yourself. A test kit, a skimmer net, a brush and perhaps a robot are enough. Do have the equipment, such as pump, filter, salt system and heating, checked once a year.</p>
+  <p>If you are away for much of the year, or let the house, regular maintenance by a pool specialist (piscinero) is the safest choice. When you agree on it, check:</p>
+  <ul class="checks">
+    <li>How often someone comes, in summer and in winter</li>
+    <li>Whether chemicals are included or charged separately</li>
+    <li>A short report with a photo after each visit</li>
+    <li>Who you call when something breaks, and how quickly they come</li>
+    <li>Whether small repairs to pump and filter can be done straight away, after your approval</li>
+  </ul>
+  <p>Thinking about a new pump, a salt system or solar power for the pump? See <a href="/en/costs/building-a-swimming-pool/">what a pool costs</a> and the guide <a href="/en/guides/garden-and-plot-spain/">garden and plot in Spain</a>.</p>
+</Guide>

@@ -1,0 +1,94 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'short', label: 'Short answer' },
+  { id: 'region', label: 'The Costa del Sol and the Axarquía' },
+  { id: 'types', label: 'Which builder for which job' },
+  { id: 'checks', label: 'How to check a builder' },
+  { id: 'warning', label: 'Warning signs' },
+  { id: 'language', label: 'English-speaking or Spanish' },
+  { id: 'timing', label: 'The best time to renovate' },
+  { id: 'request', label: 'How a request works with us' },
+];
+
+const faq = [
+  {
+    q: 'How do I know a builder in Spain is working legally?',
+    a: 'Ask for the tax number (CIF or NIF), proof of registration with social security and valid liability insurance. A building company that uses subcontractors is also listed in the Registro de Empresas Acreditadas (REA). A serious builder will send these documents without fuss.',
+  },
+  {
+    q: 'Are English-speaking builders in Spain more expensive?',
+    a: 'Not necessarily. The price depends mainly on the job, access to the site and the materials. What you often save with a builder who speaks your language is misunderstandings and extra work. So compare quotes item by item, not just the total.',
+  },
+  {
+    q: 'Do you also work on the western Costa del Sol, such as Marbella?',
+    a: 'We focus on the Axarquía, the eastern Costa del Sol: from Rincón de la Victoria and Vélez-Málaga to Nerja and the mountain villages such as Cómpeta and Frigiliana. For Marbella, Fuengirola or Estepona there are builders based closer by.',
+  },
+  {
+    q: 'Should the builder apply for the permit?',
+    a: 'The builder can arrange it for you, but the permit or notification is in the owner’s name. Agree who does it and get a copy before work starts. Without a notification or permit the town hall can stop the work.',
+  },
+];
+---
+<Guide lang="en" slug="builders-costa-del-sol" toc={toc} faq={faq} dienst="renovatie" onderwerp="Looking for a builder" ctaTitle="Need a builder in the Axarquía?" ctaText="Tell us what you would like done. You get one point of contact who speaks English, a visit on site and a quote broken down by item.">
+  <h2 id="short">Short answer</h2>
+  <p>You recognise a good builder on the Costa del Sol by <strong>paperwork in order, insurance, a written quote broken down by item and projects you can go and see</strong>. Preferably choose someone who works near your house: it saves travel time, and the builder knows the town hall, the permits and the suppliers.</p>
+  <p>Will you be living abroad during the work? Then also read the guide <a href="/en/guides/renovating-from-abroad-spain/">renovating from abroad</a> on comparing quotes, paying in stages and staying informed.</p>
+
+  <h2 id="region">The Costa del Sol and the Axarquía</h2>
+  <p>The Costa del Sol runs from Manilva in the west to Nerja in the east. The eastern part, east of Málaga city, is called the Axarquía. Building and renovating there is different from Marbella or Fuengirola:</p>
+  <ul>
+    <li><strong>Older houses</strong>: many village houses and fincas are thirty years old or more, with thick stone walls, old pipes and cane-and-clay roofs. See <a href="/en/guides/renovating-a-village-house-spain/">renovating a village house</a>.</li>
+    <li><strong>Difficult access</strong>: narrow lanes in Frigiliana or Cómpeta, steep tracks up to a finca. Materials sometimes go in by mini dumper or by hand. A builder who knows this plans for it.</li>
+    <li><strong>Rural land</strong>: many houses stand on suelo rústico, where the rules for extending are strict. A builder needs to know what is and is not allowed. See <a href="/en/guides/afo-legalisation-andalusia/">legalising a house and AFO</a>.</li>
+    <li><strong>Each town has its own rules</strong>: the building tax, procedure and timescale differ per village. You can find them per municipality on the <a href="/en/places/">places pages</a>, for example <a href="/en/places/nerja/building-permit/">building permits in Nerja</a> or <a href="/en/places/competa/building-permit/">in Cómpeta</a>.</li>
+  </ul>
+
+  <h2 id="types">Which builder for which job</h2>
+  <ul>
+    <li><strong>Constructora (building company)</strong>: for full renovations, extensions and new builds. Has its own crews or regular subcontractors and coordinates the trades.</li>
+    <li><strong>Autónomo (self-employed tradesman)</strong>: a bricklayer, plumber or electrician working alone or with a few people. Fine for one part of the job, less suited to running a whole renovation.</li>
+    <li><strong>Installer</strong>: for air conditioning, solar panels, electrics or a pool pump. For electrics, a registered installer should issue the certificate (boletín).</li>
+    <li><strong>Architect and arquitecto técnico</strong>: required for structural work, an extension or an extra floor. See <a href="/en/guides/building-permits-renovation-andalusia/">which permit you need</a>.</li>
+  </ul>
+  <p>If several jobs happen at once, such as a bathroom, kitchen and new electrics, one builder who coordinates everything saves a lot of time and hassle.</p>
+
+  <h2 id="checks">How to check a builder</h2>
+  <ul class="checks">
+    <li><strong>Tax number</strong> (CIF for a company, NIF for a self-employed tradesman) on the quote and invoices.</li>
+    <li><strong>Social security registration</strong> (alta en la Seguridad Social): then the people on your site are insured.</li>
+    <li><strong>Liability insurance</strong> (seguro de responsabilidad civil): ask for a copy of the policy and check it is current.</li>
+    <li><strong>REA registration</strong> if the company uses subcontractors: the Registro de Empresas Acreditadas is compulsory in construction.</li>
+    <li><strong>References and projects</strong>: ask about houses nearby the company has renovated, and call one or two previous clients.</li>
+    <li><strong>A written quote broken down by item</strong>, with materials, brand and timing, and whether IVA is included.</li>
+    <li><strong>Invoices with IVA</strong>: only then can you later show what work was done, for example when you sell.</li>
+  </ul>
+
+  <h2 id="warning">Warning signs</h2>
+  <ul>
+    <li>A price “without an invoice” or a discount for cash.</li>
+    <li>A large share of the money up front, before anything happens.</li>
+    <li>“You don’t need a permit for an extension or a covered terrace.” That is almost never true.</li>
+    <li>Only a verbal price, or a total without a breakdown.</li>
+    <li>No fixed address, just a phone number, and no projects you can see.</li>
+    <li>Pressure to decide fast, “because next week we can’t do it”.</li>
+  </ul>
+  <p>Work without a permit or invoice looks cheap, but it often comes back when you sell the house, with your insurer or when the town hall issues a fine. See <a href="/en/guides/selling-a-house-in-spain/paperwork/">paperwork for selling</a>.</p>
+
+  <h2 id="language">English-speaking or Spanish</h2>
+  <p>A Spanish builder from the village knows everyone and is often keenly priced. If you do not speak Spanish, the risk lies in communication: what exactly was agreed, which tile, which tap, what the extra work costs. A builder who speaks your language prevents those misunderstandings and can be reached when you are back home.</p>
+  <p>Whatever you choose, always put agreements in writing, with photos or drawings. And ask for quotes and invoices in a language you can read, alongside the Spanish version. More on renovating with an English-speaking team on <a href="/en/renovation/">renovation and building work</a>.</p>
+
+  <h2 id="timing">The best time to renovate</h2>
+  <p>The busiest time for builders on the Costa del Sol is spring, when everyone wants their house ready for summer. If you book a builder in autumn you have more choice and can renovate in winter, while the house is empty anyway.</p>
+  <ul>
+    <li><strong>October to April</strong>: pleasant working weather, and the house is ready for summer.</li>
+    <li><strong>July and August</strong>: hot, and August is the holiday month in Spain. Suppliers and town halls work more slowly. Some coastal towns also restrict noisy work in tourist areas in high season; ask your town hall.</li>
+    <li><strong>Permits</strong>: with a notification you can often start within a few weeks; for a permit with an architect, allow months. So start early.</li>
+  </ul>
+  <p>Want an idea of the budget first? Use the <a href="/en/costs/calculator/">cost calculator</a> or read <a href="/en/guides/renovation-costs-spain/">what renovating in Spain costs</a>. You only get a real price after a visit to the house.</p>
+
+  <h2 id="request">How a request works with us</h2>
+  <p>Axarquía Home works with a building team that has been building and renovating in the Axarquía for years, from the coast at Torre del Mar and Nerja to the mountain villages. You send your request through the <a href="/en/request/">request form</a>, we call you back, visit or join you on a video call, and you receive a quote broken down by item with a schedule. During the work you get photo updates and one fixed point of contact. See also <a href="/en/projects/">previous projects</a>.</p>
+</Guide>
