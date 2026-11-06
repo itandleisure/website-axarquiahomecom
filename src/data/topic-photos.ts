@@ -67,6 +67,24 @@ const photos: Record<string, TopicPhoto> = {
     de: 'Ein staubiges Solarmodul wird mit einem Wischer an einer Stange gereinigt',
     sv: 'En dammig solpanel rengörs med en skrapa på ett skaft',
   } },
+  'laadpaal-installeren-meterkast': { alt: {
+    nl: 'Elektricien sluit een laadpaal voor de auto aan in de meterkast, met de laadkabel aan de muur',
+    en: 'Electrician wiring a home EV charger into the consumer unit, with the charging cable on the wall',
+    de: 'Elektriker schließt eine Wallbox im Sicherungskasten an, daneben das Ladekabel an der Wand',
+    sv: 'Elektriker kopplar in en laddbox för bilen i elcentralen, med laddkabeln på väggen',
+  } },
+  'elektrische-auto-laadpaal-buiten': { alt: {
+    nl: 'Elektrische auto aan een laadpaal buiten, voor een bakstenen muur',
+    en: 'Electric car plugged into an outdoor charging post in front of a brick wall',
+    de: 'Elektroauto an einer Ladesäule im Freien vor einer Backsteinmauer',
+    sv: 'Elbil kopplad till en laddstolpe utomhus framför en tegelvägg',
+  } },
+  'elektrische-auto-laadstekker': { alt: {
+    nl: 'Laadstekker in de laadklep van een elektrische auto',
+    en: 'Charging plug in the charging port of an electric car',
+    de: 'Ladestecker in der Ladebuchse eines Elektroautos',
+    sv: 'Laddkontakt i laddluckan på en elbil',
+  } },
 };
 
 interface Placement { lead: string; /** Tweede foto direct onder de kop van de sectie met dit volgnummer (vanaf 0; ids verschillen per taal) */ inline?: { section: number; photo: string }; }
@@ -83,6 +101,7 @@ const topicPlacements: Record<string, Placement> = {
   'costs:zonnepanelen': { lead: 'zonnepanelen-pannendak', inline: { section: 2, photo: 'zonnepanelen-stof-schoonmaken' } },
   'costs:thuisbatterij': { lead: 'zonnepanelen-pannendak' },
   'costs:energiebeheer': { lead: 'zonnepanelen-pannendak' },
+  'costs:laadpaal': { lead: 'laadpaal-installeren-meterkast', inline: { section: 2, photo: 'elektrische-auto-laadpaal-buiten' } },
 };
 
 /** Gidsen, per slug. De tweede foto staat in de gidspagina zelf (component ArticlePhoto). */
