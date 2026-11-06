@@ -1,0 +1,91 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Kurze Antwort' },
+  { id: 'woche', label: 'Was jede Woche zu tun ist' },
+  { id: 'saison', label: 'Poolpflege nach Jahreszeit' },
+  { id: 'wasser', label: 'Kalk, Salz und Wasserbeschränkungen' },
+  { id: 'weg', label: 'Wenn Sie nicht da sind' },
+  { id: 'probleme', label: 'Probleme erkennen' },
+  { id: 'wer', label: 'Selbst machen oder beauftragen' },
+];
+
+const faq = [
+  {
+    q: 'Muss ich meinen Pool im Winter leeren?',
+    a: 'Nein, in der Axarquía besser nicht. Ein leerer Pool trocknet in der Sonne aus, die Beschichtung kann reißen, und bei hohem Grundwasser kann sich das Becken sogar bewegen. Lassen Sie das Wasser drin, senken Sie es gegebenenfalls unter den Skimmer, verwenden Sie ein Wintermittel und lassen Sie die Pumpe täglich einige Stunden laufen.',
+  },
+  {
+    q: 'Wie viel Wasser verliert ein Pool normalerweise?',
+    a: 'Durch Verdunstung verliert ein offener Pool im spanischen Sommer schnell einen halben Zentimeter pro Tag, an heißen, windigen Tagen mehr. Sinkt der Wasserstand auch mit Abdeckung oder im Winter deutlich, machen Sie den Eimertest. Verliert der Pool mehr als der Eimer, gibt es wahrscheinlich ein Leck.',
+  },
+  {
+    q: 'Was kostet Poolpflege in Spanien?',
+    a: 'Das hängt von der Größe des Pools, dem System (Chlor oder Salz), der Häufigkeit der Besuche und davon ab, ob Chemikalien enthalten sind. Fragen Sie nach einem Monatspreis für eine feste Anzahl Besuche, mit und ohne Mittel. Über die Anfrage erhalten Sie ein passendes Angebot, auch nur für die Monate, in denen Sie nicht da sind.',
+  },
+  {
+    q: 'Lässt sich Poolpflege mit Hausbetreuung kombinieren?',
+    a: 'Ja. Für Eigentümer, die einen Teil des Jahres woanders leben, ist das meist am einfachsten: Beim selben Besuch wird das Haus kontrolliert und der Pool gepflegt, und Sie erhalten einen Bericht mit Fotos.',
+  },
+];
+---
+<Guide lang="de" slug="poolpflege-spanien" toc={toc} faq={faq} dienst="zwembad" onderwerp="Poolpflege" ctaTitle="Ein klarer Pool, auch wenn Sie nicht da sind?" ctaText="Sagen Sie uns, wie groß Ihr Pool ist und wann Sie in Spanien sind. Sie erhalten ein Angebot für die regelmäßige Pflege, allein oder zusammen mit der Hausbetreuung.">
+  <h2 id="kurz">Kurze Antwort</h2>
+  <p>Poolpflege in Spanien bedeutet drei Dinge: <strong>das Wasser im Gleichgewicht halten, den Filter am Laufen halten und den Pool sauber halten</strong>. In der Hochsaison heißt das mindestens ein Besuch pro Woche, im Winter reicht oft alle zwei Wochen. Anders als zu Hause sind die Bedingungen: viel Sonne, hartes Wasser, Staub und Laub von den Berghängen, und lange Zeiten, in denen der Eigentümer nicht da ist.</p>
+  <p>Geht es um einen neuen Pool oder einen Pool, der nach Jahren der Dürre repariert werden muss, lesen Sie unsere Seite <a href="/de/pool/">Poolbau, Poolsanierung und Poolpflege</a>.</p>
+
+  <h2 id="woche">Was jede Woche zu tun ist</h2>
+  <ul class="checks">
+    <li><strong>Wasser messen</strong>: pH-Wert zwischen 7,2 und 7,6 und freies Chlor bei etwa 1 bis 1,5 mg/l. Mit Teststreifen oder einem Testset dauert das zwei Minuten.</li>
+    <li><strong>Skimmer- und Pumpenkörbe leeren</strong>: Laub, Insekten und Bougainvillea-Blüten verstopfen sie schnell.</li>
+    <li><strong>Boden und Wände</strong>: bürsten und saugen oder einen Roboter fahren lassen, damit sich keine Algen festsetzen.</li>
+    <li><strong>Wasserstand</strong>: Das Wasser sollte bis zur Mitte der Skimmeröffnung reichen. Ist es zu niedrig, saugt die Pumpe Luft.</li>
+    <li><strong>Filter</strong>: Achten Sie auf das Manometer. Steigt der Druck, ist es Zeit für die Rückspülung (contralavado).</li>
+    <li><strong>Pumpenlaufzeit</strong>: Im Sommer läuft die Pumpe oft acht Stunden oder mehr pro Tag, im Winter einige Stunden.</li>
+  </ul>
+
+  <h2 id="saison">Poolpflege nach Jahreszeit</h2>
+  <h3>Frühjahr: in Betrieb nehmen</h3>
+  <p>Ab März oder April erwärmt sich das Wasser und Algen wachsen schneller. Reinigen Sie den Pool gründlich, spülen Sie den Filter zurück, prüfen Sie Pumpe und Dichtungen und machen Sie eine Stoßchlorung. Lassen Sie das Wasser einige Tage zirkulieren, bevor Sie schwimmen. Kommen Sie erst im Juni, lassen Sie den Pool eine Woche vorher starten, dann ist er bei Ihrer Ankunft klar.</p>
+  <h3>Sommer: die härteste Zeit</h3>
+  <p>Sonne, Hitze und Badegäste verbrauchen viel Chlor. Messen Sie öfter, füllen Sie verdunstetes Wasser nach und achten Sie auf Staub: Nach einem Tag mit Wind aus Afrika (Calima) liegt manchmal eine Schicht auf dem Boden. Bei starker Nutzung, etwa bei Ferienvermietung, sind zwei Besuche pro Woche kein Luxus.</p>
+  <h3>Herbst und Winter: ruhig, aber nicht still</h3>
+  <p>Leeren Sie den Pool in der Axarquía nicht. Senken Sie den Wasserstand gegebenenfalls knapp unter den Skimmer, verwenden Sie ein Überwinterungsmittel und decken Sie den Pool gegen Laub ab. Die Pumpe läuft weiter einige Stunden täglich. Nach Starkregen im Herbst ist eine zusätzliche Kontrolle sinnvoll: Schlamm und Laub können das Wasser über Nacht grün färben. Mehr dazu in <a href="/de/ratgeber/haus-winterfest-spanien/">Haus in Spanien winterfest machen</a>.</p>
+
+  <h2 id="wasser">Kalk, Salz und Wasserbeschränkungen</h2>
+  <p>Das Leitungswasser ist in weiten Teilen der Axarquía hart. Das hinterlässt weiße Ränder an der Wasserlinie, verstopft Filter und raut die Beschichtung auf. Halten Sie den pH-Wert am unteren Ende des Bereichs, verwenden Sie bei Bedarf ein Antikalkmittel und lassen Sie Filtersand oder Kartusche rechtzeitig tauschen.</p>
+  <p>Viele Eigentümer entscheiden sich für eine <strong>Salzelektrolyse</strong>. Sie erzeugt Chlor aus Salz und erspart das Schleppen von Kanistern. Auch sie braucht Pflege: Die Elektrode verkalkt und muss regelmäßig gereinigt werden, und den pH-Wert messen Sie weiterhin.</p>
+  <p>Während der Dürre von 2023 bis Anfang 2026 durften Pools in der Axarquía oft nicht mit Leitungswasser gefüllt werden. Fragen Sie bei Ihrer Gemeinde nach, ob wieder Beschränkungen gelten, bevor Sie nachfüllen, und erkundigen Sie sich bei Bedarf nach einem Tankwagen. Eine Abdeckung spart viel Verdunstung und damit Wasser.</p>
+
+  <h2 id="weg">Wenn Sie nicht da sind</h2>
+  <p>Ein Pool ohne Pflege ist innerhalb von zwei bis drei Wochen grün. Dann hilft nur noch eine kräftige Stoßbehandlung, manchmal Abpumpen, und das kostet mehr als die Pflege, die es verhindert hätte. Die größten Risiken, wenn niemand nachsieht:</p>
+  <ul>
+    <li>Eine Pumpe, die nach einem Stromausfall nicht wieder anläuft, sodass das Wasser steht.</li>
+    <li>Ein Leck, das erst auffällt, wenn der Wasserstand unter den Skimmer fällt und die Pumpe trocken läuft.</li>
+    <li>Ein verstopfter Filter nach einem Sturm oder Calima.</li>
+  </ul>
+  <p>Lassen Sie den Pool deshalb auch außerhalb der Saison kontrollieren, allein oder zusammen mit der <a href="/de/hausbetreuung/">Hausbetreuung</a>, bei der derselbe Besuch auch das Haus prüft. Bitten Sie nach jedem Besuch um ein Foto vom Wasser und vom Manometer, dann sehen Sie selbst, dass alles in Ordnung ist.</p>
+
+  <h2 id="probleme">Probleme erkennen</h2>
+  <ul>
+    <li><strong>Grünes Wasser</strong>: zu wenig Chlor oder ein Filter, der nicht richtig arbeitet. Stoßchlorung, bürsten und den Filter laufen lassen, bis das Wasser wieder klar ist.</li>
+    <li><strong>Trübes oder milchiges Wasser</strong>: oft ein zu hoher pH-Wert oder Kalk. Erst messen, dann korrigieren.</li>
+    <li><strong>Wasserstand sinkt schneller als normal</strong>: Machen Sie den Eimertest. Stellen Sie einen Eimer mit Wasser auf die Poolstufe, markieren Sie den Stand innen und außen und vergleichen Sie nach einem Tag. Sinkt der Pool stärker, gibt es ein Leck im Becken oder in den Leitungen.</li>
+    <li><strong>Laute Pumpe oder Pumpe schaltet ab</strong>: oft Luft im System durch zu niedrigen Wasserstand oder einen undichten Deckel, manchmal verschlissene Lager.</li>
+    <li><strong>Lose Fliesen oder Risse</strong>: schnell reparieren lassen. Wasser hinter der Beschichtung vergrößert den Schaden.</li>
+  </ul>
+  <p>Bei Lecks, Rissen oder einem Pool, der lange leer stand, ist eine Inspektion mit Dichtheitsprüfung der erste Schritt. Das gehört zur <a href="/de/pool/">Poolsanierung</a>.</p>
+
+  <h2 id="wer">Selbst machen oder beauftragen</h2>
+  <p>Wohnen Sie in Spanien und sind Sie oft vor Ort, ist die wöchentliche Pflege gut selbst zu schaffen. Ein Testset, ein Kescher, eine Bürste und eventuell ein Roboter reichen. Lassen Sie die Technik wie Pumpe, Filter, Elektrolyse und Heizung aber einmal im Jahr prüfen.</p>
+  <p>Sind Sie einen großen Teil des Jahres weg oder vermieten Sie das Haus, ist die feste Pflege durch einen Poolfachmann (piscinero) die sicherste Wahl. Achten Sie bei der Vereinbarung auf:</p>
+  <ul class="checks">
+    <li>Wie oft jemand kommt, im Sommer und im Winter</li>
+    <li>Ob Chemikalien enthalten sind oder extra berechnet werden</li>
+    <li>Einen kurzen Bericht mit Foto nach jedem Besuch</li>
+    <li>Wen Sie bei einer Störung anrufen und wie schnell jemand kommt</li>
+    <li>Ob kleine Reparaturen an Pumpe und Filter nach Ihrer Zustimmung direkt erledigt werden können</li>
+  </ul>
+  <p>Der Kontakt mit uns läuft auf Englisch oder Niederländisch. Denken Sie über eine neue Pumpe, eine Salzanlage oder Solarstrom für die Pumpe nach? Lesen Sie <a href="/de/kosten/pool-bauen/">was ein Pool kostet</a> und den Ratgeber <a href="/de/ratgeber/garten-und-grundstueck-spanien/">Garten und Grundstück in Spanien</a>.</p>
+</Guide>

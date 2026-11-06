@@ -1,0 +1,94 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort antwoord' },
+  { id: 'regio', label: 'De Costa del Sol en de Axarquía' },
+  { id: 'soorten', label: 'Welke aannemer voor welke klus' },
+  { id: 'controleren', label: 'Zo controleert u een aannemer' },
+  { id: 'signalen', label: 'Waarschuwingssignalen' },
+  { id: 'taal', label: 'Nederlandstalig of Spaans' },
+  { id: 'planning', label: 'De beste tijd om te verbouwen' },
+  { id: 'aanvraag', label: 'Zo werkt een aanvraag bij ons' },
+];
+
+const faq = [
+  {
+    q: 'Hoe weet ik of een aannemer in Spanje legaal werkt?',
+    a: 'Vraag het fiscale nummer (CIF of NIF), een bewijs van inschrijving bij de sociale zekerheid en een geldige aansprakelijkheidsverzekering. Een bouwbedrijf dat met onderaannemers werkt, staat ook in het Registro de Empresas Acreditadas (REA). Een serieuze aannemer stuurt die papieren zonder moeite mee.',
+  },
+  {
+    q: 'Is een Nederlandse aannemer in Spanje duurder?',
+    a: 'Niet per definitie. De prijs hangt vooral af van de klus, de bereikbaarheid en de materialen. Wat u met een aannemer die uw taal spreekt vaak bespaart, zijn misverstanden en meerwerk. Vergelijk daarom offertes per onderdeel, niet alleen het totaalbedrag.',
+  },
+  {
+    q: 'Werkt u ook aan de westelijke Costa del Sol, zoals Marbella?',
+    a: 'Wij richten ons op de Axarquía, de oostelijke Costa del Sol: van Rincón de la Victoria en Vélez-Málaga tot Nerja en de bergdorpen zoals Cómpeta en Frigiliana. Voor Marbella, Fuengirola of Estepona zijn er aannemers die daar dichterbij zitten.',
+  },
+  {
+    q: 'Moet de aannemer de vergunning aanvragen?',
+    a: 'Dat mag de aannemer voor u regelen, maar de vergunning of melding staat op naam van de eigenaar. Spreek af wie het doet en laat u een kopie geven voordat het werk begint. Zonder melding of vergunning kan de gemeente het werk stilleggen.',
+  },
+];
+---
+<Guide slug="aannemer-costa-del-sol" toc={toc} faq={faq} dienst="renovatie" onderwerp="Aannemer gezocht" ctaTitle="Een aannemer nodig in de Axarquía?" ctaText="Vertel ons wat u wilt laten doen. U krijgt een Nederlandstalig aanspreekpunt, een bezoek ter plaatse en een offerte per onderdeel.">
+  <h2 id="kort">Kort antwoord</h2>
+  <p>Een goede aannemer aan de Costa del Sol herkent u aan <strong>papieren die kloppen, een verzekering, een schriftelijke offerte per onderdeel en projecten die u kunt gaan bekijken</strong>. Kies bij voorkeur iemand die in de buurt van uw huis werkt: dat scheelt reistijd, en de aannemer kent de gemeente, de vergunningen en de leveranciers.</p>
+  <p>Woont u (nog) in Nederland tijdens de verbouwing? Lees dan ook de gids <a href="/nl/gidsen/verbouwen-op-afstand-spanje/">verbouwen op afstand</a> over offertes vergelijken, betalen in termijnen en op de hoogte blijven.</p>
+
+  <h2 id="regio">De Costa del Sol en de Axarquía</h2>
+  <p>De Costa del Sol loopt van Manilva in het westen tot Nerja in het oosten. Het oostelijke deel, ten oosten van de stad Málaga, heet de Axarquía. Daar bouwen en renoveren is anders dan in Marbella of Fuengirola:</p>
+  <ul>
+    <li><strong>Oudere huizen</strong>: veel dorpshuizen en fincas zijn dertig jaar of ouder, met dikke stenen muren, oude leidingen en daken van riet en klei. Zie <a href="/nl/gidsen/dorpshuis-renoveren-spanje/">een dorpshuis renoveren</a>.</li>
+    <li><strong>Slechte bereikbaarheid</strong>: smalle straatjes in Frigiliana of Cómpeta, steile camino’s naar een finca. Materiaal gaat soms met een kleine dumper of met de hand naar binnen. Een aannemer die dat kent, rekent het mee in de planning.</li>
+    <li><strong>Landelijke grond</strong>: veel huizen staan op suelo rústico, waar de regels voor uitbreiden streng zijn. Een aannemer moet weten wat wel en niet kan. Zie <a href="/nl/gidsen/afo-legaliseren-andalusie/">huis legaliseren en AFO</a>.</li>
+    <li><strong>Elke gemeente eigen regels</strong>: de bouwbelasting, de procedure en de doorlooptijd verschillen per dorp. U vindt ze per gemeente op de <a href="/nl/plaatsen/">plaatsenpagina’s</a>, bijvoorbeeld <a href="/nl/plaatsen/nerja/bouwvergunning/">bouwvergunning in Nerja</a> of <a href="/nl/plaatsen/competa/bouwvergunning/">in Cómpeta</a>.</li>
+  </ul>
+
+  <h2 id="soorten">Welke aannemer voor welke klus</h2>
+  <ul>
+    <li><strong>Constructora (bouwbedrijf)</strong>: voor complete renovaties, uitbouw en nieuwbouw. Heeft eigen ploegen of vaste onderaannemers en coördineert de vakmensen.</li>
+    <li><strong>Autónomo (zelfstandige)</strong>: een metselaar, loodgieter of elektricien die alleen of met een paar mensen werkt. Prima voor één onderdeel, minder geschikt om een hele verbouwing te leiden.</li>
+    <li><strong>Installateur</strong>: voor airco, zonnepanelen, elektra of een zwembadpomp. Voor elektra hoort een erkende installateur het keuringsbewijs (boletín) af te geven.</li>
+    <li><strong>Architect en arquitecto técnico</strong>: verplicht bij werk aan de constructie, een uitbouw of een extra verdieping. Zie <a href="/nl/gidsen/vergunning-verbouwen-andalusie/">welke vergunning u nodig hebt</a>.</li>
+  </ul>
+  <p>Gaat het om meerdere onderdelen tegelijk, zoals een badkamer, keuken en nieuwe elektra, dan scheelt één aannemer die alles coördineert veel tijd en gedoe.</p>
+
+  <h2 id="controleren">Zo controleert u een aannemer</h2>
+  <ul class="checks">
+    <li><strong>Fiscaal nummer</strong> (CIF voor een bedrijf, NIF voor een zelfstandige) op de offerte en de facturen.</li>
+    <li><strong>Inschrijving bij de sociale zekerheid</strong> (alta en la Seguridad Social): dan zijn de mensen op uw bouwplaats verzekerd.</li>
+    <li><strong>Aansprakelijkheidsverzekering</strong> (seguro de responsabilidad civil): vraag een kopie van de polis en kijk of die nog loopt.</li>
+    <li><strong>REA-registratie</strong> als het bedrijf met onderaannemers werkt: het Registro de Empresas Acreditadas is verplicht in de bouw.</li>
+    <li><strong>Referenties en projecten</strong>: vraag naar huizen in de buurt die het bedrijf heeft verbouwd, en bel een of twee eerdere klanten.</li>
+    <li><strong>Schriftelijke offerte per onderdeel</strong>, met materialen, merk en planning, inclusief of exclusief IVA.</li>
+    <li><strong>Facturen met IVA</strong>: alleen dan kunt u later aantonen wat u hebt laten doen, bijvoorbeeld bij de verkoop.</li>
+  </ul>
+
+  <h2 id="signalen">Waarschuwingssignalen</h2>
+  <ul>
+    <li>Een prijs “zonder factuur” of korting bij contante betaling.</li>
+    <li>Een groot deel van het bedrag vooruit, voordat er iets gebeurt.</li>
+    <li>“Voor een uitbouw of overkapping is geen vergunning nodig.” Dat klopt bijna nooit.</li>
+    <li>Alleen een mondelinge prijs, of een totaalbedrag zonder uitsplitsing.</li>
+    <li>Geen vast adres, alleen een telefoonnummer, en geen projecten die u mag zien.</li>
+    <li>Druk om snel te beslissen, “want volgende week kan het niet meer”.</li>
+  </ul>
+  <p>Werk zonder vergunning of zonder factuur lijkt goedkoop, maar komt vaak terug bij de verkoop van het huis, bij de verzekering of als de gemeente een boete oplegt. Zie <a href="/nl/gidsen/huis-verkopen-spanje/papieren/">papieren bij de verkoop</a>.</p>
+
+  <h2 id="taal">Nederlandstalig of Spaans</h2>
+  <p>Een Spaanse aannemer uit het dorp kent iedereen en is vaak goed geprijsd. Spreekt u geen Spaans, dan zit het risico in de communicatie: wat is er precies afgesproken, welke tegel, welke kraan, wat kost het meerwerk. Een aannemer die uw taal spreekt, voorkomt die misverstanden en is ook bereikbaar als u in Nederland bent.</p>
+  <p>Wat u ook kiest: laat afspraken altijd op papier zetten, met foto’s of tekeningen erbij. En vraag offertes en facturen in een taal die u kunt lezen, naast de Spaanse versie. Meer over verbouwen met een Nederlandstalig team leest u op <a href="/nl/renovatie/">renovatie en verbouwing</a>.</p>
+
+  <h2 id="planning">De beste tijd om te verbouwen</h2>
+  <p>De drukste periode voor aannemers aan de Costa del Sol is het voorjaar, als iedereen het huis voor de zomer klaar wil hebben. Wie in het najaar een aannemer vastlegt, heeft meer keus en kan in de winter verbouwen, als het huis toch leegstaat.</p>
+  <ul>
+    <li><strong>Oktober tot april</strong>: aangenaam werkweer, en het huis is klaar voor de zomer.</li>
+    <li><strong>Juli en augustus</strong>: heet, en augustus is in Spanje de vakantiemaand. Leveranciers en gemeentes werken dan trager. In sommige kustplaatsen gelden in het hoogseizoen ook beperkingen voor lawaaiig werk in toeristische zones; vraag ernaar bij uw gemeente.</li>
+    <li><strong>Vergunning</strong>: voor een melding kunt u vaak binnen enkele weken beginnen, voor een vergunning met architect rekent u op maanden. Begin daar dus vroeg mee.</li>
+  </ul>
+  <p>Wilt u vooraf een idee van het budget? Gebruik de <a href="/nl/kosten/rekentool/">rekentool</a> of lees <a href="/nl/gidsen/kosten-huis-renoveren-spanje/">wat renoveren in Spanje kost</a>. Een echte prijs krijgt u pas na een bezoek aan het huis.</p>
+
+  <h2 id="aanvraag">Zo werkt een aanvraag bij ons</h2>
+  <p>Axarquía Home werkt met een Nederlandstalig bouwteam dat al jaren in de Axarquía bouwt en renoveert, van de kust bij Torre del Mar en Nerja tot de bergdorpen. U doet uw aanvraag via de <a href="/nl/aanvraag/">keuzehulp</a>, we bellen u terug, komen langs of kijken mee via video, en u krijgt een offerte per onderdeel met een planning. Tijdens het werk krijgt u foto-updates en hebt u één vast aanspreekpunt. Bekijk ook <a href="/nl/projecten/">eerdere projecten</a>.</p>
+</Guide>

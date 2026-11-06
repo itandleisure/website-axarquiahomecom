@@ -70,7 +70,7 @@ export const guides: GuideMeta[] = [
   {
     slug: 'wonen-in-de-axarquia',
     path: '/nl/wonen/',
-    title: 'Wonen in de Axarquía: dorpen, kosten, zorg en klimaat',
+    title: 'Wonen in Spanje, in de Axarquía: dorpen, kosten, zorg en klimaat',
     seoTitle: 'Wonen in Spanje: de Axarquía bij Málaga',
     short: 'Wonen in de Axarquía',
     description: 'Hoe is het om te wonen in de Axarquía, ten oosten van Málaga? De dorpen vergeleken, kosten van levensonderhoud, zorg, klimaat en bereikbaarheid.',
@@ -1479,12 +1479,13 @@ import type { Lang } from '../i18n';
 import { huisEnTuinNl, huisEnTuinEn, huisEnTuinDe } from './guides-huis-en-tuin';
 import { ontwerpNl, ontwerpEn, ontwerpDe } from './guides-ontwerp';
 import { wegenNl, wegenEn, wegenDe } from './guides-wegen';
+import { dienstenNl, dienstenEn, dienstenDe } from './guides-diensten';
 import { guidesSvExtra } from './guides-sv';
 // Gidsen uit eigen bestanden komen achter de lijsten hierboven, in elke taal op dezelfde positie.
 export const guidesBy: Record<Lang, GuideMeta[]> = {
-  nl: [...guides, ...huisEnTuinNl, ...ontwerpNl, ...wegenNl],
-  en: [...guidesEn, ...huisEnTuinEn, ...ontwerpEn, ...wegenEn],
-  de: [...guidesDe, ...huisEnTuinDe, ...ontwerpDe, ...wegenDe],
+  nl: [...guides, ...huisEnTuinNl, ...ontwerpNl, ...wegenNl, ...dienstenNl],
+  en: [...guidesEn, ...huisEnTuinEn, ...ontwerpEn, ...wegenEn, ...dienstenEn],
+  de: [...guidesDe, ...huisEnTuinDe, ...ontwerpDe, ...wegenDe, ...dienstenDe],
   sv: [...guidesSv, ...guidesSvExtra],
 };
 export const guideBase: Record<Lang, string> = { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/', sv: '/sv/guider/' };

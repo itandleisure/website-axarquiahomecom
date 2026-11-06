@@ -1,0 +1,91 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort antwoord' },
+  { id: 'week', label: 'Wat er elke week moet gebeuren' },
+  { id: 'seizoen', label: 'Onderhoud per seizoen' },
+  { id: 'water', label: 'Kalk, zout en waterbeperkingen' },
+  { id: 'weg', label: 'Als u in Nederland bent' },
+  { id: 'problemen', label: 'Problemen herkennen' },
+  { id: 'wie', label: 'Zelf doen of uitbesteden' },
+];
+
+const faq = [
+  {
+    q: 'Moet ik mijn zwembad in de winter leeg laten lopen?',
+    a: 'Nee, in de Axarquía liever niet. Een leeg bad droogt uit in de zon, de afwerking kan barsten en bij hoog grondwater kan de bak zelfs gaan bewegen. Laat het water erin, verlaag het eventueel tot onder de skimmer, gebruik een winterproduct en laat de pomp elke dag een paar uur draaien.',
+  },
+  {
+    q: 'Hoeveel water verliest een zwembad normaal?',
+    a: 'Door verdamping verliest een open zwembad in de Spaanse zomer al snel een halve centimeter per dag, op warme winderige dagen meer. Daalt het peil ook als het bad is afgedekt of in de winter merkbaar, doe dan de emmertest. Verliest het bad meer dan de emmer, dan is er waarschijnlijk een lek.',
+  },
+  {
+    q: 'Wat kost zwembad onderhoud in Spanje?',
+    a: 'Dat hangt af van de grootte van het bad, het systeem (chloor of zout), hoe vaak er iemand langskomt en of chemicaliën zijn inbegrepen. Vraag een prijs per maand voor een vast aantal bezoeken, met en zonder producten. Via de aanvraag krijgt u een voorstel op maat, ook voor alleen de maanden dat u er niet bent.',
+  },
+  {
+    q: 'Kan zwembadonderhoud samen met sleutelbeheer?',
+    a: 'Ja. Dat is voor eigenaren die een deel van het jaar in Nederland wonen vaak het handigst: bij hetzelfde bezoek wordt het huis gecontroleerd en het zwembad bijgehouden, en u krijgt één verslag met foto’s.',
+  },
+];
+---
+<Guide slug="zwembad-onderhoud-spanje" toc={toc} faq={faq} dienst="zwembad" onderwerp="Zwembad onderhoud" ctaTitle="Uw zwembad helder, ook als u er niet bent?" ctaText="Vertel ons hoe groot uw bad is en wanneer u in Spanje bent. U krijgt een voorstel voor vast onderhoud, los of samen met sleutelbeheer.">
+  <h2 id="kort">Kort antwoord</h2>
+  <p>Zwembad onderhoud in Spanje komt neer op drie dingen: <strong>het water in balans houden, het filter laten werken en het bad schoon houden</strong>. In het hoogseizoen betekent dat minstens één beurt per week, in de winter is eens per twee weken vaak genoeg. Het verschil met Nederland zit in de omstandigheden: veel zon, hard water, stof en blad van de berghellingen, en lange periodes waarin de eigenaar er niet is.</p>
+  <p>Gaat het om een nieuw bad of een bad dat na jaren droogte moet worden hersteld, kijk dan op onze pagina <a href="/nl/zwembad/">zwembad bouwen, renoveren en onderhoud</a>.</p>
+
+  <h2 id="week">Wat er elke week moet gebeuren</h2>
+  <ul class="checks">
+    <li><strong>Water meten</strong>: pH tussen 7,2 en 7,6 en vrij chloor tussen ongeveer 1 en 1,5 mg/l. Met strips of een testkit kost dat twee minuten.</li>
+    <li><strong>Skimmer- en pompmandjes legen</strong>: blad, insecten en bloesem van de bougainville verstoppen ze snel.</li>
+    <li><strong>Bodem en wanden</strong>: borstelen en zuigen, of een robot laten rijden. Zo krijgen algen geen kans zich vast te zetten.</li>
+    <li><strong>Waterpeil</strong>: het water moet halverwege de skimmeropening staan. Te laag en de pomp zuigt lucht.</li>
+    <li><strong>Filter</strong>: kijk naar de manometer. Stijgt de druk, dan is het tijd om terug te spoelen (contralavado).</li>
+    <li><strong>Pomptijd</strong>: in de zomer draait de pomp vaak acht uur of meer per dag, in de winter enkele uren.</li>
+  </ul>
+
+  <h2 id="seizoen">Onderhoud per seizoen</h2>
+  <h3>Voorjaar: opstarten</h3>
+  <p>Vanaf maart of april begint het water op te warmen en groeien algen sneller. Maak het bad grondig schoon, spoel het filter terug, controleer de pomp en de afdichtingen en geef een shockbehandeling. Laat het water een paar dagen circuleren voordat u gaat zwemmen. Komt u pas in juni, laat het bad dan een week eerder opstarten, dan is het helder bij aankomst.</p>
+  <h3>Zomer: het zwaarste seizoen</h3>
+  <p>Zon, hitte en zwemmers verbruiken veel chloor. Meet vaker, vul verdampt water aan en let op stof: na een dag met wind uit Afrika (calima) ligt er soms een laag op de bodem. Bij veel gebruik, zoals bij vakantieverhuur, is twee keer per week geen overbodige luxe.</p>
+  <h3>Najaar en winter: rustig, niet stil</h3>
+  <p>Laat het bad in de Axarquía niet leeglopen. Verlaag het peil eventueel tot net onder de skimmer, gebruik een overwinteringsproduct en dek het bad af tegen blad. De pomp blijft elke dag een paar uur draaien. Na zware regen in het najaar is een extra controle verstandig: modder en blad kunnen het water in één nacht groen maken. Meer over uw huis in de winter leest u in <a href="/nl/gidsen/huis-winterklaar-spanje/">huis winterklaar maken in Spanje</a>.</p>
+
+  <h2 id="water">Kalk, zout en waterbeperkingen</h2>
+  <p>Het leidingwater in grote delen van de Axarquía is hard. Dat geeft witte randen op de waterlijn, verstopte filters en een ruwere afwerking. Houd de pH aan de lage kant van de norm, gebruik zo nodig een anti-kalkproduct en laat het filterzand of de patroon op tijd vervangen.</p>
+  <p>Veel eigenaren kiezen voor een <strong>zoutelektrolysesysteem</strong>. Dat maakt zelf chloor uit zout en scheelt sjouwen met jerrycans. Ook zo’n systeem vraagt onderhoud: de elektrode verkalkt en moet regelmatig worden schoongemaakt, en de pH blijft u meten.</p>
+  <p>Tijdens de droogte van 2023 tot begin 2026 mochten zwembaden in de Axarquía vaak niet met leidingwater worden gevuld. Kijk bij uw gemeente of er weer beperkingen gelden voordat u bijvult, en vraag naar een tankwagen als dat nodig is. Een afdekzeil scheelt veel verdamping en dus water.</p>
+
+  <h2 id="weg">Als u in Nederland bent</h2>
+  <p>Een zwembad zonder onderhoud is binnen twee tot drie weken groen. Dan helpt alleen nog een flinke shockbehandeling, soms leegpompen, en dat kost meer dan het onderhoud dat het had voorkomen. De grootste risico’s als niemand kijkt:</p>
+  <ul>
+    <li>Een pomp die na een stroomstoring niet meer aanslaat, waardoor het water stilstaat.</li>
+    <li>Een lek dat pas opvalt als het peil onder de skimmer zakt en de pomp drooggelopen is.</li>
+    <li>Een verstopt filter na een storm of calima.</li>
+  </ul>
+  <p>Laat het bad daarom ook buiten het seizoen controleren. Dat kan los, of samen met <a href="/nl/sleutelbeheer/">sleutelbeheer</a>, waarbij hetzelfde bezoek ook het huis nakijkt. Vraag na elk bezoek een foto van het water en van de manometer: dan ziet u zelf dat het in orde is.</p>
+
+  <h2 id="problemen">Problemen herkennen</h2>
+  <ul>
+    <li><strong>Groen water</strong>: te weinig chloor of een filter dat niet goed werkt. Shockbehandeling, borstelen en het filter laten draaien tot het water weer helder is.</li>
+    <li><strong>Troebel of melkachtig water</strong>: vaak een te hoge pH of kalk. Eerst meten, dan corrigeren.</li>
+    <li><strong>Peil daalt sneller dan normaal</strong>: doe de emmertest. Zet een emmer met water op de trap, markeer binnen en buiten het peil en vergelijk na een dag. Zakt het bad meer, dan is er een lek in de bak of de leidingen.</li>
+    <li><strong>Pomp maakt lawaai of slaat af</strong>: vaak lucht in het systeem door een laag peil of een lekkend deksel, soms versleten lagers.</li>
+    <li><strong>Losse tegels of scheuren</strong>: laat ze snel herstellen. Water achter de afwerking maakt de schade groter.</li>
+  </ul>
+  <p>Bij lekkage, scheuren of een bad dat lang leeg heeft gestaan is een inspectie met lektest de eerste stap. Dat valt onder <a href="/nl/zwembad/">zwembad renoveren</a>.</p>
+
+  <h2 id="wie">Zelf doen of uitbesteden</h2>
+  <p>Woont u in Spanje en bent u er vaak, dan is het wekelijkse onderhoud goed zelf te doen. Een testkit, een schepnet, een borstel en eventueel een robot zijn genoeg. Laat de techniek, zoals pomp, filter, elektrolyse en verwarming, wel eens per jaar nakijken.</p>
+  <p>Bent u een groot deel van het jaar weg, of verhuurt u het huis, dan is vast onderhoud door een zwembadspecialist (piscinero) de veiligste keuze. Let bij een afspraak op:</p>
+  <ul class="checks">
+    <li>Hoe vaak er iemand komt, in de zomer en in de winter</li>
+    <li>Of chemicaliën zijn inbegrepen of apart worden berekend</li>
+    <li>Een kort verslag met foto na elk bezoek</li>
+    <li>Wie u belt bij een storing, en hoe snel er iemand komt</li>
+    <li>Of kleine reparaties aan pomp en filter direct kunnen worden gedaan, na uw akkoord</li>
+  </ul>
+  <p>Denkt u ook aan een nieuwe pomp, een zoutsysteem of zonnepanelen voor de pomp? Kijk dan bij <a href="/nl/kosten/zwembad-laten-bouwen/">wat een zwembad kost</a> en in de gids <a href="/nl/gidsen/tuin-en-perceel-spanje/">tuin en perceel in Spanje</a>.</p>
+</Guide>

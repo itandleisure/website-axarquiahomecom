@@ -1,0 +1,94 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Kurze Antwort' },
+  { id: 'region', label: 'Die Costa del Sol und die Axarquía' },
+  { id: 'arten', label: 'Welche Firma für welche Arbeit' },
+  { id: 'pruefen', label: 'So prüfen Sie ein Bauunternehmen' },
+  { id: 'warnsignale', label: 'Warnsignale' },
+  { id: 'sprache', label: 'Sprache und Absprachen' },
+  { id: 'zeitpunkt', label: 'Die beste Zeit für eine Renovierung' },
+  { id: 'anfrage', label: 'So läuft eine Anfrage bei uns' },
+];
+
+const faq = [
+  {
+    q: 'Woran erkenne ich, dass ein Bauunternehmen in Spanien legal arbeitet?',
+    a: 'Fragen Sie nach der Steuernummer (CIF oder NIF), einem Nachweis der Anmeldung bei der Sozialversicherung und einer gültigen Haftpflichtversicherung. Ein Bauunternehmen, das mit Subunternehmern arbeitet, steht außerdem im Registro de Empresas Acreditadas (REA). Eine seriöse Firma schickt diese Unterlagen ohne Weiteres.',
+  },
+  {
+    q: 'Sind ausländische Bauunternehmen in Spanien teurer?',
+    a: 'Nicht unbedingt. Der Preis hängt vor allem von der Arbeit, der Zufahrt und den Materialien ab. Was Sie mit einer Firma, die Ihre Sprache spricht, oft sparen, sind Missverständnisse und Nachträge. Vergleichen Sie Angebote deshalb Position für Position, nicht nur die Endsumme.',
+  },
+  {
+    q: 'Arbeiten Sie auch an der westlichen Costa del Sol, etwa in Marbella?',
+    a: 'Wir konzentrieren uns auf die Axarquía, die östliche Costa del Sol: von Rincón de la Victoria und Vélez-Málaga bis Nerja und in die Bergdörfer wie Cómpeta und Frigiliana. Für Marbella, Fuengirola oder Estepona gibt es Firmen, die näher sitzen.',
+  },
+  {
+    q: 'Muss das Bauunternehmen die Genehmigung beantragen?',
+    a: 'Die Firma kann das für Sie übernehmen, aber die Genehmigung oder Anzeige läuft auf den Namen des Eigentümers. Vereinbaren Sie, wer es erledigt, und lassen Sie sich vor Baubeginn eine Kopie geben. Ohne Anzeige oder Genehmigung kann die Gemeinde die Arbeiten stoppen.',
+  },
+];
+---
+<Guide lang="de" slug="bauunternehmen-costa-del-sol" toc={toc} faq={faq} dienst="renovatie" onderwerp="Bauunternehmen gesucht" ctaTitle="Sie brauchen ein Bauunternehmen in der Axarquía?" ctaText="Sagen Sie uns, was gemacht werden soll. Sie erhalten einen festen Ansprechpartner, einen Besuch vor Ort und ein Angebot nach Positionen.">
+  <h2 id="kurz">Kurze Antwort</h2>
+  <p>Ein gutes Bauunternehmen an der Costa del Sol erkennen Sie an <strong>Papieren, die stimmen, einer Versicherung, einem schriftlichen Angebot nach Positionen und Projekten, die Sie besichtigen können</strong>. Wählen Sie möglichst eine Firma in der Nähe Ihres Hauses: Das spart Fahrzeit, und sie kennt die Gemeinde, die Genehmigungen und die Lieferanten.</p>
+  <p>Wohnen Sie während der Renovierung noch im Ausland? Lesen Sie dann auch den Ratgeber <a href="/de/ratgeber/renovieren-aus-der-ferne-spanien/">Renovieren aus der Ferne</a> über Angebote vergleichen, Zahlung in Raten und wie Sie auf dem Laufenden bleiben.</p>
+
+  <h2 id="region">Die Costa del Sol und die Axarquía</h2>
+  <p>Die Costa del Sol reicht von Manilva im Westen bis Nerja im Osten. Der östliche Teil, östlich der Stadt Málaga, heißt Axarquía. Bauen und renovieren ist dort anders als in Marbella oder Fuengirola:</p>
+  <ul>
+    <li><strong>Ältere Häuser</strong>: Viele Dorfhäuser und Fincas sind dreißig Jahre oder älter, mit dicken Steinmauern, alten Leitungen und Dächern aus Schilf und Lehm. Siehe <a href="/de/ratgeber/dorfhaus-renovieren-spanien/">ein Dorfhaus renovieren</a>.</li>
+    <li><strong>Schwierige Zufahrt</strong>: enge Gassen in Frigiliana oder Cómpeta, steile Wege zu einer Finca. Material kommt manchmal per Minidumper oder von Hand ins Haus. Eine Firma, die das kennt, plant es ein.</li>
+    <li><strong>Ländlicher Boden</strong>: Viele Häuser stehen auf Suelo rústico, wo die Regeln für Anbauten streng sind. Ein Bauunternehmen muss wissen, was erlaubt ist. Siehe <a href="/de/ratgeber/afo-legalisierung-andalusien/">Legalisierung und AFO</a>.</li>
+    <li><strong>Jede Gemeinde hat eigene Regeln</strong>: Bausteuer, Verfahren und Dauer unterscheiden sich von Dorf zu Dorf. Sie finden sie pro Gemeinde auf den <a href="/de/orte/">Ortsseiten</a>, zum Beispiel <a href="/de/orte/nerja/baugenehmigung/">Baugenehmigung in Nerja</a> oder <a href="/de/orte/competa/baugenehmigung/">in Cómpeta</a>.</li>
+  </ul>
+
+  <h2 id="arten">Welche Firma für welche Arbeit</h2>
+  <ul>
+    <li><strong>Constructora (Bauunternehmen)</strong>: für Komplettsanierungen, Anbauten und Neubauten. Hat eigene Teams oder feste Subunternehmer und koordiniert die Gewerke.</li>
+    <li><strong>Autónomo (Selbstständiger)</strong>: ein Maurer, Installateur oder Elektriker, der allein oder mit wenigen Leuten arbeitet. Gut für ein Gewerk, weniger geeignet, eine ganze Renovierung zu leiten.</li>
+    <li><strong>Fachbetrieb</strong>: für Klimaanlage, Solaranlage, Elektrik oder eine Poolpumpe. Für die Elektrik stellt ein zugelassener Installateur das Prüfzertifikat (boletín) aus.</li>
+    <li><strong>Architekt und Arquitecto técnico</strong>: Pflicht bei Arbeiten an der Statik, einem Anbau oder einem zusätzlichen Stockwerk. Siehe <a href="/de/ratgeber/baugenehmigung-umbau-andalusien/">welche Genehmigung Sie brauchen</a>.</li>
+  </ul>
+  <p>Stehen mehrere Arbeiten gleichzeitig an, etwa Bad, Küche und neue Elektrik, spart eine Firma, die alles koordiniert, viel Zeit und Aufwand.</p>
+
+  <h2 id="pruefen">So prüfen Sie ein Bauunternehmen</h2>
+  <ul class="checks">
+    <li><strong>Steuernummer</strong> (CIF für eine Firma, NIF für einen Selbstständigen) auf Angebot und Rechnungen.</li>
+    <li><strong>Anmeldung bei der Sozialversicherung</strong> (alta en la Seguridad Social): Dann sind die Leute auf Ihrer Baustelle versichert.</li>
+    <li><strong>Haftpflichtversicherung</strong> (seguro de responsabilidad civil): Lassen Sie sich eine Kopie der Police geben und prüfen Sie, ob sie gültig ist.</li>
+    <li><strong>REA-Eintrag</strong>, wenn die Firma mit Subunternehmern arbeitet: Das Registro de Empresas Acreditadas ist im Bau Pflicht.</li>
+    <li><strong>Referenzen und Projekte</strong>: Fragen Sie nach Häusern in der Nähe, die die Firma renoviert hat, und rufen Sie ein oder zwei frühere Kunden an.</li>
+    <li><strong>Schriftliches Angebot nach Positionen</strong>, mit Material, Marke und Zeitplan, mit oder ohne IVA.</li>
+    <li><strong>Rechnungen mit IVA</strong>: Nur so können Sie später nachweisen, was gemacht wurde, etwa beim Verkauf.</li>
+  </ul>
+
+  <h2 id="warnsignale">Warnsignale</h2>
+  <ul>
+    <li>Ein Preis „ohne Rechnung“ oder Rabatt bei Barzahlung.</li>
+    <li>Ein großer Teil des Betrags im Voraus, bevor etwas passiert.</li>
+    <li>„Für einen Anbau oder eine Überdachung braucht man keine Genehmigung.“ Das stimmt fast nie.</li>
+    <li>Nur ein mündlicher Preis oder eine Summe ohne Aufschlüsselung.</li>
+    <li>Keine feste Adresse, nur eine Telefonnummer, und keine Projekte, die Sie sehen dürfen.</li>
+    <li>Druck, schnell zu entscheiden, „weil es nächste Woche nicht mehr geht“.</li>
+  </ul>
+  <p>Arbeiten ohne Genehmigung oder Rechnung wirken günstig, holen Sie aber oft beim Verkauf, bei der Versicherung oder bei einem Bußgeld der Gemeinde wieder ein. Siehe <a href="/de/ratgeber/haus-verkaufen-spanien/unterlagen/">Unterlagen für den Verkauf</a>.</p>
+
+  <h2 id="sprache">Sprache und Absprachen</h2>
+  <p>Ein spanischer Handwerker aus dem Dorf kennt jeden und ist oft günstig. Sprechen Sie kein Spanisch, liegt das Risiko in der Kommunikation: Was genau wurde vereinbart, welche Fliese, welche Armatur, was kosten Nachträge. Eine Firma, mit der Sie in einer gemeinsamen Sprache sprechen, vermeidet diese Missverständnisse und ist auch erreichbar, wenn Sie zu Hause sind.</p>
+  <p>Was Sie auch wählen: Halten Sie Absprachen immer schriftlich fest, mit Fotos oder Zeichnungen. Und lassen Sie sich Angebote und Rechnungen in einer Sprache geben, die Sie lesen können, neben der spanischen Fassung. Der Kontakt mit uns läuft auf Englisch oder Niederländisch. Mehr dazu auf <a href="/de/renovierung/">Renovierung und Umbau</a>.</p>
+
+  <h2 id="zeitpunkt">Die beste Zeit für eine Renovierung</h2>
+  <p>Die arbeitsreichste Zeit für Bauunternehmen an der Costa del Sol ist das Frühjahr, wenn alle ihr Haus für den Sommer fertig haben wollen. Wer im Herbst eine Firma bucht, hat mehr Auswahl und kann im Winter renovieren, wenn das Haus ohnehin leer steht.</p>
+  <ul>
+    <li><strong>Oktober bis April</strong>: angenehmes Arbeitswetter, und das Haus ist zum Sommer fertig.</li>
+    <li><strong>Juli und August</strong>: heiß, und August ist in Spanien Urlaubsmonat. Lieferanten und Gemeinden arbeiten langsamer. In einigen Küstenorten gelten in der Hochsaison zudem Einschränkungen für laute Arbeiten in Touristenzonen; fragen Sie bei Ihrer Gemeinde nach.</li>
+    <li><strong>Genehmigung</strong>: Mit einer Anzeige können Sie oft innerhalb weniger Wochen beginnen, für eine Genehmigung mit Architekt rechnen Sie mit Monaten. Fangen Sie also früh an.</li>
+  </ul>
+  <p>Möchten Sie vorab eine Vorstellung vom Budget? Nutzen Sie den <a href="/de/kosten/rechner/">Kostenrechner</a> oder lesen Sie <a href="/de/ratgeber/renovierungskosten-spanien/">was eine Renovierung in Spanien kostet</a>. Einen echten Preis erhalten Sie erst nach einem Besuch im Haus.</p>
+
+  <h2 id="anfrage">So läuft eine Anfrage bei uns</h2>
+  <p>Axarquía Home arbeitet mit einem Bauteam, das seit Jahren in der Axarquía baut und renoviert, von der Küste bei Torre del Mar und Nerja bis in die Bergdörfer. Sie stellen Ihre Anfrage über das <a href="/de/anfrage/">Anfrageformular</a>, wir rufen Sie zurück, kommen vorbei oder schauen per Video mit, und Sie erhalten ein Angebot nach Positionen mit Zeitplan. Während der Arbeiten bekommen Sie Foto-Updates und haben einen festen Ansprechpartner. Sehen Sie sich auch <a href="/de/projekte/">frühere Projekte</a> an.</p>
+</Guide>
