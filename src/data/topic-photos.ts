@@ -43,6 +43,30 @@ const photos: Record<string, TopicPhoto> = {
     de: 'Kondenswasser an der Scheibe und Schimmel in der Ecke neben einem Fenster, mit einem Tuch gegen das Wasser',
     sv: 'Kondens på glaset och mögel i hörnet bredvid ett fönster, med en trasa som fångar upp vattnet',
   } },
+  'zonnepanelen-pannendak': { alt: {
+    nl: 'Zonnepanelen op een dak met rode dakpannen en gemetselde schoorstenen',
+    en: 'Solar panels on a roof with red clay tiles and brick chimneys',
+    de: 'Solarmodule auf einem Dach mit roten Tonziegeln und gemauerten Schornsteinen',
+    sv: 'Solpaneler på ett tak med röda tegelpannor och murade skorstenar',
+  } },
+  'zonnepaneel-off-grid-paal': { alt: {
+    nl: 'Los zonnepaneel op een paal met een kastje voor de aansluiting, tegen een blauwe lucht',
+    en: 'Stand-alone solar panel on a pole with a connection box, against a blue sky',
+    de: 'Einzelnes Solarmodul an einem Mast mit Anschlusskasten vor blauem Himmel',
+    sv: 'Fristående solpanel på en stolpe med en kopplingslåda, mot en blå himmel',
+  } },
+  'zonnepanelen-schoonmaken-borstel': { alt: {
+    nl: 'Zonnepanelen worden met een borstel en water schoongemaakt',
+    en: 'Solar panels being cleaned with a brush and water',
+    de: 'Solarmodule werden mit Bürste und Wasser gereinigt',
+    sv: 'Solpaneler rengörs med en borste och vatten',
+  } },
+  'zonnepanelen-stof-schoonmaken': { alt: {
+    nl: 'Stoffig zonnepaneel wordt met een wisser aan een steel schoongemaakt',
+    en: 'A dusty solar panel being cleaned with a squeegee on a pole',
+    de: 'Ein staubiges Solarmodul wird mit einem Wischer an einer Stange gereinigt',
+    sv: 'En dammig solpanel rengörs med en skrapa på ett skaft',
+  } },
 };
 
 interface Placement { lead: string; /** Tweede foto direct onder de kop van de sectie met dit volgnummer (vanaf 0; ids verschillen per taal) */ inline?: { section: number; photo: string }; }
@@ -56,6 +80,9 @@ const topicPlacements: Record<string, Placement> = {
   'costs:dak': { lead: 'lekkage-vlek-plafond-hoek' },
   'diy:witten': { lead: 'vocht-afbladderende-verf-muur' },
   'diy:ramen': { lead: 'condens-schimmel-raam' },
+  'costs:zonnepanelen': { lead: 'zonnepanelen-pannendak', inline: { section: 2, photo: 'zonnepanelen-stof-schoonmaken' } },
+  'costs:thuisbatterij': { lead: 'zonnepanelen-pannendak' },
+  'costs:energiebeheer': { lead: 'zonnepanelen-pannendak' },
 };
 
 /** Gidsen, per slug. De tweede foto staat in de gidspagina zelf (component ArticlePhoto). */
@@ -66,6 +93,13 @@ const guidePlacements: Record<string, string> = {
   'waterlekkage-spanje': 'lekkage-vlek-plafond-hoek',
   'water-leak-spain': 'lekkage-vlek-plafond-hoek',
   'wasserschaden-spanien': 'lekkage-vlek-plafond-hoek',
+  'off-grid-wonen-spanje': 'zonnepaneel-off-grid-paal',
+  'off-grid-living-spain': 'zonnepaneel-off-grid-paal',
+  'virtuele-batterij-spanje': 'zonnepanelen-pannendak',
+  'virtual-battery-spain': 'zonnepanelen-pannendak',
+  'virtuelle-batterie-spanien': 'zonnepanelen-pannendak',
+  'energieleveranciers-spanje-vergelijken': 'zonnepanelen-pannendak',
+  'stromanbieter-spanien-vergleich': 'zonnepanelen-pannendak',
 };
 
 export interface ArticleImage { alt: string; src: string; srcset: string; og: string; }
