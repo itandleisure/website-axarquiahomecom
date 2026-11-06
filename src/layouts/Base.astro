@@ -32,7 +32,12 @@ const others = langs
   .filter((l) => l !== lang)
   .map((l) => ({ l, href: allAlternates[l] ?? route(l, 'home') }));
 const robots = !site.launchReady || noindex ? 'noindex, nofollow' : 'index, follow';
-const fullTitle = langs.some((l) => path === `/${l}/`) ? title : `${title} | ${site.brand}`;
+// Google toont ongeveer 60 tekens. De merknaam alleen toevoegen als die er nog bij past.
+const isHome = langs.some((l) => path === `/${l}/`);
+const withBrand = `${title} | ${site.brand}`;
+const fullTitle = isHome || withBrand.length > 60 ? title : withBrand;
+const ogLocale = { nl: 'nl_NL', en: 'en_GB', de: 'de_DE', sv: 'sv_SE' }[lang];
+const ogImage = new URL('/og-image.png', site.url).href;
 
 const c = site.company;
 const organization: Record<string, unknown> = {
@@ -42,7 +47,9 @@ const organization: Record<string, unknown> = {
   name: site.brand,
   url: site.url,
   areaServed: site.villages.map((v) => ({ '@type': 'Place', name: `${v}, Málaga, España` })),
-  knowsLanguage: ['nl', 'en', 'de', 'es'],
+  knowsLanguage: ['nl', 'en', 'es'],
+  logo: `${site.url}/favicon.svg`,
+  image: `${site.url}/og-image.png`,
 };
 if (isFilled(c.phone)) organization.telephone = c.phone;
 if (isFilled(c.email)) organization.email = c.email;
@@ -56,13 +63,22 @@ if (isFilled(c.street) && isFilled(c.town)) {
     addressCountry: 'ES',
   };
 }
-const schemas = [organization, ...jsonLd];
+const website = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${site.url}/#website`,
+  name: site.brand,
+  url: `${site.url}/${lang}/`,
+  inLanguage: lang,
+  publisher: { '@id': `${site.url}/#bedrijf` },
+};
+const schemas = isHome ? [organization, website, ...jsonLd] : [organization, ...jsonLd];
 const current = Astro.url.pathname;
 // Talen waarin het team niet zelf spreekt: contact gaat in het Engels of Nederlands
 const englishContact: Partial<Record<Lang, string>> = { sv: 'Kontakten sker på engelska eller nederländska.', de: 'Der Kontakt läuft auf Englisch oder Niederländisch.' };
 ---
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} data-noindex={noindex ? '' : undefined}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -75,13 +91,19 @@ const englishContact: Partial<Record<Lang, string>> = { sv: 'Kontakten sker på 
     ))}
     <link rel="alternate" hreflang="x-default" href={new URL(allAlternates.en ?? allAlternates.nl ?? path, site.url).href} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#b5532f" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.brand} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:locale" content={lang === 'nl' ? 'nl_NL' : lang === 'en' ? 'en_GB' : 'de_DE'} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={site.brand} />
+    <meta name="twitter:card" content="summary_large_image" />
     {schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
     {(site.clarityId || site.gaId) && (
       <script is:inline define:vars={{ id: site.clarityId, ga: site.gaId }}>

@@ -7,7 +7,7 @@ import { guideList, guideHref } from '../../../data/guides';
 ---
 <Base
   title="Ratgeber: Kaufen, Renovieren und Leben in Spanien"
-  description="Praktische Ratgeber auf Deutsch zum Auswandern nach Spanien, zum Kauf eines Hauses oder einer Finca, zu Kaufnebenkosten, Renovierung und Legalisierung in der Axarquía und im übrigen Andalusien."
+  description="Ratgeber zum Auswandern nach Spanien, Haus- oder Fincakauf, Kaufnebenkosten, Renovierung und Legalisierung in der Axarquía und Andalusien."
   path="/de/ratgeber/"
   lang="de"
 >
@@ -24,7 +24,7 @@ import { guideList, guideHref } from '../../../data/guides';
       <div class="cards">
         {guideList('de').map((g) => (
           <a class="card" href={guideHref('de', g)}>
-            <h3>{g.title}</h3>
+            <h2 class="h3">{g.title}</h2>
             <p>{g.description}</p>
             <span class="more">Zum Ratgeber ({g.minutes} Min.) →</span>
           </a>

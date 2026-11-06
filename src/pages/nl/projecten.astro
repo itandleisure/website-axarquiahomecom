@@ -8,8 +8,9 @@ import { projects } from '../../data/projects';
 ---
 <Base
   title="Projecten: renovaties voor en na in de Axarquía"
-  description="Bekijk renovaties, badkamers, zwembaden en fincas die we voor Nederlandse en Engelse eigenaren in de Axarquía hebben gedaan, met plaats, prijsklasse en doorlooptijd."
+  description="Renovaties, badkamers, zwembaden en fincas voor buitenlandse eigenaren in de Axarquía, voor en na, met plaats, prijsklasse en doorlooptijd."
   path="/nl/projecten/"
+  noindex={projects.length === 0}
 >
   <Breadcrumbs items={[{ name: 'Projecten', href: '/nl/projecten/' }]} />
   <Hero

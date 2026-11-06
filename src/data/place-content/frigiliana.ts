@@ -13,7 +13,7 @@ const content: PlaceContent = {
     'https://realadvisor.es/es/precios-viviendas/municipio-frigiliana',
   ],
   nl: {
-    title: 'Frigiliana: wonen en kopen in het bekendste witte dorp van de Axarquía',
+    title: 'Frigiliana: wonen en kopen in het bekendste witte dorp',
     description: 'Alles over Frigiliana: de Moorse wijk, ligging boven Nerja, woningprijzen, dorpshuizen en finca’s, en wat u moet weten over kopen en verbouwen.',
     lead: 'Witte huizen tegen een steile helling, straatjes van kiezels met bloempotten en op zes kilometer de zee. Frigiliana is het dorp op de ansichtkaart van de Axarquía.',
     intro: [
@@ -31,7 +31,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'Voor wie een echt Andalusisch dorp zoekt, met de zee en de voorzieningen van Nerja om de hoek. Een dorpshuis in de oude wijk is ideaal als u van sfeer houdt en geen auto voor de deur nodig hebt; wie ruimte en een zwembad wil, kijkt naar villa’s en finca’s rond het dorp.',
     see: {
-      title: 'Zien en doen in Frigiliana: de Moorse wijk, fiesta’s en wandelingen',
+      title: 'Zien en doen in Frigiliana: Moorse wijk en wandelingen',
       description: 'Wat te doen in Frigiliana: de mudéjarwijk, El Ingenio, het Festival 3 Culturas, wandelingen in het natuurpark en een tocht naar El Acebuchal.',
       lead: 'Frigiliana is klein, maar u kunt er makkelijk een dag doorbrengen: eerst de oude wijk, dan een terras, en daarna de bergen in.',
       items: [
@@ -49,7 +49,7 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Wonen in Frigiliana: dorpshuizen, villa’s, finca’s en prijzen',
+      title: 'Wonen in Frigiliana: dorpshuizen, villa’s en prijzen',
       description: 'Een huis kopen in Frigiliana? Welke woningen er zijn, wat ze kosten, waar u op moet letten in de oude wijk en in het buitengebied, en wat verbouwen hier vraagt.',
       lead: 'Frigiliana is na Nerja de duurste plaats van de Axarquía. Wat u krijgt: sfeer, uitzicht en de zee om de hoek. Waar u op moet letten: bereikbaarheid en vergunningen.',
       sections: [
@@ -77,7 +77,7 @@ const content: PlaceContent = {
     ],
   },
   en: {
-    title: 'Frigiliana: living and buying in the Axarquía’s best-known white village',
+    title: 'Frigiliana: living and buying in a famous white village',
     description: 'All about Frigiliana: the Moorish quarter, its setting above Nerja, property prices, village houses and fincas, and what to know about buying and renovating.',
     lead: 'White houses on a steep hillside, cobbled lanes lined with flowerpots and the sea six kilometres away. Frigiliana is the village on the Axarquía postcard.',
     intro: [
@@ -95,7 +95,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'People looking for a real Andalusian village with the sea and Nerja’s facilities close by. A village house in the old quarter is ideal if you love atmosphere and do not need a car at the door; if you want space and a pool, look at the villas and fincas around the village.',
     see: {
-      title: 'Things to do in Frigiliana: the Moorish quarter, fiestas and walks',
+      title: 'Things to do in Frigiliana: old town, fiestas, walks',
       description: 'What to do in Frigiliana: the Mudéjar quarter, El Ingenio, the 3 Cultures festival, walks in the natural park and a hike to El Acebuchal.',
       lead: 'Frigiliana is small, but it easily fills a day: the old quarter first, then a terrace, then up into the mountains.',
       items: [
@@ -113,7 +113,7 @@ const content: PlaceContent = {
       ],
     },
     living: {
-      title: 'Living in Frigiliana: village houses, villas, fincas and prices',
+      title: 'Living in Frigiliana: houses, villas, fincas, prices',
       description: 'Buying a home in Frigiliana? The types of property, what they cost, what to watch for in the old quarter and the countryside, and what renovation involves here.',
       lead: 'After Nerja, Frigiliana is the most expensive place in the Axarquía. What you get: character, views and the sea nearby. What to watch: access and permits.',
       sections: [
@@ -141,8 +141,8 @@ const content: PlaceContent = {
     ],
   },
   de: {
-    title: 'Frigiliana: Wohnen und Kaufen im bekanntesten weißen Dorf der Axarquía',
-    description: 'Alles über Frigiliana: das maurische Viertel, die Lage oberhalb von Nerja, Immobilienpreise, Dorfhäuser und Fincas und was Sie zu Kauf und Renovierung wissen sollten.',
+    title: 'Frigiliana: Wohnen und Kaufen im bekanntesten weißen Dorf',
+    description: 'Alles über Frigiliana: maurisches Viertel, Lage oberhalb von Nerja, Immobilienpreise, Dorfhäuser und Fincas und Tipps zu Kauf und Renovierung.',
     lead: 'Weiße Häuser an einem steilen Hang, Kieselgassen voller Blumentöpfe und sechs Kilometer bis zum Meer. Frigiliana ist das Dorf auf der Postkarte der Axarquía.',
     intro: [
       'Frigiliana liegt auf etwa 300 Metern am Rand des Naturparks Sierras de Tejeda, Almijara y Alhama, sechs Kilometer landeinwärts von <a href="/de/orte/nerja/">Nerja</a>. Der alte Teil, das maurische oder Mudéjar-Viertel, besteht aus steilen Treppengassen, in die kein Auto kommt. Fliesenbilder an den Fassaden erzählen die Geschichte des Morisken-Aufstands und der Schlacht am Peñón de Frigiliana im Jahr 1569.',
@@ -159,7 +159,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'Für alle, die ein echtes andalusisches Dorf suchen, mit dem Meer und den Einrichtungen von Nerja in der Nähe. Ein Dorfhaus im alten Viertel ist ideal, wenn Sie Atmosphäre lieben und kein Auto vor der Tür brauchen; wer Platz und einen Pool möchte, schaut sich Villen und Fincas rund um das Dorf an.',
     see: {
-      title: 'Sehenswertes in Frigiliana: maurisches Viertel, Feste und Wanderungen',
+      title: 'Sehenswertes in Frigiliana: Altstadt, Feste, Wandern',
       description: 'Was man in Frigiliana unternehmen kann: das Mudéjar-Viertel, El Ingenio, das Festival 3 Culturas, Wanderungen im Naturpark und ein Ausflug nach El Acebuchal.',
       lead: 'Frigiliana ist klein, füllt aber leicht einen Tag: erst das alte Viertel, dann eine Terrasse und danach in die Berge.',
       items: [
@@ -178,7 +178,7 @@ const content: PlaceContent = {
     },
     living: {
       title: 'Wohnen in Frigiliana: Dorfhäuser, Villen, Fincas und Preise',
-      description: 'Ein Haus in Frigiliana kaufen? Welche Immobilien es gibt, was sie kosten, worauf Sie im alten Viertel und im Außenbereich achten sollten und was eine Renovierung hier bedeutet.',
+      description: 'Haus in Frigiliana kaufen? Welche Immobilien es gibt, was sie kosten, worauf Sie in der Altstadt und im Außenbereich achten und was eine Renovierung bedeutet.',
       lead: 'Nach Nerja ist Frigiliana der teuerste Ort der Axarquía. Was Sie bekommen: Atmosphäre, Aussicht und das Meer in der Nähe. Worauf Sie achten sollten: Zufahrt und Genehmigungen.',
       sections: [
         { h: 'Welche Immobilien es gibt', p: [
@@ -223,7 +223,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'För dig som söker en riktig andalusisk by, med havet och Nerjas service nära. Ett byhus i gamla kvarteret passar om du älskar stämning och inte behöver bilen utanför dörren; vill du ha utrymme och pool tittar du på villorna och fincorna runt byn.',
     see: {
-      title: 'Se och göra i Frigiliana: moriska kvarteret, fiestor och vandringar',
+      title: 'Se och göra i Frigiliana: gamla stan, fiestor, vandring',
       description: 'Vad du kan göra i Frigiliana: mudéjarkvarteret, El Ingenio, festivalen 3 Culturas, vandringar i naturparken och en tur till El Acebuchal.',
       lead: 'Frigiliana är litet men fyller lätt en dag: först gamla kvarteret, sedan en uteservering och därefter upp i bergen.',
       items: [
