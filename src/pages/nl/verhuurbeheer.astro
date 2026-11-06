@@ -1,0 +1,134 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Steps from '../../components/Steps.astro';
+import Services from '../../components/Services.astro';
+import { site } from '../../data/site';
+
+const aanvraag = '/nl/aanvraag/?dienst=verhuurbeheer';
+
+const faq = [
+  {
+    "q": "Wat kost verhuurbeheer?",
+    "a": "Dat hangt af van de grootte van het huis, hoe vaak er wordt gewisseld en wat u zelf wilt blijven doen. Doet u zelf de boekingen, dan betaalt u een vaste prijs per wissel. Bij volledig beheer rekenen we een percentage van de huuropbrengst. Na uw aanvraag krijgt u een voorstel op maat."
+  },
+  {
+    "q": "Ik doe de boekingen zelf. Kunnen jullie alleen de schoonmaak doen?",
+    "a": "Ja. U deelt uw kalender van Airbnb, Booking.com of uw eigen site met ons. Elke wissel komt dan vanzelf in onze planning, en wij zorgen dat het huis klaar is voor de volgende gast."
+  },
+  {
+    "q": "Wat als een gast iets kapot maakt?",
+    "a": "We sturen u na de controle foto’s. Kleine dingen lossen we meteen op; bij grotere schade krijgt u eerst een prijs. Met de foto’s kunt u de schade verhalen via het platform of de borg."
+  },
+  {
+    "q": "Kan ik zelf nog in mijn huis verblijven?",
+    "a": "Natuurlijk. U blokkeert de weken in de kalender en wij zetten het huis voor u klaar."
+  },
+  {
+    "q": "Heb ik een vergunning nodig om te verhuren?",
+    "a": "Ja, voor vakantieverhuur moet het huis ingeschreven zijn als vivienda de uso turístico. Wij kijken of uw huis aan de eisen voldoet en passen het zo nodig aan."
+  }
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: "Verhuurbeheer vakantiewoning: wissels, schoonmaak, sleuteloverdracht en onderhoud",
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en', 'de', 'es'],
+};
+---
+<Base
+  title="Verhuurbeheer vakantiewoning in de Axarquía"
+  description="Verhuurt u uw huis in Nerja, Torrox of elders in de Axarquía? Wij regelen de wissels, schoonmaak, beddengoed, sleutels en reparaties ter plaatse."
+  path="/nl/verhuurbeheer/"
+  jsonLd={[service]}
+>
+  <Breadcrumbs items={[{ name: "Verhuurbeheer", href: '/nl/verhuurbeheer/' }]} />
+  <Hero
+    eyebrow="Verhuurbeheer"
+    title="Uw huis verhuren, <em>wij regelen het ter plaatse</em>"
+    lead="U woont in Nederland of België en verhuurt uw huis in de Axarquía aan vakantiegasten. Wij zorgen dat het tussen de gasten door schoon, compleet en in orde is, en lossen het op als er iets kapot gaat."
+    cta="Verhuurbeheer aanvragen"
+    ctaHref={aanvraag}
+    secondary="Lees de verhuurgids"
+    secondaryHref="/nl/gidsen/woning-verhuren-spanje/"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Twee manieren om met ons samen te werken</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Alleen de wissels</h3>
+          <p>U doet zelf de advertenties en boekingen op Booking.com, Airbnb of uw eigen site. Wij komen bij elke wissel: schoonmaken, beddengoed en handdoeken verversen, controleren en klaarzetten voor de volgende gast.</p>
+        </div>
+        <div class="card">
+          <h3>Volledig verhuurbeheer</h3>
+          <p>Wij nemen ook het gastencontact, de aankomsttijden en de sleuteloverdracht over, en kunnen de advertenties en de gastenregistratie verzorgen. U krijgt een overzicht per maand.</p>
+        </div>
+      </div>
+      <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 18px;">
+        <div class="card">
+          <h3>Schoonmaak en beddengoed</h3>
+          <p>Na elk vertrek een volledige schoonmaak, schoon beddengoed en handdoeken, en de basisspullen aangevuld.</p>
+        </div>
+        <div class="card">
+          <h3>Sleuteloverdracht</h3>
+          <p>Gasten persoonlijk ontvangen, of een sleutelkluis of slim slot zodat ze zelf kunnen inchecken.</p>
+        </div>
+        <div class="card">
+          <h3>Controle na vertrek</h3>
+          <p>We lopen het huis na op schade en ontbrekende spullen en sturen u foto’s.</p>
+        </div>
+        <div class="card">
+          <h3>Storingen en reparaties</h3>
+          <p>Lekkende kraan, airco die het niet doet, een kapotte deur: omdat we zelf het bouwbedrijf zijn, lossen we het snel op.</p>
+        </div>
+        <div class="card">
+          <h3>Zwembad en tuin</h3>
+          <p>Het zwembad helder en de tuin bijgehouden, zodat het er voor elke gast goed uitziet.</p>
+        </div>
+        <div class="card">
+          <h3>Verhuurklaar maken</h3>
+          <p>Airco in de slaapkamers, een rookmelder, verduistering of een extra badkamer: wij passen uw huis aan zodat het aan de regels voor vakantieverhuur voldoet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Verhuurbeheer of sleutelbeheer: wat is het verschil?</h2>
+      <p><strong>Sleutelbeheer</strong> is voor de tijd dat uw huis leeg staat. Wij bewaren de sleutel, controleren het huis regelmatig op lekkage, vocht en inbraak, en grijpen in als er iets mis is.</p>
+      <p><strong>Verhuurbeheer</strong> is voor de tijd dat er gasten komen en gaan. Dan draait het om de wissels: schoonmaak, beddengoed, sleutels en een huis dat er bij elke aankomst perfect uitziet.</p>
+      <p>Veel eigenaars combineren de twee: verhuurbeheer in het seizoen en <a href="/nl/sleutelbeheer/">sleutelbeheer</a> in de maanden dat er niemand is. Dan heeft u het hele jaar één aanspreekpunt.</p>
+    </div>
+  </section>
+
+  <Steps
+    title="Zo werkt het"
+    steps={[
+      { t: "U vertelt over uw huis", d: "Waar het staat, hoeveel slaapkamers het heeft en of u zelf de boekingen doet. Dan weten we wat u nodig heeft." },
+      { t: "Wij komen kijken", d: "We bekijken het huis, maken een inventaris en zeggen eerlijk wat er nog nodig is voor de verhuur." },
+      { t: "U krijgt een voorstel", d: "Een voorstel op maat, met een duidelijke prijs per wissel of voor het volledige beheer." },
+      { t: "Wij koppelen uw kalender", d: "Elke boeking komt automatisch in onze planning, zodat geen wissel wordt gemist." },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Mag ik mijn huis zomaar verhuren?</h2>
+      <p>Nee. Voor vakantieverhuur in Andalusië moet de woning ingeschreven zijn als <em>vivienda de uso turístico</em> bij de Junta de Andalucía, en dat nummer moet in elke advertentie staan. Staat het huis in een appartementencomplex en begint u na april 2025 met verhuren, dan moet de VvE eerst akkoord geven. Gasten moeten binnen 24 uur bij de politie worden aangemeld.</p>
+      <p>Meer over de regels, belastingen en wat verhuren oplevert leest u in de gids <a href="/nl/gidsen/woning-verhuren-spanje/">woning verhuren in Spanje</a>. Of de gemeente van uw huis extra regels heeft, ziet u bij <a href="/nl/plaatsen/">plaatsen</a>.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} />
+  <Cta dienst="verhuurbeheer" title="Verhuren zonder dat u er hoeft te zijn" text="Vertel ons over uw huis en hoe u nu verhuurt. U krijgt een voorstel voor de wissels of voor het volledige beheer." />
+  <Services exclude="verhuurbeheer" title="Ook interessant" />
+</Base>
