@@ -16,8 +16,8 @@ const endpoint = isFilled(site.leadEndpoint) ? site.leadEndpoint : '';
     <div class="field"><label for="c-email">{C.email}</label><input id="c-email" name="email" type="email" autocomplete="email" required /></div>
   </div>
   <div class="field">
-    <label for="c-telefoon">{C.telefoon} <span class="note">{C.optional}</span></label>
-    <input id="c-telefoon" name="telefoon" type="tel" autocomplete="tel" placeholder={C.telPh} />
+    <label for="c-telefoon">{C.telefoon}</label>
+    <input id="c-telefoon" name="telefoon" type="tel" autocomplete="tel" placeholder={C.telPh} required />
   </div>
   <div class="field">
     <label for="c-bericht">{C.bericht}</label>
