@@ -29,14 +29,12 @@ const T = {
     place: 'Waar staat de woning?',
     placeOpt: '(optioneel)',
     placeChoose: 'Kies een plaats',
-    vat: 'Btw',
-    vatOpts: ['Exclusief btw', 'Inclusief 10% btw (renovatie woning)', 'Inclusief 21% btw'],
     resultTitle: 'Uw indicatie',
     perUnit: 'per',
     base: 'Basis',
     total: 'Totaal',
     exVat: 'exclusief btw',
-    incVat: 'inclusief {x}% btw',
+    vatNote: 'Exclusief btw. Bij renovatie van een woning is dat meestal 10%, bij nieuwbouw zoals een zwembad 21%.',
     buffer: 'Houd daarnaast ongeveer 10% aan voor onvoorziene zaken, zoals vocht of oude leidingen die pas bij het slopen zichtbaar worden.',
     cta: 'Vraag een offerte aan met deze berekening',
     ctaSub: 'Gratis en vrijblijvend. Uw keuze en de indicatie staan al in het formulier.',
@@ -69,14 +67,12 @@ const T = {
     place: 'Where is the property?',
     placeOpt: '(optional)',
     placeChoose: 'Choose a town',
-    vat: 'VAT',
-    vatOpts: ['Excluding VAT', 'Including 10% VAT (home renovation)', 'Including 21% VAT'],
     resultTitle: 'Your estimate',
     perUnit: 'per',
     base: 'Base',
     total: 'Total',
     exVat: 'excluding VAT',
-    incVat: 'including {x}% VAT',
+    vatNote: 'Excluding VAT. For renovating a home this is usually 10%, for new construction such as a pool 21%.',
     buffer: 'Keep about 10% aside for surprises, such as damp or old pipes that only show up once work starts.',
     cta: 'Ask for a quote with this estimate',
     ctaSub: 'Free and without obligation. Your choice and the estimate are already in the form.',
@@ -109,14 +105,12 @@ const T = {
     place: 'Wo steht die Immobilie?',
     placeOpt: '(optional)',
     placeChoose: 'Ort wählen',
-    vat: 'MwSt.',
-    vatOpts: ['Ohne MwSt.', 'Inklusive 10 % MwSt. (Renovierung Wohnhaus)', 'Inklusive 21 % MwSt.'],
     resultTitle: 'Ihr Richtwert',
     perUnit: 'pro',
     base: 'Basis',
     total: 'Gesamt',
     exVat: 'ohne MwSt.',
-    incVat: 'inklusive {x} % MwSt.',
+    vatNote: 'Ohne MwSt. Bei der Renovierung eines Wohnhauses meist 10 %, bei Neubau wie einem Pool 21 %.',
     buffer: 'Planen Sie zusätzlich etwa 10 % für Unvorhergesehenes ein, etwa Feuchtigkeit oder alte Leitungen, die erst beim Abbruch sichtbar werden.',
     cta: 'Angebot mit dieser Berechnung anfragen',
     ctaSub: 'Kostenlos und unverbindlich. Ihre Auswahl und der Richtwert stehen schon im Formular.',
@@ -160,7 +154,7 @@ const data = calcs.map((c) => ({
   extras: c.extras.map((e) => ({ id: e.id, label: e.label[lang], min: e.min ?? 0, max: e.max ?? 0, pct: e.pct ?? null })),
 }));
 const msgs = {
-  perUnit: T.perUnit, base: T.base, total: T.total, exVat: T.exVat, incVat: T.incVat,
+  perUnit: T.perUnit, base: T.base, total: T.total, exVat: T.exVat,
   prefix: T.prefix, indic: T.indic, rooms: T.rooms, count: T.count,
 };
 const placeOptions = [...places].sort((a, b) => a.name.localeCompare(b.name, 'es'));
@@ -231,21 +225,13 @@ const app = {
                 {placeOptions.map((p) => <option value={p.slug}>{p.name}</option>)}
               </select>
             </div>
-            <div class="field">
-              <label for="calc-btw">{T.vat}</label>
-              <select id="calc-btw" data-btw>
-                <option value="0">{T.vatOpts[0]}</option>
-                <option value="10">{T.vatOpts[1]}</option>
-                <option value="21">{T.vatOpts[2]}</option>
-              </select>
-            </div>
           </div>
         </div>
 
         <aside class="calc-result" aria-live="polite">
           <p class="answer-title">{T.resultTitle}</p>
           <p class="calc-total" data-total>–</p>
-          <p class="note" data-vat></p>
+          <p class="note">{T.vatNote}</p>
           <ul class="calc-lines" data-lines></ul>
           <p class="note">{T.buffer}</p>
           <a class="btn calc-cta" data-cta href={requestPath[lang]}>{T.cta}</a>
@@ -294,7 +280,6 @@ const app = {
     const qtyWrap = $('[data-qty-wrap]');
     const qtyInput = $<HTMLInputElement>('[data-qty]');
     const plaatsSel = $<HTMLSelectElement>('[data-plaats]');
-    const btwSel = $<HTMLSelectElement>('[data-btw]');
     const cta = $<HTMLAnchorElement>('[data-cta]');
     const more = $<HTMLAnchorElement>('[data-more]');
     const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
@@ -356,11 +341,7 @@ const app = {
         chosen.push(e.label.replace(/\s*\(.*\)$/, ''));
         lines.push(`<li><span>+ ${esc(e.label)}</span><strong>${range(eMin, eMax)}</strong></li>`);
       });
-      const vat = parseInt(btwSel.value, 10) || 0;
-      const f = 1 + vat / 100;
-      const total = range(min * f, max * f);
-      $('[data-total]').textContent = total;
-      $('[data-vat]').textContent = vat ? M.incVat.replace('{x}', String(vat)) : M.exVat;
+      $('[data-total]').textContent = range(min, max);
       $('[data-lines]').innerHTML = lines.join('');
 
       // Doorlink naar het aanvraagformulier met alles vooringevuld
