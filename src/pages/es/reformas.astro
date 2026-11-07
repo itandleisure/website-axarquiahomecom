@@ -86,9 +86,9 @@ const service = {
         <table class="prices">
           <tbody>
             <tr><td>Reforma integral</td><td>{esPrice(prices.renovatieTotaal)}</td></tr>
-            <tr><td>Reforma por m²</td><td>{prices.renovatiePerM2}</td></tr>
+            <tr><td>Reforma por m²</td><td>{esPrice(prices.renovatiePerM2)}</td></tr>
             <tr><td>Baño nuevo</td><td>{esPrice(prices.badkamer)}</td></tr>
-            <tr><td>Cocina nueva</td><td>{prices.keuken}</td></tr>
+            <tr><td>Cocina nueva</td><td>{esPrice(prices.keuken)}</td></tr>
           </tbody>
         </table>
         <p class="note">Precios orientativos con materiales y mano de obra, sin IVA. El precio real depende del estado de la vivienda y de lo que usted quiera. Siempre recibe antes un presupuesto.</p>

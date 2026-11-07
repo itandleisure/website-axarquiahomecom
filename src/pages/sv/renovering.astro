@@ -83,9 +83,9 @@ const service = {
         <table class="prices">
           <tbody>
             <tr><td>Totalrenovering</td><td>{svPrice(prices.renovatieTotaal)}</td></tr>
-            <tr><td>Renovering per m²</td><td>{prices.renovatiePerM2}</td></tr>
+            <tr><td>Renovering per m²</td><td>{svPrice(prices.renovatiePerM2)}</td></tr>
             <tr><td>Nytt badrum</td><td>{svPrice(prices.badkamer)}</td></tr>
-            <tr><td>Nytt kök</td><td>{prices.keuken}</td></tr>
+            <tr><td>Nytt kök</td><td>{svPrice(prices.keuken)}</td></tr>
           </tbody>
         </table>
         <p class="note">Riktpriser inklusive material och arbete, exklusive moms (IVA). Det faktiska priset beror på bostadens skick och dina önskemål. Du får alltid en offert först.</p>

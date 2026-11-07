@@ -89,9 +89,9 @@ const service = {
         <table class="prices">
           <tbody>
             <tr><td>Komplettsanierung</td><td>{dePrice(prices.renovatieTotaal)}</td></tr>
-            <tr><td>Renovierung pro m²</td><td>{prices.renovatiePerM2}</td></tr>
+            <tr><td>Renovierung pro m²</td><td>{dePrice(prices.renovatiePerM2)}</td></tr>
             <tr><td>Neues Bad</td><td>{dePrice(prices.badkamer)}</td></tr>
-            <tr><td>Neue Küche</td><td>{prices.keuken}</td></tr>
+            <tr><td>Neue Küche</td><td>{dePrice(prices.keuken)}</td></tr>
           </tbody>
         </table>
         <p class="note">Richtpreise inklusive Material und Arbeit, ohne Mehrwertsteuer (IVA). Der tatsächliche Preis hängt vom Zustand der Immobilie und Ihren Wünschen ab. Sie bekommen immer zuerst ein Angebot.</p>

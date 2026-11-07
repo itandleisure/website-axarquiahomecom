@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Todo from '../../components/Todo.astro';
-import { site } from '../../data/site';
+import { site, isFilled } from '../../data/site';
 const o = site.operator;
 ---
 <Base
@@ -10,6 +10,7 @@ const o = site.operator;
   description="Cómo trata Axarquía Home sus datos personales cuando hace una solicitud, con quién los compartimos, cuánto tiempo los guardamos y qué cookies usamos."
   path="/es/privacidad/"
   lang="es"
+  noindex={!isFilled(site.operator.name)}
 >
   <Breadcrumbs lang="es" items={[{ name: 'Privacidad y aviso legal', href: '/es/privacidad/' }]} />
   <section class="section">
