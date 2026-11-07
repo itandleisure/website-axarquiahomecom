@@ -1,0 +1,99 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'verleiding', label: 'Waarom cash aantrekkelijk lijkt' },
+  { id: 'regels', label: 'Wat de wet zegt over contant betalen' },
+  { id: 'garantie', label: 'Garantie en aansprakelijkheid' },
+  { id: 'verkoop', label: 'Facturen en belasting bij verkoop' },
+  { id: 'nederland', label: 'De Nederlandse kant' },
+  { id: 'rekenvoorbeeld', label: 'Rekenvoorbeeld' },
+  { id: 'verstandig', label: 'Zo betaalt u verstandig' },
+];
+
+const faq = [
+  {
+    q: 'Mag ik een aannemer in Spanje contant betalen?',
+    a: 'Alleen voor kleine bedragen. Betaalt u een bedrijf of zelfstandige, dan is contant betalen vanaf € 1.000 verboden. Bent u aantoonbaar geen fiscaal inwoner van Spanje, dan ligt de grens op € 10.000. Gesplitste betalingen voor hetzelfde werk worden bij elkaar opgeteld. De boete is 25% van het bedrag en geldt voor beide partijen.',
+  },
+  {
+    q: 'Welke kosten mag ik bij verkoop van de winst aftrekken?',
+    a: 'Verbeteringen die de woning waardevoller maken of langer laten meegaan, zoals een nieuwe keuken of badkamer, een zwembad, een uitbouw of nieuwe ramen. Gewoon onderhoud zoals schilderwerk of een kleine reparatie telt niet mee. U moet de kosten kunnen aantonen met een factuur op uw naam en bij voorkeur een bankbetaling.',
+  },
+  {
+    q: 'Helpen facturen ook bij de plusvalía van de gemeente?',
+    a: 'Nee. De gemeentelijke plusvalía (IIVTNU) wordt berekend over de waarde van de grond, niet over het huis. Verbouwfacturen spelen daar geen rol. Ze helpen wel bij de Spaanse belasting op de verkoopwinst, die veel hoger uitvalt.',
+  },
+  {
+    q: 'Hoelang moet ik facturen bewaren?',
+    a: 'Tot u het huis verkocht heeft, en daarna nog minstens vier jaar. Zo lang kan de Spaanse belastingdienst uw aangifte over de verkoop controleren. Bewaar bij elke factuur ook het bewijs van betaling.',
+  },
+];
+---
+<Guide slug="renovatie-factuur-of-cash-spanje" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Verbouwen zonder zorgen achteraf?" ctaText="Vraag een offerte aan voor uw renovatie. U krijgt een prijs per onderdeel en alles gaat op factuur, zodat u garantie heeft en uw kosten later kunt aftrekken.">
+  <p>“Zonder factuur is het 10% goedkoper.” Wie in Spanje verbouwt, hoort het vroeg of laat. Het klinkt als een mooie besparing, en we gaan niet doen alsof die er niet is. Maar u ruilt er veel voor in: uw garantie, uw positie als er iets misgaat en een flinke belastingaftrek als u het huis later verkoopt. In deze gids zetten we beide kanten eerlijk naast elkaar.</p>
+
+  <h2 id="verleiding">Waarom cash aantrekkelijk lijkt</h2>
+  <p>Het voordeel van contant betalen zonder factuur is simpel: de aannemer rekent geen IVA (de Spaanse btw) en geeft de omzet niet op. Over renovatiewerk aan een woning is de IVA meestal 10%, bij nieuwbouw zoals een zwembad of uitbouw vaak 21%. Bij een verbouwing van € 40.000 scheelt dat al snel € 4.000 tot € 8.400 op de rekening.</p>
+  <p>Dat is echt geld, en het is begrijpelijk dat mensen het overwegen. Het voordeel is alleen direct zichtbaar, terwijl de nadelen pas later komen: als er iets lekt, als de aannemer onbereikbaar is of als u verkoopt. Hieronder leest u welke dat zijn.</p>
+
+  <h2 id="regels">Wat de wet zegt over contant betalen</h2>
+  <p>Spanje heeft een grens voor contante betalingen aan bedrijven en zelfstandigen (wet 7/2012, aangescherpt in 2021):</p>
+  <ul>
+    <li><strong>€ 1.000</strong> als u in Spanje woont, of als u niet kunt aantonen dat u elders fiscaal inwoner bent.</li>
+    <li><strong>€ 10.000</strong> als u aantoonbaar geen fiscaal inwoner van Spanje bent en als particulier betaalt.</li>
+  </ul>
+  <p>Betalingen voor hetzelfde werk tellen samen. Een verbouwing van € 15.000 in tien keer contant betalen is dus niet toegestaan. De boete is 25% van het betaalde bedrag, en die kan zowel u als de aannemer treffen.</p>
+  <p>Belangrijker nog: ook onder die grens is werk zonder factuur niet legaal. De aannemer ontduikt IVA en inkomstenbelasting. Dat is in de eerste plaats zijn overtreding, maar u werkt eraan mee en heeft er zelf ook last van, zoals u hieronder ziet.</p>
+
+  <h2 id="garantie">Garantie en aansprakelijkheid</h2>
+  <p>Een factuur is het bewijs dat er een opdracht was, wie het werk deed, wat er is afgesproken en wat u betaalde. Zonder dat papier staat u zwak als er iets misgaat.</p>
+  <ul>
+    <li><strong>Wettelijke garantie</strong>: voor bouwwerk met een project kent de Spaanse bouwwet (LOE) aansprakelijkheid van 1 jaar voor afwerking, 3 jaar voor gebreken die de bewoonbaarheid raken (zoals vocht en lekkage) en 10 jaar voor de constructie. Ook bij kleiner werk heeft u als consument rechten. Maar die rechten zijn weinig waard als u niet kunt aantonen wie wat voor u heeft gedaan.</li>
+    <li><strong>Verzekering van de aannemer</strong>: een geregistreerd bouwbedrijf heeft een aansprakelijkheidsverzekering. Die dekt geen werk dat officieel nooit heeft bestaan.</li>
+    <li><strong>Uw eigen opstalverzekering</strong>: bij waterschade of brand vraagt de verzekeraar soms wie de installatie heeft aangelegd. Werk door een niet-geregistreerde vakman kan dan lastige vragen opleveren.</li>
+    <li><strong>Certificaten</strong>: voor nieuwe of verzwaarde elektra en voor gas heeft u een officieel certificaat nodig (het <em>boletín</em>). Alleen een erkende installateur mag dat afgeven. Zonder certificaat krijgt u bijvoorbeeld geen hogere aansluiting.</li>
+    <li><strong>Vergunning</strong>: werk dat cash gebeurt, gebeurt vaak ook zonder melding of vergunning bij de gemeente. Bij verkoop controleert de advocaat van de koper dat, en dan kan het een probleem worden. Lees meer in onze gids over <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren</a>.</li>
+    <li><strong>Ongelukken</strong>: valt een niet-ingeschreven werkman van uw dak, dan is hij niet verzekerd. U kunt als opdrachtgever aansprakelijk worden gesteld.</li>
+  </ul>
+
+  <h2 id="verkoop">Facturen en belasting bij verkoop</h2>
+  <p>Hier zit het grootste verschil, en het wordt vaak vergeten. Verkoopt u uw huis in Spanje met winst, dan betaalt u Spaanse belasting over die winst:</p>
+  <ul>
+    <li><strong>Niet-inwoners</strong> (u woont in Nederland of een ander EU-land): 19% over de winst. De koper houdt daarvoor 3% van de koopprijs in en draagt die af. Met uw aangifte (modelo 210) rekent u daarna af en krijgt u eventueel geld terug.</li>
+    <li><strong>Inwoners van Spanje</strong>: 19% tot 30% over de winst, afhankelijk van de hoogte.</li>
+  </ul>
+  <p>De winst is de verkoopprijs min de aankoopprijs, waarbij u de aankoopkosten en de kosten van <strong>verbeteringen</strong> bij de aankoopprijs mag optellen. Een nieuwe keuken, badkamer, zwembad, uitbouw, nieuwe ramen of een nieuw dak verlagen dus uw winst, en daarmee de belasting. Gewoon onderhoud, zoals schilderen of een kraan vervangen, telt niet mee.</p>
+  <p>De voorwaarde: u moet de kosten kunnen bewijzen met facturen op uw naam, liefst met het bijbehorende bankafschrift. Een verbouwing die cash is betaald, bestaat voor de belastingdienst niet. Dat “bonnetje” is bij verkoop dus geld waard.</p>
+  <p>Twee kanttekeningen voor de volledigheid. De gemeentelijke <em>plusvalía</em> (IIVTNU) gaat over de waarde van de grond; daar helpen verbouwfacturen niet. En woont u vast in Spanje en bent u 65 jaar of ouder, dan is de winst op uw hoofdverblijf vrijgesteld. Voor een vakantiehuis of tweede woning geldt die vrijstelling niet.</p>
+  <p>Verhuurt u het huis? Dan zijn facturen ook elk jaar nuttig. Inwoners van de EU mogen kosten van onderhoud en reparaties aftrekken van hun Spaanse huurinkomsten, en verbeteringen deels via afschrijving. Ook daarvoor heeft u facturen nodig.</p>
+
+  <h2 id="nederland">De Nederlandse kant</h2>
+  <p>Woont u in Nederland, dan valt uw Spaanse huis in box 3. Nederland belast de verkoopwinst op dit moment niet apart, en de winst wordt in Spanje belast. Op dit moment maken verbouwfacturen voor uw Nederlandse aangifte dus weinig uit.</p>
+  <p>Dat kan veranderen. Nederland werkt aan een nieuw box 3-stelsel op basis van werkelijk rendement, gepland vanaf 2028. In de plannen wordt bij vastgoed de waardestijging pas bij verkoop belast, en tellen verbeterkosten mee bij het bepalen van die winst. Hoe dat precies uitpakt voor een huis in Spanje, met het belastingverdrag tussen beide landen, is nog niet zeker. Wie nu verbouwt en over tien jaar verkoopt, doet er dus goed aan alle facturen te bewaren.</p>
+  <p class="note">Deze gids geeft algemene informatie en is geen fiscaal advies. Laat u voor uw eigen situatie adviseren door een belastingadviseur (<em>asesor fiscal</em>) die zowel de Spaanse als de Nederlandse regels kent.</p>
+
+  <h2 id="rekenvoorbeeld">Rekenvoorbeeld</h2>
+  <p>Stel: u woont in Nederland, koopt een huis in de Axarquía voor € 250.000 en laat een nieuwe keuken en badkamer plaatsen en de ramen vervangen voor € 40.000. Na acht jaar verkoopt u voor € 350.000. Voor de eenvoud laten we de aankoop- en verkoopkosten buiten beschouwing.</p>
+  <table class="prices">
+    <thead><tr><th></th><th>Cash, zonder factuur</th><th>Op factuur</th></tr></thead>
+    <tbody>
+      <tr><td>IVA over de verbouwing (10%)</td><td>€ 0</td><td>€ 4.000</td></tr>
+      <tr><td>Winst bij verkoop</td><td>€ 100.000</td><td>€ 60.000</td></tr>
+      <tr><td>Spaanse belasting over de winst (19%)</td><td>€ 19.000</td><td>€ 11.400</td></tr>
+      <tr><td><strong>Totaal IVA en belasting</strong></td><td><strong>€ 19.000</strong></td><td><strong>€ 15.400</strong></td></tr>
+    </tbody>
+  </table>
+  <p>In dit voorbeeld bent u met facturen uiteindelijk € 3.600 goedkoper uit, en heeft u al die jaren garantie en zekerheid gehad. Eerlijk is eerlijk: verkoopt u zonder winst, of nooit, dan levert de aftrek niets op en heeft u alleen de IVA betaald. Bij werk met 21% IVA ligt het omslagpunt hoger. Maar de risico’s van werk zonder factuur blijven hoe dan ook bestaan.</p>
+
+  <h2 id="verstandig">Zo betaalt u verstandig</h2>
+  <ul>
+    <li><strong>Vraag een schriftelijke offerte</strong> per onderdeel, met de IVA apart vermeld. Lees meer over prijzen in onze gids <a href="/nl/gidsen/kosten-huis-renoveren-spanje/">wat kost een huis renoveren in Spanje</a>.</li>
+    <li><strong>Controleer het verlaagde tarief</strong>: voor renovatie van een woning voor eigen gebruik geldt onder voorwaarden 10% IVA in plaats van 21%. Dat is een legale besparing.</li>
+    <li><strong>Betaal per bank</strong>, naar een rekening op naam van het bedrijf dat op de factuur staat. Nooit naar een privérekening van een tussenpersoon.</li>
+    <li><strong>Betaal in termijnen</strong> per afgerond onderdeel, nooit grote bedragen vooruit.</li>
+    <li><strong>Laat de factuur op uw naam en NIE-nummer zetten</strong>, met het fiscale nummer (CIF of NIF) van de aannemer, een omschrijving van het werk en de IVA.</li>
+    <li><strong>Bewaar alles op één plek</strong>: offerte, facturen, bankafschriften, vergunning en certificaten. Digitaal is prima. Dit dossier helpt u ook als u later verkoopt; een koper ziet graag wat er is gedaan.</li>
+  </ul>
+  <p>Wilt u verbouwen zonder zorgen achteraf? Via onze <a href="/nl/renovatie/">renovatiedienst</a> werkt u met een geregistreerd bouwbedrijf, met een vaste prijs per onderdeel, Nederlandstalig contact en een factuur voor elk onderdeel. <a href="/nl/aanvraag/?dienst=renovatie">Vraag hier vrijblijvend een offerte aan</a>.</p>
+</Guide>

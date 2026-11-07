@@ -1,0 +1,98 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'frestelsen', label: 'Varför kontant verkar lockande' },
+  { id: 'regler', label: 'Vad lagen säger om kontanter' },
+  { id: 'garanti', label: 'Garanti och ansvar' },
+  { id: 'forsaljning', label: 'Fakturor och skatt vid försäljning' },
+  { id: 'sverige', label: 'Den svenska sidan' },
+  { id: 'rakneexempel', label: 'Räkneexempel' },
+  { id: 'klokt', label: 'Så betalar du klokt' },
+];
+
+const faq = [
+  {
+    q: 'Får jag betala en hantverkare i Spanien kontant?',
+    a: 'Bara för små belopp. Att betala ett företag eller en egenföretagare kontant är förbjudet från 1 000 €. Kan du visa att du inte är skattemässigt bosatt i Spanien är gränsen 10 000 €. Delbetalningar för samma jobb räknas ihop. Böterna är 25 % av beloppet och kan drabba båda parter.',
+  },
+  {
+    q: 'Vilka kostnader får jag dra av från vinsten när jag säljer?',
+    a: 'Förbättringar som höjer värdet eller förlänger livslängden, till exempel ett nytt kök eller badrum, en pool, en tillbyggnad eller nya fönster. Vanligt underhåll som målning eller en mindre reparation räknas inte. Du måste kunna visa kostnaden med en faktura i ditt namn och helst en bankbetalning.',
+  },
+  {
+    q: 'Hjälper fakturor mot kommunens plusvalía?',
+    a: 'Nej. Den kommunala plusvalían (IIVTNU) beräknas på tomtens värde, inte husets. Renoveringsfakturor spelar ingen roll där. Däremot hjälper de mot den spanska skatten på kapitalvinsten, som oftast är betydligt högre.',
+  },
+  {
+    q: 'Hur länge ska jag spara fakturor?',
+    a: 'Tills du har sålt huset, och därefter i minst fyra år till. Så länge kan den spanska skattemyndigheten granska din deklaration för försäljningen. Spara betalningsbeviset tillsammans med varje faktura.',
+  },
+];
+---
+<Guide lang="sv" slug="renovering-kontant-eller-faktura-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Renovera utan bekymmer i efterhand?" ctaText="Begär en offert för din renovering. Du får ett pris per del och allt sker mot faktura, så att du har garanti och kan dra av kostnaden senare.">
+  <p>”Utan faktura blir det 10 % billigare.” Alla som renoverar i Spanien hör det förr eller senare. Det låter som en fin besparing, och vi tänker inte låtsas att den inte finns. Men du ger upp mycket för den: din garanti, din ställning om något går fel och ett rejält skatteavdrag när du säljer huset. Den här guiden ställer båda sidorna mot varandra, ärligt.</p>
+
+  <h2 id="frestelsen">Varför kontant verkar lockande</h2>
+  <p>Fördelen med att betala kontant utan faktura är enkel: hantverkaren tar inte ut någon IVA (spansk moms) och redovisar inte intäkten. På renoveringsarbete i en bostad är momsen oftast 10 %, och på nybyggnad som en pool eller tillbyggnad ofta 21 %. På en renovering för 40 000 € blir det snabbt 4 000 € till 8 400 €.</p>
+  <p>Det är riktiga pengar, och det är begripligt att man funderar på det. Men besparingen syns direkt, medan nackdelarna kommer senare: när något läcker, när hantverkaren inte går att nå eller när du säljer. Här är de.</p>
+
+  <h2 id="regler">Vad lagen säger om kontanter</h2>
+  <p>Spanien har ett tak för kontantbetalningar till företag och egenföretagare (lag 7/2012, skärpt 2021):</p>
+  <ul>
+    <li><strong>1 000 €</strong> om du bor i Spanien, eller inte kan visa att du är skattemässigt bosatt någon annanstans.</li>
+    <li><strong>10 000 €</strong> om du kan visa att du inte är skattemässigt bosatt i Spanien och betalar som privatperson.</li>
+  </ul>
+  <p>Betalningar för samma jobb räknas ihop, så att betala en renovering för 15 000 € i tio kontanta omgångar är inte tillåtet. Böterna är 25 % av det betalda beloppet och kan drabba både dig och hantverkaren.</p>
+  <p>Ännu viktigare: arbete utan faktura är inte lagligt under den gränsen heller. Hantverkaren undandrar moms och inkomstskatt. Det är i första hand hans överträdelse, men du medverkar till den och får själv ta konsekvenserna, som du ser nedan.</p>
+
+  <h2 id="garanti">Garanti och ansvar</h2>
+  <p>En faktura bevisar att det fanns ett uppdrag, vem som gjorde jobbet, vad som avtalades och vad du betalade. Utan det papperet står du svagt om något går fel.</p>
+  <ul>
+    <li><strong>Lagstadgad garanti</strong>: för byggarbete med ett projekt ansvarar byggaren enligt den spanska bygglagen (LOE) i 1 år för ytskikt och finish, 3 år för brister som påverkar beboeligheten (som fukt och läckage) och 10 år för konstruktionen. Även vid mindre jobb har du konsumenträttigheter. Men de är inte mycket värda om du inte kan visa vem som gjorde vad åt dig.</li>
+    <li><strong>Hantverkarens försäkring</strong>: ett registrerat byggföretag har en ansvarsförsäkring. Den täcker inte arbete som officiellt aldrig har utförts.</li>
+    <li><strong>Din egen hemförsäkring</strong>: vid vattenskada eller brand kan försäkringsbolaget fråga vem som gjorde installationen. Arbete av en oregistrerad hantverkare kan då leda till besvärliga frågor.</li>
+    <li><strong>Intyg</strong>: ny eller förstärkt elinstallation och gas kräver ett officiellt intyg (<em>boletín</em>), som bara en behörig installatör får utfärda. Utan intyg får du till exempel ingen starkare anslutning.</li>
+    <li><strong>Tillstånd</strong>: arbete som görs kontant görs ofta också utan anmälan eller bygglov hos kommunen. Köparens advokat kontrollerar det vid en försäljning, och då kan det bli ett problem. Läs mer i vår guide om <a href="/sv/guider/afo-andalusien/">AFO-status och legalisering</a>.</li>
+    <li><strong>Olyckor</strong>: om en oregistrerad arbetare faller från ditt tak är han inte försäkrad, och du som beställare kan hållas ansvarig.</li>
+  </ul>
+
+  <h2 id="forsaljning">Fakturor och skatt vid försäljning</h2>
+  <p>Här finns den största skillnaden, och den glöms ofta bort. Säljer du ditt hus i Spanien med vinst betalar du spansk skatt på vinsten:</p>
+  <ul>
+    <li><strong>Icke-residenter</strong> (du bor i Sverige eller ett annat land): 19 % av vinsten. Köparen håller inne 3 % av priset och betalar in det. Sedan gör du upp med din deklaration (modelo 210) och kan få pengar tillbaka.</li>
+    <li><strong>Bosatta i Spanien</strong>: 19 % till 30 % av vinsten, beroende på storlek.</li>
+  </ul>
+  <p>Vinsten är försäljningspriset minus inköpspriset, och du får lägga till köpkostnaderna och kostnaden för <strong>förbättringar</strong> på inköpspriset. Ett nytt kök, badrum, pool, tillbyggnad, nya fönster eller ett nytt tak sänker alltså din vinst, och därmed skatten. Vanligt underhåll, som målning eller att byta en kran, räknas inte.</p>
+  <p>Villkoret: du måste kunna styrka kostnaden med fakturor i ditt namn, helst med motsvarande kontoutdrag. En renovering som betalats kontant finns inte för skattemyndigheten. Kvittot är alltså värt pengar när du säljer.</p>
+  <p>Två förbehåll för fullständighetens skull. Den kommunala <em>plusvalían</em> (IIVTNU) gäller tomtens värde, och där hjälper renoveringsfakturor inte. Och bor du permanent i Spanien och är 65 år eller äldre är vinsten på din permanentbostad skattefri. Det undantaget gäller inte ett fritidshus.</p>
+  <p>Hyr du ut huset? Då är fakturor till nytta varje år. Invånare i EU får dra av kostnader för underhåll och reparationer från sina spanska hyresintäkter, och förbättringar delvis genom avskrivning. Även för det behöver du fakturor.</p>
+
+  <h2 id="sverige">Den svenska sidan</h2>
+  <p>Bor du i Sverige beskattas vinsten på ditt spanska hus normalt även i Sverige, med avräkning för den spanska skatten. Även i den svenska beräkningen får du dra av förbättringsutgifter, men bara om du kan visa vad du har betalat. Utan fakturor kan du alltså få betala mer skatt i båda länderna.</p>
+  <p class="note">Den här guiden är allmän information och inte skatterådgivning. Låt en skatterådgivare (<em>asesor fiscal</em>) som kan både de spanska och de svenska reglerna titta på din situation.</p>
+
+  <h2 id="rakneexempel">Räkneexempel</h2>
+  <p>Säg att du bor utomlands, köper ett hus i Axarquía för 250 000 € och låter byta kök, badrum och fönster för 40 000 €. Efter åtta år säljer du för 350 000 €. För enkelhetens skull räknar vi inte med köp- och försäljningskostnader.</p>
+  <table class="prices">
+    <thead><tr><th></th><th>Kontant, utan faktura</th><th>Mot faktura</th></tr></thead>
+    <tbody>
+      <tr><td>Moms på renoveringen (10 %)</td><td>0 €</td><td>4 000 €</td></tr>
+      <tr><td>Vinst vid försäljning</td><td>100 000 €</td><td>60 000 €</td></tr>
+      <tr><td>Spansk skatt på vinsten (19 %)</td><td>19 000 €</td><td>11 400 €</td></tr>
+      <tr><td><strong>Moms och skatt totalt</strong></td><td><strong>19 000 €</strong></td><td><strong>15 400 €</strong></td></tr>
+    </tbody>
+  </table>
+  <p>I det här exemplet tjänar du till slut 3 600 € på att ha fakturor, och du har haft garanti och trygghet under alla år. Ärligt talat: säljer du utan vinst, eller aldrig, ger avdraget ingenting och du har bara betalat momsen. Vid arbete med 21 % moms ligger brytpunkten högre. Men riskerna med arbete utan faktura finns kvar oavsett.</p>
+
+  <h2 id="klokt">Så betalar du klokt</h2>
+  <ul>
+    <li><strong>Be om en skriftlig offert</strong> per del, med momsen angiven separat. Om priser kan du läsa i vår guide <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">vad kostar det att renovera ett hus i Spanien</a>.</li>
+    <li><strong>Kontrollera den reducerade momsen</strong>: renovering av en bostad för privat bruk ger under vissa villkor 10 % moms i stället för 21 %. Det är en laglig besparing.</li>
+    <li><strong>Betala via bank</strong> till ett konto i namnet på företaget som står på fakturan. Aldrig till en mellanhands privata konto.</li>
+    <li><strong>Betala i etapper</strong> när varje del är klar, aldrig stora belopp i förskott.</li>
+    <li><strong>Låt fakturan ställas ut på ditt namn och NIE-nummer</strong>, med hantverkarens skattenummer (CIF eller NIF), en beskrivning av arbetet och momsen.</li>
+    <li><strong>Samla allt på ett ställe</strong>: offert, fakturor, kontoutdrag, tillstånd och intyg. Digitalt går bra. Den här pärmen hjälper också när du säljer; köpare vill gärna se vad som har gjorts.</li>
+  </ul>
+  <p>Vill du renovera utan bekymmer i efterhand? Via vår <a href="/sv/renovering/">renoveringstjänst</a> arbetar du med ett registrerat byggföretag, med fast pris per del, kontakt på engelska eller nederländska och en faktura för varje del av jobbet. <a href="/sv/forfragan/?dienst=renovatie">Begär en kostnadsfri offert här</a>.</p>
+</Guide>

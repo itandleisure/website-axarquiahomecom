@@ -1,0 +1,98 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'temptation', label: 'Why cash looks attractive' },
+  { id: 'rules', label: 'What the law says about cash' },
+  { id: 'warranty', label: 'Warranty and liability' },
+  { id: 'selling', label: 'Invoices and tax when you sell' },
+  { id: 'uk', label: 'The UK side' },
+  { id: 'example', label: 'A worked example' },
+  { id: 'sensible', label: 'How to pay sensibly' },
+];
+
+const faq = [
+  {
+    q: 'Can I pay a builder in Spain in cash?',
+    a: 'Only for small amounts. Paying a business or self-employed tradesperson in cash is banned from €1,000. If you can show you are not tax resident in Spain, the limit is €10,000. Split payments for the same job are added together. The fine is 25% of the amount and can hit both sides.',
+  },
+  {
+    q: 'Which costs can I deduct from the gain when I sell?',
+    a: 'Improvements that add value or extend the life of the property, such as a new kitchen or bathroom, a pool, an extension or new windows. Routine maintenance like painting or a small repair does not count. You need to prove the cost with an invoice in your name and ideally a bank payment.',
+  },
+  {
+    q: 'Do invoices help with the town hall plusvalía?',
+    a: 'No. The municipal plusvalía (IIVTNU) is based on the value of the land, not the house, so renovation invoices play no part. They do help with Spanish tax on the capital gain, which is usually far higher.',
+  },
+  {
+    q: 'How long should I keep invoices?',
+    a: 'Until you have sold the house, and at least four years after that. That is how long the Spanish tax office can check your return on the sale. Keep proof of payment with every invoice.',
+  },
+];
+---
+<Guide lang="en" slug="paying-builders-cash-or-invoice-spain" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Renovate without worries later?" ctaText="Ask for a quote for your renovation. You get a price per item and everything is invoiced, so you have a warranty and can deduct the cost later.">
+  <p>“Without an invoice it’s 10% cheaper.” Anyone renovating in Spain hears it sooner or later. It sounds like a nice saving, and we will not pretend it isn’t one. But you give up a lot for it: your warranty, your position if something goes wrong, and a sizeable tax deduction when you sell. This guide puts both sides next to each other, honestly.</p>
+
+  <h2 id="temptation">Why cash looks attractive</h2>
+  <p>The advantage of paying cash without an invoice is simple: the builder charges no IVA (Spanish VAT) and does not declare the income. IVA on renovation work on a home is usually 10%, and often 21% on new work such as a pool or an extension. On a €40,000 renovation that quickly comes to €4,000 to €8,400.</p>
+  <p>That is real money, and it is understandable that people consider it. The catch is that the saving is visible straight away, while the downsides come later: when something leaks, when the builder cannot be reached, or when you sell. Here is what they are.</p>
+
+  <h2 id="rules">What the law says about cash</h2>
+  <p>Spain caps cash payments to businesses and the self-employed (Law 7/2012, tightened in 2021):</p>
+  <ul>
+    <li><strong>€1,000</strong> if you live in Spain, or cannot show you are tax resident elsewhere.</li>
+    <li><strong>€10,000</strong> if you can show you are not tax resident in Spain and are paying as a private individual.</li>
+  </ul>
+  <p>Payments for the same job are added together, so paying for a €15,000 renovation in ten cash instalments is not allowed. The fine is 25% of the amount paid, and it can be imposed on both you and the builder.</p>
+  <p>More importantly, work without an invoice is not legal below that limit either. The builder is evading IVA and income tax. That is first and foremost his offence, but you are taking part in it, and you also bear the consequences, as you will see below.</p>
+
+  <h2 id="warranty">Warranty and liability</h2>
+  <p>An invoice proves there was a job, who did it, what was agreed and what you paid. Without that paper you are in a weak position if something goes wrong.</p>
+  <ul>
+    <li><strong>Statutory warranty</strong>: for building work with a project, Spain’s building law (LOE) makes builders liable for 1 year for finishes, 3 years for defects affecting habitability (such as damp and leaks) and 10 years for the structure. Smaller jobs also give you consumer rights. But those rights are worth little if you cannot prove who did what for you.</li>
+    <li><strong>The builder’s insurance</strong>: a registered building company has liability insurance. It does not cover work that officially never happened.</li>
+    <li><strong>Your own home insurance</strong>: after water damage or a fire, the insurer may ask who installed what. Work by an unregistered tradesman can raise awkward questions.</li>
+    <li><strong>Certificates</strong>: new or upgraded electrics and gas need an official certificate (the <em>boletín</em>), which only a licensed installer can issue. Without it you cannot, for example, get a higher-capacity supply.</li>
+    <li><strong>Permits</strong>: cash work is often also done without notifying the town hall or getting a licence. The buyer’s lawyer checks this when you sell, and it can become a problem. Read more in our guide to <a href="/en/guides/afo-legalisation-andalusia/">AFO status and legalisation</a>.</li>
+    <li><strong>Accidents</strong>: if an unregistered worker falls off your roof, he is not insured, and you as the client can be held liable.</li>
+  </ul>
+
+  <h2 id="selling">Invoices and tax when you sell</h2>
+  <p>This is where the biggest difference lies, and it is often forgotten. If you sell your Spanish home at a profit, you pay Spanish tax on the gain:</p>
+  <ul>
+    <li><strong>Non-residents</strong> (you live in the UK or elsewhere): 19% of the gain. The buyer withholds 3% of the price and pays it to the tax office. You then settle with your return (modelo 210) and may get money back.</li>
+    <li><strong>Spanish residents</strong>: 19% to 30% of the gain, depending on its size.</li>
+  </ul>
+  <p>The gain is the sale price minus the purchase price, and you may add the buying costs and the cost of <strong>improvements</strong> to the purchase price. A new kitchen, bathroom, pool, extension, new windows or a new roof therefore reduce your gain, and with it the tax. Routine maintenance, like painting or replacing a tap, does not count.</p>
+  <p>The condition: you must be able to prove the cost with invoices in your name, ideally with the matching bank statement. A renovation paid in cash does not exist as far as the tax office is concerned. That receipt is worth money when you sell.</p>
+  <p>Two caveats, for completeness. The municipal <em>plusvalía</em> (IIVTNU) is about the value of the land, and renovation invoices do not help there. And if you live in Spain permanently and are 65 or over, the gain on your main home is exempt. That exemption does not apply to a holiday or second home.</p>
+  <p>Do you let the property? Then invoices also matter every year. EU and EEA residents can deduct maintenance and repairs from their Spanish rental income. Since Brexit, UK residents are taxed on gross rental income without those deductions, but invoices still count when you sell.</p>
+
+  <h2 id="uk">The UK side</h2>
+  <p>If you are UK resident, the UK also taxes the gain on your Spanish home through Capital Gains Tax, with a credit for the Spanish tax you paid. In the UK calculation, too, you can deduct the cost of improvements (“enhancement expenditure”), but only if you can show what you spent. Without invoices you may end up paying more tax in both countries.</p>
+  <p class="note">This guide is general information, not tax advice. For your own situation, talk to a tax adviser (<em>asesor fiscal</em>) who knows both the Spanish and the UK rules.</p>
+
+  <h2 id="example">A worked example</h2>
+  <p>Say you live abroad, buy a house in the Axarquía for €250,000 and have a new kitchen and bathroom fitted and the windows replaced for €40,000. Eight years later you sell for €350,000. To keep it simple, we leave buying and selling costs out.</p>
+  <table class="prices">
+    <thead><tr><th></th><th>Cash, no invoice</th><th>On invoice</th></tr></thead>
+    <tbody>
+      <tr><td>IVA on the renovation (10%)</td><td>€0</td><td>€4,000</td></tr>
+      <tr><td>Gain on sale</td><td>€100,000</td><td>€60,000</td></tr>
+      <tr><td>Spanish tax on the gain (19%)</td><td>€19,000</td><td>€11,400</td></tr>
+      <tr><td><strong>Total IVA and tax</strong></td><td><strong>€19,000</strong></td><td><strong>€15,400</strong></td></tr>
+    </tbody>
+  </table>
+  <p>In this example you end up €3,600 better off with invoices, and you have had a warranty and peace of mind all those years. To be fair: if you sell without a gain, or never sell, the deduction gives you nothing and you have simply paid the IVA. With work at 21% IVA the break-even point is higher. But the risks of work without an invoice remain either way.</p>
+
+  <h2 id="sensible">How to pay sensibly</h2>
+  <ul>
+    <li><strong>Get a written quote</strong> per item, with IVA shown separately. For prices, see our guide to <a href="/en/guides/renovation-costs-spain/">renovation costs in Spain</a>.</li>
+    <li><strong>Check the reduced rate</strong>: renovation of a home for private use qualifies for 10% IVA instead of 21% under certain conditions. That is a legal saving.</li>
+    <li><strong>Pay by bank transfer</strong> to an account in the name of the company on the invoice. Never to a middleman’s private account.</li>
+    <li><strong>Pay in stages</strong> as each part is completed, never large sums up front.</li>
+    <li><strong>Have the invoice made out to your name and NIE</strong>, with the builder’s tax number (CIF or NIF), a description of the work and the IVA.</li>
+    <li><strong>Keep everything in one place</strong>: quote, invoices, bank statements, licence and certificates. Digital is fine. This file also helps when you sell; buyers like to see what has been done.</li>
+  </ul>
+  <p>Want to renovate without worries later? Through our <a href="/en/renovation/">renovation service</a> you work with a registered building company, with a fixed price per item, contact in English and an invoice for every part of the job. <a href="/en/request/?dienst=renovatie">Ask for a free quote here</a>.</p>
+</Guide>
