@@ -1480,12 +1480,13 @@ import { huisEnTuinNl, huisEnTuinEn, huisEnTuinDe } from './guides-huis-en-tuin'
 import { ontwerpNl, ontwerpEn, ontwerpDe } from './guides-ontwerp';
 import { wegenNl, wegenEn, wegenDe } from './guides-wegen';
 import { dienstenNl, dienstenEn, dienstenDe } from './guides-diensten';
+import { praktischNl, praktischEn, praktischDe } from './guides-praktisch';
 import { guidesSvExtra } from './guides-sv';
 // Gidsen uit eigen bestanden komen achter de lijsten hierboven, in elke taal op dezelfde positie.
 export const guidesBy: Record<Lang, GuideMeta[]> = {
-  nl: [...guides, ...huisEnTuinNl, ...ontwerpNl, ...wegenNl, ...dienstenNl],
-  en: [...guidesEn, ...huisEnTuinEn, ...ontwerpEn, ...wegenEn, ...dienstenEn],
-  de: [...guidesDe, ...huisEnTuinDe, ...ontwerpDe, ...wegenDe, ...dienstenDe],
+  nl: [...guides, ...huisEnTuinNl, ...ontwerpNl, ...wegenNl, ...dienstenNl, ...praktischNl],
+  en: [...guidesEn, ...huisEnTuinEn, ...ontwerpEn, ...wegenEn, ...dienstenEn, ...praktischEn],
+  de: [...guidesDe, ...huisEnTuinDe, ...ontwerpDe, ...wegenDe, ...dienstenDe, ...praktischDe],
   sv: [...guidesSv, ...guidesSvExtra],
 };
 export const guideBase: Record<Lang, string> = { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/', sv: '/sv/guider/' };

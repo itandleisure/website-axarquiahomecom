@@ -1,0 +1,83 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'verplicht', label: 'What is compulsory?' },
+  { id: 'soorten', label: 'Types of cover and costs' },
+  { id: 'kenteken', label: 'Driving a UK-registered car' },
+  { id: 'schadevrij', label: 'Bringing your no-claims history' },
+  { id: 'stilstaan', label: 'A car that stands still for months' },
+  { id: 'afsluiten', label: 'How to take out a policy' },
+];
+
+const faq = [
+  {
+    q: 'How much is car insurance in Spain?',
+    a: 'Basic third-party cover (terceros) usually costs € 250 to € 450 a year, third party with windscreens, fire and theft € 350 to € 650, and fully comprehensive cover (todo riesgo) € 600 to € 1,200. Age, where you live, the car and your claims history make a big difference.',
+  },
+  {
+    q: 'Can I keep driving my UK car in Spain?',
+    a: 'If you are not resident in Spain, you can use a UK-registered car in Spain for up to six months per calendar year. Once you become resident, the car generally has to be re-registered on Spanish plates within a short period, and you then need Spanish insurance.',
+  },
+  {
+    q: 'Do Spanish insurers accept my UK no-claims bonus?',
+    a: 'Many do, but they are not obliged to. Ask your UK insurer for a letter confirming your no-claims history, ideally in English and Spanish, and ask every insurer you get a quote from whether they will take it into account.',
+  },
+  {
+    q: 'What if I drive without insurance?',
+    a: 'The police can see instantly in the central database (FIVA) whether a Spanish car is insured. Driving without the compulsory insurance means a fine of € 601 to € 3,005, and the car can be impounded.',
+  },
+];
+---
+<Guide lang="en" slug="car-insurance-spain" toc={toc} faq={faq} dienst="sleutelbeheer" onderwerp="My car stays in Spain while I am away." ctaTitle="Your car in Spain while you are away?" ctaText="With key holding we also look after your car: starting it and checking the battery and tyres, so it is ready to drive when you arrive. And if you want a carport or EV charger at the house, we build it.">
+  <p>This is general information, not insurance advice. Always read the terms of your own policy and ask an independent adviser if in doubt.</p>
+
+  <h2 id="verplicht">What is compulsory?</h2>
+  <p>Every car registered in Spain that can be driven on the road must have at least <strong>compulsory third-party insurance</strong> (<em>seguro obligatorio</em>). It pays for damage you cause to others with the car, up to the legal limits. That applies even if the car is parked and you are not using it.</p>
+  <ul>
+    <li>The insurance belongs to the <strong>car</strong>, not the driver. The policy usually names a main driver (<em>conductor habitual</em>) and, if needed, occasional drivers.</li>
+    <li>Young or inexperienced drivers often have to be declared separately, or the insurer may pay out less after an accident.</li>
+    <li>You no longer need to carry proof of insurance on paper: the police check it in the FIVA database. A copy in the car is still handy after an accident.</li>
+  </ul>
+
+  <h2 id="soorten">Types of cover and costs</h2>
+  <table class="prices">
+    <thead><tr><th>Cover</th><th>What it covers</th><th>Estimate per year</th></tr></thead>
+    <tbody>
+      <tr><td><em>Terceros básico</em> (third party)</td><td>Damage to others, usually plus breakdown cover</td><td>€ 250 to € 450</td></tr>
+      <tr><td><em>Terceros ampliado</em> (third party plus)</td><td>Also windscreens, fire and theft</td><td>€ 350 to € 650</td></tr>
+      <tr><td><em>Todo riesgo con franquicia</em></td><td>Also damage to your own car, with an excess</td><td>€ 500 to € 900</td></tr>
+      <tr><td><em>Todo riesgo sin franquicia</em> (fully comprehensive)</td><td>Everything, with no excess</td><td>€ 700 to € 1,200</td></tr>
+    </tbody>
+  </table>
+  <p>Breakdown cover (<em>asistencia en carretera</em>) is almost always included. Check whether it applies from 0 km, so also when the car will not start outside your house, or only from 25 km from home.</p>
+  <p>Living on a finca with a dirt track? Ask whether damage to the underside of the car and a cracked windscreen from stones are covered. See also <a href="/en/guides/finca-access-road-spain/">the access road to your finca</a>.</p>
+
+  <h2 id="kenteken">Driving a UK-registered car</h2>
+  <ul>
+    <li><strong>Not resident in Spain</strong>: you can use a UK-registered car in Spain for up to six months per calendar year. Many UK policies limit the number of days of cover abroad per trip or per year. Check that before you spend the winter in Spain.</li>
+    <li><strong>Resident in Spain</strong>: the car generally has to be re-registered on Spanish plates (<em>matriculación</em>) within a short period. That involves an inspection, a technical card and sometimes registration tax. You then take out Spanish insurance. A gestor can arrange this for you. Your UK driving licence must also be exchanged for a Spanish one within the time allowed after you become resident. Read more in <a href="/en/guides/moving-to-spain-from-the-uk/">moving to Spain from the UK</a>.</li>
+  </ul>
+  <p>A car with Spanish plates must also pass the Spanish MOT (<em>ITV</em>): every two years for cars aged 4 to 10, and every year for cars over 10. You also pay an annual road tax to the town hall (<em>IVTM</em>).</p>
+
+  <h2 id="schadevrij">Bringing your no-claims history</h2>
+  <p>Spanish insurers do not see your claims history automatically. Ask your UK insurer for a letter stating your years of no claims, ideally in English and Spanish. Many Spanish insurers give a discount based on it, some do not. It pays to get several quotes.</p>
+  <p>In Spain, your claims history is then kept in a shared insurers’ database. If you later switch to another Spanish insurer, your history goes with you.</p>
+
+  <h2 id="stilstaan">A car that stands still for months</h2>
+  <p>Many owners keep a car in Spain for their visits. Two things need attention:</p>
+  <ul>
+    <li><strong>Insurance</strong>: a registered car must stay insured, even when it is not used. If you do not want to insure it for a long period, you can take it off the road temporarily with the traffic authority (DGT) (<em>baja temporal</em>). It may then not be parked or driven on the public road. For most owners, a cheap third-party policy is more practical.</li>
+    <li><strong>Mechanics</strong>: in the sun and without use, the battery drains, rubber seals dry out and tyres get flat spots. A battery on a trickle charger or disconnected, starting the car now and then and a spot in the shade help a lot.</li>
+  </ul>
+  <p>A <a href="/en/guides/building-on-your-own-land-spain/carport-and-pergola/">carport</a> protects the car from sun, hail and falling fruit and keeps the interior cool. If you drive electric, a <a href="/en/costs/ev-charger/">charger at the house</a> is handy, especially combined with solar panels. And with <a href="/en/key-holding/">key holding</a> we check the car at every visit.</p>
+
+  <h2 id="afsluiten">How to take out a policy</h2>
+  <ol>
+    <li>Have your NIE number, driving licence, registration certificate (<em>permiso de circulación</em>) and technical card (<em>ficha técnica</em>) ready.</li>
+    <li>Get quotes from two or three insurers or through a broker (<em>corredor de seguros</em>). An English-speaking broker also helps when you make a claim.</li>
+    <li>Do not compare the premium alone, but also the excess, breakdown cover, courtesy car and who is covered to drive.</li>
+    <li>Watch the term: Spanish car policies renew automatically each year. Cancelling generally has to be done in writing at least a month before the renewal date.</li>
+  </ol>
+  <p>Is your house properly insured too? Read our guide to <a href="/en/guides/home-insurance-spain/">home insurance in Spain</a>.</p>
+</Guide>
