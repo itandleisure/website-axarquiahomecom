@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { site } from '../data/site';
+import { site, isFilled } from '../data/site';
 import { projects } from '../data/projects';
 import { places, placeBase, placeHref, type PlacePage } from '../data/places';
 import { placeContent } from '../data/place-content';
@@ -43,7 +43,9 @@ export const GET: APIRoute = () => {
     .map((f) => f.replace(/^\.\//, '/').replace(/index\.astro$/, '').replace(/\.astro$/, '/'))
     .filter((p) => !/\/(bedankt|thank-you|danke|tack)\//.test(p))
     // Projectpagina's staan op noindex zolang er geen projecten zijn
-    .filter((p) => projects.length > 0 || !/^\/(nl\/projecten|en\/projects|de\/projekte|sv\/projekt)\/$/.test(p));
+    .filter((p) => projects.length > 0 || !/^\/(nl\/projecten|en\/projects|de\/projekte|sv\/projekt)\/$/.test(p))
+    // Privacypagina's staan op noindex zolang de gegevens van de beheerder ontbreken
+    .filter((p) => isFilled(site.operator.name) || !/^\/(nl\/privacy|en\/privacy|de\/datenschutz|sv\/integritet)\/$/.test(p));
   const paths = [...new Set([...staticPaths, ...placePaths, ...fiestaPaths, ...topicPaths, ...weatherPaths])].sort();
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

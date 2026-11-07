@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Todo from '../../components/Todo.astro';
-import { site } from '../../data/site';
+import { site, isFilled } from '../../data/site';
 const o = site.operator;
 ---
 <Base
@@ -10,6 +10,7 @@ const o = site.operator;
   description="How Axarquía Home handles your personal data when you make a request, who we share it with, how long we keep it and which cookies we use."
   path="/en/privacy/"
   lang="en"
+  noindex={!isFilled(site.operator.name)}
 >
   <Breadcrumbs lang="en" items={[{ name: 'Privacy and terms', href: '/en/privacy/' }]} />
   <section class="section">

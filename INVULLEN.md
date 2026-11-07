@@ -1,8 +1,12 @@
 # Nog in te vullen voor livegang
 
 Alles wat nog ontbreekt staat in de code gemarkeerd met `[VUL IN]` (in `src/data/site.ts`)
-en op de pagina's in een geel blok "Nog aanleveren". Zodra alles klopt, zet je
-`launchReady: true` in `src/data/site.ts`: dan verdwijnen de gele blokken en mag Google indexeren.
+en op de pagina's in een geel blok "Nog aanleveren". Die gele blokken zie je alleen met
+`npm run dev`; op de echte site staat bij een ontbrekende prijs "Prijs op aanvraag".
+Zodra alles klopt, zet je `launchReady: true` in `src/data/site.ts`.
+
+Google mag de site indexeren zolang `indexable: true` staat in `src/data/site.ts`.
+De privacypagina's krijgen pas "index" als de gegevens van Frans' onderneming zijn ingevuld.
 
 ## Van het bouwbedrijf
 - [ ] Bedrijfsnaam, juridische naam, CIF/NIF, adres, telefoon, WhatsApp, e-mail voor aanvragen

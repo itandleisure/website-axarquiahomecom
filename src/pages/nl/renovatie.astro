@@ -7,7 +7,7 @@ import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
 import Services from '../../components/Services.astro';
 import Todo from '../../components/Todo.astro';
-import { prices, site } from '../../data/site';
+import { prices, site, nlPrice } from '../../data/site';
 
 const faq = [
   {
@@ -87,9 +87,9 @@ const service = {
         <table class="prices">
           <tbody>
             <tr><td>Complete renovatie woning</td><td>{prices.renovatieTotaal}</td></tr>
-            <tr><td>Renovatie per m²</td><td>{prices.renovatiePerM2}</td></tr>
+            <tr><td>Renovatie per m²</td><td>{nlPrice(prices.renovatiePerM2)}</td></tr>
             <tr><td>Nieuwe badkamer</td><td>{prices.badkamer}</td></tr>
-            <tr><td>Nieuwe keuken</td><td>{prices.keuken}</td></tr>
+            <tr><td>Nieuwe keuken</td><td>{nlPrice(prices.keuken)}</td></tr>
           </tbody>
         </table>
         <p class="note">Indicaties inclusief materiaal en arbeid, exclusief btw (IVA). De echte prijs hangt af van de staat van het huis en uw wensen. U krijgt altijd eerst een offerte.</p>
