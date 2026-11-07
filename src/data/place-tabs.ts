@@ -10,13 +10,14 @@ import { weatherPlaceBySlug, weatherPlaceHref, type WLang } from './weather';
 const weatherLabels: Record<WLang, string> = { nl: 'Weer', en: 'Weather', de: 'Wetter' };
 
 export type PlaceTab = PlacePage | 'fiestas' | 'weather';
-const fiestaLabels: Record<Lang, string> = { nl: 'Feesten', en: 'Fiestas', de: 'Feste', sv: 'Fester' };
+const fiestaLabels: Record<Lang, string> = { nl: 'Feesten', en: 'Fiestas', de: 'Feste', sv: 'Fester', es: 'Fiestas' };
 
 export const tabLabels: Record<Lang, Record<PlacePage, string>> = {
   nl: { overview: 'Overzicht', see: 'Zien en doen', living: 'Wonen', permit: 'Bouwvergunning', practical: 'Praktisch' },
   en: { overview: 'Overview', see: 'Things to do', living: 'Living', permit: 'Building permit', practical: 'Practical' },
   de: { overview: 'Überblick', see: 'Sehenswertes', living: 'Wohnen', permit: 'Baugenehmigung', practical: 'Praktisches' },
   sv: { overview: 'Översikt', see: 'Se och göra', living: 'Bo', permit: 'Bygglov', practical: 'Praktiskt' },
+  es: { overview: 'Resumen', see: 'Qué ver', living: 'Vivir', permit: 'Licencia de obra', practical: 'Información práctica' },
 };
 
 /** Heeft deze gemeente pagina's Bouwvergunning en Praktisch in deze taal? */

@@ -8,9 +8,9 @@ import { hasMunicipalPages } from '../data/place-tabs';
 import { topicPaths } from '../data/topics';
 import { weatherLangs, weatherMonthHref, weatherPlaceHref, weatherPlaces } from '../data/weather';
 
-// Alle .astro-pagina's onder /nl/, /en/, /de/ en /sv/, behalve bedankt.
+// Alle .astro-pagina's onder /nl/, /en/, /de/, /sv/ en /es/, behalve bedankt.
 // Dynamische routes ([slug]) komen er niet vanzelf in; de plaatspagina's voegen we hieronder toe vanuit de plaatsenlijst.
-const pages = import.meta.glob('./{nl,en,de,sv}/**/*.astro', { eager: false });
+const pages = import.meta.glob('./{nl,en,de,sv,es}/**/*.astro', { eager: false });
 
 type PlaceLang = keyof typeof placeBase;
 
@@ -41,9 +41,9 @@ export const GET: APIRoute = () => {
   const staticPaths = Object.keys(pages)
     .filter((f) => !f.includes('['))
     .map((f) => f.replace(/^\.\//, '/').replace(/index\.astro$/, '').replace(/\.astro$/, '/'))
-    .filter((p) => !/\/(bedankt|thank-you|danke|tack)\//.test(p))
+    .filter((p) => !/\/(bedankt|thank-you|danke|tack|gracias)\//.test(p))
     // Projectpagina's staan op noindex zolang er geen projecten zijn
-    .filter((p) => projects.length > 0 || !/^\/(nl\/projecten|en\/projects|de\/projekte|sv\/projekt)\/$/.test(p));
+    .filter((p) => projects.length > 0 || !/^\/(nl\/projecten|en\/projects|de\/projekte|sv\/projekt|es\/proyectos)\/$/.test(p));
   const paths = [...new Set([...staticPaths, ...placePaths, ...fiestaPaths, ...topicPaths, ...weatherPaths])].sort();
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

@@ -66,13 +66,13 @@ export const places: Place[] = [
 
 export type PlacePage = 'overview' | 'see' | 'living' | 'permit' | 'practical';
 export const placeSub: Record<Exclude<PlacePage, 'overview'>, Record<Lang, string>> = {
-  see: { nl: 'zien-en-doen', en: 'things-to-do', de: 'sehenswuerdigkeiten', sv: 'se-och-gora' },
-  living: { nl: 'wonen', en: 'living', de: 'wohnen', sv: 'bo' },
+  see: { nl: 'zien-en-doen', en: 'things-to-do', de: 'sehenswuerdigkeiten', sv: 'se-och-gora', es: 'que-ver' },
+  living: { nl: 'wonen', en: 'living', de: 'wohnen', sv: 'bo', es: 'vivir' },
   // Alleen voor gemeenten, met data uit src/data/municipal.ts (nog niet in het Zweeds)
-  permit: { nl: 'bouwvergunning', en: 'building-permit', de: 'baugenehmigung', sv: 'bygglov' },
-  practical: { nl: 'praktisch', en: 'practical-guide', de: 'praktisches', sv: 'praktiskt' },
+  permit: { nl: 'bouwvergunning', en: 'building-permit', de: 'baugenehmigung', sv: 'bygglov', es: 'licencia-de-obra' },
+  practical: { nl: 'praktisch', en: 'practical-guide', de: 'praktisches', sv: 'praktiskt', es: 'informacion-practica' },
 };
-export const placeBase: Record<Lang, string> = { nl: '/nl/plaatsen/', en: '/en/places/', de: '/de/orte/', sv: '/sv/orter/' };
+export const placeBase: Record<Lang, string> = { nl: '/nl/plaatsen/', en: '/en/places/', de: '/de/orte/', sv: '/sv/orter/', es: '/es/pueblos/' };
 export const placeHref = (lang: Lang, p: Place, page: PlacePage = 'overview') =>
   `${placeBase[lang]}${p.slug}/${page === 'overview' ? '' : `${placeSub[page][lang]}/`}`;
 export const placeBySlug = (slug: string) => places.find((p) => p.slug === slug);
@@ -82,4 +82,5 @@ export const settingLabels: Record<Lang, Record<Setting, string>> = {
   en: { coast: 'On the coast', hills: 'In the hills', mountains: 'In the mountains', inland: 'Inland' },
   de: { coast: 'An der Küste', hills: 'In den Hügeln', mountains: 'In den Bergen', inland: 'Im Hinterland' },
   sv: { coast: 'Vid kusten', hills: 'I kullarna', mountains: 'I bergen', inland: 'I inlandet' },
+  es: { coast: 'En la costa', hills: 'En las colinas', mountains: 'En la montaña', inland: 'En el interior' },
 };

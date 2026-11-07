@@ -1,0 +1,89 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'que-es', label: '¿Qué es el certificado energético?' },
+  { id: 'obligatorio', label: '¿Cuándo es obligatorio?' },
+  { id: 'como', label: 'Cómo se obtiene' },
+  { id: 'precio', label: 'Precio y validez' },
+  { id: 'mejorar', label: 'Cómo mejorar la letra' },
+  { id: '2030', label: '¿Tendré que tener una letra mejor en 2030?' },
+];
+
+const faq = [
+  {
+    q: '¿Cuánto cuesta el certificado energético?',
+    a: 'Normalmente entre 80 y 150 € para un piso o una casa de pueblo, y entre 150 y 300 € para un chalet o un cortijo, sin IVA. A veces se añade una pequeña tasa de registro. Depende del tamaño de la vivienda y del desplazamiento del técnico.',
+  },
+  {
+    q: '¿Cuánto tiempo es válido el certificado energético?',
+    a: 'Diez años. Si la vivienda tiene la peor letra, la G, cinco años. Después de una reforma importante, como ventanas nuevas, aislamiento o aerotermia, suele merecer la pena hacer uno nuevo porque la casa saldrá mejor.',
+  },
+  {
+    q: '¿Necesito certificado energético para alquilar a turistas?',
+    a: 'En la mayoría de los casos, sí. El certificado es obligatorio para alquilar y la letra debe aparecer en el anuncio. Existe una excepción para viviendas usadas menos de cuatro meses al año, pero se interpreta de forma estricta.',
+  },
+  {
+    q: '¿Qué pasa si no tengo certificado energético?',
+    a: 'El notario y la inmobiliaria lo pedirán, y sin él la venta o el alquiler pueden retrasarse. Consumo también puede imponer multas que, según la gravedad, van de unos cientos a varios miles de euros.',
+  },
+  {
+    q: '¿Quién puede hacer el certificado energético?',
+    a: 'Un técnico competente: arquitecto, arquitecto técnico (aparejador) o ingeniero. El certificado debe registrarse en la Junta de Andalucía para ser válido.',
+  },
+];
+---
+<Guide lang="es" slug="certificado-energetico" toc={toc} faq={faq} dienst="legalisatie" onderwerp="Necesito un certificado energético (o mejorar la letra de mi vivienda)." ctaTitle="¿Necesita el certificado o una letra mejor?" ctaText="Organizamos la visita del técnico, también si usted no está, y le decimos qué obras suben más la calificación y cuánto cuestan.">
+  <h2 id="que-es">¿Qué es el certificado energético?</h2>
+  <p>El <strong>certificado de eficiencia energética</strong> (CEE), conocido como certificado energético, muestra lo eficiente que es una vivienda en una escala de la A (muy eficiente) a la G (muy poco eficiente). La etiqueta tiene dos notas:</p>
+  <ul>
+    <li>el consumo de energía en kWh por m² y año;</li>
+    <li>las emisiones de CO2 en kg por m² y año.</li>
+  </ul>
+  <p>El cálculo se basa en el edificio y sus instalaciones fijas: muros, cubierta, ventanas, calefacción, refrigeración y agua caliente. Su consumo real no cuenta. Por eso una casa de pueblo antigua, con muros gruesos pero cristal simple y termo eléctrico, saca a menudo una E, F o G aunque la factura de la luz sea baja.</p>
+
+  <h2 id="obligatorio">¿Cuándo es obligatorio?</h2>
+  <p>La norma es el Real Decreto 390/2021. Necesita un certificado en vigor cuando:</p>
+  <ul>
+    <li><strong>vende:</strong> el notario lo incorpora a la escritura y el comprador recibe una copia;</li>
+    <li><strong>alquila</strong>, a largo o corto plazo, incluida la mayoría de los alquileres vacacionales;</li>
+    <li><strong>anuncia:</strong> la letra debe figurar ya en el anuncio, también en la web de la inmobiliaria o en la plataforma de alquiler.</li>
+  </ul>
+  <p>Si vive en la casa y no la vende ni la alquila, no lo necesita. Hay excepciones, por ejemplo para edificios aislados de menos de 50 m² y viviendas usadas menos de cuatro meses al año, pero no dé por hecho que se aplican: en la práctica notarios e inmobiliarias casi siempre lo piden.</p>
+  <p>Además, el certificado de antes y después de la obra es requisito para muchas <a href="/es/guias/subvenciones-placas-solares/">subvenciones y para la deducción en el IRPF</a>.</p>
+
+  <h2 id="como">Cómo se obtiene</h2>
+  <ol>
+    <li>Un técnico competente (arquitecto, aparejador o ingeniero) visita la vivienda.</li>
+    <li>Mide la casa, revisa muros, cubierta, ventanas e instalaciones y hace fotos. Suele llevar una hora.</li>
+    <li>Calcula la calificación con un programa oficial (como CE3X) e incluye recomendaciones de mejora.</li>
+    <li>Registra el certificado en la Junta de Andalucía. Solo entonces es oficial.</li>
+    <li>Usted recibe el certificado y la etiqueta, normalmente en una o dos semanas.</li>
+  </ol>
+  <p>El técnico debe poder acceder a todas las estancias, la cubierta y las instalaciones. Si usted no está, alguien con llave puede abrirle; con nuestra <a href="/es/gestion-de-llaves/">gestión de llaves</a> lo organizamos nosotros.</p>
+
+  <h2 id="precio">Precio y validez</h2>
+  <table class="prices">
+    <thead><tr><th>Vivienda</th><th>Precio orientativo (sin IVA)</th></tr></thead>
+    <tbody>
+      <tr><td>Piso</td><td>80 – 150 €</td></tr>
+      <tr><td>Casa de pueblo o adosado</td><td>100 – 180 €</td></tr>
+      <tr><td>Chalet o cortijo</td><td>150 – 300 €</td></tr>
+    </tbody>
+  </table>
+  <p>El certificado vale diez años, o cinco con una G. Desconfíe de las ofertas muy baratas por internet sin visita: un certificado hecho solo con fotos suele ser inexacto, y si se revisa o el comprador lo cuestiona habrá que repetirlo.</p>
+
+  <h2 id="mejorar">Cómo mejorar la letra</h2>
+  <p>El certificado incluye recomendaciones, pero no todas funcionan igual en el clima andaluz. En la Axarquía lo que más suele subir la calificación es:</p>
+  <ul>
+    <li><strong>Agua caliente y climatización:</strong> cambiar un termo eléctrico o una estufa de butano por aerotermia o un <a href="/es/guias/instalacion-aire-acondicionado/">aire acondicionado con bomba de calor</a> suele ganar dos letras.</li>
+    <li><strong>Ventanas:</strong> sustituir el cristal simple y los marcos que no cierran bien por doble acristalamiento con rotura de puente térmico.</li>
+    <li><strong>Aislamiento de la cubierta:</strong> por el tejado se pierde la mayor parte del calor en invierno y entra la mayor parte del calor en verano.</li>
+    <li><strong><a href="/es/guias/placas-solares/">Placas solares</a>:</strong> reducen el consumo de energía no renovable y por tanto las emisiones.</li>
+  </ul>
+  <p>Una mejor letra hace la casa más atractiva para compradores e inquilinos. Si quiere subvención, pida el certificado antes de empezar la obra, porque es la referencia para calcular la mejora.</p>
+
+  <h2 id="2030">¿Tendré que tener una letra mejor en 2030?</h2>
+  <p>A veces se lee que en 2030 todas las viviendas europeas deberán tener al menos una E o una D. Para su vivienda no es así. La directiva europea de eficiencia energética de edificios de 2024 obliga a cada país a reducir el consumo medio del conjunto de viviendas: un 16 % en 2030 y entre un 20 y un 22 % en 2035. Cómo lo haga España, con ayudas, normas para obra nueva o requisitos en las reformas, lo decide España. Hoy no existe una letra mínima obligatoria para las viviendas existentes.</p>
+  <p>Aun así, conviene elegir la opción eficiente cuando reforma. Es más probable que las mejoras se vuelvan obligatorias que más baratas, y una casa con buena letra conserva mejor su valor.</p>
+</Guide>

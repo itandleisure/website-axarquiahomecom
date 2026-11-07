@@ -1,0 +1,128 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'resumen', label: '¿Qué plagas hay en la Axarquía?' },
+  { id: 'cucarachas', label: 'Cucarachas: entran por los desagües' },
+  { id: 'ratones', label: 'Ratones y ratas' },
+  { id: 'procesionaria', label: 'Procesionaria: peligrosa para los perros' },
+  { id: 'mosquitos', label: 'Mosquitos y mosquito tigre' },
+  { id: 'termitas', label: 'Termitas y carcoma' },
+  { id: 'prevenir', label: 'Cómo evitar que vuelvan' },
+  { id: 'empresa', label: 'Contratar una empresa de control de plagas' },
+  { id: 'precio', label: 'Precio del control de plagas' },
+];
+
+const faq = [
+  {
+    q: '¿Cuánto cuesta una empresa de control de plagas?',
+    a: 'Un tratamiento puntual contra cucarachas u hormigas en un piso o casa de pueblo suele costar entre 80 y 200 €. Ratones o ratas con portacebos: 120 a 300 €. Un contrato anual con varias revisiones: 200 a 500 €. Las termitas cuestan más: 900 a 2.000 € con un sistema de cebos. Precios orientativos sin IVA.',
+  },
+  {
+    q: '¿Por qué hay tantas cucarachas en verano?',
+    a: 'La cucaracha grande (americana) vive en el alcantarillado y sube por desagües, sumideros y rendijas cuando hace calor. En una casa cerrada se seca el agua de los sifones y ya no hay nada entre la alcantarilla y su baño. Rellenar los sifones y sellar bien los desagües cambia mucho.',
+  },
+  {
+    q: '¿El seguro de hogar cubre los daños por plagas?',
+    a: 'Normalmente no. Los daños por termitas, carcoma, ratones o ratas están excluidos en casi todas las pólizas. La prevención y actuar pronto son la única forma de limitar el coste.',
+  },
+  {
+    q: '¿Puedo usar veneno yo mismo?',
+    a: 'Los productos de uso doméstico del supermercado o la ferretería se pueden usar según la etiqueta. Los productos más fuertes y los tratamientos contra termitas solo pueden aplicarlos empresas autorizadas. Cuidado con el veneno si tiene perro o gato.',
+  },
+  {
+    q: '¿Qué hago si mi perro toca una procesionaria?',
+    a: 'Lávele la boca con agua abundante sin frotar y vaya enseguida al veterinario. Los pelos urticantes pueden inflamar gravemente la lengua y la boca.',
+  },
+];
+---
+<Guide lang="es" slug="control-de-plagas" toc={toc} faq={faq} dienst="onderhoud" onderwerp="Tengo un problema de plagas (cucarachas, ratones o termitas) y quiero sellar las entradas." ctaTitle="¿Siguen entrando?" ctaText="Localizamos por dónde entran, sellamos rendijas, desagües y tejado y cambiamos la madera dañada. Envíenos unas fotos de lo que ve.">
+  <p>Eliminar una plaga es una cosa; que no vuelva es otra. Esta guía explica qué plagas encontrará en la Axarquía, qué puede hacer usted y cuándo llamar a un profesional.</p>
+
+  <h2 id="resumen">¿Qué plagas hay en la Axarquía?</h2>
+  <table class="prices">
+    <thead><tr><th>Plaga</th><th>Cuándo</th><th>En qué fijarse</th></tr></thead>
+    <tbody>
+      <tr><td>Cucarachas</td><td>De mayo a octubre</td><td>Desagües, sumideros, armarios de cocina; activas de noche</td></tr>
+      <tr><td>Hormigas</td><td>Primavera y verano</td><td>Filas a lo largo de rodapiés y marcos</td></tr>
+      <tr><td>Ratones y ratas</td><td>Sobre todo otoño e invierno</td><td>Excrementos, roeduras, ruidos en el tejado</td></tr>
+      <tr><td>Procesionaria del pino</td><td>De enero a abril</td><td>Bolsones blancos en los pinos, orugas en fila por el suelo</td></tr>
+      <tr><td>Mosquitos y mosquito tigre</td><td>De abril a noviembre</td><td>Agua estancada, picaduras de día</td></tr>
+      <tr><td>Termitas</td><td>Todo el año, enjambres en primavera</td><td>Galerías de barro, madera que suena hueca</td></tr>
+      <tr><td>Carcoma</td><td>Todo el año</td><td>Agujeritos redondos y serrín bajo vigas o muebles</td></tr>
+      <tr><td>Escorpiones y escolopendras</td><td>Verano</td><td>Bajo piedras, en grietas de muros viejos</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="cucarachas">Cucarachas: entran por los desagües</h2>
+  <p>En el sur de España verá sobre todo dos tipos. La <strong>cucaracha americana</strong>, grande (hasta 4 cm), vive en el alcantarillado y entra por desagües, sumideros y rendijas, sobre todo en noches calurosas. La <strong>cucaracha alemana</strong>, pequeña, se instala en cocinas, detrás de electrodomésticos y en armarios, y suele llegar en cajas o muebles de segunda mano.</p>
+  <ul>
+    <li><strong>Sifones:</strong> un sifón con agua impide el paso de bichos y olores. Si la casa está semanas cerrada, el agua se evapora. Abra grifos, duchas y sumideros en cada visita, o añada un chorrito de aceite, que se evapora más despacio.</li>
+    <li><strong>Sumideros y desagües:</strong> rejillas o sumideros con cierre en terraza y baño, y bajantes bien conectadas, sin huecos.</li>
+    <li><strong>Rendijas:</strong> selle con silicona o mortero los huecos alrededor de tuberías que atraviesan muros o suelos.</li>
+  </ul>
+  <p>Contra la cucaracha pequeña de cocina funciona mejor el cebo en gel. Contra la grande, lo que más ayuda es sellar. Si vuelven una y otra vez en gran número, suele haber un problema en el saneamiento, como una tubería rota o una fosa séptica antigua.</p>
+
+  <h2 id="ratones">Ratones y ratas</h2>
+  <p>En cortijos y casas de pueblo con tejado antiguo, los ratones y las ratas son un problema conocido en otoño. Los atraen la fruta caída de aguacates o mangos, el pienso de animales y un rincón cálido bajo las tejas. Roen cables, tuberías y aislamiento, lo que puede provocar incendios o fugas.</p>
+  <ul>
+    <li>Un ratón pasa por un hueco de unos 6 mm, una rata por 2 cm. Cierre agujeros en pasos de tuberías, bajo las puertas y en el alero.</li>
+    <li>Ponga malla en las rejillas de ventilación y burletes de cepillo bajo las puertas.</li>
+    <li>Recoja la fruta caída y el pienso, y mantenga las plantas alejadas del tejado.</li>
+    <li>Use cebos solo en portacebos cerrados, sobre todo con perros, gatos o niños.</li>
+  </ul>
+
+  <h2 id="procesionaria">Procesionaria: peligrosa para los perros</h2>
+  <p>Si hay pinos en su parcela o cerca, probablemente la verá. Las orugas de la procesionaria pasan el invierno en bolsones blancos en el árbol y, de enero a abril, bajan al suelo en una larga fila. Sus pelos provocan picor e inflamación en las personas y son peligrosos de verdad para perros y gatos.</p>
+  <ul>
+    <li>Haga retirar los bolsones en otoño o principios de invierno por un profesional con equipo de protección.</li>
+    <li>Un collar trampa alrededor del tronco atrapa las orugas cuando bajan.</li>
+    <li>Las trampas de feromonas en verano capturan las mariposas y evitan nuevos bolsones.</li>
+  </ul>
+
+  <h2 id="mosquitos">Mosquitos y mosquito tigre</h2>
+  <p>El mosquito tigre está presente en la provincia de Málaga desde hace años. Pica de día y pone los huevos en muy poca agua estancada: un plato de maceta, un cubo, un canalón atascado o un bidón sin tapa. Lo que ayuda:</p>
+  <ul>
+    <li>No dejar agua en platos, cubos y juguetes, y limpiar los canalones.</li>
+    <li>Mantener la depuradora de la <a href="/es/piscinas/">piscina</a> en marcha en invierno, aunque no se use, o cubrirla bien.</li>
+    <li>Mosquiteras en ventanas y puertas, la medida más eficaz dentro de casa.</li>
+  </ul>
+
+  <h2 id="termitas">Termitas y carcoma</h2>
+  <p>La termita subterránea está presente en gran parte de Andalucía, también en la Axarquía. Se come por dentro vigas, marcos y rodapiés, a menudo durante años sin que se note. La carcoma deja agujeritos redondos y serrín fino. En los dos casos, detectarlo pronto es la diferencia entre un tratamiento y vigas nuevas.</p>
+  <p>¿Va a comprar una casa de pueblo antigua o un cortijo? Haga revisar vigas y carpintería en la <a href="/es/inspeccion-de-vivienda/">inspección antes de comprar</a>.</p>
+
+  <h2 id="prevenir">Cómo evitar que vuelvan</h2>
+  <p>La mayoría de las plagas vuelven mientras la casa les deje entrar. Estas medidas de obra funcionan contra casi todo a la vez:</p>
+  <ul>
+    <li>Sellar rendijas y agujeros alrededor de tuberías, cables, marcos y alero.</li>
+    <li>Malla en rejillas de ventilación y chimeneas.</li>
+    <li>Burletes o umbrales bajo las puertas exteriores.</li>
+    <li>Mosquiteras en ventanas y puertas.</li>
+    <li>Desagües y sumideros con sifón y rejilla con cierre.</li>
+    <li>Resolver las humedades: muchos insectos y la carcoma buscan los puntos húmedos.</li>
+    <li>Revisiones periódicas si la casa está vacía: rellenar sifones, buscar señales y actuar a tiempo. Es lo que hace la <a href="/es/gestion-de-llaves/">gestión de llaves</a>.</li>
+  </ul>
+
+  <h2 id="empresa">Contratar una empresa de control de plagas</h2>
+  <p>Las empresas de control de plagas, también llamadas empresas DDD (desinsectación, desratización y desinfección), deben cumplir varios requisitos:</p>
+  <ul>
+    <li>Estar inscritas en el Registro Oficial de Establecimientos y Servicios Biocidas (ROESB) de la Junta de Andalucía. Pida el número.</li>
+    <li>Entregarle tras el tratamiento un certificado con los productos usados y el plazo de seguridad. Guárdelo, también para alquilar o vender.</li>
+    <li>Pregunte si hay garantía y si una segunda visita entra en el precio.</li>
+    <li>Si alquila la casa, un contrato anual evita quejas de los huéspedes.</li>
+  </ul>
+  <p>La empresa de plagas elimina los bichos, pero no cierra las entradas. Eso lo hacemos nosotros: localizamos por dónde entran, sellamos rendijas, desagües y tejado y cambiamos la madera dañada.</p>
+
+  <h2 id="precio">Precio del control de plagas</h2>
+  <table class="prices">
+    <thead><tr><th>Tratamiento</th><th>Precio orientativo (sin IVA)</th></tr></thead>
+    <tbody>
+      <tr><td>Cucarachas u hormigas, piso o casa de pueblo</td><td>80 – 200 €</td></tr>
+      <tr><td>Ratones o ratas con portacebos</td><td>120 – 300 €</td></tr>
+      <tr><td>Retirada de bolsones de procesionaria</td><td>Según el número de pinos</td></tr>
+      <tr><td>Contrato anual con varias revisiones</td><td>200 – 500 €</td></tr>
+      <tr><td>Termitas con sistema de cebos</td><td>900 – 2.000 €</td></tr>
+    </tbody>
+  </table>
+</Guide>

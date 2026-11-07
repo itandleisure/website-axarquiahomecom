@@ -131,6 +131,31 @@ export const contactTeksten: Record<Lang, {
       failed: 'Det gick inte att skicka. Kontrollera din anslutning eller mejla oss på info@axarquiahome.com.',
     },
   },
+  es: {
+    title: 'Contacto: envíe su pregunta a Axarquía Home',
+    description: '¿Una pregunta sobre su casa en la Axarquía? Envíenos un mensaje. Le respondemos en menos de 24 horas, en español, inglés o neerlandés.',
+    crumb: 'Contacto',
+    h1: 'Contacte con nosotros',
+    lead: '¿Tiene una pregunta o simplemente quiere comentar algo? Envíenos un mensaje y le respondemos en menos de 24 horas.',
+    naam: 'Nombre', email: 'Correo electrónico', telefoon: 'Teléfono', telPh: '+34 6…', optional: '(opcional)',
+    bericht: 'Su mensaje', berichtPh: '¿En qué podemos ayudarle?',
+    hp: 'Deje este campo vacío',
+    consent: 'Acepto que mi mensaje se envíe a la empresa constructora de Axarquía Home, que se pondrá en contacto conmigo. Consulte la',
+    privacy: 'política de privacidad',
+    submit: 'Enviar mensaje',
+    wizardHint: '¿Ya sabe qué quiere hacer? Con el',
+    wizardLink: 'formulario de solicitud',
+    fromWizard: '¿Prefiere enviarnos simplemente un mensaje?',
+    fromWizardLink: 'Use el formulario de contacto',
+    footer: 'Formulario de contacto',
+    msgs: {
+      fill: 'Rellene {x}.', thisField: 'este campo',
+      consent: 'Dé su consentimiento para que podamos enviar su mensaje.',
+      notLinked: 'El formulario aún no está conectado (versión de prueba). Su mensaje no se ha enviado.',
+      sending: 'Enviando…',
+      failed: 'No se ha podido enviar. Compruebe su conexión o escríbanos a info@axarquiahome.com.',
+    },
+  },
 };
 
 /** Vervolg van de zin bij wizardHint, per taal. */
@@ -139,4 +164,5 @@ export const wizardHintEnd: Record<Lang, string> = {
   en: 'takes two minutes and asks only what matters for your job.',
   de: 'ist Ihre Anfrage in zwei Minuten erledigt.',
   sv: 'är din förfrågan klar på två minuter.',
+  es: 'tiene su solicitud lista en dos minutos.',
 };

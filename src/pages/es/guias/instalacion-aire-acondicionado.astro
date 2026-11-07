@@ -1,0 +1,115 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'precio', label: 'Precio de instalar aire acondicionado' },
+  { id: 'sistema', label: 'Split, multisplit, conductos o aerotermia' },
+  { id: 'potencia', label: '¿Qué potencia necesito?' },
+  { id: 'incluye', label: 'Qué incluye una buena instalación' },
+  { id: 'luz', label: 'Potencia contratada y placas solares' },
+  { id: 'permisos', label: 'Comunidad, fachada y permisos' },
+  { id: 'cuando', label: 'Cuándo pedirlo: no espere a junio' },
+  { id: 'mantenimiento', label: 'Mantenimiento y consumo' },
+];
+
+const faq = [
+  {
+    q: '¿Cuánto cuesta instalar un aire acondicionado?',
+    a: 'Un split de 2,5 a 3,5 kW para un dormitorio o un salón cuesta instalado entre 900 y 1.800 € sin IVA. Un multisplit con tres unidades interiores, entre 3.500 y 6.000 €. Un sistema por conductos para toda la casa, entre 6.000 y 12.000 €.',
+  },
+  {
+    q: '¿El aire acondicionado también da calefacción?',
+    a: 'Sí. Casi todos los equipos split actuales son bombas de calor que enfrían y calientan. Con los inviernos suaves de la Axarquía es una forma económica de calentar la casa.',
+  },
+  {
+    q: '¿Cuánto consume un aire acondicionado?',
+    a: 'Un split moderno de 3,5 kW consume de media entre 0,8 y 1,2 kW por hora al enfriar. Unas horas al día en verano suponen unas decenas de euros al mes por habitación, menos si tiene placas solares.',
+  },
+  {
+    q: '¿Necesito permiso para poner la unidad exterior?',
+    a: 'Del ayuntamiento normalmente no, pero en un edificio necesita la autorización de la comunidad o cumplir sus normas. En cascos históricos protegidos el ayuntamiento puede poner condiciones a las unidades visibles en fachada.',
+  },
+  {
+    q: '¿Cuánto tarda la instalación?',
+    a: 'Un split se instala en medio día o un día. Un multisplit, uno o dos días. Un sistema por conductos o aerotermia, varios días, más si hay que hacer falso techo. En primavera los plazos suelen ser cortos; en junio y julio hay mucha más demanda y hay que esperar más.',
+  },
+];
+---
+<Guide lang="es" slug="instalacion-aire-acondicionado" toc={toc} faq={faq} dienst="anders" onderwerp="Quiero presupuesto para instalar aire acondicionado." ctaTitle="Fresco en verano, calor en invierno" ctaText="Díganos cuántas habitaciones quiere climatizar y cómo usa la casa. Le aconsejamos el sistema adecuado y le damos precio cerrado.">
+  <p>Los precios son orientativos para 2026 en la Axarquía, con instalación y materiales estándar, sin IVA.</p>
+
+  <h2 id="precio">Precio de instalar aire acondicionado</h2>
+  <table class="prices">
+    <thead><tr><th>Sistema</th><th>Para</th><th>Precio orientativo instalado</th></tr></thead>
+    <tbody>
+      <tr><td>Split 2,5 – 3,5 kW</td><td>Una estancia de hasta ± 30 m²</td><td>900 – 1.800 €</td></tr>
+      <tr><td>Multisplit, 1 exterior y 3 interiores</td><td>Piso o casa pequeña</td><td>3.500 – 6.000 €</td></tr>
+      <tr><td>Conductos</td><td>Toda la casa, oculto en falso techo</td><td>6.000 – 12.000 €</td></tr>
+      <tr><td>Aerotermia (aire-agua)</td><td>Calefacción por radiadores o suelo radiante, más agua caliente</td><td>8.000 – 15.000 €</td></tr>
+      <tr><td>Aerotermia con suelo radiante nuevo</td><td>Dentro de una reforma integral</td><td>12.000 – 20.000 €</td></tr>
+      <tr><td>Termo con bomba de calor (solo agua caliente)</td><td>Sustituye al termo eléctrico</td><td>2.000 – 4.500 €</td></tr>
+    </tbody>
+  </table>
+  <p>Mantenimiento: cuente con 80 a 150 € al año por equipo para limpiar filtros y revisar.</p>
+
+  <h2 id="sistema">Split, multisplit, conductos o aerotermia</h2>
+  <ul>
+    <li><strong>Split.</strong> Una unidad interior y una exterior por estancia. Lo más barato y fácil, ideal si solo quiere climatizar el salón y un dormitorio.</li>
+    <li><strong>Multisplit.</strong> Varias unidades interiores con una sola exterior. Menos aparatos en la fachada, pero si falla la exterior se quedan sin clima todas las estancias.</li>
+    <li><strong>Conductos.</strong> Una máquina oculta en el falso techo que reparte el aire por rejillas. Discreto y cómodo para toda la casa; tiene sentido sobre todo en una reforma o si ya hay falso techo.</li>
+    <li><strong>Aerotermia.</strong> Una bomba de calor aire-agua para calefacción y agua caliente, combinable con suelo radiante o fancoils. La opción más eficiente para una casa habitada todo el año, y la que más sube la letra del <a href="/es/guias/certificado-energetico/">certificado energético</a>.</li>
+  </ul>
+  <p>Según el tipo de casa:</p>
+  <ul>
+    <li><strong>Piso en la costa:</strong> splits o un multisplit suelen bastar. Consulte las normas de la comunidad para las unidades exteriores.</li>
+    <li><strong>Casa de pueblo con muros gruesos:</strong> se mantiene fresca en verano, pero en invierno es húmeda y fría. Un aire acondicionado con bomba de calor y buena ventilación ayuda contra la humedad.</li>
+    <li><strong>Cortijo o chalet habitado todo el año:</strong> la aerotermia con suelo radiante es lo más cómodo, sobre todo combinada con <a href="/es/guias/placas-solares/">placas solares</a>.</li>
+  </ul>
+
+  <h2 id="potencia">¿Qué potencia necesito?</h2>
+  <p>Como orientación en la costa de Málaga, cuente con unos 100 a 120 W de frío por m² (unas 90 a 100 frigorías por m²). Súbalo si la estancia da al oeste, está bajo cubierta o tiene grandes ventanales:</p>
+  <table class="prices">
+    <thead><tr><th>Superficie de la estancia</th><th>Potencia orientativa</th></tr></thead>
+    <tbody>
+      <tr><td>Hasta 15 m² (dormitorio)</td><td>2 – 2,5 kW (unas 2.000 frigorías)</td></tr>
+      <tr><td>15 – 25 m²</td><td>2,5 – 3,5 kW (unas 2.500 – 3.000 frigorías)</td></tr>
+      <tr><td>25 – 35 m² (salón)</td><td>3,5 – 5 kW (unas 3.000 – 4.300 frigorías)</td></tr>
+    </tbody>
+  </table>
+  <p>Un equipo demasiado pequeño no llega en agosto; uno demasiado grande enciende y apaga constantemente, gasta más y no deshumidifica bien. Un buen instalador lo calcula en la visita.</p>
+
+  <h2 id="incluye">Qué incluye una buena instalación</h2>
+  <p>Fíjese en que el presupuesto incluya:</p>
+  <ul>
+    <li>la línea frigorífica de cobre aislada, con metros incluidos y precio por metro adicional;</li>
+    <li>el desagüe de condensados, bien conducido, sin gotear sobre la terraza del vecino;</li>
+    <li>una línea eléctrica propia con su protección en el cuadro;</li>
+    <li>los soportes de la unidad exterior, con antivibratorios;</li>
+    <li>la prueba de vacío y estanqueidad antes de abrir el gas;</li>
+    <li>las rozas, el tapado y la pintura si la tubería va empotrada.</li>
+  </ul>
+  <p>La instalación debe hacerla una empresa habilitada para manipular gases fluorados, que le entrega el certificado de la instalación. Sin él, el fabricante puede negarle la garantía.</p>
+
+  <h2 id="luz">Potencia contratada y placas solares</h2>
+  <p>Muchas casas antiguas tienen poca potencia contratada, por ejemplo 3,45 kW. Con aire acondicionado, placa de inducción y aerotermia suele hacer falta 5,75 kW o más. Se sube a través de la comercializadora y a veces exige un boletín eléctrico nuevo, que también le podemos hacer.</p>
+  <p>El aire acondicionado funciona sobre todo en las horas de más sol, justo cuando más producen las placas. Por eso es la mejor combinación con el <a href="/es/guias/placas-solares/">autoconsumo solar</a>: buena parte del frío le sale gratis.</p>
+
+  <h2 id="permisos">Comunidad, fachada y permisos</h2>
+  <ul>
+    <li><strong>En un edificio:</strong> la comunidad puede fijar dónde van las unidades exteriores. Consúltelo antes de colocar nada en fachada.</li>
+    <li><strong>En un casco histórico:</strong> en pueblos como Frigiliana o Cómpeta el ayuntamiento puede exigir que la unidad no se vea desde la calle. Una azotea o un patio suelen ser la solución.</li>
+    <li><strong>El ruido:</strong> coloque la unidad exterior lejos de los dormitorios del vecino y sobre antivibratorios.</li>
+  </ul>
+
+  <h2 id="cuando">Cuándo pedirlo: no espere a junio</h2>
+  <p>En junio las búsquedas de instalación de aire acondicionado casi se triplican y los instaladores se llenan. Si lo pide en marzo, abril o mayo, tiene más disponibilidad, mejor precio y el equipo listo para el primer día de calor. Lo mismo para la calefacción: en octubre es mejor momento que en enero.</p>
+
+  <h2 id="mantenimiento">Mantenimiento y consumo</h2>
+  <ul>
+    <li>Limpie los filtros cada mes en temporada de uso. Unos filtros sucios gastan más y huelen mal.</li>
+    <li>Una revisión anual: limpieza de la unidad interior, revisión del gas y del desagüe.</li>
+    <li>Una temperatura de 25 a 26 grados en verano es cómoda y ahorra mucho frente a 21 grados.</li>
+    <li>Toldos, persianas y aislamiento del tejado reducen la necesidad de frío más que cualquier equipo.</li>
+  </ul>
+  <p>Si tiene una vivienda turística, un aire acondicionado en cada dormitorio es casi imprescindible. Lo instalamos y lo mantenemos con nuestra <a href="/es/gestion-alquiler-vacacional/">gestión de alquiler vacacional</a>.</p>
+</Guide>
