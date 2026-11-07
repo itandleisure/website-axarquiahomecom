@@ -536,7 +536,7 @@ export const costsDe: Topic[] = [
 <li><strong>Genehmigung.</strong> Module auf dem Dach eines bestehenden, legalen Hauses brauchen in Andalusien meist nur eine einfache Meldung (<em>declaración responsable</em>) bei der Gemeinde. Für Anlagen auf dem Boden, eine Finca im Außenbereich oder ein Haus mit AFO-Status kann die Gemeinde mehr verlangen. Siehe die Seite <em>Baugenehmigung</em> Ihrer Gemeinde unter <a href="/de/orte/">Orte</a>.</li>
 <li><strong>Anmeldung.</strong> Der Installateur meldet die Anlage bei der Junta de Andalucía an und stellt das Elektro-Zertifikat (<em>boletín</em>) aus. Danach beantragen Sie bei Ihrem Anbieter die Gutschrift für die Einspeisung.</li>
 <li><strong>Steuerermäßigung.</strong> Viele Gemeinden gewähren für einige Jahre einen Nachlass auf die Grundsteuer (<em>bonificación del IBI</em>) und auf die Bausteuer (ICIO). Die Höhe ist je Gemeinde verschieden.</li>
-<li><strong>Förderung.</strong> Spanische und europäische Förderprogramme für Eigenverbrauch ändern sich oft und sind manchmal schnell ausgeschöpft. Fragen Sie beim Angebot, was gerade läuft.</li>
+<li><strong>Förderung.</strong> Spanische und europäische Förderprogramme für Eigenverbrauch ändern sich oft und sind manchmal schnell ausgeschöpft. Was 2026 läuft, lesen Sie unter <a href="/de/ratgeber/foerderung-energetische-sanierung-spanien/">Förderung für energetische Sanierung</a>.</li>
 </ul>`,
       },
       {
@@ -1182,7 +1182,7 @@ export const costsDe: Topic[] = [
 <li><strong>Fenster in gleicher Größe tauschen</strong> ist meist eine einfache Meldung bei der Gemeinde (<em>declaración responsable</em> oder <em>obra menor</em>).</li>
 <li><strong>In einem historischen Ortskern</strong>, etwa in Frigiliana oder Cómpeta, gelten oft Regeln für Farbe und Material, zum Beispiel Holz oder eine Holzfarbe.</li>
 <li><strong>In einer Wohnanlage</strong> muss die Fassade einheitlich bleiben. Fragen Sie die <em>comunidad</em>, welche Farbe und welches Modell erlaubt sind.</li>
-<li><strong>Förderung:</strong> Für energetische Sanierungen gibt es regelmäßig Programme und einen Abzug bei der Einkommensteuer (IRPF). Fragen Sie beim Angebot, was gerade läuft.</li>
+<li><strong>Förderung:</strong> Für energetische Sanierungen gibt es regelmäßig Programme und einen Abzug bei der Einkommensteuer (IRPF). Was 2026 läuft, lesen Sie unter <a href="/de/ratgeber/foerderung-energetische-sanierung-spanien/">Förderung für energetische Sanierung</a>.</li>
 </ul>`,
       },
     ],

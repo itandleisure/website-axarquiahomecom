@@ -1,0 +1,185 @@
+---
+import ArticlePhoto from '../../../components/ArticlePhoto.astro';
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Kurze Antwort' },
+  { id: 'ueberblick', label: 'Alle Programme im Überblick' },
+  { id: 'eu-regeln', label: 'Muss Ihr Haus 2030 Klasse D haben?' },
+  { id: 'spanien', label: 'Was Spanien mit den EU-Regeln macht' },
+  { id: 'irpf', label: 'Steuerabzug in der IRPF' },
+  { id: 'junta', label: 'Zuschuss der Junta de Andalucía' },
+  { id: 'next-generation', label: 'Next Generation: was noch läuft' },
+  { id: 'gemeinde', label: 'Rabatt auf IBI und ICIO' },
+  { id: 'cae', label: 'Energieeinsparung verkaufen (CAE)' },
+  { id: 'schritte', label: 'So gehen Sie vor' },
+  { id: 'quellen', label: 'Quellen und Stand' },
+];
+
+const faq = [
+  {
+    q: 'Muss mein Haus in Spanien 2030 mindestens Energieklasse E oder D haben?',
+    a: 'Nein. Das stand in früheren Vorschlägen der Europäischen Kommission (2021) und des Europäischen Parlaments (2023), hat es aber nicht in die endgültige Richtlinie geschafft. Die EU-Gebäuderichtlinie von 2024 verpflichtet die Länder, den durchschnittlichen Energieverbrauch aller Wohngebäude zusammen zu senken: um mindestens 16% bis 2030 und um 20 bis 22% bis 2035, gemessen an 2020. Wie Spanien das umsetzt, ist noch offen. Eine Mindestklasse für Ihr eigenes Haus ist im November 2026 nicht angekündigt.',
+  },
+  {
+    q: 'Bekomme ich als Nichtresident eine Förderung für mein Ferienhaus in Spanien?',
+    a: 'Der Steuerabzug in der IRPF gilt nur für steuerlich in Spanien Ansässige, und nur für die eigene Hauptwohnung oder eine vermietete Wohnung. Der Zuschuss der Junta de Andalucía und der IBI-Rabatt sind nicht an den Wohnsitz gebunden: Es zählt, dass Sie Eigentümer sind und das Haus legal ist. Lesen Sie aber die Bedingungen des jeweiligen Aufrufs, denn sie können sich von Runde zu Runde ändern.',
+  },
+  {
+    q: 'Muss ich die Förderung vor Baubeginn beantragen?',
+    a: 'Meistens ja. Beim aktuellen andalusischen Programm dürfen Privatpersonen auch für Arbeiten beantragen, die nach dem 1. Mai 2025 begonnen haben, Unternehmen müssen jedoch vorher beantragen. Für den IRPF-Abzug brauchen Sie einen Energieausweis von vor den Arbeiten. Lassen Sie also immer zuerst einen Ausweis erstellen und prüfen Sie, welches Programm offen ist, bevor Sie einen Auftrag vergeben.',
+  },
+  {
+    q: 'Kann ich Zuschuss und Steuerabzug kombinieren?',
+    a: 'Ja, aber nicht für dasselbe Geld. Erhalten Sie einen Zuschuss, wird dieser Betrag von dem abgezogen, was Sie in der IRPF geltend machen dürfen. Einen IBI-Rabatt und den Verkauf von Energieeinsparungen (CAE) können Sie meist zusätzlich nutzen. Lassen Sie Ihren Gestor das für Ihre Situation durchrechnen.',
+  },
+  {
+    q: 'Warum sanieren, wenn es keine Pflicht gibt?',
+    a: 'Weil es sich in der Axarquía schnell lohnt: Ein gedämmtes Dach und gute Fenster halten das Haus im Sommer kühler und im Winter wärmer, eine Wärmepumpe und eine Solaranlage senken die Stromrechnung, und eine bessere Energieklasse hilft beim Verkauf und bei der Vermietung. Auch Käufer achten immer mehr auf den Energieausweis.',
+  },
+];
+---
+<Guide lang="de" slug="foerderung-energetische-sanierung-spanien" toc={toc} faq={faq} dienst="renovatie" onderwerp="Energetische Sanierung mit Förderung" ctaTitle="Ihr Haus energetisch sanieren und die Förderung richtig nutzen?" ctaText="Wir prüfen, was Ihrem Haus am meisten bringt, von der Dachdämmung bis zur Solaranlage, und sorgen für Angebote und einen Energieausweis vor und nach den Arbeiten.">
+  <h2 id="kurz">Kurze Antwort</h2>
+  <p>Ja, auch 2026 gibt es in der Axarquía finanzielle Vorteile, wenn Sie Ihr Haus energetisch verbessern. Die wichtigsten Programme sind ein <strong>Steuerabzug von 20 bis 60%</strong> in der spanischen Einkommensteuer (IRPF), ein <strong>Zuschuss von 50 bis 65%</strong> der Junta de Andalucía, ein <strong>Rabatt auf die Grundsteuer</strong> (IBI) in manchen Gemeinden und der Verkauf Ihrer Energieeinsparung über <strong>CAE-Zertifikate</strong>. Fast jedes Programm verlangt einen Energieausweis vor und nach den Arbeiten.</p>
+  <p>Und die Vorschriften? Eine <strong>Pflicht-Mindestklasse</strong> für Ihr Haus, etwa „Klasse D bis 2030“, <strong>steht nicht in der EU-Richtlinie</strong>. Sie war in früheren Vorschlägen enthalten, wurde aber gestrichen. Spanien muss den durchschnittlichen Verbrauch aller Wohngebäude senken, und wie es das tut, ist noch nicht bekannt.</p>
+
+  <h2 id="ueberblick">Alle Programme im Überblick</h2>
+  <table class="prices">
+    <thead><tr><th>Programm</th><th>Was Sie bekommen</th><th>Für wen</th><th>Stand November 2026</th></tr></thead>
+    <tbody>
+      <tr><td>IRPF-Abzug Wohnung</td><td>20% oder 40% der Kosten, auf höchstens 5.000 € oder 7.500 €</td><td>Steuerlich Ansässige; Hauptwohnung oder vermietete Wohnung</td><td>Arbeiten und neuer Ausweis vor dem 1. Januar 2027</td></tr>
+      <tr><td>IRPF-Abzug Gebäude</td><td>60%, bis 15.000 € je Wohnung über mehrere Jahre</td><td>Steuerlich Ansässige mit einer Wohnung in einem Wohngebäude</td><td>Arbeiten und neuer Ausweis vor dem 1. Januar 2028</td></tr>
+      <tr><td>Junta de Andalucía (Agencia Andaluza de la Energía)</td><td>50 bis 65% Zuschuss; Solar mit Speicher 55 bis 65%</td><td>Eigentümer, Eigentümergemeinschaften, Unternehmen</td><td>Offen seit 22. Oktober 2026; am 29. Oktober teilweise ausgesetzt, weil das Geld aufgebraucht war</td></tr>
+      <tr><td>Next Generation (EU-Aufbaufonds)</td><td>40% je Wohnung, bis 80% für ganze Gebäude</td><td>Eigentümer und Eigentümergemeinschaften</td><td>Für einzelne Wohnungen geschlossen (Arbeiten mussten bis 30. Juni 2026 fertig sein)</td></tr>
+      <tr><td>IBI-Rabatt der Gemeinde</td><td>Z. B. Vélez-Málaga 50% für 3 Jahre</td><td>Eigentümer mit Solaranlage</td><td>Je nach Gemeinde verschieden</td></tr>
+      <tr><td>CAE-Zertifikate</td><td>Einmalbetrag oder Rabatt, oft einige hundert bis einige tausend Euro</td><td>Alle, die Energie einsparen</td><td>Läuft; Betrag hängt von der Einsparung ab</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Beträge und Fristen ändern sich oft. Unten lesen Sie je Programm die Bedingungen und was noch unsicher ist.</p>
+
+  <h2 id="eu-regeln">Muss Ihr Haus 2030 Klasse D haben?</h2>
+  <p>Das hört man oft, es stimmt aber nicht. Die Geschichte stammt aus den Verhandlungen über die neue EU-Gebäuderichtlinie (<em>Energy Performance of Buildings Directive</em>, EPBD):</p>
+  <ul>
+    <li>Die <strong>Europäische Kommission</strong> schlug im Dezember 2021 vor, dass die schlechtesten Wohngebäude jedes Landes bis 2030 mindestens Klasse F und bis 2033 Klasse E erreichen.</li>
+    <li>Das <strong>Europäische Parlament</strong> wollte im März 2023 noch weiter gehen: alle Wohngebäude <strong>mindestens Klasse E bis 2030 und Klasse D bis 2033</strong>. Das haben Sie vermutlich gehört.</li>
+    <li>In der <strong>endgültigen Einigung</strong> vom Dezember 2023 wurde das gestrichen. Die Richtlinie, die 2024 in Kraft trat (Richtlinie 2024/1275), enthält <strong>keine Mindestklasse je Wohnung</strong>.</li>
+  </ul>
+  <p>Was tatsächlich in der Richtlinie steht:</p>
+  <ul>
+    <li><strong>Wohngebäude insgesamt sparsamer.</strong> Der durchschnittliche Energieverbrauch aller Wohngebäude eines Landes muss bis <strong>2030 um mindestens 16%</strong> und bis <strong>2035 um 20 bis 22%</strong> unter dem Stand von 2020 liegen. Mindestens 55% davon müssen aus den 43% schlechtesten Gebäuden kommen. Das Land entscheidet selbst, wie: mit Förderung, Beratung oder eigenen Vorschriften.</li>
+    <li><strong>Büros, Läden und andere Nichtwohngebäude</strong> bekommen eine feste Untergrenze: Die schlechtesten 16% müssen bis 2030 und die schlechtesten 26% bis 2033 saniert sein. Das sind die Jahreszahlen „2030 und 2033“, die oft mit Wohnhäusern verwechselt werden.</li>
+    <li><strong>Neubauten</strong> müssen emissionsfrei sein: öffentliche Gebäude ab 2028, alle Neubauten ab 2030.</li>
+    <li><strong>Einzelne Gas- oder Ölkessel</strong> werden seit dem 1. Januar 2025 nicht mehr gefördert, und die Länder müssen sie bis spätestens 2040 auslaufen lassen.</li>
+    <li><strong>Der Energieausweis</strong> bekommt EU-weit dieselbe Skala von A bis G, wobei A für ein emissionsfreies Gebäude steht.</li>
+  </ul>
+  <p class="note">Spanien kann eigene, strengere Regeln einführen, um die Ziele zu erreichen, zum Beispiel für Mietwohnungen. Beschlossen ist dazu im November 2026 noch nichts.</p>
+
+  <h2 id="spanien">Was Spanien mit den EU-Regeln macht</h2>
+  <p>Spanien hätte die Richtlinie bis zum <strong>29. Mai 2026</strong> in nationales Recht umsetzen müssen. Das ist noch nicht vollständig geschehen. Im Juli 2026 schickte die Europäische Kommission allen 27 Mitgliedstaaten, auch Spanien, ein Mahnschreiben, weil die Umsetzung unvollständig war. Die spanischen Einzelheiten sollen über den <strong>nationalen Sanierungsplan</strong> (<em>Plan Nacional de Renovación de Edificios</em>), der bis Ende 2026 fertig sein muss, und über die Bauvorschriften (<em>Código Técnico de la Edificación</em>) kommen.</p>
+  <p>Was in Spanien schon gilt:</p>
+  <ul>
+    <li>Beim <strong>Verkauf und bei der Vermietung</strong>, auch Ferienvermietung, ist ein Energieausweis (<em>certificado de eficiencia energética</em>) Pflicht. Die Klasse muss in der Anzeige stehen, der Ausweis gilt zehn Jahre.</li>
+    <li>Eine <strong>Renovierung</strong> muss den Bauvorschriften entsprechen. Erneuern Sie Dach oder Fenster, gelten für diesen Teil die aktuellen Dämmanforderungen.</li>
+    <li>Es gibt <strong>keine Pflicht</strong>, ein bestehendes Haus zu verbessern, wenn Sie nicht umbauen.</li>
+  </ul>
+  <p>Unser Rat: Warten Sie nicht auf Vorschriften. Eine bessere Energieklasse macht Ihr Haus schon heute komfortabler und günstiger im Unterhalt, und die heutigen Förderungen sind oft großzügiger als das, was später kommt.</p>
+
+  <h2 id="irpf">Steuerabzug in der IRPF</h2>
+  <p>Sind Sie <strong>in Spanien steuerlich ansässig</strong>, können Sie einen Teil der Kosten von der spanischen Einkommensteuer abziehen. Die Regelung wurde mit dem Real Decreto-ley 7/2026 verlängert, das der Kongress am 26. März 2026 bestätigte. Eine frühere Verlängerung (RDL 2/2026) war im März verfallen, weshalb einige Wochen Unsicherheit herrschte.</p>
+  <table class="prices">
+    <thead><tr><th>Abzug</th><th>Bedingung</th><th>Höchstbetrag</th><th>Frist</th></tr></thead>
+    <tbody>
+      <tr><td>20%</td><td>Heiz- und Kühlbedarf mindestens 7% niedriger</td><td>5.000 € pro Jahr</td><td>Arbeiten und neuer Ausweis vor dem 1. Januar 2027</td></tr>
+      <tr><td>40%</td><td>Nicht erneuerbarer Primärenergieverbrauch mindestens 30% niedriger, oder Klasse A oder B</td><td>7.500 € pro Jahr</td><td>Arbeiten und neuer Ausweis vor dem 1. Januar 2027</td></tr>
+      <tr><td>60%</td><td>Ganzes Wohngebäude (Eigentümergemeinschaft) 30% sparsamer oder Klasse A oder B</td><td>5.000 € pro Jahr, insgesamt bis 15.000 €</td><td>Arbeiten und neuer Ausweis vor dem 1. Januar 2028</td></tr>
+    </tbody>
+  </table>
+  <p>Ein Beispiel: Sie geben 15.000 € für Dachdämmung, neue Fenster und eine Wärmepumpe aus, und die Klasse steigt von E auf B. Mit 40% Abzug auf höchstens 7.500 € erhalten Sie <strong>3.000 €</strong> über die Steuererklärung zurück.</p>
+  <h3>Worauf Sie achten müssen</h3>
+  <ul>
+    <li><strong>Nur Hauptwohnung oder Vermietung.</strong> Die 20% und 40% gelten für Ihre eigene Hauptwohnung und für eine Wohnung, die Sie vermieten (oder bis zum 31. Dezember 2027 vermieten werden). Ein selbst genutztes Zweithaus zählt nicht.</li>
+    <li><strong>Nichtresidenten</strong> zahlen statt IRPF die Steuer für Nichtansässige und haben keinen Anspruch auf diesen Abzug.</li>
+    <li><strong>Energieausweis vorher und nachher.</strong> Der Ausweis von vor den Arbeiten darf bei Beginn höchstens zwei Jahre alt sein. Ohne zwei Ausweise kein Abzug.</li>
+    <li><strong>Nicht bar bezahlen.</strong> Zahlen Sie per Überweisung oder Karte und bewahren Sie alle Rechnungen auf. Barzahlungen zählen nicht.</li>
+    <li><strong>Zuschüsse werden abgezogen.</strong> Erhalten Sie auch einen Zuschuss, können Sie nur den Teil abziehen, den Sie selbst bezahlen.</li>
+  </ul>
+  <p class="note">Für einzelne Wohnungen ist 2026 die letzte Gelegenheit, es sei denn, die Regierung verlängert erneut. Das ist schon öfter passiert, darauf verlassen sollten Sie sich aber nicht.</p>
+
+  <h2 id="junta">Zuschuss der Junta de Andalucía</h2>
+  <ArticlePhoto name="isolatie-glaswol-close-up" lang="de" />
+  <p>Am <strong>22. Oktober 2026</strong> öffnete die <strong>Agencia Andaluza de la Energía</strong> eine neue Förderrunde für Energieeinsparung in Wohngebäuden, finanziert mit EU-Regionalmitteln (FEDER). Insgesamt stehen 20,8 Millionen € für ganz Andalusien bereit, öffentliche Gebäude eingeschlossen. Anträge sind bis zum 30. September 2027 möglich oder bis das Geld aufgebraucht ist, in der Reihenfolge des Eingangs.</p>
+  <h3>Was gefördert wird</h3>
+  <ul>
+    <li><strong>Dämmung</strong> von Dach, Wänden und Boden sowie <strong>neue Fenster</strong> (die Gebäudehülle).</li>
+    <li>Neue <strong>Heizung, Kühlung und Warmwasser</strong>, etwa eine Wärmepumpe (<em>aerotermia</em>), und sparsame Beleuchtung.</li>
+    <li><strong>Solaranlagen</strong> für den Eigenverbrauch, aber nur <strong>mit Batteriespeicher</strong>. Der Speicher darf höchstens 5 kWh je kW Modulleistung haben.</li>
+  </ul>
+  <h3>Wie viel</h3>
+  <ul>
+    <li>Energieeinsparung: <strong>50%</strong> für Privatpersonen, bis <strong>65%</strong> mit Zuschlägen, etwa für erneuerbare Energie.</li>
+    <li>Solar mit Speicher: <strong>55%</strong>, mit Zuschlägen bis <strong>65%</strong> (zum Beispiel in kleinen Dörfern mit Bevölkerungsrückgang oder über eine Energiegemeinschaft).</li>
+    <li>Achten Sie auf das <strong>Minimum</strong>: Der Zuschuss muss bei Energieeinsparung mindestens 10.000 € und bei Solar 6.000 € betragen. In der Praxis heißt das ein Projekt von etwa <strong>20.000 €</strong> oder mehr für Dämmung und Anlagen und rund <strong>11.000 €</strong> oder mehr für Solar mit Speicher. Kleine Aufträge fallen heraus.</li>
+  </ul>
+  <h3>Bedingungen</h3>
+  <ul>
+    <li>Die Energieklasse muss sich um <strong>mindestens einen Buchstaben</strong> verbessern, und Verbrauch und CO₂-Ausstoß müssen sinken.</li>
+    <li>Privatpersonen dürfen für Arbeiten beantragen, die <strong>nach dem 1. Mai 2025</strong> begonnen haben. Unternehmen müssen vor Beginn beantragen.</li>
+    <li>Der Antrag läuft digital über das Portal der Agencia Andaluza de la Energía. Meist übernimmt das der Installateur oder Bauunternehmer als registrierte Partnerfirma (<em>entidad colaboradora</em>).</li>
+  </ul>
+  <p><strong>Wichtig:</strong> Am <strong>29. Oktober 2026</strong>, eine Woche nach dem Start, setzte die Junta einen großen Teil des Programms aus, weil das Geld für diese Teile schon vergeben war (über 11 Millionen €). Der Beschluss nennt nur Haushaltsposten, keine Arten von Arbeiten. Es ist also <strong>unsicher, ob Privatpersonen derzeit noch beantragen können</strong>. Die Junta kann das Budget aufstocken und das Programm wieder öffnen, wie in früheren Jahren geschehen. Lassen Sie Ihren Bauunternehmer kurz vor dem Antrag im Portal prüfen, was offen ist.</p>
+
+  <h2 id="next-generation">Next Generation: was noch läuft</h2>
+  <p>Zwischen 2021 und 2026 kamen die größten Zuschüsse aus dem <strong>EU-Aufbaufonds</strong> (Next Generation EU), in Spanien über den <em>Plan de Recuperación</em> und in Andalusien über das regionale Wohnungsbauministerium vergeben. Eine einzelne Wohnung konnte bis 40% bekommen, ein ganzes Gebäude bis 80%.</p>
+  <ul>
+    <li>Das Programm für <strong>einzelne Wohnungen ist beendet</strong>: Die Arbeiten mussten bis zum 30. Juni 2026 fertig sein.</li>
+    <li>Für einige laufende Projekte auf <strong>Gebäudeebene</strong> hat die Junta die Frist im Mai 2026 verlängert, teils bis 2028. Das gilt nur für Projekte, die bereits gefördert wurden.</li>
+    <li>Im Juli 2026 verteilte die Junta noch 38,7 Millionen € auf <strong>Anträge auf der Warteliste</strong>. Neue Anträge sind nicht möglich.</li>
+  </ul>
+  <p class="note">Lesen Sie online von „Next-Generation-Förderung bis 18.800 €“? Das betrifft die vergangenen Jahre. Für neue Projekte in der Axarquía ist dieses Programm geschlossen.</p>
+
+  <h2 id="gemeinde">Rabatt auf IBI und ICIO</h2>
+  <p>Gemeinden dürfen einen Rabatt auf die Grundsteuer (<strong>IBI</strong>) und auf die Bausteuer (<strong>ICIO</strong>) gewähren, wenn Sie eine Solaranlage oder Solarthermie installieren. Jede Gemeinde regelt das in ihrer eigenen Steuersatzung (<em>ordenanza fiscal</em>), die sich jedes Jahr ändert.</p>
+  <table class="prices">
+    <thead><tr><th>Gemeinde</th><th>IBI-Rabatt für Solar</th><th>Hinweis</th></tr></thead>
+    <tbody>
+      <tr><td>Vélez-Málaga (mit Torre del Mar und Caleta de Vélez)</td><td>50%, höchstens 3 Jahre</td><td>Pro Jahr höchstens 33% der Anlagenkosten; Antrag vor dem 31. Januar für das laufende Jahr</td></tr>
+      <tr><td>Rincón de la Victoria</td><td>15%, 3 Jahre</td><td>Laut Übersicht der Fundación Renovables</td></tr>
+      <tr><td>Nerja, Torrox, Cómpeta, Frigiliana, Algarrobo und andere Dörfer</td><td>Nicht bestätigt</td><td>Fragen Sie bei der Gemeinde oder beim Patronato de Recaudación Provincial nach</td></tr>
+    </tbody>
+  </table>
+  <p>Einen Rabatt auf die ICIO (die Steuer auf die Baukosten, oft 2 bis 4%) gibt es in manchen Gemeinden, in anderen nicht. Bei einer Anlage für 8.000 € spart das schnell einige hundert Euro. Fragen Sie vor der Anzeige bei der Gemeinde nach, denn nachträglich lässt er sich meist nicht beantragen.</p>
+  <p class="note">Das Patronato de Recaudación Provincial de Málaga zieht die IBI für die meisten kleineren Gemeinden der Axarquía ein. Siehe auch unseren <a href="/de/ratgeber/steuerkalender-spanien/">Steuerkalender</a>.</p>
+
+  <h2 id="cae">Energieeinsparung verkaufen (CAE)</h2>
+  <p>Seit 2023 gibt es in Spanien <strong>Energieeinsparzertifikate</strong> (<em>Certificados de Ahorro Energético</em>, CAE). Energieversorger müssen jedes Jahr eine bestimmte Menge an Einsparungen nachweisen und kaufen sie bei Haushalten ein. Ersetzen Sie zum Beispiel einen alten Gas- oder Butankessel durch eine <strong>Wärmepumpe</strong> oder <strong>dämmen</strong> Sie das Dach, können Sie diese Einsparung zertifizieren lassen und verkaufen.</p>
+  <ul>
+    <li>Der Betrag hängt von der berechneten Einsparung und vom Klima ab. In der warmen Axarquía ist die Einsparung beim Heizen kleiner als im Landesinneren, also auch der Betrag. Rechnen Sie mit einigen hundert bis einigen tausend Euro.</li>
+    <li>Sie erhalten ihn als Rabatt auf das Angebot oder als Zahlung danach, über einen Vermittler (<em>sujeto delegado</em>) oder einen Energieversorger.</li>
+    <li>CAE lässt sich meist mit anderen Förderungen kombinieren. Lassen Sie sich schriftlich geben, was Sie wann bekommen.</li>
+    <li>Vorsicht bei Werbung mit „kostenloser Dämmung“: Die CAE deckt selten die ganze Rechnung.</li>
+  </ul>
+
+  <h2 id="schritte">So gehen Sie vor</h2>
+  <ol>
+    <li><strong>Lassen Sie einen Energieausweis</strong> für den aktuellen Zustand erstellen. Er kostet meist 100 bis 250 € und ist der Ausgangspunkt für jedes Programm.</li>
+    <li><strong>Klären Sie Ihre Lage</strong>: Sind Sie steuerlich ansässig, ist es Ihre Hauptwohnung oder vermieten Sie? Ist das Haus legal? Bei einem Haus ohne Papiere oder mit <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO</a> sind die Möglichkeiten kleiner.</li>
+    <li><strong>Wählen Sie die Maßnahmen</strong>, die am meisten bringen. In der Axarquía ist das meist zuerst das <a href="/de/ratgeber/haus-daemmen-spanien/">Dach dämmen</a> und <a href="/de/kosten/fenster-und-rahmen/">Fenster erneuern</a>, danach eine <a href="/de/kosten/klimaanlage-und-waermepumpe/">Wärmepumpe</a> und eine <a href="/de/kosten/solaranlage/">Solaranlage</a> mit <a href="/de/kosten/batteriespeicher/">Batteriespeicher</a>. Beheben Sie zuerst <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit und Schimmel</a>, sonst dämmen Sie das Problem ein.</li>
+    <li><strong>Beantragen Sie die Förderung vor Baubeginn</strong>, oder prüfen Sie zumindest, ob das Programm bereits begonnene Arbeiten zulässt. Bündeln Sie Arbeiten, wenn Sie das Minimum der Junta erreichen wollen.</li>
+    <li><strong>Zahlen Sie per Bank</strong> und bewahren Sie alle Rechnungen mit IVA auf.</li>
+    <li><strong>Lassen Sie danach einen neuen Ausweis erstellen</strong> und bei der Junta registrieren. Für den IRPF-Abzug muss das vor dem 1. Januar 2027 geschehen.</li>
+    <li><strong>Beantragen Sie den IBI-Rabatt</strong> bei der Gemeinde, vor dem 31. Januar des Jahres, für das Sie ihn möchten.</li>
+  </ol>
+  <p><strong>Möchten Sie Ihr Haus energetisch sanieren?</strong> Wir ermitteln, was Ihrem Haus am meisten bringt, holen Angebote ein und sorgen dafür, dass die Arbeiten zu den Förderbedingungen passen. <a href="/de/anfrage/?dienst=renovatie&onderwerp=Energetische%20Sanierung%20mit%20F%C3%B6rderung">Sagen Sie uns, was Sie angehen möchten</a>.</p>
+
+  <h2 id="quellen">Quellen und Stand</h2>
+  <ul>
+    <li>EU-Gebäuderichtlinie: <a href="https://eur-lex.europa.eu/eli/dir/2024/1275/oj" rel="noopener" target="_blank">Richtlinie (EU) 2024/1275</a>, Artikel 9 (Wohn- und Nichtwohngebäude), 17 (fossile Kessel) und 19 (Energieausweis). Frühere Vorschläge und die Einigung vom Dezember 2023: <a href="https://en.wikipedia.org/wiki/Energy_Performance_of_Buildings_Directive_2024" rel="noopener" target="_blank">Übersicht auf Wikipedia</a>, einschließlich der Mahnschreiben vom Juli 2026, und der <a href="https://uipi.com/european-parliaments-plenary-vote-on-epbd/" rel="noopener" target="_blank">Standpunkt des Europäischen Parlaments vom 14. März 2023</a>.</li>
+    <li>IRPF-Abzug: Ley 35/2006, Zusatzbestimmung 50; verlängert durch Real Decreto-ley 7/2026, siehe <a href="https://www.idealista.com/news/fiscalidad/2026/03/30/891068-prorrogadas-las-deducciones-fiscales-por-obras-de-mejora-energetica-de-viviendas-y-edificios" rel="noopener" target="_blank">idealista, 30. März 2026</a>.</li>
+    <li>Junta de Andalucía: Aufruf der Agencia Andaluza de la Energía vom 21. September 2026 (BOJA 25. September 2026), zusammengefasst von <a href="https://laadministracionaldia.inap.es/noticia.asp?id=1269624" rel="noopener" target="_blank">INAP</a>, <a href="https://www.construible.es/2026/09/29/convocatoria-ayudas-mejora-energetica-viviendas-edificios-publicos-andalucia" rel="noopener" target="_blank">Construible</a> und <a href="https://www.energias-renovables.com/autoconsumo/andaluc-a-abre-las-solicitudes-de-ayudas-20261022" rel="noopener" target="_blank">Energías Renovables</a>. Aussetzung: <a href="https://www.juntadeandalucia.es/boja/2026/221002/1" rel="noopener" target="_blank">Beschluss vom 29. Oktober 2026</a>.</li>
+    <li>Next Generation in Andalusien: <a href="https://www.juntadeandalucia.es/boja/2026/96/2" rel="noopener" target="_blank">Orden vom 14. Mai 2026</a> (Fristverlängerungen) und die <a href="https://www.juntadeandalucia.es/organismos/viviendajuventudyordenaciondelterritorio/areas/vivienda-rehabilitacion/plan-eco-vivienda/paginas/plan-eco-convocatoriarehab.html" rel="noopener" target="_blank">Seite der Junta zur energetischen Sanierung</a>.</li>
+    <li>IBI-Rabatt: <a href="https://costasolarguide.com/es/bonificaciones-placas-solares/velez-malaga/" rel="noopener" target="_blank">Vélez-Málaga, IBI-Steuersatzung Artikel 12</a> (geprüft Juli 2026) und eine <a href="https://solar-master-malaga.com/blog/bonificacion-ibi-municipio-a-municipio/" rel="noopener" target="_blank">Übersicht je Gemeinde</a> (auf Basis der Fundación Renovables).</li>
+    <li>CAE: <a href="https://www.ocu.org/vivienda-y-energia/gas-luz/noticias/medidas-certificados-ahorro-energetico" rel="noopener" target="_blank">OCU zu Energieeinsparzertifikaten</a>.</li>
+  </ul>
+  <p class="note">Dieser Ratgeber gibt allgemeine Informationen für die Axarquía, geprüft am 6. November 2026. Förderprogramme öffnen und schließen, und Spanien muss die EU-Richtlinie noch vollständig umsetzen. Er ist keine Steuerberatung; lassen Sie Ihren Gestor Ihre Situation durchrechnen.</p>
+</Guide>
