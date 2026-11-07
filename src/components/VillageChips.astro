@@ -1,12 +1,14 @@
 ---
 // Plaatsnamen uit het werkgebied als klikbare chips naar de plaatspagina.
+// In talen zonder plaatspagina's (zoals es) staan de namen er zonder link.
 import type { Lang } from '../i18n';
 import { site } from '../data/site';
 import { placeLinkByName } from '../data/place-links';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
+const linked = lang !== 'es';
 ---
 <ul class="villages">
-  {site.villages.map((v) => <li><a href={placeLinkByName(lang, v)}>{v}</a></li>)}
+  {site.villages.map((v) => <li>{linked ? <a href={placeLinkByName(lang, v)}>{v}</a> : <span>{v}</span>}</li>)}
 </ul>

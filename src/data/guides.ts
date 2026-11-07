@@ -1527,14 +1527,16 @@ import { dienstenNl, dienstenEn, dienstenDe } from './guides-diensten';
 import { energieNl, energieEn, energieDe } from './guides-energie';
 import { praktischNl, praktischEn, praktischDe } from './guides-praktisch';
 import { guidesSvExtra } from './guides-sv';
+import { guidesEs } from './guides-es';
 // Gidsen uit eigen bestanden komen achter de lijsten hierboven, in elke taal op dezelfde positie.
 export const guidesBy: Record<Lang, GuideMeta[]> = {
   nl: [...guides, ...huisEnTuinNl, ...ontwerpNl, ...wegenNl, ...dienstenNl, ...energieNl, ...praktischNl],
   en: [...guidesEn, ...huisEnTuinEn, ...ontwerpEn, ...wegenEn, ...dienstenEn, ...energieEn, ...praktischEn],
   de: [...guidesDe, ...huisEnTuinDe, ...ontwerpDe, ...wegenDe, ...dienstenDe, ...energieDe, ...praktischDe],
   sv: [...guidesSv, ...guidesSvExtra],
+  es: guidesEs,
 };
-export const guideBase: Record<Lang, string> = { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/', sv: '/sv/guider/' };
+export const guideBase: Record<Lang, string> = { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/', sv: '/sv/guider/', es: '/es/guias/' };
 export const guideHref = (lang: Lang, g: GuideMeta) => g.path ?? `${guideBase[lang]}${g.slug}/`;
 /** De vertaling in `lang` van de gids op positie i van de Nederlandse lijst: eerst op `of`, anders op positie. */
 export const guideAt = (lang: Lang, i: number): GuideMeta | undefined => {

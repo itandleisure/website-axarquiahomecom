@@ -109,3 +109,9 @@ export const svPrice = (s: string) =>
   s.startsWith(TODO)
     ? s
     : s.replace(/€ ([\d.]+)/g, (_, n: string) => `${n.replace(/\./g, ' ')} €`).replace(' per jaar', ' per år').replace(' per maand', ' per månad');
+
+/** Prijs in Spaanse notatie: "€ 20.000" wordt "20.000 €". */
+export const esPrice = (s: string) =>
+  s.startsWith(TODO)
+    ? s
+    : s.replace(/€ ([\d.]+)/g, '$1 €').replace(' per jaar', ' al año').replace(' per maand', ' al mes');

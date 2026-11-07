@@ -1,0 +1,97 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site, esPrice } from '../../data/site';
+
+const faq = [
+  {
+    q: '¿Cuánto cuesta construir una piscina en la Axarquía?',
+    a: `Una piscina de obra de tamaño medio, con equipos y acabados, suele costar entre ${esPrice(prices.zwembadNieuw)}. El precio depende del tamaño, del acceso a la parcela, del movimiento de tierras en pendiente y de extras como climatización o cloración salina.`,
+  },
+  {
+    q: '¿Necesito licencia para una piscina?',
+    a: 'Sí. Una piscina nueva necesita licencia municipal, y en suelo rústico las normas son más estrictas. En viviendas con declaración AFO a menudo no se puede construir nada nuevo. Lo comprobamos antes de que se comprometa.',
+  },
+  {
+    q: '¿Puedo volver a llenar la piscina?',
+    a: 'Las restricciones de agua en la Axarquía, incluida la prohibición de llenar piscinas, se levantaron en la primavera de 2026 tras un invierno lluvioso. Consulte siempre las normas vigentes en su ayuntamiento; le podemos ayudar.',
+  },
+  {
+    q: 'Mi piscina lleva dos años vacía. ¿Y ahora qué?',
+    a: 'Tras mucho tiempo sin agua solemos encontrar grietas en el revestimiento, gresite suelto, juntas resecas y bombas agarrotadas. Empezamos con una revisión y una prueba de estanqueidad y después le damos precio de la reparación.',
+  },
+  {
+    q: '¿Pueden mantener la piscina mientras no estoy?',
+    a: 'Sí, con un contrato de mantenimiento o dentro de la gestión de llaves. Controlamos el agua, limpiamos la piscina y vigilamos los equipos.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Construcción, reforma y mantenimiento de piscinas',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['es', 'en', 'nl'],
+};
+---
+<Base
+  title="Piscinas en la Axarquía: construcción y mantenimiento"
+  description="Construir una piscina nueva, reformar una antigua o mantenerla mientras está fuera. Piscinas de obra en Vélez-Málaga, Nerja, Torrox, Cómpeta y la Axarquía."
+  path="/es/piscinas/"
+  lang="es"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="es" items={[{ name: 'Piscinas', href: '/es/piscinas/' }]} />
+  <Hero
+    lang="es"
+    eyebrow="Piscinas"
+    title="Su piscina <em>lista para el verano</em>"
+    lead="Una piscina nueva en su parcela, una antigua que vuelva a funcionar después de la sequía o un mantenimiento periódico para que el agua esté limpia cuando llegue."
+    cta="Consultar sobre una piscina"
+    ctaHref="/es/solicitud/?dienst=zwembad"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h2 class="h3">Piscina nueva</h2>
+          <p>Diseño, licencia, movimiento de tierras, obra y equipos. También en parcelas en pendiente, como muchos cortijos de la Axarquía.</p>
+          <p><strong>{esPrice(prices.zwembadNieuw)}</strong></p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Reforma de piscina</h2>
+          <p>Detección de fugas, revestimiento nuevo, gresite y juntas, bomba y filtro nuevos. Tras años de sequía muchas piscinas necesitan reparación.</p>
+          <p><strong>Precio tras la revisión</strong></p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Mantenimiento</h2>
+          <p>Visitas periódicas para el agua, el filtro y los equipos, también cuando usted no está. Recibe una foto después de cada visita.</p>
+          <p><strong>{prices.zwembadOnderhoud}</strong></p>
+        </div>
+      </div>
+      <Todo label="prijs zwembadonderhoud per maand en bevestiging prijs nieuwbouw." />
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Después de la sequía: qué les pasa a las piscinas</h2>
+      <p>Entre 2023 y principios de 2026 muchas piscinas de la Axarquía no se podían llenar. Una piscina vacía mucho tiempo sufre: el sol reseca el revestimiento, las juntas se sueltan y el terreno alrededor puede moverse. Si la llena sin revisarla, se arriesga a una fuga.</p>
+      <p>Por eso empezamos con una revisión y una prueba de estanqueidad. Así sabe exactamente qué hay que hacer y cuánto cuesta, antes de echar agua.</p>
+      <p>Consejo: mantenga la depuradora en marcha también en invierno o cubra bien la piscina. El agua estancada atrae al mosquito tigre; más en nuestra guía de <a href="/es/guias/control-de-plagas/">control de plagas</a>. Y si quiere que la bomba funcione con el sol, combínela con <a href="/es/guias/placas-solares/">placas solares</a>.</p>
+      <h2>Licencia para una piscina</h2>
+      <p>Una piscina nueva necesita por regla general licencia municipal, con proyecto de un técnico. En suelo rústico y en viviendas con AFO a menudo no se permite construir. Lo comprobamos antes y tramitamos la solicitud.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="es" />
+  <Cta lang="es" dienst="zwembad" title="¿Piensa en una piscina?" />
+  <Services lang="es" exclude="piscinas" title="También le puede interesar" />
+</Base>

@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Wizard from '../../components/Wizard.astro';
+---
+<Base
+  title="Presupuesto gratis: cuéntenos qué quiere hacer"
+  description="Pida presupuesto gratis en dos minutos para reformas, placas solares, aire acondicionado, piscinas, mantenimiento o gestión de llaves en la Axarquía."
+  path="/es/solicitud/"
+  lang="es"
+>
+  <Breadcrumbs lang="es" items={[{ name: 'Solicitud', href: '/es/solicitud/' }]} />
+  <section class="section" style="padding-top:28px">
+    <div class="wrap">
+      <h1>Su solicitud gratuita</h1>
+      <p class="lead" style="margin-bottom:28px">Seis preguntas breves, unos dos minutos. En menos de 24 horas una persona de nuestro equipo se pone en contacto con usted, en español.</p>
+      <Wizard lang="es" />
+    </div>
+  </section>
+</Base>

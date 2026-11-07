@@ -1,0 +1,131 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'resumen', label: 'Respuesta corta' },
+  { id: 'tabla', label: 'Todas las ayudas de un vistazo' },
+  { id: 'junta', label: 'Subvención de la Junta de Andalucía' },
+  { id: 'irpf', label: 'Deducción en el IRPF' },
+  { id: 'ibi', label: 'Bonificación del IBI y del ICIO' },
+  { id: 'cae', label: 'Vender el ahorro energético (CAE)' },
+  { id: 'next', label: 'Next Generation: qué queda' },
+  { id: 'pasos', label: 'Cómo solicitarlas paso a paso' },
+  { id: 'fuentes', label: 'Fuentes y fecha de revisión' },
+];
+
+const faq = [
+  {
+    q: '¿Hay subvenciones para placas solares en 2026?',
+    a: 'Sí, aunque menos que antes. Las ayudas Next Generation para viviendas ya están cerradas. Sigue la subvención de la Junta de Andalucía para autoconsumo con batería, la deducción en el IRPF para residentes fiscales, la bonificación del IBI e ICIO en muchos ayuntamientos y la venta del ahorro energético mediante certificados CAE.',
+  },
+  {
+    q: '¿Subvencionan placas solares sin batería?',
+    a: 'En la convocatoria actual de la Junta de Andalucía, no: el autoconsumo solo se subvenciona con batería. Las placas sin batería sí pueden beneficiarse de la bonificación del IBI e ICIO y, en su caso, de la deducción en el IRPF.',
+  },
+  {
+    q: '¿Tengo que pedir la subvención antes de empezar la obra?',
+    a: 'Casi siempre conviene. En la convocatoria actual de la Junta los particulares pueden pedirla para obras iniciadas después del 1 de mayo de 2025, pero las empresas deben pedirla antes. Para la deducción del IRPF necesita un certificado energético anterior a la obra.',
+  },
+  {
+    q: '¿Puedo sumar subvención y deducción en el IRPF?',
+    a: 'Sí, pero no sobre el mismo dinero: lo que recibe de subvención se resta de la base de la deducción. La bonificación del IBI y los CAE normalmente se pueden sumar. Pida a su gestor que lo calcule.',
+  },
+  {
+    q: '¿Quién tramita la subvención?',
+    a: 'Normalmente la empresa instaladora, como entidad colaboradora de la Agencia Andaluza de la Energía. Usted firma la solicitud y aporta su documentación.',
+  },
+];
+---
+<Guide lang="es" slug="subvenciones-placas-solares" toc={toc} faq={faq} dienst="energie" onderwerp="Quiero placas solares (con batería) y saber qué subvención me corresponde." ctaTitle="¿Placas solares con subvención?" ctaText="Le decimos qué ayudas encajan con su casa, preparamos el presupuesto según las condiciones y tramitamos la solicitud.">
+  <h2 id="resumen">Respuesta corta</h2>
+  <p>Sí, en 2026 todavía hay ayudas para placas solares en la Axarquía. Las principales son la <strong>subvención de la Junta de Andalucía</strong> para autoconsumo con batería (55 a 65 %), la <strong>deducción en el IRPF</strong> del 20 al 60 % si es residente fiscal, la <strong>bonificación del IBI y del ICIO</strong> en muchos ayuntamientos y la venta del ahorro mediante <strong>certificados CAE</strong>. Casi todas piden un certificado energético antes y después de la obra.</p>
+  <p>Ojo con lo que lee en internet: las famosas ayudas Next Generation para viviendas ya se han cerrado, y la convocatoria de la Junta que abrió en octubre de 2026 se suspendió en parte una semana después por falta de fondos. Compruebe siempre qué está abierto justo antes de firmar.</p>
+
+  <h2 id="tabla">Todas las ayudas de un vistazo</h2>
+  <table class="prices">
+    <thead><tr><th>Ayuda</th><th>Qué obtiene</th><th>Para quién</th><th>Situación (noviembre 2026)</th></tr></thead>
+    <tbody>
+      <tr><td>Junta de Andalucía (Agencia Andaluza de la Energía)</td><td>Placas con batería: 55 a 65 %</td><td>Propietarios, comunidades, empresas</td><td>Abierta el 22 de octubre; suspendida en parte el 29 de octubre por agotar fondos</td></tr>
+      <tr><td>Deducción IRPF, vivienda</td><td>20 % o 40 % sobre 5.000 o 7.500 € al año</td><td>Residentes fiscales; vivienda habitual o alquilada</td><td>Obra y certificado nuevo antes del 1 de enero de 2027</td></tr>
+      <tr><td>Deducción IRPF, edificio</td><td>60 %, hasta 15.000 € por vivienda</td><td>Residentes fiscales en un edificio de viviendas</td><td>Obra y certificado antes del 1 de enero de 2028</td></tr>
+      <tr><td>Bonificación del IBI</td><td>Por ejemplo, Vélez-Málaga: 50 % durante 3 años</td><td>Propietarios con placas solares</td><td>Según el ayuntamiento</td></tr>
+      <tr><td>Certificados CAE</td><td>Pago único o descuento, de cientos a algunos miles de euros</td><td>Quien ahorra energía</td><td>En marcha; depende del ahorro</td></tr>
+      <tr><td>Next Generation (fondos europeos)</td><td>Hasta 40 % por vivienda</td><td>Propietarios y comunidades</td><td>Cerrada para viviendas (obras terminadas antes del 30 de junio de 2026)</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="junta">Subvención de la Junta de Andalucía</h2>
+  <p>El 22 de octubre de 2026 la Agencia Andaluza de la Energía abrió una nueva convocatoria de incentivos, con fondos europeos FEDER: 20,8 millones de euros para toda Andalucía. Se puede pedir hasta el 30 de septiembre de 2027 o hasta que se agote el dinero, por orden de llegada.</p>
+  <h3>Qué se subvenciona</h3>
+  <ul>
+    <li>Placas solares para autoconsumo, <strong>solo con batería</strong>. La batería puede tener como máximo 5 kWh por cada kW de placas.</li>
+    <li>Aislamiento de tejado, fachada y suelo, y ventanas nuevas.</li>
+    <li>Calefacción, refrigeración y agua caliente eficientes, como la aerotermia.</li>
+  </ul>
+  <h3>Cuánto</h3>
+  <ul>
+    <li>Autoconsumo con batería: 55 %, hasta 65 % con extras (por ejemplo en municipios pequeños que pierden población o mediante una comunidad energética).</li>
+    <li>Ahorro energético: 50 % para particulares, hasta 65 % con extras.</li>
+    <li><strong>Atención al mínimo:</strong> la subvención debe ser de al menos 6.000 € para autoconsumo y 10.000 € para ahorro energético. En la práctica, unas placas con batería a partir de unos 11.000 €. Las instalaciones pequeñas no entran.</li>
+  </ul>
+  <h3>La suspensión de octubre</h3>
+  <p>El 29 de octubre de 2026, una semana después de abrir, la Junta suspendió buena parte de la convocatoria porque el dinero de esas líneas ya se había agotado (más de 11 millones). La resolución menciona líneas presupuestarias, no tipos de obra, así que no está claro si los particulares pueden pedirla ahora mismo. La Junta puede ampliar el presupuesto y reabrir, como ha hecho otros años. Pida a su instalador que compruebe el portal justo antes de solicitarla.</p>
+
+  <h2 id="irpf">Deducción en el IRPF</h2>
+  <p>Si es residente fiscal en España, puede deducir parte del coste en la declaración de la renta. Las deducciones se prorrogaron con el Real Decreto-ley 7/2026, convalidado por el Congreso el 26 de marzo de 2026.</p>
+  <table class="prices">
+    <thead><tr><th>Deducción</th><th>Condición</th><th>Base máxima</th><th>Plazo</th></tr></thead>
+    <tbody>
+      <tr><td>20 %</td><td>Reducir al menos un 7 % la demanda de calefacción y refrigeración</td><td>5.000 € al año</td><td>Antes del 1 de enero de 2027</td></tr>
+      <tr><td>40 %</td><td>Reducir al menos un 30 % el consumo de energía no renovable, o letra A o B</td><td>7.500 € al año</td><td>Antes del 1 de enero de 2027</td></tr>
+      <tr><td>60 %</td><td>Edificio residencial completo un 30 % más eficiente, o letra A o B</td><td>5.000 € al año, hasta 15.000 €</td><td>Antes del 1 de enero de 2028</td></tr>
+    </tbody>
+  </table>
+  <p>Las placas solares reducen el consumo de energía no renovable, así que con frecuencia permiten la deducción del 40 %. Ejemplo: 7.500 € en placas con batería que bajan el consumo no renovable más de un 30 % dan 3.000 € de deducción.</p>
+  <ul>
+    <li>Solo para la <strong>vivienda habitual</strong> o una vivienda alquilada. Una segunda residencia de uso propio no cuenta.</li>
+    <li>Necesita un <a href="/es/guias/certificado-energetico/">certificado energético</a> de antes y otro de después. El de antes no puede tener más de dos años al empezar la obra.</li>
+    <li>Pague por transferencia o tarjeta. Los pagos en efectivo no cuentan.</li>
+    <li>Los no residentes tributan por el IRNR y no tienen esta deducción.</li>
+  </ul>
+
+  <h2 id="ibi">Bonificación del IBI y del ICIO</h2>
+  <p>Los ayuntamientos pueden rebajar el IBI y el impuesto de construcciones (ICIO) si instala placas solares o un termosifón. Cada uno lo regula en su ordenanza fiscal, que cambia cada año.</p>
+  <table class="prices">
+    <thead><tr><th>Municipio</th><th>Bonificación del IBI</th><th>Observaciones</th></tr></thead>
+    <tbody>
+      <tr><td>Vélez-Málaga (con Torre del Mar y Caleta de Vélez)</td><td>50 %, hasta 3 años</td><td>Cada año como máximo el 33 % del coste de la instalación; solicitarla antes del 31 de enero</td></tr>
+      <tr><td>Rincón de la Victoria</td><td>15 %, 3 años</td><td>Según el resumen de la Fundación Renovables</td></tr>
+      <tr><td>Nerja, Torrox, Cómpeta, Frigiliana, Algarrobo y otros</td><td>Sin confirmar</td><td>Pregunte en el ayuntamiento o en el Patronato de Recaudación Provincial</td></tr>
+    </tbody>
+  </table>
+  <p>La bonificación del ICIO (normalmente un 2 a 4 % del coste de la obra) existe en algunos municipios. En una instalación de 8.000 € puede ahorrar unos cientos de euros. Pídala al presentar la declaración responsable; después no suele poder reclamarse.</p>
+
+  <h2 id="cae">Vender el ahorro energético (CAE)</h2>
+  <p>Desde 2023 existen los Certificados de Ahorro Energético (CAE). Las empresas energéticas tienen que acreditar cada año un ahorro y lo compran a los hogares. Si cambia una caldera de gasoil o butano por aerotermia, o aísla el tejado, puede certificar ese ahorro y venderlo a través de un intermediario (sujeto delegado). En la Axarquía, con su clima suave, el importe es menor que en el interior: cuente con unos cientos a algunos miles de euros. Pida por escrito cuánto recibirá y cuándo.</p>
+
+  <h2 id="next">Next Generation: qué queda</h2>
+  <p>Entre 2021 y 2026 las mayores ayudas vinieron de los fondos europeos Next Generation. Para viviendas unifamiliares ya han terminado: las obras debían estar acabadas el 30 de junio de 2026. Si lee sobre «ayudas de hasta 18.800 €», se refiere a años anteriores.</p>
+
+  <h2 id="pasos">Cómo solicitarlas paso a paso</h2>
+  <ol>
+    <li><strong>Pida un certificado energético</strong> del estado actual. Es el punto de partida de casi todas las ayudas.</li>
+    <li><strong>Revise su situación:</strong> ¿es residente fiscal?, ¿es su vivienda habitual o la alquila?, ¿la casa es legal? Con una vivienda en AFO las opciones se reducen.</li>
+    <li><strong>Dimensione la instalación</strong> para llegar al mínimo de la Junta si quiere su subvención: placas con batería, o placas junto con aislamiento o aerotermia.</li>
+    <li><strong>Solicite antes de empezar</strong>, o al menos compruebe que la convocatoria admite obras ya iniciadas.</li>
+    <li><strong>Pague por banco</strong> y guarde todas las facturas con IVA.</li>
+    <li><strong>Pida el certificado energético nuevo</strong> y regístrelo en la Junta. Para el IRPF, antes del 1 de enero de 2027.</li>
+    <li><strong>Pida la bonificación del IBI</strong> en el ayuntamiento antes del 31 de enero del año en que la quiera.</li>
+  </ol>
+  <p>Precios y ahorro de las instalaciones en nuestras guías de <a href="/es/guias/placas-solares/">placas solares</a> y <a href="/es/guias/baterias-para-placas-solares/">baterías</a>.</p>
+
+  <h2 id="fuentes">Fuentes y fecha de revisión</h2>
+  <ul>
+    <li>Junta de Andalucía: convocatoria de la Agencia Andaluza de la Energía de 21 de septiembre de 2026 (BOJA de 25 de septiembre de 2026) y resolución de suspensión de 29 de octubre de 2026.</li>
+    <li>IRPF: Ley 35/2006, disposición adicional quincuagésima; prórroga por el Real Decreto-ley 7/2026.</li>
+    <li>Compensación de excedentes: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2019-5089" rel="noopener">Real Decreto 244/2019</a>.</li>
+    <li>IBI: ordenanza fiscal del IBI de Vélez-Málaga, artículo 12, y resumen por municipios de la Fundación Renovables.</li>
+    <li>Ayudas generales: <a href="https://www.idae.es/ayudas-y-financiacion" rel="noopener">IDAE, ayudas y financiación</a>.</li>
+  </ul>
+  <p>Esta guía ofrece información general para la Axarquía, revisada el 6 de noviembre de 2026. Las convocatorias abren y cierran con frecuencia. No es asesoramiento fiscal: consulte a su gestor para su caso concreto.</p>
+</Guide>

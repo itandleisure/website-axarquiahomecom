@@ -1,0 +1,109 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site, esPrice } from '../../data/site';
+
+const faq = [
+  {
+    q: '¿Es habitual revisar una vivienda antes de comprarla?',
+    a: 'En España todavía poco, y precisamente por eso merece la pena. Normalmente se compra la vivienda en el estado en que se encuentra, y los defectos que aparecen después de la firma casi siempre son problema del comprador. Una inspección antes del contrato de arras evita sorpresas caras.',
+  },
+  {
+    q: '¿Cuánto cuesta una inspección técnica antes de comprar?',
+    a: `La mayoría cuestan entre ${esPrice(prices.keuring)}, según el tamaño y si es un piso, una casa de pueblo o un cortijo. Le damos un precio cerrado de antemano.`,
+  },
+  {
+    q: '¿Comprueban si la vivienda es legal?',
+    a: 'Comprobamos si lo construido coincide con lo inscrito en el Catastro y el Registro de la Propiedad y buscamos señales de obras sin licencia. El dictamen jurídico sobre la legalidad, por ejemplo en un expediente AFO, lo da el arquitecto o abogado con el que trabajamos.',
+  },
+  {
+    q: '¿En cuánto tiempo pueden hacer la inspección?',
+    a: 'Normalmente en una semana desde su solicitud, a menudo antes. No hace falta que esté: acordamos el acceso con la inmobiliaria o el vendedor y le enviamos el informe en digital.',
+  },
+  {
+    q: '¿Me dan también precio de las reparaciones?',
+    a: 'Sí, esa es la gran ventaja de que la inspección la haga una empresa constructora. El informe incluye un precio orientativo para cada defecto, así sabe lo que le va a costar realmente la casa y puede negociar con datos.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Inspección técnica de vivienda antes de comprar',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['es', 'en', 'nl'],
+};
+---
+<Base
+  title="Inspección de vivienda antes de comprar en la Axarquía"
+  description="Inspección técnica de casas y cortijos antes de comprar en la Axarquía. Informe con fotos, defectos y lo que cuesta repararlos. También si usted no está."
+  path="/es/inspeccion-de-vivienda/"
+  lang="es"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="es" items={[{ name: 'Inspección de vivienda', href: '/es/inspeccion-de-vivienda/' }]} />
+  <Hero
+    lang="es"
+    eyebrow="Inspección antes de comprar"
+    title="Revise la casa <em>antes de firmar</em>"
+    lead="Una vivienda se compra tal como está. La revisamos antes de que usted compre y le decimos con claridad qué está bien, qué falla y cuánto cuesta arreglarlo."
+    cta="Pedir una inspección"
+    ctaHref="/es/solicitud/?dienst=aankoopkeuring"
+  />
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>Qué revisamos</h2>
+        <ul class="checks">
+          <li><strong>Estructura</strong>: grietas, asentamientos, muros de carga y vigas.</li>
+          <li><strong>Tejado y azoteas</strong>: goteras, aislamiento y desagües.</li>
+          <li><strong>Humedades</strong>: por capilaridad, por condensación y moho.</li>
+          <li><strong>Electricidad</strong>: toma de tierra, cuadro eléctrico y si cumple la normativa actual.</li>
+          <li><strong>Agua y saneamiento</strong>: tuberías, presión, termo, fosa séptica o red de alcantarillado.</li>
+          <li><strong>Piscina y exteriores</strong>: fugas, equipos y muros.</li>
+          <li><strong>Plagas</strong>: señales de termitas y carcoma en vigas y carpintería. Más en nuestra guía de <a href="/es/guias/control-de-plagas/">control de plagas</a>.</li>
+          <li><strong>Registro</strong>: ¿coincide lo construido con el Catastro?</li>
+        </ul>
+        <h2>Los cortijos necesitan más atención</h2>
+        <p>Una casa de campo en la Axarquía tiene más que revisar que un piso. ¿De dónde viene el agua y está legalizada? ¿El camino de acceso es público o pasa por la finca del vecino? ¿Tienen licencia la ampliación y la piscina? ¿La fosa séptica cumple la normativa? Lo revisamos todo de forma sistemática y, cuando hace falta, con nuestro arquitecto.</p>
+        <p>¿Va a vender? Necesitará un <a href="/es/guias/certificado-energetico/">certificado energético</a> en vigor.</p>
+      </div>
+      <div class="box">
+        <h3>Qué recibe</h3>
+        <ul class="checks">
+          <li>Un informe con fotos</li>
+          <li>Para cada defecto: gravedad y coste de la reparación</li>
+          <li>Consejos para la negociación</li>
+          <li>Una llamada o videollamada para comentarlo</li>
+        </ul>
+        <p class="price" style="font-family:var(--serif);font-size:1.4rem;color:var(--terra-dark);margin:0.4em 0">{esPrice(prices.keuring)}</p>
+        <p class="note">Precio cerrado de antemano, según el tipo y el tamaño de la vivienda.</p>
+        <Todo label="bevestiging prijs en naam van de partner-aparejador of architect." />
+        <a class="btn" href="/es/solicitud/?dienst=aankoopkeuring">Pedir una inspección</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="es"
+    title="De la solicitud al informe"
+    steps={[
+      { t: 'Solicitud', d: 'Envíenos el enlace del anuncio y sus preguntas.' },
+      { t: 'Cita', d: 'Acordamos la visita con la inmobiliaria o el vendedor.' },
+      { t: 'Inspección', d: 'Una revisión a fondo, por dentro y por fuera, con fotos y mediciones.' },
+      { t: 'Informe y llamada', d: 'Recibe el informe en pocos días y lo repasamos juntos.' },
+    ]}
+  />
+
+  <Faq items={faq} lang="es" />
+  <Cta lang="es" dienst="aankoopkeuring" title="¿Ha encontrado una casa?" text="Envíenos el enlace o la dirección. En menos de 24 horas le decimos cuándo podemos revisarla y cuánto cuesta." />
+  <Services lang="es" exclude="inspeccion-de-vivienda" title="Después de comprar" />
+</Base>

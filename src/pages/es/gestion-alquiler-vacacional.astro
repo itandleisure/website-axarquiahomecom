@@ -1,0 +1,133 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Steps from '../../components/Steps.astro';
+import Services from '../../components/Services.astro';
+import { site } from '../../data/site';
+
+const aanvraag = '/es/solicitud/?dienst=verhuurbeheer';
+
+const faq = [
+  {
+    q: '¿Cuánto cuesta la gestión del alquiler vacacional?',
+    a: 'Depende del tamaño de la casa, de la frecuencia de los cambios de huéspedes y de lo que quiera seguir haciendo usted. Si lleva usted las reservas, paga un precio fijo por cambio. Por la gestión completa cobramos un porcentaje de los ingresos del alquiler. Tras su solicitud recibe una propuesta a medida.',
+  },
+  {
+    q: 'Las reservas las llevo yo. ¿Pueden hacer solo la limpieza?',
+    a: 'Sí. Comparte con nosotros el calendario de Airbnb, Booking.com o su web. Cada cambio aparece automáticamente en nuestra planificación y nos aseguramos de que la casa esté lista para el siguiente huésped.',
+  },
+  {
+    q: '¿Y si un huésped rompe algo?',
+    a: 'Le enviamos fotos tras la revisión. Lo pequeño lo arreglamos enseguida; para daños mayores recibe antes un precio. Con las fotos puede reclamar el daño a través de la plataforma o de la fianza.',
+  },
+  {
+    q: '¿Puedo seguir usando la casa yo?',
+    a: 'Por supuesto. Bloquea las semanas en el calendario y preparamos la casa para usted.',
+  },
+  {
+    q: '¿Necesito licencia para alquilar?',
+    a: 'Sí. Para el alquiler vacacional la vivienda debe estar inscrita como vivienda de uso turístico (VUT) en el Registro de Turismo de Andalucía. Comprobamos si su casa cumple los requisitos y la adaptamos si hace falta.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Gestión de alquiler vacacional: cambios de huéspedes, limpieza, llaves y mantenimiento',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['es', 'en', 'nl', 'de'],
+};
+---
+<Base
+  title="Gestión de alquiler vacacional en la Axarquía"
+  description="¿Alquila su vivienda turística en Nerja, Torrox o Torre del Mar? Nos encargamos de los cambios de huéspedes, limpieza, ropa de cama, llaves y reparaciones."
+  path="/es/gestion-alquiler-vacacional/"
+  lang="es"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="es" items={[{ name: 'Alquiler vacacional', href: '/es/gestion-alquiler-vacacional/' }]} />
+  <Hero
+    lang="es"
+    eyebrow="Gestión de alquiler vacacional"
+    title="Usted alquila, <em>nosotros nos ocupamos en la zona</em>"
+    lead="Alquila su casa de la Axarquía a turistas. Nosotros nos aseguramos de que entre huésped y huésped esté limpia, completa y en orden, y la arreglamos cuando algo se rompe."
+    cta="Solicitar gestión del alquiler"
+    ctaHref={aanvraag}
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Dos formas de trabajar con nosotros</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Solo cambios de huéspedes</h3>
+          <p>Usted gestiona los anuncios y las reservas en Booking.com, Airbnb o su web. Nosotros vamos en cada cambio: limpieza, ropa de cama y toallas limpias, revisión y todo listo para el siguiente huésped.</p>
+        </div>
+        <div class="card">
+          <h3>Gestión completa</h3>
+          <p>Nos ocupamos también del contacto con los huéspedes, las horas de llegada y la entrega de llaves, y podemos gestionar los anuncios y el registro de viajeros. Recibe un resumen mensual.</p>
+        </div>
+      </div>
+      <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 18px;">
+        <div class="card">
+          <h3>Limpieza y ropa de cama</h3>
+          <p>Limpieza a fondo tras cada salida, ropa de cama y toallas limpias y reposición de lo básico.</p>
+        </div>
+        <div class="card">
+          <h3>Entrega de llaves</h3>
+          <p>Recibimos a los huéspedes en persona, o instalamos una caja de llaves o una cerradura inteligente para que entren solos.</p>
+        </div>
+        <div class="card">
+          <h3>Revisión tras la salida</h3>
+          <p>Revisamos la casa en busca de daños y objetos que faltan y le enviamos fotos.</p>
+        </div>
+        <div class="card">
+          <h3>Averías y reparaciones</h3>
+          <p>Un grifo que gotea, un aire acondicionado que no enfría, una puerta rota: como somos la empresa constructora, lo arreglamos rápido.</p>
+        </div>
+        <div class="card">
+          <h3>Piscina y jardín</h3>
+          <p>Una piscina limpia y un jardín cuidado, para que la casa luzca bien en cada llegada.</p>
+        </div>
+        <div class="card">
+          <h3>Preparar la casa para alquilar</h3>
+          <p><a href="/es/guias/instalacion-aire-acondicionado/">Aire acondicionado</a> en los dormitorios, detector de humo, estores opacos o un baño más: adaptamos su casa a las normas de la vivienda turística.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Gestión del alquiler o gestión de llaves: ¿cuál es la diferencia?</h2>
+      <p>La <strong>gestión de llaves</strong> es para cuando la casa está vacía. Guardamos la llave, revisamos la casa con regularidad por si hay fugas, humedades o intentos de robo, y actuamos si algo va mal.</p>
+      <p>La <strong>gestión del alquiler</strong> es para cuando entran y salen huéspedes. Ahí lo importante son los cambios: limpieza, ropa de cama, llaves y una casa perfecta en cada llegada.</p>
+      <p>Muchos propietarios combinan las dos: gestión del alquiler en temporada y <a href="/es/gestion-de-llaves/">gestión de llaves</a> los meses en que no hay nadie. Así tiene una sola persona de contacto todo el año.</p>
+    </div>
+  </section>
+
+  <Steps lang="es"
+    title="Cómo funciona"
+    steps={[
+      { t: 'Cuéntenos cómo es su casa', d: 'Dónde está, cuántos dormitorios tiene y si lleva usted las reservas. Así sabemos qué necesita.' },
+      { t: 'Vamos a verla', d: 'Vemos la casa, hacemos inventario y le decimos con franqueza qué falta para alquilar.' },
+      { t: 'Recibe una propuesta', d: 'Una propuesta a medida con un precio claro por cambio o por la gestión completa.' },
+      { t: 'Conectamos su calendario', d: 'Cada reserva aparece automáticamente en nuestra planificación, para que no se escape ningún cambio.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>¿Puedo alquilar sin más?</h2>
+      <p>No. Para el alquiler vacacional en Andalucía la vivienda debe inscribirse como <em>vivienda de uso turístico</em> en el Registro de Turismo de Andalucía, y ese número debe figurar en cada anuncio. Si la vivienda está en un edificio y empieza a alquilar después de abril de 2025, la comunidad de propietarios tiene que aprobarlo antes. Los huéspedes deben registrarse ante la policía en un plazo de 24 horas. Además necesita un <a href="/es/guias/certificado-energetico/">certificado energético</a> en vigor.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="es" />
+  <Cta lang="es" dienst="verhuurbeheer" title="Alquile su casa sin tener que estar" text="Cuéntenos cómo es su casa y cómo la alquila ahora. Recibirá una propuesta para los cambios de huéspedes o para la gestión completa." />
+  <Services lang="es" exclude="gestion-alquiler-vacacional" title="También le puede interesar" />
+</Base>
