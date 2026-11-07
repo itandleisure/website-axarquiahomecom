@@ -6,7 +6,8 @@ import type { Lang } from '../i18n';
 
 export interface PlacePhoto {
   name: string;
-  alt: Record<Lang, string>;
+  /** Spaans (es) is optioneel: er zijn nog geen Spaanse plaatspagina's. Zonder es valt de alt terug op het Engels. */
+  alt: Record<Exclude<Lang, 'es'>, string> & { es?: string };
   /** Uitsnede in de hero (CSS object-position), standaard 'center' */
   focus?: string;
 }
@@ -224,7 +225,7 @@ export interface ResolvedPhoto {
 const resolve = (slug: string, p: PlacePhoto, lang: Lang): ResolvedPhoto => {
   const base = `/images/plaatsen/${slug}/${p.name}`;
   return {
-    alt: p.alt[lang],
+    alt: p.alt[lang as Exclude<Lang, 'es'>] ?? p.alt.en,
     src: `${base}-800.webp`,
     srcset: photoWidths.map((w) => `${base}-${w}.webp ${w}w`).join(', '),
     og: `/images/og/${p.name}.jpg`,

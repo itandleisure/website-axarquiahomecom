@@ -1,0 +1,111 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'overzicht', label: 'Welche Schädlinge gibt es?' },
+  { id: 'kakkerlakken', label: 'Kakerlaken: über den Abfluss ins Haus' },
+  { id: 'muizen', label: 'Mäuse und Ratten' },
+  { id: 'processierups', label: 'Prozessionsspinner: gefährlich für Hunde' },
+  { id: 'muggen', label: 'Mücken und die Tigermücke' },
+  { id: 'hout', label: 'Termiten und Holzwurm' },
+  { id: 'buiten', label: 'So halten Sie Schädlinge draußen' },
+  { id: 'bestrijder', label: 'Einen Kammerjäger beauftragen' },
+];
+
+const faq = [
+  {
+    q: 'Warum gibt es in Spanien so viele Kakerlaken?',
+    a: 'Die große braune Kakerlake (cucaracha americana) lebt in der Kanalisation und kommt bei warmem Wetter über Abflüsse, Bodenabläufe und Ritzen nach oben. In einem leerstehenden Haus trocknen die Siphons aus, sodass nichts mehr zwischen Kanal und Badezimmer ist. Siphons regelmäßig auffüllen und Abflüsse gut abdichten hilft viel.',
+  },
+  {
+    q: 'Was kostet ein Kammerjäger in Spanien?',
+    a: 'Eine einmalige Behandlung gegen Kakerlaken oder Ameisen in einer Wohnung oder einem Dorfhaus kostet meist 80 € bis 200 €. Mäuse oder Ratten mit Köderstationen: 120 € bis 300 €. Ein Jahresvertrag mit mehreren Kontrollen: 200 € bis 500 €. Termiten sind teurer: 900 € bis 2.000 € für ein Ködersystem. Richtwerte ohne Mehrwertsteuer.',
+  },
+  {
+    q: 'Zahlt meine Hausversicherung Schäden durch Schädlinge?',
+    a: 'Meist nicht. Schäden durch Termiten, Holzwurm, Mäuse oder Ratten sind in fast allen spanischen Policen ausgeschlossen. Vorbeugen und früh eingreifen ist daher der einzige Weg, die Kosten zu begrenzen.',
+  },
+  {
+    q: 'Darf ich selbst Gift verwenden?',
+    a: 'Haushaltsprodukte aus dem Supermarkt oder Baumarkt dürfen Sie laut Etikett selbst verwenden. Stärkere Mittel und Behandlungen gegen Termiten dürfen nur zugelassene Firmen anwenden. Vorsicht mit Gift, wenn Sie einen Hund oder eine Katze haben.',
+  },
+];
+---
+<Guide lang="de" slug="schaedlinge-spanien" toc={toc} faq={faq} dienst="onderhoud" onderwerp="Ich habe Schädlinge im Haus und möchte es abdichten lassen." ctaTitle="Schädlinge dauerhaft draußen halten?" ctaText="Wir finden heraus, wo sie hereinkommen, und dichten es ab: Ritzen, Abflüsse, Dach und Lüftungsgitter. Wo nötig, ziehen wir einen zugelassenen Kammerjäger hinzu und ersetzen befallenes Holz.">
+  <p>Bekämpfen ist das eine, aber Schädlinge kommen wieder, solange sie einen Weg ins Haus haben. In diesem Ratgeber lesen Sie, welche Tiere Ihnen in der Axarquía begegnen, was Sie selbst tun können und wann Sie einen Fachmann rufen.</p>
+
+  <h2 id="overzicht">Welche Schädlinge gibt es?</h2>
+  <table class="prices">
+    <thead><tr><th>Schädling</th><th>Wann</th><th>Worauf Sie achten</th></tr></thead>
+    <tbody>
+      <tr><td>Kakerlaken (<em>cucarachas</em>)</td><td>Mai bis Oktober</td><td>Abflüsse, Bodenabläufe, Küchenschränke, nachts aktiv</td></tr>
+      <tr><td>Ameisen (<em>hormigas</em>)</td><td>Frühjahr und Sommer</td><td>Ameisenstraßen entlang Sockelleisten und Rahmen</td></tr>
+      <tr><td>Mäuse und Ratten (<em>ratones, ratas</em>)</td><td>Vor allem Herbst und Winter</td><td>Kot, Nagespuren, Rascheln im Dach</td></tr>
+      <tr><td>Prozessionsspinner (<em>procesionaria</em>)</td><td>Januar bis April</td><td>Weiße Nester in Kiefern, Raupen in einer Reihe am Boden</td></tr>
+      <tr><td>Mücken und Tigermücke (<em>mosquito tigre</em>)</td><td>April bis November</td><td>Stehendes Wasser, Stiche am Tag</td></tr>
+      <tr><td>Termiten (<em>termitas</em>)</td><td>Ganzjährig, Schwärme im Frühjahr</td><td>Lehmgänge, hohl klingendes Holz</td></tr>
+      <tr><td>Holzwurm (<em>carcoma</em>)</td><td>Ganzjährig</td><td>Kleine runde Löcher und Holzmehl unter Balken oder Möbeln</td></tr>
+      <tr><td>Skorpione und Hundertfüßer (<em>escolopendras</em>)</td><td>Sommer</td><td>Unter Steinen, in Ritzen alter Mauern</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="kakkerlakken">Kakerlaken: über den Abfluss ins Haus</h2>
+  <p>In Südspanien sehen Sie vor allem zwei Arten. Die <strong>große braune Kakerlake</strong> (bis 4 cm) lebt in der Kanalisation und kommt über Abflüsse, Bodenabläufe und Ritzen herein, vor allem an warmen Abenden. Die <strong>kleine Deutsche Schabe</strong> nistet in Küchen, hinter Geräten und in Schränken und kommt oft mit Kartons oder gebrauchten Möbeln ins Haus.</p>
+  <ul>
+    <li><strong>Siphons</strong>: Wasser im Siphon hält Kanaltiere und Geruch fern. Steht das Haus wochenlang leer, verdunstet es. Lassen Sie bei jeder Kontrolle Wasserhähne, Duschen und Bodenabläufe kurz laufen, oder geben Sie einen Schuss Öl hinein, das verdunstet langsamer.</li>
+    <li><strong>Bodenabläufe und Abflüsse</strong>: ein Gitter oder verschließbarer Ablauf auf der Terrasse und im Bad, und gut angeschlossene Abwasserrohre ohne Spalten.</li>
+    <li><strong>Ritzen</strong>: Öffnungen um Rohre, die durch Wand oder Boden gehen, mit Dichtmasse oder Mörtel schließen.</li>
+  </ul>
+  <p>Gegen die kleine Schabe in der Küche wirkt Ködergel am besten. Gegen die große Art hilft vor allem Abdichten. Kommen sie in großer Zahl wieder, steckt oft ein Problem in der Abwasserleitung dahinter, etwa ein gebrochenes Rohr oder eine alte Sickergrube.</p>
+
+  <h2 id="muizen">Mäuse und Ratten</h2>
+  <p>Auf Fincas und in Dorfhäusern mit altem Dach sind Mäuse und Ratten im Herbst ein bekanntes Problem. Sie kommen wegen Obst von Avocado- oder Mangobäumen, Tierfutter und einem warmen Platz unter den Dachziegeln. Sie nagen an Stromkabeln, Wasserleitungen und Dämmung, was zu Brand oder Leckagen führen kann.</p>
+  <ul>
+    <li>Eine Maus passt durch eine Öffnung von etwa 6 mm, eine Ratte durch 2 cm. Schließen Sie Löcher an Rohrdurchführungen, unter Türen und am Dachrand.</li>
+    <li>Setzen Sie Gitter hinter Lüftungsöffnungen und eine Bürstendichtung unter die Tür.</li>
+    <li>Räumen Sie Fallobst und offenes Futter weg und halten Sie Pflanzen vom Dach fern.</li>
+    <li>Verwenden Sie Köder nur in geschlossenen Köderstationen, vor allem mit Hund, Katze oder Kindern.</li>
+  </ul>
+
+  <h2 id="processierups">Prozessionsspinner: gefährlich für Hunde</h2>
+  <p>Stehen Kiefern (<em>pinos</em>) auf oder neben Ihrem Grundstück, werden Sie wahrscheinlich damit zu tun haben. Die Raupen des Pinien-Prozessionsspinners überwintern in weißen Nestern im Baum und kriechen von Januar bis April in einer langen Reihe zum Boden. Ihre Brennhaare verursachen bei Menschen starken Juckreiz und Entzündungen und sind für Hunde und Katzen wirklich gefährlich: Ein Hund, der daran leckt, kann Schwellungen an Maul und Zunge bekommen. Fahren Sie dann sofort zum Tierarzt.</p>
+  <ul>
+    <li>Lassen Sie Nester im Herbst oder Frühwinter von einem Fachmann mit Schutzkleidung entfernen.</li>
+    <li>Ein Fangring um den Stamm fängt die Raupen auf dem Weg nach unten.</li>
+    <li>Pheromonfallen im Sommer fangen die Falter und verhindern neue Nester.</li>
+  </ul>
+
+  <h2 id="muggen">Mücken und die Tigermücke</h2>
+  <p>Die Tigermücke kommt seit einigen Jahren auch in der Provinz Málaga vor. Sie sticht tagsüber und legt ihre Eier in kleine Mengen stehendes Wasser: einen Blumenuntersetzer, einen Eimer, eine verstopfte Dachrinne oder eine Regentonne ohne Deckel. Was hilft:</p>
+  <ul>
+    <li>Kein Wasser in Untersetzern, Eimern und Spielzeug stehen lassen, Dachrinnen sauber halten.</li>
+    <li>Den Pool im Winter weiter filtern, auch wenn Sie ihn nicht nutzen, oder gut abdecken. Siehe <a href="/de/ratgeber/poolpflege-spanien/">Poolpflege</a>.</li>
+    <li>Insektenschutz an Fenstern und Türen, das wirksamste Mittel im Haus. Siehe <a href="/de/ratgeber/sonnenschutz-rolllaeden-insektenschutz-spanien/">Sonnenschutz, Rollläden und Insektenschutz</a>.</li>
+  </ul>
+
+  <h2 id="hout">Termiten und Holzwurm</h2>
+  <p>Unterirdische Termiten kommen in großen Teilen Andalusiens vor, auch in der Axarquía. Sie fressen Holzbalken, Rahmen und Sockelleisten von innen auf, oft jahrelang unbemerkt. Der Holzwurm hinterlässt dagegen kleine runde Löcher und feines Holzmehl. Bei beiden entscheidet frühes Erkennen, ob eine Behandlung reicht oder neue Balken nötig sind. Alles über Erkennen, Bekämpfen und Kosten lesen Sie auf der Seite <a href="/de/probleme/termiten/">Termiten im Haus</a>.</p>
+  <p>Kaufen Sie ein altes Dorfhaus oder eine Finca, lassen Sie beim <a href="/de/immobiliengutachten/">Immobiliengutachten</a> auch Balken und Rahmen prüfen.</p>
+
+  <h2 id="buiten">So halten Sie Schädlinge draußen</h2>
+  <p>Die meisten Plagen kommen wieder, solange das Haus offen ist. Diese baulichen Maßnahmen wirken gegen fast alles gleichzeitig:</p>
+  <ul>
+    <li><strong>Ritzen und Löcher schließen</strong> um Rohre, Kabel, Rahmen und am Dachrand.</li>
+    <li><strong>Gitter hinter Lüftungsöffnungen</strong> und im Schornstein.</li>
+    <li><strong>Türbürsten oder Schwellen</strong> an Außentüren.</li>
+    <li><strong>Insektenschutz</strong> an Fenstern und Türen.</li>
+    <li><strong>Abflüsse und Bodenabläufe</strong> mit guten Siphons und verschließbaren Gittern.</li>
+    <li><strong>Feuchtigkeit beseitigen</strong>: Viele Insekten und Holzschädlinge suchen feuchte Stellen. Siehe <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit und Schimmel</a>.</li>
+    <li><strong>Regelmäßige Kontrollen</strong>, wenn Sie nicht da sind: Siphons auffüllen, nach Spuren schauen und rechtzeitig eingreifen. Das übernimmt die <a href="/de/hausbetreuung/">Hausbetreuung</a>.</li>
+  </ul>
+
+  <h2 id="bestrijder">Einen Kammerjäger beauftragen</h2>
+  <p>Ein Kammerjäger heißt in Spanien <em>empresa de control de plagas</em> oder <em>DDD</em>-Firma (desinsectación, desratización, desinfección). Achten Sie auf Folgendes:</p>
+  <ul>
+    <li>Die Firma muss im offiziellen Register für Biozid-Dienstleister der Junta de Andalucía (<em>ROESB</em>) eingetragen sein. Fragen Sie nach der Nummer.</li>
+    <li>Nach der Behandlung erhalten Sie ein Zertifikat mit den verwendeten Mitteln und der Sicherheitsfrist. Heben Sie es auf, auch für Vermietung oder Verkauf.</li>
+    <li>Fragen Sie nach einer Garantie und ob ein zweiter Besuch im Preis enthalten ist.</li>
+    <li>Vermieten Sie das Haus, verhindert ein Jahresvertrag Beschwerden von Gästen.</li>
+  </ul>
+  <p>Der Kammerjäger bekämpft die Schädlinge, dichtet die Eingänge aber nicht ab. Das übernehmen wir: Wir finden, wo sie hereinkommen, dichten Ritzen, Abflüsse und Dach ab und ersetzen befallenes Holz. <a href="/de/anfrage/?dienst=onderhoud">Beschreiben Sie uns, was Sie sehen</a>, mit ein paar Fotos, dann schauen wir, was nötig ist.</p>
+</Guide>

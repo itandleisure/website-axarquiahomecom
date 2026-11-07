@@ -31,6 +31,7 @@ const cookieText = {
   nl: { text: 'Mogen we cookies gebruiken om te zien hoe bezoekers deze site gebruiken? Zo kunnen we hem verbeteren.', yes: 'Accepteren', no: 'Weigeren', more: 'Meer in de privacyverklaring', settings: 'Cookie-instellingen' },
   en: { text: 'May we use cookies to see how visitors use this site? It helps us make it better.', yes: 'Accept', no: 'Decline', more: 'More in the privacy statement', settings: 'Cookie settings' },
   sv: { text: 'Får vi använda cookies för att se hur besökare använder webbplatsen? Det hjälper oss att göra den bättre.', yes: 'Godkänn', no: 'Avböj', more: 'Mer i integritetspolicyn', settings: 'Cookie-inställningar' },
+  es: { text: '¿Podemos usar cookies para ver cómo usan los visitantes este sitio? Así podemos mejorarlo.', yes: 'Aceptar', no: 'Rechazar', more: 'Más en la política de privacidad', settings: 'Configuración de cookies' },
   de: { text: 'Dürfen wir Cookies verwenden, um zu sehen, wie Besucher diese Website nutzen? So können wir sie verbessern.', yes: 'Akzeptieren', no: 'Ablehnen', more: 'Mehr in der Datenschutzerklärung', settings: 'Cookie-Einstellungen' },
 }[lang];
 const nav = navs[lang];
@@ -42,7 +43,7 @@ const robots = !site.indexable || noindex ? 'noindex, nofollow' : 'index, follow
 const isHome = langs.some((l) => path === `/${l}/`);
 const withBrand = `${title} | ${site.brand}`;
 const fullTitle = isHome || withBrand.length > 60 ? title : withBrand;
-const ogLocale = { nl: 'nl_NL', en: 'en_GB', de: 'de_DE', sv: 'sv_SE' }[lang];
+const ogLocale = { nl: 'nl_NL', en: 'en_GB', de: 'de_DE', sv: 'sv_SE', es: 'es_ES' }[lang];
 const ogImage = new URL(Astro.props.ogImage ?? '/og-image.png', site.url).href;
 
 const c = site.company;

@@ -1,0 +1,86 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'wat', label: 'Wat is het Spaanse energielabel?' },
+  { id: 'wanneer', label: 'Wanneer is het verplicht?' },
+  { id: 'aanvragen', label: 'Zo komt het label tot stand' },
+  { id: 'kosten', label: 'Kosten en geldigheid' },
+  { id: 'verbeteren', label: 'Een beter label: wat levert het meeste op?' },
+  { id: '2030', label: 'Moet mijn huis in 2030 een beter label hebben?' },
+];
+
+const faq = [
+  {
+    q: 'Wat kost een energielabel in Spanje?',
+    a: 'Voor een appartement of dorpshuis meestal € 80 tot € 150, voor een villa of finca € 150 tot € 300. Daar komt soms een kleine registratievergoeding bij. De prijs hangt af van de grootte van het huis en de reisafstand van de technicus.',
+  },
+  {
+    q: 'Hoe lang is een energielabel in Spanje geldig?',
+    a: 'Tien jaar. Heeft het huis de laagste klasse G, dan is het label vijf jaar geldig. Na een grote verbouwing, zoals nieuwe ramen, isolatie of een warmtepomp, is een nieuw label vaak de moeite waard, omdat het huis dan beter scoort.',
+  },
+  {
+    q: 'Heb ik een energielabel nodig voor vakantieverhuur?',
+    a: 'In de meeste gevallen wel. Het label is verplicht bij verhuur, en het moet ook in de advertentie staan. Er is een uitzondering voor woningen die minder dan vier maanden per jaar worden gebruikt, maar die is smal uitgelegd. Laat het label daarom maken als u gaat verhuren.',
+  },
+  {
+    q: 'Wat gebeurt er als ik geen energielabel heb?',
+    a: 'De notaris en de makelaar vragen erom, en zonder label kan een verkoop of huurcontract vertraging oplopen. Daarnaast kan de consumentenautoriteit een boete opleggen, die afhankelijk van de ernst kan oplopen van enkele honderden tot enkele duizenden euro’s.',
+  },
+];
+---
+<Guide slug="energielabel-spanje" toc={toc} faq={faq} dienst="legalisatie" onderwerp="Ik heb een energielabel nodig voor mijn huis." ctaTitle="Een energielabel nodig, of een beter label?" ctaText="Wij regelen het label via de erkende technicus met wie we samenwerken. Wilt u eerst het huis verbeteren, dan rekenen we uit welke ingreep het meeste oplevert: ramen, isolatie, een warmtepomp of zonnepanelen.">
+  <h2 id="wat">Wat is het Spaanse energielabel?</h2>
+  <p>Het energielabel heet in Spanje het <em>certificado de eficiencia energética</em>, kortweg <em>certificado energético</em> of CEE. Het geeft aan hoe zuinig een woning is, met een schaal van <strong>A</strong> (zeer zuinig) tot <strong>G</strong> (zeer onzuinig). Er staan twee scores op het label:</p>
+  <ul>
+    <li>het <strong>energieverbruik</strong> in kWh per m² per jaar;</li>
+    <li>de <strong>CO2-uitstoot</strong> in kg per m² per jaar.</li>
+  </ul>
+  <p>De berekening gaat uit van het gebouw en de vaste installaties: muren, dak, ramen, verwarming, koeling en warm water. Hoeveel u zelf verbruikt, telt niet mee. Daarom krijgt een oud dorpshuis met dikke muren maar enkel glas en een elektrische boiler vaak een E, F of G, ook al is de stroomrekening laag.</p>
+
+  <h2 id="wanneer">Wanneer is het verplicht?</h2>
+  <p>De regels staan in het Real Decreto 390/2021. U heeft een geldig label nodig als u:</p>
+  <ul>
+    <li><strong>verkoopt</strong>: de notaris neemt het label op in de akte, en de koper krijgt een kopie;</li>
+    <li><strong>verhuurt</strong>, voor lange of korte termijn, inclusief de meeste vakantieverhuur;</li>
+    <li><strong>adverteert</strong>: de energieklasse moet al in de advertentie staan, dus ook op de site van de makelaar of het verhuurplatform.</li>
+  </ul>
+  <p>Woont u er zelf en verkoopt of verhuurt u niet, dan heeft u geen label nodig. Er zijn uitzonderingen, bijvoorbeeld voor kleine vrijstaande gebouwen onder 50 m² en voor woningen die minder dan vier maanden per jaar worden gebruikt. Ga daar niet zomaar van uit: notarissen en makelaars vragen in de praktijk bijna altijd om het label.</p>
+  <p>Gaat u verkopen? In de gids <a href="/nl/gidsen/huis-verkopen-spanje/papieren/">papieren voor de verkoop</a> leest u wat er verder nodig is. Gaat u verhuren, lees dan ook <a href="/nl/gidsen/woning-verhuren-spanje/">uw woning verhuren in Spanje</a>.</p>
+
+  <h2 id="aanvragen">Zo komt het label tot stand</h2>
+  <ol>
+    <li><strong>Een erkende technicus</strong> (<em>técnico competente</em>), zoals een architect, bouwkundig ingenieur (<em>aparejador</em>) of ingenieur, komt het huis bekijken.</li>
+    <li>De technicus meet de woning op, bekijkt muren, dak, ramen en installaties en maakt foto’s. Dat duurt meestal een uur.</li>
+    <li>Met officiële software (zoals CE3X) wordt de energieklasse berekend, met voorstellen voor verbeteringen.</li>
+    <li>Het label wordt <strong>geregistreerd bij de Junta de Andalucía</strong>. Pas daarna is het officieel.</li>
+    <li>U krijgt het certificaat en het label met de klasse, meestal binnen één tot twee weken.</li>
+  </ol>
+  <p>Zorg dat de technicus bij alle ruimtes, het dak en de installaties kan. Bent u niet in Spanje, dan kan iemand met een sleutel de technicus binnenlaten. Met <a href="/nl/sleutelbeheer/">sleutelbeheer</a> regelen we dat voor u.</p>
+
+  <h2 id="kosten">Kosten en geldigheid</h2>
+  <table class="prices">
+    <thead><tr><th>Woning</th><th>Indicatie (excl. btw)</th></tr></thead>
+    <tbody>
+      <tr><td>Appartement</td><td>€ 80 tot € 150</td></tr>
+      <tr><td>Dorpshuis of rijtjeshuis</td><td>€ 100 tot € 180</td></tr>
+      <tr><td>Villa of finca</td><td>€ 150 tot € 300</td></tr>
+    </tbody>
+  </table>
+  <p>Het label is <strong>tien jaar geldig</strong>, en <strong>vijf jaar bij klasse G</strong>. Heeft u na het label flink verbouwd, laat dan een nieuw label maken: een betere klasse staat beter in de advertentie.</p>
+  <p>Wees voorzichtig met heel goedkope online aanbiedingen zonder bezoek. Een label op basis van alleen foto’s is vaak onnauwkeurig, en bij een controle of bij twijfel van de koper moet u het alsnog over laten doen.</p>
+
+  <h2 id="verbeteren">Een beter label: wat levert het meeste op?</h2>
+  <p>Het label bevat aanbevelingen, maar niet elke maatregel levert in het Andalusische klimaat evenveel op. In de Axarquía scoren deze ingrepen meestal het best:</p>
+  <ul>
+    <li><strong>Warm water en verwarming</strong>: een elektrische boiler of butaankachel vervangen door een warmtepomp (<em>aerotermia</em>) of een airco met warmtepomp levert vaak twee klassen winst op. Zie <a href="/nl/kosten/airco-en-warmtepomp/">kosten airco en warmtepomp</a>.</li>
+    <li><strong>Ramen</strong>: enkel glas en lekke kozijnen vervangen door dubbel glas met thermisch onderbroken kozijnen. Zie <a href="/nl/kosten/ramen-en-kozijnen/">kosten ramen en kozijnen</a>.</li>
+    <li><strong>Dakisolatie</strong>: het meeste warmteverlies en de meeste zomerwarmte gaan via het dak. Zie <a href="/nl/gidsen/huis-isoleren-spanje/">huis isoleren in Spanje</a>.</li>
+    <li><strong>Zonnepanelen</strong>: verlagen het verbruik van fossiele energie en daarmee de CO2-score. Zie <a href="/nl/kosten/zonnepanelen/">kosten zonnepanelen</a>.</li>
+  </ul>
+  <p>Een beter label maakt een huis aantrekkelijker voor kopers en huurders, en voor sommige <a href="/nl/gidsen/subsidie-verduurzamen-spanje/">subsidies</a> vraagt de overheid juist een label vóór en ná de verbouwing als bewijs. Plan het label dus slim: laat het voor een subsidie maken vóór u begint.</p>
+
+  <h2 id="2030">Moet mijn huis in 2030 een beter label hebben?</h2>
+  <p>U leest soms dat huizen in Europa in 2030 minimaal label E of D moeten hebben. Dat klopt niet voor uw woning. De Europese richtlijn voor de energieprestatie van gebouwen uit 2024 verplicht landen om het gemiddelde energieverbruik van alle woningen samen te verlagen, met 16% in 2030 en 20 tot 22% in 2035. Hoe Spanje dat doet, met subsidies, regels voor nieuwbouw of eisen bij verbouwingen, werkt het land zelf uit. Een verplicht minimumlabel voor bestaande eigen woningen is er op dit moment niet.</p>
+  <p>Wel is het verstandig om bij een verbouwing de energiezuinige keuze te maken. Verbeteringen worden later eerder verplicht dan goedkoper, en de waarde van een huis met een goed label houdt beter stand.</p>
+</Guide>

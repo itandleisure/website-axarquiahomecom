@@ -1,0 +1,94 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import { prices, site, esPrice } from '../../data/site';
+
+const faq = [
+  {
+    q: 'Tengo una gotera y no estoy en la casa. ¿Qué hago?',
+    a: 'Envíenos un mensaje por el formulario o por WhatsApp con la dirección y, si la tiene, una foto. Si aún no tiene gestión de llaves con nosotros, acordamos cómo entrar. Hacemos una reparación provisional lo antes posible y después le damos precio de la solución definitiva.',
+  },
+  {
+    q: '¿Por qué gotean tanto las azoteas y terrazas?',
+    a: 'Muchas casas de la Axarquía tienen azotea o terrazas sobre zonas habitables. Los cambios bruscos de temperatura agrietan con los años la lámina impermeable y las juntas. Tras una temporada seca se nota con la primera lluvia fuerte. Una impermeabilización nueva suele resolverlo.',
+  },
+  {
+    q: '¿Tengo que desbrozar mi parcela?',
+    a: 'En Andalucía, los propietarios de parcelas en zonas forestales o cerca de ellas deben mantenerlas libres de material inflamable, sobre todo en verano. Los ayuntamientos también pueden exigirlo. Desbrozamos su parcela una vez o cada año antes del verano.',
+  },
+  {
+    q: '¿Hacen trabajos pequeños?',
+    a: 'Sí. Un grifo que gotea, una puerta que roza, un enchufe que no funciona. A los clientes de gestión de llaves se lo arreglamos en la siguiente visita.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Mantenimiento y reparaciones de viviendas',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['es', 'en', 'nl'],
+};
+---
+<Base
+  title="Mantenimiento y reparaciones de viviendas en la Axarquía"
+  description="Goteras, impermeabilización de azoteas, desbroce de parcelas y pequeñas reparaciones en la Axarquía. También cuando usted no está en la casa."
+  path="/es/mantenimiento/"
+  lang="es"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="es" items={[{ name: 'Mantenimiento y reparaciones', href: '/es/mantenimiento/' }]} />
+  <Hero
+    lang="es"
+    eyebrow="Mantenimiento y reparaciones"
+    title="¿Gotera, avería o mantenimiento pendiente? <em>Nos encargamos.</em>"
+    lead="Tejados, terrazas, parcela y jardín, y todos los arreglos pequeños dentro y fuera de casa. También si usted está lejos y se entera por los vecinos."
+    cta="Pedir una reparación"
+    ctaHref="/es/solicitud/?dienst=onderhoud"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h2 class="h3">Tejados y goteras</h2>
+          <p>Reparación de tejados, impermeabilización de azoteas y terrazas, canalones y desagües.</p>
+          <p><strong>{esPrice(prices.daken)}</strong></p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Parcela y jardín</h2>
+          <p>Desbroce contra incendios, poda, riego, césped artificial y jardinería. Y el <a href="/es/camino-de-acceso/">camino de acceso a su finca</a>.</p>
+          <p><strong>{esPrice(prices.perceel)}</strong></p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Humedades y pintura</h2>
+          <p>Tratamiento de humedades, reparación de paredes y pintura interior y exterior.</p>
+          <p><strong>Precio tras la revisión</strong></p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Pequeños arreglos</h2>
+          <p>Fontanería, electricidad, puertas, ventanas, deshollinado, cerraduras y todo lo que se estropea. También sellamos las entradas de <a href="/es/guias/control-de-plagas/">cucarachas y ratones</a>.</p>
+          <p><strong>Precio por hora</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Mantenimiento sin tener que estar presente</h2>
+      <p>Muchos de los propietarios para los que trabajamos pasan buena parte del año fuera. Por eso trabajamos con fotos: antes, durante y después del trabajo. Usted aprueba el precio, hacemos el trabajo y ve el resultado en el móvil.</p>
+      <p>¿Prefiere no tener que llamarnos cada vez? Con la <a href="/es/gestion-de-llaves/">gestión de llaves</a> vigilamos la casa con regularidad y a menudo vemos los problemas antes de que causen daños.</p>
+      <p>¿Calor en verano o una factura de luz alta? Vea nuestras guías de <a href="/es/guias/instalacion-aire-acondicionado/">aire acondicionado</a> y <a href="/es/guias/placas-solares/">placas solares</a>.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="es" />
+  <Cta lang="es" dienst="onderhoud" title="¿Algo roto en su casa?" />
+  <Services lang="es" exclude="mantenimiento" title="También le puede interesar" />
+</Base>

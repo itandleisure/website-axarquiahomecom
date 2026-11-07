@@ -1,0 +1,86 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'wat', label: 'What is the Spanish energy certificate?' },
+  { id: 'wanneer', label: 'When is it compulsory?' },
+  { id: 'aanvragen', label: 'How the certificate is produced' },
+  { id: 'kosten', label: 'Cost and validity' },
+  { id: 'verbeteren', label: 'A better rating: what pays off most?' },
+  { id: '2030', label: 'Does my house need a better rating by 2030?' },
+];
+
+const faq = [
+  {
+    q: 'How much does an energy certificate cost in Spain?',
+    a: 'Usually € 80 to € 150 for an apartment or village house, and € 150 to € 300 for a villa or finca. There is sometimes a small registration fee on top. The price depends on the size of the house and how far the technician has to travel.',
+  },
+  {
+    q: 'How long is an energy certificate valid in Spain?',
+    a: 'Ten years. If the house has the lowest rating, G, it is valid for five years. After a major renovation, such as new windows, insulation or a heat pump, a new certificate is often worth it because the house will score better.',
+  },
+  {
+    q: 'Do I need an energy certificate for holiday lets?',
+    a: 'In most cases, yes. The certificate is required when you let a property, and the rating must appear in the advert. There is an exemption for homes used for less than four months a year, but it is interpreted narrowly. Get a certificate if you are going to let.',
+  },
+  {
+    q: 'What happens if I do not have an energy certificate?',
+    a: 'The notary and the estate agent will ask for it, and without one a sale or tenancy can be delayed. The consumer authority can also impose a fine which, depending on the seriousness, ranges from a few hundred to several thousand euros.',
+  },
+];
+---
+<Guide lang="en" slug="energy-certificate-spain" toc={toc} faq={faq} dienst="legalisatie" onderwerp="I need an energy certificate for my house." ctaTitle="Need an energy certificate, or a better rating?" ctaText="We arrange the certificate through the registered technician we work with. If you want to improve the house first, we work out which measure pays off most: windows, insulation, a heat pump or solar panels.">
+  <h2 id="wat">What is the Spanish energy certificate?</h2>
+  <p>In Spain the energy performance certificate is called the <em>certificado de eficiencia energética</em>, often shortened to <em>certificado energético</em> or CEE. It shows how efficient a home is on a scale from <strong>A</strong> (very efficient) to <strong>G</strong> (very inefficient). The label has two scores:</p>
+  <ul>
+    <li><strong>energy use</strong> in kWh per m² per year;</li>
+    <li><strong>CO2 emissions</strong> in kg per m² per year.</li>
+  </ul>
+  <p>The calculation is based on the building and its fixed installations: walls, roof, windows, heating, cooling and hot water. Your own consumption does not count. That is why an old village house with thick walls but single glazing and an electric water heater often gets an E, F or G, even if the electricity bill is low.</p>
+
+  <h2 id="wanneer">When is it compulsory?</h2>
+  <p>The rules are set out in Real Decreto 390/2021. You need a valid certificate when you:</p>
+  <ul>
+    <li><strong>sell</strong>: the notary includes it in the deed and the buyer receives a copy;</li>
+    <li><strong>let</strong>, long or short term, including most holiday lets;</li>
+    <li><strong>advertise</strong>: the energy rating must already appear in the advert, including on the agent’s website or the rental platform.</li>
+  </ul>
+  <p>If you live in the house yourself and are not selling or letting, you do not need one. There are exemptions, for example for small detached buildings under 50 m² and for homes used for less than four months a year. Do not simply assume they apply: in practice notaries and agents almost always ask for the certificate.</p>
+  <p>Selling? Our guide to the <a href="/en/guides/selling-a-house-in-spain/paperwork/">paperwork for selling</a> explains what else you need. Letting? Read <a href="/en/guides/renting-out-property-in-spain/">renting out property in Spain</a> as well.</p>
+
+  <h2 id="aanvragen">How the certificate is produced</h2>
+  <ol>
+    <li><strong>A registered technician</strong> (<em>técnico competente</em>), such as an architect, building surveyor (<em>aparejador</em>) or engineer, visits the house.</li>
+    <li>The technician measures the home, inspects the walls, roof, windows and installations and takes photos. This usually takes about an hour.</li>
+    <li>Official software (such as CE3X) is used to calculate the rating, with suggestions for improvements.</li>
+    <li>The certificate is <strong>registered with the Junta de Andalucía</strong>. Only then is it official.</li>
+    <li>You receive the certificate and the label, usually within one to two weeks.</li>
+  </ol>
+  <p>Make sure the technician can reach every room, the roof and the installations. If you are not in Spain, someone with a key can let the technician in. With <a href="/en/key-holding/">key holding</a>, we arrange that for you.</p>
+
+  <h2 id="kosten">Cost and validity</h2>
+  <table class="prices">
+    <thead><tr><th>Property</th><th>Estimate (excl. VAT)</th></tr></thead>
+    <tbody>
+      <tr><td>Apartment</td><td>€ 80 to € 150</td></tr>
+      <tr><td>Village house or townhouse</td><td>€ 100 to € 180</td></tr>
+      <tr><td>Villa or finca</td><td>€ 150 to € 300</td></tr>
+    </tbody>
+  </table>
+  <p>The certificate is <strong>valid for ten years</strong>, or <strong>five years with a G rating</strong>. If you have renovated substantially since, get a new one: a better rating looks better in the advert.</p>
+  <p>Be wary of very cheap online offers without a visit. A certificate based only on photos is often inaccurate, and if it is checked or the buyer has doubts, you will have to have it redone.</p>
+
+  <h2 id="verbeteren">A better rating: what pays off most?</h2>
+  <p>The certificate includes recommendations, but not every measure is equally effective in the Andalusian climate. In the Axarquía these usually score best:</p>
+  <ul>
+    <li><strong>Hot water and heating</strong>: replacing an electric water heater or butane heater with a heat pump (<em>aerotermia</em>) or a heat-pump air conditioner often gains two classes. See <a href="/en/costs/air-conditioning-and-heat-pumps/">air conditioning and heat pump costs</a>.</li>
+    <li><strong>Windows</strong>: replacing single glazing and leaky frames with double glazing in thermally broken frames. See <a href="/en/costs/windows-and-frames/">window and frame costs</a>.</li>
+    <li><strong>Roof insulation</strong>: most heat loss in winter and most heat gain in summer goes through the roof. See <a href="/en/guides/insulating-your-house-in-spain/">insulating your house in Spain</a>.</li>
+    <li><strong>Solar panels</strong>: reduce the use of fossil energy and therefore the CO2 score. See <a href="/en/costs/solar-panels/">solar panel costs</a>.</li>
+  </ul>
+  <p>A better rating makes a house more attractive to buyers and tenants, and some <a href="/en/guides/energy-efficiency-grants-spain/">grants</a> require a certificate before and after the work as proof. So plan it wisely: for a grant, have the certificate done before you start.</p>
+
+  <h2 id="2030">Does my house need a better rating by 2030?</h2>
+  <p>You sometimes read that homes in Europe must reach at least an E or D rating by 2030. That is not true for your home. The 2024 EU directive on the energy performance of buildings requires countries to reduce the average energy use of all homes together, by 16% by 2030 and by 20 to 22% by 2035. How Spain does that, with grants, rules for new builds or requirements during renovations, is up to Spain. There is currently no compulsory minimum rating for existing owner-occupied homes.</p>
+  <p>It is still wise to choose the energy-efficient option when you renovate. Improvements are more likely to become compulsory than cheaper, and a house with a good rating holds its value better.</p>
+</Guide>

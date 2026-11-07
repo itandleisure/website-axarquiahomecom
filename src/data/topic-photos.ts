@@ -4,7 +4,8 @@
 import type { Lang } from '../i18n';
 import { photoWidths } from './place-photos';
 
-interface TopicPhoto { alt: Record<Lang, string>; }
+/** Spaans (es) is optioneel: zonder Spaanse tekst valt de alt terug op het Engels. */
+interface TopicPhoto { alt: Record<Exclude<Lang, 'es'>, string> & { es?: string }; }
 
 const photos: Record<string, TopicPhoto> = {
   'isolatie-steenwol-tussen-balken': { alt: {
@@ -48,12 +49,14 @@ const photos: Record<string, TopicPhoto> = {
     en: 'Solar panels on a roof with red clay tiles and brick chimneys',
     de: 'Solarmodule auf einem Dach mit roten Tonziegeln und gemauerten Schornsteinen',
     sv: 'Solpaneler på ett tak med röda tegelpannor och murade skorstenar',
+    es: 'Placas solares sobre un tejado de teja roja con chimeneas de ladrillo',
   } },
   'zonnepaneel-off-grid-paal': { alt: {
     nl: 'Los zonnepaneel op een paal met een kastje voor de aansluiting, tegen een blauwe lucht',
     en: 'Stand-alone solar panel on a pole with a connection box, against a blue sky',
     de: 'Einzelnes Solarmodul an einem Mast mit Anschlusskasten vor blauem Himmel',
     sv: 'Fristående solpanel på en stolpe med en kopplingslåda, mot en blå himmel',
+    es: 'Placa solar independiente sobre un poste con una caja de conexiones, contra un cielo azul',
   } },
   'zonnepanelen-schoonmaken-borstel': { alt: {
     nl: 'Zonnepanelen worden met een borstel en water schoongemaakt',
@@ -66,6 +69,7 @@ const photos: Record<string, TopicPhoto> = {
     en: 'A dusty solar panel being cleaned with a squeegee on a pole',
     de: 'Ein staubiges Solarmodul wird mit einem Wischer an einer Stange gereinigt',
     sv: 'En dammig solpanel rengörs med en skrapa på ett skaft',
+    es: 'Limpieza de una placa solar llena de polvo con un limpiador de mango largo',
   } },
   'laadpaal-installeren-meterkast': { alt: {
     nl: 'Elektricien sluit een laadpaal voor de auto aan in de meterkast, met de laadkabel aan de muur',
@@ -106,6 +110,9 @@ const topicPlacements: Record<string, Placement> = {
 
 /** Gidsen, per slug. De tweede foto staat in de gidspagina zelf (component ArticlePhoto). */
 const guidePlacements: Record<string, string> = {
+  'placas-solares': 'zonnepanelen-pannendak',
+  'baterias-para-placas-solares': 'zonnepanelen-pannendak',
+  'subvenciones-placas-solares': 'zonnepanelen-pannendak',
   'huis-isoleren-spanje': 'isolatie-steenwol-tussen-balken',
   'insulating-your-house-in-spain': 'isolatie-steenwol-tussen-balken',
   'haus-daemmen-spanien': 'isolatie-steenwol-tussen-balken',
@@ -119,6 +126,9 @@ const guidePlacements: Record<string, string> = {
   'virtuelle-batterie-spanien': 'zonnepanelen-pannendak',
   'energieleveranciers-spanje-vergelijken': 'zonnepanelen-pannendak',
   'stromanbieter-spanien-vergleich': 'zonnepanelen-pannendak',
+  'subsidie-verduurzamen-spanje': 'zonnepanelen-pannendak',
+  'energy-efficiency-grants-spain': 'zonnepanelen-pannendak',
+  'foerderung-energetische-sanierung-spanien': 'zonnepanelen-pannendak',
 };
 
 export interface ArticleImage { alt: string; src: string; srcset: string; og: string; }
@@ -127,7 +137,7 @@ export function topicPhoto(name: string, lang: Lang): ArticleImage | undefined {
   const p = photos[name];
   if (!p) return undefined;
   const base = `/images/onderwerpen/${name}`;
-  return { alt: p.alt[lang], src: `${base}-800.webp`, srcset: photoWidths.map((w) => `${base}-${w}.webp ${w}w`).join(', '), og: `/images/og/${name}.jpg` };
+  return { alt: p.alt[lang as Exclude<Lang, 'es'>] ?? p.alt.en, src: `${base}-800.webp`, srcset: photoWidths.map((w) => `${base}-${w}.webp ${w}w`).join(', '), og: `/images/og/${name}.jpg` };
 }
 
 export function topicPhotos(kind: string, key: string, lang: Lang) {

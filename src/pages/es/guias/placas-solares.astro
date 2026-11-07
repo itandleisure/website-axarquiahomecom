@@ -1,0 +1,109 @@
+---
+import ArticlePhoto from '../../../components/ArticlePhoto.astro';
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'precio', label: '¿Cuánto cuestan las placas solares?' },
+  { id: 'cuantas', label: '¿Cuántas placas necesito?' },
+  { id: 'precio-final', label: 'Qué encarece o abarata la instalación' },
+  { id: 'ahorro', label: 'Ejemplo de ahorro y amortización' },
+  { id: 'excedentes', label: 'Excedentes: compensación y batería virtual' },
+  { id: 'segunda-vivienda', label: '¿Y si solo uso la casa parte del año?' },
+  { id: 'tramites', label: 'Licencia, legalización y bonificaciones' },
+  { id: 'mantenimiento', label: 'Mantenimiento y vida útil' },
+];
+
+const faq = [
+  {
+    q: '¿Cuánto cuesta instalar placas solares en una casa?',
+    a: 'En la Axarquía, una instalación de 4 a 5 kWp (10 a 12 placas) para una vivienda unifamiliar cuesta normalmente entre 4.500 y 7.000 € sin IVA, con inversor, estructura, instalación y legalización. Una batería de 5 kWh suma entre 3.000 y 5.000 €.',
+  },
+  {
+    q: '¿En cuántos años se amortizan las placas solares?',
+    a: 'Con un consumo medio y la mitad de la producción aprovechada en casa, en la Axarquía se amortizan en unos 6 a 7 años. Las placas duran entre 25 y 30 años, así que el resto es ahorro.',
+  },
+  {
+    q: '¿Necesito licencia de obra para poner placas solares?',
+    a: 'Para placas sobre el tejado de una vivienda legal en Andalucía basta normalmente con una declaración responsable o comunicación previa en el ayuntamiento. Las placas en el suelo, en suelo rústico o en una casa en situación AFO pueden necesitar más trámites.',
+  },
+  {
+    q: '¿Funcionan las placas solares durante un apagón?',
+    a: 'Una instalación normal se desconecta durante un corte de luz por seguridad. Si quiere tener luz en un apagón, necesita un inversor híbrido con batería y función de respaldo (backup).',
+  },
+  {
+    q: '¿Me pagan por la energía que no consumo?',
+    a: 'Con la compensación simplificada, la energía que vierte a la red se descuenta de su factura, a un precio menor que el de la luz que compra, y la factura no puede quedar por debajo de cero. Con una batería virtual el saldo sobrante se guarda para los meses siguientes.',
+  },
+];
+---
+<Guide lang="es" slug="placas-solares" toc={toc} faq={faq} dienst="energie" onderwerp="Quiero precio de placas solares para mi casa." ctaTitle="¿Quiere un precio para placas solares?" ctaText="Envíenos una foto del tejado y su última factura de la luz. Recibe una propuesta a medida con precio cerrado.">
+  <p>Los precios de esta guía son orientativos para 2026 en la Axarquía, sin IVA, e incluyen placas, inversor, estructura, cableado, instalación y legalización. El precio final depende de su tejado y de su consumo.</p>
+
+  <h2 id="precio">¿Cuánto cuestan las placas solares?</h2>
+  <table class="prices">
+    <thead><tr><th>Instalación</th><th>Para quién</th><th>Precio orientativo</th></tr></thead>
+    <tbody>
+      <tr><td>3 kWp, 7 – 8 placas</td><td>Piso con tejado propio o casa pequeña, consumo sobre todo de día</td><td>3.500 – 5.000 €</td></tr>
+      <tr><td>4 – 5 kWp, 10 – 12 placas</td><td>Vivienda familiar con aire acondicionado y placa de inducción</td><td>4.500 – 7.000 €</td></tr>
+      <tr><td>6 – 8 kWp, 14 – 20 placas</td><td>Chalet con bomba de piscina, aerotermia o cargador de coche</td><td>6.500 – 10.000 €</td></tr>
+      <tr><td>Batería de 5 kWh</td><td>Usar por la noche la energía del día</td><td>+ 3.000 – 5.000 €</td></tr>
+      <tr><td>Batería de 10 kWh</td><td>Consumo alto o mucho consumo nocturno</td><td>+ 5.500 – 9.000 €</td></tr>
+      <tr><td>Termosifón solar, 150 – 300 litros</td><td>Solo agua caliente</td><td>1.500 – 3.500 €</td></tr>
+      <tr><td>Cortijo aislado, 3 – 5 kWp con batería de 10 – 15 kWh</td><td>Casa de campo sin conexión a la red</td><td>10.000 – 18.000 €</td></tr>
+    </tbody>
+  </table>
+  <p>Las placas en el suelo o una pérgola solar añaden entre 500 y 2.000 € por la estructura y la cimentación. ¿Le interesa la batería? Lea nuestra guía de <a href="/es/guias/baterias-para-placas-solares/">baterías para placas solares</a>.</p>
+
+  <h2 id="cuantas">¿Cuántas placas necesito?</h2>
+  <p>Una regla práctica: unos 0,7 kWp, es decir, dos placas, por cada 1.000 kWh de consumo anual. Una casa que gasta 5.000 kWh al año necesita de 3,5 a 4 kWp, unas 9 o 10 placas. El dato de consumo anual aparece en su factura de la luz o en el área de cliente de la distribuidora (en la Axarquía, normalmente e-distribución).</p>
+  <p>No conviene sobredimensionar. Con la compensación simplificada, la energía que sobra se paga barata, así que lo rentable es cubrir bien lo que consume de día: aire acondicionado, bomba de la piscina, termo eléctrico y electrodomésticos.</p>
+
+  <h2 id="precio-final">Qué encarece o abarata la instalación</h2>
+  <ArticlePhoto name="zonnepanelen-stof-schoonmaken" lang="es" />
+  <ul>
+    <li><strong>El tejado.</strong> Una azotea plana es lo más sencillo. Un tejado de teja antiguo a veces hay que revisarlo o repararlo antes, o gotea después de taladrar. Hágalo todo a la vez.</li>
+    <li><strong>La instalación eléctrica.</strong> Una instalación antigua sin toma de tierra o con un cuadro pequeño hay que ponerla al día primero.</li>
+    <li><strong>El acceso.</strong> Subir placas por una calle estrecha de Frigiliana o Cómpeta lleva más tiempo que en un chalet con entrada para coches.</li>
+    <li><strong>Batería o no.</strong> Una batería casi duplica el precio. Compensa sobre todo si vive en la casa todo el año o consume mucho por la noche.</li>
+    <li><strong>Cascos históricos protegidos.</strong> En algunos centros históricos el ayuntamiento pone condiciones a las placas visibles.</li>
+  </ul>
+
+  <h2 id="ahorro">Ejemplo de ahorro y amortización</h2>
+  <p>Un chalet en Torrox habitado todo el año, con aire acondicionado, placa de inducción y bomba de piscina. Consumo: unos 7.000 kWh al año.</p>
+  <table class="prices">
+    <thead><tr><th>Concepto</th><th>Cifra orientativa</th></tr></thead>
+    <tbody>
+      <tr><td>5 kWp, 12 placas, inversor híbrido</td><td>6.000 €</td></tr>
+      <tr><td>Producción anual en la Axarquía</td><td>unos 8.000 kWh</td></tr>
+      <tr><td>Autoconsumo (± 50 %) a 0,18 € por kWh</td><td>unos 720 € al año</td></tr>
+      <tr><td>Excedentes compensados a 0,06 € por kWh</td><td>unos 240 € al año</td></tr>
+      <tr><td>Ahorro anual</td><td>unos 960 €</td></tr>
+      <tr><td>Amortización</td><td>6 a 7 años</td></tr>
+    </tbody>
+  </table>
+  <p>Las placas duran de 25 a 30 años. El inversor suele cambiarse a los 10 o 15 años (800 – 1.500 €). Si además le dan una <a href="/es/guias/subvenciones-placas-solares/">subvención o bonificación del IBI</a>, se amortiza antes.</p>
+
+  <h2 id="excedentes">Excedentes: compensación y batería virtual</h2>
+  <p>La energía que no consume en el momento se vierte a la red. Con la <strong>compensación simplificada</strong> (Real Decreto 244/2019) su comercializadora le descuenta esa energía de la factura cada mes, a un precio menor que el de la luz que compra. La factura de energía no puede quedar en negativo: lo que sobra un mes se pierde.</p>
+  <p>Por eso muchas comercializadoras ofrecen una <strong>batería virtual</strong>: el saldo que sobra se guarda en euros y se descuenta en meses siguientes, a veces también en otra vivienda. Compare las condiciones, porque algunas cobran una cuota mensual.</p>
+
+  <h2 id="segunda-vivienda">¿Y si solo uso la casa parte del año?</h2>
+  <p>También puede compensar, pero de otra forma:</p>
+  <ul>
+    <li>Elija una instalación más pequeña, ajustada a lo que la casa consume cuando está vacía: nevera, bomba de piscina, alarma, deshumidificador.</li>
+    <li>Pregunte por una batería virtual, para guardar el saldo de los meses en que no está.</li>
+    <li>Si alquila la casa en verano, los huéspedes consumen la energía del aire acondicionado justo cuando más producen las placas, y la instalación se paga antes.</li>
+  </ul>
+
+  <h2 id="tramites">Licencia, legalización y bonificaciones</h2>
+  <ul>
+    <li><strong>Licencia.</strong> Para placas sobre el tejado de una vivienda legal en Andalucía suele bastar una declaración responsable o comunicación previa en el ayuntamiento. Las placas en el suelo, una finca en suelo rústico o una casa en situación AFO pueden requerir más.</li>
+    <li><strong>Legalización.</strong> El instalador registra la instalación en la Junta de Andalucía y emite el certificado de instalación eléctrica (boletín). Después usted pide a su comercializadora la compensación de excedentes.</li>
+    <li><strong>Bonificaciones.</strong> Muchos ayuntamientos rebajan durante unos años el IBI y el ICIO por instalar placas solares. Vélez-Málaga, por ejemplo, bonifica el 50 % del IBI durante tres años.</li>
+    <li><strong>Subvenciones.</strong> La Junta subvenciona placas con batería y, si es residente fiscal, puede deducir parte en el IRPF. Todo lo que sigue abierto está en nuestra guía de <a href="/es/guias/subvenciones-placas-solares/">subvenciones para placas solares</a>.</li>
+  </ul>
+
+  <h2 id="mantenimiento">Mantenimiento y vida útil</h2>
+  <p>El polvo y la calima (arena del Sáhara) reducen la producción. Basta con aclarar las placas dos o tres veces al año, mejor a primera hora o al atardecer y sin productos agresivos. Revise también una vez al año el inversor y las conexiones. Si no está en la casa, podemos incluirlo en la <a href="/es/gestion-de-llaves/">gestión de llaves</a> o el <a href="/es/mantenimiento/">mantenimiento</a>.</p>
+  <p>Las placas combinan muy bien con el <a href="/es/guias/instalacion-aire-acondicionado/">aire acondicionado y la aerotermia</a>: enfrían justo cuando más sol hay. Y mejoran la letra de su <a href="/es/guias/certificado-energetico/">certificado energético</a>.</p>
+</Guide>

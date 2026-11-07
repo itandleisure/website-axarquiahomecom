@@ -2,14 +2,21 @@
 //
 // Elke dienst krijgt in stap 4 alleen de vragen die erbij horen: geen budget bij
 // sleutelbeheer, geen "wanneer beginnen" bij een keuring, enzovoort.
-// Teksten staan per vraag naast elkaar in de volgorde nl, en, de, sv.
+// Teksten staan per vraag naast elkaar in de volgorde nl, en, de, sv (Spaans staat in keuzehulp-es.ts).
 // De waarde die naar het bouwbedrijf gaat is altijd de Nederlandse tekst, zodat
 // de sheet en de mail voor hen leesbaar blijven, in welke taal de klant ook invult.
 
 import type { Lang } from '../i18n';
 
 export type Tx = Record<Lang, string>;
-const tx = (nl: string, en: string, de: string, sv: string): Tx => ({ nl, en, de, sv });
+import { keuzehulpEs } from './keuzehulp-es';
+/** Spaans komt uit keuzehulp-es.ts, op de Engelse tekst. */
+const es = (en: string) => {
+  const t = keuzehulpEs[en];
+  if (!t) throw new Error(`Spaanse vertaling ontbreekt in keuzehulp-es.ts voor: ${en}`);
+  return t;
+};
+const tx = (nl: string, en: string, de: string, sv: string): Tx => ({ nl, en, de, sv, es: es(en) });
 
 export type Dienst =
   | 'renovatie'

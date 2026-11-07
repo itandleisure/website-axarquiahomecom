@@ -1,0 +1,112 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Steps from '../../components/Steps.astro';
+import Services from '../../components/Services.astro';
+import { site } from '../../data/site';
+
+const onderwerp = 'Quiero ayuda con el camino de acceso a mi finca (reparación, drenaje u hormigonado).';
+const request = '/es/solicitud/?dienst=onderhoud&onderwerp=' + encodeURIComponent(onderwerp);
+
+const faq = [
+  {
+    q: '¿Cuánto cuesta arreglar un camino de acceso?',
+    a: 'Depende mucho de la longitud, la pendiente, de si llegan bien la maquinaria y la hormigonera y de cuánto drenaje haga falta. Por eso no damos un precio fijo. Con unas fotos y la ubicación le damos enseguida una primera estimación y, tras una visita, una propuesta por tramos.',
+  },
+  {
+    q: 'El camino es del ayuntamiento o de varios vecinos. ¿Pueden ayudar igualmente?',
+    a: 'Sí. Hacemos una sola propuesta para todo el camino, dividida en tramos, que puede compartir con sus vecinos o con el ayuntamiento. Todos ven qué se va a hacer y los costes se pueden repartir de forma justa. En un camino público pedimos antes permiso al ayuntamiento.',
+  },
+  {
+    q: '¿Tengo que estar presente?',
+    a: 'No. Trabajamos con fotos antes, durante y después. Usted aprueba la propuesta y nosotros la ejecutamos, aunque esté fuera.',
+  },
+  {
+    q: '¿Hace falta licencia?',
+    a: 'Para el mantenimiento normal, por lo general no. Para hormigonar, ensanchar, abrir un camino nuevo, trabajar en un camino público o cerca de un arroyo, muchas veces sí. Comprobamos antes qué hace falta y tramitamos la solicitud.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Reparación, hormigonado y mantenimiento de caminos de acceso a fincas',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['es', 'en', 'nl'],
+};
+---
+<Base
+  title="Arreglo de caminos de acceso a fincas en la Axarquía"
+  description="¿Baches, cárcavas o un camino demasiado empinado para el coche? Reparamos, hormigonamos y mantenemos el camino de acceso a su finca, con buen drenaje."
+  path="/es/camino-de-acceso/"
+  lang="es"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="es" items={[{ name: 'Camino de acceso', href: '/es/camino-de-acceso/' }]} />
+  <Hero
+    lang="es"
+    eyebrow="Camino de acceso y entrada"
+    title="Un camino a su finca <em>que sirva todo el año</em>"
+    lead="Después de la lluvia el carril vuelve a estar lleno de cárcavas, o el coche no sube la cuesta. Reparamos el camino, resolvemos el drenaje y lo mantenemos en buen estado, también cuando usted no está."
+    cta="Ayuda con su camino"
+    ctaHref={request}
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h2 class="h3">Reparación tras las lluvias</h2>
+          <p>Cárcavas, baches y tramos arrastrados rellenados y compactados con zahorra, para que el camino vuelva a ser transitable.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Drenaje</h2>
+          <p>Cunetas, badenes, pasos de agua bajo el camino y una salida protegida. Así el agua no corre por el camino y la reparación dura.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Hormigonado</h2>
+          <p>Rampas, curvas y tramos que se lavan una y otra vez, hormigonados con malla y acabado rugoso para que el coche agarre.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Bordes y taludes</h2>
+          <p>Un borde que cede o un talud que se desmorona, asegurado con un muro de contención o una escollera.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Mantenimiento periódico</h2>
+          <p>Limpieza de cunetas y pasos de agua cada otoño, revisión tras un temporal y desbroce en primavera. Fácil de combinar con la <a href="/es/gestion-de-llaves/">gestión de llaves</a>.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Vecinos, ayuntamiento y licencias</h2>
+          <p>Una propuesta que puede compartir con sus vecinos o el ayuntamiento, y averiguamos qué permiso hace falta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="es"
+    title="Cómo lo hacemos"
+    steps={[
+      { t: 'Usted envía fotos', d: 'Unas fotos del camino, de los puntos donde falla y la ubicación. Con eso ya podemos empezar a pensar.' },
+      { t: 'Vamos a verlo', d: 'Recorremos el camino y vemos de dónde viene el agua, qué pendiente tiene y si llega la hormigonera.' },
+      { t: 'Propuesta por tramos', d: 'Recibe una propuesta dividida en tramos para compartir con los vecinos. Comprobamos si hace falta licencia.' },
+      { t: 'Obra y mantenimiento', d: 'Hacemos el trabajo y le enviamos fotos. Después, si quiere, mantenemos el camino en buen estado.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Primero el agua, después el camino</h2>
+      <p>Casi todos los daños de un camino los causa el agua. Si solo se rellenan los baches, con la siguiente tormenta la grava acaba al final de la cuesta. Por eso miramos siempre primero el drenaje y después el firme.</p>
+      <p>¿Va a comprar una finca? Incluya el camino de acceso en la <a href="/es/inspeccion-de-vivienda/">inspección antes de comprar</a>.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="es" />
+  <Cta lang="es" dienst="onderhoud" onderwerp={onderwerp} title="Le ayudamos a conseguirlo" text="Díganos dónde le da problemas el camino a su finca. Con unas fotos le aconsejamos enseguida sobre reparación, drenaje u hormigonado." />
+  <Services lang="es" title="También le puede interesar" />
+</Base>

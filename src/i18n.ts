@@ -3,33 +3,41 @@ import { guidesBy, guideHref, guideAt } from './data/guides';
 import { places, placeHref, type PlacePage } from './data/places';
 import { placeContent } from './data/place-content';
 import { hasMunicipalPages } from './data/place-tabs';
-export type Lang = 'nl' | 'en' | 'de' | 'sv';
-export const langs: Lang[] = ['nl', 'en', 'de', 'sv'];
-export const langNames: Record<Lang, string> = { nl: 'Nederlands', en: 'English', de: 'Deutsch', sv: 'Svenska' };
+import { topicAlternates, type TopicKind } from './data/topics';
+export type Lang = 'nl' | 'en' | 'de' | 'sv' | 'es';
+export const langs: Lang[] = ['nl', 'en', 'de', 'sv', 'es'];
+export const langNames: Record<Lang, string> = { nl: 'Nederlands', en: 'English', de: 'Deutsch', sv: 'Svenska', es: 'Español' };
 
 /** Elke pagina met haar vertalingen. Gebruikt voor hreflang en de taalwissel. */
 export const routes: Partial<Record<Lang, string>>[] = [
-  { nl: '/nl/', en: '/en/', de: '/de/', sv: '/sv/' },
-  { nl: '/nl/renovatie/', en: '/en/renovation/', de: '/de/renovierung/', sv: '/sv/renovering/' },
-  { nl: '/nl/sleutelbeheer/', en: '/en/key-holding/', de: '/de/hausbetreuung/', sv: '/sv/tillsyn/' },
-  { nl: '/nl/aankoopkeuring/', en: '/en/property-survey/', de: '/de/immobiliengutachten/', sv: '/sv/besiktning/' },
-  { nl: '/nl/zwembad/', en: '/en/swimming-pool/', de: '/de/pool/', sv: '/sv/pool/' },
-  { nl: '/nl/onderhoud/', en: '/en/maintenance/', de: '/de/instandhaltung/', sv: '/sv/underhall/' },
-  { nl: '/nl/projecten/', en: '/en/projects/', de: '/de/projekte/', sv: '/sv/projekt/' },
-  { nl: '/nl/over-ons/', en: '/en/about-us/', de: '/de/ueber-uns/', sv: '/sv/om-oss/' },
-  { nl: '/nl/aanvraag/', en: '/en/request/', de: '/de/anfrage/', sv: '/sv/forfragan/' },
-  { nl: '/nl/privacy/', en: '/en/privacy/', de: '/de/datenschutz/', sv: '/sv/integritet/' },
-  { nl: '/nl/bedankt/', en: '/en/thank-you/', de: '/de/danke/', sv: '/sv/tack/' },
-  { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/', sv: '/sv/guider/' },
+  { nl: '/nl/', en: '/en/', de: '/de/', sv: '/sv/', es: '/es/' },
+  { nl: '/nl/renovatie/', en: '/en/renovation/', de: '/de/renovierung/', sv: '/sv/renovering/', es: '/es/reformas/' },
+  { nl: '/nl/sleutelbeheer/', en: '/en/key-holding/', de: '/de/hausbetreuung/', sv: '/sv/tillsyn/', es: '/es/gestion-de-llaves/' },
+  { nl: '/nl/aankoopkeuring/', en: '/en/property-survey/', de: '/de/immobiliengutachten/', sv: '/sv/besiktning/', es: '/es/inspeccion-de-vivienda/' },
+  { nl: '/nl/zwembad/', en: '/en/swimming-pool/', de: '/de/pool/', sv: '/sv/pool/', es: '/es/piscinas/' },
+  { nl: '/nl/onderhoud/', en: '/en/maintenance/', de: '/de/instandhaltung/', sv: '/sv/underhall/', es: '/es/mantenimiento/' },
+  { nl: '/nl/projecten/', en: '/en/projects/', de: '/de/projekte/', sv: '/sv/projekt/', es: '/es/proyectos/' },
+  { nl: '/nl/over-ons/', en: '/en/about-us/', de: '/de/ueber-uns/', sv: '/sv/om-oss/', es: '/es/sobre-nosotros/' },
+  { nl: '/nl/aanvraag/', en: '/en/request/', de: '/de/anfrage/', sv: '/sv/forfragan/', es: '/es/solicitud/' },
+  { nl: '/nl/privacy/', en: '/en/privacy/', de: '/de/datenschutz/', sv: '/sv/integritet/', es: '/es/privacidad/' },
+  { nl: '/nl/bedankt/', en: '/en/thank-you/', de: '/de/danke/', sv: '/sv/tack/', es: '/es/gracias/' },
+  { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/', sv: '/sv/guider/', es: '/es/guias/' },
   { nl: '/nl/plaatsen/', en: '/en/places/', de: '/de/orte/', sv: '/sv/orter/' },
   { nl: '/nl/zien-en-doen/', en: '/en/things-to-do/', de: '/de/sehenswuerdigkeiten/', sv: '/sv/se-och-gora/' },
-  { nl: '/nl/contact/', en: '/en/contact/', de: '/de/kontakt/', sv: '/sv/kontakt/' },
-  { nl: '/nl/toegangsweg/', en: '/en/access-road/', de: '/de/zufahrtsweg/', sv: '/sv/tillfartsvag/' },
-  { nl: '/nl/verhuurbeheer/', en: '/en/holiday-rental-management/', de: '/de/vermietungsservice/', sv: '/sv/uthyrningsservice/' },
+  { nl: '/nl/contact/', en: '/en/contact/', de: '/de/kontakt/', sv: '/sv/kontakt/', es: '/es/contacto/' },
+  { nl: '/nl/toegangsweg/', en: '/en/access-road/', de: '/de/zufahrtsweg/', sv: '/sv/tillfartsvag/', es: '/es/camino-de-acceso/' },
+  { nl: '/nl/verhuurbeheer/', en: '/en/holiday-rental-management/', de: '/de/vermietungsservice/', sv: '/sv/uthyrningsservice/', es: '/es/gestion-alquiler-vacacional/' },
   // Gidsen staan in alle talen in dezelfde volgorde (zie src/data/guides.ts)
   ...guidesBy.nl.map((_, i) =>
     Object.fromEntries(langs.filter((l) => guideAt(l, i)).map((l) => [l, guideHref(l, guideAt(l, i)!)])),
   ),
+  // Spaanse gidsen die de vertaling zijn van een kostenpagina (of: 'costs:<key>')
+  ...guidesBy.es
+    .filter((g) => g.of?.includes(':'))
+    .map((g) => {
+      const [kind, key] = g.of!.split(':') as [TopicKind, string];
+      return { ...topicAlternates(kind, key), es: guideHref('es', g) } as Partial<Record<Lang, string>>;
+    }),
   // Plaatsen (pagina's bestaan alleen voor plaatsen met built: true)
   ...places
     .filter((p) => p.built)
@@ -130,6 +138,20 @@ export const nav: Record<Lang, NavItem[]> = {
     { href: '/sv/guider/', label: 'Guider' },
     { href: '/sv/om-oss/', label: 'Om oss' },
   ],
+  es: [
+    { href: '/es/#servicios', label: 'Servicios', children: [
+      { href: '/es/reformas/', label: 'Reformas' },
+      { href: '/es/gestion-de-llaves/', label: 'Gestión de llaves' },
+      { href: '/es/gestion-alquiler-vacacional/', label: 'Alquiler vacacional' },
+      { href: '/es/inspeccion-de-vivienda/', label: 'Inspección de vivienda' },
+      { href: '/es/piscinas/', label: 'Piscinas' },
+      { href: '/es/mantenimiento/', label: 'Mantenimiento' },
+      { href: '/es/camino-de-acceso/', label: 'Camino de acceso' },
+    ] },
+    { href: '/es/guias/', label: 'Guías' },
+    { href: '/es/sobre-nosotros/', label: 'Sobre nosotros' },
+    { href: '/es/contacto/', label: 'Contacto' },
+  ],
 };
 
 export const services: Record<Lang, { href: string; title: string; text: string }[]> = {
@@ -164,6 +186,14 @@ export const services: Record<Lang, { href: string; title: string; text: string 
     { href: '/sv/pool/', title: 'Poolbygge och poolskötsel', text: 'En ny pool, en gammal som ska fungera igen eller regelbunden skötsel medan du är borta.' },
     { href: '/sv/underhall/', title: 'Underhåll och reparationer', text: 'Tak, läckor, terrasser, tomt och trädgård. Även när du inte är i Spanien.' },
     { href: '/sv/uthyrningsservice/', title: 'Uthyrningsservice', text: 'Du hyr ut till semestergäster, vi sköter gästbytena på plats: städning, linne, nycklar och reparationer.' },
+  ],
+  es: [
+    { href: '/es/reformas/', title: 'Reformas integrales y parciales', text: 'Desde una casa de pueblo antigua hasta un cortijo que hay que rehacer por completo. Un solo equipo y una sola persona de contacto.' },
+    { href: '/es/gestion-de-llaves/', title: 'Gestión de llaves y vigilancia', text: 'Cuidamos de su casa cuando usted no está. Visitas periódicas, informes con fotos y actuación rápida si hay un problema.' },
+    { href: '/es/inspeccion-de-vivienda/', title: 'Inspección antes de comprar', text: 'Revise la vivienda antes de firmar. Sabrá lo que compra y cuánto costará ponerla al día.' },
+    { href: '/es/piscinas/', title: 'Construcción y mantenimiento de piscinas', text: 'Una piscina nueva, una antigua que vuelva a funcionar o el mantenimiento periódico mientras está fuera.' },
+    { href: '/es/mantenimiento/', title: 'Mantenimiento y reparaciones', text: 'Tejados, goteras, terrazas, parcela y jardín. También cuando usted no está en la Axarquía.' },
+    { href: '/es/gestion-alquiler-vacacional/', title: 'Gestión de alquiler vacacional', text: 'Usted alquila a turistas y nosotros nos encargamos de los cambios de huéspedes: limpieza, ropa de cama, llaves y reparaciones.' },
   ],
 };
 
@@ -283,5 +313,34 @@ export const ui = {
     guide: 'Guide', minRead: 'minuters läsning', updated: 'Uppdaterad', inGuide: 'I den här guiden', askAdvice: 'Be om råd',
     readAlso: 'Läs också', readGuide: 'Läs guiden', guidesCrumb: 'Guider', dateLocale: 'sv-SE',
     langLabel: 'Språk', readIn: 'Läs sidan på',
+  },
+  es: {
+    skip: 'Ir al contenido',
+    toHome: 'a la página de inicio',
+    menuOpen: 'Abrir menú',
+    mainMenu: 'Menú principal',
+    cta: 'Presupuesto gratis',
+    ctaWizard: 'Empezar la solicitud',
+    ctaTitle: 'Cuéntenos qué tiene en mente',
+    ctaText: 'Responda a unas preguntas breves. En menos de 24 horas nos ponemos en contacto con usted, sin compromiso.',
+    faq: 'Preguntas frecuentes',
+    servicesTitle: 'Qué hacemos por usted',
+    more: 'Más sobre',
+    stepsTitle: 'Cómo funciona',
+    crumbs: 'Ruta de navegación',
+    tagline: 'El equipo para comprar, reformar y cuidar viviendas en la Axarquía, de Rincón de la Victoria a Nerja. Hablamos español, inglés y neerlandés.',
+    fServices: 'Servicios',
+    fContact: 'Contacto',
+    fAbout: 'Información',
+    fRequest: 'Pedir presupuesto',
+    fAboutUs: 'Sobre nosotros',
+    fProjects: 'Proyectos',
+    fGuides: 'Guías',
+    fPrivacy: 'Privacidad y aviso legal',
+    builtBy: (n: string) => `Trabajos realizados por ${n} en la Axarquía.`,
+    builtByDefault: 'nuestra empresa constructora colaboradora',
+    guide: 'Guía', minRead: 'min de lectura', updated: 'Actualizado el', inGuide: 'En esta guía', askAdvice: 'Pedir consejo',
+    readAlso: 'Lea también', readGuide: 'Leer la guía', guidesCrumb: 'Guías', dateLocale: 'es-ES',
+    langLabel: 'Idioma', readIn: 'Leer esta página en',
   },
 } as const;

@@ -1,0 +1,185 @@
+---
+import ArticlePhoto from '../../../components/ArticlePhoto.astro';
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort antwoord' },
+  { id: 'overzicht', label: 'Alle regelingen op een rij' },
+  { id: 'eu-regels', label: 'Moet uw huis in 2030 label D hebben?' },
+  { id: 'spanje', label: 'Wat Spanje met de EU-regels doet' },
+  { id: 'irpf', label: 'Belastingaftrek in de IRPF' },
+  { id: 'junta', label: 'Subsidie van de Junta de Andalucía' },
+  { id: 'next-generation', label: 'Next Generation: wat er nog loopt' },
+  { id: 'gemeente', label: 'Korting op IBI en ICIO' },
+  { id: 'cae', label: 'Energiebesparing verkopen (CAE)' },
+  { id: 'stappen', label: 'Zo pakt u het aan' },
+  { id: 'bronnen', label: 'Bronnen en peildatum' },
+];
+
+const faq = [
+  {
+    q: 'Moet mijn huis in Spanje in 2030 minimaal energielabel D of E hebben?',
+    a: 'Nee. Dat stond in eerdere voorstellen van de Europese Commissie (2021) en het Europees Parlement (2023), maar het is niet in de definitieve richtlijn gekomen. De Europese gebouwenrichtlijn van 2024 verplicht landen om het gemiddelde energieverbruik van alle woningen samen te verlagen: minstens 16% in 2030 en 20 tot 22% in 2035, ten opzichte van 2020. Hoe Spanje dat doet, is nog niet bekend. Een verplicht minimumlabel voor uw eigen woning is in november 2026 niet aangekondigd.',
+  },
+  {
+    q: 'Krijg ik als niet-inwoner subsidie voor mijn vakantiehuis in Spanje?',
+    a: 'De belastingaftrek in de IRPF geldt alleen voor fiscaal inwoners van Spanje, en alleen voor de eigen hoofdwoning of een woning die u verhuurt. De subsidie van de Junta de Andalucía en de korting op de IBI zijn niet aan inwonerschap gebonden: daar telt dat u eigenaar bent en dat de woning legaal is. Lees wel de voorwaarden van de oproep, want die kunnen per ronde verschillen.',
+  },
+  {
+    q: 'Moet ik subsidie aanvragen voordat het werk begint?',
+    a: 'Meestal wel. Bij de huidige Andalusische regeling mogen particulieren ook aanvragen voor werk dat na 1 mei 2025 is begonnen, maar bedrijven moeten vooraf aanvragen. Voor de IRPF-aftrek heeft u een energielabel van vóór het werk nodig. Laat dus altijd eerst een label maken en kijk dan welke regeling openstaat, voordat u opdracht geeft.',
+  },
+  {
+    q: 'Kan ik subsidie en belastingaftrek combineren?',
+    a: 'Ja, maar niet over hetzelfde geld. Krijgt u subsidie, dan gaat dat bedrag af van wat u in de IRPF mag aftrekken. Een korting op de IBI en de verkoop van energiebesparing (CAE) kunt u er meestal wel naast gebruiken. Vraag uw gestor om het voor uw situatie door te rekenen.',
+  },
+  {
+    q: 'Waarom zou ik verduurzamen als er geen plicht is?',
+    a: 'Omdat het in de Axarquía snel loont: een geïsoleerd dak en goede ramen maken het huis ’s zomers koeler en ’s winters warmer, een warmtepomp en zonnepanelen verlagen de stroomrekening, en een beter energielabel helpt bij verkoop en verhuur. Ook kopers kijken steeds vaker naar het label.',
+  },
+];
+---
+<Guide slug="subsidie-verduurzamen-spanje" toc={toc} faq={faq} dienst="renovatie" onderwerp="Verduurzamen met subsidie" ctaTitle="Uw huis verduurzamen en de subsidie goed regelen?" ctaText="Wij kijken wat uw huis het meeste oplevert, van dakisolatie tot zonnepanelen, en zorgen voor offertes en een energielabel vóór en na het werk.">
+  <h2 id="kort">Kort antwoord</h2>
+  <p>Ja, ook in 2026 kunt u in de Axarquía voordeel krijgen als u uw huis verduurzaamt. De belangrijkste regelingen zijn een <strong>belastingaftrek van 20 tot 60%</strong> in de Spaanse inkomstenbelasting (IRPF), een <strong>subsidie van 50 tot 65%</strong> van de Junta de Andalucía, <strong>korting op de onroerendgoedbelasting</strong> (IBI) in sommige gemeenten en de verkoop van uw energiebesparing via <strong>CAE-certificaten</strong>. Bijna elke regeling vraagt een energielabel vóór en na het werk.</p>
+  <p>En de regels? Een <strong>verplicht minimumlabel</strong> voor uw woning, zoals “label D in 2030”, <strong>komt er volgens de Europese richtlijn niet</strong>. Dat stond in eerdere voorstellen, maar is geschrapt. Spanje moet wel het gemiddelde verbruik van alle woningen omlaag brengen, en hoe het dat doet is nog niet bekend.</p>
+
+  <h2 id="overzicht">Alle regelingen op een rij</h2>
+  <table class="prices">
+    <thead><tr><th>Regeling</th><th>Wat u krijgt</th><th>Voor wie</th><th>Stand november 2026</th></tr></thead>
+    <tbody>
+      <tr><td>IRPF-aftrek woning</td><td>20% of 40% van de kosten, max. € 5.000 of € 7.500 aftrekbaar bedrag</td><td>Fiscaal inwoners; hoofdwoning of verhuurde woning</td><td>Werk klaar en label vóór 1 januari 2027</td></tr>
+      <tr><td>IRPF-aftrek gebouw</td><td>60%, max. € 15.000 per woning over meerdere jaren</td><td>Fiscaal inwoners met een appartement in een woongebouw</td><td>Werk klaar en label vóór 1 januari 2028</td></tr>
+      <tr><td>Junta de Andalucía (Agencia Andaluza de la Energía)</td><td>50 tot 65% subsidie; zonnepanelen met batterij 55 tot 65%</td><td>Eigenaren, VvE’s, bedrijven</td><td>Open sinds 22 oktober 2026; op 29 oktober deels gesloten omdat het geld op was</td></tr>
+      <tr><td>Next Generation (Europees herstelfonds)</td><td>40% per woning, tot 80% voor hele gebouwen</td><td>Eigenaren en VvE’s</td><td>Voor losse woningen gesloten (werk moest klaar zijn op 30 juni 2026)</td></tr>
+      <tr><td>IBI-korting gemeente</td><td>Bijv. Vélez-Málaga 50% gedurende 3 jaar</td><td>Eigenaren met zonnepanelen</td><td>Verschilt per gemeente</td></tr>
+      <tr><td>CAE-certificaten</td><td>Eenmalig bedrag of korting, vaak enkele honderden tot een paar duizend euro</td><td>Iedereen die energie bespaart</td><td>Loopt, bedrag hangt af van de besparing</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Bedragen en termijnen veranderen vaak. Hieronder leest u per regeling de voorwaarden en wat nog onzeker is.</p>
+
+  <h2 id="eu-regels">Moet uw huis in 2030 label D hebben?</h2>
+  <p>Dat hoort u vaak, maar het klopt niet. Het verhaal komt uit de onderhandelingen over de nieuwe Europese gebouwenrichtlijn (<em>Energy Performance of Buildings Directive</em>, EPBD):</p>
+  <ul>
+    <li>De <strong>Europese Commissie</strong> stelde in december 2021 voor dat de slechtste woningen in elk land in 2030 minstens label F en in 2033 label E moesten halen.</li>
+    <li>Het <strong>Europees Parlement</strong> wilde in maart 2023 nog verder gaan: alle woningen <strong>minstens label E in 2030 en label D in 2033</strong>. Dat is waarschijnlijk wat u gehoord heeft.</li>
+    <li>In het <strong>definitieve akkoord</strong> van december 2023 is dat geschrapt. De richtlijn die in 2024 van kracht werd (richtlijn 2024/1275) bevat <strong>geen minimumlabel per woning</strong>.</li>
+  </ul>
+  <p>Wat er wél in de richtlijn staat:</p>
+  <ul>
+    <li><strong>Woningen samen zuiniger.</strong> Het gemiddelde energieverbruik van alle woningen in een land moet minstens <strong>16% lager in 2030</strong> en <strong>20 tot 22% lager in 2035</strong> zijn dan in 2020. Minstens 55% van die daling moet komen van de 43% slechtste woningen. Het land kiest zelf hoe: met subsidies, voorlichting of eigen regels.</li>
+    <li><strong>Kantoren, winkels en andere niet-woningen</strong> krijgen wel een harde ondergrens: de slechtste 16% moet in 2030 en de slechtste 26% in 2033 zijn verbeterd. Dit is de “2030 en 2033” die vaak met woningen wordt verward.</li>
+    <li><strong>Nieuwbouw</strong> moet emissievrij zijn: overheidsgebouwen vanaf 2028, alle nieuwe gebouwen vanaf 2030.</li>
+    <li><strong>Losse cv-ketels op gas of olie</strong> krijgen sinds 1 januari 2025 geen subsidie meer, en landen moeten zulke ketels uiterlijk in 2040 uitfaseren.</li>
+    <li><strong>Het energielabel</strong> krijgt in de hele EU dezelfde schaal van A tot G, waarbij A staat voor een emissievrij gebouw.</li>
+  </ul>
+  <p class="note">Wel kan Spanje zelf strengere regels invoeren om de doelen te halen, bijvoorbeeld voor huurwoningen. Daar is in november 2026 nog niets over besloten.</p>
+
+  <h2 id="spanje">Wat Spanje met de EU-regels doet</h2>
+  <p>Spanje moest de richtlijn uiterlijk <strong>29 mei 2026</strong> in eigen wetgeving omzetten. Dat is nog niet volledig gebeurd. In juli 2026 stuurde de Europese Commissie alle 27 lidstaten, ook Spanje, een eerste waarschuwing omdat de omzetting niet compleet was. De Spaanse uitwerking moet komen via het <strong>nationale renovatieplan</strong> (<em>Plan Nacional de Renovación de Edificios</em>), dat eind 2026 klaar moet zijn, en via de bouwregels (<em>Código Técnico de la Edificación</em>).</p>
+  <p>Wat nu al geldt in Spanje:</p>
+  <ul>
+    <li>Bij <strong>verkoop en verhuur</strong>, ook vakantieverhuur, is een energielabel (<em>certificado de eficiencia energética</em>) verplicht. Het label moet in de advertentie staan en is tien jaar geldig.</li>
+    <li>Een <strong>verbouwing</strong> moet voldoen aan de bouwregels. Vervangt u het dak of de ramen, dan gelden voor dat deel de huidige isolatie-eisen.</li>
+    <li>Er is <strong>geen plicht</strong> om een bestaand huis te verbeteren als u niets verbouwt.</li>
+  </ul>
+  <p>Ons advies: wacht niet op regels. Een beter label maakt uw huis nu al comfortabeler en goedkoper in gebruik, en de subsidies van dit moment zijn vaak ruimer dan wat er later komt.</p>
+
+  <h2 id="irpf">Belastingaftrek in de IRPF</h2>
+  <p>Bent u <strong>fiscaal inwoner van Spanje</strong>, dan kunt u een deel van de kosten aftrekken van de Spaanse inkomstenbelasting. De regeling is verlengd met Real Decreto-ley 7/2026, dat het Congres op 26 maart 2026 bekrachtigde. Een eerdere verlenging (RDL 2/2026) was in maart vervallen; daardoor was het een paar weken onzeker.</p>
+  <table class="prices">
+    <thead><tr><th>Aftrek</th><th>Voorwaarde</th><th>Maximaal aftrekbaar bedrag</th><th>Deadline</th></tr></thead>
+    <tbody>
+      <tr><td>20%</td><td>Vraag naar verwarming en koeling minstens 7% lager</td><td>€ 5.000 per jaar</td><td>Werk en nieuw label vóór 1 januari 2027</td></tr>
+      <tr><td>40%</td><td>Verbruik van niet-hernieuwbare energie minstens 30% lager, of label A of B</td><td>€ 7.500 per jaar</td><td>Werk en nieuw label vóór 1 januari 2027</td></tr>
+      <tr><td>60%</td><td>Heel het woongebouw (VvE) 30% zuiniger of label A of B</td><td>€ 5.000 per jaar, tot € 15.000 in totaal</td><td>Werk en nieuw label vóór 1 januari 2028</td></tr>
+    </tbody>
+  </table>
+  <p>Een voorbeeld: u laat voor € 15.000 het dak isoleren, ramen vervangen en een warmtepomp plaatsen, en het label gaat van E naar B. Met 40% aftrek op maximaal € 7.500 krijgt u <strong>€ 3.000</strong> terug via de aangifte.</p>
+  <h3>Waar u op moet letten</h3>
+  <ul>
+    <li><strong>Alleen hoofdwoning of verhuur.</strong> De 20% en 40% gelden voor uw eigen hoofdwoning en voor een woning die u verhuurt (of uiterlijk 31 december 2027 gaat verhuren). Een tweede huis dat u zelf gebruikt, telt niet mee.</li>
+    <li><strong>Niet-inwoners</strong> betalen geen IRPF maar belasting voor niet-inwoners, en hebben geen recht op deze aftrek.</li>
+    <li><strong>Energielabel vóór én na.</strong> Het label van vóór het werk mag niet ouder zijn dan twee jaar bij de start. Zonder twee labels geen aftrek.</li>
+    <li><strong>Niet contant betalen.</strong> Betaal per bank of kaart en bewaar alle facturen. Cash betalingen tellen niet mee.</li>
+    <li><strong>Subsidie gaat eraf.</strong> Krijgt u ook subsidie, dan trekt u alleen het deel af dat u zelf betaalt.</li>
+  </ul>
+  <p class="note">Voor 2026 is dit de laatste kans voor losse woningen, tenzij de regering de regeling opnieuw verlengt. Dat is al vaker gebeurd, maar reken er niet op.</p>
+
+  <h2 id="junta">Subsidie van de Junta de Andalucía</h2>
+  <ArticlePhoto name="isolatie-glaswol-close-up" lang="nl" />
+  <p>De <strong>Agencia Andaluza de la Energía</strong> opende op <strong>22 oktober 2026</strong> een nieuwe ronde subsidie voor energiebesparing in woningen, betaald met Europees regionaal geld (FEDER). Er is in totaal € 20,8 miljoen beschikbaar voor heel Andalusië, inclusief overheidsgebouwen. Aanvragen kan tot 30 september 2027 of tot het geld op is, in volgorde van binnenkomst.</p>
+  <h3>Wat telt mee</h3>
+  <ul>
+    <li><strong>Isolatie</strong> van dak, muren en vloer, en <strong>nieuwe ramen</strong> (de “schil” van het huis).</li>
+    <li>Nieuwe <strong>verwarming, koeling en warm water</strong>, zoals een warmtepomp (<em>aerotermia</em>), en zuinige verlichting.</li>
+    <li><strong>Zonnepanelen</strong> voor eigen gebruik, maar alleen <strong>met een thuisbatterij</strong>. De batterij mag maximaal 5 kWh per kW panelen zijn.</li>
+  </ul>
+  <h3>Hoeveel</h3>
+  <ul>
+    <li>Energiebesparing: <strong>50%</strong> voor particulieren, tot <strong>65%</strong> met extra’s zoals hernieuwbare energie.</li>
+    <li>Zonnepanelen met batterij: <strong>55%</strong>, met extra’s tot <strong>65%</strong> (bijvoorbeeld in kleine dorpen die leeglopen, of bij een energiecoöperatie).</li>
+    <li>Let op het <strong>minimum</strong>: de subsidie moet minstens € 10.000 zijn bij energiebesparing en € 6.000 bij zonnepanelen. Dat betekent in de praktijk een project van ongeveer <strong>€ 20.000</strong> of meer voor isolatie en installaties, en zo’n <strong>€ 11.000</strong> of meer voor panelen met batterij. Kleine klussen vallen erbuiten.</li>
+  </ul>
+  <h3>Voorwaarden</h3>
+  <ul>
+    <li>Het label moet <strong>minstens één letter beter</strong> worden, en het verbruik en de CO₂-uitstoot moeten dalen.</li>
+    <li>Particulieren mogen aanvragen voor werk dat is begonnen <strong>na 1 mei 2025</strong>. Bedrijven moeten vóór de start aanvragen.</li>
+    <li>De aanvraag gaat digitaal via het portaal van de Agencia Andaluza de la Energía. Meestal doet de installateur of aannemer dit voor u als <em>entidad colaboradora</em>.</li>
+  </ul>
+  <p><strong>Belangrijk:</strong> op <strong>29 oktober 2026</strong>, één week na de opening, schortte de Junta een groot deel van de regeling op omdat het geld voor die onderdelen al op was (ruim € 11 miljoen). Het besluit noemt alleen begrotingsposten, niet welke soorten werk. Het is dus <strong>onzeker of particulieren op dit moment nog kunnen aanvragen</strong>. De Junta kan het budget aanvullen en de regeling heropenen; dat gebeurde in eerdere jaren vaker. Laat uw aannemer vlak voor de aanvraag in het portaal kijken wat er openstaat.</p>
+
+  <h2 id="next-generation">Next Generation: wat er nog loopt</h2>
+  <p>Tussen 2021 en 2026 kwamen de grootste subsidies uit het <strong>Europese herstelfonds</strong> (Next Generation EU), in Spanje uitgevoerd via het <em>Plan de Recuperación</em> en in Andalusië via de Consejería de Fomento. Voor één woning kon u tot 40% krijgen, en voor complete gebouwen tot 80%.</p>
+  <ul>
+    <li>De regeling voor <strong>losse woningen is voorbij</strong>: het werk moest uiterlijk 30 juni 2026 klaar zijn.</li>
+    <li>Voor sommige lopende projecten op <strong>gebouwniveau</strong> heeft de Junta de termijn in mei 2026 verlengd, deels tot 2028. Dat geldt alleen voor projecten die al subsidie kregen.</li>
+    <li>De Junta verdeelde in juli 2026 nog € 38,7 miljoen over <strong>aanvragen die op de wachtlijst stonden</strong>. Nieuwe aanvragen zijn niet mogelijk.</li>
+  </ul>
+  <p class="note">Leest u online over “Next Generation-subsidie tot € 18.800”? Dat gaat over de afgelopen jaren. Voor nieuwe projecten in de Axarquía is die regeling dicht.</p>
+
+  <h2 id="gemeente">Korting op IBI en ICIO</h2>
+  <p>Gemeenten mogen korting geven op de onroerendgoedbelasting (<strong>IBI</strong>) en op de bouwleges (<strong>ICIO</strong>) als u zonnepanelen of een zonneboiler plaatst. Elke gemeente regelt dat in haar eigen belastingverordening (<em>ordenanza fiscal</em>), en die verandert elk jaar.</p>
+  <table class="prices">
+    <thead><tr><th>Gemeente</th><th>IBI-korting zonne-energie</th><th>Opmerking</th></tr></thead>
+    <tbody>
+      <tr><td>Vélez-Málaga (met Torre del Mar en Caleta de Vélez)</td><td>50%, maximaal 3 jaar</td><td>Per jaar maximaal 33% van de kosten van de installatie; aanvragen vóór 31 januari voor dat jaar</td></tr>
+      <tr><td>Rincón de la Victoria</td><td>15%, 3 jaar</td><td>Volgens overzicht van Fundación Renovables</td></tr>
+      <tr><td>Nerja, Torrox, Cómpeta, Frigiliana, Algarrobo en andere dorpen</td><td>Niet bevestigd</td><td>Vraag het na bij de gemeente of het Patronato de Recaudación Provincial</td></tr>
+    </tbody>
+  </table>
+  <p>Een korting op de ICIO (de belasting op de bouwkosten, vaak 2 tot 4%) bestaat in sommige gemeenten wel en in andere niet. Bij een installatie van € 8.000 scheelt die al snel een paar honderd euro. Vraag het na vóór de melding bij de gemeente, want achteraf aanvragen kan meestal niet.</p>
+  <p class="note">Het Patronato de Recaudación Provincial van Málaga int de IBI voor de meeste kleinere gemeenten in de Axarquía. Zie ook onze <a href="/nl/gidsen/belastingkalender-spanje/">belastingkalender</a>.</p>
+
+  <h2 id="cae">Energiebesparing verkopen (CAE)</h2>
+  <p>Sinds 2023 kent Spanje <strong>energiebesparingscertificaten</strong> (<em>Certificados de Ahorro Energético</em>, CAE). Energiebedrijven moeten jaarlijks een bepaalde hoeveelheid besparing inleveren en kopen die bij particulieren. Laat u bijvoorbeeld een <strong>warmtepomp</strong> plaatsen in plaats van een oude gas- of butaanketel, of <strong>isoleert</strong> u het dak, dan kunt u die besparing laten certificeren en verkopen.</p>
+  <ul>
+    <li>Het bedrag hangt af van de berekende besparing en het klimaat. In de warme Axarquía is de besparing op verwarming kleiner dan in het binnenland, dus het bedrag ook. Reken op enkele honderden tot een paar duizend euro.</li>
+    <li>U krijgt het als korting op de offerte of als bedrag achteraf, via een tussenpartij (<em>sujeto delegado</em>) of een energiebedrijf.</li>
+    <li>CAE kunt u meestal naast andere subsidies gebruiken. Vraag wel schriftelijk wat u krijgt en wanneer.</li>
+    <li>Pas op voor reclame met “gratis isolatie”: de CAE dekt zelden de hele rekening.</li>
+  </ul>
+
+  <h2 id="stappen">Zo pakt u het aan</h2>
+  <ol>
+    <li><strong>Laat een energielabel maken</strong> van de huidige situatie. Dat kost meestal € 100 tot € 250 en is het startpunt voor elke regeling.</li>
+    <li><strong>Bepaal uw situatie</strong>: bent u fiscaal inwoner, is het uw hoofdwoning of verhuurt u? Is de woning legaal? Bij een huis zonder papieren of met een <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO</a> zijn de mogelijkheden kleiner.</li>
+    <li><strong>Kies de maatregelen</strong> die het meeste opleveren. In de Axarquía is dat meestal eerst het <a href="/nl/gidsen/huis-isoleren-spanje/">dak isoleren</a> en <a href="/nl/kosten/ramen-en-kozijnen/">ramen vervangen</a>, daarna een <a href="/nl/kosten/airco-en-warmtepomp/">warmtepomp</a> en <a href="/nl/kosten/zonnepanelen/">zonnepanelen</a> met een <a href="/nl/kosten/thuisbatterij/">thuisbatterij</a>. Los eerst <a href="/nl/problemen/vocht-en-schimmel/">vocht en schimmel</a> op, anders isoleert u het probleem in.</li>
+    <li><strong>Vraag subsidie aan vóór de start</strong>, of controleer in elk geval dat de regeling werk achteraf toestaat. Bundel de klussen als u boven het minimum van de Junta wilt komen.</li>
+    <li><strong>Betaal per bank</strong> en bewaar alle facturen, met IVA.</li>
+    <li><strong>Laat na afloop een nieuw label maken</strong> en registreer het bij de Junta. Voor de IRPF-aftrek moet dat vóór 1 januari 2027.</li>
+    <li><strong>Vraag de IBI-korting aan</strong> bij de gemeente, vóór 31 januari van het jaar waarin u korting wilt.</li>
+  </ol>
+  <p><strong>Wilt u uw huis verduurzamen?</strong> Wij brengen in kaart wat uw huis het meeste oplevert, regelen de offertes en zorgen dat het werk past bij de voorwaarden van de subsidie. <a href="/nl/aanvraag/?dienst=renovatie&onderwerp=Verduurzamen%20met%20subsidie">Vertel ons wat u wilt aanpakken</a>.</p>
+
+  <h2 id="bronnen">Bronnen en peildatum</h2>
+  <ul>
+    <li>Europese gebouwenrichtlijn: <a href="https://eur-lex.europa.eu/eli/dir/2024/1275/oj" rel="noopener" target="_blank">Richtlijn (EU) 2024/1275</a>, artikelen 9 (woningen en niet-woningen), 17 (fossiele ketels) en 19 (energielabel). Eerdere voorstellen en het akkoord van december 2023: <a href="https://en.wikipedia.org/wiki/Energy_Performance_of_Buildings_Directive_2024" rel="noopener" target="_blank">overzicht op Wikipedia</a>, inclusief de ingebrekestelling van juli 2026, en het <a href="https://uipi.com/european-parliaments-plenary-vote-on-epbd/" rel="noopener" target="_blank">standpunt van het Europees Parlement van 14 maart 2023</a>.</li>
+    <li>IRPF-aftrek: Ley 35/2006, aanvullende bepaling 50; verlengd met Real Decreto-ley 7/2026, zie <a href="https://www.idealista.com/news/fiscalidad/2026/03/30/891068-prorrogadas-las-deducciones-fiscales-por-obras-de-mejora-energetica-de-viviendas-y-edificios" rel="noopener" target="_blank">idealista, 30 maart 2026</a>.</li>
+    <li>Junta de Andalucía: oproep van de Agencia Andaluza de la Energía van 21 september 2026 (BOJA 25 september 2026), samengevat door <a href="https://laadministracionaldia.inap.es/noticia.asp?id=1269624" rel="noopener" target="_blank">INAP</a>, <a href="https://www.construible.es/2026/09/29/convocatoria-ayudas-mejora-energetica-viviendas-edificios-publicos-andalucia" rel="noopener" target="_blank">Construible</a> en <a href="https://www.energias-renovables.com/autoconsumo/andaluc-a-abre-las-solicitudes-de-ayudas-20261022" rel="noopener" target="_blank">Energías Renovables</a>. Opschorting: <a href="https://www.juntadeandalucia.es/boja/2026/221002/1" rel="noopener" target="_blank">resolutie van 29 oktober 2026</a>.</li>
+    <li>Next Generation in Andalusië: <a href="https://www.juntadeandalucia.es/boja/2026/96/2" rel="noopener" target="_blank">Orden van 14 mei 2026</a> (verlenging termijnen) en de <a href="https://www.juntadeandalucia.es/organismos/viviendajuventudyordenaciondelterritorio/areas/vivienda-rehabilitacion/plan-eco-vivienda/paginas/plan-eco-convocatoriarehab.html" rel="noopener" target="_blank">pagina van de Junta over rehabilitación energética</a>.</li>
+    <li>IBI-korting: <a href="https://costasolarguide.com/es/bonificaciones-placas-solares/velez-malaga/" rel="noopener" target="_blank">Vélez-Málaga, ordenanza fiscal IBI artikel 12</a> (gecontroleerd juli 2026) en <a href="https://solar-master-malaga.com/blog/bonificacion-ibi-municipio-a-municipio/" rel="noopener" target="_blank">overzicht per gemeente</a> (op basis van Fundación Renovables).</li>
+    <li>CAE: <a href="https://www.ocu.org/vivienda-y-energia/gas-luz/noticias/medidas-certificados-ahorro-energetico" rel="noopener" target="_blank">OCU over energiebesparingscertificaten</a>.</li>
+  </ul>
+  <p class="note">Deze gids geeft algemene informatie voor de Axarquía, gecontroleerd op 6 november 2026. Subsidies gaan open en dicht en de Spaanse uitwerking van de Europese richtlijn volgt nog. Het is geen fiscaal advies; laat uw gestor uw eigen situatie doorrekenen.</p>
+</Guide>

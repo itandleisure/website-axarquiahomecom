@@ -9,7 +9,7 @@ Gebouwd met [Astro](https://astro.build) als statische site, gepubliceerd via Gi
 |---|---|
 | `src/data/site.ts` | Alle bedrijfsgegevens, prijzen, menu en de schakelaars `indexable` (Google) en `launchReady` (alles aangeleverd) |
 | `src/data/projects.ts`, `src/data/team.ts` | Projecten en teamleden |
-| `src/pages/nl/` | Nederlandse pagina's (later `en/` en `de/`) |
+| `src/pages/nl/`, `en/`, `de/`, `sv/`, `es/` | Pagina's per taal (Spaans: diensten en eigen gidsen, nog geen plaatspagina's) |
 | `src/pages/nl/aanvraag.astro` | De keuzehulp (formulier in 6 stappen) |
 | `src/layouts/Base.astro` | Basislayout met SEO, hreflang en gestructureerde gegevens |
 | `apps-script/` | Google Apps Script voor aanvragen naar Sheet en e-mail |

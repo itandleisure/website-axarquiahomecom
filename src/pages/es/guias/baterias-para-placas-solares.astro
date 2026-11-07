@@ -1,0 +1,97 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'precio', label: 'Precio de una batería para placas solares' },
+  { id: 'capacidad', label: '¿Qué capacidad necesito?' },
+  { id: 'compensa', label: '¿Cuándo compensa una batería?' },
+  { id: 'ejemplo', label: 'Ejemplo: con y sin batería' },
+  { id: 'apagon', label: 'Luz durante un apagón' },
+  { id: 'donde', label: 'Dónde colocar la batería' },
+  { id: 'ayudas', label: 'Ayudas para baterías' },
+];
+
+const faq = [
+  {
+    q: '¿Cuánto cuesta una batería para placas solares?',
+    a: 'Instalada en la Axarquía, una batería de 5 kWh cuesta unos 3.000 a 5.000 € y una de 10 kWh unos 5.500 a 9.000 €, sin IVA. Si sus placas tienen un inversor normal, a menudo hace falta además un inversor híbrido: 1.000 a 2.000 €.',
+  },
+  {
+    q: '¿Cuántos años dura una batería solar?',
+    a: 'Una batería de litio ferrofosfato (LiFePO4) aguanta 6.000 ciclos o más, unos 12 a 15 años de uso diario. Los fabricantes suelen dar 10 años de garantía.',
+  },
+  {
+    q: '¿Puedo añadir una batería a mis placas actuales?',
+    a: 'Sí. Con un inversor híbrido o un inversor de batería aparte se puede en casi cualquier instalación. A veces el inversor que ya tiene sirve.',
+  },
+  {
+    q: '¿Es mejor una batería física o una batería virtual?',
+    a: 'Depende de cuándo use la casa. Si vive en ella todo el año y consume por la noche, la batería física aprovecha mucho más su energía. Si solo está unas semanas al año, una batería virtual de su comercializadora es más barata y suele compensar más.',
+  },
+  {
+    q: '¿Es segura una batería en casa?',
+    a: 'El litio ferrofosfato es el tipo más seguro y el más usado. Hágala instalar por un instalador autorizado, con las protecciones correctas y en un lugar fresco y seco.',
+  },
+];
+---
+<Guide lang="es" slug="baterias-para-placas-solares" toc={toc} faq={faq} dienst="energie" onderwerp="Quiero precio de una batería para mis placas solares." ctaTitle="¿Una batería para sus placas?" ctaText="Envíenos una foto de su inversor o de su tejado y su última factura de la luz. Le aconsejamos la batería adecuada y le damos precio.">
+  <p>Los precios son orientativos para 2026 en la Axarquía, para baterías de litio ferrofosfato (LiFePO4), con instalación y conexión, sin IVA.</p>
+
+  <h2 id="precio">Precio de una batería para placas solares</h2>
+  <table class="prices">
+    <thead><tr><th>Batería</th><th>Para quién</th><th>Precio orientativo</th></tr></thead>
+    <tbody>
+      <tr><td>5 kWh</td><td>Piso o casa pequeña, consumo por la tarde y la noche</td><td>3.000 – 5.000 €</td></tr>
+      <tr><td>10 kWh</td><td>Vivienda familiar con aire acondicionado e inducción</td><td>5.500 – 9.000 €</td></tr>
+      <tr><td>15 kWh</td><td>Chalet o casa con aerotermia</td><td>8.000 – 12.000 €</td></tr>
+      <tr><td>Inversor híbrido adicional</td><td>Si ya tiene placas con un inversor normal</td><td>+ 1.000 – 2.000 €</td></tr>
+      <tr><td>Función de respaldo (backup)</td><td>Mantener la luz durante un corte de red</td><td>+ 300 – 800 €</td></tr>
+    </tbody>
+  </table>
+  <p>Instalar placas y batería a la vez sale más barato que añadir la batería después. Vea también el precio de las <a href="/es/guias/placas-solares/">placas solares</a>.</p>
+
+  <h2 id="capacidad">¿Qué capacidad necesito?</h2>
+  <p>Mire cuánto consume desde que se pone el sol hasta la mañana. Una casa con nevera, luces, televisión, router y una cena con inducción gasta por la noche unos 3 a 6 kWh. Con aire acondicionado en los dormitorios en verano, fácilmente 8 a 10 kWh. Como regla general:</p>
+  <ul>
+    <li><strong>5 kWh</strong> cubre el consumo nocturno de un piso o una casa pequeña.</li>
+    <li><strong>10 kWh</strong> es lo habitual en una vivienda familiar con aire acondicionado.</li>
+    <li><strong>15 kWh o más</strong> para un chalet con aerotermia, o un cortijo aislado de la red.</li>
+  </ul>
+  <p>Una batería demasiado grande no se llena en invierno y tarda más en amortizarse. La Junta, además, solo subvenciona hasta 5 kWh de batería por cada kW de placas.</p>
+
+  <h2 id="compensa">¿Cuándo compensa una batería?</h2>
+  <ul>
+    <li><strong>Vive en la casa todo el año o casi.</strong> Usa la energía almacenada cada noche y la batería se amortiza en unos 8 a 12 años.</li>
+    <li><strong>Quiere luz durante los apagones.</strong> Con respaldo siguen funcionando la nevera, las luces, internet, la alarma y la bomba de agua. En el campo, donde hay más cortes, es el motivo principal.</li>
+    <li><strong>Su cortijo no tiene conexión a la red.</strong> Entonces la batería no es una opción sino una necesidad.</li>
+    <li><strong>Solo va unas semanas al año.</strong> Entonces una batería física rara vez sale a cuenta. Una batería virtual de su comercializadora es más barata.</li>
+  </ul>
+
+  <h2 id="ejemplo">Ejemplo: con y sin batería</h2>
+  <p>Una casa en Torre del Mar habitada todo el año, con 5 kWp de placas y un consumo de 6.000 kWh al año.</p>
+  <table class="prices">
+    <thead><tr><th></th><th>Sin batería</th><th>Con batería de 10 kWh</th></tr></thead>
+    <tbody>
+      <tr><td>Energía solar consumida en casa</td><td>unos 2.700 kWh</td><td>unos 4.800 kWh</td></tr>
+      <tr><td>Ahorro en la factura (0,18 € por kWh)</td><td>unos 490 €</td><td>unos 860 €</td></tr>
+      <tr><td>Compensación de excedentes (0,06 € por kWh)</td><td>unos 320 €</td><td>unos 190 €</td></tr>
+      <tr><td>Ahorro total al año</td><td>unos 810 €</td><td>unos 1.050 €</td></tr>
+    </tbody>
+  </table>
+  <p>En este ejemplo la batería añade unos 240 € al año. Con un coste de 7.000 €, es sobre todo una inversión en seguridad e independencia. Si sube el precio de la luz, o si consigue una subvención, se amortiza antes.</p>
+
+  <h2 id="apagon">Luz durante un apagón</h2>
+  <p>El 28 de abril de 2025 toda la península se quedó sin luz durante horas. Muchas casas con placas descubrieron entonces que tampoco tenían luz: una instalación normal se desconecta en un corte por la seguridad de los técnicos que trabajan en la red. Para tener luz hace falta:</p>
+  <ul>
+    <li>un inversor híbrido con función de respaldo (EPS o backup);</li>
+    <li>una batería con carga suficiente;</li>
+    <li>un circuito de emergencia con lo imprescindible: nevera, luces, router, alarma y, en el campo, la bomba del pozo.</li>
+  </ul>
+  <p>Pida la función de respaldo de forma expresa en el presupuesto. Sin ella, la batería también se apaga.</p>
+
+  <h2 id="donde">Dónde colocar la batería</h2>
+  <p>Una batería dura más si está fresca, idealmente entre 10 y 30 grados. En la Axarquía eso importa: en julio, un cuarto en la azotea o una caseta al sol se calientan demasiado. Lo mejor es un espacio interior, un sótano o un cuarto de instalaciones ventilado en la cara norte, seco y de fácil acceso para el mantenimiento.</p>
+
+  <h2 id="ayudas">Ayudas para baterías</h2>
+  <p>La Junta de Andalucía subvenciona instalaciones de autoconsumo con batería (55 a 65 %), con un mínimo de subvención que deja fuera las instalaciones pequeñas. Muchos ayuntamientos bonifican además el IBI. Lo explicamos en detalle en <a href="/es/guias/subvenciones-placas-solares/">subvenciones para placas solares</a>.</p>
+</Guide>

@@ -477,6 +477,17 @@ export const guides: GuideMeta[] = [
     minutes: 8,
     published: '2026-11-05',
   },
+  {
+    slug: 'renovatie-factuur-of-cash-spanje',
+    title: 'Renovatie in Spanje: op factuur of cash betalen?',
+    seoTitle: 'Verbouwing in Spanje cash of op factuur betalen? Voor- en nadelen',
+    short: 'Factuur of cash',
+    description: 'Cash betalen zonder factuur scheelt IVA, maar kost u garantie, rechtszekerheid en belastingaftrek bij verkoop. De regels, de risico’s en een rekenvoorbeeld.',
+    lead: 'Wie in Spanje verbouwt, hoort het vroeg of laat: “zonder factuur is het 10% goedkoper”. Wat kost die besparing u uiteindelijk echt?',
+    keyword: 'verbouwing spanje cash betalen',
+    minutes: 8,
+    published: '2026-11-06',
+  },
 ];
 
 export const guidesEn: GuideMeta[] = [
@@ -928,6 +939,17 @@ export const guidesEn: GuideMeta[] = [
     keyword: 'water leak spain',
     minutes: 8,
     published: '2026-11-05',
+  },
+  {
+    slug: 'paying-builders-cash-or-invoice-spain',
+    title: 'Renovating in Spain: pay cash or on invoice?',
+    seoTitle: 'Paying builders in cash in Spain: savings vs. risks (2026)',
+    short: 'Cash or invoice',
+    description: 'Paying your Spanish builder in cash saves the IVA, but costs you warranty, legal protection and tax relief when you sell. The rules, the risks and a worked example.',
+    lead: 'Sooner or later every owner in Spain hears it: “Without an invoice it’s 10% cheaper.” Here is what that saving really costs you.',
+    keyword: 'paying builders cash spain',
+    minutes: 8,
+    published: '2026-11-06',
   },
 ];
 
@@ -1381,6 +1403,17 @@ export const guidesDe: GuideMeta[] = [
     minutes: 8,
     published: '2026-11-05',
   },
+  {
+    slug: 'renovierung-bar-oder-rechnung-spanien',
+    title: 'Renovierung in Spanien: bar bezahlen oder auf Rechnung?',
+    seoTitle: 'Handwerker in Spanien bar bezahlen? Ersparnis und Risiken (2026)',
+    short: 'Bar oder Rechnung',
+    description: 'Wer den Handwerker in Spanien bar bezahlt, spart die IVA, verliert aber Gewährleistung, Rechtsschutz und Steuervorteile beim Verkauf. Regeln, Risiken und ein Rechenbeispiel.',
+    lead: 'Früher oder später hört es jeder Eigentümer in Spanien: „Ohne Rechnung ist es 10% billiger.“ Was diese Ersparnis Sie wirklich kostet.',
+    keyword: 'handwerker spanien bar bezahlen',
+    minutes: 8,
+    published: '2026-11-06',
+  },
 ];
 
 export const guidesSv: GuideMeta[] = [
@@ -1473,6 +1506,17 @@ export const guidesSv: GuideMeta[] = [
     minutes: 8,
     published: '2026-11-05',
   },
+  {
+    slug: 'renovering-kontant-eller-faktura-spanien',
+    title: 'Renovera i Spanien: betala kontant eller mot faktura?',
+    seoTitle: 'Betala hantverkare kontant i Spanien? Besparing och risker (2026)',
+    short: 'Kontant eller faktura',
+    description: 'Att betala hantverkaren kontant i Spanien sparar momsen, men kostar dig garanti, rättsligt skydd och skatteavdrag när du säljer. Regler, risker och ett räkneexempel.',
+    lead: 'Förr eller senare hör alla husägare i Spanien det: ”Utan faktura blir det 10 % billigare.” Här är vad den besparingen egentligen kostar dig.',
+    keyword: 'betala hantverkare kontant spanien',
+    minutes: 8,
+    published: '2026-11-06',
+  },
 ];
 
 import type { Lang } from '../i18n';
@@ -1480,15 +1524,19 @@ import { huisEnTuinNl, huisEnTuinEn, huisEnTuinDe } from './guides-huis-en-tuin'
 import { ontwerpNl, ontwerpEn, ontwerpDe } from './guides-ontwerp';
 import { wegenNl, wegenEn, wegenDe } from './guides-wegen';
 import { dienstenNl, dienstenEn, dienstenDe } from './guides-diensten';
+import { energieNl, energieEn, energieDe } from './guides-energie';
+import { praktischNl, praktischEn, praktischDe } from './guides-praktisch';
 import { guidesSvExtra } from './guides-sv';
+import { guidesEs } from './guides-es';
 // Gidsen uit eigen bestanden komen achter de lijsten hierboven, in elke taal op dezelfde positie.
 export const guidesBy: Record<Lang, GuideMeta[]> = {
-  nl: [...guides, ...huisEnTuinNl, ...ontwerpNl, ...wegenNl, ...dienstenNl],
-  en: [...guidesEn, ...huisEnTuinEn, ...ontwerpEn, ...wegenEn, ...dienstenEn],
-  de: [...guidesDe, ...huisEnTuinDe, ...ontwerpDe, ...wegenDe, ...dienstenDe],
+  nl: [...guides, ...huisEnTuinNl, ...ontwerpNl, ...wegenNl, ...dienstenNl, ...energieNl, ...praktischNl],
+  en: [...guidesEn, ...huisEnTuinEn, ...ontwerpEn, ...wegenEn, ...dienstenEn, ...energieEn, ...praktischEn],
+  de: [...guidesDe, ...huisEnTuinDe, ...ontwerpDe, ...wegenDe, ...dienstenDe, ...energieDe, ...praktischDe],
   sv: [...guidesSv, ...guidesSvExtra],
+  es: guidesEs,
 };
-export const guideBase: Record<Lang, string> = { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/', sv: '/sv/guider/' };
+export const guideBase: Record<Lang, string> = { nl: '/nl/gidsen/', en: '/en/guides/', de: '/de/ratgeber/', sv: '/sv/guider/', es: '/es/guias/' };
 export const guideHref = (lang: Lang, g: GuideMeta) => g.path ?? `${guideBase[lang]}${g.slug}/`;
 /** De vertaling in `lang` van de gids op positie i van de Nederlandse lijst: eerst op `of`, anders op positie. */
 export const guideAt = (lang: Lang, i: number): GuideMeta | undefined => {

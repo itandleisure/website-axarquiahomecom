@@ -1,0 +1,83 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'verplicht', label: 'Was ist Pflicht?' },
+  { id: 'soorten', label: 'Deckungsarten und Kosten' },
+  { id: 'kenteken', label: 'Fahren mit deutschem Kennzeichen' },
+  { id: 'schadevrij', label: 'Ihren Schadenfreiheitsrabatt mitnehmen' },
+  { id: 'stilstaan', label: 'Ein Auto, das monatelang steht' },
+  { id: 'afsluiten', label: 'So schließen Sie eine Police ab' },
+];
+
+const faq = [
+  {
+    q: 'Was kostet eine Autoversicherung in Spanien?',
+    a: 'Eine Haftpflichtversicherung (terceros) kostet meist 250 € bis 450 € im Jahr, eine erweiterte Haftpflicht mit Glas, Brand und Diebstahl 350 € bis 650 € und eine Vollkasko (todo riesgo) 600 € bis 1.200 €. Alter, Wohnort, Fahrzeug und Schadenhistorie machen viel aus.',
+  },
+  {
+    q: 'Darf ich mit meinem deutschen Auto in Spanien weiterfahren?',
+    a: 'Wenn Sie nicht in Spanien ansässig sind, dürfen Sie ein Auto mit deutschem Kennzeichen höchstens sechs Monate pro Kalenderjahr in Spanien nutzen. Werden Sie ansässig, muss das Auto in der Regel innerhalb kurzer Zeit ein spanisches Kennzeichen bekommen, und dann brauchen Sie eine spanische Versicherung.',
+  },
+  {
+    q: 'Erkennen spanische Versicherer meinen deutschen Schadenfreiheitsrabatt an?',
+    a: 'Viele ja, aber sie sind nicht dazu verpflichtet. Bitten Sie Ihren deutschen Versicherer um eine Bescheinigung Ihres Schadenverlaufs auf Englisch oder Spanisch und fragen Sie bei jedem Angebot, ob er berücksichtigt wird.',
+  },
+  {
+    q: 'Was passiert, wenn ich ohne Versicherung fahre?',
+    a: 'Die Polizei sieht in der zentralen Datenbank (FIVA) sofort, ob ein spanisches Auto versichert ist. Fahren ohne Pflichtversicherung kostet 601 € bis 3.005 € Bußgeld, und das Auto kann stillgelegt werden.',
+  },
+];
+---
+<Guide lang="de" slug="autoversicherung-spanien" toc={toc} faq={faq} dienst="sleutelbeheer" onderwerp="Mein Auto steht in Spanien, wenn ich nicht da bin." ctaTitle="Ihr Auto in Spanien, wenn Sie nicht da sind?" ctaText="Bei der Hausbetreuung kümmern wir uns auch um Ihr Auto: starten, Batterie und Reifen prüfen, damit es fahrbereit ist, wenn Sie ankommen. Und wenn Sie einen Carport oder eine Wallbox am Haus möchten, bauen wir sie.">
+  <p>Dies sind allgemeine Informationen, keine Versicherungsberatung. Lesen Sie immer die Bedingungen Ihrer eigenen Police und fragen Sie im Zweifel einen unabhängigen Berater.</p>
+
+  <h2 id="verplicht">Was ist Pflicht?</h2>
+  <p>Jedes in Spanien zugelassene Auto, das auf die Straße kann, braucht mindestens eine <strong>Kfz-Haftpflichtversicherung</strong> (<em>seguro obligatorio</em>). Sie zahlt Schäden, die Sie mit dem Auto anderen zufügen, bis zu den gesetzlichen Summen. Das gilt auch, wenn das Auto nur geparkt ist.</p>
+  <ul>
+    <li>Die Versicherung gehört zum <strong>Auto</strong>, nicht zum Fahrer. In der Police stehen meist ein Hauptfahrer (<em>conductor habitual</em>) und gegebenenfalls Gelegenheitsfahrer.</li>
+    <li>Junge oder unerfahrene Fahrer müssen oft gesondert angemeldet werden, sonst zahlt der Versicherer bei einem Schaden weniger.</li>
+    <li>Einen Versicherungsnachweis auf Papier müssen Sie nicht mehr mitführen: Die Polizei prüft ihn in der Datenbank FIVA. Eine Kopie im Auto ist bei einem Unfall trotzdem praktisch.</li>
+  </ul>
+
+  <h2 id="soorten">Deckungsarten und Kosten</h2>
+  <table class="prices">
+    <thead><tr><th>Deckung</th><th>Was sie abdeckt</th><th>Richtwert pro Jahr</th></tr></thead>
+    <tbody>
+      <tr><td><em>Terceros básico</em> (Haftpflicht)</td><td>Schäden an anderen, meist plus Pannenhilfe</td><td>250 € bis 450 €</td></tr>
+      <tr><td><em>Terceros ampliado</em> (Teilkasko-ähnlich)</td><td>Auch Glas, Brand und Diebstahl</td><td>350 € bis 650 €</td></tr>
+      <tr><td><em>Todo riesgo con franquicia</em></td><td>Auch Schäden am eigenen Auto, mit Selbstbeteiligung</td><td>500 € bis 900 €</td></tr>
+      <tr><td><em>Todo riesgo sin franquicia</em> (Vollkasko)</td><td>Alles, ohne Selbstbeteiligung</td><td>700 € bis 1.200 €</td></tr>
+    </tbody>
+  </table>
+  <p>Pannenhilfe (<em>asistencia en carretera</em>) ist fast immer enthalten. Achten Sie darauf, ob sie ab 0 km gilt, also auch, wenn das Auto vor Ihrem Haus nicht anspringt, oder erst ab 25 km von zu Hause.</p>
+  <p>Sie wohnen auf einer Finca an einer Schotterpiste? Fragen Sie, ob Schäden am Unterboden und eine Steinschlag-Windschutzscheibe gedeckt sind. Siehe auch <a href="/de/ratgeber/zufahrtsweg-finca-spanien/">den Zufahrtsweg zu Ihrer Finca</a>.</p>
+
+  <h2 id="kenteken">Fahren mit deutschem Kennzeichen</h2>
+  <ul>
+    <li><strong>Nicht in Spanien ansässig</strong>: Sie dürfen ein Auto mit deutschem Kennzeichen höchstens sechs Monate pro Kalenderjahr in Spanien nutzen. Ihre deutsche Versicherung deckt Spanien in der Regel ab, aber manche Policen begrenzen die Aufenthaltsdauer im Ausland. Prüfen Sie das, bevor Sie überwintern.</li>
+    <li><strong>In Spanien ansässig</strong>: Dann muss das Auto in der Regel innerhalb kurzer Zeit ein spanisches Kennzeichen bekommen (<em>matriculación</em>). Dafür sind eine technische Prüfung, ein technisches Datenblatt und manchmal eine Zulassungssteuer nötig. Danach schließen Sie eine spanische Versicherung ab. Ein Gestor kann das für Sie erledigen. Mehr im Ratgeber <a href="/de/ratgeber/auswandern-nach-spanien/">Auswandern nach Spanien</a>.</li>
+  </ul>
+  <p>Ein Auto mit spanischem Kennzeichen muss außerdem zur spanischen Hauptuntersuchung (<em>ITV</em>): Autos von 4 bis 10 Jahren alle zwei Jahre, ältere als 10 Jahre jedes Jahr. Dazu zahlen Sie bei der Gemeinde eine jährliche Kfz-Steuer (<em>IVTM</em>).</p>
+
+  <h2 id="schadevrij">Ihren Schadenfreiheitsrabatt mitnehmen</h2>
+  <p>Spanische Versicherer sehen Ihre Schadenhistorie nicht automatisch. Bitten Sie Ihren deutschen Versicherer um eine Bescheinigung über Ihre schadenfreien Jahre, am besten auf Englisch oder Spanisch. Viele spanische Versicherer geben damit Rabatt, manche nicht. Es lohnt sich, mehrere Angebote einzuholen.</p>
+  <p>In Spanien wird Ihre Schadenhistorie danach in einer gemeinsamen Datenbank der Versicherer geführt. Wechseln Sie später zu einem anderen spanischen Versicherer, geht Ihre Historie mit.</p>
+
+  <h2 id="stilstaan">Ein Auto, das monatelang steht</h2>
+  <p>Viele Eigentümer lassen ein Auto in Spanien für ihre Aufenthalte stehen. Dann gibt es zwei Punkte:</p>
+  <ul>
+    <li><strong>Versicherung</strong>: Ein zugelassenes Auto muss versichert bleiben, auch wenn es steht. Wollen Sie es längere Zeit nicht versichern, können Sie es bei der Verkehrsbehörde (DGT) vorübergehend abmelden (<em>baja temporal</em>). Es darf dann nicht auf öffentlichen Straßen stehen oder fahren. Für die meisten Eigentümer ist eine günstige Haftpflichtpolice praktischer.</li>
+    <li><strong>Technik</strong>: In der Sonne und ohne Nutzung entlädt sich die Batterie, Gummidichtungen trocknen aus und Reifen bekommen Standplatten. Eine Batterie am Erhaltungsladegerät oder abgeklemmt, das Auto ab und zu starten und ein Platz im Schatten helfen viel.</li>
+  </ul>
+  <p>Ein <a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/carport-und-pergola/">Carport</a> schützt das Auto vor Sonne, Hagel und herabfallendem Obst und hält den Innenraum kühl. Fahren Sie elektrisch, ist eine <a href="/de/kosten/wallbox/">Wallbox am Haus</a> praktisch, besonders zusammen mit einer Solaranlage. Und mit der <a href="/de/hausbetreuung/">Hausbetreuung</a> schauen wir bei jeder Kontrolle auch nach dem Auto.</p>
+
+  <h2 id="afsluiten">So schließen Sie eine Police ab</h2>
+  <ol>
+    <li>Halten Sie Ihre NIE-Nummer, Ihren Führerschein, den Fahrzeugschein (<em>permiso de circulación</em>) und das technische Datenblatt (<em>ficha técnica</em>) bereit.</li>
+    <li>Holen Sie Angebote von zwei oder drei Versicherern oder über einen Makler (<em>corredor de seguros</em>) ein. Ein deutsch- oder englischsprachiger Makler hilft auch im Schadensfall.</li>
+    <li>Vergleichen Sie nicht nur die Prämie, sondern auch Selbstbeteiligung, Pannenhilfe, Ersatzwagen und die versicherten Fahrer.</li>
+    <li>Achten Sie auf die Laufzeit: Spanische Autopolicen verlängern sich automatisch jedes Jahr. Kündigen müssen Sie in der Regel mindestens einen Monat vor Ablauf, schriftlich.</li>
+  </ol>
+  <p>Ist auch Ihr Haus gut versichert? Lesen Sie den Ratgeber <a href="/de/ratgeber/hausversicherung-spanien/">Hausversicherung in Spanien</a>.</p>
+</Guide>
