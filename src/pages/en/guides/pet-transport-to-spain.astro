@@ -1,0 +1,89 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'papieren', label: 'Paperwork: microchip, health certificate and rabies' },
+  { id: 'reis', label: 'The journey: car, ferry, plane or pet transport' },
+  { id: 'regels', label: 'Spanish rules for dogs and cats' },
+  { id: 'gezondheid', label: 'Health: sandflies, processionary caterpillars and heat' },
+  { id: 'huis', label: 'A house and garden that are safe for your pet' },
+  { id: 'weg', label: 'Travelling back to the UK' },
+];
+
+const faq = [
+  {
+    q: 'What do I need to take my dog from the UK to Spain?',
+    a: 'A microchip, a valid rabies vaccination and an Animal Health Certificate (AHC) issued by an official vet no more than 10 days before you travel. After the first rabies vaccination you have to wait 21 days before travelling, and a puppy must be at least 12 weeks old when vaccinated. UK pet passports issued before 2021 are no longer valid for travel to the EU.',
+  },
+  {
+    q: 'How much does pet transport to Spain cost?',
+    a: 'With a specialist pet transport company, budget roughly £800 to £2,500, depending on the size of the animal, the distance, and whether it travels by road or air and on a shared or private run.',
+  },
+  {
+    q: 'Can I leave my dog alone at home in Spain?',
+    a: 'Not for long. The Spanish animal welfare law (Ley 7/2023) says a dog may not be left alone for more than 24 hours in a row, and other pets for no more than three days. If you go away without your pet, arrange boarding or someone who comes in every day.',
+  },
+  {
+    q: 'Are there poisonous plants in Spanish gardens?',
+    a: 'Yes. Oleander (adelfa), found in almost every Andalusian garden and along many roads, is highly toxic to dogs and cats. Sago palms, castor oil plants and the processionary caterpillars in pine trees are dangerous too.',
+  },
+];
+---
+<Guide lang="en" slug="pet-transport-to-spain" toc={toc} faq={faq} dienst="onderhoud" onderwerp="I want to make my garden and pool safe for my dog or cat." ctaTitle="Is your house ready for your dog or cat?" ctaText="We fit a fence or gate around the plot, a pool fence or safety cover, a dog flap, strong insect screens and shade on the terrace. Send us a few photos and we will help you plan it.">
+  <p>This is general information. The rules for travelling with pets change from time to time, and the UK and the EU are negotiating arrangements that may make it easier. Check the current rules on GOV.UK and with your vet before you travel.</p>
+
+  <h2 id="papieren">Paperwork: microchip, health certificate and rabies</h2>
+  <p>To take a dog, cat or ferret from Great Britain to Spain you need:</p>
+  <ol>
+    <li><strong>A microchip</strong>, fitted before the rabies vaccination.</li>
+    <li><strong>A valid rabies vaccination</strong>. After the first vaccination you wait 21 days before you can travel. The animal must be at least 12 weeks old when vaccinated.</li>
+    <li><strong>An Animal Health Certificate (AHC)</strong>, issued by an official vet no more than 10 days before you arrive in the EU. It is valid for four months of travel within the EU after that, and for the return to Great Britain.</li>
+  </ol>
+  <p>Arriving by car or ferry, you enter the EU through a travellers’ point of entry, where the paperwork can be checked. Once you live in Spain, a Spanish vet can issue an EU pet passport, which makes later trips much simpler. Travelling from another EU country, such as Ireland, the Netherlands or Germany, a microchip, an EU pet passport and a valid rabies vaccination are enough.</p>
+
+  <h2 id="reis">The journey: car, ferry, plane or pet transport</h2>
+  <table class="prices">
+    <thead><tr><th>How</th><th>Good to know</th></tr></thead>
+    <tbody>
+      <tr><td>Car via the Channel and France</td><td>Around 2,000 km from Calais, in two or three days. Plan breaks every two to three hours and hotels that accept pets. Never leave a pet in a hot car.</td></tr>
+      <tr><td>Ferry to northern Spain</td><td>Ferries from Portsmouth or Plymouth to Santander or Bilbao offer pet-friendly cabins or kennels. From there it is about 1,000 km to the Axarquía.</td></tr>
+      <tr><td>Plane</td><td>Pets usually cannot fly in the cabin on flights from the UK. Larger animals travel in the hold or as cargo through a pet shipper. In summer many routes have heat restrictions.</td></tr>
+      <tr><td>Pet transport company</td><td>A specialist collects your pet and delivers it to Spain, by road or air. Handy if you fly yourself. Roughly £800 to £2,500.</td></tr>
+    </tbody>
+  </table>
+  <p>Get your pet used to the crate beforehand, and keep food, water, a lead, poo bags and the paperwork within easy reach.</p>
+
+  <h2 id="regels">Spanish rules for dogs and cats</h2>
+  <ul>
+    <li><strong>Registration</strong>: if you live in Andalusia, ask a local vet to register your pet in the Andalusian register (<em>RAIA</em>). Some town halls also ask for registration in their own animal register.</li>
+    <li><strong>Home alone</strong>: under the animal welfare law (<em>Ley 7/2023</em>) a dog may not be left alone for more than 24 hours, and other pets for no more than three days.</li>
+    <li><strong>Liability</strong>: the same law requires third-party liability insurance for dogs. It can often be added to your <a href="/en/guides/home-insurance-spain/">home insurance</a>. Ask your insurer about the current rules.</li>
+    <li><strong>Large or so-called dangerous breeds</strong> (<em>perros potencialmente peligrosos</em>), such as a Rottweiler or pit bull, need a licence from the town hall, extra insurance and a muzzle in public in Andalusia.</li>
+    <li><strong>Beaches</strong>: dogs are not allowed on most beaches in the season. Along the Axarquía coast there are a few dog beaches (<em>playas caninas</em>).</li>
+  </ul>
+
+  <h2 id="gezondheid">Health: sandflies, processionary caterpillars and heat</h2>
+  <ul>
+    <li><strong>Leishmaniasis</strong>: a serious disease spread by sandflies, mainly from May to October around dusk. Protect your dog with a collar or spot-on treatment and ask your vet about the vaccine. Let your dog sleep indoors at night.</li>
+    <li><strong>Heartworm</strong>: spread by mosquitoes. A preventive treatment is advisable in southern Spain.</li>
+    <li><strong>Processionary caterpillars</strong>: from January to April in and under pine trees. A dog that sniffs or licks one must go to a vet immediately. More in our guide to <a href="/en/guides/pest-control-spain/">pest control in Spain</a>.</li>
+    <li><strong>Heat</strong>: walk early in the morning and late in the evening in summer. Terrace tiles and tarmac get hot enough to burn paws.</li>
+    <li><strong>Ticks and fleas</strong>: active all year, so keep treating in winter too.</li>
+  </ul>
+
+  <h2 id="huis">A house and garden that are safe for your pet</h2>
+  <p>A house in the Axarquía is often not designed with a dog or cat in mind. Fincas rarely have a proper fence, pools are not screened off and terraces sit in full sun. These are the improvements that help most:</p>
+  <ul>
+    <li><strong>A fence around the plot or part of it</strong>, with a self-closing gate. See <a href="/en/guides/garden-and-plot-spain/">garden and plot</a>.</li>
+    <li><strong>A pool fence or safety cover</strong>, and steps or a ramp so an animal can climb out by itself. Dogs often drown because they cannot get up over the edge.</li>
+    <li><strong>Shade</strong> on the terrace with a pergola or shade sail. See <a href="/en/guides/awnings-shutters-insect-screens-spain/">awnings and shade</a>.</li>
+    <li><strong>A dog or cat flap</strong> in a door or wall.</li>
+    <li><strong>Strong insect screens</strong> or cat mesh on windows and balconies, so your cat cannot fall or jump out.</li>
+    <li><strong>Removing poisonous plants</strong>, such as oleander and sago palms.</li>
+    <li><strong>A tiled or microcement floor</strong> indoors is easy to keep clean and stays cool. See <a href="/en/guides/flooring-options-spain/">choosing a floor</a>.</li>
+  </ul>
+  <p>We can arrange all of this before you arrive with your pet. <a href="/en/request/?dienst=onderhoud">Tell us what you need</a>.</p>
+
+  <h2 id="weg">Travelling back to the UK</h2>
+  <p>To bring a dog back into Great Britain, a vet must treat it for tapeworm between 24 hours and 5 days before you arrive, and record it on the health certificate or pet passport. Cats do not need this. The rabies vaccination must still be valid. Spending the winter in Spain? Read our guide to <a href="/en/guides/wintering-in-spain/">wintering in Spain</a>.</p>
+</Guide>

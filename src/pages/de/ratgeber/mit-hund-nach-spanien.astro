@@ -1,0 +1,89 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'papieren', label: 'Die Papiere: Chip, Heimtierausweis und Tollwut' },
+  { id: 'reis', label: 'Die Reise: Auto, Flugzeug oder Tiertransport' },
+  { id: 'regels', label: 'Spanische Regeln für Hunde und Katzen' },
+  { id: 'gezondheid', label: 'Gesundheit: Sandmücken, Prozessionsspinner und Hitze' },
+  { id: 'huis', label: 'Haus und Garten, in denen Ihr Tier sicher ist' },
+  { id: 'weg', label: 'Zurück nach Deutschland' },
+];
+
+const faq = [
+  {
+    q: 'Was brauche ich, um meinen Hund nach Spanien mitzunehmen?',
+    a: 'Einen Mikrochip, einen EU-Heimtierausweis und eine gültige Tollwutimpfung. Nach der ersten Tollwutimpfung müssen Sie 21 Tage warten, bevor Sie reisen, und ein Welpe muss bei der Impfung mindestens 12 Wochen alt sein. Eine Bandwurmbehandlung ist für Spanien nicht nötig.',
+  },
+  {
+    q: 'Was kostet ein Tiertransport von Deutschland nach Spanien?',
+    a: 'Für den Transport auf der Straße mit einem spezialisierten Tiertransporteur rechnen Sie meist mit 500 € bis 1.500 €, je nach Größe des Tieres, Entfernung und ob es eine geteilte oder eine eigene Fahrt ist.',
+  },
+  {
+    q: 'Darf ich meinen Hund in Spanien allein zu Hause lassen?',
+    a: 'Nicht lange. Das spanische Tierschutzgesetz (Ley 7/2023) bestimmt, dass ein Hund nicht länger als 24 Stunden am Stück allein sein darf, andere Haustiere nicht länger als drei Tage. Verreisen Sie ohne Ihr Tier, organisieren Sie eine Unterbringung oder jemanden, der täglich kommt.',
+  },
+  {
+    q: 'Gibt es giftige Pflanzen in spanischen Gärten?',
+    a: 'Ja. Oleander (adelfa), der in fast jedem andalusischen Garten und an vielen Straßen wächst, ist für Hunde und Katzen sehr giftig. Auch der Palmfarn, der Wunderbaum (Rizinus) und die Raupen des Prozessionsspinners in Kiefern sind gefährlich.',
+  },
+];
+---
+<Guide lang="de" slug="mit-hund-nach-spanien" toc={toc} faq={faq} dienst="onderhoud" onderwerp="Ich möchte Garten und Pool für meinen Hund oder meine Katze sicher machen." ctaTitle="Ist Ihr Haus bereit für Hund oder Katze?" ctaText="Wir setzen einen Zaun oder ein Tor ums Grundstück, einen Poolzaun oder eine sichere Abdeckung, eine Hundeklappe, stabilen Insektenschutz und Schatten auf der Terrasse. Schicken Sie uns ein paar Fotos, dann denken wir mit.">
+  <p>Dies sind allgemeine Informationen. Die Regeln für Reisen mit Tieren ändern sich gelegentlich. Prüfen Sie sie vor der Abreise bei Ihrem Tierarzt.</p>
+
+  <h2 id="papieren">Die Papiere: Chip, Heimtierausweis und Tollwut</h2>
+  <p>Innerhalb der Europäischen Union reist ein Hund, eine Katze oder ein Frettchen mit diesen drei Dingen:</p>
+  <ol>
+    <li><strong>Ein Mikrochip</strong>, gesetzt vor der Tollwutimpfung.</li>
+    <li><strong>Ein EU-Heimtierausweis</strong>, ausgestellt von Ihrem Tierarzt.</li>
+    <li><strong>Eine gültige Tollwutimpfung</strong>, eingetragen im Ausweis. Nach der ersten Impfung warten Sie 21 Tage, bevor Sie reisen dürfen. Das Tier muss bei der Impfung mindestens 12 Wochen alt sein. Wird die Impfung rechtzeitig aufgefrischt, gilt die Wartezeit nicht erneut.</li>
+  </ol>
+  <p>Eine Bandwurmbehandlung ist für Spanien nicht nötig. Nehmen Sie mehr als fünf Tiere mit oder geht es um Verkauf oder Adoption, gelten strengere Regeln.</p>
+
+  <h2 id="reis">Die Reise: Auto, Flugzeug oder Tiertransport</h2>
+  <table class="prices">
+    <thead><tr><th>Wie</th><th>Gut zu wissen</th></tr></thead>
+    <tbody>
+      <tr><td>Mit dem Auto</td><td>Über 2.000 km, in zwei oder drei Tagen. Planen Sie alle zwei bis drei Stunden eine Pause und Hotels, die Haustiere erlauben. Lassen Sie das Tier nie in einem heißen Auto.</td></tr>
+      <tr><td>Flugzeug, in der Kabine</td><td>Bei vielen Fluggesellschaften dürfen kleine Hunde und Katzen in einer Tasche unter dem Sitz mit, zusammen meist bis 8 bis 10 kg. Die Plätze pro Flug sind begrenzt, buchen Sie also früh.</td></tr>
+      <tr><td>Flugzeug, im Frachtraum</td><td>Für größere Tiere, in einer zugelassenen Box. Nicht jede Gesellschaft oder Strecke bietet das an, und im Sommer gibt es wegen der Hitze oft Einschränkungen.</td></tr>
+      <tr><td>Tiertransporteur</td><td>Eine spezialisierte Firma holt Ihr Tier ab und bringt es nach Spanien, auf der Straße oder per Flugzeug. Praktisch, wenn Sie selbst fliegen. Richtwert 500 € bis 1.500 €.</td></tr>
+    </tbody>
+  </table>
+  <p>Gewöhnen Sie Ihr Tier vorher an die Box, und haben Sie Futter, Wasser, Leine, Kotbeutel und die Papiere griffbereit.</p>
+
+  <h2 id="regels">Spanische Regeln für Hunde und Katzen</h2>
+  <ul>
+    <li><strong>Registrierung</strong>: Wohnen Sie fest in Andalusien, lassen Sie Ihr Tier von einem Tierarzt vor Ort im andalusischen Register (<em>RAIA</em>) eintragen. Manche Gemeinden verlangen auch eine Eintragung in ihr eigenes Tierregister.</li>
+    <li><strong>Allein zu Hause</strong>: Nach dem Tierschutzgesetz (<em>Ley 7/2023</em>) darf ein Hund nicht länger als 24 Stunden allein sein, andere Haustiere nicht länger als drei Tage.</li>
+    <li><strong>Haftpflicht</strong>: Dasselbe Gesetz schreibt eine Haftpflichtversicherung für Hunde vor. Oft lässt sie sich in Ihre <a href="/de/ratgeber/hausversicherung-spanien/">Hausversicherung</a> einschließen. Fragen Sie Ihren Versicherer nach den aktuellen Regeln.</li>
+    <li><strong>Große oder sogenannte gefährliche Rassen</strong> (<em>perros potencialmente peligrosos</em>), etwa ein Rottweiler oder Pitbull, brauchen in Andalusien eine Genehmigung der Gemeinde, eine zusätzliche Versicherung und auf der Straße einen Maulkorb.</li>
+    <li><strong>Strand</strong>: An den meisten Stränden sind Hunde in der Saison nicht erlaubt. An der Küste der Axarquía gibt es aber einige Hundestrände (<em>playas caninas</em>).</li>
+  </ul>
+
+  <h2 id="gezondheid">Gesundheit: Sandmücken, Prozessionsspinner und Hitze</h2>
+  <ul>
+    <li><strong>Leishmaniose</strong>: eine ernste Krankheit, die Sandmücken übertragen, vor allem von Mai bis Oktober in der Dämmerung. Schützen Sie Ihren Hund mit einem Halsband oder Spot-on und fragen Sie Ihren Tierarzt nach der Impfung. Lassen Sie ihn nachts drinnen schlafen.</li>
+    <li><strong>Herzwurm</strong>: wird von Mücken übertragen. Eine Vorbeugung ist in Südspanien ratsam.</li>
+    <li><strong>Prozessionsspinner</strong>: von Januar bis April in und unter Kiefern. Ein Hund, der daran schnüffelt oder leckt, muss sofort zum Tierarzt. Mehr im Ratgeber <a href="/de/ratgeber/schaedlinge-spanien/">Schädlinge im Haus</a>.</li>
+    <li><strong>Hitze</strong>: Gehen Sie im Sommer früh morgens und spät abends spazieren. Terrassenfliesen und Asphalt werden heiß genug, um Pfoten zu verbrennen.</li>
+    <li><strong>Zecken und Flöhe</strong>: das ganze Jahr aktiv, behandeln Sie also auch im Winter.</li>
+  </ul>
+
+  <h2 id="huis">Haus und Garten, in denen Ihr Tier sicher ist</h2>
+  <p>Ein Haus in der Axarquía ist oft nicht für Hund oder Katze gemacht. Fincas haben selten einen dichten Zaun, Pools sind nicht abgesichert und Terrassen liegen in der prallen Sonne. Diese Verbesserungen bringen am meisten:</p>
+  <ul>
+    <li><strong>Ein Zaun um das Grundstück oder einen Teil davon</strong>, mit einem selbstschließenden Tor. Siehe <a href="/de/ratgeber/garten-und-grundstueck-spanien/">Garten und Grundstück</a>.</li>
+    <li><strong>Ein Poolzaun oder eine sichere Abdeckung</strong>, und eine Treppe oder Rampe, über die ein Tier selbst aus dem Wasser kommt. Hunde ertrinken oft, weil sie nicht über den Rand kommen.</li>
+    <li><strong>Schatten</strong> auf der Terrasse mit einer Pergola oder einem Sonnensegel. Siehe <a href="/de/ratgeber/sonnenschutz-rolllaeden-insektenschutz-spanien/">Sonnenschutz</a>.</li>
+    <li><strong>Eine Hunde- oder Katzenklappe</strong> in einer Tür oder Wand.</li>
+    <li><strong>Stabiler Insektenschutz</strong> oder Katzennetz an Fenstern und Balkonen, damit Ihre Katze nicht hinausfällt oder springt.</li>
+    <li><strong>Giftige Pflanzen entfernen</strong>, etwa Oleander und Palmfarn.</li>
+    <li><strong>Ein Fliesen- oder Mikrozementboden</strong> im Haus ist leicht sauber zu halten und bleibt kühl. Siehe <a href="/de/ratgeber/bodenbelag-spanien/">Bodenbelag wählen</a>.</li>
+  </ul>
+  <p>Wir können das für Sie erledigen, bevor Sie mit Ihrem Tier ankommen. <a href="/de/anfrage/?dienst=onderhoud">Sagen Sie uns, was Sie brauchen</a>.</p>
+
+  <h2 id="weg">Zurück nach Deutschland</h2>
+  <p>Für die Rückreise gelten dieselben EU-Regeln: Chip, Heimtierausweis und eine gültige Tollwutimpfung. Überwintern Sie mit Ihrem Tier, müssen Sie also nichts extra regeln, solange die Impfung gültig bleibt. Reisen Sie über das Vereinigte Königreich oder Irland, gelten zusätzliche Anforderungen, etwa eine Bandwurmbehandlung für Hunde. Lesen Sie auch den Ratgeber <a href="/de/ratgeber/ueberwintern-in-spanien/">Überwintern in Spanien</a>.</p>
+</Guide>

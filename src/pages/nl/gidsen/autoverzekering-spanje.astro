@@ -1,0 +1,83 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'verplicht', label: 'Wat is verplicht?' },
+  { id: 'soorten', label: 'Soorten dekking en kosten' },
+  { id: 'kenteken', label: 'Rijden met een Nederlands kenteken' },
+  { id: 'schadevrij', label: 'Uw schadevrije jaren meenemen' },
+  { id: 'stilstaan', label: 'Een auto die maanden stilstaat' },
+  { id: 'afsluiten', label: 'Zo sluit u een polis af' },
+];
+
+const faq = [
+  {
+    q: 'Wat kost een autoverzekering in Spanje?',
+    a: 'Een basisverzekering (terceros) kost meestal € 250 tot € 450 per jaar, een uitgebreide WA met ruiten, brand en diefstal € 350 tot € 650, en een allriskverzekering (todo riesgo) € 600 tot € 1.200. Leeftijd, woonplaats, auto en uw schadeverleden maken veel verschil.',
+  },
+  {
+    q: 'Mag ik met mijn Nederlandse auto in Spanje blijven rijden?',
+    a: 'Als u geen inwoner van Spanje bent, mag u een auto met Nederlands kenteken maximaal zes maanden per kalenderjaar in Spanje gebruiken. Wordt u inwoner, dan moet de auto in de regel binnen korte tijd een Spaans kenteken krijgen, en daarna heeft u een Spaanse verzekering nodig.',
+  },
+  {
+    q: 'Accepteren Spaanse verzekeraars mijn Nederlandse schadevrije jaren?',
+    a: 'Veel verzekeraars wel, maar ze zijn het niet verplicht. Vraag uw Nederlandse verzekeraar om een verklaring van uw schadeverleden in het Engels of Spaans, en vraag bij elke offerte of ze die meenemen in de korting.',
+  },
+  {
+    q: 'Wat als ik zonder verzekering rijd?',
+    a: 'De politie ziet in de centrale database (FIVA) direct of een Spaanse auto verzekerd is. Rijden zonder verplichte verzekering geeft een boete van € 601 tot € 3.005, en de auto kan aan de ketting worden gelegd.',
+  },
+];
+---
+<Guide slug="autoverzekering-spanje" toc={toc} faq={faq} dienst="sleutelbeheer" onderwerp="Mijn auto staat in Spanje als ik er niet ben." ctaTitle="Uw auto in Spanje als u er niet bent?" ctaText="Bij sleutelbeheer kijken we ook naar uw auto: starten, accu en banden controleren, zodat hij rijklaar is als u aankomt. En wilt u een carport of laadpaal bij het huis, dan bouwen wij die.">
+  <p>Dit is algemene informatie, geen verzekeringsadvies. Lees altijd de voorwaarden van uw eigen polis en vraag bij twijfel een onafhankelijke adviseur.</p>
+
+  <h2 id="verplicht">Wat is verplicht?</h2>
+  <p>Elke auto die in Spanje is ingeschreven en de weg op kan, moet minimaal een <strong>verplichte WA-verzekering</strong> hebben (<em>seguro obligatorio</em>). Die betaalt schade die u met de auto bij anderen veroorzaakt, tot de wettelijke bedragen. Dat geldt ook als de auto geparkeerd staat en u hem niet gebruikt.</p>
+  <ul>
+    <li>De verzekering hoort bij de <strong>auto</strong>, niet bij de bestuurder. Op de polis staan meestal een vaste bestuurder (<em>conductor habitual</em>) en eventueel incidentele bestuurders.</li>
+    <li>Jonge of onervaren bestuurders moeten vaak apart worden aangemeld, anders keert de verzekeraar bij schade minder uit.</li>
+    <li>Een bewijs van verzekering hoeft u niet meer op papier mee te nemen: de politie controleert het in de database FIVA. Een kopie in de auto is wel handig bij een ongeluk.</li>
+  </ul>
+
+  <h2 id="soorten">Soorten dekking en kosten</h2>
+  <table class="prices">
+    <thead><tr><th>Dekking</th><th>Wat het dekt</th><th>Indicatie per jaar</th></tr></thead>
+    <tbody>
+      <tr><td><em>Terceros básico</em> (WA)</td><td>Schade aan anderen, plus meestal pechhulp</td><td>€ 250 tot € 450</td></tr>
+      <tr><td><em>Terceros ampliado</em> (WA plus)</td><td>Ook ruiten, brand en diefstal</td><td>€ 350 tot € 650</td></tr>
+      <tr><td><em>Todo riesgo con franquicia</em></td><td>Ook schade aan uw eigen auto, met eigen risico</td><td>€ 500 tot € 900</td></tr>
+      <tr><td><em>Todo riesgo sin franquicia</em> (allrisk)</td><td>Alles, zonder eigen risico</td><td>€ 700 tot € 1.200</td></tr>
+    </tbody>
+  </table>
+  <p>Pechhulp (<em>asistencia en carretera</em>) zit bijna altijd in de polis. Let op of die geldt vanaf 0 km, dus ook als de auto voor uw huis niet start, of pas vanaf 25 km van huis.</p>
+  <p>Woont u op een finca aan een onverharde weg? Vraag dan of schade aan de onderkant van de auto en een gebroken voorruit door steenslag gedekt zijn. Zie ook <a href="/nl/gidsen/toegangsweg-finca-spanje/">de toegangsweg naar uw finca</a>.</p>
+
+  <h2 id="kenteken">Rijden met een Nederlands kenteken</h2>
+  <ul>
+    <li><strong>Geen inwoner van Spanje</strong>: u mag een auto met Nederlands kenteken maximaal zes maanden per kalenderjaar in Spanje gebruiken. Uw Nederlandse verzekering dekt Spanje meestal via de groene kaart, maar sommige polissen hebben een maximale verblijfsduur in het buitenland. Controleer dat voor u overwintert.</li>
+    <li><strong>Wel inwoner van Spanje</strong>: dan moet de auto in de regel binnen korte tijd een Spaans kenteken krijgen (<em>matriculación</em>). Daarvoor zijn een keuring, een technische kaart en soms registratiebelasting nodig. Daarna sluit u een Spaanse verzekering af. Een gestor kan dit voor u regelen. Lees meer in de gids <a href="/nl/gidsen/emigreren-naar-spanje/">emigreren naar Spanje</a>.</li>
+  </ul>
+  <p>Een auto met Spaans kenteken moet ook naar de Spaanse keuring (<em>ITV</em>): auto’s van 4 tot 10 jaar oud om de twee jaar, ouder dan 10 jaar elk jaar. Daarnaast betaalt u bij de gemeente een jaarlijkse motorrijtuigenbelasting (<em>IVTM</em>).</p>
+
+  <h2 id="schadevrij">Uw schadevrije jaren meenemen</h2>
+  <p>Spaanse verzekeraars zien uw schadeverleden niet automatisch. Vraag uw Nederlandse verzekeraar daarom om een verklaring met het aantal schadevrije jaren, liefst in het Engels of Spaans. Veel Spaanse verzekeraars geven daarmee korting, sommige niet. Het loont om meerdere offertes op te vragen.</p>
+  <p>In Spanje wordt uw schadeverleden daarna bijgehouden in een gezamenlijke database van de verzekeraars. Stapt u later over naar een andere Spaanse verzekeraar, dan gaat uw historie mee.</p>
+
+  <h2 id="stilstaan">Een auto die maanden stilstaat</h2>
+  <p>Veel eigenaren laten een auto in Spanje staan voor als ze er zijn. Dan zijn er twee aandachtspunten:</p>
+  <ul>
+    <li><strong>Verzekering</strong>: een ingeschreven auto moet verzekerd blijven, ook als hij stilstaat. Wilt u voor langere tijd niet verzekeren, dan kunt u de auto bij de verkeersdienst (DGT) tijdelijk uit het verkeer halen (<em>baja temporal</em>). Hij mag dan niet op de openbare weg staan of rijden. Voor de meeste eigenaren is een goedkope WA-polis handiger.</li>
+    <li><strong>Techniek</strong>: in de zon en zonder gebruik lopen de accu leeg, drogen rubbers uit en krijgen banden platte plekken. Een accu op een druppellader of losgekoppeld, de auto af en toe starten en een plek in de schaduw helpen veel.</li>
+  </ul>
+  <p>Een <a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/carport-en-pergola/">carport</a> beschermt de auto tegen zon, hagel en vallend fruit, en houdt het interieur koel. Rijdt u elektrisch, dan is een <a href="/nl/kosten/laadpaal/">laadpaal bij het huis</a> handig, zeker in combinatie met zonnepanelen. En met <a href="/nl/sleutelbeheer/">sleutelbeheer</a> kijken we bij elke controle ook naar de auto.</p>
+
+  <h2 id="afsluiten">Zo sluit u een polis af</h2>
+  <ol>
+    <li>Zorg voor een NIE-nummer, uw rijbewijs, het kentekenbewijs (<em>permiso de circulación</em>) en de technische kaart (<em>ficha técnica</em>).</li>
+    <li>Vraag offertes bij twee of drie verzekeraars of via een tussenpersoon (<em>corredor de seguros</em>). Een tussenpersoon die Nederlands of Engels spreekt, helpt ook bij een claim.</li>
+    <li>Vergelijk niet alleen de premie, maar ook het eigen risico, de pechhulp, de vervangende auto en de dekking voor bestuurders.</li>
+    <li>Let op de looptijd: Spaanse autopolissen verlengen zich automatisch per jaar. Opzeggen moet in de regel minimaal een maand voor de vervaldatum, schriftelijk.</li>
+  </ol>
+  <p>Ook uw huis goed verzekerd? Lees de gids <a href="/nl/gidsen/verzekering-huis-spanje/">woonverzekering in Spanje</a>.</p>
+</Guide>
