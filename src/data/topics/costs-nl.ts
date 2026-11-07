@@ -536,7 +536,7 @@ export const costsNl: Topic[] = [
 <li><strong>Vergunning.</strong> Panelen op het dak van een bestaande, legale woning vallen in Andalusië meestal onder een eenvoudige melding (<em>declaración responsable</em>) bij de gemeente. Op de grond, op een finca in het buitengebied of op een huis met AFO-status kan de gemeente meer vragen. Zie de pagina <em>Bouwvergunning</em> van uw gemeente onder <a href="/nl/plaatsen/">Plaatsen</a>.</li>
 <li><strong>Aanmelding.</strong> De installateur meldt de installatie aan bij de Junta de Andalucía en regelt het keuringsbewijs (<em>boletín</em>). Daarna vraagt u bij uw leverancier de vergoeding voor teruglevering aan.</li>
 <li><strong>Belastingkorting.</strong> Veel gemeenten geven een paar jaar korting op de onroerendgoedbelasting (<em>bonificación del IBI</em>) en op de bouwleges (ICIO) bij zonnepanelen. Hoeveel verschilt per gemeente.</li>
-<li><strong>Subsidie.</strong> De Spaanse en Europese subsidies voor zelfopwekking wisselen vaak en zijn soms snel op. Vraag bij de offerte wat er op dat moment loopt.</li>
+<li><strong>Subsidie.</strong> De Spaanse en Europese subsidies voor zelfopwekking wisselen vaak en zijn soms snel op. Wat er in 2026 loopt, leest u in <a href="/nl/gidsen/subsidie-verduurzamen-spanje/">subsidie voor verduurzamen</a>.</li>
 </ul>`,
       },
       {
@@ -1182,7 +1182,7 @@ export const costsNl: Topic[] = [
 <li><strong>Ramen vervangen</strong> in dezelfde maat is meestal een kleine melding bij de gemeente (<em>declaración responsable</em> of <em>obra menor</em>).</li>
 <li><strong>In een historisch centrum</strong>, zoals in Frigiliana of Cómpeta, gelden vaak regels voor kleur en materiaal, bijvoorbeeld hout of een houtkleur.</li>
 <li><strong>In een appartementencomplex</strong> moet de gevel er hetzelfde uit blijven zien. Vraag de <em>comunidad</em> welke kleur en welk model is toegestaan.</li>
-<li><strong>Subsidie:</strong> voor energiebesparende renovaties zijn er regelmatig regelingen en een belastingaftrek in de IRPF. Vraag bij de offerte wat er loopt.</li>
+<li><strong>Subsidie:</strong> voor energiebesparende renovaties zijn er regelmatig regelingen en een belastingaftrek in de IRPF. Wat er in 2026 loopt, leest u in <a href="/nl/gidsen/subsidie-verduurzamen-spanje/">subsidie voor verduurzamen</a>.</li>
 </ul>`,
       },
     ],

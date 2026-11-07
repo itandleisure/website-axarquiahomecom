@@ -1,0 +1,98 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'verlockung', label: 'Warum Barzahlung verlockend wirkt' },
+  { id: 'regeln', label: 'Was das Gesetz zu Barzahlungen sagt' },
+  { id: 'gewaehrleistung', label: 'Gewährleistung und Haftung' },
+  { id: 'verkauf', label: 'Rechnungen und Steuern beim Verkauf' },
+  { id: 'heimatland', label: 'Die deutsche Seite' },
+  { id: 'rechenbeispiel', label: 'Rechenbeispiel' },
+  { id: 'vernuenftig', label: 'So bezahlen Sie richtig' },
+];
+
+const faq = [
+  {
+    q: 'Darf ich einen Handwerker in Spanien bar bezahlen?',
+    a: 'Nur bei kleinen Beträgen. Zahlungen an Unternehmen oder Selbstständige sind ab 1.000 € in bar verboten. Können Sie nachweisen, dass Sie nicht in Spanien steuerlich ansässig sind, liegt die Grenze bei 10.000 €. Teilzahlungen für denselben Auftrag werden zusammengerechnet. Die Strafe beträgt 25% des Betrags und kann beide Seiten treffen.',
+  },
+  {
+    q: 'Welche Kosten kann ich beim Verkauf vom Gewinn abziehen?',
+    a: 'Verbesserungen, die den Wert erhöhen oder die Lebensdauer verlängern, etwa eine neue Küche oder ein neues Bad, ein Pool, ein Anbau oder neue Fenster. Normale Instandhaltung wie Streichen oder eine kleine Reparatur zählt nicht. Sie müssen die Kosten mit einer Rechnung auf Ihren Namen und am besten einer Banküberweisung belegen.',
+  },
+  {
+    q: 'Helfen Rechnungen auch bei der Plusvalía der Gemeinde?',
+    a: 'Nein. Die kommunale Plusvalía (IIVTNU) richtet sich nach dem Wert des Grundstücks, nicht des Hauses. Renovierungsrechnungen spielen dort keine Rolle. Sie helfen aber bei der spanischen Steuer auf den Veräußerungsgewinn, die meist deutlich höher ist.',
+  },
+  {
+    q: 'Wie lange muss ich Rechnungen aufbewahren?',
+    a: 'Bis Sie das Haus verkauft haben, und danach noch mindestens vier Jahre. So lange kann das spanische Finanzamt Ihre Erklärung zum Verkauf prüfen. Bewahren Sie zu jeder Rechnung auch den Zahlungsnachweis auf.',
+  },
+];
+---
+<Guide lang="de" slug="renovierung-bar-oder-rechnung-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Renovieren ohne spätere Sorgen?" ctaText="Fordern Sie ein Angebot für Ihre Renovierung an. Sie erhalten einen Preis pro Position, und alles läuft auf Rechnung, damit Sie Gewährleistung haben und die Kosten später absetzen können.">
+  <p>„Ohne Rechnung ist es 10% billiger.“ Wer in Spanien renoviert, hört diesen Satz früher oder später. Das klingt nach einer schönen Ersparnis, und wir wollen nicht so tun, als gäbe es sie nicht. Doch Sie geben viel dafür auf: Ihre Gewährleistung, Ihre Position, wenn etwas schiefgeht, und einen beträchtlichen Steuerabzug, wenn Sie das Haus später verkaufen. Dieser Ratgeber stellt beide Seiten ehrlich nebeneinander.</p>
+
+  <h2 id="verlockung">Warum Barzahlung verlockend wirkt</h2>
+  <p>Der Vorteil einer Barzahlung ohne Rechnung ist einfach: Der Handwerker berechnet keine IVA (die spanische Mehrwertsteuer) und meldet den Umsatz nicht an. Auf Renovierungsarbeiten an einer Wohnung fallen meist 10% IVA an, auf Neubauarbeiten wie einen Pool oder Anbau oft 21%. Bei einer Renovierung für 40.000 € sind das schnell 4.000 € bis 8.400 €.</p>
+  <p>Das ist echtes Geld, und es ist verständlich, dass man darüber nachdenkt. Nur ist die Ersparnis sofort sichtbar, die Nachteile kommen später: wenn etwas undicht ist, wenn der Handwerker nicht mehr erreichbar ist oder wenn Sie verkaufen. Hier sind sie.</p>
+
+  <h2 id="regeln">Was das Gesetz zu Barzahlungen sagt</h2>
+  <p>Spanien begrenzt Barzahlungen an Unternehmen und Selbstständige (Gesetz 7/2012, 2021 verschärft):</p>
+  <ul>
+    <li><strong>1.000 €</strong>, wenn Sie in Spanien wohnen oder nicht nachweisen können, dass Sie anderswo steuerlich ansässig sind.</li>
+    <li><strong>10.000 €</strong>, wenn Sie nachweislich nicht in Spanien steuerlich ansässig sind und als Privatperson zahlen.</li>
+  </ul>
+  <p>Zahlungen für denselben Auftrag werden zusammengerechnet. Eine Renovierung für 15.000 € in zehn Barraten zu bezahlen ist also nicht erlaubt. Die Strafe beträgt 25% des gezahlten Betrags und kann sowohl Sie als auch den Handwerker treffen.</p>
+  <p>Wichtiger noch: Auch unterhalb dieser Grenze ist Arbeit ohne Rechnung nicht legal. Der Handwerker hinterzieht IVA und Einkommensteuer. Das ist in erster Linie sein Verstoß, aber Sie wirken daran mit und tragen selbst die Folgen, wie Sie gleich sehen.</p>
+
+  <h2 id="gewaehrleistung">Gewährleistung und Haftung</h2>
+  <p>Eine Rechnung beweist, dass es einen Auftrag gab, wer die Arbeit ausgeführt hat, was vereinbart war und was Sie bezahlt haben. Ohne dieses Papier stehen Sie schwach da, wenn etwas schiefgeht.</p>
+  <ul>
+    <li><strong>Gesetzliche Gewährleistung</strong>: Für Bauarbeiten mit Bauprojekt haftet der Bauunternehmer nach dem spanischen Baugesetz (LOE) 1 Jahr für die Ausführung, 3 Jahre für Mängel, die die Bewohnbarkeit beeinträchtigen (etwa Feuchtigkeit und Undichtigkeiten), und 10 Jahre für die Statik. Auch bei kleineren Arbeiten haben Sie Verbraucherrechte. Diese Rechte sind aber wenig wert, wenn Sie nicht belegen können, wer was für Sie gemacht hat.</li>
+    <li><strong>Versicherung des Handwerkers</strong>: Ein registriertes Bauunternehmen hat eine Haftpflichtversicherung. Die deckt keine Arbeit, die offiziell nie stattgefunden hat.</li>
+    <li><strong>Ihre eigene Gebäudeversicherung</strong>: Nach einem Wasserschaden oder Brand fragt der Versicherer mitunter, wer die Installation gemacht hat. Arbeiten eines nicht registrierten Handwerkers können dann unangenehme Fragen aufwerfen.</li>
+    <li><strong>Zertifikate</strong>: Für eine neue oder verstärkte Elektroinstallation und für Gas brauchen Sie ein offizielles Zertifikat (das <em>Boletín</em>), das nur ein zugelassener Installateur ausstellen darf. Ohne Zertifikat bekommen Sie zum Beispiel keinen stärkeren Anschluss.</li>
+    <li><strong>Genehmigung</strong>: Was bar erledigt wird, geschieht oft auch ohne Meldung oder Genehmigung bei der Gemeinde. Beim Verkauf prüft der Anwalt des Käufers das, und dann kann es zum Problem werden. Mehr dazu in unserem Ratgeber zu <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO-Status und Legalisierung</a>.</li>
+    <li><strong>Unfälle</strong>: Stürzt ein nicht angemeldeter Arbeiter von Ihrem Dach, ist er nicht versichert. Sie als Auftraggeber können haftbar gemacht werden.</li>
+  </ul>
+
+  <h2 id="verkauf">Rechnungen und Steuern beim Verkauf</h2>
+  <p>Hier liegt der größte Unterschied, und er wird oft vergessen. Verkaufen Sie Ihr Haus in Spanien mit Gewinn, zahlen Sie spanische Steuer auf diesen Gewinn:</p>
+  <ul>
+    <li><strong>Nichtresidenten</strong> (Sie wohnen in Deutschland oder einem anderen Land): 19% auf den Gewinn. Der Käufer behält dafür 3% des Kaufpreises ein und führt sie ab. Mit Ihrer Erklärung (Modelo 210) wird anschließend abgerechnet, eventuell erhalten Sie Geld zurück.</li>
+    <li><strong>In Spanien Ansässige</strong>: 19% bis 30% auf den Gewinn, je nach Höhe.</li>
+  </ul>
+  <p>Der Gewinn ist der Verkaufspreis minus der Kaufpreis, wobei Sie die Kaufnebenkosten und die Kosten von <strong>Verbesserungen</strong> zum Kaufpreis addieren dürfen. Eine neue Küche, ein neues Bad, ein Pool, ein Anbau, neue Fenster oder ein neues Dach senken also Ihren Gewinn und damit die Steuer. Normale Instandhaltung wie Streichen oder einen Wasserhahn austauschen zählt nicht.</p>
+  <p>Die Bedingung: Sie müssen die Kosten mit Rechnungen auf Ihren Namen belegen können, am besten mit dem passenden Kontoauszug. Eine bar bezahlte Renovierung existiert für das Finanzamt nicht. Die Quittung ist beim Verkauf also bares Geld wert.</p>
+  <p>Zwei Hinweise der Vollständigkeit halber. Die kommunale <em>Plusvalía</em> (IIVTNU) bezieht sich auf den Grundstückswert; dort helfen Renovierungsrechnungen nicht. Und wenn Sie dauerhaft in Spanien wohnen und 65 Jahre oder älter sind, ist der Gewinn auf Ihren Hauptwohnsitz steuerfrei. Für ein Ferien- oder Zweithaus gilt diese Befreiung nicht.</p>
+  <p>Vermieten Sie das Haus? Dann sind Rechnungen auch jedes Jahr nützlich. Einwohner der EU dürfen Kosten für Instandhaltung und Reparaturen von ihren spanischen Mieteinnahmen abziehen, Verbesserungen teilweise über Abschreibungen. Auch dafür brauchen Sie Rechnungen.</p>
+
+  <h2 id="heimatland">Die deutsche Seite</h2>
+  <p>Wohnen Sie in Deutschland, kann der Verkauf Ihres spanischen Hauses je nach Fall auch dort steuerlich eine Rolle spielen, etwa bei einem Verkauf innerhalb von zehn Jahren nach dem Kauf. Auch in einer solchen Berechnung zählen nachgewiesene Herstellungs- und Modernisierungskosten. Ohne Rechnungen fehlt Ihnen dieser Nachweis in beiden Ländern.</p>
+  <p class="note">Dieser Ratgeber ist eine allgemeine Information und keine Steuerberatung. Lassen Sie sich für Ihre Situation von einem Steuerberater (<em>asesor fiscal</em>) beraten, der sowohl die spanischen als auch die deutschen Regeln kennt.</p>
+
+  <h2 id="rechenbeispiel">Rechenbeispiel</h2>
+  <p>Angenommen, Sie wohnen im Ausland, kaufen ein Haus in der Axarquía für 250.000 € und lassen für 40.000 € eine neue Küche und ein neues Bad einbauen und die Fenster ersetzen. Nach acht Jahren verkaufen Sie für 350.000 €. Der Einfachheit halber lassen wir Kauf- und Verkaufskosten weg.</p>
+  <table class="prices">
+    <thead><tr><th></th><th>Bar, ohne Rechnung</th><th>Auf Rechnung</th></tr></thead>
+    <tbody>
+      <tr><td>IVA auf die Renovierung (10%)</td><td>0 €</td><td>4.000 €</td></tr>
+      <tr><td>Gewinn beim Verkauf</td><td>100.000 €</td><td>60.000 €</td></tr>
+      <tr><td>Spanische Steuer auf den Gewinn (19%)</td><td>19.000 €</td><td>11.400 €</td></tr>
+      <tr><td><strong>IVA und Steuer zusammen</strong></td><td><strong>19.000 €</strong></td><td><strong>15.400 €</strong></td></tr>
+    </tbody>
+  </table>
+  <p>In diesem Beispiel stehen Sie mit Rechnungen am Ende 3.600 € besser da, und Sie hatten all die Jahre Gewährleistung und Sicherheit. Fairerweise: Verkaufen Sie ohne Gewinn oder nie, bringt der Abzug nichts, und Sie haben nur die IVA bezahlt. Bei Arbeiten mit 21% IVA liegt der Break-even höher. Die Risiken von Arbeit ohne Rechnung bleiben aber in jedem Fall.</p>
+
+  <h2 id="vernuenftig">So bezahlen Sie richtig</h2>
+  <ul>
+    <li><strong>Holen Sie ein schriftliches Angebot</strong> pro Position ein, mit separat ausgewiesener IVA. Zu Preisen lesen Sie unseren Ratgeber <a href="/de/ratgeber/renovierungskosten-spanien/">Renovierungskosten in Spanien</a>.</li>
+    <li><strong>Prüfen Sie den ermäßigten Satz</strong>: Für die Renovierung einer Wohnung zur privaten Nutzung gelten unter Bedingungen 10% statt 21% IVA. Das ist eine legale Ersparnis.</li>
+    <li><strong>Zahlen Sie per Überweisung</strong> auf ein Konto auf den Namen des Unternehmens, das auf der Rechnung steht. Nie auf ein Privatkonto eines Vermittlers.</li>
+    <li><strong>Zahlen Sie in Raten</strong> je abgeschlossenem Abschnitt, nie große Beträge im Voraus.</li>
+    <li><strong>Lassen Sie die Rechnung auf Ihren Namen und Ihre NIE ausstellen</strong>, mit der Steuernummer des Handwerkers (CIF oder NIF), einer Beschreibung der Arbeiten und der IVA.</li>
+    <li><strong>Bewahren Sie alles an einem Ort auf</strong>: Angebot, Rechnungen, Kontoauszüge, Genehmigung und Zertifikate. Digital genügt. Diese Akte hilft auch beim Verkauf; Käufer sehen gern, was gemacht wurde.</li>
+  </ul>
+  <p>Möchten Sie ohne spätere Sorgen renovieren? Über unseren <a href="/de/renovierung/">Renovierungsservice</a> arbeiten Sie mit einem registrierten Bauunternehmen, mit Festpreis pro Position, Kontakt auf Englisch oder Niederländisch und einer Rechnung für jeden Abschnitt. <a href="/de/anfrage/?dienst=renovatie">Fordern Sie hier unverbindlich ein Angebot an</a>.</p>
+</Guide>

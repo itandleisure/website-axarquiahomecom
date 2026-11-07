@@ -1,0 +1,185 @@
+---
+import ArticlePhoto from '../../../components/ArticlePhoto.astro';
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'short', label: 'Short answer' },
+  { id: 'overview', label: 'All schemes at a glance' },
+  { id: 'eu-rules', label: 'Will your home need a D rating by 2030?' },
+  { id: 'spain', label: 'What Spain does with the EU rules' },
+  { id: 'irpf', label: 'Income tax relief (IRPF)' },
+  { id: 'junta', label: 'Junta de Andalucía grant' },
+  { id: 'next-generation', label: 'Next Generation: what is left' },
+  { id: 'council', label: 'IBI and ICIO discounts' },
+  { id: 'cae', label: 'Selling your energy savings (CAE)' },
+  { id: 'steps', label: 'How to go about it' },
+  { id: 'sources', label: 'Sources and date checked' },
+];
+
+const faq = [
+  {
+    q: 'Will my home in Spain need at least an E or D energy rating by 2030?',
+    a: 'No. That was in earlier proposals from the European Commission (2021) and the European Parliament (2023), but it did not make it into the final directive. The 2024 EU buildings directive requires each country to cut the average energy use of its housing stock as a whole: by at least 16% by 2030 and 20 to 22% by 2035, compared with 2020. How Spain will do that is not yet known. As of November 2026, no minimum rating for individual homes has been announced.',
+  },
+  {
+    q: 'Can I get a grant for my holiday home in Spain as a non-resident?',
+    a: 'The IRPF tax relief is only for Spanish tax residents, and only for your main home or a property you let. The Junta de Andalucía grant and the IBI discount are not tied to residency: what counts is that you own the property and that it is legal. Do read the conditions of each call, as they can change from round to round.',
+  },
+  {
+    q: 'Do I have to apply before the work starts?',
+    a: 'Usually, yes. Under the current Andalusian scheme, private owners may also apply for work started after 1 May 2025, but companies must apply beforehand. For the IRPF relief you need an energy certificate from before the work. So always get a certificate first and check which scheme is open before you sign with a builder.',
+  },
+  {
+    q: 'Can I combine a grant with tax relief?',
+    a: 'Yes, but not on the same money. If you receive a grant, that amount is deducted from what you can claim in the IRPF. An IBI discount and the sale of energy savings (CAE) can usually be used alongside. Ask your gestor to work it out for your situation.',
+  },
+  {
+    q: 'Why improve my home if there is no obligation?',
+    a: 'Because it pays off quickly in the Axarquía: an insulated roof and good windows keep the house cooler in summer and warmer in winter, a heat pump and solar panels cut your electricity bill, and a better energy rating helps when you sell or let. Buyers are paying more and more attention to the rating.',
+  },
+];
+---
+<Guide lang="en" slug="energy-efficiency-grants-spain" toc={toc} faq={faq} dienst="renovatie" onderwerp="Energy improvements with a grant" ctaTitle="Want to make your home more efficient and get the grant right?" ctaText="We work out what will make the biggest difference to your home, from roof insulation to solar panels, and arrange quotes and an energy certificate before and after the work.">
+  <h2 id="short">Short answer</h2>
+  <p>Yes, in 2026 you can still get financial help in the Axarquía for making your home more energy efficient. The main schemes are <strong>20 to 60% tax relief</strong> on Spanish income tax (IRPF), a <strong>50 to 65% grant</strong> from the Junta de Andalucía, a <strong>discount on council tax</strong> (IBI) in some municipalities, and selling your energy savings through <strong>CAE certificates</strong>. Almost every scheme requires an energy certificate before and after the work.</p>
+  <p>And the rules? A <strong>mandatory minimum rating</strong> for your home, such as “a D by 2030”, <strong>is not in the EU directive</strong>. It was in earlier proposals but was dropped. Spain does have to bring down the average energy use of all homes, and how it will do so is not yet known.</p>
+
+  <h2 id="overview">All schemes at a glance</h2>
+  <table class="prices">
+    <thead><tr><th>Scheme</th><th>What you get</th><th>Who for</th><th>Status November 2026</th></tr></thead>
+    <tbody>
+      <tr><td>IRPF relief, single home</td><td>20% or 40% of the cost, on up to € 5,000 or € 7,500</td><td>Tax residents; main home or let property</td><td>Work and new certificate before 1 January 2027</td></tr>
+      <tr><td>IRPF relief, building</td><td>60%, up to € 15,000 per flat over several years</td><td>Tax residents with a flat in a residential building</td><td>Work and new certificate before 1 January 2028</td></tr>
+      <tr><td>Junta de Andalucía (Agencia Andaluza de la Energía)</td><td>50 to 65% grant; solar with battery 55 to 65%</td><td>Owners, communities of owners, businesses</td><td>Open since 22 October 2026; partly closed on 29 October as funds ran out</td></tr>
+      <tr><td>Next Generation (EU recovery fund)</td><td>40% per home, up to 80% for whole buildings</td><td>Owners and communities of owners</td><td>Closed for single homes (work had to be finished by 30 June 2026)</td></tr>
+      <tr><td>Council IBI discount</td><td>E.g. Vélez-Málaga 50% for 3 years</td><td>Owners with solar panels</td><td>Varies by municipality</td></tr>
+      <tr><td>CAE certificates</td><td>One-off payment or discount, often a few hundred to a few thousand euros</td><td>Anyone who saves energy</td><td>Running; amount depends on the saving</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Amounts and deadlines change often. Below you will find the conditions for each scheme and what is still uncertain.</p>
+
+  <h2 id="eu-rules">Will your home need a D rating by 2030?</h2>
+  <p>You hear it a lot, but it is not true. The story comes from the negotiations on the new EU buildings directive (<em>Energy Performance of Buildings Directive</em>, EPBD):</p>
+  <ul>
+    <li>In December 2021 the <strong>European Commission</strong> proposed that each country’s worst homes should reach at least an F by 2030 and an E by 2033.</li>
+    <li>In March 2023 the <strong>European Parliament</strong> wanted to go further: all homes <strong>at least E by 2030 and D by 2033</strong>. That is probably what you heard.</li>
+    <li>The <strong>final agreement</strong> of December 2023 dropped this. The directive that took effect in 2024 (Directive 2024/1275) contains <strong>no minimum rating per home</strong>.</li>
+  </ul>
+  <p>What the directive does say:</p>
+  <ul>
+    <li><strong>Homes as a whole must use less energy.</strong> Average energy use across a country’s housing stock must fall by at least <strong>16% by 2030</strong> and <strong>20 to 22% by 2035</strong> compared with 2020. At least 55% of that reduction must come from the worst-performing 43% of homes. Each country chooses how: grants, advice or rules of its own.</li>
+    <li><strong>Offices, shops and other non-residential buildings</strong> do get a hard floor: the worst 16% must be improved by 2030 and the worst 26% by 2033. These are the “2030 and 2033” dates that often get mixed up with homes.</li>
+    <li><strong>New buildings</strong> must be zero-emission: public buildings from 2028, all new buildings from 2030.</li>
+    <li><strong>Stand-alone gas or oil boilers</strong> have not been eligible for subsidies since 1 January 2025, and countries must phase them out by 2040.</li>
+    <li><strong>The energy certificate</strong> gets the same A to G scale across the EU, with A meaning a zero-emission building.</li>
+  </ul>
+  <p class="note">Spain may still bring in stricter national rules to meet the targets, for example for rented homes. Nothing had been decided as of November 2026.</p>
+
+  <h2 id="spain">What Spain does with the EU rules</h2>
+  <p>Spain had to transpose the directive into national law by <strong>29 May 2026</strong>. That has not been fully done yet. In July 2026 the European Commission sent all 27 member states, Spain included, a first warning because transposition was incomplete. The Spanish details are due to come through the <strong>national renovation plan</strong> (<em>Plan Nacional de Renovación de Edificios</em>), which must be ready by the end of 2026, and through the building regulations (<em>Código Técnico de la Edificación</em>).</p>
+  <p>What already applies in Spain:</p>
+  <ul>
+    <li>When you <strong>sell or let</strong> a property, holiday lets included, an energy certificate (<em>certificado de eficiencia energética</em>) is compulsory. The rating must appear in the advert and the certificate is valid for ten years.</li>
+    <li>A <strong>renovation</strong> must meet the building regulations. If you replace the roof or windows, current insulation standards apply to that part.</li>
+    <li>There is <strong>no obligation</strong> to improve an existing house if you are not renovating.</li>
+  </ul>
+  <p>Our advice: don’t wait for rules. A better rating makes your home more comfortable and cheaper to run today, and the current grants are often more generous than what will come later.</p>
+
+  <h2 id="irpf">Income tax relief (IRPF)</h2>
+  <p>If you are <strong>tax resident in Spain</strong>, you can deduct part of the cost from Spanish income tax. The scheme was extended by Real Decreto-ley 7/2026, which Congress ratified on 26 March 2026. An earlier extension (RDL 2/2026) had lapsed in March, which left things uncertain for a few weeks.</p>
+  <table class="prices">
+    <thead><tr><th>Relief</th><th>Condition</th><th>Maximum base</th><th>Deadline</th></tr></thead>
+    <tbody>
+      <tr><td>20%</td><td>Heating and cooling demand at least 7% lower</td><td>€ 5,000 per year</td><td>Work and new certificate before 1 January 2027</td></tr>
+      <tr><td>40%</td><td>Non-renewable energy use at least 30% lower, or rating A or B</td><td>€ 7,500 per year</td><td>Work and new certificate before 1 January 2027</td></tr>
+      <tr><td>60%</td><td>Whole residential building (community) 30% more efficient or rating A or B</td><td>€ 5,000 per year, up to € 15,000 in total</td><td>Work and new certificate before 1 January 2028</td></tr>
+    </tbody>
+  </table>
+  <p>An example: you spend € 15,000 on roof insulation, new windows and a heat pump, and the rating goes from E to B. With 40% relief on a maximum of € 7,500, you get <strong>€ 3,000</strong> back through your tax return.</p>
+  <h3>Points to watch</h3>
+  <ul>
+    <li><strong>Main home or let property only.</strong> The 20% and 40% apply to your own main home and to a property you let (or will let by 31 December 2027). A second home you use yourself does not count.</li>
+    <li><strong>Non-residents</strong> pay non-resident tax rather than IRPF and are not entitled to this relief.</li>
+    <li><strong>Certificate before and after.</strong> The certificate from before the work may be no more than two years old when the work starts. No two certificates, no relief.</li>
+    <li><strong>No cash.</strong> Pay by bank transfer or card and keep every invoice. Cash payments do not count.</li>
+    <li><strong>Grants are deducted.</strong> If you also receive a grant, you can only claim relief on the part you pay yourself.</li>
+  </ul>
+  <p class="note">For single homes, 2026 is the last chance unless the government extends the scheme again. That has happened several times, but don’t count on it.</p>
+
+  <h2 id="junta">Junta de Andalucía grant</h2>
+  <ArticlePhoto name="isolatie-glaswol-close-up" lang="en" />
+  <p>On <strong>22 October 2026</strong> the <strong>Agencia Andaluza de la Energía</strong> opened a new round of grants for energy savings in homes, funded with EU regional money (FEDER). A total of € 20.8 million is available for the whole of Andalusia, public buildings included. You can apply until 30 September 2027 or until the money runs out, on a first-come, first-served basis.</p>
+  <h3>What qualifies</h3>
+  <ul>
+    <li><strong>Insulation</strong> of roof, walls and floor, and <strong>new windows</strong> (the building “envelope”).</li>
+    <li>New <strong>heating, cooling and hot water</strong>, such as a heat pump (<em>aerotermia</em>), and efficient lighting.</li>
+    <li><strong>Solar panels</strong> for your own use, but only <strong>with a home battery</strong>. The battery may be at most 5 kWh per kW of panels.</li>
+  </ul>
+  <h3>How much</h3>
+  <ul>
+    <li>Energy saving work: <strong>50%</strong> for private owners, up to <strong>65%</strong> with extras such as renewable energy.</li>
+    <li>Solar with battery: <strong>55%</strong>, up to <strong>65%</strong> with extras (for example in small villages losing population, or through an energy community).</li>
+    <li>Watch the <strong>minimum</strong>: the grant must be at least € 10,000 for energy saving work and € 6,000 for solar. In practice that means a project of roughly <strong>€ 20,000</strong> or more for insulation and installations, and around <strong>€ 11,000</strong> or more for panels with a battery. Small jobs do not qualify.</li>
+  </ul>
+  <h3>Conditions</h3>
+  <ul>
+    <li>The rating must improve by <strong>at least one letter</strong>, and energy use and CO₂ emissions must fall.</li>
+    <li>Private owners may apply for work started <strong>after 1 May 2025</strong>. Businesses must apply before starting.</li>
+    <li>Applications are made online through the Agencia Andaluza de la Energía portal. Usually the installer or builder does this for you as a registered partner company (<em>entidad colaboradora</em>).</li>
+  </ul>
+  <p><strong>Important:</strong> on <strong>29 October 2026</strong>, one week after opening, the Junta suspended a large part of the scheme because the money for those parts had already gone (more than € 11 million). The decision only lists budget lines, not types of work. So it is <strong>uncertain whether private owners can apply at the moment</strong>. The Junta can top up the budget and reopen the scheme, as it has done in previous years. Ask your builder to check the portal for what is open just before applying.</p>
+
+  <h2 id="next-generation">Next Generation: what is left</h2>
+  <p>Between 2021 and 2026 the largest grants came from the <strong>EU recovery fund</strong> (Next Generation EU), run in Spain through the <em>Plan de Recuperación</em> and in Andalusia by the regional housing department. A single home could get up to 40%, a whole building up to 80%.</p>
+  <ul>
+    <li>The scheme for <strong>single homes has ended</strong>: work had to be finished by 30 June 2026.</li>
+    <li>For some ongoing projects at <strong>building level</strong>, the Junta extended the deadline in May 2026, partly to 2028. That only applies to projects that already received a grant.</li>
+    <li>In July 2026 the Junta shared out another € 38.7 million among <strong>applications on the waiting list</strong>. New applications are not possible.</li>
+  </ul>
+  <p class="note">Reading online about “Next Generation grants of up to € 18,800”? That refers to previous years. For new projects in the Axarquía that scheme is closed.</p>
+
+  <h2 id="council">IBI and ICIO discounts</h2>
+  <p>Municipalities may give a discount on property tax (<strong>IBI</strong>) and on the building works tax (<strong>ICIO</strong>) if you install solar panels or a solar water heater. Each municipality sets this in its own tax bylaw (<em>ordenanza fiscal</em>), which changes every year.</p>
+  <table class="prices">
+    <thead><tr><th>Municipality</th><th>IBI discount for solar</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Vélez-Málaga (including Torre del Mar and Caleta de Vélez)</td><td>50%, up to 3 years</td><td>Each year at most 33% of the installation cost; apply before 31 January for that year</td></tr>
+      <tr><td>Rincón de la Victoria</td><td>15%, 3 years</td><td>According to the Fundación Renovables overview</td></tr>
+      <tr><td>Nerja, Torrox, Cómpeta, Frigiliana, Algarrobo and other villages</td><td>Not confirmed</td><td>Ask the town hall or the Patronato de Recaudación Provincial</td></tr>
+    </tbody>
+  </table>
+  <p>An ICIO discount (the tax on building costs, often 2 to 4%) exists in some municipalities and not in others. On an € 8,000 installation it can easily save a few hundred euros. Ask before you notify the town hall, as it usually cannot be claimed afterwards.</p>
+  <p class="note">The Patronato de Recaudación Provincial de Málaga collects IBI for most of the smaller municipalities in the Axarquía. See also our <a href="/en/guides/spanish-property-tax-calendar/">tax calendar</a>.</p>
+
+  <h2 id="cae">Selling your energy savings (CAE)</h2>
+  <p>Since 2023 Spain has had <strong>energy savings certificates</strong> (<em>Certificados de Ahorro Energético</em>, CAE). Energy companies must deliver a certain amount of savings each year and buy them from households. If, for example, you install a <strong>heat pump</strong> to replace an old gas or butane boiler, or <strong>insulate</strong> the roof, you can have that saving certified and sell it.</p>
+  <ul>
+    <li>The amount depends on the calculated saving and the climate. In the warm Axarquía the saving on heating is smaller than inland, so the payment is too. Expect a few hundred to a few thousand euros.</li>
+    <li>You receive it as a discount on the quote or as a payment afterwards, through an intermediary (<em>sujeto delegado</em>) or an energy company.</li>
+    <li>CAE can usually be combined with other grants. Get in writing what you will receive and when.</li>
+    <li>Beware of “free insulation” adverts: the CAE rarely covers the whole bill.</li>
+  </ul>
+
+  <h2 id="steps">How to go about it</h2>
+  <ol>
+    <li><strong>Get an energy certificate</strong> for the current situation. It usually costs € 100 to € 250 and is the starting point for every scheme.</li>
+    <li><strong>Work out your situation</strong>: are you tax resident, is it your main home or do you let it? Is the property legal? For a house without paperwork or with an <a href="/en/guides/afo-legalisation-andalusia/">AFO</a> the options are more limited.</li>
+    <li><strong>Choose the measures</strong> that make the biggest difference. In the Axarquía that is usually <a href="/en/guides/insulating-your-house-in-spain/">insulating the roof</a> and <a href="/en/costs/windows-and-frames/">replacing windows</a> first, then a <a href="/en/costs/air-conditioning-and-heat-pumps/">heat pump</a> and <a href="/en/costs/solar-panels/">solar panels</a> with a <a href="/en/costs/home-battery/">home battery</a>. Fix any <a href="/en/problems/damp-and-mould/">damp and mould</a> first, or you will seal the problem in.</li>
+    <li><strong>Apply for the grant before you start</strong>, or at least check that the scheme accepts work already under way. Combine jobs if you want to reach the Junta’s minimum.</li>
+    <li><strong>Pay by bank</strong> and keep every invoice, with IVA.</li>
+    <li><strong>Get a new certificate afterwards</strong> and register it with the Junta. For the IRPF relief this must be done before 1 January 2027.</li>
+    <li><strong>Apply for the IBI discount</strong> at the town hall, before 31 January of the year you want it for.</li>
+  </ol>
+  <p><strong>Want to make your home more energy efficient?</strong> We work out what will make the biggest difference, arrange the quotes and make sure the work meets the grant conditions. <a href="/en/request/?dienst=renovatie&onderwerp=Energy%20improvements%20with%20a%20grant">Tell us what you want to tackle</a>.</p>
+
+  <h2 id="sources">Sources and date checked</h2>
+  <ul>
+    <li>EU buildings directive: <a href="https://eur-lex.europa.eu/eli/dir/2024/1275/oj" rel="noopener" target="_blank">Directive (EU) 2024/1275</a>, articles 9 (residential and non-residential), 17 (fossil boilers) and 19 (energy certificates). Earlier proposals and the December 2023 agreement: <a href="https://en.wikipedia.org/wiki/Energy_Performance_of_Buildings_Directive_2024" rel="noopener" target="_blank">Wikipedia overview</a>, including the July 2026 formal notices, and the <a href="https://uipi.com/european-parliaments-plenary-vote-on-epbd/" rel="noopener" target="_blank">European Parliament position of 14 March 2023</a>.</li>
+    <li>IRPF relief: Ley 35/2006, additional provision 50; extended by Real Decreto-ley 7/2026, see <a href="https://www.idealista.com/news/fiscalidad/2026/03/30/891068-prorrogadas-las-deducciones-fiscales-por-obras-de-mejora-energetica-de-viviendas-y-edificios" rel="noopener" target="_blank">idealista, 30 March 2026</a>.</li>
+    <li>Junta de Andalucía: call by the Agencia Andaluza de la Energía of 21 September 2026 (BOJA 25 September 2026), summarised by <a href="https://laadministracionaldia.inap.es/noticia.asp?id=1269624" rel="noopener" target="_blank">INAP</a>, <a href="https://www.construible.es/2026/09/29/convocatoria-ayudas-mejora-energetica-viviendas-edificios-publicos-andalucia" rel="noopener" target="_blank">Construible</a> and <a href="https://www.energias-renovables.com/autoconsumo/andaluc-a-abre-las-solicitudes-de-ayudas-20261022" rel="noopener" target="_blank">Energías Renovables</a>. Suspension: <a href="https://www.juntadeandalucia.es/boja/2026/221002/1" rel="noopener" target="_blank">resolution of 29 October 2026</a>.</li>
+    <li>Next Generation in Andalusia: <a href="https://www.juntadeandalucia.es/boja/2026/96/2" rel="noopener" target="_blank">Order of 14 May 2026</a> (deadline extensions) and the <a href="https://www.juntadeandalucia.es/organismos/viviendajuventudyordenaciondelterritorio/areas/vivienda-rehabilitacion/plan-eco-vivienda/paginas/plan-eco-convocatoriarehab.html" rel="noopener" target="_blank">Junta page on energy renovation</a>.</li>
+    <li>IBI discounts: <a href="https://costasolarguide.com/es/bonificaciones-placas-solares/velez-malaga/" rel="noopener" target="_blank">Vélez-Málaga, IBI tax bylaw article 12</a> (checked July 2026) and an <a href="https://solar-master-malaga.com/blog/bonificacion-ibi-municipio-a-municipio/" rel="noopener" target="_blank">overview by municipality</a> (based on Fundación Renovables).</li>
+    <li>CAE: <a href="https://www.ocu.org/vivienda-y-energia/gas-luz/noticias/medidas-certificados-ahorro-energetico" rel="noopener" target="_blank">OCU on energy savings certificates</a>.</li>
+  </ul>
+  <p class="note">This guide gives general information for the Axarquía, checked on 6 November 2026. Grants open and close, and Spain has yet to complete its version of the EU directive. It is not tax advice; ask your gestor to work out your own situation.</p>
+</Guide>

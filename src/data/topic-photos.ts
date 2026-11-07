@@ -119,6 +119,9 @@ const guidePlacements: Record<string, string> = {
   'virtuelle-batterie-spanien': 'zonnepanelen-pannendak',
   'energieleveranciers-spanje-vergelijken': 'zonnepanelen-pannendak',
   'stromanbieter-spanien-vergleich': 'zonnepanelen-pannendak',
+  'subsidie-verduurzamen-spanje': 'zonnepanelen-pannendak',
+  'energy-efficiency-grants-spain': 'zonnepanelen-pannendak',
+  'foerderung-energetische-sanierung-spanien': 'zonnepanelen-pannendak',
 };
 
 export interface ArticleImage { alt: string; src: string; srcset: string; og: string; }
