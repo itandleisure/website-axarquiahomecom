@@ -10,6 +10,8 @@ export interface PlaceText {
   intro: string[];
   facts: [string, string][];
   forWhom?: string;
+  /** Blok over reparaties en onderhoud in deze plaats (HTML toegestaan) */
+  repairs?: { h: string; p: string[] };
   /** Pagina Zien en doen (alleen gemeenten in golf A en B) */
   see?: {
     title: string;

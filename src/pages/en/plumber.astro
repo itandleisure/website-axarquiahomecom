@@ -1,0 +1,121 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Steps from '../../components/Steps.astro';
+import Services from '../../components/Services.astro';
+import { site } from '../../data/site';
+
+const onderwerp = 'I am looking for a plumber for one or more small repairs (tap, drain, toilet, water heater or water pressure).';
+const aanvraag = '/en/request/?dienst=onderhoud&onderwerp=' + encodeURIComponent(onderwerp);
+
+const faq = [
+  {
+    q: 'Will you come out for a single dripping tap?',
+    a: 'Yes. If you have several small jobs, put them in one request. We then do everything in one visit, which saves you call-out costs and time.',
+  },
+  {
+    q: 'What does a plumber cost for a small repair?',
+    a: 'Small repairs are charged by the hour, plus materials. With a few photos and a short description we can estimate the time beforehand, so there are no surprises. If it turns out to be a bigger problem, such as old pipes leaking in several places, you get a proposal first before we carry on.',
+  },
+  {
+    q: 'I am not in Spain. Can you still sort it out?',
+    a: 'Yes. Send photos or a short video from a neighbour or your cleaner, and let us know how we get in. We send photos of the work when it is done. If you have key holding with us, we arrange access ourselves and fix small things on the next visit.',
+  },
+  {
+    q: 'Water is leaking right now. What should I do first?',
+    a: 'Turn off the main stopcock. It is often by the water meter at the street or at the entrance to the urbanisation, and inside there is usually a second valve (llave de paso) in the kitchen, bathroom or by the water heater. If water is near sockets, switch off the electricity too. Our guide to water leaks in Spain explains what to do next.',
+  },
+  {
+    q: 'Do you speak English?',
+    a: 'Yes, you can simply write to us in English or Dutch. We handle the contact with the tradesman and, where needed, with the water company or the neighbours.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Plumber and small repairs',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['en', 'nl', 'es'],
+};
+---
+<Base
+  title="Plumber in the Axarquía for small repairs"
+  description="Dripping tap, blocked drain, a toilet that keeps running or a water heater that has given up? A plumber for small repairs in Cómpeta and across the Axarquía."
+  path="/en/plumber/"
+  lang="en"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="en" items={[{ name: 'Maintenance and repairs', href: '/en/maintenance/' }, { name: 'Plumber', href: '/en/plumber/' }]} />
+  <Hero
+    lang="en"
+    eyebrow="Plumber and small repairs"
+    title="A plumber who <em>actually turns up</em>, even for small jobs"
+    lead="A dripping tap, a drain that will not clear or a water heater on its last legs. In Spain it is hard to find someone for one small job. We book it in, with a price estimate up front, in English."
+    cta="Request a plumber"
+    ctaHref={aanvraag}
+    secondary="Water leak guide"
+    secondaryHref="/en/guides/water-leak-spain/"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h2 class="h3">Taps and pipes</h2>
+          <p>Dripping taps, leaking joints, a broken stop valve or a section of pipe that needs replacing.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Drains and toilets</h2>
+          <p>Blocked sinks or showers, a toilet that keeps running or leaks, bad smells coming up from the drains.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Water heater and hot water</h2>
+          <p>No or too little hot water, a leaking or ageing water heater (<em>termo</em>), a pressure relief valve that keeps dripping. Time to replace it? Read <a href="/en/guides/replacing-pipes-and-water-heater-spain/">replacing pipes and the water heater</a>.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Water pressure, pump and tank</h2>
+          <p>Low pressure, a pump that keeps cutting in or a water tank (<em>depósito</em>) that does not fill properly. See also <a href="/en/problems/no-water-or-low-pressure/">no water or low pressure</a>.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Finding leaks</h2>
+          <p>A damp patch, a high water bill or a meter that keeps turning with every tap closed. We find the cause and put right the damage.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Connecting and fitting</h2>
+          <p>Connecting a new tap, washing machine, dishwasher or <a href="/en/guides/water-filters-spain/">water filter</a>. For a whole bathroom or kitchen, see <a href="/en/renovation/">renovation</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="en"
+    title="How it works"
+    steps={[
+      { t: 'Send us the jobs', d: 'Put all the small jobs in one request, with a photo of each if you can. Then the plumber knows which parts to bring.' },
+      { t: 'Estimate and appointment', d: 'You hear roughly how long it will take and when we can come. If you are away, we agree how we get in.' },
+      { t: 'Repairs in one visit', d: 'We do the jobs in one go where possible, and send photos if you are not there.' },
+      { t: 'Spot anything else?', d: 'If we notice something, such as an old water heater or the start of a leak, we tell you. You decide whether anything is done about it.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>A small job, or a bigger problem?</h2>
+      <p>Many leaks in Spanish homes start small: a drip under the sink, a damp patch on a wall. Leave it, and a few months later you have damp and mould, or a hefty water bill. That is why we take a quick look at the rest of the plumbing with every repair. How to recognise a leak and what it costs is in our guide to <a href="/en/guides/water-leak-spain/">water leaks in Spain</a>.</p>
+      <p>Tap water in much of the Axarquía is hard. Limescale wears out taps, water heaters and toilet cisterns faster. A <a href="/en/guides/water-filters-spain/">water softener or filter</a> can help. A smell of sewage indoors, or slow drains at a country house? Sometimes the problem is the <a href="/en/problems/septic-tank-problems/">septic tank</a>. If the house stands empty for long periods, read about <a href="/en/problems/legionella/">legionella</a> too.</p>
+      <h2>Where we work</h2>
+      <p>Across the Axarquía: in mountain villages such as <a href="/en/places/competa/">Cómpeta</a>, <a href="/en/places/canillas-de-albaida/">Canillas de Albaida</a>, <a href="/en/places/archez/">Árchez</a>, <a href="/en/places/sayalonga/">Sayalonga</a> and <a href="/en/places/frigiliana/">Frigiliana</a>, and on the coast in places like <a href="/en/places/nerja/">Nerja</a>, <a href="/en/places/torrox/">Torrox</a> and <a href="/en/places/velez-malaga/">Vélez-Málaga</a>.</p>
+      <p>Rather not have to find someone for every little job? With <a href="/en/key-holding/">key holding</a> we keep an eye on the house and fix small things before they become big ones. For roofs, terraces and land, see <a href="/en/maintenance/">maintenance</a>.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="en" />
+  <Cta lang="en" dienst="onderhoud" onderwerp={onderwerp} title="A few jobs that have been waiting too long?" text="Put them in one request, with a photo if you can. You get a price estimate and an appointment." />
+  <Services lang="en" exclude="maintenance" title="You may also need" />
+</Base>

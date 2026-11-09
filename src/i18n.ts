@@ -26,6 +26,7 @@ export const routes: Partial<Record<Lang, string>>[] = [
   { nl: '/nl/zien-en-doen/', en: '/en/things-to-do/', de: '/de/sehenswuerdigkeiten/', sv: '/sv/se-och-gora/' },
   { nl: '/nl/contact/', en: '/en/contact/', de: '/de/kontakt/', sv: '/sv/kontakt/', es: '/es/contacto/' },
   { nl: '/nl/toegangsweg/', en: '/en/access-road/', de: '/de/zufahrtsweg/', sv: '/sv/tillfartsvag/', es: '/es/camino-de-acceso/' },
+  { nl: '/nl/loodgieter/', en: '/en/plumber/' },
   { nl: '/nl/verhuurbeheer/', en: '/en/holiday-rental-management/', de: '/de/vermietungsservice/', sv: '/sv/uthyrningsservice/', es: '/es/gestion-alquiler-vacacional/' },
   // Gidsen staan in alle talen in dezelfde volgorde (zie src/data/guides.ts)
   ...guidesBy.nl.map((_, i) =>
@@ -82,6 +83,7 @@ export const nav: Record<Lang, NavItem[]> = {
       { href: '/nl/aankoopkeuring/', label: 'Aankoopkeuring' },
       { href: '/nl/zwembad/', label: 'Zwembad' },
       { href: '/nl/onderhoud/', label: 'Onderhoud' },
+      { href: '/nl/loodgieter/', label: 'Loodgieter' },
       { href: '/nl/toegangsweg/', label: 'Toegangsweg' },
     ] },
     { href: '/nl/plaatsen/', label: 'Plaatsen' },
@@ -98,6 +100,7 @@ export const nav: Record<Lang, NavItem[]> = {
       { href: '/en/property-survey/', label: 'Property survey' },
       { href: '/en/swimming-pool/', label: 'Swimming pools' },
       { href: '/en/maintenance/', label: 'Maintenance' },
+      { href: '/en/plumber/', label: 'Plumber' },
       { href: '/en/access-road/', label: 'Access road' },
     ] },
     { href: '/en/places/', label: 'Places' },

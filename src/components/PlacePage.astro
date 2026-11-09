@@ -116,6 +116,7 @@ if (heroPhoto) placeLd.image = new URL(heroPhoto.og, site.url).href;
         <div class="prose">
           {c.intro.map((p) => <p set:html={p} />)}
           {c.forWhom && (<><h2>{T.forWhom} {place.name}?</h2><p set:html={c.forWhom} /></>)}
+          {c.repairs && (<><h2>{c.repairs.h}</h2>{c.repairs.p.map((p) => <p set:html={p} />)}</>)}
           {parent && <p class="note">{place.name} {T.partOf} <a href={placeHref(lang, parent)}>{parent.name}</a>.</p>}
         </div>
         <div class="box">
