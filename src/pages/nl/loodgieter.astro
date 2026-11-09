@@ -1,0 +1,118 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Steps from '../../components/Steps.astro';
+import Services from '../../components/Services.astro';
+import { site } from '../../data/site';
+
+const onderwerp = 'Ik zoek een loodgieter voor een of meer kleine reparaties (kraan, afvoer, toilet, boiler of waterdruk).';
+const aanvraag = '/nl/aanvraag/?dienst=onderhoud&onderwerp=' + encodeURIComponent(onderwerp);
+
+const faq = [
+  {
+    q: 'Komen jullie ook voor één lekkende kraan?',
+    a: 'Ja. Heeft u meerdere kleine klussen, zet ze dan samen in één aanvraag. Dan plannen we alles in één bezoek, en dat scheelt u voorrijkosten en tijd.',
+  },
+  {
+    q: 'Wat kost een loodgieter voor een kleine reparatie?',
+    a: 'Kleine reparaties gaan op uurbasis, plus materiaal. Met een paar foto’s en een korte omschrijving kunnen we vooraf inschatten hoe lang het duurt, zodat u niet voor verrassingen komt te staan. Blijkt het een groter probleem, zoals oude leidingen die overal lekken, dan krijgt u eerst een voorstel voordat we verder gaan.',
+  },
+  {
+    q: 'Ik ben niet in Spanje. Kunnen jullie het toch oplossen?',
+    a: 'Ja. Stuur foto’s of een filmpje van de buren of uw schoonmaker mee, en spreek af hoe we binnenkomen. We sturen foto’s van het werk als het klaar is. Heeft u sleutelbeheer bij ons, dan regelen we de toegang zelf en lossen we kleine dingen op tijdens het volgende bezoek.',
+  },
+  {
+    q: 'Er lekt nu water. Wat moet ik meteen doen?',
+    a: 'Draai de hoofdkraan dicht. Die zit vaak bij de watermeter aan de straat of de ingang van de urbanisatie, en in huis zit meestal nog een afsluiter (llave de paso) in de keuken, badkamer of bij de boiler. Zet bij water in de buurt van stopcontacten ook de stroom uit. Meer leest u in onze gids over waterlekkage in Spanje.',
+  },
+  {
+    q: 'Spreken jullie Nederlands?',
+    a: 'Ja, u kunt ons gewoon in het Nederlands of Engels schrijven. Wij regelen het contact met de vakman en, als het nodig is, met de waterleverancier of de buren.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Loodgieter en kleine reparaties',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en', 'es'],
+};
+---
+<Base
+  title="Loodgieter in de Axarquía voor kleine reparaties"
+  description="Lekkende kraan, verstopte afvoer, toilet dat doorloopt of een boiler die het niet doet? Loodgieter voor kleine reparaties in Cómpeta en de hele Axarquía."
+  path="/nl/loodgieter/"
+  jsonLd={[service]}
+>
+  <Breadcrumbs items={[{ name: 'Onderhoud', href: '/nl/onderhoud/' }, { name: 'Loodgieter', href: '/nl/loodgieter/' }]} />
+  <Hero
+    eyebrow="Loodgieter en kleine reparaties"
+    title="Een loodgieter die <em>gewoon komt</em>, ook voor kleine klussen"
+    lead="Een druppende kraan, een afvoer die niet wegloopt of een boiler die de geest geeft. Voor één klus vindt u in Spanje lastig iemand. Wij plannen het in, met een prijsindicatie vooraf, in het Nederlands."
+    cta="Loodgieter aanvragen"
+    ctaHref={aanvraag}
+    secondary="Gids waterlekkage"
+    secondaryHref="/nl/gidsen/waterlekkage-spanje/"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h2 class="h3">Kranen en leidingen</h2>
+          <p>Druppende kranen, lekkende koppelingen, een kapotte afsluiter of een stuk leiding dat vervangen moet worden.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Afvoer en toilet</h2>
+          <p>Verstopte gootsteen of douche, een toilet dat blijft doorlopen of lekt, stankoverlast uit de afvoer.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Boiler en warm water</h2>
+          <p>Geen of te weinig warm water, een lekkende of oude boiler (<em>termo</em>), een overdrukventiel dat blijft druppen. Toe aan vervanging? Lees <a href="/nl/gidsen/leidingen-en-boiler-vervangen-spanje/">leidingen en boiler vervangen</a>.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Waterdruk, pomp en watertank</h2>
+          <p>Weinig druk, een pomp die steeds aanslaat of een watertank (<em>depósito</em>) die niet goed vult. Zie ook <a href="/nl/problemen/geen-water-of-waterdruk/">geen water of te weinig druk</a>.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Lekkage opsporen</h2>
+          <p>Een vochtplek, een hoge waterrekening of een meter die doordraait terwijl alles dicht is. We zoeken de oorzaak en herstellen de schade.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Aansluiten en plaatsen</h2>
+          <p>Een nieuwe kraan, wasmachine, vaatwasser of <a href="/nl/gidsen/waterfilter-spanje/">waterfilter</a> aansluiten. Voor een hele badkamer of keuken kijkt u bij <a href="/nl/renovatie/">renovatie</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    title="Zo werkt het"
+    steps={[
+      { t: 'U stuurt de klussen', d: 'Zet alle kleine klussen in één aanvraag, met een foto per klus als dat kan. Dan weet de vakman welk materiaal hij mee moet nemen.' },
+      { t: 'Prijsindicatie en afspraak', d: 'U hoort hoe lang het ongeveer duurt en wanneer we kunnen komen. Bent u er niet, dan spreken we af hoe we binnenkomen.' },
+      { t: 'Reparatie in één bezoek', d: 'We doen de klussen zoveel mogelijk in één keer, en sturen foto’s als u er niet bij bent.' },
+      { t: 'Zien we meer?', d: 'Valt ons iets op, zoals een oude boiler of een begin van lekkage, dan melden we het. U beslist zelf of er iets mee gebeurt.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Kleine klus, of een groter probleem?</h2>
+      <p>Veel lekkages in Spaanse huizen beginnen klein: een druppel onder de gootsteen, een natte plek in de muur. Wie het laat zitten, heeft na een paar maanden vocht en schimmel, of een flinke waterrekening. Daarom kijken we bij elke reparatie ook even naar de rest van de installatie. Hoe u een lek herkent en wat het kost, leest u in de gids <a href="/nl/gidsen/waterlekkage-spanje/">waterlekkage in Spanje</a>.</p>
+      <p>Het leidingwater in de Axarquía is op veel plekken kalkrijk. Dat slijt kranen, boilers en toiletspoelingen sneller. Een <a href="/nl/gidsen/waterfilter-spanje/">waterontharder of filter</a> kan helpen. Ruikt het in huis naar riool, of loopt de afvoer van een landhuis traag? Dan zit het probleem soms in de <a href="/nl/problemen/beerput-vol-of-stinkt/">beerput</a>. Staat het huis lang leeg, lees dan ook over <a href="/nl/problemen/legionella/">legionella</a>.</p>
+      <h2>Waar we komen</h2>
+      <p>In de hele Axarquía: in de bergdorpen zoals <a href="/nl/plaatsen/competa/">Cómpeta</a>, <a href="/nl/plaatsen/canillas-de-albaida/">Canillas de Albaida</a>, <a href="/nl/plaatsen/archez/">Árchez</a>, <a href="/nl/plaatsen/sayalonga/">Sayalonga</a> en <a href="/nl/plaatsen/frigiliana/">Frigiliana</a>, en aan de kust in onder meer <a href="/nl/plaatsen/nerja/">Nerja</a>, <a href="/nl/plaatsen/torrox/">Torrox</a> en <a href="/nl/plaatsen/velez-malaga/">Vélez-Málaga</a>.</p>
+      <p>Wilt u niet bij elke klus zelf iemand hoeven zoeken? Met <a href="/nl/sleutelbeheer/">sleutelbeheer</a> houden we het huis in de gaten en lossen we kleine dingen op voordat ze groot worden. Voor dak, terras en perceel kijkt u bij <a href="/nl/onderhoud/">onderhoud</a>.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} />
+  <Cta dienst="onderhoud" onderwerp={onderwerp} title="Een paar klusjes die al te lang blijven liggen?" text="Zet ze in één aanvraag, met een foto als het kan. U krijgt een prijsindicatie en een afspraak." />
+  <Services exclude="onderhoud" title="Ook interessant" />
+</Base>

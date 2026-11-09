@@ -29,6 +29,13 @@ const content: PlaceContent = {
       ['Málaga (luchthaven)', 'circa een uur rijden'],
       ['Prijsniveau', 'gemiddeld, lager dan aan de kust'],
     ],
+    repairs: {
+      h: 'Reparaties en onderhoud in Cómpeta',
+      p: [
+        'Een lekkende kraan, een verstopte afvoer of een boiler die het opgeeft: in Cómpeta is het vaak lastig om voor één kleine klus iemand te vinden. Wij sturen een <a href="/nl/loodgieter/">loodgieter voor kleine reparaties</a> en plannen meerdere klusjes in één bezoek, ook als u niet in Spanje bent.',
+        'Veel huizen in en rond het dorp zijn oud en staan een deel van het jaar leeg. Een kleine lekkage valt dan pas laat op. Lees wat u meteen doet bij <a href="/nl/gidsen/waterlekkage-spanje/">waterlekkage</a>, of laat het huis in de gaten houden met <a href="/nl/sleutelbeheer/">sleutelbeheer</a>. Voor dak, terras en perceel kijkt u bij <a href="/nl/onderhoud/">onderhoud</a>.',
+      ],
+    },
     forWhom: 'Voor wie rust, natuur en uitzicht zoekt, en het niet erg vindt om voor het strand een halfuur te rijden. Cómpeta trekt mensen die er het hele jaar wonen: in het dorp is alles dichtbij en er is een grote internationale gemeenschap.',
     see: {
       title: 'Zien en doen in Cómpeta: wijn, bergen en de Noche del Vino',
@@ -91,6 +98,13 @@ const content: PlaceContent = {
       ['Málaga airport', 'about an hour by car'],
       ['Price level', 'average, below the coast'],
     ],
+    repairs: {
+      h: 'Repairs and maintenance in Cómpeta',
+      p: [
+        'A dripping tap, a blocked drain or a water heater that gives up: in Cómpeta it is often hard to find someone for one small job. We send a <a href="/en/plumber/">plumber for small repairs</a> and book several jobs into one visit, even when you are not in Spain.',
+        'Many houses in and around the village are old and stand empty for part of the year, so a small leak is often noticed late. Read what to do straight away with a <a href="/en/guides/water-leak-spain/">water leak</a>, or have the house checked with <a href="/en/key-holding/">key holding</a>. For roofs, terraces and land, see <a href="/en/maintenance/">maintenance</a>.',
+      ],
+    },
     forWhom: 'People looking for peace, nature and views, who do not mind driving half an hour to the beach. Cómpeta attracts year-round residents: everything is close by in the village and there is a large international community.',
     see: {
       title: 'Things to do in Cómpeta: wine, hiking, Noche del Vino',
