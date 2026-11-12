@@ -28,7 +28,8 @@ const CONFIG = {
   DAGEN_VERVERSEN: 60,
 };
 // Sleutels staan NIET in de code maar in Projectinstellingen > Scripteigenschappen:
-//   GA4_PROPERTY_ID, BING_API_KEY, PLAUSIBLE_API_KEY, AANVRAGEN_SHEET_ID, TOKEN (maakt setup() zelf aan)
+//   GA4_PROPERTY_ID, BING_API_KEY, PLAUSIBLE_API_KEY, AANVRAGEN_SHEET_ID, TOKEN (maakt setup() zelf aan),
+//   WACHTWOORD (voor de pagina axarquiahome.com/statistiek/)
 
 const AI_BRONNEN = /chatgpt|openai|perplexity|gemini|bard|copilot|claude|anthropic|deepseek|you\.com|phind|mistral|grok/i;
 
@@ -271,7 +272,12 @@ function doPost(e) {
 }
 
 // ===== Dashboard =====
-function doGet() {
+// Met ?wachtwoord=...: geeft de cijfers als JSON voor axarquiahome.com/statistiek/.
+// Het wachtwoord staat in Projectinstellingen > Scripteigenschappen als WACHTWOORD.
+// Zonder wachtwoord: het dashboard zelf, alleen voor de eigenaar van het script.
+function doGet(e) {
+  const p = (e && e.parameter) || {};
+  if (p.wachtwoord !== undefined) return cijfers_(String(p.wachtwoord));
   const wie = (Session.getActiveUser().getEmail() || '').toLowerCase();
   const eigenaar = (Session.getEffectiveUser().getEmail() || '').toLowerCase();
   const mag = wie && wie === eigenaar;
@@ -289,6 +295,20 @@ function doGet() {
     .setTitle('Statistieken axarquiahome.com')
     .addMetaTag('viewport', 'width=device-width, initial-scale=1')
     .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+}
+
+function cijfers_(pw) {
+  const juist = prop_('WACHTWOORD');
+  if (!juist) return json_({ ok: false, error: 'Er is nog geen wachtwoord ingesteld (scripteigenschap WACHTWOORD).' });
+  // Tegen raden: na 20 foute pogingen binnen 15 minuten even dicht.
+  const cache = CacheService.getScriptCache();
+  const fout = Number(cache.get('foutPogingen') || 0);
+  if (fout >= 20) return json_({ ok: false, error: 'Te veel pogingen. Probeer het over een kwartier opnieuw.' });
+  if (pw !== juist) {
+    cache.put('foutPogingen', String(fout + 1), 900);
+    return json_({ ok: false, error: 'Onjuist wachtwoord.' });
+  }
+  return json_({ ok: true, data: data_() });
 }
 
 function data_() {
