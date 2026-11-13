@@ -144,15 +144,15 @@ const defects = ['vocht-afbladderende-verf-muur', 'lekkage-vlek-plafond-hoek'];
 
     /* Omslag: foto over de hele pagina */
     .cover { position: relative; width: 210mm; height: 297mm; overflow: hidden; break-after: page; color: #fff; }
-    .cover img { position: absolute; inset: 0; height: 100%; object-position: 40% center; }
-    .cover::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgb(20 14 10 / 0.55) 0%, rgb(20 14 10 / 0) 28%, rgb(20 14 10 / 0) 45%, rgb(20 14 10 / 0.82) 100%); }
+    .cover img { position: absolute; inset: 0; height: 100%; }
+    /* De donkere overloop zit in de foto zelf (omslag-competa.jpg): transparante lagen tonen sommige pdf-lezers verkeerd */
     .cover .inner { position: absolute; z-index: 2; left: 18mm; right: 18mm; bottom: 22mm; }
     .brand { display: flex; align-items: center; gap: 3mm; font-family: Georgia, serif; font-size: 16pt; position: absolute; z-index: 2; top: 14mm; left: 18mm; color: #fff; }
     .brand b { color: var(--sun); font-weight: 600; }
     .edition { display: inline-block; text-transform: uppercase; letter-spacing: 0.1em; font-size: 8.5pt; font-weight: 700; background: var(--terra); padding: 1.5mm 3.5mm; border-radius: 99px; margin: 0 0 5mm; }
     .cover h1 { font-size: 32pt; margin: 0 0 5mm; color: #fff; }
-    .cover .sub { font-size: 13pt; margin: 0; max-width: 150mm; opacity: 0.95; }
-    .cover .credit { position: absolute; z-index: 2; right: 18mm; bottom: 8mm; font-size: 7.5pt; opacity: 0.8; margin: 0; }
+    .cover .sub { font-size: 13pt; margin: 0; max-width: 150mm; color: #f6efe7; }
+    .cover .credit { position: absolute; z-index: 2; right: 18mm; bottom: 8mm; font-size: 7.5pt; color: #e8ddd2; margin: 0; }
 
     /* Welkom */
     .welcome h2 { font-size: 20pt; color: var(--terra-dark); margin: 0 0 3mm; }
@@ -192,17 +192,17 @@ const defects = ['vocht-afbladderende-verf-muur', 'lekkage-vlek-plafond-hoek'];
     /* Slot: foto met de oproep erover */
     .cta { position: relative; border-radius: 4mm; overflow: hidden; margin-top: 8mm; break-inside: avoid; color: #fff; min-height: 105mm; }
     .cta img { position: absolute; inset: 0; height: 100%; }
-    .cta::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgb(143 63 34 / 0.95) 0%, rgb(143 63 34 / 0.85) 55%, rgb(143 63 34 / 0.25) 100%); }
+    .cta { background: #8f3f22; }
     .cta .inner { position: relative; z-index: 2; padding: 10mm 12mm; max-width: 125mm; }
     .cta h2 { color: #fff; margin-top: 0; font-size: 18pt; }
     .cta a.button { display: inline-block; background: #fff; color: var(--terra-dark); text-decoration: none; font-weight: 700; padding: 2.5mm 6mm; border-radius: 99px; margin-top: 2mm; }
-    .cta .url { font-size: 9pt; opacity: 0.9; margin: 3mm 0 0; }
+    .cta .url { font-size: 9pt; color: #f6e6dc; margin: 3mm 0 0; }
     .disclaimer { margin-top: 6mm; }
   </style>
 </head>
 <body>
   <section class="cover">
-    <img src={img('competa-panorama-sierra-almijara')} alt="" />
+    <img src={img('omslag-competa')} alt="" />
     <div class="brand">
       <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M4 15 16 5l12 10v12a1 1 0 0 1-1 1h-7v-8h-8v8H5a1 1 0 0 1-1-1z" fill="#fff"/><circle cx="24" cy="8" r="3" fill="#e9a23b"/></svg>
       <span>Axarquía<b>Home</b></span>
@@ -266,7 +266,7 @@ const defects = ['vocht-afbladderende-verf-muur', 'lekkage-vlek-plafond-hoek'];
   </div>
 
   <div class="cta">
-    <img src={img('nerja-uitzicht-bougainville')} alt="" />
+    <img src={img('slot-nerja')} alt="" />
     <div class="inner">
       <h2>{c.cta.title}</h2>
       <p>{c.cta.text}</p>
