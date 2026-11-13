@@ -1,14 +1,14 @@
 ---
-// Inschrijfformulier voor de gratis aankoopchecklist (lead magnet).
+// Inschrijfformulier voor een gratis checklist (lead magnet), zie src/data/checklists.ts.
 // Stuurt naar hetzelfde Apps Script als de keuzehulp, met dienst = "checklist".
 // Een inschrijving is geen aanvraag en gaat niet naar het bouwbedrijf.
 import { site, isFilled } from '../data/site';
-import { checklist } from '../data/checklist';
+import { checklists, type ChecklistId } from '../data/checklists';
 import { path, type Lang } from '../i18n';
 
-interface Props { lang?: Lang; compact?: boolean; }
-const { lang = 'nl', compact = false } = Astro.props;
-const c = checklist[lang]!;
+interface Props { lang?: Lang; id?: ChecklistId; compact?: boolean; }
+const { lang = 'nl', id = 'kopen', compact = false } = Astro.props;
+const c = checklists[id][lang]!;
 const f = c.form;
 const endpoint = isFilled(site.leadEndpoint) ? site.leadEndpoint : '';
 const pdfUrl = `/downloads/${c.pdf}`;
@@ -18,7 +18,7 @@ const uid = `cl-${Math.random().toString(36).slice(2, 8)}`;
   {compact && <p class="eyebrow">{c.page.eyebrow}</p>}
   <h2 class="cs-title">{compact ? c.teaser.title : f.title}</h2>
   <p>{compact ? c.teaser.text : f.text}</p>
-  <form class="cs-form" data-endpoint={endpoint} data-pdf={pdfUrl} data-msgs={JSON.stringify({ sending: f.sending, error: f.error, invalid: f.invalid, noEndpoint: f.noEndpoint })} novalidate>
+  <form class="cs-form" data-endpoint={endpoint} data-checklist={id} data-pdf={pdfUrl} data-msgs={JSON.stringify({ sending: f.sending, error: f.error, invalid: f.invalid, noEndpoint: f.noEndpoint })} novalidate>
     <div class="cs-row">
       <label>
         <span>{f.email}</span>
@@ -77,7 +77,7 @@ const uid = `cl-${Math.random().toString(36).slice(2, 8)}`;
       form.hidden = true;
       done.hidden = false;
       // Meten in Google Analytics (alleen als de bezoeker statistieken heeft toegestaan)
-      (window as any).gtag?.('event', 'generate_lead', { lead_type: 'checklist', language: document.documentElement.lang });
+      (window as any).gtag?.('event', 'generate_lead', { lead_type: 'checklist', checklist: form.dataset.checklist, language: document.documentElement.lang });
     };
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -89,6 +89,7 @@ const uid = `cl-${Math.random().toString(36).slice(2, 8)}`;
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { errorEl.textContent = M.invalid; return; }
       data.email = email;
       data.dienst = 'checklist';
+      data.checklist = form.dataset.checklist;
       data.toestemming = 'ja'; // de bezoeker vraagt zelf om de checklist
       data.toestemming_tips = data.toestemming_tips === 'ja' ? 'ja' : 'nee';
       data.taal = document.documentElement.lang;

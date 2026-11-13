@@ -20,10 +20,14 @@ export interface ChecklistText {
   edition: string;
   intro: string[];
   sections: ChecklistSection[];
-  questions: { title: string; agentTitle: string; agent: string[]; lawyerTitle: string; lawyer: string[] };
-  calc: { title: string; intro: string; rows: [string, string][]; total: string; note: string };
-  after: ChecklistSection;
-  cta: { title: string; text: string; button: string; contactNote?: string };
+  /** Twee kolommen met vragen (bijv. makelaar en advocaat) */
+  questions?: { title: string; agentTitle: string; agent: string[]; lawyerTitle: string; lawyer: string[] };
+  calc?: { title: string; intro: string; rows: [string, string][]; total: string; note: string };
+  after?: ChecklistSection;
+  /** Blok met twee voorbeeldfoto's onder een hoofdstuk (foto's in src/data/checklists.ts) */
+  spot?: { title: string; intro: string };
+  /** dienst = voorkeuze in de keuzehulp (?dienst=…) */
+  cta: { title: string; text: string; button: string; contactNote?: string; dienst?: string };
   disclaimer: string;
   // Landingspagina
   page: {
@@ -898,11 +902,3 @@ export const checklist: Partial<Record<Lang, ChecklistText>> = {
     },
   },
 };
-
-/** Gidsen (slug per taal) waar het inschrijfblok onder komt. */
-export const checklistGuides = new Set([
-  'emigreren-naar-spanje', 'finca-kopen-in-spanje', 'kosten-koper-spanje', 'huis-kopen-malaga-andalusie', 'afo-legaliseren-andalusie', 'kosten-huis-renoveren-spanje',
-  'moving-to-spain-from-the-uk', 'buying-a-finca-in-spain', 'buying-costs-in-spain', 'buying-property-in-malaga', 'afo-legalisation-andalusia', 'renovation-costs-spain',
-  'auswandern-nach-spanien', 'finca-kaufen-spanien', 'kaufnebenkosten-spanien', 'immobilie-kaufen-malaga', 'afo-legalisierung-andalusien', 'renovierungskosten-spanien',
-  'flytta-till-spanien', 'kopa-finca-i-spanien', 'kopa-hus-i-spanien-kostnader', 'kopa-bostad-i-malaga', 'afo-andalusien', 'renovera-hus-i-spanien-kostnad',
-]);

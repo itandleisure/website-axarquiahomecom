@@ -47,18 +47,30 @@ Nieuwe versie**. De URL blijft dan hetzelfde.
 Een gratis Google-account kan ongeveer 100 e-mails per dag versturen via Apps Script
 (Google Workspace: 1.500). Per aanvraag gaan er 2 mails uit, dus tot zo'n 50 aanvragen per dag.
 
-## Gratis checklist (lead magnet)
+## Gratis checklists (lead magnets)
 
-Het inschrijfformulier voor de aankoopchecklist (op `/nl/checklist-finca-kopen/` en onder
-de koopgidsen, in vier talen) stuurt naar dezelfde web-app met `dienst = checklist`.
+Er zijn vijf gratis checklists, elk in vier talen, met een eigen landingspagina en een
+inschrijfblok onder de bijbehorende gidsen (zie `src/data/checklists.ts`):
+
+| Id | Onderwerp | NL-pagina |
+|---|---|---|
+| kopen | finca of huis kopen | `/nl/checklist-finca-kopen/` |
+| renoveren | renoveren en verbouwen | `/nl/checklist-renoveren/` |
+| onderhoud | huis onderhouden als u er niet bent | `/nl/checklist-huis-onderhouden/` |
+| emigreren | emigreren of overwinteren | `/nl/checklist-emigreren-spanje/` |
+| verkopen | verkopen of verhuren | `/nl/checklist-huis-verkopen-verhuren/` |
+
+Het formulier stuurt naar dezelfde web-app met `dienst = checklist` en `checklist = <id>`.
 Het script:
 
-- zet de inschrijving in het tabblad **Inschrijvingen** (niet bij de aanvragen);
-- mailt de pdf in de taal van de bezoeker, als bijlage en als link;
+- zet de inschrijving in het tabblad **Inschrijvingen** (niet bij de aanvragen), met in de
+  kolom **Checklist** welke checklist het was;
+- mailt de juiste pdf in de taal van de bezoeker, als bijlage en als link
+  (teksten in `CHECKLIST` voor kopen en `ANDERE_CHECKLISTS` voor de rest);
 - stuurt **niets** naar het bouwbedrijf: een inschrijving is geen lead. Pas als iemand
   daarna de keuzehulp invult, is het een gewone aanvraag (te herkennen aan
   `utm_source=checklist` in de kolom UTM).
 
-Na het plakken van de nieuwe `Code.gs`: voer **setup** één keer opnieuw uit (het script vraagt
-nu ook toestemming om de pdf van de site op te halen) en maak een **nieuwe versie** van de
-implementatie. De kolom "Toestemming tips" zegt wie later de opvolgmails mag krijgen.
+Na het plakken van een nieuwe `Code.gs`: maak een **nieuwe versie** van de implementatie
+(Implementeren > Implementaties beheren > potloodje > Nieuwe versie). De kolom
+"Toestemming tips" zegt wie later de opvolgmails mag krijgen.

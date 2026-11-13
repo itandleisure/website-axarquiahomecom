@@ -1,25 +1,28 @@
 ---
-// Printversie van de aankoopchecklist. Wordt met `npm run pdf` omgezet naar
-// public/downloads/<pdf>. Staat ook online, maar met noindex.
+// Printversie van elke gratis checklist (src/data/checklists.ts). Wordt met `npm run pdf` omgezet naar
+// public/downloads/<pdf>. Staat ook online (/print/<id>/<taal>/), maar met noindex.
 // Foto's: stockfoto's uit Canva Pro (zie src/data/place-photos.ts) als jpg in public/images/print/, relatief gelinkt
 // zodat ze zowel online als vanaf dist/ (file://) laden.
-import { checklist } from '../../data/checklist';
-import { site } from '../../data/site';
-import { langs, path, type Lang } from '../../i18n';
+import { checklists, checklistIds, printPhotos, type ChecklistId } from '../../../data/checklists';
+import { site } from '../../../data/site';
+import { topicPhoto } from '../../../data/topic-photos';
+import { langs, path, type Lang } from '../../../i18n';
 
 export function getStaticPaths() {
-  return langs.filter((lang) => checklist[lang]).map((lang) => ({ params: { lang } }));
+  return checklistIds.flatMap((id) => langs.filter((lang) => checklists[id][lang]).map((lang) => ({ params: { id, lang } })));
 }
+const id = Astro.params.id as ChecklistId;
 const lang = Astro.params.lang as Lang;
-const c = checklist[lang]!;
-const utm = 'utm_source=checklist&utm_medium=pdf';
-const requestUrl = `${site.url}${path(lang, 'request')}?dienst=aankoopkeuring&${utm}`;
+const c = checklists[id][lang]!;
+const ph = printPhotos[id];
+const utm = `utm_source=checklist&utm_medium=pdf&utm_campaign=${id}`;
+const requestUrl = `${site.url}${path(lang, 'request')}?dienst=${c.cta.dienst ?? 'aankoopkeuring'}&${utm}`;
 const shortUrl = `${site.domain}${path(lang, 'request')}`;
 
 // Jpg-kopieën in public/images/print/ (uit de webp-foto's), zodat de pdf klein blijft
-const img = (name: string) => `../../images/print/${name}.jpg`;
+const img = (name: string) => `../../../images/print/${name}.jpg`;
 
-type T = { welcomeTitle: string; welcome: string[]; spot: string; spotIntro: string; captions: Record<string, string> };
+type T = { welcomeTitle: string; welcome: string[]; welcomeOther: string; spot: string; spotIntro: string; captions: Record<string, string> };
 const extra: Record<string, T> = {
   nl: {
     welcomeTitle: 'Welkom in de Axarquía',
@@ -27,6 +30,7 @@ const extra: Record<string, T> = {
       'Witte dorpen tegen de bergen, terrassen vol olijf-, amandel- en avocadobomen en een kust met kleine baaien onder de kliffen. De Axarquía, ten oosten van Málaga, is een van de mooiste plekken van Andalusië om te wonen.',
       'Met zo’n 300 dagen zon per jaar, het vliegveld van Málaga op ongeveer een uur rijden en dorpen als Frigiliana, Cómpeta en Nerja begrijpt u waarom steeds meer Nederlanders, Duitsers, Zweden en Britten hier een huis kopen. Deze checklist helpt u om dat met een gerust hart te doen.',
     ],
+    welcomeOther: 'Met zo’n 300 dagen zon per jaar, het vliegveld van Málaga op ongeveer een uur rijden en dorpen als Frigiliana, Cómpeta en Nerja begrijpt u waarom zoveel Nederlanders, Duitsers, Zweden en Britten hier een huis hebben. Een huis in deze streek vraagt wel om de juiste aanpak, en daar helpt deze checklist bij.',
     spot: 'Herkent u dit?',
     spotIntro: 'Vocht en lekkages zijn de meest voorkomende verborgen gebreken in huizen in de Axarquía. Een verse laag verf verstopt ze vaak tijdens de bezichtiging.',
     captions: {
@@ -51,6 +55,7 @@ const extra: Record<string, T> = {
       'White villages against the mountains, terraces full of olive, almond and avocado trees, and a coastline of little coves beneath the cliffs. The Axarquía, east of Málaga, is one of the most beautiful places in Andalusia to live.',
       'With around 300 days of sunshine a year, Málaga airport about an hour’s drive away and villages such as Frigiliana, Cómpeta and Nerja, it is easy to see why more and more Dutch, German, Swedish and British buyers settle here. This checklist helps you do it with peace of mind.',
     ],
+    welcomeOther: 'With around 300 days of sunshine a year, Málaga airport about an hour’s drive away and villages such as Frigiliana, Cómpeta and Nerja, it is easy to see why so many Dutch, German, Swedish and British people have a home here. A house in this region does need the right approach, and that is what this checklist helps with.',
     spot: 'Do you recognise this?',
     spotIntro: 'Damp and leaks are the most common hidden defects in homes in the Axarquía. A fresh coat of paint often hides them during a viewing.',
     captions: {
@@ -75,6 +80,7 @@ const extra: Record<string, T> = {
       'Weiße Dörfer vor den Bergen, Terrassen voller Oliven-, Mandel- und Avocadobäume und eine Küste mit kleinen Buchten unter den Klippen. Die Axarquía östlich von Málaga gehört zu den schönsten Orten Andalusiens zum Leben.',
       'Mit rund 300 Sonnentagen im Jahr, dem Flughafen Málaga in etwa einer Stunde Fahrt und Dörfern wie Frigiliana, Cómpeta und Nerja verstehen Sie, warum immer mehr Deutsche, Niederländer, Schweden und Briten hier ein Haus kaufen. Diese Checkliste hilft Ihnen, das mit gutem Gefühl zu tun.',
     ],
+    welcomeOther: 'Mit rund 300 Sonnentagen im Jahr, dem Flughafen Málaga in etwa einer Stunde Fahrt und Dörfern wie Frigiliana, Cómpeta und Nerja verstehen Sie, warum so viele Deutsche, Niederländer, Schweden und Briten hier ein Haus haben. Ein Haus in dieser Gegend braucht aber die richtige Herangehensweise, und dabei hilft diese Checkliste.',
     spot: 'Kommt Ihnen das bekannt vor?',
     spotIntro: 'Feuchtigkeit und Lecks sind die häufigsten versteckten Mängel in Häusern der Axarquía. Ein frischer Anstrich verdeckt sie bei der Besichtigung oft.',
     captions: {
@@ -99,6 +105,7 @@ const extra: Record<string, T> = {
       'Vita byar mot bergen, terrasser fulla av oliv-, mandel- och avokadoträd och en kust med små vikar under klipporna. Axarquía, öster om Málaga, är en av de vackraste platserna i Andalusien att bo på.',
       'Med omkring 300 soldagar om året, flygplatsen i Málaga ungefär en timmes bilresa bort och byar som Frigiliana, Cómpeta och Nerja är det lätt att förstå varför allt fler svenskar, nederländare, tyskar och britter köper hus här. Den här checklistan hjälper dig att göra det med gott samvete.',
     ],
+    welcomeOther: 'Med omkring 300 soldagar om året, flygplatsen i Málaga ungefär en timmes bilresa bort och byar som Frigiliana, Cómpeta och Nerja är det lätt att förstå varför så många svenskar, nederländare, tyskar och britter har ett hus här. Ett hus i den här trakten kräver dock rätt angreppssätt, och det hjälper den här checklistan till med.',
     spot: 'Känner du igen det här?',
     spotIntro: 'Fukt och läckage är de vanligaste dolda bristerna i hus i Axarquía. Ett nytt lager färg döljer dem ofta under visningen.',
     captions: {
@@ -119,11 +126,26 @@ const extra: Record<string, T> = {
   },
 };
 const x = extra[lang] ?? extra.en;
-const cap = (n: string) => x.captions[n] ?? '';
-// Sfeerfoto boven elk hoofdstuk (in volgorde van c.sections)
-const banners = ['nerja-strand-kustlijn', 'canillas-de-albaida-pleintje-kerk', 'competa-kerktoren-dorp', 'canillas-de-albaida-uitzicht-dal', 'frigiliana-panorama-witte-dorp'];
-const strip = ['frigiliana-blauwe-deuren', 'nerja-baai-strand-kliffen', 'canillas-de-albaida-balkons-bloemen'];
-const defects = ['vocht-afbladderende-verf-muur', 'lekkage-vlek-plafond-hoek'];
+// Welkomsttekst: de tweede alinea gaat bij de koopchecklist over kopen, bij de andere algemeen
+const welcome = id === 'kopen' ? x.welcome : [x.welcome[0], x.welcomeOther];
+// Bijschrift: eigen tekst, anders de plaatsnaam (plaatsfoto's) of het begin van de alt-tekst (onderwerpfoto's)
+const places: [string, string][] = [['competa', 'Cómpeta'], ['frigiliana', 'Frigiliana'], ['nerja', 'Nerja'], ['canillas-de-albaida', 'Canillas de Albaida'], ['torre-del-mar', 'Torre del Mar']];
+const cap = (n: string) => {
+  if (x.captions[n]) return x.captions[n];
+  const place = places.find(([p]) => n.startsWith(`${p}-`));
+  if (place) return place[1];
+  const alt = topicPhoto(n, lang)?.alt;
+  return alt ? alt.split(':')[0] : '';
+};
+const { banners, strip, spot: defects } = ph;
+const spot = c.spot ?? { title: x.spot, intro: x.spotIntro };
+// Vaste blokken na de hoofdstukken, in de volgorde van hun nummer in de titel
+const num = (t: string) => parseInt(t, 10) || 99;
+const blocks = [
+  c.questions && { kind: 'questions' as const, n: num(c.questions.title) },
+  c.calc && { kind: 'calc' as const, n: num(c.calc.title) },
+  c.after && { kind: 'after' as const, n: num(c.after.title) },
+].filter((b): b is { kind: 'questions' | 'calc' | 'after'; n: number } => !!b).sort((a, b) => a.n - b.n);
 ---
 <!doctype html>
 <html lang={lang} data-noindex>
@@ -190,19 +212,19 @@ const defects = ['vocht-afbladderende-verf-muur', 'lekkage-vlek-plafond-hoek'];
     .newpage { break-before: page; }
 
     /* Slot: foto met de oproep erover */
-    .cta { position: relative; border-radius: 4mm; overflow: hidden; margin-top: 8mm; break-inside: avoid; color: #fff; min-height: 105mm; }
+    .cta { position: relative; border-radius: 4mm; overflow: hidden; margin-top: 8mm; break-inside: avoid; color: #fff; min-height: 95mm; }
     .cta img { position: absolute; inset: 0; height: 100%; }
     .cta { background: #8f3f22; }
     .cta .inner { position: relative; z-index: 2; padding: 10mm 12mm; max-width: 125mm; }
     .cta h2 { color: #fff; margin-top: 0; font-size: 18pt; }
     .cta a.button { display: inline-block; background: #fff; color: var(--terra-dark); text-decoration: none; font-weight: 700; padding: 2.5mm 6mm; border-radius: 99px; margin-top: 2mm; }
     .cta .url { font-size: 9pt; color: #f6e6dc; margin: 3mm 0 0; }
-    .disclaimer { margin-top: 6mm; }
+    .disclaimer { margin-top: 4mm; }
   </style>
 </head>
 <body>
   <section class="cover">
-    <img src={img('omslag-competa')} alt="" />
+    <img src={img(ph.cover)} alt="" />
     <div class="brand">
       <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M4 15 16 5l12 10v12a1 1 0 0 1-1 1h-7v-8h-8v8H5a1 1 0 0 1-1-1z" fill="#fff"/><circle cx="24" cy="8" r="3" fill="#e9a23b"/></svg>
       <span>Axarquía<b>Home</b></span>
@@ -212,12 +234,12 @@ const defects = ['vocht-afbladderende-verf-muur', 'lekkage-vlek-plafond-hoek'];
       <h1>{c.title}</h1>
       <p class="sub">{c.subtitle}</p>
     </div>
-    <p class="credit">{cap('competa-panorama-sierra-almijara')}</p>
+    <p class="credit">{cap(ph.coverPhoto)}</p>
   </section>
 
   <section class="welcome">
     <h2>{x.welcomeTitle}</h2>
-    {x.welcome.map((p) => <p>{p}</p>)}
+    {welcome.map((p) => <p>{p}</p>)}
     <div class="strip">
       {strip.map((n) => <figure><img src={img(n)} alt="" /><figcaption>{cap(n)}</figcaption></figure>)}
     </div>
@@ -231,42 +253,45 @@ const defects = ['vocht-afbladderende-verf-muur', 'lekkage-vlek-plafond-hoek'];
       <h2>{s.title}</h2>
       {s.intro && <p class="sintro">{s.intro}</p>}
       <ul class="box">{s.items.map((it) => <li>{it}</li>)}</ul>
-      {i === 1 && (
+      {i === ph.spotAt && (
         <div class="spot">
-          <h3>{x.spot}</h3>
-          <p>{x.spotIntro}</p>
+          <h3>{spot.title}</h3>
+          <p>{spot.intro}</p>
           <div class="pair">{defects.map((n) => <figure><img src={img(n)} alt="" /><figcaption>{cap(n)}</figcaption></figure>)}</div>
         </div>
       )}
     </div>
   ))}
 
-  <div class="section keep">
-    <figure class="banner"><img src={img('frigiliana-trappen-oude-wijk')} alt="" /><figcaption>{cap('frigiliana-trappen-oude-wijk')}</figcaption></figure>
-    <h2>{c.questions.title}</h2>
-    <div class="cols">
-      <div><h3>{c.questions.agentTitle}</h3><ol class="q">{c.questions.agent.map((q) => <li>{q}</li>)}</ol></div>
-      <div><h3>{c.questions.lawyerTitle}</h3><ol class="q">{c.questions.lawyer.map((q) => <li>{q}</li>)}</ol></div>
+  {blocks.map((b) => b.kind === 'questions' && c.questions ? (
+    <div class="section keep">
+      <figure class="banner"><img src={img(ph.questions)} alt="" /><figcaption>{cap(ph.questions)}</figcaption></figure>
+      <h2>{c.questions.title}</h2>
+      <div class="cols">
+        <div><h3>{c.questions.agentTitle}</h3><ol class="q">{c.questions.agent.map((q) => <li>{q}</li>)}</ol></div>
+        <div><h3>{c.questions.lawyerTitle}</h3><ol class="q">{c.questions.lawyer.map((q) => <li>{q}</li>)}</ol></div>
+      </div>
     </div>
-  </div>
+  ) : b.kind === 'calc' && c.calc ? (
+    <div class="section keep">
+      <h2>{c.calc.title}</h2>
+      <p class="sintro">{c.calc.intro}</p>
+      <table>
+        {c.calc.rows.map(([label, hint]) => <tr><td>{label}</td><td class="hint">{hint}</td><td class="amount">€</td></tr>)}
+        <tr class="total"><td>{c.calc.total}</td><td></td><td>€</td></tr>
+      </table>
+      <p class="note">{c.calc.note}</p>
+    </div>
+  ) : b.kind === 'after' && c.after ? (
+    <div class="section keep">
+      <h2>{c.after.title}</h2>
+      <ul class="box">{c.after.items.map((it) => <li>{it}</li>)}</ul>
+    </div>
+  ) : null)}
 
-  <div class="section keep">
-    <h2>{c.calc.title}</h2>
-    <p class="sintro">{c.calc.intro}</p>
-    <table>
-      {c.calc.rows.map(([label, hint]) => <tr><td>{label}</td><td class="hint">{hint}</td><td class="amount">€</td></tr>)}
-      <tr class="total"><td>{c.calc.total}</td><td></td><td>€</td></tr>
-    </table>
-    <p class="note">{c.calc.note}</p>
-  </div>
-
-  <div class="section keep">
-    <h2>{c.after.title}</h2>
-    <ul class="box">{c.after.items.map((it) => <li>{it}</li>)}</ul>
-  </div>
-
+  <div class="keep">
   <div class="cta">
-    <img src={img('slot-nerja')} alt="" />
+    <img src={img(ph.cta)} alt="" />
     <div class="inner">
       <h2>{c.cta.title}</h2>
       <p>{c.cta.text}</p>
@@ -276,5 +301,6 @@ const defects = ['vocht-afbladderende-verf-muur', 'lekkage-vlek-plafond-hoek'];
     </div>
   </div>
   <p class="note disclaimer">{c.disclaimer}</p>
+  </div>
 </body>
 </html>

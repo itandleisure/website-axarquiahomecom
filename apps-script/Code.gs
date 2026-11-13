@@ -1,6 +1,6 @@
 /**
  * Axarquía Home: aanvragen uit de keuzehulp en het contactformulier opslaan en doorsturen,
- * en inschrijvingen voor de gratis aankoopchecklist (lead magnet) opslaan en de pdf mailen.
+ * en inschrijvingen voor de gratis checklists (lead magnets) opslaan en de pdf mailen.
  *
  * Plak dit in Extensies > Apps Script van de Google Sheet "Aanvragen axarquiahome.com".
  * Zie apps-script/README.md voor de stappen.
@@ -29,7 +29,7 @@ const CONFIG = {
   SITE: 'https://axarquiahome.com',
 };
 
-// Pdf en teksten van de checklist per taal (zelfde bestanden als in public/downloads/)
+// Pdf en teksten van de koopchecklist per taal (zelfde bestanden als in public/downloads/)
 const CHECKLIST = {
   nl: {
     pdf: 'checklist-finca-kopen-axarquia.pdf',
@@ -85,8 +85,94 @@ const CHECKLIST = {
   },
 };
 
+// De andere checklists: zelfde opbouw van de mail, met eigen pdf, onderwerp, drie tips en een vervolgstap.
+const AANVRAAG = { nl: '/nl/aanvraag/', en: '/en/request/', de: '/de/anfrage/', sv: '/sv/forfragan/' };
+const MAILTEKST = {
+  nl: { aanhef: (n) => (n ? `Beste ${n},` : 'Goedendag,'), hier: (wat, pdf) => `Hierbij de checklist ${wat}. U vindt hem als bijlage, en u kunt hem ook altijd hier downloaden: <a href="${pdf}">checklist (pdf)</a>.`, tips: 'Drie punten die vaak worden vergeten:', groet: 'Met vriendelijke groet,<br>Axarquía Home', taal: '' },
+  en: { aanhef: (n) => (n ? `Dear ${n},` : 'Hello,'), hier: (wat, pdf) => `Here is your checklist ${wat}. It is attached, and you can always download it here: <a href="${pdf}">checklist (PDF)</a>.`, tips: 'Three things that are often forgotten:', groet: 'Kind regards,<br>Axarquía Home', taal: '' },
+  de: { aanhef: (n) => (n ? `Guten Tag ${n},` : 'Guten Tag,'), hier: (wat, pdf) => `anbei Ihre Checkliste ${wat}. Sie finden sie im Anhang und können sie jederzeit hier herunterladen: <a href="${pdf}">Checkliste (PDF)</a>.`, tips: 'Drei Punkte, die oft vergessen werden:', groet: 'Mit freundlichen Grüßen<br>Axarquía Home', taal: ' Der Kontakt erfolgt auf Englisch oder Niederländisch.' },
+  sv: { aanhef: (n) => `Hej${n ? ` ${n}` : ''},`, hier: (wat, pdf) => `Här är din checklista ${wat}. Den finns som bilaga, och du kan alltid ladda ner den här: <a href="${pdf}">checklista (pdf)</a>.`, tips: 'Tre saker som ofta glöms bort:', groet: 'Vänliga hälsningar<br>Axarquía Home', taal: ' Kontakten sker på engelska eller nederländska.' },
+};
+const ANDERE_CHECKLISTS = {
+  renoveren: {
+    nl: { pdf: 'checklist-renoveren-axarquia.pdf', dienst: 'renovatie', subject: 'Uw checklist: renoveren en verbouwen in de Axarquía', wat: 'voor renoveren en verbouwen in de Axarquía',
+      tips: ['Houd 15 tot 20% van het budget achter de hand: in oude huizen komt vocht, schimmel of slechte bedrading vaak pas bij het slopen tevoorschijn.', 'Vraag eerst bij de gemeente welke vergunning u nodig heeft (melding of bouwvergunning), vóór u een aannemer vastlegt.', 'Betaal in termijnen per afgerond deel van het werk, met factuur en IVA, en nooit alles vooraf.'],
+      cta: 'Wilt u een vaste prijs voor uw verbouwing? Wij laten het huis opnemen en sturen een offerte met een vaste prijs per onderdeel', knop: 'vraag een offerte aan' },
+    en: { pdf: 'checklist-renovating-axarquia.pdf', dienst: 'renovatie', subject: 'Your checklist: renovating in the Axarquía', wat: 'for renovating in the Axarquía',
+      tips: ['Keep 15 to 20% of the budget in reserve: in old houses, damp, mould or poor wiring often only shows once demolition starts.', 'Ask the town hall which permit you need (a notification or a building licence) before you commit to a builder.', 'Pay in instalments per finished stage, with an invoice and IVA, and never everything up front.'],
+      cta: 'Want a fixed price for your renovation? We have the house surveyed and send a quote with a fixed price per item', knop: 'request a quote' },
+    de: { pdf: 'checkliste-renovierung-axarquia.pdf', dienst: 'renovatie', subject: 'Ihre Checkliste: renovieren und umbauen in der Axarquía', wat: 'für das Renovieren und Umbauen in der Axarquía',
+      tips: ['Halten Sie 15 bis 20 % des Budgets als Reserve: In alten Häusern zeigen sich Feuchtigkeit, Schimmel oder schlechte Leitungen oft erst beim Abriss.', 'Fragen Sie bei der Gemeinde, welche Genehmigung Sie brauchen (Anzeige oder Baugenehmigung), bevor Sie einen Bauunternehmer beauftragen.', 'Zahlen Sie in Raten pro fertigem Abschnitt, mit Rechnung und IVA, und nie alles im Voraus.'],
+      cta: 'Möchten Sie einen Festpreis für Ihren Umbau? Wir lassen das Haus aufnehmen und schicken ein Angebot mit Festpreis pro Posten', knop: 'Angebot anfragen' },
+    sv: { pdf: 'checklista-renovering-axarquia.pdf', dienst: 'renovatie', subject: 'Din checklista: renovera i Axarquía', wat: 'för att renovera i Axarquía',
+      tips: ['Håll 15 till 20 % av budgeten i reserv: i gamla hus visar sig fukt, mögel eller dålig el ofta först vid rivningen.', 'Fråga kommunen vilket tillstånd du behöver (anmälan eller bygglov) innan du bestämmer dig för en byggare.', 'Betala i delbetalningar per färdigt moment, med faktura och IVA, och aldrig allt i förskott.'],
+      cta: 'Vill du ha ett fast pris för din renovering? Vi låter mäta upp huset och skickar en offert med fast pris per post', knop: 'begär en offert' },
+  },
+  onderhoud: {
+    nl: { pdf: 'checklist-huis-onderhouden-axarquia.pdf', dienst: 'sleutelbeheer', subject: 'Uw checklist: uw huis in de Axarquía onderhouden', wat: 'voor het onderhoud van uw huis in de Axarquía als u er niet bent',
+      tips: ['Maak goten en afvoeren op het dakterras schoon vóór oktober: de meeste schade komt met de eerste zware regen.', 'Lees uw polis na: veel verzekeringen stellen een maximale periode van leegstand of verplichte controles.', 'Laat het huis elke twee weken luchten en controleren, en extra na een storm.'],
+      cta: 'Even niet in Spanje? Wij kijken voor u naar het huis, met een rapport en foto’s na elk bezoek', knop: 'vraag naar sleutelbeheer' },
+    en: { pdf: 'checklist-home-maintenance-axarquia.pdf', dienst: 'sleutelbeheer', subject: 'Your checklist: looking after your home in the Axarquía', wat: 'for looking after your home in the Axarquía while you are away',
+      tips: ['Clean gutters and roof terrace drains before October: most damage comes with the first heavy rain.', 'Read your policy: many insurers set a maximum period the house may stand empty, or require checks.', 'Have the house aired and checked every two weeks, and again after a storm.'],
+      cta: 'Away from Spain for a while? We look after the house for you, with a report and photos after every visit', knop: 'ask about key holding' },
+    de: { pdf: 'checkliste-hauspflege-axarquia.pdf', dienst: 'sleutelbeheer', subject: 'Ihre Checkliste: Ihr Haus in der Axarquía pflegen', wat: 'für die Pflege Ihres Hauses in der Axarquía, wenn Sie nicht da sind',
+      tips: ['Reinigen Sie Dachrinnen und Abflüsse der Dachterrasse vor Oktober: Die meisten Schäden kommen mit dem ersten Starkregen.', 'Lesen Sie Ihre Police: Viele Versicherungen begrenzen den Leerstand oder schreiben Kontrollen vor.', 'Lassen Sie das Haus alle zwei Wochen lüften und kontrollieren, und zusätzlich nach einem Sturm.'],
+      cta: 'Eine Weile nicht in Spanien? Wir schauen für Sie nach dem Haus, mit Bericht und Fotos nach jedem Besuch', knop: 'Hausbetreuung anfragen' },
+    sv: { pdf: 'checklista-husunderhall-axarquia.pdf', dienst: 'sleutelbeheer', subject: 'Din checklista: ta hand om ditt hus i Axarquía', wat: 'för att ta hand om ditt hus i Axarquía när du inte är där',
+      tips: ['Rensa hängrännor och avlopp på takterrassen före oktober: de flesta skador kommer med det första kraftiga regnet.', 'Läs din försäkring: många bolag har en längsta tid huset får stå tomt, eller krav på tillsyn.', 'Låt vädra och kontrollera huset varannan vecka, och extra efter en storm.'],
+      cta: 'Borta från Spanien ett tag? Vi tittar till huset åt dig, med rapport och bilder efter varje besök', knop: 'fråga om tillsyn' },
+  },
+  emigreren: {
+    nl: { pdf: 'checklist-emigreren-axarquia.pdf', dienst: 'sleutelbeheer', subject: 'Uw checklist: emigreren of overwinteren in de Axarquía', wat: 'voor emigreren of overwinteren in de Axarquía',
+      tips: ['Tel uw dagen: wie meer dan 183 dagen per jaar in Spanje is, wordt daar in principe belastingplichtig.', 'Vraag het NIE-nummer als eerste aan, want vrijwel alles hangt ervan af: bank, nutsvoorzieningen en inschrijving.', 'Ook als niet-inwoner doet u elk jaar aangifte voor uw Spaanse huis (modelo 210).'],
+      cta: 'Moet er aan het huis iets gebeuren voor u er langer woont, of zoekt u iemand die erop let als u weg bent? Wij helpen graag', knop: 'vraag het ons' },
+    en: { pdf: 'checklist-moving-to-spain-axarquia.pdf', dienst: 'sleutelbeheer', subject: 'Your checklist: moving to or wintering in the Axarquía', wat: 'for moving to or wintering in the Axarquía',
+      tips: ['Count your days: if you spend more than 183 days a year in Spain, you generally become tax resident there.', 'Apply for your NIE number first, as almost everything depends on it: bank, utilities and registration.', 'Even as a non-resident you file a return for your Spanish home every year (modelo 210).'],
+      cta: 'Does the house need work before you live there longer, or do you need someone to look after it while you are away? We are happy to help', knop: 'ask us' },
+    de: { pdf: 'checkliste-auswandern-axarquia.pdf', dienst: 'sleutelbeheer', subject: 'Ihre Checkliste: Auswandern oder Überwintern in der Axarquía', wat: 'für das Auswandern oder Überwintern in der Axarquía',
+      tips: ['Zählen Sie Ihre Tage: Wer mehr als 183 Tage im Jahr in Spanien ist, wird dort grundsätzlich steuerpflichtig.', 'Beantragen Sie zuerst die NIE-Nummer, denn fast alles hängt davon ab: Bank, Versorger und Anmeldung.', 'Auch als Nichtresident geben Sie jedes Jahr eine Erklärung für Ihr spanisches Haus ab (modelo 210).'],
+      cta: 'Muss am Haus etwas gemacht werden, bevor Sie länger dort wohnen, oder suchen Sie jemanden, der nach dem Haus schaut? Wir helfen gern', knop: 'fragen Sie uns' },
+    sv: { pdf: 'checklista-flytta-till-spanien-axarquia.pdf', dienst: 'sleutelbeheer', subject: 'Din checklista: flytta till eller övervintra i Axarquía', wat: 'för att flytta till eller övervintra i Axarquía',
+      tips: ['Räkna dina dagar: den som är mer än 183 dagar per år i Spanien blir i regel skattskyldig där.', 'Ansök om NIE-nummer först, eftersom nästan allt hänger på det: bank, el och vatten och registrering.', 'Även som icke-resident deklarerar du varje år för ditt spanska hus (modelo 210).'],
+      cta: 'Behöver huset åtgärdas innan du bor där längre, eller söker du någon som tittar till det när du är borta? Vi hjälper gärna till', knop: 'fråga oss' },
+  },
+  verkopen: {
+    nl: { pdf: 'checklist-verkopen-verhuren-axarquia.pdf', dienst: 'onderhoud', subject: 'Uw checklist: uw huis in de Axarquía verkopen of verhuren', wat: 'voor het verkopen of verhuren van uw huis in de Axarquía',
+      tips: ['Controleer of kadaster en eigendomsakte kloppen met wat er staat: een aanbouw zonder vergunning kan een verkoop maanden ophouden.', 'Bewaar alle facturen van verbouwingen: ze verlagen de belasting over de winst bij verkoop.', 'Voor vakantieverhuur heeft u een registratie als vivienda de uso turístico nodig, met het nummer in elke advertentie.'],
+      cta: 'Wilt u het huis laten opknappen voor de foto’s worden gemaakt, of het verhuurbeheer uitbesteden? Wij helpen graag', knop: 'vraag het ons' },
+    en: { pdf: 'checklist-selling-renting-axarquia.pdf', dienst: 'onderhoud', subject: 'Your checklist: selling or renting out your home in the Axarquía', wat: 'for selling or renting out your home in the Axarquía',
+      tips: ['Check that the land registry and title deed match what is there: an extension without a permit can hold up a sale for months.', 'Keep every renovation invoice: they reduce the tax on your gain when you sell.', 'For holiday letting you need a registration as a vivienda de uso turístico, with the number in every advert.'],
+      cta: 'Want the house spruced up before the photos are taken, or rental management taken off your hands? We are happy to help', knop: 'ask us' },
+    de: { pdf: 'checkliste-verkaufen-vermieten-axarquia.pdf', dienst: 'onderhoud', subject: 'Ihre Checkliste: Ihr Haus in der Axarquía verkaufen oder vermieten', wat: 'für das Verkaufen oder Vermieten Ihres Hauses in der Axarquía',
+      tips: ['Prüfen Sie, ob Grundbuch und Urkunde mit dem Bestand übereinstimmen: Ein Anbau ohne Genehmigung kann einen Verkauf monatelang aufhalten.', 'Bewahren Sie alle Rechnungen von Renovierungen auf: Sie senken die Steuer auf den Gewinn beim Verkauf.', 'Für die Ferienvermietung brauchen Sie eine Eintragung als vivienda de uso turístico, mit der Nummer in jeder Anzeige.'],
+      cta: 'Soll das Haus hergerichtet werden, bevor die Fotos gemacht werden, oder möchten Sie die Vermietung abgeben? Wir helfen gern', knop: 'fragen Sie uns' },
+    sv: { pdf: 'checklista-salja-hyra-ut-axarquia.pdf', dienst: 'onderhoud', subject: 'Din checklista: sälja eller hyra ut ditt hus i Axarquía', wat: 'för att sälja eller hyra ut ditt hus i Axarquía',
+      tips: ['Kontrollera att fastighetsregistret och lagfarten stämmer med det som finns: en tillbyggnad utan bygglov kan försena en försäljning i månader.', 'Spara alla fakturor för renoveringar: de minskar skatten på vinsten när du säljer.', 'För semesteruthyrning behöver du en registrering som vivienda de uso turístico, med numret i varje annons.'],
+      cta: 'Vill du fräscha upp huset innan bilderna tas, eller lämna över uthyrningen? Vi hjälper gärna till', knop: 'fråga oss' },
+  },
+};
+
+/** Mailtekst voor een checklist (id) in een taal; de koopchecklist heeft eigen teksten. */
+function checklistMail_(id, taal) {
+  if (!ANDERE_CHECKLISTS[id]) return CHECKLIST[taal] || CHECKLIST.nl;
+  const lang = ANDERE_CHECKLISTS[id][taal] ? taal : 'nl';
+  const c = ANDERE_CHECKLISTS[id][lang];
+  const t = MAILTEKST[lang];
+  return {
+    pdf: c.pdf,
+    keuring: `${AANVRAAG[lang]}?dienst=${c.dienst}`,
+    subject: c.subject,
+    body: (naam, pdf, link) => `<p>${t.aanhef(naam)}</p>
+      <p>${t.hier(c.wat, pdf)}</p>
+      <p>${t.tips}</p>
+      <ol>${c.tips.map((x) => `<li>${x}</li>`).join('')}</ol>
+      <p>${c.cta}: <a href="${link}">${c.knop}</a>.${t.taal}</p>
+      <p>${t.groet}</p>`,
+  };
+}
+
 const KOLOMMEN_INSCHRIJVINGEN = [
-  'Datum', 'Id', 'E-mail', 'Voornaam', 'Situatie', 'Taal', 'Toestemming tips', 'Pagina', 'UTM', 'Pdf gemaild', 'Afgemeld',
+  'Datum', 'Id', 'E-mail', 'Voornaam', 'Situatie', 'Taal', 'Toestemming tips', 'Pagina', 'UTM', 'Pdf gemaild', 'Afgemeld', 'Checklist',
 ];
 
 const KOLOMMEN = [
@@ -141,15 +227,16 @@ function checklist_(d) {
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return json_({ ok: false, error: 'Ongeldig e-mailadres' });
   const cache = CacheService.getScriptCache();
   if (d.id && cache.get(d.id)) return json_({ ok: true, dubbel: true });
-  // Niet vaker dan één keer per 6 uur naar hetzelfde adres mailen
-  const sleutel = 'cl-' + email.toLowerCase();
+  const id = String(d.checklist || 'kopen');
+  // Niet vaker dan één keer per 6 uur dezelfde checklist naar hetzelfde adres mailen
+  const sleutel = 'cl-' + id + '-' + email.toLowerCase();
   const alGemaild = !!cache.get(sleutel);
 
   const lock = LockService.getScriptLock();
   lock.waitLock(20000);
   try {
     const sh = inschrijvingenSheet_();
-    const m = CHECKLIST[d.taal] || CHECKLIST.nl;
+    const m = checklistMail_(id, d.taal);
     let gemaild = 'nee';
     if (!alGemaild) {
       mailChecklist_(email, String(d.naam || '').trim(), m);
@@ -158,7 +245,7 @@ function checklist_(d) {
     }
     sh.appendRow([
       new Date(), d.id || '', email, d.naam || '', d.situatie || '', d.taal || '',
-      d.toestemming_tips === 'ja' ? 'ja' : 'nee', d.pagina || '', d.utm || '', gemaild, '',
+      d.toestemming_tips === 'ja' ? 'ja' : 'nee', d.pagina || '', d.utm || '', gemaild, '', id,
     ]);
     if (d.id) cache.put(d.id, '1', 21600);
   } finally {
@@ -168,7 +255,7 @@ function checklist_(d) {
 }
 
 function mailChecklist_(email, naam, m) {
-  const utm = 'utm_source=checklist&utm_medium=email';
+  const utm = 'utm_source=checklist&utm_medium=email&utm_campaign=' + encodeURIComponent(m.pdf.replace(/\.pdf$/, ''));
   const pdfUrl = `${CONFIG.SITE}/downloads/${m.pdf}`;
   const keuringUrl = `${CONFIG.SITE}${m.keuring}&${utm}`;
   const alias = GmailApp.getAliases().indexOf(CONFIG.AFZENDER_ADRES) !== -1;
@@ -192,6 +279,11 @@ function inschrijvingenSheet_() {
     sh.appendRow(KOLOMMEN_INSCHRIJVINGEN);
     sh.setFrozenRows(1);
     sh.getRange(1, 1, 1, KOLOMMEN_INSCHRIJVINGEN.length).setFontWeight('bold');
+  } else if (sh.getLastColumn() < KOLOMMEN_INSCHRIJVINGEN.length) {
+    // Oudere tabbladen: ontbrekende kolomkoppen (zoals Checklist) aanvullen
+    const van = sh.getLastColumn() + 1;
+    const nieuw = KOLOMMEN_INSCHRIJVINGEN.slice(van - 1);
+    sh.getRange(1, van, 1, nieuw.length).setValues([nieuw]).setFontWeight('bold');
   }
   return sh;
 }

@@ -1,20 +1,19 @@
 ---
-// Landingspagina van de gratis aankoopchecklist, in elke taal hetzelfde opgebouwd.
+// Landingspagina van een gratis checklist, voor elke checklist en taal hetzelfde opgebouwd.
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import ChecklistSignup from './ChecklistSignup.astro';
-import { checklist } from '../data/checklist';
-import { guidesBy, guideHref } from '../data/guides';
+import { checklists, checklistGuide, type ChecklistId } from '../data/checklists';
+import { guideHref } from '../data/guides';
 import type { Lang } from '../i18n';
 
-interface Props { lang: Lang; }
-const { lang } = Astro.props;
-const c = checklist[lang]!;
+interface Props { lang: Lang; id?: ChecklistId; }
+const { lang, id = 'kopen' } = Astro.props;
+const c = checklists[id][lang]!;
 const p = c.page;
-const sample = c.sections.find((s) => s.items.length >= 10) ?? c.sections[0];
-// Link naar de finca-gids in dezelfde taal
-const fincaSlugs = ['finca-kopen-in-spanje', 'buying-a-finca-in-spain', 'finca-kaufen-spanien', 'kopa-finca-i-spanien'];
-const fincaGuide = guidesBy[lang].find((g) => fincaSlugs.includes(g.slug));
+const sample = c.sections.reduce((a, b) => (b.items.length > a.items.length ? b : a));
+// Link naar de bijbehorende gids in dezelfde taal
+const guide = checklistGuide(lang, id);
 ---
 <Base title={p.seoTitle} description={p.description} path={c.path} lang={lang}>
   <Breadcrumbs lang={lang} items={[{ name: p.h1, href: c.path }]} />
@@ -34,7 +33,7 @@ const fincaGuide = guidesBy[lang].find((g) => fincaSlugs.includes(g.slug));
         <p>{p.whoText}</p>
       </div>
       <div id="checklist-formulier">
-        <ChecklistSignup lang={lang} />
+        <ChecklistSignup lang={lang} id={id} />
       </div>
     </div>
   </section>
@@ -45,7 +44,7 @@ const fincaGuide = guidesBy[lang].find((g) => fincaSlugs.includes(g.slug));
       {sample.intro && <p>{sample.intro}</p>}
       <ul class="checks">{sample.items.slice(0, 6).map((x) => <li>{x}</li>)}</ul>
       <p><a class="btn btn-ghost" href="#checklist-formulier">{c.teaser.button}</a></p>
-      {fincaGuide && <p><a href={guideHref(lang, fincaGuide)}>{fincaGuide.title} →</a></p>}
+      {guide && <p><a href={guideHref(lang, guide)}>{guide.title} →</a></p>}
     </div>
   </section>
 </Base>
