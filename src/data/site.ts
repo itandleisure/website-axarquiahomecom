@@ -57,6 +57,10 @@ export const site = {
   // Geen geheim: zonder wachtwoord geeft de URL geen cijfers. Leeg = /statistiek/ toont uitleg.
   statsDashboardUrl: 'https://script.google.com/macros/s/AKfycbzyzH9nke4qy05RwvmARr7Pq-bP4gjatbNNl_mg5RziEk3b86J8FN_0pm3ZWB7YHXXkSQ/exec',
 
+  // IndexNow-sleutel (Bing, Yandex e.a.). Geen geheim: staat als /<sleutel>.txt op de site.
+  // Na elke publicatie meldt .github/workflows/deploy.yml de gewijzigde pagina's (scripts/indexnow.mjs).
+  indexNowKey: 'dd8fcf6ec6cb4615afd03fe2082d57da',
+
   // Voorbeelden van plaatsen in het werkgebied: de hele Axarquía, niet gebonden aan één bouwbedrijf.
   villages: [
     'Nerja',

@@ -25,6 +25,17 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      # Gewijzigde pagina's bepalen voor IndexNow (Bing). Mag de publicatie nooit tegenhouden.
+      - run: node scripts/indexnow.mjs prepare
+        continue-on-error: true
+      - uses: actions/upload-artifact@v4
+        continue-on-error: true
+        with:
+          name: indexnow
+          path: |
+            indexnow-urls.txt
+            indexnow-key.txt
+          if-no-files-found: ignore
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -38,3 +49,18 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Na de publicatie: nieuwe en gewijzigde pagina's melden bij IndexNow (Bing, en zo ChatGPT en Copilot).
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/download-artifact@v4
+        with:
+          name: indexnow
+      - run: node scripts/indexnow.mjs submit
