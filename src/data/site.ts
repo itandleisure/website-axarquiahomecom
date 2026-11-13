@@ -52,9 +52,9 @@ export const site = {
   // Google Analytics 4 Measurement ID (G-...). Laadt ook pas na toestemming. Leeg = uit.
   gaId: 'G-YSBXSHM7SS',
 
-  // URL van de web-app "Dashboard" uit apps-script/statistieken (eindigt op /exec).
-  // Wordt getoond op /statistiek/. Geen geheim: alleen jouw Google-account ziet er cijfers.
-  // Leeg = /statistiek/ toont uitleg in plaats van het dashboard.
+  // URL van de web-app uit apps-script/statistieken met toegang "Iedereen" (eindigt op /exec).
+  // /statistiek/ haalt hier de cijfers op na het juiste wachtwoord (scripteigenschap WACHTWOORD).
+  // Geen geheim: zonder wachtwoord geeft de URL geen cijfers. Leeg = /statistiek/ toont uitleg.
   statsDashboardUrl: 'https://script.google.com/macros/s/AKfycbzyzH9nke4qy05RwvmARr7Pq-bP4gjatbNNl_mg5RziEk3b86J8FN_0pm3ZWB7YHXXkSQ/exec',
 
   // Voorbeelden van plaatsen in het werkgebied: de hele Axarquía, niet gebonden aan één bouwbedrijf.

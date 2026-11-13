@@ -22,6 +22,7 @@ De privacypagina's krijgen pas "index" als de gegevens van Frans' onderneming zi
 - [ ] Naam, KvK-nummer en adres van de onderneming (privacyverklaring)
 - [ ] Apps Script web-app URL (zie `apps-script/README.md`)
 - [x] Dashboard-URL voor /statistiek/ in `statsDashboardUrl` (zie `apps-script/statistieken/README.md`)
+- [ ] Wachtwoord voor /statistiek/: scripteigenschap `WACHTWOORD` in het statistieken-script (zie `apps-script/statistieken/README.md`)
 - [ ] E-mailadres info@axarquiahome.com laten doorsturen naar je eigen mailbox
 - [ ] Privacyverklaring één keer laten nakijken
 

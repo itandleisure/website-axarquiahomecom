@@ -55,25 +55,26 @@ voor de wekelijkse Ubersuggest-cijfers.
    (iedereen die niet is ingelogd als jij krijgt "Geen toegang"), hij neemt alleen
    gegevens aan met het juiste token.
 
-### Dashboard op de website: axarquiahome.com/statistiek/
+### Statistieken op de website: axarquiahome.com/statistiek/
 
-Het dashboard is ook te bekijken op **https://axarquiahome.com/statistiek/**. De inlog is je
-Google-account: alleen als je in die browser bent ingelogd met het account dat eigenaar is
-van het script, verschijnen de cijfers. Iedereen anders ziet een inlogknop of "Geen toegang".
+De cijfers zijn ook te bekijken op **https://axarquiahome.com/statistiek/**, met één wachtwoord.
+Na het invullen haalt de pagina de actuele cijfers rechtstreeks uit dit script; ze zijn dus
+altijd bij (nachtelijke update van Google, wekelijkse van Ubersuggest) zonder dat de site
+opnieuw gepubliceerd hoeft te worden. Met "Onthouden op dit apparaat" hoef je het wachtwoord
+daarna niet meer in te typen.
+
 De pagina zelf bevat geen cijfers en geen sleutels, staat niet in het menu of de sitemap,
-heeft noindex en laadt geen analytics (je eigen bezoeken tellen dus niet mee).
+heeft noindex en laadt geen analytics (je eigen bezoeken tellen dus niet mee). Na 20 foute
+pogingen binnen een kwartier weigert het script even alle pogingen.
 
-Koppelen (eenmalig):
+Instellen (eenmalig):
 
-1. Werk `Code.gs` en `Dashboard.html` in Apps Script bij met de versies uit deze map
-   (het dashboard mag nu op de website getoond worden) en maak bij de implementatie
-   "Dashboard" een **Nieuwe versie** (zie hieronder).
-2. Zet de Dashboard-URL (eindigt op `/exec`) in `src/data/site.ts` bij `statsDashboardUrl`,
-   of geef hem aan Claude. Die URL is geen geheim: de toegang "Alleen ikzelf" houdt anderen buiten.
-
-Werkt het niet binnen de pagina (Safari blokkeert de Google-inlog in een ingesloten venster,
-en met meerdere Google-accounts tegelijk weigert Apps Script soms), gebruik dan de knop
-**Openen in nieuw tabblad** bovenaan de pagina.
+1. Werk `Code.gs` in Apps Script bij met `Statistieken.gs` uit deze map.
+2. **Projectinstellingen > Scripteigenschappen > Scripteigenschap toevoegen**:
+   eigenschap `WACHTWOORD`, waarde: het wachtwoord dat je wilt gebruiken.
+   Wachtwoord wijzigen = deze waarde aanpassen; dat werkt meteen.
+3. Maak bij de implementatie met toegang **Iedereen** (de Ontvanger) een **Nieuwe versie**
+   (zie hieronder). Die URL staat in `src/data/site.ts` bij `statsDashboardUrl`.
 
 Na een wijziging in de code: **Implementeren > Implementaties beheren**, bij allebei
 bewerken > **Nieuwe versie**. De URL's blijven gelijk.

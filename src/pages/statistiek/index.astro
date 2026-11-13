@@ -1,95 +1,415 @@
 ---
-// Privé statistiekenpagina. Toont het Apps Script-dashboard (apps-script/statistieken/).
-// De inlog is je Google-account: Google laat alleen de eigenaar van het script de cijfers zien.
-// Op deze pagina staan zelf geen cijfers en geen geheimen. Geen menu, geen cookiebanner,
-// geen analytics (je eigen bezoeken tellen niet mee), niet in de sitemap en noindex.
+// Privé statistiekenpagina met één wachtwoord. De pagina bevat zelf geen cijfers en geen geheimen:
+// na het wachtwoord haalt hij de actuele cijfers op bij het Apps Script (apps-script/statistieken/),
+// dat het wachtwoord controleert (scripteigenschap WACHTWOORD). De weergave is dezelfde als
+// apps-script/statistieken/Dashboard.html; pas die twee samen aan.
+// Geen menu, geen cookiebanner, geen analytics, niet in de sitemap en noindex.
 import { site } from '../../data/site';
 
 const url = site.statsDashboardUrl;
 ---
 <!doctype html>
 <html lang="nl" data-noindex>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow, noarchive" />
-    <meta name="referrer" content="no-referrer" />
-    <title>Statistieken | {site.brand}</title>
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <style>
-      :root { --terra: #b5532f; --ink: #23201d; --muted: #625b54; --line: #e7dfd5; --sand: #f8f3ec; }
-      * { box-sizing: border-box; }
-      html, body { margin: 0; height: 100%; }
-      body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--ink); background: var(--sand); display: flex; flex-direction: column; }
-      header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; background: #fff; border-bottom: 1px solid var(--line); }
-      header strong { font-size: 1rem; }
-      a.btn { display: inline-block; padding: 7px 14px; border-radius: 999px; background: var(--terra); color: #fff; text-decoration: none; font-size: 0.9rem; white-space: nowrap; }
-      a.btn.ghost { background: transparent; color: var(--terra); border: 1px solid var(--terra); }
-      main { flex: 1; position: relative; }
-      iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #fff; }
-      .panel { max-width: 560px; margin: 48px auto; padding: 24px; background: #fff; border: 1px solid var(--line); border-radius: 14px; line-height: 1.55; }
-      .panel h1 { font-size: 1.3rem; margin: 0 0 0.5em; }
-      .panel p { margin: 0 0 1em; color: var(--muted); }
-      .overlay { position: absolute; inset: 0; background: rgb(248 243 236 / 0.97); overflow: auto; padding: 0 16px; }
-      [hidden] { display: none !important; }
-    </style>
-  </head>
-  <body>
-    <header>
-      <strong>Statistieken {site.domain}</strong>
-      {url && <a class="btn ghost" href={url} target="_blank" rel="noopener">Openen in nieuw tabblad</a>}
-    </header>
-    <main>
-      {url ? (
-        <>
-          <iframe id="dash" src={url} title="Statistieken-dashboard" referrerpolicy="no-referrer"></iframe>
-          <div class="overlay" id="hulp" hidden>
-            <div class="panel">
-              <h1 id="hulp-titel">Inloggen</h1>
-              <p id="hulp-tekst">
-                Het dashboard verschijnt hier als je in deze browser bent ingelogd met het Google-account
-                dat eigenaar is van het dashboard.
-              </p>
-              <p>
-                <a class="btn" href={url} target="_blank" rel="noopener">Inloggen bij Google</a>
-                &nbsp; <a class="btn ghost" href="">Opnieuw laden</a>
-              </p>
-              <p style="font-size:0.9rem">
-                Lukt het daarna nog niet? Safari en sommige browsers blokkeren de Google-inlog binnen een andere site.
-                Gebruik dan de knop "Openen in nieuw tabblad". Ben je met meerdere Google-accounts ingelogd, open de pagina
-                dan in een venster waarin alleen het juiste account is ingelogd.
-              </p>
-            </div>
-          </div>
-          <script is:inline>
-            (() => {
-              const hulp = document.getElementById('hulp');
-              let klaar = false;
-              window.addEventListener('message', (e) => {
-                if (!/^https:\/\/[a-z0-9-]+\.(googleusercontent|google)\.com$/.test(e.origin)) return;
-                if (e.data === 'axh-statistiek:ok') { klaar = true; hulp.hidden = true; }
-                if (e.data === 'axh-statistiek:geen-toegang') {
-                  klaar = true;
-                  document.getElementById('hulp-titel').textContent = 'Geen toegang met dit account';
-                  document.getElementById('hulp-tekst').textContent =
-                    'Je bent ingelogd met een ander Google-account dan de eigenaar van het dashboard. Log in met het juiste account.';
-                  hulp.hidden = false;
-                }
-              });
-              // Geen seintje van het dashboard binnen 8 seconden: waarschijnlijk niet ingelogd.
-              setTimeout(() => { if (!klaar) hulp.hidden = false; }, 8000);
-            })();
-          </script>
-        </>
-      ) : (
-        <div class="panel">
-          <h1>Dashboard nog niet gekoppeld</h1>
-          <p>
-            Vul in <code>src/data/site.ts</code> bij <code>statsDashboardUrl</code> de URL van de web-app
-            "Dashboard" in (zie <code>apps-script/statistieken/README.md</code>).
-          </p>
-        </div>
-      )}
-    </main>
-  </body>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow, noarchive" />
+<meta name="referrer" content="no-referrer" />
+<title>Statistieken | {site.brand}</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style is:inline>
+  :root {
+    color-scheme: light;
+    --bg: #f4f3ef; --surface: #fcfcfb; --line: #e3e1da; --grid: #ecebe6;
+    --text: #0b0b0b; --text-2: #52514e; --muted: #8a887f;
+    --accent: #1f5f8b;
+    --s-nl: #2a78d6; --s-en: #eb6834; --s-de: #1baf7a;
+    --good: #0d7a3a; --bad: #b3261e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #121211; --surface: #1a1a19; --line: #2e2d2a; --grid: #262523;
+      --text: #f0efec; --text-2: #c3c2b7; --muted: #8f8d84; --accent: #7fb3dd;
+      --s-nl: #3987e5; --s-en: #d95926; --s-de: #199e70;
+      --good: #5cc98a; --bad: #f2867e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 20px 16px 48px; }
+  header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; margin-bottom: 16px; }
+  h1 { font-size: 22px; margin: 0; }
+  h2 { font-size: 16px; margin: 0 0 4px; }
+  .sub { color: var(--text-2); font-size: 13px; margin: 0 0 12px; }
+  .tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 16px; }
+  .tabs button { border: 1px solid var(--line); background: var(--surface); color: var(--text); padding: 6px 14px; border-radius: 999px; font: inherit; cursor: pointer; }
+  .tabs button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-bottom: 16px; }
+  .kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+  .kpi .l { color: var(--text-2); font-size: 13px; }
+  .kpi .v { font-size: 26px; font-weight: 650; margin: 2px 0; font-variant-numeric: tabular-nums; }
+  .kpi .d { font-size: 12px; color: var(--muted); }
+  .up { color: var(--good); } .down { color: var(--bad); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; min-width: 0; }
+  .full { grid-column: 1 / -1; }
+  @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+  .chartbox { position: relative; height: 260px; }
+  .tbl { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+  th { color: var(--text-2); font-weight: 600; font-size: 12px; }
+  td.n, th.n { text-align: right; white-space: nowrap; }
+  .leeg { color: var(--muted); font-size: 14px; padding: 8px 0; }
+  .tag { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 4px; border: 1px solid var(--line); color: var(--text-2); }
+  .ja { color: var(--good); font-weight: 600; }
+  details { margin-top: 24px; color: var(--text-2); font-size: 13px; }
+  .legend { display: flex; gap: 14px; font-size: 13px; color: var(--text-2); margin-bottom: 6px; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+
+  [hidden] { display: none !important; }
+  #slot { max-width: 380px; margin: 14vh auto 0; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; text-align: center; }
+  #slot h1 { margin-bottom: 4px; }
+  #slot input[type=password] { width: 100%; padding: 10px 12px; margin: 14px 0 10px; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; }
+  #slot label { display: block; font-size: 13px; color: var(--text-2); margin-bottom: 14px; }
+  #slot .knop { background: var(--accent); color: #fff; border: 0; border-radius: 999px; padding: 9px 22px; font: inherit; cursor: pointer; }
+  #slot .knop[disabled] { opacity: .6; cursor: wait; }
+  #fout { color: var(--bad); font-size: 14px; min-height: 1.4em; margin: 12px 0 0; }
+  button.link { background: none; border: 0; padding: 0; font: inherit; color: var(--accent); cursor: pointer; text-decoration: underline; }
+</style>
+</head>
+<body>
+{url ? (
+<>
+<div id="slot">
+  <h1>Statistieken</h1>
+  <p class="sub">{site.domain}</p>
+  <form id="f">
+    <input id="pw" type="password" placeholder="Wachtwoord" autocomplete="current-password" required aria-label="Wachtwoord" />
+    <label><input type="checkbox" id="onthoud" /> Onthouden op dit apparaat</label>
+    <button class="knop" id="knop">Openen</button>
+    <p id="fout" role="alert"></p>
+  </form>
+</div>
+<div class="wrap" id="app" hidden>
+  <header>
+    <h1>Statistieken axarquiahome.com</h1>
+    <span class="sub"><span id="bijgewerkt"></span> · <button type="button" class="link" id="uit">Afmelden</button></span>
+  </header>
+  <div class="tabs" role="group" aria-label="Taal">
+    <button data-t="alle" aria-pressed="true">Alle talen</button>
+    <button data-t="nl" aria-pressed="false">Nederlands</button>
+    <button data-t="en" aria-pressed="false">Engels</button>
+    <button data-t="de" aria-pressed="false">Duits</button>
+  </div>
+
+  <section class="kpis" id="kpis"></section>
+
+  <div class="grid">
+    <div class="card full">
+      <h2>Klikken uit Google per dag</h2>
+      <p class="sub">Laatste 90 dagen, uit Search Console (loopt 2 à 3 dagen achter).</p>
+      <div class="legend" id="legend"></div>
+      <div class="chartbox"><canvas id="grafiek" aria-label="Klikken per dag"></canvas></div>
+    </div>
+
+    <div class="card">
+      <h2>Zoekwoorden in Google</h2>
+      <p class="sub">Waarop de site verscheen, laatste 28 dagen. Positie 1 is bovenaan.</p>
+      <div class="tbl" id="zoekwoorden"></div>
+    </div>
+
+    <div class="card">
+      <h2>Gevolgde zoekwoorden</h2>
+      <p class="sub">Wekelijkse positiemeting via Ubersuggest, ook als er nog geen klikken zijn.</p>
+      <div class="tbl" id="posities"></div>
+    </div>
+
+    <div class="card">
+      <h2>Genoemd door AI</h2>
+      <p class="sub">Wekelijks gemeten in ChatGPT, Gemini en Google AI Overviews (Ubersuggest).</p>
+      <div class="tbl" id="ai"></div>
+    </div>
+
+    <div class="card">
+      <h2>Vragen aan AI</h2>
+      <p class="sub">Wordt Axarquía Home genoemd bij deze vragen?</p>
+      <div class="tbl" id="prompts"></div>
+    </div>
+
+    <div class="card">
+      <h2>Bronnen van bezoekers</h2>
+      <p class="sub">Laatste 28 dagen, uit Google Analytics of Plausible. AI = doorverwezen vanuit ChatGPT, Perplexity enz.</p>
+      <div class="tbl" id="bronnen"></div>
+    </div>
+
+    <div class="card">
+      <h2>Beste pagina's in Google</h2>
+      <p class="sub">Laatste 28 dagen.</p>
+      <div class="tbl" id="paginas"></div>
+    </div>
+
+    <div class="card">
+      <h2>Aanvragen per maand</h2>
+      <p class="sub">Uit de sheet Aanvragen axarquiahome.com.</p>
+      <div class="tbl" id="aanvragen"></div>
+    </div>
+
+    <div class="card">
+      <h2>Bing</h2>
+      <p class="sub">Laatste 28 dagen. Bing levert ook de antwoorden van Copilot en deels ChatGPT.</p>
+      <div class="tbl" id="bing"></div>
+    </div>
+  </div>
+
+  <details>
+    <summary>Logboek van het ophalen</summary>
+    <div class="tbl" id="log"></div>
+  </details>
+</div>
+
+<script is:inline define:vars={{ url }}>
+let D;
+const TAAL_NAAM = { alle: 'Alle talen', nl: 'Nederlands', en: 'Engels', de: 'Duits' };
+const LAND = { 2528: 'NL', 2056: 'BE', 2724: 'ES', 2826: 'UK', 2276: 'DE' };
+let taal = 'alle';
+let chart;
+
+const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const fmt = (n, d = 0) => (n === '' || n == null || isNaN(n)) ? '–' : Number(n).toLocaleString('nl-NL', { maximumFractionDigits: d, minimumFractionDigits: d });
+const dag = (off) => { const d = new Date(Date.now() + off * 864e5); return d.toISOString().slice(0, 10); };
+const leeg = (t) => `<div class="leeg">${t}</div>`;
+const tabel = (kop, rijen) => `<table><thead><tr>${kop.map(([t, n]) => `<th${n ? ' class="n"' : ''}>${t}</th>`).join('')}</tr></thead><tbody>${
+  rijen.map((r) => `<tr>${r.map((c, i) => `<td${kop[i][1] ? ' class="n"' : ''}>${c}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+
+function delta(nu, toen, lagerBeter) {
+  if (!toen || !nu) return '<span class="d">geen vergelijking</span>';
+  const pct = lagerBeter ? toen - nu : ((nu - toen) / toen) * 100;
+  if (Math.abs(pct) < 0.05) return '<span class="d">gelijk aan 28 dagen ervoor</span>';
+  const goed = pct > 0;
+  const txt = lagerBeter ? `${goed ? '▲' : '▼'} ${fmt(Math.abs(pct), 1)} plaatsen` : `${goed ? '▲' : '▼'} ${fmt(Math.abs(pct))}%`;
+  return `<span class="${Math.abs(pct) < 0.05 ? '' : goed ? 'up' : 'down'}">${txt}</span> <span class="d">t.o.v. 28 dagen ervoor</span>`;
+}
+
+function som(rows, t, van, tot, kol) {
+  return rows.filter((r) => r[1] === t && r[0] >= van && r[0] <= tot).reduce((s, r) => s + (Number(r[kol]) || 0), 0);
+}
+function gemPositie(rows, t, van, tot) {
+  let w = 0, s = 0;
+  rows.filter((r) => r[1] === t && r[0] >= van && r[0] <= tot).forEach((r) => { w += r[3]; s += r[5] * r[3]; });
+  return w ? s / w : null;
+}
+
+function kpis() {
+  const g = D.gscDag, nu = [dag(-28), dag(0)], toen = [dag(-56), dag(-29)];
+  const k = [];
+  if (D.bezoekersBron) {
+    const a = som(D.bezDag, taal, ...nu, 2), b = som(D.bezDag, taal, ...toen, 2);
+    k.push(['Bezoekers', fmt(a), delta(a, b)]);
+  } else {
+    k.push(['Bezoekers', '–', '<span class="d">Analytics nog niet gekoppeld</span>']);
+  }
+  const c1 = som(g, taal, ...nu, 2), c0 = som(g, taal, ...toen, 2);
+  const i1 = som(g, taal, ...nu, 3), i0 = som(g, taal, ...toen, 3);
+  const p1 = gemPositie(g, taal, ...nu), p0 = gemPositie(g, taal, ...toen);
+  k.push(['Klikken uit Google', fmt(c1), delta(c1, c0)]);
+  k.push(['Vertoningen in Google', fmt(i1), delta(i1, i0)]);
+  k.push(['Gemiddelde positie', p1 ? fmt(p1, 1) : '–', p1 ? delta(p1, p0, true) : '<span class="d">nog geen data</span>']);
+
+  if (D.aanvragen) {
+    const f = (r) => taal === 'alle' || r[1] === taal;
+    const a = D.aanvragen.filter((r) => f(r) && r[0] >= nu[0]).length;
+    const b = D.aanvragen.filter((r) => f(r) && r[0] >= toen[0] && r[0] <= toen[1]).length;
+    k.push(['Aanvragen', fmt(a), delta(a, b)]);
+  } else {
+    k.push(['Aanvragen', '–', '<span class="d">sheet nog niet gekoppeld</span>']);
+  }
+
+  const pr = D.aiPrompts.filter((r) => taal === 'alle' || r[1] === taal);
+  if (pr.length) {
+    const ja = pr.filter((r) => r[3] === 'ja').length;
+    k.push(['Genoemd door AI', `${ja} van ${pr.length}`, `<span class="d">vragen, meting ${esc(pr[0][0])}</span>`]);
+  } else {
+    k.push(['Genoemd door AI', '–', '<span class="d">eerste meting volgt</span>']);
+  }
+  if (D.bezoekersBron) {
+    const ai = D.bronnen.filter((r) => r[0] === taal && r[3] === 'ja').reduce((s, r) => s + r[2], 0);
+    k.push(['Bezoekers via AI', fmt(ai), '<span class="d">laatste 28 dagen</span>']);
+  }
+  document.getElementById('kpis').innerHTML = k.map(([l, v, d]) => `<div class="kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="d">${d}</div></div>`).join('');
+}
+
+function grafiek() {
+  const van = dag(-90);
+  const datums = [...new Set(D.gscDag.filter((r) => r[0] >= van).map((r) => r[0]))].sort();
+  const series = taal === 'alle' ? ['nl', 'en', 'de'] : [taal];
+  const kleur = { nl: css('--s-nl'), en: css('--s-en'), de: css('--s-de') };
+  const sets = series.map((t) => {
+    const m = {}; D.gscDag.filter((r) => r[1] === t).forEach((r) => (m[r[0]] = r[2]));
+    return { label: TAAL_NAAM[t], data: datums.map((d) => m[d] || 0), borderColor: kleur[t], backgroundColor: kleur[t],
+      borderWidth: 2, pointRadius: 0, pointHoverRadius: 5, tension: 0.25 };
+  }).filter((s) => taal !== 'alle' || s.data.some((v) => v > 0) || s.label !== 'Duits');
+  document.getElementById('legend').innerHTML = sets.length > 1
+    ? sets.map((s) => `<span><i style="background:${s.borderColor}"></i>${s.label}</span>`).join('') : '';
+  if (chart) chart.destroy();
+  if (!datums.length) { document.querySelector('.chartbox').innerHTML = leeg('Nog geen gegevens uit Search Console. Die komen zodra de site live en geïndexeerd is.'); return; }
+  chart = new Chart(document.getElementById('grafiek'), {
+    type: 'line',
+    data: { labels: datums, datasets: sets },
+    options: {
+      maintainAspectRatio: false, animation: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: { legend: { display: false }, tooltip: { callbacks: { title: (i) => new Date(i[0].label).toLocaleDateString('nl-NL', { weekday: 'short', day: 'numeric', month: 'short' }) } } },
+      scales: {
+        x: { grid: { display: false }, ticks: { color: css('--muted'), maxTicksLimit: 8, callback: function (v) { return new Date(this.getLabelForValue(v)).toLocaleDateString('nl-NL', { day: 'numeric', month: 'short' }); } } },
+        y: { beginAtZero: true, grid: { color: css('--grid') }, border: { display: false }, ticks: { color: css('--muted'), precision: 0 } },
+      },
+    },
+  });
+}
+
+function zoekwoorden() {
+  const r = D.gscZw.filter((x) => x[0] === taal).sort((a, b) => b[3] - a[3]).slice(0, 25);
+  document.getElementById('zoekwoorden').innerHTML = r.length ? tabel(
+    [['Zoekwoord'], ['Klikken', 1], ['Vertoningen', 1], ['Positie', 1]],
+    r.map((x) => {
+      const v = x[5] ? x[5] - x[4] : 0;
+      const pijl = x[5] && Math.abs(v) >= 0.5 ? ` <span class="${v > 0 ? 'up' : 'down'}">${v > 0 ? '▲' : '▼'}${fmt(Math.abs(v), 0)}</span>` : '';
+      return [esc(x[1]), fmt(x[2]), fmt(x[3]), fmt(x[4], 1) + pijl];
+    })) : leeg('Nog geen zoekwoorden. Die verschijnen zodra Google de site toont.');
+}
+
+function posities() {
+  const r = D.pos.filter((x) => taal === 'alle' || x[1] === taal)
+    .sort((a, b) => (a[4] || 999) - (b[4] || 999) || String(a[3]).localeCompare(b[3]));
+  document.getElementById('posities').innerHTML = r.length ? tabel(
+    [['Zoekwoord'], ['Land'], ['Positie', 1], ['Verschil', 1]],
+    r.slice(0, 40).map((x) => {
+      const v = x[4] && x[5] ? x[5] - x[4] : 0;
+      return [esc(x[3]), `<span class="tag">${esc(LAND[x[2]] || x[2])}</span>`, x[4] ? fmt(x[4]) : '<span class="d">niet in top 100</span>',
+        v ? `<span class="${v > 0 ? 'up' : 'down'}">${v > 0 ? '▲' : '▼'}${fmt(Math.abs(v))}</span>` : ''];
+    })) + (r.length > 40 ? `<p class="sub">En nog ${r.length - 40} in de sheet (tabblad Posities).</p>` : '')
+    : leeg('De eerste meting volgt na de wekelijkse update.');
+}
+
+function ai() {
+  const datums = [...new Set(D.ai.map((r) => r[0]))].sort();
+  if (!datums.length) { document.getElementById('ai').innerHTML = leeg('De eerste meting volgt na de wekelijkse update.'); return; }
+  const laatste = datums[datums.length - 1], vorige = datums[datums.length - 2];
+  const naam = { alle: 'Alle AI samen', openai: 'ChatGPT', gemini: 'Gemini', google_aio: 'Google AI Overviews' };
+  const rij = D.ai.filter((r) => r[0] === laatste);
+  document.getElementById('ai').innerHTML = tabel(
+    [['AI'], ['Zichtbaar', 1], ['Vermeldingen', 1], ['Gem. positie', 1]],
+    rij.map((x) => {
+      const oud = vorige && D.ai.find((r) => r[0] === vorige && r[1] === x[1]);
+      const v = oud && x[2] !== '' && oud[2] !== '' ? x[2] - oud[2] : 0;
+      return [esc(naam[x[1]] || x[1]), fmt(x[2], 0) + '%' + (v ? ` <span class="${v > 0 ? 'up' : 'down'}">${v > 0 ? '▲' : '▼'}${fmt(Math.abs(v))}</span>` : ''), fmt(x[3]), fmt(x[4], 1)];
+    })) + `<p class="sub">Meting van ${esc(laatste)}. Zichtbaar = in hoeveel procent van de antwoorden de site genoemd wordt.</p>`;
+}
+
+function prompts() {
+  const r = D.aiPrompts.filter((x) => taal === 'alle' || x[1] === taal).sort((a, b) => (a[3] === 'ja' ? -1 : 1) - (b[3] === 'ja' ? -1 : 1));
+  document.getElementById('prompts').innerHTML = r.length ? tabel(
+    [['Vraag'], ['Genoemd'], ['Wie wel']],
+    r.map((x) => [esc(x[2]), x[3] === 'ja' ? `<span class="ja">✓ ja${x[4] ? ' (#' + fmt(x[4]) + ')' : ''}</span>` : '<span class="d">nee</span>', `<span class="d">${esc(x[6])}</span>`]))
+    : leeg('De eerste meting volgt na de wekelijkse update.');
+}
+
+function bronnen() {
+  if (!D.bezoekersBron) { document.getElementById('bronnen').innerHTML = leeg('Google Analytics is nog niet gekoppeld (zie README).'); return; }
+  const r = D.bronnen.filter((x) => x[0] === taal).sort((a, b) => b[2] - a[2]).slice(0, 12);
+  document.getElementById('bronnen').innerHTML = r.length ? tabel([['Bron'], ['Bezoekers', 1]],
+    r.map((x) => [esc(x[1]) + (x[3] === 'ja' ? ' <span class="tag">AI</span>' : ''), fmt(x[2])])) : leeg('Nog geen bezoekers gemeten.');
+}
+
+function paginas() {
+  const r = D.gscPag.filter((x) => x[0] === taal).sort((a, b) => b[2] - a[2] || b[3] - a[3]).slice(0, 12);
+  document.getElementById('paginas').innerHTML = r.length ? tabel([['Pagina'], ['Klikken', 1], ['Vertoningen', 1], ['Positie', 1]],
+    r.map((x) => [esc(x[1]), fmt(x[2]), fmt(x[3]), fmt(x[4], 1)])) : leeg('Nog geen gegevens.');
+}
+
+function aanvragen() {
+  if (!D.aanvragen) { document.getElementById('aanvragen').innerHTML = leeg('Nog niet gekoppeld: zet AANVRAGEN_SHEET_ID in de scripteigenschappen.'); return; }
+  const m = {};
+  D.aanvragen.forEach((r) => {
+    const maand = String(r[0]).slice(0, 7);
+    const x = (m[maand] = m[maand] || { nl: 0, en: 0, de: 0, totaal: 0, getekend: 0 });
+    if (x[r[1]] != null) x[r[1]]++;
+    x.totaal++;
+    if (/getekend/i.test(r[3])) x.getekend++;
+  });
+  const rijen = Object.keys(m).sort().reverse().slice(0, 12);
+  document.getElementById('aanvragen').innerHTML = rijen.length ? tabel([['Maand'], ['NL', 1], ['EN', 1], ['DE', 1], ['Totaal', 1], ['Getekend', 1]],
+    rijen.map((k) => [k, m[k].nl, m[k].en, m[k].de, `<strong>${m[k].totaal}</strong>`, m[k].getekend])) : leeg('Nog geen aanvragen.');
+}
+
+function bing() {
+  if (!D.bingActief) { document.getElementById('bing').innerHTML = leeg('Nog niet gekoppeld: zet BING_API_KEY in de scripteigenschappen.'); return; }
+  const t = D.bing.find((x) => x[0] === taal);
+  const zw = taal === 'alle' ? D.bingZw.slice().sort((a, b) => b[2] - a[2]).slice(0, 8) : [];
+  document.getElementById('bing').innerHTML = (t ? `<p><strong>${fmt(t[1])}</strong> klikken, <strong>${fmt(t[2])}</strong> vertoningen</p>` : leeg('Nog geen gegevens.'))
+    + (zw.length ? tabel([['Zoekwoord'], ['Klikken', 1], ['Vertoningen', 1], ['Positie', 1]], zw.map((x) => [esc(x[0]), fmt(x[1]), fmt(x[2]), fmt(x[3], 1)])) : '');
+}
+
+function render() {
+  kpis(); grafiek(); zoekwoorden(); posities(); ai(); prompts(); bronnen(); paginas(); aanvragen(); bing();
+}
+
+function start(data) {
+  D = data;
+  document.querySelectorAll('.tabs button').forEach((b) => b.addEventListener('click', () => {
+    taal = b.dataset.t;
+    document.querySelectorAll('.tabs button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    render();
+  }));
+  document.getElementById('bijgewerkt').textContent = 'Bijgewerkt ' + D.bijgewerkt;
+  document.getElementById('log').innerHTML = D.log.length ? tabel([['Tijd'], ['Onderdeel'], ['Resultaat']], D.log.slice().reverse().map((r) => r.map(esc))) : leeg('Leeg.');
+  render();
+}
+
+const SLEUTEL = 'axh_stat_pw';
+const opslag = {
+  lees() { try { return localStorage.getItem(SLEUTEL); } catch (e) { return null; } },
+  zet(v) { try { localStorage.setItem(SLEUTEL, v); } catch (e) {} },
+  wis() { try { localStorage.removeItem(SLEUTEL); } catch (e) {} },
+};
+
+async function open_(pw, onthoud) {
+  const knop = document.getElementById('knop');
+  const fout = document.getElementById('fout');
+  knop.disabled = true; knop.textContent = 'Laden…'; fout.textContent = '';
+  try {
+    const r = await fetch(url + '?wachtwoord=' + encodeURIComponent(pw), { cache: 'no-store', referrerPolicy: 'no-referrer' });
+    const j = await r.json();
+    if (!j.ok) { opslag.wis(); fout.textContent = j.error || 'Onjuist wachtwoord.'; return; }
+    if (onthoud) opslag.zet(pw);
+    document.getElementById('slot').remove();
+    document.getElementById('app').hidden = false;
+    start(j.data);
+  } catch (e) {
+    fout.textContent = 'De cijfers konden niet worden opgehaald. Probeer het zo opnieuw.';
+  } finally {
+    knop.disabled = false; knop.textContent = 'Openen';
+  }
+}
+
+document.getElementById('f').addEventListener('submit', (e) => {
+  e.preventDefault();
+  open_(document.getElementById('pw').value, document.getElementById('onthoud').checked);
+});
+document.getElementById('uit').addEventListener('click', () => { opslag.wis(); location.reload(); });
+const bewaard = opslag.lees();
+if (bewaard) { document.getElementById('onthoud').checked = true; open_(bewaard, true); }
+</script>
+</>
+) : (
+<div id="slot">
+  <h1>Statistieken nog niet gekoppeld</h1>
+  <p class="sub">Vul in <code>src/data/site.ts</code> bij <code>statsDashboardUrl</code> de URL van de web-app in (zie <code>apps-script/statistieken/README.md</code>).</p>
+</div>
+)}
+</body>
 </html>
