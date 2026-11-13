@@ -63,8 +63,12 @@ export const routes: Partial<Record<Lang, string>>[] = [
       ),
     )
     .filter((r) => Object.keys(r).length > 0),
-  // Gratis aankoopchecklist (lead magnet, zie src/data/checklist.ts)
+  // Gratis checklists (lead magnets, zie src/data/checklists.ts)
   { nl: '/nl/checklist-finca-kopen/', en: '/en/finca-buying-checklist/', de: '/de/checkliste-finca-kaufen/', sv: '/sv/checklista-kopa-finca/' },
+  { nl: '/nl/checklist-renoveren/', en: '/en/renovation-checklist/', de: '/de/checkliste-renovierung/', sv: '/sv/checklista-renovering/' },
+  { nl: '/nl/checklist-huis-onderhouden/', en: '/en/home-maintenance-checklist/', de: '/de/checkliste-hauspflege/', sv: '/sv/checklista-husunderhall/' },
+  { nl: '/nl/checklist-emigreren-spanje/', en: '/en/moving-to-spain-checklist/', de: '/de/checkliste-auswandern-spanien/', sv: '/sv/checklista-flytta-till-spanien/' },
+  { nl: '/nl/checklist-huis-verkopen-verhuren/', en: '/en/selling-renting-checklist/', de: '/de/checkliste-verkaufen-vermieten/', sv: '/sv/checklista-salja-hyra-ut/' },
 ];
 
 export function alternatesFor(path: string): Partial<Record<Lang, string>> {

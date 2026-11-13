@@ -1,4 +1,4 @@
-// Zet de printversies van de aankoopchecklist (dist/print/<taal>/) om naar pdf's
+// Zet de printversies van de checklists (dist/print/<id>/<taal>/) om naar pdf's
 // in public/downloads/. Gebruik: npm run pdf (bouwt eerst de site).
 // Vereist Playwright met Chromium (npx playwright install chromium).
 import { createRequire } from 'node:module';
@@ -16,7 +16,8 @@ mkdirSync(out, { recursive: true });
 
 const browser = await chromium.launch();
 const page = await browser.newPage();
-for (const lang of readdirSync(dist)) {
+const pages = readdirSync(dist).flatMap((id) => (existsSync(join(dist, id, 'index.html')) ? [] : readdirSync(join(dist, id)).map((lang) => `${id}/${lang}`)));
+for (const lang of pages) {
   const file = join(dist, lang, 'index.html');
   if (!existsSync(file)) continue;
   await page.goto(pathToFileURL(file).href, { waitUntil: 'load' });
