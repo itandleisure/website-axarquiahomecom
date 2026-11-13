@@ -1,0 +1,141 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'In het kort' },
+  { id: 'regios', label: 'Welke regio past bij u?' },
+  { id: 'kosten', label: 'Wat kost wonen in Spanje per maand?' },
+  { id: 'regels', label: 'De regels: 3, 8 en 183' },
+  { id: 'zorg', label: 'Zorg, AOW en pensioen' },
+  { id: 'werk', label: 'Werken vanuit Spanje' },
+  { id: 'huis', label: 'Huren of kopen' },
+  { id: 'voordelen', label: 'Voordelen en nadelen' },
+  { id: 'axarquia', label: 'Waarom zoveel mensen kiezen voor de Axarquía' },
+];
+
+const faq = [
+  {
+    q: 'Kun je zomaar in Spanje gaan wonen?',
+    a: 'Als Nederlander of Belg wel: als EU-burger heeft u geen visum of verblijfsvergunning nodig. Blijft u langer dan drie maanden, dan schrijft u zich in bij het register voor EU-burgers en krijgt u een NIE-nummer. U moet dan laten zien dat u een inkomen of vermogen heeft en een zorgverzekering.',
+  },
+  {
+    q: 'Is wonen in Spanje goedkoper dan in Nederland?',
+    a: 'Gemiddeld wel, maar minder dan veel mensen denken. Een huis, uit eten gaan en lokale producten zijn goedkoper. Stroom, auto’s, elektronica en supermarktproducten uit Noord-Europa kosten ongeveer hetzelfde of meer. Een stel kan in Andalusië buiten de dure kustplaatsen comfortabel leven van € 2.000 tot € 2.800 per maand inclusief huur.',
+  },
+  {
+    q: 'Waar wonen de meeste Nederlanders in Spanje?',
+    a: 'Aan de Costa Blanca (rond Torrevieja, Benidorm, Altea en Jávea) en aan de Costa del Sol (van Marbella en Mijas tot Nerja en de Axarquía). Ook in Murcia en op de Canarische Eilanden wonen grote groepen Nederlanders en Belgen.',
+  },
+  {
+    q: 'Waar is een huis aan zee in Spanje het goedkoopst?',
+    a: 'Aan de kust van Murcia (Mazarrón, Águilas), in Almería en in delen van de zuidelijke Costa Blanca zijn appartementen aan zee het goedkoopst. Aan de Costa del Sol is het oostelijke deel, de Axarquía, per m² duidelijk goedkoper dan Marbella of Estepona. Reken er wel op dat een goedkoop huis vaak ouder is en opgeknapt moet worden.',
+  },
+  {
+    q: 'Moet ik me uitschrijven in Nederland als ik in Spanje ga wonen?',
+    a: 'Ja, als u verwacht binnen een jaar minstens acht maanden in het buitenland te verblijven. Dat meldt u bij uw gemeente. Na uitschrijving bouwt u geen AOW meer op (tenzij u zich vrijwillig verzekert bij de SVB) en vervalt uw Nederlandse basiszorgverzekering.',
+  },
+  {
+    q: 'Krijg ik mijn AOW in Spanje?',
+    a: 'Ja. De SVB betaalt uw AOW en uw pensioenfonds uw pensioen gewoon uit in Spanje. Wel bouwt u voor elk jaar dat u vóór uw AOW-leeftijd buiten Nederland woont 2% minder AOW op, tenzij u zich binnen een jaar na vertrek vrijwillig verzekert bij de SVB.',
+  },
+];
+
+const kosten = [
+  { p: 'Huur appartement, 2 slaapkamers (lange termijn)', v: '€ 750 – € 1.300' },
+  { p: 'Boodschappen voor twee personen', v: '€ 400 – € 550' },
+  { p: 'Stroom (meer in zomer met airco en winter met warmtepomp)', v: '€ 60 – € 130' },
+  { p: 'Water en afval', v: '€ 25 – € 50' },
+  { p: 'Internet en twee mobiele telefoons', v: '€ 45 – € 70' },
+  { p: 'Auto: verzekering, brandstof, onderhoud', v: '€ 150 – € 250' },
+  { p: 'Privé zorgverzekering (als aanvulling), per persoon', v: '€ 60 – € 180' },
+  { p: 'Uit eten, terrasjes, vrije tijd', v: '€ 200 – € 400' },
+];
+---
+<Guide slug="wonen-in-spanje" toc={toc} faq={faq} ctaTitle="Een huis in Spanje op het oog?" ctaText="Wij keuren het huis vóór u tekent en geven een vaste prijs voor het opknappen. Ook als u nog in Nederland of België woont.">
+  <h2 id="kort">In het kort</h2>
+  <ul>
+    <li><strong>Mag het?</strong> Ja. Als EU-burger mag u in Spanje wonen zonder visum. Na drie maanden schrijft u zich in.</li>
+    <li><strong>Waar?</strong> De meeste Nederlanders en Belgen wonen aan de Costa Blanca en de Costa del Sol. Het klimaat, de afstand tot een vliegveld en de prijzen verschillen per regio flink.</li>
+    <li><strong>Wat kost het?</strong> Een stel leeft in Andalusië of Murcia comfortabel van ongeveer € 2.000 tot € 2.800 per maand inclusief huur. Woont u in een eigen huis zonder hypotheek, dan is het een stuk minder.</li>
+    <li><strong>Waar moet u op letten?</strong> Belasting (de 183-dagenregel), zorgverzekering, uw AOW-opbouw en de staat van het huis dat u huurt of koopt.</li>
+  </ul>
+  <p>Wonen in Spanje is iets anders dan op vakantie gaan. Dit is een overzicht om de keuze te maken. Het papierwerk stap voor stap staat in onze gids <a href="/nl/gidsen/emigreren-naar-spanje/">emigreren naar Spanje</a>. Wilt u alleen de winter in Spanje doorbrengen, lees dan <a href="/nl/gidsen/overwinteren-in-spanje/">overwinteren in Spanje</a>.</p>
+
+  <h2 id="regios">Welke regio past bij u?</h2>
+  <p>Spanje is groot. Tussen het groene noorden en het droge zuidoosten zit een wereld van verschil in klimaat, prijzen en sfeer. De meeste Noord-Europeanen kiezen een van deze gebieden:</p>
+  <h3>Costa del Sol (Málaga)</h3>
+  <p>De warmste winters van het vasteland, met overdag vaak 16 tot 19 graden in januari. Het vliegveld van Málaga heeft het hele jaar door directe vluchten naar Amsterdam, Eindhoven, Rotterdam en Brussel. Het westen (Marbella, Estepona, Benalmádena) is internationaal en duur. Het oosten, de <a href="/nl/wonen/">Axarquía</a>, is rustiger, Spaanser en per m² goedkoper, met witte bergdorpen achter de kust.</p>
+  <h3>Costa Blanca (Alicante)</h3>
+  <p>De regio met de grootste Nederlandse en Belgische gemeenschap. Het noorden (Dénia, Jávea, Altea) is groen en heuvelachtig; het zuiden (Torrevieja, Orihuela Costa) vlak, droog en betaalbaar, met veel nieuwbouw. In de winter is het er een paar graden koeler dan aan de Costa del Sol.</p>
+  <h3>Murcia en Almería</h3>
+  <p>De goedkoopste kust van Spanje en de meeste zonuren. In de zomer is het wel erg heet en droog, en de omgeving is minder groen. Geschikt als budget de doorslag geeft.</p>
+  <h3>Canarische Eilanden</h3>
+  <p>Het hele jaar lente, maar verder weg (ruim vier uur vliegen) en met eilandprijzen voor veel producten. Populair bij overwinteraars.</p>
+  <h3>Valencia, Barcelona, Madrid</h3>
+  <p>Voor wie in een stad wil wonen en werken. Levendig, goede verbindingen, maar de huurprijzen zijn de afgelopen jaren hard gestegen.</p>
+  <p><strong>Tip:</strong> kom minstens twee keer kijken, één keer in de zomer en één keer in januari of februari. Een dorp dat in augustus bruist, kan in de winter stil zijn, en een stenen huis zonder isolatie is in februari kil.</p>
+
+  <h2 id="kosten">Wat kost wonen in Spanje per maand?</h2>
+  <p>Hieronder een indicatie voor een stel in een middelgrote plaats aan de kust van Andalusië of Murcia. In Marbella, Málaga-stad, Barcelona en Madrid liggen vooral de huren veel hoger. Dit zijn bandbreedtes, geen offertes: uw eigen uitgavenpatroon bepaalt het meest.</p>
+  <div class="table-scroll">
+    <table class="prices">
+      <tbody>
+        {kosten.map((k) => <tr><td>{k.p}</td><td>{k.v}</td></tr>)}
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Indicaties per maand, 2026. Woont u in een eigen huis, reken dan in plaats van huur op onroerendgoedbelasting (IBI, vaak € 300 tot € 900 per jaar), een opstal- en inboedelverzekering, eventueel servicekosten van de vereniging van eigenaars, en geld voor onderhoud.</p>
+  <h3>Wat is goedkoper en wat niet?</h3>
+  <ul>
+    <li><strong>Goedkoper</strong>: huizen buiten de toplocaties, verse groente en fruit van de markt, uit eten (een <em>menú del día</em> kost € 12 tot € 16), wijn, openbaar vervoer, gemeentelijke belastingen.</li>
+    <li><strong>Ongeveer gelijk of duurder</strong>: stroom, auto’s en auto-onderdelen, elektronica, Noord-Europese producten in de supermarkt, en particuliere zorgverzekeringen voor wie ouder is.</li>
+    <li><strong>Vergeet niet</strong>: onderhoud aan een huis in een warm klimaat. Zon, zout en hevige regenbuien slijten daken, kozijnen en gevels sneller dan u gewend bent. Zie <a href="/nl/onderhoud/">onderhoud</a>.</li>
+  </ul>
+
+  <h2 id="regels">De regels: 3, 8 en 183</h2>
+  <p>Drie getallen bepalen wat u moet regelen als u in Spanje gaat wonen:</p>
+  <ul>
+    <li><strong>3 maanden</strong>: blijft u langer dan drie maanden, dan schrijft u zich in bij het <em>Registro Central de Extranjeros</em> en bij de gemeente waar u woont (<em>padrón</em>). U heeft daarvoor een NIE-nummer, een bewijs van inkomen of vermogen en een zorgverzekering nodig.</li>
+    <li><strong>8 maanden</strong>: verwacht u binnen een jaar minstens acht maanden buiten Nederland te verblijven, dan schrijft u zich uit bij uw Nederlandse gemeente. Vanaf dat moment bouwt u geen AOW meer op en vervalt de Nederlandse basisverzekering. Belgen melden hun vertrek bij de gemeente en schrijven zich in bij het consulaat.</li>
+    <li><strong>183 dagen</strong>: verblijft u meer dan 183 dagen per kalenderjaar in Spanje, of ligt het centrum van uw leven daar, dan bent u voor de Spaanse fiscus inwoner. U doet dan in Spanje aangifte over uw wereldinkomen. Het belastingverdrag bepaalt welk land welk inkomen mag belasten.</li>
+  </ul>
+  <p>Andalusië heeft voor inwoners een paar fiscale voordelen: de vermogensbelasting is er op nul gezet (alleen boven € 3 miljoen geldt een landelijke solidariteitsheffing) en de erf- en schenkbelasting tussen ouders, kinderen en partners is grotendeels afgeschaft. Belastingregels veranderen geregeld, dus laat uw eigen situatie doorrekenen door een fiscalist die beide landen kent.</p>
+
+  <h2 id="zorg">Zorg, AOW en pensioen</h2>
+  <h3>Zorgverzekering</h3>
+  <p>Werkt u in Spanje, dan bent u verzekerd via de Spaanse sociale zekerheid. Heeft u alleen AOW of een Nederlands pensioen, dan krijgt u via het CAK meestal een S1-formulier. Daarmee gebruikt u de Spaanse publieke zorg en betaalt u een verdragsbijdrage in Nederland. Anderen sluiten een Spaanse privéverzekering af. Veel mensen nemen die ook als aanvulling, voor kortere wachttijden en artsen die Engels spreken.</p>
+  <h3>AOW en pensioen</h3>
+  <p>Uw AOW en pensioen worden gewoon in Spanje uitbetaald. Wel bouwt u voor elk jaar dat u vóór uw AOW-leeftijd buiten Nederland woont 2% minder AOW op. U kunt zich binnen een jaar na vertrek vrijwillig verzekeren bij de SVB om dat gat te dichten. Reken vooraf uit of dat voor u loont.</p>
+
+  <h2 id="werk">Werken vanuit Spanje</h2>
+  <p>De Spaanse lonen liggen lager dan in Nederland en de werkloosheid is hoger, vooral buiten het toerisme. Veel Nederlanders en Belgen in Spanje werken daarom op afstand voor een werkgever of klanten thuis, of beginnen een eigen bedrijf als <em>autónomo</em> (zzp’er). Een autónomo betaalt een maandelijkse sociale bijdrage die afhangt van het inkomen, met in het eerste jaar meestal een verlaagd tarief. Laat u bij een eigen bedrijf vooraf adviseren door een gestor.</p>
+  <p>Denkt u aan een bed &amp; breakfast of vakantieverhuur? Lees dan eerst <a href="/nl/gidsen/huis-kopen-in-spanje/bed-and-breakfast-kopen/">bed and breakfast kopen in Spanje</a> en <a href="/nl/gidsen/woning-verhuren-spanje/">woning verhuren in Spanje</a>. De regels voor toeristische verhuur zijn de afgelopen jaren flink strenger geworden.</p>
+
+  <h2 id="huis">Huren of kopen</h2>
+  <p>Ons advies aan bijna iedereen: huur eerst een half jaar tot een jaar. Zo ontdekt u of u liever aan zee of in de bergen woont, hoe druk het in de zomer is en of u zich thuis voelt bij de buren. Langetermijnhuur is in populaire kustplaatsen wel schaars geworden, mede door vakantieverhuur. Begin dus op tijd met zoeken, en wees voorzichtig met huurwoningen die u alleen online heeft gezien.</p>
+  <p>Gaat u kopen, reken dan op ongeveer 10% kosten koper bovenop de prijs (zie <a href="/nl/gidsen/kosten-koper-spanje/">kosten koper in Spanje</a>) en neem een eigen advocaat. Het hele traject staat in het <a href="/nl/gidsen/huis-kopen-in-spanje/">stappenplan huis kopen in Spanje</a>. Twijfelt u tussen een appartement, een dorpshuis of een finca, lees dan <a href="/nl/gidsen/finca-appartement-of-dorpshuis/">finca, appartement of dorpshuis</a>.</p>
+  <p>Let vooral op de staat van het huis. Veel betaalbare huizen aan de Spaanse kusten zijn dertig tot vijftig jaar oud: enkel glas, geen isolatie, oude leidingen en daken die na een natte winter lekken. Dat is geen reden om ze niet te kopen, wel om vooraf te weten wat het opknappen kost. Een <a href="/nl/aankoopkeuring/">aankoopkeuring</a> kost een fractie van een verkeerde aankoop. Wat renoveren gemiddeld kost, staat in <a href="/nl/gidsen/kosten-huis-renoveren-spanje/">wat kost een huis renoveren in Spanje</a>.</p>
+
+  <h2 id="voordelen">Voordelen en nadelen van wonen in Spanje</h2>
+  <h3>Voordelen</h3>
+  <ul>
+    <li><strong>Klimaat</strong>: aan de zuidkust meer dan 300 zonnige dagen per jaar en zachte winters. Veel mensen merken dat ze meer buiten zijn en gezonder leven.</li>
+    <li><strong>Ruimte en prijs</strong>: voor het geld van een rijtjeshuis in de Randstad koopt u in Andalusië een vrijstaand huis met terras of tuin, buiten de toplocaties.</li>
+    <li><strong>Levensstijl</strong>: een rustiger ritme, het leven op straat en op terrasjes, goed en betaalbaar eten.</li>
+    <li><strong>Bereikbaarheid</strong>: vanuit Málaga en Alicante vliegt u het hele jaar in twee tot drie uur naar Nederland en België.</li>
+    <li><strong>Gezondheidszorg</strong>: de Spaanse publieke zorg is goed, al zijn de wachttijden voor specialisten soms lang.</li>
+  </ul>
+  <h3>Nadelen</h3>
+  <ul>
+    <li><strong>Bureaucratie</strong>: afspraken bij de politie of de gemeente zijn soms lastig te krijgen, en veel gaat op papier en in het Spaans. Een gestor is geen luxe.</li>
+    <li><strong>Taal</strong>: aan de kust redt u zich met Engels, maar bij de huisarts, de gemeente en de buren in het dorp spreekt men Spaans.</li>
+    <li><strong>Zomerhitte en droogte</strong>: in juli en augustus kan het boven de 35 graden worden, en water is in delen van Zuid-Spanje schaars.</li>
+    <li><strong>Afstand tot familie</strong>: kleinkinderen zien gaat niet meer even op zondag. Veel emigranten onderschatten dit.</li>
+    <li><strong>Vakmensen vinden</strong>: een betrouwbare aannemer of loodgieter die op tijd komt en uw taal spreekt, is niet vanzelfsprekend. Daarom vragen veel buitenlandse eigenaren hun buren om een naam, of gebruiken ze een vast aanspreekpunt zoals ons.</li>
+  </ul>
+
+  <h2 id="axarquia">Waarom zoveel mensen kiezen voor de Axarquía</h2>
+  <p>De Axarquía, het oostelijke deel van de provincie Málaga, combineert het warme winterklimaat van de Costa del Sol met prijzen die lager liggen dan in Marbella of Fuengirola. U woont er aan zee in Nerja, Torrox Costa of Torre del Mar, of in een wit bergdorp als <a href="/nl/plaatsen/competa/">Cómpeta</a> of <a href="/nl/plaatsen/frigiliana/">Frigiliana</a>, op een half uur tot een uur van het vliegveld. Er wonen Nederlanders, Belgen, Britten, Duitsers en Scandinaviërs, maar het blijft een Spaanse streek met een echt dorpsleven.</p>
+  <p>Wilt u de dorpen vergelijken, lees dan <a href="/nl/wonen/">wonen in de Axarquía</a> of bekijk <a href="/nl/plaatsen/">alle dorpen en plaatsen</a>. En heeft u straks een huis: wij doen de <a href="/nl/renovatie/">renovatie</a>, het <a href="/nl/onderhoud/">onderhoud</a> en het <a href="/nl/sleutelbeheer/">sleutelbeheer</a> als u in Nederland of België bent, met één aanspreekpunt dat Nederlands spreekt.</p>
+  <p class="note">Deze gids geeft algemene informatie en is geen juridisch, fiscaal of financieel advies. Regels en bedragen kunnen veranderen; controleer ze bij de SVB, het CAK, de Belastingdienst of een adviseur.</p>
+</Guide>

@@ -3,7 +3,12 @@ import Guide from '../../../components/Guide.astro';
 
 const toc = [
   { id: 'gebieden', label: 'De gebieden in de provincie Málaga' },
-  { id: 'prijzen', label: 'Wat kost een huis?' },
+  { id: 'stad', label: 'Huis kopen in Málaga-stad: de wijken' },
+  { id: 'prijzen', label: 'Wat kost een huis? Prijzen per gebied' },
+  { id: 'zee', label: 'Waar is het goedkoopst aan zee?' },
+  { id: 'nieuwbouw', label: 'Bestaande bouw of nieuwbouw' },
+  { id: 'financiering', label: 'Hypotheek en eigen geld' },
+  { id: 'zoeken', label: 'Zoeken: portalen en makelaars' },
   { id: 'proces', label: 'Het koopproces stap voor stap' },
   { id: 'valkuilen', label: 'Valkuilen voor buitenlandse kopers' },
   { id: 'na', label: 'Na de aankoop' },
@@ -13,6 +18,14 @@ const faq = [
   {
     q: 'Waar is een huis in de provincie Málaga het goedkoopst?',
     a: 'In het binnenland en in de oostelijke Axarquía zijn huizen per m² het goedkoopst. Aan de westelijke Costa del Sol, rond Marbella en Estepona, liggen de prijzen het hoogst. Ook in Málaga-stad zijn de prijzen de laatste jaren sterk gestegen.',
+  },
+  {
+    q: 'Kun je als Nederlander zomaar een huis kopen in Málaga?',
+    a: 'Ja. Als EU-burger heeft u dezelfde rechten als Spanjaarden en heeft u geen vergunning nodig. U heeft wel een NIE-nummer en een Spaanse bankrekening nodig. U hoeft niet in Spanje te wonen om er een huis te kopen.',
+  },
+  {
+    q: 'Hoeveel eigen geld heb ik nodig voor een huis in Málaga?',
+    a: 'Als niet-inwoner financiert een Spaanse bank meestal hooguit 60 tot 70% van de taxatiewaarde. Met de kosten koper van ongeveer 10% erbij heeft u dus 40 tot 50% van de koopprijs aan eigen geld nodig, plus een budget voor eventuele verbouwing.',
   },
   {
     q: 'Heb ik een makelaar nodig?',
@@ -35,9 +48,55 @@ const faq = [
   <h3>Het binnenland</h3>
   <p>Rond Antequera, Ronda en Álora. Ruimte, rust en lagere prijzen, maar verder van zee en vliegveld, en in de winter kouder.</p>
 
-  <h2 id="prijzen">Wat kost een huis?</h2>
-  <p>De prijzen verschillen sterk per plek en per type woning. Als grove richtlijn: een appartement aan de kust in de Axarquía begint rond € 200.000, een dorpshuis in de bergen kan vanaf € 150.000, en villa’s en gerenoveerde fincas met zeezicht lopen snel op tot € 400.000 tot ruim € 1 miljoen. Kijk op portalen als Idealista en Kyero om een actueel beeld te krijgen. Let op: vraagprijzen liggen vaak boven wat er uiteindelijk betaald wordt.</p>
+  <h2 id="stad">Huis kopen in Málaga-stad: de wijken</h2>
+  <p>Wie “huis kopen in Málaga” zegt, bedoelt soms de stad en soms de hele provincie. De stad zelf is de laatste tien jaar veranderd van doorreisplaats in een van de populairste steden van Europa, met musea, een gerenoveerde haven en een groeiende techsector. Het aanbod bestaat vooral uit appartementen. De bekendste wijken:</p>
+  <ul>
+    <li><strong>Centro Histórico en Soho</strong>: het oude centrum, levendig en duur. Veel kleine appartementen, vaak zonder lift of parkeerplaats, en veel vakantieverhuur.</li>
+    <li><strong>La Malagueta en El Limonar</strong>: dicht bij strand en centrum, met de duurste appartementen en villa’s van de stad.</li>
+    <li><strong>Pedregalejo en El Palo</strong>: voormalige vissersdorpen aan het strand ten oosten van het centrum, met een boulevard vol visrestaurants. Geliefd bij gezinnen en expats.</li>
+    <li><strong>Teatinos</strong>: nieuwere wijk bij de universiteit en het ziekenhuis, met appartementen met zwembad en betere prijzen per m².</li>
+    <li><strong>Cerrado de Calderón en de oostelijke heuvels</strong>: villa’s met uitzicht op zee, op een kwartier van het centrum.</li>
+  </ul>
+  <p>Wilt u meer ruimte voor hetzelfde geld, kijk dan langs de kust ten oosten van de stad: Rincón de la Victoria ligt op een kwartier rijden, en verder oostwaarts beginnen de Axarquía en de witte bergdorpen.</p>
+
+  <h2 id="prijzen">Wat kost een huis? Prijzen per gebied</h2>
+  <p>De prijzen verschillen sterk per plek. Onderstaande bandbreedtes zijn gebaseerd op vraagprijzen op de grote portalen en afgerond. Ze geven een beeld van de verhoudingen; voor een actuele prijs kijkt u op Idealista of Kyero.</p>
+  <div class="table-scroll">
+    <table class="prices">
+      <tbody>
+        <tr><td>Marbella, Estepona, Benahavís</td><td>€ 4.500 – € 7.000 per m²</td></tr>
+        <tr><td>Málaga-stad</td><td>€ 3.500 – € 5.000 per m²</td></tr>
+        <tr><td>Fuengirola, Benalmádena, Torremolinos</td><td>€ 3.500 – € 5.000 per m²</td></tr>
+        <tr><td>Nerja</td><td>€ 3.500 – € 5.000 per m²</td></tr>
+        <tr><td>Rincón de la Victoria, Torre del Mar, Torrox Costa</td><td>€ 2.500 – € 3.800 per m²</td></tr>
+        <tr><td>Bergdorpen Axarquía (Cómpeta, Canillas, Sayalonga)</td><td>€ 1.500 – € 3.000 per m²</td></tr>
+        <tr><td>Binnenland (Antequera, Álora, Ronda)</td><td>€ 1.000 – € 2.200 per m²</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Indicatieve vraagprijzen, eind 2026. Een opgeknapt huis met zeezicht zit aan de bovenkant, een huis dat gerenoveerd moet worden aan de onderkant.</p>
+  <p>Als grove richtlijn: een appartement aan de kust in de Axarquía begint rond € 200.000, een dorpshuis in de bergen kan vanaf € 150.000, en villa’s en gerenoveerde fincas met zeezicht lopen snel op tot € 400.000 tot ruim € 1 miljoen. Kijk op portalen als Idealista en Kyero om een actueel beeld te krijgen. Let op: vraagprijzen liggen vaak boven wat er uiteindelijk betaald wordt.</p>
   <p>Reken bovenop de koopprijs op ongeveer 10% kosten koper (zie <a href="/nl/gidsen/kosten-koper-spanje/">kosten koper Spanje</a>), en bij oudere huizen op een verbouwbudget.</p>
+
+  <h2 id="zee">Waar is het goedkoopst aan zee?</h2>
+  <p>Binnen de provincie Málaga worden huizen aan zee goedkoper naarmate u verder naar het oosten gaat. Torre del Mar, Caleta de Vélez, Algarrobo Costa en Torrox Costa hebben appartementen op loopafstand van het strand voor een stuk minder dan in Fuengirola of Marbella. De keerzijde: het aanbod is ouder. Veel appartementen aan de oostkust zijn in de jaren zeventig en tachtig gebouwd en hebben een nieuwe badkamer, keuken, ramen of elektra nodig.</p>
+  <p>Wie het allergoedkoopst aan zee wil wonen in Spanje, komt uit in Murcia, Almería of de zuidelijke Costa Blanca. Die regio’s vergelijken we in <a href="/nl/gidsen/wonen-in-spanje/">wonen in Spanje</a>.</p>
+
+  <h2 id="nieuwbouw">Bestaande bouw of nieuwbouw</h2>
+  <p>Aan de westelijke Costa del Sol wordt veel nieuw gebouwd, in de Axarquía vooral bestaande bouw. De belastingen verschillen:</p>
+  <ul>
+    <li><strong>Bestaande bouw</strong>: u betaalt overdrachtsbelasting (<em>ITP</em>), in Andalusië 7% van de koopprijs.</li>
+    <li><strong>Nieuwbouw</strong>, gekocht van de projectontwikkelaar: u betaalt 10% btw (<em>IVA</em>) plus 1,2% zegelbelasting (<em>AJD</em>).</li>
+  </ul>
+  <p>Nieuwbouw is energiezuinig en heeft tien jaar constructiegarantie, maar is per m² duurder en ligt vaak in grote complexen buiten de dorpskernen. Bestaande bouw heeft karakter en een betere ligging, maar vraagt bijna altijd onderhoud of renovatie. Wat dat kost, leest u in <a href="/nl/gidsen/kosten-huis-renoveren-spanje/">wat kost een huis renoveren in Spanje</a>. Een oud dorpshuis opknappen? Zie <a href="/nl/gidsen/dorpshuis-renoveren-spanje/">dorpshuis renoveren</a>.</p>
+
+  <h2 id="financiering">Hypotheek en eigen geld</h2>
+  <p>Nederlandse banken financieren geen huis in Spanje. Spaanse banken doen dat wel, maar voor niet-inwoners meestal tot 60 à 70% van de taxatiewaarde (of de koopprijs, als die lager is). Inwoners kunnen soms tot 80% lenen. De bank laat het huis taxeren en vraagt bewijs van inkomen en uw Nederlandse of Belgische belastingaangifte.</p>
+  <p>Reken dus op 40 tot 50% eigen geld, inclusief de kosten koper. Overweegt u overwaarde op uw Nederlandse huis te gebruiken, laat u dan adviseren over de gevolgen voor uw belasting. Bij een finca of een huis met onduidelijke vergunningen financieren veel banken niet; zie <a href="/nl/gidsen/finca-kopen-in-spanje/">finca kopen in Spanje</a>.</p>
+
+  <h2 id="zoeken">Zoeken: portalen en makelaars</h2>
+  <p>De grootste portalen zijn Idealista, Fotocasa en Kyero; op Kyero en de Nederlandse sites staat vooral aanbod van makelaars die op buitenlanders gericht zijn. Hetzelfde huis staat vaak bij meerdere makelaars, soms voor verschillende prijzen. In de bergdorpen gaat veel nog via de lokale makelaar of mond-tot-mondreclame: vraag in het dorp rond.</p>
+  <p>Bezichtig niet alleen online. Een foto laat geen vocht, verzakking of een steile onverharde toegangsweg zien. Komt u maar een paar dagen, maak dan een korte lijst en laat de favoriet daarna <a href="/nl/aankoopkeuring/">keuren</a> voordat u een aanbetaling doet.</p>
 
   <h2 id="proces">Het koopproces stap voor stap</h2>
   <p>Hieronder de stappen in het kort. Elke stap uitgewerkt, met wat u laat controleren en wat u betaalt, staat in het <a href="/nl/gidsen/huis-kopen-in-spanje/">stappenplan huis kopen in Spanje</a>.</p>

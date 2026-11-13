@@ -1,0 +1,115 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Kurz zusammengefasst' },
+  { id: 'regionen', label: 'Welche Region passt zu Ihnen?' },
+  { id: 'kosten', label: 'Lebenshaltungskosten pro Monat' },
+  { id: 'regeln', label: 'Die Regeln: 3 Monate und 183 Tage' },
+  { id: 'gesundheit', label: 'Krankenversicherung und Rente' },
+  { id: 'arbeit', label: 'Arbeiten von Spanien aus' },
+  { id: 'wohnung', label: 'Mieten oder kaufen' },
+  { id: 'vorteile', label: 'Vor- und Nachteile' },
+  { id: 'axarquia', label: 'Warum so viele die Axarquía wählen' },
+];
+
+const faq = [
+  {
+    q: 'Kann man als Deutscher einfach in Spanien leben?',
+    a: 'Ja. Als EU-Bürger brauchen Sie kein Visum. Bleiben Sie länger als drei Monate, lassen Sie sich im Register für EU-Bürger eintragen und erhalten eine NIE-Nummer. Dafür weisen Sie ein Einkommen oder Vermögen und eine Krankenversicherung nach.',
+  },
+  {
+    q: 'Ist das Leben in Spanien günstiger als in Deutschland?',
+    a: 'Im Durchschnitt ja, aber weniger, als viele denken. Wohnen außerhalb der Toplagen, Essen gehen und regionale Produkte sind günstiger. Strom, Autos, Elektronik und deutsche Produkte im Supermarkt kosten etwa gleich viel oder mehr. Ein Paar lebt in Andalusien außerhalb der teuren Badeorte gut mit etwa 2.000 bis 2.800 € im Monat inklusive Miete.',
+  },
+  {
+    q: 'Wird meine deutsche Rente in Spanien ausgezahlt?',
+    a: 'Ja. Die Deutsche Rentenversicherung zahlt Ihre Rente auch nach Spanien. Wie sie besteuert wird, hängt von Ihrem Wohnsitz und dem Doppelbesteuerungsabkommen ab. Lassen Sie sich vor dem Umzug beraten.',
+  },
+  {
+    q: 'Wo leben die meisten Deutschen in Spanien?',
+    a: 'Auf Mallorca und den Kanarischen Inseln, an der Costa Blanca und an der Costa del Sol. In der Axarquía hat vor allem Torrox eine große deutsche Gemeinschaft.',
+  },
+];
+
+const kosten = [
+  { p: 'Miete, Wohnung mit 2 Schlafzimmern (langfristig)', v: '750 – 1.300 €' },
+  { p: 'Lebensmittel für zwei Personen', v: '400 – 550 €' },
+  { p: 'Strom (im Sommer mehr wegen Klimaanlage)', v: '60 – 130 €' },
+  { p: 'Wasser und Müll', v: '25 – 50 €' },
+  { p: 'Internet und zwei Handys', v: '45 – 70 €' },
+  { p: 'Auto: Versicherung, Kraftstoff, Wartung', v: '150 – 250 €' },
+  { p: 'Private Krankenversicherung (Zusatz), pro Person', v: '60 – 180 €' },
+  { p: 'Essen gehen und Freizeit', v: '200 – 400 €' },
+];
+---
+<Guide lang="de" slug="leben-in-spanien" toc={toc} faq={faq} ctaTitle="Ein Haus in Spanien im Blick?" ctaText="Wir begutachten das Haus vor der Unterschrift und nennen einen Festpreis für die Renovierung. Kontakt auf Englisch oder Niederländisch.">
+  <h2 id="kurz">Kurz zusammengefasst</h2>
+  <ul>
+    <li><strong>Darf man?</strong> Ja. Als EU-Bürger leben Sie ohne Visum in Spanien. Nach drei Monaten lassen Sie sich registrieren.</li>
+    <li><strong>Wo?</strong> Die meisten Deutschen leben auf den Inseln, an der Costa Blanca und an der Costa del Sol. Klima, Flugverbindungen und Preise unterscheiden sich stark.</li>
+    <li><strong>Was kostet es?</strong> Ein Paar lebt in Andalusien oder Murcia gut mit etwa 2.000 bis 2.800 € im Monat inklusive Miete, im eigenen, abbezahlten Haus deutlich günstiger.</li>
+    <li><strong>Worauf achten?</strong> Steuerwohnsitz (die 183-Tage-Regel), Krankenversicherung und den Zustand des Hauses, das Sie mieten oder kaufen.</li>
+  </ul>
+  <p>Den Papierkram Schritt für Schritt finden Sie im Ratgeber <a href="/de/ratgeber/auswandern-nach-spanien/">Auswandern nach Spanien</a>. Wer nur den Winter im Süden verbringen will, liest <a href="/de/ratgeber/ueberwintern-in-spanien/">Überwintern in Spanien</a>.</p>
+
+  <h2 id="regionen">Welche Region passt zu Ihnen?</h2>
+  <h3>Costa del Sol (Málaga)</h3>
+  <p>Die mildesten Winter auf dem Festland, im Januar tagsüber oft 16 bis 19 Grad, und ganzjährig Direktflüge nach Deutschland. Der Westen (Marbella, Estepona) ist international und teuer. Der Osten, die <a href="/de/wohnen/">Axarquía</a>, ist ruhiger, spanischer und pro Quadratmeter günstiger, mit weißen Bergdörfern hinter der Küste.</p>
+  <h3>Costa Blanca (Alicante)</h3>
+  <p>Der Norden (Dénia, Jávea, Altea) ist grün und hügelig, der Süden (Torrevieja) flach, trocken und günstig. Im Winter ein paar Grad kühler als an der Costa del Sol.</p>
+  <h3>Murcia und Almería</h3>
+  <p>Die günstigste Küste Spaniens mit den meisten Sonnenstunden, dafür sehr heiße, trockene Sommer.</p>
+  <h3>Mallorca und Kanaren</h3>
+  <p>Beliebt bei Deutschen, aber Inselpreise. Auf den Kanaren ist es das ganze Jahr Frühling.</p>
+  <p><strong>Tipp:</strong> Kommen Sie mindestens zweimal, im Sommer und im Januar oder Februar. Ein ungedämmtes Steinhaus kann im Februar ungemütlich kalt sein.</p>
+
+  <h2 id="kosten">Lebenshaltungskosten pro Monat</h2>
+  <p>Richtwerte für ein Paar in einem mittelgroßen Ort an der Küste Andalusiens oder Murcias. In Marbella, Málaga-Stadt, Barcelona und Madrid liegen vor allem die Mieten deutlich höher.</p>
+  <div class="table-scroll">
+    <table class="prices">
+      <tbody>
+        {kosten.map((k) => <tr><td>{k.p}</td><td>{k.v}</td></tr>)}
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Richtwerte pro Monat, 2026. Im eigenen Haus rechnen Sie statt Miete mit Grundsteuer (IBI, oft 300 bis 900 € im Jahr), Versicherung, eventuell Gemeinschaftskosten und Geld für die Instandhaltung.</p>
+
+  <h2 id="regeln">Die Regeln: 3 Monate und 183 Tage</h2>
+  <ul>
+    <li><strong>3 Monate</strong>: Bleiben Sie länger, tragen Sie sich im <em>Registro Central de Extranjeros</em> und bei der Gemeinde (<em>padrón</em>) ein. Dafür brauchen Sie eine NIE, einen Nachweis über Einkommen oder Vermögen und eine Krankenversicherung.</li>
+    <li><strong>Abmeldung in Deutschland</strong>: Geben Sie Ihren Wohnsitz in Deutschland auf, melden Sie sich beim Einwohnermeldeamt ab. Das hat Folgen für Krankenversicherung und Steuern.</li>
+    <li><strong>183 Tage</strong>: Wer mehr als 183 Tage im Jahr in Spanien lebt oder dort seinen Lebensmittelpunkt hat, ist in Spanien steuerpflichtig mit dem Welteinkommen. Das Doppelbesteuerungsabkommen regelt, welches Land was besteuert.</li>
+  </ul>
+  <p>Andalusien hat für Einwohner einige Vorteile: Die Vermögensteuer ist auf null gesetzt (nur über 3 Millionen € gilt eine landesweite Solidaritätsabgabe), und die Erbschaft- und Schenkungsteuer zwischen Eltern, Kindern und Ehepartnern ist weitgehend abgeschafft. Lassen Sie Ihre Lage von einem Steuerberater prüfen, der beide Länder kennt.</p>
+
+  <h2 id="gesundheit">Krankenversicherung und Rente</h2>
+  <p>Arbeiten Sie in Spanien, sind Sie über die spanische Sozialversicherung versichert. Rentner mit deutscher gesetzlicher Rente können sich über das Formular S1 bei der spanischen öffentlichen Versorgung anmelden. Andere schließen eine private spanische Krankenversicherung ab. Ihre deutsche Rente wird nach Spanien ausgezahlt.</p>
+
+  <h2 id="arbeit">Arbeiten von Spanien aus</h2>
+  <p>Die Löhne sind niedriger als in Deutschland und die Arbeitslosigkeit ist höher. Viele Deutsche arbeiten deshalb remote für Arbeitgeber oder Kunden in Deutschland oder machen sich als <em>autónomo</em> selbstständig. Lassen Sie sich vorher von einem Gestor beraten. Für Ferienvermietung lesen Sie <a href="/de/ratgeber/immobilie-in-spanien-vermieten/">Immobilie in Spanien vermieten</a>; die Regeln sind deutlich strenger geworden.</p>
+
+  <h2 id="wohnung">Mieten oder kaufen</h2>
+  <p>Unser Rat: Mieten Sie zuerst ein halbes bis ein Jahr. So finden Sie heraus, ob Sie lieber am Meer oder in den Bergen leben. Beim Kauf rechnen Sie mit etwa 10 % Nebenkosten (siehe <a href="/de/ratgeber/kaufnebenkosten-spanien/">Kaufnebenkosten in Spanien</a>) und nehmen einen eigenen Anwalt. Den ganzen Ablauf finden Sie unter <a href="/de/ratgeber/haus-kaufen-spanien/">Haus kaufen in Spanien</a>.</p>
+  <p>Achten Sie vor allem auf den Zustand. Viele bezahlbare Häuser an den Küsten sind dreißig bis fünfzig Jahre alt: Einfachverglasung, keine Dämmung, alte Leitungen, undichte Dächer. Ein <a href="/de/immobiliengutachten/">Immobiliengutachten</a> vor dem Kauf kostet nur einen Bruchteil eines Fehlkaufs. Typische Preise stehen in <a href="/de/ratgeber/renovierungskosten-spanien/">Renovierungskosten in Spanien</a>.</p>
+
+  <h2 id="vorteile">Vor- und Nachteile</h2>
+  <h3>Vorteile</h3>
+  <ul>
+    <li><strong>Klima</strong>: an der Südküste über 300 Sonnentage und milde Winter.</li>
+    <li><strong>Mehr Platz fürs Geld</strong> außerhalb der Toplagen.</li>
+    <li><strong>Lebensart</strong>: ruhigeres Tempo, Leben draußen, gutes und günstiges Essen.</li>
+    <li><strong>Gute Erreichbarkeit</strong>: ganzjährig Direktflüge von Málaga und Alicante.</li>
+  </ul>
+  <h3>Nachteile</h3>
+  <ul>
+    <li><strong>Bürokratie</strong>: Termine bei Polizei und Gemeinde sind oft schwer zu bekommen.</li>
+    <li><strong>Sprache</strong>: Beim Arzt und auf dem Amt wird Spanisch gesprochen.</li>
+    <li><strong>Sommerhitze und Trockenheit</strong> im Juli und August.</li>
+    <li><strong>Handwerker finden</strong>: zuverlässige Handwerker, die pünktlich kommen, sind nicht selbstverständlich.</li>
+  </ul>
+
+  <h2 id="axarquia">Warum so viele die Axarquía wählen</h2>
+  <p>Die Axarquía im Osten der Provinz Málaga verbindet die warmen Winter der Costa del Sol mit Preisen unter denen von Marbella. Sie wohnen am Meer in Nerja, Torrox Costa oder Torre del Mar oder in einem weißen Bergdorf wie Cómpeta oder Frigiliana, eine halbe bis eine Stunde vom Flughafen. Vergleichen Sie die Orte unter <a href="/de/wohnen/">Leben in der Axarquía</a>. Für Ihr Haus übernehmen wir <a href="/de/renovierung/">Renovierung</a>, <a href="/de/instandhaltung/">Instandhaltung</a> und <a href="/de/hausbetreuung/">Hausbetreuung</a>.</p>
+  <p class="note">Dieser Ratgeber ist eine allgemeine Information und keine Rechts-, Steuer- oder Finanzberatung.</p>
+</Guide>

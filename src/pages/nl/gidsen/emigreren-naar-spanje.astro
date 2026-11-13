@@ -4,12 +4,16 @@ import Guide from '../../../components/Guide.astro';
 const toc = [
   { id: 'waarom', label: 'Waarom de Axarquía en Costa del Sol' },
   { id: 'stappenplan', label: 'Stappenplan in het kort' },
+  { id: 'geld', label: 'Hoeveel geld heeft u nodig?' },
   { id: 'papieren', label: 'NIE, inschrijving en padrón' },
   { id: 'belasting', label: 'Belasting: waar bent u inwoner?' },
+  { id: 'uitschrijven', label: 'Uitschrijven, AOW en pensioen' },
   { id: 'zorg', label: 'Zorgverzekering' },
   { id: 'huis', label: 'Een huis vinden: huren of kopen' },
   { id: 'verbouwen', label: 'Het huis klaarmaken' },
   { id: 'praktisch', label: 'Praktische zaken' },
+  { id: 'tijdlijn', label: 'Tijdlijn: wat regelt u wanneer?' },
+  { id: 'voordelen', label: 'Voor- en nadelen' },
 ];
 
 const faq = [
@@ -24,6 +28,18 @@ const faq = [
   {
     q: 'Houd ik mijn Nederlandse zorgverzekering?',
     a: 'Dat hangt af van uw situatie. Gaat u in Spanje werken, dan valt u meestal onder het Spaanse stelsel. Ontvangt u alleen een Nederlands pensioen of AOW, dan kunt u vaak via het CAK een S1-formulier krijgen en gebruikmaken van de Spaanse publieke zorg. Daarnaast kiezen veel emigranten een aanvullende privéverzekering.',
+  },
+  {
+    q: 'Hoeveel geld heb je nodig om te emigreren naar Spanje?',
+    a: 'Reken op een eenmalig startbudget van ongeveer € 8.000 tot € 15.000 voor verhuizing, borg en eerste huur, advies en inrichting, plus een buffer van zes maanden vaste lasten. Voor de inschrijving als EU-burger moet u laten zien dat u voldoende inkomen of vermogen heeft; een stel leeft in Andalusië buiten de dure badplaatsen comfortabel van € 2.000 tot € 2.800 per maand inclusief huur.',
+  },
+  {
+    q: 'Hoeveel AOW krijg ik als ik in Spanje ga wonen?',
+    a: 'U behoudt de AOW die u heeft opgebouwd en krijgt die gewoon in Spanje uitbetaald. Voor elk jaar dat u vóór uw AOW-leeftijd in Spanje woont, bouwt u 2% minder op. Dat kunt u voorkomen door u binnen een jaar na vertrek vrijwillig te verzekeren bij de SVB.',
+  },
+  {
+    q: 'Kan ik met een uitkering naar Spanje emigreren?',
+    a: 'Dat hangt af van de uitkering. Een WIA-uitkering kunt u binnen de EU meestal meenemen. Met een WW-uitkering mag u onder voorwaarden maximaal drie maanden in een ander EU-land werk zoeken met behoud van uitkering. Een bijstandsuitkering vervalt als u verhuist. Vraag het altijd vooraf na bij het UWV of uw gemeente.',
   },
   {
     q: 'Moet ik meteen een huis kopen?',
@@ -52,6 +68,17 @@ const faq = [
     <li><strong>Het huis klaarmaken</strong>: verbouwen, inrichten en eventueel sleutelbeheer voor als u op reis bent.</li>
   </ol>
 
+  <h2 id="geld">Hoeveel geld heeft u nodig?</h2>
+  <p>De vraag die bijna iedereen stelt. Het antwoord hangt af van huren of kopen, de regio en uw levensstijl, maar dit zijn reële bedragen voor de Costa del Sol in 2026:</p>
+  <ul>
+    <li><strong>Verhuizing</strong>: een internationale verhuizer kost voor een volle inboedel ruwweg € 3.500 tot € 7.000. Zelf rijden met een busje kan voor een paar duizend euro, maar kost tijd.</li>
+    <li><strong>Huur en borg</strong>: bij een nieuw huurcontract betaalt u de eerste maand plus meestal twee maanden borg. Voor een appartement aan de kust in de Axarquía is dat al snel € 3.000 tot € 4.000.</li>
+    <li><strong>Advies en papieren</strong>: gestor, vertalingen, NIE en inschrijving: reken op € 300 tot € 1.000. Een fiscalist die beide landen kent, kost eenmalig een paar honderd euro en verdient zich vaak terug.</li>
+    <li><strong>Auto</strong>: een tweedehands auto in Spanje is duurder dan in Nederland. Uw Nederlandse auto op Spaans kenteken zetten kost ook geld (keuring, registratiebelasting).</li>
+    <li><strong>Buffer</strong>: houd minstens zes maanden vaste lasten achter de hand. Dingen duren in Spanje vaak langer dan gepland.</li>
+  </ul>
+  <p>Wat het leven per maand kost, met een overzicht van huur, boodschappen, energie en zorg, staat in onze gids <a href="/nl/gidsen/wonen-in-spanje/#kosten">wonen in Spanje</a>. Gaat u kopen, dan komen daar ongeveer 10% <a href="/nl/gidsen/kosten-koper-spanje/">kosten koper</a> en vaak een verbouwbudget bij.</p>
+
   <h2 id="papieren">NIE, inschrijving en padrón</h2>
   <h3>Het NIE-nummer</h3>
   <p>Het <em>Número de Identidad de Extranjero</em> (NIE) is uw fiscale identificatienummer in Spanje. U heeft het nodig om een huis te kopen, een bankrekening te openen, een auto te registreren en belasting te betalen. U vraagt het aan bij de politie (Policía Nacional) in Spanje of via het Spaanse consulaat in Nederland. Een afspraak (cita previa) kan in drukke periodes weken op zich laten wachten, dus begin op tijd. Veel emigranten laten dit regelen door een gestor of advocaat.</p>
@@ -64,6 +91,14 @@ const faq = [
   <p>Woont u meer dan 183 dagen per jaar in Spanje, of ligt het centrum van uw leven daar, dan bent u voor de Spaanse fiscus inwoner. U doet dan aangifte in Spanje over uw wereldinkomen (<em>IRPF</em>). Het belastingverdrag tussen Nederland en Spanje regelt welk land welk inkomen mag belasten; zo wordt bijvoorbeeld een overheidspensioen vaak in Nederland belast.</p>
   <p>Blijft u minder dan 183 dagen en houdt u uw woonplaats in Nederland, dan bent u voor Spanje niet-inwoner. Over uw Spaanse huis betaalt u dan jaarlijks de belasting voor niet-inwoners (<em>IRNR</em>), ook als u het niet verhuurt. Daarnaast betaalt iedere eigenaar onroerendgoedbelasting aan de gemeente (<em>IBI</em>).</p>
   <p>Belastingregels veranderen geregeld en de gevolgen kunnen groot zijn. Laat uw situatie altijd doorrekenen door een fiscalist die beide landen kent.</p>
+
+  <h2 id="uitschrijven">Uitschrijven, AOW en pensioen</h2>
+  <h3>Uitschrijven in Nederland</h3>
+  <p>Verwacht u binnen een jaar minstens acht maanden buiten Nederland te wonen, dan bent u verplicht u uit te schrijven bij uw gemeente. Dat kan vanaf vijf dagen vóór vertrek. Uitschrijven heeft gevolgen voor veel zaken tegelijk: uw zorgverzekering stopt, toeslagen stoppen, en u bouwt geen AOW meer op. Overwintert u alleen een paar maanden per jaar, dan blijft u ingeschreven in Nederland; zie <a href="/nl/gidsen/overwinteren-in-spanje/">overwinteren in Spanje</a>.</p>
+  <h3>AOW</h3>
+  <p>De AOW die u heeft opgebouwd, houdt u en krijgt u in Spanje uitbetaald. Voor elk jaar dat u vóór uw AOW-leeftijd buiten Nederland woont, bouwt u wel 2% minder op. Gaat u op uw 60e, dan scheelt dat al snel 14% AOW voor de rest van uw leven. U kunt dat gat dichten door u binnen een jaar na vertrek vrijwillig te verzekeren bij de SVB. De premie hangt af van uw inkomen, dus reken uit of het loont.</p>
+  <h3>Pensioen</h3>
+  <p>Uw pensioenfonds betaalt uw pensioen ook in Spanje uit. Waar u erover belasting betaalt, hangt af van het soort pensioen en het belastingverdrag; een overheidspensioen (zoals ABP) wordt meestal in Nederland belast. Geef uw nieuwe adres en Spaanse rekening tijdig door aan de SVB en uw pensioenfonds, en houd rekening met een levensbewijs dat u jaarlijks moet opsturen.</p>
 
   <h2 id="zorg">Zorgverzekering</h2>
   <p>Werkt u in Spanje, in loondienst of als zelfstandige (<em>autónomo</em>), dan bent u verzekerd via de Spaanse sociale zekerheid. Ontvangt u alleen een Nederlands pensioen of AOW, dan kunt u in veel gevallen via het CAK een S1-formulier krijgen. Daarmee heeft u recht op de Spaanse publieke zorg, terwijl u de bijdrage in Nederland betaalt.</p>
@@ -82,6 +117,35 @@ const faq = [
     <li><strong>Rijbewijs</strong>: uw Nederlandse rijbewijs blijft geldig. Wordt u inwoner, dan moet u het op termijn omwisselen of in Spanje verlengen.</li>
     <li><strong>Auto</strong>: een Nederlandse auto die u permanent in Spanje gebruikt, moet u op Spaans kenteken zetten. Vaak is een auto in Spanje kopen eenvoudiger.</li>
     <li><strong>Internet</strong>: aan de kust is glasvezel gebruikelijk. In de bergen is soms alleen 4G/5G of satellietinternet beschikbaar; check dit vóór u koopt.</li>
-    <li><strong>Huisdieren</strong>: met een EU-dierenpaspoort, chip en geldige rabiësvaccinatie kunnen honden en katten mee.</li>
+    <li><strong>Huisdieren</strong>: met een EU-dierenpaspoort, chip en geldige rabiësvaccinatie kunnen honden en katten mee. Zie <a href="/nl/gidsen/met-huisdier-naar-spanje/">met uw huisdier naar Spanje</a>.</li>
+    <li><strong>Taal</strong>: begin al in Nederland met Spaans. In de meeste gemeentes in de Axarquía zijn betaalbare cursussen, vaak via het ayuntamiento.</li>
   </ul>
+
+  <h2 id="tijdlijn">Tijdlijn: wat regelt u wanneer?</h2>
+  <h3>Een jaar tot zes maanden vooraf</h3>
+  <ul>
+    <li>Kies een regio en kom kijken in de zomer en de winter.</li>
+    <li>Laat uw situatie doorrekenen door een fiscalist: belasting, AOW, pensioen en eventueel de verkoop van uw Nederlandse huis.</li>
+    <li>Vraag uw NIE-nummer aan via het consulaat of een gestor.</li>
+  </ul>
+  <h3>Drie maanden vooraf</h3>
+  <ul>
+    <li>Zoek een huurwoning, of laat het huis dat u wilt kopen eerst <a href="/nl/aankoopkeuring/">keuren</a>.</li>
+    <li>Vraag offertes bij verhuizers en bepaal wat u meeneemt.</li>
+    <li>Regel uw zorgverzekering: S1 via het CAK of een Spaanse polis.</li>
+  </ul>
+  <h3>De maand van vertrek</h3>
+  <ul>
+    <li>Schrijf u uit bij uw gemeente en zeg abonnementen en verzekeringen op.</li>
+    <li>Geef uw nieuwe adres door aan de Belastingdienst, de SVB, uw pensioenfonds en uw bank.</li>
+  </ul>
+  <h3>De eerste maanden in Spanje</h3>
+  <ul>
+    <li>Schrijf u in bij de gemeente (padrón) en, na drie maanden, bij het register voor EU-burgers.</li>
+    <li>Open een Spaanse bankrekening en zet water, stroom en IBI op uw naam.</li>
+    <li>Meld u aan bij het gezondheidscentrum (<em>centro de salud</em>).</li>
+  </ul>
+
+  <h2 id="voordelen">Voor- en nadelen van emigreren naar Spanje</h2>
+  <p>De voordelen kent iedereen: het klimaat, de ruimte, de levensstijl en lagere woonlasten buiten de toplocaties. De nadelen worden vaker onderschat: de bureaucratie, de taal, de zomerhitte, de afstand tot familie en het vinden van betrouwbare vakmensen. Wie dat van tevoren weet, is beter voorbereid. Een uitgebreide afweging, met de regio’s en kosten naast elkaar, staat in onze gids <a href="/nl/gidsen/wonen-in-spanje/">wonen in Spanje</a>.</p>
 </Guide>
