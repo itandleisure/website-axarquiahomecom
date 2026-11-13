@@ -639,7 +639,7 @@ export const checklist: Partial<Record<Lang, ChecklistText>> = {
     },
     disclaimer: 'Diese Checkliste enthält allgemeine Informationen und ist keine Rechts- oder Steuerberatung. Das Urteil über eine bestimmte Immobilie kommt von einem Anwalt, Architekten oder aparejador. Beträge sind Richtwerte (2026).',
     page: {
-      seoTitle: 'Checkliste Finca oder Haus kaufen in Spanien (kostenloses PDF)',
+      seoTitle: 'Checkliste: Finca oder Haus in Spanien kaufen (Gratis-PDF)',
       description: 'Kostenlose PDF-Checkliste für den Kauf einer Finca oder eines Hauses in der Axarquía: Besichtigung, Legalität, Wasser, Fragen an Makler und Anwalt, Rechenblatt.',
       eyebrow: 'Kostenloses PDF',
       h1: 'Checkliste: eine Finca oder ein Haus in der Axarquía kaufen',
@@ -848,7 +848,7 @@ export const checklist: Partial<Record<Lang, ChecklistText>> = {
     },
     disclaimer: 'Den här checklistan ger allmän information och är inte juridisk eller skattemässig rådgivning. Bedömningen av ett visst hus görs av en advokat, arkitekt eller aparejador. Beloppen är riktvärden (2026).',
     page: {
-      seoTitle: 'Checklista för att köpa finca eller hus i Spanien (gratis pdf)',
+      seoTitle: 'Checklista: köpa finca eller hus i Spanien (gratis pdf)',
       description: 'Gratis checklista som pdf för att köpa en finca eller ett hus i Axarquía: visning, laglighet, vatten, frågor till mäklare och advokat och ett räkneblad.',
       eyebrow: 'Gratis pdf',
       h1: 'Checklista: köpa en finca eller ett hus i Axarquía',
