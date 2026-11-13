@@ -12,7 +12,9 @@ Gebouwd met [Astro](https://astro.build) als statische site, gepubliceerd via Gi
 | `src/pages/nl/`, `en/`, `de/`, `sv/`, `es/` | Pagina's per taal (Spaans: diensten en eigen gidsen, nog geen plaatspagina's) |
 | `src/pages/nl/aanvraag.astro` | De keuzehulp (formulier in 6 stappen) |
 | `src/layouts/Base.astro` | Basislayout met SEO, hreflang en gestructureerde gegevens |
-| `apps-script/` | Google Apps Script voor aanvragen naar Sheet en e-mail |
+| `apps-script/` | Google Apps Script voor aanvragen en checklist-inschrijvingen naar Sheet en e-mail |
+| `src/data/checklist.ts` | Tekst van de gratis aankoopchecklist (4 talen): landingspagina, formulier en pdf |
+| `public/downloads/` | De checklist-pdf's. Opnieuw maken na een tekstwijziging met `npm run pdf` |
 | `INVULLEN.md` | Wat er nog ontbreekt voor livegang |
 
 ## Lokaal draaien

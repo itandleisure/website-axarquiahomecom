@@ -6,6 +6,8 @@ import Base from '../layouts/Base.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import Faq from './Faq.astro';
 import Cta from './Cta.astro';
+import ChecklistSignup from './ChecklistSignup.astro';
+import { checklist, checklistGuides } from '../data/checklist';
 import { site } from '../data/site';
 import { guidesBy, guideHref, guideList } from '../data/guides';
 import { ui, path as route, type Lang } from '../i18n';
@@ -54,6 +56,8 @@ const crumbs = parent
     : [{ name: t.guidesCrumb, href: base }, { name: g.short, href: path }];
 const fmt = (d: string) => new Date(d).toLocaleDateString(t.dateLocale, { day: 'numeric', month: 'long', year: 'numeric' });
 const request = route(lang, 'request');
+// Gratis aankoopchecklist onder de koop- en verbouwgidsen
+const showChecklist = checklistGuides.has(slug) && !!checklist[lang];
 ---
 <Base title={g.seoTitle ?? g.title} description={g.description} path={path} lang={lang} jsonLd={[article]} ogImage={photo?.og} ogImageAlt={photo?.alt}>
   <Breadcrumbs lang={lang} items={crumbs} />
@@ -66,6 +70,7 @@ const request = route(lang, 'request');
         <p class="note">{t.updated} {fmt(g.updated ?? g.published)}</p>
         <ArticlePhoto photo={photo} lead />
         <slot />
+        {showChecklist && <ChecklistSignup lang={lang} compact />}
       </div>
       <aside class="toc">
         <p class="footer-title" style="color:var(--ink)">{t.inGuide}</p>

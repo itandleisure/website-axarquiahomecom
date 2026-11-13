@@ -63,6 +63,8 @@ export const routes: Partial<Record<Lang, string>>[] = [
       ),
     )
     .filter((r) => Object.keys(r).length > 0),
+  // Gratis aankoopchecklist (lead magnet, zie src/data/checklist.ts)
+  { nl: '/nl/checklist-finca-kopen/', en: '/en/finca-buying-checklist/', de: '/de/checkliste-finca-kaufen/', sv: '/sv/checklista-kopa-finca/' },
 ];
 
 export function alternatesFor(path: string): Partial<Record<Lang, string>> {

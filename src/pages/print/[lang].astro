@@ -1,0 +1,119 @@
+---
+// Printversie van de aankoopchecklist. Wordt met `npm run pdf` omgezet naar
+// public/downloads/<pdf>. Staat ook online, maar met noindex.
+import { checklist } from '../../data/checklist';
+import { site } from '../../data/site';
+import { langs, path, type Lang } from '../../i18n';
+
+export function getStaticPaths() {
+  return langs.filter((lang) => checklist[lang]).map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const c = checklist[lang]!;
+const utm = 'utm_source=checklist&utm_medium=pdf';
+const requestUrl = `${site.url}${path(lang, 'request')}?dienst=aankoopkeuring&${utm}`;
+const shortUrl = `${site.domain}${path(lang, 'request')}`;
+---
+<!doctype html>
+<html lang={lang} data-noindex>
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="pdf-file" content={c.pdf} />
+  <meta name="pdf-footer" content={`${c.title} · ${site.domain}`} />
+  <title>{c.title}</title>
+  <style>
+    @page { size: A4; margin: 16mm 16mm 18mm; }
+    :root { --terra: #b5532f; --terra-dark: #8f3f22; --sun: #e9a23b; --olive: #5f6b3c; --ink: #23201d; --muted: #625b54; --line: #e7dfd5; --sand: #f8f3ec; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.45; }
+    h1, h2, h3 { font-family: Georgia, 'Palatino Linotype', serif; font-weight: 600; line-height: 1.2; }
+    .cover { background: linear-gradient(160deg, var(--sand) 0%, #f3e6d6 100%); border-radius: 10px; padding: 22mm 14mm 14mm; margin-bottom: 8mm; position: relative; overflow: hidden; }
+    .cover::after { content: ''; position: absolute; right: -40mm; top: -40mm; width: 110mm; height: 110mm; border-radius: 50%; background: radial-gradient(circle, rgb(233 162 59 / 0.35), transparent 70%); }
+    .brand { display: flex; align-items: center; gap: 3mm; color: var(--terra); font-family: Georgia, serif; font-size: 15pt; position: absolute; top: 9mm; left: 14mm; }
+    .brand span { color: var(--ink); } .brand b { color: var(--terra); }
+    .edition { text-transform: uppercase; letter-spacing: 0.08em; font-size: 8.5pt; font-weight: 700; color: var(--olive); margin: 0 0 3mm; }
+    .cover h1 { font-size: 26pt; margin: 0 0 4mm; max-width: 150mm; position: relative; z-index: 1; }
+    .cover .sub { font-size: 12pt; color: var(--muted); margin: 0; max-width: 150mm; position: relative; z-index: 1; }
+    .intro p { margin: 0 0 3mm; }
+    h2 { font-size: 15pt; color: var(--terra-dark); margin: 7mm 0 2mm; break-after: avoid; }
+    h3 { font-size: 11.5pt; margin: 4mm 0 2mm; break-after: avoid; }
+    .sintro { color: var(--muted); margin: 0 0 2.5mm; font-style: italic; }
+    ul.box { list-style: none; padding: 0; margin: 0; }
+    ul.box li { position: relative; padding: 1.1mm 0 1.1mm 7mm; border-bottom: 1px solid var(--line); break-inside: avoid; }
+    ul.box li::before { content: ''; position: absolute; left: 0; top: 2.2mm; width: 3.4mm; height: 3.4mm; border: 1.3px solid var(--terra); border-radius: 1mm; }
+    ol.q { padding-left: 5mm; margin: 0; } ol.q li { margin-bottom: 1.4mm; break-inside: avoid; }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 7mm; }
+    table { width: 100%; border-collapse: collapse; margin-top: 2mm; }
+    th, td { text-align: left; padding: 2mm 2mm; border-bottom: 1px solid var(--line); vertical-align: bottom; }
+    td.hint { color: var(--muted); font-size: 9pt; width: 38mm; }
+    td.amount { width: 38mm; border-bottom: 1px solid var(--muted); }
+    tr.total td { font-weight: 700; border-top: 2px solid var(--ink); border-bottom: none; }
+    .note { color: var(--muted); font-size: 9pt; }
+    .section { break-inside: auto; }
+    .keep { break-inside: avoid; }
+    .cta { background: var(--terra); color: #fff; border-radius: 10px; padding: 8mm 10mm; margin-top: 8mm; break-inside: avoid; }
+    .cta h2 { color: #fff; margin-top: 0; }
+    .cta a.button { display: inline-block; background: #fff; color: var(--terra-dark); text-decoration: none; font-weight: 700; padding: 2.5mm 6mm; border-radius: 99px; margin-top: 2mm; }
+    .cta .url { font-size: 9pt; opacity: 0.9; margin: 2mm 0 0; }
+    .disclaimer { margin-top: 6mm; }
+    .newpage { break-before: page; }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <div class="brand">
+      <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path d="M4 15 16 5l12 10v12a1 1 0 0 1-1 1h-7v-8h-8v8H5a1 1 0 0 1-1-1z" fill="currentColor"/><circle cx="24" cy="8" r="3" fill="#e9a23b"/></svg>
+      <span>Axarquía<b>Home</b></span>
+    </div>
+    <p class="edition">{c.edition}</p>
+    <h1>{c.title}</h1>
+    <p class="sub">{c.subtitle}</p>
+  </div>
+  <div class="intro">{c.intro.map((p) => <p>{p}</p>)}</div>
+
+  {c.sections.map((s, i) => (
+    <div class="section">
+      {/* Kop en eerste punten samenhouden, zodat een kop nooit alleen onderaan een pagina staat */}
+      <div class="keep">
+        <h2>{s.title}</h2>
+        {s.intro && <p class="sintro">{s.intro}</p>}
+        <ul class="box">{s.items.slice(0, 3).map((x) => <li>{x}</li>)}</ul>
+      </div>
+      <ul class="box">{s.items.slice(3).map((x) => <li>{x}</li>)}</ul>
+    </div>
+  ))}
+
+  <div class="section keep">
+    <h2>{c.questions.title}</h2>
+    <div class="cols">
+      <div><h3>{c.questions.agentTitle}</h3><ol class="q">{c.questions.agent.map((x) => <li>{x}</li>)}</ol></div>
+      <div><h3>{c.questions.lawyerTitle}</h3><ol class="q">{c.questions.lawyer.map((x) => <li>{x}</li>)}</ol></div>
+    </div>
+  </div>
+
+  <div class="section keep">
+    <h2>{c.calc.title}</h2>
+    <p class="sintro">{c.calc.intro}</p>
+    <table>
+      {c.calc.rows.map(([label, hint]) => <tr><td>{label}</td><td class="hint">{hint}</td><td class="amount">€</td></tr>)}
+      <tr class="total"><td>{c.calc.total}</td><td></td><td>€</td></tr>
+    </table>
+    <p class="note">{c.calc.note}</p>
+  </div>
+
+  <div class="section keep">
+    <h2>{c.after.title}</h2>
+    <ul class="box">{c.after.items.map((x) => <li>{x}</li>)}</ul>
+  </div>
+
+  <div class="cta">
+    <h2>{c.cta.title}</h2>
+    <p>{c.cta.text}</p>
+    {c.cta.contactNote && <p>{c.cta.contactNote}</p>}
+    <a class="button" href={requestUrl}>{c.cta.button}</a>
+    <p class="url">{shortUrl} · {site.operator.email}</p>
+  </div>
+  <p class="note disclaimer">{c.disclaimer}</p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+---
+// Landingspagina van de gratis aankoopchecklist, in elke taal hetzelfde opgebouwd.
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import ChecklistSignup from './ChecklistSignup.astro';
+import { checklist } from '../data/checklist';
+import { guidesBy, guideHref } from '../data/guides';
+import type { Lang } from '../i18n';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const c = checklist[lang]!;
+const p = c.page;
+const sample = c.sections.find((s) => s.items.length >= 10) ?? c.sections[0];
+// Link naar de finca-gids in dezelfde taal
+const fincaSlugs = ['finca-kopen-in-spanje', 'buying-a-finca-in-spain', 'finca-kaufen-spanien', 'kopa-finca-i-spanien'];
+const fincaGuide = guidesBy[lang].find((g) => fincaSlugs.includes(g.slug));
+---
+<Base title={p.seoTitle} description={p.description} path={c.path} lang={lang}>
+  <Breadcrumbs lang={lang} items={[{ name: p.h1, href: c.path }]} />
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">{p.eyebrow}</p>
+      <h1>{p.h1}</h1>
+      <p class="lead">{p.lead}</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap checklist-grid">
+      <div>
+        <h2>{p.inside}</h2>
+        <ul class="checks">{p.insideItems.map((x) => <li>{x}</li>)}</ul>
+        <h2>{p.who}</h2>
+        <p>{p.whoText}</p>
+      </div>
+      <div id="checklist-formulier">
+        <ChecklistSignup lang={lang} />
+      </div>
+    </div>
+  </section>
+  <section class="section alt">
+    <div class="wrap narrow">
+      <p class="eyebrow">{p.preview}</p>
+      <h2>{sample.title.replace(/^\d+\.\s*/, '')}</h2>
+      {sample.intro && <p>{sample.intro}</p>}
+      <ul class="checks">{sample.items.slice(0, 6).map((x) => <li>{x}</li>)}</ul>
+      <p><a class="btn btn-ghost" href="#checklist-formulier">{c.teaser.button}</a></p>
+      {fincaGuide && <p><a href={guideHref(lang, fincaGuide)}>{fincaGuide.title} →</a></p>}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .checklist-grid { display: grid; gap: 32px; grid-template-columns: 1fr 1fr; align-items: start; }
+  .checklist-grid :global(.checklist-signup) { margin-top: 0; }
+  @media (max-width: 860px) { .checklist-grid { grid-template-columns: 1fr; } }
+</style>
