@@ -1,0 +1,110 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'ueberblick', label: 'Der Kalender in einer Tabelle' },
+  { id: 'ibi', label: 'IBI und Müllgebühr (Gemeinde)' },
+  { id: 'irnr', label: 'Steuer für Nichtresidenten (Formular 210)' },
+  { id: 'vermoegen', label: 'Vermögensteuer' },
+  { id: 'wohnland', label: 'Steuererklärung im Wohnland' },
+  { id: 'zahlen', label: 'Zahlen aus dem Ausland' },
+  { id: 'verpasst', label: 'Frist verpasst? So vermeiden Sie Zuschläge' },
+  { id: 'quellen', label: 'Quellen' },
+];
+
+const faq = [
+  {
+    q: 'Wann zahle ich die IBI in der Axarquía?',
+    a: 'Das hängt von der Gemeinde ab. In den meisten Gemeinden zieht das Patronato de Recaudación Provincial der Provinz Málaga die IBI ein; die Zahlungsfrist liegt meist im Sommer oder Frühherbst und dauert etwa zwei bis drei Monate. Einige Gemeinden ziehen selbst ein, mit eigenem Kalender. Mit einer Lastschrift wird automatisch abgebucht, und Sie müssen sich das Datum nicht merken.',
+  },
+  {
+    q: 'Muss ich jedes Jahr eine Erklärung abgeben, wenn ich nicht vermiete?',
+    a: 'Ja. Als Nichtresident zahlen Sie jedes Jahr Steuer auf ein fiktives Einkommen aus Ihrer Immobilie: 1,1 % oder 2 % des Katasterwerts, versteuert mit 19 % (EU) oder 24 % (außerhalb der EU, etwa Schweiz). Die Erklärung, Formular 210, geben Sie im Folgejahr ab. Für 2025 bis zum 31. Dezember 2026, ab 2026 vom 1. April bis 31. Dezember des Folgejahres.',
+  },
+  {
+    q: 'Wann erkläre ich meine Mieteinnahmen?',
+    a: 'Für Mieten ab 2026 einmal im Jahr, vom 1. bis 20. April des Folgejahres. Die Miete von 2026 erklären Sie also im April 2027. Bis einschließlich 2025 war es vierteljährlich; die letzte Quartalserklärung für 2025 lief bis zum 20. Januar 2026.',
+  },
+  {
+    q: 'Kann ich spanische Steuern mit einem deutschen Bankkonto bezahlen?',
+    a: 'Manchmal. Nach den europäischen SEPA-Regeln darf eine spanische Behörde eine ausländische IBAN nicht ablehnen, in der Praxis klappt es aber längst nicht immer. Ein spanisches Bankkonto ist daher am einfachsten: Darüber lassen sich IBI, Müllgebühr, Wasser, Strom und Formular 210 abbuchen. Gemeindesteuern können Sie auch online mit Karte bezahlen.',
+  },
+  {
+    q: 'Brauche ich einen Steuervertreter?',
+    a: 'Als Privatperson, die nur eine Immobilie besitzt oder vermietet, meist nicht; das Finanzamt kann ihn aber verlangen. Hilfreich ist ein Gestor oder Steuerberater, der Ihre Erklärungen abgibt und die Post des spanischen Finanzamts empfängt. Das kostet oft 100 bis 400 € im Jahr, je nachdem, ob Sie vermieten.',
+  },
+];
+---
+<Guide lang="de" slug="steuerkalender-spanien" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Jemand vor Ort, der Post und Haus im Blick behält?" ctaText="Wir kontrollieren Ihr Haus, wenn Sie nicht da sind, holen die Post ab und leiten Briefe von Gemeinde oder Finanzamt weiter, damit Sie keine Frist verpassen.">
+  <p>Sie haben ein Haus in der Axarquía, wohnen aber nicht dort? Dann kommen jedes Jahr einige feste Steuern auf Sie zu: von der Gemeinde, vom spanischen Finanzamt und in Ihrem eigenen Land. Wer nie vor Ort ist, verpasst leicht einen Brief, und eine verpasste Frist kostet schnell einen Zuschlag. Dieser Kalender zeigt, was wann kommt, was Sie einreichen müssen und wie Sie aus dem Ausland bezahlen. Mehr zur Besteuerung von Mieteinnahmen lesen Sie in unserem Ratgeber <a href="/de/ratgeber/immobilie-in-spanien-vermieten/">Immobilie in Spanien vermieten</a>.</p>
+
+  <h2 id="ueberblick">Der Kalender in einer Tabelle</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Wann</th><th>Was</th><th>Für wen</th></tr></thead>
+    <tbody>
+      <tr><td>1. – 20. Januar</td><td>Formular 210 mit Ergebnis null für die Miete des Vorjahres (etwa wenn die Kosten so hoch wie die Miete waren)</td><td>Vermieter mit Wohnsitz in der EU</td></tr>
+      <tr><td>Frühjahr</td><td>Kfz-Steuer (IVTM), wenn Sie ein Auto mit spanischem Kennzeichen haben</td><td>Eigentümer mit spanischem Auto</td></tr>
+      <tr><td>1. – 20. April</td><td>Formular 210 für die Mieteinnahmen des Vorjahres (erstmals im April 2027, für 2026). Per Lastschrift bis 15. April.</td><td>Vermieter</td></tr>
+      <tr><td>April – 30. Juni</td><td>Vermögensteuer, nur bei großem Vermögen in Spanien</td><td>Wenige Eigentümer, siehe unten</td></tr>
+      <tr><td>Sommer bis Frühherbst (je Gemeinde)</td><td>IBI, die Grundsteuer der Gemeinde; teils in zwei Raten</td><td>Alle Eigentümer</td></tr>
+      <tr><td>Je Gemeinde</td><td>Müllgebühr (<em>tasa de basura</em>), separat, mit der IBI oder über die Wasserrechnung</td><td>Alle Eigentümer</td></tr>
+      <tr><td>1. April – 31. Dezember</td><td>Formular 210 für das fiktive Einkommen des Vorjahres, für die Tage ohne Vermietung. Per Lastschrift bis 23. Dezember. (Für 2025: das ganze Jahr 2026.)</td><td>Alle Eigentümer ohne Wohnsitz in Spanien</td></tr>
+      <tr><td>Ihr Wohnland</td><td>Einkommensteuererklärung, mit der spanischen Immobilie</td><td>Alle Eigentümer</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Stand 5. November 2026. Die Fristen des spanischen Finanzamts stehen in der Orden HAC/623/2026; die der Gemeinden unterscheiden sich je Jahr und Gemeinde.</p>
+
+  <h2 id="ibi">IBI und Müllgebühr (Gemeinde)</h2>
+  <p>Die <strong>IBI</strong> (<em>Impuesto sobre Bienes Inmuebles</em>) ist die jährliche Grundsteuer. Sie zahlen einen Prozentsatz des Katasterwerts; für ein normales Haus in der Axarquía meist einige hundert Euro im Jahr. Wer am 1. Januar Eigentümer ist, zahlt die IBI für das ganze Jahr. Bei einem Verkauf verrechnen Käufer und Verkäufer das oft untereinander.</p>
+  <ul>
+    <li><strong>Wer einzieht.</strong> Die meisten Gemeinden der Axarquía lassen die IBI vom <em>Patronato de Recaudación Provincial</em> der Provinz Málaga einziehen. Einige größere Gemeinden ziehen selbst ein. Auf Ihrem Bescheid steht der Absender.</li>
+    <li><strong>Wann.</strong> Jede Stelle legt jährlich einen Steuerkalender fest. Die Zahlungsfrist (<em>periodo voluntario</em>) dauert meist zwei bis drei Monate und liegt in der Axarquía oft im Sommer oder Frühherbst. Manche Gemeinden teilen die IBI in zwei Raten.</li>
+    <li><strong>Müllgebühr.</strong> Seit 2025 müssen alle spanischen Gemeinden eine kostendeckende Müllgebühr erheben. In der Axarquía kommt sie je nach Gemeinde als eigener Bescheid, zusammen mit der IBI oder über die Wasserrechnung.</li>
+    <li><strong>Was Sie tun müssen.</strong> Für IBI und Müllgebühr reichen Sie nichts ein: Sie bekommen einen Bescheid (<em>recibo</em>). Sorgen Sie aber dafür, dass die Stelle Ihre richtige Adresse hat, oder richten Sie eine Lastschrift ein. Auch wenn kein Brief kommt, bleiben Sie zur Zahlung verpflichtet.</li>
+  </ul>
+  <p>Bewahren Sie jedes Jahr den Zahlungsbeleg auf. Bei einem Verkauf verlangt der Notar den letzten IBI-Bescheid, und eine offene IBI haftet an der Immobilie. Siehe auch unseren Ratgeber <a href="/de/ratgeber/haus-verkaufen-spanien/unterlagen/">Unterlagen für den Verkauf</a>.</p>
+
+  <h2 id="irnr">Steuer für Nichtresidenten (Formular 210)</h2>
+  <p>Wohnen Sie nicht in Spanien, fallen Sie unter die Einkommensteuer für Nichtresidenten (IRNR). Für eine Immobilie gibt es zwei Situationen, oft beide im selben Jahr:</p>
+  <ul>
+    <li><strong>Sie nutzen das Haus selbst oder es steht leer.</strong> Sie zahlen Steuer auf ein fiktives Einkommen: 1,1 % des Katasterwerts (2 %, wenn der Wert seit 1994 nicht überprüft wurde), anteilig nach Tagen. Darauf zahlen Sie 19 %, wenn Sie in der EU, Island oder Norwegen wohnen, sonst 24 %. Bei einem Katasterwert von 100.000 € sind das für einen EU-Einwohner 209 € im Jahr. Die Erklärung geben Sie im Folgejahr ab: ab dem Steuerjahr 2026 vom 1. April bis 31. Dezember; für 2025 noch das ganze Jahr 2026.</li>
+    <li><strong>Sie vermieten.</strong> Auf Mieteinnahmen zahlen Sie 19 % auf den Nettoertrag (EU) oder 24 % auf die Bruttomiete (außerhalb der EU). Ab den Mieten von 2026 erklären Sie einmal im Jahr, vom 1. bis 20. April des Folgejahres. Bis einschließlich 2025 war es vierteljährlich. Ist das Ergebnis null, reichen Sie die Erklärung vom 1. bis 20. Januar ein.</li>
+  </ul>
+  <p>Gehört das Haus zwei Personen, gibt jede eine eigene Erklärung für ihren Anteil ab. Formular 210 können Sie selbst online bei der Agencia Tributaria einreichen, die meisten Eigentümer lassen es aber von einem Gestor oder Steuerberater machen.</p>
+
+  <h2 id="vermoegen">Vermögensteuer</h2>
+  <p>Für die meisten Eigentümer spielt das keine Rolle. Nichtresidenten zahlen Vermögensteuer auf ihr Vermögen in Spanien oberhalb eines Freibetrags von 700.000 € pro Person, nach Abzug einer etwaigen Hypothek. Andalusien gewährt eine Ermäßigung auf diese Steuer, und daneben gibt es eine befristete Solidaritätsabgabe auf Vermögen über 3 Millionen €. Eine Erklärung ist in jedem Fall Pflicht, wenn Ihr Vermögen in Spanien mehr als 2 Millionen € wert ist. Die Frist läuft von April bis 30. Juni. Gehören Sie zu dieser Gruppe, lassen Sie es durchrechnen.</p>
+  <p>Die spanische Erklärung über Auslandsvermögen (Formular 720) gilt nur für Residenten in Spanien, nicht für Sie als Nichtresident.</p>
+
+  <h2 id="wohnland">Steuererklärung im Wohnland</h2>
+  <p>Auch in Ihrem Wohnland geben Sie die spanische Immobilie an. Wohnen Sie in Deutschland, sind spanische Mieteinkünfte nach dem Doppelbesteuerungsabkommen meist in Deutschland steuerfrei, erhöhen aber den Steuersatz auf Ihr übriges Einkommen (Progressionsvorbehalt). Selbst genutzte Ferienimmobilien lösen in Deutschland in der Regel keine Steuer aus. In Österreich und der Schweiz gelten eigene Regeln. Bewahren Sie die spanischen Bescheide und Erklärungen auf: Sie brauchen sie für Ihre Erklärung zu Hause.</p>
+
+  <h2 id="zahlen">Zahlen aus dem Ausland</h2>
+  <ul>
+    <li><strong>Lastschrift.</strong> Der einfachste Weg: IBI, Müllgebühr und Formular 210 automatisch abbuchen lassen. Am reibungslosesten geht das mit einem spanischen Bankkonto. Nach den SEPA-Regeln darf eine ausländische IBAN nicht abgelehnt werden, in der Praxis akzeptiert sie aber nicht jede Stelle.</li>
+    <li><strong>Online bezahlen.</strong> Gemeindebescheide können Sie mit der Nummer auf dem Bescheid online per Karte bezahlen, über die Website des Patronato oder der Gemeinde.</li>
+    <li><strong>Formular 210.</strong> Ein fälliger Betrag wird über eine spanische Bank bezahlt (Lastschrift oder Zahlung mit Referenznummer). Ohne spanisches Konto ist eine Überweisung aus dem Ausland möglich, aber umständlicher; meist regelt das ein Gestor für Sie.</li>
+    <li><strong>Digitale Post.</strong> Briefe des spanischen Finanzamts kommen immer öfter digital. Mit einem digitalen Zertifikat oder über Ihren Gestor sehen Sie sie rechtzeitig. Geben Sie Gemeinde und Finanzamt eine Adresse, an der Post wirklich ankommt.</li>
+    <li><strong>Gestor oder Vertreter.</strong> Ein Gestor kann Ihre Erklärungen abgeben, Bescheide bezahlen und Ihr Ansprechpartner für das Finanzamt sein. Ein formeller Steuervertreter ist für private Eigentümer meist nicht Pflicht.</li>
+  </ul>
+
+  <h2 id="verpasst">Frist verpasst? So vermeiden Sie Zuschläge</h2>
+  <p>Zahlen Sie einen Gemeindebescheid nicht fristgerecht, kommt ein Zuschlag von 5 % hinzu, der im Vollstreckungsverfahren auf 20 % plus Zinsen steigt. Am Ende kann Ihr spanisches Bankkonto gepfändet werden. Eine verspätete Erklärung beim Finanzamt kostet einen Zuschlag, der mit der Zeit steigt. Drei Tipps:</p>
+  <ul>
+    <li>Lassen Sie alles, was geht, per Lastschrift abbuchen, und prüfen Sie einmal im Jahr, ob es auch passiert ist.</li>
+    <li>Sorgen Sie dafür, dass jemand vor Ort Ihre Post sieht. Mit der <a href="/de/hausbetreuung/">Hausbetreuung</a> holen wir die Post ab und leiten Briefe von Gemeinde oder Finanzamt weiter.</li>
+    <li>Geben Sie alle Erklärungen an einen Gestor, damit auch die Fristen bei einer Person liegen.</li>
+  </ul>
+  <p>Fragen zu Ihrem Haus in der Axarquía? Schreiben Sie an <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>. Siehe auch <a href="/de/ratgeber/kaufnebenkosten-spanien/">Kaufnebenkosten</a> für die laufenden Kosten einer Immobilie in Spanien.</p>
+
+  <h2 id="quellen">Quellen</h2>
+  <ul>
+    <li>Fristen Formular 210 (Miete jährlich im April, fiktives Einkommen 1. April bis 31. Dezember): Orden HAC/623/2026 vom 12. Juni 2026 (BOE, 23. Juni 2026), zur Änderung der Orden EHA/3316/2010.</li>
+    <li>Steuer für Nichtresidenten und fiktives Einkommen: Real Decreto Legislativo 5/2004, Artikel 24 und 25; Ley 35/2006, Artikel 85.</li>
+    <li>IBI: Real Decreto Legislativo 2/2004 (Gesetz über die Gemeindesteuern), Artikel 60 bis 77.</li>
+    <li>Kostendeckende Müllgebühr: Ley 7/2022 über Abfälle, Artikel 11, Pflicht seit April 2025.</li>
+    <li>Zuschläge bei verspäteter Zahlung und Erklärung: Ley 58/2003 (Ley General Tributaria), Artikel 27 und 28.</li>
+    <li>Vermögensteuer: Ley 19/1991; befristete Solidaritätsabgabe: Ley 38/2022.</li>
+  </ul>
+  <p class="note">Geprüft am 5. November 2026. Dieser Kalender gibt allgemeine Informationen und ist keine Steuerberatung. Fristen und Sätze ändern sich; prüfen Sie den Steuerkalender Ihrer Gemeinde und lassen Sie Ihre Erklärungen von einem Gestor oder Steuerberater abgeben.</p>
+</Guide>

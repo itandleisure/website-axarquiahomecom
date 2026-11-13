@@ -1,0 +1,80 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort svar' },
+  { id: 'region', label: 'Costa del Sol och Axarquía' },
+  { id: 'typer', label: 'Vilken firma för vilket jobb' },
+  { id: 'kontroll', label: 'Så kontrollerar du en byggfirma' },
+  { id: 'varning', label: 'Varningssignaler' },
+  { id: 'sprak', label: 'Språk och avtal' },
+  { id: 'tid', label: 'Bästa tiden att renovera' },
+  { id: 'forfragan', label: 'Så fungerar en förfrågan hos oss' },
+];
+
+const faq = [
+  {
+    q: 'Hur vet jag att en byggfirma i Spanien arbetar lagligt?',
+    a: 'Be om skattenumret (CIF eller NIF), bevis på registrering hos socialförsäkringen och en giltig ansvarsförsäkring. En byggfirma som anlitar underentreprenörer finns också i Registro de Empresas Acreditadas (REA). En seriös firma skickar dessa papper utan problem.',
+  },
+  {
+    q: 'Arbetar ni även på västra Costa del Sol, som Marbella?',
+    a: 'Vi fokuserar på Axarquía, östra Costa del Sol: från Rincón de la Victoria och Vélez-Málaga till Nerja och bergsbyarna som Cómpeta och Frigiliana. För Marbella, Fuengirola eller Estepona finns det firmor som sitter närmare.',
+  },
+  {
+    q: 'Ska byggfirman söka tillståndet?',
+    a: 'Firman kan ordna det åt dig, men tillståndet eller anmälan står i ägarens namn. Kom överens om vem som gör det och be om en kopia innan arbetet börjar. Utan anmälan eller tillstånd kan kommunen stoppa arbetet.',
+  },
+];
+---
+<Guide lang="sv" slug="byggfirma-costa-del-sol" toc={toc} faq={faq} dienst="renovatie" onderwerp="Söker byggfirma" ctaTitle="Behöver du en byggfirma i Axarquía?" ctaText="Berätta vad du vill få gjort. Du får en fast kontaktperson, ett besök på plats och en offert uppdelad per moment.">
+  <h2 id="kort">Kort svar</h2>
+  <p>En bra byggfirma på Costa del Sol känner du igen på <strong>papper som stämmer, en försäkring, en skriftlig offert uppdelad per moment och projekt som du kan gå och titta på</strong>. Välj helst en firma som arbetar nära ditt hus: det sparar restid, och firman känner kommunen, tillstånden och leverantörerna.</p>
+  <p>Bor du i Sverige under renoveringen? Läs då också guiden <a href="/sv/guider/renovera-pa-distans-i-spanien/">renovera på distans</a> om att jämföra offerter, betala i etapper och hålla dig informerad.</p>
+
+  <h2 id="region">Costa del Sol och Axarquía</h2>
+  <p>Costa del Sol sträcker sig från Manilva i väster till Nerja i öster. Den östra delen, öster om staden Málaga, heter Axarquía. Att bygga och renovera där skiljer sig från Marbella eller Fuengirola:</p>
+  <ul>
+    <li><strong>Äldre hus</strong>: många byhus och fincor är trettio år eller äldre, med tjocka stenväggar, gamla rör och tak av vass och lera. Se <a href="/sv/guider/renovera-byhus-i-spanien/">renovera ett byhus</a>.</li>
+    <li><strong>Svår åtkomst</strong>: smala gränder i Frigiliana eller Cómpeta, branta vägar upp till en finca. Material bärs ibland in för hand. En firma som känner till det planerar för det.</li>
+    <li><strong>Landsbygdsmark</strong>: många hus står på suelo rústico, där reglerna för tillbyggnad är stränga. Se <a href="/sv/guider/afo-andalusien/">AFO i Andalusien</a>.</li>
+    <li><strong>Varje kommun har egna regler</strong>: byggskatt, förfarande och handläggningstid skiljer sig mellan byarna. Läs mer om orterna på <a href="/sv/orter/">ortssidorna</a>.</li>
+  </ul>
+
+  <h2 id="typer">Vilken firma för vilket jobb</h2>
+  <ul>
+    <li><strong>Constructora (byggföretag)</strong>: för totalrenoveringar, tillbyggnader och nybyggen. Har egna lag eller fasta underentreprenörer och samordnar hantverkarna.</li>
+    <li><strong>Autónomo (egenföretagare)</strong>: en murare, rörmokare eller elektriker som arbetar ensam eller med några få. Bra för ett moment, mindre lämpad att leda en hel renovering.</li>
+    <li><strong>Installatör</strong>: för luftkonditionering, solceller, el eller poolpump. För el ska en behörig installatör utfärda intyget (boletín).</li>
+    <li><strong>Arkitekt och arquitecto técnico</strong>: krävs vid arbete på bärande delar, tillbyggnad eller en extra våning. Se <a href="/sv/guider/bygglov-renovering-andalusien/">vilket tillstånd du behöver</a>.</li>
+  </ul>
+
+  <h2 id="kontroll">Så kontrollerar du en byggfirma</h2>
+  <ul class="checks">
+    <li><strong>Skattenummer</strong> (CIF för ett företag, NIF för en egenföretagare) på offert och fakturor.</li>
+    <li><strong>Registrering hos socialförsäkringen</strong> (alta en la Seguridad Social): då är personerna på din byggplats försäkrade.</li>
+    <li><strong>Ansvarsförsäkring</strong> (seguro de responsabilidad civil): be om en kopia av försäkringsbrevet och kontrollera att den gäller.</li>
+    <li><strong>REA-registrering</strong> om firman anlitar underentreprenörer: registret är obligatoriskt i byggbranschen.</li>
+    <li><strong>Referenser och projekt</strong>: fråga efter hus i närheten som firman har renoverat och ring ett par tidigare kunder.</li>
+    <li><strong>Skriftlig offert per moment</strong>, med material, märke och tidsplan, med eller utan IVA.</li>
+    <li><strong>Fakturor med IVA</strong>: bara då kan du senare visa vad som gjorts, till exempel vid försäljning.</li>
+  </ul>
+
+  <h2 id="varning">Varningssignaler</h2>
+  <ul>
+    <li>Ett pris ”utan faktura” eller rabatt vid kontant betalning.</li>
+    <li>En stor del av beloppet i förskott, innan något har hänt.</li>
+    <li>”För en tillbyggnad eller ett tak över terrassen behövs inget tillstånd.” Det stämmer nästan aldrig.</li>
+    <li>Bara ett muntligt pris, eller en totalsumma utan uppdelning.</li>
+    <li>Ingen fast adress, bara ett telefonnummer, och inga projekt du får se.</li>
+  </ul>
+
+  <h2 id="sprak">Språk och avtal</h2>
+  <p>En spansk hantverkare från byn känner alla och är ofta prisvärd. Talar du inte spanska ligger risken i kommunikationen: vad som exakt är avtalat, vilket kakel, vilken kran, vad tilläggsarbeten kostar. Skriv därför alltid ner avtal, med foton eller ritningar, och be om offerter och fakturor på ett språk du kan läsa. Kontakten med oss sker på engelska eller nederländska. Läs mer på <a href="/sv/renovering/">renovering och ombyggnad</a>.</p>
+
+  <h2 id="tid">Bästa tiden att renovera</h2>
+  <p>Den mest hektiska perioden för byggfirmor på Costa del Sol är våren, när alla vill ha huset klart till sommaren. Bokar du en firma på hösten har du större urval och kan renovera på vintern, när huset ändå står tomt. Juli och augusti är varma, och augusti är semestermånad i Spanien, så leverantörer och kommuner arbetar långsammare. Vill du ha en uppfattning om budgeten, läs <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">vad det kostar att renovera i Spanien</a>.</p>
+
+  <h2 id="forfragan">Så fungerar en förfrågan hos oss</h2>
+  <p>Axarquía Home arbetar med ett byggteam som i många år har byggt och renoverat i Axarquía, från kusten vid Torre del Mar och Nerja till bergsbyarna. Du skickar din förfrågan via <a href="/sv/forfragan/">formuläret</a>, vi ringer upp, kommer förbi eller tittar via video, och du får en offert uppdelad per moment med tidsplan. Se också <a href="/sv/projekt/">tidigare projekt</a>.</p>
+</Guide>

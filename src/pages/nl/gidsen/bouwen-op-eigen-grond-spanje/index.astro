@@ -1,0 +1,93 @@
+---
+// Bronnen (gelezen op 5 november 2026): Ley 7/2021 LISTA art. 21, 22, 137, 138, 153 en Decreto 550/2022 (reglamento);
+// Ley 49/1960 Propiedad Horizontal art. 7.2, 10.3, 17; Orden 21 mayo 2009 Junta de Andalucía (brandgevaar, zona de influencia forestal).
+// Kostenaanduiding met €-tekens op verzoek van Frans: geen bedragen, alleen goedkoop of duur.
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'grond', label: 'Eerst: wat voor grond?' },
+  { id: 'overzicht', label: 'Wat mag waar? Het overzicht' },
+  { id: 'urbano', label: 'In een woonwijk (urbano)' },
+  { id: 'rustico', label: 'Op een finca (rústico)' },
+  { id: 'complex', label: 'In een complex: de VvE' },
+  { id: 'zonder', label: 'Bouwen zonder vergunning' },
+  { id: 'per-project', label: 'Per project' },
+];
+
+const faq = [
+  { q: 'Hoe weet ik of mijn grond rústico of urbano is?', a: 'Kijk in het Catastro (sedecatastro.gob.es) bij uw referencia catastral: daar staat of het perceel urbano of rústico is. Zekerheid geeft een informe urbanístico of cédula urbanística van de gemeente, waarin ook staat hoeveel er op uw perceel gebouwd mag worden.' },
+  { q: 'Mag ik zonder vergunning iets kleins bouwen?', a: 'Voor heel weinig. Een losse pergola zonder dak, een tuinmuurtje of een bestrating kan soms met een melding (declaración responsable). Alles met een vast dak, muren of een fundering vraagt in de regel een vergunning. Vraag het altijd vooraf bij de gemeente.' },
+  { q: 'Mag ik bijbouwen bij een huis met AFO-status?', a: 'Nee. Bij een AFO-woning mag u onderhouden en verbouwen, maar niets bijbouwen: geen uitbouw, geen garage, geen gastenverblijf. Ook een carport met een vast dak geldt als uitbreiding.' },
+  { q: 'Mag de VvE mij verbieden een barbecue te gebruiken?', a: 'Ja, als de statuten of het huishoudelijk reglement het verbieden, of als u de buren hinder bezorgt. De comunidad kan dan via de rechter afdwingen dat u stopt.' },
+];
+---
+<Guide slug="bouwen-op-eigen-grond-spanje" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Iets bijbouwen bij uw huis?" ctaText="Vertel wat u wilt bouwen en waar uw huis staat. Wij zoeken uit wat er mag, regelen de vergunning en bouwen het voor u.">
+  <h2 id="grond">Eerst: wat voor grond?</h2>
+  <p>In Andalusië bepaalt het bestemmingsplan van de gemeente (<em>PGOU</em>) wat er op een perceel mag. De belangrijkste vraag is welke soort grond het is:</p>
+  <ul>
+    <li><strong>Suelo urbano</strong>: grond in een dorp, stad of urbanisatie. Hier mag u bouwen, binnen de regels van het bestemmingsplan: hoeveel vierkante meter, hoe hoog en hoe ver van de erfgrens.</li>
+    <li><strong>Suelo rústico</strong>: landelijke grond. Hier staan de meeste fincas in de Axarquía. Bouwen is de uitzondering. Het land is bedoeld voor landbouw en natuur, niet voor huizen.</li>
+  </ul>
+  <p>U vindt de soort grond in het kadaster (<em>Catastro</em>). Meer zekerheid geeft een <em>informe urbanístico</em> van de gemeente: daarin staat ook hoeveel er op uw perceel al gebouwd is en hoeveel er nog bij mag.</p>
+  <p>Woont u in een appartement of in een urbanisatie met een vereniging van eigenaren (<em>comunidad de propietarios</em>), dan gelden daarnaast de regels van die VvE.</p>
+
+  <h2 id="overzicht">Wat mag waar? Het overzicht</h2>
+  <table class="prices plain">
+    <thead><tr><th>Project</th><th>Woonwijk (urbano)</th><th>Finca (rústico)</th></tr></thead>
+    <tbody>
+      <tr><td><a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/carport-en-pergola/">Pergola zonder vast dak</a></td><td>Meestal ja, vaak met een melding</td><td>Vaak ja, vraag het vooraf</td></tr>
+      <tr><td><a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/carport-en-pergola/">Carport of overkapping</a></td><td>Vaak ja, met vergunning</td><td>Soms, met vergunning</td></tr>
+      <tr><td><a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/buitenkeuken/">Buitenkeuken</a></td><td>Meestal ja</td><td>Meestal ja; let op het brandseizoen</td></tr>
+      <tr><td><a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/garage/">Garage</a></td><td>Vaak ja, met project en vergunning</td><td>Lastig, alleen als het plan ruimte laat</td></tr>
+      <tr><td><a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/uitbouw-en-terras-dichtmaken/">Uitbouw of extra verdieping</a></td><td>Als er nog bouwruimte is</td><td>Zelden</td></tr>
+      <tr><td><a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/uitbouw-en-terras-dichtmaken/">Terras dichtmaken</a></td><td>Met vergunning, in een complex ook met de VvE</td><td>Zelden</td></tr>
+      <tr><td><a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/gastenverblijf/">Tweede huisje of gastenverblijf</a></td><td>Soms, als aanbouw of binnen de bouwruimte</td><td>Bijna nooit</td></tr>
+      <tr><td><a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/barbecue-appartement/">Barbecue op een appartementsterras</a></td><td colspan="2">Hangt af van de regels van de VvE</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="urbano">In een woonwijk (urbano)</h2>
+  <p>In een dorp of urbanisatie mag u bouwen, maar het bestemmingsplan bepaalt hoeveel. Drie begrippen komen steeds terug:</p>
+  <ul>
+    <li><strong>Edificabilidad</strong>: hoeveel vierkante meter er in totaal op het perceel gebouwd mag worden. Is dat al op, dan mag er niets meer bij, ook geen garage.</li>
+    <li><strong>Ocupación</strong>: welk deel van het perceel bebouwd mag zijn.</li>
+    <li><strong>Retranqueos</strong>: de afstand tot de erfgrens en de straat. Vaak een paar meter, en een carport of garage valt daar ook onder.</li>
+  </ul>
+  <p>Een overkapping die aan de zijkanten open is, telt in veel bestemmingsplannen maar deels mee. Een dichte garage of kamer telt volledig mee. De regels verschillen per gemeente, dus laat het vooraf nakijken. Voor vrijwel alles met een vast dak of muren hebt u een vergunning (<em>licencia de obra</em>) nodig, en voor grotere werken ook een architect. Hoe dat werkt, leest u in de gids <MaybeLink href="/nl/gidsen/vergunning-verbouwen-andalusie/">vergunning voor verbouwen</MaybeLink>.</p>
+
+  <h2 id="rustico">Op een finca (rústico)</h2>
+  <p>Op landelijke grond is de regel: bouwen mag alleen als de wet en het bestemmingsplan het uitdrukkelijk toestaan. Voor de meeste fincas betekent dat:</p>
+  <ul>
+    <li><strong>Een legaal huis</strong> mag u onderhouden en verbouwen. Uitbreiden kan alleen als het bestemmingsplan nog ruimte laat, en veel oudere fincas zitten al aan het maximum.</li>
+    <li><strong>Een nieuw, los gebouw</strong> zoals een garage of gastenverblijf vraagt een vergunning, en vaak eerst een aparte toestemming voor bouwen op landelijke grond. Dat duurt lang en lukt lang niet altijd.</li>
+    <li><strong>Een tweede woning</strong> op hetzelfde perceel is in de praktijk bijna nooit mogelijk. Een nieuwe woning op rústico vraagt onder de Andalusische wet LISTA onder meer een groot perceel (de gemeente bepaalt hoe groot, vaak enkele hectares), een aparte procedure en een heffing aan de gemeente.</li>
+    <li><strong>Een landbouwschuur</strong> (<em>almacén agrícola</em> of <em>cuarto de aperos</em>) mag soms wel, maar alleen voor landbouw. Wie er later een slaapkamer of gastenverblijf van maakt, bouwt illegaal.</li>
+  </ul>
+  <p>Heeft uw huis AFO-status, dan mag u niets bijbouwen. Lees meer in de gids <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren</a>.</p>
+
+  <h2 id="complex">In een complex: de VvE</h2>
+  <p>Woont u in een appartementencomplex of in een urbanisatie met een <em>comunidad de propietarios</em>, dan gelden naast de gemeente ook de regels van de VvE:</p>
+  <ul>
+    <li><strong>De statuten en het huishoudelijk reglement</strong> (<em>estatutos</em> en <em>normas de régimen interior</em>) kunnen van alles verbieden: een barbecue op het terras, een zonnescherm in een andere kleur, een pergola op het dakterras.</li>
+    <li><strong>Alles wat de gevel of het gebouw verandert</strong>, zoals een terras dichtmaken of een verdieping erop, vraagt volgens de Spaanse wet op de appartementsrechten (<em>Ley de Propiedad Horizontal</em>) instemming van de vergadering, meestal met drie vijfde van de eigenaren.</li>
+    <li><strong>Hinder</strong>: ook als iets niet uitdrukkelijk verboden is, kan de VvE optreden tegen activiteiten die de buren hinderen, zoals rook.</li>
+  </ul>
+  <p>Vraag de statuten, het reglement en de laatste notulen op bij de beheerder (<em>administrador de fincas</em>) voordat u iets koopt of laat bouwen. Meer over barbecueën leest u op <a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/barbecue-appartement/">barbecue in een appartementencomplex</a>.</p>
+
+  <h2 id="zonder">Bouwen zonder vergunning</h2>
+  <p>In de Axarquía staan duizenden carports, casitas en dichtgemaakte terrassen zonder vergunning. Dat betekent niet dat het zonder risico is:</p>
+  <ul>
+    <li>De gemeente kan tot zes jaar na de bouw een boete opleggen en sloop eisen. Op beschermde grond verloopt die termijn niet.</li>
+    <li>Bij verkoop moet wat er staat kloppen met het kadaster en de akte. Een illegale uitbouw kost u dan tijd, geld of kopers.</li>
+    <li>Een verzekeraar kan weigeren te betalen voor schade aan een onvergund deel.</li>
+  </ul>
+  <p>Staat er al iets zonder vergunning, dan is legaliseren soms mogelijk. Zie <a href="/nl/gidsen/afo-legaliseren-andalusie/">huis legaliseren en AFO</a>. Koopt u een huis, laat dan in een <a href="/nl/aankoopkeuring/">aankoopkeuring</a> nagaan of alles wat er staat ook op papier staat.</p>
+
+  <h2 id="per-project">Per project</h2>
+  <p>Per project leest u wat er mag, welke mogelijkheden er zijn en hoe wij u helpen het te realiseren:</p>
+  <GuideChildren parent="bouwen-op-eigen-grond-spanje" />
+  <p>Wilt u een deel zelf bouwen? Begin met ons <a href="/nl/gidsen/bouwen-op-eigen-grond-spanje/pergola-bouwen/">stappenplan pergola bouwen</a>, of kijk op <MaybeLink href="/nl/zelf-doen/">zelf doen</MaybeLink>.</p>
+  <p class="note">Deze gids geeft algemene uitleg op basis van de Andalusische wet LISTA (Ley 7/2021), het reglement daarvan (Decreto 550/2022) en de Ley de Propiedad Horizontal, zoals die golden op 5 november 2026. Het is geen juridisch advies: wat op uw perceel mag, hangt af van het bestemmingsplan van uw gemeente en wordt beoordeeld door een architect en de gemeente.</p>
+</Guide>

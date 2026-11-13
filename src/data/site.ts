@@ -1,13 +1,16 @@
 // Centrale gegevens van de site. Alles wat met [VUL IN] begint, moet nog
 // worden aangevuld met gegevens van het bouwbedrijf of van Frans.
-// Zolang `launchReady` op false staat, krijgt elke pagina "noindex" en
-// blokkeert robots.txt de zoekmachines. Zet hem pas op true als alles klopt.
+// `indexable` bepaalt of Google de site mag indexeren (robots.txt en meta robots).
+// `launchReady` zegt of alle [VUL IN]-gegevens zijn aangeleverd. Zolang dat niet
+// zo is, tonen ontbrekende prijzen "op aanvraag" en zijn de gele blokken
+// "Nog aanleveren" alleen zichtbaar in `npm run dev` (of als indexable op false staat).
 
 export const TODO = '[VUL IN]';
 export const isFilled = (v: string | undefined | null): v is string =>
   !!v && !v.startsWith(TODO);
 
 export const site = {
+  indexable: true,
   launchReady: false,
 
   brand: 'Axarquía Home',
@@ -25,8 +28,10 @@ export const site = {
     phone: `${TODO} telefoon, bijv. +34 600 000 000`,
     whatsapp: `${TODO} WhatsApp in internationaal formaat zonder +, bijv. 34600000000`,
     email: `${TODO} e-mail voor aanvragen`,
-    yearsInRegion: `${TODO} aantal`,
   },
+
+  // Jaren ervaring in de bouw (bevestigd door Frans), getoond op de Over ons-pagina
+  experienceYears: 20,
 
   // De beheerder van de site (Frans' onderneming), voor privacy en colofon
   operator: {
@@ -46,6 +51,11 @@ export const site = {
   clarityId: 'z8rraji52s',
   // Google Analytics 4 Measurement ID (G-...). Laadt ook pas na toestemming. Leeg = uit.
   gaId: 'G-YSBXSHM7SS',
+
+  // URL van de web-app "Dashboard" uit apps-script/statistieken (eindigt op /exec).
+  // Wordt getoond op /statistiek/. Geen geheim: alleen jouw Google-account ziet er cijfers.
+  // Leeg = /statistiek/ toont uitleg in plaats van het dashboard.
+  statsDashboardUrl: 'https://script.google.com/macros/s/AKfycbzyzH9nke4qy05RwvmARr7Pq-bP4gjatbNNl_mg5RziEk3b86J8FN_0pm3ZWB7YHXXkSQ/exec',
 
   // Voorbeelden van plaatsen in het werkgebied: de hele Axarquía, niet gebonden aan één bouwbedrijf.
   villages: [
@@ -85,20 +95,40 @@ export const prices = {
 
 // Menu en diensten staan in src/i18n.ts (per taal).
 
+const onRequest = {
+  nl: 'Prijs op aanvraag',
+  en: 'Price on request',
+  de: 'Preis auf Anfrage',
+  sv: 'Pris på förfrågan',
+  es: 'Precio a consultar',
+} as const;
+
+/** Nog niet ingevulde prijs: in `npm run dev` de [VUL IN]-tekst, op de echte site "op aanvraag". */
+const pending = (s: string, lang: keyof typeof onRequest) => (import.meta.env.DEV ? s : onRequest[lang]);
+
+/** Nederlandse prijs, of "Prijs op aanvraag" als hij nog niet is ingevuld. */
+export const nlPrice = (s: string) => (s.startsWith(TODO) ? pending(s, 'nl') : s);
+
 /** Zet een Nederlandse prijsnotatie om naar Engelse (€ 20.000 → €20,000). */
 export const enPrice = (s: string) =>
   s.startsWith(TODO)
-    ? s
+    ? pending(s, 'en')
     : s.replace(/(\d)\.(\d{3})/g, '$1,$2').replace(/€ /g, '€').replace(' per jaar', ' per year').replace(' per maand', ' per month');
 
 /** Zet een Nederlandse prijsnotatie om naar Duitse (€ 20.000 → 20.000 €). */
 export const dePrice = (s: string) =>
   s.startsWith(TODO)
-    ? s
+    ? pending(s, 'de')
     : s.replace(/€ ([\d.]+)/g, '$1 €').replace(' per jaar', ' pro Jahr').replace(' per maand', ' pro Monat');
 
 /** Prijs in Zweedse notatie: "€ 20.000" wordt "20 000 €". */
 export const svPrice = (s: string) =>
   s.startsWith(TODO)
-    ? s
+    ? pending(s, 'sv')
     : s.replace(/€ ([\d.]+)/g, (_, n: string) => `${n.replace(/\./g, ' ')} €`).replace(' per jaar', ' per år').replace(' per maand', ' per månad');
+
+/** Prijs in Spaanse notatie: "€ 20.000" wordt "20.000 €". */
+export const esPrice = (s: string) =>
+  s.startsWith(TODO)
+    ? pending(s, 'es')
+    : s.replace(/€ ([\d.]+)/g, '$1 €').replace(' per jaar', ' al año').replace(' per maand', ' al mes');

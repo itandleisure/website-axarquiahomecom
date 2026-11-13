@@ -1,0 +1,105 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
+
+const toc = [
+  { id: 'three', label: 'Three types of home' },
+  { id: 'comparison', label: 'Side by side' },
+  { id: 'access', label: 'Getting there' },
+  { id: 'amenities', label: 'Amenities' },
+  { id: 'upkeep', label: 'Upkeep and running costs' },
+  { id: 'renovation', label: 'Renovation costs' },
+  { id: 'legal', label: 'Legal status (AFO)' },
+  { id: 'letting', label: 'Holiday letting and licences' },
+  { id: 'audience', label: 'What suits you?' },
+];
+
+const faq = [
+  {
+    q: 'Does a finca cost more to maintain than an apartment?',
+    a: 'Usually, yes. In an apartment you share the cost of the roof, façade, lift and pool with the other owners through the monthly community fee. With a finca you pay for everything yourself: the land, the access track, the septic tank, the water supply and often a pool. Budget several thousand euros a year for upkeep on a finca with land, before any larger repairs.',
+  },
+  {
+    q: 'Can I let my finca to tourists?',
+    a: 'That depends on the land classification and the status of the house. Andalusia’s standard holiday-let scheme (vivienda con fines turísticos) applies to homes on residential land. Houses on rural land fall under the rural tourism rules, which have their own requirements, and a house with AFO status cannot always be let. Have it checked before you buy.',
+  },
+  {
+    q: 'Can the owners’ community ban holiday lets in my apartment?',
+    a: 'Since April 2025, an owner who wants to start letting an apartment to tourists needs prior approval from the community of owners, by a three-fifths majority. So if you plan to let, read the statutes and the minutes of recent meetings before you buy.',
+  },
+  {
+    q: 'Is a village house a good compromise?',
+    a: 'Often, yes. You live within walking distance of the bakery, bar and doctor, on urban land where renovating is easier than in the countryside, with no community fees. The downsides: little outdoor space apart from a roof terrace, stairs, neighbours on the other side of your wall, and lanes you cannot always drive down.',
+  },
+];
+---
+<Guide lang="en" slug="finca-apartment-or-village-house" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Torn between two properties?" ctaText="We survey both and tell you what each needs and what it will cost. Then you compare more than just the asking price.">
+  <h2 id="three">Three types of home</h2>
+  <p>Most foreign buyers in the Axarquía choose between three types of property. They differ not just in character, but in how you live in them, what they cost to keep up and what you are legally allowed to do.</p>
+  <ul>
+    <li><strong>The finca</strong>: a country house with land, often with olive, almond, avocado or mango trees. Legally it sits on rural land (<em>suelo rústico</em>). Plenty of space and peace, but you are responsible for everything. See also our guide to <a href="/en/guides/buying-a-finca-in-spain/">buying a finca</a>.</li>
+    <li><strong>The apartment</strong>: usually on the coast, in Torre del Mar, Nerja, Torrox Costa or Rincón de la Victoria, or in a complex on the hills above. Often with a shared pool. The community of owners (<em>comunidad de propietarios</em>) looks after the common areas.</li>
+    <li><strong>The village house</strong> (<em>casa de pueblo</em>): a narrow, tall house in a white village such as Cómpeta, Frigiliana or Canillas de Albaida. Thick walls, a roof terrace, everything within walking distance. It sits on urban land.</li>
+  </ul>
+  <p>There are also villas on the slopes above the coast. They fall somewhere in between: privacy and a private pool like a finca, but often on urban land and on a tarmac road.</p>
+
+  <h2 id="comparison">Side by side</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th></th><th>Finca</th><th>Apartment</th><th>Village house</th></tr></thead>
+    <tbody>
+      <tr><td>Access</td><td>Car essential, sometimes a dirt track</td><td>Good, often near the A-7</td><td>Village easy to reach, the house itself not always by car</td></tr>
+      <tr><td>Amenities</td><td>Drive to everything</td><td>Within walking distance</td><td>Within walking distance, less choice than the coast</td></tr>
+      <tr><td>Space and privacy</td><td>Lots</td><td>Little, neighbours above and beside you</td><td>Reasonable inside, outdoors mainly the roof terrace</td></tr>
+      <tr><td>Your own upkeep</td><td>A lot: land, track, water, drainage, pool</td><td>Little, the community handles much of it</td><td>Moderate: roof, façade, damp</td></tr>
+      <tr><td>Running costs</td><td>High (upkeep, water, sometimes power)</td><td>Community fees</td><td>Low</td></tr>
+      <tr><td>Legal status</td><td>Often needs checking (AFO)</td><td>Usually straightforward</td><td>Usually straightforward, watch for extensions</td></tr>
+      <tr><td>Holiday letting</td><td>Different (rural) rules</td><td>Community approval needed</td><td>Usually possible, check the town hall</td></tr>
+      <tr><td>Supervision when away</td><td>Important</td><td>Less critical</td><td>Moderate</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">A general picture. Every house is different; the facts for a specific property come from the paperwork and a survey.</p>
+
+  <h2 id="access">Getting there</h2>
+  <p>A coastal apartment is usually close to the A-7 motorway. From Torre del Mar it is about 40 minutes to Málaga airport. Buses run along the coast and to Vélez-Málaga and Málaga.</p>
+  <p>A village house in the mountains is further out: from Cómpeta or Canillas de Albaida it is over an hour to the airport, on winding roads. The village has a bus, but only a few a day. Look closely at the house itself: in the old centre, lanes are often too narrow or steep for a car. Shopping, suitcases and building materials then go the last stretch on foot or by wheelbarrow.</p>
+  <p>A finca asks the most. Without a car you are going nowhere, and often you need two if two people work or children have to get to school. The last stretch is regularly a dirt track across a neighbour’s land. After heavy rain it can be hard going for days. Ask who maintains the track and whether the right of way is recorded in the land registry. Ideally, drive it yourself after dark.</p>
+
+  <h2 id="amenities">Amenities</h2>
+  <p>On the coast everything is within walking distance: supermarkets, doctors, pharmacies, restaurants and international shops. The regional hospital is in Vélez-Málaga. A village such as Cómpeta, Frigiliana or Torrox has a health centre (<em>centro de salud</em>), a pharmacy, a primary school, bakeries, bars and a small supermarket. For a big shop or a DIY store you drive down to the coast.</p>
+  <p>From a finca you drive for everything: bread, the doctor, a night out. In the first year that feels like a holiday. After a few years, or as you get older, it can become a burden. Outside the villages, internet usually comes via 4G/5G or satellite; fibre is rare.</p>
+
+  <h2 id="upkeep">Upkeep and running costs</h2>
+  <p><strong>Apartment.</strong> You pay a monthly fee to the community of owners, which covers the roof, façade, lift, gardens and pool. In the Axarquía this is often between €50 and €250 a month, depending on the complex. For major works the community can levy an extra charge (<em>derrama</em>). Ask for the minutes of recent meetings before you buy: they show what is coming.</p>
+  <p><strong>Village house.</strong> No community fees, but you maintain the roof, façade and roof terrace yourself. Old village houses often suffer from damp walls, timber beams that may be affected, and flat roofs that start leaking after some years. Shared walls with neighbours can turn some repairs into a joint project.</p>
+  <p><strong>Finca.</strong> This is where most of the work is. The land needs looking after: pruning trees, clearing weeds and, in wooded areas, keeping a firebreak around the house. Then there is the <a href="/en/guides/finca-access-road-spain/">access track</a>, the water system or well, the septic tank, often a pool and sometimes solar panels with batteries. The land alone easily costs €300 to €2,000 a year. If you would rather not do it yourself, see <a href="/en/maintenance/">maintenance</a>.</p>
+
+  <h2 id="renovation">Renovation costs</h2>
+  <p>The price per square metre is roughly the same for all three: from €250 – €500 for a refresh to €1,000 – €1,600 for a full renovation. See our guide <a href="/en/guides/renovation-costs-spain/">how much does it cost to renovate</a>. The difference lies in what comes on top:</p>
+  <ul>
+    <li><strong>Apartment</strong>: the least work, often a bathroom, kitchen and windows. Allow for the community’s rules (working hours, protecting the lift, removing rubble) and ask permission for anything visible on the façade or terrace.</li>
+    <li><strong>Village house</strong>: often waterproofing the roof and roof terrace, tackling damp and rewiring. The narrow lanes make delivering materials and removing waste laborious, which raises the price. Protected village centres have rules on façades, window frames and roof tiles.</li>
+    <li><strong>Finca</strong>: besides the house itself, often water, drainage (€3,000 – €10,000 for a new septic tank or treatment plant), power and the access track. And with AFO status you may not extend, so what you see is what you get.</li>
+  </ul>
+  <p>That is why a <a href="/en/property-survey/">property survey</a> with a price per defect is worth doing before you buy. Then you compare two houses on what they will really cost, not just the asking price.</p>
+
+  <h2 id="legal">Legal status (AFO)</h2>
+  <p>With an <strong>apartment</strong>, the legal status is usually simple: the building was built with a permit and has an occupancy certificate. Do watch for enclosed terraces or an extra room on the roof that may have been added without a permit.</p>
+  <p>A <strong>village house</strong> sits on urban land. Here too, floors or roof rooms have sometimes been added without a permit, but on urban land that is usually easier to sort out than in the countryside. Compare the floor area in the cadastre and land registry with what is actually there.</p>
+  <p>With a <strong>finca</strong>, this is the key question. Building on rural land in Andalusia is heavily restricted, and many fincas were built or extended (partly) without a permit. Once the enforcement period has expired, the town hall can declare the house <em>asimilado a fuera de ordenación</em>: AFO status, with the official declaration also known as a DAFO. The house can then be lived in, sold and connected to utilities, but it may not be extended or rebuilt. That affects your plans too: adding a bedroom, a guest annexe or a pool is usually not possible with an AFO property. Read more in our guide to <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation</a>.</p>
+
+  <h2 id="letting">Holiday letting and licences</h2>
+  <p>If you want to let the house to tourists, even occasionally, the type of property matters a great deal.</p>
+  <ul>
+    <li><strong>Apartment or village house on residential land</strong>: in Andalusia this falls under the <em>vivienda con fines turísticos</em> scheme (VFT, often called VUT). You register the home with a declaration in the Andalusian tourism register (<em>Registro de Turismo de Andalucía</em>) and must meet requirements, including air conditioning and heating, furnishing and a complaints form. Since 2024 town halls may limit the number of holiday lets. On letting platforms you advertise with the number from the Andalusian register; the national registration number required since July 2025 was struck down by Spain’s Supreme Court in May 2026. See also our guide to <a href="/en/guides/renting-out-property-in-spain/">renting out property in Spain</a>.</li>
+    <li><strong>Apartment</strong>: since April 2025, starting a new holiday let requires prior approval from the community of owners, by a three-fifths vote. In many complexes this is the biggest hurdle.</li>
+    <li><strong>Finca on rural land</strong>: the standard VFT scheme only applies to homes on residential land. Country houses fall under the rural tourism rules (<em>alojamiento rural</em>, such as a <em>casa rural</em>), with their own requirements. Whether a house with AFO status qualifies varies case by case.</li>
+  </ul>
+  <p>Holiday-letting rules change quickly. Have the options for a specific property checked with the town hall or a specialist gestor or lawyer before you buy. Thinking of a B&amp;B? Read the dedicated page below.</p>
+
+  <h2 id="audience">What suits you?</h2>
+  <p>The trade-offs depend heavily on your situation. For each type of buyer we have set out the main points:</p>
+  <GuideChildren lang="en" parent="finca-apartment-or-village-house" />
+  <p>In short: if you want peace and space and enjoy DIY or are happy to outsource the upkeep, a finca will make you happy. If you want carefree living, with everything within walking distance and little maintenance, choose an apartment. The village house sits in between: Spanish village life, amenities close by, no community fees, but stairs and an old house that needs attention.</p>
+  <p>Not living there all year? Think about <a href="/en/key-holding/">key holding</a> too: someone who checks regularly, inspects the roof after a storm and keeps the garden and pool in order. With a remote finca that is no luxury. Found a house that needs work? We are happy to quote for the <a href="/en/renovation/">renovation</a>.</p>
+  <p class="note">This guide gives general information and is not legal or tax advice. The verdict on a specific property comes from a lawyer, architect or gestor.</p>
+</Guide>

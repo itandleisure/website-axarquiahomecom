@@ -2,9 +2,11 @@
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
 import Services from '../../components/Services.astro';
+import HomeMenu from '../../components/HomeMenu.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
+import VillageChips from '../../components/VillageChips.astro';
 import { site } from '../../data/site';
 
 const faq = [
@@ -31,8 +33,8 @@ const faq = [
 ];
 ---
 <Base
-  title="Niederländische Handwerker in der Axarquía | Renovierung, Hausbetreuung, Gutachten"
-  description="Ein Haus in der Axarquía kaufen, renovieren oder betreuen lassen? Ein niederländisches Team für Renovierung, Gutachten vor dem Kauf, Hausbetreuung und Instandhaltung in Nerja, Cómpeta, Frigiliana, Torrox und Umgebung."
+  title="Handwerker in der Axarquía: Renovierung & Hausbetreuung"
+  description="Haus in der Axarquía kaufen, renovieren oder betreuen lassen? Renovierung, Gutachten, Hausbetreuung und Instandhaltung in Nerja, Cómpeta, Torrox und Umgebung."
   path="/de/"
   lang="de"
 >
@@ -51,6 +53,8 @@ const faq = [
       <li>Fotoberichte, wenn Sie weg sind</li>
     </ul>
   </Hero>
+
+  <HomeMenu lang="de" />
 
   <div id="leistungen"><Services lang="de" /></div>
 
@@ -91,9 +95,7 @@ const faq = [
     <div class="wrap">
       <h2>Wo wir arbeiten</h2>
       <p class="section-intro">Von der Küste bis in die Bergdörfer: Wir sind in der ganzen Axarquía tätig, auch bei Landhäusern, bei denen Wasser, Zufahrt und Genehmigungen besondere Aufmerksamkeit brauchen.</p>
-      <ul class="villages">
-        {site.villages.map((v) => <li>{v}</li>)}
-      </ul>
+      <VillageChips lang="de" />
     </div>
   </section>
 

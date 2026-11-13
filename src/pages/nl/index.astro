@@ -2,9 +2,11 @@
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
 import Services from '../../components/Services.astro';
+import HomeMenu from '../../components/HomeMenu.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
+import VillageChips from '../../components/VillageChips.astro';
 import { site } from '../../data/site';
 
 const faq = [
@@ -31,8 +33,8 @@ const faq = [
 ];
 ---
 <Base
-  title="Nederlandse aannemer in de Axarquía | Renovatie, sleutelbeheer en keuring"
-  description="Huis kopen, verbouwen of laten beheren in de Axarquía? Het Nederlandstalige team voor renovatie, aankoopkeuring, sleutelbeheer en onderhoud in Nerja, Cómpeta, Torrox en omgeving."
+  title="Nederlandse aannemer Axarquía: renovatie & sleutelbeheer"
+  description="Huis kopen, verbouwen of laten beheren in de Axarquía? Nederlandstalig team voor renovatie, aankoopkeuring, sleutelbeheer en onderhoud rond Nerja."
   path="/nl/"
 >
   <Hero
@@ -49,6 +51,8 @@ const faq = [
       <li>Foto-updates als u weg bent</li>
     </ul>
   </Hero>
+
+  <HomeMenu />
 
   <div id="diensten"><Services /></div>
 
@@ -88,9 +92,7 @@ const faq = [
     <div class="wrap">
       <h2>Ons werkgebied</h2>
       <p class="section-intro">Van de kust tot de bergdorpen: we werken in de hele Axarquía, inclusief fincas op het platteland waar water, toegang en vergunningen extra aandacht vragen.</p>
-      <ul class="villages">
-        {site.villages.map((v) => <li>{v}</li>)}
-      </ul>
+      <VillageChips lang="nl" />
     </div>
   </section>
 

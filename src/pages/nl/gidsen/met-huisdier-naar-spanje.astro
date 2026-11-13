@@ -1,0 +1,89 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'papieren', label: 'De papieren: chip, paspoort en rabiës' },
+  { id: 'reis', label: 'De reis: auto, vliegtuig of dierenvervoerder' },
+  { id: 'regels', label: 'Spaanse regels voor honden en katten' },
+  { id: 'gezondheid', label: 'Gezondheid: zandvlieg, processierups en hitte' },
+  { id: 'huis', label: 'Een huis en tuin die veilig zijn voor uw dier' },
+  { id: 'weg', label: 'Als u terug naar Nederland gaat' },
+];
+
+const faq = [
+  {
+    q: 'Wat heb ik nodig om mijn hond mee te nemen naar Spanje?',
+    a: 'Een chip, een Europees dierenpaspoort en een geldige vaccinatie tegen rabiës. Bij de eerste rabiësvaccinatie moet u 21 dagen wachten voor u reist, en een pup moet bij die vaccinatie minimaal 12 weken oud zijn. Een behandeling tegen lintworm is voor Spanje niet nodig.',
+  },
+  {
+    q: 'Wat kost een dierenvervoerder van Nederland naar Spanje?',
+    a: 'Voor vervoer over de weg met een gespecialiseerde dierenvervoerder rekent u meestal op € 500 tot € 1.500, afhankelijk van de grootte van het dier, de afstand en of het een gedeelde of een eigen rit is.',
+  },
+  {
+    q: 'Mag ik mijn hond in Spanje alleen thuislaten?',
+    a: 'Niet lang. De Spaanse dierenwelzijnswet (Ley 7/2023) bepaalt dat u een hond niet langer dan 24 uur achter elkaar alleen mag laten, en andere huisdieren niet langer dan drie dagen. Gaat u weg zonder uw dier, regel dan opvang of iemand die dagelijks komt.',
+  },
+  {
+    q: 'Zijn er giftige planten in Spaanse tuinen?',
+    a: 'Ja. Oleander (adelfa), die in bijna elke Andalusische tuin en langs veel wegen staat, is zeer giftig voor honden en katten. Ook de sagopalm, ricinus (wonderboom) en de rupsen van de processievlinder in dennenbomen zijn gevaarlijk.',
+  },
+];
+---
+<Guide slug="met-huisdier-naar-spanje" toc={toc} faq={faq} dienst="onderhoud" onderwerp="Ik wil mijn tuin en zwembad veilig maken voor mijn hond of kat." ctaTitle="Uw huis klaar voor uw hond of kat?" ctaText="Wij plaatsen een hek of poort rond het perceel, een zwembadhek of veilige afdekking, een hondenluik, stevige horren en schaduw op het terras. Stuur een paar foto’s, dan denken we mee.">
+  <p>Dit is algemene informatie. De regels voor het reizen met dieren veranderen af en toe. Controleer ze voor vertrek bij uw dierenarts of de NVWA.</p>
+
+  <h2 id="papieren">De papieren: chip, paspoort en rabiës</h2>
+  <p>Binnen de Europese Unie reist een hond, kat of fret met deze drie dingen:</p>
+  <ol>
+    <li><strong>Een chip</strong>, geplaatst vóór de rabiësvaccinatie.</li>
+    <li><strong>Een Europees dierenpaspoort</strong>, afgegeven door uw dierenarts.</li>
+    <li><strong>Een geldige rabiësvaccinatie</strong>, in het paspoort. Na de eerste vaccinatie wacht u 21 dagen voor u mag reizen. Het dier moet bij de vaccinatie minimaal 12 weken oud zijn. Blijft u de vaccinatie op tijd herhalen, dan geldt die wachttijd niet opnieuw.</li>
+  </ol>
+  <p>Een lintwormbehandeling is voor Spanje niet nodig. Neemt u meer dan vijf dieren mee, of gaat het om een verkoop of adoptie, dan gelden strengere regels.</p>
+
+  <h2 id="reis">De reis: auto, vliegtuig of dierenvervoerder</h2>
+  <table class="prices">
+    <thead><tr><th>Manier</th><th>Goed om te weten</th></tr></thead>
+    <tbody>
+      <tr><td>Met de auto</td><td>Ruim 2.000 km, in twee of drie dagen. Plan pauzes elke twee à drie uur en hotels die huisdieren toelaten. Nooit het dier in een warme auto laten zitten.</td></tr>
+      <tr><td>Vliegtuig, in de cabine</td><td>Bij veel maatschappijen mogen kleine honden en katten mee in een tas onder de stoel, samen meestal tot 8 à 10 kg. Het aantal plaatsen per vlucht is beperkt, dus boek vroeg.</td></tr>
+      <tr><td>Vliegtuig, in het ruim</td><td>Voor grotere dieren, in een goedgekeurde bench. Niet elke maatschappij of route biedt het aan, en in de zomer gelden vaak beperkingen vanwege de hitte.</td></tr>
+      <tr><td>Dierenvervoerder</td><td>Een gespecialiseerd bedrijf haalt uw dier op en brengt het naar Spanje, over de weg of door de lucht. Handig als u zelf vliegt. Indicatie € 500 tot € 1.500.</td></tr>
+    </tbody>
+  </table>
+  <p>Laat uw dier vooraf wennen aan de bench, en neem eten, water, een riem, poepzakjes en de papieren binnen handbereik mee.</p>
+
+  <h2 id="regels">Spaanse regels voor honden en katten</h2>
+  <ul>
+    <li><strong>Registratie</strong>: woont u vast in Andalusië, laat uw dierenarts dan uw dier registreren in het Andalusische register (<em>RAIA</em>). Sommige gemeenten vragen ook om inschrijving in hun eigen dierenregister.</li>
+    <li><strong>Alleen thuis</strong>: volgens de dierenwelzijnswet (<em>Ley 7/2023</em>) mag een hond niet langer dan 24 uur alleen zijn, en andere huisdieren niet langer dan drie dagen.</li>
+    <li><strong>Aansprakelijkheid</strong>: dezelfde wet verplicht een aansprakelijkheidsverzekering voor honden. Vaak kan die mee op uw <a href="/nl/gidsen/verzekering-huis-spanje/">woonverzekering</a>. Vraag uw verzekeraar naar de actuele regels.</li>
+    <li><strong>Grote of zogeheten gevaarlijke rassen</strong> (<em>perros potencialmente peligrosos</em>), zoals een rottweiler of pitbull, hebben in Andalusië een vergunning van de gemeente, een extra verzekering en een muilkorf op straat nodig.</li>
+    <li><strong>Strand</strong>: op de meeste stranden zijn honden in het seizoen niet toegestaan. Langs de kust van de Axarquía zijn er wel enkele hondenstranden (<em>playas caninas</em>).</li>
+  </ul>
+
+  <h2 id="gezondheid">Gezondheid: zandvlieg, processierups en hitte</h2>
+  <ul>
+    <li><strong>Leishmaniose</strong>: een ernstige ziekte die zandvliegjes overbrengen, vooral van mei tot oktober rond de schemering. Bescherm uw hond met een halsband of druppels en vraag uw dierenarts naar de vaccinatie. Laat hem ’s avonds binnen slapen.</li>
+    <li><strong>Hartworm</strong>: wordt door muggen overgebracht. Een preventief middel is in Zuid-Spanje aan te raden.</li>
+    <li><strong>Processierups</strong>: van januari tot april in en onder dennen. Een hond die eraan snuffelt of likt, moet direct naar de dierenarts. Meer in de gids <a href="/nl/gidsen/ongedierte-bestrijden-spanje/">ongedierte in uw huis</a>.</li>
+    <li><strong>Hitte</strong>: wandel in de zomer vroeg in de ochtend en laat op de avond. Terrastegels en asfalt worden heet genoeg om poten te verbranden.</li>
+    <li><strong>Teken en vlooien</strong>: het hele jaar door actief, behandel dus ook in de winter.</li>
+  </ul>
+
+  <h2 id="huis">Een huis en tuin die veilig zijn voor uw dier</h2>
+  <p>Een huis in de Axarquía is vaak niet gemaakt voor een hond of kat. Fincas hebben zelden een dicht hek, zwembaden zijn niet afgeschermd en terrassen liggen in de volle zon. Dit zijn de verbeteringen die het meest opleveren:</p>
+  <ul>
+    <li><strong>Een hek rond het perceel of een deel ervan</strong>, met een poort die vanzelf sluit. Zie <a href="/nl/gidsen/tuin-en-perceel-spanje/">tuin en perceel</a>.</li>
+    <li><strong>Een zwembadhek of een veilige afdekking</strong>, en een trapje of hellend vlak waarmee een dier zelf uit het water kan. Honden verdrinken vaak omdat ze de rand niet op komen.</li>
+    <li><strong>Schaduw</strong> op het terras met een pergola of zonnedoek. Zie <a href="/nl/gidsen/zonwering-rolluiken-horren-spanje/">zonwering</a>.</li>
+    <li><strong>Een hondenluik of kattenluik</strong> in een deur of muur.</li>
+    <li><strong>Stevige horren</strong> of kattengaas voor ramen en balkons, zodat uw kat niet naar buiten valt of springt.</li>
+    <li><strong>Giftige planten weghalen</strong>, zoals oleander en sagopalm.</li>
+    <li><strong>Een tegel- of microcementvloer</strong> binnen is makkelijk schoon te houden en blijft koel. Zie <a href="/nl/gidsen/vloer-kiezen-spanje/">een vloer kiezen</a>.</li>
+  </ul>
+  <p>Wij kunnen dit voor u regelen voordat u met uw dier aankomt. <a href="/nl/aanvraag/?dienst=onderhoud">Vertel ons wat u nodig heeft</a>.</p>
+
+  <h2 id="weg">Als u terug naar Nederland gaat</h2>
+  <p>Voor de reis terug gelden dezelfde EU-regels: chip, paspoort en een geldige rabiësvaccinatie. Overwintert u met uw dier, dan hoeft u dus niets extra te regelen, zolang de vaccinatie geldig blijft. Gaat u via het Verenigd Koninkrijk of Ierland, dan gelden extra eisen, zoals een lintwormbehandeling voor honden. Lees ook de gids <a href="/nl/gidsen/overwinteren-in-spanje/">overwinteren in Spanje</a>.</p>
+</Guide>

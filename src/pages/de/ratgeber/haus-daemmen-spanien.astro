@@ -1,0 +1,133 @@
+---
+import ArticlePhoto from '../../../components/ArticlePhoto.astro';
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kurz', label: 'Die kurze Antwort' },
+  { id: 'warum', label: 'Warum spanische Häuser kalt sind' },
+  { id: 'dach', label: 'Das Dach dämmen' },
+  { id: 'waende', label: 'Die Wände dämmen' },
+  { id: 'vorsatzschale', label: 'Eine Vorsatzschale einbauen' },
+  { id: 'vergleich', label: 'Alle Möglichkeiten im Vergleich' },
+  { id: 'feuchte', label: 'Dämmen ohne Feuchtigkeitsprobleme' },
+  { id: 'reihenfolge', label: 'Wo fangen Sie an?' },
+];
+
+const faq = [
+  {
+    q: 'Lohnt sich Dämmen in einem warmen Land?',
+    a: 'Mehr als man denkt. Ein gut gedämmtes Dach hält im Sommer die Hitze draußen und im Winter die Wärme drinnen. In einem ungedämmten Haus in der Axarquía sparen Sie mit Dach- und Wanddämmung oft 30 bis 50 % beim Heizen und Kühlen, und das Haus fühlt sich in beiden Jahreszeiten viel angenehmer an.',
+  },
+  {
+    q: 'Brauche ich eine Genehmigung zum Dämmen?',
+    a: 'Innendämmung, etwa eine Vorsatzschale oder eine abgehängte Decke, erfordert meist nur eine einfache Anzeige (declaración responsable) oder eine kleine Baugenehmigung. Außendämmung verändert die Fassade und braucht meist eine Genehmigung. In geschützten Ortskernen kann die Gemeinde Vorgaben zu Putz und Farbe machen.',
+  },
+  {
+    q: 'Wie viel Platz kostet eine Vorsatzschale?',
+    a: 'Eine Vorsatzschale aus Gipskarton auf Metallprofilen mit 4 bis 5 cm Dämmung ist insgesamt 6 bis 8 cm dick. In einem Raum von 4 × 4 Metern mit zwei gedämmten Außenwänden verlieren Sie etwa einen halben Quadratmeter Fläche.',
+  },
+  {
+    q: 'Gibt es Förderung oder Steuervorteile?',
+    a: 'Wer in Spanien steuerlich ansässig ist, konnte in den letzten Jahren einen Teil der Kosten für energetische Sanierungen von der Einkommensteuer (IRPF) absetzen, mit einem Energieausweis vor und nach den Arbeiten. Die Regelung wurde mehrfach verlängert. Fragen Sie Ihren Gestor, ob sie für Sie noch gilt. Nichtresidenten profitieren meist nicht.',
+  },
+];
+---
+<Guide lang="de" slug="haus-daemmen-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Ein Haus, das im Winter warm und im Sommer kühl bleibt?" ctaText="Wir prüfen, wo Ihr Haus die meiste Wärme verliert, und sorgen für eine saubere Ausführung, vom Dach bis zur Vorsatzschale.">
+  <h2 id="kurz">Die kurze Antwort</h2>
+  <p>Die meisten Häuser in der Axarquía, die vor 2007 gebaut wurden, haben kaum oder gar keine Dämmung. Beginnen Sie beim <strong>Dach</strong>: Dort kommt im Sommer die Hitze herein und geht im Winter die Wärme verloren. Danach die <strong>Außenwände</strong>, außen mit einem Dämmsystem oder innen mit einer <strong>Vorsatzschale</strong>. Unten sehen Sie, was jede Methode bedeutet und was sie bringt.</p>
+
+  <h2 id="warum">Warum spanische Häuser kalt sind</h2>
+  <p>Wer den ersten Winter in Spanien verbringt, ist oft überrascht: draußen 18 Grad in der Sonne, drinnen 13 Grad und klamm. Ältere spanische Häuser wurden gebaut, um im Sommer kühl zu bleiben: Fliesenböden, einschalige Wände aus Ziegel oder Naturstein, Einfachverglasung und ein ungedämmtes Dach. Erst seit der Bauordnung von 2006 (<em>Código Técnico de la Edificación</em>) ist Dämmung bei Neubauten Pflicht.</p>
+  <p>Die Folge: Im Winter ist es drinnen kälter als tagsüber draußen, mit <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit und Schimmel</a> als Nebenwirkung. Im Sommer heizt sich ein Flachdach oder eine Dachterrasse so auf, dass das Obergeschoss nachts nicht mehr abkühlt.</p>
+
+  <h2 id="dach">Das Dach dämmen</h2>
+  <p>Das Dach bringt am meisten für den geringsten Aufwand. Es gibt drei übliche Wege:</p>
+  <h3>Von innen: abgehängte Decke</h3>
+  <p>Unter der bestehenden Decke wird ein Rahmen mit Mineralwolle oder Holzfaser montiert und mit Gipskarton verkleidet. Das Dach selbst bleibt unberührt. Geeignet, wenn der Raum hoch genug ist.</p>
+  <h3>Auf dem Flachdach oder der Dachterrasse: Umkehrdach</h3>
+  <p>Auf die bestehende Dachhaut kommen druckfeste Dämmplatten (XPS) und darauf neue Fliesen oder Kies. Die beste Lösung für die typischen Flachdächer der Axarquía, am besten zusammen mit einer neuen Abdichtung.</p>
+  <h3>Bei einem neuen Ziegeldach</h3>
+  <p>Muss das Dach ohnehin herunter, etwa wegen Undichtigkeit oder <a href="/de/ratgeber/asbest-uralita-dach-spanien/">Uralita</a>, dämmen Sie gleich zwischen oder auf den Sparren. Das ist der klügste Zeitpunkt: Die Dämmung geht in einem Arbeitsgang mit. Siehe auch <a href="/de/kosten/dach-und-dachterrasse/">Dach und Dachterrasse</a>.</p>
+  <h3>Schneller Gewinn: reflektierende Dachfarbe</h3>
+  <p>Eine weiße, reflektierende Beschichtung auf dem Flachdach hält im Sommer viel Hitze draußen. Sie ersetzt keine Dämmung, ist aber eine schnelle Verbesserung.</p>
+
+  <h2 id="waende">Die Wände dämmen</h2>
+  <h3>Von außen (SATE)</h3>
+  <p>Ein Wärmedämmverbundsystem (<em>SATE</em>, in Deutschland WDVS) mit Dämmplatten und Putz. Es wirkt am besten: Die Wand bleibt warm, Wärmebrücken verschwinden, und Sie verlieren innen keinen Platz. Nachteil: Die Fassade verändert sich, und es ist eine Genehmigung nötig.</p>
+  <h3>In der Luftschicht</h3>
+  <p>Häuser aus den siebziger Jahren bis 2000 haben manchmal eine zweischalige Wand mit Luftschicht (<em>cámara de aire</em>). Sie lässt sich über kleine Bohrlöcher mit Dämmgranulat oder Schaum füllen. Schnell und günstig, aber nur, wenn wirklich eine Luftschicht da ist; ein Fachmann prüft das mit Probebohrung oder Kamera.</p>
+  <h3>Von innen</h3>
+  <p>Darf oder kann die Außenseite nicht verändert werden, oder haben Sie ein Reihenhaus im Dorf, dämmen Sie von innen. Das geht mit Dämmputzen (Kork oder Kalk, 2 bis 4 cm) oder, meist besser, mit einer Vorsatzschale.</p>
+
+  <h2 id="vorsatzschale">Eine Vorsatzschale einbauen</h2>
+  <ArticlePhoto name="isolatie-glaswol-close-up" lang="de" />
+  <p>Eine Vorsatzschale (<em>trasdosado</em>) ist eine zweite, dünne Wand direkt vor der bestehenden Außenwand. Sie ist die beliebteste Art, ein bestehendes spanisches Haus von innen zu dämmen.</p>
+  <h3>So funktioniert es</h3>
+  <ul>
+    <li>Vor die Wand kommt ein Rahmen aus <strong>Metallprofilen</strong> (oder Holz).</li>
+    <li>Zwischen die Profile kommt <strong>Dämmung</strong>: Mineralwolle, Holzfaser oder PIR-Platten, meist 4 bis 6 cm.</li>
+    <li>Auf der warmen Seite kommt eine <strong>Dampfbremse</strong>, damit Feuchtigkeit aus dem Raum nicht in der kalten Wand kondensiert.</li>
+    <li>Darauf <strong>Gipskarton</strong> (<em>pladur</em>), in Bad und Küche feuchtebeständige Platten. Danach spachteln und streichen.</li>
+  </ul>
+  <p>Es gibt auch <strong>fertige Verbundplatten</strong>: Gipskarton mit aufkaschierter Dämmung, die direkt auf eine ebene Wand geklebt werden. Dünner und schneller, aber nur für trockene, ebene Wände.</p>
+  <h3>Vorteile</h3>
+  <ul>
+    <li>Der Raum heizt sich viel schneller auf, die Wand fühlt sich nicht mehr kalt an.</li>
+    <li>Neue Leitungen und Steckdosen lassen sich gleich darin verlegen.</li>
+    <li>Keine Fassadengenehmigung nötig; Raum für Raum möglich.</li>
+    <li>Schiefe, rissige oder unschöne Wände werden in einem Schritt gerade.</li>
+  </ul>
+  <h3>Worauf Sie achten sollten</h3>
+  <ul>
+    <li>Sie verlieren 6 bis 10 cm pro Wand.</li>
+    <li>Sockelleisten, Steckdosen, Heizkörper und Fensterbänke müssen versetzt oder angepasst werden.</li>
+    <li><strong>Zuerst die Feuchtigkeit beheben.</strong> Eine Vorsatzschale vor einer nassen Wand versteckt das Problem und verschlimmert es. Bei alten Natursteinwänden mit aufsteigender Feuchte wählen Sie ein diffusionsoffenes System (Holzfaser, Kork, Kalk) mit Hinterlüftung.</li>
+  </ul>
+  <h3>Ausführungen</h3>
+  <table class="prices">
+    <thead><tr><th>Ausführung</th><th>Geeignet für</th></tr></thead>
+    <tbody>
+      <tr><td>Gipskarton-Verbundplatte</td><td>Trockene, ebene Wände; schnell</td></tr>
+      <tr><td>Metallprofile, Mineralwolle, Gipskarton</td><td>Der Standard; Platz für Leitungen</td></tr>
+      <tr><td>Diffusionsoffenes System (Holzfaser oder Kork, Kalk)</td><td>Alte Natursteinwände</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Eine Vorsatzschale lässt sich Raum für Raum einbauen. Beginnen Sie mit den Räumen, die Sie im Winter am meisten nutzen, etwa Wohn- und Schlafzimmer.</p>
+
+  <h2 id="vergleich">Alle Möglichkeiten im Vergleich</h2>
+  <p>Mehr Sterne bedeuten mehr Komfort und größere Einsparung.</p>
+  <table class="prices">
+    <thead><tr><th>Maßnahme</th><th>Wirkung</th></tr></thead>
+    <tbody>
+      <tr><td>Reflektierende Dachbeschichtung</td><td>★★ (vor allem im Sommer)</td></tr>
+      <tr><td>Luftschicht verfüllen</td><td>★★★</td></tr>
+      <tr><td>Dämmputz aus Kalk oder Kork</td><td>★★</td></tr>
+      <tr><td>Abgehängte Decke mit Dämmung</td><td>★★★</td></tr>
+      <tr><td>Vorsatzschale innen</td><td>★★★</td></tr>
+      <tr><td>Flachdach oder Dachterrasse dämmen (Umkehrdach)</td><td>★★★★</td></tr>
+      <tr><td>Außendämmung (SATE)</td><td>★★★★</td></tr>
+      <tr><td>Neues Ziegeldach mit Dämmung</td><td>★★★★</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Müssen zuerst Feuchtigkeit oder Risse behoben werden, geht das vor. Für Verkauf oder Vermietung brauchen Sie außerdem einen Energieausweis (<em>certificado energético</em>). Welche Förderung und welcher Steuerabzug 2026 für Dämmung möglich sind, lesen Sie unter <a href="/de/ratgeber/foerderung-energetische-sanierung-spanien/">Förderung für energetische Sanierung</a>.</p>
+  <p>Vergessen Sie die Fenster nicht: Einfachglas in einem alten Rahmen lässt mehr Wärme durch als eine ganze Wand. Siehe <a href="/de/kosten/fenster-und-rahmen/">Fenster und Rahmen</a>. Und mit Dämmung arbeitet eine <a href="/de/kosten/klimaanlage-und-waermepumpe/">Wärmepumpe oder Klimaanlage</a> viel sparsamer; lesen Sie auch <a href="/de/ratgeber/heizen-und-kuehlen-spanien/">Heizen und Kühlen in Spanien</a>.</p>
+  <p><strong>Möchten Sie Ihr Haus dämmen lassen?</strong> Wir prüfen, wo Ihr Haus die meiste Wärme verliert, und sorgen für eine saubere Ausführung, vom Dach bis zur Vorsatzschale. <a href="/de/anfrage/?dienst=renovatie">Erzählen Sie uns, was Sie angehen möchten</a>.</p>
+
+  <h2 id="feuchte">Dämmen ohne Feuchtigkeitsprobleme</h2>
+  <p>Ein gedämmtes Haus ist dichter. Das ist gut für die Wärme, aber Feuchtigkeit muss irgendwohin. Achten Sie daher auf:</p>
+  <ul>
+    <li><strong>Lüftung</strong>: Lüftungsschlitze in den Fenstern oder ein Abluftventilator in Bad und Küche.</li>
+    <li><strong>Zuerst Feuchtigkeitsursachen beheben</strong>: ein undichtes Dach, ein kaputtes Fallrohr oder aufsteigende Feuchte.</li>
+    <li><strong>Das richtige Material</strong>: bei alten Steinwänden diffusionsoffen arbeiten.</li>
+    <li><strong>Ein Haus, das lange leer steht</strong>, profitiert von einem Luftentfeuchter oder regelmäßigem Lüften. Das lässt sich über die <a href="/de/hausbetreuung/">Hausbetreuung</a> regeln.</li>
+  </ul>
+
+  <h2 id="reihenfolge">Wo fangen Sie an?</h2>
+  <ol>
+    <li>Beim <strong>Dach</strong>, vor allem über dem Obergeschoss oder einer Dachterrasse.</li>
+    <li>Bei den <strong>Fenstern</strong>, wenn noch Einfachglas drin ist.</li>
+    <li>Bei den <strong>Außenwänden</strong> der Räume, die Sie im Winter am meisten nutzen, zum Beispiel mit einer Vorsatzschale.</li>
+    <li>Erst danach die <strong>Heizung</strong> wählen: Ein gedämmtes Haus braucht eine kleinere Anlage.</li>
+  </ol>
+  <p class="note">Dieser Ratgeber gibt allgemeine Informationen für die Axarquía im November 2026. Regeln können sich ändern.</p>
+</Guide>

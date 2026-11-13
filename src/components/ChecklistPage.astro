@@ -9,7 +9,7 @@ import type { Lang } from '../i18n';
 
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
-const c = checklist[lang];
+const c = checklist[lang]!;
 const p = c.page;
 const sample = c.sections.find((s) => s.items.length >= 10) ?? c.sections[0];
 // Link naar de finca-gids in dezelfde taal

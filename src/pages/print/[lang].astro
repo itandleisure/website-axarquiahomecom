@@ -6,10 +6,10 @@ import { site } from '../../data/site';
 import { langs, path, type Lang } from '../../i18n';
 
 export function getStaticPaths() {
-  return langs.map((lang) => ({ params: { lang } }));
+  return langs.filter((lang) => checklist[lang]).map((lang) => ({ params: { lang } }));
 }
 const lang = Astro.params.lang as Lang;
-const c = checklist[lang];
+const c = checklist[lang]!;
 const utm = 'utm_source=checklist&utm_medium=pdf';
 const requestUrl = `${site.url}${path(lang, 'request')}?dienst=aankoopkeuring&${utm}`;
 const shortUrl = `${site.domain}${path(lang, 'request')}`;

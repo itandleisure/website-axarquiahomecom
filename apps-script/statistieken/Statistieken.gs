@@ -275,15 +275,20 @@ function doGet() {
   const wie = (Session.getActiveUser().getEmail() || '').toLowerCase();
   const eigenaar = (Session.getEffectiveUser().getEmail() || '').toLowerCase();
   const mag = wie && wie === eigenaar;
+  // ALLOWALL: het dashboard mag getoond worden op axarquiahome.com/statistiek/.
+  // De cijfers blijven alleen zichtbaar voor de eigenaar (controle hierboven + Google-login).
   if (!mag) {
-    return HtmlService.createHtmlOutput('<p style="font-family:sans-serif">Geen toegang. Open het dashboard via de link voor alleen jezelf.</p>')
-      .setTitle('Geen toegang');
+    return HtmlService.createHtmlOutput('<p style="font-family:sans-serif">Geen toegang. Log in met het Google-account dat eigenaar is van het dashboard.</p>'
+      + '<script>try{window.top.postMessage("axh-statistiek:geen-toegang","*")}catch(e){}</script>')
+      .setTitle('Geen toegang')
+      .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
   }
   const t = HtmlService.createTemplateFromFile('Dashboard');
   t.data = JSON.stringify(data_()).replace(/</g, '\\u003c');
   return t.evaluate()
     .setTitle('Statistieken axarquiahome.com')
-    .addMetaTag('viewport', 'width=device-width, initial-scale=1');
+    .addMetaTag('viewport', 'width=device-width, initial-scale=1')
+    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
 
 function data_() {

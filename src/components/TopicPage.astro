@@ -1,0 +1,128 @@
+---
+// Kosten-, probleem- of zelf-doen-pagina: kort antwoord, secties met tabellen, FAQ, bronnen, links en CTA.
+import ArticlePhoto from './ArticlePhoto.astro';
+import { topicPhotos } from '../data/topic-photos';
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Faq from './Faq.astro';
+import Cta from './Cta.astro';
+import Todo from './Todo.astro';
+import { site } from '../data/site';
+import { calcs, calcPath } from '../data/calculator';
+import { guidesBy, guideBase, guideHref } from '../data/guides';
+import {
+  topics, topicBase, topicUi, topicHref, topicByRef, topicAlternates, pricesChecked, requestPath,
+  type TopicKind, type TopicLang,
+} from '../data/topics';
+
+interface Props { kind: TopicKind; lang: TopicLang; slug: string; }
+const { kind, lang, slug } = Astro.props;
+const t = topics[kind][lang].find((x) => x.slug === slug)!;
+const u = topicUi[lang];
+const path = topicHref(kind, lang, t);
+const hub = topicBase[kind][lang];
+const fmt = (d: string) => new Date(d).toLocaleDateString(u.dateLocale, { day: 'numeric', month: 'long', year: 'numeric' });
+const toc = t.sections.map((s) => ({ id: s.id, label: s.h }));
+const q = new URLSearchParams({ dienst: t.dienst, onderwerp: t.onderwerp }).toString();
+const requestHref = `${requestPath[lang]}?${q}`;
+// Rekentool: alleen bij kostenpagina's waarvoor de rekentool een klus heeft
+const calcText = {
+  nl: { title: 'Bereken uw eigen prijs', text: 'Vul in wat u wilt laten doen en zie direct de bandbreedte.', btn: 'Naar de rekentool' },
+  en: { title: 'Work out your own price', text: 'Enter what you want done and see the range straight away.', btn: 'Open the calculator' },
+  de: { title: 'Eigenen Preis berechnen', text: 'Geben Sie ein, was gemacht werden soll, und sehen Sie sofort die Spanne.', btn: 'Zum Kostenrechner' },
+}[lang];
+const calcHref = kind === 'costs' && calcs.some((c) => c.key === t.key) ? `${calcPath[lang]}?klus=${t.key}` : '';
+// Links naar gidsen die (nog) niet bestaan laten we weg, zodat een pagina kan verwijzen naar een gids die later wordt toegevoegd
+const guidePaths = new Set(guidesBy[lang].map((g) => guideHref(lang, g)));
+const links = t.links.filter((l) => !l.href.startsWith(guideBase[lang]) || guidePaths.has(l.href));
+const related = t.related.map((r) => topicByRef(r, lang)).filter((x) => !!x);
+const photo = topicPhotos(kind, t.key, lang);
+const article = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  image: photo.lead ? new URL(photo.lead.og, site.url).href : `${site.url}/og-image.png`,
+  headline: t.title,
+  description: t.description,
+  inLanguage: lang,
+  datePublished: t.published,
+  dateModified: t.updated ?? t.published,
+  author: { '@type': 'Organization', name: site.brand, url: site.url },
+  publisher: { '@id': `${site.url}/#bedrijf` },
+  mainEntityOfPage: new URL(path, site.url).href,
+};
+---
+<Base title={t.seoTitle} description={t.description} path={path} lang={lang} alternates={topicAlternates(kind, t.key)} jsonLd={[article]} ogImage={photo.lead?.og} ogImageAlt={photo.lead?.alt}>
+  <Breadcrumbs lang={lang} items={[{ name: u.hub[kind], href: hub }, { name: t.short, href: path }]} />
+  <article class="section guide" style="padding-top:24px">
+    <div class="wrap guide-grid">
+      <div class="prose">
+        <p class="eyebrow">{u.eyebrow[kind]} · {t.minutes} {u.minRead}</p>
+        <h1>{t.title}</h1>
+        <p class="lead">{t.lead}</p>
+        <p class="note">{u.updated} {fmt(t.updated ?? t.published)}</p>
+        <ArticlePhoto photo={photo.lead} lead />
+        <div class="answer">
+          <p class="answer-title">{u.shortAnswer}</p>
+          <p set:html={t.answer} />
+        </div>
+        {calcHref && (
+          <div class="calc-callout">
+            <div>
+              <p><strong>{calcText.title}</strong></p>
+              <p class="note">{calcText.text}</p>
+            </div>
+            <a class="btn btn-small" href={calcHref}>{calcText.btn}</a>
+          </div>
+        )}
+        {kind === 'costs' && lang === 'nl' && <Todo label="bevestiging van deze bedragen door het bouwbedrijf." />}
+        {t.sections.map((s, i) => (
+          <>
+            <h2 id={s.id}>{s.h}</h2>
+            {photo.inline?.section === i && <ArticlePhoto photo={photo.inline.photo} />}
+            {s.html && <Fragment set:html={s.html} />}
+            {s.table && (
+              <div class="table-scroll">
+                <table class="prices">
+                  <thead><tr>{s.table.head.map((h) => <th set:html={h} />)}</tr></thead>
+                  <tbody>{s.table.rows.map((r) => <tr>{r.map((c) => <td set:html={c} />)}</tr>)}</tbody>
+                </table>
+              </div>
+            )}
+            {s.table?.note && <p class="note" set:html={s.table.note} />}
+            {s.after && <Fragment set:html={s.after} />}
+          </>
+        ))}
+        <h2 id="links">{u.alsoUseful}</h2>
+        <ul>{links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+        <aside class="sources">
+          <h2 class="h3">{u.sourcesTitle}</h2>
+          <p class="note">{kind === 'diy' ? u.sourcesTextDiy : u.sourcesText} {fmt(pricesChecked)}.</p>
+          <ul class="note">{t.sources.map((s) => <li><a href={s.url} rel="noopener nofollow" target="_blank">{s.name}</a></li>)}</ul>
+        </aside>
+      </div>
+      <aside class="toc">
+        <p class="footer-title" style="color:var(--ink)">{u.inPage}</p>
+        <ol>{toc.map((x) => <li><a href={`#${x.id}`}>{x.label}</a></li>)}</ol>
+        <a class="btn btn-small" href={requestHref}>{kind === 'costs' ? u.askQuote : kind === 'diy' ? u.askDiy : u.askHelp}</a>
+      </aside>
+    </div>
+  </article>
+  {t.faq.length > 0 && <Faq items={t.faq} lang={lang} />}
+  <Cta lang={lang} dienst={t.dienst} onderwerp={t.onderwerp} title={t.ctaTitle} text={t.ctaText} />
+  {related.length > 0 && (
+    <section class="section">
+      <div class="wrap">
+        <h2>{u.related[kind]}</h2>
+        <div class="cards">
+          {related.map((r) => (
+            <a class="card" href={topicHref(r.kind, lang, r.topic)}>
+              <h3>{r.topic.title}</h3>
+              <p>{r.topic.description}</p>
+              <span class="more">{u.read} →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</Base>

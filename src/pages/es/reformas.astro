@@ -1,0 +1,115 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import Todo from '../../components/Todo.astro';
+import { prices, site, esPrice } from '../../data/site';
+
+const faq = [
+  {
+    q: '¿Cuánto cuesta reformar una casa en la Axarquía?',
+    a: `Depende mucho del estado de la vivienda. Actualizar un apartamento puede costar unos miles de euros; la reforma integral de un cortijo antiguo puede superar con creces los 100.000 €. La mayoría de las reformas que hacemos están entre ${esPrice(prices.renovatieTotaal)}. Tras una visita recibe un presupuesto desglosado por partidas.`,
+  },
+  {
+    q: '¿Necesito licencia para reformar?',
+    a: 'Casi siempre hace falta algún trámite. Para obras menores basta normalmente con una declaración responsable en el ayuntamiento. Una ampliación o una obra que toque la estructura necesita licencia de obra mayor con proyecto de arquitecto. Nosotros vemos qué necesita cada obra y nos encargamos de la tramitación.',
+  },
+  {
+    q: '¿Pueden hacer la obra aunque yo no esté?',
+    a: 'Sí. Muchos de nuestros clientes no están en la Axarquía durante la obra. Tiene una persona de contacto fija, fotos y vídeos cada semana y hablamos por teléfono o videollamada. Paga por fases, a medida que se terminan.',
+  },
+  {
+    q: '¿Cuánto dura una reforma?',
+    a: 'Un baño o una cocina suelen llevar unas semanas. Una reforma integral, normalmente de tres a seis meses, según la licencia y el alcance. El presupuesto incluye un calendario.',
+  },
+  {
+    q: '¿Puedo ampliar mi casa de campo?',
+    a: 'Depende de la situación legal de la vivienda y del planeamiento municipal. Una vivienda en suelo rústico con declaración AFO, por lo general, no se puede ampliar. Compruébelo antes de comprar. Trabajamos con un arquitecto que estudia cada caso.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Reformas integrales y parciales',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['es', 'en', 'nl'],
+};
+---
+<Base
+  title="Reformas en la Axarquía: casas, baños, cocinas y cortijos"
+  description="Empresa de reformas en la Axarquía: reformas integrales, baños, cocinas y cortijos en Vélez-Málaga, Torre del Mar, Nerja, Torrox, Cómpeta y alrededores."
+  path="/es/reformas/"
+  lang="es"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="es" items={[{ name: 'Reformas', href: '/es/reformas/' }]} />
+  <Hero
+    lang="es"
+    eyebrow="Reformas integrales y parciales"
+    title="Reformar su casa, <em>sin quebraderos de cabeza</em>"
+    lead="Tiene una casa en la Axarquía, o está a punto de comprarla, y necesita una reforma. Nos encargamos de todo el proyecto, desde el diseño y la licencia hasta el último azulejo."
+    cta="Pedir presupuesto"
+    ctaHref="/es/solicitud/?dienst=renovatie"
+  />
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>Qué reformamos</h2>
+        <p>La mayoría de las viviendas de la Axarquía tienen más de treinta años. Casas de pueblo en Cómpeta y Frigiliana con muros gruesos y ventanas pequeñas, pisos en la costa de Torre del Mar y Nerja, y cortijos en el monte con pozo propio. Cada tipo tiene sus problemas, y los conocemos bien.</p>
+        <ul class="checks">
+          <li><strong>Reforma integral</strong>: fontanería, electricidad, aislamiento, distribución y acabados.</li>
+          <li><strong>Baños y cocinas</strong>: diseño, demolición, instalación y acabados, también a medida.</li>
+          <li><strong>Cocinas exteriores</strong>: cocina de obra con barbacoa, encimera y fregadero, de estilo andaluz o ibicenco.</li>
+          <li><strong><a href="/es/guias/instalacion-aire-acondicionado/">Aire acondicionado</a> y aerotermia</strong>: fresco en verano y calefacción eficiente en invierno, con la instalación eléctrica incluida.</li>
+          <li><strong><a href="/es/guias/placas-solares/">Placas solares</a> y <a href="/es/guias/baterias-para-placas-solares/">baterías</a></strong>: su propia energía desde el tejado, también para un cortijo aislado de la red.</li>
+          <li><strong>Electricidad</strong>: cuadro nuevo, toma de tierra, aumento de potencia y boletín eléctrico.</li>
+          <li><strong>Alicatados y piedra natural</strong>: suelos, paredes, terrazas y muros de piedra.</li>
+          <li><strong>Rehabilitación de cortijos</strong>: humedades, tejados, terrazas, agua y saneamiento.</li>
+          <li><strong>Ventanas y aislamiento</strong>: adiós a los inviernos fríos detrás de un cristal simple. Mejora también el <a href="/es/guias/certificado-energetico/">certificado energético</a>.</li>
+          <li><strong>Chimeneas y estufas</strong>: deshollinado, reparación o una estufa nueva.</li>
+          <li><strong>Terrazas, pérgolas y porches</strong>: más vida al aire libre, también en julio.</li>
+        </ul>
+        <h2>Lo que no se ve en una visita</h2>
+        <p>Humedades en los muros, instalaciones eléctricas antiguas sin toma de tierra, tejados que gotean con la primera lluvia o una ampliación sin licencia. Son cosas que no se ven en una visita en verano. Las revisamos con usted, le decimos qué es urgente y qué puede esperar, y le damos un precio por partida.</p>
+        <h2>Licencias, arquitecto y final de obra</h2>
+        <p>Una cocina o un baño nuevos solo necesitan una declaración responsable, así que podemos empezar esa misma semana. Una ampliación, una planta más o una obra estructural necesitan licencia, proyecto de arquitecto y dirección de obra de un arquitecto técnico. Nosotros llevamos todo el proceso, desde la solicitud hasta el certificado final de obra.</p>
+      </div>
+      <div class="box">
+        <h3>Precios orientativos</h3>
+        <table class="prices">
+          <tbody>
+            <tr><td>Reforma integral</td><td>{esPrice(prices.renovatieTotaal)}</td></tr>
+            <tr><td>Reforma por m²</td><td>{esPrice(prices.renovatiePerM2)}</td></tr>
+            <tr><td>Baño nuevo</td><td>{esPrice(prices.badkamer)}</td></tr>
+            <tr><td>Cocina nueva</td><td>{esPrice(prices.keuken)}</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Precios orientativos con materiales y mano de obra, sin IVA. El precio real depende del estado de la vivienda y de lo que usted quiera. Siempre recibe antes un presupuesto.</p>
+        <Todo label="prijzen per m² en keuken van het bouwbedrijf, en bevestiging van de andere bedragen." />
+        <a class="btn" href="/es/solicitud/?dienst=renovatie">Pedir presupuesto</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="es"
+    title="Cómo es una reforma con nosotros"
+    steps={[
+      { t: 'Primer contacto', d: 'Cuéntenos qué quiere en nuestro formulario breve. Le llamamos en menos de 24 horas.' },
+      { t: 'Visita y mediciones', d: 'Medimos, hacemos fotos y hablamos de lo que quiere, en la casa o por videollamada.' },
+      { t: 'Presupuesto y licencia', d: 'Un presupuesto por partidas y un calendario. Tramitamos la licencia en el ayuntamiento.' },
+      { t: 'Obra y entrega', d: 'Un jefe de obra, fotos cada semana y pago por fases terminadas.' },
+    ]}
+  />
+
+  <Faq items={faq} lang="es" />
+  <Cta lang="es" dienst="renovatie" title="¿Tiene planes para su casa?" />
+  <Services lang="es" exclude="reformas" title="También le puede interesar" />
+</Base>

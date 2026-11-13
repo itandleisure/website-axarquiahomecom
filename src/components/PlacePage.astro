@@ -1,4 +1,5 @@
 ---
+import { placeLinkIfExists } from '../data/place-links';
 // Eén plaats: overzicht, Zien en doen of Wonen. Teksten komen uit src/data/place-content/.
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
@@ -6,11 +7,15 @@ import Hero from './Hero.astro';
 import Faq from './Faq.astro';
 import Cta from './Cta.astro';
 import Todo from './Todo.astro';
+import PhotoStrip from './PhotoStrip.astro';
+import { photosFor } from '../data/place-photos';
 import { places, placeBySlug, placeHref, type Place, type PlacePage } from '../data/places';
 import { placeContent } from '../data/place-content';
 import { services, path as route, type Lang } from '../i18n';
 import { site } from '../data/site';
-import { guidesBy, guideHref } from '../data/guides';
+import { guidesBy, guideHref, guideAt } from '../data/guides';
+import { placeTabs } from '../data/place-tabs';
+import { fiestaHref, fiestaSlugFor } from '../data/fiestas';
 
 interface Props { lang: Lang; place: Place; page: PlacePage; }
 const { lang, place, page } = Astro.props;
@@ -57,11 +62,10 @@ const order = place.setting === 'coast' ? [1, 0, 4, 3, 2] : place.setting === 'm
 const svcs = order.map((i) => ({ ...services[lang][i], key: svcKeys[i] }));
 const request = route(lang, 'request');
 
-const tabs: { page: PlacePage; label: string }[] = [
-  { page: 'overview', label: T.overview },
-  ...(c.see ? [{ page: 'see' as PlacePage, label: T.see }] : []),
-  ...(c.living ? [{ page: 'living' as PlacePage, label: T.living }] : []),
-];
+// Tabs, inclusief Bouwvergunning en Praktisch (bij een kern die van de gemeente)
+const tabs = placeTabs(lang, place);
+const fiestaSlug = fiestaSlugFor(place.slug, place.municipality);
+const fiestaLabel = { nl: 'Feesten', en: 'Fiestas', de: 'Feste', sv: 'Fester' }[lang];
 const self = placeHref(lang, place, page);
 const sub = page === 'see' ? c.see! : page === 'living' ? c.living! : null;
 const title = sub ? sub.title : c.title;
@@ -77,22 +81,30 @@ const nearby = places
   .filter((p) => p.municipality === place.slug || place.municipality === p.slug || (p.municipality && p.municipality === place.municipality) || p.setting === place.setting)
   .slice(0, 4);
 const buyerGuides = guidesBy[lang].filter((_, i) => [1, 2, 3, 7].includes(i));
+// Buiten de kust liggen veel huizen aan een camino: daar ook de gids over de toegangsweg
+const roadIndex = guidesBy.nl.findIndex((g) => g.slug === 'toegangsweg-finca-spanje');
+const roadGuide = place.setting !== 'coast' && roadIndex >= 0 ? guideAt(lang, roadIndex) : undefined;
 
-const placeLd = {
+// Foto's: de eerste is de hero en de deelafbeelding, de rest komt in een fotoreeks
+const [heroPhoto, ...morePhotos] = photosFor(place.slug, page === 'see' || page === 'living' ? page : 'overview', lang);
+const photosLabel = { nl: `Foto's van ${place.name}`, en: `Photos of ${place.name}`, de: `Fotos von ${place.name}`, sv: `Bilder från ${place.name}` }[lang];
+
+const placeLd: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': 'Place',
   name: place.name,
   containedInPlace: { '@type': 'AdministrativeArea', name: parent ? `${parent.name}, Axarquía, Málaga` : 'Axarquía, Málaga' },
   url: new URL(self, site.url).href,
 };
+if (heroPhoto) placeLd.image = new URL(heroPhoto.og, site.url).href;
 ---
-<Base title={title} description={description} path={self} lang={lang} jsonLd={page === 'overview' ? [placeLd] : []}>
+<Base title={title} description={description} path={self} lang={lang} jsonLd={page === 'overview' ? [placeLd] : []} ogImage={heroPhoto?.og} ogImageAlt={heroPhoto?.alt}>
   <Breadcrumbs lang={lang} items={crumbs} />
-  <Hero lang={lang} eyebrow={parent ? `${place.name} · ${parent.name}` : 'Axarquía'} title={h1} lead={lead} ctaHref={`${request}?plaats=${place.slug}`}>
+  <Hero lang={lang} eyebrow={parent ? `${place.name} · ${parent.name}` : 'Axarquía'} title={h1} lead={lead} ctaHref={`${request}?plaats=${place.slug}`} image={heroPhoto}>
     {tabs.length > 1 && (
       <nav class="place-tabs" aria-label={place.name}>
         {tabs.map((t) => (
-          <a href={placeHref(lang, place, t.page)} aria-current={t.page === page ? 'page' : undefined}>{t.label}</a>
+          <a href={t.href} aria-current={t.page === page ? 'page' : undefined}>{t.label}</a>
         ))}
       </nav>
     )}
@@ -104,12 +116,13 @@ const placeLd = {
         <div class="prose">
           {c.intro.map((p) => <p set:html={p} />)}
           {c.forWhom && (<><h2>{T.forWhom} {place.name}?</h2><p set:html={c.forWhom} /></>)}
+          {c.repairs && (<><h2>{c.repairs.h}</h2>{c.repairs.p.map((p) => <p set:html={p} />)}</>)}
           {parent && <p class="note">{place.name} {T.partOf} <a href={placeHref(lang, parent)}>{parent.name}</a>.</p>}
         </div>
         <div class="box">
           <h3>{T.facts}</h3>
           <table class="prices"><tbody>
-            {c.facts.map(([k, v]) => <tr><td>{k}</td><td set:html={v} /></tr>)}
+            {c.facts.map(([k, v]) => { const href = placeLinkIfExists(lang, v); return <tr><td>{k}</td>{href ? <td><a href={href}>{v}</a></td> : <td set:html={v} />}</tr>; })}
           </tbody></table>
         </div>
       </div>
@@ -126,6 +139,7 @@ const placeLd = {
           <>
             <h2>{T.fiestas}</h2>
             <ul>{c.see.fiestas.map((f) => <li><strong>{f.name}</strong> ({f.when}): <span set:html={f.text} /></li>)}</ul>
+            {fiestaSlug && <p><a class="more" href={fiestaHref(lang, fiestaSlug)}>{fiestaLabel}: {placeBySlug(fiestaSlug)!.name} →</a></p>}
           </>
         )}
       </div>
@@ -142,12 +156,16 @@ const placeLd = {
         <div class="box">
           <h3>{T.guides}</h3>
           <ul class="checks">
+            {tabs.filter((t) => t.page === 'permit' || t.page === 'practical').map((t) => <li><a href={t.href}>{t.label}</a></li>)}
             {buyerGuides.map((g) => <li><a href={guideHref(lang, g)}>{g.short}</a></li>)}
+            {roadGuide && <li><a href={guideHref(lang, roadGuide)}>{roadGuide.short}</a></li>}
           </ul>
         </div>
       </div>
     </section>
   )}
+
+  <PhotoStrip photos={morePhotos} label={photosLabel} />
 
   <section class="section alt">
     <div class="wrap">

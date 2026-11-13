@@ -1,7 +1,9 @@
 ---
 // Zichtbare plek voor inhoud die nog van het bouwbedrijf moet komen.
-// Wordt alleen getoond zolang de site niet live is (launchReady = false).
+// Alleen zichtbaar zolang niet alles is aangeleverd (launchReady = false), en dan
+// alleen in `npm run dev` of als de site niet indexeerbaar is: bezoekers en Google
+// zien deze blokken niet.
 import { site } from '../data/site';
 interface Props { label: string; }
 ---
-{!site.launchReady && <div class="todo" role="note"><strong>Nog aanleveren:</strong> {Astro.props.label}</div>}
+{!site.launchReady && (import.meta.env.DEV || !site.indexable) && <div class="todo" role="note"><strong>Nog aanleveren:</strong> {Astro.props.label}</div>}

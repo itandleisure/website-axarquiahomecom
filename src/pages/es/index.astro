@@ -1,0 +1,115 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Services from '../../components/Services.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import VillageChips from '../../components/VillageChips.astro';
+import { site } from '../../data/site';
+
+const faq = [
+  {
+    q: '¿En qué idiomas atienden?',
+    a: 'En español, inglés y neerlandés. Tiene una persona de contacto fija desde la primera llamada hasta la entrega, y nos ocupamos del trato con proveedores, técnicos y el ayuntamiento.',
+  },
+  {
+    q: '¿Dónde trabajan?',
+    a: `En toda la Axarquía y la parte oriental de la Costa del Sol, entre otros en ${site.villages.join(', ')}. También en cortijos y casas de campo del interior.`,
+  },
+  {
+    q: '¿Instalan placas solares y aire acondicionado?',
+    a: 'Sí. Instalamos placas solares con o sin batería, aire acondicionado con bomba de calor y aerotermia, y nos encargamos del boletín eléctrico, la legalización y, si procede, de la subvención.',
+  },
+  {
+    q: '¿Cuánto cuesta pedir presupuesto?',
+    a: 'Nada. La solicitud, la primera conversación y la visita para el presupuesto son gratuitas y sin compromiso.',
+  },
+  {
+    q: 'Voy a comprar una casa. ¿Pueden revisarla antes?',
+    a: 'Sí. Una inspección antes de comprar muestra el estado de la vivienda, qué hay que hacer y cuánto cuesta, antes de que firme nada. Una casa se compra tal como está, así que merece la pena.',
+  },
+];
+---
+<Base
+  title="Reformas, placas solares y mantenimiento en la Axarquía"
+  description="Reformas, placas solares, aire acondicionado, piscinas, inspección antes de comprar y gestión de llaves en Vélez-Málaga, Nerja, Torrox, Cómpeta y la Axarquía."
+  path="/es/"
+  lang="es"
+>
+  <Hero
+    lang="es"
+    eyebrow="Comprar · Reformar · Cuidar"
+    title="Su casa en la Axarquía, <em>en buenas manos</em>"
+    lead="Una empresa constructora de dirección holandesa que trabaja en toda la costa al este de Málaga. Desde la inspección antes de comprar y la reforma hasta las placas solares, el aire acondicionado y el cuidado de su casa cuando no está."
+    secondary="Nuestros servicios"
+    secondaryHref="#servicios"
+  >
+    <ul class="trust">
+      <li>Una sola persona de contacto</li>
+      <li>Respuesta en 24 horas</li>
+      <li>Precio cerrado en el presupuesto</li>
+      <li>Informes con fotos si no está</li>
+    </ul>
+  </Hero>
+
+  <div id="servicios"><Services lang="es" /></div>
+
+  <section class="section alt">
+    <div class="wrap split">
+      <div>
+        <h2>¿Por qué un equipo de dirección holandesa?</h2>
+        <p>Quien compra o reforma una casa se encuentra a menudo con los mismos problemas: presupuestos que no cuadran, profesionales que dejan de coger el teléfono, plazos que se alargan y nadie que coordine el conjunto.</p>
+        <p>Nosotros trabajamos con acuerdos claros, un presupuesto por escrito, una persona de contacto fija y un calendario que cumplimos. Y conocemos la zona: la forma de construir de los pueblos blancos, a los proveedores locales y a los ayuntamientos.</p>
+        <p>Como también hacemos mantenimiento y gestión de llaves, seguimos ahí después de la entrega. Somos los primeros en ver si el tejado gotea o la piscina se pone verde, y lo arreglamos antes de que sea un problema.</p>
+      </div>
+      <div class="box">
+        <h3>Una persona de contacto para todo</h3>
+        <ul class="checks">
+          <li>Reformas, baños y cocinas</li>
+          <li><a href="/es/guias/placas-solares/">Placas solares</a> y <a href="/es/guias/baterias-para-placas-solares/">baterías</a></li>
+          <li><a href="/es/guias/instalacion-aire-acondicionado/">Aire acondicionado</a> y aerotermia</li>
+          <li>Construcción y mantenimiento de piscinas</li>
+          <li>Tejados, terrazas y goteras</li>
+          <li>Inspección antes de comprar</li>
+          <li>Gestión de llaves y alquiler vacacional</li>
+        </ul>
+        <a class="btn" href="/es/solicitud/">Cuéntenos su proyecto</a>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="es"
+    steps={[
+      { t: 'Solicitud', d: 'Responda a unas preguntas en nuestro formulario breve. Las fotos ayudan, pero no son necesarias.' },
+      { t: 'Contacto', d: 'En menos de 24 horas su persona de contacto le llama o le escribe para hablar de sus planes.' },
+      { t: 'Visita y presupuesto', d: 'Vemos la vivienda (también si usted no está) y le enviamos un presupuesto claro y desglosado.' },
+      { t: 'Ejecución', d: 'Un jefe de obra, fotos cada semana y un calendario que cumplimos.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Guías prácticas</h2>
+      <p class="section-intro">Lo que conviene saber antes de invertir en su casa, con precios reales de la Axarquía.</p>
+      <div class="cards">
+        <a class="card" href="/es/guias/placas-solares/"><h3>Placas solares</h3><p>Precio, ahorro, compensación de excedentes y trámites.</p><span class="more">Leer la guía →</span></a>
+        <a class="card" href="/es/guias/subvenciones-placas-solares/"><h3>Subvenciones 2026</h3><p>Junta de Andalucía, IRPF, IBI y CAE: qué sigue abierto.</p><span class="more">Leer la guía →</span></a>
+        <a class="card" href="/es/guias/instalacion-aire-acondicionado/"><h3>Aire acondicionado</h3><p>Split, multisplit, conductos o aerotermia, con precios.</p><span class="more">Leer la guía →</span></a>
+      </div>
+      <p style="margin-top:18px"><a href="/es/guias/">Todas las guías →</a></p>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <h2>Dónde trabajamos</h2>
+      <p class="section-intro">De la costa a los pueblos de montaña: trabajamos en toda la Axarquía, también en cortijos donde el agua, el camino de acceso y las licencias requieren una atención especial.</p>
+      <VillageChips lang="es" />
+    </div>
+  </section>
+
+  <Faq items={faq} lang="es" />
+  <Cta lang="es" />
+</Base>

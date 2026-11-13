@@ -1,0 +1,53 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import MaybeLink from '../../../../components/MaybeLink.astro';
+
+const toc = [
+  { id: 'baurecht', label: 'Ist noch Baurecht übrig?' },
+  { id: 'anbau', label: 'Anbau oder Erweiterung' },
+  { id: 'stockwerk', label: 'Ein zusätzliches Stockwerk' },
+  { id: 'terrasse', label: 'Terrasse schließen (Cerramiento)' },
+  { id: 'optionen', label: 'Welche Möglichkeiten gibt es?' },
+];
+
+const faq = [
+  { q: 'Brauche ich eine Genehmigung, um meine Terrasse zu schließen?', a: 'Ja. Eine Terrasse mit Glas oder Mauern zu schließen macht Außenraum zu Innenraum und verändert die Fassade. Dafür braucht es in Andalusien eine Genehmigung, in einer Wohnanlage auch die Zustimmung der Gemeinschaft.' },
+  { q: 'Wie viele Eigentümer müssen dem Schließen einer Terrasse zustimmen?', a: 'Nach der Ley de Propiedad Horizontal (Art. 10.3) muss die Eigentümerversammlung mit drei Fünfteln der Eigentümer zustimmen, die zusammen auch drei Fünftel der Anteile halten. Legen die Statuten schon eine einheitliche Ausführung für alle Terrassen fest, ist es oft einfacher.' },
+  { q: 'Sind rahmenlose Glasvorhänge auch ein Cerramiento?', a: 'Meistens ja. Auch ein Glasvorhang (Cortina de cristal) schließt die Terrasse ab und verändert das Erscheinungsbild. Manche Gemeinden sind damit großzügiger als bei Mauern, aber in einer Wohnanlage muss die Gemeinschaft immer zustimmen.' },
+  { q: 'Darf ich ein Stockwerk auf mein Haus setzen?', a: 'Nur wenn der Bebauungsplan ein weiteres Stockwerk erlaubt und noch Baurecht übrig ist. Außerdem muss die Konstruktion das Gewicht tragen. In einer Wohnanlage braucht es die Zustimmung der Gemeinschaft und der direkt betroffenen Eigentümer.' },
+];
+---
+<Guide lang="de" slug="bauen-auf-eigenem-grundstueck-anbau-und-terrasse-schliessen" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Mehr Platz im Haus?" ctaText="Sagen Sie uns, was Sie möchten. Wir prüfen, was der Bebauungsplan erlaubt, kümmern uns um Architekt und Genehmigung und bauen es.">
+  <h2 id="baurecht">Ist noch Baurecht übrig?</h2>
+  <p>Jede Erweiterung beginnt mit derselben Frage: Wie viel darf auf Ihrem Grundstück noch dazukommen? Der Bebauungsplan (<em>PGOU</em>) legt fest, wie viele Quadratmeter insgesamt gebaut werden dürfen (<em>Edificabilidad</em>), wie hoch und mit welchem Abstand zur Grenze. Ist das ausgeschöpft, darf nichts mehr hinzukommen. Ein Architekt kann das prüfen, oder Sie beantragen ein <em>Informe urbanístico</em> bei der Gemeinde.</p>
+  <p>Auf einer Finca (<em>Suelo rústico</em>) ist der Spielraum meist klein oder schon ausgeschöpft. Hat das Haus AFO-Status, darf nichts hinzukommen. Siehe <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>.</p>
+
+  <h2 id="anbau">Anbau oder Erweiterung</h2>
+  <p>Ein Anbau, eine Erweiterung oder ein zusätzliches Zimmer ist in Andalusien immer genehmigungspflichtig, mit einem Projekt eines Architekten und eines <em>Arquitecto técnico</em>. Sie dürfen erst beginnen, wenn die Genehmigung vorliegt und das Ausführungsprojekt bei der Gemeinde eingereicht ist. Danach müssen die zusätzlichen Quadratmeter ins Kataster und am besten auch in die Urkunde. Alle Schritte stehen im Ratgeber <MaybeLink href="/de/ratgeber/baugenehmigung-umbau-andalusien/">Baugenehmigung für den Umbau</MaybeLink>.</p>
+
+  <h2 id="stockwerk">Ein zusätzliches Stockwerk</h2>
+  <p>Ein Stockwerk aufzusetzen ist einer der größten Umbauten. Neben dem Baurecht muss der Bebauungsplan die zusätzliche Höhe erlauben, und Fundament und Mauern müssen das Gewicht tragen. Das berechnet der Architekt. Ältere Dorfhäuser müssen oft verstärkt werden. In einer Wohnanlage braucht ein zusätzliches Stockwerk die Zustimmung der Gemeinschaft und der direkt betroffenen Eigentümer.</p>
+
+  <h2 id="terrasse">Terrasse schließen (Cerramiento)</h2>
+  <p>Die Terrasse mit Glas oder einem Wintergarten zu schließen, ist in Spanien sehr verbreitet und wird oft ohne Genehmigung gemacht. Trotzdem ist es ein Umbau mit Regeln:</p>
+  <ul>
+    <li><strong>Gemeinde</strong>: Aus Außenraum wird Innenraum. Das zählt zum Baurecht und verändert die Fassade, Sie brauchen also eine Genehmigung. Passt es nicht in den Bebauungsplan, ist es nicht erlaubt.</li>
+    <li><strong>Gemeinschaft</strong>: In einer Wohnanlage verändern Sie das Erscheinungsbild des Gebäudes. Nach der Ley de Propiedad Horizontal (Art. 10.3) muss die Versammlung zustimmen, mit drei Fünfteln der Eigentümer und drei Fünfteln der Anteile. Oft schreibt die Gemeinschaft auch eine einheitliche Ausführung vor, damit alle Terrassen gleich aussehen.</li>
+    <li><strong>Ohne Zustimmung</strong>: Die Gemeinschaft kann den Rückbau verlangen, und die Gemeinde kann ein Bußgeld verhängen. Auch beim Verkauf kann es Fragen aufwerfen.</li>
+  </ul>
+
+  <h2 id="optionen">Welche Möglichkeiten gibt es?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Option</th><th>Gut zu wissen</th></tr></thead>
+    <tbody>
+      <tr><td>Markise oder Screens auf der Terrasse</td><td>Kein Cerramiento. In einer Anlage oft eine vorgeschriebene Farbe.</td></tr>
+      <tr><td>Glasvorhang (Cortina de cristal)</td><td>Auf- und zuschiebbar, freie Sicht. Gemeinschaft und oft Genehmigung nötig.</td></tr>
+      <tr><td>Aluminiumrahmen mit Glas</td><td>Besser gegen Wind und Kälte, wird ein echtes zusätzliches Zimmer.</td></tr>
+      <tr><td>Wintergarten mit Dach am Haus</td><td>Gilt als Anbau: Projekt und Genehmigung.</td></tr>
+      <tr><td>Gemauerter Anbau oder zusätzliches Zimmer</td><td>Die dauerhafteste Erweiterung, mit Architekt.</td></tr>
+      <tr><td>Zusätzliches Stockwerk</td><td>Oft mit Verstärkung der Konstruktion.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Möchten Sie das umsetzen lassen? Sagen Sie uns, was Sie vorhaben. Wir klären, was erlaubt ist, kümmern uns um die Genehmigung und bauen es für Sie.</strong> <a href="/de/anfrage/?dienst=renovatie">Kontakt aufnehmen →</a></p>
+  <p>Zurück zur Übersicht: <a href="/de/ratgeber/bauen-auf-eigenem-grundstueck-spanien/">Bauen auf dem eigenen Grundstück</a>.</p>
+</Guide>

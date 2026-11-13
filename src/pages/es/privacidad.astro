@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Todo from '../../components/Todo.astro';
+import { site, isFilled } from '../../data/site';
+const o = site.operator;
+---
+<Base
+  title="Privacidad y aviso legal"
+  description="Cómo trata Axarquía Home sus datos personales cuando hace una solicitud, con quién los compartimos, cuánto tiempo los guardamos y qué cookies usamos."
+  path="/es/privacidad/"
+  lang="es"
+  noindex={!isFilled(site.operator.name)}
+>
+  <Breadcrumbs lang="es" items={[{ name: 'Privacidad y aviso legal', href: '/es/privacidad/' }]} />
+  <section class="section">
+    <div class="wrap prose">
+      <h1>Privacidad y aviso legal</h1>
+      <Todo label="gegevens van de onderneming van Frans. Laat deze tekst één keer nakijken door een AVG-jurist (ook op de Spaanse LSSI)." />
+      <p>Última actualización: 7 de noviembre de 2026.</p>
+
+      <h2>Quiénes somos</h2>
+      <p>El sitio web {site.domain} lo gestiona {o.name}, {o.address}, inscrita en la Cámara de Comercio de los Países Bajos con el número {o.kvk} («Axarquía Home»). Puede escribirnos a <a href={`mailto:${o.email}`}>{o.email}</a>.</p>
+      <p>Axarquía Home no realiza obras por sí misma. Los trabajos los ejecuta una empresa constructora de la Axarquía, cuidadosamente seleccionada, con la que colaboramos («la constructora»). Si quiere saber qué empresa atiende su solicitud, se lo decimos.</p>
+
+      <h2>Qué datos tratamos</h2>
+      <p>Cuando rellena el formulario de solicitud tratamos los datos que nos facilita: nombre, correo electrónico, teléfono, dirección o municipio de la vivienda, descripción de sus planes, presupuesto y plazos, y las fotos que adjunte. También registramos la fecha y la página desde la que hizo la solicitud.</p>
+
+      <h2>Para qué y con qué base legal</h2>
+      <p>Solo usamos estos datos para atender su solicitud: llamarle o escribirle, acordar una visita y preparar un presupuesto. La base legal es su consentimiento (artículo 6.1.a del RGPD), que da al marcar la casilla del formulario, y la aplicación de medidas precontractuales a petición suya (artículo 6.1.b).</p>
+
+      <h2>Con quién compartimos sus datos</h2>
+      <p>Su solicitud se envía automáticamente a la constructora, que se pondrá en contacto con usted y preparará el presupuesto. Si su consulta no corresponde a los trabajos de la constructora (por ejemplo, una mudanza), solo la enviamos a otro profesional colaborador si usted lo ha autorizado en el formulario.</p>
+      <p>Las solicitudes se guardan en el Google Workspace de Axarquía Home (Google Sheets y Google Drive). Google trata estos datos por encargo nuestro. No vendemos sus datos ni los usamos para boletines sin su consentimiento expreso.</p>
+
+      <h2>Cuánto tiempo guardamos los datos</h2>
+      <p>Guardamos las solicitudes hasta 24 meses después del último contacto, o más si es necesario para la documentación de un contrato (el plazo legal de conservación de facturas en los Países Bajos es de 7 años).</p>
+
+      <h2>Sus derechos</h2>
+      <p>Puede pedirnos en cualquier momento qué datos tenemos sobre usted, rectificarlos o suprimirlos, o retirar su consentimiento. Escriba a <a href={`mailto:${o.email}`}>{o.email}</a>. También tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) o la autoridad neerlandesa (Autoriteit Persoonsgegevens).</p>
+
+      <h2>Cookies y estadísticas</h2>
+      <p>Este sitio solo instala cookies si usted lo acepta en el aviso de cookies. Usamos Google Search Console y Bing Webmaster Tools para ver cómo se encuentra el sitio en los buscadores; para ello no se guarda nada en su dispositivo. Guardamos su elección del aviso en su navegador (localStorage), para no preguntarle en cada página.</p>
+      <p>Para mejorar el sitio usamos Microsoft Clarity, que nos muestra cómo se usan las páginas, por ejemplo dónde se hace clic y hasta dónde se desplaza, mediante mapas de calor y grabaciones anónimas de la visita. Clarity solo se carga si pulsa Aceptar en el aviso de cookies. Entonces instala cookies de Microsoft (como _clck, _clsk y MUID) que se conservan hasta un año. Lo que escribe en los formularios queda oculto. Microsoft trata estos datos por encargo nuestro; consulte la <a href="https://privacy.microsoft.com/privacystatement" rel="noopener">declaración de privacidad de Microsoft</a>. La base legal es su consentimiento (artículo 6.1.a del RGPD), que puede retirar en cualquier momento en Configuración de cookies, al pie de cada página.</p>
+      <p>También usamos Google Analytics 4 para medir las visitas, por ejemplo cuántas personas visitan el sitio, desde qué buscador llegan y qué páginas leen. Google Analytics también se carga solo si pulsa Aceptar. Entonces instala cookies de Google (_ga y _ga_*) que se conservan hasta dos años. Las direcciones IP se acortan y no compartimos datos con fines publicitarios. Google trata estos datos por encargo nuestro; consulte la <a href="https://policies.google.com/privacy" rel="noopener">política de privacidad de Google</a>. La base legal es su consentimiento (artículo 6.1.a del RGPD), que puede retirar en Configuración de cookies, al pie de cada página.</p>
+
+      <h2>Condiciones</h2>
+      <p>La información de este sitio es general y se ha preparado con cuidado, pero no es asesoramiento jurídico, fiscal ni técnico para su caso concreto. Los precios del sitio son orientativos; solo es vinculante un presupuesto por escrito de la constructora. La constructora es responsable de la ejecución de los trabajos, las garantías y las posibles reclamaciones sobre la obra.</p>
+      <p>Sobre legalizaciones (AFO), licencias y subvenciones damos solo explicaciones generales. El dictamen sobre una vivienda concreta corresponde a un arquitecto, abogado o gestor.</p>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,134 @@
+---
+import ArticlePhoto from '../../../components/ArticlePhoto.astro';
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'short', label: 'The short answer' },
+  { id: 'first', label: 'First aid: the first ten minutes' },
+  { id: 'find', label: 'Finding the leak' },
+  { id: 'cause', label: 'Roof, pipe, drain or condensation?' },
+  { id: 'diy', label: 'What you can fix yourself' },
+  { id: 'plumber', label: 'When to call a plumber' },
+  { id: 'pays', label: 'Who pays for the damage?' },
+  { id: 'prevent', label: 'Preventing leaks while you are away' },
+];
+
+const faq = [
+  {
+    q: 'Where is the main stopcock in a Spanish house?',
+    a: 'Usually by the water meter (contador): in a box in the front wall, in a pit in the pavement or at the entrance to the urbanisation. Inside the house there is often a second valve (llave de paso) in the kitchen, bathroom or by the water heater. Find both before anything happens and turn them off and on now and then so they don’t seize up.',
+  },
+  {
+    q: 'Will my insurance pay for water damage?',
+    a: 'A standard home insurance policy (seguro de hogar) usually covers water damage to the house and contents, and often the cost of finding the leak. Repairing the broken pipe itself is sometimes excluded. Damage caused by poor maintenance, such as a roof that has leaked for years, is often refused. Report the damage quickly, take photos and keep everything until the loss adjuster has been.',
+  },
+  {
+    q: 'My upstairs neighbours are causing a leak. What now?',
+    a: 'Warn them straight away and ask them to turn off their stopcock. Then report it to your own insurer, who will usually deal with the neighbours’ insurer. If the water comes from a shared pipe or the building’s roof, it is a matter for the owners’ association (comunidad). Tell the administrator in writing.',
+  },
+  {
+    q: 'My water bill is suddenly very high. Do I have a leak?',
+    a: 'Probably. Do the meter test: turn off all taps and appliances and see whether the meter is still moving. If it is, there is a leak between the meter and your taps. Often it is a running toilet or an underground leak in the garden. Some water companies reduce the bill if you show an invoice proving the leak has been repaired.',
+  },
+];
+---
+<Guide lang="en" slug="water-leak-spain" toc={toc} faq={faq} dienst="onderhoud" ctaTitle="A leak you can’t find, or don’t trust?" ctaText="We trace the leak, repair it and put right the damage. Even if you are not in Spain yourself.">
+  <h2 id="short">The short answer</h2>
+  <p>With a leak: first <strong>turn off the water</strong> and where needed <strong>the electricity</strong>, then <strong>take photos</strong>, and only then look for the cause. The water meter tells you in minutes whether a pipe is leaking. A roof leak mainly shows after rain, a leaking pipe also in dry weather. Report damage quickly to your insurer and, in an apartment, to the neighbours or owners’ association.</p>
+
+  <h2 id="first">First aid: the first ten minutes</h2>
+  <ol>
+    <li><strong>Turn off the main stopcock.</strong> Inside the house it is called the <em>llave de paso</em>, at the meter the <em>llave del contador</em>. If you don’t know where it is, now is the time to find out.</li>
+    <li><strong>Switch off the electricity</strong> in rooms where water reaches sockets, lights or the fuse box. Don’t touch wet appliances.</li>
+    <li><strong>Switch off the water heater</strong> if the leak is on the hot water side.</li>
+    <li><strong>Catch the water</strong> with buckets and towels and lift furniture, rugs and papers out of the way.</li>
+    <li><strong>Take photos and videos</strong> of the damage and the leak, with the date. You will need them for the insurer.</li>
+    <li><strong>Warn the neighbours</strong> if the water is coming from above or running down to them.</li>
+  </ol>
+
+  <h2 id="find">Finding the leak</h2>
+  <h3>The meter test</h3>
+  <p>Turn off all taps, the washing machine, dishwasher and any irrigation, and look at the water meter. Is the small wheel or red star still? Then no pipe is leaking. If it turns, there is a leak somewhere between the meter and the taps. Note the reading and check again after an hour if in doubt.</p>
+  <h3>Looking yourself</h3>
+  <ul>
+    <li><strong>Toilet</strong>: put a few drops of food colouring in the cistern. If colour appears in the bowl after fifteen minutes, it is running. This is the most common cause of a high water bill.</li>
+    <li><strong>Damp patches</strong>: a patch that grows, even in dry weather, points to a pipe. Follow it upwards or to the nearest tap.</li>
+    <li><strong>Loose or hollow tiles</strong>, and a floor that feels warm (with a leak in a hot water pipe).</li>
+    <li><strong>Wet patches in the garden</strong>, or a strip of grass that is conspicuously green: an underground pipe leak.</li>
+    <li><strong>Under the sink and behind the washing machine</strong>: flexible hoses and traps fail first.</li>
+  </ul>
+  <h3>Leak detection by a specialist</h3>
+  <p>If you can’t find the leak, don’t start knocking holes in walls. A leak detection company (<em>detección de fugas</em>) works without breaking anything:</p>
+  <ul>
+    <li><strong>Thermal imaging</strong>: a heat camera shows where warm or cold water runs through a wall or floor.</li>
+    <li><strong>Acoustic</strong>: a sensitive microphone hears the hiss of a leak under the floor.</li>
+    <li><strong>Tracer gas</strong>: a harmless gas in the pipe rises at the leak and is detected. Good for underground leaks.</li>
+    <li><strong>Camera inspection</strong> of drains and sewers.</li>
+  </ul>
+  <p>Many home insurance policies cover leak detection. Check beforehand.</p>
+
+  <h2 id="cause">Roof, pipe, drain or condensation?</h2>
+  <ArticlePhoto name="condens-schimmel-raam" lang="en" />
+  <table class="prices">
+    <thead><tr><th>What you see</th><th>Likely cause</th></tr></thead>
+    <tbody>
+      <tr><td>Patch on the ceiling, only after rain</td><td>Roof or roof terrace. See <a href="/en/problems/roof-leaks/">roof leaks</a>.</td></tr>
+      <tr><td>Patch that grows, even in dry weather; meter moving</td><td>Leaking water pipe</td></tr>
+      <tr><td>Wet patch after showering or washing up; meter still</td><td>Leaking drain, trap or sealant</td></tr>
+      <tr><td>Wet patches at the bottom of the wall, salt tide mark</td><td>Rising damp from the ground</td></tr>
+      <tr><td>Drops on windows and cold walls in winter, black spots</td><td>Condensation. See <a href="/en/problems/damp-and-mould/">damp and mould</a>.</td></tr>
+      <tr><td>Water at the outside wall after heavy rain</td><td>Downpipe, gutter or drainage of the plot</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="diy">What you can fix yourself</h2>
+  <p>Small leaks can often be fixed with a few euros’ worth of parts:</p>
+  <ul>
+    <li><strong>Dripping tap</strong>: a new washer or cartridge. Take the old one to the hardware shop (<em>ferretería</em>).</li>
+    <li><strong>Running toilet</strong>: replace the float valve or flush valve seal in the cistern.</li>
+    <li><strong>Leaking trap</strong>: unscrew, clean, fit a new seal and hand-tighten.</li>
+    <li><strong>Flexible hose</strong> under the tap or to the washing machine: replaced in minutes. Close the isolating valve first.</li>
+    <li><strong>Sealant</strong> around shower or bath: remove the old sealant, let it dry and apply new sanitary silicone.</li>
+    <li><strong>Roof</strong>: put back a loose tile or temporarily seal a crack in a roof terrace. Read <a href="/en/diy/repairing-or-replacing-your-roof/">repairing your roof</a> first, and never go on a roof alone.</li>
+  </ul>
+
+  <h2 id="plumber">When to call a plumber</h2>
+  <ul>
+    <li>The leak is inside a wall, under a floor or underground.</li>
+    <li>The main stopcock does not close properly or has seized.</li>
+    <li>Water has reached the electrics.</li>
+    <li>The leak comes back after your own repair.</li>
+    <li>You have old iron or lead pipes. Then one leak is often the start. Read <a href="/en/guides/replacing-pipes-and-water-heater-spain/">replacing pipes and water heater</a>.</li>
+  </ul>
+  <p>This is what we can help with:</p>
+  <ul>
+    <li>Repairing a tap, trap or toilet</li>
+    <li>Leak detection by a specialist</li>
+    <li>Repairing a pipe in a wall, including making good and tiling</li>
+    <li>Repairing a leak in a roof terrace</li>
+    <li>Putting right water damage: drying, plastering, painting</li>
+    <li>Replacing all the pipes</li>
+  </ul>
+
+  <p><strong>A leak you can’t or don’t want to fix yourself?</strong> We trace the leak, repair it and put the damage right, even when you are not in Spain. <a href="/en/request/?dienst=onderhoud">Tell us what is going on</a>.</p>
+
+  <h2 id="pays">Who pays for the damage?</h2>
+  <ul>
+    <li><strong>Your own home insurance</strong> (<em>seguro de hogar</em>): usually covers water damage to the house and contents, and often finding the leak. Repairing the pipe itself or a worn part sometimes not. Look in your policy for “daños por agua” and “localización de fugas”. See also our guide to <a href="/en/guides/home-insurance-spain/">home insurance in Spain</a>.</li>
+    <li><strong>The neighbours</strong>: if the water comes from their home, their insurance (liability) pays. Your insurer usually settles it with theirs.</li>
+    <li><strong>The owners’ association</strong> (<em>comunidad de propietarios</em>): for leaks from shared pipes, the roof or the façade of the building. Report it in writing to the administrator.</li>
+    <li><strong>You</strong>: for wear and tear and poor maintenance. Insurers refuse claims when a leak turns out to have existed for a long time.</li>
+  </ul>
+  <p>Tip: report damage within seven days, keep broken parts and don’t have anything permanently repaired before the loss adjuster (<em>perito</em>) has been, unless it is needed to prevent worse damage.</p>
+
+  <h2 id="prevent">Preventing leaks while you are away</h2>
+  <p>A leak in an empty house can run for weeks. It is the biggest single cause of damage we see in holiday homes.</p>
+  <ul>
+    <li><strong>Turn off the main stopcock</strong> when you leave. Leave only a separate valve open for irrigation or the pool if needed.</li>
+    <li><strong>Leak sensors</strong> under the water heater, washing machine and dishwasher that send an alert to your phone. A small outlay.</li>
+    <li><strong>A smart main valve</strong> that closes automatically on a leak or unusual use.</li>
+    <li><strong>Roof and gutters</strong> checked before the autumn rains.</li>
+    <li><strong>Someone who looks in regularly</strong>, runs the taps and checks the meter. That is exactly what <a href="/en/key-holding/">key holding</a> does.</li>
+  </ul>
+  <p class="note">This guide gives general information for home owners in the Axarquía in November 2026. What your insurance covers is set out in your own policy.</p>
+</Guide>

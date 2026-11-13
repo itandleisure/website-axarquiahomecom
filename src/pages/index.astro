@@ -1,5 +1,5 @@
 ---
-// Root: stuur bezoekers naar hun taal (Nederlands, Duits, Zweeds of anders Engels).
+// Root: stuur bezoekers naar hun taal (Nederlands, Duits, Zweeds, Spaans of anders Engels).
 ---
 <!doctype html>
 <html lang="en">
@@ -11,12 +11,13 @@
     <link rel="alternate" hreflang="en" href="https://axarquiahome.com/en/" />
     <link rel="alternate" hreflang="de" href="https://axarquiahome.com/de/" />
     <link rel="alternate" hreflang="sv" href="https://axarquiahome.com/sv/" />
+    <link rel="alternate" hreflang="es" href="https://axarquiahome.com/es/" />
     <link rel="alternate" hreflang="x-default" href="https://axarquiahome.com/en/" />
     <script is:inline>
       var l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
-      location.replace(/^(nl|be)/i.test(l) ? '/nl/' : /^de/i.test(l) ? '/de/' : /^sv/i.test(l) ? '/sv/' : '/en/');
+      location.replace(/^(nl|be)/i.test(l) ? '/nl/' : /^de/i.test(l) ? '/de/' : /^sv/i.test(l) ? '/sv/' : /^(es|ca|gl|eu)/i.test(l) ? '/es/' : '/en/');
     </script>
     <noscript><meta http-equiv="refresh" content="0; url=/en/" /></noscript>
   </head>
-  <body><p><a href="/nl/">Nederlands</a> · <a href="/en/">English</a> · <a href="/de/">Deutsch</a> · <a href="/sv/">Svenska</a></p></body>
+  <body><p><a href="/nl/">Nederlands</a> · <a href="/en/">English</a> · <a href="/de/">Deutsch</a> · <a href="/sv/">Svenska</a> · <a href="/es/">Español</a></p></body>
 </html>

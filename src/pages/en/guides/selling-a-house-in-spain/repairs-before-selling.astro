@@ -1,0 +1,94 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'principle', label: 'The principle: no bargaining points' },
+  { id: 'table', label: 'What pays off: guide prices' },
+  { id: 'defects', label: 'First: fix defects' },
+  { id: 'look', label: 'Then: presentation' },
+  { id: 'avoid', label: 'What to leave alone' },
+  { id: 'permit', label: 'Permits for small works' },
+  { id: 'plan', label: 'Approach and timing' },
+];
+
+const faq = [
+  {
+    q: 'Do I have to disclose defects to the buyer?',
+    a: 'Defects you know about should be disclosed. Under the Spanish civil code the seller is liable for hidden defects, and concealing a known defect risks a claim. Fixing it before the sale is therefore often the simplest solution.',
+  },
+  {
+    q: 'Is it worth having my own survey done before selling?',
+    a: 'Often, yes. You see what a buyer will find and can choose: fix it, or disclose it and reflect it in the price. A survey with a price per defect also puts you in a strong position if a buyer later arrives with their own list.',
+  },
+  {
+    q: 'Can I have work done while I am abroad?',
+    a: 'Yes. We price the work from a visit and photos and keep you updated with photos while it is done. With key holding, the same contact can then open the house for the agent’s viewings.',
+  },
+];
+---
+<Guide lang="en" slug="selling-a-house-in-spain-repairs" toc={toc} faq={faq} dienst="renovatie" ctaTitle="What does your house need before you sell?" ctaText="We walk through the house with a buyer’s eyes and give you a price per job. You decide what to have done.">
+  <h2 id="principle">The principle: no bargaining points</h2>
+  <p>A buyer who spots a damp patch, a leaking roof terrace or a crack rarely calculates the actual repair cost. They price in the risk: what else is behind it? That amount comes off their offer. A defect you could fix for a few hundred euros can easily cost you many times that in negotiation.</p>
+  <p>So the rule is simple: fix what a buyer or surveyor will find, make the house fresh and clean, and leave the big choices to the buyer.</p>
+
+  <h2 id="table">What pays off: guide prices</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Job</th><th>Guide price</th><th>Worth it?</th></tr></thead>
+    <tbody>
+      <tr><td>Painting inside (house of about 100 m²)</td><td>€ 1,500 – € 3,500</td><td>Yes, almost always</td></tr>
+      <tr><td>Whitewashing the façade</td><td>€ 1,500 – € 5,000</td><td>Yes, it sets the first impression and the photos</td></tr>
+      <tr><td>Fixing damp and its cause</td><td>€ 300 – € 3,000</td><td>Yes, damp is the biggest deal-breaker</td></tr>
+      <tr><td>Re-waterproofing the roof terrace</td><td>See <a href="/en/costs/roof-and-roof-terrace/">roof and roof terrace costs</a></td><td>Yes, if it leaks or the layer is worn</td></tr>
+      <tr><td>Pool clean, pump and filter working</td><td>€ 150 – € 1,000</td><td>Yes, a green pool puts buyers off</td></tr>
+      <tr><td>Tidying garden and land</td><td>€ 200 – € 1,500</td><td>Yes, especially for a finca</td></tr>
+      <tr><td>Small repairs (taps, handles, tiles, lights)</td><td>€ 200 – € 1,000</td><td>Yes</td></tr>
+      <tr><td>New kitchen doors and worktop</td><td>€ 2,000 – € 6,000</td><td>Sometimes, for a kitchen that looks dated but is sound</td></tr>
+      <tr><td>Complete new kitchen</td><td>See <a href="/en/costs/kitchen-renovation/">kitchen costs</a></td><td>Rarely</td></tr>
+      <tr><td>Complete new bathroom</td><td>See <a href="/en/costs/bathroom-renovation/">bathroom costs</a></td><td>Rarely, unless it is broken</td></tr>
+      <tr><td>Building a new pool</td><td>See <a href="/en/costs/building-a-swimming-pool/">pool costs</a></td><td>No, not just before selling</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Guide prices for the Axarquía, November 2026, excluding VAT. The actual price depends on the house and access.</p>
+
+  <h2 id="defects">First: fix defects</h2>
+  <p>Start with what a surveyor would put in their report. In the Axarquía that is mainly:</p>
+  <ul>
+    <li><strong>Damp and mould</strong> in walls and corners, often from rising damp or a leaking roof terrace. Painting over it does not help; a buyer or surveyor with a moisture meter will find it. See <a href="/en/problems/damp-and-mould/">damp and mould</a>.</li>
+    <li><strong>Leaks</strong> from roof and roof terrace. See <a href="/en/problems/roof-leaks/">roof leaks</a>.</li>
+    <li><strong>Cracks</strong> in walls and façade. Have it established whether they are superficial or point to a foundation problem. See <a href="/en/problems/cracks-in-walls/">cracks in walls</a>.</li>
+    <li><strong>Timber damage</strong> in beams, frames and doors, for example from <a href="/en/problems/termites/">termites</a>.</li>
+    <li><strong>Systems</strong>: wiring without an earth leakage breaker, a water heater at the end of its life, a full septic tank, a pool pump that does not work.</li>
+  </ul>
+  <p>Keep invoices and photos of the work done. Show them to the buyer; it builds trust.</p>
+
+  <h2 id="look">Then: presentation</h2>
+  <p>Next comes the first impression, both at the viewing and in the photos buyers browse from abroad.</p>
+  <ul>
+    <li><strong>Paint</strong>, inside and out. Light, neutral colours. A white façade belongs in the Axarquía and makes the house look cared for at once.</li>
+    <li><strong>Outdoor space</strong>. Terrace clean, broken tiles replaced, garden tidied, pool clear. For a finca: paths passable, weeds cleared and the firebreak around the house maintained.</li>
+    <li><strong>Declutter</strong>. Fewer furniture and personal items make rooms look bigger. Buyers want to picture their own life in the house.</li>
+    <li><strong>Light and air</strong>. Working lights, clean windows, shutters open. A house that has been closed for a long time smells musty; have it aired before viewings.</li>
+  </ul>
+
+  <h2 id="avoid">What to leave alone</h2>
+  <ul>
+    <li><strong>Big kitchen or bathroom renovations</strong>. Buyers have their own taste, and you rarely recover the full cost. If a kitchen really is worn, consider new doors and a worktop rather than a complete kitchen.</li>
+    <li><strong>Extending without a permit</strong>. An extension or enclosed terrace without a permit makes the house harder to sell, not easier. With AFO status you are not allowed to extend at all.</li>
+    <li><strong>Hiding defects instead of fixing them</strong>. A painted-over damp patch comes back, and concealment can lead to a claim after the sale.</li>
+    <li><strong>Personal choices</strong>: bold colours, unusual tiles or themed interiors.</li>
+  </ul>
+
+  <h2 id="permit">Permits for small works</h2>
+  <p>Even smaller works in Spain often need something from the town hall: a notification (<em>declaración responsable</em>) or a minor works licence (<em>licencia de obra menor</em>). This applies, for example, to replacing a bathroom or kitchen, resurfacing a roof terrace or renovating the façade. Painting inside usually does not need one. Exactly what is required varies by town hall; for the work we carry out, we arrange it as part of the job. Work done with the right paperwork is also something you can show when you sell.</p>
+
+  <h2 id="plan">Approach and timing</h2>
+  <ol>
+    <li><strong>Walk through the house</strong> with someone who looks at it like a buyer or surveyor. You get a list of defects and a price per job.</li>
+    <li><strong>Choose</strong>: what do you fix, and what do you disclose and reflect in the price?</li>
+    <li><strong>Carry it out</strong>, ideally outside peak season. Allow a few weeks for a freshen-up; after a damp repair the wall has to dry out before it can be painted.</li>
+    <li><strong>Have photos taken</strong> once everything is done, on a sunny day.</li>
+    <li><strong>Keep it up until the sale</strong>: garden, pool and airing, so the house looks at every viewing just as it does in the photos. That is what <a href="/en/key-holding/">key holding</a> and <a href="/en/maintenance/">maintenance</a> are for.</li>
+  </ol>
+  <p>Want to know what your house needs? Request a <a href="/en/request/?dienst=renovatie">quote for freshening up</a> or a <a href="/en/request/?dienst=onderhoud">repair</a>. Back to the main guide: <a href="/en/guides/selling-a-house-in-spain/">selling a house in Spain</a>.</p>
+  <p class="note">Checked on 5 November 2026. Guide prices are indications, not a quote. Whether an investment pays for itself depends on the house, its location and the market at the time of sale.</p>
+</Guide>

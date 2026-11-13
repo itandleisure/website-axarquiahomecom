@@ -42,8 +42,8 @@ const service = {
 };
 ---
 <Base
-  title="Haus renovieren in Spanien: Komplettsanierung, Bad und Küche in der Axarquía"
-  description="Renovieren in der Axarquía: Komplettsanierung, Bäder, Küchen und Fincas in Nerja, Cómpeta, Frigiliana, Torrox und Umgebung. Klare Angebote, ein Projektleiter als fester Ansprechpartner."
+  title="Haus renovieren in Spanien: Sanierung, Bad und Küche"
+  description="Renovieren in der Axarquía: Komplettsanierung, Bäder, Küchen und Fincas in Nerja, Cómpeta, Frigiliana, Torrox und Umgebung."
   path="/de/renovierung/"
   lang="de"
   jsonLd={[service]}
@@ -56,6 +56,8 @@ const service = {
     lead="Sie haben ein Haus in der Axarquía gekauft, oder haben es vor, und es muss etwas gemacht werden. Wir übernehmen das ganze Projekt, von Planung und Genehmigung bis zur letzten Fliese."
     cta="Angebot anfragen"
     ctaHref="/de/anfrage/?dienst=renovatie"
+    secondary="Kosten berechnen"
+    secondaryHref="/de/kosten/rechner/?klus=woning"
   />
 
   <section class="section">
@@ -65,25 +67,31 @@ const service = {
         <p>Die meisten Häuser, die ausländische Käufer in der Axarquía erwerben, sind über dreißig Jahre alt. Dorfhäuser in Cómpeta und Frigiliana mit dicken Mauern und kleinen Fenstern, Wohnungen an der Küste in Torre del Mar und Nerja, Fincas in den Hügeln mit eigenem Brunnen. Jeder Typ hat seine eigenen Schwachstellen, und wir kennen sie gut.</p>
         <ul class="checks">
           <li><strong>Komplettsanierung</strong>: Leitungen, Elektrik, Dämmung, Grundriss und Ausbau.</li>
-          <li><strong>Bäder und Küchen</strong>: Planung, Rückbau, Einbau und Fertigstellung.</li>
+          <li><strong><a href="/de/kosten/bad-renovieren/">Bäder</a> und <a href="/de/kosten/kueche-renovieren/">Küchen</a></strong>: Planung, Rückbau, Einbau und Fertigstellung, auch ganz nach Maß.</li>
           <li><strong>Außenküchen</strong>: gemauerte Außenküche mit Grill, Arbeitsplatte und Spüle, im Ibiza- oder andalusischen Stil.</li>
           <li><strong>Klimaanlage und Wärmepumpe</strong>: kühl im Sommer, sparsam heizen im Winter, einschließlich Elektrik.</li>
+          <li><strong><a href="/de/kosten/solaranlage/">Solaranlage</a> und Batteriespeicher</strong>: eigener Strom vom Dach, auch für eine Finca ohne Stromnetz.</li>
+          <li><strong><a href="/de/kosten/wallbox/">Wallbox</a> und <a href="/de/kosten/intelligentes-energiemanagement/">intelligentes Energiemanagement</a></strong>: das Auto mit Sonne laden, Module, Speicher und Geräte arbeiten automatisch zusammen.</li>
+          <li><strong><a href="/de/kosten/elektrik-erneuern/">Elektrik</a></strong>: neuer Sicherungskasten, Erdung, mehr Leistung und das Elektro-Zertifikat (boletín).</li>
           <li><strong>Fliesen und Naturstein</strong>: Böden, Wände, Terrassen und Natursteinwände.</li>
           <li><strong>Finca-Sanierung</strong>: Feuchtigkeit, Dächer, Terrassen, Wasser und Abwasser.</li>
-          <li><strong>Fenster und Dämmung</strong>: keine kalten Winter mehr hinter Einfachverglasung.</li>
+          <li><strong><a href="/de/kosten/fenster-und-rahmen/">Fenster</a> und Dämmung</strong>: keine kalten Winter mehr hinter Einfachverglasung.</li>
+          <li><strong><a href="/de/kosten/schornstein-und-kaminofen/">Schornstein und Kaminofen</a></strong>: fegen, reparieren oder einen neuen Ofen einbauen.</li>
           <li><strong>Terrassen, Pergolen und Überdachungen</strong>: mehr Leben draußen, auch im Juli.</li>
         </ul>
         <h2>Worauf ausländische Käufer stoßen</h2>
-        <p>Feuchte Wände, alte Elektrik ohne Erdung, Dächer, die beim ersten Regen undicht sind, oder ein Anbau ohne Genehmigung. Das sieht man bei einer Besichtigung im Sommer nicht. Wir gehen das mit Ihnen durch, sagen Ihnen, was dringend ist und was warten kann, und nennen Ihnen für jede Position einen Preis.</p>
+        <p>Feuchte Wände, alte Elektrik ohne Erdung, Dächer, die beim ersten Regen undicht sind, oder ein Anbau ohne Genehmigung. Das sieht man bei einer Besichtigung im Sommer nicht. Wir gehen das mit Ihnen durch, sagen Ihnen, was dringend ist und was warten kann, und nennen Ihnen für jede Position einen Preis. Worauf Sie bei jeder Firma in der Region achten, lesen Sie im Ratgeber <a href="/de/ratgeber/bauunternehmen-costa-del-sol/">Bauunternehmen an der Costa del Sol finden</a>.</p>
+        <h2>Genehmigung, Architekt und Abnahme</h2>
+        <p>Eine neue Küche oder ein neues Bad braucht nur eine Anzeige bei der Gemeinde, so können wir in derselben Woche beginnen. Ein Anbau, ein zusätzliches Stockwerk oder Eingriffe in die Statik brauchen eine Genehmigung, einen Architekten und einen Arquitecto técnico. Wir übernehmen diesen Ablauf, vom Antrag bis zum Abschlusszertifikat. Was jede Art von Arbeit braucht, lesen Sie im Ratgeber <a href="/de/ratgeber/baugenehmigung-umbau-andalusien/">Umbauen in Andalusien: welche Genehmigung und wen Sie brauchen</a>; Regeln und Bausteuer Ihrer Gemeinde finden Sie auf den <a href="/de/orte/">Ortsseiten</a>.</p>
       </div>
       <div class="box">
         <h3>Richtpreise</h3>
         <table class="prices">
           <tbody>
             <tr><td>Komplettsanierung</td><td>{dePrice(prices.renovatieTotaal)}</td></tr>
-            <tr><td>Renovierung pro m²</td><td>{prices.renovatiePerM2}</td></tr>
+            <tr><td>Renovierung pro m²</td><td>{dePrice(prices.renovatiePerM2)}</td></tr>
             <tr><td>Neues Bad</td><td>{dePrice(prices.badkamer)}</td></tr>
-            <tr><td>Neue Küche</td><td>{prices.keuken}</td></tr>
+            <tr><td>Neue Küche</td><td>{dePrice(prices.keuken)}</td></tr>
           </tbody>
         </table>
         <p class="note">Richtpreise inklusive Material und Arbeit, ohne Mehrwertsteuer (IVA). Der tatsächliche Preis hängt vom Zustand der Immobilie und Ihren Wünschen ab. Sie bekommen immer zuerst ein Angebot.</p>

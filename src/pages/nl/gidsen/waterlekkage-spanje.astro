@@ -1,0 +1,134 @@
+---
+import ArticlePhoto from '../../../components/ArticlePhoto.astro';
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort antwoord' },
+  { id: 'direct', label: 'Eerste hulp: de eerste tien minuten' },
+  { id: 'opsporen', label: 'Het lek opsporen' },
+  { id: 'oorzaak', label: 'Dak, leiding, afvoer of condens?' },
+  { id: 'zelf', label: 'Wat u zelf kunt doen' },
+  { id: 'vakman', label: 'Wanneer belt u een loodgieter?' },
+  { id: 'betalen', label: 'Wie betaalt de schade?' },
+  { id: 'voorkomen', label: 'Lekkage voorkomen als u weg bent' },
+];
+
+const faq = [
+  {
+    q: 'Waar zit de hoofdkraan in een Spaans huis?',
+    a: 'Meestal bij de watermeter (contador): in een kastje in de gevel, in een put in de stoep of bij de ingang van de urbanisatie. In het huis zit vaak nog een tweede afsluiter (llave de paso) in de keuken, de badkamer of bij de boiler. Zoek beide op voordat er iets gebeurt en laat ze af en toe dicht- en opendraaien, zodat ze niet vastroesten.',
+  },
+  {
+    q: 'Betaalt mijn verzekering de waterschade?',
+    a: 'Een gewone woonverzekering (seguro de hogar) dekt meestal de schade door water aan uw huis en inboedel, en vaak ook het zoeken naar het lek. Het repareren van de kapotte leiding zelf valt er soms buiten. Schade door achterstallig onderhoud, zoals een dak dat al jaren lekt, wordt vaak afgewezen. Meld de schade snel, maak foto’s en gooi niets weg voordat de expert is geweest.',
+  },
+  {
+    q: 'De buren boven veroorzaken een lekkage bij mij. Wat nu?',
+    a: 'Waarschuw de buren direct en vraag hen hun hoofdkraan dicht te draaien. Meld het daarna bij uw eigen verzekering; die regelt het verder met de verzekering van de buren. Komt het water uit een gemeenschappelijke leiding of het dak van het gebouw, dan is de vereniging van eigenaars (comunidad) aan zet. Laat het de beheerder (administrador) schriftelijk weten.',
+  },
+  {
+    q: 'Mijn waterrekening is ineens heel hoog. Heb ik een lek?',
+    a: 'Waarschijnlijk wel. Doe de metertest: draai alle kranen dicht, zet apparaten uit en kijk of de meter nog loopt. Loopt hij, dan zit er een lek tussen de meter en uw kranen. Vaak is het een doorlopend toilet of een lek onder de grond in de tuin. Sommige waterbedrijven geven korting op de rekening als u met een factuur aantoont dat het lek is gerepareerd.',
+  },
+];
+---
+<Guide slug="waterlekkage-spanje" toc={toc} faq={faq} dienst="onderhoud" ctaTitle="Een lekkage die u niet vindt of niet vertrouwt?" ctaText="Wij sporen het lek op, repareren het en herstellen de schade. Ook als u zelf niet in Spanje bent.">
+  <h2 id="kort">Kort antwoord</h2>
+  <p>Bij een lekkage geldt: eerst <strong>het water dicht</strong> en waar nodig <strong>de stroom eraf</strong>, dan <strong>foto’s maken</strong> en daarna pas zoeken naar de oorzaak. Met de watermeter ziet u in een paar minuten of een leiding lekt. Een lek in het dak geeft vooral na regen klachten, een lekkende leiding ook bij droog weer. Meld schade snel bij uw verzekering en, in een appartement, bij de buren of de vereniging van eigenaars.</p>
+
+  <h2 id="direct">Eerste hulp: de eerste tien minuten</h2>
+  <ol>
+    <li><strong>Draai de hoofdkraan dicht.</strong> In het huis heet die <em>llave de paso</em>, bij de meter <em>llave del contador</em>. Weet u niet waar hij zit, dan is dit het moment om hem te zoeken.</li>
+    <li><strong>Zet de stroom uit</strong> in de ruimtes waar water bij stopcontacten, lampen of de groepenkast komt. Raak natte apparaten niet aan.</li>
+    <li><strong>Zet de boiler uit</strong> als het lek bij de warmwaterleiding zit.</li>
+    <li><strong>Vang het water op</strong> met emmers en handdoeken en zet meubels, kleden en papieren hoog.</li>
+    <li><strong>Maak foto’s en video’s</strong> van de schade en de plek van het lek, met datum. Dat heeft u nodig voor de verzekering.</li>
+    <li><strong>Waarschuw de buren</strong> als het water van boven komt of naar beneden loopt.</li>
+  </ol>
+
+  <h2 id="opsporen">Het lek opsporen</h2>
+  <h3>De metertest</h3>
+  <p>Draai alle kranen dicht, zet de wasmachine, vaatwasser en eventuele beregening uit en kijk naar de watermeter. Staat het kleine wieltje of het rode sterretje stil? Dan lekt er geen leiding. Draait het, dan zit er ergens een lek tussen de meter en de kranen. Noteer de stand en kijk na een uur nog eens als u twijfelt.</p>
+  <h3>Zelf zoeken</h3>
+  <ul>
+    <li><strong>Toilet</strong>: doe een paar druppels kleurstof in de stortbak. Ziet u na een kwartier kleur in de pot, dan loopt hij door. Dit is de meest voorkomende oorzaak van een hoge waterrekening.</li>
+    <li><strong>Vochtplekken</strong>: een plek die groter wordt, ook bij droog weer, wijst op een leiding. Volg de plek omhoog of naar de dichtstbijzijnde kraan.</li>
+    <li><strong>Losse of holle tegels</strong> en een vloer die warm aanvoelt (bij een lek in een warmwaterleiding).</li>
+    <li><strong>Natte plekken in de tuin</strong> of een stuk gras dat opvallend groen is: een lek in de leiding onder de grond.</li>
+    <li><strong>Onder het aanrecht en achter de wasmachine</strong>: flexibele slangen en sifons gaan als eerste kapot.</li>
+  </ul>
+  <h3>Lekdetectie door een specialist</h3>
+  <p>Vindt u het lek niet, laat dan geen muren op de gok openhakken. Een lekdetectiebedrijf (<em>detección de fugas</em>) werkt zonder te breken:</p>
+  <ul>
+    <li><strong>Thermografie</strong>: een warmtecamera laat zien waar warm of koud water door de muur of vloer loopt.</li>
+    <li><strong>Akoestisch</strong>: een gevoelige microfoon hoort het sissen van een lek onder de vloer.</li>
+    <li><strong>Tracergas</strong>: een onschadelijk gas in de leiding komt bij het lek naar boven en wordt gemeten. Goed voor lekken onder de grond.</li>
+    <li><strong>Camera-inspectie</strong> in de afvoer of het riool.</li>
+  </ul>
+  <p>Veel woonverzekeringen vergoeden het opsporen. Vraag het vooraf na.</p>
+
+  <h2 id="oorzaak">Dak, leiding, afvoer of condens?</h2>
+  <ArticlePhoto name="condens-schimmel-raam" lang="nl" />
+  <table class="prices">
+    <thead><tr><th>Wat u ziet</th><th>Waarschijnlijke oorzaak</th></tr></thead>
+    <tbody>
+      <tr><td>Plek op het plafond, alleen na regen</td><td>Dak of dakterras. Zie <a href="/nl/problemen/daklekkage/">daklekkage</a>.</td></tr>
+      <tr><td>Plek die groeit, ook bij droog weer; meter loopt</td><td>Lekkende waterleiding</td></tr>
+      <tr><td>Natte plek na douchen of afwassen; meter staat stil</td><td>Lekkende afvoer, sifon of kitrand</td></tr>
+      <tr><td>Natte plekken onderaan de muur, zoutrand</td><td>Optrekkend vocht uit de grond</td></tr>
+      <tr><td>Druppels op ramen en koude muren in de winter, zwarte puntjes</td><td>Condens. Zie <a href="/nl/problemen/vocht-en-schimmel/">vocht en schimmel</a>.</td></tr>
+      <tr><td>Water bij de buitenmuur na hevige regen</td><td>Regenpijp, goot of afwatering van het perceel</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="zelf">Wat u zelf kunt doen</h2>
+  <p>Kleine lekkages lost u vaak zelf op met een paar euro aan onderdelen:</p>
+  <ul>
+    <li><strong>Druppelende kraan</strong>: een nieuw leertje of kraanpatroon. Neem het oude mee naar de bouwmarkt (<em>ferretería</em>).</li>
+    <li><strong>Doorlopend toilet</strong>: vlotter of afsluitrubber in de stortbak vervangen.</li>
+    <li><strong>Lekkende sifon</strong>: losdraaien, schoonmaken, nieuwe ring erin en handvast weer aandraaien.</li>
+    <li><strong>Flexibele slang</strong> onder de kraan of naar de wasmachine: in een paar minuten vervangen. Draai eerst het kraantje eronder dicht.</li>
+    <li><strong>Kitrand</strong> rond douche of bad: oude kit eruit, droog laten worden en nieuwe sanitairkit aanbrengen.</li>
+    <li><strong>Dak</strong>: een losse pan terugleggen of een scheurtje in een dakterras tijdelijk dichtzetten. Lees eerst <a href="/nl/zelf-doen/dak-zelf-repareren-of-vervangen/">dak zelf repareren</a> en ga nooit alleen op een dak.</li>
+  </ul>
+
+  <h2 id="vakman">Wanneer belt u een loodgieter?</h2>
+  <ul>
+    <li>Het lek zit in de muur, in de vloer of onder de grond.</li>
+    <li>De hoofdkraan sluit niet goed of is vastgeroest.</li>
+    <li>Er is water bij de elektra geweest.</li>
+    <li>De lekkage komt terug na uw eigen reparatie.</li>
+    <li>U heeft oude ijzeren of loden leidingen. Dan is één lek vaak het begin. Lees <a href="/nl/gidsen/leidingen-en-boiler-vervangen-spanje/">leidingen en boiler vervangen</a>.</li>
+  </ul>
+  <p>Hierbij kunnen wij u helpen:</p>
+  <ul>
+    <li>Kraan, sifon of toilet repareren</li>
+    <li>Lekdetectie door specialist</li>
+    <li>Leiding in de muur repareren, inclusief dichtmaken en tegel</li>
+    <li>Lek in een dakterras herstellen</li>
+    <li>Waterschade herstellen: drogen, stucen, schilderen</li>
+    <li>Alle leidingen vervangen</li>
+  </ul>
+
+  <p><strong>Een lekkage die u niet zelf kunt of wilt oplossen?</strong> Wij sporen het lek op, repareren het en herstellen de schade, ook als u niet in Spanje bent. <a href="/nl/aanvraag/?dienst=onderhoud">Vertel ons wat er aan de hand is</a>.</p>
+
+  <h2 id="betalen">Wie betaalt de schade?</h2>
+  <ul>
+    <li><strong>Uw eigen woonverzekering</strong> (<em>seguro de hogar</em>): dekt meestal waterschade aan huis en inboedel, en vaak het opsporen van het lek. De reparatie van de leiding zelf of een versleten onderdeel soms niet. Lees de polis op “daños por agua” en “localización de fugas”. Zie ook onze gids <a href="/nl/gidsen/verzekering-huis-spanje/">verzekering voor uw huis in Spanje</a>.</li>
+    <li><strong>De buren</strong>: komt het water uit hun woning, dan is hun verzekering (aansprakelijkheid) aan zet. Uw verzekeraar regelt dat meestal onderling.</li>
+    <li><strong>De vereniging van eigenaars</strong> (<em>comunidad de propietarios</em>): bij lekkage uit gemeenschappelijke leidingen, het dak of de gevel van het gebouw. Meld het schriftelijk bij de beheerder.</li>
+    <li><strong>Uzelf</strong>: bij slijtage en achterstallig onderhoud. Verzekeraars wijzen schade af als blijkt dat een lek al lang bestond.</li>
+  </ul>
+  <p>Tip: meld schade binnen zeven dagen, bewaar kapotte onderdelen en laat niets definitief herstellen voordat de expert (<em>perito</em>) is geweest, tenzij het nodig is om erger te voorkomen.</p>
+
+  <h2 id="voorkomen">Lekkage voorkomen als u weg bent</h2>
+  <p>Een lek in een leeg huis loopt soms weken door. Dat is de grootste schadepost die wij bij vakantiehuizen zien.</p>
+  <ul>
+    <li><strong>Hoofdkraan dicht</strong> bij vertrek. Laat alleen een aparte kraan open voor beregening of zwembad als dat nodig is.</li>
+    <li><strong>Watermelders</strong> onder de boiler, de wasmachine en de vaatwasser, die een bericht naar uw telefoon sturen. Een kleine uitgave.</li>
+    <li><strong>Een slimme hoofdkraan</strong> die automatisch sluit bij een lek of ongewoon verbruik.</li>
+    <li><strong>Dak en goten</strong> voor het regenseizoen in het najaar laten nakijken.</li>
+    <li><strong>Iemand die regelmatig binnenkijkt</strong>, de kranen doorspoelt en de meter controleert. Dat is precies wat <a href="/nl/sleutelbeheer/">sleutelbeheer</a> doet.</li>
+  </ul>
+  <p class="note">Deze gids geeft algemene informatie voor huiseigenaren in de Axarquía in november 2026. Wat uw verzekering vergoedt, staat in uw eigen polis.</p>
+</Guide>

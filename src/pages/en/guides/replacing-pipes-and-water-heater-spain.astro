@@ -1,0 +1,119 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'short', label: 'The short answer' },
+  { id: 'pipes', label: 'What pipes are in your house?' },
+  { id: 'signs', label: 'Signs it is time' },
+  { id: 'replace', label: 'Replacing pipes: how it works' },
+  { id: 'heater', label: 'Hot water: which water heater?' },
+  { id: 'compare', label: 'Water heaters compared' },
+  { id: 'costs', label: 'Work we can help with' },
+  { id: 'tips', label: 'Tips for a holiday home' },
+];
+
+const faq = [
+  {
+    q: 'Are lead pipes dangerous?',
+    a: 'Yes. Lead gets into drinking water, especially when water has been standing in the pipe for a long time. Under Spain’s new drinking water rules (RD 3/2023) lead pipes must be phased out. If you see grey, soft pipes that you can scratch with a key, have them replaced and do not drink tap water until then.',
+  },
+  {
+    q: 'Electric water heater or heat pump water heater: which is cheaper?',
+    a: 'To buy, an electric termo is much cheaper. To run, a heat pump water heater uses about a third of the electricity. If you live there all year, it pays for itself within a number of years. For a holiday home used a few months a year, a good termo with a timer or smart plug is often the most sensible choice.',
+  },
+  {
+    q: 'How long does a water heater last?',
+    a: 'An electric termo usually lasts 8 to 12 years in the Axarquía. Hard water is its worst enemy: limescale and a worn-out anode. Have the anode checked every 2 to 3 years; it costs little and extends its life considerably. A heat pump water heater lasts 15 years or more.',
+  },
+  {
+    q: 'Do the walls have to be opened up to replace pipes?',
+    a: 'Usually yes, for pipes inside the walls. Channels (rozas) are cut and filled and plastered afterwards. Alternatives are surface-mounted pipes, or running them behind skirting or a wall lining. During a bathroom or kitchen renovation it is all done in one go.',
+  },
+];
+---
+<Guide lang="en" slug="replacing-pipes-and-water-heater-spain" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Old pipes, or a water heater on its last legs?" ctaText="We assess the plumbing and advise on the water heater that suits how you use the house, at a fixed price.">
+  <h2 id="short">The short answer</h2>
+  <p>Many older houses in the Axarquía still have <strong>galvanised iron or even lead pipes</strong>. They rust, scale up and leak. Replacing them with plastic multilayer pipe solves that for decades, and is best done together with a bathroom or kitchen renovation. For hot water you choose between a cheap <strong>electric termo</strong> that uses a lot of power and a more expensive but efficient <strong>heat pump water heater</strong> or <strong>solar water heater</strong>.</p>
+
+  <h2 id="pipes">What pipes are in your house?</h2>
+  <table class="prices">
+    <thead><tr><th>Material</th><th>How to recognise it</th><th>Advice</th></tr></thead>
+    <tbody>
+      <tr><td>Lead (<em>plomo</em>)</td><td>Dull grey, soft, easily scratched. Houses from before about 1975.</td><td>Always replace</td></tr>
+      <tr><td>Galvanised iron (<em>hierro galvanizado</em>)</td><td>Grey, hard, threaded joints. 1960s to 1980s.</td><td>Replace; it rusts from the inside</td></tr>
+      <tr><td>Copper (<em>cobre</em>)</td><td>Reddish brown, soldered. 1970s to 2000.</td><td>Often still fine; check for green deposits and small leaks</td></tr>
+      <tr><td>Plastic (PEX, multilayer)</td><td>White, red/blue or grey, with press fittings. After 2000.</td><td>Good</td></tr>
+    </tbody>
+  </table>
+  <p>The drains are a separate story. In old houses they are often cast iron, clay or <a href="/en/guides/asbestos-uralita-roof-spain/">asbestos cement (uralita)</a>, and too narrow. They are usually replaced during a bathroom or kitchen renovation.</p>
+
+  <h2 id="signs">Signs it is time</h2>
+  <ul>
+    <li>Brown or rusty water when you turn on the tap after being away.</li>
+    <li>Ever lower water pressure, especially upstairs. See also <a href="/en/problems/no-water-or-low-pressure/">no water or low pressure</a>.</li>
+    <li>Damp patches on walls or floors, or a water bill that suddenly rises. Read <a href="/en/guides/water-leak-spain/">what to do about a water leak</a> first.</li>
+    <li>Lead pipes, or you don’t know and the house dates from before 1980.</li>
+    <li>The water heater ticks or gurgles, the water is less hot, or there is rust underneath.</li>
+  </ul>
+
+  <h2 id="replace">Replacing pipes: how it works</h2>
+  <ol>
+    <li><strong>Inspection</strong>: where does the water come in, where do the pipes run, what state are the drains in?</li>
+    <li><strong>Plan</strong>: a new manifold (<em>colector</em>) by the main stopcock, with a separate pipe and valve for each room. Then a leak means shutting off one room, not the house.</li>
+    <li><strong>Installation</strong>: multilayer pipe in channels in the wall or floor, or surface-mounted. Hot water pipes are insulated.</li>
+    <li><strong>Pressure test</strong>: the system is tested under pressure before the walls are closed.</li>
+    <li><strong>Finishing</strong>: filling channels, plastering, painting.</li>
+  </ol>
+  <p>An apartment takes one to two weeks, a house two to three. Most of the cost is not the pipe but the cutting, plastering and tiling around it. That is why it makes sense to replace pipes during a <a href="/en/costs/bathroom-renovation/">bathroom</a> or <a href="/en/costs/kitchen-renovation/">kitchen renovation</a>.</p>
+
+  <h2 id="heater">Hot water: which water heater?</h2>
+  <h3>Electric water heater (termo eléctrico)</h3>
+  <p>The standard in Spain: a 50 to 100 litre tank heated by an element. Cheap, simple and repairable anywhere. The downside: it uses a lot of electricity and keeps the water hot all day.</p>
+  <h3>Butane gas water heater (calentador)</h3>
+  <p>On fincas without mains gas, often connected to butane bottles. Instant hot water with no tank, but you have to change bottles and the installation needs regular inspections. Chosen less and less.</p>
+  <h3>Heat pump water heater (termo aerotérmico)</h3>
+  <p>A 200 to 300 litre tank with a small heat pump on top. It takes heat from the air and uses about a third of the electricity of an ordinary termo. In the mild Axarquía climate it works well all year. It does need space: a storeroom, garage or plant room, or a duct to outside air.</p>
+  <h3>Solar water heater (termosifón)</h3>
+  <p>A collector with a tank on the roof. With more than 300 sunny days a year it supplies most of your hot water for free. On a village roof there must be room and the roof must take the weight.</p>
+  <h3>A termo on your own solar power</h3>
+  <p>If you have <a href="/en/costs/solar-panels/">solar panels</a>, a smart diverter can send surplus power to the termo. That makes the cheap termo almost free to run, for a small extra cost.</p>
+
+  <h2 id="compare">Water heaters compared</h2>
+  <p>More stars means lower running costs.</p>
+  <table class="prices">
+    <thead><tr><th>System</th><th>Efficiency</th><th>Lifespan</th></tr></thead>
+    <tbody>
+      <tr><td>Electric termo</td><td>★</td><td>8 – 12 years</td></tr>
+      <tr><td>Butane water heater</td><td>★★</td><td>10 – 15 years</td></tr>
+      <tr><td>Termo with solar diverter</td><td>★★★★ (with panels)</td><td>8 – 12 years</td></tr>
+      <tr><td>Solar water heater (termosifón)</td><td>★★★★</td><td>15 – 20 years</td></tr>
+      <tr><td>Heat pump water heater</td><td>★★★★</td><td>15 – 20 years</td></tr>
+    </tbody>
+  </table>
+  <p class="note">If you live there all year, an efficient system pays off. If you use the house a few months a year, a good termo with a timer is often the most sensible choice.</p>
+  <p>A heat pump water heater goes well with a <a href="/en/costs/air-conditioning-and-heat-pumps/">heat pump for heating</a>. For the full energy picture, read <a href="/en/guides/heating-and-cooling-spain/">heating and cooling in Spain</a>.</p>
+
+  <h2 id="costs">Work we can help with</h2>
+  <p>From a small repair to complete new plumbing:</p>
+  <ul>
+    <li>Replacing the termo’s anode and descaling</li>
+    <li>Pressure reducing valve on the mains</li>
+    <li>New manifold with a valve per room</li>
+    <li>Booster pump (grupo de presión)</li>
+    <li>New drains in a bathroom or kitchen</li>
+    <li>Replumbing an apartment</li>
+    <li>Replumbing a house</li>
+  </ul>
+  <p class="note">How much work it involves depends mostly on the size of the house, how many walls and floors need opening and whether new tiling is needed.</p>
+  <p><strong>Want your pipes or water heater replaced?</strong> We assess what is in your house, advise on the water heater that suits how you use it and take care of the work. <a href="/en/request/?dienst=renovatie">Tell us what is going on</a>.</p>
+
+  <h2 id="tips">Tips for a holiday home</h2>
+  <ul>
+    <li><strong>Turn off the main stopcock</strong> when you leave, and switch off the termo. A smart plug can switch it back on the day before you arrive.</li>
+    <li><strong>Legionella</strong>: water standing for weeks in a lukewarm tank is a risk. On arrival, run the heater at 60 °C or more for a few hours and run all taps. See <a href="/en/problems/legionella/">legionella</a>.</li>
+    <li><strong>Hard water</strong>: a <a href="/en/guides/water-filters-spain/">water softener</a> protects the heater, pipes and taps.</li>
+    <li><strong>A leak sensor</strong> under the water heater and dishwasher alerts your phone. A small outlay that can prevent a lot of damage.</li>
+    <li>Have someone run the taps and check the meter while you are away. That is part of <a href="/en/key-holding/">key holding</a>.</li>
+  </ul>
+  <p class="note">This guide gives general information for the Axarquía in November 2026.</p>
+</Guide>

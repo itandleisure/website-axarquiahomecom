@@ -1,0 +1,60 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'core', label: 'What really matters' },
+  { id: 'health', label: 'Healthcare and amenities' },
+  { id: 'driving', label: 'Driving in later years' },
+  { id: 'stairs', label: 'Stairs and accessibility' },
+  { id: 'upkeep', label: 'Upkeep' },
+  { id: 'social', label: 'Social life' },
+  { id: 'resale', label: 'Selling up later' },
+  { id: 'advice', label: 'Our advice by type' },
+];
+
+const faq = [
+  {
+    q: 'Where is the nearest hospital in the Axarquía?',
+    a: 'The regional hospital (Hospital Comarcal de la Axarquía) is in Vélez-Málaga. For specialist care you go to the hospitals in Málaga. Every larger municipality has a health centre, and there are private clinics with English-speaking doctors in Nerja, Torre del Mar and Málaga, among others.',
+  },
+  {
+    q: 'Can I adapt a village house so I need fewer stairs?',
+    a: 'Often, but not always. Sometimes the bedroom and bathroom can move to the ground floor, or a stairlift will fit. Installing a lift in a narrow village house is usually difficult. Have the options and costs assessed during the property survey.',
+  },
+  {
+    q: 'What if I spend less time in Spain later on?',
+    a: 'Then upkeep and supervision become more important. An apartment can safely be locked up for a few months. A finca or village house needs someone to check it regularly, air it and inspect the roof after a storm. That is what key holding is for.',
+  },
+];
+---
+<Guide lang="en" slug="finca-apartment-or-village-house-retirees" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="A home for the next twenty years?" ctaText="We survey the house before you sign and look at how it can be adapted when stairs or upkeep become harder.">
+  <h2 id="core">What really matters</h2>
+  <p>Many retirees buy the house they always dreamed of in the Axarquía: a finca with olive trees and a sea view. That can be a wonderful choice. But you are choosing a home for perhaps twenty years or more. Ask yourself: will this house still work in ten years, if I no longer enjoy driving, or if one of us needs care? If you will not stay all year, also read our guide to <a href="/en/guides/wintering-in-spain/">wintering in Spain</a>.</p>
+
+  <h2 id="health">Healthcare and amenities</h2>
+  <p>On the coast and in the larger villages you have a health centre, a pharmacy and often private clinics with English-speaking doctors close by. The regional hospital is in Vélez-Málaga; from the coast you are there quickly, from the mountain villages allow half an hour to 45 minutes. From a remote finca it takes longer, and an ambulance must be able to find and reach the house. Always give a clear address and directions.</p>
+
+  <h2 id="driving">Driving in later years</h2>
+  <p>On a finca, the car is your lifeline: shopping, the doctor, friends. Winding mountain roads and a dirt track are fine at sixty, but perhaps not at seventy-eight. In a village or on the coast you can do a lot on foot, and buses run to Vélez-Málaga and Málaga. If you choose a finca now, it is wise to think about where you would move to later.</p>
+
+  <h2 id="stairs">Stairs and accessibility</h2>
+  <p>This is where the classic village house scores badly: narrow and tall, with steep stairs to the bedrooms and roof terrace, and often a steep lane to the front door. An apartment with a lift, within walking distance of amenities, is the most future-proof. A single-storey finca or villa can work well too, provided the road to it is good.</p>
+  <p>When renovating, look ahead: a walk-in shower instead of a bath, no thresholds, a bedroom and bathroom on the ground floor. During a <a href="/en/renovation/">renovation</a> that costs little extra, and far less than adapting the house later.</p>
+
+  <h2 id="upkeep">Upkeep</h2>
+  <p>A finca needs a lot of upkeep: the land, trees, the <a href="/en/guides/finca-access-road-spain/">access track</a>, the water system, the septic tank and often a pool. That is enjoyable while you do it yourself, and a fixed cost once you outsource it. A village house mainly needs attention to the roof, roof terrace and damp. In an apartment the community of owners handles most of it, for a monthly fee. For a realistic view of yearly costs, see the main guide and our page on <a href="/en/maintenance/">maintenance</a>.</p>
+
+  <h2 id="social">Social life</h2>
+  <p>Loneliness is often underestimated. In a village you see people every day: at the market, in the bar, at the bakery. On the coast there are many clubs and groups of other foreign residents, from walking groups to bridge clubs. On a finca, company depends on the car and your own initiative. That suits some people and not others. And think about the situation where one partner is left on their own.</p>
+
+  <h2 id="resale">Selling up later</h2>
+  <p>Apartments and village houses in popular places usually sell more easily than remote fincas. Finca buyers are more critical, especially about legal status and water. A finca with settled AFO status and good paperwork sells better. So keep every document on permits, surveys and works. Read more in our guide to <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation</a>.</p>
+
+  <h2 id="advice">Our advice by type</h2>
+  <ul>
+    <li><strong>Apartment</strong>: the most carefree long-term choice, especially with a lift and amenities within walking distance. Also easy to lock up when you go home for a few months.</li>
+    <li><strong>Village house</strong>: sociable and full of character, but mind the stairs and steep lanes. Choose one with a bedroom and bathroom downstairs, or one that can be adapted.</li>
+    <li><strong>Finca</strong>: wonderful while you are fit and love being outdoors. Choose one close to a village, with a good road, on one level and with settled paperwork. And agree who will do the upkeep once you no longer want to.</li>
+  </ul>
+  <p>Going home for the summer or the holidays? With <a href="/en/key-holding/">key holding</a> someone checks the house regularly, including after storms or heavy rain.</p>
+</Guide>

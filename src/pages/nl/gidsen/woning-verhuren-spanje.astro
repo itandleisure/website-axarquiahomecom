@@ -1,0 +1,177 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kiezen', label: 'Vakantieverhuur of langdurig?' },
+  { id: 'vakantie', label: 'Vakantieverhuur: vergunning en regels' },
+  { id: 'langdurig', label: 'Langdurige verhuur: contract en borg' },
+  { id: 'belasting', label: 'Belasting als u niet in Spanje woont' },
+  { id: 'verzekering', label: 'Verzekering' },
+  { id: 'verhuurklaar', label: 'Uw huis verhuurklaar maken' },
+  { id: 'afstand', label: 'Verhuren op afstand' },
+  { id: 'rekenvoorbeeld', label: 'Wat levert het op? Een rekenvoorbeeld' },
+  { id: 'stappen', label: 'Stappenplan' },
+  { id: 'bronnen', label: 'Bronnen' },
+];
+
+const faq = [
+  {
+    q: 'Mag ik mijn appartement in de Axarquía als vakantiewoning verhuren?',
+    a: 'Alleen als het in het toerismeregister van Andalusië is ingeschreven en aan de eisen voldoet. Wilt u sinds 3 april 2025 nieuw beginnen met vakantieverhuur in een appartementengebouw, dan heeft u vooraf toestemming nodig van drie vijfde van de vereniging van eigenaars. Kijk ook in de statuten of verhuur niet al verboden is, en vraag bij de gemeente na of er beperkingen gelden.',
+  },
+  {
+    q: 'Heb ik nog een landelijk registratienummer nodig?',
+    a: 'Nee. Het landelijke registratienummer dat sinds 1 juli 2025 verplicht was, is op 19 mei 2026 door het Spaanse Hooggerechtshof vernietigd. U adverteert met het nummer uit het Andalusische toerismeregister. Platforms moeten wel gegevens blijven doorgeven aan de overheid, en de regels zijn nog in beweging; controleer de stand van zaken voordat u start.',
+  },
+  {
+    q: 'Hoeveel belasting betaal ik over huurinkomsten als ik in Nederland of België woon?',
+    a: 'Als inwoner van de EU betaalt u in Spanje 19% over de netto huuropbrengst: de huur min de kosten die u mag aftrekken. Inwoners van landen buiten de EU, zoals het Verenigd Koninkrijk, betalen 24% over de bruto huur, zonder aftrek. Vanaf de huur over 2026 doet u daarvoor één keer per jaar aangifte, van 1 tot 20 april. Ook in uw woonland moet u de woning en de inkomsten meestal opgeven.',
+  },
+  {
+    q: 'Moet ik de borg van mijn huurder nog bij de Junta van Andalusië storten?',
+    a: 'Niet meer voor nieuwe contracten. Sinds 24 januari 2026 hoeft de borg (fianza) niet meer bij AVRA te worden gestort. De huurder betaalt nog steeds één maand huur als borg, maar u houdt die zelf aan en betaalt die aan het eind van het contract terug, min eventuele schade of achterstand.',
+  },
+  {
+    q: 'Wat levert meer op: vakantieverhuur of langdurige verhuur?',
+    a: 'Vakantieverhuur levert per jaar meer bruto huur op, maar ook veel meer kosten en werk: schoonmaak, beheer, platformkosten, energie en slijtage. Bij een gewoon appartement met betaald beheer blijft er bij langdurige verhuur vaak evenveel of meer over. Vakantieverhuur wint vooral bij een huis met zwembad of uitzicht dat hoge prijzen haalt, of als u het huis zelf ook wilt gebruiken.',
+  },
+  {
+    q: 'Is er toeristenbelasting in de Axarquía?',
+    a: 'Nee. Andalusië heft (stand november 2026) geen toeristenbelasting, en geen enkele gemeente in de Axarquía doet dat. Er is in Málaga wel discussie over, dus houd het in de gaten.',
+  },
+];
+---
+<Guide slug="woning-verhuren-spanje" toc={toc} faq={faq} dienst="verhuurbeheer" ctaTitle="Uw huis verhuren zonder dat u er hoeft te zijn?" ctaText="Wij regelen de hele verhuur ter plaatse: gasten ontvangen, schoonmaak en handdoeken, storingen, reparaties en onderhoud. U krijgt vooraf een prijs.">
+  <p>Veel eigenaars in de Axarquía verhuren hun huis voor een deel van het jaar, of zelfs het hele jaar. Dat kan als vakantiewoning, per week of per nacht, of langdurig aan een vaste huurder. Beide vormen kennen eigen regels, eigen belasting en eigen werk. Deze gids zet het op een rij, met een rekenvoorbeeld. Heeft u nog geen huis en twijfelt u welk type geschikt is voor verhuur? Lees dan eerst onze keuzegids <a href="/nl/gidsen/finca-appartement-of-dorpshuis/vakantiehuis/">vakantiehuis: finca, appartement of dorpshuis</a> en, voor wie er een bedrijf van wil maken, de pagina over een <a href="/nl/gidsen/finca-appartement-of-dorpshuis/bed-and-breakfast/">B&amp;B</a>.</p>
+
+  <h2 id="kiezen">Vakantieverhuur of langdurig?</h2>
+  <p>De eerste keuze is de vorm. Die bepaalt welke vergunning u nodig heeft, hoeveel werk het is en of u er zelf nog kunt verblijven.</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th></th><th>Vakantieverhuur</th><th>Langdurige verhuur</th></tr></thead>
+    <tbody>
+      <tr><td>Huurder</td><td>Toeristen, per nacht of week</td><td>Een vaste huurder, meestal voor jaren</td></tr>
+      <tr><td>Vergunning</td><td>Inschrijving in het toerismeregister van Andalusië</td><td>Geen; wel een huurcontract volgens de Spaanse huurwet</td></tr>
+      <tr><td>Zelf gebruiken</td><td>Ja, in de weken dat u niet verhuurt</td><td>Nee, zolang het contract loopt</td></tr>
+      <tr><td>Bruto opbrengst</td><td>Hoger, maar sterk seizoensgebonden</td><td>Lager, maar elke maand gelijk</td></tr>
+      <tr><td>Kosten en werk</td><td>Hoog: schoonmaak, wissels, beheer, energie, slijtage</td><td>Laag: vooral onderhoud en de vaste lasten</td></tr>
+      <tr><td>Risico</td><td>Lege weken, slechte reviews, regels die strenger worden</td><td>Een huurder die niet betaalt of niet vertrekt</td></tr>
+      <tr><td>Geschikt voor</td><td>Huizen met zwembad, uitzicht of nabij strand en dorp</td><td>Gewone appartementen en dorpshuizen, eigenaars die weinig omkijken willen</td></tr>
+    </tbody>
+  </table></div>
+  <p>Er is ook een tussenvorm: verhuur per seizoen (<em>alquiler de temporada</em>), bijvoorbeeld aan overwinteraars of mensen die tijdelijk in de streek werken. Dat valt onder de huurwet, niet onder de toerismeregels, maar alleen als de huurder een echte tijdelijke reden heeft. Wordt een ‘seizoenscontract’ steeds verlengd, dan kan de rechter het als gewone woninghuur zien. Laat zo’n contract opstellen door een advocaat.</p>
+
+  <h2 id="vakantie">Vakantieverhuur: vergunning en regels</h2>
+  <p>In Andalusië heet een vakantiewoning officieel <em>vivienda con fines turísticos</em> (VFT); in de volksmond vaak VUT. De regels staan in een besluit van de Junta van Andalusië uit 2016, dat in 2024 flink is aangescherpt. In het kort:</p>
+  <ul>
+    <li><strong>Inschrijving in het toerismeregister.</strong> U dient online een verklaring in (<em>declaración responsable</em>) bij het <em>Registro de Turismo de Andalucía</em>. U krijgt een nummer dat begint met VFT/MA, en dat nummer moet in elke advertentie staan. Daarna kan de Junta controleren; wie niet voldoet, wordt uitgeschreven. Dat gebeurt ook echt: de Junta heeft al ruim 2.400 woningen uit het register gehaald.</li>
+    <li><strong>Eisen aan de woning.</strong> Onder meer koeling en verwarming, ramen naar buiten, meubels en linnengoed voor het aantal gasten, een EHBO-kit, informatie voor gasten en klachtenformulieren (<em>hojas de reclamaciones</em>). Sinds 2024 gelden ook eisen aan het oppervlak per gast en een maximum aantal gasten. De woning moet bovendien bewoonbaar zijn volgens de papieren; bij een huis zonder verklaring van ingebruikname of met onduidelijke vergunningen loopt u vast.</li>
+    <li><strong>Alleen op woongrond.</strong> De VFT-regeling geldt voor woningen op stedelijke grond. Een finca op landelijke grond valt onder de regels voor toerisme op het platteland (<em>vivienda turística de alojamiento rural</em>), met eigen eisen. Bij een huis met AFO-status is toeristische verhuur niet altijd mogelijk. Zie onze gids <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren</a>.</li>
+    <li><strong>De gemeente.</strong> Sinds 2024 mogen gemeenten in Andalusië het aantal vakantiewoningen beperken. Málaga-stad heeft dat gedaan: sinds juli 2026 geldt daar voor drie jaar een stop op nieuwe vakantiewoningen. In de Axarquía zijn ons (november 2026) geen vergelijkbare stops bekend, maar het aantal groeit snel: Nerja telt ruim 2.700 vakantiewoningen, Frigiliana ruim 400. Vraag het altijd na bij het <em>ayuntamiento</em> voordat u investeert.</li>
+    <li><strong>De vereniging van eigenaars.</strong> Sinds 3 april 2025 heeft u in een appartementengebouw vooraf toestemming nodig van drie vijfde van de eigenaars om nieuw te beginnen met vakantieverhuur. Woningen die al eerder legaal werden verhuurd, mogen doorgaan. Daarnaast kunnen de statuten verhuur verbieden.</li>
+    <li><strong>Gasten registreren.</strong> Sinds december 2024 moet u van elke gast uitgebreide gegevens doorgeven aan de politie, via het systeem SES.Hospedajes. Veel verhuurders laten dat automatisch doen via hun boekingssoftware of beheerder.</li>
+    <li><strong>Geen landelijk nummer meer.</strong> Sinds 1 juli 2025 was naast het Andalusische nummer ook een landelijk registratienummer verplicht. Het Spaanse Hooggerechtshof heeft dat landelijke register op 19 mei 2026 vernietigd, omdat toerisme onder de regio’s valt. Het Andalusische nummer blijft verplicht. Andalusië werkt aan een nieuwe toerismewet, dus de regels kunnen opnieuw veranderen.</li>
+    <li><strong>Toeristenbelasting.</strong> Die is er in Andalusië niet (stand november 2026).</li>
+  </ul>
+  <p>Biedt u diensten zoals een hotel, bijvoorbeeld dagelijkse schoonmaak tijdens het verblijf of ontbijt, dan bent u 21% btw verschuldigd. Gewone verhuur met een eindschoonmaak valt daar niet onder.</p>
+
+  <h2 id="langdurig">Langdurige verhuur: contract en borg</h2>
+  <p>Verhuurt u aan iemand die er gaat wonen, dan geldt de Spaanse huurwet (<em>Ley de Arrendamientos Urbanos</em>, LAU). Die beschermt de huurder stevig. De belangrijkste regels:</p>
+  <ul>
+    <li><strong>Looptijd.</strong> U kunt een contract voor één jaar sluiten, maar de huurder mag het jaarlijks verlengen tot vijf jaar, als u als particulier verhuurt. Zegt niemand op, dan wordt het daarna nog eens met maximaal drie jaar verlengd. De huurder kan na zes maanden opzeggen met een maand opzegtermijn.</li>
+    <li><strong>Zelf terug willen.</strong> Alleen als dat in het contract staat, kunt u na het eerste jaar opzeggen omdat u of een naast familielid er zelf gaat wonen. Een vakantiehuis dat u af en toe zelf wilt gebruiken, past dus slecht bij langdurige verhuur.</li>
+    <li><strong>Borg.</strong> De wettelijke borg (<em>fianza</em>) is één maand huur. Daarbovenop mag u maximaal twee maanden extra zekerheid vragen. Sinds 24 januari 2026 hoeft u de borg in Andalusië niet meer bij de Junta (AVRA) te storten; u houdt hem zelf aan. Borgen uit oudere contracten blijven bij AVRA staan tot het contract eindigt.</li>
+    <li><strong>Huurverhoging.</strong> Alleen als het contract dat regelt, en hooguit volgens de huurindex van het Spaanse statistiekbureau (IRAV) voor contracten sinds 2023. In Andalusië zijn geen ‘gespannen woningmarkten’ aangewezen, dus de extra huurplafonds die de landelijke woningwet daar toestaat, gelden hier niet.</li>
+    <li><strong>Kosten van de makelaar.</strong> Schakelt u een makelaar in om een huurder te vinden, dan betaalt u die zelf. Sinds 2023 mag dat niet meer bij de huurder in rekening worden gebracht.</li>
+    <li><strong>Energielabel.</strong> Ook bij verhuur verplicht, en het moet in de advertentie staan.</li>
+  </ul>
+  <p>Het grootste risico is een huurder die niet meer betaalt. Een ontruiming via de rechter duurt in Spanje al gauw maanden. Controleer daarom inkomen en referenties, en overweeg een verzekering tegen huurachterstand (<em>seguro de impago</em>). Die kost meestal zo’n 3% tot 5% van de jaarhuur.</p>
+
+  <h2 id="belasting">Belasting als u niet in Spanje woont</h2>
+  <p>Woont u in Nederland, België of elders, dan betaalt u in Spanje inkomstenbelasting voor niet-inwoners (<em>Impuesto sobre la Renta de no Residentes</em>, IRNR) over uw huurinkomsten:</p>
+  <ul>
+    <li><strong>Inwoners van de EU, IJsland en Noorwegen: 19%</strong> over de netto opbrengst. U mag de kosten aftrekken die bij de verhuur horen: rente op de hypotheek, onderhoud en reparaties, IBI, bijdrage aan de vereniging van eigenaars, verzekering, beheer- en schoonmaakkosten, platformkosten, energie die u betaalt, en jaarlijks 3% afschrijving over de waarde van het gebouw (niet de grond). Verhuurt u een deel van het jaar, dan trekt u de vaste kosten naar verhouding af.</li>
+    <li><strong>Inwoners van andere landen, zoals het Verenigd Koninkrijk: 24%</strong> over de bruto huur, zonder aftrek van kosten.</li>
+    <li><strong>Aangifte.</strong> U doet aangifte met formulier 210. Vanaf de huur over 2026 doet u dat één keer per jaar, van 1 tot en met 20 april van het jaar daarna. Voorheen was het per kwartaal.</li>
+    <li><strong>Weken dat het huis leeg staat.</strong> Over de dagen dat u niet verhuurt, betaalt u ook belasting over een fictief inkomen: 1,1% of 2% van de kadastrale waarde, naar verhouding van het aantal dagen. Daarvoor doet u apart aangifte, van 1 april tot 31 december van het jaar daarna.</li>
+  </ul>
+  <p>Inwoners van Spanje betalen via de gewone inkomstenbelasting, en krijgen bij langdurige verhuur een korting op de netto huur die niet-inwoners niet krijgen. In uw woonland moet u de woning en de inkomsten meestal ook opgeven; een belastingverdrag voorkomt dubbele heffing. Laat de aangiftes doen door een gestor of belastingadviseur; dat kost vaak een paar honderd euro per jaar. Wanneer welke aangifte en aanslag komt, en hoe u vanuit het buitenland betaalt, staat in onze <a href="/nl/gidsen/belastingkalender-spanje/">belastingkalender</a>.</p>
+
+  <h2 id="verzekering">Verzekering</h2>
+  <p>Een gewone woonverzekering dekt verhuur lang niet altijd. Meld bij uw verzekeraar dat u verhuurt, en hoe. Let op:</p>
+  <ul>
+    <li><strong>Aansprakelijkheid.</strong> Glijdt een gast uit bij het zwembad of veroorzaakt een lekkage schade bij de buren, dan bent u als verhuurder aansprakelijk. Kies een ruime dekking. Platforms bieden soms een eigen garantie, maar die vervangt geen verzekering.</li>
+    <li><strong>Schade door huurders of gasten.</strong> Niet elke polis dekt schade door de mensen aan wie u verhuurt. Vraag het na.</li>
+    <li><strong>Huurachterstand.</strong> Bij langdurige verhuur: de <em>seguro de impago</em>, zie hierboven.</li>
+    <li><strong>Leegstand.</strong> Sommige polissen dekken inbraak of waterschade niet als het huis lang leeg staat of niet regelmatig wordt gecontroleerd. Laat het huis daarom bijhouden, en bewaar de verslagen.</li>
+  </ul>
+
+  <h2 id="verhuurklaar">Uw huis verhuurklaar maken</h2>
+  <p>Huurders en gasten zijn kritischer dan u zelf. Wat u als eigenaar op de koop toe neemt, wordt bij verhuur een slechte review of een klacht. Reken op:</p>
+  <ul>
+    <li><strong>Airco en verwarming</strong> in de woonkamer en slaapkamers. Voor een vakantiewoning is koeling en verwarming verplicht, en in juli en augustus onmisbaar.</li>
+    <li><strong>Vocht en lekkage</strong> eerst oplossen. Een schimmelplek op een foto kost boekingen. Zie <a href="/nl/problemen/vocht-en-schimmel/">vocht en schimmel</a> en <a href="/nl/problemen/daklekkage/">daklekkage</a>.</li>
+    <li><strong>Een betrouwbaar zwembad</strong> en een tuin die bijgehouden wordt. Zie <a href="/nl/zwembad/">zwembad</a>.</li>
+    <li><strong>Een badkamer en keuken die tegen een stootje kunnen.</strong> Gasten gebruiken ze intensiever dan u. Vaak loont het om een verouderde badkamer te vernieuwen voordat u gaat verhuren; zie de <a href="/nl/kosten/rekentool/">rekentool</a> voor een prijsindicatie.</li>
+    <li><strong>Elektra en wifi</strong> die het aankunnen: een gast laadt een auto op, zet drie airco’s aan en werkt op afstand.</li>
+  </ul>
+  <p>Voor een vakantiewoning loont het vaak om in één keer op te knappen en daarna pas foto’s te laten maken. Wij geven u vooraf een prijs; zie <a href="/nl/renovatie/">renovatie</a> en <a href="/nl/onderhoud/">onderhoud en reparaties</a>.</p>
+
+  <h2 id="afstand">Verhuren op afstand</h2>
+  <p>De meeste eigenaars in de Axarquía wonen niet in Spanje. Verhuren gaat dan alleen goed als iemand ter plaatse de praktische kant regelt. Dat kunt u verdelen over een sleutelhouder, een schoonmaakbedrijf en een verhuurbeheerder, of in één hand leggen:</p>
+  <ul>
+    <li><strong>Sleutels en controle.</strong> Iemand die de sleutels heeft, het huis controleert na vertrek van gasten of huurders, en in actie komt als er iets misgaat. Met <a href="/nl/sleutelbeheer/">sleutelbeheer</a> heeft u daarvoor één vast aanspreekpunt.</li>
+    <li><strong>Storingen snel verhelpen.</strong> Een kapotte airco in augustus of een verstopte afvoer moet binnen een dag gemaakt worden, anders vraagt de gast zijn geld terug. Spreek vooraf af wie dat doet en tot welk bedrag diegene zonder overleg mag laten repareren.</li>
+    <li><strong>Schoonmaak, beddengoed en handdoeken</strong> tussen gasten door, bij vakantieverhuur.</li>
+    <li><strong>Gastencontact en afspraken.</strong> Vragen van gasten beantwoorden, aankomsttijden afspreken en de sleutels overdragen. Boekingen kunt u zelf via de platforms doen, of laten beheren; een verhuurbeheerder rekent vaak 15% tot 25% van de huuropbrengst.</li>
+    <li><strong>Onderhoud het hele jaar.</strong> Ook als er niemand is: zwembad, tuin, dakterras voor de herfstregens, en de airco’s voor de zomer. Zo voorkomt u dat een klein probleem midden in het seizoen een lege week wordt.</li>
+  </ul>
+  <p>Wij doen dit allemaal vanuit één team: sleutels en controles, gasten ontvangen en afspraken maken, schoonmaak en handdoeken, en omdat we zelf bouwers zijn ook de reparaties en het onderhoud. Zo heeft u één aanspreekpunt voor de verhuur én voor het huis. Lees meer over <a href="/nl/verhuurbeheer/">verhuurbeheer</a> en <a href="/nl/sleutelbeheer/">sleutelbeheer</a>.</p>
+
+  <h2 id="rekenvoorbeeld">Wat levert het op? Een rekenvoorbeeld</h2>
+  <p>Een appartement met twee slaapkamers in Torre del Mar, eigenaar woont in Nederland. Gebouwwaarde (zonder grond) € 150.000, kadastrale waarde € 90.000. Alle bedragen zijn aannames ter illustratie.</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Per jaar</th><th>Vakantieverhuur</th><th>Langdurige verhuur</th></tr></thead>
+    <tbody>
+      <tr><td>Huur</td><td>140 nachten × € 110 = € 15.400</td><td>12 × € 950 = € 11.400</td></tr>
+      <tr><td>Verhuurbeheer (20%) of makelaar</td><td>− € 3.080</td><td>− € 230 (een maand huur eens per vijf jaar)</td></tr>
+      <tr><td>Schoonmaak en linnengoed</td><td>− € 1.500 (25 wissels)</td><td>–</td></tr>
+      <tr><td>Stroom, water, internet</td><td>− € 1.800</td><td>Betaalt de huurder</td></tr>
+      <tr><td>Vereniging van eigenaars</td><td>− € 1.200</td><td>− € 1.200</td></tr>
+      <tr><td>IBI en afvalheffing</td><td>− € 450</td><td>− € 450</td></tr>
+      <tr><td>Verzekering</td><td>− € 350</td><td>− € 800 (inclusief huurachterstand)</td></tr>
+      <tr><td>Onderhoud en slijtage</td><td>− € 800</td><td>− € 600</td></tr>
+      <tr><td>Gestor en aangiftes</td><td>− € 400</td><td>− € 300</td></tr>
+      <tr><td><strong>Over vóór belasting</strong></td><td><strong>€ 5.820</strong></td><td><strong>€ 7.820</strong></td></tr>
+      <tr><td>Spaanse belasting (19%, na aftrek van kosten en afschrijving)</td><td>− € 1.010</td><td>− € 630</td></tr>
+      <tr><td>Belasting over de lege dagen</td><td>− € 115</td><td>–</td></tr>
+      <tr><td><strong>Over na Spaanse belasting</strong></td><td><strong>ca. € 4.700</strong></td><td><strong>ca. € 7.200</strong></td></tr>
+    </tbody>
+  </table></div>
+  <p>Bij vakantieverhuur zijn de vaste lasten naar verhouding van 140 verhuurde dagen afgetrokken, en de afschrijving ook (3% van € 150.000 × 140/365). Bij langdurige verhuur is het hele jaar aftrekbaar. Woont de eigenaar in het Verenigd Koninkrijk, dan is het verschil nog groter: 24% over de bruto huur betekent ongeveer € 3.840 belasting bij vakantieverhuur tegenover € 2.740 bij langdurige verhuur.</p>
+  <p>Wat dit voorbeeld laat zien: bij een gewoon appartement met betaald beheer houdt u met langdurige verhuur vaak meer over, met veel minder werk. Vakantieverhuur loont vooral als u hogere prijzen haalt, bijvoorbeeld met een zwembad of zeezicht, als u veel zelf doet, of als u het huis zelf ook wilt gebruiken. Uw eigen weken zijn in dit voorbeeld niet meegeteld.</p>
+  <p class="note">Rekenvoorbeeld met aannames, gemaakt op 5 november 2026. Uw uitkomst hangt af van ligging, prijzen, bezetting en uw belastingsituatie. Laat een gestor of belastingadviseur meerekenen.</p>
+
+  <h2 id="stappen">Stappenplan</h2>
+  <ol>
+    <li><strong>Kies de vorm</strong>: vakantieverhuur, seizoen of langdurig. Reken beide door met uw eigen cijfers.</li>
+    <li><strong>Check of het mag</strong>: bestemming van de grond, papieren van het huis, gemeente, en bij een appartement de statuten en de vereniging van eigenaars.</li>
+    <li><strong>Maak het huis verhuurklaar</strong>: gebreken herstellen, airco, energielabel, en de inrichting die de regels vragen.</li>
+    <li><strong>Regel de papieren</strong>: inschrijving in het toerismeregister, of een goed huurcontract via een advocaat. Pas uw verzekering aan.</li>
+    <li><strong>Regel het beheer ter plaatse</strong>: sleutels, controles, schoonmaak, storingen en onderhoud.</li>
+    <li><strong>Regel de belasting</strong>: een gestor voor formulier 210, en de aangifte in uw woonland.</li>
+  </ol>
+  <p>Wilt u uw huis verhuren en zoekt u iemand ter plaatse? Wij nemen de verhuur ter plaatse over: gasten ontvangen, schoonmaak en handdoeken, controles tussen huurders en gasten door, en reparaties, onderhoud en een eventuele opknapbeurt. Vraag <a href="/nl/aanvraag/?dienst=verhuurbeheer">verhuurbeheer</a> aan, of een offerte voor <a href="/nl/aanvraag/?dienst=renovatie">opknappen</a> of <a href="/nl/aanvraag/?dienst=onderhoud">onderhoud</a>. Vragen? Mail naar <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+
+  <h2 id="bronnen">Bronnen</h2>
+  <ul>
+    <li>Vakantiewoningen in Andalusië: Decreto 28/2016 van 2 februari 2016, gewijzigd door Decreto 31/2024 van 29 januari 2024 (Junta de Andalucía).</li>
+    <li>Toestemming van de vereniging van eigenaars: Ley Orgánica 1/2025 (BOE, 3 januari 2025), wijziging van artikel 17.12 van de Ley de Propiedad Horizontal, van kracht sinds 3 april 2025.</li>
+    <li>Landelijk register vernietigd: Tribunal Supremo, sentencia 620/2026 van 19 mei 2026, over Real Decreto 1312/2024; zie idealista/news, 21 mei 2026.</li>
+    <li>Gastenregistratie: Real Decreto 933/2021, van kracht sinds 2 december 2024.</li>
+    <li>Huurwet: Ley 29/1994 de Arrendamientos Urbanos, gewijzigd door Ley 12/2023 (woningwet, BOE 25 mei 2023).</li>
+    <li>Borg niet meer bij AVRA: Ley 5/2025 de Vivienda de Andalucía (BOJA, 24 december 2025), zesde aanvullende bepaling, van kracht sinds 24 januari 2026.</li>
+    <li>Belasting voor niet-inwoners: Real Decreto Legislativo 5/2004, artikelen 24 en 25; jaarlijkse aangifte van huurinkomsten: Orden HAC/623/2026 (BOE, 23 juni 2026).</li>
+    <li>Aantallen vakantiewoningen in Nerja en Frigiliana: El Español Málaga, 25 juni 2026. Stop in Málaga-stad: gemeente Málaga, juli 2026.</li>
+  </ul>
+  <p class="note">Gecontroleerd op 5 november 2026. Deze gids geeft algemene informatie en is geen juridisch of fiscaal advies. Regels voor verhuur veranderen de laatste jaren snel; laat uw situatie beoordelen door een advocaat, gestor of belastingadviseur voordat u begint.</p>
+</Guide>

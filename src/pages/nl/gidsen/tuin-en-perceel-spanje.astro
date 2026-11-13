@@ -1,0 +1,77 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'overzicht', label: 'Alle mogelijkheden op een rij' },
+  { id: 'droogte', label: 'Een droogtebestendige tuin' },
+  { id: 'irrigatie', label: 'Druppelirrigatie' },
+  { id: 'hek', label: 'Hek en muur' },
+  { id: 'poort', label: 'Automatische poort' },
+  { id: 'perceel', label: 'Perceel schoon en brandveilig' },
+];
+
+const faq = [
+  {
+    q: 'Kan ik in de Axarquía een gazon hebben?',
+    a: 'Het kan, maar echt gras heeft in de zomer elke dag water nodig, en in droge jaren mag u soms niet sproeien. Kies liever een klein stukje gras met een droogtebestendige soort, of kunstgras op een plek waar u het echt gebruikt, en grind en mediterrane planten voor de rest.',
+  },
+  {
+    q: 'Wat gebeurt er met mijn tuin als ik maanden weg ben?',
+    a: 'Met druppelirrigatie op een computer en droogtebestendige planten overleeft een tuin de zomer prima zonder u. Laat wel iemand een paar keer per jaar kijken of de slangen heel zijn en de computer werkt; een kapotte druppelaar kost in een paar weken een plant of veel water.',
+  },
+  {
+    q: 'Heb ik een vergunning nodig voor een hek of muur?',
+    a: 'Meestal is een melding of kleine vergunning bij de gemeente nodig, zeker voor een gemetselde muur of een hek langs de weg. Op landelijke grond (suelo rústico) gelden strengere regels voor hoogte en materiaal. Vraag het vooraf na.',
+  },
+];
+---
+<Guide slug="tuin-en-perceel-spanje" toc={toc} faq={faq} dienst="onderhoud" ctaTitle="Hulp bij uw tuin of perceel?" ctaText="Vertel ons wat u wilt: een tuin die weinig water vraagt, irrigatie, een hek of een poort, of het perceel opruimen. Met een paar foto’s kunnen we snel meedenken.">
+  <h2 id="overzicht">Alle mogelijkheden op een rij</h2>
+  <p>Een overzicht van wat er is en waarvoor het dient. Wilt u dit laten doen? <a href="/nl/aanvraag/">Vertel ons wat u wilt</a>, dan helpen wij u het te realiseren.</p>
+  <table class="prices">
+    <thead><tr><th>Mogelijkheid</th><th>Goed om te weten</th></tr></thead>
+    <tbody>
+      <tr><td>Grind en mediterrane planten</td><td>Weinig water en onderhoud, het hele jaar mooi</td></tr>
+      <tr><td>Graszoden of ingezaaid gras</td><td>Goedkoop aan te leggen, duur in water en onderhoud</td></tr>
+      <tr><td>Kunstgras</td><td>Geen water, wel heet in de zomerzon</td></tr>
+      <tr><td>Druppelirrigatie met tijdschakelaar</td><td>Bespaart veel water en werk; deels zelf aan te leggen</td></tr>
+      <tr><td>Irrigatie met wifi-computer en meerdere zones</td><td>Op afstand bijsturen vanuit huis</td></tr>
+      <tr><td>Gaashek (<em>malla</em>)</td><td>Afbakening en tegen honden en wilde zwijnen; geen privacy</td></tr>
+      <tr><td>Hek van panelen of spijlen</td><td>Steviger en netter, deels doorkijk</td></tr>
+      <tr><td>Gemetselde en gestucte muur</td><td>Privacy en stevigheid; vaak vergunning nodig</td></tr>
+      <tr><td>Draaipoort met motor</td><td>Openen met afstandsbediening of telefoon; ruimte nodig om te draaien</td></tr>
+      <tr><td>Schuifpoort met motor</td><td>Ideaal op een helling of smalle oprit</td></tr>
+      <tr><td>Perceel schoonmaken en snoeien</td><td>Jaarlijks nodig, zeker voor de zomer</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="droogte">Een droogtebestendige tuin</h2>
+  <p>Spanjaarden noemen het <em>xerojardinería</em>: een tuin die het grootste deel van het jaar met weinig of geen extra water toe kan. Die past bij het klimaat van de Axarquía, waar het van mei tot oktober bijna niet regent en waar in droge jaren beperkingen gelden voor het sproeien van tuinen en het vullen van zwembaden.</p>
+  <ul>
+    <li><strong>Planten</strong>: olijf, johannesbroodboom, lavendel, rozemarijn, salie, oleander, bougainvillea, plumbago, agave, aloë en vetplanten. Ze kunnen tegen zon, wind en droogte.</li>
+    <li><strong>Grind of schors</strong> rond de planten houdt de grond koel en vochtig en onkruid weg. Leg er worteldoek onder.</li>
+    <li><strong>Groepeer</strong> planten met dezelfde waterbehoefte, zodat u alleen de dorstige plekken water geeft.</li>
+    <li><strong>Plant in de herfst</strong>: dan komt de regen en kunnen wortels zich vóór de zomer vestigen.</li>
+    <li><strong>Let op</strong>: palmen zijn gevoelig voor de rode palmsnuitkever (<em>picudo rojo</em>). Hebt u palmen, laat ze dan preventief behandelen.</li>
+  </ul>
+
+  <h2 id="irrigatie">Druppelirrigatie</h2>
+  <p>Met druppelirrigatie (<em>riego por goteo</em>) krijgt elke plant precies het water dat hij nodig heeft, aan de wortel, en verdampt er bijna niets. Een tijdschakelaar of irrigatiecomputer zet het systeem ’s nachts of vroeg in de ochtend aan. Met een wifi-computer stuurt u het bij vanuit Nederland, bijvoorbeeld na een hittegolf of juist na regen.</p>
+  <p>Een eenvoudig systeem aan de kraan kunt u zelf aanleggen. Bij een grotere tuin met meerdere zones, een watertank of een pomp is het verstandig het te laten ontwerpen, zodat de druk overal klopt. Heeft u een tank of put, lees dan ook over <a href="/nl/gidsen/finca-kopen-in-spanje/">water op een finca</a>.</p>
+
+  <h2 id="hek">Hek en muur</h2>
+  <p>Een hek houdt honden binnen en wilde zwijnen, geiten en ongenode gasten buiten. De keuze hangt af van wat u wilt: alleen afbakenen (gaashek), stevig en net (panelen of spijlen) of privacy (gemetselde muur, eventueel met een hek erop). Op een helling moet een muur vaak ook grond tegenhouden; dan is het een keermuur en is een goede fundering en afwatering nodig.</p>
+  <p>Regels: voor een muur of hek langs de openbare weg vraagt de gemeente bijna altijd een melding of vergunning. Op landelijke grond (<em>suelo rústico</em>) gelden vaak een maximale hoogte voor het gemetselde deel en een open bovenkant, zodat dieren en water erdoor kunnen. Zie de regels van <a href="/nl/plaatsen/">uw gemeente</a>.</p>
+
+  <h2 id="poort">Automatische poort</h2>
+  <p>Een poort met motor is op een finca of villa een groot gemak: u hoeft niet uit te stappen op een steile oprit, en de poort is altijd dicht. Er zijn twee soorten:</p>
+  <ul>
+    <li><strong>Draaipoort</strong>: één of twee vleugels die opendraaien. Goedkoper, maar heeft ruimte nodig om te draaien en werkt lastig op een helling.</li>
+    <li><strong>Schuifpoort</strong>: schuift opzij langs het hek. Duurder, maar ideaal bij een helling of een korte oprit.</li>
+  </ul>
+  <p>Kies een motor met noodontgrendeling en een accu voor als de stroom uitvalt. Op een huis zonder netstroom kan de poort op een zonnepaneel werken. Openen met de telefoon is handig als iemand voor u de poort moet openen, zoals de schoonmaker of het <a href="/nl/sleutelbeheer/">sleutelbeheer</a>.</p>
+
+  <h2 id="perceel">Perceel schoon en brandveilig</h2>
+  <p>In de zomer is brand een echt risico in de heuvels van de Axarquía. Andalusië verplicht eigenaren van huizen in of bij bos- en natuurgebied om het perceel brandveilig te houden: droog onkruid en struikgewas weghalen, takken die over het dak hangen snoeien en geen brandbaar afval laten liggen. Hoe breed die strook rond het huis moet zijn, hangt af van de ligging; vraag het na bij de gemeente.</p>
+  <p>Laat het perceel in het voorjaar (april, mei) schoonmaken, vóór het droge seizoen. Dan voorkomt u ook dat onkruid zaad vormt en volgend jaar alles opnieuw dichtgroeit. Combineer dit met ander <a href="/nl/onderhoud/">onderhoud</a> van het huis, zoals het snoeien en bijhouden van <a href="/nl/gidsen/toegangsweg-finca-spanje/">de toegangsweg</a>.</p>
+</Guide>

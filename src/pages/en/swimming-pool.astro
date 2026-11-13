@@ -42,7 +42,7 @@ const service = {
 ---
 <Base
   title="Pool building, renovation and maintenance in the Axarquía"
-  description="Build a new pool, bring an old one back to life, or have it maintained while you are away. English-speaking builders in Nerja, Cómpeta, Torrox and across the Axarquía."
+  description="Build a new pool, renovate an old one or have it maintained while you are away. English-speaking builders in Nerja, Cómpeta, Torrox and the Axarquía."
   path="/en/swimming-pool/"
   lang="en"
   jsonLd={[service]}
@@ -55,25 +55,27 @@ const service = {
     lead="A new pool on your plot, an old one that needs to work again after the drought, or regular maintenance so the water is clear when you arrive."
     cta="Ask about a pool"
     ctaHref="/en/request/?dienst=zwembad"
+    secondary="Work out the cost"
+    secondaryHref="/en/costs/calculator/?klus=zwembad"
   />
 
   <section class="section">
     <div class="wrap">
       <div class="cards">
         <div class="card">
-          <h3>New pool</h3>
+          <h2 class="h3">New pool</h2>
           <p>Design, licence, groundwork, construction and equipment. Sloping plots too, as with many fincas in the Axarquía.</p>
           <p><strong>{enPrice(prices.zwembadNieuw)}</strong></p>
         </div>
         <div class="card">
-          <h3>Pool renovation</h3>
+          <h2 class="h3">Pool renovation</h2>
           <p>Leak detection, new finish, tiles and grout, new pump and filter. After years of drought many pools need repair.</p>
           <p><strong>Price after inspection</strong></p>
         </div>
         <div class="card">
-          <h3>Maintenance</h3>
-          <p>Regular visits for water, filter and equipment, even while you are in the UK. You get a photo after every visit.</p>
-          <p><strong>{prices.zwembadOnderhoud}</strong></p>
+          <h2 class="h3">Maintenance</h2>
+          <p>Regular visits for water, filter and equipment, even while you are in the UK. You get a photo after every visit. See our guide to <a href="/en/guides/pool-maintenance-spain/">pool maintenance in Spain</a>.</p>
+          <p><strong>{enPrice(prices.zwembadOnderhoud)}</strong></p>
         </div>
       </div>
       <Todo label="prijs zwembadonderhoud per maand en bevestiging prijs nieuwbouw." />
@@ -85,6 +87,8 @@ const service = {
       <h2>After the drought: what happens to pools</h2>
       <p>Between 2023 and early 2026 pools in the Axarquía often could not be filled. A pool that stands empty for a long time suffers: the sun dries out the finish, grout comes loose and the ground around the pool can move. Refill it without an inspection and you risk a leak.</p>
       <p>That is why we start with an inspection and a leak test. Then you know exactly what needs doing and what it costs, before any water goes in.</p>
+      <h2>Permission for a pool</h2>
+      <p>A new pool as a rule needs a permit from the council, with a project by a technician. On rural land and with AFO houses, new construction is often not allowed. We check this beforehand and handle the application. More in our guide <a href="/en/guides/building-permits-renovation-andalusia/">renovating in Andalusia: which permit you need and who does what</a>.</p>
     </div>
   </section>
 

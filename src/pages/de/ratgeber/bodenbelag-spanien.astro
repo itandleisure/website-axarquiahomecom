@@ -1,0 +1,155 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'spanisch', label: 'Warum Böden in Spanien anders sind' },
+  { id: 'vergleich', label: 'Alle Böden im Vergleich' },
+  { id: 'fliesen', label: 'Feinsteinzeug (gres porcelánico)' },
+  { id: 'mikrozement', label: 'Mikrozement' },
+  { id: 'terrazzo', label: 'Terrazzo und alte Zementfliesen' },
+  { id: 'barro', label: 'Barro und Terrakotta' },
+  { id: 'naturstein', label: 'Marmor und Naturstein' },
+  { id: 'vinyl', label: 'Vinyl, Laminat und Holz' },
+  { id: 'aussen', label: 'Terrasse, Dachterrasse und Poolrand' },
+  { id: 'fussbodenheizung', label: 'Fußbodenheizung' },
+  { id: 'wahl', label: 'Welcher Boden passt zu Ihrem Haus?' },
+  { id: 'extras', label: 'Was noch dazukommt' },
+];
+
+const faq = [
+  {
+    q: 'Kann ich neue Fliesen auf die alten legen?',
+    a: 'Oft ja, wenn der alte Boden eben ist, fest sitzt und nicht hohl klingt. Sie sparen den Abriss und die Schuttentsorgung, und das macht einen spürbaren Unterschied. Der Boden wird aber 1 bis 2 cm höher: Türen müssen gekürzt werden und an Haustür, Bad und Treppe entsteht eine kleine Kante. Bei losen Fliesen, Feuchtigkeit oder Rissen muss der alte Boden zuerst raus.',
+  },
+  {
+    q: 'Ist Mikrozement in Spanien eine gute Idee?',
+    a: 'Für einen schlichten, fugenlosen Look in Bad oder Wohnzimmer ja, und er kann auf vorhandene Fliesen. Aber es ist Handwerkskunst: Schlecht aufgetragener Mikrozement reißt oder wird fleckig. Er ist kratzempfindlicher als Fliesen und muss alle paar Jahre neu versiegelt werden. In einer viel genutzten Ferienvermietung wählen wir lieber großformatige Fliesen.',
+  },
+  {
+    q: 'Warum hat fast jedes spanische Haus Fliesenböden?',
+    a: 'Fliesen bleiben im Sommer kühl, vertragen Sand, Wasser und Sonnencreme und halten Jahrzehnte. Gute Fliesen sind in Spanien zudem leicht und günstig zu bekommen. Der Nachteil: Im Winter fühlen sie sich kalt an. Eine Fußbodenheizung oder ein paar gute Teppiche lösen das.',
+  },
+  {
+    q: 'Kann ich Laminat oder Parkett in einem spanischen Haus verlegen?',
+    a: 'In einer trockenen Wohnung geht das, aber in alten Dorfhäusern und Fincas ohne Kriechkeller steigt Feuchtigkeit aus dem Boden auf. Laminat quillt dann auf und Holz arbeitet. Wer die warme Optik von Holz möchte, wählt Feinsteinzeug in Holzoptik oder einen wasserfesten Klick-Vinylboden.',
+  },
+  {
+    q: 'Brauche ich eine Genehmigung für einen neuen Boden?',
+    a: 'Ein neuer Boden im Haus gilt meist als kleine Baumaßnahme. Je nach Gemeinde reichen Sie eine Anzeige ein (declaración responsable) oder beantragen eine kleine Baugenehmigung. In einer Wohnung prüfen Sie auch die Regeln der Eigentümergemeinschaft: Manche schreiben Trittschalldämmung vor.',
+  },
+];
+---
+<Guide lang="de" slug="bodenbelag-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Neuen Boden verlegen lassen?" ctaText="Sagen Sie uns, welche Räume Sie angehen möchten und welchen Boden Sie sich vorstellen. Wir übernehmen alles, vom Herausnehmen des alten Bodens bis zur letzten Sockelleiste, auch wenn Sie nicht in Spanien sind.">
+  <h2 id="spanisch">Warum Böden in Spanien anders sind</h2>
+  <p>Ein Boden in der Axarquía muss anderes aushalten als in Deutschland. Im Sommer soll er kühl bleiben, Sand und Wasser vom Strand oder Pool landen darauf, und in alten Dorfhäusern und Fincas liegt der Boden oft direkt auf dem Erdreich, ohne Kriechkeller. Feuchtigkeit steigt dann auf. Deshalb hat fast jedes spanische Haus einen Stein- oder Keramikboden (<em>suelo</em> oder <em>solería</em>).</p>
+  <p>Trotzdem gibt es mehr Auswahl als die übliche beige Fliese. Unten vergleichen wir alle gängigen Böden: was sie kosten, was sie gut können und wo sie nicht passen.</p>
+
+  <h2 id="vergleich">Alle Böden im Vergleich</h2>
+  <p>Unten für jeden Boden, was er gut kann und wo er schwächelt. Abriss des alten Bodens und Ausgleichen des Untergrunds kommen hinzu (siehe <a href="#extras">was noch dazukommt</a>).</p>
+  <div class="table-scroll">
+  <table class="prices">
+    <thead><tr><th>Boden</th><th>Stark bei</th><th>Schwächer bei</th></tr></thead>
+    <tbody>
+      <tr><td>Feinsteinzeug (gres porcelánico)</td><td>Robust, wasserfest, kühl, pflegeleicht</td><td>Kalt im Winter, Fugen</td></tr>
+      <tr><td>Großformat (z. B. 120 × 60 cm oder größer)</td><td>Schlicht, wenige Fugen, wirkt großzügig</td><td>Braucht sehr ebenen Untergrund und Fachleute</td></tr>
+      <tr><td>Mikrozement</td><td>Fugenlos, auf alten Fliesen, auch an Wänden</td><td>Kratzer, Handwerkskunst, alle paar Jahre versiegeln</td></tr>
+      <tr><td>Alten Terrazzo aufarbeiten (schleifen und polieren)</td><td>Günstig, Charakter, hält noch Jahrzehnte</td><td>Kaputte Fliesen schwer zu ersetzen</td></tr>
+      <tr><td>Neuer Terrazzo</td><td>Nahezu unverwüstlich, schön</td><td>Preis, Gewicht</td></tr>
+      <tr><td>Barro / Terrakotta (handgemacht)</td><td>Warme, authentische Ausstrahlung</td><td>Porös, fleckt, muss behandelt werden</td></tr>
+      <tr><td>Marmor und Naturstein</td><td>Edel, kühl, langlebig</td><td>Preis, empfindlich gegen Zitrone und Essig</td></tr>
+      <tr><td>Polierter oder gegossener Beton</td><td>Industrielook, robust</td><td>Haarrisse, braucht guten Untergrund</td></tr>
+      <tr><td>Klick-Vinyl (SPC/LVT)</td><td>Schnell, wasserfest, auf Fliesen, wärmer und leiser</td><td>Wird in der Sonne heiß, weniger haltbar als Fliesen</td></tr>
+      <tr><td>Laminat</td><td>Günstig, Holzoptik</td><td>Quillt bei Feuchtigkeit, nicht für alte Häuser</td></tr>
+      <tr><td>Parkett oder Massivholz</td><td>Warm und gemütlich</td><td>Feuchtigkeit, Sonne und Sand, arbeitet mit den Jahreszeiten</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box"><p><strong>Möchten Sie einen neuen Boden verlegen lassen?</strong> Wir übernehmen alles: den alten Boden raus, den Untergrund in Ordnung bringen und den neuen Boden rein, auch wenn Sie nicht in Spanien sind. Sagen Sie uns, was Sie machen lassen möchten.</p><a class="btn" href="/de/anfrage/?dienst=renovatie">Erzählen Sie uns Ihr Vorhaben</a></div>
+  <p>Kleine Flächen, Treppen und viel Zuschnitt machen den Quadratmeter teurer. Rechnen Sie auch mit einer passenden Sockelleiste (<em>rodapié</em>).</p>
+
+  <h2 id="fliesen">Feinsteinzeug (gres porcelánico)</h2>
+  <p>Spanien gehört zu den größten Fliesenherstellern der Welt, mit Fabriken rund um Castellón. Gute Fliesen sind hier deshalb günstig und die Auswahl ist riesig. Wählen Sie <strong>porcelánico</strong> (durchgefärbtes, dicht gebranntes Feinsteinzeug) statt einfacher Keramik: Es nimmt kaum Wasser auf, ist härter und auch für draußen geeignet.</p>
+  <ul>
+    <li><strong>Format:</strong> 60 × 60 cm ist Standard. Großformate (120 × 60, 120 × 120 cm) bedeuten weniger Fugen und eine ruhige Fläche, aber der Untergrund muss sehr eben sein und das Verlegen kostet mehr.</li>
+    <li><strong>Holzoptik:</strong> lange Fliesen mit Holzmaserung wirken wie Parkett, ohne die Probleme mit Feuchtigkeit.</li>
+    <li><strong>Farbe:</strong> helle Farben lassen den Raum größer wirken und bleiben kühler. Sehr dunkel oder sehr weiß zeigt jedes Sandkorn.</li>
+    <li><strong>Fugen:</strong> schmale Fugen in einer Farbe nah an der Fliese. Epoxidfugen in Küche und Bad bleiben sauber.</li>
+  </ul>
+
+  <h2 id="mikrozement">Mikrozement</h2>
+  <p>Mikrozement ist eine dünne Schicht (2 bis 3 mm) aus Zement, Kunstharz und Pigment, die in mehreren Lagen von Hand aufgetragen und dann versiegelt wird. Das Ergebnis ist ein fugenloser Boden, der auch an Wänden, auf Treppen und in der Dusche weiterlaufen kann.</p>
+  <ul>
+    <li><strong>Vorteile:</strong> schlichte, moderne Optik; kann auf vorhandene Fliesen, also kein Abriss und kaum Höhenunterschied; keine Fugen zu reinigen; Boden und Wände aus einem Material.</li>
+    <li><strong>Nachteile:</strong> das Ergebnis hängt ganz vom Handwerker ab; der Untergrund darf nicht arbeiten, sonst entstehen Haarrisse; kratz- und fleckempfindlicher als Fliesen; die Versiegelung muss alle 2 bis 5 Jahre erneuert werden.</li>
+    <li><strong>Geeignet für:</strong> ein Haus oder eine Wohnung, die Sie selbst bewohnen, Bäder und offene Küchen. Weniger für eine stark genutzte Ferienvermietung mit Sand und Koffern.</li>
+  </ul>
+
+  <h2 id="terrazzo">Terrazzo und alte Zementfliesen</h2>
+  <p>In vielen Wohnungen aus den 1960er bis 1980er Jahren und in alten Dorfhäusern liegt <em>terrazo</em> oder <em>granito</em>: Zementfliesen mit Marmorsplittern. Oder die bekannten gemusterten Zementfliesen (<em>baldosa hidráulica</em>). Viele Käufer wollen sie loswerden, doch das ist oft schade.</p>
+  <ul>
+    <li><strong>Aufarbeiten:</strong> Schleifen, Spachteln und Polieren macht einen stumpfen Terrazzoboden wieder wie neu. Viel günstiger als ein neuer Boden und ohne Schutt.</li>
+    <li><strong>Gemusterte Zementfliesen</strong> sind heute gefragt. Können Sie sie nicht im ganzen Haus behalten, verwenden Sie sie im Flur oder als „Teppich“ im Wohnzimmer.</li>
+    <li><strong>Hinweis:</strong> kaputte Terrazzofliesen sind schwer nachzumachen. Legen Sie bei einer Renovierung ein paar heile Fliesen beiseite.</li>
+  </ul>
+
+  <h2 id="barro">Barro und Terrakotta</h2>
+  <p>Handgemachte Fliesen aus gebranntem Ton, von rot bis sandfarben, passen zu einer Finca oder einem Cortijo. Einen alten Barroboden reinigen und neu imprägnieren ist deutlich günstiger, als einen neuen zu verlegen.</p>
+  <ul>
+    <li><strong>Vorteile:</strong> warme, authentische Atmosphäre; jede Fliese ist anders; altert schön.</li>
+    <li><strong>Nachteile:</strong> porös, Öl- und Weinflecken ziehen ein, wenn der Boden nicht gut behandelt ist; muss regelmäßig mit Öl oder Wachs nachbehandelt werden; in der Küche weniger praktisch.</li>
+    <li><strong>Tipp:</strong> Wer die Optik ohne den Pflegeaufwand möchte: Es gibt Feinsteinzeug in Terrakotta-Optik, das kaum vom Original zu unterscheiden ist.</li>
+  </ul>
+
+  <h2 id="naturstein">Marmor und Naturstein</h2>
+  <p>Andalusien hat seinen eigenen Marmor: Der weiße Marmor aus Macael (Almería) liegt in vielen Villen und auf vielen Treppen. Naturstein ist edel, kühl und hält Generationen, ist aber teuer und empfindlich: Säure wie Zitrone, Essig und manche Reiniger greifen polierten Marmor an. Eine geschliffene oder gebürstete Oberfläche ist weniger rutschig und weniger empfindlich als Hochglanz.</p>
+
+  <h2 id="vinyl">Vinyl, Laminat und Holz</h2>
+  <ul>
+    <li><strong>Klick-Vinyl (SPC oder LVT):</strong> der schnellste und günstigste Weg, einen veralteten Fliesenboden zu erneuern. Er wird auf die vorhandenen Fliesen gelegt, ist wasserfest, fühlt sich wärmer an und ist leiser. Nachteile: Bei viel Sonne auf dem Boden kann er sich ausdehnen und ausbleichen, er ist weniger kratzfest als Fliesen und hält nicht so lange. Gut für Schlafzimmer und eine selbst genutzte Wohnung.</li>
+    <li><strong>Laminat</strong> raten wir in der Axarquía meist ab: Feuchtigkeit aus dem Untergrund, eine tropfende Klimaanlage oder ein nasses Handtuch lassen es aufquellen.</li>
+    <li><strong>Parkett oder Massivholz</strong> geht in einem trockenen, gut gedämmten Haus, muss aber den feuchten Winter und den trockenen Sommer vertragen. Wählen Sie Mehrschichtparkett, nie direkt auf einem Boden ohne Feuchtigkeitssperre.</li>
+  </ul>
+
+  <h2 id="aussen">Terrasse, Dachterrasse und Poolrand</h2>
+  <p>Draußen gelten andere Anforderungen. Achten Sie bei Fliesen für Terrasse, Treppe oder Poolrand auf:</p>
+  <ul>
+    <li><strong>Rutschfestigkeit:</strong> Klasse C3 (die höchste spanische Rutschklasse, <em>clase 3</em>) am Pool und auf Treppen, mindestens C2 auf der Terrasse.</li>
+    <li><strong>Frostbeständigkeit</strong> in den Bergdörfern, wo es im Winter gelegentlich friert.</li>
+    <li><strong>Helle Farbe:</strong> dunkle Fliesen werden in der Sommersonne so heiß, dass man barfuß nicht darüber laufen kann.</li>
+    <li><strong>Gefälle und Abdichtung:</strong> Auf einer Dachterrasse liegt unter den Fliesen eine Abdichtung. Neue Fliesen verlegen, ohne sie zu prüfen, führt zu Undichtigkeiten. Siehe <a href="/de/kosten/dach-und-dachterrasse/">Dach und Dachterrasse</a> und <a href="/de/probleme/undichtes-dach/">undichtes Dach</a>.</li>
+  </ul>
+  <p>Geht es um den Poolrand oder den ganzen Pool, lesen Sie <a href="/de/kosten/pool-bauen/">was ein Pool kostet</a>.</p>
+
+  <h2 id="fussbodenheizung">Fußbodenheizung</h2>
+  <p>Der größte Nachteil eines Steinbodens ist, dass er im Winter kalt ist. Eine Fußbodenheizung löst das, und Fliesen und Mikrozement leiten die Wärme sehr gut.</p>
+  <ul>
+    <li><strong>Elektrische Heizmatte</strong> unter den Fliesen: bezahlbar für ein Bad oder einen Raum, aber teurer im Betrieb.</li>
+    <li><strong>Wassergeführte Fußbodenheizung mit Wärmepumpe (aerotermia):</strong> eine größere Investition, weil eine Wärmepumpe dazukommt. Sparsam und komfortabel für das ganze Haus, vor allem wenn der Boden bei einer großen Renovierung ohnehin offen ist.</li>
+  </ul>
+  <p>Eine Wärmepumpe heizt und kühlt; mehr dazu bei <a href="/de/kosten/klimaanlage-und-waermepumpe/">Klimaanlage und Wärmepumpe</a>.</p>
+
+  <h2 id="wahl">Welcher Boden passt zu Ihrem Haus?</h2>
+  <table class="prices">
+    <thead><tr><th>Situation</th><th>Unsere Empfehlung</th></tr></thead>
+    <tbody>
+      <tr><td>Ferienvermietung oder B&B</td><td>Feinsteinzeug in einem mittleren Ton mit schmalen Fugen: verträgt Sand, Koffer und Reiniger, und eine beschädigte Fliese ist leicht zu ersetzen</td></tr>
+      <tr><td>Wohnung aus den 70ern mit Terrazzo</td><td>Terrazzo schleifen und polieren lassen, oder Mikrozement darüber für eine moderne Optik</td></tr>
+      <tr><td>Altes Dorfhaus mit feuchtem Boden</td><td>Zuerst die Feuchtigkeit beheben, dann Fliesen oder Barro. Kein Laminat, Parkett oder Vinyl direkt auf dem Erdreich</td></tr>
+      <tr><td>Finca oder Cortijo</td><td>Barro oder Fliesen in Terrakotta-Optik innen, rutschfestes Feinsteinzeug außen</td></tr>
+      <tr><td>Veralteter Boden, kleines Budget</td><td>Klick-Vinyl über den Fliesen in Schlafzimmern, oder Fliese auf Fliese</td></tr>
+      <tr><td>Haus mit Hunden oder kleinen Kindern</td><td>Feinsteinzeug oder Terrazzo: kratzfest und leicht zu reinigen</td></tr>
+      <tr><td>Ganzjährig bewohnt, große Renovierung</td><td>Großformat oder Mikrozement mit Fußbodenheizung über Wärmepumpe</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="extras">Was noch dazukommt</h2>
+  <ul>
+    <li><strong>Alten Boden abreißen und Schutt entsorgen:</strong> in den engen Gassen der weißen Dörfer teurer, weil kein Container stehen kann und alles von Hand hinaus muss.</li>
+    <li><strong>Ausgleichen:</strong> nötig für Großformate, Mikrozement und Vinyl.</li>
+    <li><strong>Feuchtigkeitssperre oder Drainage</strong> bei feuchten Böden: Lassen Sie zuerst die Ursache klären, siehe <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit und Schimmel</a>.</li>
+    <li><strong>Türen kürzen</strong>, wenn der Boden höher wird.</li>
+    <li><strong>Möbel umräumen und das Haus staubdicht abdecken</strong>, wenn es bewohnt oder möbliert vermietet ist.</li>
+    <li><strong>MwSt.:</strong> Renovierungsarbeiten an einer Wohnung können unter Bedingungen mit 10 % statt 21 % abgerechnet werden. Siehe <a href="/de/ratgeber/renovierungskosten-spanien/">was eine Renovierung kostet</a>.</li>
+  </ul>
+  <p>Sie wohnen nicht in Spanien? Ein neuer Boden lässt sich gut erledigen, während Sie nicht da sind. Rechnen Sie mit 1 bis 2 Wochen für eine durchschnittliche Wohnung, mit Fotos von jedem Schritt.</p>
+</Guide>

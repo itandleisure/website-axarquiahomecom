@@ -1,0 +1,111 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'overzicht', label: 'Which pests will you come across?' },
+  { id: 'kakkerlakken', label: 'Cockroaches: in through the drains' },
+  { id: 'muizen', label: 'Mice and rats' },
+  { id: 'processierups', label: 'Processionary caterpillars: dangerous for dogs' },
+  { id: 'muggen', label: 'Mosquitoes and the tiger mosquito' },
+  { id: 'hout', label: 'Termites and woodworm' },
+  { id: 'buiten', label: 'How to keep pests out' },
+  { id: 'bestrijder', label: 'Hiring a pest controller' },
+];
+
+const faq = [
+  {
+    q: 'Why are there so many cockroaches in Spain?',
+    a: 'The large brown cockroach (cucaracha americana) lives in the sewers and comes up through drains, gullies and gaps in warm weather. In a house that stands empty, the water in the traps dries out, leaving nothing between the sewer and your bathroom. Topping up the traps regularly and sealing drains properly makes a big difference.',
+  },
+  {
+    q: 'How much does pest control cost in Spain?',
+    a: 'A one-off treatment for cockroaches or ants in an apartment or village house usually costs € 80 to € 200. Mice or rats with bait stations: € 120 to € 300. An annual contract with several inspections: € 200 to € 500. Termites cost more: € 900 to € 2,000 for a bait system. These are estimates excluding VAT.',
+  },
+  {
+    q: 'Does my home insurance cover pest damage?',
+    a: 'Usually not. Damage from termites, woodworm, mice or rats is excluded in almost every Spanish policy. Prevention and acting early are the only ways to keep costs down.',
+  },
+  {
+    q: 'Can I use poison myself?',
+    a: 'Household products from the supermarket or DIY store can be used according to the label. Stronger products and termite treatments may only be applied by licensed companies. Be careful with poison if you have a dog or cat.',
+  },
+];
+---
+<Guide lang="en" slug="pest-control-spain" toc={toc} faq={faq} dienst="onderhoud" onderwerp="I have a pest problem and want the house sealed." ctaTitle="Keep pests out for good?" ctaText="We find where they get in and seal it: gaps, drains, the roof and air vents. Where needed, we bring in a licensed pest controller and repair damaged timber.">
+  <p>Getting rid of pests is one thing, but they come back as long as they have a way in. This guide covers the pests you will meet in the Axarquía, what you can do yourself and when to call in a professional.</p>
+
+  <h2 id="overzicht">Which pests will you come across?</h2>
+  <table class="prices">
+    <thead><tr><th>Pest</th><th>When</th><th>What to look for</th></tr></thead>
+    <tbody>
+      <tr><td>Cockroaches (<em>cucarachas</em>)</td><td>May to October</td><td>Drains, gullies, kitchen cupboards, active at night</td></tr>
+      <tr><td>Ants (<em>hormigas</em>)</td><td>Spring and summer</td><td>Ant trails along skirting boards and frames</td></tr>
+      <tr><td>Mice and rats (<em>ratones, ratas</em>)</td><td>Mainly autumn and winter</td><td>Droppings, gnaw marks, scratching in the roof</td></tr>
+      <tr><td>Processionary caterpillars (<em>procesionaria</em>)</td><td>January to April</td><td>White nests in pine trees, caterpillars in a line on the ground</td></tr>
+      <tr><td>Mosquitoes and tiger mosquitoes (<em>mosquito tigre</em>)</td><td>April to November</td><td>Standing water, bites during the day</td></tr>
+      <tr><td>Termites (<em>termitas</em>)</td><td>All year, swarms in spring</td><td>Mud tubes, timber that sounds hollow</td></tr>
+      <tr><td>Woodworm (<em>carcoma</em>)</td><td>All year</td><td>Small round holes and wood dust under beams or furniture</td></tr>
+      <tr><td>Scorpions and centipedes (<em>escolopendras</em>)</td><td>Summer</td><td>Under stones, in cracks in old walls</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="kakkerlakken">Cockroaches: in through the drains</h2>
+  <p>In southern Spain you mainly see two kinds. The <strong>large brown cockroach</strong> (up to 4 cm) lives in the sewers and comes in through drains, gullies and gaps, especially on warm evenings. The <strong>small German cockroach</strong> settles in kitchens, behind appliances and in cupboards, and often arrives in boxes or second-hand furniture.</p>
+  <ul>
+    <li><strong>Traps</strong>: a U-bend with water in it keeps sewer pests and smells out. If the house is empty for weeks, the water evaporates. Run the taps, showers and floor drains at every check, or add a splash of oil, which evaporates more slowly.</li>
+    <li><strong>Gullies and drains</strong>: a grate or sealable drain on the terrace and in the bathroom, and properly connected waste pipes without gaps.</li>
+    <li><strong>Gaps</strong>: seal openings around pipes that pass through walls or floors with sealant or mortar.</li>
+  </ul>
+  <p>Gel bait works best against the small cockroach in the kitchen. Against the large one, sealing is what helps most. If they keep coming back in large numbers, there is often a problem in the drainage, such as a broken pipe or an old septic tank.</p>
+
+  <h2 id="muizen">Mice and rats</h2>
+  <p>On fincas and in village houses with an old roof, mice and rats are a familiar problem in autumn. They are drawn by fruit from avocado or mango trees, animal feed and a warm spot under the roof tiles. They gnaw through electric cables, water pipes and insulation, which can lead to fires or leaks.</p>
+  <ul>
+    <li>A mouse fits through a gap of about 6 mm, a rat through 2 cm. Close holes at pipe entries, under doors and along the eaves.</li>
+    <li>Fit mesh behind air vents and a brush strip under doors.</li>
+    <li>Clear fallen fruit and open feed, and keep plants away from the roof.</li>
+    <li>Only use bait in closed bait stations, especially with dogs, cats or children around.</li>
+  </ul>
+
+  <h2 id="processierups">Processionary caterpillars: dangerous for dogs</h2>
+  <p>If there are pine trees (<em>pinos</em>) on or near your plot, you will probably come across them. The caterpillars of the pine processionary moth spend the winter in white nests in the tree and, from January to April, come down to the ground in a long line. Their hairs cause severe itching and inflammation in people, and are genuinely dangerous for dogs and cats: a dog that licks one can get swelling in the mouth and tongue. Go to a vet straight away.</p>
+  <ul>
+    <li>Have nests removed in autumn or early winter by a professional with protective clothing.</li>
+    <li>A collar trap around the trunk catches the caterpillars on their way down.</li>
+    <li>Pheromone traps in summer catch the moths and prevent new nests.</li>
+  </ul>
+
+  <h2 id="muggen">Mosquitoes and the tiger mosquito</h2>
+  <p>The tiger mosquito has been present in Málaga province for several years. It bites during the day and lays its eggs in small amounts of standing water: a plant saucer, a bucket, a blocked gutter or a water butt without a lid. What helps:</p>
+  <ul>
+    <li>No water left standing in saucers, buckets and toys, and clean gutters.</li>
+    <li>Keep the pool filtering in winter even if you do not use it, or cover it properly. See <a href="/en/guides/pool-maintenance-spain/">pool maintenance</a>.</li>
+    <li>Insect screens for windows and doors, the most effective measure indoors. See <a href="/en/guides/awnings-shutters-insect-screens-spain/">awnings, shutters and insect screens</a>.</li>
+  </ul>
+
+  <h2 id="hout">Termites and woodworm</h2>
+  <p>Subterranean termites are found in large parts of Andalusia, including the Axarquía. They eat timber beams, frames and skirting boards from the inside, often for years without being noticed. Woodworm, by contrast, leaves small round holes and fine wood dust. With both, early detection is the difference between a treatment and new beams. Everything about recognising, treating and costs is on our page about <a href="/en/problems/termites/">termites in your house</a>.</p>
+  <p>Buying an old village house or a finca? Have the beams and frames checked as part of the <a href="/en/property-survey/">property survey</a>.</p>
+
+  <h2 id="buiten">How to keep pests out</h2>
+  <p>Most infestations come back as long as the house is open to them. These building measures work against almost everything at once:</p>
+  <ul>
+    <li><strong>Seal gaps and holes</strong> around pipes, cables, frames and the eaves.</li>
+    <li><strong>Mesh behind air vents</strong> and in chimneys.</li>
+    <li><strong>Door brushes or thresholds</strong> under external doors.</li>
+    <li><strong>Insect screens</strong> for windows and doors.</li>
+    <li><strong>Drains and gullies</strong> with proper traps and sealable grates.</li>
+    <li><strong>Tackle damp</strong>: many insects and wood borers look for damp spots. See <a href="/en/problems/damp-and-mould/">damp and mould</a>.</li>
+    <li><strong>Regular checks</strong> while you are away: topping up traps, looking for signs and acting in time. That is what <a href="/en/key-holding/">key holding</a> does.</li>
+  </ul>
+
+  <h2 id="bestrijder">Hiring a pest controller</h2>
+  <p>A pest controller in Spain is an <em>empresa de control de plagas</em> or <em>DDD</em> company (desinsectación, desratización, desinfección). Look out for the following:</p>
+  <ul>
+    <li>The company must be listed in the Junta de Andalucía’s official register of biocide services (<em>ROESB</em>). Ask for the number.</li>
+    <li>After the treatment you receive a certificate listing the products used and the safety period. Keep it, also for letting or selling.</li>
+    <li>Ask whether there is a guarantee and whether a second visit is included in the price.</li>
+    <li>If you let the house, an annual contract prevents complaints from guests.</li>
+  </ul>
+  <p>The pest controller deals with the pests but does not seal the entry points. That is what we do: we trace where they get in, seal gaps, drains and the roof, and replace damaged timber. <a href="/en/request/?dienst=onderhoud">Tell us what you are seeing</a>, with a few photos, and we will look at what is needed.</p>
+</Guide>

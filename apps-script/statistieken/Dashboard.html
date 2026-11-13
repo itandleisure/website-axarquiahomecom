@@ -331,6 +331,8 @@ document.querySelectorAll('.tabs button').forEach((b) => b.addEventListener('cli
 document.getElementById('bijgewerkt').textContent = 'Bijgewerkt ' + D.bijgewerkt;
 document.getElementById('log').innerHTML = D.log.length ? tabel([['Tijd'], ['Onderdeel'], ['Resultaat']], D.log.slice().reverse().map((r) => r.map(esc))) : leeg('Leeg.');
 render();
+// Laat axarquiahome.com/statistiek/ weten dat het dashboard geladen is (geen cijfers, alleen een seintje).
+try { window.top.postMessage('axh-statistiek:ok', '*'); } catch (e) {}
 </script>
 </body>
 </html>

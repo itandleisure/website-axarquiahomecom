@@ -15,7 +15,7 @@ const content: PlaceContent = {
   ],
   nl: {
     title: 'Vélez-Málaga: wonen en kopen in de hoofdstad van de Axarquía',
-    description: 'Alles over Vélez-Málaga: de stad, de kustplaatsen Torre del Mar, Caleta de Vélez en Benajarafe, voorzieningen, woningprijzen en waar u op let bij kopen en verbouwen.',
+    description: 'Alles over Vélez-Málaga: de stad, Torre del Mar, Caleta de Vélez en Benajarafe, voorzieningen, woningprijzen en waar u op let bij kopen en verbouwen.',
     lead: 'Vélez-Málaga is de hoofdstad van de Axarquía: een echte Spaanse stad met ziekenhuis, markten en winkels, en aan zee de badplaatsen Torre del Mar, Caleta de Vélez en Benajarafe.',
     intro: [
       'De gemeente Vélez-Málaga is met ruim 85.000 inwoners veruit de grootste van de Axarquía. De stad zelf ligt een paar kilometer landinwaarts, op een heuvel met de Moorse burcht, de Fortaleza. Aan de kust liggen <a href="/nl/plaatsen/torre-del-mar/">Torre del Mar</a>, met zijn lange boulevard, de vissershaven van <a href="/nl/plaatsen/caleta-de-velez/">Caleta de Vélez</a> en <a href="/nl/plaatsen/benajarafe/">Benajarafe</a>, met rustigere stranden richting Málaga.',
@@ -32,7 +32,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'Voor wie het hele jaar in Spanje woont en alle voorzieningen dichtbij wil, met een Spaans karakter. Torre del Mar is populair bij overwinteraars en gezinnen; de dorpjes in het binnenland bij wie ruimte zoekt.',
     see: {
-      title: 'Zien en doen in Vélez-Málaga: Fortaleza, Torre del Mar en de haven van Caleta',
+      title: 'Zien en doen in Vélez-Málaga: Fortaleza en de kust',
       description: 'Wat te doen in Vélez-Málaga: de Fortaleza en de oude stad, de boulevard van Torre del Mar, de vissershaven van Caleta de Vélez, stranden en feesten.',
       lead: 'Vélez combineert een historische stad met een lange kust. In één dag ziet u een Moorse burcht, een vismarkt en een strand.',
       items: [
@@ -76,8 +76,8 @@ const content: PlaceContent = {
     ],
   },
   en: {
-    title: 'Vélez-Málaga: living and buying in the capital of the Axarquía',
-    description: 'All about Vélez-Málaga: the town, the coastal resorts of Torre del Mar, Caleta de Vélez and Benajarafe, facilities, property prices and what to know about buying and renovating.',
+    title: 'Vélez-Málaga: living and buying in the Axarquía capital',
+    description: 'All about Vélez-Málaga: the town, Torre del Mar, Caleta de Vélez and Benajarafe, facilities, property prices and tips on buying and renovating.',
     lead: 'Vélez-Málaga is the capital of the Axarquía: a real Spanish town with a hospital, markets and shops, and on the sea the resorts of Torre del Mar, Caleta de Vélez and Benajarafe.',
     intro: [
       'With over 85,000 residents, Vélez-Málaga is by far the largest municipality in the Axarquía. The town itself lies a few kilometres inland, on a hill topped by the Moorish fortress, the Fortaleza. On the coast are <a href="/en/places/torre-del-mar/">Torre del Mar</a>, with its long promenade, the fishing port of <a href="/en/places/caleta-de-velez/">Caleta de Vélez</a> and <a href="/en/places/benajarafe/">Benajarafe</a>, with quieter beaches towards Málaga.',
@@ -94,7 +94,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'People who live in Spain year-round and want every facility close by, with a Spanish character. Torre del Mar is popular with winter residents and families; the inland hamlets with those looking for space.',
     see: {
-      title: 'Things to do in Vélez-Málaga: the Fortaleza, Torre del Mar and Caleta harbour',
+      title: 'Things to do in Vélez-Málaga: Fortaleza and coast',
       description: 'What to do in Vélez-Málaga: the Fortaleza and old town, the Torre del Mar promenade, the Caleta de Vélez fishing port, beaches and fiestas.',
       lead: 'Vélez combines a historic town with a long coastline. In one day you can see a Moorish fortress, a fish market and a beach.',
       items: [
@@ -138,8 +138,8 @@ const content: PlaceContent = {
     ],
   },
   de: {
-    title: 'Vélez-Málaga: Wohnen und Kaufen in der Hauptstadt der Axarquía',
-    description: 'Alles über Vélez-Málaga: die Stadt, die Küstenorte Torre del Mar, Caleta de Vélez und Benajarafe, Versorgung, Immobilienpreise und was Sie zu Kauf und Renovierung wissen sollten.',
+    title: 'Vélez-Málaga: Wohnen und Kaufen in der Hauptstadt',
+    description: 'Alles über Vélez-Málaga: die Stadt, Torre del Mar, Caleta de Vélez und Benajarafe, Versorgung, Immobilienpreise und Tipps zu Kauf und Renovierung.',
     lead: 'Vélez-Málaga ist die Hauptstadt der Axarquía: eine echte spanische Stadt mit Krankenhaus, Märkten und Geschäften, und am Meer die Badeorte Torre del Mar, Caleta de Vélez und Benajarafe.',
     intro: [
       'Mit gut 85.000 Einwohnern ist Vélez-Málaga die mit Abstand größte Gemeinde der Axarquía. Die Stadt selbst liegt einige Kilometer landeinwärts auf einem Hügel mit der maurischen Burg, der Fortaleza. An der Küste liegen <a href="/de/orte/torre-del-mar/">Torre del Mar</a> mit seiner langen Promenade, der Fischerhafen <a href="/de/orte/caleta-de-velez/">Caleta de Vélez</a> und <a href="/de/orte/benajarafe/">Benajarafe</a> mit ruhigeren Stränden Richtung Málaga.',
@@ -156,7 +156,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'Für alle, die das ganze Jahr in Spanien leben und alle Einrichtungen in der Nähe haben möchten, mit spanischem Charakter. Torre del Mar ist bei Überwinterern und Familien beliebt; die Weiler im Hinterland bei allen, die Platz suchen.',
     see: {
-      title: 'Sehenswertes in Vélez-Málaga: Fortaleza, Torre del Mar und der Hafen von Caleta',
+      title: 'Sehenswertes in Vélez-Málaga: Fortaleza und Küste',
       description: 'Was man in Vélez-Málaga unternehmen kann: Fortaleza und Altstadt, die Promenade von Torre del Mar, der Fischerhafen von Caleta de Vélez, Strände und Feste.',
       lead: 'Vélez verbindet eine historische Stadt mit einer langen Küste. An einem Tag sehen Sie eine maurische Burg, einen Fischmarkt und einen Strand.',
       items: [
@@ -173,7 +173,7 @@ const content: PlaceContent = {
     },
     living: {
       title: 'Wohnen in Vélez-Málaga: Stadt, Küste und Land',
-      description: 'Ein Haus in Vélez-Málaga, Torre del Mar oder Caleta kaufen? Welche Immobilien es gibt, was sie kosten, die Versorgung und worauf Sie bei Kauf und Renovierung achten sollten.',
+      description: 'Haus in Vélez-Málaga, Torre del Mar oder Caleta kaufen? Immobilien, Preise, Versorgung und worauf Sie bei Kauf und Renovierung achten sollten.',
       lead: 'Vélez-Málaga hat das größte Angebot der Axarquía, von Apartments am Meer über Reihenhäuser in der Stadt bis zu Landhäusern zwischen Avocadobäumen.',
       sections: [
         { h: 'Welche Immobilien es gibt', p: [
@@ -218,7 +218,7 @@ const content: PlaceContent = {
     ],
     forWhom: 'För dig som bor i Spanien året runt och vill ha all service nära, i en spansk miljö. Torre del Mar är populärt bland dem som övervintrar och bland barnfamiljer; småorterna i inlandet bland dem som söker utrymme.',
     see: {
-      title: 'Se och göra i Vélez-Málaga: Fortaleza, Torre del Mar och hamnen i Caleta',
+      title: 'Se och göra i Vélez-Málaga: Fortaleza och kusten',
       description: 'Vad du kan göra i Vélez-Málaga: Fortaleza och gamla stan, strandpromenaden i Torre del Mar, fiskehamnen i Caleta de Vélez, stränder och fiestor.',
       lead: 'Vélez kombinerar en historisk stad med en lång kustremsa. På en dag hinner du se en morisk borg, en fiskmarknad och en strand.',
       items: [

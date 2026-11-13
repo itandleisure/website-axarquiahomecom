@@ -1,0 +1,130 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'wahl', label: 'Dusche, Badewanne oder beides?' },
+  { id: 'vergleich', label: 'Alle Möglichkeiten im Vergleich' },
+  { id: 'walk-in', label: 'Bodengleiche Dusche' },
+  { id: 'regendusche', label: 'Regendusche' },
+  { id: 'duschwanne', label: 'Duschwanne mit Glaswand' },
+  { id: 'wanne', label: 'Badewanne, Wanne mit Dusche oder freistehend' },
+  { id: 'wasser', label: 'Wasser, Druck und Boiler' },
+  { id: 'vermietung', label: 'Für B&B und Ferienvermietung' },
+  { id: 'spaeter', label: 'Ein Bad für später' },
+  { id: 'empfehlung', label: 'Unsere Empfehlung je Situation' },
+];
+
+const faq = [
+  {
+    q: 'Ist eine Regendusche sparsam?',
+    a: 'Meist nicht. Eine normale Spardusche verbraucht 6 bis 9 Liter pro Minute, eine große Regendusche 12 bis 20 Liter. Mit einem wassersparenden Regenduschkopf (rund 9 Liter pro Minute) und einem Thermostat hält sich der Verbrauch in Grenzen. Auf einer Finca mit Wassertank oder in einem trockenen Jahr ist ein normaler Duschkopf vernünftiger, oder eine Kombination mit Handbrause.',
+  },
+  {
+    q: 'Braucht ein B&B eine Badewanne?',
+    a: 'Nein. Die meisten Gäste in der Axarquía wollen eine gute, großzügige Dusche. Eine Wanne ist ein Extra für Familien mit kleinen Kindern oder für eine Luxus-Suite, in der eine freistehende Wanne auf Fotos stark wirkt. Prüfen Sie aber die Anforderungen der Kategorie, in der Sie Ihre Unterkunft anmelden.',
+  },
+  {
+    q: 'Geht eine bodengleiche Dusche überall?',
+    a: 'Nicht immer. Eine Dusche ohne Stufe braucht Gefälle zum Abfluss, und dafür muss unter dem Boden Platz sein. Im Erdgeschoss ist das meist möglich. In einer Wohnung liegen die Abflüsse oft in der Decke der Nachbarn darunter; dann wird der Boden etwas erhöht oder eine sehr flache Duschwanne von 2 bis 3 cm eingesetzt.',
+  },
+  {
+    q: 'Was kostet es, die Badewanne durch eine Dusche zu ersetzen?',
+    a: 'Das hängt von den Maßen, dem Abfluss und den gewählten Fliesen und der Glaswand ab. Es ist deutlich weniger Arbeit als ein komplett neues Bad, weil nur der Duschbereich erneuert wird. Möchten Sie es machen lassen? Wir nehmen Ihnen die ganze Arbeit ab.',
+  },
+];
+---
+<Guide lang="de" slug="bad-dusche-oder-badewanne" toc={toc} faq={faq} dienst="badkamer-keuken" ctaTitle="Ihr Bad umbauen lassen?" ctaText="Sagen Sie uns, was Sie möchten: eine bodengleiche Dusche, eine Regendusche oder eine Wanne. Wir übernehmen alles, vom Abriss bis zur Übergabe, auch wenn Sie nicht in Spanien sind.">
+  <h2 id="wahl">Dusche, Badewanne oder beides?</h2>
+  <p>Wer in der Axarquía ein Bad renoviert, steht fast immer vor derselben Frage: Wanne behalten, bodengleiche Dusche oder doch eine Regendusche? Die Antwort hängt davon ab, wer das Bad nutzt. Wohnen Sie selbst dort, vermieten Sie an Feriengäste oder führen Sie ein B&B? Und wie viel Wasser und Platz haben Sie?</p>
+  <p>In spanischen Häusern aus den 1970ern bis 2000ern steckt oft eine kleine Wanne mit Duschkopf darüber. Das ist das Bad, das die meisten Käufer zuerst angehen. Unten stellen wir alle Möglichkeiten nebeneinander.</p>
+
+  <h2 id="vergleich">Alle Möglichkeiten im Vergleich</h2>
+  <p>Unten für jede Möglichkeit der Wasserverbrauch und ihre Stärken.</p>
+  <div class="table-scroll">
+  <table class="prices">
+    <thead><tr><th>Möglichkeit</th><th>Wasserverbrauch</th><th>Stark bei</th></tr></thead>
+    <tbody>
+      <tr><td>Duschwanne mit Glaswand</td><td>6 – 9 l pro Minute</td><td>Günstig, passt fast überall</td></tr>
+      <tr><td>Bodengleiche Dusche</td><td>6 – 9 l pro Minute</td><td>Großzügig, modern, leicht zu reinigen, auch für später</td></tr>
+      <tr><td>Regendusche (Set, zusätzlich zur Dusche)</td><td>9 – 20 l pro Minute</td><td>Komfort und Luxusgefühl</td></tr>
+      <tr><td>Badewanne mit Duschwand ersetzen</td><td>150 – 200 l pro Bad</td><td>Familien mit kleinen Kindern</td></tr>
+      <tr><td>Freistehende Badewanne</td><td>200 – 300 l pro Bad</td><td>Atmosphäre, Luxus-Suite, Fotos</td></tr>
+      <tr><td>Wanne raus, bodengleiche Dusche rein</td><td>Spart Wasser</td><td>Der häufigste Umbauwunsch</td></tr>
+      <tr><td>Komplettes Bad (4 – 6 m²)</td><td>-</td><td>Alles neu, auch Leitungen</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box"><p><strong>Möchten Sie Ihr Bad umbauen lassen?</strong> Wir übernehmen alles: Abriss, Leitungen, Fliesen und Sanitär, auch wenn Sie nicht in Spanien sind. Sagen Sie uns, was Sie machen lassen möchten.</p><a class="btn" href="/de/anfrage/?dienst=badkamer-keuken">Erzählen Sie uns Ihr Vorhaben</a></div>
+  <p>Was ein ganzes Bad kostet: <a href="/de/kosten/bad-renovieren/">Kosten Bad renovieren</a>.</p>
+
+  <h2 id="walk-in">Bodengleiche Dusche</h2>
+  <p>Eine bodengleiche Dusche (<em>ducha a ras de suelo</em> oder <em>ducha de obra</em>) hat keine Stufe: Der Boden läuft durch und fällt leicht zu einer Duschrinne oder einem Bodenablauf ab. Eine Glaswand hält das Wasser drinnen.</p>
+  <ul>
+    <li><strong>Vorteile:</strong> großzügig und hell, keine Kanten, an denen sich Schmutz sammelt, das Bad wirkt größer, und auch im Alter sicher nutzbar.</li>
+    <li><strong>Nachteile:</strong> der Boden braucht Gefälle und der Abfluss Platz dafür; eine gute Abdichtung unter den Fliesen ist entscheidend. Eine zu kleine Dusche ohne Tür setzt den Badboden unter Wasser.</li>
+    <li><strong>Tipp:</strong> mindestens 90 × 120 cm, besser 100 × 140 cm. Eine lange Duschrinne an der Wand ermöglicht großformatige Fliesen oder Mikrozement.</li>
+  </ul>
+
+  <h2 id="regendusche">Regendusche</h2>
+  <p>Eine Regendusche (<em>ducha efecto lluvia</em> oder <em>rociador</em>) ist ein großer, flacher Duschkopf von 25 bis 40 cm über Ihrem Kopf. Das Wasser fällt wie ein sanfter Regen. Es ist keine eigene Duschart, sondern ein Kopf, den Sie zu einer bodengleichen Dusche oder Duschwanne wählen.</p>
+  <ul>
+    <li><strong>Aufputz-Set:</strong> eine Stange mit Regenbrause, Handbrause und Thermostat an der Wand. Passt in eine vorhandene Dusche.</li>
+    <li><strong>Unterputz:</strong> die Armaturen sitzen in der Wand und die Regenbrause kommt aus Decke oder Wand. Schlicht, aber die Wand muss geöffnet werden.</li>
+    <li><strong>Immer mit Handbrause kombinieren.</strong> Praktisch zum Reinigen der Dusche und wenn Sie nicht jedes Mal die Haare nass machen wollen.</li>
+    <li><strong>Kalk:</strong> Das Wasser in der Axarquía ist hart. Wählen Sie einen Kopf mit Gumminoppen, die Sie sauber reiben können, und erwägen Sie eine Enthärtungsanlage oder einen Kalkfilter.</li>
+  </ul>
+
+  <h2 id="duschwanne">Duschwanne mit Glaswand</h2>
+  <p>Eine Duschwanne (<em>plato de ducha</em>) aus Kunstharz oder Mineralguss liegt auf dem Boden, mit einem sehr niedrigen Rand von 2 bis 4 cm. Moderne Wannen sind flach, rutschhemmend und in jeder Größe erhältlich.</p>
+  <ul>
+    <li><strong>Vorteile:</strong> günstiger und schneller als eine bodengleiche Dusche, passt auch dort, wo der Abfluss wenig Platz hat, und eine neue Wanne kann oft an die Stelle der alten Badewanne.</li>
+    <li><strong>Nachteile:</strong> ein kleiner Rand, und die Fuge zwischen Wanne und Fliesen muss sauber abgedichtet sein.</li>
+    <li><strong>Geeignet für:</strong> Wohnungen, Renovierungen mit kleinem Budget und Vermietung.</li>
+  </ul>
+
+  <h2 id="wanne">Badewanne, Wanne mit Dusche oder freistehend</h2>
+  <ul>
+    <li><strong>Einbauwanne mit Duschwand:</strong> die klassische Kombination. Praktisch mit kleinen Kindern und wenn Sie gern ab und zu baden. Nachteil: Das Übersteigen wird im Alter schwieriger, und sie braucht viel Platz.</li>
+    <li><strong>Freistehende Wanne:</strong> das Schmuckstück eines Luxusbades oder einer Suite. Braucht Platz rundherum und einen Bodenablauf. Verbraucht am meisten Wasser.</li>
+    <li><strong>Dusche und Wanne:</strong> Hat das Bad mindestens 7 bis 8 m², passen eine separate bodengleiche Dusche und eine Wanne. Die beste Wahl für das Hauptbad einer Villa.</li>
+  </ul>
+
+  <h2 id="wasser">Wasser, Druck und Boiler</h2>
+  <p>In trockenen Jahren gibt es in der Axarquía manchmal Wasserbeschränkungen, und auf vielen Fincas kommt das Wasser aus einem eigenen Tank oder Brunnen. Denken Sie bei der Wahl also auch an das Wasser:</p>
+  <ul>
+    <li><strong>Verbrauch:</strong> 5 Minuten duschen mit Sparbrause kosten 30 bis 45 Liter, mit großer Regendusche 60 bis 100 Liter, ein Vollbad 150 bis 300 Liter.</li>
+    <li><strong>Wasserdruck:</strong> eine Regendusche braucht mindestens 2 bis 3 bar. Bei niedrigem Druck stehen Sie unter einer tropfenden Platte.</li>
+    <li><strong>Boiler:</strong> Regendusche oder Wanne brauchen mehr Warmwasser. Ein Boiler (<em>termo</em>) mit 50 Litern ist dann zu klein; wählen Sie 80 bis 100 Liter oder einen Wärmepumpenboiler, der mit Solarstrom Warmwasser macht.</li>
+    <li><strong>Wassertank:</strong> Auf einer Finca bestimmt der Tank, wie viel Sie duschen können.</li>
+  </ul>
+
+  <h2 id="vermietung">Für B&B und Ferienvermietung</h2>
+  <p>Wenn Sie an Gäste vermieten, gelten andere Abwägungen als für Ihr eigenes Bad. Unsere Empfehlung:</p>
+  <ul>
+    <li><strong>Dusche als Standard.</strong> Die meisten Gäste wollen eine gute, großzügige Dusche mit kräftigem Strahl. Eine bodengleiche Dusche mit Thermostat punktet in Bewertungen und ist in Minuten gereinigt.</li>
+    <li><strong>Regendusche plus Handbrause</strong> gibt das Luxusgefühl, das Gäste fotografieren, während die Handbrause das Putzen einfach hält.</li>
+    <li><strong>Eine Wanne für Familien.</strong> Eltern mit kleinen Kindern suchen nach „Badewanne“. Haben Sie ein Familienzimmer oder ein Ferienhaus für Familien, behalten Sie dort eine Wanne mit Dusche.</li>
+    <li><strong>Freistehende Wanne in einer Suite</strong>, wenn Sie ein teureres Zimmer anbieten wollen. Ein starkes Bild für die Website, kostet aber Wasser, Platz und Reinigungszeit.</li>
+    <li><strong>Robust und leicht zu ersetzen:</strong> Standardmaße und spanische Marken, damit eine defekte Armatur oder Duschwand schnell ersetzt ist.</li>
+    <li><strong>Lüftung:</strong> Viele Bäder in Dorfhäusern haben kein Fenster. Ein guter Lüfter mit Nachlauf verhindert Schimmel zwischen den Gästewechseln. Siehe <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit und Schimmel</a>.</li>
+  </ul>
+  <p>Sie wollen ein B&B kaufen oder eröffnen? Lesen Sie auch <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/bed-and-breakfast/">welche Immobilie zu einem B&B passt</a>.</p>
+
+  <h2 id="spaeter">Ein Bad für später</h2>
+  <p>Viele Eigentümer in der Axarquía leben nach der Rente dort. Bauen Sie jetzt ein neues Bad, denken Sie gleich an später: eine bodengleiche Dusche ohne Stufe, ein rutschfester Boden, ein Thermostat gegen Verbrühen, Verstärkung in der Wand für spätere Haltegriffe und Platz für einen Duschsitz. Das kostet jetzt kaum etwas extra und erspart einen zweiten Umbau.</p>
+
+  <h2 id="empfehlung">Unsere Empfehlung je Situation</h2>
+  <table class="prices">
+    <thead><tr><th>Situation</th><th>Unsere Empfehlung</th></tr></thead>
+    <tbody>
+      <tr><td>Eigene Wohnung, kleines Bad</td><td>Wanne raus, bodengleiche Dusche oder flache Duschwanne mit Glaswand und Regendusche mit Handbrause</td></tr>
+      <tr><td>Villa oder Finca, großes Hauptbad</td><td>Separate bodengleiche Dusche mit Regenbrause und eine Badewanne</td></tr>
+      <tr><td>B&B, Standardzimmer</td><td>Bodengleiche Dusche mit Thermostat, Regendusche plus Handbrause</td></tr>
+      <tr><td>B&B oder Vermietung, Familienzimmer</td><td>Badewanne mit Dusche darüber</td></tr>
+      <tr><td>Luxus-Suite</td><td>Freistehende Wanne im Zimmer oder Bad, dazu eine großzügige Dusche</td></tr>
+      <tr><td>Finca mit Wassertank</td><td>Normaler oder wassersparender Duschkopf, keine große Wanne</td></tr>
+      <tr><td>Wohnen im Ruhestand</td><td>Bodengleiche Dusche ohne Stufe, rutschfest, vorbereitet für Haltegriffe</td></tr>
+    </tbody>
+  </table>
+  <p>Ein neues Bad passt gut zu einem neuen Boden im restlichen Haus. Lesen Sie auch <a href="/de/ratgeber/bodenbelag-spanien/">welcher Boden zu Ihrem Haus passt</a>.</p>
+</Guide>

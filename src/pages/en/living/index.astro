@@ -1,5 +1,6 @@
 ---
 import Guide from '../../../components/Guide.astro';
+import { placeLinkByName } from '../../../data/place-links';
 
 const toc = [
   { id: 'region', label: 'Where is the Axarquía?' },
@@ -45,11 +46,11 @@ const towns = [
   <h2 id="towns">The towns compared</h2>
   <div class="cards" style="margin-bottom:1.5em">
     {towns.map((d) => (
-      <div class="card">
+      <a class="card" href={placeLinkByName('en', d.n, 'living')}>
         <h3>{d.n}</h3>
         <p class="note" style="margin-top:-0.4em">{d.t}</p>
         <p>{d.d}</p>
-      </div>
+      </a>
     ))}
   </div>
 
@@ -74,5 +75,6 @@ const towns = [
     <li><strong>Villas</strong> on the hillsides above the coast, with garden and pool.</li>
     <li><strong>Fincas and cortijos</strong> inland, with land, olive or avocado trees and sometimes off-grid. Read our guide to <a href="/en/guides/buying-a-finca-in-spain/">buying a finca</a> first.</li>
   </ul>
+  <p>Which type suits you? See our guide <a href="/en/guides/finca-apartment-or-village-house/">finca, apartment or village house</a>.</p>
   <p>Most homes are more than thirty years old. When you buy, expect work on the bathroom, kitchen, electrics or roof. We help with <a href="/en/property-survey/">surveys</a>, <a href="/en/renovation/">renovations</a> and <a href="/en/key-holding/">key holding</a> across the area.</p>
 </Guide>

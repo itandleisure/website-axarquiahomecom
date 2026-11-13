@@ -1,5 +1,6 @@
 ---
 import Guide from '../../../components/Guide.astro';
+import { placeLinkByName } from '../../../data/place-links';
 
 const toc = [
   { id: 'region', label: 'Var ligger Axarquía?' },
@@ -45,11 +46,11 @@ const orter = [
   <h2 id="orter">Orterna jämförda</h2>
   <div class="cards" style="margin-bottom:1.5em">
     {orter.map((d) => (
-      <div class="card">
+      <a class="card" href={placeLinkByName('sv', d.n, 'living')}>
         <h3>{d.n}</h3>
         <p class="note" style="margin-top:-0.4em">{d.t}</p>
         <p>{d.d}</p>
-      </div>
+      </a>
     ))}
   </div>
   <p>Alla orter hittar du på <a href="/sv/orter/">Orter i Axarquía</a>.</p>

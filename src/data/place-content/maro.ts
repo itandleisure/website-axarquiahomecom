@@ -88,7 +88,7 @@ const content: PlaceContent = {
   },
   "de": {
     "title": "Maro: Wohnen im ruhigsten Küstendorf bei Nerja",
-    "description": "Alles über Maro bei Nerja: die Klippen von Maro-Cerro Gordo, die Cueva de Nerja, die Buchten, das knappe Immobilienangebot und was Sie zu Kauf und Renovierung wissen sollten.",
+    "description": "Alles über Maro bei Nerja: Klippen von Maro-Cerro Gordo, Cueva de Nerja, Buchten, das knappe Immobilienangebot und Tipps zu Kauf und Renovierung.",
     "lead": "Maro ist ein kleines weißes Dorf auf einem Plateau über dem Meer, vier Kilometer östlich von Nerja, umgeben von alten Zuckerrohrterrassen, Avocados und geschützten Klippen.",
     "intro": [
       "Maro gehört zur Gemeinde <a href=\"/de/orte/nerja/\">Nerja</a>. Das Dorf hat nur einige hundert Einwohner und ist auffallend ruhig, während das Zentrum von Nerja fünf Autominuten entfernt liegt. Direkt beim Dorf liegt die Cueva de Nerja, die bekannte Tropfsteinhöhle.",

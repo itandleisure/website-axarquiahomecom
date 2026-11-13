@@ -1,12 +1,16 @@
 # Nog in te vullen voor livegang
 
 Alles wat nog ontbreekt staat in de code gemarkeerd met `[VUL IN]` (in `src/data/site.ts`)
-en op de pagina's in een geel blok "Nog aanleveren". Zodra alles klopt, zet je
-`launchReady: true` in `src/data/site.ts`: dan verdwijnen de gele blokken en mag Google indexeren.
+en op de pagina's in een geel blok "Nog aanleveren". Die gele blokken zie je alleen met
+`npm run dev`; op de echte site staat bij een ontbrekende prijs "Prijs op aanvraag".
+Zodra alles klopt, zet je `launchReady: true` in `src/data/site.ts`.
+
+Google mag de site indexeren zolang `indexable: true` staat in `src/data/site.ts`.
+De privacypagina's krijgen pas "index" als de gegevens van Frans' onderneming zijn ingevuld.
 
 ## Van het bouwbedrijf
 - [ ] Bedrijfsnaam, juridische naam, CIF/NIF, adres, telefoon, WhatsApp, e-mail voor aanvragen
-- [ ] Aantal jaren actief in de regio en het verhaal van het bedrijf (Over ons)
+- [x] Ervaring: 20 jaar (Frans). Over ons noemt het bouwbedrijf bewust niet bij naam
 - [ ] Teamleden: naam, functie, foto, paar zinnen (`src/data/team.ts`, foto's in `public/team/`)
 - [ ] Prijzen: renovatie per m², keuken, zwembadonderhoud, sleutelbeheer-pakketten (Basis/Plus/Compleet)
 - [ ] Bevestiging van de andere prijsindicaties en van de pakketinhoud sleutelbeheer
@@ -17,6 +21,7 @@ en op de pagina's in een geel blok "Nog aanleveren". Zodra alles klopt, zet je
 ## Van Frans
 - [ ] Naam, KvK-nummer en adres van de onderneming (privacyverklaring)
 - [ ] Apps Script web-app URL (zie `apps-script/README.md`)
+- [x] Dashboard-URL voor /statistiek/ in `statsDashboardUrl` (zie `apps-script/statistieken/README.md`)
 - [ ] E-mailadres info@axarquiahome.com laten doorsturen naar je eigen mailbox
 - [ ] Privacyverklaring één keer laten nakijken
 

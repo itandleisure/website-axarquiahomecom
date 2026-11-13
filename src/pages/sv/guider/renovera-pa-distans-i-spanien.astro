@@ -1,0 +1,125 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort svar' },
+  { id: 'byggfirma', label: 'Välja byggfirma' },
+  { id: 'offerter', label: 'Jämföra offerter' },
+  { id: 'avtal', label: 'Det här ska stå skriftligt' },
+  { id: 'betala', label: 'Betala i etapper' },
+  { id: 'uppdatering', label: 'Hålla dig informerad' },
+  { id: 'ovrigt', label: 'Det som behöver ordnas utöver arbetet' },
+  { id: 'overlamning', label: 'Överlämning och efteråt' },
+];
+
+const faq = [
+  {
+    q: 'Behöver jag vara i Spanien under renoveringen?',
+    a: 'Nej. Det är klokt att vara där vid starten och vid överlämningen, eller att låta någon titta för din räkning. Däremellan kan du följa arbetet via foton, video och en enda kontaktperson.',
+  },
+  {
+    q: 'Vilken förskottsbetalning är normal för en byggfirma i Spanien?',
+    a: 'Oftast 20 till 30 % vid starten, främst för material. Betala sedan per avslutad etapp och håll inne 5 till 10 % till efter överlämningen. En byggfirma som vill ha större delen av priset i förväg är en varningssignal.',
+  },
+  {
+    q: 'Kan jag betala en byggfirma kontant?',
+    a: 'Gör inte det. Betala alltid via banköverföring mot faktura med moms. Utan faktura har du ingen garanti, inget underlag för tillståndet och problem senare när du säljer, eftersom du inte kan visa vad renoveringen kostade.',
+  },
+  {
+    q: 'Behöver jag en fullmakt?',
+    a: 'Inte alltid. För tillstånd och anslutningar kan en fullmakt (poder notarial) för en gestor vara praktisk, så att du inte behöver flyga ner för varje underskrift. Du kan låta upprätta en på ett spanskt konsulat eller hos en notarius publicus hemma.',
+  },
+];
+---
+<Guide lang="sv" slug="renovera-pa-distans-i-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Renovera medan du är hemma i Sverige?" ctaText="Berätta vad som behöver göras med ditt hus. Vi tar hand om renoveringen, med en kontaktperson och foton av framstegen varje vecka.">
+  <h2 id="kort">Kort svar</h2>
+  <p>Att renovera på distans fungerar bra när fyra saker stämmer: <strong>en byggfirma du kan kontrollera, en offert uppdelad per post, betalning i etapper för utfört arbete och regelbundna uppdateringar med foton</strong>. Det som går fel vid renoveringar i Spanien handlar nästan alltid om vaga överenskommelser: ett klumpbelopp utan specifikation, tillägg som avtalats muntligt eller för mycket betalt i förväg.</p>
+  <p>Den här guiden förklarar hur du väljer byggfirma, jämför offerter rättvist, vad du ska avtala skriftligt och hur du behåller kontrollen hemifrån.</p>
+
+  <h2 id="byggfirma">Välja byggfirma</h2>
+  <p>I Axarquía arbetar stora byggföretag, små arbetslag och självständiga hantverkare sida vid sida. För en större renovering vill du ha någon som kan visa dig:</p>
+  <ul class="checks">
+    <li>Ett spanskt organisations- eller skattenummer (<em>CIF</em> eller <em>NIF</em>) och fakturor med moms.</li>
+    <li>Registrering som företag eller egenföretagare hos den spanska socialförsäkringen, så att de som arbetar i ditt hus är försäkrade.</li>
+    <li>Ansvarsförsäkring (<em>seguro de responsabilidad civil</em>). Be om en kopia.</li>
+    <li>Referenser från ägare som också renoverat på distans, och foton av färdiga jobb i närheten.</li>
+    <li>En kontaktperson som talar ett språk du förstår och svarar inom ett dygn.</li>
+    <li>Ett samarbete med en arkitekt och en gestor för tillstånd, så att du inte själv behöver samordna alla.</li>
+  </ul>
+  <p>Var försiktig med det lägsta priset från någon utan företagsuppgifter. Det ser ut som ett fynd tills något går fel och det inte finns någon att ställa till svars.</p>
+
+  <h2 id="offerter">Jämföra offerter</h2>
+  <p>Be om två eller tre offerter utifrån samma beskrivning. En bra offert (<em>presupuesto</em>) är uppdelad per post (<em>partida</em>) och anger vad som ingår och inte. Se upp med de här skillnaderna:</p>
+  <table class="prices">
+    <thead><tr><th>Kontrollera</th><th>Varför</th></tr></thead>
+    <tbody>
+      <tr><td>Moms: 10 % eller 21 %</td><td>Renovering av en bostad för privat bruk kan under vissa villkor debiteras med 10 %. Jämför alltid priser inklusive moms.</td></tr>
+      <tr><td>Bortforsling av byggavfall och container</td><td>Glöms ofta bort, och i en by med smala gränder kan det bli dyrt.</td></tr>
+      <tr><td>Tillstånd och avgifter</td><td>Ingår anmälan eller tillståndet och den kommunala skatten (ICIO), eller tillkommer de?</td></tr>
+      <tr><td>Material</td><td>Står märke och typ av kakel, sanitetsporslin och blandare angivna, eller bara ”standard”? En preliminär summa för material gör det svårt att jämföra.</td></tr>
+      <tr><td>Ställning, skydd och städning</td><td>Ingår eller separat?</td></tr>
+      <tr><td>Tidsplan</td><td>Startdatum, längd och vad som händer vid försening.</td></tr>
+    </tbody>
+  </table>
+  <p>Om en offert är mycket lägre än de andra, fråga vad som saknas. Skillnaden ligger oftast i det som utelämnats.</p>
+
+  <h2 id="avtal">Det här ska stå skriftligt</h2>
+  <ul>
+    <li><strong>Den specificerade offerten</strong> som grund, med fast pris per post.</li>
+    <li><strong>En tidsplan</strong> med start, delmål och slutdatum.</li>
+    <li><strong>Betalningsplanen</strong> kopplad till utfört arbete, inte till datum.</li>
+    <li><strong>Tillägg bara skriftligt</strong>: ett pris via WhatsApp eller mejl, utfört först efter ditt godkännande. Gamla hus avslöjar nästan alltid något; ha en buffert på 10 till 15 %.</li>
+    <li><strong>Garanti</strong>: Spanien har ett lagstadgat ansvar för byggfel, men avtala också en egen garantitid för arbetet.</li>
+    <li><strong>Nycklar och tillträde</strong>: vem har nyckel, vem låser, vem slår på larmet?</li>
+  </ul>
+
+  <h2 id="betala">Betala i etapper</h2>
+  <p>Ett säkert och vanligt schema för en medelstor renovering ser ungefär ut så här:</p>
+  <table class="prices">
+    <thead><tr><th>Tidpunkt</th><th>Andel av priset</th></tr></thead>
+    <tbody>
+      <tr><td>Vid starten (material, förberedelser)</td><td>20–30 %</td></tr>
+      <tr><td>Efter rivning och grovinstallation (rör, el, väggar)</td><td>25–30 %</td></tr>
+      <tr><td>Efter ytskikt (kakel, sanitet, kök)</td><td>25–30 %</td></tr>
+      <tr><td>Efter överlämning och när de sista anmärkningarna är åtgärdade</td><td>5–10 %</td></tr>
+    </tbody>
+  </table>
+  <p class="note">En riktlinje, ingen fast regel. För små jobb är en enda betalning vid slutförandet normalt.</p>
+  <p>Betala varje etapp först när du har sett foton av arbetet du betalar för. Betala alltid via banköverföring mot faktura med moms, aldrig kontant. Du behöver fakturorna senare: för garantin, tillståndet och när du säljer huset.</p>
+
+  <h2 id="uppdatering">Hålla dig informerad</h2>
+  <p>När du renoverar på distans är god kommunikation viktigare än priset. Kom överens i förväg om:</p>
+  <ul>
+    <li><strong>En kontaktperson</strong> på engelska eller nederländska, inte en arbetsledare som byts ut.</li>
+    <li><strong>Foton och korta videor varje vecka</strong> av framstegen, även av det som senare försvinner bakom kakel eller puts, som rör och el.</li>
+    <li><strong>Ett videosamtal</strong> för de viktiga valen: kakel, köksplanering, var uttagen ska sitta.</li>
+    <li><strong>En gemensam lista</strong> med val, tillägg och betalningar, så att du alltid vet var du står.</li>
+  </ul>
+  <p>Så arbetar vi också: de flesta av våra kunder är inte i Spanien medan huset renoveras. Vårt team har tjugo års erfarenhet i Axarquía, arbetar efter nederländsk kvalitetsstandard med en fast arkitekt och gestor, och du har en enda kontaktperson.</p>
+
+  <h2 id="ovrigt">Det som behöver ordnas utöver arbetet</h2>
+  <p>Utöver själva renoveringen finns det saker som måste ordnas och som ofta saknas i en offert. Hos oss ingår de i ett och samma upplägg:</p>
+  <table class="prices">
+    <thead><tr><th>Post</th><th>När</th></tr></thead>
+    <tbody>
+      <tr><td>Anmälan för mindre arbeten (declaración responsable)</td><td>Invändiga arbeten utan konstruktionsändringar</td></tr>
+      <tr><td>Fullmakt hos notarie</td><td>Om en gestor skriver under för din räkning</td></tr>
+      <tr><td>Container eller bortforsling av byggavfall</td><td>Varje renovering med rivning</td></tr>
+      <tr><td>Gestor för ansökningar och pappersarbete</td><td>Tillstånd, anslutningar, registreringar</td></tr>
+      <tr><td>Kommunala bygglovsavgifter och skatt (ICIO)</td><td>Vid tillstånd, en procentsats av byggkostnaden</td></tr>
+      <tr><td>Arkitekt: projekt och tillsyn</td><td>Vid tillståndspliktiga arbeten, tillbyggnader eller pool</td></tr>
+      <tr><td>Buffert för det oväntade</td><td>Alltid, särskilt i gamla hus</td></tr>
+    </tbody>
+  </table>
+  <p>Vad själva renoveringen kostar går vi igenom i <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">vad det kostar att renovera ett hus i Spanien</a>, och vilket tillstånd du behöver i <a href="/sv/guider/bygglov-renovering-andalusien/">tillstånd och renovering i Andalusien</a>.</p>
+  <p><strong>Vill du få det här gjort?</strong> Berätta vad som behöver göras och var ditt hus ligger. Vi hjälper dig hela vägen, från första besöket till överlämningen, även medan du är hemma. <a href="/sv/forfragan/?dienst=renovatie">Berätta om dina planer</a>.</p>
+
+  <h2 id="overlamning">Överlämning och efteråt</h2>
+  <ol>
+    <li><strong>Gå igenom huset tillsammans</strong>, på plats eller via videosamtal, och gör en lista med anmärkningar.</li>
+    <li><strong>Betala den sista delen</strong> först när anmärkningarna är åtgärdade.</li>
+    <li><strong>Samla alla papper</strong>: fakturor, garantier, elintyget (<em>boletín</em>) om elen har förnyats och slutdokumenten om det fanns ett tillstånd.</li>
+    <li><strong>Låt någon hålla koll på huset efteråt</strong>. Du vill upptäcka små läckor eller sprickor de första månaderna. Med <a href="/sv/tillsyn/">tillsyn</a> tittar någon till huset regelbundet.</li>
+  </ol>
+  <p>Osäker på om du behöver tillstånd? Läs först om <a href="/sv/renovering/">renovering</a>, eller skicka oss din fråga.</p>
+</Guide>

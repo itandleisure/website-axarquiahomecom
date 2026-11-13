@@ -1,0 +1,136 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Steps from '../../components/Steps.astro';
+import Services from '../../components/Services.astro';
+import { site } from '../../data/site';
+
+const aanvraag = '/en/request/?dienst=verhuurbeheer';
+
+const faq = [
+  {
+    "q": "What does rental management cost?",
+    "a": "That depends on the size of the house, how often guests change over and what you want to keep doing yourself. If you handle the bookings, you pay a fixed price per changeover. For full management we charge a percentage of the rental income. After your request you receive a tailored proposal."
+  },
+  {
+    "q": "I handle the bookings myself. Can you just do the cleaning?",
+    "a": "Yes. You share your Airbnb, Booking.com or website calendar with us. Every changeover then appears in our schedule automatically, and we make sure the house is ready for the next guest."
+  },
+  {
+    "q": "What if a guest breaks something?",
+    "a": "We send you photos after the check. Small things we fix straight away; for bigger damage you get a price first. With the photos you can claim the damage through the platform or the deposit."
+  },
+  {
+    "q": "Can I still stay in my home myself?",
+    "a": "Of course. You block the weeks in the calendar and we get the house ready for you."
+  },
+  {
+    "q": "Do I need a licence to let?",
+    "a": "Yes, for holiday letting the home must be registered as a vivienda de uso turístico. We check whether your home meets the requirements and adapt it where needed."
+  }
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: "Holiday rental management: changeovers, cleaning, key handover and maintenance",
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['nl', 'en', 'de', 'es'],
+};
+---
+<Base
+  title="Holiday rental management in the Axarquía"
+  description="Letting your home in Nerja, Torrox or elsewhere in the Axarquía? We handle changeovers, cleaning, linen, keys and repairs on the spot."
+  path="/en/holiday-rental-management/"
+  lang="en"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="en" items={[{ name: "Rental management", href: '/en/holiday-rental-management/' }]} />
+  <Hero
+    lang="en"
+    eyebrow="Rental management"
+    title="Let your home, <em>we take care of it on the spot</em>"
+    lead="You live abroad and let your home in the Axarquía to holiday guests. We make sure it is clean, complete and in good order between guests, and fix it when something breaks."
+    cta="Request rental management"
+    ctaHref={aanvraag}
+    secondary="Read the letting guide"
+    secondaryHref="/en/guides/renting-out-property-in-spain/"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Two ways to work with us</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Changeovers only</h3>
+          <p>You handle the listings and bookings on Booking.com, Airbnb or your own site. We come at every changeover: cleaning, fresh bed linen and towels, a check and everything ready for the next guest.</p>
+        </div>
+        <div class="card">
+          <h3>Full rental management</h3>
+          <p>We also take over guest contact, arrival times and key handover, and can manage the listings and guest registration. You get a monthly overview.</p>
+        </div>
+      </div>
+      <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 18px;">
+        <div class="card">
+          <h3>Cleaning and linen</h3>
+          <p>A full clean after every departure, fresh bed linen and towels, and the basics topped up.</p>
+        </div>
+        <div class="card">
+          <h3>Key handover</h3>
+          <p>Welcoming guests in person, or a key safe or smart lock so they can check in themselves.</p>
+        </div>
+        <div class="card">
+          <h3>Check after departure</h3>
+          <p>We go through the house for damage and missing items and send you photos.</p>
+        </div>
+        <div class="card">
+          <h3>Breakdowns and repairs</h3>
+          <p>A dripping tap, air con that has stopped, a broken door: because we are the builders ourselves, we fix it fast.</p>
+        </div>
+        <div class="card">
+          <h3>Pool and garden</h3>
+          <p>A clear pool and a tidy garden, so the house looks good for every guest.</p>
+        </div>
+        <div class="card">
+          <h3>Getting ready to let</h3>
+          <p>Air con in the bedrooms, a smoke alarm, blackout blinds or an extra bathroom: we adapt your home so it meets the rules for holiday letting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap prose">
+      <h2>Rental management or key holding: what is the difference?</h2>
+      <p><strong>Key holding</strong> is for when your home stands empty. We keep the key, check the house regularly for leaks, damp and break-ins, and act when something is wrong.</p>
+      <p><strong>Rental management</strong> is for when guests come and go. Then it is all about the changeovers: cleaning, linen, keys and a home that looks perfect on every arrival.</p>
+      <p>Many owners combine the two: rental management in the season and <a href="/en/key-holding/">key holding</a> in the months when nobody is there. That gives you one point of contact all year round.</p>
+    </div>
+  </section>
+
+  <Steps lang="en"
+    title="How it works"
+    steps={[
+      { t: "Tell us about your home", d: "Where it is, how many bedrooms it has and whether you handle the bookings yourself. Then we know what you need." },
+      { t: "We come and have a look", d: "We view the house, make an inventory and tell you honestly what is still needed for letting." },
+      { t: "You receive a proposal", d: "A tailored proposal with a clear price per changeover or for full management." },
+      { t: "We link your calendar", d: "Every booking appears in our schedule automatically, so no changeover is missed." },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Can I simply let my home?</h2>
+      <p>No. For holiday letting in Andalusia the property must be registered as a <em>vivienda de uso turístico</em> with the Junta de Andalucía, and that number must appear in every listing. If the home is in an apartment building and you start letting after April 2025, the community of owners must approve it first. Guests must be registered with the police within 24 hours.</p>
+      <p>Read more about the rules, taxes and what letting earns in the guide <a href="/en/guides/renting-out-property-in-spain/">renting out property in Spain</a>. Whether your municipality has extra rules, see <a href="/en/places/">places</a>.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="en" />
+  <Cta lang="en" dienst="verhuurbeheer" title="Let your home without having to be there" text="Tell us about your home and how you let it now. You will receive a proposal for the changeovers or for full management." />
+  <Services lang="en" exclude="holiday-rental-management" title="You may also like" />
+</Base>

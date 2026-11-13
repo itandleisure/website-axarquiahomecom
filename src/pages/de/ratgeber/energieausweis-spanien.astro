@@ -1,0 +1,86 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'wat', label: 'Was ist der spanische Energieausweis?' },
+  { id: 'wanneer', label: 'Wann ist er Pflicht?' },
+  { id: 'aanvragen', label: 'So entsteht der Ausweis' },
+  { id: 'kosten', label: 'Kosten und Gültigkeit' },
+  { id: 'verbeteren', label: 'Eine bessere Klasse: was bringt am meisten?' },
+  { id: '2030', label: 'Muss mein Haus bis 2030 besser werden?' },
+];
+
+const faq = [
+  {
+    q: 'Was kostet ein Energieausweis in Spanien?',
+    a: 'Für eine Wohnung oder ein Dorfhaus meist 80 € bis 150 €, für eine Villa oder Finca 150 € bis 300 €. Manchmal kommt eine kleine Registrierungsgebühr dazu. Der Preis hängt von der Größe des Hauses und der Anfahrt des Technikers ab.',
+  },
+  {
+    q: 'Wie lange ist ein Energieausweis in Spanien gültig?',
+    a: 'Zehn Jahre. Hat das Haus die schlechteste Klasse G, gilt er fünf Jahre. Nach einer größeren Renovierung, etwa neuen Fenstern, Dämmung oder einer Wärmepumpe, lohnt sich oft ein neuer Ausweis, weil das Haus dann besser abschneidet.',
+  },
+  {
+    q: 'Brauche ich einen Energieausweis für die Ferienvermietung?',
+    a: 'In den meisten Fällen ja. Der Ausweis ist bei Vermietung Pflicht, und die Klasse muss in der Anzeige stehen. Es gibt eine Ausnahme für Wohnungen, die weniger als vier Monate im Jahr genutzt werden, aber sie wird eng ausgelegt. Lassen Sie den Ausweis erstellen, wenn Sie vermieten.',
+  },
+  {
+    q: 'Was passiert, wenn ich keinen Energieausweis habe?',
+    a: 'Notar und Makler fragen danach, und ohne Ausweis kann sich ein Verkauf oder Mietvertrag verzögern. Außerdem kann die Verbraucherschutzbehörde ein Bußgeld verhängen, das je nach Schwere von einigen hundert bis zu einigen tausend Euro reicht.',
+  },
+];
+---
+<Guide lang="de" slug="energieausweis-spanien" toc={toc} faq={faq} dienst="legalisatie" onderwerp="Ich brauche einen Energieausweis für mein Haus." ctaTitle="Einen Energieausweis nötig, oder eine bessere Klasse?" ctaText="Wir besorgen den Ausweis über den zugelassenen Techniker, mit dem wir zusammenarbeiten. Möchten Sie das Haus zuerst verbessern, rechnen wir aus, welche Maßnahme am meisten bringt: Fenster, Dämmung, eine Wärmepumpe oder eine Solaranlage.">
+  <h2 id="wat">Was ist der spanische Energieausweis?</h2>
+  <p>Der Energieausweis heißt in Spanien <em>certificado de eficiencia energética</em>, kurz <em>certificado energético</em> oder CEE. Er zeigt, wie effizient eine Wohnung ist, auf einer Skala von <strong>A</strong> (sehr effizient) bis <strong>G</strong> (sehr ineffizient). Auf dem Etikett stehen zwei Werte:</p>
+  <ul>
+    <li>der <strong>Energieverbrauch</strong> in kWh pro m² und Jahr;</li>
+    <li>der <strong>CO2-Ausstoß</strong> in kg pro m² und Jahr.</li>
+  </ul>
+  <p>Die Berechnung geht vom Gebäude und den festen Anlagen aus: Wände, Dach, Fenster, Heizung, Kühlung und Warmwasser. Wie viel Sie selbst verbrauchen, zählt nicht. Deshalb bekommt ein altes Dorfhaus mit dicken Mauern, aber Einfachverglasung und Elektroboiler oft ein E, F oder G, auch wenn die Stromrechnung niedrig ist.</p>
+
+  <h2 id="wanneer">Wann ist er Pflicht?</h2>
+  <p>Die Regeln stehen im Real Decreto 390/2021. Sie brauchen einen gültigen Ausweis, wenn Sie:</p>
+  <ul>
+    <li><strong>verkaufen</strong>: Der Notar nimmt ihn in die Urkunde auf, und der Käufer erhält eine Kopie;</li>
+    <li><strong>vermieten</strong>, lang- oder kurzfristig, einschließlich der meisten Ferienvermietungen;</li>
+    <li><strong>inserieren</strong>: Die Effizienzklasse muss schon in der Anzeige stehen, also auch auf der Website des Maklers oder der Vermietungsplattform.</li>
+  </ul>
+  <p>Wohnen Sie selbst im Haus und verkaufen oder vermieten nicht, brauchen Sie keinen Ausweis. Es gibt Ausnahmen, etwa für kleine freistehende Gebäude unter 50 m² und für Wohnungen, die weniger als vier Monate im Jahr genutzt werden. Verlassen Sie sich nicht einfach darauf: Notare und Makler verlangen den Ausweis in der Praxis fast immer.</p>
+  <p>Sie verkaufen? Im Ratgeber <a href="/de/ratgeber/haus-verkaufen-spanien/unterlagen/">Unterlagen für den Verkauf</a> lesen Sie, was Sie sonst noch brauchen. Sie vermieten? Lesen Sie auch <a href="/de/ratgeber/immobilie-in-spanien-vermieten/">Immobilie in Spanien vermieten</a>.</p>
+
+  <h2 id="aanvragen">So entsteht der Ausweis</h2>
+  <ol>
+    <li><strong>Ein zugelassener Techniker</strong> (<em>técnico competente</em>), etwa ein Architekt, Bauingenieur (<em>aparejador</em>) oder Ingenieur, besichtigt das Haus.</li>
+    <li>Der Techniker misst die Wohnung auf, prüft Wände, Dach, Fenster und Anlagen und macht Fotos. Das dauert meist etwa eine Stunde.</li>
+    <li>Mit offizieller Software (etwa CE3X) wird die Effizienzklasse berechnet, mit Vorschlägen für Verbesserungen.</li>
+    <li>Der Ausweis wird <strong>bei der Junta de Andalucía registriert</strong>. Erst dann ist er offiziell.</li>
+    <li>Sie erhalten das Zertifikat und das Etikett mit der Klasse, meist innerhalb von ein bis zwei Wochen.</li>
+  </ol>
+  <p>Sorgen Sie dafür, dass der Techniker in alle Räume, aufs Dach und an die Anlagen kommt. Sind Sie nicht in Spanien, kann jemand mit Schlüssel aufschließen. Mit der <a href="/de/hausbetreuung/">Hausbetreuung</a> übernehmen wir das für Sie.</p>
+
+  <h2 id="kosten">Kosten und Gültigkeit</h2>
+  <table class="prices">
+    <thead><tr><th>Objekt</th><th>Richtwert (ohne MwSt.)</th></tr></thead>
+    <tbody>
+      <tr><td>Wohnung</td><td>80 € bis 150 €</td></tr>
+      <tr><td>Dorfhaus oder Reihenhaus</td><td>100 € bis 180 €</td></tr>
+      <tr><td>Villa oder Finca</td><td>150 € bis 300 €</td></tr>
+    </tbody>
+  </table>
+  <p>Der Ausweis ist <strong>zehn Jahre gültig</strong>, bei <strong>Klasse G fünf Jahre</strong>. Haben Sie danach umfassend renoviert, lassen Sie einen neuen erstellen: Eine bessere Klasse macht sich in der Anzeige besser.</p>
+  <p>Vorsicht bei sehr günstigen Online-Angeboten ohne Besichtigung. Ein Ausweis nur auf Basis von Fotos ist oft ungenau, und bei einer Kontrolle oder Zweifeln des Käufers müssen Sie ihn neu erstellen lassen.</p>
+
+  <h2 id="verbeteren">Eine bessere Klasse: was bringt am meisten?</h2>
+  <p>Der Ausweis enthält Empfehlungen, aber nicht jede Maßnahme bringt im andalusischen Klima gleich viel. In der Axarquía schneiden diese Eingriffe meist am besten ab:</p>
+  <ul>
+    <li><strong>Warmwasser und Heizung</strong>: einen Elektroboiler oder Butanofen durch eine Wärmepumpe (<em>aerotermia</em>) oder eine Klimaanlage mit Wärmepumpe ersetzen bringt oft zwei Klassen. Siehe <a href="/de/kosten/klimaanlage-und-waermepumpe/">Kosten für Klimaanlage und Wärmepumpe</a>.</li>
+    <li><strong>Fenster</strong>: Einfachverglasung und undichte Rahmen durch Doppelverglasung in thermisch getrennten Rahmen ersetzen. Siehe <a href="/de/kosten/fenster-und-rahmen/">Kosten für Fenster und Rahmen</a>.</li>
+    <li><strong>Dachdämmung</strong>: Der meiste Wärmeverlust im Winter und die meiste Hitze im Sommer gehen über das Dach. Siehe <a href="/de/ratgeber/haus-daemmen-spanien/">Haus dämmen in Spanien</a>.</li>
+    <li><strong>Solaranlage</strong>: senkt den Verbrauch fossiler Energie und damit den CO2-Wert. Siehe <a href="/de/kosten/solaranlage/">Kosten einer Solaranlage</a>.</li>
+  </ul>
+  <p>Eine bessere Klasse macht ein Haus für Käufer und Mieter attraktiver, und manche <a href="/de/ratgeber/foerderung-energetische-sanierung-spanien/">Förderungen</a> verlangen einen Ausweis vor und nach den Arbeiten als Nachweis. Planen Sie also klug: Für eine Förderung lassen Sie den Ausweis erstellen, bevor Sie anfangen.</p>
+
+  <h2 id="2030">Muss mein Haus bis 2030 besser werden?</h2>
+  <p>Manchmal liest man, dass Wohnungen in Europa bis 2030 mindestens Klasse E oder D erreichen müssen. Für Ihr Haus stimmt das nicht. Die EU-Gebäuderichtlinie von 2024 verpflichtet die Länder, den durchschnittlichen Energieverbrauch aller Wohngebäude zusammen zu senken, um 16 % bis 2030 und um 20 bis 22 % bis 2035. Wie Spanien das umsetzt, mit Förderungen, Regeln für Neubauten oder Anforderungen bei Renovierungen, entscheidet das Land selbst. Eine Pflicht-Mindestklasse für bestehende selbstgenutzte Wohnungen gibt es derzeit nicht.</p>
+  <p>Trotzdem ist es klug, bei einer Renovierung die energieeffiziente Lösung zu wählen. Verbesserungen werden eher Pflicht als billiger, und ein Haus mit guter Klasse behält seinen Wert besser.</p>
+</Guide>

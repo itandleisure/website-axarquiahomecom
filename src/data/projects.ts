@@ -15,6 +15,9 @@ export interface Project {
   titleSv?: string;
   summarySv?: string;
   durationSv?: string; // bijv. '4 månader'
+  titleEs?: string;
+  summaryEs?: string;
+  durationEs?: string; // bijv. '4 meses'
   before?: string;
   after?: string;
 }

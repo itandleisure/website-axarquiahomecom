@@ -1,0 +1,13 @@
+---
+// Foto in een gids of onderwerppagina (zie src/data/topic-photos.ts).
+import { topicPhoto, type ArticleImage } from '../data/topic-photos';
+import type { Lang } from '../i18n';
+interface Props { photo?: ArticleImage; name?: string; lang?: Lang; lead?: boolean; }
+const { lead = false } = Astro.props;
+const photo = Astro.props.photo ?? (Astro.props.name ? topicPhoto(Astro.props.name, Astro.props.lang ?? 'nl') : undefined);
+---
+{photo && (
+  <figure class:list={['article-photo', { inline: !lead }]}>
+    <img src={photo.src} srcset={photo.srcset} sizes={lead ? '(min-width: 1000px) 760px, calc(100vw - 40px)' : '(min-width: 600px) 520px, calc(100vw - 40px)'} alt={photo.alt} width="1200" height="1200" loading={lead ? 'eager' : 'lazy'} fetchpriority={lead ? 'high' : undefined} decoding="async" />
+  </figure>
+)}

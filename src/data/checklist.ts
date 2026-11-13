@@ -62,7 +62,8 @@ export interface ChecklistText {
   teaser: { title: string; text: string; button: string };
 }
 
-export const checklist: Record<Lang, ChecklistText> = {
+// Talen zonder checklist (zoals es) tonen geen inschrijfblok.
+export const checklist: Partial<Record<Lang, ChecklistText>> = {
   nl: {
     path: '/nl/checklist-finca-kopen/',
     pdf: 'checklist-finca-kopen-axarquia.pdf',

@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Cta from '../../components/Cta.astro';
+import Todo from '../../components/Todo.astro';
+import { projects } from '../../data/projects';
+import { esPrice } from '../../data/site';
+---
+<Base
+  title="Proyectos: reformas en la Axarquía, antes y después"
+  description="Reformas, baños, piscinas y cortijos en la Axarquía, antes y después, con ubicación, rango de precio y duración de la obra."
+  path="/es/proyectos/"
+  noindex={projects.length === 0}
+  lang="es"
+>
+  <Breadcrumbs lang="es" items={[{ name: 'Proyectos', href: '/es/proyectos/' }]} />
+  <Hero
+    lang="es"
+    eyebrow="Proyectos"
+    title="Antes y después: <em>nuestro trabajo en la Axarquía</em>"
+    lead="Cada casa es distinta. Aquí tiene una selección de proyectos, con dónde fueron, cuánto costaron más o menos y cuánto tardaron."
+  />
+  <section class="section">
+    <div class="wrap">
+      {projects.length === 0 && <Todo label="projecten (zie src/data/projects.ts). Voeg per project ook een Spaanse titel en omschrijving toe." />}
+      <div class="cards">
+        {projects.map((p) => (
+          <article class="card">
+            {p.after && <img src={p.after} alt={`${p.titleEs ?? p.title}, ${p.place}, después de la reforma`} loading="lazy" width="640" height="420" />}
+            <h3>{p.titleEs ?? p.title}</h3>
+            <p>{p.summaryEs ?? p.summary}</p>
+            <p class="note">{p.place} · {esPrice(p.budget)} · {p.durationEs ?? p.duration}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Cta lang="es" title="¿Quiere un resultado así para su casa?" />
+</Base>

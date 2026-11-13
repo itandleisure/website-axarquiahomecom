@@ -1,0 +1,36 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import Hero from '../../../components/Hero.astro';
+import Cta from '../../../components/Cta.astro';
+import { guideList, guideHref } from '../../../data/guides';
+---
+<Base
+  title="Guías: placas solares, aire acondicionado y su casa"
+  description="Guías prácticas sobre placas solares, baterías, subvenciones, aire acondicionado, certificado energético y control de plagas en la Axarquía."
+  path="/es/guias/"
+  lang="es"
+>
+  <Breadcrumbs lang="es" items={[{ name: 'Guías', href: '/es/guias/' }]} />
+  <Hero
+    lang="es"
+    eyebrow="Guías"
+    title="Lo que conviene saber <em>antes de invertir en su casa</em>"
+    lead="Escritas por quienes viven y construyen aquí. Sin rodeos comerciales: precios reales de la Axarquía, normas vigentes y lo que de verdad funciona."
+    cta="Hacer una pregunta"
+  />
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        {guideList('es').map((g) => (
+          <a class="card" href={guideHref('es', g)}>
+            <h2 class="h3">{g.title}</h2>
+            <p>{g.description}</p>
+            <span class="more">Leer la guía ({g.minutes} min) →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Cta lang="es" />
+</Base>

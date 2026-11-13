@@ -1,0 +1,177 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'wahl', label: 'Ferienvermietung oder Langzeitmiete?' },
+  { id: 'ferien', label: 'Ferienvermietung: Lizenz und Regeln' },
+  { id: 'langzeit', label: 'Langzeitmiete: Vertrag und Kaution' },
+  { id: 'steuern', label: 'Steuern, wenn Sie nicht in Spanien wohnen' },
+  { id: 'versicherung', label: 'Versicherung' },
+  { id: 'vorbereiten', label: 'Ihr Haus vermietungsfertig machen' },
+  { id: 'ferne', label: 'Vermieten aus der Ferne' },
+  { id: 'rechenbeispiel', label: 'Was bringt es? Ein Rechenbeispiel' },
+  { id: 'schritte', label: 'Schritt für Schritt' },
+  { id: 'quellen', label: 'Quellen' },
+];
+
+const faq = [
+  {
+    q: 'Darf ich meine Wohnung in der Axarquía als Ferienwohnung vermieten?',
+    a: 'Nur wenn sie im Tourismusregister Andalusiens eingetragen ist und die Anforderungen erfüllt. Wer seit dem 3. April 2025 neu mit Ferienvermietung in einer Wohnanlage beginnen will, braucht vorab die Zustimmung von drei Fünfteln der Eigentümergemeinschaft. Prüfen Sie auch, ob die Gemeinschaftsordnung Vermietung nicht schon verbietet, und fragen Sie im Rathaus nach Beschränkungen.',
+  },
+  {
+    q: 'Brauche ich noch eine landesweite Registriernummer?',
+    a: 'Nein. Die landesweite Registriernummer, die seit dem 1. Juli 2025 Pflicht war, hat der spanische Oberste Gerichtshof am 19. Mai 2026 für nichtig erklärt. Sie inserieren mit der Nummer aus dem andalusischen Tourismusregister. Plattformen müssen weiterhin Daten an die Behörden übermitteln, und die Regeln sind noch in Bewegung; prüfen Sie den aktuellen Stand, bevor Sie starten.',
+  },
+  {
+    q: 'Wie viel Steuer zahle ich auf Mieteinnahmen, wenn ich in Deutschland wohne?',
+    a: 'Als Einwohner der EU zahlen Sie in Spanien 19 % auf den Nettoertrag: die Miete abzüglich der Kosten, die Sie geltend machen dürfen. Einwohner von Ländern außerhalb der EU und des EWR, etwa der Schweiz oder Großbritanniens, zahlen 24 % auf die Bruttomiete ohne Kostenabzug. Ab den Mieten des Jahres 2026 erklären Sie einmal im Jahr, vom 1. bis 20. April. Auch in Deutschland müssen Sie die Einkünfte in der Regel angeben; das Doppelbesteuerungsabkommen verhindert eine doppelte Besteuerung.',
+  },
+  {
+    q: 'Muss ich die Kaution meines Mieters noch bei der Junta de Andalucía hinterlegen?',
+    a: 'Bei neuen Verträgen nicht mehr. Seit dem 24. Januar 2026 muss die Kaution (fianza) nicht mehr bei AVRA hinterlegt werden. Der Mieter zahlt weiterhin eine Monatsmiete als Kaution, aber Sie verwahren sie selbst und zahlen sie am Ende des Vertrags zurück, abzüglich etwaiger Schäden oder Rückstände.',
+  },
+  {
+    q: 'Was bringt mehr: Ferienvermietung oder Langzeitmiete?',
+    a: 'Ferienvermietung bringt mehr Bruttomiete, aber auch deutlich mehr Kosten und Arbeit: Reinigung, Verwaltung, Plattformgebühren, Energie und Verschleiß. Bei einer normalen Wohnung mit bezahlter Verwaltung bleibt bei Langzeitmiete oft genauso viel oder mehr übrig. Ferienvermietung lohnt sich vor allem bei einem Haus mit Pool oder Aussicht, das hohe Preise erzielt, oder wenn Sie es auch selbst nutzen möchten.',
+  },
+  {
+    q: 'Gibt es in der Axarquía eine Kurtaxe?',
+    a: 'Nein. Andalusien erhebt (Stand November 2026) keine Touristensteuer, und auch keine Gemeinde in der Axarquía. In Málaga wird darüber diskutiert, behalten Sie es also im Blick.',
+  },
+];
+---
+<Guide lang="de" slug="immobilie-in-spanien-vermieten" toc={toc} faq={faq} dienst="verhuurbeheer" ctaTitle="Ihr Haus vermieten, ohne vor Ort sein zu müssen?" ctaText="Wir übernehmen die gesamte Vermietung vor Ort: Gäste empfangen, Reinigung und Handtücher, Störungen, Reparaturen und Wartung. Sie bekommen vorab einen Preis.">
+  <p>Viele Eigentümer in der Axarquía vermieten ihr Haus einen Teil des Jahres oder sogar das ganze Jahr. Das geht als Ferienwohnung, pro Woche oder Nacht, oder langfristig an einen Mieter, der dort wohnt. Beide Formen haben eigene Regeln, eigene Steuern und eigenen Aufwand. Dieser Ratgeber stellt alles zusammen, mit einem Rechenbeispiel. Sie haben noch kein Haus und fragen sich, welcher Typ sich zum Vermieten eignet? Lesen Sie zuerst unseren Ratgeber <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/ferienhaus/">Ferienhaus: Finca, Wohnung oder Dorfhaus</a> und, wenn Sie ein Geschäft daraus machen wollen, die Seite zum <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/bed-and-breakfast/">B&amp;B</a>.</p>
+
+  <h2 id="wahl">Ferienvermietung oder Langzeitmiete?</h2>
+  <p>Die erste Entscheidung ist die Form. Sie bestimmt, welche Lizenz Sie brauchen, wie viel Arbeit es ist und ob Sie selbst noch dort wohnen können.</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th></th><th>Ferienvermietung</th><th>Langzeitmiete</th></tr></thead>
+    <tbody>
+      <tr><td>Mieter</td><td>Urlauber, pro Nacht oder Woche</td><td>Ein fester Mieter, meist für Jahre</td></tr>
+      <tr><td>Lizenz</td><td>Eintrag im Tourismusregister Andalusiens</td><td>Keine; ein Mietvertrag nach spanischem Mietrecht</td></tr>
+      <tr><td>Eigennutzung</td><td>Ja, in den Wochen ohne Vermietung</td><td>Nein, solange der Vertrag läuft</td></tr>
+      <tr><td>Bruttoertrag</td><td>Höher, aber stark saisonabhängig</td><td>Niedriger, aber jeden Monat gleich</td></tr>
+      <tr><td>Kosten und Arbeit</td><td>Hoch: Reinigung, Gästewechsel, Verwaltung, Energie, Verschleiß</td><td>Niedrig: vor allem Instandhaltung und Fixkosten</td></tr>
+      <tr><td>Risiko</td><td>Leere Wochen, schlechte Bewertungen, immer strengere Regeln</td><td>Ein Mieter, der nicht zahlt oder nicht auszieht</td></tr>
+      <tr><td>Geeignet für</td><td>Häuser mit Pool, Aussicht oder nahe Strand und Ort</td><td>Normale Wohnungen und Dorfhäuser, Eigentümer, die wenig Aufwand wollen</td></tr>
+    </tbody>
+  </table></div>
+  <p>Es gibt auch eine Zwischenform: die Saisonmiete (<em>alquiler de temporada</em>), etwa an Überwinterer oder Menschen, die vorübergehend in der Gegend arbeiten. Sie fällt unter das Mietrecht, nicht unter die Tourismusregeln, aber nur, wenn der Mieter einen echten vorübergehenden Grund hat. Wird ein „Saisonvertrag“ immer wieder verlängert, kann ein Gericht ihn als normale Wohnraummiete werten. Lassen Sie einen solchen Vertrag von einem Anwalt aufsetzen.</p>
+
+  <h2 id="ferien">Ferienvermietung: Lizenz und Regeln</h2>
+  <p>In Andalusien heißt eine Ferienwohnung offiziell <em>vivienda con fines turísticos</em> (VFT), umgangssprachlich oft VUT. Die Regeln stehen in einem Dekret der Junta de Andalucía von 2016, das 2024 deutlich verschärft wurde. Kurz gefasst:</p>
+  <ul>
+    <li><strong>Eintrag im Tourismusregister.</strong> Sie reichen online eine Erklärung ein (<em>declaración responsable</em>) beim <em>Registro de Turismo de Andalucía</em>. Sie erhalten eine Nummer, die mit VFT/MA beginnt und in jeder Anzeige stehen muss. Danach kann die Junta kontrollieren; wer die Anforderungen nicht erfüllt, wird gestrichen. In ganz Andalusien betraf das bereits über 2.400 Wohnungen.</li>
+    <li><strong>Anforderungen an die Wohnung.</strong> Unter anderem Kühlung und Heizung, Fenster nach außen, Möbel und Bettwäsche für die Zahl der Gäste, ein Erste-Hilfe-Set, Gästeinformationen und Beschwerdeformulare (<em>hojas de reclamaciones</em>). Seit 2024 gelten auch Mindestflächen pro Gast und eine Höchstzahl an Gästen. Die Wohnung muss außerdem laut Papieren bewohnbar sein; ohne Bezugsbescheinigung oder mit unklaren Genehmigungen kommen Sie nicht weiter.</li>
+    <li><strong>Nur auf Wohnbauland.</strong> Die VFT-Regelung gilt für Wohnungen auf städtischem Boden. Eine Finca auf ländlichem Boden fällt unter die Regeln für Landtourismus (<em>vivienda turística de alojamiento rural</em>), mit eigenen Anforderungen. Bei einem Haus mit AFO-Status ist touristische Vermietung nicht immer möglich. Siehe unseren Ratgeber <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung</a>.</li>
+    <li><strong>Die Gemeinde.</strong> Seit 2024 dürfen Gemeinden in Andalusien die Zahl der Ferienwohnungen begrenzen. Die Stadt Málaga hat das getan: Seit Juli 2026 gilt dort für drei Jahre ein Stopp für neue Ferienwohnungen. In der Axarquía sind uns (November 2026) keine vergleichbaren Stopps bekannt, aber die Zahlen steigen schnell: Nerja hat über 2.700 Ferienwohnungen, Frigiliana über 400. Fragen Sie immer im <em>ayuntamiento</em> nach, bevor Sie investieren.</li>
+    <li><strong>Die Eigentümergemeinschaft.</strong> Seit dem 3. April 2025 brauchen Sie in einer Wohnanlage vorab die Zustimmung von drei Fünfteln der Eigentümer, um neu mit Ferienvermietung zu beginnen. Wohnungen, die schon vorher legal vermietet wurden, dürfen weitermachen. Zusätzlich kann die Gemeinschaftsordnung Vermietung verbieten.</li>
+    <li><strong>Gästeregistrierung.</strong> Seit Dezember 2024 müssen Sie umfangreiche Daten jedes Gastes über das System SES.Hospedajes an die Polizei melden. Viele Vermieter lassen das automatisch über ihre Buchungssoftware oder Verwaltung erledigen.</li>
+    <li><strong>Keine landesweite Nummer mehr.</strong> Seit dem 1. Juli 2025 war neben der andalusischen Nummer auch eine landesweite Registriernummer Pflicht. Der spanische Oberste Gerichtshof hat dieses landesweite Register am 19. Mai 2026 für nichtig erklärt, weil Tourismus Sache der Regionen ist. Die andalusische Nummer bleibt Pflicht. Andalusien arbeitet an einem neuen Tourismusgesetz; die Regeln können sich also erneut ändern.</li>
+    <li><strong>Kurtaxe.</strong> Gibt es in Andalusien nicht (Stand November 2026).</li>
+  </ul>
+  <p>Bieten Sie hotelähnliche Leistungen an, etwa tägliche Reinigung während des Aufenthalts oder Frühstück, fällt 21 % Mehrwertsteuer an. Normale Vermietung mit Endreinigung gehört nicht dazu.</p>
+
+  <h2 id="langzeit">Langzeitmiete: Vertrag und Kaution</h2>
+  <p>Vermieten Sie an jemanden, der dort wohnen wird, gilt das spanische Mietgesetz (<em>Ley de Arrendamientos Urbanos</em>, LAU). Es schützt Mieter stark. Die wichtigsten Regeln:</p>
+  <ul>
+    <li><strong>Laufzeit.</strong> Sie können für ein Jahr abschließen, aber wenn Sie als Privatperson vermieten, darf der Mieter jährlich bis zu fünf Jahren verlängern. Kündigt niemand, verlängert sich der Vertrag danach um bis zu drei weitere Jahre. Der Mieter kann nach sechs Monaten mit einem Monat Frist kündigen.</li>
+    <li><strong>Eigenbedarf.</strong> Nur wenn es im Vertrag steht, können Sie nach dem ersten Jahr kündigen, weil Sie oder ein naher Angehöriger einziehen. Ein Ferienhaus, das Sie ab und zu selbst nutzen möchten, passt daher schlecht zur Langzeitmiete.</li>
+    <li><strong>Kaution.</strong> Die gesetzliche Kaution (<em>fianza</em>) beträgt eine Monatsmiete. Zusätzlich dürfen Sie höchstens zwei Monatsmieten weitere Sicherheit verlangen. Seit dem 24. Januar 2026 müssen Sie die Kaution in Andalusien nicht mehr bei der Junta (AVRA) hinterlegen; Sie verwahren sie selbst. Kautionen aus älteren Verträgen bleiben bis Vertragsende bei AVRA.</li>
+    <li><strong>Mieterhöhung.</strong> Nur wenn der Vertrag sie vorsieht, und bei Verträgen seit 2023 höchstens nach dem Mietindex des spanischen Statistikamts (IRAV). In Andalusien sind keine „angespannten Wohnungsmärkte“ ausgewiesen, die zusätzlichen Mietobergrenzen des landesweiten Wohnungsgesetzes gelten hier also nicht.</li>
+    <li><strong>Maklerkosten.</strong> Beauftragen Sie einen Makler mit der Mietersuche, zahlen Sie ihn selbst. Seit 2023 dürfen diese Kosten nicht mehr dem Mieter berechnet werden.</li>
+    <li><strong>Energieausweis.</strong> Auch bei Vermietung Pflicht, und er muss in der Anzeige stehen.</li>
+  </ul>
+  <p>Das größte Risiko ist ein Mieter, der nicht mehr zahlt. Eine Räumung über das Gericht dauert in Spanien schnell Monate. Prüfen Sie daher Einkommen und Referenzen und erwägen Sie eine Mietausfallversicherung (<em>seguro de impago</em>). Sie kostet meist etwa 3 % bis 5 % der Jahresmiete.</p>
+
+  <h2 id="steuern">Steuern, wenn Sie nicht in Spanien wohnen</h2>
+  <p>Wohnen Sie in Deutschland, Österreich, der Schweiz oder anderswo, zahlen Sie in Spanien Einkommensteuer für Nichtresidenten (<em>Impuesto sobre la Renta de no Residentes</em>, IRNR) auf Ihre Mieteinnahmen:</p>
+  <ul>
+    <li><strong>Einwohner der EU, Islands und Norwegens: 19 %</strong> auf den Nettoertrag. Abziehbar sind die Kosten der Vermietung: Hypothekenzinsen, Instandhaltung und Reparaturen, IBI, Gemeinschaftsbeiträge, Versicherung, Verwaltung und Reinigung, Plattformgebühren, von Ihnen bezahlte Energie und jährlich 3 % Abschreibung auf den Gebäudewert (nicht den Boden). Vermieten Sie nur einen Teil des Jahres, ziehen Sie die Fixkosten anteilig ab.</li>
+    <li><strong>Einwohner anderer Länder, etwa der Schweiz oder Großbritanniens: 24 %</strong> auf die Bruttomiete, ohne Kostenabzug.</li>
+    <li><strong>Erklärung.</strong> Sie erklären mit dem Formular 210. Ab den Mieten des Jahres 2026 einmal im Jahr, vom 1. bis 20. April des Folgejahres. Bisher war es vierteljährlich.</li>
+    <li><strong>Wochen, in denen das Haus leer steht.</strong> Für die Tage ohne Vermietung zahlen Sie zusätzlich Steuer auf ein fiktives Einkommen: 1,1 % oder 2 % des Katasterwerts, anteilig nach Tagen. Dafür gibt es eine eigene Erklärung, vom 1. April bis 31. Dezember des Folgejahres.</li>
+  </ul>
+  <p>Residenten in Spanien zahlen über die normale Einkommensteuer und erhalten bei Langzeitmiete einen Abschlag auf die Nettomiete, den Nichtresidenten nicht bekommen. In Deutschland müssen Sie die Einkünfte in der Regel ebenfalls angeben; nach dem Doppelbesteuerungsabkommen werden sie dort meist freigestellt, können aber den Steuersatz auf Ihr übriges Einkommen erhöhen. Lassen Sie die Erklärungen von einem Gestor oder Steuerberater machen; das kostet oft einige hundert Euro im Jahr. Wann welche Erklärung und welcher Bescheid fällig ist und wie Sie aus dem Ausland zahlen, steht in unserem <a href="/de/ratgeber/steuerkalender-spanien/">Steuerkalender</a>.</p>
+
+  <h2 id="versicherung">Versicherung</h2>
+  <p>Eine normale Hausversicherung deckt Vermietung oft nicht ab. Teilen Sie Ihrem Versicherer mit, dass und wie Sie vermieten. Achten Sie auf:</p>
+  <ul>
+    <li><strong>Haftpflicht.</strong> Rutscht ein Gast am Pool aus oder verursacht ein Leck Schäden beim Nachbarn, haften Sie als Vermieter. Wählen Sie eine großzügige Deckung. Plattformen bieten teils eigene Garantien, die aber keine Versicherung ersetzen.</li>
+    <li><strong>Schäden durch Mieter oder Gäste.</strong> Nicht jede Police deckt Schäden durch die Menschen, an die Sie vermieten. Fragen Sie nach.</li>
+    <li><strong>Mietausfall.</strong> Bei Langzeitmiete: die <em>seguro de impago</em>, siehe oben.</li>
+    <li><strong>Leerstand.</strong> Manche Policen decken Einbruch oder Wasserschäden nicht, wenn das Haus lange leer steht oder nicht regelmäßig kontrolliert wird. Lassen Sie es betreuen und bewahren Sie die Berichte auf.</li>
+  </ul>
+
+  <h2 id="vorbereiten">Ihr Haus vermietungsfertig machen</h2>
+  <p>Mieter und Gäste sind kritischer als Sie selbst. Was Sie als Eigentümer hinnehmen, wird bei Vermietung zur schlechten Bewertung oder Beschwerde. Planen Sie ein:</p>
+  <ul>
+    <li><strong>Klimaanlage und Heizung</strong> in Wohnzimmer und Schlafzimmern. Für eine Ferienwohnung sind Kühlung und Heizung Pflicht, und im Juli und August unverzichtbar.</li>
+    <li><strong>Feuchtigkeit und Undichtigkeiten</strong> zuerst beheben. Ein Schimmelfleck auf einem Foto kostet Buchungen. Siehe <a href="/de/probleme/feuchtigkeit-und-schimmel/">Feuchtigkeit und Schimmel</a> und <a href="/de/probleme/undichtes-dach/">undichtes Dach</a>.</li>
+    <li><strong>Einen zuverlässigen Pool</strong> und einen gepflegten Garten. Siehe <a href="/de/pool/">Pool</a>.</li>
+    <li><strong>Bad und Küche, die etwas aushalten.</strong> Gäste nutzen sie intensiver als Sie. Ein veraltetes Bad vor der Vermietung zu erneuern, lohnt sich oft; eine Preisindikation gibt der <a href="/de/kosten/rechner/">Kostenrechner</a>.</li>
+    <li><strong>Elektrik und WLAN</strong>, die das schaffen: Ein Gast lädt ein Auto, schaltet drei Klimaanlagen ein und arbeitet im Homeoffice.</li>
+  </ul>
+  <p>Bei einer Ferienwohnung lohnt es sich oft, alles in einem Zug zu renovieren und erst dann Fotos machen zu lassen. Wir nennen Ihnen vorab einen Preis; siehe <a href="/de/renovierung/">Renovierung</a> und <a href="/de/instandhaltung/">Instandhaltung und Reparaturen</a>.</p>
+
+  <h2 id="ferne">Vermieten aus der Ferne</h2>
+  <p>Die meisten Eigentümer in der Axarquía wohnen nicht in Spanien. Vermieten klappt dann nur, wenn jemand vor Ort die praktische Seite übernimmt. Das können Sie auf Schlüsselhalter, Reinigungsfirma und Vermietungsverwaltung verteilen oder in eine Hand geben:</p>
+  <ul>
+    <li><strong>Schlüssel und Kontrolle.</strong> Jemand, der die Schlüssel hat, das Haus nach Abreise von Gästen oder Mietern kontrolliert und handelt, wenn etwas schiefgeht. Mit der <a href="/de/hausbetreuung/">Hausbetreuung</a> haben Sie dafür einen festen Ansprechpartner.</li>
+    <li><strong>Störungen schnell beheben.</strong> Eine kaputte Klimaanlage im August oder ein verstopfter Abfluss muss innerhalb eines Tages repariert sein, sonst verlangt der Gast sein Geld zurück. Vereinbaren Sie vorab, wer das macht und bis zu welchem Betrag ohne Rücksprache repariert werden darf.</li>
+    <li><strong>Reinigung, Bettwäsche und Handtücher</strong> zwischen den Gästen, bei Ferienvermietung.</li>
+    <li><strong>Gästekontakt und Absprachen.</strong> Fragen der Gäste beantworten, Ankunftszeiten vereinbaren und die Schlüssel übergeben. Buchungen können Sie selbst über die Plattformen erledigen oder verwalten lassen; eine Vermietungsverwaltung berechnet oft 15 % bis 25 % der Mieteinnahmen.</li>
+    <li><strong>Wartung das ganze Jahr.</strong> Auch wenn niemand da ist: Pool, Garten, Dachterrasse vor den Herbstregen und die Klimaanlagen vor dem Sommer. So wird aus einem kleinen Problem keine leere Woche mitten in der Saison.</li>
+  </ul>
+  <p>Wir erledigen all das aus einem Team: Schlüssel und Kontrollen, Gäste empfangen und Absprachen treffen, Reinigung und Handtücher und, weil wir selbst Handwerker sind, auch Reparaturen und Wartung. So haben Sie einen Ansprechpartner für die Vermietung und für das Haus. Mehr zum <a href="/de/vermietungsservice/">Vermietungsservice</a> und zur <a href="/de/hausbetreuung/">Hausbetreuung</a>.</p>
+
+  <h2 id="rechenbeispiel">Was bringt es? Ein Rechenbeispiel</h2>
+  <p>Eine Wohnung mit zwei Schlafzimmern in Torre del Mar, Eigentümer wohnt in Deutschland. Gebäudewert (ohne Boden) 150.000 €, Katasterwert 90.000 €. Alle Beträge sind Annahmen zur Veranschaulichung.</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Pro Jahr</th><th>Ferienvermietung</th><th>Langzeitmiete</th></tr></thead>
+    <tbody>
+      <tr><td>Miete</td><td>140 Nächte × 110 € = 15.400 €</td><td>12 × 950 € = 11.400 €</td></tr>
+      <tr><td>Vermietungsverwaltung (20 %) oder Makler</td><td>− 3.080 €</td><td>− 230 € (eine Monatsmiete alle fünf Jahre)</td></tr>
+      <tr><td>Reinigung und Wäsche</td><td>− 1.500 € (25 Wechsel)</td><td>–</td></tr>
+      <tr><td>Strom, Wasser, Internet</td><td>− 1.800 €</td><td>Zahlt der Mieter</td></tr>
+      <tr><td>Eigentümergemeinschaft</td><td>− 1.200 €</td><td>− 1.200 €</td></tr>
+      <tr><td>IBI und Müllgebühr</td><td>− 450 €</td><td>− 450 €</td></tr>
+      <tr><td>Versicherung</td><td>− 350 €</td><td>− 800 € (inklusive Mietausfall)</td></tr>
+      <tr><td>Instandhaltung und Verschleiß</td><td>− 800 €</td><td>− 600 €</td></tr>
+      <tr><td>Gestor und Erklärungen</td><td>− 400 €</td><td>− 300 €</td></tr>
+      <tr><td><strong>Übrig vor Steuern</strong></td><td><strong>5.820 €</strong></td><td><strong>7.820 €</strong></td></tr>
+      <tr><td>Spanische Steuer (19 %, nach Kosten und Abschreibung)</td><td>− 1.010 €</td><td>− 630 €</td></tr>
+      <tr><td>Steuer auf die leeren Tage</td><td>− 115 €</td><td>–</td></tr>
+      <tr><td><strong>Übrig nach spanischer Steuer</strong></td><td><strong>ca. 4.700 €</strong></td><td><strong>ca. 7.200 €</strong></td></tr>
+    </tbody>
+  </table></div>
+  <p>Bei der Ferienvermietung sind Fixkosten und Abschreibung anteilig für 140 vermietete Tage abgezogen (3 % von 150.000 € × 140/365). Bei der Langzeitmiete ist das ganze Jahr abziehbar. Wohnt der Eigentümer in der Schweiz, ist der Unterschied noch größer: 24 % auf die Bruttomiete bedeuten rund 3.840 € Steuer bei Ferienvermietung gegenüber 2.740 € bei Langzeitmiete.</p>
+  <p>Was das Beispiel zeigt: Bei einer normalen Wohnung mit bezahlter Verwaltung bleibt bei Langzeitmiete oft mehr übrig, bei viel weniger Aufwand. Ferienvermietung lohnt sich vor allem bei höheren Preisen, etwa mit Pool oder Meerblick, wenn Sie viel selbst machen oder das Haus auch selbst nutzen möchten. Ihre eigenen Wochen sind in diesem Beispiel nicht berücksichtigt.</p>
+  <p class="note">Rechenbeispiel mit Annahmen, erstellt am 5. November 2026. Ihr Ergebnis hängt von Lage, Preisen, Auslastung und Ihrer steuerlichen Situation ab. Lassen Sie einen Gestor oder Steuerberater mitrechnen.</p>
+
+  <h2 id="schritte">Schritt für Schritt</h2>
+  <ol>
+    <li><strong>Wählen Sie die Form</strong>: Ferien-, Saison- oder Langzeitmiete. Rechnen Sie beide mit Ihren eigenen Zahlen durch.</li>
+    <li><strong>Prüfen Sie, ob es erlaubt ist</strong>: Bodenklassifizierung, Papiere des Hauses, Gemeinde und bei einer Wohnung Gemeinschaftsordnung und Eigentümergemeinschaft.</li>
+    <li><strong>Machen Sie das Haus vermietungsfertig</strong>: Mängel beheben, Klimaanlage, Energieausweis und die vorgeschriebene Ausstattung.</li>
+    <li><strong>Regeln Sie die Papiere</strong>: Eintrag im Tourismusregister oder ein solider Mietvertrag vom Anwalt. Passen Sie Ihre Versicherung an.</li>
+    <li><strong>Organisieren Sie die Betreuung vor Ort</strong>: Schlüssel, Kontrollen, Reinigung, Störungen und Wartung.</li>
+    <li><strong>Regeln Sie die Steuern</strong>: einen Gestor für Formular 210 und die Erklärung in Ihrem Wohnland.</li>
+  </ol>
+  <p>Sie möchten Ihr Haus vermieten und suchen jemanden vor Ort? Wir übernehmen die Vermietung vor Ort: Gäste empfangen, Reinigung und Handtücher, Kontrollen zwischen Mietern und Gästen sowie Reparaturen, Wartung und eine eventuelle Auffrischung. Fragen Sie <a href="/de/anfrage/?dienst=verhuurbeheer">Vermietungsverwaltung</a> an oder ein Angebot für <a href="/de/anfrage/?dienst=renovatie">Renovierung</a> oder <a href="/de/anfrage/?dienst=onderhoud">Instandhaltung</a>. Fragen? Schreiben Sie an <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+
+  <h2 id="quellen">Quellen</h2>
+  <ul>
+    <li>Ferienwohnungen in Andalusien: Decreto 28/2016 vom 2. Februar 2016, geändert durch Decreto 31/2024 vom 29. Januar 2024 (Junta de Andalucía).</li>
+    <li>Zustimmung der Eigentümergemeinschaft: Ley Orgánica 1/2025 (BOE, 3. Januar 2025), Änderung von Artikel 17.12 der Ley de Propiedad Horizontal, in Kraft seit 3. April 2025.</li>
+    <li>Landesweites Register für nichtig erklärt: Tribunal Supremo, Urteil 620/2026 vom 19. Mai 2026, zum Real Decreto 1312/2024; siehe idealista/news, 21. Mai 2026.</li>
+    <li>Gästeregistrierung: Real Decreto 933/2021, in Kraft seit 2. Dezember 2024.</li>
+    <li>Mietrecht: Ley 29/1994 de Arrendamientos Urbanos, geändert durch Ley 12/2023 (Wohnungsgesetz, BOE 25. Mai 2023).</li>
+    <li>Kaution nicht mehr bei AVRA: Ley 5/2025 de Vivienda de Andalucía (BOJA, 24. Dezember 2025), sechste Zusatzbestimmung, in Kraft seit 24. Januar 2026.</li>
+    <li>Steuer für Nichtresidenten: Real Decreto Legislativo 5/2004, Artikel 24 und 25; jährliche Erklärung der Mieteinnahmen: Orden HAC/623/2026 (BOE, 23. Juni 2026).</li>
+    <li>Zahl der Ferienwohnungen in Nerja und Frigiliana: El Español Málaga, 25. Juni 2026. Stopp in der Stadt Málaga: Stadt Málaga, Juli 2026.</li>
+  </ul>
+  <p class="note">Geprüft am 5. November 2026. Dieser Ratgeber gibt allgemeine Informationen und ist keine Rechts- oder Steuerberatung. Die Regeln für Vermietung haben sich in den letzten Jahren schnell geändert; lassen Sie Ihre Situation von einem Anwalt, Gestor oder Steuerberater prüfen, bevor Sie beginnen.</p>
+</Guide>

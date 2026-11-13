@@ -8,7 +8,7 @@ import { path, type Lang } from '../i18n';
 
 interface Props { lang?: Lang; compact?: boolean; }
 const { lang = 'nl', compact = false } = Astro.props;
-const c = checklist[lang];
+const c = checklist[lang]!;
 const f = c.form;
 const endpoint = isFilled(site.leadEndpoint) ? site.leadEndpoint : '';
 const pdfUrl = `/downloads/${c.pdf}`;

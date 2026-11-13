@@ -1,0 +1,86 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'lime-or-paint', label: 'Lime or masonry paint?' },
+  { id: 'prices', label: 'What is involved?' },
+  { id: 'how-often', label: 'How often?' },
+  { id: 'rules', label: 'Town hall rules' },
+  { id: 'method', label: 'How a good painter works' },
+  { id: 'diy-or-hire', label: 'DIY or hire someone?' },
+];
+
+const faq = [
+  {
+    q: 'Can I put limewash over a wall that has been painted?',
+    a: 'Not just like that. Lime bonds poorly to plastic masonry paint and soon peels off. The paint has to come off first, or you need a special bonding coat. The other way round works: after a good clean, you can put a breathable silicate or silicone paint over old limewash.',
+  },
+  {
+    q: 'Why does my façade keep peeling?',
+    a: 'Usually there is moisture in the wall that cannot get out: rising damp, a leaking gutter, or non-breathable paint on an old stone wall. Fix the cause first, or the new coat will peel again within a year.',
+  },
+  {
+    q: 'When is the best time to have it done?',
+    a: 'In spring (March to June) or autumn (September to November). In July and August lime and paint dry too fast in the strong sun, and in the rainy weeks of winter they do not dry properly. Book early: before summer and before Easter painters are busy.',
+  },
+];
+---
+<Guide slug="painting-house-exterior-spain" lang="en" toc={toc} faq={faq} dienst="onderhoud" ctaTitle="Want your façade whitewashed or painted?" ctaText="Send us a few photos of the façade and its size. We will look at what the wall needs and make sure it is done properly, including repairs to cracks and damp patches.">
+  <p>Want to do it yourself? Read our DIY guide to <a href="/en/diy/limewashing-your-house/">limewashing your house</a>. This guide covers the choice between lime and paint, and what it costs to have it done.</p>
+
+  <h2 id="lime-or-paint">Lime or masonry paint?</h2>
+  <p>In the Axarquía you see two kinds of façade: the traditional limewashed walls of the white villages, and newer houses with smooth cement render and paint. Which finish suits your house depends mainly on the wall underneath.</p>
+  <table class="prices">
+    <thead><tr><th></th><th>Lime (<em>cal</em>)</th><th>Elastic masonry paint (<em>pintura elástica</em>)</th></tr></thead>
+    <tbody>
+      <tr><td>Suits</td><td>Old walls of stone, earth or lime mortar</td><td>Newer walls with cement render, concrete or brick</td></tr>
+      <tr><td>Breathes</td><td>Yes, moisture can escape</td><td>Hardly; traps moisture in an old wall</td></tr>
+      <tr><td>Hairline cracks</td><td>Fills small cracks but does not bridge them</td><td>Stretches and bridges hairline cracks</td></tr>
+      <tr><td>Look</td><td>Matt, soft white, the real village look</td><td>Smooth and even, also in colour</td></tr>
+      <tr><td>Lasts</td><td>1 to 3 years, then a fresh coat</td><td>8 to 12 years</td></tr>
+      <tr><td>Material</td><td>Cheap</td><td>More expensive per m²</td></tr>
+    </tbody>
+  </table>
+  <p>In between are <strong>silicate and silicone paints</strong>: they breathe and last longer than lime. A good choice for an old wall you do not want to redo every two years.</p>
+  <p>Rule of thumb: never put plastic masonry paint on an old stone house. The moisture can no longer escape and ends up inside as <a href="/en/problems/damp-and-mould/">damp and mould</a>.</p>
+
+  <h2 id="prices">What is involved?</h2>
+  <p>An overview of what exists and what it is for. Want to have this done? <a href="/en/request/">Tell us what you have in mind</a> and we will help you make it happen.</p>
+  <table class="prices">
+    <thead><tr><th>Option</th><th>Good to know</th></tr></thead>
+    <tbody>
+      <tr><td>Limewashing the façade</td><td>Cheap each time, but needed again every 1 to 3 years</td></tr>
+      <tr><td>Elastic masonry paint</td><td>More per job, lasts 8 to 12 years</td></tr>
+      <tr><td>Silicate or silicone paint</td><td>Breathes and lasts long; the best choice for an old wall you rarely want to redo</td></tr>
+      <tr><td>Removing old coats and repairing cracks</td><td>Depends entirely on the state of the wall; often the biggest item</td></tr>
+      <tr><td>Scaffolding</td><td>Needed from the first floor up; in the street a municipal fee is added</td></tr>
+    </tbody>
+  </table>
+  <p>What mainly determines the work: the state of the wall, the height (scaffolding or not) and access. A village house in a narrow alley takes more time than a villa you can reach with a cherry picker.</p>
+
+  <h2 id="how-often">How often?</h2>
+  <p>Traditionally Andalusians whitewash their houses every spring, before Easter. You do not have to do it that often, but lime wears: after one to three years you see grey streaks under window sills and stains where rainwater runs down. Walls near the sea and on the west side (wind and rain) wear fastest.</p>
+  <p>A painted façade lasts eight to twelve years. Still have it checked every year for cracks, especially after the autumn rains. A crack sealed early prevents damp damage inside. See also <a href="/en/problems/cracks-in-walls/">cracks in walls</a>.</p>
+
+  <h2 id="rules">Town hall rules</h2>
+  <ul>
+    <li><strong>Colour</strong>: in the historic centres of Frigiliana, Cómpeta and Nerja, among others, the town hall requires white, sometimes with set colours for plinths and frames. A different colour can mean a fine and repainting.</li>
+    <li><strong>Notification</strong>: painting without structural work is minor maintenance. Many town halls still ask for a notification (<em>declaración responsable</em>) or a minor works licence (<em>licencia de obra menor</em>), certainly in a protected area.</li>
+    <li><strong>Scaffolding in the street</strong>: for scaffolding or a skip on the public road you pay a municipal fee (<em>ocupación de vía pública</em>).</li>
+    <li><strong>Apartment</strong>: in a building with an owners’ association (<em>comunidad de propietarios</em>) the façade is shared. The association decides, not you alone.</li>
+  </ul>
+  <p>If in doubt, ask the town hall or let the painter arrange it. You will find local rules on the pages under <a href="/en/places/">Places</a>.</p>
+
+  <h2 id="method">How a good painter works</h2>
+  <ol>
+    <li>First looks for where moisture comes from: gutter, roof edge, window sill, rising damp. That gets fixed first.</li>
+    <li>Removes loose paint and lime and cleans the wall, with a pressure washer if needed.</li>
+    <li>Repairs cracks and loose render with a mortar that matches the wall (lime mortar on an old wall).</li>
+    <li>Applies a primer that matches the finish.</li>
+    <li>Works in the shade, not in strong wind or with rain on the way, and dampens the wall before limewashing.</li>
+    <li>Also does roof edges, chimney and the low walls on the roof terrace: that is often where water gets in.</li>
+  </ol>
+
+  <h2 id="diy-or-hire">DIY or hire someone?</h2>
+  <p>Limewashing a low façade or a garden wall is a good DIY job; see the <a href="/en/diy/limewashing-your-house/">DIY guide to limewashing</a>. Hire someone when you need scaffolding, when there are cracks or damp patches, or when you are not there. A professional also spots straight away whether something is wrong under the old coat. Combine painting with other <a href="/en/maintenance/">maintenance</a> such as gutters and the roof terrace, so the scaffolding only goes up once.</p>
+</Guide>

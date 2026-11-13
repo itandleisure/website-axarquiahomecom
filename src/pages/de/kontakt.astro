@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import { contactTeksten } from '../../data/contactformulier';
+const C = contactTeksten.de;
+---
+<Base
+  title={C.title}
+  description={C.description}
+  path="/de/kontakt/"
+  lang="de"
+>
+  <Breadcrumbs lang="de" items={[{ name: C.crumb, href: '/de/kontakt/' }]} />
+  <section class="section" style="padding-top:28px">
+    <div class="wrap">
+      <h1>{C.h1}</h1>
+      <p class="lead" style="margin-bottom:28px">{C.lead}</p>
+      <ContactForm lang="de" />
+    </div>
+  </section>
+</Base>

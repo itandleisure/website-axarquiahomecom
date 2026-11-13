@@ -1,0 +1,109 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import { site } from '../../data/site';
+
+const faq = [
+  {
+    q: '¿Qué es la gestión de llaves?',
+    a: 'Guardamos una llave de su casa y la revisamos periódicamente mientras usted no está. Comprobamos que no haya fugas, humedades, cortes de luz ni intentos de robo, ventilamos y le enviamos un breve informe con fotos. Si hay un problema, actuamos enseguida tras consultarle.',
+  },
+  {
+    q: '¿Cuánto cuesta?',
+    a: 'Depende de la frecuencia de las visitas y de lo que hagamos además. Una revisión sencilla cada dos semanas suele costar unas decenas de euros al mes; con jardín, piscina y limpieza, algo más. Tras su solicitud recibe una propuesta a medida. Las reparaciones y la limpieza extra solo se cobran si usted da el visto bueno.',
+  },
+  {
+    q: '¿Está segura mi llave?',
+    a: 'Las llaves se guardan codificadas, sin dirección, en una caja fuerte. Solo tiene acceso el personal fijo y cada visita queda registrada.',
+  },
+  {
+    q: '¿Qué pasa si algo se estropea?',
+    a: 'Lo pequeño lo arreglamos en el momento y lo verá en la factura mensual. Para reparaciones mayores le enviamos antes fotos y un precio. Como también somos empresa constructora, no tiene que buscar usted a nadie.',
+  },
+  {
+    q: '¿Puedo darme de baja cuando quiera?',
+    a: 'Sí, el servicio es mensual. Muchos propietarios solo lo contratan para los meses en que no están en la casa.',
+  },
+  {
+    q: '¿También gestionan el alquiler?',
+    a: 'Sí. Si alquila la casa a turistas o a largo plazo, nos encargamos de todo en la zona: recibir a los huéspedes, limpieza, ropa de cama y toallas, revisión tras la salida, averías y reparaciones.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Gestión de llaves y vigilancia de viviendas',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['es', 'en', 'nl'],
+};
+---
+<Base
+  title="Gestión de llaves y vigilancia de casas en la Axarquía"
+  description="Gestión de llaves y revisión de su segunda vivienda en Nerja, Torrox, Cómpeta y toda la Axarquía: visitas periódicas, informes con fotos y actuación rápida."
+  path="/es/gestion-de-llaves/"
+  lang="es"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="es" items={[{ name: 'Gestión de llaves', href: '/es/gestion-de-llaves/' }]} />
+  <Hero
+    lang="es"
+    eyebrow="Gestión de llaves y vigilancia"
+    title="Su casa vigilada <em>mientras usted no está</em>"
+    lead="Su segunda vivienda pasa gran parte del año vacía. Nosotros la revisamos, le enviamos fotos y actuamos si algo va mal, antes de que una pequeña gotera se convierta en una gran reparación."
+    cta="Contratar gestión de llaves"
+    ctaHref="/es/solicitud/?dienst=sleutelbeheer"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Qué hacemos por usted</h2>
+      <p class="section-intro">Adaptamos las visitas a su situación: con qué frecuencia, qué extras y solo los meses en que no está. Baja mensual.</p>
+      <ul class="checks">
+        <li>Revisiones periódicas de la vivienda</li>
+        <li>Abrir ventanas y ventilar</li>
+        <li>Comprobar fugas, humedades e intentos de robo</li>
+        <li>Breve informe con fotos tras cada visita</li>
+        <li>Revisión extra después de temporales o lluvias fuertes</li>
+        <li>Recoger y reenviar el correo</li>
+        <li>Preparar la casa para su llegada</li>
+        <li>Cuidado de piscina y jardín</li>
+        <li>Abrir a técnicos y repartidores</li>
+        <li>Limpieza antes y después de su estancia</li>
+      </ul>
+      <p><a class="btn" href="/es/solicitud/?dienst=sleutelbeheer">Solicitar gestión de llaves</a></p>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap split">
+      <div class="prose">
+        <h2>Por qué conviene en la Axarquía</h2>
+        <p>Una casa vacía en la costa lo pasa mal. En invierno la lluvia trae goteras y humedades; en verano el calor da problemas con la piscina, el jardín y el tejado. Tras un temporal puede haber ramas en la terraza o un corte de luz que descongela el congelador. Y en una casa cerrada los sifones se secan y entran las cucarachas: vea nuestra guía de <a href="/es/guias/control-de-plagas/">control de plagas</a>.</p>
+        <p>Si no hay nadie, usted se entera cuando vuelve. Con la gestión de llaves lo vemos en una o dos semanas, y antes si ha habido mal tiempo.</p>
+        <h2>Más que guardar una llave</h2>
+        <p>Como también somos la empresa que hace las obras, podemos solucionar los problemas enseguida. Sin buscar fontanero ni pedir tres presupuestos a distancia. Recibe fotos y un precio y, cuando usted lo aprueba, se hace.</p>
+        <p>¿Alquila su casa? Con la <a href="/es/gestion-alquiler-vacacional/">gestión de alquiler vacacional</a> nos ocupamos también de los cambios de huéspedes, la limpieza, la ropa de cama y la entrega de llaves. La gestión de llaves es para cuando la casa está vacía; la gestión del alquiler, para cuando entran y salen huéspedes.</p>
+      </div>
+      <div class="box">
+        <h3>Lo que recibe tras cada visita</h3>
+        <ul class="checks">
+          <li>Fecha y hora de la visita</li>
+          <li>Fotos de cada estancia y del exterior</li>
+          <li>Lectura de los contadores de agua y luz</li>
+          <li>Qué hemos visto y qué hemos hecho</li>
+          <li>Consejo si hay algo que arreglar</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="es" />
+  <Cta lang="es" dienst="sleutelbeheer" title="Su casa en buenas manos mientras está fuera" />
+  <Services lang="es" exclude="gestion-de-llaves" title="También le puede interesar" />
+</Base>

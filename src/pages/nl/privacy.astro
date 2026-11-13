@@ -2,13 +2,14 @@
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Todo from '../../components/Todo.astro';
-import { site } from '../../data/site';
+import { site, isFilled } from '../../data/site';
 const o = site.operator;
 ---
 <Base
   title="Privacy en voorwaarden"
-  description="Hoe Axarquía Home omgaat met uw gegevens als u een aanvraag doet, en met wie we die delen."
+  description="Hoe Axarquía Home omgaat met uw gegevens als u een aanvraag doet, met wie we die delen, hoe lang we ze bewaren en welke cookies we gebruiken."
   path="/nl/privacy/"
+  noindex={!isFilled(site.operator.name)}
 >
   <Breadcrumbs items={[{ name: 'Privacy en voorwaarden', href: '/nl/privacy/' }]} />
   <section class="section">

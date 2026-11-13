@@ -1,0 +1,79 @@
+---
+// Källor: se den nederländska versionen (src/pages/nl/gidsen/vergunning-verbouwen-andalusie.astro).
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Anmälan eller tillstånd?' },
+  { id: 'tabell', label: 'Per typ av arbete' },
+  { id: 'vem', label: 'Vem du behöver' },
+  { id: 'steg', label: 'Stegen vid en tillbyggnad' },
+  { id: 'landsbygd', label: 'Fincor och landsbygden' },
+  { id: 'kommun', label: 'Kostnader och regler per kommun' },
+];
+
+const faq = [
+  { q: 'Behöver jag bygglov för en tillbyggnad i Spanien?', a: 'Ja. En tillbyggnad, ett annex eller en extra våning kräver alltid en licencia de obra från kommunen i Andalusien, med ett projekt av en arkitekt. Du får börja först när tillståndet är beviljat och genomförandeprojektet har lämnats in till kommunen.' },
+  { q: 'Krävs det en arkitekt för en renovering?', a: 'Bara när arbetet kräver ett byggprojekt: nybygge, tillbyggnad, konstruktionsarbete, en ändrad fasad eller ändrad användning. Då behöver en bostad både en arkitekt och en arquitecto técnico. Ett nytt kök eller badrum gör det inte.' },
+  { q: 'Kan jag själv ansöka hos kommunen?', a: 'Ja, men oftast lämnar arkitekten eller byggfirman in ansökan för din räkning, även digitalt. Du skriver under en fullmakt.' },
+  { q: 'Vad händer om tillbyggnaden aldrig fick tillstånd?', a: 'Kommunen kan ingripa i upp till sex år efter att den byggdes. Därefter kan huset erkännas som AFO. Det är ingen legalisering: du får underhålla och renovera, men inte bygga ut mer.' },
+  { q: 'Måste en tillbyggnad föras in i katastret och köpebrevet?', a: 'Den måste alltid föras in i Catastro. Köpebrevet och fastighetsregistret är inget krav men klokt: när du säljer frågar notarien efter dem, och utan tillstånd och slutbesked går det inte.' },
+];
+---
+<Guide slug="bygglov-renovering-andalusien" lang="sv" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Ska du renovera eller bygga ut?" ctaText="Berätta vad du har i tankarna. Vi tar reda på vilket tillstånd som behövs, ordnar arkitekten och utför arbetet.">
+  <h2 id="kort">Anmälan eller tillstånd?</h2>
+  <p>I Andalusien avgör plan- och bygglagen LISTA (Ley 7/2021) vilken väg en renovering ska gå. Det finns två:</p>
+  <ul>
+    <li><strong>Anmälan</strong> (<em>declaración responsable</em>, lokalt fortfarande ofta kallad <em>obra menor</em>): för mindre arbeten utan byggprojekt, och för arbeten inne i ett befintligt, lagligt hus i tätort som inte ändrar storlek, höjd eller antal bostäder. Du lämnar in anmälan med handlingarna och får börja samma dag. Kommunen kontrollerar i efterhand.</li>
+    <li><strong>Tillstånd</strong> (<em>licencia de obra</em>, ofta kallad <em>obra mayor</em>): för allt annat, som nybyggen, en tillbyggnad eller extra våning och konstruktionsarbete. Kommunen ska besluta inom tre månader efter en komplett ansökan. Du får börja först när tillståndet är beviljat.</li>
+  </ul>
+  <p>Vem du behöver beror på en fråga: kräver arbetet ett byggprojekt? Enligt den spanska bygglagen (LOE) gör det det för nybyggen, för arbeten som väsentligt ändrar fasad, volym eller konstruktion, för ändrad användning och för skyddade byggnader. Då krävs en arkitekt och en <em>arquitecto técnico</em>.</p>
+
+  <h2 id="tabell">Per typ av arbete</h2>
+  <p>För ett lagligt hus i tätort. Exakt vad som går med en anmälan står i kommunens förordning.</p>
+  <table class="prices">
+    <thead><tr><th>Arbete</th><th>Väg</th><th>Vem du behöver</th></tr></thead>
+    <tbody>
+      <tr><td>Nytt kök eller badrum, inga väggar flyttas</td><td>Anmälan</td><td>Byggfirma; behörig elektriker om elen ändras</td></tr>
+      <tr><td>Kakel, puts, målning, fönster i samma storlek</td><td>Anmälan, ibland undantaget</td><td>Byggfirma</td></tr>
+      <tr><td>Tätning av tak eller terrass utan att röra konstruktionen</td><td>Anmälan</td><td>Byggfirma; ofta en tekniker om det behövs ställning</td></tr>
+      <tr><td>Ändrad planlösning utan bärande väggar eller extra bostad</td><td>Anmälan</td><td>Byggfirma, med en ritning</td></tr>
+      <tr><td>Solpaneler, isolering, värmepump</td><td>Anmälan, även på landsbygden</td><td>Installatör; behörig elektriker</td></tr>
+      <tr><td>Ta bort en bärande vägg, nytt bjälklag eller bjälkar</td><td>Tillstånd</td><td>Arkitekt, arquitecto técnico, byggfirma</td></tr>
+      <tr><td>Tillbyggnad, annex, extra våning, glasa in en terrass</td><td>Tillstånd</td><td>Arkitekt, arquitecto técnico, byggfirma</td></tr>
+      <tr><td>Pool</td><td>I regel tillstånd</td><td>Tekniker med projekt; vilken varierar per kommun</td></tr>
+      <tr><td>Rivning (ej skyddad byggnad)</td><td>Anmälan</td><td>Tekniker med rivningsprojekt</td></tr>
+    </tbody>
+  </table>
+  <p>Byggställning eller container på allmän väg kräver ofta ett separat medgivande från kommunen. Du betalar alltid byggskatt (ICIO) på arbetets kostnad, även vid en anmälan.</p>
+
+  <h2 id="vem">Vem du behöver</h2>
+  <ul>
+    <li><strong>Arkitekt</strong> (<em>arquitecto</em>): upprättar projektet och leder arbetet. Krävs för alla arbeten på en bostad som kräver ett projekt.</li>
+    <li><strong>Arquitecto técnico</strong> (även <em>aparejador</em>): leder arbetet på plats och kontrollerar kvaliteten. Krävs vid sidan av arkitekten. Tillsammans bildar de <em>dirección facultativa</em>.</li>
+    <li><strong>Samordnare för arbetsmiljö</strong> (<em>coordinador de seguridad y salud</em>): krävs så snart mer än ett företag eller en egenföretagare arbetar på bygget. Varje projekt innehåller också en säkerhetsstudie.</li>
+    <li><strong>Yrkessammanslutning</strong> (<em>colegio</em>): stämplar genomförandeprojektet och slutbeskedet (<em>visado</em>). Krävs för alla arbeten som kräver ett projekt, även vid legalisering.</li>
+    <li><strong>Behörig elektriker</strong>: utfärdar ett installationsintyg för ny eller ändrad el, registrerat hos Junta de Andalucía. Utan det får du inget nytt elavtal.</li>
+    <li><strong>Byggfirma</strong>: utför arbetet, med eller utan projekt.</li>
+  </ul>
+
+  <h2 id="steg">Stegen vid en tillbyggnad</h2>
+  <ol>
+    <li><strong>Förstudie</strong>: arkitekten kontrollerar i detaljplanen (PGOU) hur mycket som får byggas på tomten, och om själva huset är lagligt.</li>
+    <li><strong>Grundprojekt och ansökan</strong>: med ett <em>proyecto básico</em> ansöker arkitekten om tillstånd hos kommunen.</li>
+    <li><strong>Prövning</strong>: en tekniker och en jurist från kommunen, i små kommuner ofta från Diputación de Málaga, lämnar sitt yttrande. Kommunen beslutar inom tre månader efter en komplett ansökan. Du betalar ICIO och avgifterna.</li>
+    <li><strong>Genomförandeprojekt</strong>: tillståndet ensamt räcker inte för att bygga. Först lämnas genomförandeprojektet (<em>proyecto de ejecución</em>) med visado in till kommunen, tillsammans med en anmälan om byggstart.</li>
+    <li><strong>Bygga</strong>: börja inom ett år och bli klar inom tre, om inte tillståndet säger annat. Förlängning är möjlig.</li>
+    <li><strong>Slutförande</strong>: arkitekten och arquitecto técnico skriver under slutbeskedet (<em>certificado final de obra</em>). Med det anmäler du till kommunen att byggnaden tas i bruk.</li>
+    <li><strong>Catastro och notarie</strong>: den nya ytan måste föras in i Catastro. För att också få in den i köpebrevet och fastighetsregistret låter du upprätta en handling om <em>ampliación de obra nueva</em>. Notarien frågar efter tillståndet, slutbeskedet och beviset på ibruktagande. Det sparar mycket besvär när du säljer.</li>
+  </ol>
+  <p>Med en anmälan går det snabbare: byggfirman eller teknikern lämnar in den med handlingarna, du betalar ICIO och kan börja.</p>
+
+  <h2 id="landsbygd">Fincor och landsbygden</h2>
+  <p>Många fincor i Axarquía står på <em>suelo rústico</em>. Där räcker en anmälan bara för arbeten som gör huset mer energieffektivt, som isolering eller solpaneler, utan extra yta. Allt annat kräver tillstånd, och att bygga ut är ofta inte tillåtet alls.</p>
+  <p>Om ett hus eller annex någon gång har byggts utan tillstånd kan kommunen ingripa i upp till sex år efter att det byggdes. Därefter kan huset erkännas som AFO. Fram till det erkännandet får inga arbeten utföras. Efteråt får du underhålla och renovera, även konstruktionen, men inte göra huset större. Läs mer i vår guide om <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>. Ska du köpa en finca? Låt en <a href="/sv/besiktning/">besiktning före köp</a> kontrollera att det som står där stämmer med papperen.</p>
+
+  <h2 id="kommun">Kostnader och regler per kommun</h2>
+  <p>Reglerna ovan gäller i hela Andalusien. Byggskatten (ICIO) och avgifterna skiljer sig mellan kommunerna: i Axarquía ligger ICIO mellan 2 och 4 % av arbetets kostnad. Fråga kommunen eller din arkitekt om den exakta satsen. Vad själva arbetet kostar ser du i <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringskostnader</a>, och orterna jämförs på våra <a href="/sv/orter/">ortssidor</a>.</p>
+  <p>Vi sköter hela processen: vi kontrollerar om din plan kräver en anmälan eller ett tillstånd, ordnar arkitekten och ansökan och utför arbetet. Se <a href="/sv/renovering/">renovering</a> och <a href="/sv/pool/">bygga pool</a>.</p>
+  <p class="note">Den här guiden ger allmän information utifrån andalusisk och spansk lag som den såg ut den 5 november 2026 (LISTA, LOE, RD 1000/2010, RD 1627/1997, REBT, Ley del Catastro, Ley de Suelo). Den är inte juridisk rådgivning; arkitekten och kommunen beslutar om en viss plan.</p>
+</Guide>
