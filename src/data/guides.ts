@@ -31,8 +31,9 @@ export const guides: GuideMeta[] = [
     description: 'Stap voor stap emigreren naar Spanje: NIE, inschrijving, belasting, zorg, wonen en een huis vinden in de Axarquía en aan de Costa del Sol.',
     lead: 'Elk jaar verhuizen duizenden Nederlanders naar de zon. Deze gids zet alle stappen op een rij, van het eerste papierwerk tot een huis dat klaar is om in te wonen.',
     keyword: 'emigreren naar spanje',
-    minutes: 11,
+    minutes: 14,
     published: '2026-11-05',
+    updated: '2026-11-13',
   },
   {
     slug: 'finca-kopen-in-spanje',
@@ -42,8 +43,9 @@ export const guides: GuideMeta[] = [
     description: 'Een finca kopen in Andalusië? Lees waar u op let: vergunningen en AFO, water en put, toegangsweg, septische put, keuring en verbouwkosten.',
     lead: 'Een finca in de heuvels van de Axarquía is voor veel kopers de droom. Maar bij een landelijke woning is er meer te controleren dan bij een appartement aan de kust.',
     keyword: 'finca kopen spanje',
-    minutes: 10,
+    minutes: 12,
     published: '2026-11-05',
+    updated: '2026-11-13',
   },
   {
     slug: 'kosten-koper-spanje',
@@ -70,12 +72,12 @@ export const guides: GuideMeta[] = [
   {
     slug: 'wonen-in-de-axarquia',
     path: '/nl/wonen/',
-    title: 'Wonen in Spanje, in de Axarquía: dorpen, kosten, zorg en klimaat',
-    seoTitle: 'Wonen in Spanje: de Axarquía bij Málaga',
+    title: 'Wonen in de Axarquía: dorpen, kosten, zorg en klimaat',
+    seoTitle: 'Wonen in de Axarquía bij Málaga: dorpen, kosten en zorg',
     short: 'Wonen in de Axarquía',
     description: 'Hoe is het om te wonen in de Axarquía, ten oosten van Málaga? De dorpen vergeleken, kosten van levensonderhoud, zorg, klimaat en bereikbaarheid.',
     lead: 'Witte dorpen tegen de bergen, avocado’s en mango’s op de hellingen en de zee op twintig minuten. Wat maakt de Axarquía zo geliefd, en welk dorp past bij u?',
-    keyword: 'wonen in spanje',
+    keyword: 'wonen in de axarquia',
     minutes: 9,
     published: '2026-11-05',
   },
@@ -93,13 +95,14 @@ export const guides: GuideMeta[] = [
   {
     slug: 'huis-kopen-malaga-andalusie',
     title: 'Huis kopen in Málaga en Andalusië: gebieden, prijzen en het koopproces',
-    seoTitle: 'Huis kopen in Málaga en Andalusië: prijzen en stappen',
+    seoTitle: 'Huis kopen in Málaga: wijken, prijzen per m² en stappen',
     short: 'Huis kopen in Málaga',
-    description: 'Een huis kopen in de provincie Málaga: welke gebieden er zijn, wat huizen ongeveer kosten en hoe het koopproces in Spanje stap voor stap verloopt.',
+    description: 'Een huis kopen in Málaga: de wijken van de stad en de gebieden in de provincie, prijzen per m², hypotheek en eigen geld, en het koopproces stap voor stap.',
     lead: 'De provincie Málaga is een van de populairste plekken in Europa om een tweede huis te kopen. Van Marbella in het westen tot Nerja in het oosten: zo vindt u uw weg.',
     keyword: 'huis kopen malaga',
-    minutes: 10,
+    minutes: 13,
     published: '2026-11-05',
+    updated: '2026-11-13',
   },
   {
     slug: 'afo-legaliseren-andalusie',
@@ -499,8 +502,9 @@ export const guidesEn: GuideMeta[] = [
     description: 'Moving to Spain from the UK after Brexit: the 90/180 rule, visas, NIE and TIE, tax, healthcare and finding a home in the Axarquía and on the Costa del Sol.',
     lead: 'Since Brexit, moving to Spain takes more paperwork than it used to, but thousands of Britons still make the move every year. This guide sets out the steps, from your first visa application to a home that is ready to live in.',
     keyword: 'moving to spain from uk',
-    minutes: 12,
+    minutes: 15,
     published: '2026-11-05',
+    updated: '2026-11-13',
   },
   {
     slug: 'buying-a-finca-in-spain',
@@ -510,8 +514,9 @@ export const guidesEn: GuideMeta[] = [
     description: 'Buying a finca in Andalusia? What to check: permits and AFO status, water and wells, access roads, septic tanks, surveys and renovation costs.',
     lead: 'A finca in the hills of the Axarquía is many buyers’ dream. But a country property has far more to check than an apartment on the coast.',
     keyword: 'buying a finca in spain',
-    minutes: 10,
+    minutes: 12,
     published: '2026-11-05',
+    updated: '2026-11-13',
   },
   {
     slug: 'buying-costs-in-spain',
@@ -561,13 +566,14 @@ export const guidesEn: GuideMeta[] = [
   {
     slug: 'buying-property-in-malaga',
     title: 'Buying property in Málaga and Andalusia: areas, prices and the process',
-    seoTitle: 'Buying property in Málaga province: areas, prices and steps',
+    seoTitle: 'Buying property in Málaga: areas, prices per m² and steps',
     short: 'Buying in Málaga',
-    description: 'Buying a home in Málaga province: the main areas, roughly what homes cost and how the buying process in Spain works step by step.',
+    description: 'Buying property in Málaga: city neighbourhoods and areas of the province, prices per m², mortgages and deposits, and the buying process step by step.',
     lead: 'Málaga province is one of the most popular places in Europe to buy a home in the sun. From Marbella in the west to Nerja in the east, here is how to find your way.',
     keyword: 'buying property in malaga',
-    minutes: 10,
+    minutes: 13,
     published: '2026-11-05',
+    updated: '2026-11-13',
   },
   {
     slug: 'afo-legalisation-andalusia',
@@ -1526,13 +1532,14 @@ import { wegenNl, wegenEn, wegenDe } from './guides-wegen';
 import { dienstenNl, dienstenEn, dienstenDe } from './guides-diensten';
 import { energieNl, energieEn, energieDe } from './guides-energie';
 import { praktischNl, praktischEn, praktischDe } from './guides-praktisch';
+import { wonenNl, wonenEn, wonenDe } from './guides-wonen';
 import { guidesSvExtra } from './guides-sv';
 import { guidesEs } from './guides-es';
 // Gidsen uit eigen bestanden komen achter de lijsten hierboven, in elke taal op dezelfde positie.
 export const guidesBy: Record<Lang, GuideMeta[]> = {
-  nl: [...guides, ...huisEnTuinNl, ...ontwerpNl, ...wegenNl, ...dienstenNl, ...energieNl, ...praktischNl],
-  en: [...guidesEn, ...huisEnTuinEn, ...ontwerpEn, ...wegenEn, ...dienstenEn, ...energieEn, ...praktischEn],
-  de: [...guidesDe, ...huisEnTuinDe, ...ontwerpDe, ...wegenDe, ...dienstenDe, ...energieDe, ...praktischDe],
+  nl: [...guides, ...huisEnTuinNl, ...ontwerpNl, ...wegenNl, ...dienstenNl, ...energieNl, ...praktischNl, ...wonenNl],
+  en: [...guidesEn, ...huisEnTuinEn, ...ontwerpEn, ...wegenEn, ...dienstenEn, ...energieEn, ...praktischEn, ...wonenEn],
+  de: [...guidesDe, ...huisEnTuinDe, ...ontwerpDe, ...wegenDe, ...dienstenDe, ...energieDe, ...praktischDe, ...wonenDe],
   sv: [...guidesSv, ...guidesSvExtra],
   es: guidesEs,
 };

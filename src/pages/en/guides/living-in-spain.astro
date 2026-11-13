@@ -1,0 +1,129 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'short', label: 'In short' },
+  { id: 'regions', label: 'Which region suits you?' },
+  { id: 'costs', label: 'Cost of living in Spain per month' },
+  { id: 'rules', label: 'The rules after Brexit: 90, 180 and 183' },
+  { id: 'health', label: 'Healthcare and pensions' },
+  { id: 'work', label: 'Working from Spain' },
+  { id: 'home', label: 'Renting or buying' },
+  { id: 'pros', label: 'Pros and cons' },
+  { id: 'axarquia', label: 'Why so many people choose the Axarquía' },
+];
+
+const faq = [
+  {
+    q: 'Can a British citizen live in Spain after Brexit?',
+    a: 'Yes, but you need a visa. Without residency you can stay for at most 90 days in any 180-day period. Most retirees use the non-lucrative visa; people working remotely for clients outside Spain often use the digital nomad visa. Buying a property no longer gives you residency on its own, since the golden visa was abolished in 2025.',
+  },
+  {
+    q: 'Is it cheaper to live in Spain than in the UK?',
+    a: 'On average yes, though less than many people expect. Housing outside the hotspots, eating out and local produce are cheaper. Electricity, cars, electronics and imported British products cost about the same or more. A couple can live comfortably in Andalusia outside the expensive resorts on roughly €2,000 to €2,800 a month including rent.',
+  },
+  {
+    q: 'Where do most British people live in Spain?',
+    a: 'On the Costa del Sol (from Marbella and Mijas to Nerja and the Axarquía), the Costa Blanca (Torrevieja, Orihuela Costa, Jávea), in Murcia and on the Canary Islands and Balearics.',
+  },
+  {
+    q: 'Is my UK State Pension paid and increased in Spain?',
+    a: 'Yes. The UK State Pension is paid in Spain and goes up every year, just as it does in the UK. Private and workplace pensions can also be paid into a Spanish account. How they are taxed depends on your residence and the UK–Spain tax treaty.',
+  },
+  {
+    q: 'Where is the cheapest place to buy by the sea in Spain?',
+    a: 'Coastal Murcia (Mazarrón, Águilas), Almería and parts of the southern Costa Blanca have the cheapest apartments by the sea. On the Costa del Sol, the eastern part, the Axarquía, is clearly cheaper per square metre than Marbella or Estepona. A cheap home is often an older one that needs work, so budget for that.',
+  },
+];
+
+const costs = [
+  { p: 'Rent, 2-bedroom apartment (long term)', v: '€750 – €1,300' },
+  { p: 'Groceries for two', v: '€400 – €550' },
+  { p: 'Electricity (higher with summer air con)', v: '€60 – €130' },
+  { p: 'Water and refuse', v: '€25 – €50' },
+  { p: 'Internet and two mobile phones', v: '€45 – €70' },
+  { p: 'Car: insurance, fuel, servicing', v: '€150 – €250' },
+  { p: 'Private health insurance, per person (age dependent)', v: '€60 – €200' },
+  { p: 'Eating out and leisure', v: '€200 – €400' },
+];
+---
+<Guide lang="en" slug="living-in-spain" toc={toc} faq={faq} ctaTitle="Found a home in Spain?" ctaText="We survey it before you sign and give you a fixed price for the work, even while you are still in the UK.">
+  <h2 id="short">In short</h2>
+  <ul>
+    <li><strong>Can you?</strong> Yes, with a visa. Since Brexit, Britons need a visa to live in Spain for longer than 90 days in any 180.</li>
+    <li><strong>Where?</strong> Most Britons live on the Costa del Sol and the Costa Blanca. Climate, airport links and prices differ a lot between regions.</li>
+    <li><strong>What does it cost?</strong> A couple lives comfortably in Andalusia or Murcia on roughly €2,000 to €2,800 a month including rent, and a good deal less in a home they own outright.</li>
+    <li><strong>What to watch?</strong> Your visa, tax residence (the 183-day rule), healthcare and the condition of the home you rent or buy.</li>
+  </ul>
+  <p>This guide helps you decide. The paperwork step by step is in our guide <a href="/en/guides/moving-to-spain-from-the-uk/">moving to Spain from the UK</a>. If you only want to spend the winter, read <a href="/en/guides/wintering-in-spain/">wintering in Spain</a>.</p>
+
+  <h2 id="regions">Which region suits you?</h2>
+  <h3>Costa del Sol (Málaga)</h3>
+  <p>The mildest winters on the mainland, often 16 to 19 degrees by day in January, and direct flights to almost every UK airport all year. The west (Marbella, Estepona, Benalmádena) is international and expensive. The east, the <a href="/en/living/">Axarquía</a>, is quieter, more Spanish and cheaper per square metre, with white mountain villages behind the coast.</p>
+  <h3>Costa Blanca (Alicante)</h3>
+  <p>A long-standing British favourite. The north (Dénia, Jávea, Altea) is green and hilly; the south (Torrevieja, Orihuela Costa) is flat, dry and affordable, with lots of newer developments. Winters are a few degrees cooler than on the Costa del Sol.</p>
+  <h3>Murcia and Almería</h3>
+  <p>The cheapest coast in Spain and the most sunshine. Summers are very hot and dry, and the landscape is less green.</p>
+  <h3>Canary Islands and Balearics</h3>
+  <p>Spring all year round on the Canaries, but further away and with island prices for many goods. Mallorca and Ibiza are beautiful and expensive.</p>
+  <p><strong>Tip:</strong> visit at least twice, once in summer and once in January or February. A village that is lively in August can be very quiet in winter, and an uninsulated stone house can be chilly in February.</p>
+
+  <h2 id="costs">Cost of living in Spain per month</h2>
+  <p>A guide for a couple in a mid-sized town on the coast of Andalusia or Murcia. In Marbella, Málaga city, Barcelona and Madrid, rents in particular are much higher. These are ranges, not quotes.</p>
+  <div class="table-scroll">
+    <table class="prices">
+      <tbody>
+        {costs.map((k) => <tr><td>{k.p}</td><td>{k.v}</td></tr>)}
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Monthly estimates, 2026. If you own your home, budget instead for local property tax (IBI, often €300 to €900 a year), buildings and contents insurance, community fees where relevant, and money for maintenance.</p>
+  <ul>
+    <li><strong>Cheaper</strong>: homes outside the hotspots, fresh produce from the market, eating out (a <em>menú del día</em> costs €12 to €16), wine, public transport, local taxes.</li>
+    <li><strong>Similar or dearer</strong>: electricity, cars and parts, electronics, imported British products, and private health insurance as you get older.</li>
+    <li><strong>Don’t forget</strong>: maintenance. Sun, salt and heavy rain wear out roofs, windows and façades faster than in the UK. See <a href="/en/maintenance/">maintenance</a>.</li>
+  </ul>
+
+  <h2 id="rules">The rules after Brexit: 90, 180 and 183</h2>
+  <ul>
+    <li><strong>90 days in 180</strong>: without residency you may stay in the Schengen area for at most 90 days in any rolling 180-day period. Owning a home does not change that.</li>
+    <li><strong>A visa to stay longer</strong>: the non-lucrative visa for people living on income or savings (you may not work in Spain), or the digital nomad visa for remote workers. You apply at the Spanish consulate in the UK and then get a residence card (TIE) in Spain.</li>
+    <li><strong>183 days</strong>: spend more than 183 days a year in Spain, or have the centre of your life there, and you are Spanish tax resident, filing a Spanish return on your worldwide income. The UK–Spain treaty decides which country taxes which income.</li>
+  </ul>
+  <p>Andalusia has some advantages for residents: wealth tax has been reduced to zero (only a national solidarity tax applies above €3 million), and inheritance and gift tax between parents, children and spouses has largely been abolished. Tax rules change often, so have your situation reviewed by an adviser who knows both systems.</p>
+
+  <h2 id="health">Healthcare and pensions</h2>
+  <p>With a UK State Pension you can usually get an <strong>S1 form</strong>, which gives you Spanish public healthcare paid for by the UK. If you work in Spain, you are covered through Spanish social security. Non-lucrative visa holders need comprehensive private health insurance from an insurer authorised in Spain.</p>
+  <p>Your UK State Pension is paid in Spain and uprated every year. Workplace and private pensions can also be paid out; how they are taxed depends on where you are resident. Get advice before you draw down large sums.</p>
+
+  <h2 id="work">Working from Spain</h2>
+  <p>Spanish salaries are lower than in the UK and unemployment is higher outside tourism. Many Britons in Spain work remotely for UK employers or clients, on the digital nomad visa. Setting up as self-employed (<em>autónomo</em>) for Spanish clients requires a separate permit, which is harder to get as a non-EU citizen.</p>
+  <p>Thinking of holiday lets? Read <a href="/en/guides/renting-out-property-in-spain/">renting out property in Spain</a> first. The rules for tourist rentals have become much stricter.</p>
+
+  <h2 id="home">Renting or buying</h2>
+  <p>Our advice to almost everyone: rent for six months to a year first. You will find out whether you prefer the coast or the mountains, how busy it gets in summer and whether you feel at home. Long-term rentals in popular resorts are scarce, partly because of holiday lets, so start early and be wary of homes you have only seen online.</p>
+  <p>If you buy, allow around 10% on top of the price for taxes and fees (see <a href="/en/guides/buying-costs-in-spain/">buying costs in Spain</a>) and hire your own lawyer. The full process is in <a href="/en/guides/buying-a-house-in-spain/">buying a house in Spain</a>, and if you are torn between an apartment, a village house or a finca, read <a href="/en/guides/finca-apartment-or-village-house/">finca, apartment or village house</a>.</p>
+  <p>Above all, check the condition of the house. Many affordable homes on the Spanish coasts are thirty to fifty years old: single glazing, no insulation, old pipes and roofs that leak after a wet winter. That is no reason not to buy, but it is a reason to know the cost of the work beforehand. A <a href="/en/property-survey/">property survey</a> costs a fraction of a bad purchase. Typical prices are in <a href="/en/guides/renovation-costs-spain/">how much renovation costs in Spain</a>.</p>
+
+  <h2 id="pros">Pros and cons of living in Spain</h2>
+  <h3>Pros</h3>
+  <ul>
+    <li><strong>Climate</strong>: more than 300 sunny days a year on the south coast and mild winters.</li>
+    <li><strong>Space for your money</strong>: outside the hotspots, the price of a terraced house in southern England buys a detached home with a terrace or garden.</li>
+    <li><strong>Way of life</strong>: a slower pace, life outdoors and good, affordable food.</li>
+    <li><strong>Easy to get home</strong>: from Málaga and Alicante you fly to the UK in about two and a half hours, all year round.</li>
+  </ul>
+  <h3>Cons</h3>
+  <ul>
+    <li><strong>Paperwork</strong>: since Brexit there is more of it, and appointments with the police or town hall can be hard to get. A gestor is money well spent.</li>
+    <li><strong>Language</strong>: English gets you far on the coast, but at the health centre, the town hall and with village neighbours, people speak Spanish.</li>
+    <li><strong>Summer heat and drought</strong>: July and August can top 35 degrees, and water is scarce in parts of southern Spain.</li>
+    <li><strong>Distance from family</strong>: many people underestimate this.</li>
+    <li><strong>Finding tradespeople</strong>: reliable builders and plumbers who turn up on time and speak English are not a given. That is why many overseas owners rely on one trusted point of contact.</li>
+  </ul>
+
+  <h2 id="axarquia">Why so many people choose the Axarquía</h2>
+  <p>The Axarquía, the eastern part of Málaga province, combines the Costa del Sol’s warm winters with prices below those of Marbella or Fuengirola. You can live by the sea in Nerja, Torrox Costa or Torre del Mar, or in a white mountain village such as Cómpeta or Frigiliana, half an hour to an hour from the airport. There is a long-established British community, yet it remains a Spanish area with real village life.</p>
+  <p>Compare the towns in <a href="/en/living/">living in the Axarquía</a> or browse <a href="/en/places/">all towns and villages</a>. And once you have a home, we handle <a href="/en/renovation/">renovation</a>, <a href="/en/maintenance/">maintenance</a> and <a href="/en/key-holding/">key holding</a> while you are in the UK, with one English-speaking point of contact.</p>
+  <p class="note">This guide is general information, not legal, tax or financial advice. Rules and amounts change; check them with the Spanish consulate, HMRC, the DWP or an adviser.</p>
+</Guide>

@@ -185,6 +185,7 @@ const nl: HomeMenu = {
       intro: 'Emigreren, overwinteren, de dorpen en het weer.',
       links: [
         { label: 'Emigreren naar Spanje', href: '/nl/gidsen/emigreren-naar-spanje/' },
+        { label: 'Wonen in Spanje: kosten en regels', href: '/nl/gidsen/wonen-in-spanje/' },
         { label: 'Wonen in de Axarquía', href: '/nl/wonen/' },
         { label: 'Overwinteren in Spanje', href: '/nl/gidsen/overwinteren-in-spanje/' },
         { label: 'Huis levensloopbestendig maken', href: '/nl/gidsen/levensloopbestendig-maken-spanje/' },
@@ -350,6 +351,7 @@ const en: HomeMenu = {
       intro: 'Moving to Spain, wintering, the villages and the weather.',
       links: [
         { label: 'Moving to Spain from the UK', href: '/en/guides/moving-to-spain-from-the-uk/' },
+        { label: 'Living in Spain: costs and rules', href: '/en/guides/living-in-spain/' },
         { label: 'Living in the Axarquía', href: '/en/living/' },
         { label: 'Wintering in Spain', href: '/en/guides/wintering-in-spain/' },
         { label: 'Adapting your home for later life', href: '/en/guides/accessible-home-spain/' },
@@ -508,6 +510,7 @@ const de: HomeMenu = {
       intro: 'Auswandern, überwintern, die Dörfer und das Wetter.',
       links: [
         { label: 'Auswandern nach Spanien', href: '/de/ratgeber/auswandern-nach-spanien/' },
+        { label: 'Leben in Spanien: Kosten und Regeln', href: '/de/ratgeber/leben-in-spanien/' },
         { label: 'Leben in der Axarquía', href: '/de/wohnen/' },
         { label: 'Überwintern in Spanien', href: '/de/ratgeber/ueberwintern-in-spanien/' },
         { label: 'Haus altersgerecht umbauen', href: '/de/ratgeber/barrierefrei-umbauen-spanien/' },

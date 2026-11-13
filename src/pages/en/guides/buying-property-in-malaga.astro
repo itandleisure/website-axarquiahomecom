@@ -3,7 +3,12 @@ import Guide from '../../../components/Guide.astro';
 
 const toc = [
   { id: 'areas', label: 'The areas of Málaga province' },
-  { id: 'prices', label: 'What does a home cost?' },
+  { id: 'city', label: 'Buying in Málaga city: the neighbourhoods' },
+  { id: 'prices', label: 'What does a home cost? Prices by area' },
+  { id: 'sea', label: 'Where is cheapest by the sea?' },
+  { id: 'newbuild', label: 'Resale or new build' },
+  { id: 'mortgage', label: 'Mortgages and deposit' },
+  { id: 'search', label: 'Searching: portals and agents' },
   { id: 'process', label: 'The buying process step by step' },
   { id: 'pitfalls', label: 'Pitfalls for overseas buyers' },
   { id: 'after', label: 'After you buy' },
@@ -13,6 +18,14 @@ const faq = [
   {
     q: 'Where is property cheapest in Málaga province?',
     a: 'Inland and in the eastern Axarquía homes are cheapest per m². Prices are highest on the western Costa del Sol around Marbella and Estepona. Málaga city has also seen steep rises in recent years.',
+  },
+  {
+    q: 'Can British people still buy property in Málaga after Brexit?',
+    a: 'Yes. There are no restrictions on Britons buying property in Spain. You need an NIE number and a Spanish bank account. What changed is residency: owning a home does not let you stay longer than 90 days in any 180 without a visa.',
+  },
+  {
+    q: 'How big a deposit do I need?',
+    a: 'Spanish banks usually lend non-residents up to 60 to 70% of the valuation. With around 10% buying costs on top, you need 40 to 50% of the price in cash, plus any renovation budget.',
   },
   {
     q: 'Do I need an estate agent?',
@@ -35,9 +48,55 @@ const faq = [
   <h3>Inland</h3>
   <p>Around Antequera, Ronda and Álora. Space, peace and lower prices, but further from the sea and the airport, and colder in winter.</p>
 
-  <h2 id="prices">What does a home cost?</h2>
-  <p>Prices vary a great deal by location and type. As a rough guide: a coastal apartment in the Axarquía starts at around €200,000, a village house in the hills from about €150,000, and villas and restored fincas with sea views quickly reach €400,000 to well over €1 million. Portals such as Idealista, Kyero and Rightmove’s overseas section give a current picture. Asking prices are often above what is finally paid.</p>
+  <h2 id="city">Buying in Málaga city: the neighbourhoods</h2>
+  <p>“Buying in Málaga” can mean the city or the whole province. The city has changed in ten years from a place people passed through into one of Europe’s most popular cities, with museums, a regenerated port and a growing tech sector. Most of what is for sale are apartments. The best-known areas:</p>
+  <ul>
+    <li><strong>Centro Histórico and Soho</strong>: the old centre, lively and expensive. Many small apartments, often without a lift or parking, and lots of holiday lets.</li>
+    <li><strong>La Malagueta and El Limonar</strong>: close to the beach and the centre, with the city’s most expensive apartments and villas.</li>
+    <li><strong>Pedregalejo and El Palo</strong>: former fishing villages on the beach east of the centre, with a seafront full of fish restaurants. Popular with families and expats.</li>
+    <li><strong>Teatinos</strong>: a newer district near the university and hospital, with apartments with pools and better prices per square metre.</li>
+    <li><strong>Cerrado de Calderón and the eastern hills</strong>: villas with sea views, fifteen minutes from the centre.</li>
+  </ul>
+  <p>For more space for your money, look along the coast east of the city: Rincón de la Victoria is fifteen minutes away, and further east the Axarquía and its white villages begin.</p>
+
+  <h2 id="prices">What does a home cost? Prices by area</h2>
+  <p>Prices vary widely. The ranges below are based on asking prices on the main portals, rounded. They show how areas compare; for current prices check Idealista or Kyero.</p>
+  <div class="table-scroll">
+    <table class="prices">
+      <tbody>
+        <tr><td>Marbella, Estepona, Benahavís</td><td>€4,500 – €7,000 per m²</td></tr>
+        <tr><td>Málaga city</td><td>€3,500 – €5,000 per m²</td></tr>
+        <tr><td>Fuengirola, Benalmádena, Torremolinos</td><td>€3,500 – €5,000 per m²</td></tr>
+        <tr><td>Nerja</td><td>€3,500 – €5,000 per m²</td></tr>
+        <tr><td>Rincón de la Victoria, Torre del Mar, Torrox Costa</td><td>€2,500 – €3,800 per m²</td></tr>
+        <tr><td>Axarquía mountain villages (Cómpeta, Canillas, Sayalonga)</td><td>€1,500 – €3,000 per m²</td></tr>
+        <tr><td>Inland (Antequera, Álora, Ronda)</td><td>€1,000 – €2,200 per m²</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Indicative asking prices, late 2026. A renovated home with sea views sits at the top of the range, one that needs work at the bottom.</p>
+  <p>As a rough guide: a coastal apartment in the Axarquía starts at around €200,000, a village house in the hills from about €150,000, and villas and restored fincas with sea views quickly reach €400,000 to well over €1 million. Portals such as Idealista, Kyero and Rightmove’s overseas section give a current picture. Asking prices are often above what is finally paid.</p>
   <p>On top of the price, budget around 10% for buying costs (see <a href="/en/guides/buying-costs-in-spain/">costs of buying in Spain</a>) and, for older homes, a renovation budget.</p>
+
+  <h2 id="sea">Where is cheapest by the sea?</h2>
+  <p>Within Málaga province, homes by the sea get cheaper the further east you go. Torre del Mar, Caleta de Vélez, Algarrobo Costa and Torrox Costa have apartments within walking distance of the beach for much less than in Fuengirola or Marbella. The catch: the housing stock is older. Many apartments on the eastern coast were built in the 1970s and 1980s and need a new bathroom, kitchen, windows or wiring.</p>
+  <p>For the very cheapest coastal homes in Spain, look at Murcia, Almería or the southern Costa Blanca. We compare those regions in <a href="/en/guides/living-in-spain/">living in Spain</a>.</p>
+
+  <h2 id="newbuild">Resale or new build</h2>
+  <p>The western Costa del Sol has a lot of new building; the Axarquía is mostly resale. The taxes differ:</p>
+  <ul>
+    <li><strong>Resale</strong>: you pay transfer tax (<em>ITP</em>), 7% of the price in Andalusia.</li>
+    <li><strong>New build</strong> bought from the developer: you pay 10% VAT (<em>IVA</em>) plus 1.2% stamp duty (<em>AJD</em>).</li>
+  </ul>
+  <p>New builds are energy efficient and come with a ten-year structural guarantee, but cost more per square metre and are often in large complexes outside the town centres. Resale homes have character and better locations but almost always need maintenance or renovation. See <a href="/en/guides/renovation-costs-spain/">how much renovation costs in Spain</a> and <a href="/en/guides/renovating-a-village-house-spain/">renovating a village house</a>.</p>
+
+  <h2 id="mortgage">Mortgages and deposit</h2>
+  <p>UK lenders rarely lend on Spanish property, but Spanish banks do: for non-residents usually up to 60 to 70% of the valuation (or the price, if lower). Residents can sometimes borrow up to 80%. The bank values the property and asks for proof of income and your UK tax returns.</p>
+  <p>So plan on 40 to 50% in cash, including buying costs. Many banks will not lend on a finca or a home with unclear permits; see <a href="/en/guides/buying-a-finca-in-spain/">buying a finca in Spain</a>. Use a currency specialist for the transfer from sterling, as banks’ exchange rates are usually worse.</p>
+
+  <h2 id="search">Searching: portals and agents</h2>
+  <p>The biggest portals are Idealista, Fotocasa and Kyero, plus the overseas sections of UK portals. The same house is often listed with several agents, sometimes at different prices. In the mountain villages a lot still sells through the local agent or by word of mouth, so ask around.</p>
+  <p>Do not buy from photos alone. A photo will not show damp, subsidence or a steep unmade access track. If you only have a few days, make a shortlist and have your favourite <a href="/en/property-survey/">surveyed</a> before you pay a deposit.</p>
 
   <h2 id="process">The buying process step by step</h2>
   <p>Here are the steps in brief. Each one is worked out in full, with what to check and what you pay, in our <a href="/en/guides/buying-a-house-in-spain/">step-by-step guide to buying a house in Spain</a>.</p>
