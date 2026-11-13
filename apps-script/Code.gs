@@ -1,5 +1,6 @@
 /**
- * Axarquía Home: aanvragen uit de keuzehulp opslaan en doorsturen.
+ * Axarquía Home: aanvragen uit de keuzehulp en het contactformulier opslaan en doorsturen,
+ * en inschrijvingen voor de gratis aankoopchecklist (lead magnet) opslaan en de pdf mailen.
  *
  * Plak dit in Extensies > Apps Script van de Google Sheet "Aanvragen axarquiahome.com".
  * Zie apps-script/README.md voor de stappen.
@@ -22,7 +23,71 @@ const CONFIG = {
   // (Gmail > Instellingen > Accounts > "E-mail verzenden als"). Anders gaat de mail
   // vanaf het Google-account en staat dit adres als antwoordadres (reply-to).
   AFZENDER_ADRES: 'info@axarquiahome.com',
+  // Tabblad voor inschrijvingen op de gratis checklist. Dit zijn geen aanvragen:
+  // ze gaan niet naar het bouwbedrijf en tellen niet als lead.
+  TABBLAD_INSCHRIJVINGEN: 'Inschrijvingen',
+  SITE: 'https://axarquiahome.com',
 };
+
+// Pdf en teksten van de checklist per taal (zelfde bestanden als in public/downloads/)
+const CHECKLIST = {
+  nl: {
+    pdf: 'checklist-finca-kopen-axarquia.pdf',
+    keuring: '/nl/aanvraag/?dienst=aankoopkeuring',
+    subject: 'Uw checklist: een finca of huis kopen in de Axarquía',
+    body: (naam, pdf, keuring) => `<p>${naam ? `Beste ${naam},` : 'Goedendag,'}</p>
+      <p>Hierbij de checklist voor het kopen van een finca of huis in de Axarquía. U vindt hem als bijlage, en u kunt hem ook altijd hier downloaden: <a href="${pdf}">checklist (pdf)</a>.</p>
+      <p>Drie punten die kopers het vaakst vergeten:</p>
+      <ol><li>Vergelijk de <i>nota simple</i> en het kadaster met wat er echt staat. Klopt het oppervlak niet, dan is er waarschijnlijk zonder vergunning gebouwd.</li>
+      <li>Vraag hoeveel water er de afgelopen droge zomers was, en of dat water rechtsgeldig bij het huis hoort.</li>
+      <li>Reken de renovatie mee in uw budget. Bij een oudere finca is 15 tot 30% van de koopprijs geen uitzondering.</li></ol>
+      <p>Heeft u een huis op het oog? Laat het keuren vóór u tekent. U krijgt per gebrek een prijs voor herstel, en daarmee onderhandelt u over de prijs: <a href="${keuring}">vraag een aankoopkeuring aan</a>.</p>
+      <p>Met vriendelijke groet,<br>Axarquía Home</p>`,
+  },
+  en: {
+    pdf: 'checklist-buying-a-finca-axarquia.pdf',
+    keuring: '/en/request/?dienst=aankoopkeuring',
+    subject: 'Your checklist: buying a finca or house in the Axarquía',
+    body: (naam, pdf, keuring) => `<p>${naam ? `Dear ${naam},` : 'Hello,'}</p>
+      <p>Here is your checklist for buying a finca or house in the Axarquía. It is attached, and you can always download it here: <a href="${pdf}">checklist (PDF)</a>.</p>
+      <p>Three things buyers most often forget:</p>
+      <ol><li>Compare the <i>nota simple</i> and the cadastre with what is actually there. If the floor area does not match, something was probably built without a permit.</li>
+      <li>Ask how much water there was in recent dry summers, and whether that water is legally attached to the property.</li>
+      <li>Include the renovation in your budget. For an older finca, 15 to 30% of the purchase price is not unusual.</li></ol>
+      <p>Got a house in mind? Have it surveyed before you sign. You get a repair price for every defect, which you can use to negotiate: <a href="${keuring}">request a property survey</a>.</p>
+      <p>Kind regards,<br>Axarquía Home</p>`,
+  },
+  de: {
+    pdf: 'checkliste-finca-kaufen-axarquia.pdf',
+    keuring: '/de/anfrage/?dienst=aankoopkeuring',
+    subject: 'Ihre Checkliste: eine Finca oder ein Haus in der Axarquía kaufen',
+    body: (naam, pdf, keuring) => `<p>${naam ? `Guten Tag ${naam},` : 'Guten Tag,'}</p>
+      <p>anbei Ihre Checkliste für den Kauf einer Finca oder eines Hauses in der Axarquía. Sie finden sie im Anhang und können sie jederzeit hier herunterladen: <a href="${pdf}">Checkliste (PDF)</a>.</p>
+      <p>Drei Punkte, die Käufer am häufigsten vergessen:</p>
+      <ol><li>Vergleichen Sie die <i>nota simple</i> und das Kataster mit dem, was tatsächlich steht. Stimmt die Fläche nicht, wurde wahrscheinlich ohne Genehmigung gebaut.</li>
+      <li>Fragen Sie, wie viel Wasser es in den letzten trockenen Sommern gab und ob das Wasser rechtlich zum Haus gehört.</li>
+      <li>Rechnen Sie die Renovierung ins Budget ein. Bei einer älteren Finca sind 15 bis 30 % des Kaufpreises keine Ausnahme.</li></ol>
+      <p>Haben Sie ein Haus im Blick? Lassen Sie es vor der Unterschrift begutachten. Sie erhalten für jeden Mangel einen Preis für die Behebung und können damit verhandeln: <a href="${keuring}">Immobiliengutachten anfragen</a>. Der Kontakt erfolgt auf Englisch oder Niederländisch.</p>
+      <p>Mit freundlichen Grüßen<br>Axarquía Home</p>`,
+  },
+  sv: {
+    pdf: 'checklista-kopa-finca-axarquia.pdf',
+    keuring: '/sv/forfragan/?dienst=aankoopkeuring',
+    subject: 'Din checklista: köpa en finca eller ett hus i Axarquía',
+    body: (naam, pdf, keuring) => `<p>Hej${naam ? ` ${naam}` : ''},</p>
+      <p>Här är din checklista för att köpa en finca eller ett hus i Axarquía. Den finns som bilaga, och du kan alltid ladda ner den här: <a href="${pdf}">checklista (pdf)</a>.</p>
+      <p>Tre saker som köpare oftast glömmer:</p>
+      <ol><li>Jämför <i>nota simple</i> och Catastro med vad som faktiskt står där. Stämmer inte ytan har något troligen byggts utan bygglov.</li>
+      <li>Fråga hur mycket vatten det fanns de senaste torra somrarna, och om vattnet juridiskt hör till fastigheten.</li>
+      <li>Räkna med renoveringen i budgeten. För en äldre finca är 15 till 30 % av köpeskillingen inte ovanligt.</li></ol>
+      <p>Har du ett hus i sikte? Låt besiktiga det innan du skriver på. Du får ett pris för att åtgärda varje brist och kan använda det i förhandlingen: <a href="${keuring}">begär en besiktning</a>. Kontakten sker på engelska eller nederländska.</p>
+      <p>Vänliga hälsningar<br>Axarquía Home</p>`,
+  },
+};
+
+const KOLOMMEN_INSCHRIJVINGEN = [
+  'Datum', 'Id', 'E-mail', 'Voornaam', 'Situatie', 'Taal', 'Toestemming tips', 'Pagina', 'UTM', 'Pdf gemaild', 'Afgemeld',
+];
 
 const KOLOMMEN = [
   'Datum', 'Aanvraag-id', 'Dienst', 'Situatie', 'Type woning', 'Plaats', 'Adres/link',
@@ -38,7 +103,11 @@ function doPost(e) {
 
     // Spam en dubbele inzendingen tegenhouden
     if (d.website) return json_({ ok: true });
+    // Gratis checklist (lead magnet): apart opslaan, pdf mailen, niet naar het bouwbedrijf
+    if (d.dienst === 'checklist') return checklist_(d);
     if (!d.naam || !d.email || d.toestemming !== 'ja') return json_({ ok: false, error: 'Verplichte velden ontbreken' });
+    // Contactformulier: telefoon en bericht zijn ook verplicht
+    if (d.dienst === 'contact' && (!d.telefoon || !d.omschrijving)) return json_({ ok: false, error: 'Verplichte velden ontbreken' });
     const cache = CacheService.getScriptCache();
     if (d.id && cache.get(d.id)) return json_({ ok: true, dubbel: true });
 
@@ -65,6 +134,66 @@ function doPost(e) {
     console.error(err);
     return json_({ ok: false, error: String(err) });
   }
+}
+
+function checklist_(d) {
+  const email = String(d.email || '').trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return json_({ ok: false, error: 'Ongeldig e-mailadres' });
+  const cache = CacheService.getScriptCache();
+  if (d.id && cache.get(d.id)) return json_({ ok: true, dubbel: true });
+  // Niet vaker dan één keer per 6 uur naar hetzelfde adres mailen
+  const sleutel = 'cl-' + email.toLowerCase();
+  const alGemaild = !!cache.get(sleutel);
+
+  const lock = LockService.getScriptLock();
+  lock.waitLock(20000);
+  try {
+    const sh = inschrijvingenSheet_();
+    const m = CHECKLIST[d.taal] || CHECKLIST.nl;
+    let gemaild = 'nee';
+    if (!alGemaild) {
+      mailChecklist_(email, String(d.naam || '').trim(), m);
+      gemaild = 'ja';
+      cache.put(sleutel, '1', 21600);
+    }
+    sh.appendRow([
+      new Date(), d.id || '', email, d.naam || '', d.situatie || '', d.taal || '',
+      d.toestemming_tips === 'ja' ? 'ja' : 'nee', d.pagina || '', d.utm || '', gemaild, '',
+    ]);
+    if (d.id) cache.put(d.id, '1', 21600);
+  } finally {
+    lock.releaseLock();
+  }
+  return json_({ ok: true });
+}
+
+function mailChecklist_(email, naam, m) {
+  const utm = 'utm_source=checklist&utm_medium=email';
+  const pdfUrl = `${CONFIG.SITE}/downloads/${m.pdf}`;
+  const keuringUrl = `${CONFIG.SITE}${m.keuring}&${utm}`;
+  const alias = GmailApp.getAliases().indexOf(CONFIG.AFZENDER_ADRES) !== -1;
+  const opts = { htmlBody: m.body(esc_(naam), pdfUrl, keuringUrl), name: CONFIG.AFZENDER, replyTo: CONFIG.AFZENDER_ADRES };
+  if (alias) opts.from = CONFIG.AFZENDER_ADRES;
+  // Pdf als bijlage meesturen; lukt dat niet (site nog niet online), dan alleen de link
+  try {
+    const res = UrlFetchApp.fetch(pdfUrl, { muteHttpExceptions: true });
+    if (res.getResponseCode() === 200) opts.attachments = [res.getBlob().setName(m.pdf)];
+  } catch (err) {
+    console.warn('Pdf niet opgehaald: ' + err);
+  }
+  GmailApp.sendEmail(email, m.subject, '', opts);
+}
+
+function inschrijvingenSheet_() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sh = ss.getSheetByName(CONFIG.TABBLAD_INSCHRIJVINGEN);
+  if (!sh) sh = ss.insertSheet(CONFIG.TABBLAD_INSCHRIJVINGEN);
+  if (sh.getLastRow() === 0) {
+    sh.appendRow(KOLOMMEN_INSCHRIJVINGEN);
+    sh.setFrozenRows(1);
+    sh.getRange(1, 1, 1, KOLOMMEN_INSCHRIJVINGEN.length).setFontWeight('bold');
+  }
+  return sh;
 }
 
 function doGet() {
@@ -96,6 +225,8 @@ function bewaarFotos_(d) {
 }
 
 function mailBouwbedrijf_(d, fotoLinks, rijNummer) {
+  // Berichten van het gewone contactformulier hebben dienst "contact"
+  const contact = d.dienst === 'contact';
   const regels = [
     ['Dienst', d.dienst], ['Situatie', d.situatie], ['Type woning', d.type_woning], ['Plaats', d.plaats],
     ['Adres/link', d.adres], ['Planning', d.planning], ['Budget', d.budget], ['Omschrijving', d.omschrijving],
@@ -103,7 +234,7 @@ function mailBouwbedrijf_(d, fotoLinks, rijNummer) {
     ['Taal', d.taal], ['Toestemming partner', d.toestemming_partner || 'nee'],
   ].filter(([, v]) => v);
   const html = `
-    <p><b>Nieuwe aanvraag via axarquiahome.com</b> (regel ${rijNummer} in de sheet)</p>
+    <p><b>${contact ? 'Nieuw contactbericht' : 'Nieuwe aanvraag'} via axarquiahome.com</b> (regel ${rijNummer} in de sheet)</p>
     <table cellpadding="6" style="border-collapse:collapse">${regels.map(([k, v]) =>
       `<tr><td style="color:#666;vertical-align:top">${k}</td><td>${esc_(v).replace(/\n/g, '<br>')}</td></tr>`).join('')}
     </table>
@@ -115,7 +246,9 @@ function mailBouwbedrijf_(d, fotoLinks, rijNummer) {
     cc: CONFIG.MAIL_KOPIE,
     replyTo: d.email,
     name: CONFIG.AFZENDER,
-    subject: `Nieuwe aanvraag: ${d.dienst || 'onbekend'} in ${d.plaats || 'onbekend'} (${d.naam})`,
+    subject: contact
+      ? `Nieuw contactbericht van ${d.naam}`
+      : `Nieuwe aanvraag: ${d.dienst || 'onbekend'} in ${d.plaats || 'onbekend'} (${d.naam})`,
     htmlBody: html,
   });
 }
@@ -137,6 +270,10 @@ function mailKlant_(d) {
     sv: {
       subject: 'Vi har tagit emot din förfrågan',
       body: `<p>Hej ${esc_(d.naam)},</p><p>Tack för din förfrågan. Inom 24 timmar hör någon från vårt team av sig för att gå igenom nästa steg. Vi svarar på engelska eller nederländska.</p><p>Vänliga hälsningar<br>Axarquía Home</p>`,
+    },
+    es: {
+      subject: 'Hemos recibido su solicitud',
+      body: `<p>Estimado/a ${esc_(d.naam)}:</p><p>Gracias por su solicitud. En menos de 24 horas una persona de nuestro equipo se pondrá en contacto con usted para comentar el siguiente paso.</p><p>Un cordial saludo,<br>Axarquía Home</p>`,
     },
   };
   const m = teksten[d.taal] || teksten.nl;
@@ -169,6 +306,8 @@ function json_(obj) {
 /** Eenmalig handmatig uitvoeren om toestemming te geven en het tabblad aan te maken. */
 function setup() {
   sheet_();
+  inschrijvingenSheet_();
+  UrlFetchApp.fetch(CONFIG.SITE, { muteHttpExceptions: true });
   DriveApp.getRootFolder();
   GmailApp.getAliases();
   MailApp.getRemainingDailyQuota();

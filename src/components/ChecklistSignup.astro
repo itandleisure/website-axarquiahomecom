@@ -1,0 +1,122 @@
+---
+// Inschrijfformulier voor de gratis aankoopchecklist (lead magnet).
+// Stuurt naar hetzelfde Apps Script als de keuzehulp, met dienst = "checklist".
+// Een inschrijving is geen aanvraag en gaat niet naar het bouwbedrijf.
+import { site, isFilled } from '../data/site';
+import { checklist } from '../data/checklist';
+import { path, type Lang } from '../i18n';
+
+interface Props { lang?: Lang; compact?: boolean; }
+const { lang = 'nl', compact = false } = Astro.props;
+const c = checklist[lang];
+const f = c.form;
+const endpoint = isFilled(site.leadEndpoint) ? site.leadEndpoint : '';
+const pdfUrl = `/downloads/${c.pdf}`;
+const uid = `cl-${Math.random().toString(36).slice(2, 8)}`;
+---
+<div class:list={['checklist-signup', { compact }]}>
+  {compact && <p class="eyebrow">{c.page.eyebrow}</p>}
+  <h2 class="cs-title">{compact ? c.teaser.title : f.title}</h2>
+  <p>{compact ? c.teaser.text : f.text}</p>
+  <form class="cs-form" data-endpoint={endpoint} data-pdf={pdfUrl} data-msgs={JSON.stringify({ sending: f.sending, error: f.error, invalid: f.invalid, noEndpoint: f.noEndpoint })} novalidate>
+    <div class="cs-row">
+      <label>
+        <span>{f.email}</span>
+        <input type="email" name="email" required autocomplete="email" />
+      </label>
+      <label>
+        <span>{f.name}</span>
+        <input type="text" name="naam" autocomplete="given-name" />
+      </label>
+    </div>
+    <label>
+      <span>{f.stage}</span>
+      <select name="situatie">
+        {f.stages.map(([v, l]) => <option value={v}>{l}</option>)}
+      </select>
+    </label>
+    <label class="consent"><input type="checkbox" name="toestemming_tips" value="ja" /><span>{f.consentTips}</span></label>
+    <p class="note">{f.privacy} <a href={path(lang, 'privacy')} target="_blank">{f.privacyLink}</a>.</p>
+    <div class="hp" aria-hidden="true"><label for={`${uid}-w`}>Website</label><input id={`${uid}-w`} type="text" name="website" tabindex="-1" autocomplete="off" /></div>
+    <button class="btn" type="submit">{compact ? c.teaser.button : f.button}</button>
+    <p class="cs-error" role="alert"></p>
+  </form>
+  <div class="cs-done" hidden>
+    <p class="cs-done-title">{f.done}</p>
+    <p>{f.doneText}</p>
+    <a class="btn" href={pdfUrl} download>{f.download}</a>
+  </div>
+</div>
+
+<style>
+  .checklist-signup { background: var(--sand); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; margin: 32px 0; }
+  .checklist-signup .cs-title { font-size: 1.4rem; margin-bottom: 0.3em; }
+  .cs-form { display: grid; gap: 12px; margin-top: 12px; }
+  .cs-row { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 600px) { .cs-row { grid-template-columns: 1fr; } }
+  .cs-form label > span { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+  .cs-form input[type='email'], .cs-form input[type='text'], .cs-form select { width: 100%; box-sizing: border-box; padding: 0.7em 0.8em; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: var(--white); }
+  .cs-form .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 0.95rem; }
+  .cs-form .consent > span { display: inline; font-weight: 400; margin: 0; }
+  .cs-form .consent input { margin-top: 0.3em; }
+  .cs-form .note { font-size: 0.85rem; color: var(--muted); margin: 0; }
+  .cs-form .btn { justify-self: start; }
+  .cs-error { color: #a12a1a; margin: 0; min-height: 1em; }
+  .cs-done-title { font-family: var(--serif); font-size: 1.3rem; margin-bottom: 0.2em; }
+  .hp { position: absolute; left: -9999px; }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('.cs-form').forEach((form) => {
+    const box = form.closest('.checklist-signup')!;
+    const done = box.querySelector<HTMLElement>('.cs-done')!;
+    const errorEl = form.querySelector<HTMLElement>('.cs-error')!;
+    const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+    const M = JSON.parse(form.dataset.msgs!);
+    const finish = () => {
+      form.hidden = true;
+      done.hidden = false;
+      // Meten in Google Analytics (alleen als de bezoeker statistieken heeft toegestaan)
+      (window as any).gtag?.('event', 'generate_lead', { lead_type: 'checklist', language: document.documentElement.lang });
+    };
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorEl.textContent = '';
+      const data: Record<string, unknown> = Object.fromEntries(new FormData(form).entries());
+      if (data.website) return; // spam
+      delete data.website;
+      const email = String(data.email || '').trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { errorEl.textContent = M.invalid; return; }
+      data.email = email;
+      data.dienst = 'checklist';
+      data.toestemming = 'ja'; // de bezoeker vraagt zelf om de checklist
+      data.toestemming_tips = data.toestemming_tips === 'ja' ? 'ja' : 'nee';
+      data.taal = document.documentElement.lang;
+      data.pagina = location.pathname;
+      data.utm = location.search;
+      data.id = crypto.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+      const endpoint = form.dataset.endpoint;
+      if (!endpoint) { errorEl.textContent = M.noEndpoint; finish(); return; }
+      button.disabled = true;
+      const label = button.textContent;
+      button.textContent = M.sending;
+      const body = JSON.stringify(data);
+      try {
+        // text/plain voorkomt een CORS-preflight bij Google Apps Script
+        const res = await fetch(endpoint, { method: 'POST', body, headers: { 'Content-Type': 'text/plain;charset=utf-8' } });
+        const json = await res.json().catch(() => ({ ok: res.ok }));
+        if (!json.ok) throw new Error(json.error || 'failed');
+        finish();
+      } catch {
+        try {
+          await fetch(endpoint, { method: 'POST', body, mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' } });
+          finish();
+        } catch {
+          button.disabled = false;
+          button.textContent = label;
+          errorEl.textContent = M.error;
+        }
+      }
+    });
+  });
+</script>

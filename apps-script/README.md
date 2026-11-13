@@ -46,3 +46,19 @@ Nieuwe versie**. De URL blijft dan hetzelfde.
 
 Een gratis Google-account kan ongeveer 100 e-mails per dag versturen via Apps Script
 (Google Workspace: 1.500). Per aanvraag gaan er 2 mails uit, dus tot zo'n 50 aanvragen per dag.
+
+## Gratis checklist (lead magnet)
+
+Het inschrijfformulier voor de aankoopchecklist (op `/nl/checklist-finca-kopen/` en onder
+de koopgidsen, in vier talen) stuurt naar dezelfde web-app met `dienst = checklist`.
+Het script:
+
+- zet de inschrijving in het tabblad **Inschrijvingen** (niet bij de aanvragen);
+- mailt de pdf in de taal van de bezoeker, als bijlage en als link;
+- stuurt **niets** naar het bouwbedrijf: een inschrijving is geen lead. Pas als iemand
+  daarna de keuzehulp invult, is het een gewone aanvraag (te herkennen aan
+  `utm_source=checklist` in de kolom UTM).
+
+Na het plakken van de nieuwe `Code.gs`: voer **setup** één keer opnieuw uit (het script vraagt
+nu ook toestemming om de pdf van de site op te halen) en maak een **nieuwe versie** van de
+implementatie. De kolom "Toestemming tips" zegt wie later de opvolgmails mag krijgen.

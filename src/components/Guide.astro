@@ -4,6 +4,8 @@ import Base from '../layouts/Base.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import Faq from './Faq.astro';
 import Cta from './Cta.astro';
+import ChecklistSignup from './ChecklistSignup.astro';
+import { checklistGuides } from '../data/checklist';
 import { site } from '../data/site';
 import { guidesBy, guideHref, guideList } from '../data/guides';
 import { ui, path as route, type Lang } from '../i18n';
@@ -39,6 +41,8 @@ const article = {
 const related = guideList(lang).filter((x) => x.slug !== slug).slice(0, 3);
 const fmt = (d: string) => new Date(d).toLocaleDateString(t.dateLocale, { day: 'numeric', month: 'long', year: 'numeric' });
 const request = route(lang, 'request');
+// Gratis aankoopchecklist onder de koop- en verbouwgidsen
+const showChecklist = checklistGuides.has(slug);
 ---
 <Base title={g.seoTitle ?? g.title} description={g.description} path={path} lang={lang} jsonLd={[article]}>
   <Breadcrumbs lang={lang} items={g.path ? [{ name: g.short, href: path }] : [{ name: t.guidesCrumb, href: base }, { name: g.short, href: path }]} />
@@ -50,6 +54,7 @@ const request = route(lang, 'request');
         <p class="lead">{g.lead}</p>
         <p class="note">{t.updated} {fmt(g.updated ?? g.published)}</p>
         <slot />
+        {showChecklist && <ChecklistSignup lang={lang} compact />}
       </div>
       <aside class="toc">
         <p class="footer-title" style="color:var(--ink)">{t.inGuide}</p>
