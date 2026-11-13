@@ -12,8 +12,9 @@ const { lang } = Astro.props;
 const c = checklist[lang];
 const p = c.page;
 const sample = c.sections.find((s) => s.items.length >= 10) ?? c.sections[0];
-// De finca-gids staat in elke taal op positie 1 (zie src/data/guides.ts)
-const fincaGuide = guidesBy[lang][1];
+// Link naar de finca-gids in dezelfde taal
+const fincaSlugs = ['finca-kopen-in-spanje', 'buying-a-finca-in-spain', 'finca-kaufen-spanien', 'kopa-finca-i-spanien'];
+const fincaGuide = guidesBy[lang].find((g) => fincaSlugs.includes(g.slug));
 ---
 <Base title={p.seoTitle} description={p.description} path={c.path} lang={lang}>
   <Breadcrumbs lang={lang} items={[{ name: p.h1, href: c.path }]} />
