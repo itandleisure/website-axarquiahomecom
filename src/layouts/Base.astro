@@ -47,6 +47,21 @@ const ogLocale = { nl: 'nl_NL', en: 'en_GB', de: 'de_DE', sv: 'sv_SE', es: 'es_E
 const ogImage = new URL(Astro.props.ogImage ?? '/og-image.png', site.url).href;
 
 const c = site.company;
+const orgDescription: Record<Lang, string> = {
+  nl: 'Axarquía Home is het Nederlandstalige aanspreekpunt voor huiseigenaren en kopers in de Axarquía (oost van Málaga): renovatie en verbouwing, sleutelbeheer en huistoezicht, onderhoud, zwembad, aankoopkeuring en legalisatie (AFO), uitgevoerd door een bouwteam onder Nederlandse leiding.',
+  en: 'Axarquía Home is the English and Dutch-speaking point of contact for homeowners and buyers in the Axarquía (east of Málaga): renovation and building work, key holding and property checks, maintenance, pools, pre-purchase surveys and legalisation (AFO), carried out by a Dutch-led building team.',
+  de: 'Axarquía Home ist die Anlaufstelle für ausländische Hauseigentümer und Käufer in der Axarquía (östlich von Málaga): Renovierung, Hausbetreuung, Wartung, Pool, Immobiliengutachten und Legalisierung (AFO), ausgeführt von einem Bauteam unter niederländischer Leitung.',
+  sv: 'Axarquía Home är kontaktpunkten för utländska husägare och köpare i Axarquía (öster om Málaga): renovering, tillsyn, underhåll, pool, besiktning och legalisering (AFO), utfört av ett byggteam under nederländsk ledning.',
+  es: 'Axarquía Home es el punto de contacto para propietarios y compradores extranjeros en la Axarquía (este de Málaga): reformas, gestión de llaves, mantenimiento, piscinas, inspección de vivienda y legalización (AFO), con un equipo de obra bajo dirección neerlandesa.',
+};
+const orgSlogan: Record<Lang, string> = {
+  nl: 'Bouwen en beheren in de Axarquía, in het Nederlands',
+  en: 'Building and property care in the Axarquía, in English or Dutch',
+  de: 'Bauen und Hausbetreuung in der Axarquía',
+  sv: 'Bygg och tillsyn i Axarquía',
+  es: 'Reformas y cuidado de viviendas en la Axarquía',
+};
+const orgCatalog: Record<Lang, string> = { nl: 'Diensten', en: 'Services', de: 'Leistungen', sv: 'Tjänster', es: 'Servicios' };
 const organization: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': 'HomeAndConstructionBusiness',
@@ -57,9 +72,35 @@ const organization: Record<string, unknown> = {
   knowsLanguage: ['nl', 'en', 'de', 'es'],
   logo: `${site.url}/favicon.svg`,
   image: `${site.url}/og-image.png`,
+  // Duidelijke beschrijving en dienstenlijst: AI-assistenten (ChatGPT, Gemini) lezen dit
+  // om te bepalen wát Axarquía Home is en voor welke vragen het een antwoord is.
+  description: orgDescription[lang],
+  slogan: orgSlogan[lang],
+  email: isFilled(c.email) ? c.email : site.operator.email,
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    email: isFilled(c.email) ? c.email : site.operator.email,
+    url: new URL(route(lang, 'contact') ?? route(lang, 'home'), site.url).href,
+    availableLanguage: ['Dutch', 'English', 'Spanish'],
+    areaServed: 'ES',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: orgCatalog[lang],
+    itemListElement: svcs[lang].map((s) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: s.title,
+        description: s.text,
+        url: new URL(s.href, site.url).href,
+        areaServed: { '@type': 'AdministrativeArea', name: 'Axarquía, Málaga, España' },
+      },
+    })),
+  },
 };
 if (isFilled(c.phone)) organization.telephone = c.phone;
-if (isFilled(c.email)) organization.email = c.email;
 if (isFilled(c.street) && isFilled(c.town)) {
   organization.address = {
     '@type': 'PostalAddress',
