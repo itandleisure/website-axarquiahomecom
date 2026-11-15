@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Services from '../../components/Services.astro';
 import HomeMenu from '../../components/HomeMenu.astro';
 import Steps from '../../components/Steps.astro';
@@ -31,13 +32,14 @@ const faq = [
     a: 'Ja. Met een aankoopkeuring ziet u vóór het tekenen wat de staat van het huis is, wat er moet gebeuren en wat dat ongeveer kost. Zo onderhandelt u met de juiste informatie.',
   },
 ];
+const photo = servicePhoto('home', 'nl');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Nederlandse aannemer Axarquía: renovatie & sleutelbeheer"
   description="Huis kopen, verbouwen of laten beheren in de Axarquía? Nederlandstalig team voor renovatie, aankoopkeuring, sleutelbeheer en onderhoud rond Nerja."
   path="/nl/"
 >
-  <Hero
+  <Hero image={photo}
     eyebrow="Kopen · Verbouwen · Beheren"
     title="Uw huis in de Axarquía, in <em>vertrouwde handen</em>"
     lead="Wij zijn het Nederlandse bouwbedrijf voor buitenlandse eigenaren en kopers aan de oostkust van Málaga. Van de keuring vóór de aankoop tot de renovatie en het beheer als u er niet bent."

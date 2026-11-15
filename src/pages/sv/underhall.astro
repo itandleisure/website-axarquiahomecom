@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
@@ -34,8 +35,9 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['nl', 'en', 'es'],
 };
+const photo = servicePhoto('onderhoud', 'sv');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Underhåll och reparationer av ditt hus i Spanien"
   description="Läckande tak, nytt tätskikt på terrassen, tomtskötsel och små reparationer i Axarquía. Även när du inte är i Spanien."
   path="/sv/underhall/"
@@ -43,7 +45,7 @@ const service = {
   jsonLd={[service]}
 >
   <Breadcrumbs lang="sv" items={[{ name: 'Underhåll och reparationer', href: '/sv/underhall/' }]} />
-  <Hero
+  <Hero image={photo}
     lang="sv"
     eyebrow="Underhåll och reparationer"
     title="Läcka, skada eller eftersatt underhåll? <em>Vi tar hand om det.</em>"

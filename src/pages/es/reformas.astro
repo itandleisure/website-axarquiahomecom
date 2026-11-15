@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
@@ -40,8 +41,9 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['es', 'en', 'nl'],
 };
+const photo = servicePhoto('renovatie', 'es');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Reformas en la Axarquía: casas, baños, cocinas y cortijos"
   description="Empresa de reformas en la Axarquía: reformas integrales, baños, cocinas y cortijos en Vélez-Málaga, Torre del Mar, Nerja, Torrox, Cómpeta y alrededores."
   path="/es/reformas/"
@@ -49,7 +51,7 @@ const service = {
   jsonLd={[service]}
 >
   <Breadcrumbs lang="es" items={[{ name: 'Reformas', href: '/es/reformas/' }]} />
-  <Hero
+  <Hero image={photo}
     lang="es"
     eyebrow="Reformas integrales y parciales"
     title="Reformar su casa, <em>sin quebraderos de cabeza</em>"

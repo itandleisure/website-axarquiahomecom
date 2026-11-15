@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Services from '../../components/Services.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
@@ -31,14 +32,15 @@ const faq = [
     a: 'Ja. En besiktning före köp visar husets skick, vad som behöver göras och ungefär vad det kostar, innan du skriver på något. I Spanien köper du huset i befintligt skick, så det lönar sig.',
   },
 ];
+const photo = servicePhoto('home', 'sv');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Hantverkare i Axarquía: renovering och tillsyn av hus"
   description="Köpa, renovera eller låta någon sköta ditt hus i Axarquía? Renovering, besiktning före köp, tillsyn och underhåll i Nerja, Torrox och omgivningarna."
   path="/sv/"
   lang="sv"
 >
-  <Hero
+  <Hero image={photo}
     lang="sv"
     eyebrow="Köpa · Renovera · Sköta"
     title="Ditt hus i Axarquía, <em>i goda händer</em>"

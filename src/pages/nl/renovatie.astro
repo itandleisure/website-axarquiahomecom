@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
@@ -40,15 +41,16 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['nl', 'en'],
 };
+const photo = servicePhoto('renovatie', 'nl');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Huis renoveren in Spanje met een Nederlandse aannemer"
   description="Verbouwen in de Axarquía met een Nederlands bouwbedrijf: complete renovaties, badkamers, keukens en fincas in Nerja, Cómpeta, Torrox en omgeving."
   path="/nl/renovatie/"
   jsonLd={[service]}
 >
   <Breadcrumbs items={[{ name: 'Renovatie en verbouwing', href: '/nl/renovatie/' }]} />
-  <Hero
+  <Hero image={photo}
     eyebrow="Renovatie en verbouwing"
     title="Verbouwen in Spanje, <em>met een Nederlandse aannemer</em>"
     lead="U heeft een huis in de Axarquía gekocht, of u gaat dat doen, en het moet worden opgeknapt. Wij nemen het hele traject uit handen: van ontwerp en vergunning tot de laatste tegel."

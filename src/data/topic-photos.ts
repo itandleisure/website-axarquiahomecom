@@ -1,5 +1,7 @@
-// Foto's bij gidsen en kosten-, probleem- en zelf-doen-pagina's (stockfoto's uit Canva Pro,
-// commercieel gebruik toegestaan; geen eigen projecten).
+// Foto's bij dienstpagina's, gidsen en kosten-, probleem- en zelf-doen-pagina's.
+// Bron: Canva AI-beelden (commercieel gebruik toegestaan) en Canva Pro-stockfoto's. Nieuwe stockfoto's
+// krijgen een merkje (logo + axarquiahome.com) zodat ze onderdeel van een ontwerp zijn en niet los staan.
+// Geen eigen projecten: echte foto's van het bouwbedrijf komen alleen op Projecten en Over ons.
 // Bestanden: public/images/onderwerpen/<naam>-<480|800|1200>.webp en public/images/og/<naam>.jpg.
 import type { Lang } from '../i18n';
 import { photoWidths } from './place-photos';
@@ -89,6 +91,70 @@ const photos: Record<string, TopicPhoto> = {
     de: 'Ladestecker in der Ladebuchse eines Elektroautos',
     sv: 'Laddkontakt i laddluckan på en elbil',
   } },
+  // Dienstpagina's (hero). AI = Canva AI-beeld, stock = Canva Pro met merkje.
+  'finca-zeezicht-axarquia': { alt: { // stock
+    nl: 'Witte finca met pannendaken boven de heuvels van de Axarquía, met uitzicht op de Middellandse Zee',
+    en: 'White finca with tiled roofs above the hills of the Axarquía, looking out over the Mediterranean',
+    de: 'Weiße Finca mit Ziegeldächern über den Hügeln der Axarquía mit Blick aufs Mittelmeer',
+    sv: 'Vit finca med tegeltak ovanför Axarquías kullar, med utsikt över Medelhavet',
+    es: 'Finca blanca con tejados de teja sobre las colinas de la Axarquía, con vistas al Mediterráneo',
+  } },
+  'toegangsweg-finca-olijfbomen': { alt: { // stock
+    nl: 'Onverharde toegangsweg naar een finca tussen olijfbomen en begroeide taluds in de Axarquía',
+    en: 'Unpaved access road to a finca between olive trees and overgrown banks in the Axarquía',
+    de: 'Unbefestigter Zufahrtsweg zu einer Finca zwischen Olivenbäumen und bewachsenen Böschungen in der Axarquía',
+    sv: 'Grusväg upp till en finca mellan olivträd och bevuxna slänter i Axarquía',
+    es: 'Camino de tierra hacia una finca entre olivos y taludes con vegetación en la Axarquía',
+  } },
+  'dorpshuis-renoveren-verbouwing': { alt: { // AI
+    nl: 'Dorpshuis in de Axarquía tijdens de verbouwing: kale muren, houten balken, betonmolen en stapels terracotta tegels',
+    en: 'Village house in the Axarquía during renovation: bare walls, timber beams, a cement mixer and stacks of terracotta tiles',
+    de: 'Dorfhaus in der Axarquía während der Renovierung: nackte Wände, Holzbalken, Betonmischer und gestapelte Terrakottafliesen',
+    sv: 'Byhus i Axarquía under renovering: nakna väggar, träbjälkar, cementblandare och staplade terrakottaplattor',
+    es: 'Casa de pueblo en la Axarquía en plena reforma: paredes desnudas, vigas de madera, hormigonera y baldosas de barro apiladas',
+  } },
+  'zwembad-finca-sierra-almijara': { alt: { // AI
+    nl: 'Zwembad bij een witte finca tussen de olijfbomen, met de bergen van de Sierra Almijara op de achtergrond',
+    en: 'Swimming pool at a white finca among olive trees, with the Sierra Almijara mountains behind',
+    de: 'Pool an einer weißen Finca zwischen Olivenbäumen, im Hintergrund die Berge der Sierra Almijara',
+    sv: 'Pool vid en vit finca bland olivträd, med bergen i Sierra Almijara i bakgrunden',
+    es: 'Piscina junto a una finca blanca entre olivos, con la Sierra Almijara al fondo',
+  } },
+  'sleutelbeheer-sleutels-blauwe-deur': { alt: { // AI
+    nl: 'Hand met een sleutelbos met label voor de blauwe voordeur van een wit dorpshuis met geraniums',
+    en: 'Hand holding a labelled bunch of keys in front of the blue door of a white village house with geraniums',
+    de: 'Hand mit beschriftetem Schlüsselbund vor der blauen Haustür eines weißen Dorfhauses mit Geranien',
+    sv: 'Hand med en märkt nyckelknippa framför den blå dörren till ett vitt byhus med pelargoner',
+    es: 'Mano con un manojo de llaves etiquetado ante la puerta azul de una casa blanca de pueblo con geranios',
+  } },
+  'gevel-witten-onderhoud-finca': { alt: { // AI
+    nl: 'Vakman wit de gevel van een finca met een verfroller, met olijfbomen en bergen op de achtergrond',
+    en: 'Tradesman whitewashing the wall of a finca with a paint roller, olive trees and mountains behind',
+    de: 'Handwerker weißelt die Fassade einer Finca mit der Farbrolle, dahinter Olivenbäume und Berge',
+    sv: 'Hantverkare vitkalkar fasaden på en finca med en färgroller, olivträd och berg i bakgrunden',
+    es: 'Operario encalando la fachada de una finca con un rodillo, con olivos y montañas al fondo',
+  } },
+  'loodgieter-boiler-repareren': { alt: { // AI
+    nl: 'Loodgieter draait met een moersleutel de koperen leidingen onder een elektrische boiler vast',
+    en: 'Plumber tightening the copper pipes under an electric water heater with a wrench',
+    de: 'Installateur zieht mit dem Schraubenschlüssel die Kupferleitungen unter einem elektrischen Boiler fest',
+    sv: 'Rörmokare drar åt kopparrören under en elektrisk varmvattenberedare med en skiftnyckel',
+    es: 'Fontanero apretando con una llave las tuberías de cobre bajo un termo eléctrico',
+  } },
+  'aankoopkeuring-vochtmeting-muur': { alt: { // AI
+    nl: 'Bouwkundige meet met een vochtmeter een vochtplek onderaan de muur van een oude finca',
+    en: 'Surveyor checking a damp patch at the bottom of an old finca wall with a moisture meter',
+    de: 'Gutachter misst mit einem Feuchtemessgerät einen feuchten Fleck unten an der Wand einer alten Finca',
+    sv: 'Besiktningsman mäter en fuktfläck längst ner på väggen i en gammal finca med en fuktmätare',
+    es: 'Perito midiendo con un medidor de humedad una mancha en la parte baja de un muro de una finca antigua',
+  } },
+  'verhuurbeheer-terras-zwembad-zeezicht': { alt: { // AI
+    nl: 'Terras van een vakantievilla met ligbedden, opgevouwen handdoeken, een zwembad en zicht op zee',
+    en: 'Holiday villa terrace with sun loungers, folded towels, a pool and a sea view',
+    de: 'Terrasse einer Ferienvilla mit Liegen, gefalteten Handtüchern, Pool und Meerblick',
+    sv: 'Terrass vid en semestervilla med solstolar, vikta handdukar, pool och havsutsikt',
+    es: 'Terraza de una villa vacacional con tumbonas, toallas dobladas, piscina y vistas al mar',
+  } },
 };
 
 interface Placement { lead: string; /** Tweede foto direct onder de kop van de sectie met dit volgnummer (vanaf 0; ids verschillen per taal) */ inline?: { section: number; photo: string }; }
@@ -150,3 +216,21 @@ export function topicPhotos(kind: string, key: string, lang: Lang) {
 }
 
 export const guidePhoto = (slug: string, lang: Lang) => (guidePlacements[slug] ? topicPhoto(guidePlacements[slug], lang) : undefined);
+
+/** Hero-foto per dienst (geldt voor alle talen). */
+const servicePlacements: Record<string, string> = {
+  home: 'finca-zeezicht-axarquia',
+  renovatie: 'dorpshuis-renoveren-verbouwing',
+  zwembad: 'zwembad-finca-sierra-almijara',
+  sleutelbeheer: 'sleutelbeheer-sleutels-blauwe-deur',
+  onderhoud: 'gevel-witten-onderhoud-finca',
+  loodgieter: 'loodgieter-boiler-repareren',
+  aankoopkeuring: 'aankoopkeuring-vochtmeting-muur',
+  verhuurbeheer: 'verhuurbeheer-terras-zwembad-zeezicht',
+  toegangsweg: 'toegangsweg-finca-olijfbomen',
+};
+
+export function servicePhoto(key: keyof typeof servicePlacements | string, lang: Lang) {
+  const p = servicePlacements[key] ? topicPhoto(servicePlacements[key], lang) : undefined;
+  return p ? { ...p, focus: 'center' } : undefined;
+}

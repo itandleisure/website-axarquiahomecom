@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
@@ -38,8 +39,9 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['en', 'nl', 'es'],
 };
+const photo = servicePhoto('toegangsweg', 'de');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Zufahrtsweg zur Finca reparieren und pflegen"
   description="Schlaglöcher, Rinnen oder ein zu steiler Camino? Wir reparieren, befestigen und pflegen den Zufahrtsweg zu Ihrer Finca in der Axarquía, mit guter Entwässerung."
   path="/de/zufahrtsweg/"
@@ -47,7 +49,7 @@ const service = {
   jsonLd={[service]}
 >
   <Breadcrumbs lang="de" items={[{ name: 'Zufahrtsweg', href: '/de/zufahrtsweg/' }]} />
-  <Hero
+  <Hero image={photo}
     lang="de"
     eyebrow="Zufahrtsweg und Einfahrt"
     title="Ein Weg zu Ihrer Finca, <em>der das ganze Jahr befahrbar ist</em>"

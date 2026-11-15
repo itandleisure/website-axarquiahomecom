@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
@@ -39,8 +40,9 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['es', 'en', 'nl'],
 };
+const photo = servicePhoto('zwembad', 'es');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Piscinas en la Axarquía: construcción y mantenimiento"
   description="Construir una piscina nueva, reformar una antigua o mantenerla mientras está fuera. Piscinas de obra en Vélez-Málaga, Nerja, Torrox, Cómpeta y la Axarquía."
   path="/es/piscinas/"
@@ -48,7 +50,7 @@ const service = {
   jsonLd={[service]}
 >
   <Breadcrumbs lang="es" items={[{ name: 'Piscinas', href: '/es/piscinas/' }]} />
-  <Hero
+  <Hero image={photo}
     lang="es"
     eyebrow="Piscinas"
     title="Su piscina <em>lista para el verano</em>"
