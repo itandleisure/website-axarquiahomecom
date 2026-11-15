@@ -8,6 +8,7 @@ import Faq from './Faq.astro';
 import Cta from './Cta.astro';
 import ChecklistSignup from './ChecklistSignup.astro';
 import { checklistFor } from '../data/checklists';
+import { clusterForPage, clusterMembers, clusterChecklist } from '../data/clusters';
 import { site } from '../data/site';
 import { guidesBy, guideHref, guideList } from '../data/guides';
 import { ui, path as route, type Lang } from '../i18n';
@@ -48,7 +49,13 @@ const article = {
 const parent = g.parent ? list.find((x) => x.slug === g.parent) : undefined;
 const related = parent
   ? [parent, ...list.filter((x) => x.parent === g.parent && x.slug !== slug)]
-  : guideList(lang).filter((x) => x.slug !== slug).slice(0, 3);
+  : (() => {
+      // Eerst gidsen uit hetzelfde onderwerp (src/data/clusters.ts), aangevuld met andere gidsen
+      const c = clusterForPage(path, lang);
+      const own = c ? clusterMembers(c, lang).filter((m) => m.kind === 'guide' && m.href !== path).map((m) => list.find((x) => guideHref(lang, x) === m.href)!).filter(Boolean) : [];
+      const rest = guideList(lang).filter((x) => x.slug !== slug && !own.includes(x));
+      return [...own, ...rest].slice(0, 3);
+    })();
 const crumbs = parent
   ? [{ name: t.guidesCrumb, href: base }, { name: parent.short, href: guideHref(lang, parent) }, { name: g.short, href: path }]
   : g.path
@@ -57,7 +64,7 @@ const crumbs = parent
 const fmt = (d: string) => new Date(d).toLocaleDateString(t.dateLocale, { day: 'numeric', month: 'long', year: 'numeric' });
 const request = route(lang, 'request');
 // Gratis checklist die bij het onderwerp van deze gids hoort (zie src/data/checklists.ts)
-const checklistId = checklistFor(lang, slug);
+const checklistId = checklistFor(lang, slug) ?? clusterChecklist(path, lang);
 ---
 <Base title={g.seoTitle ?? g.title} description={g.description} path={path} lang={lang} jsonLd={[article]} ogImage={photo?.og} ogImageAlt={photo?.alt}>
   <Breadcrumbs lang={lang} items={crumbs} />

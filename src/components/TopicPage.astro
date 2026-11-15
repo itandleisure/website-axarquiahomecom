@@ -7,6 +7,8 @@ import Breadcrumbs from './Breadcrumbs.astro';
 import Faq from './Faq.astro';
 import Cta from './Cta.astro';
 import Todo from './Todo.astro';
+import ChecklistSignup from './ChecklistSignup.astro';
+import { clusterChecklist } from '../data/clusters';
 import { site } from '../data/site';
 import { calcs, calcPath } from '../data/calculator';
 import { guidesBy, guideBase, guideHref } from '../data/guides';
@@ -37,6 +39,8 @@ const guidePaths = new Set(guidesBy[lang].map((g) => guideHref(lang, g)));
 const links = t.links.filter((l) => !l.href.startsWith(guideBase[lang]) || guidePaths.has(l.href));
 const related = t.related.map((r) => topicByRef(r, lang)).filter((x) => !!x);
 const photo = topicPhotos(kind, t.key, lang);
+// Gratis checklist van het onderwerp waar deze pagina bij hoort (src/data/clusters.ts)
+const checklistId = clusterChecklist(path, lang);
 const article = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -94,6 +98,7 @@ const article = {
         ))}
         <h2 id="links">{u.alsoUseful}</h2>
         <ul>{links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+        {checklistId && <ChecklistSignup lang={lang} id={checklistId} compact />}
         <aside class="sources">
           <h2 class="h3">{u.sourcesTitle}</h2>
           <p class="note">{kind === 'diy' ? u.sourcesTextDiy : u.sourcesText} {fmt(pricesChecked)}.</p>

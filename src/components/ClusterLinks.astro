@@ -1,0 +1,116 @@
+---
+// Interne links binnen een onderwerp (zie src/data/clusters.ts). Staat automatisch onderaan elke pagina (Base.astro).
+// - Op een hoofdpagina: "Alles over …" met alle pagina's van het onderwerp, per soort.
+// - Op een pagina uit het onderwerp: een blok terug naar de hoofdpagina, plus checklist, rekentool en verwante pagina's.
+import type { Lang } from '../i18n';
+import { calcPath } from '../data/calculator';
+import { clusterForHub, clusterForPage, clusterHub, clusterMembers, pageInfo, type PageInfo, type PageKind } from '../data/clusters';
+import { checklists } from '../data/checklists';
+
+interface Props { path: string; lang: Lang }
+const { path, lang } = Astro.props;
+
+const T = {
+  nl: { all: (n: string) => `Alles over ${n}`, allText: 'Gidsen, prijzen, problemen en checklists over dit onderwerp, bij elkaar.', partOf: 'Dit hoort bij', toHub: (n: string) => `Alles over ${n}`, more: 'Meer over dit onderwerp', groups: { guide: 'Gidsen', costs: 'Kosten en rekentool', problems: 'Problemen oplossen', diy: 'Zelf doen', page: 'Diensten en checklists' } },
+  en: { all: (n: string) => `All about ${n}`, allText: 'Guides, prices, problems and checklists on this topic, in one place.', partOf: 'Part of', toHub: (n: string) => `All about ${n}`, more: 'More on this topic', groups: { guide: 'Guides', costs: 'Costs and calculator', problems: 'Fixing problems', diy: 'Do it yourself', page: 'Services and checklists' } },
+  de: { all: (n: string) => `Alles über ${n}`, allText: 'Ratgeber, Preise, Probleme und Checklisten zu diesem Thema an einem Ort.', partOf: 'Gehört zu', toHub: (n: string) => `Alles über ${n}`, more: 'Mehr zu diesem Thema', groups: { guide: 'Ratgeber', costs: 'Kosten und Rechner', problems: 'Probleme lösen', diy: 'Selbermachen', page: 'Leistungen und Checklisten' } },
+  sv: { all: (n: string) => `Allt om ${n}`, allText: 'Guider, priser och checklistor om det här ämnet, samlat på ett ställe.', partOf: 'Det här hör till', toHub: (n: string) => `Allt om ${n}`, more: 'Mer om ämnet', groups: { guide: 'Guider', costs: 'Kostnader', problems: 'Problem', diy: 'Gör det själv', page: 'Tjänster och checklistor' } },
+  es: { all: (n: string) => `Todo sobre ${n}`, allText: 'Guías, precios y listas de control sobre este tema, en un solo lugar.', partOf: 'Forma parte de', toHub: (n: string) => `Todo sobre ${n}`, more: 'Más sobre este tema', groups: { guide: 'Guías', costs: 'Costes', problems: 'Problemas', diy: 'Hágalo usted mismo', page: 'Servicios y listas de control' } },
+}[lang];
+
+const hubCluster = clusterForHub(path, lang);
+const cluster = hubCluster ?? clusterForPage(path, lang);
+const name = cluster?.name[lang];
+const hubHref = cluster ? clusterHub(cluster, lang) : undefined;
+const hubInfo = hubHref ? pageInfo(hubHref) : undefined;
+const members = cluster ? clusterMembers(cluster, lang).filter((m) => m.href !== path && m.href !== hubHref) : [];
+
+// Rekentool met de juiste klus voorgekozen
+const calcBase = cluster?.calc ? (calcPath as Partial<Record<Lang, string>>)[lang] : undefined;
+const calc: PageInfo | undefined = calcBase ? { ...pageInfo(calcBase)!, href: `${calcBase}?klus=${cluster!.calc}` } : undefined;
+const list = calc ? [calc, ...members.filter((m) => m.href !== calcBase)] : members;
+
+const order: PageKind[] = ['guide', 'costs', 'problems', 'diy', 'page'];
+const groups = order.map((k) => ({ k, items: list.filter((m) => m.kind === k) })).filter((x) => x.items.length > 0);
+
+// Op een pagina uit het cluster: checklist en rekentool eerst, daarna de rest (max. 6)
+const checklist = cluster?.checklist ? checklists[cluster.checklist][lang] : undefined;
+const pick = [
+  ...(calc && calc.href.split('?')[0] !== path.split('?')[0] ? [calc] : []),
+  ...(checklist && checklist.path !== path ? list.filter((m) => m.href === checklist.path) : []),
+];
+const siblings = [...pick, ...list.filter((m) => !pick.includes(m))].slice(0, 6);
+const show = !!cluster && !!name && (hubCluster ? list.length > 0 : !!hubHref && !!hubInfo);
+---
+{show && hubCluster && (
+  <section class="section cluster" id="alles-over">
+    <div class="wrap">
+      <h2>{T.all(name!)}</h2>
+      <p class="section-intro">{T.allText}</p>
+      {groups.map((gr) => (
+        <>
+          <h3 class="cluster-group">{T.groups[gr.k]}</h3>
+          <ul class="cluster-grid">
+            {gr.items.map((m) => (
+              <li>
+                <a href={m.href}>
+                  <strong>{m.title}</strong>
+                  <span>{m.text}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      ))}
+    </div>
+  </section>
+)}
+{show && !hubCluster && (
+  <section class="section cluster cluster-member">
+    <div class="wrap">
+      <div class="cluster-box">
+        <p class="eyebrow">{T.partOf}</p>
+        <h2 class="h3"><a href={hubHref}>{T.toHub(name!)} →</a></h2>
+        <p>{hubInfo!.text}</p>
+        {siblings.length > 0 && (
+          <>
+            <p class="cluster-more">{T.more}</p>
+            <ul class="cluster-list">
+              {siblings.map((m) => <li><a href={m.href}>{m.title}</a></li>)}
+            </ul>
+          </>
+        )}
+      </div>
+    </div>
+  </section>
+)}
+
+<style>
+  .cluster-group { margin: 28px 0 12px; }
+  .cluster-grid {
+    list-style: none; margin: 0; padding: 0;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;
+  }
+  .cluster-grid a {
+    display: block; height: 100%; padding: 14px 16px; text-decoration: none; color: inherit;
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--radius, 10px);
+  }
+  .cluster-grid a:hover { border-color: var(--terra); }
+  .cluster-grid strong { display: block; color: var(--terra-dark); margin-bottom: 4px; line-height: 1.35; }
+  .cluster-grid span {
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    color: var(--muted); font-size: 0.92em; line-height: 1.45;
+  }
+  .cluster-member { padding-top: 0; }
+  .cluster-box {
+    background: var(--sand);
+    border: 1px solid var(--line, rgba(0, 0, 0, 0.08));
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .cluster-box h2 { margin: 4px 0 8px; }
+  .cluster-box h2 a { text-decoration: none; }
+  .cluster-more { font-weight: 600; margin: 16px 0 6px; }
+  .cluster-list { columns: 2 280px; margin: 0; padding-left: 18px; }
+  .cluster-list li { margin-bottom: 6px; break-inside: avoid; }
+</style>

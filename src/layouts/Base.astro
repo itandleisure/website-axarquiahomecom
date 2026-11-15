@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import ClusterLinks from '../components/ClusterLinks.astro';
 import { site, isFilled } from '../data/site';
 import { contactTeksten } from '../data/contactformulier';
 import { ui, nav as navs, services as svcs, alternatesFor, langs, langNames, path as route, type Lang } from '../i18n';
@@ -18,9 +19,11 @@ interface Props {
   /** Deelafbeelding (1200 x 630), pad vanaf de root; standaard /og-image.png */
   ogImage?: string;
   ogImageAlt?: string;
+  /** false = geen automatisch onderwerpblok onderaan (de pagina zet <ClusterLinks> zelf neer) */
+  cluster?: boolean;
 }
 
-const { title, description, path, lang = 'nl', alternates = {}, jsonLd = [], noindex = false, ogImageAlt } = Astro.props;
+const { title, description, path, lang = 'nl', alternates = {}, jsonLd = [], noindex = false, ogImageAlt, cluster = true } = Astro.props;
 const canonical = new URL(path, site.url).href;
 const allAlternates: Partial<Record<string, string>> = { ...alternatesFor(path), ...alternates, [lang]: path };
 const t = ui[lang];
@@ -235,6 +238,7 @@ const englishContact: Partial<Record<Lang, string>> = { sv: 'Kontakten sker på 
 
     <main id="inhoud">
       <slot />
+      {cluster && <ClusterLinks path={path} lang={lang} />}
     </main>
 
     <footer class="site-footer">
