@@ -1,0 +1,50 @@
+---
+// Hoofdpagina van een onderwerp zonder eigen dienstpagina (zie src/data/clusters.ts):
+// korte inleiding en daaronder alle pagina's van het onderwerp.
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Hero from './Hero.astro';
+import Cta from './Cta.astro';
+import ClusterLinks from './ClusterLinks.astro';
+import { clusters, clusterMembers, type ClusterId } from '../data/clusters';
+import { site } from '../data/site';
+import { path as route, type Lang } from '../i18n';
+
+interface Props {
+  id: ClusterId;
+  lang: Lang;
+  title: string;
+  description: string;
+  eyebrow: string;
+  heading: string;
+  lead: string;
+  cta: string;
+  crumb: string;
+  /** Inleidende alinea's (HTML) */
+  intro: string[];
+  ctaTitle?: string;
+  ctaText?: string;
+}
+const { id, lang, title, description, eyebrow, heading, lead, cta, crumb, intro, ctaTitle, ctaText } = Astro.props;
+const c = clusters.find((x) => x.id === id)!;
+const path = c.hubPaths![lang]!;
+const alternates = c.hubPaths as Partial<Record<Lang, string>>;
+const itemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: title,
+  itemListElement: clusterMembers(c, lang).map((m, i) => ({ '@type': 'ListItem', position: i + 1, name: m.title, url: new URL(m.href, site.url).href })),
+};
+const ctaHref = `${route(lang, 'request')}${c.dienst ? `?dienst=${c.dienst}` : ''}`;
+---
+<Base title={title} description={description} path={path} lang={lang} alternates={alternates} jsonLd={[itemList]} cluster={false}>
+  <Breadcrumbs lang={lang} items={[{ name: crumb, href: path }]} />
+  <Hero eyebrow={eyebrow} title={heading} lead={lead} cta={cta} lang={lang} ctaHref={ctaHref} />
+  <section class="section" style="padding-bottom:0">
+    <div class="wrap prose">
+      {intro.map((p) => <p set:html={p} />)}
+    </div>
+  </section>
+  <ClusterLinks path={path} lang={lang} />
+  <Cta lang={lang} dienst={c.dienst} title={ctaTitle} text={ctaText} />
+</Base>
