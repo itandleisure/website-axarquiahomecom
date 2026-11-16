@@ -3,7 +3,8 @@
 // krijgen een merkje (logo + axarquiahome.com) zodat ze onderdeel van een ontwerp zijn en niet los staan.
 // Geen eigen projecten: echte foto's van het bouwbedrijf komen alleen op Projecten en Over ons.
 // Bestanden: public/images/onderwerpen/<naam>-<480|800|1200>.webp en public/images/og/<naam>.jpg.
-import type { Lang } from '../i18n';
+import { langs, type Lang } from '../i18n';
+import { guidesBy, guideAt } from './guides';
 import { photoWidths } from './place-photos';
 
 /** Spaans (es) is optioneel: zonder Spaanse tekst valt de alt terug op het Engels. */
@@ -282,6 +283,188 @@ const photos: Record<string, TopicPhoto> = {
     sv: 'Rasad stödmur av natursten med lera och stenar på terrassen vid en finca efter kraftigt regn',
     es: 'Muro de piedra derrumbado con barro y piedras en la terraza de una finca tras lluvias intensas',
   } },
+  'verhuisdozen-terras-zeezicht': { alt: {
+    nl: 'Verhuisdozen en een koffer op het terras van een wit huis met uitzicht op olijfgaarden en de zee',
+    en: 'Moving boxes and a suitcase on the terrace of a white house overlooking olive groves and the sea',
+    de: 'Umzugskartons und ein Koffer auf der Terrasse eines weißen Hauses mit Blick auf Olivenhaine und das Meer',
+    sv: 'Flyttkartonger och en resväska på terrassen till ett vitt hus med utsikt över olivlundar och havet',
+    es: 'Cajas de mudanza y una maleta en la terraza de una casa blanca con vistas a olivares y al mar',
+  } },
+  'notaris-sleutels-koopcontract': { alt: {
+    nl: 'Overdracht van de huissleutels aan een bureau met een getekende koopakte',
+    en: 'House keys being handed over across a desk with a signed purchase deed',
+    de: 'Übergabe der Hausschlüssel über einem Schreibtisch mit unterschriebenem Kaufvertrag',
+    sv: 'Husnycklarna lämnas över vid ett skrivbord med ett undertecknat köpekontrakt',
+    es: 'Entrega de las llaves de la casa sobre un escritorio con la escritura de compraventa firmada',
+  } },
+  'overwinteren-terras-winterzon': { alt: {
+    nl: 'Terras in de winterzon met een rieten stoel, deken en boek, met besneeuwde bergen en de zee op de achtergrond',
+    en: 'Terrace in the winter sun with a wicker chair, blanket and book, snowy mountains and the sea behind',
+    de: 'Terrasse in der Wintersonne mit Korbstuhl, Decke und Buch, verschneite Berge und das Meer im Hintergrund',
+    sv: 'Terrass i vintersolen med korgstol, filt och bok, snöklädda berg och havet i bakgrunden',
+    es: 'Terraza al sol de invierno con sillón de mimbre, manta y libro, montañas nevadas y el mar al fondo',
+  } },
+  'bouwtekeningen-vergunning-terras': { alt: {
+    nl: 'Bouwtekeningen, kadasterkaart en een map met vergunningstukken op een houten terrastafel',
+    en: 'Building plans, a land registry map and a folder of permit papers on a wooden terrace table',
+    de: 'Baupläne, Katasterkarte und eine Mappe mit Genehmigungsunterlagen auf einem Holztisch auf der Terrasse',
+    sv: 'Byggritningar, fastighetskarta och en pärm med bygglovshandlingar på ett träbord på terrassen',
+    es: 'Planos, mapa catastral y una carpeta con la documentación de licencia sobre una mesa de madera en la terraza',
+  } },
+  'ruwbouw-nieuwbouw-olijfbomen': { alt: {
+    nl: 'Ruwbouw van een nieuw huis van baksteen en beton op een perceel tussen olijfbomen in de bergen',
+    en: 'Shell of a new brick and concrete house on a plot among olive trees in the mountains',
+    de: 'Rohbau eines neuen Hauses aus Ziegel und Beton auf einem Grundstück zwischen Olivenbäumen in den Bergen',
+    sv: 'Stomme till ett nytt hus av tegel och betong på en tomt bland olivträd i bergen',
+    es: 'Obra en bruto de una casa nueva de ladrillo y hormigón en una parcela entre olivos en la montaña',
+  } },
+  'pergola-terras-wingerd': { alt: {
+    nl: 'Houten pergola met wingerd en bloeiende klimplanten boven een terras met eettafel',
+    en: 'Wooden pergola with vines and flowering climbers over a terrace with a dining table',
+    de: 'Holzpergola mit Wein und blühenden Kletterpflanzen über einer Terrasse mit Esstisch',
+    sv: 'Pergola av trä med vinrankor och blommande klätterväxter över en terrass med matbord',
+    es: 'Pérgola de madera con parra y trepadoras en flor sobre una terraza con mesa de comedor',
+  } },
+  'gastenverblijf-casita-finca': { alt: {
+    nl: 'Klein wit gastenverblijf naast een grotere finca op een perceel met olijfbomen en bergen',
+    en: 'Small white guest cottage next to a larger finca on a plot with olive trees and mountains',
+    de: 'Kleines weißes Gästehaus neben einer größeren Finca auf einem Grundstück mit Olivenbäumen und Bergen',
+    sv: 'Litet vitt gästhus bredvid en större finca på en tomt med olivträd och berg',
+    es: 'Pequeña casita de invitados blanca junto a una finca más grande en una parcela con olivos y montañas',
+  } },
+  'barbecue-balkon-appartement': { alt: {
+    nl: 'Gasbarbecue op het balkon van een appartement aan zee bij zonsondergang',
+    en: 'Gas barbecue on the balcony of a seafront apartment at sunset',
+    de: 'Gasgrill auf dem Balkon einer Wohnung am Meer bei Sonnenuntergang',
+    sv: 'Gasolgrill på balkongen till en lägenhet vid havet i solnedgången',
+    es: 'Barbacoa de gas en el balcón de un apartamento frente al mar al atardecer',
+  } },
+  'terras-glazen-schuifwand': { alt: {
+    nl: 'Overdekt terras dichtgemaakt met glazen schuifpanelen en uitzicht op een wit dorp in de bergen',
+    en: 'Covered terrace enclosed with glass sliding panels, overlooking a white mountain village',
+    de: 'Überdachte Terrasse mit Glasschiebewänden und Blick auf ein weißes Bergdorf',
+    sv: 'Inglasad terrass med skjutbara glaspaneler och utsikt över en vit bergsby',
+    es: 'Terraza cubierta cerrada con cortina de cristal y vistas a un pueblo blanco de montaña',
+  } },
+  'te-koop-bord-dorpshuis': { alt: {
+    nl: 'Leeg verkoopbord aan het smeedijzeren hek van een wit dorpshuis met geraniums',
+    en: 'Blank sale sign on the wrought-iron gate of a white village house with geraniums',
+    de: 'Leeres Verkaufsschild am schmiedeeisernen Tor eines weißen Dorfhauses mit Geranien',
+    sv: 'Tom försäljningsskylt på smidesgrinden till ett vitt byhus med pelargoner',
+    es: 'Cartel de venta en blanco en la cancela de forja de una casa de pueblo blanca con geranios',
+  } },
+  'finca-winterklaar-zwembadafdekking': { alt: {
+    nl: 'Finca winterklaar gemaakt: afgedekt zwembad en tuinmeubels onder een hoes op een nat terras',
+    en: 'Finca closed up for winter: covered pool and garden furniture under a cover on a wet terrace',
+    de: 'Winterfest gemachte Finca: abgedeckter Pool und Gartenmöbel unter einer Plane auf nasser Terrasse',
+    sv: 'Finca stängd för vintern: övertäckt pool och trädgårdsmöbler under skydd på en blöt terrass',
+    es: 'Finca preparada para el invierno: piscina cubierta y muebles de jardín tapados en una terraza mojada',
+  } },
+  'terracotta-vloer-leggen': { alt: {
+    nl: 'Tegelzetter legt handgemaakte terracotta vloertegels met een rubberen hamer',
+    en: 'Tiler laying handmade terracotta floor tiles with a rubber mallet',
+    de: 'Fliesenleger verlegt handgemachte Terrakottafliesen mit einem Gummihammer',
+    sv: 'Plattsättare lägger handgjorda terrakottaplattor med en gummiklubba',
+    es: 'Solador colocando baldosas de barro artesanas con una maza de goma',
+  } },
+  'inloopdouche-levensloopbestendig': { alt: {
+    nl: 'Drempelloze inloopdouche met opklapbaar douchezitje en handgrepen in een gerenoveerde badkamer',
+    en: 'Step-free walk-in shower with a fold-down seat and grab rails in a renovated bathroom',
+    de: 'Bodengleiche Dusche mit Klappsitz und Haltegriffen in einem renovierten Bad',
+    sv: 'Duschplats utan tröskel med uppfällbar sits och stödhandtag i ett renoverat badrum',
+    es: 'Ducha a ras de suelo con asiento abatible y asideros en un baño reformado',
+  } },
+  'verbouwing-volgen-tablet': { alt: {
+    nl: 'Iemand volgt de voortgang van een verbouwing in Spanje op een tablet aan de keukentafel thuis',
+    en: 'Someone following the progress of a renovation in Spain on a tablet at the kitchen table at home',
+    de: 'Jemand verfolgt den Fortschritt einer Renovierung in Spanien auf einem Tablet am heimischen Küchentisch',
+    sv: 'Någon följer en renovering i Spanien på en surfplatta vid köksbordet hemma',
+    es: 'Alguien sigue el avance de una reforma en España en una tableta desde la mesa de su cocina',
+  } },
+  'uralita-dak-schuur': { alt: {
+    nl: 'Oud golfplaatdak van vezelcement (uralita) op een stenen schuur naast een witte finca',
+    en: 'Old corrugated fibre cement (uralita) roof on a stone outbuilding next to a white finca',
+    de: 'Altes Wellplattendach aus Faserzement (Uralita) auf einem Steinschuppen neben einer weißen Finca',
+    sv: 'Gammalt korrugerat tak av fibercement (uralita) på ett stenförråd bredvid en vit finca',
+    es: 'Viejo tejado de uralita sobre un almacén de piedra junto a una finca blanca',
+  } },
+  'waterfilter-osmose-keuken': { alt: {
+    nl: 'Osmose-waterfilter met filterpatronen in het keukenkastje onder de gootsteen',
+    en: 'Reverse osmosis water filter with cartridges in the cabinet under the kitchen sink',
+    de: 'Umkehrosmose-Wasserfilter mit Filterkartuschen im Schrank unter der Spüle',
+    sv: 'Omvänd osmos-vattenfilter med filterpatroner i skåpet under diskbänken',
+    es: 'Equipo de ósmosis inversa con cartuchos en el mueble bajo el fregadero',
+  } },
+  'zonwering-toldo-terras': { alt: {
+    nl: 'Terracottakleurig zonnescherm boven het terras van een wit huis met rolluiken voor de ramen',
+    en: 'Terracotta-coloured awning over the terrace of a white house with roller shutters on the windows',
+    de: 'Terrakottafarbene Markise über der Terrasse eines weißen Hauses mit Rollläden an den Fenstern',
+    sv: 'Terrakottafärgad markis över terrassen till ett vitt hus med rullgardiner för fönstren',
+    es: 'Toldo color teja sobre la terraza de una casa blanca con persianas en las ventanas',
+  } },
+  'mediterrane-tuin-druppelirrigatie': { alt: {
+    nl: 'Droogtebestendige tuin met lavendel, agaves, een oude olijfboom en druppelslangen bij een witte finca',
+    en: 'Drought-tolerant garden with lavender, agaves, an old olive tree and drip lines at a white finca',
+    de: 'Trockenheitsresistenter Garten mit Lavendel, Agaven, altem Olivenbaum und Tropfschläuchen an einer weißen Finca',
+    sv: 'Torktålig trädgård med lavendel, agaver, ett gammalt olivträd och droppbevattning vid en vit finca',
+    es: 'Jardín resistente a la sequía con lavanda, agaves, un olivo viejo y riego por goteo junto a una finca blanca',
+  } },
+  '3d-ontwerp-laptop-terras': { alt: {
+    nl: 'Laptop met een 3D-ontwerp van een gerenoveerd huis met zwembad, naast een plattegrond op een terrastafel',
+    en: 'Laptop showing a 3D design of a renovated house with pool, next to a floor plan on a terrace table',
+    de: 'Laptop mit 3D-Entwurf eines renovierten Hauses mit Pool neben einem Grundriss auf einem Terrassentisch',
+    sv: 'Bärbar dator med en 3D-ritning av ett renoverat hus med pool, bredvid en planritning på ett terrassbord',
+    es: 'Portátil con un diseño 3D de una casa reformada con piscina junto a un plano en una mesa de terraza',
+  } },
+  'zwembad-onderhoud-schepnet': { alt: {
+    nl: 'Schepnet haalt bladeren uit een zwembad bij een witte finca, met testset en chloordrijver op de rand',
+    en: 'Skimmer net removing leaves from a pool at a white finca, with a test kit and chlorine float on the edge',
+    de: 'Kescher fischt Blätter aus dem Pool einer weißen Finca, Testset und Chlorschwimmer am Rand',
+    sv: 'Håv tar upp löv ur poolen vid en vit finca, med testkit och klorflottör på kanten',
+    es: 'Recogehojas limpiando la piscina de una finca blanca, con kit de análisis y dosificador de cloro en el borde',
+  } },
+  'auto-bergweg-axarquia': { alt: {
+    nl: 'Witte auto op een smalle bergweg tussen olijfgaarden en witte dorpen, met de zee in de verte',
+    en: 'White car on a narrow mountain road between olive groves and white villages, with the sea in the distance',
+    de: 'Weißes Auto auf einer schmalen Bergstraße zwischen Olivenhainen und weißen Dörfern, das Meer in der Ferne',
+    sv: 'Vit bil på en smal bergsväg mellan olivlundar och vita byar, med havet i fjärran',
+    es: 'Coche blanco en una estrecha carretera de montaña entre olivares y pueblos blancos, con el mar al fondo',
+  } },
+  'hond-terras-wit-huis': { alt: {
+    nl: 'Hond ligt op het terras van een wit huis naast een waterbak, met uitzicht op de heuvels',
+    en: 'Dog lying on the terrace of a white house next to a water bowl, overlooking the hills',
+    de: 'Hund liegt auf der Terrasse eines weißen Hauses neben einem Wassernapf, mit Blick auf die Hügel',
+    sv: 'Hund som ligger på terrassen till ett vitt hus bredvid en vattenskål, med utsikt över kullarna',
+    es: 'Perro tumbado en la terraza de una casa blanca junto a un cuenco de agua, con vistas a las colinas',
+  } },
+  'dorp-vallei-axarquia': { alt: {
+    nl: 'Wit dorp in een groene vallei in de Axarquía, gezien vanaf een heuvel',
+    en: 'White village in a green valley in the Axarquía, seen from a hillside',
+    de: 'Weißes Dorf in einem grünen Tal der Axarquía, von einem Hang aus gesehen',
+    sv: 'Vit by i en grön dal i Axarquía, sedd från en sluttning',
+    es: 'Pueblo blanco en un valle verde de la Axarquía, visto desde una ladera',
+  } },
+  'dorpshuis-buitentrap-axarquia': { alt: {
+    nl: 'Witte gevel van een dorpshuis met een buitentrap van terracotta en een smeedijzeren leuning',
+    en: 'White facade of a village house with a terracotta outdoor staircase and wrought-iron railing',
+    de: 'Weiße Fassade eines Dorfhauses mit Außentreppe aus Terrakotta und schmiedeeisernem Geländer',
+    sv: 'Vit fasad på ett byhus med utvändig trappa i terrakotta och smidesräcke',
+    es: 'Fachada blanca de una casa de pueblo con escalera exterior de barro y barandilla de forja',
+  } },
+  'oude-keuken-dorpshuis': { alt: {
+    nl: 'Oude keuken in een dorpshuis met tegeltjes, gordijntjes onder het aanrecht en terracotta vloer',
+    en: 'Old kitchen in a village house with tiles, curtains under the counter and a terracotta floor',
+    de: 'Alte Küche in einem Dorfhaus mit Fliesen, Vorhängen unter der Arbeitsplatte und Terrakottaboden',
+    sv: 'Gammalt kök i ett byhus med kakel, gardiner under bänken och terrakottagolv',
+    es: 'Cocina antigua en una casa de pueblo con azulejos, cortinas bajo la encimera y suelo de barro',
+  } },
+  'witte-steeg-dorp-axarquia': { alt: {
+    nl: 'Smalle witte steeg met smeedijzeren balkons en planten in een dorp in de Axarquía',
+    en: 'Narrow white alley with wrought-iron balconies and plants in a village in the Axarquía',
+    de: 'Schmale weiße Gasse mit schmiedeeisernen Balkonen und Pflanzen in einem Dorf der Axarquía',
+    sv: 'Smal vit gränd med smidesbalkonger och växter i en by i Axarquía',
+    es: 'Calle estrecha y blanca con balcones de forja y plantas en un pueblo de la Axarquía',
+  } },
 };
 
 interface Placement { lead: string; /** Tweede foto direct onder de kop van de sectie met dit volgnummer (vanaf 0; ids verschillen per taal) */ inline?: { section: number; photo: string }; }
@@ -336,6 +519,9 @@ const guidePlacements: Record<string, string> = {
   'wasserschaden-spanien': 'lekkage-vlek-plafond-hoek',
   'off-grid-wonen-spanje': 'zonnepaneel-off-grid-paal',
   'off-grid-living-spain': 'zonnepaneel-off-grid-paal',
+  'autark-leben-spanien': 'zonnepaneel-off-grid-paal',
+  'electricity-providers-spain-compared': 'zonnepanelen-pannendak',
+  'instalacion-aire-acondicionado': 'airco-installeren-binnenunit',
   'virtuele-batterij-spanje': 'zonnepanelen-pannendak',
   'virtual-battery-spain': 'zonnepanelen-pannendak',
   'virtuelle-batterie-spanien': 'zonnepanelen-pannendak',
@@ -364,7 +550,86 @@ export function topicPhotos(kind: string, key: string, lang: Lang) {
   };
 }
 
-export const guidePhoto = (slug: string, lang: Lang) => (guidePlacements[slug] ? topicPhoto(guidePlacements[slug], lang) : undefined);
+/** Gidsen per Nederlandse slug; de vertalingen (en/de/sv/es) volgen via guideAt. */
+const nlGuidePlacements: Record<string, string> = {
+  'emigreren-naar-spanje': 'verhuisdozen-terras-zeezicht',
+  'finca-kopen-in-spanje': 'finca-zeezicht-axarquia',
+  'kosten-koper-spanje': 'notaris-sleutels-koopcontract',
+  'kosten-huis-renoveren-spanje': 'dorpshuis-renoveren-verbouwing',
+  'wonen-in-de-axarquia': 'witte-steeg-dorp-axarquia',
+  'overwinteren-in-spanje': 'overwinteren-terras-winterzon',
+  'huis-kopen-malaga-andalusie': 'notaris-sleutels-koopcontract',
+  'afo-legaliseren-andalusie': 'bouwtekeningen-vergunning-terras',
+  'finca-appartement-of-dorpshuis': 'dorpshuis-buitentrap-axarquia',
+  'finca-appartement-of-dorpshuis-gezinnen': 'zwembad-finca-sierra-almijara',
+  'finca-appartement-of-dorpshuis-gepensioneerden': 'overwinteren-terras-winterzon',
+  'finca-appartement-of-dorpshuis-bed-and-breakfast': 'verhuurbeheer-terras-zwembad-zeezicht',
+  'finca-appartement-of-dorpshuis-vakantiehuis': 'sleutelbeheer-sleutels-blauwe-deur',
+  'bouwen-op-eigen-grond-spanje': 'ruwbouw-nieuwbouw-olijfbomen',
+  'bouwen-op-eigen-grond-carport-en-pergola': 'pergola-terras-wingerd',
+  'bouwen-op-eigen-grond-pergola-bouwen': 'pergola-terras-wingerd',
+  'bouwen-op-eigen-grond-garage': 'ruwbouw-nieuwbouw-olijfbomen',
+  'bouwen-op-eigen-grond-gastenverblijf': 'gastenverblijf-casita-finca',
+  'bouwen-op-eigen-grond-buitenkeuken': 'buitenkeuken-barbecue-pergola',
+  'bouwen-op-eigen-grond-barbecue-appartement': 'barbecue-balkon-appartement',
+  'bouwen-op-eigen-grond-uitbouw-en-terras-dichtmaken': 'terras-glazen-schuifwand',
+  'huis-verkopen-spanje': 'te-koop-bord-dorpshuis',
+  'huis-verkopen-spanje-papieren': 'bouwtekeningen-vergunning-terras',
+  'huis-verkopen-spanje-opknappen': 'oude-keuken-dorpshuis',
+  'huis-kopen-in-spanje': 'notaris-sleutels-koopcontract',
+  'huis-kopen-in-spanje-checklist': 'aankoopkeuring-vochtmeting-muur',
+  'huis-kopen-in-spanje-bed-and-breakfast': 'verhuurbeheer-terras-zwembad-zeezicht',
+  'huis-flippen-spanje': 'dorpshuis-renoveren-verbouwing',
+  'woning-verhuren-spanje': 'verhuurbeheer-terras-zwembad-zeezicht',
+  'belastingkalender-spanje': 'bouwtekeningen-vergunning-terras',
+  'huis-winterklaar-spanje': 'finca-winterklaar-zwembadafdekking',
+  'verzekering-huis-spanje': 'lekkage-vlek-plafond-hoek',
+  'verwarmen-en-koelen-spanje': 'houtkachel-rookkanaal-finca',
+  'vergunning-verbouwen-andalusie': 'bouwtekeningen-vergunning-terras',
+  'vloer-kiezen-spanje': 'terracotta-vloer-leggen',
+  'badkamer-douche-of-bad': 'badkamer-renoveren-inloopdouche',
+  'levensloopbestendig-maken-spanje': 'inloopdouche-levensloopbestendig',
+  'verbouwen-op-afstand-spanje': 'verbouwing-volgen-tablet',
+  'dorpshuis-renoveren-spanje': 'dorpshuis-buitentrap-axarquia',
+  'asbest-uralita-dak-spanje': 'uralita-dak-schuur',
+  'leidingen-en-boiler-vervangen-spanje': 'loodgieter-boiler-repareren',
+  'waterfilter-spanje': 'waterfilter-osmose-keuken',
+  'renovatie-factuur-of-cash-spanje': 'bouwtekeningen-vergunning-terras',
+  'gevel-witten-schilderen-spanje': 'gevel-witten-onderhoud-finca',
+  'zonwering-rolluiken-horren-spanje': 'zonwering-toldo-terras',
+  'beveiliging-huis-spanje': 'inbraak-rejas-alarm-raam',
+  'tuin-en-perceel-spanje': 'mediterrane-tuin-druppelirrigatie',
+  '3d-ontwerp-verbouwing': '3d-ontwerp-laptop-terras',
+  'toegangsweg-finca-spanje': 'toegangsweg-finca-olijfbomen',
+  'zwembad-onderhoud-spanje': 'zwembad-onderhoud-schepnet',
+  'aannemer-costa-del-sol': 'dorpshuis-renoveren-verbouwing',
+  'ongedierte-bestrijden-spanje': 'termieten-schade-houten-balk',
+  'energielabel-spanje': 'zonnepanelen-pannendak',
+  'autoverzekering-spanje': 'auto-bergweg-axarquia',
+  'met-huisdier-naar-spanje': 'hond-terras-wit-huis',
+  'wonen-in-spanje': 'dorp-vallei-axarquia',
+};
+
+let guideIndex: Map<string, string> | undefined;
+function guidePhotoName(slug: string, lang: Lang) {
+  if (!guideIndex) {
+    guideIndex = new Map();
+    guidesBy.nl.forEach((g, i) => {
+      const name = nlGuidePlacements[g.slug];
+      if (!name) return;
+      for (const l of langs) {
+        const t = guideAt(l, i);
+        if (t) guideIndex.set(`${l}:${t.slug}`, name);
+      }
+    });
+  }
+  return guidePlacements[slug] ?? guideIndex.get(`${lang}:${slug}`);
+}
+
+export const guidePhoto = (slug: string, lang: Lang) => {
+  const name = guidePhotoName(slug, lang);
+  return name ? topicPhoto(name, lang) : undefined;
+};
 
 /** Hero-foto per dienst (geldt voor alle talen). */
 const servicePlacements: Record<string, string> = {
