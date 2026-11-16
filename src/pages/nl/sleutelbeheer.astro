@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
@@ -42,15 +43,16 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['nl', 'en'],
 };
+const photo = servicePhoto('sleutelbeheer', 'nl');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Sleutelbeheer in Spanje: uw huis in de Axarquía"
   description="Sleutelbeheer en woningtoezicht in Nerja, Cómpeta, Torrox en de hele Axarquía. Vaste controles, foto-verslagen en direct actie bij lekkage of storm."
   path="/nl/sleutelbeheer/"
   jsonLd={[service]}
 >
   <Breadcrumbs items={[{ name: 'Sleutelbeheer', href: '/nl/sleutelbeheer/' }]} />
-  <Hero
+  <Hero image={photo}
     eyebrow="Sleutelbeheer en woningtoezicht"
     title="Sleutelbeheer in Spanje: <em>met een gerust hart terug naar Nederland</em>"
     lead="Uw huis in Spanje staat een groot deel van het jaar leeg. Wij houden het in de gaten, sturen u foto’s en grijpen in als er iets mis is, voordat een kleine lekkage een grote schade wordt."

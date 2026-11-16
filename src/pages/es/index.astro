@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Services from '../../components/Services.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
@@ -30,14 +31,15 @@ const faq = [
     a: 'Sí. Una inspección antes de comprar muestra el estado de la vivienda, qué hay que hacer y cuánto cuesta, antes de que firme nada. Una casa se compra tal como está, así que merece la pena.',
   },
 ];
+const photo = servicePhoto('home', 'es');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Reformas, placas solares y mantenimiento en la Axarquía"
   description="Reformas, placas solares, aire acondicionado, piscinas, inspección antes de comprar y gestión de llaves en Vélez-Málaga, Nerja, Torrox, Cómpeta y la Axarquía."
   path="/es/"
   lang="es"
 >
-  <Hero
+  <Hero image={photo}
     lang="es"
     eyebrow="Comprar · Reformar · Cuidar"
     title="Su casa en la Axarquía, <em>en buenas manos</em>"

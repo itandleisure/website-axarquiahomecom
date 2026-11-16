@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
@@ -40,8 +41,9 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['nl', 'en', 'es'],
 };
+const photo = servicePhoto('renovatie', 'sv');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Renovera hus i Spanien: Axarquía, Nerja och omgivningarna"
   description="Renovering i Axarquía: totalrenovering, badrum, kök och fincor i Nerja, Torrox, Frigiliana, Cómpeta och omgivningarna."
   path="/sv/renovering/"
@@ -49,7 +51,7 @@ const service = {
   jsonLd={[service]}
 >
   <Breadcrumbs lang="sv" items={[{ name: 'Renovering', href: '/sv/renovering/' }]} />
-  <Hero
+  <Hero image={photo}
     lang="sv"
     eyebrow="Renovering och ombyggnad"
     title="Renovera i Spanien, <em>utan huvudvärk</em>"

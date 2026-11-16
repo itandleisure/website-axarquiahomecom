@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
@@ -41,8 +42,9 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['nl', 'en', 'de', 'es'],
 };
+const photo = servicePhoto('verhuurbeheer', 'de');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Vermietungsservice für Ferienhäuser in der Axarquía"
   description="Sie vermieten Ihr Haus in Nerja, Torrox oder anderswo in der Axarquía? Wir übernehmen Gästewechsel, Reinigung, Wäsche, Schlüssel und Reparaturen vor Ort."
   path="/de/vermietungsservice/"
@@ -50,7 +52,7 @@ const service = {
   jsonLd={[service]}
 >
   <Breadcrumbs lang="de" items={[{ name: "Vermietungsservice", href: '/de/vermietungsservice/' }]} />
-  <Hero
+  <Hero image={photo}
     lang="de"
     eyebrow="Vermietungsservice"
     title="Ihr Haus vermieten, <em>wir kümmern uns vor Ort</em>"

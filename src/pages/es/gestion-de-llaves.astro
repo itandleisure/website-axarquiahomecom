@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
@@ -42,8 +43,9 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['es', 'en', 'nl'],
 };
+const photo = servicePhoto('sleutelbeheer', 'es');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Gestión de llaves y vigilancia de casas en la Axarquía"
   description="Gestión de llaves y revisión de su segunda vivienda en Nerja, Torrox, Cómpeta y toda la Axarquía: visitas periódicas, informes con fotos y actuación rápida."
   path="/es/gestion-de-llaves/"
@@ -51,7 +53,7 @@ const service = {
   jsonLd={[service]}
 >
   <Breadcrumbs lang="es" items={[{ name: 'Gestión de llaves', href: '/es/gestion-de-llaves/' }]} />
-  <Hero
+  <Hero image={photo}
     lang="es"
     eyebrow="Gestión de llaves y vigilancia"
     title="Su casa vigilada <em>mientras usted no está</em>"

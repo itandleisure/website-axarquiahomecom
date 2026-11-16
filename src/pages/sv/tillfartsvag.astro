@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
@@ -38,8 +39,9 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['en', 'nl', 'es'],
 };
+const photo = servicePhoto('toegangsweg', 'sv');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Laga och underhålla tillfartsvägen till din finca"
   description="Gropar, raviner eller en för brant camino? Vi lagar, belägger och underhåller tillfartsvägen till din finca i Axarquía, med bra avvattning."
   path="/sv/tillfartsvag/"
@@ -47,7 +49,7 @@ const service = {
   jsonLd={[service]}
 >
   <Breadcrumbs lang="sv" items={[{ name: 'Tillfartsväg', href: '/sv/tillfartsvag/' }]} />
-  <Hero
+  <Hero image={photo}
     lang="sv"
     eyebrow="Tillfartsväg och uppfart"
     title="En väg till din finca <em>som fungerar året runt</em>"

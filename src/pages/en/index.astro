@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Services from '../../components/Services.astro';
 import HomeMenu from '../../components/HomeMenu.astro';
 import Steps from '../../components/Steps.astro';
@@ -31,14 +32,15 @@ const faq = [
     a: 'Yes. A pre-purchase survey tells you the condition of the property, what needs doing and roughly what it will cost, before you sign anything. In Spain you buy “as seen”, so this matters.',
   },
 ];
+const photo = servicePhoto('home', 'en');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Builders in the Axarquía: Renovation & Key Holding"
   description="Buying, renovating or looking after a home in the Axarquía? English-speaking builders for renovation, surveys, key holding and maintenance near Nerja."
   path="/en/"
   lang="en"
 >
-  <Hero
+  <Hero image={photo}
     lang="en"
     eyebrow="Buy · Renovate · Look after"
     title="Your home in the Axarquía, <em>in safe hands</em>"

@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
@@ -40,15 +41,16 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['nl', 'en'],
 };
+const photo = servicePhoto('aankoopkeuring', 'nl');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Aankoopkeuring huis in Spanje: weet wat u koopt"
   description="Bouwkundige keuring vóór de aankoop van een huis of finca in de Axarquía. Rapport in het Nederlands met foto’s, gebreken en wat het herstel kost."
   path="/nl/aankoopkeuring/"
   jsonLd={[service]}
 >
   <Breadcrumbs items={[{ name: 'Aankoopkeuring', href: '/nl/aankoopkeuring/' }]} />
-  <Hero
+  <Hero image={photo}
     eyebrow="Aankoopkeuring"
     title="Laat het huis keuren <em>voordat u tekent</em>"
     lead="Een huis in Spanje koopt u zoals het is. Wij keuren de woning vóór de aankoop en vertellen u in begrijpelijk Nederlands wat er goed is, wat er mis is en wat het opknappen kost."

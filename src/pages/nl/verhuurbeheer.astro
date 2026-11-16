@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
@@ -41,15 +42,16 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['nl', 'en', 'de', 'es'],
 };
+const photo = servicePhoto('verhuurbeheer', 'nl');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Verhuurbeheer vakantiewoning in de Axarquía"
   description="Verhuurt u uw huis in Nerja, Torrox of elders in de Axarquía? Wij regelen de wissels, schoonmaak, beddengoed, sleutels en reparaties ter plaatse."
   path="/nl/verhuurbeheer/"
   jsonLd={[service]}
 >
   <Breadcrumbs items={[{ name: "Verhuurbeheer", href: '/nl/verhuurbeheer/' }]} />
-  <Hero
+  <Hero image={photo}
     eyebrow="Verhuurbeheer"
     title="Uw huis verhuren, <em>wij regelen het ter plaatse</em>"
     lead="U woont in Nederland of België en verhuurt uw huis in de Axarquía aan vakantiegasten. Wij zorgen dat het tussen de gasten door schoon, compleet en in orde is, en lossen het op als er iets kapot gaat."

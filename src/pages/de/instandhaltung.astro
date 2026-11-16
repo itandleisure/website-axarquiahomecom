@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
@@ -34,8 +35,9 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['de', 'nl', 'en'],
 };
+const photo = servicePhoto('onderhoud', 'de');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Instandhaltung und Reparaturen für Ihr Haus in Spanien"
   description="Undichte Dächer, Terrassenabdichtung, Grundstückspflege und kleine Reparaturen in der Axarquía. Mit festem Ansprechpartner, auch wenn Sie nicht in Spanien sind."
   path="/de/instandhaltung/"
@@ -43,7 +45,7 @@ const service = {
   jsonLd={[service]}
 >
   <Breadcrumbs lang="de" items={[{ name: 'Instandhaltung und Reparaturen', href: '/de/instandhaltung/' }]} />
-  <Hero
+  <Hero image={photo}
     lang="de"
     eyebrow="Instandhaltung und Reparaturen"
     title="Leck, Schaden oder überfällige Wartung? <em>Wir kümmern uns.</em>"

@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
@@ -34,8 +35,9 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['es', 'en', 'nl'],
 };
+const photo = servicePhoto('onderhoud', 'es');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Mantenimiento y reparaciones de viviendas en la Axarquía"
   description="Goteras, impermeabilización de azoteas, desbroce de parcelas y pequeñas reparaciones en la Axarquía. También cuando usted no está en la casa."
   path="/es/mantenimiento/"
@@ -43,7 +45,7 @@ const service = {
   jsonLd={[service]}
 >
   <Breadcrumbs lang="es" items={[{ name: 'Mantenimiento y reparaciones', href: '/es/mantenimiento/' }]} />
-  <Hero
+  <Hero image={photo}
     lang="es"
     eyebrow="Mantenimiento y reparaciones"
     title="¿Gotera, avería o mantenimiento pendiente? <em>Nos encargamos.</em>"

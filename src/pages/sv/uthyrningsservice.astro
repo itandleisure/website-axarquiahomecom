@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
@@ -41,8 +42,9 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['nl', 'en', 'de', 'es'],
 };
+const photo = servicePhoto('verhuurbeheer', 'sv');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Uthyrningsservice för semesterboende i Axarquía"
   description="Hyr du ut ditt hus i Nerja, Torrox eller någon annanstans i Axarquía? Vi sköter gästbyten, städning, sänglinne, nycklar och reparationer på plats."
   path="/sv/uthyrningsservice/"
@@ -50,7 +52,7 @@ const service = {
   jsonLd={[service]}
 >
   <Breadcrumbs lang="sv" items={[{ name: "Uthyrningsservice", href: '/sv/uthyrningsservice/' }]} />
-  <Hero
+  <Hero image={photo}
     lang="sv"
     eyebrow="Uthyrningsservice"
     title="Hyr ut ditt hus, <em>vi sköter det på plats</em>"

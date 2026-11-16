@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
@@ -38,8 +39,9 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['nl', 'en', 'es'],
 };
+const photo = servicePhoto('sleutelbeheer', 'sv');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Tillsyn av hus i Spanien: ditt hus i Axarquía"
   description="Tillsyn och nyckelservice i Nerja, Torrox, Cómpeta och hela Axarquía: regelbundna kontroller, fotorapporter och snabb hjälp efter storm. Uppsägning per månad."
   path="/sv/tillsyn/"
@@ -47,7 +49,7 @@ const service = {
   jsonLd={[service]}
 >
   <Breadcrumbs lang="sv" items={[{ name: 'Tillsyn', href: '/sv/tillsyn/' }]} />
-  <Hero
+  <Hero image={photo}
     lang="sv"
     eyebrow="Tillsyn och nyckelservice"
     title="Tillsyn av hus i Spanien: <em>åk hem med lugnt sinne</em>"

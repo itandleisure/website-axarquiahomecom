@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Services from '../../components/Services.astro';
 import HomeMenu from '../../components/HomeMenu.astro';
 import Steps from '../../components/Steps.astro';
@@ -31,14 +32,15 @@ const faq = [
     a: 'Ja. Ein Gutachten vor dem Kauf zeigt Ihnen den Zustand der Immobilie, was gemacht werden muss und was das ungefähr kostet, bevor Sie etwas unterschreiben. In Spanien kaufen Sie „wie gesehen“, deshalb lohnt sich das.',
   },
 ];
+const photo = servicePhoto('home', 'de');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Handwerker in der Axarquía: Renovierung & Hausbetreuung"
   description="Haus in der Axarquía kaufen, renovieren oder betreuen lassen? Renovierung, Gutachten, Hausbetreuung und Instandhaltung in Nerja, Cómpeta, Torrox und Umgebung."
   path="/de/"
   lang="de"
 >
-  <Hero
+  <Hero image={photo}
     lang="de"
     eyebrow="Kaufen · Renovieren · Betreuen"
     title="Ihr Haus in der Axarquía, <em>in guten Händen</em>"

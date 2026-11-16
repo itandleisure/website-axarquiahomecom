@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
@@ -42,15 +43,16 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['nl', 'en', 'es'],
 };
+const photo = servicePhoto('loodgieter', 'nl');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Loodgieter in de Axarquía voor kleine reparaties"
   description="Lekkende kraan, verstopte afvoer, toilet dat doorloopt of een boiler die het niet doet? Loodgieter voor kleine reparaties in Cómpeta en de hele Axarquía."
   path="/nl/loodgieter/"
   jsonLd={[service]}
 >
   <Breadcrumbs items={[{ name: 'Onderhoud', href: '/nl/onderhoud/' }, { name: 'Loodgieter', href: '/nl/loodgieter/' }]} />
-  <Hero
+  <Hero image={photo}
     eyebrow="Loodgieter en kleine reparaties"
     title="Een loodgieter die <em>gewoon komt</em>, ook voor kleine klussen"
     lead="Een druppende kraan, een afvoer die niet wegloopt of een boiler die de geest geeft. Voor één klus vindt u in Spanje lastig iemand. Wij plannen het in, met een prijsindicatie vooraf, in het Nederlands."

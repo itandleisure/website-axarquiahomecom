@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
@@ -39,8 +40,9 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['nl', 'en', 'es'],
 };
+const photo = servicePhoto('zwembad', 'sv');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Poolbygge, poolrenovering och poolskötsel i Axarquía"
   description="Bygga en ny pool, få en gammal att fungera igen eller låta någon sköta den medan du är borta. I Nerja, Torrox, Cómpeta och hela Axarquía."
   path="/sv/pool/"
@@ -48,7 +50,7 @@ const service = {
   jsonLd={[service]}
 >
   <Breadcrumbs lang="sv" items={[{ name: 'Pool', href: '/sv/pool/' }]} />
-  <Hero
+  <Hero image={photo}
     lang="sv"
     eyebrow="Pool"
     title="Din pool <em>redo för sommaren</em>"

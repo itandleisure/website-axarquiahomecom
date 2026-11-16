@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
@@ -40,8 +41,9 @@ const service = {
   areaServed: 'Axarquía, Málaga, España',
   availableLanguage: ['en', 'nl'],
 };
+const photo = servicePhoto('aankoopkeuring', 'en');
 ---
-<Base
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
   title="Property survey in Spain: know what you are buying"
   description="Pre-purchase survey for houses and fincas in the Axarquía. A report in English with photos, defects and what they cost to fix. Even if you are not in Spain."
   path="/en/property-survey/"
@@ -49,7 +51,7 @@ const service = {
   jsonLd={[service]}
 >
   <Breadcrumbs lang="en" items={[{ name: 'Property survey', href: '/en/property-survey/' }]} />
-  <Hero
+  <Hero image={photo}
     lang="en"
     eyebrow="Pre-purchase survey"
     title="Have it surveyed <em>before you sign</em>"
