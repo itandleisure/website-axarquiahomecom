@@ -46,7 +46,6 @@ const ALL = {
     hp: 'Laat dit veld leeg',
     consent: 'Ik geef toestemming dat mijn aanvraag wordt doorgestuurd naar het bouwbedrijf van Axarquía Home, dat contact met mij opneemt. Zie de',
     privacy: 'privacyverklaring',
-    consentPartner: 'Als mijn vraag buiten het werk van het bouwbedrijf valt, mag mijn aanvraag naar één andere vakpartner.',
     prev: 'Vorige', next: 'Volgende', submit: 'Verstuur aanvraag',
     msgs: {
       choose: 'Kies een van de opties om verder te gaan.',
@@ -93,7 +92,6 @@ const ALL = {
     hp: 'Leave this field empty',
     consent: 'I agree that my request is passed on to the Axarquía Home building company, who will contact me. See the',
     privacy: 'privacy policy',
-    consentPartner: 'If my request falls outside the building company’s work, it may be passed on to one other specialist partner.',
     prev: 'Back', next: 'Next', submit: 'Send request',
     msgs: {
       choose: 'Please choose one of the options to continue.',
@@ -140,7 +138,6 @@ const ALL = {
     hp: 'Dieses Feld bitte leer lassen',
     consent: 'Ich bin einverstanden, dass meine Anfrage an das Bauunternehmen von Axarquía Home weitergeleitet wird, das sich bei mir meldet. Siehe die',
     privacy: 'Datenschutzerklärung',
-    consentPartner: 'Falls meine Anfrage nicht zu den Leistungen des Bauunternehmens gehört, darf sie an einen anderen Fachpartner weitergeleitet werden.',
     prev: 'Zurück', next: 'Weiter', submit: 'Anfrage senden',
     msgs: {
       choose: 'Bitte wählen Sie eine der Optionen, um fortzufahren.',
@@ -187,7 +184,6 @@ const ALL = {
     hp: 'Lämna det här fältet tomt',
     consent: 'Jag godkänner att min förfrågan skickas vidare till Axarquía Homes byggföretag, som kontaktar mig. Se',
     privacy: 'integritetspolicyn',
-    consentPartner: 'Om min förfrågan inte ingår i byggföretagets tjänster får den skickas vidare till en annan fackpartner.',
     prev: 'Tillbaka', next: 'Nästa', submit: 'Skicka förfrågan',
     msgs: {
       choose: 'Välj ett av alternativen för att fortsätta.',
@@ -234,7 +230,6 @@ const ALL = {
     hp: 'Deje este campo vacío',
     consent: 'Acepto que mi solicitud se envíe a la empresa constructora de Axarquía Home, que se pondrá en contacto conmigo. Consulte la',
     privacy: 'política de privacidad',
-    consentPartner: 'Si mi consulta no corresponde a los trabajos de la constructora, mi solicitud puede enviarse a otro profesional colaborador.',
     prev: 'Anterior', next: 'Siguiente', submit: 'Enviar solicitud',
     msgs: {
       choose: 'Elija una de las opciones para continuar.',
@@ -367,7 +362,6 @@ const perDienst = Object.fromEntries(groepen.map(([k, g]) => [k, {
           </div>
           <div class="hp" aria-hidden="true"><label>{T.hp} <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
           <label class="consent"><input type="checkbox" name="toestemming" value="ja" required /><span>{T.consent} <a href={path(lang, 'privacy')} target="_blank">{T.privacy}</a>.</span></label>
-          <label class="consent"><input type="checkbox" name="toestemming_partner" value="ja" /><span>{T.consentPartner} <span class="note">{T.optional}</span></span></label>
         </fieldset>
 
         <p class="wizard-error" role="alert" data-error></p>

@@ -178,6 +178,8 @@ const KOLOMMEN_INSCHRIJVINGEN = [
 const KOLOMMEN = [
   'Datum', 'Aanvraag-id', 'Dienst', 'Situatie', 'Type woning', 'Plaats', 'Adres/link',
   'Planning', 'Budget', 'Omschrijving', 'Naam', 'E-mail', 'Telefoon', 'Contactvoorkeur',
+  // 'Toestemming partner' wordt niet meer gevraagd. De kolom blijft staan (leeg),
+  // zodat de kolommen in een bestaande sheet niet verschuiven.
   'Taal', 'Toestemming', 'Toestemming partner', 'Pagina', 'UTM', 'Foto\'s',
   // Door het bouwbedrijf in te vullen, voor de commissie:
   'Status (contact/offerte/getekend/afgewezen)', 'Offertebedrag excl. IVA', 'Opdrachtbedrag excl. IVA', 'Notities',
@@ -205,7 +207,7 @@ function doPost(e) {
       const rij = [
         new Date(), d.id || '', d.dienst || '', d.situatie || '', d.type_woning || '', d.plaats || '', d.adres || '',
         d.planning || '', d.budget || '', d.omschrijving || '', d.naam, d.email, d.telefoon || '', d.contactvoorkeur || '',
-        d.taal || '', d.toestemming || '', d.toestemming_partner || 'nee', d.pagina || '', d.utm || '', fotoLinks.join('\n'),
+        d.taal || '', d.toestemming || '', '', d.pagina || '', d.utm || '', fotoLinks.join('\n'),
         '', '', '', '',
       ];
       sheet.appendRow(rij);
@@ -323,7 +325,7 @@ function mailBouwbedrijf_(d, fotoLinks, rijNummer) {
     ['Dienst', d.dienst], ['Situatie', d.situatie], ['Type woning', d.type_woning], ['Plaats', d.plaats],
     ['Adres/link', d.adres], ['Planning', d.planning], ['Budget', d.budget], ['Omschrijving', d.omschrijving],
     ['Naam', d.naam], ['E-mail', d.email], ['Telefoon', d.telefoon], ['Contactvoorkeur', d.contactvoorkeur],
-    ['Taal', d.taal], ['Toestemming partner', d.toestemming_partner || 'nee'],
+    ['Taal', d.taal],
   ].filter(([, v]) => v);
   const html = `
     <p><b>${contact ? 'Nieuw contactbericht' : 'Nieuwe aanvraag'} via axarquiahome.com</b> (regel ${rijNummer} in de sheet)</p>
