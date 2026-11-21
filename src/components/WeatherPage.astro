@@ -27,7 +27,7 @@ const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 const svc = services[lang]; // 0 renovatie, 1 sleutelbeheer, 2 aankoopkeuring, 3 zwembad, 4 onderhoud
 const request = route(lang, 'request');
 const n = place?.name ?? '';
-const home = { nl: 'Nederland (De Bilt)', en: 'London', de: 'Berlin' }[lang];
+const home = { nl: 'Nederland (De Bilt)', en: 'London', de: 'Berlin', sv: 'Stockholm' }[lang];
 
 const T = {
   nl: {
@@ -174,6 +174,54 @@ const T = {
     ],
     cta: 'Ihr Haus bereit für jede Jahreszeit?', ctaText: 'Von der undichten Dachterrasse nach dem Herbstregen über die Klimaanlage für den Sommer bis zur Hausbetreuung im Winter. Fragen Sie alles auf einmal an.',
   },
+  sv: {
+    crumb: 'Väder', places: 'Orter', weer: 'Väder',
+    hubTitle: 'Väder i Malaga och Axarquía per månad: temperatur och sol',
+    hubDesc: 'Hur är vädret i Malaga-området och Axarquía, runt Nerja, Torrox och Torre del Mar? Temperatur, soltimmar, regn och vattentemperatur per månad, vid kusten och i bergen.',
+    hubH1: 'Vädret i Malaga och <em>Axarquía</em>, månad för månad',
+    hubLead: 'Mer än 300 soldagar om året, milda vintrar och varma somrar med havsbris. Här ser du vad du kan vänta dig varje månad öster om Malaga, vid kusten och i bergsbyarna, och vad vädret betyder för ditt hus.',
+    monthTitle: (m: string) => fitTitle(`Väder i Malaga i ${m}: Nerja och Axarquía, sol och hav`, `Väder i Malaga i ${m}: temperatur, sol och hav`, `Väder i Malaga och Nerja i ${m}`),
+    monthDesc: (m: string, c: typeof climate[number]) => `Vädret i ${m} i Malaga-området, runt Nerja och Torre del Mar: i snitt ${c.max} °C på dagen, ${c.min} °C på natten, ${c.sun} timmar sol om dagen och ${c.sea} °C i havet.`,
+    monthH1: (m: string) => `Vädret i Malaga och Axarquía i <em>${m}</em>`,
+    placeTitle: fitTitle(`Väder i ${n} per månad: temperatur, sol och hav`, `Väder i ${n} per månad: temperatur och sol`, `Väder i ${n} per månad`),
+    placeDesc: fitDesc(`Hur är vädret i ${n}? Medeltemperatur, soltimmar, regn och vattentemperatur per månad, och vad klimatet betyder för ett hus i ${n}.`, `Hur är vädret i ${n}? Temperatur, soltimmar, regn och vattentemperatur per månad, och vad klimatet betyder för ditt hus.`),
+    placeH1: `Väder och klimat i <em>${n}</em>`,
+    stats: { max: 'På dagen', min: 'På natten', sun: 'Sol per dag', sea: 'Havet', rain: 'Regndagar' },
+    hours: 'tim', days: 'dagar',
+    table: { month: 'Månad', max: 'Max', min: 'Min', sun: 'Sol', rain: 'Regn', days: 'Regndagar', sea: 'Hav' },
+    tableTitle: 'Klimatet per månad vid kusten',
+    tablePlace: `Klimatet per månad i ${n}`,
+    tableNote: 'Avrundade långtidsmedelvärden. Max och min i °C, sol i timmar per dag, regn i mm per månad. Källor: AEMET (klimatnormaler 1991–2020 för Málaga och östkusten) och Copernicus för vattentemperaturen. Vädret varierar från år till år.',
+    coastMountain: 'Kust och berg', cmText: 'Ju högre upp, desto svalare. Temperaturen sjunker ungefär en halv grad per 100 meter, och i bergen regnar det mer.',
+    cm: { where: 'Var', coast: 'Kusten (Nerja, Torrox Costa, Torre del Mar)', hills: 'Kullarna (Frigiliana, byn Torrox, ca 300 m)', mountains: 'Bergen (Cómpeta, Canillas, ca 650 m)' },
+    vsHome: (m: string, d: number) => `I ${m} är det i snitt ${d} grader varmare på dagen än i ${home}.`,
+    weatherH: (m: string) => `Hur är vädret i ${m}?`,
+    houseH: (m: string) => `Ditt hus i ${m}`,
+    otherMonths: 'Andra månader', byPlace: 'Vädret per ort', inPlaces: (m: string) => `Temperatur i ${m} per ort`,
+    best: 'När är vädret som bäst?',
+    bestText: 'För sol och bad: juni till oktober. För vandring och byutflykter: mars till maj och oktober till mitten av november. För att övervintra: november till mars, med 16 till 21 grader på dagen vid kusten. Läs också guiden <a href="/sv/guider/overvintra-i-spanien/">övervintra i Spanien</a>.',
+    houseHub: 'Vad klimatet gör med ditt hus',
+    houseItems: [
+      ['Fukt på vintern', 'Tjocka stenväggar och klinkergolv håller sommaren sval, men gör huset kallt och fuktigt på vintern. Särskilt när det står tomt.', '/sv/problem/fukt-och-mogel/'],
+      ['Kraftigt regn på hösten', 'Efter en torr sommar kommer regnet ibland på en gång. Då märks det var ett tak eller en takterrass läcker och om dräneringen runt huset fungerar.', '/sv/problem/taklacka/'],
+      ['Sol och värme', 'Solen är stark: tak, fogar och färg slits fortare, och ett hus utan luftkonditionering eller solskydd blir varmt i juli. Solen kan du också använda, med solceller.', '/sv/kostnader/solceller/'],
+      ['Ett tomt hus', 'Är du borta en del av året upptäcker du problem först när du kommer tillbaka. Tillsyn håller koll på huset, även efter en storm.', '/sv/tillsyn/'],
+    ],
+    read: 'Läs mer',
+    placeHouse: `Vad klimatet betyder för ett hus i ${n}`,
+    placeHouseText: {
+      coast: 'Vid kusten är salt, sol och vind de största fienderna: metall rostar fortare, fogar och färg slits och en takterrass måste vara ordentligt tätad. På vintern är ventilation viktig mot fukt.',
+      hills: 'I kullarna är nätterna svalare och fukten stannar kvar längre. Tänk på god ventilation, en torr källare eller bottenvåning och dränering av sluttningen runt huset.',
+      mountains: 'I bergen behöver ett hus uppvärmning, isolering och bra fönster. Rör utomhus och i ouppvärmda utrymmen kan frysa, och vid kraftigt regn måste dräneringen av sluttningen fungera.',
+    },
+    faqHub: [
+      ['Hur varmt är det på vintern i Malaga och Axarquía?', 'Vid kusten är det i december, januari och februari i snitt 17 till 18 grader på dagen, med sex till sju timmar sol om dagen. På natten sjunker det till 8 eller 9 grader. I bergsbyarna är det några grader kallare.'],
+      ['När kan man bada i havet i Axarquía?', 'Havet håller 20 grader eller mer från juni till oktober, med en topp på runt 23 grader i augusti. I maj och november är det bara de härdade som badar.'],
+      ['Vad är terral?', 'En het, torr vind från inlandet som blåser några dagar om året på sommaren. Temperaturen vid kusten kan då gå över 38 grader.'],
+      ['Vad är en DANA?', 'En kalluftsdroppe högt upp i atmosfären som främst från september till november kan ge korta, kraftiga skyfall och åska. Se till att hängrännor och avlopp är fria.'],
+    ],
+    cta: 'Ditt hus redo för varje årstid?', ctaText: 'Från en läckande takterrass efter höstregnen till luftkonditionering för sommaren och tillsyn på vintern. Fråga om allt på en gång. Kontakten sker på engelska eller nederländska.',
+  },
 }[lang];
 
 // Adressen, kruimelpad en vertalingen
@@ -196,7 +244,7 @@ const tabs = mode === 'place' ? placeTabs(lang, place!).map((t) => ({ ...t, curr
 const title = mode === 'place' ? T.placeTitle : mode === 'month' ? T.monthTitle(M[month!]) : T.hubTitle;
 const description = mode === 'place' ? T.placeDesc : mode === 'month' ? T.monthDesc(M[month!], climate[month!]) : T.hubDesc;
 const h1 = mode === 'place' ? T.placeH1 : mode === 'month' ? T.monthH1(M[month!]) : T.hubH1;
-const placeLead = { nl: `Temperatuur, zon, regen en zeewater in ${n}, maand voor maand. Met wat het klimaat betekent voor uw huis.`, en: `Temperature, sunshine, rain and sea temperature in ${n}, month by month. Plus what the climate means for your home.`, de: `Temperatur, Sonne, Regen und Wassertemperatur in ${n}, Monat für Monat. Dazu, was das Klima für Ihr Haus bedeutet.` }[lang];
+const placeLead = { nl: `Temperatuur, zon, regen en zeewater in ${n}, maand voor maand. Met wat het klimaat betekent voor uw huis.`, en: `Temperature, sunshine, rain and sea temperature in ${n}, month by month. Plus what the climate means for your home.`, de: `Temperatur, Sonne, Regen und Wassertemperatur in ${n}, Monat für Monat. Dazu, was das Klima für Ihr Haus bedeutet.`, sv: `Temperatur, sol, regn och vattentemperatur i ${n}, månad för månad. Plus vad klimatet betyder för ditt hus.` }[lang];
 const lead = mode === 'place' ? placeLead : mode === 'month' ? monthText[month!].weather[lang].replace(/<[^>]+>/g, '').split('. ')[0] + '.' : T.hubLead;
 const alt = wp?.alt ?? 'coast';
 const rows = climate.map((_, i) => ({ i, ...climateFor(i, alt) }));
