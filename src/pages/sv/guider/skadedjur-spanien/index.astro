@@ -1,0 +1,112 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'oversikt', label: 'Vilka skadedjur finns det?' },
+  { id: 'kackerlackor', label: 'Kackerlackor: in via avloppet' },
+  { id: 'moss', label: 'Möss och råttor' },
+  { id: 'processionsfjaril', label: 'Processionsfjärilar: farliga för hundar' },
+  { id: 'myggor', label: 'Myggor och tigermyggan' },
+  { id: 'tra', label: 'Termiter och trämask' },
+  { id: 'hall-ute', label: 'Så håller du skadedjuren ute' },
+  { id: 'firma', label: 'Anlita en skadedjursfirma' },
+];
+
+const faq = [
+  {
+    q: 'Varför finns det så många kackerlackor i Spanien?',
+    a: 'Den stora bruna kackerlackan (cucaracha americana) lever i avloppsnätet och kommer upp genom avlopp, golvbrunnar och springor när det är varmt. I ett tomt hus torkar vattenlåsen ut, så att inget skiljer avloppet från badrummet. Att fylla på vattenlåsen regelbundet och täta avloppen ordentligt hjälper mycket.',
+  },
+  {
+    q: 'Vad kostar en skadedjursfirma i Spanien?',
+    a: 'En engångsbehandling mot kackerlackor eller myror i en lägenhet eller ett byhus kostar oftast 80 till 200 €. Möss eller råttor med betesstationer: 120 till 300 €. Ett årsavtal med flera kontroller: 200 till 500 €. Termiter är dyrare: 900 till 2 000 € för ett betessystem. Riktpriser utan moms.',
+  },
+  {
+    q: 'Betalar min hemförsäkring skador av skadedjur?',
+    a: 'Oftast inte. Skador av termiter, trämask, möss eller råttor är undantagna i nästan alla spanska försäkringar. Att förebygga och ingripa tidigt är därför det enda sättet att hålla nere kostnaden. Se även hemförsäkring i Spanien.',
+  },
+  {
+    q: 'Får jag använda gift själv?',
+    a: 'Hushållsprodukter från mataffären eller byggvaruhuset får du använda själv enligt etiketten. Starkare medel och behandlingar mot termiter får bara godkända firmor använda. Var försiktig med gift om du har hund eller katt.',
+  },
+];
+---
+<Guide lang="sv" slug="skadedjur-spanien" toc={toc} faq={faq} dienst="onderhoud" onderwerp="Jag har skadedjur i huset och vill få det tätat." ctaTitle="Vill du hålla skadedjuren ute för gott?" ctaText="Vi tar reda på var de kommer in och tätar det: springor, avlopp, tak och ventilationsgaller. Där det behövs tar vi in en godkänd skadedjursfirma och byter angripet trä.">
+  <p>Att bekämpa är en sak, men skadedjuren kommer tillbaka så länge de har en väg in i huset. I den här guiden läser du vilka djur du möter i Axarquía, vad du kan göra själv och när du ska ringa en fackman.</p>
+
+  <h2 id="oversikt">Vilka skadedjur finns det?</h2>
+  <table class="prices">
+    <thead><tr><th>Skadedjur</th><th>När</th><th>Vad du ska titta efter</th></tr></thead>
+    <tbody>
+      <tr><td>Kackerlackor (<em>cucarachas</em>)</td><td>Maj till oktober</td><td>Avlopp, golvbrunnar, köksskåp, aktiva på natten</td></tr>
+      <tr><td>Myror (<em>hormigas</em>)</td><td>Vår och sommar</td><td>Myrstigar längs golvlister och karmar</td></tr>
+      <tr><td>Möss och råttor (<em>ratones, ratas</em>)</td><td>Framför allt höst och vinter</td><td>Spillning, gnagmärken, prassel i taket</td></tr>
+      <tr><td>Processionsfjärilar (<em>procesionaria</em>)</td><td>Januari till april</td><td>Vita bon i tallar, larver i rad på marken</td></tr>
+      <tr><td>Myggor och tigermygga (<em>mosquito tigre</em>)</td><td>April till november</td><td>Stillastående vatten, stick på dagen</td></tr>
+      <tr><td>Termiter (<em>termitas</em>)</td><td>Hela året, svärmar på våren</td><td>Lergångar, ihåligt klingande trä</td></tr>
+      <tr><td>Trämask (<em>carcoma</em>)</td><td>Hela året</td><td>Små runda hål och trämjöl under bjälkar eller möbler</td></tr>
+      <tr><td>Skorpioner och skolopendrar (<em>escolopendras</em>)</td><td>Sommar</td><td>Under stenar, i springor i gamla murar</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="kackerlackor">Kackerlackor: in via avloppet</h2>
+  <p>I södra Spanien ser du framför allt två arter. Den <strong>stora bruna kackerlackan</strong> (upp till 4 cm) lever i avloppsnätet och kommer in genom avlopp, golvbrunnar och springor, särskilt varma kvällar. Den <strong>lilla tyska kackerlackan</strong> bor i kök, bakom vitvaror och i skåp och följer ofta med kartonger eller begagnade möbler in i huset.</p>
+  <ul>
+    <li><strong>Vattenlås</strong>: vattnet i vattenlåset håller borta djur och lukt från avloppet. Står huset tomt i veckor avdunstar det. Låt kranar, duschar och golvbrunnar rinna en stund vid varje kontroll, eller häll i en skvätt olja, som avdunstar långsammare.</li>
+    <li><strong>Golvbrunnar och avlopp</strong>: ett galler eller en stängbar brunn på terrassen och i badrummet, och väl anslutna avloppsrör utan glipor.</li>
+    <li><strong>Springor</strong>: täta öppningar runt rör som går genom vägg eller golv med fogmassa eller bruk.</li>
+  </ul>
+  <p>Mot den lilla kackerlackan i köket fungerar betesgel bäst. Mot den stora arten hjälper framför allt tätning. Kommer de tillbaka i stort antal ligger ofta ett problem i avloppet bakom, till exempel ett trasigt rör eller en gammal <a href="/sv/problem/avloppsbrunn-full-eller-luktar/">avloppsbrunn</a>.</p>
+
+  <h2 id="moss">Möss och råttor</h2>
+  <p>På fincor och i byhus med gammalt tak är möss och råttor ett känt problem på hösten. De kommer för frukt från avokado- eller mangoträd, djurfoder och en varm plats under takpannorna. De gnager på elkablar, vattenledningar och isolering, vilket kan leda till brand eller läckor.</p>
+  <ul>
+    <li>En mus tar sig igenom en öppning på cirka 6 mm, en råtta genom 2 cm. Täta hål vid rörgenomföringar, under dörrar och vid takkanten.</li>
+    <li>Sätt galler bakom ventilationsöppningar och en borsttätning under dörren.</li>
+    <li>Plocka bort nedfallen frukt och öppet foder och håll växter borta från taket.</li>
+    <li>Använd bara bete i stängda betesstationer, särskilt om du har hund, katt eller barn.</li>
+  </ul>
+
+  <h2 id="processionsfjaril">Processionsfjärilar: farliga för hundar</h2>
+  <p>Står det tallar (<em>pinos</em>) på eller intill din tomt får du troligen göra med dem. Larverna av tallprocessionsfjärilen övervintrar i vita bon i trädet och kryper från januari till april i en lång rad ner till marken. Deras brännhår ger människor kraftig klåda och inflammation och är verkligt farliga för hundar och katter: en hund som slickar på dem kan få svullnad i mun och tunga. Åk då genast till veterinären.</p>
+  <ul>
+    <li>Låt en fackman med skyddskläder ta bort bona på hösten eller förvintern.</li>
+    <li>En fångring runt stammen fångar larverna på väg ner.</li>
+    <li>Feromonfällor på sommaren fångar fjärilarna och förhindrar nya bon.</li>
+  </ul>
+  <p>Ska du flytta ner med husdjur? Läs också <a href="/sv/guider/flytta-till-spanien-med-hund/">flytta till Spanien med hund eller katt</a>.</p>
+
+  <h2 id="myggor">Myggor och tigermyggan</h2>
+  <p>Tigermyggan finns sedan några år också i provinsen Málaga. Den sticker på dagen och lägger sina ägg i små mängder stillastående vatten: ett blomfat, en hink, en igensatt takränna eller en regntunna utan lock. Det här hjälper:</p>
+  <ul>
+    <li>Låt inget vatten stå kvar i fat, hinkar och leksaker, och håll takrännorna rena.</li>
+    <li>Fortsätt filtrera poolen på vintern, även om du inte använder den, eller täck den ordentligt. Se <a href="/sv/guider/poolskotsel-i-spanien/">poolskötsel</a>.</li>
+    <li>Myggnät i fönster och dörrar, det mest effektiva medlet inomhus. Se <a href="/sv/guider/solskydd-persienner-myggnat-spanien/">solskydd, persienner och myggnät</a>.</li>
+  </ul>
+
+  <h2 id="tra">Termiter och trämask</h2>
+  <p>Underjordiska termiter finns i stora delar av Andalusien, även i Axarquía. De äter upp träbjälkar, karmar och golvlister inifrån, ofta i åratal utan att någon märker det. Trämasken lämnar i stället små runda hål och fint trämjöl. För båda avgör tidig upptäckt om en behandling räcker eller om nya bjälkar behövs. Allt om att känna igen, bekämpa och kostnader läser du på sidan <a href="/sv/problem/termiter/">termiter i huset</a>.</p>
+  <p>Köper du ett gammalt byhus eller en finca, låt då även bjälkar och karmar kontrolleras vid <a href="/sv/besiktning/">besiktningen</a>.</p>
+
+  <h2 id="hall-ute">Så håller du skadedjuren ute</h2>
+  <p>De flesta plågor kommer tillbaka så länge huset är öppet. De här byggtekniska åtgärderna fungerar mot nästan allt på en gång:</p>
+  <ul>
+    <li><strong>Täta springor och hål</strong> runt rör, kablar, karmar och vid takkanten.</li>
+    <li><strong>Galler bakom ventilationsöppningar</strong> och i skorstenen.</li>
+    <li><strong>Dörrborstar eller trösklar</strong> på ytterdörrar.</li>
+    <li><strong>Myggnät</strong> i fönster och dörrar.</li>
+    <li><strong>Avlopp och golvbrunnar</strong> med bra vattenlås och stängbara galler.</li>
+    <li><strong>Ta bort fukten</strong>: många insekter och träskadegörare söker sig till fuktiga ställen. Se <a href="/sv/problem/fukt-och-mogel/">fukt och mögel</a>.</li>
+    <li><strong>Regelbundna kontroller</strong> när du inte är där: fylla på vattenlås, titta efter spår och ingripa i tid. Det sköter <a href="/sv/tillsyn/">tillsynen av huset</a>.</li>
+  </ul>
+
+  <h2 id="firma">Anlita en skadedjursfirma</h2>
+  <p>En skadedjursfirma heter i Spanien <em>empresa de control de plagas</em> eller <em>DDD</em>-firma (desinsectación, desratización, desinfección). Tänk på följande:</p>
+  <ul>
+    <li>Firman måste vara registrerad i Junta de Andalucías officiella register för biocidtjänster (<em>ROESB</em>). Fråga efter numret.</li>
+    <li>Efter behandlingen får du ett intyg med de medel som använts och säkerhetstiden. Spara det, även för uthyrning eller försäljning.</li>
+    <li>Fråga efter garanti och om ett andra besök ingår i priset.</li>
+    <li>Hyr du ut huset förhindrar ett årsavtal klagomål från gäster.</li>
+  </ul>
+  <p>Skadedjursfirman bekämpar djuren, men tätar inte ingångarna. Det gör vi: vi hittar var de kommer in, tätar springor, avlopp och tak och byter angripet trä. <a href="/sv/forfragan/?dienst=onderhoud">Beskriv vad du ser</a>, gärna med några foton, så tittar vi på vad som behövs.</p>
+</Guide>

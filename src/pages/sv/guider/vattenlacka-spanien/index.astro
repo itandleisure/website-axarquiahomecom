@@ -1,0 +1,133 @@
+---
+import ArticlePhoto from '../../../../components/ArticlePhoto.astro';
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Det korta svaret' },
+  { id: 'direkt', label: 'Första hjälpen: de första tio minuterna' },
+  { id: 'hitta', label: 'Hitta läckan' },
+  { id: 'orsak', label: 'Tak, ledning, avlopp eller kondens?' },
+  { id: 'sjalv', label: 'Det här kan du laga själv' },
+  { id: 'fackman', label: 'När ringer du en rörmokare?' },
+  { id: 'betalar', label: 'Vem betalar skadan?' },
+  { id: 'forebygga', label: 'Förebygg läckor när du inte är där' },
+];
+
+const faq = [
+  {
+    q: 'Var sitter huvudkranen i ett spanskt hus?',
+    a: 'Oftast vid vattenmätaren (contador): i ett skåp på fasaden, i en brunn i trottoaren eller vid infarten till urbanisationen. Inne i huset finns ofta också en andra ventil (llave de paso) i kök, badrum eller vid varmvattenberedaren. Leta upp båda innan något händer, och stäng och öppna dem då och då så att de inte rostar fast.',
+  },
+  {
+    q: 'Betalar min försäkring vattenskadan?',
+    a: 'En vanlig hemförsäkring (seguro de hogar) täcker oftast vattenskador på hus och lösöre och ofta också läcksökningen. Reparationen av själva den trasiga ledningen är ibland undantagen. Skador som beror på bristande underhåll, till exempel ett tak som har läckt i flera år, avslås ofta. Anmäl skadan snabbt, ta foton och släng inget innan värderingsmannen har varit där.',
+  },
+  {
+    q: 'Grannarna ovanför orsakar en läcka hos mig. Vad gör jag?',
+    a: 'Varna grannarna direkt och be dem stänga sin huvudkran. Anmäl det sedan till din egen försäkring; den reder ut det med grannarnas försäkring. Kommer vattnet från en gemensam ledning eller från byggnadens tak är samfälligheten (comunidad) ansvarig. Informera förvaltaren (administrador) skriftligt.',
+  },
+  {
+    q: 'Min vattenräkning är plötsligt mycket hög. Har jag en läcka?',
+    a: 'Troligen. Gör mätartestet: stäng alla kranar, stäng av apparaterna och se om mätaren fortfarande går. Gör den det finns en läcka mellan mätaren och dina kranar. Ofta är det en toalett som står och rinner eller en läcka under jord i trädgården. Vissa vattenbolag sänker räkningen om du med en faktura visar att läckan har lagats.',
+  },
+];
+---
+<Guide lang="sv" slug="vattenlacka-spanien" toc={toc} faq={faq} dienst="onderhoud" ctaTitle="En läcka som du inte hittar eller inte litar på?" ctaText="Vi hittar läckan, lagar den och åtgärdar skadan. Även när du själv inte är i Spanien.">
+  <h2 id="kort">Det korta svaret</h2>
+  <p>Vid en läcka gäller: först <strong>stänga av vattnet</strong> och vid behov <strong>slå av strömmen</strong>, sedan <strong>ta foton</strong> och först därefter leta efter orsaken. Med vattenmätaren ser du på några minuter om en ledning läcker. Ett läckande tak syns framför allt efter regn, en läckande ledning även när det är torrt. Anmäl skador snabbt till din försäkring och, i en lägenhet, till grannarna eller samfälligheten.</p>
+
+  <h2 id="direkt">Första hjälpen: de första tio minuterna</h2>
+  <ol>
+    <li><strong>Stäng huvudkranen.</strong> Inne i huset heter den <em>llave de paso</em>, vid mätaren <em>llave del contador</em>. Vet du inte var den sitter är det nu du ska leta upp den.</li>
+    <li><strong>Slå av strömmen</strong> i rum där vatten kommer åt eluttag, lampor eller elcentralen. Rör inte blöta apparater.</li>
+    <li><strong>Stäng av varmvattenberedaren</strong> om läckan sitter på varmvattenledningen.</li>
+    <li><strong>Samla upp vattnet</strong> med hinkar och handdukar och ställ möbler, mattor och papper högt.</li>
+    <li><strong>Ta foton och filmer</strong> av skadan och läckan, med datum. Dem behöver du för försäkringen.</li>
+    <li><strong>Varna grannarna</strong> om vattnet kommer ovanifrån eller rinner nedåt.</li>
+  </ol>
+
+  <h2 id="hitta">Hitta läckan</h2>
+  <h3>Mätartestet</h3>
+  <p>Stäng alla kranar, stäng av tvättmaskin, diskmaskin och eventuell bevattning och titta på vattenmätaren. Står det lilla hjulet eller den röda stjärnan still? Då läcker ingen ledning. Snurrar den finns det en läcka någonstans mellan mätaren och kranarna. Skriv upp ställningen och kontrollera vid tvekan igen efter en timme.</p>
+  <h3>Leta själv</h3>
+  <ul>
+    <li><strong>Toaletten</strong>: droppa lite karamellfärg i cisternen. Finns det färg i skålen efter en kvart står spolningen och rinner. Det är den vanligaste orsaken till en hög vattenräkning.</li>
+    <li><strong>Fuktfläckar</strong>: en fläck som växer, även när det är torrt, tyder på en ledning. Följ den uppåt eller mot närmaste kran.</li>
+    <li><strong>Lösa eller ihåliga plattor</strong> och ett golv som känns varmt (vid en läcka på varmvattenledningen).</li>
+    <li><strong>Blöta fläckar i trädgården</strong> eller en påfallande grön rand i gräsmattan: en läcka på ledningen under jord.</li>
+    <li><strong>Under diskbänken och bakom tvättmaskinen</strong>: flexslangar och vattenlås går sönder först.</li>
+  </ul>
+  <h3>Läcksökning av ett fackföretag</h3>
+  <p>Hittar du inte läckan, låt inte bila upp väggar på måfå. Ett fackföretag för läcksökning (<em>detección de fugas</em>) arbetar utan att förstöra:</p>
+  <ul>
+    <li><strong>Termografi</strong>: en värmekamera visar var varmt eller kallt vatten rinner genom vägg eller golv.</li>
+    <li><strong>Akustiskt</strong>: en känslig mikrofon hör väsandet från en läcka under golvet.</li>
+    <li><strong>Spårgas</strong>: en ofarlig gas i ledningen läcker ut vid läckan och mäts. Bra för läckor under jord.</li>
+    <li><strong>Kamerainspektion</strong> av avlopp och ledningar.</li>
+  </ul>
+  <p>Många hemförsäkringar betalar läcksökningen. Fråga innan.</p>
+
+  <h2 id="orsak">Tak, ledning, avlopp eller kondens?</h2>
+  <ArticlePhoto name="condens-schimmel-raam" lang="sv" />
+  <table class="prices">
+    <thead><tr><th>Vad du ser</th><th>Trolig orsak</th></tr></thead>
+    <tbody>
+      <tr><td>Fläck i taket, bara efter regn</td><td>Tak eller takterrass. Se <a href="/sv/problem/taklacka/">läckande tak</a>.</td></tr>
+      <tr><td>Fläck som växer, även när det är torrt; mätaren går</td><td>Läckande vattenledning</td></tr>
+      <tr><td>Blöt fläck efter dusch eller disk; mätaren står still</td><td>Läckande avlopp, vattenlås eller fog</td></tr>
+      <tr><td>Blöta fläckar nederst på väggen, saltrand</td><td>Uppstigande fukt från marken</td></tr>
+      <tr><td>Droppar på fönster och kalla väggar på vintern, svarta prickar</td><td>Kondens. Se <a href="/sv/problem/fukt-och-mogel/">fukt och mögel</a>.</td></tr>
+      <tr><td>Vatten vid ytterväggen efter skyfall</td><td>Stuprör, hängränna eller tomtens dränering</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="sjalv">Det här kan du laga själv</h2>
+  <p>Små läckor kan du ofta åtgärda själv med reservdelar för några euro:</p>
+  <ul>
+    <li><strong>Droppande kran</strong>: ny packning eller patron. Ta med den gamla delen till järnhandeln (<em>ferretería</em>).</li>
+    <li><strong>Toalett som står och rinner</strong>: byt flottörventil eller packning i cisternen.</li>
+    <li><strong>Läckande vattenlås</strong>: skruva loss, rengör, sätt i en ny packning och dra åt för hand.</li>
+    <li><strong>Flexslang</strong> under kranen eller till tvättmaskinen: bytt på några minuter. Stäng först vinkelventilen.</li>
+    <li><strong>Silikonfog</strong> vid dusch eller badkar: ta bort den gamla fogen, låt torka, dra en ny sanitetsfog.</li>
+    <li><strong>Tak</strong>: lägg tillbaka en förskjuten takpanna eller täta en spricka i takterrassen provisoriskt. Gå aldrig upp på taket ensam; läs först <a href="/sv/gor-det-sjalv/laga-taket-sjalv/">laga taket själv</a>.</li>
+  </ul>
+
+  <h2 id="fackman">När ringer du en rörmokare?</h2>
+  <ul>
+    <li>Läckan sitter i väggen, i golvet eller under jord.</li>
+    <li>Huvudkranen stänger inte ordentligt eller har rostat fast.</li>
+    <li>Vatten har kommit åt elen.</li>
+    <li>Läckan kommer tillbaka efter din egen reparation.</li>
+    <li>Du har gamla järn- eller blyrör. Då är en läcka ofta bara början. Läs <a href="/sv/guider/byta-ror-och-varmvattenberedare-spanien/">byta rör och varmvattenberedare</a>.</li>
+  </ul>
+  <p>Det här kan vi hjälpa dig med:</p>
+  <ul>
+    <li>Laga kran, vattenlås eller toalett</li>
+    <li>Läcksökning av ett fackföretag</li>
+    <li>Laga en ledning i väggen, inklusive lagning och kakel</li>
+    <li>Åtgärda en läcka i en takterrass</li>
+    <li>Åtgärda vattenskador: torka, putsa, måla</li>
+    <li>Byta alla ledningar</li>
+  </ul>
+  <p><strong>En läcka som du inte kan eller vill åtgärda själv?</strong> Vi hittar läckan, lagar den och åtgärdar skadan, även när du inte är i Spanien. <a href="/sv/forfragan/?dienst=onderhoud">Berätta vad som har hänt</a>.</p>
+
+  <h2 id="betalar">Vem betalar skadan?</h2>
+  <ul>
+    <li><strong>Din egen hemförsäkring</strong> (<em>seguro de hogar</em>): täcker oftast vattenskador på hus och lösöre och ofta läcksökningen. Reparationen av själva ledningen eller en sliten del ibland inte. Leta i ditt villkor efter ”daños por agua” och ”localización de fugas”. Se också vår guide <a href="/sv/guider/hemforsakring-i-spanien/">hemförsäkring i Spanien</a>.</li>
+    <li><strong>Grannarna</strong>: kommer vattnet från deras lägenhet är det deras ansvarsförsäkring som gäller. Ditt försäkringsbolag sköter det oftast direkt.</li>
+    <li><strong>Samfälligheten</strong> (<em>comunidad de propietarios</em>): vid läckor från gemensamma ledningar, byggnadens tak eller fasad. Anmäl det skriftligt till förvaltaren.</li>
+    <li><strong>Du själv</strong>: vid slitage och bristande underhåll. Försäkringsbolag avslår om det visar sig att en läcka har funnits länge.</li>
+  </ul>
+  <p>Tips: anmäl skador inom sju dagar, spara trasiga delar och låt inget lagas definitivt innan värderingsmannen (<em>perito</em>) har varit där, om det inte behövs för att förhindra värre skador.</p>
+
+  <h2 id="forebygga">Förebygg läckor när du inte är där</h2>
+  <p>En läcka i ett tomt hus kan rinna i veckor. Det är den största enskilda skadan vi ser i fritidshus.</p>
+  <ul>
+    <li><strong>Stäng huvudkranen</strong> när du reser. Låt bara en separat ventil för bevattning eller pool vara öppen om det behövs.</li>
+    <li><strong>Vattenlarm</strong> under varmvattenberedare, tvättmaskin och diskmaskin som skickar ett meddelande till mobilen.</li>
+    <li><strong>En smart huvudkran</strong> som stänger automatiskt vid en läcka eller ovanlig förbrukning.</li>
+    <li><strong>Tak och hängrännor</strong> kontrollerade före regnperioden på hösten.</li>
+    <li><strong>Någon som regelbundet tittar till huset</strong>, spolar kranarna och kontrollerar mätaren. Precis det gör <a href="/sv/tillsyn/">tillsynen</a>.</li>
+  </ul>
+  <p class="note">Den här guiden ger allmän information för husägare i Axarquía i november 2026. Vad din försäkring betalar står i ditt eget försäkringsvillkor.</p>
+</Guide>

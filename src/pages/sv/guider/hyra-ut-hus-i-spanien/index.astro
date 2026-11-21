@@ -1,0 +1,177 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'val', label: 'Semesteruthyrning eller långtidsuthyrning?' },
+  { id: 'semester', label: 'Semesteruthyrning: tillstånd och regler' },
+  { id: 'langtid', label: 'Långtidsuthyrning: avtal och deposition' },
+  { id: 'skatt', label: 'Skatt när du inte bor i Spanien' },
+  { id: 'forsakring', label: 'Försäkring' },
+  { id: 'forbereda', label: 'Gör huset klart för uthyrning' },
+  { id: 'distans', label: 'Hyra ut på distans' },
+  { id: 'rakneexempel', label: 'Vad ger det? Ett räkneexempel' },
+  { id: 'steg', label: 'Steg för steg' },
+  { id: 'kallor', label: 'Källor' },
+];
+
+const faq = [
+  {
+    q: 'Får jag hyra ut min lägenhet i Axarquía som semesterbostad?',
+    a: 'Bara om den är registrerad i Andalusiens turistregister och uppfyller kraven. Vill du börja med semesteruthyrning i ett lägenhetsområde efter den 3 april 2025 behöver du först godkännande från tre femtedelar av samfälligheten. Kontrollera också att stadgarna inte redan förbjuder uthyrning, och fråga kommunen om begränsningar.',
+  },
+  {
+    q: 'Behöver jag fortfarande ett nationellt registreringsnummer?',
+    a: 'Nej. Det nationella registreringsnumret, som var obligatoriskt från den 1 juli 2025, ogiltigförklarades av Spaniens högsta domstol den 19 maj 2026. Du annonserar med numret från det andalusiska turistregistret. Plattformarna måste fortfarande lämna uppgifter till myndigheterna, och reglerna är i rörelse; kontrollera läget innan du börjar.',
+  },
+  {
+    q: 'Hur mycket skatt betalar jag på hyresintäkter om jag bor i Sverige?',
+    a: 'Som bosatt i EU betalar du i Spanien 19 % på nettot: hyran minus de kostnader du får dra av. Bosatta utanför EU och EES, till exempel i Storbritannien eller Schweiz, betalar 24 % på bruttohyran utan avdrag. Från och med hyrorna för 2026 deklarerar du en gång om året, 1 till 20 april. I Sverige deklarerar du också inkomsten, och den spanska skatten kan i regel räknas av så att du inte betalar dubbelt.',
+  },
+  {
+    q: 'Måste jag fortfarande deponera hyresgästens deposition hos Junta de Andalucía?',
+    a: 'Inte för nya avtal. Sedan den 24 januari 2026 behöver depositionen (fianza) inte längre lämnas till AVRA. Hyresgästen betalar fortfarande en månadshyra i deposition, men du förvarar den själv och betalar tillbaka den när avtalet slutar, minus eventuella skador eller skulder.',
+  },
+  {
+    q: 'Vad ger mest: semesteruthyrning eller långtidsuthyrning?',
+    a: 'Semesteruthyrning ger högre bruttohyra, men också klart mer kostnader och arbete: städning, förvaltning, plattformsavgifter, energi och slitage. För en vanlig lägenhet med betald förvaltning blir det med långtidsuthyrning ofta lika mycket eller mer kvar. Semesteruthyrning lönar sig framför allt för ett hus med pool eller utsikt som får höga priser, eller om du också vill använda det själv.',
+  },
+  {
+    q: 'Finns det en turistskatt i Axarquía?',
+    a: 'Nej. Andalusien tar (november 2026) inte ut någon turistskatt, och ingen kommun i Axarquía gör det heller. I Málaga diskuteras det, så håll ett öga på det.',
+  },
+];
+---
+<Guide lang="sv" slug="hyra-ut-hus-i-spanien" toc={toc} faq={faq} dienst="verhuurbeheer" ctaTitle="Hyra ut ditt hus utan att behöva vara på plats?" ctaText="Vi sköter hela uthyrningen på plats: tar emot gäster, städning och handdukar, fel, reparationer och underhåll. Du får ett pris i förväg.">
+  <p>Många ägare i Axarquía hyr ut sitt hus en del av året eller till och med hela året. Det kan ske som semesterbostad, per vecka eller natt, eller långsiktigt till en hyresgäst som bor där. Båda formerna har egna regler, egen skatt och egen arbetsinsats. Den här guiden samlar allt, med ett räkneexempel. Har du inget hus ännu och undrar vilken typ som passar för uthyrning? Läs först vår guide <a href="/sv/guider/finca-lagenhet-eller-byhus/fritidshus/">fritidshus: finca, lägenhet eller byhus</a> och, om du vill göra en verksamhet av det, sidan om <a href="/sv/guider/finca-lagenhet-eller-byhus/bed-and-breakfast/">B&amp;B</a>.</p>
+
+  <h2 id="val">Semesteruthyrning eller långtidsuthyrning?</h2>
+  <p>Det första valet är formen. Den avgör vilket tillstånd du behöver, hur mycket arbete det är och om du själv fortfarande kan bo där.</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th></th><th>Semesteruthyrning</th><th>Långtidsuthyrning</th></tr></thead>
+    <tbody>
+      <tr><td>Hyresgäst</td><td>Semesterfirare, per natt eller vecka</td><td>En fast hyresgäst, oftast i flera år</td></tr>
+      <tr><td>Tillstånd</td><td>Registrering i Andalusiens turistregister</td><td>Inget; ett hyresavtal enligt spansk hyreslag</td></tr>
+      <tr><td>Egen användning</td><td>Ja, de veckor huset inte är uthyrt</td><td>Nej, så länge avtalet löper</td></tr>
+      <tr><td>Bruttointäkt</td><td>Högre, men starkt säsongsberoende</td><td>Lägre, men samma varje månad</td></tr>
+      <tr><td>Kostnader och arbete</td><td>Höga: städning, gästbyten, förvaltning, energi, slitage</td><td>Låga: främst underhåll och fasta kostnader</td></tr>
+      <tr><td>Risk</td><td>Tomma veckor, dåliga omdömen, allt strängare regler</td><td>En hyresgäst som inte betalar eller inte flyttar</td></tr>
+      <tr><td>Passar för</td><td>Hus med pool, utsikt eller nära strand och by</td><td>Vanliga lägenheter och byhus, ägare som vill ha lite arbete</td></tr>
+    </tbody>
+  </table></div>
+  <p>Det finns också en mellanform: säsongsuthyrning (<em>alquiler de temporada</em>), till exempel till övervintrare eller personer som arbetar tillfälligt i området. Den faller under hyreslagen, inte turistreglerna, men bara om hyresgästen har ett verkligt tillfälligt skäl. Förlängs ett ”säsongsavtal” om och om igen kan en domstol se det som ett vanligt bostadshyresavtal. Låt en advokat skriva ett sådant avtal.</p>
+
+  <h2 id="semester">Semesteruthyrning: tillstånd och regler</h2>
+  <p>I Andalusien heter en semesterbostad officiellt <em>vivienda con fines turísticos</em> (VFT), i dagligt tal ofta VUT. Reglerna finns i ett dekret från Junta de Andalucía från 2016, som skärptes kraftigt 2024. Kortfattat:</p>
+  <ul>
+    <li><strong>Registrering i turistregistret.</strong> Du lämnar in en anmälan online (<em>declaración responsable</em>) till <em>Registro de Turismo de Andalucía</em>. Du får ett nummer som börjar med VFT/MA och som måste stå i varje annons. Därefter kan Junta kontrollera; den som inte uppfyller kraven stryks. I hela Andalusien har det redan drabbat över 2 400 bostäder.</li>
+    <li><strong>Krav på bostaden.</strong> Bland annat kyla och värme, fönster mot utsidan, möbler och sängkläder för antalet gäster, en förbandslåda, gästinformation och klagomålsblanketter (<em>hojas de reclamaciones</em>). Sedan 2024 gäller också minsta yta per gäst och ett högsta antal gäster. Bostaden måste dessutom enligt papperen vara beboelig; utan bevis på bostadsanvändning eller med oklara tillstånd kommer du inte vidare.</li>
+    <li><strong>Bara på bostadsmark.</strong> VFT-reglerna gäller för bostäder på stadsmark. En finca på landsbygdsmark faller under reglerna för landsbygdsturism (<em>vivienda turística de alojamiento rural</em>), med egna krav. För ett hus med AFO-status är turistuthyrning inte alltid möjlig. Se vår guide <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.</li>
+    <li><strong>Kommunen.</strong> Sedan 2024 får kommuner i Andalusien begränsa antalet semesterbostäder. Málaga stad har gjort det: sedan juli 2026 gäller där ett stopp för nya semesterbostäder i tre år. I Axarquía känner vi (november 2026) inte till några liknande stopp, men antalet ökar snabbt: Nerja har över 2 700 semesterbostäder, Frigiliana över 400. Fråga alltid på <em>ayuntamiento</em> innan du investerar.</li>
+    <li><strong>Samfälligheten.</strong> Sedan den 3 april 2025 behöver du i ett lägenhetsområde först godkännande från tre femtedelar av ägarna för att börja med semesteruthyrning. Bostäder som redan hyrdes ut lagligt får fortsätta. Dessutom kan stadgarna förbjuda uthyrning.</li>
+    <li><strong>Gästregistrering.</strong> Sedan december 2024 måste du rapportera omfattande uppgifter om varje gäst till polisen via systemet SES.Hospedajes. Många uthyrare låter bokningsprogrammet eller förvaltaren sköta det automatiskt.</li>
+    <li><strong>Inget nationellt nummer längre.</strong> Från den 1 juli 2025 krävdes utöver det andalusiska numret också ett nationellt registreringsnummer. Spaniens högsta domstol ogiltigförklarade det nationella registret den 19 maj 2026, eftersom turism är regionernas sak. Det andalusiska numret är fortfarande obligatoriskt. Andalusien arbetar på en ny turismlag, så reglerna kan ändras igen.</li>
+    <li><strong>Turistskatt.</strong> Finns inte i Andalusien (november 2026).</li>
+  </ul>
+  <p>Erbjuder du hotelliknande tjänster, till exempel daglig städning under vistelsen eller frukost, tillkommer 21 % moms. Vanlig uthyrning med slutstädning räknas inte dit.</p>
+
+  <h2 id="langtid">Långtidsuthyrning: avtal och deposition</h2>
+  <p>Hyr du ut till någon som ska bo där gäller den spanska hyreslagen (<em>Ley de Arrendamientos Urbanos</em>, LAU). Den skyddar hyresgäster starkt. De viktigaste reglerna:</p>
+  <ul>
+    <li><strong>Avtalstid.</strong> Du kan skriva avtal på ett år, men hyr du ut som privatperson får hyresgästen förlänga varje år upp till fem år. Säger ingen upp förlängs avtalet därefter med upp till tre år till. Hyresgästen kan säga upp efter sex månader med en månads varsel.</li>
+    <li><strong>Eget behov.</strong> Bara om det står i avtalet kan du säga upp efter första året för att du själv eller en nära anhörig ska flytta in. Ett fritidshus som du vill använda då och då passar därför dåligt för långtidsuthyrning.</li>
+    <li><strong>Deposition.</strong> Den lagstadgade depositionen (<em>fianza</em>) är en månadshyra. Därutöver får du begära högst två månadshyror i ytterligare säkerhet. Sedan den 24 januari 2026 behöver du i Andalusien inte längre lämna depositionen till Junta (AVRA); du förvarar den själv. Depositioner från äldre avtal ligger kvar hos AVRA tills avtalet upphör.</li>
+    <li><strong>Hyreshöjning.</strong> Bara om avtalet tillåter det, och för avtal sedan 2023 högst enligt spanska statistikmyndighetens hyresindex (IRAV). I Andalusien finns inga utpekade ”ansträngda bostadsmarknader”, så den nationella bostadslagens extra hyrestak gäller inte här.</li>
+    <li><strong>Mäklarkostnad.</strong> Anlitar du en mäklare för att hitta en hyresgäst betalar du själv. Sedan 2023 får kostnaden inte längre läggas på hyresgästen.</li>
+    <li><strong>Energideklaration.</strong> Obligatorisk även vid uthyrning, och den ska stå i annonsen; se <a href="/sv/guider/energideklaration-spanien/">energideklaration i Spanien</a>.</li>
+  </ul>
+  <p>Den största risken är en hyresgäst som slutar betala. En vräkning via domstol tar snabbt månader i Spanien. Kontrollera därför inkomst och referenser och överväg en hyresgarantiförsäkring (<em>seguro de impago</em>). Den kostar oftast cirka 3 till 5 % av årshyran.</p>
+
+  <h2 id="skatt">Skatt när du inte bor i Spanien</h2>
+  <p>Bor du i Sverige eller någon annanstans betalar du i Spanien inkomstskatt för icke-bosatta (<em>Impuesto sobre la Renta de no Residentes</em>, IRNR) på dina hyresintäkter:</p>
+  <ul>
+    <li><strong>Bosatta i EU, Island och Norge: 19 %</strong> på nettot. Avdragsgilla är kostnaderna för uthyrningen: räntor på bolån, underhåll och reparationer, IBI, avgifter till samfälligheten, försäkring, förvaltning och städning, plattformsavgifter, energi som du betalar och 3 % avskrivning per år på byggnadens värde (inte marken). Hyr du bara ut en del av året drar du av de fasta kostnaderna proportionellt.</li>
+    <li><strong>Bosatta i andra länder, till exempel Storbritannien eller Schweiz: 24 %</strong> på bruttohyran, utan avdrag.</li>
+    <li><strong>Deklaration.</strong> Du deklarerar med blankett 210. Från och med hyrorna för 2026 en gång om året, 1 till 20 april året därpå. Tidigare var det kvartalsvis.</li>
+    <li><strong>Veckor när huset står tomt.</strong> För dagarna utan uthyrning betalar du dessutom skatt på en schablonmässig inkomst: 1,1 % eller 2 % av taxeringsvärdet, proportionellt per dag. Det har en egen deklaration, 1 april till 31 december året därpå.</li>
+  </ul>
+  <p>Bosatta i Spanien betalar via den vanliga inkomstskatten och får vid långtidsuthyrning en nedsättning på nettohyran, som icke-bosatta inte får. I Sverige deklarerar du som bosatt här också hyresinkomsten, och den spanska skatten kan i regel räknas av mot den svenska. Låt en gestor eller skatterådgivare sköta deklarationerna; det kostar ofta några hundra euro om året. När vilken deklaration och vilket skattebesked ska betalas och hur du betalar från utlandet står i vår <a href="/sv/guider/skattekalender-spanien/">skattekalender</a>.</p>
+
+  <h2 id="forsakring">Försäkring</h2>
+  <p>En vanlig hemförsäkring täcker ofta inte uthyrning. Berätta för ditt försäkringsbolag att och hur du hyr ut. Se upp med:</p>
+  <ul>
+    <li><strong>Ansvar.</strong> Halkar en gäst vid poolen eller orsakar en läcka skador hos grannen ansvarar du som uthyrare. Välj ett generöst skydd. Plattformar erbjuder ibland egna garantier, men de ersätter ingen försäkring.</li>
+    <li><strong>Skador orsakade av hyresgäster eller gäster.</strong> Alla försäkringar täcker inte skador från de personer du hyr ut till. Fråga.</li>
+    <li><strong>Utebliven hyra.</strong> Vid långtidsuthyrning: <em>seguro de impago</em>, se ovan.</li>
+    <li><strong>Tomt hus.</strong> Vissa försäkringar täcker inte inbrott eller vattenskador om huset står tomt länge eller inte kontrolleras regelbundet. Låt någon ha tillsyn och spara rapporterna. Mer i <a href="/sv/guider/hemforsakring-i-spanien/">hemförsäkring i Spanien</a>.</li>
+  </ul>
+
+  <h2 id="forbereda">Gör huset klart för uthyrning</h2>
+  <p>Hyresgäster och gäster är mer kritiska än du själv. Det du som ägare står ut med blir vid uthyrning ett dåligt omdöme eller ett klagomål. Planera för:</p>
+  <ul>
+    <li><strong>Luftkonditionering och värme</strong> i vardagsrum och sovrum. För en semesterbostad är kyla och värme obligatoriskt, och i juli och augusti oumbärligt.</li>
+    <li><strong>Fukt och läckor</strong> åtgärdar du först. En mögelfläck på ett foto kostar bokningar. Se <a href="/sv/problem/fukt-och-mogel/">fukt och mögel</a> och <a href="/sv/problem/taklacka/">läckande tak</a>.</li>
+    <li><strong>En pålitlig pool</strong> och en välskött trädgård. Se <a href="/sv/pool/">pool</a>.</li>
+    <li><strong>Badrum och kök som tål något.</strong> Gäster använder dem mer än du. Att byta ett omodernt badrum före uthyrningen lönar sig ofta; en prisindikation ger <a href="/sv/kostnader/kalkylator/">kostnadskalkylatorn</a>.</li>
+    <li><strong>El och wifi</strong> som klarar det: en gäst laddar en bil, slår på tre luftkonditioneringar och jobbar hemifrån.</li>
+  </ul>
+  <p>För en semesterbostad lönar det sig ofta att renovera allt i ett svep och först därefter låta fotografera. Vi ger dig ett pris i förväg; se <a href="/sv/renovering/">renovering</a> och <a href="/sv/underhall/">underhåll och reparationer</a>.</p>
+
+  <h2 id="distans">Hyra ut på distans</h2>
+  <p>De flesta ägare i Axarquía bor inte i Spanien. Då fungerar uthyrning bara om någon på plats sköter det praktiska. Det kan du dela upp på nyckelhållare, städfirma och uthyrningsförvaltning, eller lägga i en hand:</p>
+  <ul>
+    <li><strong>Nycklar och kontroll.</strong> Någon som har nycklarna, kontrollerar huset när gäster eller hyresgäster har rest och agerar när något går fel. Med <a href="/sv/tillsyn/">tillsyn</a> har du en fast kontaktperson för det.</li>
+    <li><strong>Åtgärda fel snabbt.</strong> En trasig luftkonditionering i augusti eller ett stopp i avloppet måste lagas inom en dag, annars kräver gästen pengarna tillbaka. Kom överens i förväg om vem som gör det och upp till vilket belopp som får repareras utan att fråga dig.</li>
+    <li><strong>Städning, sängkläder och handdukar</strong> mellan gästerna, vid semesteruthyrning.</li>
+    <li><strong>Gästkontakt och överenskommelser.</strong> Svara på gästernas frågor, komma överens om ankomsttider och lämna över nycklarna. Bokningar kan du sköta själv via plattformarna eller låta förvalta; en uthyrningsförvaltning tar ofta 15 till 25 % av hyresintäkterna.</li>
+    <li><strong>Underhåll året runt.</strong> Även när ingen är där: pool, trädgård, takterrassen före höstregnen och luftkonditioneringen före sommaren. Så blir ett litet problem inte en tom vecka mitt i säsongen.</li>
+  </ul>
+  <p>Vi gör allt det från ett team: nycklar och kontroller, ta emot gäster och komma överens, städning och handdukar och, eftersom vi själva är hantverkare, även reparationer och underhåll. Då har du en kontaktperson för uthyrningen och för huset. Mer om <a href="/sv/uthyrningsservice/">uthyrningsservice</a> och <a href="/sv/tillsyn/">tillsyn</a>.</p>
+
+  <h2 id="rakneexempel">Vad ger det? Ett räkneexempel</h2>
+  <p>En lägenhet med två sovrum i Torre del Mar, ägaren bor i Sverige. Byggnadens värde (utan mark) 150 000 €, taxeringsvärde 90 000 €. Alla belopp är antaganden för att illustrera.</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Per år</th><th>Semesteruthyrning</th><th>Långtidsuthyrning</th></tr></thead>
+    <tbody>
+      <tr><td>Hyra</td><td>140 nätter × 110 € = 15 400 €</td><td>12 × 950 € = 11 400 €</td></tr>
+      <tr><td>Uthyrningsförvaltning (20 %) eller mäklare</td><td>− 3 080 €</td><td>− 230 € (en månadshyra vart femte år)</td></tr>
+      <tr><td>Städning och tvätt</td><td>− 1 500 € (25 byten)</td><td>–</td></tr>
+      <tr><td>El, vatten, internet</td><td>− 1 800 €</td><td>Betalas av hyresgästen</td></tr>
+      <tr><td>Samfällighet</td><td>− 1 200 €</td><td>− 1 200 €</td></tr>
+      <tr><td>IBI och sophämtning</td><td>− 450 €</td><td>− 450 €</td></tr>
+      <tr><td>Försäkring</td><td>− 350 €</td><td>− 800 € (inklusive hyresgaranti)</td></tr>
+      <tr><td>Underhåll och slitage</td><td>− 800 €</td><td>− 600 €</td></tr>
+      <tr><td>Gestor och deklarationer</td><td>− 400 €</td><td>− 300 €</td></tr>
+      <tr><td><strong>Kvar före skatt</strong></td><td><strong>5 820 €</strong></td><td><strong>7 820 €</strong></td></tr>
+      <tr><td>Spansk skatt (19 %, efter kostnader och avskrivning)</td><td>− 1 010 €</td><td>− 630 €</td></tr>
+      <tr><td>Skatt på de tomma dagarna</td><td>− 115 €</td><td>–</td></tr>
+      <tr><td><strong>Kvar efter spansk skatt</strong></td><td><strong>ca 4 700 €</strong></td><td><strong>ca 7 200 €</strong></td></tr>
+    </tbody>
+  </table></div>
+  <p>Vid semesteruthyrningen är fasta kostnader och avskrivning avdragna proportionellt för 140 uthyrda dagar (3 % av 150 000 € × 140/365). Vid långtidsuthyrningen är hela året avdragsgillt. Bor ägaren i Storbritannien blir skillnaden ännu större: 24 % på bruttohyran ger cirka 3 840 € i skatt vid semesteruthyrning mot 2 740 € vid långtidsuthyrning.</p>
+  <p>Vad exemplet visar: för en vanlig lägenhet med betald förvaltning blir det vid långtidsuthyrning ofta mer kvar, med mycket mindre arbete. Semesteruthyrning lönar sig framför allt vid högre priser, till exempel med pool eller havsutsikt, om du gör mycket själv eller vill använda huset själv. Dina egna veckor är inte medräknade i exemplet.</p>
+  <p class="note">Räkneexempel med antaganden, gjort 5 november 2026. Ditt resultat beror på läge, priser, beläggning och din skattesituation. Låt en gestor eller skatterådgivare räkna med.</p>
+
+  <h2 id="steg">Steg för steg</h2>
+  <ol>
+    <li><strong>Välj form</strong>: semester-, säsongs- eller långtidsuthyrning. Räkna på båda med dina egna siffror.</li>
+    <li><strong>Kontrollera att det är tillåtet</strong>: markklassning, husets papper, kommunen och för en lägenhet stadgar och samfällighet.</li>
+    <li><strong>Gör huset klart för uthyrning</strong>: åtgärda brister, luftkonditionering, energideklaration och den föreskrivna utrustningen.</li>
+    <li><strong>Ordna papperen</strong>: registrering i turistregistret eller ett ordentligt hyresavtal från advokat. Anpassa din försäkring.</li>
+    <li><strong>Ordna skötseln på plats</strong>: nycklar, kontroller, städning, fel och underhåll.</li>
+    <li><strong>Ordna skatten</strong>: en gestor för blankett 210 och deklarationen i ditt hemland.</li>
+  </ol>
+  <p>Vill du hyra ut ditt hus och söker någon på plats? Vi sköter uthyrningen på plats: tar emot gäster, städning och handdukar, kontroller mellan hyresgäster och gäster samt reparationer, underhåll och en eventuell uppfräschning. Be om <a href="/sv/forfragan/?dienst=verhuurbeheer">uthyrningsförvaltning</a> eller en offert för <a href="/sv/forfragan/?dienst=renovatie">renovering</a> eller <a href="/sv/forfragan/?dienst=onderhoud">underhåll</a>. Frågor? Mejla <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+
+  <h2 id="kallor">Källor</h2>
+  <ul>
+    <li>Semesterbostäder i Andalusien: Decreto 28/2016 av den 2 februari 2016, ändrat genom Decreto 31/2024 av den 29 januari 2024 (Junta de Andalucía).</li>
+    <li>Samfällighetens godkännande: Ley Orgánica 1/2025 (BOE, 3 januari 2025), ändring av artikel 17.12 i Ley de Propiedad Horizontal, i kraft sedan 3 april 2025.</li>
+    <li>Nationellt register ogiltigförklarat: Tribunal Supremo, dom 620/2026 av den 19 maj 2026, om Real Decreto 1312/2024; se idealista/news, 21 maj 2026.</li>
+    <li>Gästregistrering: Real Decreto 933/2021, i kraft sedan 2 december 2024.</li>
+    <li>Hyresrätt: Ley 29/1994 de Arrendamientos Urbanos, ändrad genom Ley 12/2023 (bostadslagen, BOE 25 maj 2023).</li>
+    <li>Deposition inte längre hos AVRA: Ley 5/2025 de Vivienda de Andalucía (BOJA, 24 december 2025), sjätte tilläggsbestämmelsen, i kraft sedan 24 januari 2026.</li>
+    <li>Skatt för icke-bosatta: Real Decreto Legislativo 5/2004, artikel 24 och 25; årlig deklaration av hyresintäkter: Orden HAC/623/2026 (BOE, 23 juni 2026).</li>
+    <li>Antal semesterbostäder i Nerja och Frigiliana: El Español Málaga, 25 juni 2026. Stopp i Málaga stad: Málaga stad, juli 2026.</li>
+  </ul>
+  <p class="note">Kontrollerat 5 november 2026. Den här guiden ger allmän information och är ingen juridisk eller skattemässig rådgivning. Reglerna för uthyrning har ändrats snabbt de senaste åren; låt en advokat, gestor eller skatterådgivare granska din situation innan du börjar.</p>
+</Guide>

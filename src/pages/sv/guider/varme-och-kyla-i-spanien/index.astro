@@ -1,0 +1,134 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'vinter', label: 'Varför värma i södra Spanien?' },
+  { id: 'jamforelse', label: 'Alla uppvärmningssätt jämförda' },
+  { id: 'luftvarmepump', label: 'Luftkonditionering och värmepump' },
+  { id: 'aerotermia', label: 'Aerotermia och golvvärme' },
+  { id: 'ved', label: 'Braskamin och öppen spis' },
+  { id: 'pellets', label: 'Pelletskamin' },
+  { id: 'gasol', label: 'Gasolkamin med butan' },
+  { id: 'el', label: 'Elelement och infravärme' },
+  { id: 'valja', label: 'Vad passar ditt hus?' },
+  { id: 'svalka', label: 'Håll huset svalt på sommaren' },
+];
+
+const faq = [
+  {
+    q: 'Vilket är det billigaste sättet att värma huset i Spanien?',
+    a: 'Per kWh värme är en luftkonditionering med värmepump och en braskamin med egen eller billig ved billigast, cirka 0,05 till 0,07 €. Med solceller blir luftkonditioneringen ännu billigare under dagen. Ett enkelt elelement är dyrast, cirka 0,18 € per kWh.',
+  },
+  {
+    q: 'Är en gasolkamin med butan farlig?',
+    a: 'Inte om den används rätt: alltid med lite ventilation, aldrig i sovrum eller badrum och med en kamin som har syrebristvakt. Sätt upp en kolmonoxidvarnare intill. En butankamin avger dock mycket fukt, vilket ger kondens och mögel.',
+  },
+  {
+    q: 'Behöver jag golvvärme i Spanien?',
+    a: 'Inte nödvändigtvis, men klinkergolv är kalla på vintern. Elektrisk golvvärme i badrummet är en överkomlig lyx. För hela huset är golvvärme med värmepump (aerotermia) bekvämt och sparsamt, framför allt vid en stor renovering.',
+  },
+  {
+    q: 'Kan jag värma en finca utan elnät?',
+    a: 'Ja. En braskamin fungerar utan el och är standard där. En pelletskamin behöver lite el. En luftkonditionering går bara soliga dagar eller med ett stort batteri. Se guiden om att bo off grid.',
+  },
+];
+---
+<Guide lang="sv" slug="varme-och-kyla-i-spanien" toc={toc} faq={faq} dienst="energie" ctaTitle="Vill du ha råd om värme eller kyla?" ctaText="Berätta hur stort ditt hus är, var det ligger och hur du använder det. Du får råd om den bästa uppvärmningen och ett pris.">
+  <h2 id="vinter">Varför värma i södra Spanien?</h2>
+  <p>Under dagen är det i Axarquía även i januari ofta 16 till 18 grader i solen. På kvällen och natten sjunker det vid kusten till 6 till 10 grader, i bergsbyarna ibland ner mot nollan. Spanska hus är byggda för att hålla sig svala: tjocka murar, klinkergolv, enkelglas och ofta ingen centralvärme. Inomhus är det därför på vintern ofta kallare än ute i middagssolen.</p>
+  <p>Det finns alltså inte ett bästa sätt att värma. Det beror på ditt hus, hur ofta du är där och om du vill ha ett par rum eller hela huset varmt. Nedan jämför vi alla vanliga sätt.</p>
+
+  <h2 id="jamforelse">Alla uppvärmningssätt jämförda</h2>
+  <p>Riktvärden för 2026. Kostnaden per kWh värme räknar med el för 0,18 € per kWh, en butanflaska för cirka 17 € och torkad olivved för 150 till 250 € per ton.</p>
+  <div class="table-scroll">
+  <table class="prices">
+    <thead><tr><th>Sätt</th><th>Värmer</th><th>Inköp och installation</th><th>Per kWh värme</th></tr></thead>
+    <tbody>
+      <tr><td>Luftkonditionering med värmepump (split)</td><td>Per rum, eller flera med multisplit</td><td>1 000–2 000 € per rum</td><td>± 0,05–0,06 €</td></tr>
+      <tr><td>Aerotermia med golvvärme</td><td>Hela huset</td><td>10 000–20 000 €</td><td>± 0,05–0,06 €</td></tr>
+      <tr><td>Braskamin</td><td>Vardagsrummet, med varmluft även delar av huset</td><td>2 500–6 000 €</td><td>± 0,05–0,07 €</td></tr>
+      <tr><td>Pelletskamin</td><td>Vardagsrummet, eller hela huset med radiatorer</td><td>3 000–7 000 €</td><td>± 0,08–0,09 €</td></tr>
+      <tr><td>Gasolkamin med butan</td><td>Ett rum</td><td>80–200 €</td><td>± 0,10–0,12 €</td></tr>
+      <tr><td>Infravärmepanel</td><td>Ett rum eller en plats</td><td>150–500 € per panel</td><td>± 0,18 €</td></tr>
+      <tr><td>Elelement eller oljeradiator</td><td>Ett rum</td><td>30–200 €</td><td>± 0,18 €</td></tr>
+      <tr><td>Elektrisk golvvärme</td><td>Badrum eller ett rum</td><td>40–70 € per m²</td><td>± 0,18 €</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Med <a href="/sv/kostnader/solceller/">solceller</a> blir allt som går på el betydligt billigare under dagen, och med <a href="/sv/kostnader/smart-energistyrning/">smart energistyrning</a> förvärmer huset precis under de billigaste timmarna.</p>
+
+  <h2 id="luftvarmepump">Luftkonditionering och värmepump</h2>
+  <p>Nästan varje modern luftkonditionering i Spanien är en värmepump (<em>bomba de calor</em>): den kyler på sommaren och värmer på vintern. Av 1 kWh el gör den 3 till 4 kWh värme. Vid kusten, där det sällan fryser, fungerar det bra året runt.</p>
+  <ul>
+    <li><strong>Fördelar:</strong> billig i drift, snabbt varmt, kyla på sommaren, ingen lukt, kan slås på på distans och passar bra med solceller.</li>
+    <li><strong>Nackdelar:</strong> blåser luft, vilket inte alla gillar; värmer uppifrån, så golvet förblir kallt; utedel på fasad eller tak.</li>
+    <li><strong>Passar för:</strong> nästan varje lägenhet och hus vid kusten, och som komplement i bergen.</li>
+  </ul>
+  <p>Priser per typ i <a href="/sv/kostnader/luftkonditionering-och-varmepump/">kostnader för luftkonditionering och värmepump</a>.</p>
+
+  <h2 id="aerotermia">Aerotermia och golvvärme</h2>
+  <p><em>Aerotermia</em> är en värmepump som värmer vatten i stället för luft. Vattnet går till golvvärme, radiatorer och ofta också till varmvattenberedaren. Den spanska versionen av centralvärme, men sparsam.</p>
+  <ul>
+    <li><strong>Fördelar:</strong> hela huset jämnt varmt, varma fötter på klinker, tyst, ingen lukt, även varmvatten, mycket billigt med solceller.</li>
+    <li><strong>Nackdelar:</strong> hög investering; golvvärme kräver nytt golv, så det lönar sig framför allt vid en stor renovering eller nybygge. Värmer upp långsamt, och passar därför sämre i ett hus som du bara använder ibland.</li>
+    <li><strong>Passar för:</strong> ett hus som du bor i året runt eller ändå renoverar helt.</li>
+  </ul>
+  <p>Vill du bara ha varma fötter i badrummet är en elektrisk värmematta under klinkern en billig lösning.</p>
+
+  <h2 id="ved">Braskamin och öppen spis</h2>
+  <p>I byarna och på fincorna är braskaminen fortfarande favoriten. Olivved från beskärningen är lätt att få tag på i Axarquía.</p>
+  <ul>
+    <li><strong>Fördelar:</strong> stämning, strålningsvärme som också värmer tjocka murar, billigt med egen eller lokal ved, fungerar utan el.</li>
+    <li><strong>Nackdelar:</strong> hämta, lagra och torka ved; aska och damm; vedrök luktar, även hos grannen; skorstenen måste sotas varje år. Värmer främst rummet där den står.</li>
+    <li><strong>Passar för:</strong> byhus och fincor, bergsbyar, att bo off grid.</li>
+  </ul>
+  <p>En <strong>öppen spis</strong> är mysig, men tar bara ut 10 till 20 % av värmen ur veden och drar varm luft upp i skorstenen. En insats eller braskamin i den befintliga spisen ger tre till fyra gånger så mycket värme. Se <a href="/sv/kostnader/skorsten-och-braskamin/">kostnader för skorsten och braskamin</a> och, om den ryker in, <a href="/sv/problem/kaminen-ryker-in/">kaminen ryker in</a>.</p>
+
+  <h2 id="pellets">Pelletskamin</h2>
+  <p>En pelletskamin eldar pressade träpellets från ett förrådsmagasin, med termostat och timer.</p>
+  <ul>
+    <li><strong>Fördelar:</strong> automatisk, renare än ved, styrs efter temperatur, kan slås på på distans, pelletssäckar är lätta att köpa och lagra. En vattenmantlad pelletskamin värmer hela huset via radiatorer.</li>
+    <li><strong>Nackdelar:</strong> behöver el för fläkt och tändning; surrar hörbart; underhåll och årlig sotning; dyrare i inköp än en braskamin.</li>
+    <li><strong>Passar för:</strong> den som vill ha värmen från en kamin utan att bära ved, även i ett hus som du vill förvärma på distans.</li>
+  </ul>
+
+  <h2 id="gasol">Gasolkamin med butan</h2>
+  <p>Den rullbara kaminen med en orange butanflaska inuti finns i många spanska hem.</p>
+  <ul>
+    <li><strong>Fördelar:</strong> billig i inköp, snabbt varmt, flyttbar, fungerar utan el.</li>
+    <li><strong>Nackdelar:</strong> avger mycket vattenånga, vilket ger kondens och mögel; gaslukt; risk för kolmonoxid, så vädra alltid och aldrig i sovrum eller badrum; bära och byta flaskor.</li>
+    <li><strong>Passar för:</strong> att då och då snabbt värma ett rum, som nödlösning. Inte som fast uppvärmning i ett hus som redan är fuktigt.</li>
+  </ul>
+  <p>Problem med fukt? Läs <a href="/sv/problem/fukt-och-mogel/">fukt och mögel</a> och <a href="/sv/problem/drag-och-kondens-vid-fonster/">drag och kondens vid fönster</a>.</p>
+
+  <h2 id="el">Elelement och infravärme</h2>
+  <ul>
+    <li><strong>Oljeradiator eller konvektor:</strong> billig att köpa och enkel, men dyr i drift. Praktisk för ett gästrum som du använder några gånger om året.</li>
+    <li><strong>Infravärmepanel:</strong> en platt panel på vägg eller tak som värmer människor och väggar i stället för luften, som solen. Känns varm redan vid lägre lufttemperatur, inget drag och ingen lukt. Per kWh lika dyr som annan elvärme, men sparsam om du bara värmer platsen där du sitter. Bra för badrum, arbetsplats eller terrass.</li>
+    <li><strong>Se upp med effekten:</strong> flera elelement samtidigt kan lösa ut säkringen. Se <a href="/sv/problem/stromavbrott/">strömmen går hela tiden</a>.</li>
+  </ul>
+
+  <h2 id="valja">Vad passar ditt hus?</h2>
+  <table class="prices">
+    <thead><tr><th>Situation</th><th>Vårt råd</th></tr></thead>
+    <tbody>
+      <tr><td>Lägenhet vid kusten</td><td>Luftkonditionering med värmepump i vardagsrum och sovrum, eventuellt elektrisk golvvärme i badrummet</td></tr>
+      <tr><td>Fritidshus, några månader om året</td><td>Luftkonditionering med värmepump, som kan slås på på distans så att det är varmt när du kommer</td></tr>
+      <tr><td>Byhus med tjocka murar</td><td>Bras- eller pelletskamin i vardagsrummet, luftkonditionering i sovrummen</td></tr>
+      <tr><td>Bebott året runt, stor renovering</td><td>Aerotermia med golvvärme, tillsammans med solceller</td></tr>
+      <tr><td>Finca i bergen</td><td>Braskamin som bas, luftkonditionering eller pelletskamin som komplement</td></tr>
+      <tr><td>Finca off grid</td><td>Braskamin, luftkonditionering bara på dagen med solel; se <a href="/sv/guider/bo-off-grid-i-spanien/">bo off grid</a></td></tr>
+    </tbody>
+  </table>
+  <p>Vilken uppvärmning du än väljer: bra <a href="/sv/kostnader/fonster-och-karmar/">fönster med dubbelglas</a> och att täta drag ger ofta mer än en starkare kamin. Mer om det i <a href="/sv/guider/isolera-hus-i-spanien/">isolera huset i Spanien</a>.</p>
+
+  <h2 id="svalka">Håll huset svalt på sommaren</h2>
+  <p>I juli och augusti är det 28 till 32 grader vid kusten, i inlandet ibland över 38. Bara en luftkonditionering kyler verkligen, men det finns mer att göra:</p>
+  <ul>
+    <li><strong>Rullgardiner och markiser</strong> stängda under dagen på sol- och västsidan; se <a href="/sv/guider/solskydd-persienner-myggnat-spanien/">solskydd och persienner</a>.</li>
+    <li><strong>Vädra på natten</strong>, när det är svalare ute, och stäng allt under dagen.</li>
+    <li><strong>Takfläktar</strong> känns 3 till 4 grader svalare och drar lite el.</li>
+    <li><strong>Solskyddsglas</strong> och ett isolerat tak eller en isolerad takterrass håller värmen ute.</li>
+    <li><strong>En luftkonditionering med solel</strong> kyler precis när solen är som starkast, alltså nästan gratis.</li>
+  </ul>
+</Guide>

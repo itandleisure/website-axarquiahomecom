@@ -1,0 +1,105 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
+
+const toc = [
+  { id: 'tre', label: 'Tre sorters hus' },
+  { id: 'jamforelse', label: 'Jämförelse i en tabell' },
+  { id: 'tillganglighet', label: 'Tillgänglighet' },
+  { id: 'service', label: 'Service och butiker' },
+  { id: 'underhall', label: 'Underhåll och löpande kostnader' },
+  { id: 'renovering', label: 'Renoveringskostnader' },
+  { id: 'status', label: 'Rättslig status (AFO)' },
+  { id: 'uthyrning', label: 'Semesteruthyrning och licens' },
+  { id: 'malgrupp', label: 'Vad passar dig?' },
+];
+
+const faq = [
+  {
+    q: 'Är en finca dyrare att underhålla än en lägenhet?',
+    a: 'Oftast ja. I en lägenhet delar du kostnaderna för tak, fasad, hiss och pool med de andra ägarna via månadsavgiften till samfälligheten. På en finca betalar du allt själv: tomten, tillfartsvägen, avloppsbrunnen, vattenförsörjningen och ofta en pool. Räkna med några tusen euro i underhåll per år för en finca med mark, utan större reparationer.',
+  },
+  {
+    q: 'Får jag hyra ut min finca till turister?',
+    a: 'Det beror på markens klassning och husets status. Den vanliga regeln för semesterbostäder i Andalusien (vivienda con fines turísticos) gäller bostäder på tomtmark för bostäder. För hus på landsbygdsmark gäller reglerna för landsbygdsturism med egna krav, och ett hus med AFO-status går inte alltid att hyra ut. Låt kontrollera det före köpet.',
+  },
+  {
+    q: 'Kan samfälligheten förbjuda semesteruthyrning i min lägenhet?',
+    a: 'Sedan april 2025 behöver en ägare som vill börja hyra ut en lägenhet till turister först samfällighetens godkännande med tre femtedels majoritet. Läs därför stadgarna och protokollen från de senaste stämmorna före köpet om du vill hyra ut.',
+  },
+  {
+    q: 'Är ett byhus en bra kompromiss?',
+    a: 'Ofta ja. Du bor på gångavstånd från bageri, bar och läkare, på tomtmark där det är lättare att bygga om än på landsbygden, och utan månadsavgift. Baksidan: lite utomhusyta förutom en takterrass, trappor, grannar på andra sidan väggen och gränder där du inte alltid kommer fram med bil.',
+  },
+];
+---
+<Guide lang="sv" slug="finca-lagenhet-eller-byhus" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Tvekar du mellan två hus?" ctaText="Vi tittar på båda och berättar vad som behöver göras i varje hus och vad det kostar. Då jämför du mer än bara köpesumman.">
+  <h2 id="tre">Tre sorters hus</h2>
+  <p>I Axarquía väljer de flesta utländska köpare mellan tre typer av hus. De skiljer sig inte bara i karaktär, utan också i hur du lever där, vad underhållet kostar och vad som är tillåtet rent juridiskt.</p>
+  <ul>
+    <li><strong>Fincan</strong>: ett hus på landet med mark, ofta med oliv-, mandel-, avokado- eller mangoträd. Juridiskt står det på landsbygdsmark (<em>suelo rústico</em>). Mycket plats och lugn, men du ansvarar för allt själv. Läs också vår guide <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca i Spanien</a>.</li>
+    <li><strong>Lägenheten</strong>: oftast vid kusten, i Torre del Mar, Nerja, Torrox Costa eller Rincón de la Victoria, eller i ett område i sluttningarna ovanför. Ofta med gemensam pool. Samfälligheten (<em>comunidad de propietarios</em>) sköter de gemensamma ytorna.</li>
+    <li><strong>Byhuset</strong> (<em>casa de pueblo</em>): ett smalt, högt hus i en vit by som Cómpeta, Frigiliana eller Canillas de Albaida. Tjocka väggar, en takterrass och allt på gångavstånd. Det står på tomtmark i byn.</li>
+  </ul>
+  <p>Dessutom finns villor i sluttningarna ovanför kusten. De hamnar mittemellan: avskildhet och egen pool som på en finca, men ofta på tomtmark och vid en asfalterad väg.</p>
+
+  <h2 id="jamforelse">Jämförelse i en tabell</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th></th><th>Finca</th><th>Lägenhet</th><th>Byhus</th></tr></thead>
+    <tbody>
+      <tr><td>Tillgänglighet</td><td>Bil krävs, ibland grusväg</td><td>Bra, ofta nära A-7</td><td>Byn är lätt att nå, huset självt inte alltid med bil</td></tr>
+      <tr><td>Service</td><td>Du kör till allt</td><td>Gångavstånd</td><td>Gångavstånd, mindre utbud än vid kusten</td></tr>
+      <tr><td>Plats och avskildhet</td><td>Mycket</td><td>Lite, grannar över och bredvid dig</td><td>Rymligt inne, ute mest takterrassen</td></tr>
+      <tr><td>Eget underhåll</td><td>Mycket: tomt, väg, vatten, avlopp, pool</td><td>Lite, samfälligheten sköter mycket</td><td>Medel: tak, fasad, fukt</td></tr>
+      <tr><td>Löpande kostnader</td><td>Höga (underhåll, vatten, ev. el)</td><td>Månadsavgift</td><td>Låga</td></tr>
+      <tr><td>Rättslig status</td><td>Ofta värt att kontrollera (AFO)</td><td>Oftast enkel</td><td>Oftast enkel, se upp med tillbyggnader</td></tr>
+      <tr><td>Semesteruthyrning</td><td>Andra regler (landsbygd)</td><td>Samfällighetens godkännande krävs</td><td>Oftast möjligt, kontrollera med kommunen</td></tr>
+      <tr><td>Tillsyn när du är borta</td><td>Viktig</td><td>Mindre kritisk</td><td>Medel</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">En allmän bild. Varje hus är olika; fakta om ett visst hus får du ur papperen och en besiktning.</p>
+
+  <h2 id="tillganglighet">Tillgänglighet</h2>
+  <p>En lägenhet vid kusten ligger oftast nära motorvägen A-7. Från Torre del Mar kör du omkring 40 minuter till Málagas flygplats. Bussar går längs kusten och till Vélez-Málaga och Málaga.</p>
+  <p>Ett byhus i bergen ligger längre bort: från Cómpeta eller Canillas de Albaida är det drygt en timme till flygplatsen, på slingriga vägar. Byn har bussförbindelse, men bara några turer om dagen. Tänk på själva huset: i den gamla bykärnan är gränderna ofta för smala eller branta för en bil. Matkassar, resväskor och byggmaterial bärs den sista biten eller körs med skottkärra.</p>
+  <p>En finca kräver mest. Utan bil går ingenting, och ofta behöver du två om två personer arbetar eller barnen ska till skolan. Den sista biten är ofta en grusväg över grannarnas mark. Efter kraftigt regn kan den vara svårframkomlig i flera dagar. Fråga vem som underhåller vägen och om vägrätten står inskriven i fastighetsregistret. Kör den gärna själv en gång när det är mörkt.</p>
+
+  <h2 id="service">Service och butiker</h2>
+  <p>Vid kusten har du allt på gångavstånd: mataffärer, läkare, apotek, restauranger och internationella butiker. Regionsjukhuset ligger i Vélez-Málaga. I en by som Cómpeta, Frigiliana eller Torrox finns en vårdcentral (<em>centro de salud</em>), ett apotek, en lågstadieskola, bagerier, barer och en liten mataffär. För storhandling eller byggvaruhuset åker du ner till kusten.</p>
+  <p>Från en finca kör du till allt: bröd, läkare, en kväll på restaurang. Första året känns det som semester. Efter några år, eller när du blir äldre, kan det bli en börda. Utanför byarna går internet oftast via 4G/5G eller satellit; fiber är sällsynt där.</p>
+
+  <h2 id="underhall">Underhåll och löpande kostnader</h2>
+  <p><strong>Lägenhet.</strong> Du betalar en månadsavgift till samfälligheten. Med den underhålls tak, fasad, hiss, trädgård och pool. I Axarquía ligger avgiften ofta mellan 50 och 250 € i månaden, beroende på området. För större arbeten kan samfälligheten besluta om en extra avgift (<em>derrama</em>). Be om protokollen från de senaste stämmorna före köpet: där står vad som är på gång.</p>
+  <p><strong>Byhus.</strong> Ingen månadsavgift, men tak, fasad och takterrass underhåller du själv. Gamla byhus har ofta fuktiga väggar, träbjälkar som kan vara angripna och platta tak som börjar läcka efter några år. Gemensamma väggar med grannarna gör en del reparationer till ett gemensamt projekt.</p>
+  <p><strong>Finca.</strong> Här finns mest arbete. Marken måste skötas: beskära träd, rensa ogräs och i skogsområden hålla en brandskyddszon fri runt huset. Till det kommer <a href="/sv/guider/tillfartsvag-finca-spanien/">tillfartsvägen</a>, vattensystemet eller brunnen, avloppsbrunnen, ofta en pool och ibland solceller med batterier. Bara för marken räknar vi snabbt med 300 till 2 000 € per år. Vill du inte göra det själv kan du lämna bort det via <a href="/sv/underhall/">underhåll</a>.</p>
+
+  <h2 id="renovering">Renoveringskostnader</h2>
+  <p>Priset per kvadratmeter är ungefär detsamma för alla tre typerna: från 250 – 500 € för en uppfräschning till 1 000 – 1 600 € för en totalrenovering. Se vår guide <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">vad kostar en renovering</a>. Skillnaden ligger i det som tillkommer:</p>
+  <ul>
+    <li><strong>Lägenhet</strong>: minst arbete, ofta badrum, kök och fönster. Följ samfällighetens regler (arbetstider, skydda hissen, forsla bort byggavfall) och be om lov för allt som syns på fasad eller terrass.</li>
+    <li><strong>Byhus</strong>: ofta täta tak och takterrass, åtgärda fukt, byta elsystem. På grund av de smala gränderna är materialtransporten besvärlig, vilket höjer priset. I skyddade bykärnor finns regler för fasader, fönster och takpannor.</li>
+    <li><strong>Finca</strong>: utöver huset ofta vatten, avlopp (3 000 – 10 000 € för en ny avloppsbrunn eller ett minireningsverk), el och tillfartsväg. Och vid AFO-status får du inte bygga ut: det du ser är det du får.</li>
+  </ul>
+  <p>Låt därför göra en <a href="/sv/besiktning/">besiktning före köpet</a> med pris per brist. Då jämför du två hus utifrån vad de verkligen kostar, och inte bara utifrån köpesumman.</p>
+
+  <h2 id="status">Rättslig status (AFO)</h2>
+  <p>För en <strong>lägenhet</strong> är den rättsliga statusen oftast enkel: byggnaden är uppförd med bygglov och har ett intyg om att den får bebos. Se ändå upp med inglasade terrasser eller ett extra rum på taket som kan ha byggts utan lov.</p>
+  <p>Ett <strong>byhus</strong> står på tomtmark. Även där har våningar eller takrum ibland byggts på utan lov, men på tomtmark är det oftast lättare att ordna än på landsbygden. Jämför ytan i Catastro och i fastighetsregistret med det som faktiskt står där.</p>
+  <p>För en <strong>finca</strong> är det den viktigaste frågan. På landsbygdsmark är byggandet i Andalusien kraftigt begränsat, och många fincor har byggts eller byggts ut (delvis) utan lov. Har fristen för myndigheternas ingripande löpt ut kan kommunen förklara att huset är <em>asimilado a fuera de ordenación</em>: AFO-status, vars officiella förklaring också kallas DAFO. Huset får då bebos, säljas och anslutas, men inte byggas ut eller byggas nytt. Det påverkar också dina planer: ett extra sovrum, ett gästhus eller en pool går oftast inte att bygga till ett hus med AFO-status. Mer om detta i vår guide <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.</p>
+
+  <h2 id="uthyrning">Semesteruthyrning och licens</h2>
+  <p>Vill du (ibland) hyra ut huset till turister gör hustypen stor skillnad.</p>
+  <ul>
+    <li><strong>Lägenhet eller byhus på tomtmark för bostäder</strong>: i Andalusien omfattas det av reglerna för <em>vivienda con fines turísticos</em> (VFT, ofta kallat VUT). Du registrerar bostaden med en anmälan i Andalusiens turistregister (<em>Registro de Turismo de Andalucía</em>) och måste uppfylla krav, bland annat på luftkonditionering och värme, utrustning och ett klagomålsformulär. Sedan 2024 får kommunerna begränsa antalet semesterbostäder. På uthyrningsplattformarna annonserar du med numret från det andalusiska registret; det nationella registreringsnummer som gällde från juli 2025 ogiltigförklarades av Spaniens högsta domstol i maj 2026. Se också vår guide <a href="/sv/guider/hyra-ut-hus-i-spanien/">hyra ut hus i Spanien</a>.</li>
+    <li><strong>Lägenhet</strong>: sedan april 2025 behöver du för en ny semesteruthyrning först samfällighetens godkännande med tre femtedelar av rösterna. I många områden är det det största hindret.</li>
+    <li><strong>Finca på landsbygdsmark</strong>: den vanliga VFT-regeln gäller bara bostäder på tomtmark. För hus på landet gäller reglerna för landsbygdsturism (<em>alojamiento rural</em>, till exempel en <em>casa rural</em>) med egna krav. Om ett hus med AFO-status kan komma i fråga skiljer sig från fall till fall.</li>
+  </ul>
+  <p>Reglerna för turistuthyrning ändras snabbt. Låt kontrollera möjligheterna för ett visst hus hos kommunen eller en specialiserad gestor eller advokat före köpet. Vill du öppna ett B&amp;B? Läs undersidan nedan.</p>
+
+  <h2 id="malgrupp">Vad passar dig?</h2>
+  <p>Avvägningen beror mycket på din situation. För varje målgrupp har vi samlat de viktigaste punkterna:</p>
+  <GuideChildren lang="sv" parent="finca-lagenhet-eller-byhus" />
+  <p>Kort sagt: den som söker lugn och plats och gärna hugger i själv, eller lämnar bort underhållet, blir lycklig med en finca. Den som vill bo bekymmersfritt, med allt på gångavstånd och lite underhåll, väljer en lägenhet. Byhuset hamnar mittemellan: spanskt byliv, service i närheten, ingen månadsavgift, men trappor och ett gammalt hus som behöver omsorg.</p>
+  <p>Bor du inte där hela året? Tänk också på <a href="/sv/tillsyn/">tillsyn av huset</a>: någon som regelbundet ser till att allt är i ordning, kontrollerar taket efter en storm och ser till att trädgård och pool sköts. För en avsides finca är det ingen lyx. Har du hittat ett hus som behöver åtgärdas? Vi gör gärna en offert på <a href="/sv/renovering/">renoveringen</a>.</p>
+  <p class="note">Den här guiden ger allmän information och är inte juridisk eller skattemässig rådgivning. Bedömningen av ett visst hus kommer från en advokat, arkitekt eller gestor.</p>
+</Guide>

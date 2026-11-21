@@ -1,0 +1,93 @@
+---
+import Guide from '../../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'forst', label: 'Kontrollera först' },
+  { id: 'material', label: 'Trä, aluminium eller stål?' },
+  { id: 'behov', label: 'Det här behöver du' },
+  { id: 'steg', label: 'Steg för steg' },
+  { id: 'fasad', label: 'Mot fasaden eller på takterrassen' },
+  { id: 'andalusien', label: 'Det som är annorlunda i Andalusien' },
+  { id: 'fackman', label: 'När anlitar du en fackman?' },
+];
+
+const faq = [
+  { q: 'Behöver jag tillstånd för en pergola jag bygger själv?', a: 'För en fristående, öppen pergola utan fast tak räcker i många kommuner en anmälan (declaración responsable), ibland inte ens det. Med fast tak eller mot huset kräver kommunen ofta bygglov. I ett lägenhetsområde måste också samfälligheten godkänna. Fråga först.' },
+  { q: 'Hur djupa måste fundamenten för en pergola vara?', a: 'Räkna med hål på omkring 40 × 40 cm och 50 till 60 cm djup, fyllda med betong. I en sluttning, i lös jord eller på blåsiga platser gör du dem djupare eller bredare. Låt räkna på det om du är osäker.' },
+  { q: 'Vilket trä är bäst för en pergola i Spanien?', a: 'Tryckimpregnerad furu (madera tratada en autoclave) är vanligast och lätt att få tag på. Douglasgran eller lärk håller längre, tropiskt hårdträ längst. Viktigare än träslaget: håll träet borta från marken och behandla det med några års mellanrum mot sol och trämask.' },
+  { q: 'Får jag ställa en pergola på min takterrass?', a: 'Bara om taket bär vikten och vindlasten och tätskiktet förblir intakt. Borra aldrig bara rakt genom tätskiktet. I ett lägenhetsområde krävs nästan alltid samfällighetens godkännande. Det är ett jobb för en fackman.' },
+];
+---
+<Guide lang="sv" slug="bygga-pa-egen-tomt-bygga-pergola" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Hellre låta bygga en pergola?" ctaText="Ingen tid eller lust att bygga själv? Berätta vad du vill ha och skicka ett foto av platsen. Vi ordnar allt, från anmälan till montering.">
+  <h2 id="forst">Kontrollera först</h2>
+  <ul>
+    <li><strong>Är det tillåtet?</strong> En öppen pergola utan fast tak är oftast lätt att ordna, ofta med en anmälan till kommunen. Med fast tak blir den ett skärmtak, med strängare regler. Läs först <a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/carport-och-pergola/">carport, skärmtak och pergola</a>.</li>
+    <li><strong>Bor du i ett lägenhetsområde?</strong> Be samfälligheten om godkännande innan du köper något.</li>
+    <li><strong>Platsen</strong>: tänk på var solen står på eftermiddagen och kvällen, varifrån vinden kommer och om det finns ledningar i marken (vatten, avlopp, el till poolen).</li>
+    <li><strong>Storleken</strong>: vanligt är 3 × 4 till 4 × 5 meter med omkring 2,40 meters fri höjd. Håll avståndet mellan trästolparna under 3 till 3,5 meter, annars måste bjälkarna vara grövre.</li>
+  </ul>
+
+  <h2 id="material">Trä, aluminium eller stål?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Material</th><th>Bra att veta</th></tr></thead>
+    <tbody>
+      <tr><td>Tryckimpregnerad furu (<em>madera tratada en autoclave</em>)</td><td>Vanligast, finns överallt och är lätt att arbeta med. Behandla med några års mellanrum.</td></tr>
+      <tr><td>Douglasgran, lärk eller tropiskt hårdträ</td><td>Håller längre och är vackrare, men tyngre och svårare att såga och borra.</td></tr>
+      <tr><td>Byggsats i aluminium</td><td>Nästan underhållsfri. Går att montera själv, men du är bunden till byggsatsens mått.</td></tr>
+      <tr><td>Stål</td><td>Starkt och slankt, men svetsning är fackarbete. Vid kusten bara galvaniserat eller pulverlackerat.</td></tr>
+    </tbody>
+  </table>
+  <p>Den här guiden utgår från en fristående träpergola på fyra eller sex stolpar.</p>
+
+  <h2 id="behov">Det här behöver du</h2>
+  <p><strong>Material</strong> (praktiskt att ta med de spanska orden till byggvaruhuset eller brädgården, <em>almacén de maderas</em>):</p>
+  <ul>
+    <li>Stolpar på 9 × 9 eller 12 × 12 cm (<em>postes</em>)</li>
+    <li>Bärlinor ovanpå stolparna, till exempel 7 × 17 cm eller grövre (<em>vigas</em>)</li>
+    <li>Tvärbjälkar eller läkt ovanpå (<em>travesaños</em> eller <em>listones</em>)</li>
+    <li>Galvaniserade stolpskor att gjuta in (<em>anclajes para poste</em>)</li>
+    <li>Betong eller färdigblandad snabbetong i säck (<em>hormigón</em>)</li>
+    <li>Franska skruvar M10 eller M12 med brickor och rostfria skruvar (<em>tornillería inoxidable</em>)</li>
+    <li>Trälasyr eller olja med UV-skydd och ett medel mot trämask (<em>carcoma</em>)</li>
+    <li>För skugga: vassmatta (<em>cañizo</em>), skuggnät (<em>malla de sombreo</em>) eller klätterväxter</li>
+  </ul>
+  <p><strong>Verktyg</strong>: måttband, snöre och pinnar, vattenpass (gärna också ett långt eller en laser), spade eller jordborr, cirkelsåg, skruvdragare med långa träborrar, hylsnyckel, två stadiga stegar och en person till.</p>
+
+  <h2 id="steg">Steg för steg</h2>
+  <ol>
+    <li><strong>Märk ut.</strong> Markera hörnen med pinnar och snöre. Kontrollera rät vinkel med de två diagonalerna: de ska vara lika långa.</li>
+    <li><strong>Gräv hålen.</strong> Ett hål per stolpe på omkring 40 × 40 cm och 50 till 60 cm djup. I Axarquías steniga mark behöver du ibland en bilningshammare; den kan du hyra.</li>
+    <li><strong>Gjut fundamenten.</strong> Fyll hålen med betong och sätt stolpskorna exakt på snörlinjen och på samma höjd. Låt betongen härda i minst några dagar, i sommarvärmen övertäckt och fuktad då och då.</li>
+    <li><strong>Res stolparna.</strong> Sätt stolparna i skorna, rikta dem lodrätt med vattenpass på två sidor och stötta dem provisoriskt. Skruva fast dem.</li>
+    <li><strong>Kapa i höjd.</strong> För över höjden till alla stolpar med (laser)vattenpass och kapa dem lika långa. Ge toppen lite fall, ifall något vattentätt ändå ska läggas på senare.</li>
+    <li><strong>Montera bärlinorna.</strong> Lägg bärlinorna på eller mot stolparna och fäst dem med genomgående franska skruvar. Förborra och använd brickor.</li>
+    <li><strong>Lägg tvärbjälkarna.</strong> Lägg tvärbjälkar eller läkt med 40 till 60 cm mellanrum på bärlinorna och skruva fast dem. Ju tätare, desto mer skugga.</li>
+    <li><strong>Stagning mot vind.</strong> Sätt snedsträvor mellan stolpar och bärlinor. De gör pergolan styv, och med vinden i Axarquía är det ingen lyx.</li>
+    <li><strong>Gör klart.</strong> Behandla allt trä, även kapytorna. Fäst vassmatta eller skuggnät, eller plantera klätterväxter som blåregn, bougainvillea eller vin vid foten.</li>
+  </ol>
+
+  <h2 id="fasad">Mot fasaden eller på takterrassen</h2>
+  <p>En pergola som vilar mot huset på ena sidan hänger på en väggregel som sitter med kraftiga ankare i väggen. I de gamla, delvis smuliga väggarna i byhus och fincor håller vanliga pluggar inte; använd kemankare. En pergola mot fasaden ses av kommunen oftare som en utbyggnad av huset, och i ett lägenhetsområde ändrar den utseendet.</p>
+  <p>På en takterrass är det ännu svårare: taket måste bära vikt och vindlast, och varje hål i tätskiktet är en möjlig läcka. Överlåt det alltid till en fackman.</p>
+
+  <h2 id="andalusien">Det som är annorlunda i Andalusien</h2>
+  <ul>
+    <li><strong>Sol</strong>: UV-strålningen gör att obehandlat trä grånar och spricker på några år. Behandla det vartannat till vart tredje år.</li>
+    <li><strong>Vind</strong>: särskilt på kullar och på hösten kan det blåsa hårt. Ett hårt spänt skuggnät tar mycket vind; ta ner det vid storm.</li>
+    <li><strong>Trämask och termiter</strong>: håll träet några centimeter över marken, som en stolpsko gör, och kontrollera det varje år.</li>
+    <li><strong>Skyfall</strong>: korta men kraftiga på vintern. Låt inget vatten bli stående på bjälkarna och håll stolpfoten torr.</li>
+    <li><strong>Salt</strong>: vid kusten rostar vanliga skruvar snabbt. Använd rostfritt eller varmförzinkat.</li>
+  </ul>
+
+  <h2 id="fackman">När anlitar du en fackman?</h2>
+  <p>En enkel, fristående träpergola kan du gott bygga själv. Lämna hellre över jobbet till en fackman om:</p>
+  <ul>
+    <li>du vill ha ett lamelltak, fast tak eller glastak;</li>
+    <li>pergolan ska stå på en takterrass eller mot en gammal fasad;</li>
+    <li>den blir större än omkring 4 × 5 meter eller står i en brant sluttning;</li>
+    <li>belysning, el eller ett utekök ska finnas under den;</li>
+    <li>du behöver bygglov och ritningar.</li>
+  </ul>
+  <p><strong>Vill du låta bygga pergolan, eller bara lämna bort fundamenten och de tunga momenten?</strong> <a href="/sv/forfragan/?dienst=renovatie">Kontakta oss →</a></p>
+  <p>Tillbaka till översikten: <a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/">bygga på egen tomt</a>.</p>
+</Guide>

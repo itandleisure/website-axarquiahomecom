@@ -1,0 +1,110 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'oversikt', label: 'Kalendern i en tabell' },
+  { id: 'ibi', label: 'IBI och sophämtning (kommunen)' },
+  { id: 'irnr', label: 'Skatt för icke-bosatta (blankett 210)' },
+  { id: 'formogenhet', label: 'Förmögenhetsskatt' },
+  { id: 'hemland', label: 'Deklarationen i hemlandet' },
+  { id: 'betala', label: 'Betala från utlandet' },
+  { id: 'missat', label: 'Missat en tidsfrist? Så undviker du tillägg' },
+  { id: 'kallor', label: 'Källor' },
+];
+
+const faq = [
+  {
+    q: 'När betalar jag IBI i Axarquía?',
+    a: 'Det beror på kommunen. I de flesta kommuner tar Patronato de Recaudación Provincial i provinsen Málaga in IBI; betalningsperioden ligger oftast på sommaren eller tidig höst och varar cirka två till tre månader. Några kommuner tar in skatten själva, med egen kalender. Med autogiro dras beloppet automatiskt och du behöver inte komma ihåg datumet.',
+  },
+  {
+    q: 'Måste jag deklarera varje år om jag inte hyr ut?',
+    a: 'Ja. Som icke-bosatt betalar du varje år skatt på en schablonmässig inkomst från din bostad: 1,1 % eller 2 % av taxeringsvärdet, beskattat med 19 % (EU och EES) eller 24 % (utanför, till exempel Storbritannien). Deklarationen, blankett 210, lämnar du året därpå. För 2025 senast 31 december 2026, från och med 2026 mellan 1 april och 31 december året därpå.',
+  },
+  {
+    q: 'När deklarerar jag mina hyresintäkter?',
+    a: 'För hyror från och med 2026 en gång om året, 1 till 20 april året därpå. Hyran för 2026 deklarerar du alltså i april 2027. Till och med 2025 var det kvartalsvis; den sista kvartalsdeklarationen för 2025 gick ut den 20 januari 2026.',
+  },
+  {
+    q: 'Kan jag betala spanska skatter från ett svenskt bankkonto?',
+    a: 'Ibland. Enligt de europeiska SEPA-reglerna får en spansk myndighet inte vägra ett utländskt IBAN, men i praktiken fungerar det långt ifrån alltid. Ett spanskt bankkonto är därför enklast: via det kan IBI, sophämtning, vatten, el och blankett 210 dras automatiskt. Kommunala skatter kan du också betala online med kort.',
+  },
+  {
+    q: 'Behöver jag ett skatteombud?',
+    a: 'Som privatperson som bara äger eller hyr ut en bostad oftast inte, men skatteverket kan kräva det. Det som hjälper är en gestor eller skatterådgivare som lämnar dina deklarationer och tar emot posten från spanska skatteverket. Det kostar ofta 100 till 400 € om året, beroende på om du hyr ut.',
+  },
+];
+---
+<Guide lang="sv" slug="skattekalender-spanien" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Någon på plats som håller koll på post och hus?" ctaText="Vi kontrollerar ditt hus när du inte är där, hämtar posten och vidarebefordrar brev från kommunen eller skatteverket, så att du inte missar en tidsfrist.">
+  <p>Har du ett hus i Axarquía men bor inte där? Då kommer några fasta skatter varje år: från kommunen, från spanska skatteverket och i ditt eget land. Den som aldrig är på plats missar lätt ett brev, och en missad tidsfrist ger snabbt en tilläggsavgift. Den här kalendern visar vad som kommer när, vad du ska lämna in och hur du betalar från utlandet. Mer om skatt på hyresintäkter läser du i vår guide <a href="/sv/guider/hyra-ut-hus-i-spanien/">hyra ut hus i Spanien</a>.</p>
+
+  <h2 id="oversikt">Kalendern i en tabell</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>När</th><th>Vad</th><th>För vem</th></tr></thead>
+    <tbody>
+      <tr><td>1–20 januari</td><td>Blankett 210 med resultat noll för förra årets hyra (till exempel när kostnaderna var lika stora som hyran)</td><td>Uthyrare bosatta i EU</td></tr>
+      <tr><td>Våren</td><td>Fordonsskatt (IVTM), om du har en bil med spanska skyltar</td><td>Ägare med spansk bil</td></tr>
+      <tr><td>1–20 april</td><td>Blankett 210 för förra årets hyresintäkter (första gången i april 2027, för 2026). Med autogiro senast 15 april.</td><td>Uthyrare</td></tr>
+      <tr><td>April – 30 juni</td><td>Förmögenhetsskatt, bara vid stor förmögenhet i Spanien</td><td>Få ägare, se nedan</td></tr>
+      <tr><td>Sommar till tidig höst (per kommun)</td><td>IBI, kommunens fastighetsskatt; ibland i två delar</td><td>Alla ägare</td></tr>
+      <tr><td>Per kommun</td><td>Sophämtningsavgift (<em>tasa de basura</em>), separat, med IBI eller via vattenräkningen</td><td>Alla ägare</td></tr>
+      <tr><td>1 april – 31 december</td><td>Blankett 210 för förra årets schablonmässiga inkomst, för dagarna utan uthyrning. Med autogiro senast 23 december. (För 2025: hela 2026.)</td><td>Alla ägare som inte bor i Spanien</td></tr>
+      <tr><td>Ditt hemland</td><td>Inkomstdeklarationen, med den spanska bostaden</td><td>Alla ägare</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Läget 5 november 2026. Spanska skatteverkets tidsfrister står i Orden HAC/623/2026; kommunernas skiljer sig per år och kommun.</p>
+
+  <h2 id="ibi">IBI och sophämtning (kommunen)</h2>
+  <p><strong>IBI</strong> (<em>Impuesto sobre Bienes Inmuebles</em>) är den årliga fastighetsskatten. Du betalar en procentsats av taxeringsvärdet; för ett vanligt hus i Axarquía oftast några hundra euro om året. Den som är ägare den 1 januari betalar IBI för hela året. Vid en försäljning räknar köpare och säljare ofta av det sinsemellan.</p>
+  <ul>
+    <li><strong>Vem som tar in skatten.</strong> De flesta kommuner i Axarquía låter <em>Patronato de Recaudación Provincial</em> i provinsen Málaga ta in IBI. Några större kommuner gör det själva. På ditt skattebesked står avsändaren.</li>
+    <li><strong>När.</strong> Varje instans fastställer en skattekalender per år. Betalningsperioden (<em>periodo voluntario</em>) varar oftast två till tre månader och ligger i Axarquía ofta på sommaren eller tidig höst. Vissa kommuner delar IBI i två delar.</li>
+    <li><strong>Sophämtning.</strong> Sedan 2025 måste alla spanska kommuner ta ut en sophämtningsavgift som täcker kostnaderna. I Axarquía kommer den beroende på kommun som eget besked, tillsammans med IBI eller via vattenräkningen.</li>
+    <li><strong>Vad du måste göra.</strong> För IBI och sophämtning lämnar du inte in något: du får ett skattebesked (<em>recibo</em>). Se däremot till att instansen har din rätta adress, eller lägg upp autogiro. Även om inget brev kommer är du skyldig att betala.</li>
+  </ul>
+  <p>Spara betalningsbeviset varje år. Vid en försäljning begär notarien det senaste IBI-beskedet, och obetald IBI följer med fastigheten. Se också vår guide <a href="/sv/guider/salja-hus-i-spanien/dokument/">dokument vid försäljning</a>.</p>
+
+  <h2 id="irnr">Skatt för icke-bosatta (blankett 210)</h2>
+  <p>Bor du inte i Spanien omfattas du av inkomstskatten för icke-bosatta (IRNR). För en bostad finns två situationer, ofta båda samma år:</p>
+  <ul>
+    <li><strong>Du använder huset själv eller det står tomt.</strong> Du betalar skatt på en schablonmässig inkomst: 1,1 % av taxeringsvärdet (2 % om värdet inte har setts över sedan 1994), proportionellt per dag. På det betalar du 19 % om du bor i EU, Island eller Norge, annars 24 %. Med ett taxeringsvärde på 100 000 € blir det för en EU-bosatt 209 € om året. Deklarationen lämnar du året därpå: från och med skatteåret 2026 mellan 1 april och 31 december; för 2025 fortfarande under hela 2026.</li>
+    <li><strong>Du hyr ut.</strong> På hyresintäkter betalar du 19 % på nettot (EU och EES) eller 24 % på bruttohyran (utanför). Från och med hyrorna för 2026 deklarerar du en gång om året, 1 till 20 april året därpå. Till och med 2025 var det kvartalsvis. Blir resultatet noll lämnar du deklarationen 1 till 20 januari.</li>
+  </ul>
+  <p>Ägs huset av två personer lämnar var och en en egen deklaration för sin andel. Blankett 210 kan du lämna in själv online hos Agencia Tributaria, men de flesta ägare låter en gestor eller skatterådgivare göra det.</p>
+
+  <h2 id="formogenhet">Förmögenhetsskatt</h2>
+  <p>För de flesta ägare spelar det ingen roll. Icke-bosatta betalar förmögenhetsskatt på sin förmögenhet i Spanien över ett grundavdrag på 700 000 € per person, efter avdrag för eventuellt bolån. Andalusien ger en nedsättning av skatten, och därutöver finns en tillfällig solidaritetsskatt på förmögenheter över 3 miljoner €. En deklaration är i alla fall obligatorisk om din förmögenhet i Spanien är värd mer än 2 miljoner €. Perioden går från april till 30 juni. Tillhör du den gruppen, låt någon räkna på det.</p>
+  <p>Den spanska deklarationen om utländska tillgångar (blankett 720) gäller bara för bosatta i Spanien, inte för dig som icke-bosatt.</p>
+
+  <h2 id="hemland">Deklarationen i hemlandet</h2>
+  <p>Även i ditt hemland ska den spanska bostaden med. Bor du i Sverige deklarerar du hyresinkomster från huset även här, och den spanska skatten kan i regel räknas av mot den svenska, så att du inte betalar dubbelt. Ett fritidshus som du bara använder själv ger normalt ingen inkomstskatt i Sverige, och den svenska fastighetsavgiften gäller inte för en bostad i Spanien. Säljer du huset deklarerar du vinsten även i Sverige. I Norge, Danmark och Finland gäller egna regler. Spara de spanska skattebeskeden och deklarationerna: du behöver dem för deklarationen hemma.</p>
+
+  <h2 id="betala">Betala från utlandet</h2>
+  <ul>
+    <li><strong>Autogiro.</strong> Det enklaste sättet: låt IBI, sophämtning och blankett 210 dras automatiskt. Smidigast går det med ett spanskt bankkonto. Enligt SEPA-reglerna får ett utländskt IBAN inte vägras, men i praktiken godtar inte alla instanser det.</li>
+    <li><strong>Betala online.</strong> Kommunala skattebesked kan du betala online med kort, med numret på beskedet, via Patronatos eller kommunens webbplats.</li>
+    <li><strong>Blankett 210.</strong> Ett belopp att betala betalas via en spansk bank (autogiro eller betalning med referensnummer). Utan spanskt konto går en överföring från utlandet, men det är krångligare; oftast ordnar en gestor det åt dig.</li>
+    <li><strong>Digital post.</strong> Brev från spanska skatteverket kommer allt oftare digitalt. Med ett digitalt certifikat eller via din gestor ser du dem i tid. Ge kommunen och skatteverket en adress där posten verkligen kommer fram.</li>
+    <li><strong>Gestor eller ombud.</strong> En gestor kan lämna dina deklarationer, betala besked och vara din kontakt mot skatteverket. Ett formellt skatteombud är för privata ägare oftast inte obligatoriskt.</li>
+  </ul>
+
+  <h2 id="missat">Missat en tidsfrist? Så undviker du tillägg</h2>
+  <p>Betalar du inte ett kommunalt skattebesked i tid tillkommer ett tillägg på 5 %, som i indrivningen stiger till 20 % plus ränta. Till slut kan ditt spanska bankkonto utmätas. En försenad deklaration till skatteverket ger ett tillägg som ökar med tiden. Tre tips:</p>
+  <ul>
+    <li>Lägg allt som går på autogiro och kontrollera en gång om året att det verkligen har dragits.</li>
+    <li>Se till att någon på plats ser din post. Med <a href="/sv/tillsyn/">tillsyn</a> hämtar vi posten och vidarebefordrar brev från kommunen eller skatteverket.</li>
+    <li>Lämna alla deklarationer till en gestor, så att också tidsfristerna ligger hos en person.</li>
+  </ul>
+  <p>Frågor om ditt hus i Axarquía? Mejla <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>. Se också <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">kostnader vid husköp</a> för de löpande kostnaderna för en bostad i Spanien.</p>
+
+  <h2 id="kallor">Källor</h2>
+  <ul>
+    <li>Tidsfrister blankett 210 (hyra årligen i april, schablonmässig inkomst 1 april till 31 december): Orden HAC/623/2026 av den 12 juni 2026 (BOE, 23 juni 2026), om ändring av Orden EHA/3316/2010.</li>
+    <li>Skatt för icke-bosatta och schablonmässig inkomst: Real Decreto Legislativo 5/2004, artikel 24 och 25; Ley 35/2006, artikel 85.</li>
+    <li>IBI: Real Decreto Legislativo 2/2004 (lagen om kommunala skatter), artikel 60 till 77.</li>
+    <li>Kostnadstäckande sophämtningsavgift: Ley 7/2022 om avfall, artikel 11, obligatorisk sedan april 2025.</li>
+    <li>Tillägg vid sen betalning och deklaration: Ley 58/2003 (Ley General Tributaria), artikel 27 och 28.</li>
+    <li>Förmögenhetsskatt: Ley 19/1991; tillfällig solidaritetsskatt: Ley 38/2022.</li>
+  </ul>
+  <p class="note">Kontrollerat 5 november 2026. Den här kalendern ger allmän information och är ingen skatterådgivning. Tidsfrister och skattesatser ändras; kontrollera din kommuns skattekalender och låt en gestor eller skatterådgivare lämna dina deklarationer.</p>
+</Guide>

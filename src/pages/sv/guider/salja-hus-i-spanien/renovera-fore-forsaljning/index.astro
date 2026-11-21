@@ -1,0 +1,94 @@
+---
+import Guide from '../../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'princip', label: 'Principen: inga förhandlingspunkter' },
+  { id: 'tabell', label: 'Det som lönar sig: riktpriser' },
+  { id: 'brister', label: 'Först: åtgärda brister' },
+  { id: 'intryck', label: 'Sedan: intrycket' },
+  { id: 'lat-bli', label: 'Det du hellre låter bli' },
+  { id: 'tillstand', label: 'Tillstånd för små arbeten' },
+  { id: 'upplagg', label: 'Upplägg och tidsplan' },
+];
+
+const faq = [
+  {
+    q: 'Måste jag berätta om brister för köparen?',
+    a: 'Brister du känner till bör du uppge. Enligt den spanska civillagen ansvarar säljaren för dolda fel, och den som tiger om ett känt fel riskerar ett krav. Att åtgärda det före försäljningen är därför ofta den enklaste lösningen.',
+  },
+  {
+    q: 'Lönar det sig att göra en egen besiktning före försäljningen?',
+    a: 'Ofta ja. Du ser vad en köpare kommer att hitta och kan välja: åtgärda eller uppge och ta hänsyn till det i priset. En besiktning med pris per brist stärker dessutom din position om en köpare senare kommer med en egen lista.',
+  },
+  {
+    q: 'Kan jag låta renovera medan jag är utomlands?',
+    a: 'Ja. Vi ger ett pris efter ett besök och foton och håller dig uppdaterad med foton under arbetet. Med tillsyn av huset kan samma kontaktperson sedan öppna för mäklarens visningar.',
+  },
+];
+---
+<Guide lang="sv" slug="salja-hus-i-spanien-renovera" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Vad behöver ditt hus före försäljningen?" ctaText="Vi går igenom huset med en köpares ögon och ger dig ett pris per arbete. Du bestämmer vad som görs.">
+  <h2 id="princip">Principen: inga förhandlingspunkter</h2>
+  <p>En köpare som ser en fuktfläck, en läckande takterrass eller en spricka räknar sällan med den faktiska reparationskostnaden. Hen räknar med risken: vad döljer sig mer bakom? Det beloppet dras av från budet. En brist som du kunde låta åtgärda för några hundra euro kostar dig snabbt många gånger mer i förhandlingen.</p>
+  <p>Regeln är alltså enkel: åtgärda det som en köpare eller besiktningsman hittar, gör huset fräscht och rent och lämna de stora besluten till köparen.</p>
+
+  <h2 id="tabell">Det som lönar sig: riktpriser</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Arbete</th><th>Riktpris</th><th>Lönar det sig?</th></tr></thead>
+    <tbody>
+      <tr><td>Måla invändigt (hus på ca 100 m²)</td><td>1 500 € – 3 500 €</td><td>Ja, nästan alltid</td></tr>
+      <tr><td>Kalka fasaden</td><td>1 500 € – 5 000 €</td><td>Ja, styr det första intrycket och fotona</td></tr>
+      <tr><td>Åtgärda fukt och orsaken</td><td>300 € – 3 000 €</td><td>Ja, fukt är det som skrämmer bort flest köpare</td></tr>
+      <tr><td>Täta takterrassen på nytt</td><td>Se <a href="/sv/kostnader/tak-och-takterrass/">kostnader för tak och takterrass</a></td><td>Ja, om den läcker eller skiktet är slitet</td></tr>
+      <tr><td>Pool ren, pump och filter i funktion</td><td>150 € – 1 000 €</td><td>Ja, en grön pool skrämmer</td></tr>
+      <tr><td>Sköta trädgård och tomt</td><td>200 € – 1 500 €</td><td>Ja, särskilt för en finca</td></tr>
+      <tr><td>Små reparationer (kranar, handtag, kakel, lampor)</td><td>200 € – 1 000 €</td><td>Ja</td></tr>
+      <tr><td>Byta köksluckor och bänkskiva</td><td>2 000 € – 6 000 €</td><td>Ibland, för ett omodernt men stabilt kök</td></tr>
+      <tr><td>Helt nytt kök</td><td>Se <a href="/sv/kostnader/renovera-kok/">kostnader för kök</a></td><td>Sällan</td></tr>
+      <tr><td>Helt nytt badrum</td><td>Se <a href="/sv/kostnader/renovera-badrum/">kostnader för badrum</a></td><td>Sällan, om det inte är trasigt</td></tr>
+      <tr><td>Bygga ny pool</td><td>Se <a href="/sv/kostnader/bygga-pool/">kostnader för pool</a></td><td>Nej, inte strax före försäljningen</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Riktpriser för Axarquía, november 2026, exklusive moms. Det faktiska priset beror på huset och tillfartsvägen.</p>
+
+  <h2 id="brister">Först: åtgärda brister</h2>
+  <p>Börja med det som en besiktningsman skulle skriva i sin rapport. I Axarquía är det framför allt:</p>
+  <ul>
+    <li><strong>Fukt och mögel</strong> i väggar och hörn, ofta från uppstigande fukt eller en läckande takterrass. Att måla över hjälper inte; en köpare eller besiktningsman med fuktmätare hittar det ändå. Se <a href="/sv/problem/fukt-och-mogel/">fukt och mögel</a>.</li>
+    <li><strong>Läckor</strong> i tak och takterrass. Se <a href="/sv/problem/taklacka/">takläcka</a>.</li>
+    <li><strong>Sprickor</strong> i väggar och fasad. Låt utreda om de är ytliga eller tyder på ett grundproblem. Se <a href="/sv/problem/sprickor-i-vaggar/">sprickor i väggar</a>.</li>
+    <li><strong>Träskador</strong> på bjälkar, karmar och dörrar, till exempel av <a href="/sv/problem/termiter/">termiter</a>.</li>
+    <li><strong>Installationer</strong>: el utan jordfelsbrytare, en varmvattenberedare i slutet av sin livslängd, en full avloppsbrunn, en poolpump som inte går.</li>
+  </ul>
+  <p>Spara fakturor och foton av arbetena. Visa dem för köparen; det skapar förtroende.</p>
+
+  <h2 id="intryck">Sedan: intrycket</h2>
+  <p>Därefter handlar det om det första intrycket, vid visningen och på fotona som köpare i utlandet letar med.</p>
+  <ul>
+    <li><strong>Måla</strong>, inne och ute. Ljusa, neutrala färger. En vit fasad hör till Axarquía och får huset att genast se välskött ut.</li>
+    <li><strong>Utomhus</strong>. Terrassen ren, trasigt kakel utbytt, trädgården skött, poolen klar. För en finca: gångar framkomliga, ogräs borta och brandskyddszonen runt huset skött.</li>
+    <li><strong>Röj undan</strong>. Färre möbler och personliga saker får rummen att se större ut. Köpare vill föreställa sig sitt eget liv i huset.</li>
+    <li><strong>Ljus och luft</strong>. Fungerande lampor, rena fönster, luckorna öppna. Ett hus som varit stängt länge luktar unket; låt vädra före visningar.</li>
+  </ul>
+
+  <h2 id="lat-bli">Det du hellre låter bli</h2>
+  <ul>
+    <li><strong>Stora ombyggnader av kök eller badrum</strong>. Köpare har sin egen smak, och du får sällan tillbaka kostnaden helt. Är ett kök verkligen slitet, tänk hellre på nya luckor och en ny bänkskiva än ett helt kök.</li>
+    <li><strong>Bygga ut utan lov</strong>. En tillbyggnad eller inglasad terrass utan lov gör huset svårare att sälja, inte lättare. Med AFO-status får du ändå inte bygga ut.</li>
+    <li><strong>Dölja brister i stället för att åtgärda dem</strong>. En övermålad fuktfläck kommer tillbaka, och att tiga om den kan leda till ett krav efter försäljningen.</li>
+    <li><strong>Personliga val</strong>: skrikiga färger, udda kakel eller en temainredning.</li>
+  </ul>
+
+  <h2 id="tillstand">Tillstånd för små arbeten</h2>
+  <p>Även för mindre arbeten behöver du i Spanien ofta något från kommunen: en anmälan (<em>declaración responsable</em>) eller ett tillstånd för mindre byggarbete (<em>licencia de obra menor</em>). Det gäller till exempel byte av badrum eller kök, ny tätning av en takterrass eller renovering av fasaden. Invändig målning omfattas oftast inte. Exakt vad som krävs skiljer sig mellan kommunerna; för de arbeten vi utför ordnar vi det samtidigt. Arbeten med rätt papper kan du också visa upp vid försäljningen.</p>
+
+  <h2 id="upplagg">Upplägg och tidsplan</h2>
+  <ol>
+    <li><strong>Gå igenom huset</strong> med någon som tittar som en köpare eller besiktningsman. Du får en bristlista med pris per arbete.</li>
+    <li><strong>Bestäm</strong>: vad åtgärdar du, vad uppger du och tar hänsyn till i priset?</li>
+    <li><strong>Utför</strong>, helst utanför högsäsongen. Räkna med några veckor för en uppfräschning; efter en fuktsanering måste väggen först torka innan den kan målas.</li>
+    <li><strong>Låt ta foton</strong> när allt är klart, en solig dag.</li>
+    <li><strong>Sköt om huset fram till försäljningen</strong>: trädgård, pool och vädring, så att huset ser ut som på fotona vid varje visning. Det är vad <a href="/sv/tillsyn/">tillsyn</a> och <a href="/sv/underhall/">underhåll</a> är till för.</li>
+  </ol>
+  <p>Vill du veta vad ditt hus behöver? Be om en <a href="/sv/forfragan/?dienst=renovatie">offert på uppfräschning</a> eller en <a href="/sv/forfragan/?dienst=onderhoud">reparation</a>. Tillbaka till huvudguiden: <a href="/sv/guider/salja-hus-i-spanien/">sälja hus i Spanien</a>.</p>
+  <p class="note">Kontrollerat 5 november 2026. Riktpriser är vägledande och ingen offert. Om en investering lönar sig beror på huset, läget och marknaden vid försäljningen.</p>
+</Guide>

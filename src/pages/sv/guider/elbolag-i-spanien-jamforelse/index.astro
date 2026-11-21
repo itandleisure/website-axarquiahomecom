@@ -1,0 +1,144 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'hur', label: 'Så har vi jämfört' },
+  { id: 'typer', label: 'Fast pris, rörligt eller PVPC?' },
+  { id: 'jamforelse', label: 'Jämförelse: virtuellt batteri och utmatning' },
+  { id: 'situation', label: 'Vad passar din situation?' },
+  { id: 'tidstariff', label: 'Lågpristid, effekt och laddbox' },
+  { id: 'laddbox', label: 'Laddbox från elbolaget' },
+  { id: 'byta', label: 'Byta som utländsk ägare' },
+  { id: 'sjalv', label: 'Jämför själv' },
+  { id: 'kallor', label: 'Källor och datum' },
+];
+
+const faq = [
+  {
+    q: 'Vilket är det billigaste elbolaget i Spanien?',
+    a: 'Det beror på när du förbrukar el, hur mycket du matar ut och hur ofta du är på plats. Ett bolag med hög ersättning för utmatning kan i slutändan bli dyrare om elen du köper kostar mycket. Jämför därför alltid med din egen förbrukning, till exempel med CNMC:s officiella jämförelsetjänst.',
+  },
+  {
+    q: 'Kostar det något att byta elbolag i Spanien?',
+    a: 'Nej. Bytet är gratis och det nya bolaget sköter allt, även uppsägningen hos det gamla. Du behöver bara CUPS-koden för din anslutning, som står på varje räkning. Se dock upp med en bindningstid (permanencia) hos ditt nuvarande bolag och med ditt tillgodohavande i ett virtuellt batteri: det går oftast förlorat.',
+  },
+  {
+    q: 'Behöver jag ett spanskt bankkonto för ett elavtal?',
+    a: 'Enligt de europeiska SEPA-reglerna får ett bolag inte vägra autogiro från ett konto i ett annat euroland. Sverige har inte euro, så med ett svenskt konto gäller inte den regeln fullt ut, och i praktiken kräver många bolag ett spanskt IBAN. Ett NIE som avtalsinnehavare behöver du alltid.',
+  },
+  {
+    q: 'Är PVPC eller fast pris bättre med solceller?',
+    a: 'Med solceller väljer de flesta ägare ett avtal med fast pris eller rörligt pris på den fria marknaden, eftersom ett virtuellt batteri bara finns där. PVPC lönar sig om du matar ut lite, kan flytta din förbrukning till billiga timmar eller har rätt till bono social.',
+  },
+  {
+    q: 'Får ni ersättning från bolagen i den här jämförelsen?',
+    a: 'Nej. Vi säljer inga energiavtal och är inte bundna till något bolag. Vi installerar och underhåller solceller, batterier och laddboxar och ger råd om vilken avtalstyp som passar.',
+  },
+];
+---
+<Guide lang="sv" slug="elbolag-i-spanien-jamforelse" toc={toc} faq={faq} dienst="energiebeheer" ctaTitle="Vill du ha hjälp med elen i Spanien?" ctaText="Skicka oss en aktuell räkning. Vi kontrollerar om effekt, avtal och kvittning passar hur du använder huset och vad solceller eller ett batteri skulle ge.">
+  <h2 id="hur">Så har vi jämfört</h2>
+  <p>I Spanien kan du välja bland dussintals elbolag (<em>comercializadoras</em>). Själva nätet ägs av ett nätbolag per område; i Axarquía är det nästan överallt e-distribución. Oavsett vilket bolag du har är el, mätare och avbrott desamma. Du väljer alltså främst pris och villkor.</p>
+  <p>För ägare med solceller räknas tre saker: vad du betalar för köpt el, vad du får för utmatad el och vad som händer med överskottet. Det sista avgör om du behöver ett <a href="/sv/guider/virtuellt-batteri-spanien/">virtuellt batteri</a>.</p>
+  <p>Vi har ställt de mest kända bolagen med ett erbjudande för egenförbrukning bredvid varandra. För varje bolag anger vi källa och datum. <strong>Priser och villkor ändras ofta</strong>, ibland varje månad. Använd tabellen för att se skillnaderna och kontrollera de aktuella villkoren innan du byter.</p>
+
+  <h2 id="typer">Fast pris, rörligt eller PVPC?</h2>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Avtalstyp</th><th>Så fungerar priset</th><th>För vem</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Fast pris</strong> (<em>precio fijo</em>, fria marknaden)</td><td>Ett fast pris per kWh, ofta i 12 månader. Ibland ett pris för hela dygnet, ibland per period (topp, mellan, låg).</td><td>Den som vill kunna planera. De flesta erbjudanden med virtuellt batteri är av den här typen.</td></tr>
+      <tr><td><strong>Rörligt</strong> (<em>tarifa indexada</em>, fria marknaden)</td><td>Timpriset på grossistmarknaden plus ett fast påslag. Utmatning får oftast också marknadspriset.</td><td>Den som kan styra sin förbrukning, till exempel med batteri eller smart laddbox.</td></tr>
+      <tr><td><strong>PVPC</strong> (reglerat avtal)</td><td>Staten bestämmer formeln. 2026 beror 55 % av energipriset på terminsmarknader och 45 % på dagen före-marknaden. Utmatning får timpriset på marknaden.</td><td>Den som matar ut lite eller har rätt till <em>bono social</em>. Inget virtuellt batteri möjligt.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>PVPC finns bara hos ett av de reglerade bolagen (<em>comercializadoras de referencia</em>), till exempel Energía XXI, Curenergía, Baser eller Régsiti, och bara för anslutningar upp till 10 kW. Se upp: många företag med nästan samma namn säljer avtal på den fria marknaden.</p>
+  <p>Mitt på dagen, när alla Spaniens solceller producerar samtidigt, är marknadspriset ofta mycket lågt. I PVPC och med rörliga avtal är din utmatning då värd lite. En fast ersättning per kWh är lättare att planera med solceller.</p>
+
+  <h2 id="jamforelse">Jämförelse: virtuellt batteri och utmatning</h2>
+  <p class="note">Belopp exklusive moms, per månad om inget annat anges. ”Utmatning” är ersättningen per kWh för el som du matar tillbaka till nätet. Se <a href="#kallor">källorna</a> nedan.</p>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Bolag</th><th>Virtuellt batteri och kostnad</th><th>Utmatning</th><th>Tillgodohavande gäller</th><th>Dela med</th><th>Datum</th></tr></thead>
+    <tbody>
+      <tr><td>Octopus Energy</td><td>Solar Wallet, gratis</td><td>0,035 €; 0,07 € vid installation via Octopus</td><td>Förfaller inte</td><td>Andra Octopus-anslutningar, även en andra bostad</td><td>Nov. 2026</td></tr>
+      <tr><td>Endesa</td><td>Batería virtual, 2 €</td><td>0,06 €</td><td>Förfaller inte</td><td>Bara samma anslutning</td><td>Juli 2026</td></tr>
+      <tr><td>Iberdrola</td><td>Solar Cloud; nya kunder sedan sept. 2026 bara med tilläggstjänsten Asistente Smart Avanzado, 3,45 €</td><td>Beroende på avtal</td><td>Fråga</td><td>Andra Iberdrola-avtal med samma innehavare</td><td>Sept. 2026</td></tr>
+      <tr><td>Naturgy</td><td>Batería virtual, gratis</td><td>ca 0,06 €</td><td>5 år</td><td>El och gas med samma innehavare</td><td>Sept. 2026</td></tr>
+      <tr><td>Repsol</td><td>Batería virtual, 1,99 €</td><td>0,06 €</td><td>Så länge du är kund, upp till 1 år efter uppsägning</td><td>Anslutningar med samma innehavare</td><td>Juli 2026</td></tr>
+      <tr><td>Holaluz</td><td>Holaluz Cloud, individuellt månadsbelopp med årsavräkning</td><td>Ingår i månadsbeloppet</td><td>Fråga</td><td>Permanentbostad och andra bostad</td><td>Sept. 2026</td></tr>
+      <tr><td>Factorenergia</td><td>Batería virtual, gratis</td><td>Beroende på avtal</td><td>Förfaller inte, utom vid byte</td><td>Anslutningar med samma innehavare, även utan solceller</td><td>Sept. 2026</td></tr>
+      <tr><td>Energía Nufri</td><td>Batería virtual, gratis</td><td>Beroende på avtal</td><td>Förfaller inte</td><td>Andra anslutningar med samma innehavare</td><td>Sept. 2026</td></tr>
+      <tr><td>Som Energia (kooperativ)</td><td>Sols: 80 % av överskottet som inte kvittats, ingen avgift</td><td>Marknadspris</td><td>5 år</td><td>Bara samma avtal</td><td>Sept. 2026</td></tr>
+      <tr><td>TotalEnergies</td><td>Inget virtuellt batteri i solavtalet</td><td>ca 0,06 €</td><td>Överskottet försvinner varje månad</td><td>Nej</td><td>Sept. 2026</td></tr>
+      <tr><td>PVPC (reglerat)</td><td>Inget virtuellt batteri</td><td>Timpris på marknaden</td><td>Överskottet försvinner varje månad</td><td>Nej</td><td>Nov. 2026</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Det som sticker ut: skillnaderna i ersättning för utmatning är små (några cent per kWh), skillnaderna i villkor stora. Om du kan dela tillgodohavandet med en andra bostad, hur länge det gäller och om en obligatorisk tilläggstjänst ingår betyder över några år ofta mer än en halv cent i ersättning. Och glöm inte priset på elen du köper: det är den största delen av räkningen på vintern.</p>
+
+  <h2 id="situation">Vad passar din situation?</h2>
+  <ul>
+    <li><strong>Fritidshus med solceller, tomt i månader.</strong> Du matar ut mycket medan du är borta. Ett gratis virtuellt batteri som inte förfaller är viktigast här. En hög ersättning är en bonus.</li>
+    <li><strong>Två bostäder i Spanien</strong>, till exempel en finca och en lägenhet vid kusten. Välj ett bolag där tillgodohavandet kan delas mellan båda anslutningarna.</li>
+    <li><strong>Bebott året runt, hög förbrukning på kvällen.</strong> Ett <a href="/sv/kostnader/solcellsbatteri/">solcellsbatteri</a> ger mer än ett virtuellt batteri. Välj ett avtal med låga priser under topp- och mellantid.</li>
+    <li><strong>Elbil.</strong> Välj ett avtal med billig lågpristid (natt och helg) och ladda med solel under dagen. Se nedan.</li>
+    <li><strong>Semesteruthyrning.</strong> Gäster förbrukar mycket, ofta på sommaren när anläggningen ger mest. Ett fast pris per kWh ger bäst överblick. Med smart energistyrning går luftkonditioneringen inte för fullt hela dagen.</li>
+    <li><strong>Inga solceller.</strong> Då spelar det virtuella batteriet ingen roll. Jämför bara priset per kWh, effektavgiften och din avtalade effekt, och kontrollera om PVPC är billigare.</li>
+  </ul>
+
+  <h2 id="tidstariff">Lågpristid, effekt och laddbox</h2>
+  <p>Nästan varje spanskt hushåll har nättariffen 2.0TD, med priser efter tid på dygnet:</p>
+  <table class="prices">
+    <thead><tr><th>Period</th><th>Vardagar</th><th>Pris</th></tr></thead>
+    <tbody>
+      <tr><td>Topp (<em>punta</em>, P1)</td><td>10:00–14:00 och 18:00–22:00</td><td>Högst</td></tr>
+      <tr><td>Mellan (<em>llano</em>, P2)</td><td>08:00–10:00, 14:00–18:00 och 22:00–24:00</td><td>Mellan</td></tr>
+      <tr><td>Låg (<em>valle</em>, P3)</td><td>00:00–08:00 samt hela helgen och nationella helgdagar</td><td>Lägst</td></tr>
+    </tbody>
+  </table>
+  <p>Därtill betalar du en effektavgift för den <strong>avtalade effekten</strong> (<em>potencia contratada</em>) i kW. För lågpristiden kan du välja högre effekt än under dagen. Praktiskt för en <a href="/sv/kostnader/laddbox/">laddbox</a>: ladda med mer effekt på natten utan att betala för det under dagen. För hög effekt kostar pengar varje månad, även när du inte är där; för låg löser ut huvudsäkringen.</p>
+  <p>Vissa bolag har särskilda avtal för elbilar med mycket lågt nattpris. Kontrollera då också priset under övriga timmar, eftersom det ofta är högre. Med solceller, batteri och laddbox lönar det sig att samordna allt: se <a href="/sv/kostnader/smart-energistyrning/">smart energistyrning</a>.</p>
+
+  <h2 id="laddbox">Laddbox från elbolaget</h2>
+  <p>De stora bolagen säljer också en laddbox med installation, ofta tillsammans med ett särskilt bilavtal. I paketet ingår en fast kabellängd mellan elcentral och laddbox. Är avståndet större, till exempel i ett garage under ett lägenhetshus eller vid en carport längst bak på en finca, betalar du per extra meter. Be därför alltid om en offert med det verkliga avståndet.</p>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Bolag</th><th>Paket</th><th>Kabel ingår</th><th>Pris från</th><th>Datum</th></tr></thead>
+    <tbody>
+      <tr><td>Endesa</td><td>Waybox, 7,4 eller 22 kW, med installationsintyg (CIE)</td><td>Hus: upp till 20 m. Gemensamt garage: upp till 20 m (Mini) eller 50 m</td><td>1 099 €</td><td>Nov. 2026</td></tr>
+      <tr><td>Repsol</td><td>Laddbox med lastbalansering (<em>balanceo</em>), enfas</td><td>Ej angivet, enligt offert</td><td>2 011 € (hus), 2 066 € (garage), inkl. moms</td><td>Nov. 2026</td></tr>
+      <tr><td>Iberdrola</td><td>Köpa eller hyra laddbox, installation enligt offert via deras kalkylator</td><td>Beroende på avstånd</td><td>Enligt offert</td><td>Nov. 2026</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Endesa ger med paketet 30 % rabatt på bilavtalet <em>Tarifa Recarga en Casa</em>, ett fast månadsbelopp för ett paket kWh. Det lönar sig om du laddar mycket hemma, mindre om du har solceller och laddar med solel under dagen. Du behöver inte köpa laddboxen av ditt elbolag: varje behörig installatör får installera den, och avtalet väljer du fritt. Vad en laddbox kostar och vad en extra meter kabel brukar kosta ser du i <a href="/sv/kostnader/laddbox/">kostnader för laddbox</a>.</p>
+
+  <h2 id="byta">Byta som utländsk ägare</h2>
+  <ul class="checks">
+    <li>Du behöver ett NIE och anslutningens CUPS-kod (står på varje räkning)</li>
+    <li>Bytet är gratis; det nya bolaget säger upp det gamla avtalet</li>
+    <li>Kontrollera om ditt nuvarande avtal har en <em>permanencia</em> med avgift</li>
+    <li>Använd tillgodohavandet i ditt virtuella batteri innan: vid byte går det oftast förlorat</li>
+    <li>Se efter på räkningen om det finns tilläggstjänster (<em>servicios adicionales</em>), till exempel serviceavtal som du aldrig har beställt</li>
+    <li>Fråga om kundtjänsten talar engelska och om du kan sköta allt online</li>
+    <li>Står anslutningen fortfarande på den förra ägaren? Då behövs ett innehavarbyte (<em>cambio de titular</em>), ibland med ett giltigt elintyg</li>
+  </ul>
+  <p>Är elen gammal eller saknas ett giltigt intyg (<em>boletín</em>)? Se <a href="/sv/kostnader/byta-elsystem/">byta elsystem</a>.</p>
+
+  <h2 id="sjalv">Jämför själv</h2>
+  <p>Den spanska tillsynsmyndigheten CNMC har en oberoende jämförelsetjänst: <a href="https://comparador.cnmc.gob.es/" rel="noopener" target="_blank">comparador.cnmc.gob.es</a>. Du anger postnummer, effekt och förbrukning per period och ser alla erbjudanden, även med egenförbrukning. Din förbrukning per timme kan du ladda ner på nätbolagets webbplats (hos e-distribución heter den <em>Área Privada</em>).</p>
+  <p>Vill du inte räkna själv? Skicka oss en aktuell räkning, så berättar vi vad som sticker ut och vad solceller, ett batteri eller ett annat avtal skulle ge.</p>
+
+  <h2 id="kallor">Källor och datum</h2>
+  <ul>
+    <li>Octopus Energy: <a href="https://octopusenergy.es/precios/tarifa-solar" rel="noopener" target="_blank">octopusenergy.es, tarifa solar</a>, hämtad 5 november 2026.</li>
+    <li>Kostnad, giltighet och delning av virtuellt batteri per bolag: <a href="https://tuexcedente.es/bateria-virtual/" rel="noopener" target="_blank">tuexcedente.es</a>, med hänvisningar till bolagens webbplatser, läget i september 2026 (Endesa: priser från 22 juli 2026; Iberdrola: ändring från 7 september 2026).</li>
+    <li>Ersättning för utmatning samt kostnader hos Repsol och Endesa: <a href="https://selectra.es/autoconsumo/tarifas/bateria-virtual/comercializadoras" rel="noopener" target="_blank">Selectra</a>, uppdaterad 2 juli 2026. Selectra angav då fortfarande Endesas virtuella batteri som gratis.</li>
+    <li>TotalEnergies och Naturgy: <a href="https://veredictosolar.com/mejor-tarifa-bateria-virtual/" rel="noopener" target="_blank">Veredicto Solar</a>, uppdaterad 30 september 2026.</li>
+    <li>Laddboxpaket från Endesa och Repsol: <a href="https://www.endesa.com/es/movilidad-electrica/cargador.html" rel="noopener" target="_blank">endesa.com</a> och <a href="https://www.repsol.es/particulares/asesoramiento-consumo/instalar-punto-recarga-en-garaje/" rel="noopener" target="_blank">repsol.es</a>, hämtade 5 november 2026.</li>
+    <li>Kvittningsordningen: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2019-5089" rel="noopener" target="_blank">Real Decreto 244/2019</a>. PVPC-formeln: <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-14048" rel="noopener" target="_blank">Real Decreto 446/2023</a>.</li>
+  </ul>
+  <p class="note">Den här jämförelsen är allmän information och ingen rekommendation av ett visst bolag. Priser och villkor ändras regelbundet; kontrollera dem alltid hos bolaget innan du tecknar ett avtal. Har du hittat ett fel eller ett ändrat villkor? Mejla oss på info@axarquiahome.com, så rättar vi det. Vi säljer inga energiavtal och är inte bundna till något bolag.</p>
+</Guide>

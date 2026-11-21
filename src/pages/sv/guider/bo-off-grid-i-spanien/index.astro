@@ -1,0 +1,153 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'vad', label: 'Bo off grid i Axarquía' },
+  { id: 'el', label: 'El: solceller och batteri' },
+  { id: 'bil', label: 'Köra och ladda elbil' },
+  { id: 'smart', label: 'Smart energistyrning' },
+  { id: 'vatten', label: 'Vatten: tank, regnvatten och brunn' },
+  { id: 'avlopp', label: 'Avlopp: avloppsbrunn eller minireningsverk' },
+  { id: 'internet', label: 'Internet: Starlink och alternativ' },
+  { id: 'laga-mat', label: 'Matlagning, varmvatten och värme' },
+  { id: 'kostnad', label: 'Vad kostar allt tillsammans?' },
+  { id: 'kopa', label: 'Köpa en finca som är off grid' },
+];
+
+const faq = [
+  {
+    q: 'Är det lagligt att bo off grid i Spanien?',
+    a: 'Ja. Det finns inget krav på att vara ansluten till elnätet. Själva huset måste dock vara lagligt eller ha AFO-status, solcellsanläggningen och brunnen måste vara byggda och anmälda enligt reglerna, och avloppssystemet måste vara godkänt.',
+  },
+  {
+    q: 'Kan jag ansluta en finca som är off grid till nätet senare?',
+    a: 'Ibland. Det beror på avståndet till nätet och husets status. Ligger närmaste ledning hundratals meter bort kan nätbolaget begära tiotusentals euro. En bra solcellsanläggning är då ofta billigare.',
+  },
+  {
+    q: 'Vad händer med batteriet om jag är borta i flera månader?',
+    a: 'Ett modernt litiumbatteri (LiFePO4) klarar utan problem att vila i månader, så länge panelerna laddar det. Låt ändå någon kontrollera att anläggningen fungerar och att växelriktaren inte visar något fel. Det kan ingå i tillsynen.',
+  },
+  {
+    q: 'Fungerar Starlink i Axarquías berg?',
+    a: 'Oftast bra, om antennen har fri sikt mot den norra himlen. Träd eller en bergssluttning åt det hållet kan bryta signalen. Kontrollera platsen i förväg med Starlink-appen.',
+  },
+];
+---
+<Guide lang="sv" slug="bo-off-grid-i-spanien" toc={toc} faq={faq} dienst="energie" ctaTitle="Göra en finca självförsörjande?" ctaText="Berätta var huset ligger och hur du använder det. Du får ett förslag för el, vatten och avlopp, med ett pris per post.">
+  <h2 id="vad">Bo off grid i Axarquía</h2>
+  <p>Många fincor i kullarna runt Cómpeta, Canillas, Árchez, Periana och Comares har aldrig varit anslutna till elnät eller vattenledning. De boende tar sin el från taket, sitt vatten från en tank eller brunn och sitt internet från en satellit. Med dagens teknik är det ingen camping längre: du kan bo bekvämt där, med luftkonditionering, tvättmaskin och snabbt internet.</p>
+  <p>Att bo off grid kräver dock ett väl planerat system. Ett för litet batteri eller en för liten vattentank märks först en mulen vecka i januari eller i slutet av en torr sommar. Nedan ser du per post vad du ska tänka på och vad det kostar. Alla belopp är riktvärden för 2026, exklusive moms.</p>
+
+  <h2 id="el">El: solceller och batteri</h2>
+  <p>Hjärtat i ett hus som är off grid är en fristående anläggning med batteri (<em>instalación aislada</em>). Under dagen laddar panelerna batteriet, på kvällen och natten tar du el från batteriet. Eftersom det inte finns något nät i reserv dimensionerar du generösare än för ett anslutet hus:</p>
+  <ul>
+    <li><strong>Paneler:</strong> tillräckligt för en kort vinterdag. I Axarquía ger 1 kWp i december cirka 3 kWh per dag, i juli det dubbla.</li>
+    <li><strong>Batteri:</strong> tillräckligt för en till två dagar utan sol. För ett hus som bebos året runt oftast 10 till 20 kWh.</li>
+    <li><strong>Växelriktare:</strong> stark nog för de största apparaterna som går samtidigt, till exempel vattenpump, tvättmaskin och luftkonditionering.</li>
+    <li><strong>Reserv:</strong> ett litet elverk för långa mulna perioder, eller smart planering av tunga apparater till soliga eftermiddagar.</li>
+  </ul>
+  <table class="prices">
+    <thead><tr><th>Anläggning</th><th>Passar för</th><th>Riktvärde</th></tr></thead>
+    <tbody>
+      <tr><td>3 kWp, 10 kWh batteri</td><td>Fritidshus, sparsam användning, ingen luftkonditionering</td><td>10 000–14 000 €</td></tr>
+      <tr><td>5 kWp, 15 kWh batteri</td><td>Hus som bebos året runt med en eller två luftkonditioneringar</td><td>14 000–20 000 €</td></tr>
+      <tr><td>8 kWp, 20–30 kWh batteri</td><td>Stort hus med poolpump eller värmepump</td><td>20 000–32 000 €</td></tr>
+      <tr><td>Elverk som reserv</td><td>Långa mulna perioder</td><td>800–3 000 €</td></tr>
+    </tbody>
+  </table>
+  <p>Mer om priser, batterier och återbetalningstid i <a href="/sv/kostnader/solceller/">kostnader för solceller</a> och <a href="/sv/kostnader/solcellsbatteri/">kostnader för solcellsbatteri</a>.</p>
+
+  <h2 id="bil">Köra och ladda elbil</h2>
+  <p>Även off grid kan du köra elbil, på egen solel. En bil som kör 1 000 mil om året förbrukar cirka 1 500 till 1 800 kWh. Därtill kommer:</p>
+  <ul>
+    <li><strong>2 till 3 kWp extra paneler</strong>, eftersom du producerar mindre på vintern och inte har något nät i reserv. Räkna med 2 500 till 4 500 €.</li>
+    <li><strong>En laddbox som bara laddar med överskott</strong>, med 2 till 3,7 kW, så att husbatteriet förblir fullt för natten. Ett bilbatteri på 60 kWh är mycket större än ditt husbatteri.</li>
+    <li><strong>En växelriktare med tillräcklig effekt</strong> för laddbox, vattenpump och luftkonditionering samtidigt.</li>
+  </ul>
+  <p>Du laddar då främst soliga eftermiddagar. Under långa mulna perioder är en snabbladdare i byn eller längs A-7 ett bra komplement. Mer om priser och regler i <a href="/sv/kostnader/laddbox/">kostnader för laddbox</a>.</p>
+
+  <h2 id="smart">Smart energistyrning</h2>
+  <p>Utan nät är det viktigt att stora förbrukare inte går samtidigt och att batteriet aldrig blir tomt. Med <a href="/sv/kostnader/smart-energistyrning/">smart energistyrning</a>, till exempel med Home Assistant, sköter huset det själv:</p>
+  <ul>
+    <li>Vattenpump, varmvattenberedare, tvättmaskin och laddbox går när solen skiner och batteriet är tillräckligt fullt.</li>
+    <li>Du får ett meddelande vid lågt batteri, tom vattentank eller ett fel på växelriktaren.</li>
+    <li>I mobilen ser du, även från Sverige, vad panelerna producerar och hur fulla batteri och vattentank är.</li>
+    <li>Elverket startar automatiskt när batteriet blir för tomt efter några gråa dagar.</li>
+  </ul>
+
+  <h2 id="vatten">Vatten: tank, regnvatten och brunn</h2>
+  <p>Utan vattenledning behöver du en eller flera av de här källorna. Efter de senaste årens torka är det klokt att kunna lita på två.</p>
+  <ul>
+    <li><strong>Vattentank (<em>depósito</em>) med leverans med tankbil.</strong> Den enklaste lösningen. Ett hushåll förbrukar snabbt 3 till 5 m³ per vecka, så en tank på 10 000 till 20 000 liter är ingen lyx.</li>
+    <li><strong>Samla regnvatten.</strong> Många gamla fincor har en murad cistern (<em>aljibe</em>) under terrassen. Att reparera och täta den är ofta billigare än en ny tank.</li>
+    <li><strong>Brunn (<em>pozo</em>).</strong> Ger störst oberoende, men kräver tillstånd från vattenmyndigheten, och det finns ingen garanti för att du hittar vatten.</li>
+    <li><strong>Bevattningsvatten (<em>agua de riego</em>).</strong> Vissa tomter har en andel i en bevattningsförening. Det vattnet är för trädgården, inte för att dricka.</li>
+  </ul>
+  <p>Till varje källa hör en pump med tryckkärl, för dricksvatten ett filter och eventuellt en UV-lampa. Se även <a href="/sv/guider/vattenfilter-spanien/">vattenfilter i Spanien</a>.</p>
+  <table class="prices">
+    <thead><tr><th>Post</th><th>Riktvärde</th></tr></thead>
+    <tbody>
+      <tr><td>Plasttank 10 000 liter, uppställd och ansluten</td><td>1 500–4 000 €</td></tr>
+      <tr><td>Reparera och täta en murad cistern (aljibe)</td><td>2 000–8 000 €</td></tr>
+      <tr><td>Pump med tryckkärl</td><td>600–1 500 €</td></tr>
+      <tr><td>Filter och UV-lampa för dricksvatten</td><td>800–2 000 €</td></tr>
+      <tr><td>Brunn med tillstånd, pump och ledning</td><td>10 000–30 000 €</td></tr>
+      <tr><td>Vatten med tankbil</td><td>4–10 € per m³ inklusive leverans</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="avlopp">Avlopp: avloppsbrunn eller minireningsverk</h2>
+  <p>Utan kommunalt avlopp går avloppsvattnet till en avloppsbrunn (<em>fosa séptica</em>) eller ett minireningsverk (<em>depuradora</em>). Gamla avloppsbrunnar är ofta inte täta och uppfyller inte längre reglerna. Vid köp eller renovering hör det till det första du bör kontrollera; se också <a href="/sv/kostnader/vattentank-och-avloppsbrunn/">kostnader för vattentank och avloppsbrunn</a>.</p>
+  <table class="prices">
+    <thead><tr><th>Post</th><th>Riktvärde</th></tr></thead>
+    <tbody>
+      <tr><td>Ny avloppsbrunn, installerad</td><td>2 500–6 000 €</td></tr>
+      <tr><td>Minireningsverk</td><td>4 000–9 000 €</td></tr>
+      <tr><td>Tömma avloppsbrunnen</td><td>150–300 € per tömning</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="internet">Internet: Starlink och alternativ</h2>
+  <p>Fiber når sällan ända fram till fincan. Det finns tre möjligheter:</p>
+  <ul>
+    <li><strong>Starlink.</strong> Internet via satellit, snabbt nog för distansarbete och streaming. Du köper en antenn och betalar ett månadsabonnemang; priser och kampanjer ändras, räkna med några hundra euro för paketet och cirka 30–65 € i månaden. Obs: antennen drar hela tiden 50 till 75 watt, alltså 1 till 1,5 kWh per dag. Ta med det när du dimensionerar batteriet.</li>
+    <li><strong>4G eller 5G med utomhusantenn.</strong> Billigare och ofta tillräckligt om det finns täckning. En antenn på taket gör stor skillnad.</li>
+    <li><strong>Radiolänk.</strong> Lokala leverantörer i Axarquía levererar internet via en sändare på en kulle. Fråga i byn vem som täcker din dal.</li>
+  </ul>
+  <p>Antennen eller parabolen ska monteras stadigt och vädertätt på taket eller en mast, med kabeln snyggt indragen i huset. Det gör vi tillsammans med solcellsanläggningen.</p>
+
+  <h2 id="laga-mat">Matlagning, varmvatten och värme</h2>
+  <ul>
+    <li><strong>Matlagning:</strong> med gasolflaskor (<em>butano</em> eller <em>propano</em>) eller med induktion om batteriet är stort nog.</li>
+    <li><strong>Varmvatten:</strong> solfångare (<em>termosifón</em>) är off grid det bästa valet. Den kostar 1 500–3 500 € och behöver ingen el.</li>
+    <li><strong>Värme:</strong> en ved- eller pelletskamin, och under dagen luftkonditioneringen som värmepump medan solen skiner. Bra fönster och isolering gör skillnaden: se <a href="/sv/guider/isolera-hus-i-spanien/">isolera huset</a> och <a href="/sv/renovering/">renovering</a>.</li>
+  </ul>
+
+  <h2 id="kostnad">Vad kostar allt tillsammans?</h2>
+  <p>Ett räkneexempel: en finca på 120 m² nära Cómpeta, bebodd året runt av två personer, där ett gammalt fritidshus blir ett fullvärdigt hus som är off grid.</p>
+  <table class="prices">
+    <thead><tr><th>Post</th><th>Riktvärde</th></tr></thead>
+    <tbody>
+      <tr><td>Solcellsanläggning 5 kWp med 15 kWh batteri</td><td>14 000–20 000 €</td></tr>
+      <tr><td>Vattentank 15 000 liter, pump, filter och UV</td><td>3 500–7 000 €</td></tr>
+      <tr><td>Ny avloppsbrunn</td><td>2 500–6 000 €</td></tr>
+      <tr><td>Solfångare</td><td>1 500–3 500 €</td></tr>
+      <tr><td>Starlink, monterad</td><td>500–900 €</td></tr>
+      <tr><td>Förnya elen i huset</td><td>6 000–9 000 €</td></tr>
+      <tr><td><strong>Totalt</strong></td><td><strong>28 000–46 000 €</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Därefter är de löpande kostnaderna låga: ingen elräkning, bara vatten med tankbil, gas, internet och då och då underhåll av anläggningen.</p>
+
+  <h2 id="kopa">Köpa en finca som är off grid</h2>
+  <p>En finca utan anslutningar är ofta billigare, men räkningen kommer senare. Låt kontrollera före köpet:</p>
+  <ul class="checks">
+    <li>Hur gamla solcellsanläggningen och framför allt batteriet är, och om anläggningen är anmäld</li>
+    <li>Varifrån vattnet kommer, om en brunn har tillstånd och hur mycket den ger</li>
+    <li>Om avloppsbrunnen är tät och tillåten</li>
+    <li>Om tillfartsvägen går att köra på vintern, även för en tankbil; se <a href="/sv/guider/tillfartsvag-finca-spanien/">tillfartsväg till en finca</a></li>
+    <li>Om det finns mobiltäckning och fri sikt norrut för Starlink</li>
+    <li>Om huset är lagligt eller har AFO-status: se <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a></li>
+  </ul>
+  <p>Alla de punkterna kontrollerar vi vid en <a href="/sv/besiktning/">besiktning före köpet</a>. Läs också guiden <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca i Spanien</a>.</p>
+</Guide>

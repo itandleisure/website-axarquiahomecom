@@ -1,0 +1,86 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'vad', label: 'Vad är den spanska energideklarationen?' },
+  { id: 'nar', label: 'När krävs den?' },
+  { id: 'sa-gors', label: 'Så tas deklarationen fram' },
+  { id: 'kostnad', label: 'Kostnad och giltighet' },
+  { id: 'battre', label: 'En bättre klass: vad ger mest?' },
+  { id: '2030', label: 'Måste mitt hus bli bättre till 2030?' },
+];
+
+const faq = [
+  {
+    q: 'Vad kostar en energideklaration i Spanien?',
+    a: 'För en lägenhet eller ett byhus oftast 80 till 150 €, för en villa eller finca 150 till 300 €. Ibland tillkommer en liten registreringsavgift. Priset beror på husets storlek och teknikerns resväg.',
+  },
+  {
+    q: 'Hur länge gäller en energideklaration i Spanien?',
+    a: 'Tio år. Har huset den sämsta klassen G gäller den i fem år. Efter en större renovering, till exempel nya fönster, isolering eller en värmepump, lönar det sig ofta att göra en ny deklaration, eftersom huset då får en bättre klass.',
+  },
+  {
+    q: 'Behöver jag en energideklaration för semesteruthyrning?',
+    a: 'I de flesta fall ja. Deklarationen krävs vid uthyrning, och klassen måste stå i annonsen. Det finns ett undantag för bostäder som används mindre än fyra månader om året, men det tolkas snävt. Låt göra deklarationen om du hyr ut.',
+  },
+  {
+    q: 'Vad händer om jag inte har någon energideklaration?',
+    a: 'Notarie och mäklare frågar efter den, och utan deklaration kan en försäljning eller ett hyresavtal dra ut på tiden. Dessutom kan konsumentmyndigheten utfärda böter, från några hundra till några tusen euro beroende på hur allvarligt det är.',
+  },
+];
+---
+<Guide lang="sv" slug="energideklaration-spanien" toc={toc} faq={faq} dienst="legalisatie" onderwerp="Jag behöver en energideklaration för mitt hus." ctaTitle="Behöver du en energideklaration, eller en bättre klass?" ctaText="Vi ordnar deklarationen via den godkända tekniker vi samarbetar med. Vill du förbättra huset först räknar vi ut vilken åtgärd som ger mest: fönster, isolering, en värmepump eller solceller.">
+  <h2 id="vad">Vad är den spanska energideklarationen?</h2>
+  <p>Energideklarationen heter i Spanien <em>certificado de eficiencia energética</em>, kort <em>certificado energético</em> eller CEE. Den visar hur energieffektiv en bostad är, på en skala från <strong>A</strong> (mycket effektiv) till <strong>G</strong> (mycket ineffektiv). På etiketten står två värden:</p>
+  <ul>
+    <li><strong>energiförbrukningen</strong> i kWh per m² och år;</li>
+    <li><strong>koldioxidutsläppen</strong> i kg per m² och år.</li>
+  </ul>
+  <p>Beräkningen utgår från byggnaden och de fasta installationerna: väggar, tak, fönster, värme, kyla och varmvatten. Hur mycket du själv förbrukar räknas inte. Därför får ett gammalt byhus med tjocka murar men enkelglas och elektrisk varmvattenberedare ofta E, F eller G, även om elräkningen är låg.</p>
+
+  <h2 id="nar">När krävs den?</h2>
+  <p>Reglerna finns i Real Decreto 390/2021. Du behöver en giltig deklaration när du:</p>
+  <ul>
+    <li><strong>säljer</strong>: notarien tar med den i köpebrevet, och köparen får en kopia;</li>
+    <li><strong>hyr ut</strong>, på lång eller kort tid, inklusive de flesta semesteruthyrningar;</li>
+    <li><strong>annonserar</strong>: energiklassen måste stå redan i annonsen, alltså även på mäklarens webbplats eller uthyrningsplattformen.</li>
+  </ul>
+  <p>Bor du själv i huset och varken säljer eller hyr ut behöver du ingen deklaration. Det finns undantag, till exempel för små fristående byggnader under 50 m² och för bostäder som används mindre än fyra månader om året. Lita inte bara på det: notarier och mäklare kräver i praktiken nästan alltid deklarationen.</p>
+  <p>Ska du sälja? I guiden <a href="/sv/guider/salja-hus-i-spanien/dokument/">dokument för försäljningen</a> läser du vad mer du behöver. Ska du hyra ut? Läs också <a href="/sv/guider/hyra-ut-hus-i-spanien/">hyra ut hus i Spanien</a>.</p>
+
+  <h2 id="sa-gors">Så tas deklarationen fram</h2>
+  <ol>
+    <li><strong>En godkänd tekniker</strong> (<em>técnico competente</em>), till exempel en arkitekt, byggingenjör (<em>aparejador</em>) eller ingenjör, besöker huset.</li>
+    <li>Teknikern mäter upp bostaden, kontrollerar väggar, tak, fönster och installationer och tar foton. Det tar oftast ungefär en timme.</li>
+    <li>Med officiell programvara (till exempel CE3X) beräknas energiklassen, med förslag på förbättringar.</li>
+    <li>Deklarationen <strong>registreras hos Junta de Andalucía</strong>. Först då är den officiell.</li>
+    <li>Du får certifikatet och etiketten med klassen, oftast inom en till två veckor.</li>
+  </ol>
+  <p>Se till att teknikern kommer in i alla rum, upp på taket och till installationerna. Är du inte i Spanien kan någon med nyckel låsa upp. Med <a href="/sv/tillsyn/">tillsynen av huset</a> sköter vi det åt dig.</p>
+
+  <h2 id="kostnad">Kostnad och giltighet</h2>
+  <table class="prices">
+    <thead><tr><th>Bostad</th><th>Riktpris (utan moms)</th></tr></thead>
+    <tbody>
+      <tr><td>Lägenhet</td><td>80 till 150 €</td></tr>
+      <tr><td>Byhus eller radhus</td><td>100 till 180 €</td></tr>
+      <tr><td>Villa eller finca</td><td>150 till 300 €</td></tr>
+    </tbody>
+  </table>
+  <p>Deklarationen <strong>gäller i tio år</strong>, vid <strong>klass G i fem år</strong>. Har du renoverat ordentligt efteråt, låt göra en ny: en bättre klass ser bättre ut i annonsen.</p>
+  <p>Se upp med mycket billiga erbjudanden på nätet utan besök. En deklaration som bara bygger på foton är ofta felaktig, och vid en kontroll eller om köparen tvivlar får du göra om den.</p>
+
+  <h2 id="battre">En bättre klass: vad ger mest?</h2>
+  <p>Deklarationen innehåller rekommendationer, men inte varje åtgärd ger lika mycket i det andalusiska klimatet. I Axarquía ger de här ingreppen oftast bäst resultat:</p>
+  <ul>
+    <li><strong>Varmvatten och värme</strong>: att byta en elektrisk varmvattenberedare eller butankamin mot en värmepump (<em>aerotermia</em>) eller luftkonditionering med värmepump ger ofta två klasser. Se <a href="/sv/kostnader/luftkonditionering-och-varmepump/">kostnader för luftkonditionering och värmepump</a>.</li>
+    <li><strong>Fönster</strong>: byt enkelglas och otäta karmar mot dubbelglas i karmar med köldbrytning. Se <a href="/sv/kostnader/fonster-och-karmar/">kostnader för fönster och karmar</a>.</li>
+    <li><strong>Takisolering</strong>: det mesta av värmeförlusten på vintern och det mesta av värmen på sommaren går genom taket. Se <a href="/sv/guider/isolera-hus-i-spanien/">isolera hus i Spanien</a>.</li>
+    <li><strong>Solceller</strong>: sänker förbrukningen av fossil energi och därmed koldioxidvärdet. Se <a href="/sv/kostnader/solceller/">kostnader för solceller</a>.</li>
+  </ul>
+  <p>En bättre klass gör ett hus mer attraktivt för köpare och hyresgäster, och vissa <a href="/sv/guider/bidrag-energieffektivisering-spanien/">bidrag</a> kräver en deklaration före och efter arbetena som bevis. Planera alltså klokt: för ett bidrag låter du göra deklarationen innan du börjar.</p>
+
+  <h2 id="2030">Måste mitt hus bli bättre till 2030?</h2>
+  <p>Ibland läser man att bostäder i Europa måste nå minst klass E eller D till 2030. För ditt hus stämmer det inte. EU:s byggnadsdirektiv från 2024 ålägger länderna att sänka den genomsnittliga energiförbrukningen för alla bostadshus tillsammans, med 16 % till 2030 och med 20 till 22 % till 2035. Hur Spanien genomför det, med bidrag, regler för nybyggen eller krav vid renoveringar, bestämmer landet självt. Någon obligatorisk minimiklass för befintliga bostäder som ägaren själv använder finns i dag inte.</p>
+  <p>Ändå är det klokt att välja den energieffektiva lösningen när du renoverar. Förbättringar blir snarare obligatoriska än billigare, och ett hus med bra klass behåller sitt värde bättre.</p>
+</Guide>

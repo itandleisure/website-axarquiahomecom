@@ -1,0 +1,89 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'oversikt', label: 'Alla alternativ i översikt' },
+  { id: 'larm', label: 'Larm: med eller utan larmcentral' },
+  { id: 'kameror', label: 'Kameror och integritet' },
+  { id: 'rejas', label: 'Galler, dörr och lås' },
+  { id: 'tomt-hus', label: 'Ett hus som står tomt' },
+  { id: 'kombination', label: 'Vilken kombination passar dig?' },
+];
+
+const faq = [
+  {
+    q: 'Kommer polisen om mitt larm går?',
+    a: 'Inte automatiskt. I Spanien skickar larmcentralen hos ett auktoriserat säkerhetsföretag polis eller Guardia Civil först när larmet har bekräftats, till exempel med bild, ljud eller flera utlösta sensorer. Ett larm utan larmcentral låter bara och skickar dig ett meddelande.',
+  },
+  {
+    q: 'Får min kamera filma gatan?',
+    a: 'Nej, bara din egen tomt. En liten remsa av gatan eller vägen fram till ytterdörren är tillåten om det inte går att undvika. En kamera som fångar allmän gata eller grannens tomt bryter mot dataskyddsreglerna. Sätt också upp en skylt med ”zona videovigilada”.',
+  },
+  {
+    q: 'Får jag rabatt på försäkringen med larm?',
+    a: 'Ofta ja, och vissa försäkringsbolag kräver till och med larm eller galler som villkor om huset står tomt en del av året. Fråga ditt försäkringsbolag.',
+  },
+];
+---
+<Guide slug="inbrottsskydd-hus-spanien" lang="sv" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Vill du skydda ditt hus bättre?" ctaText="Berätta om ditt hus och hur ofta du är där. Vi tittar på var de svaga punkterna finns och vad som ger mest: galler, en bättre dörr, ett larm eller någon som regelbundet tittar till huset.">
+  <h2 id="oversikt">Alla alternativ i översikt</h2>
+  <p>En översikt över vad som finns och vad det är bra för. Vill du få det gjort? <a href="/sv/forfragan/">Berätta vad du planerar</a>, så hjälper vi dig att genomföra det.</p>
+  <table class="prices">
+    <thead><tr><th>Alternativ</th><th>Vad det ger</th></tr></thead>
+    <tbody>
+      <tr><td>Bättre låscylinder (inbrottsskyddad)</td><td>Gör det betydligt svårare att bryta upp dörren</td></tr>
+      <tr><td>Smart larm utan larmcentral (monterat själv)</td><td>Siren och meddelande till mobilen; du måste själv skicka någon</td></tr>
+      <tr><td>Wifi-kameror att montera själv</td><td>Fjärråtkomst; fungerar bara med bra internet</td></tr>
+      <tr><td>Fönstergaller (<em>rejas</em>)</td><td>Håller inbrottstjuvar borta från bottenvåningen; inget abonnemang</td></tr>
+      <tr><td>Kamerasystem med inspelare, monterat</td><td>Pålitliga inspelningar, även om internet går ner</td></tr>
+      <tr><td>Larm med larmcentral (abonnemang)</td><td>Övervakat dygnet runt; centralen ringer dig och vid behov polisen</td></tr>
+      <tr><td>Säkerhetsdörr (<em>puerta de seguridad / acorazada</em>)</td><td>Ytterdörren blir den starkaste i stället för den svagaste punkten</td></tr>
+      <tr><td>Rulljalusier med motor och timer</td><td>Huset ser bebott ut; extra barriär vid fönstret</td></tr>
+      <tr><td>Tillsyn: någon som tittar till huset regelbundet</td><td>Ser det ett larm inte ser: läckor, stormskador, post, ett trasigt lås</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="larm">Larm: med eller utan larmcentral</h2>
+  <p>Det finns två sorters larm, och skillnaden är stor:</p>
+  <ul>
+    <li><strong>Med larmcentral</strong> (<em>alarma conectada a central receptora</em>): ett auktoriserat säkerhetsföretag övervakar huset dygnet runt. Går larmet kontrollerar centralen bild eller ljud, ringer dig och skickar vid behov polis eller väktare. Bara ett företag som är registrerat hos inrikesministeriet får koppla upp ett sådant larm. Oftast binder du dig i några år.</li>
+    <li><strong>Utan larmcentral</strong>: ett smart system med sensorer och siren som skickar ett meddelande till dig. Billigt och utan abonnemang, men när du är i Sverige måste du själv hitta någon som åker dit och tittar.</li>
+  </ul>
+  <p>För en finca: utan fast internetanslutning behöver du ett larm som fungerar via mobilnätet (4G), med batteri för strömavbrott. För ett hus som är off grid är det extra viktigt; se <a href="/sv/guider/bo-off-grid-i-spanien/">bo off grid</a>.</p>
+
+  <h2 id="kameror">Kameror och integritet</h2>
+  <p>Med kameror tittar du på distans, och inspelningar hjälper senare vid polisanmälan och försäkring. En kamera förhindrar inte ensam ett inbrott, men synliga kameror avskräcker. Följ de spanska dataskyddsreglerna (tillsynsmyndighet är AEPD):</p>
+  <ul>
+    <li>Filma bara din egen tomt, inte gatan eller grannarna.</li>
+    <li>Sätt upp en skylt med ”<em>zona videovigilada</em>” vid entrén.</li>
+    <li>Spara inte inspelningar längre än nödvändigt (riktvärde högst en månad).</li>
+  </ul>
+  <p>Wifi-kameror som du monterar själv är billiga, men slutar fungera när wifi går ner. Ett kabelanslutet system med inspelare (NVR) i huset är pålitligare.</p>
+
+  <h2 id="rejas">Galler, dörr och lås</h2>
+  <p>De flesta inbrottstjuvar kommer in genom ett fönster på bottenvåningen eller en svag dörr. Därför ger de här åtgärderna ofta mest per euro:</p>
+  <ul>
+    <li><strong>Galler</strong> (<em>rejas</em>): helt normalt i Andalusien och i smide som passar ett byhus eller en finca. För fönster som också är nödutgång väljer du galler som kan öppnas inifrån.</li>
+    <li><strong>Säkerhetsdörr</strong>: dörr med stålkärna, flerpunktslås och en bra cylinder.</li>
+    <li><strong>Cylinder</strong>: många spanska dörrar har en enkel cylinder som kan öppnas med ”bumping” på några sekunder. En bumpingskyddad cylinder är en liten åtgärd med stor effekt.</li>
+    <li><strong>Terrass- och skjutdörrar</strong>: extra lås eller en spärrstång i skenan.</li>
+  </ul>
+  <p>Galler och säkerhetsdörr går bra att kombinera med andra arbeten, till exempel nya fönster eller <a href="/sv/guider/solskydd-persienner-myggnat-spanien/">rulljalusier</a>.</p>
+
+  <h2 id="tomt-hus">Ett hus som står tomt</h2>
+  <p>Ett hus som är stängt i månader syns: stängda jalusier, en full brevlåda, en förvildad trädgård. Det här hjälper:</p>
+  <ul>
+    <li>Jalusier och belysning med timer, på varierande tider.</li>
+    <li>Någon som regelbundet tittar till huset, hämtar posten och kontrollerar att allt är i ordning. Precis det gör <a href="/sv/tillsyn/">tillsynen</a>.</li>
+    <li>Bra kontakt med grannarna, med deras nummer i mobilen.</li>
+    <li>Inga inlägg i sociala medier om att du är borta.</li>
+  </ul>
+  <p>Orolig för husockupanter (<em>okupas</em>)? Läs vad du kan göra i <a href="/sv/problem/inbrott-och-ockupation/">inbrott och ockupation</a>.</p>
+
+  <h2 id="kombination">Vilken kombination passar dig?</h2>
+  <ul>
+    <li><strong>Lägenhet i ett område</strong>, du är ofta där: en bättre cylinder och ett smart larm utan larmcentral räcker ofta.</li>
+    <li><strong>Byhus</strong>, tomt en del av året: galler på bottenvåningen, en bra dörr och tillsyn.</li>
+    <li><strong>Fristående villa eller finca</strong>, tom i månader: galler eller säkerhetsjalusier, larm med larmcentral via 4G, några kameror och tillsyn.</li>
+  </ul>
+</Guide>

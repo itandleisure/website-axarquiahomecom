@@ -1,0 +1,115 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'vad', label: 'Vad är ett virtuellt batteri?' },
+  { id: 'kvittning', label: 'Grunden: kvittning av överskott' },
+  { id: 'skillnad', label: 'Vad det virtuella batteriet tillför' },
+  { id: 'exempel', label: 'Räkneexempel: ett fritidshus i Torrox' },
+  { id: 'riktigt-batteri', label: 'Virtuellt eller riktigt batteri?' },
+  { id: 'laddbox', label: 'Tillsammans med en laddbox' },
+  { id: 'anmala', label: 'Så ordnar du det' },
+  { id: 'kontrollera', label: 'Det här ska du kontrollera' },
+];
+
+const faq = [
+  {
+    q: 'Får jag betalt för solel som jag matar ut?',
+    a: 'Inte i den vanliga ordningen för hushåll. Utmatad el kvittas mot din räkning, men en räkning blir aldrig negativ. Med ett virtuellt batteri sparas resten som ett tillgodohavande i euro för senare räkningar. Utbetalning får du bara om du registrerar dig som elproducent, vilket sällan lönar sig för ett bostadshus.',
+  },
+  {
+    q: 'Är det virtuella batteriet reglerat i lag?',
+    a: 'Nej. Lagen reglerar bara den månatliga kvittningen av överskott (Real Decreto 244/2019). Det virtuella batteriet är en extratjänst från elbolaget med egna villkor. Därför skiljer sig kostnader, hur länge tillgodohavandet gäller och vad du kan använda det till mellan bolagen.',
+  },
+  {
+    q: 'Finns det ett virtuellt batteri i det reglerade PVPC-avtalet?',
+    a: 'Nej. I PVPC får du visserligen den lagstadgade kvittningen till timpriset på marknaden, men det som blir över i slutet av månaden försvinner. Ett virtuellt batteri erbjuds bara av bolag på den fria marknaden.',
+  },
+  {
+    q: 'Förlorar jag mitt tillgodohavande om jag byter elbolag?',
+    a: 'Hos nästan alla bolag ja. Tillgodohavandet hör till bolaget, inte till anslutningen. Använd det därför helst innan, eller byt en månad när det är lågt.',
+  },
+  {
+    q: 'Kan jag använda tillgodohavandet från mitt hus i Spanien för mitt hus i Sverige?',
+    a: 'Nej. Delning går bara mellan anslutningar i Spanien hos samma bolag och ofta bara med samma avtalsinnehavare. Vissa bolag tillåter det för en andra bostad eller till och med för gasavtalet.',
+  },
+];
+---
+<Guide lang="sv" slug="virtuellt-batteri-spanien" toc={toc} faq={faq} dienst="energiebeheer" ctaTitle="Få ut mer av dina solceller?" ctaText="Vi tittar på din anläggning, din förbrukning och ditt avtal och säger ärligt om ett virtuellt batteri, ett riktigt batteri eller ett annat avtal ger mest.">
+  <h2 id="vad">Vad är ett virtuellt batteri?</h2>
+  <p>Solceller i Axarquía producerar under dagen ofta mer el än du förbrukar just då. Framför allt i ett fritidshus som står tomt en del av året. Överskottet går ut på nätet. I Spanien får du ersättning för det, men bara tills din räkning står på noll. Det som går utöver det försvinner.</p>
+  <p>Ett <strong>virtuellt batteri</strong> (<em>batería virtual</em>, hos vissa bolag <em>monedero solar</em> eller <em>Solar Wallet</em>) löser det. Bolaget sätter in beloppet som du inte kunde kvitta som ett tillgodohavande i euro. Det tillgodohavandet använder du en senare månad, till exempel på vintern när panelerna ger mindre, eller när du själv är på plats och förbrukar mer.</p>
+  <p>Det är alltså inget batteri fullt med el, utan en spargris full med pengar. Den skillnaden är viktig när du jämför med ett riktigt batteri.</p>
+
+  <h2 id="kvittning">Grunden: kvittning av överskott</h2>
+  <p>Nästan varje hus med solceller i Spanien omfattas av ordningen <em>autoconsumo con excedentes acogido a compensación simplificada</em> i Real Decreto 244/2019. Kortfattat:</p>
+  <ul>
+    <li>Ordningen gäller för anläggningar upp till 100 kW, alltså för varje bostadshus.</li>
+    <li>Varje månad värderas den utmatade elen med ett pris per kWh. I det reglerade avtalet (PVPC) är det timpriset på marknaden, på den fria marknaden priset i ditt avtal, ofta mellan 0,03 och 0,08 € per kWh.</li>
+    <li>Beloppet dras av från <strong>energikostnaden</strong> på din räkning. Effektavgiften (<em>término de potencia</em>), mätarhyran och skatterna på dem är kvar.</li>
+    <li>Energikostnaden sjunker som mest till noll. Inga pengar betalas ut, och utan virtuellt batteri försvinner resten i slutet av månaden.</li>
+  </ul>
+  <p>Som jämförelse: för el från nätet betalar du på den fria marknaden oftast 0,12 till 0,30 € per kWh, beroende på avtal och tid på dygnet. En kWh som du förbrukar själv är alltså värd tre till fem gånger så mycket som en som du matar ut.</p>
+
+  <h2 id="skillnad">Vad det virtuella batteriet tillför</h2>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th></th><th>Bara kvittning</th><th>Med virtuellt batteri</th></tr></thead>
+    <tbody>
+      <tr><td>Överskott i slutet av månaden</td><td>Försvinner</td><td>Sparas som tillgodohavande</td></tr>
+      <tr><td>Vad du kan kvitta</td><td>Bara energikostnaden</td><td>Hos många bolag även effektavgift och andra poster</td></tr>
+      <tr><td>Dela med en annan anslutning</td><td>Nej</td><td>Hos vissa bolag</td></tr>
+      <tr><td>Kostnad</td><td>Ingen</td><td>Gratis till några euro i månaden</td></tr>
+      <tr><td>Finns hos</td><td>Alla bolag och i PVPC</td><td>Bara fria marknaden, villkor per bolag</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Vilka bolag som erbjuder ett virtuellt batteri och på vilka villkor ser du i vår <a href="/sv/guider/elbolag-i-spanien-jamforelse/">jämförelse av elbolag i Spanien</a>.</p>
+
+  <h2 id="exempel">Räkneexempel: ett fritidshus i Torrox</h2>
+  <p>Ett hus med 4 kWp solpaneler producerar i Axarquía cirka 6 000 kWh om året. Ägarna är på plats från oktober till april och hyr ut några veckor på sommaren. De förbrukar cirka 1 800 kWh solel direkt och matar ut 4 200 kWh. Ersättningen är 0,06 € per kWh.</p>
+  <div style="overflow-x:auto">
+  <table class="prices">
+    <thead><tr><th>Period</th><th>Värde av utmatningen</th><th>Energikostnad att kvitta</th><th>Utan virtuellt batteri</th></tr></thead>
+    <tbody>
+      <tr><td>Maj till september (huset mest tomt)</td><td>ca 160 €</td><td>ca 40 €</td><td>ca 120 € försvinner</td></tr>
+      <tr><td>Oktober till april (bebott)</td><td>ca 90 €</td><td>ca 260 €</td><td>Allt kvittas</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Utan virtuellt batteri går i det här exemplet cirka 120 € förlorade per år. Med det förs beloppet över till vintermånaderna och får hos många bolag även betala effektavgiften. Ju oftare huset står tomt, desto mer ger det virtuella batteriet. Siffrorna är riktvärden: din egen förbrukning, avtalet och panelernas riktning betyder mycket.</p>
+
+  <h2 id="riktigt-batteri">Virtuellt eller riktigt batteri?</h2>
+  <p>Ett riktigt batteri lagrar el, ett virtuellt batteri lagrar pengar. En kWh i ditt batteri sparar på kvällen hela priset på 0,15 till 0,30 €. Samma kWh i ett virtuellt batteri är värd 0,03 till 0,08 €. Ändå är det riktiga batteriet inte alltid det bästa valet:</p>
+  <ul>
+    <li><strong>Bebott året runt, hög förbrukning på kvällen</strong> (luftkonditionering, matlagning, laddbox)? Då betalar sig ett batteri snabbast. Se <a href="/sv/kostnader/solcellsbatteri/">vad ett solcellsbatteri kostar</a>.</li>
+    <li><strong>Står huset tomt i månader?</strong> Då blir batteriet snabbt fullt och ger lite. Ett gratis virtuellt batteri fångar upp överskottet utan investering.</li>
+    <li><strong>Det bästa av båda:</strong> med riktigt batteri och virtuellt batteri går elen först till huset, sedan till batteriet och bara resten ut på nätet, där den sparas som tillgodohavande.</li>
+    <li><strong>Strömavbrott:</strong> ett riktigt batteri med reservkraft håller kyl, larm och router igång vid ett avbrott. Ett virtuellt batteri gör det inte. I Axarquías kullar går strömmen regelbundet efter en storm; se <a href="/sv/problem/stromavbrott/">strömavbrott</a>.</li>
+  </ul>
+  <p>Mer om solceller, produktion och återbetalningstid i <a href="/sv/kostnader/solceller/">kostnader för solceller</a>. Ingen nätanslutning? Då finns inget att mata ut: se <a href="/sv/guider/bo-off-grid-i-spanien/">bo off grid i Spanien</a>.</p>
+
+  <h2 id="laddbox">Tillsammans med en laddbox</h2>
+  <p>En elbil som står hemma under dagen är det billigaste sättet att använda din egen solel: varje kWh i bilen är en kWh som du inte matar ut för några cent. En smart laddbox laddar med solöverskottet och växlar på natten till den billiga lågpristiden. Är du borta under dagen fångar det virtuella batteriet upp överskottet och hjälper till att betala nattladdningen. Se <a href="/sv/kostnader/laddbox/">vad en laddbox kostar</a> och hur <a href="/sv/kostnader/smart-energistyrning/">smart energistyrning</a> samordnar solceller, batteri, laddbox och luftkonditionering.</p>
+
+  <h2 id="anmala">Så ordnar du det</h2>
+  <ol>
+    <li><strong>Anmäl anläggningen.</strong> Installatören utfärdar installationsintyget (<em>certificado de instalación</em>, CIE) och anmäler anläggningen i Junta de Andalucías register för egenförbrukning.</li>
+    <li><strong>Nätbolaget.</strong> I provinsen Málaga är det nästan överallt e-distribución. Det ställer om din anslutning till egenförbrukning med kvittning. Det sker oftast automatiskt efter anmälan, men kan ta några veckor till några månader.</li>
+    <li><strong>Elbolaget.</strong> Du väljer ett avtal med kvittning och, om du vill, ett virtuellt batteri. Hos vissa bolag skickar du CIE själv, hos andra sker det automatiskt.</li>
+    <li><strong>Kontrollera de första räkningarna.</strong> Leta efter en rad med <em>compensación de excedentes</em> eller <em>energía vertida</em>. Saknas den efter två månader har anmälan fastnat någonstans.</li>
+  </ol>
+  <p>Vi sköter anmälan när vi installerar <a href="/sv/kostnader/solceller/">solceller</a> och kontrollerar för befintliga anläggningar om kvittningen fungerar. Det går fel oftare än man tror, särskilt för äldre anläggningar eller efter en försäljning.</p>
+
+  <h2 id="kontrollera">Det här ska du kontrollera</h2>
+  <ul class="checks">
+    <li>Priset per kWh för utmatad el, och om det är fast eller följer marknaden</li>
+    <li>Månadskostnaden för det virtuella batteriet eller en obligatorisk tilläggstjänst</li>
+    <li>Vad du får betala med tillgodohavandet: bara energi eller även effektavgift och skatter</li>
+    <li>Hur länge tillgodohavandet gäller och vad som händer vid byte</li>
+    <li>Om du kan dela tillgodohavandet med en andra bostad i Spanien</li>
+    <li>Priset på elen som du köper: en hög ersättning med ett dyrt avtal ger i slutändan ofta mindre</li>
+    <li>En bindningstid (<em>permanencia</em>) eller avgift vid byte</li>
+  </ul>
+  <p class="note">Den här guiden är allmän information, läget i november 2026. Elbolagen ändrar priser och villkor regelbundet; kontrollera alltid de aktuella villkoren innan du tecknar ett avtal. Vi säljer inga energiavtal och är inte bundna till något bolag.</p>
+</Guide>

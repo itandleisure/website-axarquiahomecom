@@ -1,0 +1,56 @@
+---
+import Guide from '../../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Det korta svaret' },
+  { id: 'rustico', label: 'På en finca (rústico)' },
+  { id: 'urbano', label: 'I ett bostadsområde (urbano)' },
+  { id: 'modulhus', label: 'Modulhus, attefallshus och mobilhem' },
+  { id: 'alternativ', label: 'Vilka alternativ finns?' },
+  { id: 'uthyrning', label: 'Hyra ut till gäster' },
+];
+
+const faq = [
+  { q: 'Får jag bygga ett andra hus på min finca i Spanien?', a: 'Nästan aldrig. På landsbygdsmark (rústico) är ett nytt bostadshus bara möjligt genom ett eget förfarande, med en stor minsta tomtstorlek och oftast bara ett bostadshus per tomt. Ett andra, separat hus bredvid det befintliga tillåts i praktiken aldrig.' },
+  { q: 'Får jag ställa ett mobilhem eller tiny house på min tomt?', a: 'Inte utan bygglov om det står där permanent. Ett mobilhem med fast plats, vatten- och elanslutning eller grund räknas som en byggnad. På rústico tillåts det som regel inte.' },
+  { q: 'Är en befintlig casita utan bygglov ett problem?', a: 'Vid försäljning, försäkring och uthyrning kan den bli ett problem. Ibland kan en sådan casita legaliseras eller erkännas som AFO. Låt kontrollera det innan du lägger pengar på den.' },
+  { q: 'Får jag göra om ett befintligt uthus till gästhus?', a: 'Bara med bygglov för ändrad användning och bara om detaljplanen tillåter det. Att göra om en jordbruksbyggnad till sovrum är på rústico oftast inte tillåtet.' },
+];
+---
+<Guide lang="sv" slug="bygga-pa-egen-tomt-gasthus" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Skapa plats för gäster?" ctaText="Berätta vad du har tänkt dig. Vi säger ärligt vad som är tillåtet på din tomt och vilken lösning som passar bäst.">
+  <h2 id="kort">Det korta svaret</h2>
+  <p>Ett andra, separat hus på din tomt är i Andalusien nästan aldrig tillåtet, och på landsbygdsmark absolut inte. Det som ofta går: <strong>bygga ut det befintliga huset</strong>, till exempel med en gästflygel, eller <strong>bygga om ett befintligt lagligt uthus</strong>. Skillnaden: det förblir ett bostadshus, med en adress och ett nummer i Catastro.</p>
+
+  <h2 id="rustico">På en finca (rústico)</h2>
+  <p>På landsbygdsmark är ett bostadshus undantaget. Den andalusiska lagen LISTA tillåter ett nytt fristående hus bara under stränga villkor: tomten måste vara tillräckligt stor (kommunen bestämmer minimistorleken, ofta flera hektar), det får inte uppstå någon ny bebyggelse, och det finns ett eget förfarande med en avgift till kommunen. Ett andra hus bredvid det befintliga på samma tomt omfattas i praktiken aldrig.</p>
+  <p>Det som ibland går:</p>
+  <ul>
+    <li><strong>Bygga ut huset</strong> med ett rum eller en gästflygel, om huset är lagligt och detaljplanen ger byggrätt kvar.</li>
+    <li><strong>Bygga om ett befintligt, lagligt utrymme</strong>, till exempel ett gammalt stall som redan hör till huset.</li>
+  </ul>
+  <p>Har huset AFO-status får inget tillkomma. Se <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.</p>
+
+  <h2 id="urbano">I ett bostadsområde (urbano)</h2>
+  <p>I byn eller i en urbanisation beror det på detaljplanen. I många villaområden är bara ett bostadshus per tomt tillåtet. Ett gästhus är då ibland möjligt som <strong>komplementbyggnad till bostadshuset</strong>, så länge det finns byggrätt kvar och det inte blir en självständig bostad (till exempel utan eget kök eller egna anslutningar). Ska det verkligen bli ett andra bostadshus måste tomten vara planlagd för det och ofta också kunna styckas.</p>
+
+  <h2 id="modulhus">Modulhus, attefallshus och mobilhem</h2>
+  <p>Den som kommer från Sverige tänker kanske på ett attefallshus, men någon motsvarighet finns inte i Spanien. Ett modulhus, tiny house eller mobilhem verkar som en smart genväg, men kommunen ser på hur det används, inte hur det är byggt. Står det permanent, med grund eller anslutning till vatten, el eller avlopp, är det en byggnad och kräver bygglov. På rústico beviljas det som regel inte. En husvagn som du använder ibland och kör bort igen är något annat, men att bo permanent i den eller hyra ut den är inte heller fritt tillåtet på egen mark.</p>
+
+  <h2 id="alternativ">Vilka alternativ finns?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Alternativ</th><th>Bra att veta</th></tr></thead>
+    <tbody>
+      <tr><td>Inreda ett gästrum i huset</td><td>Inget tillstånd behövs, så länge inget ändras utvändigt.</td></tr>
+      <tr><td>Bygga om ett befintligt lagligt uthus</td><td>Ofta den bästa vägen. Bygglov krävs om användningen ändras.</td></tr>
+      <tr><td>Gästflygel mot huset</td><td>Räknas som tillbyggnad: projekt, bygglov och byggrätt krävs.</td></tr>
+      <tr><td>Prefabricerat gästhus eller modulgästhus</td><td>Snabbare byggt, men samma bygglov som ett murat hus.</td></tr>
+      <tr><td>Separat murat gästhus</td><td>Bara där detaljplanen tillåter det, på rústico nästan aldrig.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Vill du låta bygga det? Berätta vad du planerar. Vi tar reda på vad som är tillåtet, ordnar bygglovet och bygger det åt dig.</strong> <a href="/sv/forfragan/?dienst=renovatie">Kontakta oss →</a></p>
+  <p>Mer om att bygga ut under <a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/tillbyggnad-och-inglasning/">tillbyggnad och inglasad terrass</a>.</p>
+
+  <h2 id="uthyrning">Hyra ut till gäster</h2>
+  <p>Vill du hyra ut gästhuset till semesterfirare måste det i Andalusien registreras som semesterbostad (<em>vivienda de uso turístico</em>). Det går bara för ett lagligt utrymme, och i ett lägenhetsområde ibland bara om samfälligheten inte förbjuder det. En casita utan bygglov kan du alltså inte hyra ut lagligt. Mer i guiden <a href="/sv/guider/hyra-ut-hus-i-spanien/">hyra ut hus i Spanien</a>.</p>
+  <p>Tillbaka till översikten: <a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/">bygga på egen tomt</a>.</p>
+</Guide>

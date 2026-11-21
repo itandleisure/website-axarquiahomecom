@@ -1,0 +1,83 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'obligatoriskt', label: 'Vad är obligatoriskt?' },
+  { id: 'typer', label: 'Typer av skydd och kostnader' },
+  { id: 'skylt', label: 'Köra med svenska skyltar' },
+  { id: 'bonus', label: 'Ta med din bonus' },
+  { id: 'star', label: 'En bil som står i månader' },
+  { id: 'teckna', label: 'Så tecknar du en försäkring' },
+];
+
+const faq = [
+  {
+    q: 'Vad kostar en bilförsäkring i Spanien?',
+    a: 'En trafikförsäkring (terceros) kostar oftast 250 till 450 € om året, en utökad trafikförsäkring med glas, brand och stöld 350 till 650 € och en helförsäkring (todo riesgo) 600 till 1 200 €. Ålder, bostadsort, bil och skadehistorik gör stor skillnad.',
+  },
+  {
+    q: 'Får jag fortsätta köra min svenska bil i Spanien?',
+    a: 'Är du inte bosatt i Spanien får du använda en bil med svenska skyltar högst sex månader per kalenderår i Spanien. Blir du bosatt måste bilen som regel inom kort få spanska skyltar, och då behöver du en spansk försäkring.',
+  },
+  {
+    q: 'Godtar spanska försäkringsbolag min svenska bonus?',
+    a: 'Många gör det, men de är inte skyldiga. Be ditt svenska försäkringsbolag om ett skadefrihetsintyg (bonusintyg) på engelska eller spanska och fråga vid varje offert om det räknas med.',
+  },
+  {
+    q: 'Vad händer om jag kör utan försäkring?',
+    a: 'Polisen ser direkt i den centrala databasen (FIVA) om en spansk bil är försäkrad. Att köra utan obligatorisk försäkring ger böter på 601 till 3 005 €, och bilen kan beläggas med körförbud.',
+  },
+];
+---
+<Guide lang="sv" slug="bilforsakring-spanien" toc={toc} faq={faq} dienst="sleutelbeheer" onderwerp="Min bil står i Spanien när jag inte är där." ctaTitle="Din bil i Spanien när du inte är där?" ctaText="Med tillsynen av huset tar vi också hand om din bil: startar den, kontrollerar batteri och däck, så att den är körklar när du kommer. Och vill du ha en carport eller en laddbox vid huset bygger vi den.">
+  <p>Det här är allmän information, ingen försäkringsrådgivning. Läs alltid villkoren i din egen försäkring och fråga en oberoende rådgivare om du är osäker.</p>
+
+  <h2 id="obligatoriskt">Vad är obligatoriskt?</h2>
+  <p>Varje bil som är registrerad i Spanien och kan köras på vägen måste ha minst en <strong>trafikförsäkring</strong> (<em>seguro obligatorio</em>). Den betalar skador som du med bilen orsakar andra, upp till de lagstadgade beloppen. Det gäller även när bilen bara står parkerad.</p>
+  <ul>
+    <li>Försäkringen hör till <strong>bilen</strong>, inte till föraren. I försäkringen står oftast en huvudförare (<em>conductor habitual</em>) och eventuellt tillfälliga förare.</li>
+    <li>Unga eller ovana förare måste ofta anmälas särskilt, annars betalar försäkringsbolaget mindre vid en skada.</li>
+    <li>Du behöver inte längre ha med dig ett försäkringsbevis på papper: polisen kontrollerar i databasen FIVA. En kopia i bilen är ändå praktisk vid en olycka.</li>
+  </ul>
+
+  <h2 id="typer">Typer av skydd och kostnader</h2>
+  <table class="prices">
+    <thead><tr><th>Skydd</th><th>Vad det täcker</th><th>Riktpris per år</th></tr></thead>
+    <tbody>
+      <tr><td><em>Terceros básico</em> (trafikförsäkring)</td><td>Skador på andra, oftast plus vägassistans</td><td>250 till 450 €</td></tr>
+      <tr><td><em>Terceros ampliado</em> (som halvförsäkring)</td><td>Även glas, brand och stöld</td><td>350 till 650 €</td></tr>
+      <tr><td><em>Todo riesgo con franquicia</em></td><td>Även skador på egen bil, med självrisk</td><td>500 till 900 €</td></tr>
+      <tr><td><em>Todo riesgo sin franquicia</em> (helförsäkring)</td><td>Allt, utan självrisk</td><td>700 till 1 200 €</td></tr>
+    </tbody>
+  </table>
+  <p>Vägassistans (<em>asistencia en carretera</em>) ingår nästan alltid. Kontrollera om den gäller från 0 km, alltså även när bilen inte startar utanför ditt hus, eller först 25 km hemifrån.</p>
+  <p>Bor du på en finca vid en grusväg? Fråga om skador på underredet och stenskott i vindrutan täcks. Se även <a href="/sv/guider/tillfartsvag-finca-spanien/">tillfartsvägen till din finca</a>.</p>
+
+  <h2 id="skylt">Köra med svenska skyltar</h2>
+  <ul>
+    <li><strong>Inte bosatt i Spanien</strong>: du får använda en bil med svenska skyltar högst sex månader per kalenderår i Spanien. Din svenska försäkring täcker som regel Spanien, men vissa försäkringar begränsar hur länge du får vara utomlands. Kontrollera det innan du övervintrar.</li>
+    <li><strong>Bosatt i Spanien</strong>: då måste bilen som regel inom kort få spanska skyltar (<em>matriculación</em>). Det kräver en teknisk kontroll, ett tekniskt datablad och ibland en registreringsskatt. Därefter tecknar du en spansk försäkring. En gestor kan sköta det åt dig. Mer i guiden <a href="/sv/guider/flytta-till-spanien/">flytta till Spanien</a>.</li>
+  </ul>
+  <p>En bil med spanska skyltar måste dessutom besiktas i Spanien (<em>ITV</em>): bilar mellan 4 och 10 år vartannat år, äldre än 10 år varje år. Därtill betalar du en årlig fordonsskatt (<em>IVTM</em>) till kommunen.</p>
+
+  <h2 id="bonus">Ta med din bonus</h2>
+  <p>Spanska försäkringsbolag ser inte automatiskt din skadehistorik. Be ditt svenska försäkringsbolag om ett intyg över dina skadefria år, helst på engelska eller spanska. Många spanska bolag ger rabatt på det, vissa inte. Det lönar sig att ta in flera offerter.</p>
+  <p>I Spanien registreras din skadehistorik sedan i en gemensam databas för försäkringsbolagen. Byter du senare till ett annat spanskt bolag följer historiken med.</p>
+
+  <h2 id="star">En bil som står i månader</h2>
+  <p>Många ägare låter en bil stå i Spanien för sina vistelser. Då finns det två saker att tänka på:</p>
+  <ul>
+    <li><strong>Försäkring</strong>: en registrerad bil måste förbli försäkrad, även när den står still. Vill du inte försäkra den under en längre tid kan du tillfälligt avregistrera den hos trafikmyndigheten (DGT) (<em>baja temporal</em>). Den får då inte stå eller köras på allmän väg. För de flesta ägare är en billig trafikförsäkring smidigare.</li>
+    <li><strong>Teknik</strong>: i solen och utan användning laddas batteriet ur, gummilister torkar och däcken får platta punkter. En underhållsladdare eller frånkopplat batteri, att starta bilen ibland och en plats i skuggan hjälper mycket.</li>
+  </ul>
+  <p>En <a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/carport-och-pergola/">carport</a> skyddar bilen mot sol, hagel och nedfallande frukt och håller kupén sval. Kör du elbil är en <a href="/sv/kostnader/laddbox/">laddbox vid huset</a> praktisk, särskilt tillsammans med solceller. Och med <a href="/sv/tillsyn/">tillsynen av huset</a> tittar vi till bilen vid varje kontroll.</p>
+
+  <h2 id="teckna">Så tecknar du en försäkring</h2>
+  <ol>
+    <li>Ha ditt NIE-nummer, körkort, registreringsbevis (<em>permiso de circulación</em>) och tekniska datablad (<em>ficha técnica</em>) till hands.</li>
+    <li>Ta in offerter från två eller tre försäkringsbolag eller via en mäklare (<em>corredor de seguros</em>). En engelsktalande mäklare hjälper också vid en skada.</li>
+    <li>Jämför inte bara premien, utan också självrisk, vägassistans, ersättningsbil och vilka förare som är försäkrade.</li>
+    <li>Tänk på avtalstiden: spanska bilförsäkringar förlängs automatiskt varje år. Uppsägning måste som regel ske skriftligt minst en månad före förfallodagen.</li>
+  </ol>
+  <p>Är även ditt hus väl försäkrat? Läs guiden <a href="/sv/guider/hemforsakring-i-spanien/">hemförsäkring i Spanien</a>.</p>
+</Guide>

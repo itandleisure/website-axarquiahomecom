@@ -1,0 +1,119 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Det korta svaret' },
+  { id: 'ror', label: 'Vilka rör finns i ditt hus?' },
+  { id: 'tecken', label: 'Tecken på att det är dags' },
+  { id: 'byta', label: 'Byta rör: så går det till' },
+  { id: 'beredare', label: 'Varmvatten: vilken beredare?' },
+  { id: 'jamforelse', label: 'Beredare jämförda' },
+  { id: 'arbeten', label: 'Arbeten som vi hjälper till med' },
+  { id: 'tips', label: 'Tips för ett fritidshus' },
+];
+
+const faq = [
+  {
+    q: 'Är blyrör farliga?',
+    a: 'Ja. Bly hamnar i dricksvattnet, särskilt när vattnet har stått länge i ledningen. Enligt de nya spanska dricksvattenreglerna (RD 3/2023) ska blyrör bytas ut. Ser du gråa, mjuka rör som går att repa med en nyckel, låt byta dem och drick inte kranvattnet tills dess.',
+  },
+  {
+    q: 'Elektrisk beredare eller värmepumpsberedare: vad är billigast?',
+    a: 'I inköp är en elektrisk termo klart billigare. I drift behöver en värmepumpsberedare bara cirka en tredjedel av elen. Bor du där året runt har den betalat sig efter några år. För ett fritidshus som bara används några månader om året är en bra termo med timer eller smart uttag ofta det klokaste valet.',
+  },
+  {
+    q: 'Hur länge håller en varmvattenberedare?',
+    a: 'En elektrisk termo håller i Axarquía oftast 8 till 12 år. Det hårda vattnet är dess största fiende: kalk och en förbrukad anod. Låt kontrollera anoden vartannat till vart tredje år; det förlänger livslängden betydligt. En värmepumpsberedare håller 15 år eller längre.',
+  },
+  {
+    q: 'Måste väggarna öppnas för nya rör?',
+    a: 'Oftast ja, för rören i väggen. Spår (rozas) fräses upp och lagas och putsas sedan igen. Alternativ är utanpåliggande rör eller rör bakom golvlister eller en isolerad innervägg. Vid en badrums- eller köksrenovering görs allt i ett moment.',
+  },
+];
+---
+<Guide lang="sv" slug="byta-ror-och-varmvattenberedare-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Gamla rör eller en beredare som ger upp?" ctaText="Vi bedömer installationen, ger råd om rätt beredare och sköter utförandet.">
+  <h2 id="kort">Det korta svaret</h2>
+  <p>I många äldre hus i Axarquía finns fortfarande <strong>galvaniserade järnrör eller till och med blyrör</strong>. De rostar, kalkar igen och läcker. Nya flerskiktsrör av plast löser det för årtionden, helst i samband med en badrums- eller köksrenovering. För varmvatten väljer du mellan en billig <strong>elektrisk termo</strong> som drar mycket el och en dyrare men sparsam <strong>värmepumpsberedare</strong> eller en <strong>solfångare för varmvatten</strong>.</p>
+
+  <h2 id="ror">Vilka rör finns i ditt hus?</h2>
+  <table class="prices">
+    <thead><tr><th>Material</th><th>Så känner du igen det</th><th>Råd</th></tr></thead>
+    <tbody>
+      <tr><td>Bly (<em>plomo</em>)</td><td>Mattgrått, mjukt, lätt att repa. Hus från före cirka 1975.</td><td>Byt alltid</td></tr>
+      <tr><td>Galvaniserat järn (<em>hierro galvanizado</em>)</td><td>Grått, hårt, med gängor. 1960- till 1980-tal.</td><td>Byt, rostar inifrån</td></tr>
+      <tr><td>Koppar (<em>cobre</em>)</td><td>Rödbrunt, lött. 1970-tal till 2000.</td><td>Ofta fortfarande bra; kontrollera gröna avlagringar och små läckor</td></tr>
+      <tr><td>Plast (PEX, flerskikt)</td><td>Vitt, rött/blått eller grått, med presskopplingar. Efter 2000.</td><td>Bra</td></tr>
+    </tbody>
+  </table>
+  <p>Avloppet är en egen fråga. I gamla hus består det ofta av gjutjärn, stengods eller <a href="/sv/guider/asbest-eternit-tak-spanien/">asbestcement (uralita)</a> och är för smalt. Vid en badrums- eller köksrenovering byts det oftast samtidigt.</p>
+
+  <h2 id="tecken">Tecken på att det är dags</h2>
+  <ul>
+    <li>Brunt eller rostigt vatten när du öppnar kranen efter en längre bortavaro.</li>
+    <li>Allt lägre vattentryck, särskilt på övervåningen. Se också <a href="/sv/problem/inget-vatten-eller-lagt-vattentryck/">inget vatten eller lågt vattentryck</a>.</li>
+    <li>Fuktfläckar på väggar eller golv eller en vattenräkning som plötsligt stiger. Läs först <a href="/sv/guider/vattenlacka-spanien/">vad du gör vid en vattenläcka</a>.</li>
+    <li>Blyrör, eller du vet inte och huset är från före 1980.</li>
+    <li>Beredaren tickar eller bubblar, vattnet blir mindre varmt eller det finns rost under den.</li>
+  </ul>
+
+  <h2 id="byta">Byta rör: så går det till</h2>
+  <ol>
+    <li><strong>Inventering</strong>: var kommer vattnet in i huset, var går rören, i vilket skick är avloppet?</li>
+    <li><strong>Planering</strong>: en ny fördelare (<em>colector</em>) vid huvudkranen, med egen ledning och egen ventil för varje rum. Vid en läcka stänger du då bara av ett rum.</li>
+    <li><strong>Dragning</strong>: flerskiktsrör i spår i vägg eller golv, eller utanpåliggande. Varmvattenrören isoleras.</li>
+    <li><strong>Tryckprovning</strong>: innan väggarna stängs testas systemet under tryck.</li>
+    <li><strong>Avslutning</strong>: laga spåren, putsa, måla.</li>
+  </ol>
+  <p>En lägenhet tar en till två veckor, ett hus två till tre. Det mesta arbetet är inte röret, utan bilningen, putsningen och kaklingen runt omkring. Därför är det klokt att byta rör vid en <a href="/sv/kostnader/renovera-badrum/">badrums-</a> eller <a href="/sv/kostnader/renovera-kok/">köksrenovering</a>.</p>
+
+  <h2 id="beredare">Varmvatten: vilken beredare?</h2>
+  <h3>Elektrisk beredare (termo eléctrico)</h3>
+  <p>Standard i Spanien: en tank på 50 till 100 liter som värms med en elpatron. Billig, enkel och går att reparera överallt. Nackdel: den drar mycket el och håller vattnet varmt hela dagen.</p>
+  <h3>Gasolvärmare med butan (calentador)</h3>
+  <p>På fincor utan gasanslutning ofta ansluten till butanflaskor. Varmt vatten direkt utan tank, men du måste byta flaskor och låta kontrollera anläggningen regelbundet. Väljs allt mer sällan.</p>
+  <h3>Värmepumpsberedare (termo aerotérmico)</h3>
+  <p>En tank på 200 till 300 liter med en liten värmepump ovanpå. Den hämtar värme ur luften och behöver cirka en tredjedel av elen jämfört med en vanlig termo. I Axarquías milda klimat fungerar den bra året runt. Den kräver dock plats: ett förråd, ett garage eller ett teknikrum, eller en anslutning till uteluften.</p>
+  <h3>Solfångare (termosifón)</h3>
+  <p>En solfångare med tank på taket. Med över 300 soldagar om året ger den större delen av ditt varmvatten gratis. På ett bytak måste det finnas plats och bärförmåga.</p>
+  <h3>Termo med egen solel</h3>
+  <p>Har du <a href="/sv/kostnader/solceller/">solceller</a> kan en smart styrning leda överskottsel till termon. Då blir den enkla termon nästan gratis i drift.</p>
+
+  <h2 id="jamforelse">Beredare jämförda</h2>
+  <p>Fler stjärnor betyder lägre energikostnad.</p>
+  <table class="prices">
+    <thead><tr><th>System</th><th>Sparsamhet</th><th>Livslängd</th></tr></thead>
+    <tbody>
+      <tr><td>Elektrisk termo</td><td>★</td><td>8–12 år</td></tr>
+      <tr><td>Butanvärmare</td><td>★★</td><td>10–15 år</td></tr>
+      <tr><td>Termo med solelstyrning</td><td>★★★★ (med solceller)</td><td>8–12 år</td></tr>
+      <tr><td>Solfångare (termosifón)</td><td>★★★★</td><td>15–20 år</td></tr>
+      <tr><td>Värmepumpsberedare</td><td>★★★★</td><td>15–20 år</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Bor du där året runt lönar sig ett sparsamt system. Använder du huset några månader om året är en bra termo med timer ofta det klokaste valet.</p>
+  <p>En värmepumpsberedare passar bra ihop med en <a href="/sv/kostnader/luftkonditionering-och-varmepump/">värmepump för uppvärmningen</a>. Mer om helheten läser du i <a href="/sv/guider/varme-och-kyla-i-spanien/">värme och kyla i Spanien</a>.</p>
+
+  <h2 id="arbeten">Arbeten som vi hjälper till med</h2>
+  <p>Från den lilla reparationen till en helt ny vattenledning:</p>
+  <ul>
+    <li>Byta anod i termon och avkalka</li>
+    <li>Tryckreducerare på huvudledningen</li>
+    <li>Ny fördelare med en ventil per rum</li>
+    <li>Tryckstegringspump (grupo de presión)</li>
+    <li>Nytt avlopp i badrum eller kök</li>
+    <li>Nya vattenledningar i en lägenhet</li>
+    <li>Nya vattenledningar i ett hus</li>
+  </ul>
+  <p class="note">Hur mycket arbete det blir beror framför allt på husets storlek, hur många väggar och golv som måste öppnas och om nytt kakel behövs.</p>
+  <p><strong>Vill du byta rör eller beredare?</strong> Vi tittar på vad som finns i ditt hus, rekommenderar den beredare som passar din användning och sköter utförandet. <a href="/sv/forfragan/?dienst=renovatie">Berätta vad det gäller</a>.</p>
+
+  <h2 id="tips">Tips för ett fritidshus</h2>
+  <ul>
+    <li><strong>Stäng huvudkranen</strong> när du reser och stäng av termon. Ett smart uttag slår på den igen dagen innan du kommer.</li>
+    <li><strong>Legionella</strong>: vatten som står i veckor i en ljummen tank är en risk. Låt beredaren gå några timmar på minst 60 °C när du kommer och spola igenom alla kranar. Se <a href="/sv/problem/legionella/">legionella</a>.</li>
+    <li><strong>Hårt vatten</strong>: en <a href="/sv/guider/vattenfilter-spanien/">avhärdare</a> skyddar beredare, rör och blandare.</li>
+    <li><strong>En vattenlarmsensor</strong> under beredaren och diskmaskinen meddelar en läcka i mobilen. En liten investering som kan förhindra stora skador.</li>
+    <li>Låt spola kranarna och kontrollera mätaren medan du är borta. Det ingår i <a href="/sv/tillsyn/">tillsynen</a>.</li>
+  </ul>
+  <p class="note">Den här guiden ger allmän information för Axarquía i november 2026.</p>
+</Guide>
