@@ -1,0 +1,147 @@
+---
+import Guide from '../../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'vad', label: 'Hus eller företag: vad köper du?' },
+  { id: 'tillstand', label: 'Tillstånd och markanvändning' },
+  { id: 'siffror', label: 'Granska årssiffrorna' },
+  { id: 'kanaler', label: 'Bokningskanaler och direktbokningar' },
+  { id: 'online', label: 'Webbplats, sociala medier och omdömen' },
+  { id: 'byggnad', label: 'Byggnad och installationer' },
+  { id: 'personal', label: 'Personal och avtal' },
+  { id: 'jamfora', label: 'Jämföra flera objekt' },
+  { id: 'spanska', label: 'Frågor på spanska' },
+  { id: 'hjalp', label: 'Så hjälper vi till' },
+  { id: 'kallor', label: 'Källor' },
+];
+
+const faq = [
+  {
+    q: 'Följer turisttillståndet med vid köpet?',
+    a: 'Registreringen i Andalusiens turistregister står på den som driver verksamheten. Vid ett övertagande anmäler du byte av operatör hos Junta de Andalucía, och även det nationella registreringsnumret för uthyrningsplattformar måste ändras. Låt kontrollera före köpet att den befintliga registreringen fortfarande gäller enligt dagens regler: reglerna och kommunernas begränsningar har ändrats de senaste åren.',
+  },
+  {
+    q: 'Följer omdömena på Booking.com och Airbnb med?',
+    a: 'Det beror på plattformen. På Booking.com hör sidan till boendet, och det finns ett förfarande för ägarbyte. På Airbnb hör omdömena till värdens konto och följer oftast inte med till ett nytt konto. Fråga säljaren hur överlämningen går till per kanal, och räkna med att börja om på vissa kanaler.',
+  },
+  {
+    q: 'Hur många års siffror bör jag se?',
+    a: 'Minst tre hela år och innevarande år per månad. Då ser du trend och säsong och om ett bra år var ett undantag. Jämför siffrorna med deklarationerna och plattformarnas utbetalningar.',
+  },
+  {
+    q: 'Köper jag byggnaden eller säljarens bolag?',
+    a: 'Oftast köper du byggnaden med inventarier och startar verksamheten själv. Ibland ägs B&B:t av ett spanskt bolag (SL) och du köper aktierna. Skattemässigt kan det se annorlunda ut, men du tar då också över bolagets alla skulder och risker. Låt alltid advokat och gestor granska strukturen.',
+  },
+];
+---
+<Guide lang="sv" slug="kopa-hus-i-spanien-bed-and-breakfast" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Har du ett B&B i sikte?" ctaText="Vi besiktar byggnaden med en operatörs ögon: rum, badrum, vatten, avlopp och installationer, med ett pris för de arbeten som behövs. Kommunikation på engelska eller nederländska.">
+  <p>Den här sidan handlar om att ta över ett B&amp;B, ett pensionat, en casa rural eller en liten semesteruthyrning som redan är i gång. Vill du själv starta ett B&amp;B i ett hus du ännu inte valt, läs <a href="/sv/guider/finca-lagenhet-eller-byhus/bed-and-breakfast/">starta ett B&amp;B i Axarquía</a>. De vanliga stegen vid köpet står i guiden <a href="/sv/guider/kopa-hus-i-spanien/">köpa hus i Spanien</a>.</p>
+
+  <h2 id="vad">Hus eller företag: vad köper du?</h2>
+  <p>Ett pågående B&amp;B säljs ofta dyrare än vad huset ensamt är värt. Säljaren räknar in omsättning, omdömen och stamgäster. Det kan vara rimligt, men bara om omsättningen är verklig och överlever överlämningen. Ställ därför två separata frågor:</p>
+  <ul>
+    <li><strong>Vad är byggnaden värd som bostadshus?</strong> Jämför med vanliga hus i närheten och räkna med kostnaden för arbeten.</li>
+    <li><strong>Vad ger verksamheten netto</strong>, efter alla kostnader och en rimlig ersättning för ditt eget arbete? Skillnaden mellan köpeskilling och husets värde betalar du för det resultatet.</li>
+  </ul>
+  <p>Oftast köper du byggnaden med inventarier och startar verksamheten själv. Ägs B&amp;B:t av ett spanskt bolag (SL) och du köper aktierna, tar du också över bolagets alla skulder och risker. Låt advokat och gestor granska strukturen.</p>
+
+  <h2 id="tillstand">Tillstånd och markanvändning</h2>
+  <p>Ett B&amp;B är ingen egen kategori i Andalusien. Det är en semesterbostad (VFT, även rum för rum), ett boende på landsbygden (till exempel en <em>casa rural</em>) eller en liten hotellform som ett pensionat. Kontrollera:</p>
+  <ul>
+    <li><strong>Registreringen i turistregistret</strong> (<em>Registro de Turismo de Andalucía</em>): kategori, antal rum och gäster. Drivs verksamheten med fler rum eller gäster än registrerat, kan en del av omsättningen inte upprepas lagligt.</li>
+    <li><strong>Det nationella registreringsnumret</strong>, som sedan juli 2025 är obligatoriskt för annonser på uthyrningsplattformar.</li>
+    <li><strong>Byggnadens rättsliga status.</strong> Har alla gästrum, badrum och poolen bygglov? En finca med AFO-status får inte byggas ut, och turistisk användning är inte självklar. Se <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.</li>
+    <li><strong>Kommunala begränsningar.</strong> Kommuner får begränsa nya semesterbostäder. Fråga vad som gäller vid byte av operatör.</li>
+    <li><strong>Andra tillstånd</strong>: ett verksamhetstillstånd för hotellliknande former och, om du serverar frukost, reglerna för livsmedelshygien.</li>
+  </ul>
+
+  <h2 id="siffror">Granska årssiffrorna</h2>
+  <p>Begär minst tre hela år och innevarande år per månad. Titta på:</p>
+  <ul>
+    <li><strong>Omsättning per månad</strong>, så att du ser säsongen. Många B&amp;B i Axarquía går från mars till november och har få gäster på vintern.</li>
+    <li><strong>Beläggning och genomsnittspris per natt</strong>, per rum. Hög omsättning till låga priser är sårbarare än lägre omsättning med stamgäster som betalar mer.</li>
+    <li><strong>Alla kostnader</strong>: plattformarnas provision, städning och tvätt, energi och vatten, frukost, underhåll, försäkring, IBI, sophämtning, gestor, marknadsföring och personal.</li>
+    <li><strong>Säljarens eget arbete.</strong> Gör ägarna allt själva, finns deras arbete inte med i kostnaderna. Räkna med en ersättning eller lönen för någon som tar över det.</li>
+    <li><strong>Trenden.</strong> Stiger eller sjunker omsättningen? Var ett år ett undantag?</li>
+  </ul>
+  <p><strong>Be om bevis för siffrorna.</strong> Ett kalkylblad är inget bevis. Begär de spanska deklarationerna (inkomst- eller bolagsskatt och moms), utbetalningsrapporterna från Booking.com, Airbnb och andra kanaler samt kontoutdrag. Omsättning som sägs ha tjänats ”kontant” eller utanför bokföringen räknar du inte med: du kan inte kontrollera den och inte själv upprepa den lagligt.</p>
+  <p>Fråga också om <strong>framtida bokningar</strong>: hur många finns redan, och vem får gästernas förskott? Skriv in det i köpeavtalet.</p>
+
+  <h2 id="kanaler">Bokningskanaler och direktbokningar</h2>
+  <p>Var gästerna kommer ifrån avgör hur mycket du får behålla och hur sårbar omsättningen är. Fråga per kanal om andelen bokningar och omsättning de senaste åren:</p>
+  <ul>
+    <li><strong>Plattformar</strong> som Booking.com, Airbnb och Expedia. De tar provision, på Booking.com ofta 15 till 20 %, på Airbnb en jämförbar andel av totalpriset. Ett B&amp;B som får nästan allt via en plattform är beroende av dess algoritm och regler.</li>
+    <li><strong>Direktbokningar</strong> via egen webbplats, telefon eller e-post. De ger mest. En hög andel direktbokningar och stamgäster är ofta den mest värdefulla delen av ett B&amp;B.</li>
+    <li><strong>Andra kanaler</strong>: researrangörer, vandrings- eller cykelresor, yogaretreater, bröllop.</li>
+  </ul>
+  <p>Fråga också vad som följer med. På Booking.com hör sidan till boendet, och det finns ett förfarande för nya ägare. På Airbnb hör omdömena till värdens konto och följer oftast inte med. Kundlistan med direktgäster kan du bara ta över om dataskyddet (GDPR) tillåter det; låt advokaten ordna det.</p>
+
+  <h2 id="online">Webbplats, sociala medier och omdömen</h2>
+  <p>Ett välfungerande B&amp;B hittas på nätet. Titta själv innan du frågar säljaren:</p>
+  <ul>
+    <li><strong>Webbplatsen</strong>: står domänen på säljaren, och följer den med? Hur många besökare kommer och varifrån (Google, sociala medier, plattformar)? Be om tillgång till statistiken, till exempel Google Analytics och Search Console.</li>
+    <li><strong>Googles företagsprofil</strong>: antal omdömen, snittbetyg och om ägaren svarar.</li>
+    <li><strong>Sociala medier</strong>: på vilka kanaler finns B&amp;B:t (Instagram, Facebook, TikTok, YouTube)? Hur många följare, hur ofta publiceras något, hur många reaktioner? Ett konto med 10 000 följare där inget hänt på ett år är lite värt. Fråga om kontona förs över.</li>
+    <li><strong>Omdömen på alla plattformar</strong>: läs de senaste två åren, inte bara betyget. Återkommande klagomål på fukt, buller, sängar eller tillfartsvägen tyder på kostnader efter köpet.</li>
+    <li><strong>Ägarens roll.</strong> Gäster skriver ofta om värdarna. Lever B&amp;B:t på deras personlighet, kan stamgäster utebli efter överlämningen.</li>
+  </ul>
+
+  <h2 id="byggnad">Byggnad och installationer</h2>
+  <p>Gäster sliter mer på ett hus än boende. Vid en besiktning av ett B&amp;B kontrollerar vi utöver de vanliga punkterna:</p>
+  <ul>
+    <li>Badrummet i varje rum: ledningar, avlopp, fukt och ventilation.</li>
+    <li>Varmvatten och vattenförsörjning: räcker källan eller anslutningen vid fullbokning i augusti?</li>
+    <li>Avlopp och avloppsbrunn: kapacitet och om den uppfyller reglerna.</li>
+    <li>Luftkonditionering och värme i alla rum, obligatoriskt för turistuthyrning i Andalusien.</li>
+    <li>El: effekt och säkerhet när luftkonditionering, kök och pool går samtidigt.</li>
+    <li>Brandskydd, utrymningsvägar och ljudisolering mellan rummen.</li>
+    <li>Uppskjutet underhåll: en säljare som ska sluta investerar ofta lite de sista åren.</li>
+  </ul>
+  <p>Läs också <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca i Spanien</a> om vatten, tillfartsväg och avlopp på landet, och riktpriser i <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringskostnader i Spanien</a>.</p>
+
+  <h2 id="personal">Personal och avtal</h2>
+  <p>Har B&amp;B:t anställda, till exempel städare eller en kock? Tar du över verksamheten som helhet går spanska anställningsavtal i regel över till den nya ägaren, med intjänade rättigheter. Begär en lista över personal, avtal och eventuella tvister. Kontrollera också löpande avtal med tvätterier, leverantörer, researrangörer och serviceföretag: vad löper vidare, och vad kan du säga upp?</p>
+
+  <h2 id="jamfora">Jämföra flera objekt</h2>
+  <p>Titta helst på två eller tre objekt och jämför dem med samma måttstockar:</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Måttstock</th><th>Var du hittar det</th></tr></thead>
+    <tbody>
+      <tr><td>Köpeskilling och pris per lagligt rum</td><td>Annons och registrering i turistregistret</td></tr>
+      <tr><td>Husets värde utan verksamhet</td><td>Jämförbara hus i närheten, värdering</td></tr>
+      <tr><td>Omsättning och nettoresultat över tre år</td><td>Deklarationer, plattformarnas utbetalningar</td></tr>
+      <tr><td>Beläggning och pris per natt per säsong</td><td>Månatlig bokningsrapport</td></tr>
+      <tr><td>Andel direktbokningar och stamgäster</td><td>Bokningsrapport per kanal</td></tr>
+      <tr><td>Betyg och trend</td><td>Google, Booking.com, Airbnb, Tripadvisor</td></tr>
+      <tr><td>Räckvidd på nätet</td><td>Webbstatistik, sociala medier</td></tr>
+      <tr><td>Investeringar efter köpet</td><td>Besiktning med prisuppskattning</td></tr>
+      <tr><td>Rättslig status för byggnad och tillstånd</td><td>Advokat, kommun, Junta</td></tr>
+      <tr><td>Eget arbete som krävs</td><td>Samtal med säljaren, personallista</td></tr>
+    </tbody>
+  </table></div>
+  <p>Gör en egen kalkyl för det bästa objektet med ett försiktigt scenario: lägre beläggning första året, plattformarnas provision och investeringarna från besiktningen. Går kalkylen fortfarande ihop, har du en bra grund för ditt bud.</p>
+
+  <h2 id="spanska">Frågor på spanska</h2>
+  <p>Några frågor du kan skicka till säljaren eller mäklaren:</p>
+  <ul>
+    <li><q lang="es">¿Me puede enviar las declaraciones de impuestos y de IVA de los últimos tres años?</q> Kan du skicka mig skatte- och momsdeklarationerna för de senaste tre åren?</li>
+    <li><q lang="es">¿Me puede enviar los informes de pagos de Booking y Airbnb de los últimos tres años?</q> Kan du skicka mig utbetalningsrapporterna från Booking och Airbnb för de senaste tre åren?</li>
+    <li><q lang="es">¿Qué porcentaje de las reservas es directo y qué porcentaje viene de plataformas?</q> Hur stor andel av bokningarna är direkta, och hur stor kommer via plattformar?</li>
+    <li><q lang="es">¿Con qué número está inscrito en el Registro de Turismo de Andalucía, y para cuántas habitaciones y plazas?</q> Med vilket nummer är ni registrerade i turistregistret, och för hur många rum och gäster?</li>
+    <li><q lang="es">¿Están incluidos en la venta el dominio web, las redes sociales y las reservas futuras?</q> Ingår domän, sociala medier och framtida bokningar i försäljningen?</li>
+    <li><q lang="es">¿Hay trabajadores contratados? ¿Me puede enviar sus contratos?</q> Finns det anställda? Kan du skicka mig avtalen?</li>
+  </ul>
+  <p>Fler frågor om själva huset, även på spanska, finns i <a href="/sv/guider/kopa-hus-i-spanien/checklista/">checklistan för husköp</a>.</p>
+
+  <h2 id="hjalp">Så hjälper vi till</h2>
+  <p>Bokföringen låter du en gestor eller skatterådgivare granska, tillstånd och struktur en advokat. Vi tar hand om byggnaden: med vår <a href="/sv/besiktning/">besiktning</a> ser vi B&amp;B:t med en operatörs ögon och räknar på de arbeten som behövs, rum för rum. Efter köpet hjälper vi till med <a href="/sv/renovering/">renovering</a>, <a href="/sv/underhall/">underhåll</a>, <a href="/sv/pool/">poolen</a> och, när du inte är där, med <a href="/sv/tillsyn/">tillsyn</a>. <a href="/sv/forfragan/?dienst=aankoopkeuring">Be om en besiktning</a> eller mejla <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+
+  <h2 id="kallor">Källor</h2>
+  <ul>
+    <li>Turism i Andalusien: Ley 13/2011 del Turismo de Andalucía; semesterbostäder: Decreto 28/2016, ändrat genom Decreto 31/2024; boenden på landsbygden: Decreto 20/2002 de Turismo en el Medio Rural.</li>
+    <li>Nationellt registreringsnummer för korttidsuthyrning: Real Decreto 1312/2024 (obligatoriskt sedan 1 juli 2025).</li>
+    <li>Personalens övergång vid verksamhetsöverlåtelse: Estatuto de los Trabajadores, artikel 44.</li>
+    <li>Bygga på landsbygdsmark och AFO: Ley 7/2021 (LISTA) och Decreto 550/2022.</li>
+  </ul>
+  <p class="note">Kontrollerat 5 november 2026. Den här guiden ger allmän information och är ingen juridisk, skattemässig eller ekonomisk rådgivning. Reglerna för turistuthyrning ändras regelbundet; låt advokat och gestor eller skatterådgivare följa ett övertagande.</p>
+</Guide>

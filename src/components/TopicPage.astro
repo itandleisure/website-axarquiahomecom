@@ -32,6 +32,7 @@ const calcText = {
   nl: { title: 'Bereken uw eigen prijs', text: 'Vul in wat u wilt laten doen en zie direct de bandbreedte.', btn: 'Naar de rekentool' },
   en: { title: 'Work out your own price', text: 'Enter what you want done and see the range straight away.', btn: 'Open the calculator' },
   de: { title: 'Eigenen Preis berechnen', text: 'Geben Sie ein, was gemacht werden soll, und sehen Sie sofort die Spanne.', btn: 'Zum Kostenrechner' },
+  sv: { title: 'Räkna ut ditt eget pris', text: 'Fyll i vad du vill få gjort och se spannet direkt.', btn: 'Till kalkylatorn' },
 }[lang];
 const calcHref = kind === 'costs' && calcs.some((c) => c.key === t.key) ? `${calcPath[lang]}?klus=${t.key}` : '';
 // Links naar gidsen die (nog) niet bestaan laten we weg, zodat een pagina kan verwijzen naar een gids die later wordt toegevoegd

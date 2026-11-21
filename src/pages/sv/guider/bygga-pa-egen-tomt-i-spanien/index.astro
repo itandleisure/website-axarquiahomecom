@@ -1,0 +1,91 @@
+---
+// Källor (lästa 5 november 2026): Ley 7/2021 LISTA art. 21, 22, 137, 138, 153 och Decreto 550/2022;
+// Ley 49/1960 Propiedad Horizontal art. 7.2, 10.3, 17; Orden 21 mayo 2009 Junta de Andalucía (brandrisk).
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
+
+const toc = [
+  { id: 'mark', label: 'Först: vilken mark?' },
+  { id: 'oversikt', label: 'Vad är tillåtet var?' },
+  { id: 'urbano', label: 'I ett bostadsområde (urbano)' },
+  { id: 'rustico', label: 'På en finca (rústico)' },
+  { id: 'samfallighet', label: 'I ett lägenhetsområde' },
+  { id: 'utan', label: 'Bygga utan lov' },
+  { id: 'projekt', label: 'Per projekt' },
+];
+
+const faq = [
+  { q: 'Hur tar jag reda på om min tomt är rústico eller urbano?', a: 'Sök på din referencia catastral i Catastro (sedecatastro.gob.es): där står om tomten är urbano eller rústico. Säkerhet ger ett informe urbanístico eller en cédula urbanística från kommunen, där det också står hur mycket som får byggas på din tomt.' },
+  { q: 'Får jag bygga något litet utan tillstånd?', a: 'Bara väldigt lite. En fristående pergola utan tak, en låg trädgårdsmur eller en stenläggning går ibland med en anmälan (declaración responsable). Allt med fast tak, väggar eller grund kräver som regel bygglov. Fråga alltid kommunen först.' },
+  { q: 'Får jag bygga till ett hus med AFO-status?', a: 'Nej. Ett AFO-hus får du underhålla och renovera, men inte bygga ut: ingen tillbyggnad, inget garage, inget gästhus. Även en carport med fast tak räknas som en utbyggnad.' },
+  { q: 'Får samfälligheten förbjuda mig att grilla?', a: 'Ja, om stadgarna eller ordningsreglerna förbjuder det eller om du stör grannarna. Samfälligheten kan då få domstol att tvinga dig att sluta.' },
+];
+---
+<Guide lang="sv" slug="bygga-pa-egen-tomt-i-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Vill du bygga något?" ctaText="Berätta vad du vill bygga och var ditt hus ligger. Vi tar reda på vad som är tillåtet, ordnar bygglovet och bygger det åt dig.">
+  <h2 id="mark">Först: vilken mark?</h2>
+  <p>I Andalusien bestämmer kommunens detaljplan (<em>PGOU</em>) vad som är tillåtet på en tomt. Den viktigaste frågan är vilken typ av mark det gäller:</p>
+  <ul>
+    <li><strong>Suelo urbano</strong>: mark i en by, stad eller urbanisation. Här får du bygga, inom detaljplanens ramar: hur många kvadratmeter, hur högt och med vilket avstånd till tomtgränsen.</li>
+    <li><strong>Suelo rústico</strong>: landsbygdsmark. Här står de flesta fincor i Axarquía. Att bygga är undantaget: marken är avsedd för jordbruk och natur, inte för hus.</li>
+  </ul>
+  <p>Marktypen hittar du i fastighetsregistret (<em>Catastro</em>). Större säkerhet ger ett <em>informe urbanístico</em> från kommunen: där står också hur mycket som redan är byggt på din tomt och hur mycket som får tillkomma.</p>
+  <p>Bor du i en lägenhet eller en urbanisation med samfällighet (<em>comunidad de propietarios</em>) gäller dessutom dess regler.</p>
+
+  <h2 id="oversikt">Vad är tillåtet var?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Projekt</th><th>Bostadsområde (urbano)</th><th>Finca (rústico)</th></tr></thead>
+    <tbody>
+      <tr><td><a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/carport-och-pergola/">Pergola utan fast tak</a></td><td>Oftast ja, ofta med anmälan</td><td>Ofta ja, fråga först</td></tr>
+      <tr><td><a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/carport-och-pergola/">Carport eller skärmtak</a></td><td>Ofta ja, med bygglov</td><td>Ibland, med bygglov</td></tr>
+      <tr><td><a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/utekok/">Utekök</a></td><td>Oftast ja</td><td>Oftast ja; tänk på brandsäsongen</td></tr>
+      <tr><td><a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/garage/">Garage</a></td><td>Ofta ja, med projekt och bygglov</td><td>Svårt, bara om planen ger utrymme</td></tr>
+      <tr><td><a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/tillbyggnad-och-inglasning/">Tillbyggnad eller extra våning</a></td><td>Om det finns byggrätt kvar</td><td>Sällan</td></tr>
+      <tr><td><a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/tillbyggnad-och-inglasning/">Glasa in terrassen</a></td><td>Med bygglov, i ett område också med samfälligheten</td><td>Sällan</td></tr>
+      <tr><td><a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/gasthus/">Andra hus eller gästhus</a></td><td>Ibland, som tillbyggnad eller inom byggrätten</td><td>Nästan aldrig</td></tr>
+      <tr><td><a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/grilla-pa-balkongen/">Grill på lägenhetens terrass</a></td><td colspan="2">Beror på samfällighetens regler</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="urbano">I ett bostadsområde (urbano)</h2>
+  <p>I byn eller i en urbanisation får du bygga, men detaljplanen bestämmer hur mycket. Tre begrepp återkommer hela tiden:</p>
+  <ul>
+    <li><strong>Edificabilidad</strong>: hur många kvadratmeter som totalt får byggas på tomten (byggrätt). Är den utnyttjad får inget mer tillkomma, inte heller ett garage.</li>
+    <li><strong>Ocupación</strong>: hur stor andel av tomten som får vara bebyggd.</li>
+    <li><strong>Retranqueos</strong>: avståndet till tomtgränsen och vägen. Ofta några meter, och även en carport eller ett garage måste hålla det.</li>
+  </ul>
+  <p>Ett skärmtak som är öppet på sidorna räknas i många detaljplaner bara delvis. Ett stängt garage eller ett rum räknas fullt ut. Reglerna skiljer sig mellan kommunerna, så låt kontrollera det först. För nästan allt med fast tak eller väggar behöver du bygglov (<em>licencia de obra</em>), för större arbeten också en arkitekt. Mer i guiden <a href="/sv/guider/bygglov-renovering-andalusien/">bygglov för renovering</a>.</p>
+
+  <h2 id="rustico">På en finca (rústico)</h2>
+  <p>På landsbygdsmark gäller: bara det som lagen och detaljplanen uttryckligen tillåter får byggas. För de flesta fincor betyder det:</p>
+  <ul>
+    <li><strong>Ett lagligt hus</strong> får du underhålla och renovera. Att bygga ut går bara om detaljplanen ger utrymme, och många äldre fincor har redan nått maximum.</li>
+    <li><strong>En ny, separat byggnad</strong> som ett garage eller ett gästhus kräver bygglov och ofta först ett eget godkännande för att bygga på landsbygdsmark. Det tar lång tid och lyckas långt ifrån alltid.</li>
+    <li><strong>Ett andra bostadshus</strong> på samma tomt är i praktiken nästan aldrig möjligt. Ett nytt hus på rústico kräver enligt den andalusiska lagen LISTA bland annat en stor tomt (kommunen bestämmer minimistorleken, ofta flera hektar), ett eget förfarande och en avgift till kommunen.</li>
+    <li><strong>En jordbruksbyggnad</strong> (<em>almacén agrícola</em> eller <em>cuarto de aperos</em>) är ibland tillåten, men bara för jordbruket. Den som senare gör ett sovrum eller gästhus av den bygger olagligt.</li>
+  </ul>
+  <p>Har ditt hus AFO-status får du inte bygga till något. Mer i guiden <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.</p>
+
+  <h2 id="samfallighet">I ett lägenhetsområde</h2>
+  <p>Bor du i ett lägenhetsområde eller en urbanisation med <em>comunidad de propietarios</em> gäller utöver kommunens regler också samfällighetens:</p>
+  <ul>
+    <li><strong>Stadgar och ordningsregler</strong> (<em>estatutos</em> och <em>normas de régimen interior</em>) kan förbjuda mycket: en grill på terrassen, en markis i en annan färg, en pergola på takterrassen.</li>
+    <li><strong>Allt som ändrar fasaden eller byggnaden</strong>, till exempel att glasa in en terrass eller bygga på en våning, kräver enligt den spanska lagen om bostadsrätter (<em>Ley de Propiedad Horizontal</em>) stämmans godkännande, oftast med tre femtedelar av ägarna.</li>
+    <li><strong>Störningar</strong>: även när något inte uttryckligen är förbjudet kan samfälligheten ingripa mot aktiviteter som stör grannarna, till exempel rök.</li>
+  </ul>
+  <p>Be förvaltaren (<em>administrador de fincas</em>) om stadgarna, ordningsreglerna och de senaste protokollen innan du köper eller bygger. Mer om grillning under <a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/grilla-pa-balkongen/">grilla i lägenhetsområden</a>.</p>
+
+  <h2 id="utan">Bygga utan lov</h2>
+  <p>I Axarquía står tusentals carportar, casitas och inglasade terrasser utan bygglov. Riskfritt är det ändå inte:</p>
+  <ul>
+    <li>Kommunen kan i upp till sex år efter färdigställandet ge böter och kräva rivning. På skyddad mark preskriberas det aldrig.</li>
+    <li>Vid försäljning måste det som står där stämma med Catastro och lagfarten. En olaglig tillbyggnad kostar dig då tid, pengar eller köpare.</li>
+    <li>Ett försäkringsbolag kan vägra att betala för skador på en del som saknar tillstånd.</li>
+  </ul>
+  <p>Står det redan något utan lov är en legalisering ibland möjlig. Se <a href="/sv/guider/afo-andalusien/">legalisering och AFO</a>. Köper du ett hus, låt kontrollera i en <a href="/sv/besiktning/">besiktning</a> att allt som står där också finns på papperet.</p>
+
+  <h2 id="projekt">Per projekt</h2>
+  <p>För varje projekt läser du vad som är tillåtet, vilka möjligheter som finns och hur vi hjälper dig att genomföra det:</p>
+  <GuideChildren lang="sv" parent="bygga-pa-egen-tomt-i-spanien" />
+  <p>Vill du bygga en del själv? Börja med vår <a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/bygga-pergola/">guide till att bygga en pergola</a>.</p>
+  <p class="note">Den här guiden ger allmän information utifrån den andalusiska lagen LISTA (Ley 7/2021), dess förordning (Decreto 550/2022) och Ley de Propiedad Horizontal, per den 5 november 2026. Den är inte juridisk rådgivning: vad som är tillåtet på din tomt beror på din kommuns detaljplan och bedöms av en arkitekt och kommunen.</p>
+</Guide>

@@ -1,0 +1,155 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'spanskt', label: 'Varför golv är annorlunda i Spanien' },
+  { id: 'jamforelse', label: 'Alla golv jämförda' },
+  { id: 'klinker', label: 'Granitkeramik (gres porcelánico)' },
+  { id: 'mikrocement', label: 'Mikrocement' },
+  { id: 'terrazzo', label: 'Terrazzo och gamla cementplattor' },
+  { id: 'barro', label: 'Barro och terrakotta' },
+  { id: 'natursten', label: 'Marmor och natursten' },
+  { id: 'vinyl', label: 'Vinyl, laminat och trä' },
+  { id: 'ute', label: 'Terrass, takterrass och poolkant' },
+  { id: 'golvvarme', label: 'Golvvärme' },
+  { id: 'val', label: 'Vilket golv passar ditt hus?' },
+  { id: 'extra', label: 'Det här tillkommer' },
+];
+
+const faq = [
+  {
+    q: 'Kan jag lägga nya plattor ovanpå de gamla?',
+    a: 'Ofta ja, om det gamla golvet är plant, sitter fast och inte låter ihåligt. Du sparar rivningen och bortforslingen av byggavfall, och det gör märkbar skillnad. Golvet blir dock 1 till 2 cm högre: dörrar måste kortas och vid ytterdörr, badrum och trappa uppstår en liten kant. Vid lösa plattor, fukt eller sprickor måste det gamla golvet bort först.',
+  },
+  {
+    q: 'Är mikrocement en bra idé i Spanien?',
+    a: 'För ett stilrent, fogfritt utseende i badrum eller vardagsrum ja, och det kan läggas på befintligt klinker. Men det är hantverk: dåligt utfört mikrocement spricker eller blir fläckigt. Det är känsligare för repor än klinker och måste förseglas på nytt vartannat till vart femte år. I en flitigt använd semesteruthyrning väljer vi hellre storformatsplattor.',
+  },
+  {
+    q: 'Varför har nästan alla spanska hus klinkergolv?',
+    a: 'Klinker håller sig svalt på sommaren, tål sand, vatten och solkräm och håller i årtionden. Bra plattor är dessutom lätta och billiga att få tag på i Spanien. Nackdelen: på vintern känns de kalla. Golvvärme eller några bra mattor löser det.',
+  },
+  {
+    q: 'Kan jag lägga laminat eller parkett i ett spanskt hus?',
+    a: 'I en torr lägenhet går det, men i gamla byhus och fincor utan krypgrund stiger fukt upp ur marken. Laminat sväller då och trä rör sig. Den som vill ha träets varma utseende väljer granitkeramik med träimitation eller ett vattentåligt klickvinylgolv.',
+  },
+  {
+    q: 'Behöver jag tillstånd för ett nytt golv?',
+    a: 'Ett nytt golv inomhus räknas oftast som en mindre byggåtgärd. Beroende på kommun lämnar du in en anmälan (declaración responsable) eller söker ett mindre bygglov. I en lägenhet kontrollerar du också samfällighetens regler: vissa kräver stegljudsisolering.',
+  },
+];
+---
+<Guide lang="sv" slug="valja-golv-i-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Vill du lägga nytt golv?" ctaText="Berätta vilka rum du vill ta itu med och vilket golv du tänker dig. Vi sköter allt, från att ta bort det gamla golvet till den sista golvlisten, även när du inte är i Spanien.">
+  <h2 id="spanskt">Varför golv är annorlunda i Spanien</h2>
+  <p>Ett golv i Axarquía måste tåla annat än i Sverige. På sommaren ska det hålla sig svalt, sand och vatten från stranden eller poolen hamnar på det, och i gamla byhus och fincor ligger golvet ofta direkt på marken, utan krypgrund. Fukt stiger då upp. Därför har nästan alla spanska hus ett golv av sten eller keramik (<em>suelo</em> eller <em>solería</em>).</p>
+  <p>Ändå finns det mer att välja på än den vanliga beige plattan. Nedan jämför vi alla vanliga golv: vad de klarar bra och var de inte passar.</p>
+
+  <h2 id="jamforelse">Alla golv jämförda</h2>
+  <p>Nedan för varje golv vad det klarar bra och var det är svagare. Rivning av det gamla golvet och avjämning av underlaget tillkommer (se <a href="#extra">det här tillkommer</a>).</p>
+  <div class="table-scroll">
+  <table class="prices">
+    <thead><tr><th>Golv</th><th>Starkt på</th><th>Svagare på</th></tr></thead>
+    <tbody>
+      <tr><td>Granitkeramik (gres porcelánico)</td><td>Tåligt, vattentätt, svalt, lättskött</td><td>Kallt på vintern, fogar</td></tr>
+      <tr><td>Storformat (t.ex. 120 × 60 cm eller större)</td><td>Stilrent, få fogar, känns rymligt</td><td>Kräver mycket plant underlag och yrkesfolk</td></tr>
+      <tr><td>Mikrocement</td><td>Fogfritt, på gamla plattor, även på väggar</td><td>Repor, hantverk, försegla vart par år</td></tr>
+      <tr><td>Renovera gammal terrazzo (slipa och polera)</td><td>Billigt, karaktär, håller i årtionden till</td><td>Trasiga plattor svåra att ersätta</td></tr>
+      <tr><td>Ny terrazzo</td><td>Nästan oförstörbar, vacker</td><td>Pris, vikt</td></tr>
+      <tr><td>Barro / terrakotta (handgjord)</td><td>Varm, autentisk känsla</td><td>Porös, fläckar, måste behandlas</td></tr>
+      <tr><td>Marmor och natursten</td><td>Exklusivt, svalt, långlivat</td><td>Pris, känsligt för citron och ättika</td></tr>
+      <tr><td>Polerad eller gjuten betong</td><td>Industriell stil, tålig</td><td>Hårfina sprickor, kräver bra underlag</td></tr>
+      <tr><td>Klickvinyl (SPC/LVT)</td><td>Snabbt, vattentåligt, på klinker, varmare och tystare</td><td>Blir varmt i solen, mindre hållbart än klinker</td></tr>
+      <tr><td>Laminat</td><td>Billigt, träutseende</td><td>Sväller vid fukt, inte för gamla hus</td></tr>
+      <tr><td>Parkett eller massivt trä</td><td>Varmt och ombonat</td><td>Fukt, sol och sand, rör sig med årstiderna</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box"><p><strong>Vill du lägga nytt golv?</strong> Vi sköter allt: det gamla golvet ut, underlaget i ordning och det nya golvet på plats, även när du inte är i Spanien. Berätta vad du vill göra.</p><a class="btn" href="/sv/forfragan/?dienst=renovatie">Berätta om ditt projekt</a></div>
+  <p>Små ytor, trappor och mycket kapning gör kvadratmetern dyrare. Räkna också med en passande golvlist (<em>rodapié</em>).</p>
+
+  <h2 id="klinker">Granitkeramik (gres porcelánico)</h2>
+  <p>Spanien är en av världens största tillverkare av kakel och klinker, med fabriker runt Castellón. Bra plattor är därför billiga här och utbudet är enormt. Välj <strong>porcelánico</strong> (genomfärgad, tätt bränd granitkeramik) i stället för enkel keramik: den suger knappt upp vatten, är hårdare och passar även utomhus.</p>
+  <ul>
+    <li><strong>Format:</strong> 60 × 60 cm är standard. Storformat (120 × 60, 120 × 120 cm) ger färre fogar och en lugn yta, men underlaget måste vara mycket plant och läggningen kostar mer.</li>
+    <li><strong>Träimitation:</strong> långa plattor med trämönster ser ut som parkett, utan problemen med fukt.</li>
+    <li><strong>Färg:</strong> ljusa färger får rummet att kännas större och håller sig svalare. Mycket mörkt eller mycket vitt visar varje sandkorn.</li>
+    <li><strong>Fogar:</strong> smala fogar i en färg nära plattan. Epoxifog i kök och badrum håller sig ren.</li>
+  </ul>
+
+  <h2 id="mikrocement">Mikrocement</h2>
+  <p>Mikrocement är ett tunt skikt (2 till 3 mm) av cement, harts och pigment som läggs för hand i flera lager och sedan förseglas. Resultatet är ett fogfritt golv som också kan fortsätta upp på väggar, i trappor och i duschen.</p>
+  <ul>
+    <li><strong>Fördelar:</strong> stilrent, modernt utseende; kan läggas på befintligt klinker, alltså ingen rivning och knappt någon nivåskillnad; inga fogar att rengöra; golv och väggar i ett material.</li>
+    <li><strong>Nackdelar:</strong> resultatet beror helt på hantverkaren; underlaget får inte röra sig, annars uppstår hårfina sprickor; känsligare för repor och fläckar än klinker; förseglingen måste förnyas vartannat till vart femte år.</li>
+    <li><strong>Passar för:</strong> ett hus eller en lägenhet som du bor i själv, badrum och öppna kök. Mindre för en flitigt använd semesteruthyrning med sand och resväskor.</li>
+  </ul>
+
+  <h2 id="terrazzo">Terrazzo och gamla cementplattor</h2>
+  <p>I många lägenheter från 1960- till 1980-talet och i gamla byhus ligger <em>terrazo</em> eller <em>granito</em>: cementplattor med marmorflis. Eller de kända mönstrade cementplattorna (<em>baldosa hidráulica</em>). Många köpare vill bli av med dem, men det är ofta synd.</p>
+  <ul>
+    <li><strong>Renovera:</strong> slipning, spackling och polering gör ett matt terrazzogolv som nytt igen. Mycket billigare än ett nytt golv och utan byggavfall.</li>
+    <li><strong>Mönstrade cementplattor</strong> är eftertraktade i dag. Kan du inte behålla dem i hela huset, använd dem i hallen eller som en ”matta” i vardagsrummet.</li>
+    <li><strong>Obs:</strong> trasiga terrazzoplattor är svåra att efterlikna. Lägg undan några hela plattor vid en renovering.</li>
+  </ul>
+
+  <h2 id="barro">Barro och terrakotta</h2>
+  <p>Handgjorda plattor av bränd lera, från röd till sandfärgad, passar en finca eller en cortijo. Att rengöra och impregnera ett gammalt barrogolv på nytt är klart billigare än att lägga ett nytt.</p>
+  <ul>
+    <li><strong>Fördelar:</strong> varm, autentisk atmosfär; varje platta är olik; åldras vackert.</li>
+    <li><strong>Nackdelar:</strong> poröst, fläckar av olja och vin tränger in om golvet inte är väl behandlat; måste regelbundet efterbehandlas med olja eller vax; mindre praktiskt i köket.</li>
+    <li><strong>Tips:</strong> vill du ha utseendet utan skötseln finns granitkeramik med terrakottautseende som knappt går att skilja från originalet.</li>
+  </ul>
+
+  <h2 id="natursten">Marmor och natursten</h2>
+  <p>Andalusien har sin egen marmor: den vita marmorn från Macael (Almería) ligger i många villor och trappor. Natursten är exklusivt, svalt och håller i generationer, men är dyrt och känsligt: syror som citron, ättika och vissa rengöringsmedel angriper polerad marmor. En slipad eller borstad yta är mindre hal och mindre känslig än högblank.</p>
+
+  <h2 id="vinyl">Vinyl, laminat och trä</h2>
+  <ul>
+    <li><strong>Klickvinyl (SPC eller LVT):</strong> det snabbaste och billigaste sättet att förnya ett omodernt klinkergolv. Det läggs på befintligt klinker, är vattentåligt, känns varmare och är tystare. Nackdelar: med mycket sol på golvet kan det utvidga sig och blekna, det är mindre reptåligt än klinker och håller inte lika länge. Bra för sovrum och en lägenhet som du använder själv.</li>
+    <li><strong>Laminat</strong> avråder vi oftast från i Axarquía: fukt från underlaget, en droppande luftkonditionering eller en blöt handduk får det att svälla.</li>
+    <li><strong>Parkett eller massivt trä</strong> fungerar i ett torrt, välisolerat hus, men måste tåla den fuktiga vintern och den torra sommaren. Välj flerskiktsparkett, aldrig direkt på ett golv utan fuktspärr.</li>
+  </ul>
+
+  <h2 id="ute">Terrass, takterrass och poolkant</h2>
+  <p>Utomhus gäller andra krav. Tänk på följande för plattor på terrass, trappa eller poolkant:</p>
+  <ul>
+    <li><strong>Halkskydd:</strong> klass C3 (den högsta spanska halkklassen, <em>clase 3</em>) vid poolen och i trappor, minst C2 på terrassen.</li>
+    <li><strong>Frostbeständighet</strong> i bergsbyarna, där det då och då fryser på vintern.</li>
+    <li><strong>Ljus färg:</strong> mörka plattor blir så heta i sommarsolen att man inte kan gå barfota på dem.</li>
+    <li><strong>Fall och tätskikt:</strong> på en takterrass ligger ett tätskikt under plattorna. Att lägga nya plattor utan att kontrollera det leder till läckor. Se <a href="/sv/kostnader/tak-och-takterrass/">tak och takterrass</a> och <a href="/sv/problem/taklacka/">läckande tak</a>.</li>
+  </ul>
+  <p>Gäller det poolkanten eller hela poolen, läs <a href="/sv/kostnader/bygga-pool/">vad en pool kostar</a>.</p>
+
+  <h2 id="golvvarme">Golvvärme</h2>
+  <p>Den största nackdelen med ett stengolv är att det är kallt på vintern. Golvvärme löser det, och klinker och mikrocement leder värmen mycket bra.</p>
+  <ul>
+    <li><strong>Elektrisk värmematta</strong> under plattorna: överkomlig för ett badrum eller ett rum, men dyrare i drift.</li>
+    <li><strong>Vattenburen golvvärme med värmepump (aerotermia):</strong> en större investering, eftersom en värmepump tillkommer. Sparsam och bekväm för hela huset, framför allt om golvet ändå ligger öppet vid en stor renovering.</li>
+  </ul>
+  <p>En värmepump värmer och kyler; mer om det i <a href="/sv/kostnader/luftkonditionering-och-varmepump/">luftkonditionering och värmepump</a> och <a href="/sv/guider/varme-och-kyla-i-spanien/">värme och kyla i Spanien</a>.</p>
+
+  <h2 id="val">Vilket golv passar ditt hus?</h2>
+  <table class="prices">
+    <thead><tr><th>Situation</th><th>Vårt råd</th></tr></thead>
+    <tbody>
+      <tr><td>Semesteruthyrning eller B&amp;B</td><td>Granitkeramik i en mellanton med smala fogar: tål sand, resväskor och rengöringsmedel, och en skadad platta är lätt att byta</td></tr>
+      <tr><td>Lägenhet från 70-talet med terrazzo</td><td>Låt slipa och polera terrazzon, eller lägg mikrocement ovanpå för ett modernt utseende</td></tr>
+      <tr><td>Gammalt byhus med fuktigt golv</td><td>Åtgärda först fukten, sedan klinker eller barro. Inget laminat, parkett eller vinyl direkt på marken</td></tr>
+      <tr><td>Finca eller cortijo</td><td>Barro eller klinker med terrakottautseende inne, halkskyddad granitkeramik ute</td></tr>
+      <tr><td>Omodernt golv, liten budget</td><td>Klickvinyl över klinkret i sovrummen, eller platta på platta</td></tr>
+      <tr><td>Hus med hundar eller små barn</td><td>Granitkeramik eller terrazzo: reptåligt och lätt att rengöra</td></tr>
+      <tr><td>Bebott året runt, stor renovering</td><td>Storformat eller mikrocement med golvvärme via värmepump</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="extra">Det här tillkommer</h2>
+  <ul>
+    <li><strong>Riva det gamla golvet och forsla bort avfallet:</strong> dyrare i de vita byarnas trånga gränder, eftersom ingen container får plats och allt måste bäras ut för hand.</li>
+    <li><strong>Avjämning:</strong> behövs för storformat, mikrocement och vinyl.</li>
+    <li><strong>Fuktspärr eller dränering</strong> vid fuktiga golv: låt först utreda orsaken, se <a href="/sv/problem/fukt-och-mogel/">fukt och mögel</a>.</li>
+    <li><strong>Korta dörrar</strong> när golvet blir högre.</li>
+    <li><strong>Flytta möbler och täcka huset dammtätt</strong> om det är bebott eller hyrs ut möblerat.</li>
+    <li><strong>Moms:</strong> renoveringsarbeten i en bostad kan under vissa villkor faktureras med 10 % i stället för 21 %. Se <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">vad en renovering kostar</a>.</li>
+  </ul>
+  <p>Bor du inte i Spanien? Ett nytt golv går bra att ordna medan du inte är där. Räkna med 1 till 2 veckor för en genomsnittlig lägenhet, med foton av varje steg.</p>
+</Guide>

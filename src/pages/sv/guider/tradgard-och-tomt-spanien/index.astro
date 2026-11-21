@@ -1,0 +1,77 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'oversikt', label: 'Alla alternativ i översikt' },
+  { id: 'torktalig', label: 'En torktålig trädgård' },
+  { id: 'bevattning', label: 'Droppbevattning' },
+  { id: 'staket', label: 'Staket och mur' },
+  { id: 'grind', label: 'Automatisk grind' },
+  { id: 'tomt', label: 'Tomten ren och brandsäker' },
+];
+
+const faq = [
+  {
+    q: 'Kan jag ha en gräsmatta i Axarquía?',
+    a: 'Ja, men riktigt gräs behöver vatten varje dag på sommaren, och under torra år är bevattning ibland begränsad. Bättre är en liten yta med torktåligt gräs eller konstgräs där du verkligen använder den, och grus och medelhavsväxter för resten.',
+  },
+  {
+    q: 'Vad händer med min trädgård om jag är borta i månader?',
+    a: 'Med droppbevattning på en styrenhet och torktåliga växter klarar sig en trädgård bra över sommaren utan dig. Låt ändå kontrollera några gånger om året att slangarna är täta och att styrenheten fungerar; ett trasigt droppmunstycke kostar på några veckor en växt eller mycket vatten.',
+  },
+  {
+    q: 'Behöver jag tillstånd för staket eller mur?',
+    a: 'Oftast krävs en anmälan eller ett mindre bygglov hos kommunen, framför allt för en murad vägg eller ett staket mot gatan. På landsbygdsmark (suelo rústico) gäller strängare regler för höjd och material. Fråga i förväg.',
+  },
+];
+---
+<Guide slug="tradgard-och-tomt-spanien" lang="sv" toc={toc} faq={faq} dienst="onderhoud" ctaTitle="Behöver du hjälp med trädgård eller tomt?" ctaText="Berätta vad du vill ha: en trädgård som behöver lite vatten, bevattning, ett staket eller en grind, eller att tomten röjs. Med några foton kan vi snabbt tänka med.">
+  <h2 id="oversikt">Alla alternativ i översikt</h2>
+  <p>En översikt över vad som finns och vad det är bra för. Vill du få det gjort? <a href="/sv/forfragan/">Berätta vad du planerar</a>, så hjälper vi dig att genomföra det.</p>
+  <table class="prices">
+    <thead><tr><th>Alternativ</th><th>Bra att veta</th></tr></thead>
+    <tbody>
+      <tr><td>Grus och medelhavsväxter</td><td>Lite vatten och skötsel, vackert året runt</td></tr>
+      <tr><td>Rullgräs eller sådd gräsmatta</td><td>Billigt att anlägga, dyrt i vatten och skötsel</td></tr>
+      <tr><td>Konstgräs</td><td>Inget vatten, men hett i sommarsolen</td></tr>
+      <tr><td>Droppbevattning med timer</td><td>Sparar mycket vatten och arbete; delvis att lägga själv</td></tr>
+      <tr><td>Bevattning med wifi-styrning och flera zoner</td><td>Styr på distans hemifrån</td></tr>
+      <tr><td>Nätstaket (<em>malla</em>)</td><td>Avgränsning, håller hundar inne och vildsvin ute; inget insynsskydd</td></tr>
+      <tr><td>Staket av paneler eller spjälor</td><td>Stabilare och prydligare, ibland med genomsikt</td></tr>
+      <tr><td>Murad, putsad mur</td><td>Insynsskydd och stabilitet; ofta lovpliktig</td></tr>
+      <tr><td>Slaggrind med motor</td><td>Öppna med fjärrkontroll eller mobil; behöver plats att svänga upp</td></tr>
+      <tr><td>Skjutgrind med motor</td><td>Perfekt i sluttning eller vid kort uppfart</td></tr>
+      <tr><td>Röja och beskära tomten</td><td>Behövs varje år, framför allt före sommaren</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="torktalig">En torktålig trädgård</h2>
+  <p>Spanjorerna kallar det <em>xerojardinería</em>: en trädgård som större delen av året klarar sig med lite eller inget extra vatten. Den passar Axarquías klimat, där det knappt regnar från maj till oktober och där det under torra år finns begränsningar för att vattna trädgårdar och fylla pooler.</p>
+  <ul>
+    <li><strong>Växter</strong>: oliv, johannesbröd, lavendel, rosmarin, salvia, oleander, bougainvillea, blyblomma, agave, aloe och suckulenter. De tål sol, vind och torka.</li>
+    <li><strong>Grus eller bark</strong> runt växterna håller marken sval och fuktig och ogräset borta. Lägg markduk under.</li>
+    <li><strong>Gruppera</strong> växter med samma vattenbehov, så att du bara vattnar de törstiga ställena.</li>
+    <li><strong>Plantera på hösten</strong>: då kommer regnet, och rötterna hinner etablera sig före sommaren.</li>
+    <li><strong>Obs</strong>: palmer är känsliga för röd palmvivel (<em>picudo rojo</em>). Låt behandla palmer förebyggande.</li>
+  </ul>
+
+  <h2 id="bevattning">Droppbevattning</h2>
+  <p>Med droppbevattning (<em>riego por goteo</em>) får varje växt exakt det vatten den behöver, direkt vid roten, och knappt något avdunstar. En timer eller styrenhet startar anläggningen på natten eller tidigt på morgonen. Med en wifi-styrenhet ändrar du den från Sverige, till exempel efter en värmebölja eller efter regn.</p>
+  <p>Ett enkelt system på vattenkranen kan du lägga själv. För en större trädgård med flera zoner, vattentank eller pump lönar det sig med en planering, så att trycket stämmer överallt. Har du tank eller brunn, läs också om <a href="/sv/guider/kopa-finca-i-spanien/">vatten på en finca</a>.</p>
+
+  <h2 id="staket">Staket och mur</h2>
+  <p>Ett staket håller hundar inne och vildsvin, getter och objudna gäster ute. Valet beror på vad du vill: bara avgränsa (nätstaket), stabilt och prydligt (paneler eller spjälor) eller insynsskydd (murad vägg, eventuellt med staket ovanpå). I en sluttning måste en mur ofta också hålla jord; då är det en stödmur som behöver en bra grund och dränering. Se <a href="/sv/kostnader/stodmur-och-dranering/">stödmur och dränering</a>.</p>
+  <p>Regler: för mur eller staket mot en allmän väg kräver kommunen nästan alltid en anmälan eller ett bygglov. På landsbygdsmark (<em>suelo rústico</em>) finns ofta en högsta höjd för den murade delen och en öppen övre del, så att djur och vatten kan passera. Se reglerna för <a href="/sv/orter/">din kommun</a>.</p>
+
+  <h2 id="grind">Automatisk grind</h2>
+  <p>En grind med motor är på en finca eller villa en stor bekvämlighet: du slipper kliva ur bilen i den branta uppfarten, och grinden är alltid stängd. Det finns två sorter:</p>
+  <ul>
+    <li><strong>Slaggrind</strong>: en eller två grindar som svänger upp. Billigare, men behöver plats och är svår i en sluttning.</li>
+    <li><strong>Skjutgrind</strong>: glider åt sidan längs staketet. Dyrare, men perfekt i en sluttning eller vid kort uppfart.</li>
+  </ul>
+  <p>Välj en motor med nödupplåsning och batteri för strömavbrott. Vid ett hus utan nätström kan grinden drivas med en solpanel. Att öppna med mobilen är praktiskt när någon behöver öppna åt dig, till exempel städaren eller <a href="/sv/tillsyn/">tillsynen</a>.</p>
+
+  <h2 id="tomt">Tomten ren och brandsäker</h2>
+  <p>På sommaren är brand en verklig risk i Axarquías kullar. Andalusien ålägger ägare av hus i eller nära skogs- och naturområden att hålla tomten brandsäker: ta bort torrt ogräs och sly, beskära grenar över taket och inte lämna brännbart avfall. Hur bred zonen runt huset måste vara beror på läget; fråga kommunen.</p>
+  <p>Låt röja tomten på våren (april, maj), före torrperioden. Då förhindrar du också att ogräset fröar av sig och att allt växer igen nästa år. Kombinera det med annat <a href="/sv/underhall/">underhåll</a> av huset.</p>
+</Guide>

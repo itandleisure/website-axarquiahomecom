@@ -1,0 +1,133 @@
+---
+import ArticlePhoto from '../../../../components/ArticlePhoto.astro';
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Det korta svaret' },
+  { id: 'varfor', label: 'Varför spanska hus är kalla' },
+  { id: 'tak', label: 'Isolera taket' },
+  { id: 'vaggar', label: 'Isolera väggarna' },
+  { id: 'innervagg', label: 'Bygga en isolerad innervägg' },
+  { id: 'jamforelse', label: 'Alla alternativ jämförda' },
+  { id: 'fukt', label: 'Isolera utan fuktproblem' },
+  { id: 'ordning', label: 'Var börjar du?' },
+];
+
+const faq = [
+  {
+    q: 'Lönar det sig att isolera i ett varmt land?',
+    a: 'Mer än man tror. Ett välisolerat tak håller värmen ute på sommaren och inne på vintern. I ett oisolerat hus i Axarquía sparar du med isolering av tak och väggar ofta 30 till 50 % på uppvärmning och kyla, och huset känns mycket behagligare under båda årstiderna.',
+  },
+  {
+    q: 'Behöver jag tillstånd för att isolera?',
+    a: 'Invändig isolering, till exempel en isolerad innervägg eller ett nedsänkt tak, kräver oftast bara en enkel anmälan (declaración responsable) eller ett mindre bygglov. Utvändig isolering förändrar fasaden och kräver oftast bygglov. I skyddade byakärnor kan kommunen ha krav på puts och färg.',
+  },
+  {
+    q: 'Hur mycket plats tar en isolerad innervägg?',
+    a: 'En innervägg av gips på metallreglar med 4 till 5 cm isolering är totalt 6 till 8 cm tjock. I ett rum på 4 × 4 meter med två isolerade ytterväggar förlorar du cirka en halv kvadratmeter golvyta.',
+  },
+  {
+    q: 'Finns det bidrag eller skatteavdrag?',
+    a: 'Den som är skatterättsligt bosatt i Spanien har de senaste åren kunnat dra av en del av kostnaden för energirenoveringar från inkomstskatten (IRPF), med en energideklaration före och efter arbetena. Ordningen har förlängts flera gånger. Fråga din gestor om den fortfarande gäller för dig. Icke-bosatta har oftast ingen nytta av den, och svenskt ROT-avdrag gäller inte för ett hus i Spanien.',
+  },
+];
+---
+<Guide lang="sv" slug="isolera-hus-i-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Ett hus som är varmt på vintern och svalt på sommaren?" ctaText="Vi tar reda på var ditt hus förlorar mest värme och ser till att arbetet blir ordentligt utfört, från taket till den isolerade innerväggen.">
+  <h2 id="kort">Det korta svaret</h2>
+  <p>De flesta hus i Axarquía som byggdes före 2007 har knappt någon eller ingen isolering. Börja med <strong>taket</strong>: där kommer värmen in på sommaren och försvinner på vintern. Därefter <strong>ytterväggarna</strong>, utvändigt med ett isoleringssystem eller invändigt med en <strong>isolerad innervägg</strong>. Nedan ser du vad varje metod innebär och vad den ger.</p>
+
+  <h2 id="varfor">Varför spanska hus är kalla</h2>
+  <p>Den som tillbringar sin första vinter i Spanien blir ofta förvånad: ute 18 grader i solen, inne 13 grader och rått. Äldre spanska hus byggdes för att hålla sig svala på sommaren: klinkergolv, enkla väggar av tegel eller natursten, enkelglas och ett oisolerat tak. Först sedan byggreglerna från 2006 (<em>Código Técnico de la Edificación</em>) är isolering obligatorisk i nybyggen.</p>
+  <p>Följden: på vintern är det kallare inne än ute under dagen, med <a href="/sv/problem/fukt-och-mogel/">fukt och mögel</a> som bieffekt. På sommaren hettas ett platt tak eller en takterrass upp så mycket att övervåningen inte svalnar på natten.</p>
+
+  <h2 id="tak">Isolera taket</h2>
+  <p>Taket ger mest för minst arbete. Det finns tre vanliga sätt:</p>
+  <h3>Inifrån: nedsänkt tak</h3>
+  <p>Under det befintliga taket monteras en stomme med mineralull eller träfiber som kläs med gips. Själva yttertaket lämnas orört. Passar om rummet har tillräcklig takhöjd.</p>
+  <h3>På det platta taket eller takterrassen: omvänt tak</h3>
+  <p>Ovanpå det befintliga tätskiktet läggs tryckfasta isolerskivor (XPS) och på dem nya plattor eller grus. Den bästa lösningen för Axarquías typiska platta tak, helst tillsammans med ett nytt tätskikt.</p>
+  <h3>Vid ett nytt tegeltak</h3>
+  <p>Ska taket ändå bort, till exempel på grund av läckage eller <a href="/sv/guider/asbest-eternit-tak-spanien/">uralita</a>, isolera direkt mellan eller ovanpå takstolarna. Det är det klokaste tillfället: isoleringen följer med i samma arbetsmoment. Se också <a href="/sv/kostnader/tak-och-takterrass/">tak och takterrass</a>.</p>
+  <h3>Snabb vinst: reflekterande takfärg</h3>
+  <p>En vit, reflekterande beläggning på det platta taket håller ute mycket värme på sommaren. Den ersätter inte isolering, men är en snabb förbättring.</p>
+
+  <h2 id="vaggar">Isolera väggarna</h2>
+  <h3>Utifrån (SATE)</h3>
+  <p>Ett system för utvändig tilläggsisolering (<em>SATE</em>) med isolerskivor och puts. Det fungerar bäst: väggen förblir varm, köldbryggor försvinner och du förlorar ingen yta inomhus. Nackdel: fasaden förändras, och bygglov behövs.</p>
+  <h3>I luftspalten</h3>
+  <p>Hus från 1970-talet fram till 2000 har ibland en dubbel vägg med luftspalt (<em>cámara de aire</em>). Den kan fyllas med lösull eller skum genom små borrhål. Snabbt och billigt, men bara om det verkligen finns en luftspalt; en fackman kontrollerar det med provborrning eller kamera.</p>
+  <h3>Inifrån</h3>
+  <p>Får eller kan utsidan inte ändras, eller har du ett radhus i byn, isolerar du inifrån. Det går med isolerande puts (kork eller kalk, 2 till 4 cm) eller, oftast bättre, med en isolerad innervägg.</p>
+
+  <h2 id="innervagg">Bygga en isolerad innervägg</h2>
+  <ArticlePhoto name="isolatie-glaswol-close-up" lang="sv" />
+  <p>En isolerad innervägg (<em>trasdosado</em>) är en andra, tunn vägg direkt framför den befintliga ytterväggen. Det är det populäraste sättet att isolera ett befintligt spanskt hus inifrån.</p>
+  <h3>Så fungerar det</h3>
+  <ul>
+    <li>Framför väggen monteras en stomme av <strong>metallreglar</strong> (eller trä).</li>
+    <li>Mellan reglarna läggs <strong>isolering</strong>: mineralull, träfiber eller PIR-skivor, oftast 4 till 6 cm.</li>
+    <li>På den varma sidan sätts en <strong>ångbroms</strong>, så att fukt från rummet inte kondenserar mot den kalla väggen.</li>
+    <li>Ovanpå kommer <strong>gipsskivor</strong> (<em>pladur</em>), i badrum och kök fuktbeständiga skivor. Därefter spackel och målning.</li>
+  </ul>
+  <p>Det finns också <strong>färdiga kombiskivor</strong>: gips med isolering påkaschierad, som limmas direkt på en plan vägg. Tunnare och snabbare, men bara för torra, plana väggar.</p>
+  <h3>Fördelar</h3>
+  <ul>
+    <li>Rummet värms upp mycket snabbare och väggen känns inte längre kall.</li>
+    <li>Nya ledningar och eluttag kan dras i den på en gång.</li>
+    <li>Inget fasadlov behövs; går att göra rum för rum.</li>
+    <li>Sneda, spruckna eller fula väggar blir raka i ett steg.</li>
+  </ul>
+  <h3>Det här ska du tänka på</h3>
+  <ul>
+    <li>Du förlorar 6 till 10 cm per vägg.</li>
+    <li>Golvlister, eluttag, radiatorer och fönsterbänkar måste flyttas eller anpassas.</li>
+    <li><strong>Åtgärda fukten först.</strong> En innervägg framför en blöt vägg döljer problemet och förvärrar det. För gamla naturstensväggar med uppstigande fukt väljer du ett diffusionsöppet system (träfiber, kork, kalk) med luftning bakom.</li>
+  </ul>
+  <h3>Utföranden</h3>
+  <table class="prices">
+    <thead><tr><th>Utförande</th><th>Passar för</th></tr></thead>
+    <tbody>
+      <tr><td>Kombiskiva av gips och isolering</td><td>Torra, plana väggar; snabbt</td></tr>
+      <tr><td>Metallreglar, mineralull, gips</td><td>Standard; plats för ledningar</td></tr>
+      <tr><td>Diffusionsöppet system (träfiber eller kork, kalk)</td><td>Gamla naturstensväggar</td></tr>
+    </tbody>
+  </table>
+  <p class="note">En isolerad innervägg kan byggas rum för rum. Börja med de rum du använder mest på vintern, till exempel vardagsrum och sovrum.</p>
+
+  <h2 id="jamforelse">Alla alternativ jämförda</h2>
+  <p>Fler stjärnor betyder mer komfort och större besparing.</p>
+  <table class="prices">
+    <thead><tr><th>Åtgärd</th><th>Effekt</th></tr></thead>
+    <tbody>
+      <tr><td>Reflekterande takbeläggning</td><td>★★ (framför allt på sommaren)</td></tr>
+      <tr><td>Fylla luftspalten</td><td>★★★</td></tr>
+      <tr><td>Isolerande puts av kalk eller kork</td><td>★★</td></tr>
+      <tr><td>Nedsänkt tak med isolering</td><td>★★★</td></tr>
+      <tr><td>Isolerad innervägg</td><td>★★★</td></tr>
+      <tr><td>Isolera platt tak eller takterrass (omvänt tak)</td><td>★★★★</td></tr>
+      <tr><td>Utvändig isolering (SATE)</td><td>★★★★</td></tr>
+      <tr><td>Nytt tegeltak med isolering</td><td>★★★★</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Måste fukt eller sprickor åtgärdas först går det före. För försäljning eller uthyrning behöver du dessutom en energideklaration (<em>certificado energético</em>); se <a href="/sv/guider/energideklaration-spanien/">energideklaration i Spanien</a>. Vilka bidrag och skatteavdrag som finns för isolering 2026 läser du i <a href="/sv/guider/bidrag-energieffektivisering-spanien/">bidrag för energieffektivisering</a>.</p>
+  <p>Glöm inte fönstren: enkelglas i en gammal karm släpper igenom mer värme än en hel vägg. Se <a href="/sv/kostnader/fonster-och-karmar/">fönster och karmar</a>. Och med isolering arbetar en <a href="/sv/kostnader/luftkonditionering-och-varmepump/">värmepump eller luftkonditionering</a> mycket sparsammare; läs också <a href="/sv/guider/varme-och-kyla-i-spanien/">värme och kyla i Spanien</a>.</p>
+  <p><strong>Vill du isolera ditt hus?</strong> Vi tar reda på var ditt hus förlorar mest värme och ser till att arbetet blir ordentligt utfört, från taket till den isolerade innerväggen. <a href="/sv/forfragan/?dienst=renovatie">Berätta vad du vill ta itu med</a>.</p>
+
+  <h2 id="fukt">Isolera utan fuktproblem</h2>
+  <p>Ett isolerat hus är tätare. Det är bra för värmen, men fukten måste ta vägen någonstans. Tänk därför på:</p>
+  <ul>
+    <li><strong>Ventilation</strong>: ventiler i fönstren eller en frånluftsfläkt i badrum och kök.</li>
+    <li><strong>Åtgärda först orsakerna till fukt</strong>: ett läckande tak, ett trasigt stuprör eller uppstigande fukt.</li>
+    <li><strong>Rätt material</strong>: arbeta diffusionsöppet vid gamla stenväggar.</li>
+    <li><strong>Ett hus som står tomt länge</strong> har nytta av en avfuktare eller regelbunden vädring. Det kan ordnas via <a href="/sv/tillsyn/">tillsyn</a>.</li>
+  </ul>
+
+  <h2 id="ordning">Var börjar du?</h2>
+  <ol>
+    <li>Med <strong>taket</strong>, framför allt över övervåningen eller en takterrass.</li>
+    <li>Med <strong>fönstren</strong>, om det fortfarande sitter enkelglas.</li>
+    <li>Med <strong>ytterväggarna</strong> i de rum du använder mest på vintern, till exempel med en isolerad innervägg.</li>
+    <li>Först därefter väljer du <strong>uppvärmning</strong>: ett isolerat hus behöver en mindre anläggning.</li>
+  </ol>
+  <p class="note">Den här guiden ger allmän information för Axarquía i november 2026. Regler kan ändras.</p>
+</Guide>

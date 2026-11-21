@@ -3,9 +3,9 @@
 import { buyingChecklist } from '../data/buying-checklist';
 import type { Lang } from '../i18n';
 interface Props { theme: number; lang?: Lang; }
-const lang = (Astro.props.lang ?? 'nl') as 'nl' | 'en' | 'de';
+const lang = (Astro.props.lang ?? 'nl') as 'nl' | 'en' | 'de' | 'sv';
 const t = buyingChecklist[Astro.props.theme];
-const label = { nl: 'In het Spaans', en: 'In Spanish', de: 'Auf Spanisch' }[lang];
+const label = { nl: 'In het Spaans', en: 'In Spanish', de: 'Auf Spanisch', sv: 'På spanska' }[lang];
 ---
 <h2 id={t.id[lang]}>{t.title[lang]}</h2>
 <ol class="ask-list">

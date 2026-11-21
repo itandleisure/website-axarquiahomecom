@@ -1,0 +1,120 @@
+---
+import Guide from '../../../../components/Guide.astro';
+import GuideChildren from '../../../../components/GuideChildren.astro';
+
+const toc = [
+  { id: 'varfor', label: 'Därför lönar sig förberedelser' },
+  { id: 'steg', label: 'Plan i fem faser' },
+  { id: 'dokument', label: 'Dokument och legalisering' },
+  { id: 'reparationer', label: 'Reparationer som lönar sig' },
+  { id: 'kostnader', label: 'Kostnader för säljaren' },
+  { id: 'distans', label: 'Sälja från utlandet' },
+  { id: 'mer', label: 'Läs vidare' },
+  { id: 'kallor', label: 'Källor' },
+];
+
+const faq = [
+  {
+    q: 'Hur lång tid tar det att sälja ett hus i Axarquía?',
+    a: 'Det varierar mycket. En lägenhet vid kusten med rätt pris säljs ibland på några månader. En finca på landet är ofta till salu ett år eller längre, särskilt när den rättsliga statusen väcker frågor. Räkna dessutom med en till tre månader mellan föravtalet (arras) och notarien.',
+  },
+  {
+    q: 'Måste jag renovera huset före försäljningen?',
+    a: 'Oftast inte helt. Det som lönar sig är att åtgärda synliga brister (fukt, läckor, sprickor, trasiga installationer) och ge ett fräscht intryck: målning, trädgård och pool i ordning. Ett helt nytt kök eller badrum får du sällan tillbaka. Sidan om att renovera före försäljning visar vad som lönar sig och vad som inte gör det.',
+  },
+  {
+    q: 'Kan jag sälja ett hus med AFO-status?',
+    a: 'Ja. Ett hus med en AFO-förklaring (DAFO) från kommunen går att sälja och kan skrivas in i fastighetsregistret. Utan den förklaringen är försäljningen svårare: många köpare och banker hoppar av. Börja därför ansökan i god tid, den tar ofta månader.',
+  },
+  {
+    q: 'Vem betalar plusvalían vid försäljningen?',
+    a: 'Den kommunala plusvalían (skatt på markens värdeökning) betalas i princip av säljaren. Sedan november 2021 betalar du inget om det bevisligen inte finns någon värdeökning, och du kan välja den förmånligaste av två beräkningsmetoder.',
+  },
+  {
+    q: 'Jag bor inte i Spanien. Varför håller köparen inne 3 %?',
+    a: 'Är säljaren inte skattemässigt bosatt i Spanien måste köparen hålla inne 3 % av köpesumman och betala in den till spanska skattemyndigheten, som förskott på din skatt på vinsten. Därefter lämnar du själv en deklaration. Var din skatt lägre än 3 % kan du begära tillbaka mellanskillnaden.',
+  },
+];
+---
+<Guide lang="sv" slug="salja-hus-i-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Göra huset redo för försäljning?" ctaText="Vi tittar på ditt hus, berättar vilka reparationer som lönar sig och utför dem, även när du är utomlands. Du får ett pris i förväg.">
+  <h2 id="varfor">Därför lönar sig förberedelser</h2>
+  <p>Köpare av hus i Axarquía är ofta utlänningar som du. De är försiktiga, eftersom de har hört om hus utan bygglov och dolda fel. Deras advokat granskar dokumenten, och allt fler köpare låter göra en <a href="/sv/besiktning/">besiktning</a>. Varje problem som dyker upp blir ett skäl att pressa priset eller hoppa av.</p>
+  <p>Den som kommer före får tre fördelar:</p>
+  <ul>
+    <li><strong>Snabbare såld.</strong> Ligger dokumenten klara kan köparen gå direkt till notarien. Ett saknat dokument eller ett AFO-förfarande kostar snabbt månader.</li>
+    <li><strong>Starkare i förhandlingen.</strong> En åtgärdad brist är ingen förhandlingspunkt längre. En fuktfläck som kostar 800 € att åtgärda pressar ofta priset med tusentals euro i förhandlingen.</li>
+    <li><strong>Mindre risk efteråt.</strong> Enligt spansk rätt ansvarar säljaren för dolda fel. Det du har låtit åtgärda och ärligt uppger kan inte bli ett krav senare.</li>
+  </ul>
+
+  <h2 id="steg">Plan i fem faser</h2>
+  <ol>
+    <li><strong>Sex till tolv månader före: kontrollera dokumenten.</strong> Beställ en nota simple från fastighetsregistret och jämför den med Catastro och med det som faktiskt står där. Finns det tillbyggnader, en inglasad terrass eller en pool utan bygglov? Börja då med legaliseringen eller en AFO-ansökan nu.</li>
+    <li><strong>Tre till sex månader före: kontrollera och reparera.</strong> Låt någon titta på huset som om du själv var köparen. Åtgärda det en köpare skulle hitta: läckor, fukt, sprickor, el som inte uppfyller föreskrifterna. Se <a href="/sv/underhall/">underhåll och reparationer</a>.</li>
+    <li><strong>En till två månader före: fräscha upp och visa upp.</strong> Måla, få trädgård och pool i ordning, byt det som är trasigt, plocka undan personliga saker. Låt först därefter ta foton.</li>
+    <li><strong>Sätt huset till salu.</strong> Låt göra energideklarationen (obligatorisk så snart du annonserar), välj en mäklare och bestäm vem som sköter visningar när du inte är där.</li>
+    <li><strong>Från bud till notarie.</strong> Efter överenskommelsen skriver ni oftast ett föravtal (<em>contrato de arras</em>) och du får en handpenning, ofta 10 %. Hos notarien följer köpebrev och betalning. Se till att alla dokument, fakturor och nycklar ligger klara.</li>
+  </ol>
+
+  <h2 id="dokument">Dokument och legalisering</h2>
+  <p>Det mesta arbetet ligger i dokumenten. Kort sagt behöver du:</p>
+  <ul>
+    <li>Ditt köpebrev (<em>escritura</em>) och en aktuell <em>nota simple</em> från fastighetsregistret.</li>
+    <li>En beskrivning i Catastro och fastighetsregistret som stämmer med verkligheten.</li>
+    <li>Beviset att huset får bebos: ett bostadsintyg eller en anmälan om bostadsanvändning, för ett gammalt hus ett åldersbevis eller AFO-förklaringen.</li>
+    <li>Energideklarationen (<em>certificado de eficiencia energética</em>).</li>
+    <li>Den senaste skattsedeln för fastighetsskatt (IBI) och aktuella vatten- och elräkningar.</li>
+    <li>För en lägenhet: ett intyg från samfälligheten om att det inte finns några skulder.</li>
+  </ul>
+  <p>Stämmer ytan i papperen inte med verkligheten eller har något byggts utan lov, måste det rättas till före försäljningen. På landsbygden handlar det ofta om AFO-status; läs vår guide <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>. Den fullständiga listan, med vem som utfärdar vad och vad det kostar, hittar du på sidan <a href="/sv/guider/salja-hus-i-spanien/dokument/">dokument för försäljningen</a>.</p>
+
+  <h2 id="reparationer">Reparationer som lönar sig</h2>
+  <p>Ett hus som ser välskött ut får fler visningar och bättre bud. Det betyder inte att du måste bygga om. I Axarquía lönar sig framför allt:</p>
+  <ul>
+    <li><strong>Åtgärda brister</strong> som en köpare eller besiktningsman hittar: <a href="/sv/problem/fukt-och-mogel/">fukt och mögel</a>, <a href="/sv/problem/taklacka/">takläcka</a>, <a href="/sv/problem/sprickor-i-vaggar/">sprickor</a>, en läckande pool.</li>
+    <li><strong>Målning</strong>, inne och ute. Ett nykalkat hus ser genast flera år yngre ut.</li>
+    <li><strong>Utomhus</strong>: takterrassen tät och ren, trädgården skött, poolen klar.</li>
+    <li><strong>Små förnyelser</strong>: kranar, dörrhandtag, lampor, trasigt kakel, köksluckor.</li>
+  </ul>
+  <p>Stora ombyggnader strax före försäljningen får du oftast inte tillbaka, eftersom köpare ofta vill välja kök eller badrum själva. Undantaget: ett hus som är så omodernt att bara köpare med ombyggnadsplaner överväger det. Avvägningar och riktpriser finns på sidan <a href="/sv/guider/salja-hus-i-spanien/renovera-fore-forsaljning/">renovera före försäljning</a>.</p>
+
+  <h2 id="kostnader">Kostnader för säljaren</h2>
+  <p>Vid en försäljning i Spanien betalar köparen överlåtelseskatten och oftast notarie och register. Som säljare får du räkna med de här kostnaderna:</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Kostnadspost</th><th>Riktvärde</th><th>Förklaring</th></tr></thead>
+    <tbody>
+      <tr><td>Mäklare</td><td>Ofta 3 % till 6 % plus 21 % moms</td><td>Förhandlingsbart; på Costa del Sol är 5 % vanligt</td></tr>
+      <tr><td>Plusvalía (kommunen)</td><td>Några hundra till några tusen euro</td><td>Skatt på markens värdeökning; inget vid bevisad förlust</td></tr>
+      <tr><td>Skatt på vinsten</td><td>19 % av vinsten för icke-residenter</td><td>De som är bosatta i Spanien betalar 19 % till 30 % via inkomstskatten</td></tr>
+      <tr><td>Energideklaration</td><td>Oftast 80 € – 250 €</td><td>Obligatorisk när du annonserar</td></tr>
+      <tr><td>Nota simple</td><td>Omkring 10 € – 15 €</td><td>Beställs online hos registret</td></tr>
+      <tr><td>Lösa bolånet</td><td>Beror på banken</td><td>Inklusive avregistrering i registret</td></tr>
+      <tr><td>Legalisering eller AFO</td><td>Varierar mycket</td><td>Arkitekt, avgifter och eventuella åtgärder</td></tr>
+      <tr><td>Reparationer och uppfräschning</td><td>Efter eget val</td><td>Räkna på det i förväg, se sidan om renovering</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Riktvärden, kontrollerade 5 november 2026. Skatter beror på din situation; låt en spansk skatterådgivare eller gestor göra en beräkning.</p>
+  <p>Bor du inte i Spanien håller köparen inne 3 % av köpesumman och betalar in den som förskott på din skatt till spanska skattemyndigheten. Inom några månader efter försäljningen lämnar du själv en deklaration (<em>modelo 210</em>) och begär tillbaka det som hållits inne för mycket. Är du bosatt i Sverige ska vinsten också redovisas i den svenska deklarationen; den spanska skatten räknas normalt av. Fråga Skatteverket eller en skatterådgivare hur det blir i ditt fall.</p>
+
+  <h2 id="distans">Sälja från utlandet</h2>
+  <p>Många ägare i Axarquía säljer medan de bor i Sverige, Norge, Danmark eller någon annanstans. Det går bra om du ordnar några saker:</p>
+  <ul>
+    <li><strong>Någon med nyckel.</strong> Mäklare vill kunna visa huset. Någon måste öppna det i förväg, vädra, slå på luftkonditioneringen på sommaren och låsa efteråt. Med <a href="/sv/tillsyn/">tillsyn av huset</a> har du en fast kontaktperson för det, även om du arbetar med flera mäklare.</li>
+    <li><strong>Låt huset se bebott ut.</strong> Ett hus som står tomt i månader lockar inbrottstjuvar och ibland ockupanter. Se <a href="/sv/problem/inbrott-och-ockupation/">inbrott och ockupation</a>.</li>
+    <li><strong>Fortsätt skötseln.</strong> En grön pool eller en igenvuxen trädgård på visningsdagen kostar dig en köpare. Låt sköta <a href="/sv/pool/">poolen</a> och trädgården ända fram till tillträdet.</li>
+    <li><strong>Fullmakt.</strong> Du behöver inte själv gå till notarien. Med en fullmakt (<em>poder</em>) kan din advokat skriva under åt dig. Den undertecknar du hos en spansk notarie eller hos en notarius publicus hemma, med apostille.</li>
+  </ul>
+
+  <h2 id="mer">Läs vidare</h2>
+  <p>De två viktigaste delarna går vi igenom på egna sidor:</p>
+  <GuideChildren lang="sv" parent="salja-hus-i-spanien" />
+  <p>Vill du först veta vad ditt hus behöver? Vi tittar på det med en köpares ögon och ger dig ett pris på det som behöver göras. Sedan bestämmer du. Be om en <a href="/sv/forfragan/?dienst=renovatie">offert på renovering</a> eller en <a href="/sv/forfragan/?dienst=onderhoud">reparation</a>, eller läs om <a href="/sv/renovering/">renovering</a> och <a href="/sv/underhall/">underhåll</a>.</p>
+
+  <h2 id="kallor">Källor</h2>
+  <ul>
+    <li>Plusvalía: Real Decreto-ley 26/2021 (BOE, 9 november 2021), ny beräkning och undantag utan värdeökning.</li>
+    <li>3 % innehållande och 19 % för icke-residenter: Real Decreto Legislativo 5/2004 (lagen om inkomstskatt för icke-residenter), artikel 25; blankett 211 och 210 hos Agencia Tributaria.</li>
+    <li>Energideklaration: Real Decreto 390/2021 (BOE, 2 juni 2021).</li>
+    <li>Bostadsanvändning i Andalusien: Ley 7/2021 (LISTA), artikel 138 och nionde tilläggsbestämmelsen.</li>
+  </ul>
+  <p class="note">Kontrollerat 5 november 2026. Den här guiden ger allmän information och är inte juridisk eller skattemässig rådgivning. Regler och satser kan ändras; låt en advokat, gestor eller skatterådgivare granska din situation.</p>
+</Guide>

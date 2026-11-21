@@ -1,0 +1,118 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Det korta svaret' },
+  { id: 'kranvatten', label: 'Kan man dricka kranvattnet?' },
+  { id: 'test', label: 'Börja med ett vattentest' },
+  { id: 'typer', label: 'Typerna av vattenfilter' },
+  { id: 'jamforelse', label: 'Alla filter jämförda' },
+  { id: 'brunn', label: 'Vatten från brunn eller tank' },
+  { id: 'rad', label: 'Vilket filter passar dig?' },
+  { id: 'underhall', label: 'Underhåll' },
+];
+
+const faq = [
+  {
+    q: 'Är osmosvatten nyttigt?',
+    a: 'Osmosvatten är mycket rent, men innehåller också knappt några mineraler längre. Den som äter varierat har inga problem med det. Många anläggningar har ett remineraliseringsfilter som tillför lite kalcium och magnesium igen; det förbättrar också smaken.',
+  },
+  {
+    q: 'Slösar en osmosanläggning mycket vatten?',
+    a: 'Äldre anläggningar spolade bort 3 till 4 liter för varje liter dricksvatten. Moderna anläggningar klarar sig med 1 till 2 liter, vissa direktflödesmodeller med ännu mindre. På en finca med egen tank kan du samla upp spolvattnet till trädgården.',
+  },
+  {
+    q: 'Kan jag dricka avhärdat vatten?',
+    a: 'En avhärdare byter ut kalk mot en liten mängd natrium. För matlagning och tvätt är det inget problem. Som dricksvatten avråder vi för bebisar och personer som äter saltfattigt. Den vanliga lösningen: avhärdare för hela huset och en osmoskran i köket för dricksvatten.',
+  },
+  {
+    q: 'Är ett filter billigare än flaskvatten?',
+    a: 'Oftast ja, om du bor där en stor del av året. Två personer köper snabbt över tusen liter flaskvatten om året, plus bärandet och plastavfallet. En osmosanläggning har då betalat sig på några år. För en lägenhet som du använder några veckor om året räcker en filterkanna.',
+  },
+];
+---
+<Guide lang="sv" slug="vattenfilter-spanien" toc={toc} faq={faq} dienst="anders" ctaTitle="Rent dricksvatten ur din egen kran?" ctaText="Vi låter testa ditt vatten, rekommenderar rätt filter för ditt vatten och ditt hus och sköter installationen.">
+  <h2 id="kort">Det korta svaret</h2>
+  <p>Många utlänningar i Axarquía köper vatten på flaska eftersom kranvattnet smakar klor, är hårt eller kommer från den egna brunnen. Ett vattenfilter är bekvämare och på sikt billigare. Det finns fyra nivåer: en <strong>filterkanna</strong>, ett <strong>filter under diskbänken</strong>, en <strong>anläggning för omvänd osmos</strong> för rent dricksvatten och en <strong>anläggning för hela huset</strong> med avhärdare, vid brunnsvatten dessutom en UV-lampa. Vilken du behöver beror på var ditt vatten kommer ifrån.</p>
+
+  <h2 id="kranvatten">Kan man dricka kranvattnet?</h2>
+  <p>Det beror på källan:</p>
+  <ul>
+    <li><strong>Kommunalt kranvatten</strong> kontrolleras och måste uppfylla de spanska dricksvattenreglerna (RD 3/2023). Det är alltså i princip drickbart. Det smakar dock ofta klor och är i stora delar av Axarquía <strong>hårt</strong>, innehåller alltså mycket kalk. Efter torra perioder kan också smaken variera.</li>
+    <li><strong>Den sista biten</strong> är ofta problemet: gamla <a href="/sv/guider/byta-ror-och-varmvattenberedare-spanien/">järn- eller blyrör</a> eller en vattentank på taket som inte har rengjorts på flera år. Då är bra vatten vid mätaren inte längre bra vid din kran.</li>
+    <li><strong>Vatten från en egen brunn eller källa</strong> (<em>pozo</em>) på en finca kontrollerar ingen. I ett jordbruksområde som Axarquía kan det innehålla nitrat, bakterier eller bekämpningsmedel. Drick det inte utan test och rening.</li>
+    <li><strong>Vatten från en tank</strong> som fylls med tankbil (<em>cuba</em>) är vid leverans oftast dricksvatten, men kvaliteten beror på skicket på din tank.</li>
+  </ul>
+  <p>Därför dricker många flaskvatten. Förståeligt, men du bär hem vattenflaskor varje vecka och får ett berg av plast.</p>
+
+  <h2 id="test">Börja med ett vattentest</h2>
+  <p>Köp inte ett filter på måfå. Ett test visar vad som finns i ditt vatten och alltså vad filtret måste klara.</p>
+  <table class="prices">
+    <thead><tr><th>Test</th><th>Vad du får veta</th></tr></thead>
+    <tbody>
+      <tr><td>Teststickor eller TDS-mätare</td><td>Hårdhet, lösta ämnen, klor</td></tr>
+      <tr><td>Grundanalys i laboratorium</td><td>Hårdhet, nitrat, pH-värde, bakterier (E. coli)</td></tr>
+      <tr><td>Utökad analys</td><td>Dessutom tungmetaller (bly) och bekämpningsmedel</td></tr>
+    </tbody>
+  </table>
+  <p>För kommunalt vatten räcker ofta en TDS-mätare och ett hårdhetstest. För brunnsvatten är en laboratorieanalys ett måste, därefter en gång om året.</p>
+
+  <h2 id="typer">Typerna av vattenfilter</h2>
+  <h3>1. Filterkanna</h3>
+  <p>En kanna med aktivt kolfilter i locket. Du fyller på kranvatten, efter några minuter är det filtrerat. Den tar bort klorsmaken och en del av kalken. <strong>Bakterier, nitrat eller bly tar den inte bort.</strong> Perfekt för att börja eller för en lägenhet som du använder några veckor om året. Patronen byter du ungefär varje månad.</p>
+  <h3>2. Kranfilter eller filter under diskbänken</h3>
+  <p>Ett filter på kranen eller, bättre, ett kolblockfilter i köksskåpet med egen dricksvattenkran på bänken. Det tar bort klor, lukt, partiklar och en del av bly och bekämpningsmedel. Filtrerat vatten utan väntetid. Patronen byter du var sjätte till tolfte månad.</p>
+  <h3>3. Omvänd osmos (ósmosis inversa)</h3>
+  <p>Det populäraste systemet i spanska kök. Vattnet går genom förfilter och sedan genom ett membran med så fina porer att nästan allt stannar kvar: kalk, salter, nitrat, bly, bakterier och virus. Resultatet smakar som flaskvatten. Anläggningen står i köksskåpet och har en egen kran. Det finns enkla modeller med förrådstank och direktflödesmodeller utan tank som förbrukar mindre vatten. Förfilter varje år, membran vartannat till vart fjärde år.</p>
+  <h3>4. Anläggning för hela huset</h3>
+  <p>En anläggning på huvudledningen, direkt efter vattenmätaren eller pumpen. Allt vatten i huset behandlas: dusch, tvättmaskin, varmvattenberedare och kranar. En sådan anläggning består av en eller flera av följande delar:</p>
+  <ul>
+    <li><strong>Sedimentfilter</strong>: fångar sand, rost och smuts och skyddar blandare och apparater.</li>
+    <li><strong>Kolfilter för hela huset</strong>: tar bort klor och lukt ur allt vatten, även i duschen.</li>
+    <li><strong>Avhärdare</strong> (<em>descalcificador</em>): tar bort kalk via en hartsbädd som regenererar sig själv med salt. Ingen kalk längre på kakel och blandare, och varmvattenberedare, tvättmaskin och diskmaskin håller längre. Med Axarquías hårda vatten en av de klokaste investeringarna. Salt fyller du på några gånger om året.</li>
+    <li><strong>UV-lampa</strong>: dödar bakterier och virus med ultraviolett ljus, utan kemikalier. Nödvändig vid brunns- eller källvatten. Lampan byts varje år.</li>
+  </ul>
+  <p>En populär kombination: <strong>avhärdare för hela huset och en osmosanläggning i köket</strong> för dricksvatten.</p>
+
+  <h2 id="jamforelse">Alla filter jämförda</h2>
+  <p>Fler stjärnor betyder renare vatten.</p>
+  <table class="prices">
+    <thead><tr><th>System</th><th>Tar bort</th><th>Renhet</th></tr></thead>
+    <tbody>
+      <tr><td>Filterkanna</td><td>Klorsmak, lite kalk</td><td>★</td></tr>
+      <tr><td>Filter under diskbänken (aktivt kol)</td><td>Klor, lukt, partiklar, lite bly</td><td>★★</td></tr>
+      <tr><td>Omvänd osmos</td><td>Nästan allt, även nitrat och bakterier</td><td>★★★★</td></tr>
+      <tr><td>Sediment- och kolfilter för hela huset</td><td>Sand, rost, klor</td><td>★★</td></tr>
+      <tr><td>Avhärdare för hela huset</td><td>Kalk</td><td>★ (skyddar huset)</td></tr>
+      <tr><td>UV-lampa</td><td>Bakterier och virus</td><td>★★★</td></tr>
+      <tr><td>Komplett anläggning för finca med brunn</td><td>Allt</td><td>★★★★</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Vill du installera ett vattenfilter?</strong> Vi låter testa ditt vatten, rekommenderar det filter som passar ditt vatten och ditt hus och sköter installationen. <a href="/sv/forfragan/?dienst=anders">Berätta var ditt vatten kommer ifrån</a>.</p>
+
+  <h2 id="brunn">Vatten från brunn eller tank</h2>
+  <p>På många fincor kommer vattnet från en egen brunn, en källa, en gemensam bevattningsledning eller en tank som fylls med tankbil. Då är filtrering ingen lyx. En säker anläggning har fyra steg:</p>
+  <ol>
+    <li><strong>Sedimentfilter</strong> mot sand och partiklar.</li>
+    <li><strong>Kolfilter</strong> mot lukt, smak och en del av kemikalierna.</li>
+    <li><strong>Avhärdare</strong>, om vattnet är hårt.</li>
+    <li><strong>UV-lampa</strong> som sista steg mot bakterier. För dricksvatten dessutom en osmosanläggning i köket, särskilt vid nitrat.</li>
+  </ol>
+  <p>Håll också själva tanken ren: låt tömma och rengöra den vart eller vartannat år. En gammal tank av <a href="/sv/guider/asbest-eternit-tak-spanien/">uralita</a> byter du hellre mot plast. Mer om tankar och brunnar i <a href="/sv/kostnader/vattentank-och-avloppsbrunn/">vattentank, brunn och avloppsbrunn</a> och <a href="/sv/gor-det-sjalv/installera-vattentank/">installera en vattentank</a>.</p>
+
+  <h2 id="rad">Vilket filter passar dig?</h2>
+  <table class="prices">
+    <thead><tr><th>Din situation</th><th>Vårt råd</th></tr></thead>
+    <tbody>
+      <tr><td>Lägenhet vid kusten, några veckor om året</td><td>Filterkanna eller kranfilter</td></tr>
+      <tr><td>Hus på ledningsnätet, du bor där (halva) året</td><td>Osmos i köket, eventuellt avhärdare för hela huset</td></tr>
+      <tr><td>Mycket kalk på kakel och blandare, beredaren går snabbt sönder</td><td>Avhärdare för hela huset</td></tr>
+      <tr><td>Finca med egen brunn eller källa</td><td>Först ett laboratorietest, sedan sediment, kol, avhärdare, UV och osmos</td></tr>
+      <tr><td>Tank som fylls med tankbil</td><td>Sedimentfilter, UV-lampa och osmos; rengör tanken regelbundet</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="underhall">Underhåll</h2>
+  <p>Ett filter utan underhåll är sämre än inget alls: i en gammal patron växer bakterier. Skriv in bytesdatumen i din kalender eller låt någon sköta det. Står huset tomt länge, spola alla kranar några minuter när du kommer och häll bort det första vattnet ur osmostanken. Genomspolning och filterbyte kan ingå i <a href="/sv/tillsyn/">tillsynen</a>.</p>
+  <p class="note">Den här guiden ger allmän information för Axarquía i november 2026. Den är ingen medicinsk rådgivning. Låt alltid göra ett laboratorietest om du är osäker på ditt dricksvatten.</p>
+</Guide>

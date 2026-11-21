@@ -1,0 +1,185 @@
+---
+import ArticlePhoto from '../../../../components/ArticlePhoto.astro';
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort svar' },
+  { id: 'oversikt', label: 'Alla program i översikt' },
+  { id: 'eu-regler', label: 'Måste ditt hus ha klass D 2030?' },
+  { id: 'spanien', label: 'Vad Spanien gör med EU-reglerna' },
+  { id: 'irpf', label: 'Skatteavdrag i IRPF' },
+  { id: 'junta', label: 'Bidrag från Junta de Andalucía' },
+  { id: 'next-generation', label: 'Next Generation: vad som fortfarande gäller' },
+  { id: 'kommun', label: 'Rabatt på IBI och ICIO' },
+  { id: 'cae', label: 'Sälja energibesparing (CAE)' },
+  { id: 'steg', label: 'Så går du till väga' },
+  { id: 'kallor', label: 'Källor och datum' },
+];
+
+const faq = [
+  {
+    q: 'Måste mitt hus i Spanien ha minst energiklass E eller D 2030?',
+    a: 'Nej. Det stod i tidigare förslag från Europeiska kommissionen (2021) och Europaparlamentet (2023), men kom inte med i det slutliga direktivet. EU:s byggnadsdirektiv från 2024 ålägger länderna att sänka den genomsnittliga energiförbrukningen för alla bostadshus tillsammans: med minst 16 % till 2030 och med 20 till 22 % till 2035, jämfört med 2020. Hur Spanien genomför det är ännu inte klart. Någon minimiklass för ditt eget hus har i november 2026 inte aviserats.',
+  },
+  {
+    q: 'Får jag som icke-bosatt bidrag för mitt fritidshus i Spanien?',
+    a: 'Skatteavdraget i IRPF gäller bara för skatterättsligt bosatta i Spanien, och bara för den egna permanentbostaden eller en uthyrd bostad. Bidraget från Junta de Andalucía och IBI-rabatten är inte knutna till bosättning: det som räknas är att du är ägare och att huset är lagligt. Läs dock villkoren för varje utlysning, eftersom de kan ändras från omgång till omgång.',
+  },
+  {
+    q: 'Måste jag söka bidraget innan arbetena börjar?',
+    a: 'Oftast ja. I det nuvarande andalusiska programmet får privatpersoner söka även för arbeten som började efter den 1 maj 2025, men företag måste söka innan. För IRPF-avdraget behöver du en energideklaration från före arbetena. Låt därför alltid först göra en deklaration och kontrollera vilket program som är öppet innan du beställer arbetet.',
+  },
+  {
+    q: 'Kan jag kombinera bidrag och skatteavdrag?',
+    a: 'Ja, men inte för samma pengar. Får du ett bidrag dras det beloppet av från det du får dra av i IRPF. En IBI-rabatt och försäljning av energibesparingar (CAE) kan du oftast använda utöver det. Låt din gestor räkna på din situation.',
+  },
+  {
+    q: 'Varför energieffektivisera om det inte är obligatoriskt?',
+    a: 'För att det snabbt lönar sig i Axarquía: ett isolerat tak och bra fönster håller huset svalare på sommaren och varmare på vintern, en värmepump och solceller sänker elräkningen, och en bättre energiklass hjälper vid försäljning och uthyrning. Även köpare tittar allt mer på energideklarationen.',
+  },
+];
+---
+<Guide lang="sv" slug="bidrag-energieffektivisering-spanien" toc={toc} faq={faq} dienst="renovatie" onderwerp="Energieffektivisering med bidrag" ctaTitle="Vill du energieffektivisera ditt hus och använda bidragen rätt?" ctaText="Vi tar reda på vad som ger ditt hus mest, från takisolering till solceller, och ordnar offerter och en energideklaration före och efter arbetena.">
+  <h2 id="kort">Kort svar</h2>
+  <p>Ja, även 2026 finns det ekonomiska fördelar i Axarquía när du förbättrar ditt hus energimässigt. De viktigaste programmen är ett <strong>skatteavdrag på 20 till 60 %</strong> i den spanska inkomstskatten (IRPF), ett <strong>bidrag på 50 till 65 %</strong> från Junta de Andalucía, en <strong>rabatt på fastighetsskatten</strong> (IBI) i vissa kommuner och försäljning av din energibesparing via <strong>CAE-certifikat</strong>. Nästan varje program kräver en energideklaration före och efter arbetena.</p>
+  <p>Och reglerna? En <strong>obligatorisk minimiklass</strong> för ditt hus, till exempel ”klass D till 2030”, <strong>finns inte i EU-direktivet</strong>. Den fanns i tidigare förslag, men ströks. Spanien måste sänka den genomsnittliga förbrukningen för alla bostadshus, och hur det ska gå till är ännu inte känt. Svenska stöd som ROT-avdrag gäller inte för ett hus i Spanien.</p>
+
+  <h2 id="oversikt">Alla program i översikt</h2>
+  <table class="prices">
+    <thead><tr><th>Program</th><th>Vad du får</th><th>För vem</th><th>Läget i november 2026</th></tr></thead>
+    <tbody>
+      <tr><td>IRPF-avdrag bostad</td><td>20 % eller 40 % av kostnaden, på högst 5 000 € eller 7 500 €</td><td>Skatterättsligt bosatta; permanentbostad eller uthyrd bostad</td><td>Arbeten och ny deklaration före 1 januari 2027</td></tr>
+      <tr><td>IRPF-avdrag byggnad</td><td>60 %, upp till 15 000 € per bostad över flera år</td><td>Skatterättsligt bosatta med en bostad i ett flerbostadshus</td><td>Arbeten och ny deklaration före 1 januari 2028</td></tr>
+      <tr><td>Junta de Andalucía (Agencia Andaluza de la Energía)</td><td>50 till 65 % bidrag; solceller med batteri 55 till 65 %</td><td>Ägare, samfälligheter, företag</td><td>Öppet sedan 22 oktober 2026; den 29 oktober delvis stoppat eftersom pengarna tagit slut</td></tr>
+      <tr><td>Next Generation (EU:s återhämtningsfond)</td><td>40 % per bostad, upp till 80 % för hela byggnader</td><td>Ägare och samfälligheter</td><td>Stängt för enskilda bostäder (arbetena måste vara klara senast 30 juni 2026)</td></tr>
+      <tr><td>IBI-rabatt från kommunen</td><td>T.ex. Vélez-Málaga 50 % i 3 år</td><td>Ägare med solceller</td><td>Olika per kommun</td></tr>
+      <tr><td>CAE-certifikat</td><td>Engångsbelopp eller rabatt, ofta några hundra till några tusen euro</td><td>Alla som sparar energi</td><td>Pågår; beloppet beror på besparingen</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Belopp och tidsfrister ändras ofta. Nedan läser du villkoren per program och vad som fortfarande är osäkert.</p>
+
+  <h2 id="eu-regler">Måste ditt hus ha klass D 2030?</h2>
+  <p>Det hör man ofta, men det stämmer inte. Historien kommer från förhandlingarna om EU:s nya byggnadsdirektiv (<em>Energy Performance of Buildings Directive</em>, EPBD):</p>
+  <ul>
+    <li><strong>Europeiska kommissionen</strong> föreslog i december 2021 att varje lands sämsta bostadshus skulle nå minst klass F till 2030 och klass E till 2033.</li>
+    <li><strong>Europaparlamentet</strong> ville i mars 2023 gå ännu längre: alla bostadshus <strong>minst klass E till 2030 och klass D till 2033</strong>. Det är troligen det du har hört.</li>
+    <li>I den <strong>slutliga överenskommelsen</strong> i december 2023 ströks det. Direktivet som trädde i kraft 2024 (direktiv 2024/1275) innehåller <strong>ingen minimiklass per bostad</strong>.</li>
+  </ul>
+  <p>Vad som faktiskt står i direktivet:</p>
+  <ul>
+    <li><strong>Bostadshus sammantaget sparsammare.</strong> Den genomsnittliga energiförbrukningen för alla bostadshus i ett land måste till <strong>2030 vara minst 16 %</strong> och till <strong>2035 20 till 22 %</strong> lägre än 2020. Minst 55 % av det måste komma från de 43 % sämsta byggnaderna. Landet bestämmer själv hur: med bidrag, rådgivning eller egna regler.</li>
+    <li><strong>Kontor, butiker och andra lokaler</strong> får en fast miniminivå: de sämsta 16 % måste vara renoverade till 2030 och de sämsta 26 % till 2033. Det är årtalen ”2030 och 2033” som ofta förväxlas med bostadshus.</li>
+    <li><strong>Nybyggen</strong> måste vara utsläppsfria: offentliga byggnader från 2028, alla nybyggen från 2030.</li>
+    <li><strong>Enskilda gas- eller oljepannor</strong> får sedan 1 januari 2025 inte längre bidrag, och länderna måste fasa ut dem senast 2040.</li>
+    <li><strong>Energideklarationen</strong> får i hela EU samma skala från A till G, där A står för en utsläppsfri byggnad.</li>
+  </ul>
+  <p class="note">Spanien kan införa egna, strängare regler för att nå målen, till exempel för hyresbostäder. Inget sådant har beslutats i november 2026.</p>
+
+  <h2 id="spanien">Vad Spanien gör med EU-reglerna</h2>
+  <p>Spanien skulle ha infört direktivet i nationell lag senast den <strong>29 maj 2026</strong>. Det har ännu inte skett fullt ut. I juli 2026 skickade Europeiska kommissionen en formell underrättelse till alla 27 medlemsstater, även Spanien, eftersom genomförandet var ofullständigt. De spanska detaljerna ska komma via den <strong>nationella renoveringsplanen</strong> (<em>Plan Nacional de Renovación de Edificios</em>), som ska vara klar i slutet av 2026, och via byggreglerna (<em>Código Técnico de la Edificación</em>).</p>
+  <p>Det här gäller redan i Spanien:</p>
+  <ul>
+    <li>Vid <strong>försäljning och uthyrning</strong>, även semesteruthyrning, är en energideklaration (<em>certificado de eficiencia energética</em>) obligatorisk. Klassen måste stå i annonsen, och deklarationen gäller i tio år. Se <a href="/sv/guider/energideklaration-spanien/">energideklaration i Spanien</a>.</li>
+    <li>En <strong>renovering</strong> måste följa byggreglerna. Byter du tak eller fönster gäller dagens isoleringskrav för den delen.</li>
+    <li>Det finns <strong>inget krav</strong> på att förbättra ett befintligt hus om du inte bygger om.</li>
+  </ul>
+  <p>Vårt råd: vänta inte på regler. En bättre energiklass gör ditt hus bekvämare och billigare att ha redan i dag, och dagens bidrag är ofta generösare än det som kommer senare.</p>
+
+  <h2 id="irpf">Skatteavdrag i IRPF</h2>
+  <p>Är du <strong>skatterättsligt bosatt i Spanien</strong> kan du dra av en del av kostnaden från den spanska inkomstskatten. Ordningen förlängdes med Real Decreto-ley 7/2026, som kongressen godkände den 26 mars 2026. En tidigare förlängning (RDL 2/2026) föll i mars, vilket gav några veckors osäkerhet.</p>
+  <table class="prices">
+    <thead><tr><th>Avdrag</th><th>Villkor</th><th>Högsta belopp</th><th>Tidsfrist</th></tr></thead>
+    <tbody>
+      <tr><td>20 %</td><td>Behov av värme och kyla minst 7 % lägre</td><td>5 000 € per år</td><td>Arbeten och ny deklaration före 1 januari 2027</td></tr>
+      <tr><td>40 %</td><td>Icke förnybar primärenergiförbrukning minst 30 % lägre, eller klass A eller B</td><td>7 500 € per år</td><td>Arbeten och ny deklaration före 1 januari 2027</td></tr>
+      <tr><td>60 %</td><td>Hela flerbostadshuset (samfälligheten) 30 % sparsammare eller klass A eller B</td><td>5 000 € per år, totalt upp till 15 000 €</td><td>Arbeten och ny deklaration före 1 januari 2028</td></tr>
+    </tbody>
+  </table>
+  <p>Ett exempel: du lägger 15 000 € på takisolering, nya fönster och en värmepump, och klassen går från E till B. Med 40 % avdrag på högst 7 500 € får du tillbaka <strong>3 000 €</strong> via deklarationen.</p>
+  <h3>Det här ska du tänka på</h3>
+  <ul>
+    <li><strong>Bara permanentbostad eller uthyrning.</strong> 20 % och 40 % gäller för din egen permanentbostad och för en bostad som du hyr ut (eller kommer att hyra ut senast 31 december 2027). Ett fritidshus som du använder själv räknas inte.</li>
+    <li><strong>Icke-bosatta</strong> betalar skatt för icke-bosatta i stället för IRPF och har inte rätt till avdraget.</li>
+    <li><strong>Energideklaration före och efter.</strong> Deklarationen från före arbetena får vara högst två år gammal när arbetena börjar. Utan två deklarationer inget avdrag.</li>
+    <li><strong>Betala inte kontant.</strong> Betala med banköverföring eller kort och spara alla fakturor. Kontantbetalningar räknas inte.</li>
+    <li><strong>Bidrag dras av.</strong> Får du också ett bidrag kan du bara dra av den del som du betalar själv.</li>
+  </ul>
+  <p class="note">För enskilda bostäder är 2026 sista chansen, om inte regeringen förlänger igen. Det har hänt förut, men räkna inte med det.</p>
+
+  <h2 id="junta">Bidrag från Junta de Andalucía</h2>
+  <ArticlePhoto name="isolatie-glaswol-close-up" lang="sv" />
+  <p>Den <strong>22 oktober 2026</strong> öppnade <strong>Agencia Andaluza de la Energía</strong> en ny bidragsomgång för energibesparing i bostadshus, finansierad med EU:s regionalfond (FEDER). Totalt finns 20,8 miljoner € för hela Andalusien, offentliga byggnader inräknade. Ansökningar kan göras till den 30 september 2027 eller tills pengarna är slut, i den ordning de kommer in.</p>
+  <h3>Vad som får bidrag</h3>
+  <ul>
+    <li><strong>Isolering</strong> av tak, väggar och golv samt <strong>nya fönster</strong> (klimatskalet).</li>
+    <li>Ny <strong>värme, kyla och varmvatten</strong>, till exempel en värmepump (<em>aerotermia</em>), och sparsam belysning.</li>
+    <li><strong>Solceller</strong> för egenförbrukning, men bara <strong>med batteri</strong>. Batteriet får vara högst 5 kWh per kW paneleffekt.</li>
+  </ul>
+  <h3>Hur mycket</h3>
+  <ul>
+    <li>Energibesparing: <strong>50 %</strong> för privatpersoner, upp till <strong>65 %</strong> med tillägg, till exempel för förnybar energi.</li>
+    <li>Solceller med batteri: <strong>55 %</strong>, med tillägg upp till <strong>65 %</strong> (till exempel i små byar med minskande befolkning eller via en energigemenskap).</li>
+    <li>Se upp med <strong>minimibeloppet</strong>: bidraget måste vara minst 10 000 € för energibesparing och 6 000 € för solceller. I praktiken betyder det ett projekt på cirka <strong>20 000 €</strong> eller mer för isolering och installationer och cirka <strong>11 000 €</strong> eller mer för solceller med batteri. Små uppdrag faller utanför.</li>
+  </ul>
+  <h3>Villkor</h3>
+  <ul>
+    <li>Energiklassen måste förbättras med <strong>minst en bokstav</strong>, och förbrukning och koldioxidutsläpp måste minska.</li>
+    <li>Privatpersoner får söka för arbeten som började <strong>efter den 1 maj 2025</strong>. Företag måste söka innan arbetena börjar.</li>
+    <li>Ansökan görs digitalt via Agencia Andaluza de la Energías portal. Oftast sköter installatören eller byggfirman det som registrerat samarbetsföretag (<em>entidad colaboradora</em>).</li>
+  </ul>
+  <p><strong>Viktigt:</strong> den <strong>29 oktober 2026</strong>, en vecka efter starten, stoppade Junta en stor del av programmet eftersom pengarna för de delarna redan var fördelade (över 11 miljoner €). Beslutet nämner bara budgetposter, inte typer av arbeten. Det är alltså <strong>osäkert om privatpersoner just nu fortfarande kan söka</strong>. Junta kan fylla på budgeten och öppna programmet igen, som skett tidigare år. Låt din byggfirma kontrollera i portalen strax före ansökan vad som är öppet.</p>
+
+  <h2 id="next-generation">Next Generation: vad som fortfarande gäller</h2>
+  <p>Mellan 2021 och 2026 kom de största bidragen från <strong>EU:s återhämtningsfond</strong> (Next Generation EU), i Spanien via <em>Plan de Recuperación</em> och i Andalusien fördelade av det regionala bostadsdepartementet. En enskild bostad kunde få upp till 40 %, en hel byggnad upp till 80 %.</p>
+  <ul>
+    <li>Programmet för <strong>enskilda bostäder är avslutat</strong>: arbetena måste vara klara senast 30 juni 2026.</li>
+    <li>För vissa pågående projekt på <strong>byggnadsnivå</strong> förlängde Junta tidsfristen i maj 2026, ibland till 2028. Det gäller bara projekt som redan har fått bidrag.</li>
+    <li>I juli 2026 fördelade Junta ytterligare 38,7 miljoner € på <strong>ansökningar på väntelistan</strong>. Nya ansökningar är inte möjliga.</li>
+  </ul>
+  <p class="note">Läser du på nätet om ”Next Generation-bidrag upp till 18 800 €”? Det gäller tidigare år. För nya projekt i Axarquía är det programmet stängt.</p>
+
+  <h2 id="kommun">Rabatt på IBI och ICIO</h2>
+  <p>Kommuner får ge rabatt på fastighetsskatten (<strong>IBI</strong>) och byggskatten (<strong>ICIO</strong>) om du installerar solceller eller solfångare. Varje kommun reglerar det i sin egen skatteförordning (<em>ordenanza fiscal</em>), som ändras varje år.</p>
+  <table class="prices">
+    <thead><tr><th>Kommun</th><th>IBI-rabatt för solceller</th><th>Notering</th></tr></thead>
+    <tbody>
+      <tr><td>Vélez-Málaga (med Torre del Mar och Caleta de Vélez)</td><td>50 %, högst 3 år</td><td>Per år högst 33 % av anläggningens kostnad; ansökan före 31 januari för innevarande år</td></tr>
+      <tr><td>Rincón de la Victoria</td><td>15 %, 3 år</td><td>Enligt Fundación Renovables översikt</td></tr>
+      <tr><td>Nerja, Torrox, Cómpeta, Frigiliana, Algarrobo och andra byar</td><td>Inte bekräftat</td><td>Fråga kommunen eller Patronato de Recaudación Provincial</td></tr>
+    </tbody>
+  </table>
+  <p>Rabatt på ICIO (skatten på byggkostnaden, ofta 2 till 4 %) finns i vissa kommuner, i andra inte. För en anläggning för 8 000 € sparar det snabbt några hundra euro. Fråga kommunen innan du lämnar in anmälan, eftersom den oftast inte kan sökas i efterhand.</p>
+  <p class="note">Patronato de Recaudación Provincial de Málaga tar in IBI för de flesta mindre kommuner i Axarquía. Se också vår <a href="/sv/guider/skattekalender-spanien/">skattekalender</a>.</p>
+
+  <h2 id="cae">Sälja energibesparing (CAE)</h2>
+  <p>Sedan 2023 finns i Spanien <strong>energibesparingscertifikat</strong> (<em>Certificados de Ahorro Energético</em>, CAE). Energibolag måste varje år visa en viss mängd besparingar och köper in dem från hushåll. Byter du till exempel en gammal gas- eller butanpanna mot en <strong>värmepump</strong> eller <strong>isolerar</strong> taket kan du låta certifiera besparingen och sälja den.</p>
+  <ul>
+    <li>Beloppet beror på den beräknade besparingen och på klimatet. I det varma Axarquía är besparingen på uppvärmning mindre än i inlandet, och därmed också beloppet. Räkna med några hundra till några tusen euro.</li>
+    <li>Du får det som rabatt på offerten eller som betalning efteråt, via en mellanhand (<em>sujeto delegado</em>) eller ett energibolag.</li>
+    <li>CAE kan oftast kombineras med andra bidrag. Be om att få skriftligt vad du får och när.</li>
+    <li>Se upp med reklam om ”gratis isolering”: CAE täcker sällan hela räkningen.</li>
+  </ul>
+
+  <h2 id="steg">Så går du till väga</h2>
+  <ol>
+    <li><strong>Låt göra en energideklaration</strong> för nuvarande skick. Den kostar oftast 100 till 250 € och är utgångspunkten för varje program.</li>
+    <li><strong>Klargör din situation</strong>: är du skatterättsligt bosatt, är det din permanentbostad eller hyr du ut? Är huset lagligt? För ett hus utan papper eller med <a href="/sv/guider/afo-andalusien/">AFO</a> är möjligheterna mindre.</li>
+    <li><strong>Välj de åtgärder</strong> som ger mest. I Axarquía är det oftast först att <a href="/sv/guider/isolera-hus-i-spanien/">isolera taket</a> och <a href="/sv/kostnader/fonster-och-karmar/">byta fönster</a>, därefter en <a href="/sv/kostnader/luftkonditionering-och-varmepump/">värmepump</a> och <a href="/sv/kostnader/solceller/">solceller</a> med <a href="/sv/kostnader/solcellsbatteri/">batteri</a>. Åtgärda först <a href="/sv/problem/fukt-och-mogel/">fukt och mögel</a>, annars isolerar du in problemet.</li>
+    <li><strong>Sök bidraget innan arbetena börjar</strong>, eller kontrollera åtminstone om programmet tillåter arbeten som redan har börjat. Samla arbeten om du vill nå Juntas minimibelopp.</li>
+    <li><strong>Betala via bank</strong> och spara alla fakturor med IVA.</li>
+    <li><strong>Låt göra en ny deklaration efteråt</strong> och registrera den hos Junta. För IRPF-avdraget måste det ske före 1 januari 2027.</li>
+    <li><strong>Sök IBI-rabatten</strong> hos kommunen, före 31 januari det år du vill ha den.</li>
+  </ol>
+  <p><strong>Vill du energieffektivisera ditt hus?</strong> Vi tar reda på vad som ger ditt hus mest, tar in offerter och ser till att arbetena stämmer med bidragsvillkoren. <a href="/sv/forfragan/?dienst=renovatie&onderwerp=Energieffektivisering%20med%20bidrag">Berätta vad du vill ta itu med</a>.</p>
+
+  <h2 id="kallor">Källor och datum</h2>
+  <ul>
+    <li>EU:s byggnadsdirektiv: <a href="https://eur-lex.europa.eu/eli/dir/2024/1275/oj" rel="noopener" target="_blank">direktiv (EU) 2024/1275</a>, artikel 9 (bostadshus och lokaler), 17 (fossila pannor) och 19 (energideklaration). Tidigare förslag och överenskommelsen i december 2023: <a href="https://en.wikipedia.org/wiki/Energy_Performance_of_Buildings_Directive_2024" rel="noopener" target="_blank">översikt på Wikipedia</a>, inklusive de formella underrättelserna i juli 2026, och <a href="https://uipi.com/european-parliaments-plenary-vote-on-epbd/" rel="noopener" target="_blank">Europaparlamentets ståndpunkt den 14 mars 2023</a>.</li>
+    <li>IRPF-avdrag: Ley 35/2006, tilläggsbestämmelse 50; förlängt genom Real Decreto-ley 7/2026, se <a href="https://www.idealista.com/news/fiscalidad/2026/03/30/891068-prorrogadas-las-deducciones-fiscales-por-obras-de-mejora-energetica-de-viviendas-y-edificios" rel="noopener" target="_blank">idealista, 30 mars 2026</a>.</li>
+    <li>Junta de Andalucía: utlysning från Agencia Andaluza de la Energía den 21 september 2026 (BOJA 25 september 2026), sammanfattad av <a href="https://laadministracionaldia.inap.es/noticia.asp?id=1269624" rel="noopener" target="_blank">INAP</a>, <a href="https://www.construible.es/2026/09/29/convocatoria-ayudas-mejora-energetica-viviendas-edificios-publicos-andalucia" rel="noopener" target="_blank">Construible</a> och <a href="https://www.energias-renovables.com/autoconsumo/andaluc-a-abre-las-solicitudes-de-ayudas-20261022" rel="noopener" target="_blank">Energías Renovables</a>. Stopp: <a href="https://www.juntadeandalucia.es/boja/2026/221002/1" rel="noopener" target="_blank">beslut den 29 oktober 2026</a>.</li>
+    <li>Next Generation i Andalusien: <a href="https://www.juntadeandalucia.es/boja/2026/96/2" rel="noopener" target="_blank">Orden den 14 maj 2026</a> (förlängda tidsfrister) och <a href="https://www.juntadeandalucia.es/organismos/viviendajuventudyordenaciondelterritorio/areas/vivienda-rehabilitacion/plan-eco-vivienda/paginas/plan-eco-convocatoriarehab.html" rel="noopener" target="_blank">Juntas sida om energirenovering</a>.</li>
+    <li>IBI-rabatt: <a href="https://costasolarguide.com/es/bonificaciones-placas-solares/velez-malaga/" rel="noopener" target="_blank">Vélez-Málaga, IBI-förordningen artikel 12</a> (kontrollerad juli 2026) och en <a href="https://solar-master-malaga.com/blog/bonificacion-ibi-municipio-a-municipio/" rel="noopener" target="_blank">översikt per kommun</a> (baserad på Fundación Renovables).</li>
+    <li>CAE: <a href="https://www.ocu.org/vivienda-y-energia/gas-luz/noticias/medidas-certificados-ahorro-energetico" rel="noopener" target="_blank">OCU om energibesparingscertifikat</a>.</li>
+  </ul>
+  <p class="note">Den här guiden ger allmän information för Axarquía, kontrollerad 6 november 2026. Bidragsprogram öppnar och stänger, och Spanien måste fortfarande genomföra EU-direktivet fullt ut. Den är ingen skatterådgivning; låt din gestor räkna på din situation.</p>
+</Guide>

@@ -1,0 +1,6 @@
+---
+import TopicPage from '../../../../components/TopicPage.astro';
+import { topicStaticPaths } from '../../../../data/topics';
+export const getStaticPaths = () => topicStaticPaths('diy', 'sv');
+---
+<TopicPage kind="diy" lang="sv" slug={Astro.params.slug!} />

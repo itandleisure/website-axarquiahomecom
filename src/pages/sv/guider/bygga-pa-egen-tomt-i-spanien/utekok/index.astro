@@ -1,0 +1,52 @@
+---
+import Guide from '../../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'tillatet', label: 'Är ett utekök tillåtet?' },
+  { id: 'brand', label: 'Brandsäsong: grillförbud' },
+  { id: 'alternativ', label: 'Vilka alternativ finns?' },
+  { id: 'tips', label: 'Det här ska du tänka på' },
+];
+
+const faq = [
+  { q: 'Behöver jag tillstånd för ett utekök i Spanien?', a: 'För ett murat utekök utan tak räcker i många kommuner en anmälan (declaración responsable). Kommer ett fast skärmtak över behöver det oftast bygglov. I ett lägenhetsområde måste också samfälligheten godkänna.' },
+  { q: 'Får jag grilla på min finca på sommaren?', a: 'Från 1 juni till 15 oktober råder hög brandrisk i Andalusien. Då är eld förbjuden i skogs- och naturområden och i en zon på 400 meter runt dem, även grillning. Många fincor i Axarquía ligger inom den zonen. Fråga kommunen vad som gäller för din tomt.' },
+  { q: 'Är en gas- eller elgrill tillåten?', a: 'De är mindre riskabla än kolgrill, men om de omfattas av förbudet beror på situationen och årets regler. Fråga kommunen eller Junta de Andalucía och ha alltid en trädgårdsslang eller brandsläckare redo.' },
+];
+---
+<Guide lang="sv" slug="bygga-pa-egen-tomt-utekok" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Låta bygga ett utekök?" ctaText="Berätta var det ska stå och vad det ska innehålla. Vi ritar och bygger det, inklusive vatten och el.">
+  <h2 id="tillatet">Är ett utekök tillåtet?</h2>
+  <p>För ett fristående hus oftast ja. Hur du ordnar det beror på vad du bygger:</p>
+  <ul>
+    <li><strong>Fristående grill eller mobilt utekök</strong>: inget tillstånd behövs.</li>
+    <li><strong>Murat utekök utan tak</strong>: ofta en anmälan (<em>declaración responsable</em>) till kommunen.</li>
+    <li><strong>Utekök med fast skärmtak</strong>: skärmtaket kräver oftast bygglov och räknas in i byggrätten. Se <a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/carport-och-pergola/">carport, skärmtak och pergola</a>.</li>
+  </ul>
+  <p>På en finca (<em>suelo rústico</em>) gäller samma steg, men ett skärmtak är bara tillåtet för ett lagligt hus med byggrätt kvar. I ett lägenhetsområde beror allt på samfälligheten: läs <a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/grilla-pa-balkongen/">grilla i lägenhetsområden</a>.</p>
+
+  <h2 id="brand">Brandsäsong: grillförbud</h2>
+  <p>Det missar många nya ägare. Från <strong>1 juni till 15 oktober</strong> råder perioden med hög brandrisk i Andalusien. Under den tiden är eld förbjuden i skogs- och naturmark (<em>terreno forestal</em>) och i <strong>zonen på 400 meter</strong> runt den (<em>zona de influencia forestal</em>), även för grillning. Under torra år kan Junta de Andalucía förlänga perioden.</p>
+  <p>I kullarna i Axarquía ligger många fincor i eller nära en sådan zon. Fråga kommunen om din tomt ligger där och vad som gäller för en fast grill vid huset. Ett utekök med gas- eller elgrill bredvid kolgrillen gör dig mindre beroende av säsongen.</p>
+
+  <h2 id="alternativ">Vilka alternativ finns?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Alternativ</th><th>Bra att veta</th></tr></thead>
+    <tbody>
+      <tr><td>Fristående gas- eller kolgrill</td><td>Ingen byggnad, flyttbar.</td></tr>
+      <tr><td>Murat block med grill och arbetsbänk</td><td>Den klassiska andalusiska <em>barbacoa de obra</em>.</td></tr>
+      <tr><td>Komplett utekök med diskho, el och kylskåp</td><td>Att dra vatten och avlopp är ofta den största delen av jobbet.</td></tr>
+      <tr><td>Med pizzaugn, natursten och belysning</td><td>För dig som lagar mycket mat ute och har gäster.</td></tr>
+      <tr><td>Med fast skärmtak eller lamelltak</td><td>Användbart även i stark sol och regn. Bygglov krävs oftast.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Vill du låta bygga det? Berätta vad du planerar. Vi tar reda på vad som är tillåtet, ordnar tillståndet och bygger det åt dig.</strong> <a href="/sv/forfragan/?dienst=renovatie">Kontakta oss →</a> Vad det kostar ser du på sidan <a href="/sv/kostnader/utekok/">kostnader för utekök</a>.</p>
+
+  <h2 id="tips">Det här ska du tänka på</h2>
+  <ul>
+    <li><strong>Material</strong>: sol, salt vid kusten och vinterregn. Välj rostfritt stål, natursten eller keramik, inte vanligt trä eller spånskiva.</li>
+    <li><strong>Avlopp</strong>: på en finca med avloppsbrunn måste avloppet anslutas rätt. Fett och matrester hör inte hemma där.</li>
+    <li><strong>Plats och vind</strong>: placera grillen så att röken inte drar mot huset, poolen eller grannen, och inte under ett utskjutande tak eller träd.</li>
+    <li><strong>El</strong>: uttag utomhus måste vara vattentäta och ha egen säkring, installerade av en behörig elektriker.</li>
+  </ul>
+  <p>Tillbaka till översikten: <a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/">bygga på egen tomt</a>.</p>
+</Guide>

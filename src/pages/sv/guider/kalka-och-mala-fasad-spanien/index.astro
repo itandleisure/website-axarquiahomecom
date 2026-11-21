@@ -1,0 +1,84 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kalk-eller-farg', label: 'Kalk eller fasadfärg?' },
+  { id: 'vad-ingar', label: 'Vad ingår?' },
+  { id: 'hur-ofta', label: 'Hur ofta på nytt?' },
+  { id: 'regler', label: 'Kommunens krav' },
+  { id: 'arbetsgang', label: 'Så arbetar en bra målare' },
+  { id: 'sjalv-eller-lata-gora', label: 'Göra själv eller låta göra?' },
+];
+
+const faq = [
+  {
+    q: 'Kan jag kalka över en målad vägg?',
+    a: 'Inte utan vidare. Kalk fäster dåligt på plastbaserad fasadfärg och flagnar snabbt. Färgen måste bort först, eller så behöver du en särskild vidhäftningsgrund. Tvärtom går det: på gammal kalk kan du efter grundlig rengöring måla med en andningsbar silikat- eller silikonfärg.',
+  },
+  {
+    q: 'Varför flagnar min fasad hela tiden?',
+    a: 'Oftast finns det fukt i väggen som inte kan komma ut: uppstigande fukt, en läckande hängränna eller färg som inte andas på en gammal stenmur. Åtgärda först orsaken, annars flagnar även den nya målningen inom ett år.',
+  },
+  {
+    q: 'När är det bäst att måla?',
+    a: 'På våren (mars till juni) eller hösten (september till november). I juli och augusti torkar kalk och färg för snabbt i den gassande solen, under vinterns regnveckor torkar de inte ordentligt. Planera tidigt: före sommaren och före påsk är målarna fullbokade.',
+  },
+];
+---
+<Guide slug="kalka-och-mala-fasad-spanien" lang="sv" toc={toc} faq={faq} dienst="onderhoud" ctaTitle="Vill du kalka eller måla fasaden?" ctaText="Skicka oss några foton av fasaden och måtten. Vi tittar på vad väggen behöver och ser till att arbetet blir ordentligt utfört, inklusive lagning av sprickor och fuktfläckar.">
+  <h2 id="kalk-eller-farg">Kalk eller fasadfärg?</h2>
+  <p>I Axarquía ser du två sorters fasader: de vita byarnas traditionellt kalkade murar och nyare hus med slät cementputs och färg. Vilken behandling som passar beror framför allt på väggen under.</p>
+  <table class="prices">
+    <thead><tr><th></th><th>Kalk (<em>cal</em>)</th><th>Elastisk fasadfärg (<em>pintura elástica</em>)</th></tr></thead>
+    <tbody>
+      <tr><td>Passar till</td><td>Gamla murar av natursten, lera eller kalkbruk</td><td>Nyare väggar med cementputs, betong eller tegel</td></tr>
+      <tr><td>Andas</td><td>Ja, fukt kan komma ut</td><td>Knappt; stänger in fukt i gamla murar</td></tr>
+      <tr><td>Hårfina sprickor</td><td>Fyller små sprickor, men överbryggar dem inte</td><td>Töjer sig och överbryggar hårfina sprickor</td></tr>
+      <tr><td>Utseende</td><td>Matt, mjukt vitt, den äkta bykaraktären</td><td>Slät och jämn, även i färg</td></tr>
+      <tr><td>Hållbarhet</td><td>1 till 3 år, sedan kalka på nytt</td><td>8 till 12 år</td></tr>
+      <tr><td>Material</td><td>Billigt</td><td>Dyrare per m²</td></tr>
+    </tbody>
+  </table>
+  <p>Däremellan finns <strong>silikat- och silikonfärger</strong>: de andas och håller längre än kalk. Ett bra val för en gammal mur som du inte vill måla vartannat år.</p>
+  <p>Tumregel: måla aldrig ett gammalt stenhus med plastbaserad fasadfärg. Fukten kan då inte längre komma ut och visar sig på insidan som <a href="/sv/problem/fukt-och-mogel/">fukt och mögel</a>.</p>
+
+  <h2 id="vad-ingar">Vad ingår?</h2>
+  <p>En översikt över vad som finns och vad det är bra för. Vill du få det gjort? <a href="/sv/forfragan/">Berätta vad du planerar</a>, så hjälper vi dig att genomföra det.</p>
+  <table class="prices">
+    <thead><tr><th>Alternativ</th><th>Bra att veta</th></tr></thead>
+    <tbody>
+      <tr><td>Kalka fasaden</td><td>Billigt per gång, men behöver göras om vart till vart tredje år</td></tr>
+      <tr><td>Elastisk fasadfärg</td><td>Dyrare per gång, håller 8 till 12 år</td></tr>
+      <tr><td>Silikat- eller silikonfärg</td><td>Andas och håller länge; det bästa valet för gamla murar som du sällan vill måla</td></tr>
+      <tr><td>Ta bort gamla lager och laga sprickor</td><td>Beror helt på väggens skick; ofta den största posten</td></tr>
+      <tr><td>Ställning</td><td>Behövs från första våningen; på gatan tillkommer en avgift till kommunen</td></tr>
+    </tbody>
+  </table>
+  <p>Det som framför allt avgör arbetet: väggens skick, höjden (ställning eller inte) och åtkomligheten. Ett byhus i en trång gränd tar mer tid än en villa där en skylift kan köra fram.</p>
+
+  <h2 id="hur-ofta">Hur ofta på nytt?</h2>
+  <p>Traditionellt kalkar andalusier sitt hus varje vår före påsk. Så ofta behöver det inte vara, men kalk nöts: efter ett till tre år ser du grå ränder under fönsterbänkar och fläckar där regnvatten rinner ner. Murar vid havet och på västsidan (vind och regn) slits snabbast.</p>
+  <p>En målad fasad håller åtta till tolv år. Låt ändå kontrollera den varje år för sprickor, framför allt efter höstregnen. En spricka som lagas tidigt förhindrar fuktskador inomhus. Se också <a href="/sv/problem/sprickor-i-vaggar/">sprickor i väggar</a>.</p>
+
+  <h2 id="regler">Kommunens krav</h2>
+  <ul>
+    <li><strong>Färg</strong>: i de historiska byakärnorna i bland annat Frigiliana, Cómpeta och Nerja kräver kommunen vitt, ibland med fasta färger för sockel och karmar. En avvikande färg kan betyda böter och ommålning.</li>
+    <li><strong>Anmälan</strong>: att måla utan att röra byggnadsstommen är mindre underhåll. Många kommuner kräver ändå en anmälan (<em>declaración responsable</em>) eller ett mindre bygglov (<em>licencia de obra menor</em>), framför allt i skyddade delar av byn.</li>
+    <li><strong>Ställning på gatan</strong>: för ställning eller container på allmän mark betalar du en avgift (<em>ocupación de vía pública</em>).</li>
+    <li><strong>Lägenhet</strong>: i en byggnad med samfällighet (<em>comunidad de propietarios</em>) tillhör fasaden alla. Det är samfälligheten som beslutar, inte du ensam.</li>
+  </ul>
+  <p>Fråga kommunen vid tvekan eller låt målaren ordna det. Reglerna per ort hittar du under <a href="/sv/orter/">orter</a>.</p>
+
+  <h2 id="arbetsgang">Så arbetar en bra målare</h2>
+  <ol>
+    <li>Letar först efter var fukten kommer ifrån: hängränna, takkant, fönsterbänk, uppstigande fukt. Det åtgärdas först.</li>
+    <li>Tar bort lös färg och kalk och rengör väggen, vid behov med högtryckstvätt.</li>
+    <li>Lagar sprickor och lös puts med passande bruk (kalkbruk på gamla murar).</li>
+    <li>Stryker en grundning som passar behandlingen.</li>
+    <li>Arbetar i skugga, inte i hård vind eller när regn hotar, och fuktar väggen innan den kalkas.</li>
+    <li>Målar också takkanter, skorsten och murarna på takterrassen: där tränger vatten ofta in.</li>
+  </ol>
+
+  <h2 id="sjalv-eller-lata-gora">Göra själv eller låta göra?</h2>
+  <p>En låg fasad eller trädgårdsmur kan du gott kalka själv; se <a href="/sv/gor-det-sjalv/kalka-fasaden/">kalka fasaden själv</a>. Låt någon annan göra det om du behöver en ställning, om det finns sprickor eller fuktfläckar eller om du inte är på plats. En fackman ser också direkt om något är fel under den gamla målningen. Kombinera målningen med annat <a href="/sv/underhall/">underhåll</a> som hängrännor och takterrass, så står ställningen bara uppe en gång.</p>
+</Guide>

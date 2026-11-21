@@ -1,0 +1,63 @@
+---
+import Guide from '../../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'karna', label: 'Vad det handlar om' },
+  { id: 'borta', label: 'Medan du är borta' },
+  { id: 'underhall', label: 'Underhåll på distans' },
+  { id: 'kostnader', label: 'Löpande kostnader och skatter' },
+  { id: 'uthyrning', label: 'Hyra ut själv?' },
+  { id: 'resor', label: 'Resa fram och tillbaka' },
+  { id: 'rad', label: 'Våra råd per hustyp' },
+];
+
+const faq = [
+  {
+    q: 'Hur ofta bör någon titta till mitt fritidshus?',
+    a: 'För en lägenhet räcker ofta varannan till var fjärde vecka. För ett byhus eller en finca rekommenderar vi varje eller varannan vecka, och alltid efter storm eller kraftigt regn. Då upptäcks läckor, inbrott eller en trasig pump i tid.',
+  },
+  {
+    q: 'Betalar jag skatt på mitt fritidshus om jag inte hyr ut det?',
+    a: 'Ja. Bor du inte i Spanien betalar du varje år spansk inkomstskatt på en schablonintäkt från fritidsbostaden, utöver den kommunala fastighetsskatten (IBI). Hyr du ut betalar du skatt på hyresintäkterna. Låt en gestor sköta deklarationerna.',
+  },
+  {
+    q: 'Kan jag hyra ut min lägenhet när jag inte är där?',
+    a: 'Bara med en turistregistrering, och sedan april 2025 kräver en ny semesteruthyrning i ett flerbostadshus först godkännande från tre femtedelar av samfälligheten. Kontrollera också om kommunen begränsar antalet semesterbostäder.',
+  },
+];
+---
+<Guide lang="sv" slug="finca-lagenhet-eller-byhus-fritidshus" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="Ditt fritidshus i goda händer?" ctaText="Med tillsyn av huset tittar någon regelbundet till det, även efter storm och kraftigt regn. Efter varje besök får du en kort rapport med foton.">
+  <h2 id="karna">Vad det handlar om</h2>
+  <p>När det gäller ett fritidshus väljer du med hjärtat: utsikten, byn, terrassen. Men huset står troligen tomt åtta till tio månader om året. Den viktigaste frågan är alltså: vad händer medan du inte är där, och vad kostar det? Den allmänna avvägningen hittar du i <a href="/sv/guider/finca-lagenhet-eller-byhus/">huvudguiden</a>.</p>
+
+  <h2 id="borta">Medan du är borta</h2>
+  <p>En <strong>lägenhet</strong> i ett område är lättast att låsa och lämna. Det bor grannar där, ofta finns en vaktmästare (<em>conserje</em>) eller förvaltare, och tak och trädgård sköts av samfälligheten. En vattenskada från lägenheten ovanför är fortfarande en risk.</p>
+  <p>Ett <strong>byhus</strong> har grannar på alla sidor, som ofta märker när något inte stämmer. Men gamla byhus blir unkna och fuktiga när de står stängda i månader, och en läckande takterrass märker ingen förrän taket under ger vika.</p>
+  <p>En <strong>finca</strong> ligger avsides. Ett inbrott, en trasig vattenpump, ett nedfallet träd eller en läckande pool kan gå obemärkt i veckor. Ett larm med kameror och någon som regelbundet tittar till huset är ingen lyx här. Det ordnar du med <a href="/sv/tillsyn/">tillsyn av huset</a>.</p>
+
+  <h2 id="underhall">Underhåll på distans</h2>
+  <p>I en lägenhet begränsar sig underhållet till dina egna fyra väggar. I ett byhus handlar det om tak, fasad och fukt. En finca har dessutom marken, träden, tillfartsvägen, vattensystemet och oftast en pool, och det fortsätter när du inte är där. Ogräset växer, och i skogsområden måste marken runt huset hållas fri som brandskyddszon. Utan någon på plats blir det svårt. Se våra sidor om <a href="/sv/underhall/">underhåll</a> och <a href="/sv/pool/">pool</a>.</p>
+
+  <h2 id="kostnader">Löpande kostnader och skatter</h2>
+  <p>Varje hustyp har löpande kostnader: fastighetsskatt (IBI), sophämtningsavgift, försäkring och grundavgifterna för vatten och el. I en lägenhet tillkommer månadsavgiften till samfälligheten, på en finca underhållet av mark och pool. Bor du inte i Spanien betalar du dessutom varje år inkomstskatt på en schablonintäkt från huset, även om du inte hyr ut det. Se också vår guide <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">kostnader vid husköp</a>.</p>
+
+  <h2 id="uthyrning">Hyra ut själv?</h2>
+  <p>Många ägare hyr ut sitt fritidshus en del av året för att täcka kostnaderna. Då spelar hustypen stor roll:</p>
+  <ul>
+    <li><strong>Lägenhet</strong>: uthyrning som semesterbostad (VFT) är möjlig på tomtmark för bostäder, men sedan april 2025 kräver en ny uthyrning godkännande från tre femtedelar av samfälligheten.</li>
+    <li><strong>Byhus</strong>: oftast möjligt som VFT, så länge kommunen inte begränsar antalet semesterbostäder. I populära byar sker det allt oftare.</li>
+    <li><strong>Finca</strong>: på landsbygdsmark gäller reglerna för landsbygdsturism, och med AFO-status är uthyrning inte alltid möjlig.</li>
+  </ul>
+  <p>På uthyrningsplattformarna annonserar du med numret från Andalusiens turistregister. Licens, skatter och förvaltning förklaras i vår guide <a href="/sv/guider/hyra-ut-hus-i-spanien/">hyra ut hus i Spanien</a>. Den som hyr ut behöver också någon för nyckelöverlämning, städning och små reparationer mellan gästerna; se vår <a href="/sv/uthyrningsservice/">uthyrningsservice</a>. Vill du göra en riktig verksamhet av det, läs sidan om <a href="/sv/guider/finca-lagenhet-eller-byhus/bed-and-breakfast/">B&amp;B</a>.</p>
+
+  <h2 id="resor">Resa fram och tillbaka</h2>
+  <p>Ju oftare du vill åka, desto viktigare är restiden. Från Málaga går det direktflyg året runt till Stockholm, Göteborg, Köpenhamn och Oslo, och under säsongen också till flera mindre svenska flygplatser. Från Torre del Mar är du på flygplatsen på omkring 40 minuter, från Nerja på en timme, från bergsbyarna på drygt en timme. För en finca tillkommer resan längs tillfartsvägen, och du behöver en (hyr)bil. För en långhelg gör det skillnad.</p>
+
+  <h2 id="rad">Våra råd per hustyp</h2>
+  <ul>
+    <li><strong>Lägenhet</strong>: det mest bekymmersfria fritidshuset. Lite underhåll, lätt att låsa och nära flygplatsen. Vill du hyra ut, kontrollera samfälligheten först.</li>
+    <li><strong>Byhus</strong>: mycket stämning och ofta lätt att hyra ut. Låt vädra det regelbundet och kontrollera takterrassen.</li>
+    <li><strong>Finca</strong>: det vackraste och mest krävande fritidshuset. Ordna tillsyn, ett larm och en fast kontaktperson för trädgård och pool, och kontrollera uthyrningsmöjligheterna före köpet.</li>
+  </ul>
+  <p>Letar du fortfarande? Låt först kontrollera huset med en <a href="/sv/besiktning/">besiktning</a>. Behöver något åtgärdas innan du kan använda eller hyra ut det, gör vi en offert på <a href="/sv/renovering/">renoveringen</a>.</p>
+</Guide>

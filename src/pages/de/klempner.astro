@@ -1,0 +1,123 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Steps from '../../components/Steps.astro';
+import Services from '../../components/Services.astro';
+import { site } from '../../data/site';
+
+const onderwerp = 'Ich suche einen Klempner für eine oder mehrere kleine Reparaturen (Wasserhahn, Abfluss, WC, Boiler oder Wasserdruck).';
+const aanvraag = '/de/anfrage/?dienst=onderhoud&onderwerp=' + encodeURIComponent(onderwerp);
+
+const faq = [
+  {
+    q: 'Kommen Sie auch für einen einzelnen tropfenden Wasserhahn?',
+    a: 'Ja. Haben Sie mehrere kleine Arbeiten, packen Sie sie in eine Anfrage. Dann erledigen wir alles bei einem Besuch, das spart Anfahrtskosten und Zeit.',
+  },
+  {
+    q: 'Was kostet ein Klempner in Spanien für eine kleine Reparatur?',
+    a: 'Kleine Reparaturen rechnen wir nach Stunden ab, plus Material. Mit ein paar Fotos und einer kurzen Beschreibung schätzen wir die Zeit vorher ein, damit es keine Überraschungen gibt. Stellt sich ein größeres Problem heraus, etwa alte Leitungen, die an mehreren Stellen lecken, bekommen Sie zuerst einen Vorschlag, bevor wir weitermachen.',
+  },
+  {
+    q: 'Ich bin nicht in Spanien. Geht das trotzdem?',
+    a: 'Ja. Schicken Sie Fotos oder ein kurzes Video von einem Nachbarn oder Ihrer Reinigungskraft und sagen Sie uns, wie wir hineinkommen. Nach der Arbeit schicken wir Fotos. Haben Sie die Hausbetreuung bei uns, regeln wir den Zugang selbst und beheben Kleinigkeiten beim nächsten Besuch.',
+  },
+  {
+    q: 'Gerade läuft Wasser aus. Was mache ich zuerst?',
+    a: 'Drehen Sie den Haupthahn zu. Er sitzt oft beim Wasserzähler an der Straße oder am Eingang der Urbanisation, und im Haus gibt es meist ein zweites Ventil (llave de paso) in Küche, Bad oder am Boiler. Kommt Wasser in die Nähe von Steckdosen, schalten Sie auch den Strom ab. Was danach zu tun ist, steht in unserem Ratgeber zu Wasserschäden in Spanien.',
+  },
+  {
+    q: 'In welcher Sprache kann ich Kontakt aufnehmen?',
+    a: 'Schreiben Sie uns einfach auf Englisch oder Niederländisch. Wir übernehmen den Kontakt mit dem Handwerker und, wo nötig, mit dem Wasserversorger oder den Nachbarn.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Klempner und kleine Reparaturen',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['en', 'nl', 'es'],
+};
+const photo = servicePhoto('loodgieter', 'de');
+---
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
+  title="Klempner in der Axarquía für kleine Reparaturen"
+  description="Tropfender Wasserhahn, verstopfter Abfluss, eine Spülung, die ständig läuft, oder ein Boiler, der aufgegeben hat? Ein Klempner für kleine Reparaturen in Cómpeta und der ganzen Axarquía."
+  path="/de/klempner/"
+  lang="de"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="de" items={[{ name: 'Instandhaltung und Reparaturen', href: '/de/instandhaltung/' }, { name: 'Klempner', href: '/de/klempner/' }]} />
+  <Hero image={photo}
+    lang="de"
+    eyebrow="Klempner und kleine Reparaturen"
+    title="Ein Klempner, der <em>wirklich kommt</em>, auch für kleine Arbeiten"
+    lead="Ein tropfender Wasserhahn, ein Abfluss, der nicht frei wird, oder ein Boiler in den letzten Zügen. In Spanien findet man für eine kleine Arbeit schwer jemanden. Wir planen es ein, mit einer Preisschätzung vorab."
+    cta="Klempner anfragen"
+    ctaHref={aanvraag}
+    secondary="Ratgeber Wasserschaden"
+    secondaryHref="/de/ratgeber/wasserschaden-spanien/"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h2 class="h3">Wasserhähne und Leitungen</h2>
+          <p>Tropfende Wasserhähne, undichte Verbindungen, ein defektes Absperrventil oder ein Stück Leitung, das ersetzt werden muss.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Abflüsse und WC</h2>
+          <p>Verstopfte Waschbecken oder Duschen, eine Spülung, die ständig läuft oder leckt, schlechte Gerüche aus dem Abfluss.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Boiler und Warmwasser</h2>
+          <p>Kein oder zu wenig Warmwasser, ein undichter oder alter Boiler (<em>termo</em>), ein Sicherheitsventil, das ständig tropft. Zeit für einen neuen? Lesen Sie <a href="/de/ratgeber/leitungen-und-boiler-erneuern-spanien/">Leitungen und Boiler erneuern</a>.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Wasserdruck, Pumpe und Tank</h2>
+          <p>Wenig Druck, eine Pumpe, die ständig anspringt, oder ein Wassertank (<em>depósito</em>), der sich nicht richtig füllt. Siehe auch <a href="/de/probleme/kein-wasser-oder-wasserdruck/">kein Wasser oder zu wenig Druck</a>.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Lecks finden</h2>
+          <p>Ein feuchter Fleck, eine hohe Wasserrechnung oder ein Zähler, der bei geschlossenen Hähnen weiterläuft. Wir finden die Ursache und beheben den Schaden.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Anschließen und montieren</h2>
+          <p>Einen neuen Wasserhahn, eine Waschmaschine, Spülmaschine oder einen <a href="/de/ratgeber/wasserfilter-spanien/">Wasserfilter</a> anschließen. Für ein ganzes Bad oder eine Küche siehe <a href="/de/renovierung/">Renovierung</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="de"
+    title="So funktioniert es"
+    steps={[
+      { t: 'Schicken Sie uns die Arbeiten', d: 'Packen Sie alle kleinen Arbeiten in eine Anfrage, wenn möglich mit einem Foto von jeder. Dann weiß der Klempner, welche Teile er mitbringen muss.' },
+      { t: 'Schätzung und Termin', d: 'Sie erfahren ungefähr, wie lange es dauert und wann wir kommen können. Sind Sie nicht da, vereinbaren wir, wie wir hineinkommen.' },
+      { t: 'Reparaturen bei einem Besuch', d: 'Wir erledigen die Arbeiten möglichst in einem Durchgang und schicken Fotos, wenn Sie nicht da sind.' },
+      { t: 'Noch etwas entdeckt?', d: 'Fällt uns etwas auf, etwa ein alter Boiler oder ein beginnendes Leck, sagen wir es Ihnen. Sie entscheiden, ob etwas gemacht wird.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Eine kleine Arbeit oder ein größeres Problem?</h2>
+      <p>Viele Lecks in spanischen Häusern fangen klein an: ein Tropfen unter dem Waschbecken, ein feuchter Fleck an der Wand. Lassen Sie es, haben Sie ein paar Monate später Feuchtigkeit und Schimmel oder eine saftige Wasserrechnung. Deshalb werfen wir bei jeder Reparatur einen kurzen Blick auf den Rest der Installation. Wie Sie ein Leck erkennen und was es kostet, steht im Ratgeber <a href="/de/ratgeber/wasserschaden-spanien/">Wasserschaden in Spanien</a>.</p>
+      <p>Das Leitungswasser ist in großen Teilen der Axarquía hart. Kalk verschleißt Wasserhähne, Boiler und Spülkästen schneller. Eine <a href="/de/ratgeber/wasserfilter-spanien/">Enthärtungsanlage oder ein Filter</a> kann helfen. Riecht es im Haus nach Abwasser, oder laufen die Abflüsse auf einer Finca langsam ab? Manchmal liegt es an der <a href="/de/probleme/klaergrube-voll-oder-riecht/">Klärgrube</a>. Steht das Haus lange leer, lesen Sie auch über <a href="/de/probleme/legionellen/">Legionellen</a>.</p>
+      <h2>Wo wir arbeiten</h2>
+      <p>In der ganzen Axarquía: in Bergdörfern wie <a href="/de/orte/competa/">Cómpeta</a>, <a href="/de/orte/canillas-de-albaida/">Canillas de Albaida</a>, <a href="/de/orte/archez/">Árchez</a>, <a href="/de/orte/sayalonga/">Sayalonga</a> und <a href="/de/orte/frigiliana/">Frigiliana</a> und an der Küste in Orten wie <a href="/de/orte/nerja/">Nerja</a>, <a href="/de/orte/torrox/">Torrox</a> und <a href="/de/orte/velez-malaga/">Vélez-Málaga</a>.</p>
+      <p>Keine Lust, für jede Kleinigkeit jemanden zu suchen? Mit der <a href="/de/hausbetreuung/">Hausbetreuung</a> behalten wir das Haus im Blick und beheben Kleinigkeiten, bevor sie groß werden. Für Dach, Terrassen und Grundstück siehe <a href="/de/instandhaltung/">Instandhaltung</a>.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="de" />
+  <Cta lang="de" dienst="onderhoud" onderwerp={onderwerp} title="Ein paar Arbeiten, die schon zu lange warten?" text="Packen Sie sie in eine Anfrage, wenn möglich mit Foto. Sie bekommen eine Preisschätzung und einen Termin." />
+  <Services lang="de" exclude="instandhaltung" title="Das könnte Sie auch interessieren" />
+</Base>

@@ -1,0 +1,83 @@
+---
+import Guide from '../../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'karna', label: 'Juridiskt finns inget B&B' },
+  { id: 'former', label: 'De former som finns' },
+  { id: 'finca', label: 'B&B i en finca' },
+  { id: 'byhus', label: 'B&B i ett byhus' },
+  { id: 'lagenhet', label: 'Och en lägenhet?' },
+  { id: 'ombyggnad', label: 'Vad ombyggnaden kräver' },
+  { id: 'checklista', label: 'Checklista före köpet' },
+];
+
+const faq = [
+  {
+    q: 'Får jag servera frukost till mina gäster?',
+    a: 'Som regel ja, men så snart du serverar mat gäller livsmedelshygienregler, till exempel en hygienkurs (manipulador de alimentos) och krav på köket. Vid hotelliknande tjänster som frukost och städning under vistelsen tillkommer ofta också skatteplikter, till exempel moms. Låt en gestor reda ut det för din situation.',
+  },
+  {
+    q: 'Kan jag bygga till gästrum på en finca med AFO-status?',
+    a: 'Oftast inte. På ett hus med AFO-status får du underhålla det befintliga huset och bygga om inom den befintliga volymen, men inte bygga ut. Att göra om ett stall till gästrum räknas som regel också som en utbyggnad. Räkna alltså med de rum som lagligt finns i dag.',
+  },
+  {
+    q: 'Hur många rum behöver jag för att leva på ett B&B?',
+    a: 'Det beror på dina priser, beläggningen och de fasta kostnaderna. Många små B&B i Axarquía har tre till sex rum och går främst från våren till hösten. Gör en realistisk kalkyl med låg beläggning på vintern, och räkna in ombyggnad och tillstånd.',
+  },
+];
+---
+<Guide lang="sv" slug="finca-lagenhet-eller-byhus-bed-and-breakfast" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Har du hittat ett hus för ditt B&B?" ctaText="Vi kontrollerar om rum, badrum, vatten och avlopp passar för gäster, och vad ombyggnaden kostar.">
+  <h2 id="karna">Juridiskt finns inget B&amp;B</h2>
+  <p>I Andalusien är ”bed and breakfast” ingen officiell kategori. Det du planerar faller under en av de former av turistuthyrning eller logi som Junta de Andalucía känner till, var och en med egna krav. Vilken form som är möjlig beror framför allt på <strong>var huset står</strong> (tomtmark för bostäder eller landsbygdsmark), <strong>vilken rättslig status</strong> det har och <strong>om du själv bor där</strong>. Därför är valet mellan finca, byhus och lägenhet mycket viktigare för ett B&amp;B än för att bara bo. Den allmänna avvägningen hittar du i <a href="/sv/guider/finca-lagenhet-eller-byhus/">huvudguiden</a>.</p>
+
+  <h2 id="former">De former som finns</h2>
+  <ul>
+    <li><strong>Hyra ut rum i din egen bostad</strong>: som <em>vivienda con fines turísticos</em> (VFT) per rum. Du bor själv där och hyr ut några rum till turister. Bara möjligt på tomtmark för bostäder, alltså i byn eller vid kusten.</li>
+    <li><strong>Hyra ut ett helt hus eller gästhus</strong>: som VFT för hela bostaden. Också bara på tomtmark för bostäder. Sedan 2024 får kommunerna begränsa antalet semesterbostäder.</li>
+    <li><strong>Landsbygdslogi</strong> (<em>alojamiento rural</em>), till exempel en <em>casa rural</em>: för hus på landsbygdsmark eller i små byar, med egna krav på skick, utrustning och omgivning.</li>
+    <li><strong>Ett litet pensionat eller hostal</strong>: omfattas av hotellreglerna, med strängare krav på brandskydd, tillgänglighet och ett verksamhetstillstånd från kommunen.</li>
+  </ul>
+  <p>Varje form registreras i Andalusiens turistregister (<em>Registro de Turismo de Andalucía</em>). Med det numret annonserar du på uthyrningsplattformarna. Det nationella registreringsnummer som var obligatoriskt från juli 2025 ogiltigförklarades av Spaniens högsta domstol i maj 2026. Reglerna ändras regelbundet; låt kontrollera möjligheterna för ett visst hus hos kommunen och en specialiserad gestor eller advokat innan du skriver föravtalet.</p>
+
+  <h2 id="finca">B&amp;B i en finca</h2>
+  <p>Det är den klassiska drömmen: en restaurerad cortijo med pool, några gästrum och frukost på terrassen med havsutsikt. Gäster som söker lugn och natur betalar gärna för det. Men på tre punkter går det ofta fel:</p>
+  <ul>
+    <li><strong>Marken</strong>: en finca står på landsbygdsmark, så den vanliga VFT-regeln gäller inte. Du arbetar med reglerna för landsbygdsturism, som ställer krav på hus och omgivning.</li>
+    <li><strong>Den rättsliga statusen</strong>: många fincor har AFO-status. Då får du inte bygga ut: inga extra rum, inget gästhus i det gamla stallet. Om ett hus med AFO-status får hyras ut till turister skiljer sig från fall till fall. Läs vår guide <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.</li>
+    <li><strong>Försörjningen</strong>: sex eller tio gäster förbrukar mycket mer vatten än två boende. Räcker vattenkällan, även en torr sommar? Klarar avloppsbrunnen det? Och hittar och klarar gästerna tillfartsvägen i mörker?</li>
+  </ul>
+  <p>För ett B&amp;B är en finca alltså både det vackraste och det svåraste objektet. Välj en där alla utrymmen har fullständiga tillstånd, med pålitligt vatten och en bra tillfartsväg. Läs också <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca</a>.</p>
+
+  <h2 id="byhus">B&amp;B i ett byhus</h2>
+  <p>Juridiskt är ett byhus ofta enklare: det står på tomtmark för bostäder, så uthyrning som VFT (per rum om du bor där, eller som hel bostad) är i princip möjlig, så länge kommunen inte begränsar antalet semesterbostäder. Populära byar som Frigiliana, Cómpeta och Nerja lockar turister året runt, och gästerna går till fots till restauranger och sevärdheter.</p>
+  <p>Nackdelarna: huset är smalt och högt, och rum med eget badrum får inte alltid plats. Parkering för gäster är ofta svår i den gamla bykärnan. Och väggarna delar du med grannar som inte alltid uppskattar rullande resväskor och sena ankomster. I skyddade bykärnor gäller dessutom regler för fasader och tak vid ombyggnad.</p>
+
+  <h2 id="lagenhet">Och en lägenhet?</h2>
+  <p>En lägenhet passar sämst för ett B&amp;B. Att hyra ut rum med frukost i en lägenhet är småskaligt och knappast lönsamt, och sedan april 2025 kräver en ny turistuthyrning i ett flerbostadshus först godkännande från tre femtedelar av samfälligheten. Den som vill hyra ut en lägenhet tänker hellre på en semesterbostad än ett B&amp;B. Se sidan om <a href="/sv/guider/finca-lagenhet-eller-byhus/fritidshus/">fritidshus</a>.</p>
+
+  <h2 id="ombyggnad">Vad ombyggnaden kräver</h2>
+  <p>Gäster förväntar sig mer än boende. Räkna för ett B&amp;B med:</p>
+  <ul>
+    <li>Ett eget badrum per rum: 6 000 – 25 000 € styck.</li>
+    <li>Luftkonditionering och värme i rummen, vilket också är ett krav för turistuthyrning i Andalusien: 3 000 – 10 000 € för flera rum.</li>
+    <li>Ljudisolering mellan rummen, bra belysning och lås.</li>
+    <li>Brandskydd: brandvarnare, brandsläckare och en tydlig utrymningsväg; för hotelliknande former strängare krav.</li>
+    <li>På en finca ofta ett större vattenförråd, ett nytt minireningsverk (3 000 – 10 000 €) och en bättre tillfartsväg.</li>
+  </ul>
+  <p>Priser per arbetsmoment hittar du i vår guide <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringskostnader</a>. Vi gör gärna en offert på <a href="/sv/renovering/">renoveringen</a> av ditt B&amp;B, uppdelad per rum.</p>
+
+  <h2 id="checklista">Checklista före köpet</h2>
+  <ul class="checks">
+    <li>Markens klassning känd: tomtmark för bostäder eller landsbygdsmark</li>
+    <li>Husets rättsliga status, inklusive alla rum, tillbyggnader och pool</li>
+    <li>Klarlagt med kommunen om turistuthyrning (fortfarande) är möjlig</li>
+    <li>Vald form av uthyrning eller logi och dess krav</li>
+    <li>Vatten, avlopp och el dimensionerade för antalet gäster</li>
+    <li>Tillfartsväg och parkering för gäster</li>
+    <li>Ombyggnadskostnad per rum, inklusive badrum och luftkonditionering</li>
+    <li>Skattemässiga följder genomgångna med en gestor (inkomstskatt, moms, eventuellt registrering som egenföretagare)</li>
+    <li><a href="/sv/besiktning/">Besiktning</a> med pris per brist</li>
+  </ul>
+  <p>Bor du inte där hela året, eller vill du ha hjälp med gästbyten och tillsyn? Titta då på <a href="/sv/tillsyn/">tillsyn av huset</a> och vår <a href="/sv/uthyrningsservice/">uthyrningsservice</a>.</p>
+  <p class="note">Den här sidan ger allmän information och är inte juridisk eller skattemässig rådgivning. Reglerna för turistuthyrning ändras regelbundet.</p>
+</Guide>

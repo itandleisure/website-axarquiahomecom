@@ -1,0 +1,200 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort svar' },
+  { id: 'vilket-hus', label: 'Vilka hus som passar' },
+  { id: 'kop', label: 'Köpet: kostnader och kontroller' },
+  { id: 'renovering', label: 'Bygglov och renovering' },
+  { id: 'finansiering', label: 'Finansiering och löpande kostnader' },
+  { id: 'forsaljning', label: 'Försäljningskostnader' },
+  { id: 'skatt', label: 'Skatt på vinsten' },
+  { id: 'exempel', label: 'Räkneexempel' },
+  { id: 'tid', label: 'Tidsplan' },
+  { id: 'risker', label: 'De största riskerna' },
+  { id: 'checklista', label: 'Checklista' },
+];
+
+const faq = [
+  {
+    q: 'Lönar det sig att flippa hus i Axarquía?',
+    a: 'Det kan löna sig, men marginalen är mindre än många tror. Köpkostnader (cirka 10 %), försäljningskostnader (cirka 6 till 7 % inklusive moms på mäklararvodet) och skatten på vinsten tar tillsammans snabbt 15 till 20 % av försäljningspriset. Vinsten görs framför allt vid köpet: ett hus klart under marknadsvärdet, med en renovering som är ordentligt kalkylerad i förväg.',
+  },
+  {
+    q: 'Hur mycket skatt betalar jag på vinsten?',
+    a: 'Bor du inte i Spanien betalar du där 19 % på kapitalvinsten. Som skatterättsligt bosatt i Spanien hamnar vinsten i sparinkomsten i IRPF (19 till 30 %). Via ett spanskt bolag gäller bolagsskatt. Som säljare betalar du dessutom den kommunala plusvalían. Bor du i Sverige deklarerar du vinsten även här, med avräkning för den spanska skatten. Låt en skatterådgivare räkna på det i förväg.',
+  },
+  {
+    q: 'Vad är innehållandet på 3 % vid försäljning?',
+    a: 'Säljer du som icke-bosatt håller köparen inne 3 % av köpeskillingen och betalar in det till spanska skatteverket som förskott på din skatt. Är din skatt lägre begär du tillbaka mellanskillnaden med en deklaration (modelo 210). Det tar ofta månader, så räkna med det i din likviditet.',
+  },
+  {
+    q: 'Finns det en lägre överlåtelseskatt för den som flippar?',
+    a: 'I Andalusien gäller för professionella fastighetsföretag som bokför bostaden som omsättningstillgång och säljer vidare inom fem år en skattesats på 2 % i stället för 7 %. Du måste redan vid köpet vara registrerad som fastighetsföretag (IAE) och visa det hos notarien. Privata köpare betalar de vanliga 7 %.',
+  },
+  {
+    q: 'Kan jag flippa ett hus med AFO-status?',
+    a: 'Det är svårt. Ett AFO-hus får du underhålla och modernisera, men inte bygga ut. Många köpare får svårare att få bolån, och försäljningspriset blir ofta lägre. Räkna alltså inte med att höja värdet med ett extra sovrum eller en pool.',
+  },
+  {
+    q: 'Slipper jag skatt om jag köper ett nytt hus inom två år?',
+    a: 'Bara om det sålda huset var din permanentbostad och du återinvesterar i en ny permanentbostad. Som skatterättsligt bosatt i Spanien måste du i princip ha bott där i tre år. Som icke-bosatt i EU eller EES måste det ha varit din permanentbostad i Spanien innan du flyttade. Ett hus som köpts som fritidshus eller investering och sålts igen omfattas inte. Låt din gestor eller skatterådgivare räkna på din situation.',
+  },
+];
+---
+<Guide lang="sv" slug="flippa-hus-i-spanien" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Har du ett renoveringsobjekt i sikte?" ctaText="Låt besikta det innan du lägger ett bud. Du får en lista med brister och en prisuppskattning för renoveringen, och vet om kalkylen går ihop.">
+  <h2 id="kort">Kort svar</h2>
+  <p>Att köpa, renovera och sälja ett hus med vinst fungerar i Axarquía, men bara om tre saker stämmer: du köper klart under marknadsvärdet, husets papper är i ordning och renoveringen är kalkylerad före köpet. Mellan köp och försäljning försvinner snabbt 15 till 20 % av försäljningspriset i skatter, notarie, mäklare och vinstskatt. En renovering som blir 20 % dyrare, eller en försäljning som tar ett halvår längre, äter upp resten av marginalen.</p>
+  <p>Den här guiden visar allt du behöver tänka på. För detaljerna i varje steg hänvisar vi till våra andra guider.</p>
+
+  <h2 id="vilket-hus">Vilka hus som passar</h2>
+  <ul>
+    <li><strong>Byhus</strong> i populära vita byar (Nerja, Frigiliana, Cómpeta, Torrox) och i Vélez-Málaga: ofta omoderna, med takterrass och karaktär. Köpare söker dem, men se upp med fukt, gamla bjälkar och dålig åtkomst för byggmaterial.</li>
+    <li><strong>Lägenheter</strong> vid kusten (Torre del Mar, Caleta de Vélez, Rincón de la Victoria, Torrox Costa): enklare att renovera, många köpare, snabbare såld. Marginalen per objekt är oftast mindre. Arbeten på byggnadens fasad, tak eller ledningar beror på samfälligheten.</li>
+    <li><strong>Fincor på landet</strong>: störst potential, men också störst risk. Många fincor har tillbyggnader utan lov eller <a href="/sv/guider/afo-andalusien/">AFO-status</a>, en egen brunn eller avloppsbrunn och en besvärlig tillfartsväg. Köparmarknaden är mindre och försäljningen tar längre tid.</li>
+  </ul>
+  <p>Tvekar du mellan typerna, läs <a href="/sv/guider/finca-lagenhet-eller-byhus/">finca, lägenhet eller byhus</a>. Utgå vid köpet från faktiska försäljningspriser på samma gata eller i samma urbanisation, inte från utgångspriser.</p>
+
+  <h2 id="kop">Köpet: kostnader och kontroller</h2>
+  <p>När du köper ett befintligt hus betalar du i Andalusien 7 % överlåtelseskatt (ITP), plus notarie, fastighetsregister, advokat och gestoría. Räkna totalt med 9 till 11 % utöver köpeskillingen. Hela uppställningen finns i vår guide om <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">kostnader vid husköp i Spanien</a>.</p>
+  <p>Arbetar du som professionellt fastighetsföretag kan den andalusiska skattesatsen på 2 % gälla. Villkoren: du är vid köpet registrerad i en fastighetsrubrik i IAE, bokför bostaden som omsättningstillgång och säljer inom fem år genom notariell handling. Kan du inte visa det hos notarien betalar du 7 %. Låt en skatterådgivare kontrollera det i förväg.</p>
+  <h3>Det här kontrollerar du före underskriften</h3>
+  <ul>
+    <li><strong>Laglighet</strong>: stämmer det som byggts med Catastro och fastighetsregistret (nota simple)? Finns det bygglov för tillbyggnader eller en AFO-förklaring från kommunen? Nästa köpare och dennes bank ställer samma frågor.</li>
+    <li><strong>Byggrätt</strong>: får du bygga ut, bygga en pool eller ändra planlösningen? Om inte måste vinsten komma från moderniseringen.</li>
+    <li><strong>Skick</strong>: tak, fukt, sprickor, el, ledningar, avlopp eller avloppsbrunn. Här finns de stora överraskningarna. En <a href="/sv/besiktning/">besiktning</a> ger en prisuppskattning per brist, som du också använder i förhandlingen.</li>
+    <li><strong>Skulder och belastningar</strong>: obetald IBI, avgifter till samfälligheten, bolån eller utmätningar. Din advokat kontrollerar det.</li>
+    <li><strong>Hävningsklausuler</strong>: skriv in i föravtalet (arras) att du kan dra dig ur om besiktningen eller den rättsliga granskningen blir negativ.</li>
+  </ul>
+  <p>Frågorna att ställa vid visningen, även på spanska, finns i <a href="/sv/guider/kopa-hus-i-spanien/checklista/">checklistan för husköp</a>.</p>
+
+  <h2 id="renovering">Bygglov och renovering</h2>
+  <p>Sedan den andalusiska lagen LISTA (Ley 7/2021) räcker för många arbeten inne i en befintlig bostad en förhandsanmälan till kommunen (<em>declaración responsable</em>), till exempel för ett nytt kök eller badrum, kakel och nya installationer. Arbeten på bärande konstruktion eller fasad, eller en tillbyggnad, kräver bygglov (<em>licencia de obra</em>) med ett arkitektprojekt. Det tar mer tid och kostar mer. Reglerna per kommun finns på sidan Bygglov, till exempel för <a href="/sv/orter/velez-malaga/bygglov/">Vélez-Málaga</a> och <a href="/sv/orter/nerja/bygglov/">Nerja</a>.</p>
+  <p>Det här tillkommer utöver byggfirmans faktura:</p>
+  <ul>
+    <li><strong>Kommunal byggskatt (ICIO) och avgifter</strong>: oftast några procent av byggkostnaden.</li>
+    <li><strong>Arkitekt eller aparejador</strong>: för lovpliktiga arbeten, ofta också klokt vid slutbesiktningen.</li>
+    <li><strong>Moms på renoveringen</strong>: som privatperson betalar du under vissa villkor 10 % IVA för renovering av en bostad. Via ett bolag är det oftast 21 %. Eftersom försäljning av en befintlig bostad är momsfri kan du inte heller dra av den momsen.</li>
+    <li><strong>Energideklaration</strong>: obligatorisk så snart du bjuder ut huset till försäljning; se <a href="/sv/guider/energideklaration-spanien/">energideklaration i Spanien</a>.</li>
+    <li><strong>Oförutsett</strong>: räkna med minst 10 till 15 % buffert, för äldre byhus och fincor hellre mer.</li>
+  </ul>
+  <p>Realistiska belopp per post finns i <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringskostnader i Spanien</a>. Med <a href="/sv/kostnader/kalkylator/">kostnadskalkylatorn</a> gör du en första budget på några minuter.</p>
+  <p>Investera när du flippar i det köpare ser och betalar för: ett ljust, fräscht kök och badrum, bra luftkonditionering, en välskött uteplats, torra väggar och ett tätt tak. Dyr lyx som du inte får tillbaka hoppar du över.</p>
+
+  <h2 id="finansiering">Finansiering och löpande kostnader</h2>
+  <p>Spanska banker lånar oftast ut 60 till 70 % av värderingen till icke-bosatta, och renoveringen bara sällan. En flipp finansieras alltså mest med eget kapital. Med ett bolån tillkommer värderings- och bankkostnader, ibland också en avgift för förtidsinlösen. Låt skriva in det i erbjudandet.</p>
+  <p>Så länge du äger huset betalar du löpande kostnader: IBI, sophämtning, försäkring, vatten och el, eventuellt samfälligheten och som icke-bosatt den årliga skatten på fastigheten (IRNR). Ett tomt hus behöver tillsyn; se <a href="/sv/tillsyn/">tillsyn</a>.</p>
+
+  <h2 id="forsaljning">Försäljningskostnader</h2>
+  <table class="prices">
+    <thead><tr><th>Post</th><th>Riktvärde</th></tr></thead>
+    <tbody>
+      <tr><td>Mäklare</td><td>3–6 % + 21 % IVA</td></tr>
+      <tr><td>Plusvalía municipal (kommunen)</td><td>några hundra till några tusen euro</td></tr>
+      <tr><td>Energideklaration</td><td>100–300 €</td></tr>
+      <tr><td>Lösen av bolån och avregistrering i fastighetsregistret</td><td>några hundra euro</td></tr>
+      <tr><td>Advokat eller gestoría vid försäljningen</td><td>500–1 500 €</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Riktvärden utifrån vanliga taxor i provinsen Málaga, november 2026.</p>
+  <p><strong>Plusvalía municipal</strong> är en kommunal skatt på markens värdeökning som säljaren betalar. Sedan slutet av 2021 beskattas även en försäljning inom ett år. Du väljer mellan en beräkning utifrån taxeringsvärdet och en utifrån den faktiska vinsten; den lägsta gäller. Säljer du med förlust betalar du ingenting, om du kan visa det med köpebreven.</p>
+  <p>Hur du gör huset säljklart, vilka dokument köpare väntar sig och hur du säljer på distans läser du i <a href="/sv/guider/salja-hus-i-spanien/">sälja hus i Spanien</a>.</p>
+
+  <h2 id="skatt">Skatt på vinsten</h2>
+  <p>Vinsten är försäljningspriset minus försäljningskostnader, köpeskilling, köpkostnader och renoveringskostnader (med fakturor). Löpande kostnader som IBI och försäkring räknas oftast inte för privata säljare. Hur mycket skatt du betalar beror på hur du flippar:</p>
+  <table class="prices">
+    <thead><tr><th>Situation</th><th>Skatt i Spanien</th></tr></thead>
+    <tbody>
+      <tr><td>Privatperson, icke-bosatt</td><td>19 % på vinsten (IRNR)</td></tr>
+      <tr><td>Privatperson, skatterättsligt bosatt i Spanien</td><td>19–30 % på sparinkomsten i IRPF</td></tr>
+      <tr><td>Spanskt bolag (S.L.)</td><td>Bolagsskatt, normalt 25 %</td></tr>
+    </tbody>
+  </table>
+  <p>Två saker att se upp med. För det första <strong>innehållandet på 3 %</strong>: säljer du som icke-bosatt håller köparen inne 3 % av köpeskillingen som förskott på din skatt. Det du betalat för mycket får du tillbaka via deklaration (modelo 210), men det tar ofta månader. För det andra: köper och säljer du regelbundet kan skatteverket se det som näringsverksamhet i stället för kapitalvinst, med högre skattesatser.</p>
+  <h3 id="kvitton">Spara alla kvitton och fakturor</h3>
+  <p>Det du bevisligen har lagt på huset sänker den skattepliktiga vinsten. Dit hör köpkostnaderna och förbättringar av huset: ett nytt kök eller badrum, ett nytt tak, isolering, luftkonditionering, en pool samt arkitekt och avgifter för det. Vanligt underhåll och reparationer räknas oftast inte.</p>
+  <ul>
+    <li>Be alltid om en riktig faktura (<em>factura</em>) i ägarens namn, med företagets NIF och momsen särredovisad. Ett kassakvitto eller en lapp utan uppgifter godtar skatteverket ofta inte.</li>
+    <li>Betala via banköverföring, inte kontant. Kontantbetalningar till företag är i Spanien begränsade till 1 000 €, och kontoutdraget är ditt bevis.</li>
+    <li>Spara allt samlat, även digitalt, till långt efter försäljningen. Skatteverket kan ställa frågor upp till fyra år efter deklarationen.</li>
+    <li>Spara också kvittona för ditt nästa hus. Säljer du det senare behöver du dem igen.</li>
+  </ul>
+
+  <h3 id="aterinvestering">Skattefrihet vid återinvestering i en ny permanentbostad</h3>
+  <p>Spanien gör vinsten vid försäljning av din <strong>permanentbostad</strong> (<em>vivienda habitual</em>) skattefri om du investerar beloppet i en ny permanentbostad inom två år (före eller efter försäljningen). Återinvesterar du bara en del gäller befrielsen till motsvarande andel.</p>
+  <ul>
+    <li><strong>Skatterättsligt bosatt i Spanien</strong>: regeln gäller i IRPF. Som permanentbostad räknas i princip ett hus där du har bott oavbrutet i minst tre år.</li>
+    <li><strong>Icke-bosatt</strong>: bor du i ett annat EU- eller EES-land kan befrielsen också gälla, men bara om det sålda huset var din permanentbostad i Spanien innan du flyttade och du återinvesterar i en ny permanentbostad. Ett fritidshus eller ett hus köpt från Sverige som investering omfattas inte. Köparen håller ändå inne 3 %; befrielsen begär du i deklarationen (modelo 210) eller i efterhand som återbetalning.</li>
+  </ul>
+  <p>För en flipp betyder det: ett hus som du köper, renoverar och säljer igen efter ett eller två år är ingen permanentbostad, och befrielsen gäller inte. Bara om du verkligen bor och är skriven där och håller tidsfristerna kan den gälla. Om den gäller för dig beror mycket på detaljerna. Be din gestor eller skatterådgivare räkna på det före försäljningen.</p>
+  <h3 id="sverige">Din permanentbostad ligger i Sverige</h3>
+  <p>Det är läget för de flesta köpare: du bor i Sverige, Norge, Danmark eller Finland och köper ett hus i Spanien för att renovera och sälja, eller använda själv. Skattemässigt betyder det:</p>
+  <ul>
+    <li><strong>Det spanska huset är ingen permanentbostad.</strong> Tvåårsregeln gäller alltså inte. På vinsten vid försäljningen betalar du i Spanien 19 %, även om du köper ett annat hus efteråt.</li>
+    <li><strong>Dina kvitton räknas fullt ut.</strong> Vinsten är försäljningspriset minus försäljningskostnader, köpeskilling, köpkostnader och förbättringar av huset. Varje faktura för ett nytt kök, badrum, tak eller en pool sänker vinsten som du betalar 19 % på. Utan kvitton betalar du skatt på pengar som du själv har lagt i huset.</li>
+    <li><strong>Kvitton följer inte med till nästa hus.</strong> De hör till huset där arbetet gjordes. Köper du ett nytt hus efteråt börjar du där med nya kvitton.</li>
+    <li><strong>Även utan försäljning betalar du skatt i Spanien.</strong> För ett fritidshus som inte hyrs ut betalar du varje år skatt på en schablonmässig inkomst (IRNR), utöver IBI.</li>
+    <li><strong>I Sverige</strong> deklarerar du som bosatt här också vinsten på det spanska huset. Den spanska skatten kan i regel räknas av mot den svenska, så att du inte betalar dubbelt. Hur det blir för dig, särskilt vid flera flippar, går du igenom med en skatterådgivare. Ditt hus i Sverige påverkas inte.</li>
+    <li><strong>Flyttar du senare till Spanien</strong>, skriver dig och bor minst tre år i huset, kan det ändå bli din permanentbostad. Därefter kan tvåårsregeln gälla.</li>
+  </ul>
+  <p>Kort sagt: med din permanentbostad i Sverige hjälper tvåårsregeln dig inte, men dina kvitton desto mer. Låt din gestor eller skatterådgivare räkna, även på följderna i Sverige.</p>
+
+  <h2 id="exempel">Räkneexempel: byhus för 180 000 €</h2>
+  <p>Ett omodernt byhus, köpt av en privatperson som inte bor i Spanien, renoverat och sålt efter ungefär ett år. Alla belopp är riktvärden.</p>
+  <table class="prices">
+    <tbody>
+      <tr><td>Köpeskilling</td><td>180 000 €</td></tr>
+      <tr><td>Köpkostnader (ITP 7 %, notarie, register, advokat, gestoría)</td><td>16 900 €</td></tr>
+      <tr><td>Renovering inkl. 10 % IVA</td><td>60 000 €</td></tr>
+      <tr><td>Arkitekt, ICIO och avgifter</td><td>6 000 €</td></tr>
+      <tr><td>Oförutsett (10 %)</td><td>6 000 €</td></tr>
+      <tr><td>Löpande kostnader under projektet</td><td>2 500 €</td></tr>
+      <tr><td><strong>Total investering</strong></td><td><strong>271 400 €</strong></td></tr>
+      <tr><td>Försäljningspris</td><td>320 000 €</td></tr>
+      <tr><td>Försäljningskostnader (mäklare 5 % + IVA, plusvalía, energideklaration)</td><td>− 20 500 €</td></tr>
+      <tr><td><strong>Intäkt efter försäljningskostnader</strong></td><td><strong>299 500 €</strong></td></tr>
+      <tr><td>Vinst före skatt</td><td>28 100 €</td></tr>
+      <tr><td>Skatt 19 % (på 30 600 €, löpande kostnader ej avdragsgilla)</td><td>− 5 800 €</td></tr>
+      <tr><td><strong>Nettovinst</strong></td><td><strong>22 300 € (cirka 8 %)</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Vad det visar: med en investering på över 270 000 € återstår efter ett års arbete cirka 22 000 €. Säljer du 5 % billigare (304 000 €) halveras vinsten ungefär. Blir renoveringen 20 % dyrare återstår ännu mindre. Dessutom håller köparen inne 9 600 € (3 %), som du delvis får tillbaka först månader senare.</p>
+
+  <h2 id="tid">Tidsplan</h2>
+  <table class="prices">
+    <thead><tr><th>Fas</th><th>Riktvärde</th></tr></thead>
+    <tbody>
+      <tr><td>Sökande, besiktning och köp</td><td>1–3 månader</td></tr>
+      <tr><td>Planering, offerter och anmälan eller bygglov</td><td>1–4 månader</td></tr>
+      <tr><td>Renovering</td><td>3–6 månader</td></tr>
+      <tr><td>Försäljning fram till notarien</td><td>3–9 månader</td></tr>
+      <tr><td><strong>Totalt</strong></td><td><strong>cirka 9–18 månader</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Vår och höst är de starkaste försäljningsperioderna, när utländska köpare kommer på visningar. Planera att bli klar före dem. På sommaren står byggarbeten delvis stilla i många byar.</p>
+
+  <h2 id="risker">De största riskerna</h2>
+  <ul>
+    <li><strong>Papperen är inte i ordning</strong>: en tillbyggnad utan lov gör huset svårare att sälja och finansiera för nästa köpare.</li>
+    <li><strong>Dolda fel</strong>: fukt, trämask och termiter i gamla bjälkar, ett läckande tak, el utan jordning.</li>
+    <li><strong>Förseningar</strong>: att vänta på bygglov eller hantverkare betyder längre löpande kostnader och att pengarna kommer tillbaka senare.</li>
+    <li><strong>Marknaden</strong>: priserna kan falla under projektet, och vissa lägen (avlägsna fincor) säljs långsamt.</li>
+    <li><strong>Vatten</strong>: efter torkan 2022 till 2024 tittar köpare noggrannare på vattenförsörjningen, särskilt för fincor med egen brunn eller utan anslutning.</li>
+    <li><strong>Tomt hus</strong>: ett tomt hus lockar inbrottstjuvar och husockupanter. Se till att det finns tillsyn och bra lås; se <a href="/sv/guider/inbrottsskydd-hus-spanien/">inbrottsskydd</a>.</li>
+    <li><strong>Ansvar efter försäljningen</strong>: som säljare ansvarar du för dolda fel. Bra, dokumenterat arbete med fakturor skyddar dig.</li>
+  </ul>
+
+  <h2 id="checklista">Checklista</h2>
+  <ol>
+    <li>Bestäm det förväntade försäljningspriset utifrån faktiska försäljningar, inte utgångspriser.</li>
+    <li>Räkna baklänges: försäljningspris minus försäljningskostnader, skatt, renovering, buffert och önskad vinst ger ditt högsta bud.</li>
+    <li>Låt besikta huset före underskriften och kalkylera renoveringen.</li>
+    <li>Låt en oberoende advokat kontrollera laglighet, skulder och belastningar.</li>
+    <li>Bestäm i förväg med en skatterådgivare: privatperson eller bolag, och vad det betyder i Spanien och Sverige.</li>
+    <li>Ordna anmälan eller bygglov innan arbetena börjar.</li>
+    <li>Spara alla fakturor och kontoutdrag: de sänker den skattepliktiga vinsten.</li>
+    <li>Be din gestor eller skatterådgivare räkna före försäljningen, även på en eventuell befrielse vid återinvestering.</li>
+    <li>Ta med innehållandet på 3 % i din likviditetsplanering.</li>
+  </ol>
+  <p class="note">Den här guiden ger allmän information utifrån reglerna i Andalusien och Spanien i november 2026. Källor: andalusiska Ley 5/2021 (ITP 7 % och 2 % för fastighetsföretag), Ley 7/2021 (LISTA), Real Decreto-ley 26/2021 (plusvalía) och spanska skatteverket (Agencia Tributaria) för IRPF, IRNR, innehållandet på 3 % och befrielsen vid återinvestering (art. 38 Ley IRPF och sjunde tilläggsbestämmelsen i Ley IRNR). Skattesatser och regler kan ändras. Detta är ingen skatte- eller juridisk rådgivning; låt en advokat och en skatterådgivare granska din situation.</p>
+</Guide>

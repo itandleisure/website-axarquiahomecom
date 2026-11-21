@@ -1,0 +1,63 @@
+---
+import Guide from '../../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'regler', label: 'Vad kommunen kräver' },
+  { id: 'urbano', label: 'I ett bostadsområde' },
+  { id: 'finca', label: 'På en finca' },
+  { id: 'alternativ', label: 'Vilka alternativ finns?' },
+  { id: 'steg', label: 'Stegen' },
+];
+
+const faq = [
+  { q: 'Behöver jag en arkitekt för ett garage i Spanien?', a: 'För ett murat garage oftast ja: det är en nybyggnad, och då kräver kommunen ett projekt från en arkitekt eller behörig tekniker. För en lätt, öppen carport behövs det ofta inte.' },
+  { q: 'Får jag bygga om ett garage till ett rum eller en bostad?', a: 'Bara med bygglov för ändrad användning och bara om detaljplanen tillåter det. Den extra boytan räknas in i byggrätten. En extra, fristående bostad är på rústico i praktiken aldrig tillåten.' },
+  { q: 'Får jag ställa upp ett prefabricerat garage utan tillstånd?', a: 'Nej. Även ett prefabricerat garage eller en container på en betongplatta räknas som en byggnad och kräver bygglov.' },
+];
+---
+<Guide lang="sv" slug="bygga-pa-egen-tomt-garage" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Bygga garage eller förråd?" ctaText="Berätta vad du vill ha och skicka ett foto av platsen. Vi kontrollerar vad som är tillåtet, ordnar projektet och bygger det.">
+  <h2 id="regler">Vad kommunen kräver</h2>
+  <p>Ett garage med väggar och tak är för kommunen en ny byggnad. Det betyder nästan alltid:</p>
+  <ul>
+    <li>ett <strong>bygglov</strong> (<em>licencia de obra</em>), inte en anmälan;</li>
+    <li>ett <strong>projekt</strong> från en arkitekt eller behörig tekniker;</li>
+    <li>kvadratmeterna räknas fullt ut i tomtens <strong>byggrätt</strong>;</li>
+    <li>du betalar <strong>byggskatt</strong> (ICIO) och avgifter, och efter bygget ska garaget föras in i Catastro.</li>
+  </ul>
+  <p>Hur en bygglovsansökan går till läser du under <a href="/sv/guider/bygglov-renovering-andalusien/">bygglov för renovering</a>.</p>
+
+  <h2 id="urbano">I ett bostadsområde</h2>
+  <p>I byn eller i en urbanisation går ett garage oftast bra om det finns byggrätt kvar och det håller föreskrivet avstånd till gräns och väg. En del detaljplaner tillåter ett garage mot gränsen, ibland bara med grannarnas medgivande. I en urbanisation med samfällighet måste garaget också följa dess regler.</p>
+
+  <h2 id="finca">På en finca</h2>
+  <p>På landsbygdsmark (<em>suelo rústico</em>) är ett garage svårare:</p>
+  <ul>
+    <li>Det är bara tillåtet för ett lagligt hus och bara om detaljplanen ger utrymme för mer bebyggelse.</li>
+    <li>Ibland är en jordbruksbyggnad (<em>almacén agrícola</em>) tillåten. Den är då för verktyg och skörd, inte som garage eller bostad.</li>
+    <li>Har huset AFO-status får inget tillkomma. Se <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.</li>
+  </ul>
+  <p>En öppen carport är på en finca ofta mer genomförbar. Se <a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/carport-och-pergola/">carport och pergola</a>.</p>
+
+  <h2 id="alternativ">Vilka alternativ finns?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Alternativ</th><th>Bra att veta</th></tr></thead>
+    <tbody>
+      <tr><td>Göra om ett befintligt utrymme till garage eller förråd</td><td>Till exempel ett gammalt stall eller en bodega. Går ofta med anmälan om inget ändras utvändigt.</td></tr>
+      <tr><td>Prefabricerat garage av stål eller betong</td><td>Snabbt på plats, men kräver grund och bygglov.</td></tr>
+      <tr><td>Murat enkelgarage</td><td>Hållbart och passar huset. Med projekt och bygglov.</td></tr>
+      <tr><td>Dubbelgarage med förråd eller verkstad</td><td>Fler kvadratmeter, alltså mer byggrätt som krävs.</td></tr>
+      <tr><td>Garage i sluttningen eller under terrassen</td><td>Mycket schaktning och stödmurar, men knappt synligt.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Vill du låta bygga det? Berätta vad du planerar. Vi tar reda på vad som är tillåtet, ordnar bygglovet och bygger det åt dig.</strong> <a href="/sv/forfragan/?dienst=renovatie">Kontakta oss →</a></p>
+
+  <h2 id="steg">Stegen</h2>
+  <ol>
+    <li><strong>Genomförbarhet</strong>: låt kontrollera marktyp, återstående byggrätt och husets laglighet.</li>
+    <li><strong>Projekt och ansökan</strong>: arkitekten ritar garaget och ansöker om bygglov.</li>
+    <li><strong>Bygglov</strong>: kommunen har enligt lag upp till tre månader efter att handlingarna är kompletta. Du betalar ICIO och avgifter.</li>
+    <li><strong>Bygget</strong>: grund, väggar, tak, port och vid behov el och belysning.</li>
+    <li><strong>Avslut</strong>: slutintyg, anmälan till kommunen och registrering i Catastro.</li>
+  </ol>
+  <p>Tillbaka till översikten: <a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/">bygga på egen tomt</a>.</p>
+</Guide>

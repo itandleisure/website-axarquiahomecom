@@ -1,0 +1,55 @@
+---
+import Guide from '../../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Är det tillåtet?' },
+  { id: 'regler', label: 'Var reglerna står' },
+  { id: 'samfallighet', label: 'Vad samfälligheten kan göra' },
+  { id: 'kontrollera', label: 'Så tar du reda på det' },
+  { id: 'alternativ', label: 'Det som ofta är tillåtet' },
+];
+
+const faq = [
+  { q: 'Är det enligt lag förbjudet att grilla på balkongen i Spanien?', a: 'Det finns ingen nationell lag som förbjuder det. Förbudet står oftast i samfällighetens stadgar eller ordningsregler, ibland i en kommunal stadga. Dessutom får du inte störa grannarna, inte heller med rök.' },
+  { q: 'Kan samfälligheten införa ett grillförbud?', a: 'Ja. En regel i ordningsreglerna (normas de régimen interior) kan stämman besluta med enkel majoritet. Ett förbud i själva stadgarna kräver i princip att alla ägare godkänner.' },
+  { q: 'Vad händer om jag inte följer förbudet?', a: 'Samfällighetens ordförande kan först skriftligen uppmana dig att sluta. Hjälper inte det kan samfälligheten gå till domstol. Domstolen kan förbjuda användningen, döma ut skadestånd och i allvarliga fall till och med tillfälligt förbjuda användningen av bostaden.' },
+  { q: 'Får hyresgäster eller semestergäster grilla?', a: 'Hyresgäster och gäster måste följa samma regler. Som ägare är du ansvarig, så ta med det i dina husregler om du hyr ut.' },
+];
+---
+<Guide lang="sv" slug="bygga-pa-egen-tomt-grilla-pa-balkongen" toc={toc} faq={faq} dienst="sleutelbeheer" ctaTitle="En lägenhet i ett område?" ctaText="Vi har koll på din lägenhet när du inte är där och vet hur det fungerar med samfälligheten.">
+  <h2 id="kort">Är det tillåtet?</h2>
+  <p>Det beror på ditt område. I många lägenhetsområden på Costa del Sol och i Axarquía är det förbjudet att grilla på terrass eller balkong, särskilt med kol. På andra ställen är det tillåtet eller bara med elgrill. Ingen nationell lag reglerar det: det står i ägarnas samfällighets regler (<em>comunidad de propietarios</em>).</p>
+
+  <h2 id="regler">Var reglerna står</h2>
+  <ul>
+    <li><strong>Stadgar</strong> (<em>estatutos</em>): en del av uppdelningshandlingen, ofta inskriven i fastighetsregistret. En ändring kräver i princip alla ägare.</li>
+    <li><strong>Ordningsregler</strong> (<em>normas de régimen interior</em>): regler för vardagen, till exempel pooltider, husdjur och grillning. Stämman kan besluta eller ändra dem med majoritet.</li>
+    <li><strong>Lagen om bostadsrätter</strong> (<em>Ley de Propiedad Horizontal</em>, art. 7.2): ägare och boende får inte göra något som stadgarna förbjuder eller som är störande, ohälsosamt eller farligt för grannarna. Även utan uttryckligt förbud kan mycket rök alltså vara ett problem.</li>
+    <li><strong>Kommunen</strong>: en del kommuner har regler om rök och eld inom tätorten. Under brandsäsongen kan fler begränsningar gälla.</li>
+  </ul>
+  <p>Även en terrass som bara du använder är juridiskt ofta gemensam egendom med särskild nyttjanderätt. Där får du inte bara bygga något, till exempel en murad grill.</p>
+
+  <h2 id="samfallighet">Vad samfälligheten kan göra</h2>
+  <p>Följer en ägare eller hyresgäst inte reglerna uppmanar ordföranden först skriftligen hen att sluta. Hjälper inte det kan stämman besluta om en stämning (<em>acción de cesación</em>). Domstolen kan förbjuda användningen och döma ut skadestånd. Så långt går det sällan, men en dålig relation med grannarna vill du inte ha i ett lägenhetsområde.</p>
+
+  <h2 id="kontrollera">Så tar du reda på det</h2>
+  <ol>
+    <li>Be förvaltaren (<em>administrador de fincas</em>) eller ordföranden om <strong>stadgarna</strong> och <strong>ordningsreglerna</strong>.</li>
+    <li>Fråga också efter <strong>protokollen</strong> (<em>actas</em>) från de senaste stämmorna: ibland finns ett beslut som ännu inte står i ordningsreglerna.</li>
+    <li>Ska du köpa en lägenhet? Låt mäklaren eller advokaten begära in de här handlingarna före köpet. Ett utekök eller en grill på terrassen är för många köpare skälet att välja en viss lägenhet.</li>
+    <li>Vill du ändra reglerna? Sätt upp det på dagordningen till årsstämman. En gemensam grillplats vid poolen är ofta lättare att få igenom än en regel för varje terrass.</li>
+  </ol>
+
+  <h2 id="alternativ">Det som ofta är tillåtet</h2>
+  <table class="prices plain">
+    <thead><tr><th>Alternativ</th><th>Bra att veta</th></tr></thead>
+    <tbody>
+      <tr><td>Elektrisk bordsgrill eller plancha</td><td>Ingen öppen låga, lite rök. Ofta tillåtet, kontrollera ordningsreglerna.</td></tr>
+      <tr><td>Elektrisk terrassgrill</td><td>En riktig grill utan kol. Tänk på effekten i din elanslutning.</td></tr>
+      <tr><td>Gasolgrill</td><td>I vissa områden förbjuden på grund av gasflaskan. Kontrollera ordningsreglerna och försäkringen.</td></tr>
+      <tr><td>Gemensam grillplats i samfälligheten</td><td>Kräver ett stämmobeslut, kostnaderna delas.</td></tr>
+    </tbody>
+  </table>
+  <p>Har du ett hus med egen trädgård? Läs <a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/utekok/">utekök och grill</a>, med reglerna för brandsäsongen.</p>
+  <p>Tillbaka till översikten: <a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/">bygga på egen tomt</a>.</p>
+</Guide>

@@ -1,0 +1,123 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Steps from '../../components/Steps.astro';
+import Services from '../../components/Services.astro';
+import { site } from '../../data/site';
+
+const onderwerp = 'Jag söker en rörmokare för en eller flera små reparationer (kran, avlopp, toalett, varmvattenberedare eller vattentryck).';
+const aanvraag = '/sv/forfragan/?dienst=onderhoud&onderwerp=' + encodeURIComponent(onderwerp);
+
+const faq = [
+  {
+    q: 'Kommer ni även för en enda droppande kran?',
+    a: 'Ja. Har du flera små jobb, samla dem i en förfrågan. Då gör vi allt vid ett besök, vilket sparar dig utryckningskostnad och tid.',
+  },
+  {
+    q: 'Vad kostar en rörmokare i Spanien för en liten reparation?',
+    a: 'Små reparationer debiteras per timme, plus material. Med några foton och en kort beskrivning uppskattar vi tiden i förväg, så att det inte blir några överraskningar. Visar det sig vara ett större problem, till exempel gamla rör som läcker på flera ställen, får du först ett förslag innan vi fortsätter.',
+  },
+  {
+    q: 'Jag är inte i Spanien. Kan ni ordna det ändå?',
+    a: 'Ja. Skicka foton eller en kort video från en granne eller din städare och berätta hur vi kommer in. Vi skickar foton när arbetet är klart. Har du tillsyn av huset hos oss ordnar vi tillträdet själva och åtgärdar småsaker vid nästa besök.',
+  },
+  {
+    q: 'Det läcker vatten just nu. Vad gör jag först?',
+    a: 'Stäng huvudkranen. Den sitter ofta vid vattenmätaren vid gatan eller vid infarten till urbanisationen, och inne i huset finns oftast en andra ventil (llave de paso) i köket, badrummet eller vid varmvattenberedaren. Kommer vatten nära eluttag, slå även av strömmen. Vad du gör sedan står i vår guide om vattenläckor i Spanien.',
+  },
+  {
+    q: 'På vilket språk kan jag kontakta er?',
+    a: 'Skriv till oss på engelska eller nederländska. Vi sköter kontakten med hantverkaren och, där det behövs, med vattenbolaget eller grannarna.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Rörmokare och små reparationer',
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: 'Axarquía, Málaga, España',
+  availableLanguage: ['en', 'nl', 'es'],
+};
+const photo = servicePhoto('loodgieter', 'sv');
+---
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
+  title="Rörmokare i Axarquía för små reparationer"
+  description="Droppande kran, stopp i avloppet, en toalett som står och rinner eller en varmvattenberedare som gett upp? En rörmokare för små reparationer i Cómpeta och hela Axarquía."
+  path="/sv/rormokare/"
+  lang="sv"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="sv" items={[{ name: 'Underhåll och reparationer', href: '/sv/underhall/' }, { name: 'Rörmokare', href: '/sv/rormokare/' }]} />
+  <Hero image={photo}
+    lang="sv"
+    eyebrow="Rörmokare och små reparationer"
+    title="En rörmokare som <em>faktiskt kommer</em>, även för små jobb"
+    lead="En droppande kran, ett avlopp som inte blir fritt eller en varmvattenberedare på sista versen. I Spanien är det svårt att hitta någon för ett litet jobb. Vi bokar in det, med en prisuppskattning i förväg."
+    cta="Beställ en rörmokare"
+    ctaHref={aanvraag}
+    secondary="Guide om vattenläckor"
+    secondaryHref="/sv/guider/vattenlacka-spanien/"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h2 class="h3">Kranar och rör</h2>
+          <p>Droppande kranar, läckande kopplingar, en trasig avstängningsventil eller en bit rör som behöver bytas.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Avlopp och toaletter</h2>
+          <p>Stopp i handfat eller dusch, en toalett som står och rinner eller läcker, dålig lukt från avloppen.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Varmvattenberedare och varmvatten</h2>
+          <p>Inget eller för lite varmvatten, en läckande eller gammal varmvattenberedare (<em>termo</em>), en säkerhetsventil som droppar hela tiden. Dags att byta? Läs <a href="/sv/guider/byta-ror-och-varmvattenberedare-spanien/">byta rör och varmvattenberedare</a>.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Vattentryck, pump och tank</h2>
+          <p>Lågt tryck, en pump som startar hela tiden eller en vattentank (<em>depósito</em>) som inte fylls ordentligt. Se även <a href="/sv/problem/inget-vatten-eller-lagt-vattentryck/">inget vatten eller lågt vattentryck</a>.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Hitta läckor</h2>
+          <p>En fuktfläck, en hög vattenräkning eller en mätare som snurrar fast alla kranar är stängda. Vi hittar orsaken och åtgärdar skadan.</p>
+        </div>
+        <div class="card">
+          <h2 class="h3">Ansluta och montera</h2>
+          <p>Ansluta en ny kran, tvättmaskin, diskmaskin eller ett <a href="/sv/guider/vattenfilter-spanien/">vattenfilter</a>. För ett helt badrum eller kök, se <a href="/sv/renovering/">renovering</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="sv"
+    title="Så går det till"
+    steps={[
+      { t: 'Skicka oss jobben', d: 'Samla alla små jobb i en förfrågan, gärna med ett foto av varje. Då vet rörmokaren vilka delar som ska med.' },
+      { t: 'Uppskattning och tid', d: 'Du får veta ungefär hur lång tid det tar och när vi kan komma. Är du borta kommer vi överens om hur vi kommer in.' },
+      { t: 'Reparationer vid ett besök', d: 'Vi gör jobben i ett svep där det går och skickar foton om du inte är där.' },
+      { t: 'Något mer upptäckt?', d: 'Ser vi något, till exempel en gammal varmvattenberedare eller början på en läcka, säger vi till. Du bestämmer om något ska göras.' },
+    ]}
+  />
+
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Ett litet jobb eller ett större problem?</h2>
+      <p>Många läckor i spanska hus börjar smått: ett dropp under diskbänken, en fuktfläck på en vägg. Låter du det vara har du några månader senare fukt och mögel, eller en saftig vattenräkning. Därför tittar vi snabbt på resten av rörsystemet vid varje reparation. Hur du känner igen en läcka och vad det kostar står i guiden <a href="/sv/guider/vattenlacka-spanien/">vattenläcka i Spanien</a>.</p>
+      <p>Kranvattnet är hårt i stora delar av Axarquía. Kalk sliter snabbare på kranar, varmvattenberedare och toalettcisterner. En <a href="/sv/guider/vattenfilter-spanien/">avhärdare eller ett filter</a> kan hjälpa. Luktar det avlopp inomhus, eller rinner avloppen långsamt på en finca? Ibland ligger problemet i <a href="/sv/problem/avloppsbrunn-full-eller-luktar/">avloppsbrunnen</a>. Står huset tomt länge, läs också om <a href="/sv/problem/legionella/">legionella</a>.</p>
+      <h2>Var vi arbetar</h2>
+      <p>I hela Axarquía: i bergsbyar som <a href="/sv/orter/competa/">Cómpeta</a>, <a href="/sv/orter/canillas-de-albaida/">Canillas de Albaida</a>, <a href="/sv/orter/archez/">Árchez</a>, <a href="/sv/orter/sayalonga/">Sayalonga</a> och <a href="/sv/orter/frigiliana/">Frigiliana</a>, och vid kusten i orter som <a href="/sv/orter/nerja/">Nerja</a>, <a href="/sv/orter/torrox/">Torrox</a> och <a href="/sv/orter/velez-malaga/">Vélez-Málaga</a>.</p>
+      <p>Vill du slippa leta efter någon för varje litet jobb? Med <a href="/sv/tillsyn/">tillsyn av huset</a> håller vi ett öga på huset och åtgärdar småsaker innan de blir stora. För tak, terrasser och tomt, se <a href="/sv/underhall/">underhåll</a>.</p>
+    </div>
+  </section>
+
+  <Faq items={faq} lang="sv" />
+  <Cta lang="sv" dienst="onderhoud" onderwerp={onderwerp} title="Några jobb som har väntat för länge?" text="Samla dem i en förfrågan, gärna med foto. Du får en prisuppskattning och en tid." />
+  <Services lang="sv" exclude="underhall" title="Du kanske också behöver" />
+</Base>

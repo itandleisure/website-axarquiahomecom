@@ -1,0 +1,52 @@
+---
+import Guide from '../../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'byggratt', label: 'Finns det byggrätt kvar?' },
+  { id: 'tillbyggnad', label: 'Tillbyggnad eller utbyggnad' },
+  { id: 'vaning', label: 'En extra våning' },
+  { id: 'terrass', label: 'Glasa in terrassen (cerramiento)' },
+  { id: 'alternativ', label: 'Vilka alternativ finns?' },
+];
+
+const faq = [
+  { q: 'Behöver jag tillstånd för att glasa in min terrass?', a: 'Ja. Att stänga en terrass med glas eller väggar gör uteplats till inomhusyta och ändrar fasaden. Det kräver bygglov i Andalusien, och i ett lägenhetsområde också samfällighetens godkännande.' },
+  { q: 'Hur många ägare måste godkänna en inglasning av terrassen?', a: 'Enligt Ley de Propiedad Horizontal (art. 10.3) måste stämman godkänna med tre femtedelar av ägarna, som tillsammans också har tre femtedelar av andelarna. Föreskriver stadgarna redan ett enhetligt utförande för alla terrasser är det ofta enklare.' },
+  { q: 'Är ramlösa glaspartier också en cerramiento?', a: 'Oftast ja. Även ett ramlöst glasparti (cortina de cristal) stänger terrassen och ändrar utseendet. En del kommuner är mer generösa med det än med väggar, men i ett lägenhetsområde måste samfälligheten alltid godkänna.' },
+  { q: 'Får jag bygga på en våning på mitt hus?', a: 'Bara om detaljplanen tillåter ytterligare en våning och det finns byggrätt kvar. Dessutom måste konstruktionen bära vikten. I ett lägenhetsområde krävs samfällighetens och de direkt berörda ägarnas godkännande.' },
+];
+---
+<Guide lang="sv" slug="bygga-pa-egen-tomt-tillbyggnad-och-inglasning" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Mer plats i huset?" ctaText="Berätta vad du vill göra. Vi kontrollerar vad detaljplanen tillåter, ordnar arkitekt och bygglov och bygger det.">
+  <h2 id="byggratt">Finns det byggrätt kvar?</h2>
+  <p>Varje utbyggnad börjar med samma fråga: hur mycket får tillkomma på din tomt? Detaljplanen (<em>PGOU</em>) bestämmer hur många kvadratmeter som totalt får byggas (<em>edificabilidad</em>), hur högt och med vilket avstånd till gränsen. Är byggrätten utnyttjad får inget mer tillkomma. En arkitekt kan kontrollera det, eller så begär du ett <em>informe urbanístico</em> från kommunen.</p>
+  <p>På en finca (<em>suelo rústico</em>) är utrymmet oftast litet eller redan utnyttjat. Har huset AFO-status får inget tillkomma. Se <a href="/sv/guider/afo-andalusien/">AFO och legalisering</a>.</p>
+
+  <h2 id="tillbyggnad">Tillbyggnad eller utbyggnad</h2>
+  <p>En tillbyggnad, en utbyggnad eller ett extra rum kräver i Andalusien alltid bygglov, med ett projekt från en arkitekt och en <em>arquitecto técnico</em>. Du får börja först när lovet finns och utförandeprojektet har lämnats in till kommunen. Därefter ska de extra kvadratmeterna föras in i Catastro och helst också i lagfarten. Alla steg står i guiden <a href="/sv/guider/bygglov-renovering-andalusien/">bygglov för renovering</a>.</p>
+
+  <h2 id="vaning">En extra våning</h2>
+  <p>Att bygga på en våning är en av de största ombyggnaderna. Utöver byggrätten måste detaljplanen tillåta den extra höjden, och grund och väggar måste bära vikten. Det räknar arkitekten på. Äldre byhus behöver ofta förstärkas. I ett lägenhetsområde kräver en extra våning samfällighetens och de direkt berörda ägarnas godkännande.</p>
+
+  <h2 id="terrass">Glasa in terrassen (cerramiento)</h2>
+  <p>Att glasa in terrassen eller bygga ett uterum är mycket vanligt i Spanien och görs ofta utan bygglov. Det är ändå en ombyggnad med regler:</p>
+  <ul>
+    <li><strong>Kommunen</strong>: uteplats blir inomhusyta. Det räknas in i byggrätten och ändrar fasaden, så du behöver bygglov. Passar det inte i detaljplanen är det inte tillåtet.</li>
+    <li><strong>Samfälligheten</strong>: i ett lägenhetsområde ändrar du byggnadens utseende. Enligt Ley de Propiedad Horizontal (art. 10.3) måste stämman godkänna, med tre femtedelar av ägarna och tre femtedelar av andelarna. Ofta föreskriver samfälligheten också ett enhetligt utförande, så att alla terrasser ser likadana ut.</li>
+    <li><strong>Utan godkännande</strong>: samfälligheten kan kräva att det tas bort, och kommunen kan ge böter. Även vid försäljning kan det väcka frågor.</li>
+  </ul>
+
+  <h2 id="alternativ">Vilka alternativ finns?</h2>
+  <table class="prices plain">
+    <thead><tr><th>Alternativ</th><th>Bra att veta</th></tr></thead>
+    <tbody>
+      <tr><td>Markis eller screens på terrassen</td><td>Ingen cerramiento. I ett område ofta en föreskriven färg.</td></tr>
+      <tr><td>Ramlöst glasparti (cortina de cristal)</td><td>Går att skjuta upp och igen, fri utsikt. Samfälligheten och ofta bygglov krävs.</td></tr>
+      <tr><td>Aluminiumkarmar med glas</td><td>Bättre mot vind och kyla, blir ett riktigt extra rum.</td></tr>
+      <tr><td>Uterum med tak mot huset</td><td>Räknas som tillbyggnad: projekt och bygglov.</td></tr>
+      <tr><td>Murad tillbyggnad eller extra rum</td><td>Den mest beständiga utbyggnaden, med arkitekt.</td></tr>
+      <tr><td>Extra våning</td><td>Ofta med förstärkning av konstruktionen.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Vill du låta bygga det? Berätta vad du planerar. Vi tar reda på vad som är tillåtet, ordnar bygglovet och bygger det åt dig.</strong> <a href="/sv/forfragan/?dienst=renovatie">Kontakta oss →</a></p>
+  <p>Tillbaka till översikten: <a href="/sv/guider/bygga-pa-egen-tomt-i-spanien/">bygga på egen tomt</a>.</p>
+</Guide>

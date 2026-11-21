@@ -1,0 +1,95 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'varfor', label: 'Varför du bör se det i förväg' },
+  { id: 'vad', label: 'Vad du får: planritning, 3D och visualisering' },
+  { id: 'ai', label: 'Vad AI kan och inte kan' },
+  { id: 'nytta', label: 'Vad det ger dig' },
+  { id: 'steg', label: 'Så fungerar det, steg för steg' },
+  { id: 'forbereda', label: 'Det här kan du förbereda själv' },
+];
+
+const faq = [
+  {
+    q: 'Måste jag vara i Spanien för att få en 3D-ritning gjord?',
+    a: 'Nej. Huset mäts upp och fotograferas på plats. Diskussioner och beslut sker sedan via videosamtal och e-post.',
+  },
+  {
+    q: 'Är en 3D-ritning samma sak som ritningarna för bygglovet?',
+    a: 'Nej. 3D-ritning och visualiseringar visar hur resultatet ser ut. För bygglovet behövs tekniska ritningar. Fördelen med att arbeta med en arkitekt: båda bygger på samma mått och samma förslag.',
+  },
+  {
+    q: 'Kan jag jämföra olika varianter?',
+    a: 'Ja, det är just det en 3D-ritning är bra för. Du ser till exempel två planlösningar eller två färgsättningar bredvid varandra innan du bestämmer dig. Med AI går det ofta snabbare än förr att ta fram varianter av utformningen.',
+  },
+  {
+    q: 'Kan jag lita på en AI-visualisering?',
+    a: 'När det gäller känslan, ja. När det gäller måtten, nej. AI kan visa ett rum övertygande, men vet inte var en bärande vägg eller ett avlopp sitter. Därför kontrollerar och bearbetar arkitekten alltid bilderna.',
+  },
+  {
+    q: 'Lönar sig en 3D-ritning för ett hus med AFO-status?',
+    a: 'Ja, så länge huset inte blir större. Just inom de befintliga murarna hjälper ett bra förslag att utnyttja ytan på bästa sätt. Mer om det i guiden om AFO och legalisering.',
+  },
+];
+
+const forfragan = '/sv/forfragan/?dienst=renovatie&onderwerp=' + encodeURIComponent('Jag vill ha en 3D-ritning och visualiseringar av min ombyggnad.');
+---
+<Guide lang="sv" slug="3d-ritning-renovering" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Vill du få det gjort?" ctaText="Vi hjälper dig att genomföra det. Vår arkitekt gör förslaget och visualiseringarna, sedan sköter vi utförandet.">
+  <h2 id="varfor">Varför du bör se det i förväg</h2>
+  <p>Den som bygger om ett hus i Axarquía bor oftast fortfarande i Sverige eller någon annanstans i Norden. Du ser huset några gånger om året, diskuterar mycket på distans och måste välja kakel, kök och planlösningar som du bara känner till från ett foto. En planritning med mått säger då lite. De flesta kan först föreställa sig ett rum när de ser det.</p>
+  <p>Dessutom: ett gammalt byhus eller en finca är sällan rakt och rätvinkligt. Väggar lutar, tak är låga och ljuset faller annorlunda än man tror. En 3D-ritning visar vad som faktiskt går i ditt hus, inte i ett standardhus.</p>
+
+  <h2 id="vad">Vad du får: planritning, 3D och visualisering</h2>
+  <p>I stort sett finns tre sorters bilder. De kompletterar varandra.</p>
+  <table class="prices">
+    <thead><tr><th>Typ</th><th>Vad den visar</th><th>Till vad</th></tr></thead>
+    <tbody>
+      <tr><td>Planritning och sektion</td><td>Planlösning, mått, väggar, fönster och dörrar</td><td>Grund för förslaget och senare för bygglovet</td></tr>
+      <tr><td>3D-modell</td><td>Huset från alla håll, som du kan titta in i</td><td>Bedöma planlösning och proportioner</td></tr>
+      <tr><td>Visualisering</td><td>En realistisk bild med material, färger och ljus</td><td>Bestämma hur det ska se ut och kännas</td></tr>
+    </tbody>
+  </table>
+  <p>En visualisering (ofta kallad <em>rendering</em>) ser ut som ett foto av det färdiga resultatet: det nya köket med havsutsikt, takterrassen med pergola, badrummet med kaklet du har i huvudet. Då är det lätt att säga ”ja, precis så” eller ”nej, hellre ljusare”.</p>
+
+  <h2 id="ai">Vad AI kan och inte kan</h2>
+  <p>Artificiell intelligens har gjort det betydligt snabbare att ta fram visualiseringar. Från ett foto av rummet i dag kan AI snabbt visa hur det skulle se ut med andra golv, väggar eller möbler. Det är praktiskt i första fasen, när du fortfarande letar efter en stil.</p>
+  <p>AI har dock också tydliga begränsningar:</p>
+  <ul>
+    <li>En AI-bild är inte skalenlig. Den kan flytta ett fönster eller få ett rum att se större ut än det är.</li>
+    <li>AI vet inte var bärande väggar, ledningar och avlopp sitter, och inte heller vad kommunen tillåter.</li>
+    <li>En AI-bild är ingen bygghandling. Hantverkare kan inte bygga efter den, och kommunen godtar den inte.</li>
+  </ul>
+  <p>Bäst fungerar det därför när en arkitekt använder AI som verktyg och kontrollerar och bearbetar bilderna utifrån ditt hus verkliga mått. Då kombinerar du AI:s snabbhet med en fackmans pålitlighet.</p>
+
+  <h2 id="nytta">Vad det ger dig</h2>
+  <ul>
+    <li><strong>Beslut i förväg.</strong> Du bestämmer planlösning, material och färger innan bygget börjar, och inte mitt i under tidspress.</li>
+    <li><strong>Färre tilläggsarbeten och överraskningar.</strong> Många tillägg uppstår för att resultatet blir annorlunda än någon föreställt sig. En tydlig bild i förväg förhindrar många av dessa ändringar.</li>
+    <li><strong>Alla vet vad som menas.</strong> En bild säger mer än en beskrivning, även för de spanska hantverkarna. Språkskillnader spelar mindre roll.</li>
+    <li><strong>Bättre underlag för bygglovet.</strong> Förslag och tekniska ritningar hänger ihop. Då är det direkt tydligt vad som behöver lov och vad som inte gör det, till exempel för ett hus med <a href="/sv/guider/afo-andalusien/">AFO-status</a>.</li>
+    <li><strong>Lugn vid ombyggnad på distans.</strong> Du vet vad som byggs, även när du inte är på plats. Se också <a href="/sv/guider/renovera-pa-distans-i-spanien/">renovera på distans</a>.</li>
+    <li><strong>Hjälp vid försäljning.</strong> Vill du sälja? Visualiseringar visar köpare vad huset kan bli. Se också <a href="/sv/guider/salja-hus-i-spanien/renovera-fore-forsaljning/">renovera före försäljning</a>.</li>
+  </ul>
+
+  <h2 id="steg">Så fungerar det, steg för steg</h2>
+  <ol>
+    <li><strong>Dina önskemål.</strong> Du berättar vad du vill: vilka rum, vilken atmosfär, vad som ska bli bättre. Foton och exempel hjälper.</li>
+    <li><strong>Uppmätning på plats.</strong> Huset mäts upp och fotograferas, så att förslaget bygger på den verkliga situationen.</li>
+    <li><strong>Första skiss och varianter.</strong> Du får en första planritning, ofta med några varianter att jämföra.</li>
+    <li><strong>3D-modell och visualiseringar.</strong> Den valda riktningen arbetas fram i 3D, med bilder av de viktigaste rummen.</li>
+    <li><strong>Justera.</strong> Du säger vad som ska ändras, tills bilden stämmer med din föreställning.</li>
+    <li><strong>Teknisk bearbetning och utförande.</strong> Det slutliga förslaget blir underlag för bygglovet och själva ombyggnaden.</li>
+  </ol>
+  <p>Hur omfattande förslaget blir beror på ditt projekt. För ett nytt badrum räcker ofta en bra visualisering; vid en hel <a href="/sv/renovering/">renovering</a> av en finca lönar sig en fullständig 3D-modell.</p>
+
+  <h2 id="forbereda">Det här kan du förbereda själv</h2>
+  <ul>
+    <li>Foton av varje rum, även av tak, golv och utsikten från fönstren.</li>
+    <li>Planritningar eller ritningar som du fick vid köpet, om sådana finns.</li>
+    <li>Exempel som du gillar: bilder från tidningar, från internet eller från hus du har sett.</li>
+    <li>En kort lista: vad som absolut måste finnas, vad som får finnas och vad du helst inte vill ha.</li>
+    <li>Hur du ska använda huset: bo själv, övervintra, hyra ut eller sälja.</li>
+  </ul>
+  <p><strong>Vill du se din ombyggnad i 3D i förväg?</strong> Vi hjälper dig att genomföra den, från första förslaget till sista kakelplattan. <a href={forfragan}>Berätta om ditt projekt</a>.</p>
+</Guide>

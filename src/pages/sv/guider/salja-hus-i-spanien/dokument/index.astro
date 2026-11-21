@@ -1,0 +1,106 @@
+---
+import Guide from '../../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'checklista', label: 'Checklistan i en tabell' },
+  { id: 'agande', label: 'Ägande: escritura och nota simple' },
+  { id: 'catastro', label: 'Stämma av Catastro och registret' },
+  { id: 'bebos', label: 'Får huset bebos?' },
+  { id: 'afo', label: 'Byggt utan lov: AFO' },
+  { id: 'energi', label: 'Energideklaration' },
+  { id: 'avgifter', label: 'IBI, samfällighet och räkningar' },
+  { id: 'skatt', label: 'Plusvalía och 3 % innehållande' },
+  { id: 'kallor', label: 'Källor' },
+];
+
+const faq = [
+  {
+    q: 'Behöver jag en cédula de habitabilidad för att sälja i Andalusien?',
+    a: 'Nej, den finns inte i Andalusien. Andra regioner som Katalonien och Valencia har ett sådant intyg om att bostaden får bebos. I Andalusien är det kommunens tillstånd eller anmälan om bostadsanvändning (ocupación eller utilización) som räknas. För äldre hus räcker ofta ett bevis på att huset har funnits länge.',
+  },
+  {
+    q: 'Hur länge gäller en energideklaration?',
+    a: 'Tio år, för den sämsta klassen G fem år. Har du ändrat mycket i huset under den tiden, till exempel nya fönster, isolering eller en värmepump, lönar sig ofta en ny deklaration, eftersom huset då får en bättre klass.',
+  },
+  {
+    q: 'Vad händer om ytan i registret inte stämmer?',
+    a: 'Notarien kan ofta ändå upprätta köpebrevet, men köparen och banken kommer att ställa frågor. Gäller det en tillbyggnad utan lov kan banken vägra finansiering eller värdera huset lägre. Rätta till det före försäljningen med en nybyggnadsförklaring (declaración de obra nueva) och, där det behövs, en legalisering.',
+  },
+  {
+    q: 'Hur begär jag tillbaka innehållandet på 3 %?',
+    a: 'Med blankett 210 hos spanska skattemyndigheten. Där anger du köpesumma, försäljningspris och kostnader. Är skatten på din vinst lägre än de innehållna 3 % får du tillbaka mellanskillnaden. Det tar ofta några månader. En gestor eller skatterådgivare kan sköta det åt dig.',
+  },
+];
+---
+<Guide lang="sv" slug="salja-hus-i-spanien-dokument" toc={toc} faq={faq} dienst="legalisatie" ctaTitle="Stämmer inte husets papper?" ctaText="Vi jämför det som står där med det som står i papperen och sätter dig i kontakt med den arkitekt vi arbetar med för legalisering, AFO och energideklaration.">
+  <h2 id="checklista">Checklistan i en tabell</h2>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Dokument</th><th>Varifrån</th><th>Till vad</th></tr></thead>
+    <tbody>
+      <tr><td>Köpebrev (<em>escritura</em>)</td><td>Egna papper eller notarien som upprättade det</td><td>Bevis på ägande och köpesumma</td></tr>
+      <tr><td><em>Nota simple</em></td><td>Registro de la Propiedad, online</td><td>Ägare, yta, bolån och belastningar</td></tr>
+      <tr><td>Uppgifter i Catastro (<em>referencia catastral</em>)</td><td>Sede Electrónica del Catastro</td><td>Måste stämma med registret och verkligheten</td></tr>
+      <tr><td>Tillstånd eller anmälan om bostadsanvändning</td><td>Kommunhuset</td><td>Bevis på att huset får bebos</td></tr>
+      <tr><td>AFO-förklaring (i förekommande fall)</td><td>Kommunhuset</td><td>För hus som byggts utan lov</td></tr>
+      <tr><td>Energideklaration</td><td>Behörig tekniker, därefter registrering hos Junta de Andalucía</td><td>Obligatorisk vid annonsering och försäljning</td></tr>
+      <tr><td>Senaste IBI-skattsedeln</td><td>Kommunhuset eller Patronato de Recaudación i Málaga</td><td>Bevis på att fastighetsskatten är betald</td></tr>
+      <tr><td>Intyg från samfälligheten</td><td>Förvaltaren för <em>comunidad</em></td><td>För lägenheter: inga skulder</td></tr>
+      <tr><td>Räkningar för vatten, el och sopor</td><td>Leverantörer och kommunen</td><td>Överskrivning på köparen</td></tr>
+      <tr><td>NIE och pass</td><td>Du själv</td><td>Identifiering hos notarien</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="agande">Ägande: escritura och nota simple</h2>
+  <p>Leta fram ditt köpebrev. Har du tappat bort det? Be då notarien som upprättade det om en kopia (<em>copia simple</em> eller <em>copia autorizada</em>). Beställ också en aktuell <em>nota simple</em> från fastighetsregistret. Det går online via Registradores webbplats och kostar omkring 10 € till 15 €. Kontrollera i den:</p>
+  <ul>
+    <li>att du (och eventuellt din partner) står som ägare, och med vilka andelar;</li>
+    <li>om det fortfarande finns ett bolån inskrivet. Även ett avbetalt bolån står kvar i registret tills du låter avregistrera det (<em>cancelación registral</em>). Ordna det i förväg eller låt det göras hos notarien samtidigt;</li>
+    <li>om det finns utmätningar eller andra belastningar inskrivna;</li>
+    <li>vilken yta och vilka byggnader som beskrivs.</li>
+  </ul>
+  <p>Har en av ägarna avlidit? Då måste arvet först ha handlagts och skrivits in i Spanien innan du kan sälja. Det tar ofta månader.</p>
+
+  <h2 id="catastro">Stämma av Catastro och registret</h2>
+  <p>I Spanien finns två register: Catastro, som beskriver mark och byggnader för beskattningen, och fastighetsregistret (<em>Registro de la Propiedad</em>), som registrerar äganderätten. I Axarquía stämmer de ofta inte med det som faktiskt står där, särskilt för äldre hus och fincor. En inglasad veranda, ett extra sovrum, ett garage eller en pool saknas då.</p>
+  <p>För köpare och bank är det en varningssignal. Grovt finns två fall:</p>
+  <ul>
+    <li><strong>Byggt med lov men aldrig registrerat.</strong> Låt då notarien upprätta en nybyggnadsförklaring (<em>declaración de obra nueva</em>) med intyg från en arkitekt och skriva in den. Catastro justeras därefter.</li>
+    <li><strong>Byggt utan lov.</strong> Då krävs en legalisering eller, om fristen för myndighetens ingripande har löpt ut, en AFO-förklaring. Se nedan.</li>
+  </ul>
+
+  <h2 id="bebos">Får huset bebos?</h2>
+  <p>Till skillnad från vissa andra regioner finns ingen <em>cédula de habitabilidad</em> i Andalusien. Det avgörande är att huset enligt kommunen får användas. Sedan den andalusiska planlagen LISTA (Ley 7/2021) sker det för de flesta byggnader med en anmälan om bostadsanvändning (<em>declaración responsable de ocupación</em>) i stället för ett tillstånd. Nerja och andra kommuner i Axarquía har blanketter för det, även för befintliga hus.</p>
+  <p>Vid försäljning av ett befintligt hus frågar notarien, köparen eller banken ofta efter tillståndet för första inflyttning (<em>licencia de primera ocupación</em>) eller ett jämförbart bevis. För ett gammalt hus kan ett åldersintyg från en arkitekt (<em>certificado de antigüedad</em>) räcka. Exakt vilket dokument som krävs beror på kommun och byggår. Fråga därför kommunen eller notarien i förväg. Utan ett sådant bevis kan också leverantörerna göra det svårt att skriva över vatten och el.</p>
+
+  <h2 id="afo">Byggt utan lov: AFO</h2>
+  <p>Många hus på landsbygden i Axarquía har byggts helt eller delvis utan lov. Har fristen löpt ut inom vilken kommunen kan ingripa kan den förklara att huset har status som <em>asimilado a fuera de ordenación</em> (AFO). Med den förklaringen kan huset skrivas in, anslutas och säljas.</p>
+  <p>För en försäljning är skillnaden stor. Utan AFO-förklaring finns få köpare och knappt några banker som finansierar. Med förklaringen blir det ett normalt, om än begränsat, bostadshus. Ansökan sker via en arkitekt och tar ofta månader, ibland längre. Börja alltså i god tid före försäljningen. Hur det fungerar och vad som är tillåtet läser du i vår guide <a href="/sv/guider/afo-andalusien/">AFO och legalisering i Andalusien</a>.</p>
+
+  <h2 id="energi">Energideklaration</h2>
+  <p>Sedan 2013 är en energideklaration (<em>certificado de eficiencia energética</em>) obligatorisk när du säljer eller hyr ut ett hus. Enligt gällande Real Decreto 390/2021 måste energiklassen stå redan i annonsen, alltså även på mäklarens webbplats. En behörig tekniker upprättar deklarationen efter ett besök; därefter registreras den hos Junta de Andalucía. Kostnaden ligger oftast mellan 80 € och 250 €, beroende på husets storlek. Deklarationen gäller tio år, för klass G fem år. Kostnad, giltighet och hur du når en bättre klass läser du i guiden <a href="/sv/guider/energideklaration-spanien/">energideklaration i Spanien</a>.</p>
+  <p>En dålig klass (E, F eller G) är vanlig för äldre hus i Axarquía och inget skäl att inte sälja. Har du nyss fått nya fönster, isolering, en <a href="/sv/kostnader/luftkonditionering-och-varmepump/">värmepump</a> eller solceller, låt göra deklarationen efteråt.</p>
+
+  <h2 id="avgifter">IBI, samfällighet och räkningar</h2>
+  <ul>
+    <li><strong>IBI.</strong> Ha den senaste betalda skattsedeln för fastighetsskatt redo. I provinsen Málaga tar Patronato Provincial de Recaudación in IBI för de flesta kommuner. Obetald IBI följer med huset, därför vill köparen ha säkerhet.</li>
+    <li><strong>Samfällighet.</strong> För en lägenhet eller ett hus i ett område behöver du ett intyg från förvaltaren om att det inte finns några skulder. Det kräver lagen om bostadsrätter (Ley 49/1960, artikel 9). Nämn också planerade extra avgifter (<em>derramas</em>); köparen ser dem ändå i protokollen.</li>
+    <li><strong>Vatten, el, gas, internet.</strong> Ha de senaste räkningarna och avtalsnumren redo. Kom överens med köparen om när avtalen skrivs över, och säg upp dina egna avtal och autogiron först därefter.</li>
+    <li><strong>Kommunal sophämtningsavgift</strong> (<em>basura</em>): i många kommuner en egen skattsedel. Även den måste vara betald.</li>
+  </ul>
+
+  <h2 id="skatt">Plusvalía och 3 % innehållande</h2>
+  <p><strong>Plusvalía municipal.</strong> Kommunen beskattar markens värdeökning mellan köp och försäljning. Skatten betalas av säljaren, och du deklarerar den hos kommunen inom trettio arbetsdagar efter försäljningen. Sedan Real Decreto-ley 26/2021 kan du välja mellan två beräkningsmetoder och betalar inget om du visar att marken inte har ökat i värde (till exempel vid en försäljning med förlust). Bor du inte i Spanien håller köparen ofta inne beloppet hos notarien och betalar det åt dig.</p>
+  <p><strong>Skatt på vinsten.</strong> På vinsten (försäljningspris minus köpesumma och kostnader) betalar en icke-resident 19 % inkomstskatt för icke-residenter. Eftersom skattemyndigheten har svårt att nå dig efter försäljningen måste köparen hålla inne 3 % av köpesumman och betala in den inom en månad (blankett 211). Därefter lämnar du själv deklarationen med blankett 210. Är skatten lägre än 3 % får du tillbaka mellanskillnaden; är den högre betalar du resten.</p>
+  <p>Är du bosatt i Spanien omfattas vinsten av den vanliga inkomstskatten (IRPF), med satser från 19 % till 30 % och undantag, till exempel vid återinvestering i en ny permanentbostad eller om du är 65 år eller äldre och det var din permanentbostad. Bor du i Sverige ska försäljningen också deklareras där. Låt i båda fallen en gestor eller skatterådgivare göra beräkningen.</p>
+
+  <h2 id="kallor">Källor</h2>
+  <ul>
+    <li>Ley 7/2021 de impulso para la sostenibilidad del territorio de Andalucía (LISTA), artikel 138 och nionde tilläggsbestämmelsen (bostadsanvändning och handlingar).</li>
+    <li>Real Decreto 390/2021 (BOE, 2 juni 2021): energideklaration vid försäljning och i annonser.</li>
+    <li>Real Decreto-ley 26/2021 (BOE, 9 november 2021): kommunal plusvalía.</li>
+    <li>Real Decreto Legislativo 5/2004, artikel 25: satsen 19 % och innehållandet på 3 % vid försäljning av icke-residenter; blankett 210 och 211 hos Agencia Tributaria.</li>
+    <li>Ley 49/1960 de Propiedad Horizontal, artikel 9: intyg från samfälligheten.</li>
+    <li>Nerja kommun: blankett declaración responsable de ocupación o utilización de edificaciones existentes (2023).</li>
+  </ul>
+  <p class="note">Kontrollerat 5 november 2026. Den här sidan ger allmän information och är inte juridisk eller skattemässig rådgivning. Exakt vilka dokument notarien kräver skiljer sig mellan kommuner och hus. Låt en advokat eller gestor granska din situation innan du skriver under ett köpeavtal.</p>
+</Guide>

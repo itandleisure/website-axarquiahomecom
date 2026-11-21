@@ -91,11 +91,12 @@ export const clusters: Cluster[] = [
     id: 'energie',
     name: { nl: 'verduurzamen en energie', en: 'energy saving and solar', de: 'Energiesparen und Solar', sv: 'energi och solel', es: 'energía y ahorro' },
     hub: '/nl/verduurzamen/',
-    hubPaths: { nl: '/nl/verduurzamen/', en: '/en/energy-saving/', de: '/de/energiesparen/' },
+    hubPaths: { nl: '/nl/verduurzamen/', en: '/en/energy-saving/', de: '/de/energiesparen/', sv: '/sv/energi-och-solel/' },
     hubText: {
       nl: 'Zonnepanelen, thuisbatterij, airco en warmtepomp, isolatie en subsidies: kosten, regels en tips op één plek.',
       en: 'Solar panels, home batteries, air con and heat pumps, insulation and grants: costs, rules and tips in one place.',
       de: 'Photovoltaik, Batteriespeicher, Klimaanlage und Wärmepumpe, Dämmung und Förderung: Kosten, Regeln und Tipps an einem Ort.',
+      sv: 'Solceller, batteri, luftkonditionering och värmepump, isolering och bidrag: kostnader, regler och tips på ett ställe.',
     },
     checklist: 'renoveren',
     calc: 'zonnepanelen',
@@ -143,11 +144,12 @@ export const clusters: Cluster[] = [
     id: 'emigreren',
     name: { nl: 'emigreren en wonen in Spanje', en: 'moving to and living in Spain', de: 'Auswandern und Leben in Spanien', sv: 'flytta till och bo i Spanien', es: 'mudarse y vivir en España' },
     hub: '/nl/emigreren/',
-    hubPaths: { nl: '/nl/emigreren/', en: '/en/moving-to-spain/', de: '/de/auswandern/' },
+    hubPaths: { nl: '/nl/emigreren/', en: '/en/moving-to-spain/', de: '/de/auswandern/', sv: '/sv/utvandra-till-spanien/' },
     hubText: {
       nl: 'Stappenplan, wonen in de Axarquía, belasting, verzekering, huisdieren en de gratis checklist voor uw verhuizing.',
       en: 'Step-by-step plan, living in the Axarquía, tax, insurance, pets and the free checklist for your move.',
       de: 'Schritt-für-Schritt-Plan, Leben in der Axarquía, Steuern, Versicherung, Haustiere und die kostenlose Checkliste für Ihren Umzug.',
+      sv: 'Steg för steg, att bo i Axarquía, skatt, försäkring, husdjur och den kostnadsfria checklistan för din flytt.',
     },
     checklist: 'emigreren',
     members: [
@@ -188,24 +190,28 @@ const hubText: Record<TopicKind, Tx> = {
     nl: 'Prijsindicaties per onderdeel, met rekenvoorbeelden en bronnen.',
     en: 'Guide prices per job, with worked examples and sources.',
     de: 'Richtpreise pro Gewerk, mit Rechenbeispielen und Quellen.',
+    sv: 'Riktpriser per arbete, med räkneexempel och källor.',
   },
   problems: {
     nl: 'Vocht, lekkage, scheuren en meer: oorzaken, eerste stappen en kosten.',
     en: 'Damp, leaks, cracks and more: causes, first steps and costs.',
     de: 'Feuchtigkeit, Lecks, Risse und mehr: Ursachen, erste Schritte und Kosten.',
+    sv: 'Fukt, läckor, sprickor och mer: orsaker, första åtgärder och kostnader.',
   },
   diy: {
     nl: 'Klussen die u zelf kunt doen, en wanneer u beter een vakman belt.',
     en: 'Jobs you can do yourself, and when to call in a professional.',
     de: 'Arbeiten, die Sie selbst machen können, und wann besser ein Fachmann kommt.',
+    sv: 'Arbeten du kan göra själv, och när det är bättre att ringa en hantverkare.',
   },
 };
 
-const calcInfo: Tx = { nl: 'Rekentool: bereken uw prijs', en: 'Calculator: work out your price', de: 'Kostenrechner: Preis berechnen' };
+const calcInfo: Tx = { nl: 'Rekentool: bereken uw prijs', en: 'Calculator: work out your price', de: 'Kostenrechner: Preis berechnen', sv: 'Kalkylator: räkna ut ditt pris' };
 const calcText: Tx = {
   nl: 'Kies wat u wilt laten doen en zie direct wat het ongeveer kost.',
   en: 'Choose what you want done and see straight away roughly what it costs.',
   de: 'Wählen Sie, was gemacht werden soll, und sehen Sie sofort die ungefähren Kosten.',
+  sv: 'Välj vad du vill få gjort och se direkt ungefär vad det kostar.',
 };
 
 const extraPages: Record<string, { title: Tx; text: Tx }> = {
@@ -254,7 +260,7 @@ for (const [nl, e] of Object.entries(extraPages)) {
 }
 
 // Eigen hoofdpagina's van clusters (verduurzamen, emigreren)
-const hubTitle: Tx = { nl: 'Alles over', en: 'All about', de: 'Alles über' };
+const hubTitle: Tx = { nl: 'Alles over', en: 'All about', de: 'Alles über', sv: 'Allt om' };
 for (const c of clusters) {
   for (const l of langs) {
     const href = c.hubPaths?.[l];

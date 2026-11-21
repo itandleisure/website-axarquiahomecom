@@ -1,0 +1,115 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'kort', label: 'Kort sammanfattat' },
+  { id: 'regioner', label: 'Vilken region passar dig?' },
+  { id: 'kostnader', label: 'Levnadskostnader per månad' },
+  { id: 'regler', label: 'Reglerna: 3 månader och 183 dagar' },
+  { id: 'halsa', label: 'Sjukvård och pension' },
+  { id: 'arbete', label: 'Arbeta från Spanien' },
+  { id: 'bostad', label: 'Hyra eller köpa' },
+  { id: 'for-nackdelar', label: 'För- och nackdelar' },
+  { id: 'axarquia', label: 'Varför så många väljer Axarquía' },
+];
+
+const faq = [
+  {
+    q: 'Kan man som svensk bara flytta och bo i Spanien?',
+    a: 'Ja. Som EU-medborgare behöver du inget visum. Stannar du längre än tre månader registrerar du dig i registret för EU-medborgare och får ett NIE-nummer. Då visar du att du har inkomst eller tillgångar och en sjukförsäkring.',
+  },
+  {
+    q: 'Är det billigare att bo i Spanien än i Sverige?',
+    a: 'I genomsnitt ja, men mindre än många tror. Boende utanför de dyraste lägena, att äta ute och lokala produkter är billigare. El, bilar, elektronik och svenska produkter i mataffären kostar ungefär lika mycket eller mer. Ett par lever bra i Andalusien utanför de dyra badorterna på cirka 2 000 till 2 800 € i månaden inklusive hyra.',
+  },
+  {
+    q: 'Betalas min svenska pension ut i Spanien?',
+    a: 'Ja. Pensionsmyndigheten och de flesta tjänstepensionsbolag betalar ut pensionen till ett spanskt konto. Hur den beskattas beror på var du har din hemvist och på vilken sorts pension det är. Låt en rådgivare som känner båda länderna titta på det innan du flyttar.',
+  },
+  {
+    q: 'Var bor de flesta svenskar i Spanien?',
+    a: 'Framför allt på Costa del Sol, med Fuengirola och Marbella som kända svenska orter, på Costa Blanca kring Torrevieja och Alicante, och på Kanarieöarna. Österut, i Axarquía, är det lugnare och mer spanskt.',
+  },
+];
+
+const kostnader = [
+  { p: 'Hyra, lägenhet med 2 sovrum (långtid)', v: '750 – 1 300 €' },
+  { p: 'Mat för två personer', v: '400 – 550 €' },
+  { p: 'El (mer på sommaren på grund av luftkonditionering)', v: '60 – 130 €' },
+  { p: 'Vatten och sophämtning', v: '25 – 50 €' },
+  { p: 'Internet och två mobiler', v: '45 – 70 €' },
+  { p: 'Bil: försäkring, bränsle, service', v: '150 – 250 €' },
+  { p: 'Privat sjukförsäkring (komplement), per person', v: '60 – 180 €' },
+  { p: 'Äta ute och fritid', v: '200 – 400 €' },
+];
+---
+<Guide lang="sv" slug="bo-i-spanien" toc={toc} faq={faq} ctaTitle="Har du ett hus i Spanien i sikte?" ctaText="Vi besiktar huset innan du skriver under och ger ett fast pris för renoveringen. Kontakt på engelska eller nederländska.">
+  <h2 id="kort">Kort sammanfattat</h2>
+  <ul>
+    <li><strong>Får man?</strong> Ja. Som EU-medborgare bor du i Spanien utan visum. Efter tre månader registrerar du dig.</li>
+    <li><strong>Var?</strong> De flesta svenskar bor på Costa del Sol, Costa Blanca och Kanarieöarna. Klimat, flygförbindelser och priser skiljer sig mycket.</li>
+    <li><strong>Vad kostar det?</strong> Ett par lever bra i Andalusien eller Murcia på cirka 2 000 till 2 800 € i månaden inklusive hyra, i ett eget, betalt hus betydligt billigare.</li>
+    <li><strong>Vad ska man tänka på?</strong> Skatterättslig hemvist (183-dagarsregeln), sjukförsäkring och skicket på huset du hyr eller köper.</li>
+  </ul>
+  <p>Pappersarbetet steg för steg hittar du i guiden <a href="/sv/guider/flytta-till-spanien/">flytta till Spanien</a> och på sidan <a href="/sv/utvandra-till-spanien/">utvandra till Spanien</a>. Vill du bara tillbringa vintern i södern, läs <a href="/sv/guider/overvintra-i-spanien/">övervintra i Spanien</a>.</p>
+
+  <h2 id="regioner">Vilken region passar dig?</h2>
+  <h3>Costa del Sol (Málaga)</h3>
+  <p>De mildaste vintrarna på fastlandet, i januari ofta 16 till 19 grader på dagen, och direktflyg till Stockholm, Göteborg och Köpenhamn året runt. Västra delen (Fuengirola, Marbella, Estepona) är internationell och dyr. Östra delen, <a href="/sv/bo/">Axarquía</a>, är lugnare, mer spansk och billigare per kvadratmeter, med vita bergsbyar bakom kusten.</p>
+  <h3>Costa Blanca (Alicante)</h3>
+  <p>Norra delen (Dénia, Jávea, Altea) är grön och kuperad, södra delen (Torrevieja) platt, torr och billig. På vintern några grader svalare än Costa del Sol.</p>
+  <h3>Murcia och Almería</h3>
+  <p>Spaniens billigaste kust med flest soltimmar, men mycket varma, torra somrar.</p>
+  <h3>Mallorca och Kanarieöarna</h3>
+  <p>Populära bland svenskar, men med öpriser. På Kanarieöarna är det vår hela året.</p>
+  <p><strong>Tips:</strong> Kom minst två gånger, på sommaren och i januari eller februari. Ett oisolerat stenhus kan vara obehagligt kallt i februari.</p>
+
+  <h2 id="kostnader">Levnadskostnader per månad</h2>
+  <p>Riktpriser för ett par i en medelstor ort vid kusten i Andalusien eller Murcia. I Marbella, Málaga stad, Barcelona och Madrid är framför allt hyrorna betydligt högre.</p>
+  <div class="table-scroll">
+    <table class="prices">
+      <tbody>
+        {kostnader.map((k) => <tr><td>{k.p}</td><td>{k.v}</td></tr>)}
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Riktpriser per månad, 2026. I ett eget hus räknar du i stället för hyra med fastighetsskatt (IBI, ofta 300 till 900 € om året), försäkring, eventuella samfällighetsavgifter och pengar för underhåll.</p>
+
+  <h2 id="regler">Reglerna: 3 månader och 183 dagar</h2>
+  <ul>
+    <li><strong>3 månader</strong>: stannar du längre registrerar du dig i <em>Registro Central de Extranjeros</em> och hos kommunen (<em>padrón</em>). Då behöver du ett NIE, bevis på inkomst eller tillgångar och en sjukförsäkring.</li>
+    <li><strong>Utflyttning från Sverige</strong>: flyttar du permanent anmäler du utflyttning till Skatteverket. Det påverkar folkbokföring, sjukvård, försäkringar och skatt.</li>
+    <li><strong>183 dagar</strong>: den som bor mer än 183 dagar om året i Spanien eller har sitt huvudsakliga liv där är skattskyldig i Spanien för hela sin inkomst. Sverige kan i vissa fall fortsätta att se dig som skattskyldig, till exempel de första åren efter flytten om du har väsentlig anknytning kvar.</li>
+  </ul>
+  <p>Andalusien har några fördelar för bosatta: förmögenhetsskatten är satt till noll (bara över 3 miljoner € gäller en nationell solidaritetsskatt), och arvs- och gåvoskatten mellan föräldrar, barn och makar är i stort sett avskaffad. Låt en skatterådgivare som känner båda länderna gå igenom din situation.</p>
+
+  <h2 id="halsa">Sjukvård och pension</h2>
+  <p>Arbetar du i Spanien är du försäkrad via den spanska socialförsäkringen. Pensionärer med svensk allmän pension kan via intyg S1 från Försäkringskassan skriva in sig i den spanska offentliga vården. Andra tecknar en privat spansk sjukförsäkring. Din svenska pension betalas ut till Spanien.</p>
+
+  <h2 id="arbete">Arbeta från Spanien</h2>
+  <p>Lönerna är lägre än i Sverige och arbetslösheten är högre. Många svenskar arbetar därför på distans för arbetsgivare eller kunder i Sverige eller startar eget som <em>autónomo</em>. Låt en gestor ge råd i förväg. För semesteruthyrning, läs <a href="/sv/guider/hyra-ut-hus-i-spanien/">hyra ut hus i Spanien</a>; reglerna har blivit betydligt strängare.</p>
+
+  <h2 id="bostad">Hyra eller köpa</h2>
+  <p>Vårt råd: hyr först ett halvår till ett år. Då får du veta om du hellre bor vid havet eller i bergen. Vid köp räknar du med cirka 10 % i extra kostnader (se <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">kostnader vid husköp i Spanien</a>) och anlitar en egen advokat. Hela förloppet hittar du under <a href="/sv/guider/kopa-hus-i-spanien/">köpa hus i Spanien</a>.</p>
+  <p>Titta framför allt på skicket. Många prisvärda hus vid kusterna är trettio till femtio år gamla: enkelglas, ingen isolering, gamla ledningar, läckande tak. En <a href="/sv/besiktning/">besiktning</a> före köpet kostar bara en bråkdel av ett felköp. Typiska priser finns i <a href="/sv/guider/renovera-hus-i-spanien-kostnad/">renoveringskostnader i Spanien</a>.</p>
+
+  <h2 id="for-nackdelar">För- och nackdelar</h2>
+  <h3>Fördelar</h3>
+  <ul>
+    <li><strong>Klimat</strong>: på sydkusten över 300 soldagar och milda vintrar.</li>
+    <li><strong>Mer utrymme för pengarna</strong> utanför de dyraste lägena.</li>
+    <li><strong>Livsstil</strong>: lugnare tempo, liv utomhus, god och billig mat.</li>
+    <li><strong>Bra förbindelser</strong>: direktflyg från Málaga och Alicante till Skandinavien året runt.</li>
+  </ul>
+  <h3>Nackdelar</h3>
+  <ul>
+    <li><strong>Byråkrati</strong>: tider hos polisen och kommunen är ofta svåra att få.</li>
+    <li><strong>Språk</strong>: hos läkaren och på myndigheter talas spanska.</li>
+    <li><strong>Sommarvärme och torka</strong> i juli och augusti.</li>
+    <li><strong>Hitta hantverkare</strong>: pålitliga hantverkare som kommer i tid är inte självklart.</li>
+  </ul>
+
+  <h2 id="axarquia">Varför så många väljer Axarquía</h2>
+  <p>Axarquía i östra delen av provinsen Málaga förenar Costa del Sols varma vintrar med priser under Marbellas. Du bor vid havet i Nerja, Torrox Costa eller Torre del Mar, eller i en vit bergsby som Cómpeta eller Frigiliana, en halvtimme till en timme från flygplatsen. Jämför orterna under <a href="/sv/bo/">bo i Axarquía</a>. För ditt hus sköter vi <a href="/sv/renovering/">renovering</a>, <a href="/sv/underhall/">underhåll</a> och <a href="/sv/tillsyn/">tillsyn</a>.</p>
+  <p class="note">Den här guiden är allmän information och ingen juridisk, skattemässig eller ekonomisk rådgivning.</p>
+</Guide>

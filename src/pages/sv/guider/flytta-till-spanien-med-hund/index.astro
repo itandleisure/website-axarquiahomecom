@@ -1,0 +1,89 @@
+---
+import Guide from '../../../../components/Guide.astro';
+
+const toc = [
+  { id: 'papper', label: 'Papperen: chip, EU-pass och rabies' },
+  { id: 'resa', label: 'Resan: bil, flyg eller djurtransport' },
+  { id: 'regler', label: 'Spanska regler för hundar och katter' },
+  { id: 'halsa', label: 'Hälsa: sandmyggor, processionsfjärilar och värme' },
+  { id: 'hus', label: 'Hus och trädgård där djuret är säkert' },
+  { id: 'hem', label: 'Tillbaka till Sverige' },
+];
+
+const faq = [
+  {
+    q: 'Vad behöver jag för att ta med min hund till Spanien?',
+    a: 'Ett mikrochip, ett EU-pass för sällskapsdjur och en giltig rabiesvaccination. Efter den första rabiesvaccinationen måste du vänta 21 dagar innan du reser, och en valp måste vara minst 12 veckor vid vaccinationen. Avmaskning mot dvärgbandmask krävs inte för Spanien och inte heller för hemresan till Sverige.',
+  },
+  {
+    q: 'Vad kostar en djurtransport från Sverige till Spanien?',
+    a: 'För transport på väg med en specialiserad djurtransportör får du oftast räkna med 700 till 2 000 €, beroende på djurets storlek, avståndet och om det är en delad eller en egen resa.',
+  },
+  {
+    q: 'Får jag lämna min hund ensam hemma i Spanien?',
+    a: 'Inte länge. Den spanska djurskyddslagen (Ley 7/2023) säger att en hund inte får vara ensam längre än 24 timmar i sträck, andra husdjur inte längre än tre dagar. Reser du utan ditt djur, ordna en djurpassning eller någon som kommer varje dag.',
+  },
+  {
+    q: 'Finns det giftiga växter i spanska trädgårdar?',
+    a: 'Ja. Oleander (adelfa), som växer i nästan varje andalusisk trädgård och längs många vägar, är mycket giftig för hundar och katter. Även kottepalm, ricinbuske och larverna av processionsfjärilen i tallar är farliga.',
+  },
+];
+---
+<Guide lang="sv" slug="flytta-till-spanien-med-hund" toc={toc} faq={faq} dienst="onderhoud" onderwerp="Jag vill göra trädgård och pool säkra för min hund eller katt." ctaTitle="Är ditt hus redo för hund eller katt?" ctaText="Vi sätter upp ett staket eller en grind runt tomten, ett poolstaket eller ett säkert överdrag, en hundlucka, stadiga myggnät och skugga på terrassen. Skicka några foton, så hjälper vi dig att tänka.">
+  <p>Det här är allmän information. Reglerna för resor med djur ändras ibland. Kontrollera dem hos din veterinär och på Jordbruksverkets webbplats innan du åker.</p>
+
+  <h2 id="papper">Papperen: chip, EU-pass och rabies</h2>
+  <p>Inom Europeiska unionen reser en hund, katt eller iller med de här tre sakerna:</p>
+  <ol>
+    <li><strong>Ett mikrochip</strong>, insatt före rabiesvaccinationen.</li>
+    <li><strong>Ett EU-pass för sällskapsdjur</strong>, utfärdat av din veterinär.</li>
+    <li><strong>En giltig rabiesvaccination</strong>, införd i passet. Efter den första vaccinationen väntar du 21 dagar innan du får resa. Djuret måste vara minst 12 veckor vid vaccinationen. Förnyas vaccinationen i tid gäller väntetiden inte igen.</li>
+  </ol>
+  <p>Avmaskning mot dvärgbandmask krävs inte för Spanien. Tar du med fler än fem djur, eller handlar det om försäljning eller adoption, gäller strängare regler.</p>
+
+  <h2 id="resa">Resan: bil, flyg eller djurtransport</h2>
+  <table class="prices">
+    <thead><tr><th>Hur</th><th>Bra att veta</th></tr></thead>
+    <tbody>
+      <tr><td>Med bil</td><td>Över 3 000 km från Stockholm, på tre till fyra dagar. Med färja till Tyskland eller Polen blir vägen kortare. Planera en paus varannan till var tredje timme och hotell som tillåter husdjur. Lämna aldrig djuret i en varm bil.</td></tr>
+      <tr><td>Flyg, i kabinen</td><td>Hos många flygbolag får små hundar och katter följa med i en väska under sätet, tillsammans oftast upp till 8 till 10 kg. Platserna per flyg är begränsade, så boka tidigt.</td></tr>
+      <tr><td>Flyg, i lastrummet</td><td>För större djur, i en godkänd bur. Inte alla bolag eller sträckor erbjuder det, och på sommaren finns ofta begränsningar på grund av värmen.</td></tr>
+      <tr><td>Djurtransportör</td><td>En specialiserad firma hämtar ditt djur och kör det till Spanien, på väg eller med flyg. Praktiskt om du själv flyger. Riktpris 700 till 2 000 €.</td></tr>
+    </tbody>
+  </table>
+  <p>Vänj djuret vid buren i förväg, och ha mat, vatten, koppel, bajspåsar och papperen till hands.</p>
+
+  <h2 id="regler">Spanska regler för hundar och katter</h2>
+  <ul>
+    <li><strong>Registrering</strong>: bor du permanent i Andalusien, låt en lokal veterinär registrera ditt djur i det andalusiska registret (<em>RAIA</em>). Vissa kommuner kräver också registrering i sitt eget djurregister.</li>
+    <li><strong>Ensam hemma</strong>: enligt djurskyddslagen (<em>Ley 7/2023</em>) får en hund inte vara ensam längre än 24 timmar, andra husdjur inte längre än tre dagar.</li>
+    <li><strong>Ansvarsförsäkring</strong>: samma lag kräver en ansvarsförsäkring för hundar. Ofta kan den ingå i din <a href="/sv/guider/hemforsakring-i-spanien/">hemförsäkring</a>. Fråga ditt försäkringsbolag om de aktuella reglerna.</li>
+    <li><strong>Stora eller så kallade farliga raser</strong> (<em>perros potencialmente peligrosos</em>), till exempel en rottweiler eller pitbull, kräver i Andalusien tillstånd från kommunen, en extra försäkring och munkorg på gatan.</li>
+    <li><strong>Strand</strong>: på de flesta stränder är hundar inte tillåtna under säsongen. Längs Axarquías kust finns dock några hundstränder (<em>playas caninas</em>).</li>
+  </ul>
+
+  <h2 id="halsa">Hälsa: sandmyggor, processionsfjärilar och värme</h2>
+  <ul>
+    <li><strong>Leishmaniasis</strong>: en allvarlig sjukdom som sprids av sandmyggor, framför allt från maj till oktober i skymningen. Skydda din hund med ett halsband eller spot-on och fråga veterinären om vaccin. Låt hunden sova inomhus på natten.</li>
+    <li><strong>Hjärtmask</strong>: sprids av myggor. Förebyggande behandling är klokt i södra Spanien.</li>
+    <li><strong>Processionsfjärilar</strong>: från januari till april i och under tallar. En hund som nosar på eller slickar på larverna måste genast till veterinären. Mer i guiden <a href="/sv/guider/skadedjur-spanien/">skadedjur i huset</a>.</li>
+    <li><strong>Värme</strong>: gå ut tidigt på morgonen och sent på kvällen på sommaren. Terrassplattor och asfalt blir så heta att tassarna kan brännas.</li>
+    <li><strong>Fästingar och loppor</strong>: aktiva hela året, så behandla även på vintern.</li>
+  </ul>
+
+  <h2 id="hus">Hus och trädgård där djuret är säkert</h2>
+  <p>Ett hus i Axarquía är ofta inte gjort för hund eller katt. Fincor har sällan ett tätt staket, pooler är inte säkrade och terrasser ligger i full sol. De här förbättringarna ger mest:</p>
+  <ul>
+    <li><strong>Ett staket runt tomten eller en del av den</strong>, med en självstängande grind. Se <a href="/sv/guider/tradgard-och-tomt-spanien/">trädgård och tomt</a>.</li>
+    <li><strong>Ett poolstaket eller ett säkert överdrag</strong>, och en trappa eller ramp där djuret själv kan ta sig upp ur vattnet. Hundar drunknar ofta för att de inte kommer över kanten. Se även <a href="/sv/pool/">pool</a>.</li>
+    <li><strong>Skugga</strong> på terrassen med en pergola eller ett solsegel. Se <a href="/sv/guider/solskydd-persienner-myggnat-spanien/">solskydd</a>.</li>
+    <li><strong>En hund- eller kattlucka</strong> i en dörr eller vägg.</li>
+    <li><strong>Stadiga myggnät</strong> eller kattnät i fönster och på balkonger, så att katten inte faller eller hoppar ut.</li>
+    <li><strong>Ta bort giftiga växter</strong>, till exempel oleander och kottepalm.</li>
+    <li><strong>Ett golv av klinker eller mikrocement</strong> inomhus är lätt att hålla rent och förblir svalt. Se <a href="/sv/guider/valja-golv-i-spanien/">välja golv</a>.</li>
+  </ul>
+  <p>Vi kan ordna det åt dig innan du kommer med ditt djur. <a href="/sv/forfragan/?dienst=onderhoud">Berätta vad du behöver</a>.</p>
+
+  <h2 id="hem">Tillbaka till Sverige</h2>
+  <p>För hemresan gäller samma EU-regler: chip, EU-pass och en giltig rabiesvaccination. Sverige kräver inte längre avmaskning mot dvärgbandmask för hundar från andra EU-länder. Övervintrar du med ditt djur behöver du alltså inte ordna något extra, så länge vaccinationen är giltig. Reser du via Norge, Finland, Storbritannien eller Irland gäller extra krav, till exempel avmaskning för hundar. Läs också guiden <a href="/sv/guider/overvintra-i-spanien/">övervintra i Spanien</a>.</p>
+</Guide>

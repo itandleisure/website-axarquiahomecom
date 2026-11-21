@@ -1,0 +1,115 @@
+---
+import Guide from '../../../../../components/Guide.astro';
+import BuyingChecklist from '../../../../../components/BuyingChecklist.astro';
+import { buyingChecklist } from '../../../../../data/buying-checklist';
+
+const toc = [
+  { id: 'anvandning', label: 'Så använder du listan' },
+  { id: 'laglighetstest', label: 'Laglighetstestet: tre fall' },
+  ...buyingChecklist.map((t) => ({ id: t.id.sv, label: t.title.sv })),
+  { id: 'per-typ', label: 'Extra punkter per hustyp' },
+  { id: 'besiktning', label: 'Låt oss kontrollera det' },
+  { id: 'kallor', label: 'Källor' },
+];
+
+const faq = [
+  {
+    q: 'Måste jag ställa de här frågorna om jag har en advokat?',
+    a: 'Din advokat kontrollerar dokumenten: register, Catastro, tillstånd och skulder. Frågor om själva huset, som fukt, läckor, vatten och tillfartsväg, ställer du helst redan vid visningen. Då vet du tidigt om huset är värt det, innan det uppstår kostnader.',
+  },
+  {
+    q: 'Kan jag lita på säljarens svar?',
+    a: 'Ett muntligt svar är en början, inget bevis. Be om dokumentet (tillstånd, AFO-förklaring, nota simple, fakturor) eller en skriftlig bekräftelse, och låt skriva in de viktigaste punkterna i arras-avtalet. En skriftlig uppgift från säljaren som inte stämmer kan senare ligga till grund för ett krav.',
+  },
+  {
+    q: 'Vad är skillnaden mellan licencia de primera ocupación och declaración responsable?',
+    a: 'Tidigare beviljade kommunen ett tillstånd för första inflyttning. Sedan den andalusiska lagen LISTA från december 2021 räcker för de flesta nya eller ombyggda bostäder en anmälan (declaración responsable de ocupación) från ägaren med ett intyg från en arkitekt. Äldre hus har ibland inget av dem; då kan ett åldersbevis eller en AFO-förklaring behövas.',
+  },
+];
+---
+<Guide lang="sv" slug="kopa-hus-i-spanien-checklista" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Ska vi kontrollera det åt dig?" ctaText="Med en besiktning kontrollerar vi husets skick, om det som byggts stämmer med dokumenten, och räknar på de arbeten som behövs. Kommunikation på engelska eller nederländska.">
+  <h2 id="anvandning">Så använder du listan</h2>
+  <p>Den här checklistan hör till guiden <a href="/sv/guider/kopa-hus-i-spanien/">köpa hus i Spanien steg för steg</a>. Ta med den till visningen, i mobilen eller utskriven. Ställ frågorna till mäklaren eller säljaren. Talar hen inte engelska, läs upp den spanska meningen eller skicka den via WhatsApp eller e-post.</p>
+  <p>Tre meningar som alltid är användbara:</p>
+  <ul>
+    <li><q lang="es">¿Me lo puede confirmar por escrito, por favor?</q> Kan du bekräfta det skriftligt, tack?</li>
+    <li><q lang="es">¿Me puede enviar una copia del documento?</q> Kan du skicka mig en kopia av dokumentet?</li>
+    <li><q lang="es">Mi abogado lo va a comprobar.</q> Min advokat kommer att kontrollera det.</li>
+  </ul>
+  <p>Ett svar räknas först när det står på papper. Låt din egen advokat kontrollera de viktigaste svaren och skriva in dem i det privata köpeavtalet (arras).</p>
+
+  <h2 id="laglighetstest">Laglighetstestet: tre fall</h2>
+  <p>Har något byggts utan lov (en tillbyggnad, en inglasad terrass, en pool eller hela huset), ta först reda på vilket av tre fall huset hör till. Det avgör om du kan lösa problemet, kan leva med det eller hellre ska hoppa av.</p>
+  <div class="compare-wrap"><table class="compare">
+    <thead><tr><th>Fall</th><th>Vad det betyder</th><th>För dig som köpare</th></tr></thead>
+    <tbody>
+      <tr><td><strong>1. Kan legaliseras</strong></td><td>Det som byggts passar i detaljplanen. Ägaren kan i efterhand ansöka om bygglov.</td><td>Därefter helt lagligt. Kom överens om att säljaren ordnar det före notarien, eller ta hänsyn till kostnaden i priset.</td></tr>
+      <tr><td><strong>2. AFO</strong></td><td>Det passar inte i planen, men fristen på sex år för ingripande har löpt ut. Kommunen kan utfärda en AFO-förklaring.</td><td>Huset får stå kvar och bebos, men inte byggas ut. Ett bolån är svårare, semesteruthyrning bara med kommunens uttryckliga godkännande.</td></tr>
+      <tr><td><strong>3. Preskriberas aldrig</strong></td><td>På områden utan frist, till exempel kustzonen, översvämningsområden eller skyddad natur, och vid en olaglig styckning.</td><td>Rivning är alltid möjlig. Köp inte, om inte din advokat är säker på att det inte gäller.</td></tr>
+    </tbody>
+  </table></div>
+  <p>Frågorna till det:</p>
+  <ul>
+    <li><q lang="es">¿Lo construido sin licencia es compatible con el planeamiento? ¿Se puede legalizar?</q> Passar det som byggts utan lov i detaljplanen? Kan det legaliseras?</li>
+    <li><q lang="es">¿Cuándo se terminó la obra? ¿Han pasado más de seis años? ¿Tiene ya la resolución de AFO?</q> När byggdes det? För mer än sex år sedan? Finns det redan en AFO-förklaring?</li>
+    <li><q lang="es">¿Está la parcela en zona de costa, zona inundable, espacio natural protegido o suelo de especial protección?</q> Ligger tomten i kustzonen, i ett översvämningsområde eller i ett skyddat område?</li>
+    <li><q lang="es">¿La parcela procede de una segregación o parcelación con licencia?</q> Har tomten styckats av med tillstånd?</li>
+  </ul>
+  <p>Säljarens svar är en början; din advokat kontrollerar det hos kommunen. Kostnad, tid och förfarande per fall står i <a href="/sv/guider/afo-andalusien/">AFO och legalisering i Andalusien</a>.</p>
+
+  <BuyingChecklist lang="sv" theme={0} />
+  <p>Mer om den rättsliga statusen i <a href="/sv/guider/afo-andalusien/">AFO och legalisering i Andalusien</a> och för hus på landet i <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca i Spanien</a>. På kommunsidorna under <a href="/sv/orter/">orter</a> står också de lokala reglerna för bygglov.</p>
+
+  <BuyingChecklist lang="sv" theme={1} />
+  <p>Vad du betalar utöver priset står i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">kostnader vid husköp i Spanien</a>.</p>
+
+  <BuyingChecklist lang="sv" theme={2} />
+  <p>På de här frågorna får du nästan alltid ett lugnande svar. Därför låter du också kontrollera huset själv. Mer om <a href="/sv/problem/fukt-och-mogel/">fukt och mögel</a>, <a href="/sv/problem/taklacka/">läckande tak</a>, <a href="/sv/problem/sprickor-i-vaggar/">sprickor i väggar</a> och <a href="/sv/problem/termiter/">termiter</a>.</p>
+
+  <BuyingChecklist lang="sv" theme={3} />
+
+  <BuyingChecklist lang="sv" theme={4} />
+  <p>Vill du ta över ett pågående B&amp;B eller en semesteruthyrning? Då tillkommer många fler frågor; se <a href="/sv/guider/kopa-hus-i-spanien/kopa-bed-and-breakfast/">köpa ett befintligt B&amp;B</a>.</p>
+
+  <h2 id="per-typ">Extra punkter per hustyp</h2>
+  <h3>Lägenhet</h3>
+  <ul>
+    <li><strong>Samfällighetens protokoll.</strong> <q lang="es">¿Me puede enviar las actas de las tres últimas juntas de la comunidad?</q> Där ser du planerade arbeten, tvister och skulder.</li>
+    <li><strong>Byggnadens skick.</strong> <q lang="es">¿Tiene el edificio la inspección técnica (ITE) favorable?</q> En ogynnsam besiktning betyder ofta en extra avgift för fasad, tak eller ledningar.</li>
+    <li><strong>Parkering och förråd.</strong> <q lang="es">¿La plaza de garaje y el trastero están inscritos en el Registro y se incluyen en la venta?</q></li>
+    <li><strong>Semesteruthyrning.</strong> Sedan april 2025 kräver ny turistuthyrning i ett lägenhetsområde först godkännande från tre femtedelar av samfälligheten. <q lang="es">¿Permiten los estatutos de la comunidad el alquiler turístico?</q></li>
+  </ul>
+  <h3>Finca</h3>
+  <ul>
+    <li>Gör alltid laglighetstestet ovan, för huset och för varje uthus och poolen.</li>
+    <li>Vatten, avlopp, tillfartsväg och el är de största kostnadsposterna för en finca; se frågorna under <a href="#land">vatten, avlopp och tillfartsväg</a>.</li>
+    <li>Fråga om gränserna: <q lang="es">¿Están los límites de la finca marcados y coinciden con el Catastro?</q></li>
+    <li>Mer i <a href="/sv/guider/kopa-finca-i-spanien/">köpa finca i Spanien</a>.</li>
+  </ul>
+  <h3>B&amp;B eller semesteruthyrning</h3>
+  <ul>
+    <li>Gör laglighetstestet för varje gästrum: rum utan bygglov får inte hyras ut lagligt. Ett hus med AFO-status får bara hyras ut till semesterfirare med kommunens uttryckliga godkännande.</li>
+    <li><q lang="es">¿Con qué número está inscrito en el Registro de Turismo de Andalucía, y para cuántas plazas?</q></li>
+    <li>Köper du ett pågående B&amp;B, granska också siffror, bokningskanaler och omdömen; se <a href="/sv/guider/kopa-hus-i-spanien/kopa-bed-and-breakfast/">köpa ett befintligt B&amp;B</a>. Vill du starta själv, läs <a href="/sv/guider/finca-lagenhet-eller-byhus/bed-and-breakfast/">starta ett B&amp;B</a>.</li>
+  </ul>
+
+  <h2 id="besiktning">Låt oss kontrollera det</h2>
+  <p>En säljare som säger att taket aldrig har läckt kan mena det ärligt. En besiktningsman ser vad som verkligen finns. Med vår <a href="/sv/besiktning/">besiktning</a> kontrollerar vi de tekniska punkterna på listan åt dig:</p>
+  <ul class="checks">
+    <li>Fukt, läckor, sprickor, termiter och trämask</li>
+    <li>Tak och takterrass, fönster, el, vatten och avlopp, pool</li>
+    <li>För en finca: vattenkälla, avloppsbrunn och tillfartsväg</li>
+    <li>Om boyta och uthus stämmer med köpebrev och Catastro, som underlag för din advokat</li>
+    <li>En prisuppskattning för varje brist, så att du kan förhandla</li>
+  </ul>
+  <p>Du får en rapport med foton, även om du själv inte är i Spanien; kommunikationen sker på engelska eller nederländska. <a href="/sv/forfragan/?dienst=aankoopkeuring">Be om en besiktning</a> eller mejla <a href="mailto:info@axarquiahome.com">info@axarquiahome.com</a>.</p>
+  <h2 id="kallor">Källor</h2>
+  <ul>
+    <li>Sexårsfristen för ingripande och områden utan frist: Ley 7/2021 (LISTA), artikel 153; AFO: Decreto 550/2022.</li>
+    <li>Bostadsanvändning genom anmälan (declaración responsable): Ley 7/2021 (LISTA), artikel 138.</li>
+    <li>Semesteruthyrning av ett AFO-hus bara med kommunens godkännande: Decreto 28/2016, artikel 1.3.d, ändrat genom Decreto 31/2024.</li>
+    <li>Godkännande från tre femtedelar av samfälligheten för semesteruthyrning: Ley 49/1960 de Propiedad Horizontal, artikel 17.12, ändrad genom Ley Orgánica 1/2025.</li>
+    <li>Samfällighetens skulder: Ley 49/1960, artikel 9.1.e. IBI följer med fastigheten: Real Decreto Legislativo 2/2004, artikel 64.</li>
+  </ul>
+  <p class="note">Kontrollerat 5 november 2026. Den här checklistan ger allmän information och ersätter inte juridisk rådgivning. Den rättsliga granskningen av register, tillstånd och skulder hör till en oberoende advokat.</p>
+</Guide>
