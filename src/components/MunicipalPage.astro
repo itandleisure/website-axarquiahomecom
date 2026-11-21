@@ -18,7 +18,7 @@ const { lang, place, kind } = Astro.props;
 
 const svc = services[lang];
 const g = guidesBy[lang];
-const permitGuideSlugs = ['vergunning-verbouwen-andalusie', 'building-permits-renovation-andalusia', 'baugenehmigung-umbau-andalusien'];
+const permitGuideSlugs = ['vergunning-verbouwen-andalusie', 'building-permits-renovation-andalusia', 'baugenehmigung-umbau-andalusien', 'bygglov-renovering-andalusien'];
 const request = route(lang, 'request');
 const villages = places.filter((p) => p.municipality === place.slug).map((p) => p.name);
 for (const v of place.villages ?? []) if (!villages.includes(v)) villages.push(v);
@@ -45,6 +45,9 @@ const T = {
   de: { places: 'Orte', cta: 'Beratung anfragen', servicesTitle: 'Dabei helfen wir Ihnen', ctaPermit: `Umbauen in ${place.name}?`, ctaPractical: `Ein Haus in ${place.name}?`,
     ctaPermitText: 'Beschreiben Sie kurz Ihr Vorhaben. Wir klären, welche Genehmigung nötig ist, und schicken ein unverbindliches Angebot.',
     ctaPracticalText: 'Wir behalten Ihr Haus im Blick, wenn Sie nicht da sind, und kümmern uns um Instandhaltung und Reparaturen.' },
+  sv: { places: 'Orter', cta: 'Be om råd', servicesTitle: 'Så hjälper vi dig', ctaPermit: `Renovera i ${place.name}?`, ctaPractical: `Ett hus i ${place.name}?`,
+    ctaPermitText: 'Berätta kort vad du vill göra. Vi tar reda på vilket tillstånd som behövs och skickar en offert utan förpliktelser.',
+    ctaPracticalText: 'Vi har koll på ditt hus när du inte är där och tar hand om underhåll och reparationer.' },
 }[lang];
 
 const self = placeHref(lang, place, kind);

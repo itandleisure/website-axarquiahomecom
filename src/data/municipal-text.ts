@@ -1,4 +1,4 @@
-// Teksten voor de pagina's Bouwvergunning en Praktisch wonen per gemeente, in NL, EN en DE.
+// Teksten voor de pagina's Bouwvergunning en Praktisch wonen per gemeente, in NL, EN, DE en SV.
 // De teksten zijn gelijk voor alle gemeenten; de cijfers en het gemeentehuis komen uit src/data/municipal.ts.
 // Feiten en bronnen staan bovenaan municipal.ts. HTML in alinea's is toegestaan.
 import { fitTitle, fitDesc } from './seo';
@@ -6,8 +6,8 @@ import type { Lang } from '../i18n';
 import { municipal, municipalChecked, municipalTaxYear, imputationRate, icioRange, ibiRange, type Municipal } from './municipal';
 
 export type MunicipalPageKind = 'permit' | 'practical';
-export type MunicipalLang = 'nl' | 'en' | 'de';
-export const municipalLangs: MunicipalLang[] = ['nl', 'en', 'de'];
+export type MunicipalLang = 'nl' | 'en' | 'de' | 'sv';
+export const municipalLangs: MunicipalLang[] = ['nl', 'en', 'de', 'sv'];
 
 export interface MunicipalText {
   title: string;
@@ -21,9 +21,9 @@ export interface MunicipalText {
   sources: string;
 }
 
-const locale: Record<MunicipalLang, string> = { nl: 'nl-NL', en: 'en-GB', de: 'de-DE' };
+const locale: Record<MunicipalLang, string> = { nl: 'nl-NL', en: 'en-GB', de: 'de-DE', sv: 'sv-SE' };
 const num = (lang: MunicipalLang, n: number, d = 4) => n.toLocaleString(locale[lang], { maximumFractionDigits: d });
-const pct = (lang: MunicipalLang, n: number) => (lang === 'de' ? `${num(lang, n)}\u00a0%` : `${num(lang, n)}%`);
+const pct = (lang: MunicipalLang, n: number) => (lang === 'de' || lang === 'sv' ? `${num(lang, n)}\u00a0%` : `${num(lang, n)}%`);
 const eur = (lang: MunicipalLang, n: number) => {
   const s = Math.round(n).toLocaleString(locale[lang]);
   return lang === 'nl' ? `€\u00a0${s}` : lang === 'en' ? `€${s}` : `${s}\u00a0€`;
@@ -153,7 +153,7 @@ function permit(lang: MunicipalLang, c: Ctx): MunicipalText {
     ],
     sources: `Sources: ${municipalTaxYear} rates from the Spanish Ministry of Finance (<em>Consulta de información impositiva municipal</em>); address from the <em>Base de Datos General de Entidades Locales</em>; rules from Ley 7/2021 (LISTA), articles 137 to 141. Checked on ${date(lang)}. Rates can change on 1 January; the council’s tax bylaw is what counts.${m.addressChecked === false ? ' The town hall address comes from an older council notice; call ahead to be sure.' : ''}`,
   };
-  return {
+  if (lang === 'de') return {
     title: fitTitle(`Baugenehmigung in ${name}: Licencia de obra und Kosten`, `Baugenehmigung in ${name}: Kosten und Dauer`, `Baugenehmigung ${name}: Kosten und Dauer`),
     description: fitDesc(`Umbauen in ${name}? Wann Sie eine Licencia de obra oder Declaración responsable brauchen, was die Bausteuer (ICIO ${icio}) kostet und wie lange es dauert.`, `Umbauen in ${name}? Wann Sie eine Licencia de obra brauchen, was die Bausteuer (ICIO ${icio}) kostet und wie lange es dauert.`),
     h1: `Baugenehmigung in ${name}`,
@@ -204,6 +204,57 @@ function permit(lang: MunicipalLang, c: Ctx): MunicipalText {
     ],
     sources: `Quellen: Steuersätze ${municipalTaxYear} aus der <em>Consulta de información impositiva municipal</em> des spanischen Finanzministeriums; Adresse aus der <em>Base de Datos General de Entidades Locales</em>; Regeln aus der Ley 7/2021 (LISTA), Art. 137 bis 141. Geprüft am ${date(lang)}. Die Sätze können sich zum 1. Januar ändern; maßgeblich ist die Steuersatzung der Gemeinde.${m.addressChecked === false ? ' Die Adresse des Rathauses stammt aus einer älteren Mitteilung der Gemeinde; rufen Sie sicherheitshalber vorher an.' : ''}`,
   };
+  return {
+    title: fitTitle(`Bygglov i ${name}: licencia de obra och kostnader`, `Bygglov i ${name}: kostnader och handläggningstid`, `Bygglov ${name}: kostnader och tid`),
+    description: fitDesc(`Renovera i ${name}? När du behöver licencia de obra eller declaración responsable, vad byggskatten (ICIO ${icio}) kostar och hur lång tid det tar.`, `Renovera i ${name}? När du behöver licencia de obra, vad byggskatten (ICIO ${icio}) kostar och hur lång tid det tar.`),
+    h1: `Bygglov i ${name}`,
+    lead: `Den som renoverar i ${name} behöver nästan alltid något från kommunhuset. För små jobb räcker en anmälan, för större arbeten ett bygglov. Kommunen tar ut ${icio} i byggskatt på byggkostnaden.`,
+    factsTitle: `${name} i korthet`,
+    facts: [
+      ['Byggskatt (ICIO)', `${icio} av byggkostnaden`],
+      ['Badrum för ' + eur(lang, examples.bath), `${ex(examples.bath)} ICIO`],
+      ['Kök för ' + eur(lang, examples.kitchen), `${ex(examples.kitchen)} ICIO`],
+      ['Pool för ' + eur(lang, examples.pool), `${ex(examples.pool)} ICIO`],
+      ['Beslut om bygglov', 'högst 3 månader'],
+      ['Kommunhuset', m.phone ? `+34 ${m.phone}` : site(m)],
+    ],
+    sections: [
+      { h: 'Bygglov eller anmälan?', p: [
+        `I Andalusien bestämmer bygglagen LISTA (Ley 7/2021) vilka arbeten som kräver bygglov. I ${name} gäller samma regler som i hela regionen.${also ? ` Det gäller också ${also}, som hör till ${name} kommun.` : ''} Det finns två vägar:`,
+      ], list: [
+        '<strong>Declaración responsable</strong> (anmälan): för små arbeten utan byggprojekt, till exempel nytt kök eller badrum, kakel och klinker, fönster i samma storlek eller takreparationer utan ingrepp i bärande konstruktion. Även för arbeten i ett befintligt, lagligt hus i byn som inte ändrar storlek, höjd eller antal bostäder. Du får börja samma dag som anmälan är komplett. Lokalt kallas det ofta fortfarande <em>obra menor</em>.',
+        '<strong>Licencia de obra</strong> (bygglov, ofta kallat <em>obra mayor</em>): för nybygge, tillbyggnad, en extra våning, ingrepp i bärande konstruktion och som regel också för en pool. Det kräver ett projekt från en arkitekt. Du får börja först när lovet är beviljat.',
+      ] },
+      { h: `Vad det kostar i ${name}`, p: [
+        `${name} tar ut en byggskatt (<em>Impuesto sobre Construcciones, Instalaciones y Obras</em>, ICIO) på <strong>${icio}</strong> av byggkostnaden exklusive moms och arvoden. I Axarquía ligger satsen mellan ${range}. Ett badrum för ${eur(lang, examples.bath)} kostar alltså ${ex(examples.bath)} i ICIO och en pool för ${eur(lang, examples.pool)} ${ex(examples.pool)}.`,
+        'Många kommuner tar dessutom ut en handläggningsavgift (<em>tasa por licencia urbanística</em>), som står i skattestadgan (<em>ordenanza fiscal</em>). Vid ett bygglov tillkommer arkitekt och ibland en arbetsmiljösamordnare. Se också vår guide om <a href="' + links.renoCosts + '">renoveringskostnader</a>.',
+      ] },
+      { h: 'Hur lång tid det tar', p: [
+        'Med en declaración responsable får du börja direkt, förutsatt att handlingarna är kompletta. Kommunen kontrollerar i efterhand och kan stoppa arbetet om något inte stämmer.',
+        'Ett bygglov måste kommunen besluta om inom <strong>tre månader</strong> från att ansökan är komplett. Begär kommunen in fler handlingar börjar fristen löpa senare. Därefter har du som regel ett år på dig att börja och tre år att bli klar, om inte lovet säger något annat.',
+      ] },
+      { h: `Var du ansöker i ${name}`, p: [
+        `Ansökan eller anmälan lämnar du in på kommunhuset (<em>Ayuntamiento de ${name}</em>)${m.address ? `, ${addr}` : ''}${m.phone ? `, telefon +34 ${m.phone}` : ''}. Digitalt går det via den elektroniska expeditionen (<em>sede electrónica</em>) på ${site(m)}; då behöver du ett digitalt certifikat. Oftast är det arkitekten eller byggfirman som lämnar in ansökan.`,
+        'I mindre kommuner granskas ansökan ofta av en tekniker från Diputación de Málaga. Fråga på kommunhuset exakt vilka handlingar som krävs; det skiljer sig mellan kommunerna.',
+      ] },
+      { h: 'Vem du behöver', p: [
+        `För en anmälan räcker oftast en byggfirma; ändras elen utfärdar en behörig elektriker ett installationsintyg. Kräver arbetet ett byggprojekt, till exempel en tillbyggnad, en extra våning eller ingrepp i bärande konstruktion, är en arkitekt och en <em>arquitecto técnico</em> obligatoriska, och så snart mer än ett företag arbetar på bygget också en arbetsmiljösamordnare. Vår guide <a href="${links.permitGuide}">bygglov för renovering i Andalusien</a> går igenom varje typ av arbete och alla steg fram till notarien.`,
+      ] },
+      { h: 'Hus på landsbygden', p: [
+        `Ligger ditt hus utanför byn, på <em>suelo rústico</em>? Då gäller strängare regler. En anmälan räcker där bara för arbeten som gör huset mer energieffektivt, till exempel isolering eller solceller, utan extra yta. Allt annat kräver bygglov, och att bygga till är ofta inte tillåtet. Har huset någon gång byggts eller byggts ut utan lov, läs först vår guide om <a href="${links.afo}">AFO och legalisering</a>.`,
+      ] },
+      { h: 'Det här tar vi hand om', p: [
+        `Vi kontrollerar först om ditt projekt kräver en anmälan eller ett bygglov, gör en offert och ordnar arkitekt och ansökan. Sedan utför vi arbetet och håller dig uppdaterad när du inte är i Spanien. Läs mer om <a href="${links.renovation}">renovering</a> och <a href="${links.pool}">poolbygge</a>, eller <a href="${links.request('legalisatie')}">skicka en förfrågan direkt</a>.`,
+      ] },
+    ],
+    faq: [
+      { q: `Behöver jag bygglov i ${name} för ett nytt kök eller badrum?`, a: 'Oftast inte. Så länge du inte ändrar bärande konstruktion eller planlösning räcker en declaración responsable. ICIO på byggkostnaden betalar du ändå.' },
+      { q: `Hur mycket byggskatt betalar jag i ${name}?`, a: `ICIO är ${icio} av byggkostnaden exklusive moms (sats ${municipalTaxYear} enligt spanska finansdepartementet). Till det kan komma en avgift till kommunen.` },
+      { q: 'Vad händer om jag bygger utan lov?', a: 'Kommunen kan stoppa arbetet, ge böter och kräva att det rivs. Vid en försäljning upptäcks det ofta, eftersom köparen eller notarien frågar efter tillstånden.' },
+      { q: 'Måste jag själv gå till kommunhuset?', a: 'Nej. Arkitekten eller byggfirman kan ansöka åt dig, även digitalt. Du skriver under en fullmakt.' },
+    ],
+    sources: `Källor: skattesatser ${municipalTaxYear} från <em>Consulta de información impositiva municipal</em> hos spanska finansdepartementet; adress från <em>Base de Datos General de Entidades Locales</em>; regler från Ley 7/2021 (LISTA), art. 137 till 141. Kontrollerat ${date(lang)}. Satserna kan ändras den 1 januari; det som gäller är kommunens skattestadga.${m.addressChecked === false ? ' Kommunhusets adress kommer från ett äldre meddelande från kommunen; ring gärna innan du åker dit.' : ''}`,
+  };
 }
 
 function practical(lang: MunicipalLang, c: Ctx): MunicipalText {
@@ -218,7 +269,7 @@ function practical(lang: MunicipalLang, c: Ctx): MunicipalText {
   const plus = m.plusvalia > 0 ? pct(lang, m.plusvalia) : '';
   const addr = [m.address, `${m.postcode} ${name}`].filter(Boolean).join(', ');
   const also = c.villages.length ? c.villages.join(', ') : '';
-  const contactRow: [string, string] = [{ nl: 'Gemeentehuis', en: 'Town hall', de: 'Rathaus' }[lang], [m.phone ? (lang === 'nl' ? m.phone : `+34 ${m.phone}`) : '', site(m)].filter(Boolean).join('<br>')];
+  const contactRow: [string, string] = [{ nl: 'Gemeentehuis', en: 'Town hall', de: 'Rathaus', sv: 'Kommunhuset' }[lang], [m.phone ? (lang === 'nl' ? m.phone : `+34 ${m.phone}`) : '', site(m)].filter(Boolean).join('<br>')];
   if (lang === 'nl') return {
     title: fitTitle(`Praktisch wonen in ${name}: IBI, afval, water en padrón`, `Praktisch wonen in ${name}: IBI, afval en water`, `Praktisch wonen in ${name}: IBI en afval`, `Wonen in ${name}: IBI en afval`),
     description: fitDesc(`Een huis in ${name}? Wat u betaalt aan IBI (${ibi}), wat niet-residenten aan belasting kwijt zijn, en hoe het zit met afval, water en de padrón.`, `Een huis in ${name}? Wat u betaalt aan IBI (${ibi}) en als niet-resident, en hoe het zit met afval, water en de padrón.`),
@@ -327,7 +378,7 @@ function practical(lang: MunicipalLang, c: Ctx): MunicipalText {
     ],
     sources: `Sources: ${municipalTaxYear} rates and revaluation year from the Spanish Ministry of Finance (<em>Consulta de información impositiva municipal</em>); address from the <em>Base de Datos General de Entidades Locales</em>; non-resident tax under Ley 35/2006 (IRPF), article 85 and additional provision 55. Checked on ${date(lang)}. Rates can change on 1 January.`,
   };
-  return {
+  if (lang === 'de') return {
     title: fitTitle(`Praktisches für ${name}: IBI, Müllgebühr und Wasser`, `Praktisches für ${name}: IBI und Müllgebühr`, `${name}: IBI und Müllgebühr`),
     description: fitDesc(`Ein Haus in ${name}? Was Sie an IBI (${ibi}) zahlen, welche Steuer Nichtresidenten zahlen und wie Müll, Wasser und der Padrón funktionieren.`, `Ein Haus in ${name}? Was Sie an IBI (${ibi}) und als Nichtresident zahlen und wie Müll und Wasser funktionieren.`),
     h1: `Praktisches für ${name}`,
@@ -380,6 +431,60 @@ function practical(lang: MunicipalLang, c: Ctx): MunicipalText {
       { q: 'Wer zahlt die IBI im Jahr des Kaufs?', a: 'Wer am 1. Januar Eigentümer ist, erhält den Bescheid für das ganze Jahr. Käufer und Verkäufer vereinbaren beim Notar oft eine anteilige Aufteilung.' },
     ],
     sources: `Quellen: Steuersätze ${municipalTaxYear} und Revisionsjahr aus der <em>Consulta de información impositiva municipal</em> des spanischen Finanzministeriums; Adresse aus der <em>Base de Datos General de Entidades Locales</em>; Steuer für Nichtresidenten nach Ley 35/2006 (IRPF), Art. 85 und Zusatzbestimmung 55. Geprüft am ${date(lang)}. Die Sätze können sich zum 1. Januar ändern.`,
+  };
+  return {
+    title: fitTitle(`Praktiskt i ${name}: IBI, sophämtning och vatten`, `Praktiskt i ${name}: IBI och sophämtning`, `${name}: IBI och sophämtning`),
+    description: fitDesc(`Ett hus i ${name}? Vad du betalar i IBI (${ibi}), vilken skatt icke-residenter betalar och hur sopor, vatten och padrón fungerar.`, `Ett hus i ${name}? Vad du betalar i IBI (${ibi}) och som icke-resident, och hur sopor och vatten fungerar.`),
+    h1: `Praktiskt i ${name}`,
+    lead: `Löpande kostnader och pappersarbete för ett hus i ${name} på ett ställe: fastighetsskatt, skatt för icke-residenter, sopor, vatten, internet och folkbokföring i kommunen.`,
+    factsTitle: `${name} i korthet`,
+    facts: [
+      ['IBI bostadshus (urbana)', ibi],
+      ['IBI landsbygd (rústica)', ibiR],
+      ['Taxeringsvärden omräknade', String(m.catastro)],
+      ...(plus ? [['Plusvalía vid försäljning', plus] as [string, string]] : []),
+      ['Byggskatt (ICIO)', pct(lang, m.icio)],
+      contactRow,
+    ],
+    sections: [
+      { h: 'IBI: fastighetsskatten', p: [
+        `Varje ägare betalar varje år <em>Impuesto sobre Bienes Inmuebles</em> (IBI). I ${name} är satsen ${municipalTaxYear} <strong>${ibi}</strong> av taxeringsvärdet (valor catastral) för hus i byn och ${ibiR} för mark på landsbygden. I Axarquía ligger satsen för bostadshus mellan ${range}.${also ? ` Den gäller också i ${also}.` : ''}`,
+        `Ett hus med ett taxeringsvärde på ${eur(lang, exampleCadastral)} betalar alltså ${ibiEx} per år i ${name}. Taxeringsvärdet står på din skattsedel och i Catastro och ligger oftast långt under marknadsvärdet. I ${name} räknades värdena senast om allmänt ${m.catastro}.`,
+        'Skattsedeln kommer från kommunhuset eller från Diputación de Málagas skattekontor (Patronato de Recaudación Provincial), som tar in skatten för många kommuner i provinsen. Låt dra IBI via autogiro från ett spanskt konto, så missar du ingen förfallodag när du inte är i Spanien.',
+      ] },
+      { h: 'Skatt för icke-residenter', p: [
+        `Bor du inte i Spanien och hyr inte ut huset betalar du ändå inkomstskatt för icke-residenter varje år (<em>IRNR</em>, blankett 210). Spanien räknar med en schablonintäkt på ${num(lang, imp)} % av taxeringsvärdet${imp === 2 ? ', eftersom värdena i den här kommunen räknades om före 2012' : ', eftersom värdena i den här kommunen räknades om efter 2012'}. På den betalar du 19 % om du bor i EU eller EES, annars 24 %.`,
+        `Vid ett taxeringsvärde på ${eur(lang, exampleCadastral)} blir det ${nrEu} per år (EU) eller ${nrOther} (till exempel Storbritannien). Mer i vår guide om <a href="${links.buyCosts}">kostnader vid husköp</a>.`,
+      ] },
+      { h: 'Sopor', p: [
+        `För sophämtningen tar kommunen ut en avgift (<em>tasa de basura</em>). Belopp och uppbörd regleras i ${name}s skattestadga; ibland kommer den med vattenräkningen, ibland som en egen skattsedel. Hushållssopor lägger du i containrarna vid vägen; grovsopor och trädgårdsavfall lämnar du på återvinningscentralen (<em>punto limpio</em>) eller får hämtat efter överenskommelse.`,
+      ] },
+      { h: 'Vatten', p: [
+        'Dricksvattnet levereras av kommunens vattentjänst eller ett företag på uppdrag av kommunen. När du köper skriver du över avtal och mätare på dig; be säljaren om den senaste räkningen, så vet du vem du ska kontakta.',
+        'Axarquía drabbades 2023 och 2024 av torka och vattenrestriktioner. Därför har många hus utanför byarna en egen vattentank (<em>depósito</em> eller <em>aljibe</em>). Låt kontrollera var vattnet kommer ifrån och om anslutningen är laglig när du köper en finca.',
+      ] },
+      { h: 'Internet och fiber', p: [
+        'I bykärnorna och längs kusten finns det ofta fiber, men det skiljer sig från gata till gata. Arbetar du hemifrån, fråga operatörerna före köpet om din adress är ansluten. På avsides fincor är internet via 4G/5G eller satellit vanligt.',
+      ] },
+      { h: 'Folkbokföring i kommunen: padrón', p: [
+        `Bor du (en del av året) i ${name}, skriver du in dig i kommunens befolkningsregister (<em>padrón municipal</em>) på kommunhuset. Ta med pass, NIE och köpekontrakt eller hyresavtal. Du får ett intyg (<em>certificado de empadronamiento</em>) som du bland annat behöver för läkare, skola, en bil med spanska skyltar och residencia. Kommunen får pengar per inskriven invånare och ser det därför gärna.`,
+      ] },
+      ...(plus ? [{ h: 'Plusvalía vid försäljning', p: [
+        `När du säljer tar kommunen ut plusvalía municipal på markens värdeökning. I ${name} är satsen ${plus}. Beloppet beror på markens taxeringsvärde och hur länge du ägt huset; går du med förlust betalar du inget.`,
+      ] }] : []),
+      { h: 'Kommunhuset', p: [
+        `<em>Ayuntamiento de ${name}</em>${m.address ? `, ${addr}` : ''}${m.phone ? `. Telefon +34 ${m.phone}` : ''}. Webbplats och elektronisk expedition: ${site(m)}.${m.addressChecked === false ? ' Adressen kommer från ett äldre meddelande från kommunen; ring gärna innan du åker dit.' : ''}`,
+      ] },
+      { h: 'Inte i Spanien? Vi har koll på huset', p: [
+        `Med <a href="${links.keyholding}">tillsyn av huset</a> kontrollerar vi ditt hus i ${name} regelbundet och efter storm eller skyfall och skickar foton. En läcka eller skada? Vi ordnar <a href="${links.maintenance}">reparationen</a>. Ska du köpa? Låt först göra en <a href="${links.survey}">besiktning</a>.`,
+      ] },
+    ],
+    faq: [
+      { q: `Hur mycket IBI betalar jag i ${name}?`, a: `Satsen är ${ibi} av taxeringsvärdet (${municipalTaxYear}). Vid ett taxeringsvärde på ${eur(lang, exampleCadastral)} blir det ${ibiEx} per år.` },
+      { q: 'Måste jag skriva in mig i padrón om jag bara är i Spanien några månader om året?', a: 'Den som normalt bor i Spanien ska skriva in sig i den kommun där hen tillbringar större delen av året. Kommer du bara på semester är det inget krav. Inskrivningen gör dig inte i sig skattemässigt bosatt; det beror bland annat på om du är i Spanien mer än 183 dagar per år.' },
+      { q: 'Vem betalar IBI det år huset köps?', a: 'Den som äger huset den 1 januari får skattsedeln för hela året. Köpare och säljare kommer ofta överens hos notarien om en proportionell fördelning.' },
+    ],
+    sources: `Källor: skattesatser ${municipalTaxYear} och omräkningsår från <em>Consulta de información impositiva municipal</em> hos spanska finansdepartementet; adress från <em>Base de Datos General de Entidades Locales</em>; skatt för icke-residenter enligt Ley 35/2006 (IRPF), art. 85 och tilläggsbestämmelse 55. Kontrollerat ${date(lang)}. Satserna kan ändras den 1 januari.`,
   };
 }
 
