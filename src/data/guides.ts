@@ -1513,6 +1513,7 @@ export const guidesSv: GuideMeta[] = [
     published: '2026-11-05',
   },
   {
+    of: 'renovatie-factuur-of-cash-spanje',
     slug: 'renovering-kontant-eller-faktura-spanien',
     title: 'Renovera i Spanien: betala kontant eller mot faktura?',
     seoTitle: 'Betala hantverkare kontant i Spanien? Besparing och risker (2026)',

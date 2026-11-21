@@ -9,13 +9,16 @@ import { problemsDe } from './problems-de';
 import { diyNl } from './diy-nl';
 import { diyEn } from './diy-en';
 import { diyDe } from './diy-de';
+import { costsSv } from './costs-sv';
+import { problemsSv } from './problems-sv';
+import { diySv } from './diy-sv';
 
 export * from './types';
 
 export const topics: Record<TopicKind, Record<TopicLang, Topic[]>> = {
-  costs: { nl: costsNl, en: costsEn, de: costsDe },
-  problems: { nl: problemsNl, en: problemsEn, de: problemsDe },
-  diy: { nl: diyNl, en: diyEn, de: diyDe },
+  costs: { nl: costsNl, en: costsEn, de: costsDe, sv: costsSv },
+  problems: { nl: problemsNl, en: problemsEn, de: problemsDe, sv: problemsSv },
+  diy: { nl: diyNl, en: diyEn, de: diyDe, sv: diySv },
 };
 
 export const topicHref = (kind: TopicKind, lang: TopicLang, t: Topic) => `${topicBase[kind][lang]}${t.slug}/`;

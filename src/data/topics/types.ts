@@ -2,9 +2,9 @@
 // De inhoud staat per taal in costs-*.ts, problems-*.ts en diy-*.ts (zelf doen). Een pagina heeft in elke taal
 // dezelfde `key`, zo vinden de vertalingen elkaar (hreflang en taalwissel).
 
-export type TopicLang = 'nl' | 'en' | 'de';
+export type TopicLang = 'nl' | 'en' | 'de' | 'sv';
 export type TopicKind = 'costs' | 'problems' | 'diy';
-export const topicLangs: TopicLang[] = ['nl', 'en', 'de'];
+export const topicLangs: TopicLang[] = ['nl', 'en', 'de', 'sv'];
 
 export interface TopicTable {
   head: string[];
@@ -58,9 +58,9 @@ export interface Topic {
 export const pricesChecked = '2026-11-05';
 
 export const topicBase: Record<TopicKind, Record<TopicLang, string>> = {
-  costs: { nl: '/nl/kosten/', en: '/en/costs/', de: '/de/kosten/' },
-  problems: { nl: '/nl/problemen/', en: '/en/problems/', de: '/de/probleme/' },
-  diy: { nl: '/nl/zelf-doen/', en: '/en/diy/', de: '/de/selbermachen/' },
+  costs: { nl: '/nl/kosten/', en: '/en/costs/', de: '/de/kosten/', sv: '/sv/kostnader/' },
+  problems: { nl: '/nl/problemen/', en: '/en/problems/', de: '/de/probleme/', sv: '/sv/problem/' },
+  diy: { nl: '/nl/zelf-doen/', en: '/en/diy/', de: '/de/selbermachen/', sv: '/sv/gor-det-sjalv/' },
 };
 
 export const topicUi = {
@@ -124,7 +124,27 @@ export const topicUi = {
     read: 'Weiterlesen',
     dateLocale: 'de-DE',
   },
+  sv: {
+    hub: { costs: 'Kostnader', problems: 'Problem', diy: 'Gör det själv' },
+    eyebrow: { costs: 'Kostnader', problems: 'Lösa problem', diy: 'Gör det själv' },
+    minRead: 'minuters läsning',
+    updated: 'Uppdaterad',
+    inPage: 'På den här sidan',
+    shortAnswer: 'Kort svar',
+    askQuote: 'Be om en offert',
+    askHelp: 'Be om hjälp',
+    askDiy: 'Vill du hellre anlita någon? Vi hjälper dig',
+    sourcesTitle: 'Källor och metod',
+    sourcesText:
+      'Beloppen är riktpriser för Axarquía, inklusive material och arbete och exklusive moms (IVA), om inget annat anges. De bygger på spanska prisguider och på det vi ser i praktiken. Varje hus är olika: en offert efter ett besök eller utifrån foton är alltid mer exakt. Priserna kontrollerades den',
+    sourcesTextDiy:
+      'Vill du hellre att någon annan gör jobbet? Vi hjälper dig att få det gjort. Reglerna för tillstånd skiljer sig mellan kommunerna: fråga alltid på ayuntamiento (kommunen) innan du börjar. Arbeta säkert; du utför de här arbetena på egen risk. Kontrollerat den',
+    alsoUseful: 'Också användbart',
+    related: { costs: 'Fler kostnadsöversikter', problems: 'Andra problem', diy: 'Fler gör-det-själv-guider' },
+    read: 'Läs mer',
+    dateLocale: 'sv-SE',
+  },
 } as const;
 
 /** Paden van de aanvraagpagina per taal */
-export const requestPath: Record<TopicLang, string> = { nl: '/nl/aanvraag/', en: '/en/request/', de: '/de/anfrage/' };
+export const requestPath: Record<TopicLang, string> = { nl: '/nl/aanvraag/', en: '/en/request/', de: '/de/anfrage/', sv: '/sv/forfragan/' };
