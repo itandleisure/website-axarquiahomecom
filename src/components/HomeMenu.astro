@@ -85,6 +85,10 @@ const topics = (menu?.topics ?? [])
 <style>
   .lead { color: var(--muted); max-width: 640px; }
   .hm-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 20px; }
+  @media (max-width: 640px) {
+    .hm-tabs { flex-wrap: nowrap; overflow-x: auto; margin: 18px -20px 20px; padding: 0 20px 6px; scrollbar-width: thin; }
+    .hm-tabs button { flex: none; }
+  }
   .hm-tabs button {
     font: inherit; font-size: 0.97rem; font-weight: 600; cursor: pointer;
     padding: 9px 16px; border-radius: var(--radius); border: 1px solid var(--line);
