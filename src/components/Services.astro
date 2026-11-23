@@ -9,14 +9,16 @@ const list = services[lang].filter((s) => !exclude || !s.href.includes(`/${exclu
 <section class="section">
   <div class="wrap">
     <h2>{title}</h2>
-    <div class="cards">
+    <ul class="service-list">
       {list.map((s) => (
-        <a class="card" href={s.href}>
-          <h3>{s.title}</h3>
-          <p>{s.text}</p>
-          <span class="more">{t.more} {s.title.toLowerCase()} →</span>
-        </a>
+        <li>
+          <a href={s.href}>
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
+            <span class="more" aria-hidden="true">{t.moreShort} →</span>
+          </a>
+        </li>
       ))}
-    </div>
+    </ul>
   </div>
 </section>

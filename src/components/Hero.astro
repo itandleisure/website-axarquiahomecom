@@ -8,21 +8,19 @@ const ctaHref = Astro.props.ctaHref ?? path(lang, 'request');
 ---
 <section class:list={['hero', { 'hero-photo': image }]}>
   <div class="wrap">
-    <div class="hero-grid">
-      <div class="hero-text">
-        {eyebrow && <p class="eyebrow">{eyebrow}</p>}
-        <h1 set:html={title} />
-        <p class="lead">{lead}</p>
-        <div class="hero-actions">
-          <a class="btn" href={ctaHref}>{cta}</a>
-          {secondary && secondaryHref && <a class="btn btn-ghost" href={secondaryHref}>{secondary}</a>}
-        </div>
+    {image && (
+      <figure class="hero-img">
+        <img src={image.src} srcset={image.srcset} sizes="(min-width: 1120px) 1080px, calc(100vw - 40px)" alt={image.alt} width="1200" height="1200" loading="eager" fetchpriority="high" decoding="async" style={`object-position: ${image.focus}`} />
+      </figure>
+    )}
+    <div class="hero-text">
+      {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+      <h1 set:html={title} />
+      <p class="lead">{lead}</p>
+      <div class="hero-actions">
+        <a class="btn" href={ctaHref}>{cta}</a>
+        {secondary && secondaryHref && <a class="btn btn-ghost" href={secondaryHref}>{secondary}</a>}
       </div>
-      {image && (
-        <figure class="hero-img">
-          <img src={image.src} srcset={image.srcset} sizes="(min-width: 860px) 440px, calc(100vw - 40px)" alt={image.alt} width="1200" height="1200" loading="eager" fetchpriority="high" decoding="async" style={`object-position: ${image.focus}`} />
-        </figure>
-      )}
     </div>
     <slot />
   </div>

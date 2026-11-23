@@ -55,7 +55,7 @@ const uid = `cl-${Math.random().toString(36).slice(2, 8)}`;
   .cs-row { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
   @media (max-width: 600px) { .cs-row { grid-template-columns: 1fr; } }
   .cs-form label > span { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
-  .cs-form input[type='email'], .cs-form input[type='text'], .cs-form select { width: 100%; box-sizing: border-box; padding: 0.7em 0.8em; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: var(--white); }
+  .cs-form input[type='email'], .cs-form input[type='text'], .cs-form select { width: 100%; box-sizing: border-box; padding: 0.7em 0.8em; border: 1px solid var(--line); border-radius: var(--radius); font: inherit; background: var(--white); }
   .cs-form .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 0.95rem; }
   .cs-form .consent > span { display: inline; font-weight: 400; margin: 0; }
   .cs-form .consent input { margin-top: 0.3em; }

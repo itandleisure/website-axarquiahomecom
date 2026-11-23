@@ -1,0 +1,23 @@
+---
+// Vast aanspreekpunt in het donkere blok op de homepage: foto en naam van het eerste
+// teamlid (src/data/team.ts) en het telefoonnummer zodra die zijn ingevuld.
+// Zonder gegevens toont dit niets, zodat er geen lege plekken op de site staan.
+import { site, isFilled } from '../data/site';
+import { team } from '../data/team';
+import type { Lang } from '../i18n';
+interface Props { lang?: Lang; }
+const { lang = 'nl' } = Astro.props;
+const m = team[0];
+const role = m && ({ nl: m.role, en: m.roleEn, de: m.roleDe, sv: m.roleSv, es: m.roleEn }[lang] ?? m.roleEn ?? m.role);
+const phone = site.company.phone;
+---
+{m && (
+  <div class="contact-person">
+    {m.photo && <img src={m.photo} alt={m.name} width="88" height="88" loading="lazy" />}
+    <div>
+      <p class="name">{m.name}</p>
+      {role && <p>{role}</p>}
+    </div>
+  </div>
+)}
+{isFilled(phone) && <a class="contact-phone" href={`tel:${phone.replace(/[^+\d]/g, '')}`}>{phone}</a>}
