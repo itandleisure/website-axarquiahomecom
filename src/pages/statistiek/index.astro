@@ -123,7 +123,7 @@ const url = site.statsDashboardUrl;
 
     <div class="card">
       <h2>Gevolgde zoekwoorden</h2>
-      <p class="sub">Wekelijkse positiemeting via Ubersuggest, ook als er nog geen klikken zijn.</p>
+      <p class="sub">Wekelijkse positiemeting via Ubersuggest, ook als er nog geen klikken zijn. Volume: gemiddeld aantal zoekopdrachten per maand in dat land; – betekent te weinig om te meten.</p>
       <div class="tbl" id="posities"></div>
     </div>
 
@@ -286,10 +286,10 @@ function posities() {
   const r = D.pos.filter((x) => taal === 'alle' || x[1] === taal)
     .sort((a, b) => (a[4] || 999) - (b[4] || 999) || String(a[3]).localeCompare(b[3]));
   document.getElementById('posities').innerHTML = r.length ? tabel(
-    [['Zoekwoord'], ['Land'], ['Positie', 1], ['Verschil', 1]],
+    [['Zoekwoord'], ['Land'], ['Volume', 1], ['Positie', 1], ['Verschil', 1]],
     r.slice(0, 40).map((x) => {
       const v = x[4] && x[5] ? x[5] - x[4] : 0;
-      return [esc(x[3]), `<span class="tag">${esc(LAND[x[2]] || x[2])}</span>`, x[4] ? fmt(x[4]) : '<span class="d">niet in top 100</span>',
+      return [esc(x[3]), `<span class="tag">${esc(LAND[x[2]] || x[2])}</span>`, x[7] > 0 ? fmt(x[7]) : '<span class="d">–</span>', x[4] ? fmt(x[4]) : '<span class="d">niet in top 100</span>',
         v ? `<span class="${v > 0 ? 'up' : 'down'}">${v > 0 ? '▲' : '▼'}${fmt(Math.abs(v))}</span>` : ''];
     })) + (r.length > 40 ? `<p class="sub">En nog ${r.length - 40} in de sheet (tabblad Posities).</p>` : '')
     : leeg('De eerste meting volgt na de wekelijkse update.');
