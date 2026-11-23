@@ -7,6 +7,7 @@ import HomeMenu from '../../components/HomeMenu.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
+import ContactPerson from '../../components/ContactPerson.astro';
 import VillageChips from '../../components/VillageChips.astro';
 import Todo from '../../components/Todo.astro';
 import { site } from '../../data/site';
@@ -43,8 +44,7 @@ const photo = servicePhoto('home', 'sv');
 >
   <Hero image={photo}
     lang="sv"
-    eyebrow="Köpa · Renovera · Sköta"
-    title="Ditt hus i Axarquía, <em>i goda händer</em>"
+    title="Vi renoverar och sköter hus i Axarquía, även när du inte är där."
     lead="Ett nederländskt byggföretag som arbetar för utländska ägare och köpare på kusten öster om Málaga. Från besiktning före köp och renovering till tillsyn av huset när du inte är där."
     secondary="Våra tjänster"
     secondaryHref="#tjanster"
@@ -71,7 +71,7 @@ const photo = servicePhoto('home', 'sv');
         <p>Vi arbetar som du är van vid: tydliga överenskommelser, en skriftlig offert, en fast kontaktperson och en tidsplan som vi håller. Samtidigt känner vi trakten, byggsättet i de vita byarna, de lokala hantverkarna och kommunerna.</p>
         <p>Eftersom vi också erbjuder tillsyn och underhåll finns vi kvar efter överlämningen. Vi märker först om taket läcker eller poolen blir grön, och åtgärdar det innan det blir ett problem.</p>
       </div>
-      <div class="box">
+      <div class="box box-dark">
         <h3>En kontaktperson för allt</h3>
         <ul class="checks">
           <li>Besiktning före köp</li>
@@ -81,6 +81,7 @@ const photo = servicePhoto('home', 'sv');
           <li>Tillsyn och kontroller</li>
           <li>Tomt och trädgård</li>
         </ul>
+        <ContactPerson lang="sv" />
         <a class="btn" href="/sv/forfragan/">Berätta om dina planer</a>
       </div>
     </div>

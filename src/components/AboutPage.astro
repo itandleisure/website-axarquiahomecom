@@ -273,7 +273,7 @@ const bio = (m: (typeof team)[number]) => ({ nl: m.bio, en: m.bioEn, de: m.bioDe
         <div class="cards">
           {team.map((m) => (
             <div class="card">
-              {m.photo && <img src={m.photo} alt={m.name} loading="lazy" width="400" height="400" style="border-radius:10px;margin-bottom:14px" />}
+              {m.photo && <img src={m.photo} alt={m.name} loading="lazy" width="400" height="400" style="margin-bottom:14px" />}
               <h3>{m.name}</h3>
               <p class="note">{role(m)}</p>
               <p>{bio(m)}</p>

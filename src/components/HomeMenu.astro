@@ -87,23 +87,23 @@ const topics = (menu?.topics ?? [])
   .hm-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 20px; }
   .hm-tabs button {
     font: inherit; font-size: 0.97rem; font-weight: 600; cursor: pointer;
-    padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line);
+    padding: 9px 16px; border-radius: var(--radius); border: 1px solid var(--line);
     background: var(--white); color: var(--ink);
     transition: background 0.15s, border-color 0.15s, color 0.15s;
   }
-  .hm-tabs button:hover { border-color: var(--terra); }
-  .hm-tabs button[aria-selected='true'] { background: var(--terra); border-color: var(--terra); color: #fff; }
+  .hm-tabs button:hover { border-color: var(--ink); }
+  .hm-tabs button[aria-selected='true'] { background: var(--ink); border-color: var(--ink); color: #fff; }
   .hm-tabs button:focus-visible { outline: 3px solid var(--sun); outline-offset: 2px; }
   .hm-panels { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
   .is-tabs .hm-panels { display: block; }
-  .hm-panel { background: var(--sand); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .hm-panel { background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--ink); border-radius: 0; padding: 24px; }
   .hm-panel h3 { margin-top: 0; }
   .hm-panel p { color: var(--muted); }
   .hm-panel ul { list-style: none; padding: 0; margin: 0 0 18px; }
   .is-tabs .hm-panel ul { columns: 2 260px; column-gap: 32px; }
   .hm-panel li { break-inside: avoid; padding: 6px 0; border-bottom: 1px solid var(--line); }
   .hm-panel li a { text-decoration: none; font-weight: 500; }
-  .hm-panel li a::before { content: '→ '; color: var(--terra); }
+  .hm-panel li a::before { content: '→ '; color: var(--ochre-dark); }
   .hm-panel li a:hover { text-decoration: underline; }
   .hm-request { margin-top: 18px; font-weight: 600; }
 </style>

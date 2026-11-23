@@ -7,6 +7,7 @@ import HomeMenu from '../../components/HomeMenu.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
+import ContactPerson from '../../components/ContactPerson.astro';
 import VillageChips from '../../components/VillageChips.astro';
 import { site } from '../../data/site';
 
@@ -40,8 +41,7 @@ const photo = servicePhoto('home', 'nl');
   path="/nl/"
 >
   <Hero image={photo}
-    eyebrow="Kopen · Verbouwen · Beheren"
-    title="Uw huis in de Axarquía, in <em>vertrouwde handen</em>"
+    title="Wij verbouwen en onderhouden huizen in de Axarquía. Ook als u er niet bent."
     lead="Wij zijn het Nederlandse bouwbedrijf voor buitenlandse eigenaren en kopers aan de oostkust van Málaga. Van de keuring vóór de aankoop tot de renovatie en het beheer als u er niet bent."
     secondary="Bekijk onze diensten"
     secondaryHref="#diensten"
@@ -66,7 +66,7 @@ const photo = servicePhoto('home', 'nl');
         <p>Wij werken zoals u dat uit Nederland gewend bent: duidelijke afspraken, een offerte op papier, vaste contactpersonen en een planning waar we ons aan houden. Tegelijk kennen we de regio, de bouwstijl van de witte dorpen, de Spaanse vakmensen en de gemeentes.</p>
         <p>Omdat we ook sleutelbeheer en onderhoud doen, blijven we na de oplevering bereikbaar. We zien het eerst als het dak lekt of het zwembad groen wordt, en we lossen het op voordat u het merkt.</p>
       </div>
-      <div class="box">
+      <div class="box box-dark">
         <h3>Eén aanspreekpunt voor alles</h3>
         <ul class="checks">
           <li>Keuring vóór de aankoop</li>
@@ -76,6 +76,7 @@ const photo = servicePhoto('home', 'nl');
           <li>Sleutelbeheer en woningtoezicht</li>
           <li>Perceel en tuin bijhouden</li>
         </ul>
+        <ContactPerson lang="nl" />
         <a class="btn" href="/nl/aanvraag/">Vertel ons uw plan</a>
       </div>
     </div>

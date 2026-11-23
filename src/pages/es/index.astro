@@ -6,6 +6,7 @@ import Services from '../../components/Services.astro';
 import Steps from '../../components/Steps.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
+import ContactPerson from '../../components/ContactPerson.astro';
 import VillageChips from '../../components/VillageChips.astro';
 import { site } from '../../data/site';
 
@@ -41,8 +42,7 @@ const photo = servicePhoto('home', 'es');
 >
   <Hero image={photo}
     lang="es"
-    eyebrow="Comprar · Reformar · Cuidar"
-    title="Su casa en la Axarquía, <em>en buenas manos</em>"
+    title="Reformamos y cuidamos casas en la Axarquía, también cuando usted no está."
     lead="Una empresa constructora de dirección holandesa que trabaja en toda la costa al este de Málaga. Desde la inspección antes de comprar y la reforma hasta las placas solares, el aire acondicionado y el cuidado de su casa cuando no está."
     secondary="Nuestros servicios"
     secondaryHref="#servicios"
@@ -65,7 +65,7 @@ const photo = servicePhoto('home', 'es');
         <p>Nosotros trabajamos con acuerdos claros, un presupuesto por escrito, una persona de contacto fija y un calendario que cumplimos. Y conocemos la zona: la forma de construir de los pueblos blancos, a los proveedores locales y a los ayuntamientos.</p>
         <p>Como también hacemos mantenimiento y gestión de llaves, seguimos ahí después de la entrega. Somos los primeros en ver si el tejado gotea o la piscina se pone verde, y lo arreglamos antes de que sea un problema.</p>
       </div>
-      <div class="box">
+      <div class="box box-dark">
         <h3>Una persona de contacto para todo</h3>
         <ul class="checks">
           <li>Reformas, baños y cocinas</li>
@@ -76,6 +76,7 @@ const photo = servicePhoto('home', 'es');
           <li>Inspección antes de comprar</li>
           <li>Gestión de llaves y alquiler vacacional</li>
         </ul>
+        <ContactPerson lang="es" />
         <a class="btn" href="/es/solicitud/">Cuéntenos su proyecto</a>
       </div>
     </div>
