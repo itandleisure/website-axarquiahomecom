@@ -410,7 +410,7 @@ export const problemsSv: Topic[] = [
     title: 'Inbrott och husockupanter i ditt fritidshus i Spanien',
     seoTitle: 'Inbrott och ockupanter (okupas) i Spanien: skydda ditt hus',
     short: 'Inbrott och ockupation',
-    description: 'Så skyddar du ditt fritidshus i Axarquía mot inbrott och ockupanter (okupas): larm, säkerhetsdörr, ett hus som inte ser tomt ut, och vad du gör efter ett inbrott.',
+    description: 'Så skyddar du ditt fritidshus i Axarquía mot inbrott och ockupanter (okupas): larm, säkerhetsdörr, ett hus som ser bebott ut och vad du gör efteråt.',
     lead: 'Ett hus som står tomt i månader lockar inbrottstjuvar och, ibland, ockupanter. Den goda nyheten: med några enkla åtgärder och någon som regelbundet tittar till huset minskar risken kraftigt.',
     keyword: 'inbrott fritidshus spanien',
     dienst: 'sleutelbeheer',

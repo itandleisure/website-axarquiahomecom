@@ -415,7 +415,7 @@ export const costsSv: Topic[] = [
     short: 'Utekök',
     description: 'Vad kostar ett murat utekök med grill i Axarquía? Priser från enkelt till komplett med tak, vatten och el, plus vilket tillstånd som behövs.',
     lead: 'I Axarquía lever man ute en stor del av året. Ett utekök vid poolen eller på terrassen är därför en populär ombyggnad. Det här kostar det.',
-    keyword: 'utekök spanien',
+    keyword: 'utekök kostnad spanien',
     dienst: 'renovatie',
     onderwerp: 'Jag vill gärna ha en offert på ett utekök.',
     answer: 'Ett enkelt murat utekök med grill och arbetsyta kostar i Axarquía <strong>2 500 till 5 000 €</strong>. Med diskho, vatten, el och kylskåp räknar du med <strong>6 000 till 12 000 €</strong>. Med tak och vitvaror i premiumklass <strong>12 000 till 25 000 €</strong>. Belopp exklusive moms.',

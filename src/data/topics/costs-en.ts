@@ -412,7 +412,7 @@ export const costsEn: Topic[] = [
     short: 'Outdoor kitchen',
     description: 'What does a built-in outdoor kitchen with barbecue cost in the Axarquía? Prices from simple to complete with a roof, water, power and fridge, plus permits.',
     lead: 'In the Axarquía you live outdoors for much of the year. An outdoor kitchen by the pool or on the terrace is a popular project. This is what it costs.',
-    keyword: 'outdoor kitchen spain',
+    keyword: 'outdoor kitchen cost spain',
     dienst: 'renovatie',
     onderwerp: 'I would like a quote for an outdoor kitchen.',
     answer: 'A simple built outdoor kitchen with barbecue and worktop costs <strong>€2,500 to €5,000</strong> in the Axarquía. With a sink, water, power and fridge, budget <strong>€6,000 to €12,000</strong>. With a roof and premium appliances, <strong>€12,000 to €25,000</strong>. Prices excluding VAT.',
