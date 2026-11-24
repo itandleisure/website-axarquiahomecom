@@ -27,6 +27,7 @@ export const routes: Partial<Record<Lang, string>>[] = [
   { nl: '/nl/contact/', en: '/en/contact/', de: '/de/kontakt/', sv: '/sv/kontakt/', es: '/es/contacto/' },
   { nl: '/nl/toegangsweg/', en: '/en/access-road/', de: '/de/zufahrtsweg/', sv: '/sv/tillfartsvag/', es: '/es/camino-de-acceso/' },
   { nl: '/nl/loodgieter/', en: '/en/plumber/', de: '/de/klempner/', sv: '/sv/rormokare/' },
+  { nl: '/nl/nederlandse-aannemer-axarquia/', en: '/en/builders-axarquia/' },
   { nl: '/nl/verhuurbeheer/', en: '/en/holiday-rental-management/', de: '/de/vermietungsservice/', sv: '/sv/uthyrningsservice/', es: '/es/gestion-alquiler-vacacional/' },
   // Gidsen staan in alle talen in dezelfde volgorde (zie src/data/guides.ts)
   ...guidesBy.nl.map((_, i) =>

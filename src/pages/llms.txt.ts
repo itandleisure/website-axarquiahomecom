@@ -18,6 +18,7 @@ export const GET: APIRoute = () => {
     `- Area served: the whole Axarquía, including ${villages}.`,
     '- Languages: Dutch, English and Spanish (German and Swedish pages; contact in English or Dutch).',
     `- Contact: ${site.operator.email}, or the request form at ${abs('/en/request/')} (English) and ${abs('/nl/aanvraag/')} (Dutch).`,
+    `- Dutch or English-speaking builder in the Axarquía: ${abs('/en/builders-axarquia/')} (English) and ${abs('/nl/nederlandse-aannemer-axarquia/')} (Nederlands).`,
     '- Typical questions we answer: Which Dutch or English-speaking builder can renovate my house in the Axarquía? Who does key holding for my holiday home? What does renovating a finca cost? How do I legalise a house with AFO? Who can survey a house before I buy near Málaga?',
     '',
     '## Services (English)',

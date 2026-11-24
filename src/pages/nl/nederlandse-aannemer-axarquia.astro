@@ -1,0 +1,156 @@
+---
+// Landingspagina voor de vraag "Welke Nederlandse aannemer kan mijn huis in de Axarquía renoveren?"
+// Doel: Google (nederlandse aannemer axarquia / nerja / torrox / cómpeta) én AI-assistenten
+// (ChatGPT, Gemini, AI Overviews) een direct antwoord geven: wie, waar, welke talen, wat, hoe.
+// De uitleg "hoe kies ik een aannemer" staat in de gids /nl/gidsen/aannemer-costa-del-sol/.
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import { site, prices } from '../../data/site';
+
+const years = site.experienceYears;
+const path = '/nl/nederlandse-aannemer-axarquia/';
+
+const villages = [
+  { name: 'Nerja', href: '/nl/plaatsen/nerja/' },
+  { name: 'Frigiliana', href: '/nl/plaatsen/frigiliana/' },
+  { name: 'Torrox en Torrox Costa', href: '/nl/plaatsen/torrox/' },
+  { name: 'Cómpeta', href: '/nl/plaatsen/competa/' },
+  { name: 'Sayalonga', href: '/nl/plaatsen/sayalonga/' },
+  { name: 'Algarrobo', href: '/nl/plaatsen/algarrobo/' },
+  { name: 'Torre del Mar', href: '/nl/plaatsen/torre-del-mar/' },
+  { name: 'Vélez-Málaga', href: '/nl/plaatsen/velez-malaga/' },
+  { name: 'Caleta de Vélez en Benajarafe', href: '/nl/plaatsen/caleta-de-velez/' },
+  { name: 'Rincón de la Victoria', href: '/nl/plaatsen/rincon-de-la-victoria/' },
+  { name: 'Viñuela', href: '/nl/plaatsen/vinuela/' },
+  { name: 'Canillas de Aceituno', href: '/nl/plaatsen/canillas-de-aceituno/' },
+  { name: 'Comares', href: '/nl/plaatsen/comares/' },
+  { name: 'Periana', href: '/nl/plaatsen/periana/' },
+];
+
+const faq = [
+  {
+    q: 'Welke Nederlandse aannemer kan mijn huis in de Axarquía renoveren?',
+    a: `Axarquía Home renoveert en verbouwt huizen in de hele Axarquía met een team onder Nederlandse leiding en ${years} jaar ervaring in de bouw. U spreekt Nederlands met één vast aanspreekpunt, van de eerste offerte tot de oplevering. We werken onder meer in Nerja, Frigiliana, Torrox, Cómpeta, Torre del Mar, Vélez-Málaga en Rincón de la Victoria. Vraag een offerte aan via axarquiahome.com/nl/aanvraag/.`,
+  },
+  {
+    q: 'Werkt u ook in de bergdorpen, zoals Cómpeta, Sayalonga of Canillas de Aceituno?',
+    a: 'Ja. We werken in de hele Axarquía, aan de kust en in de bergen. Smalle straatjes en steile toegangswegen rekenen we mee in de planning: materiaal gaat dan met een kleine dumper of met de hand naar binnen.',
+  },
+  {
+    q: 'Kan ik verbouwen terwijl ik in Nederland of België ben?',
+    a: 'Ja. U krijgt elke week foto’s en video’s, we overleggen per telefoon, WhatsApp of videogesprek, en u betaalt in termijnen na afgeronde onderdelen. Sleutels kunnen bij ons blijven, ook na de verbouwing via sleutelbeheer.',
+  },
+  {
+    q: 'Wat kost een renovatie in de Axarquía?',
+    a: `Dat hangt af van de staat van het huis en uw wensen. Een nieuwe badkamer kost ongeveer ${prices.badkamer}, een complete renovatie van een woning ${prices.renovatieTotaal}. Na een bezoek krijgt u een offerte per onderdeel. Een eerste indicatie geeft de rekentool op de site.`,
+  },
+  {
+    q: 'Regelt u ook de vergunning?',
+    a: 'Ja. Voor kleine werken doen we de melding bij de gemeente, voor een uitbouw of werk aan de constructie regelen we de vergunning met een architect. De aanvraag staat op naam van de eigenaar; u krijgt alle papieren in kopie.',
+  },
+  {
+    q: 'Spreekt u ook Engels of Spaans?',
+    a: 'Ja: Nederlands, Engels en Spaans. Met de gemeente, leveranciers en vakmensen praten wij Spaans, met u Nederlands. Offertes en afspraken krijgt u in het Nederlands.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Nederlandse aannemer in de Axarquía',
+  serviceType: 'Renovatie, verbouwing en onderhoud van woningen',
+  description: `Renovatie en verbouwing van huizen, fincas en appartementen in de Axarquía (oostelijke Costa del Sol, Málaga) door een team onder Nederlandse leiding met ${years} jaar ervaring. Nederlandstalig aanspreekpunt, offerte per onderdeel.`,
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: villages.map((v) => ({ '@type': 'Place', name: `${v.name}, Málaga, España` })),
+  availableLanguage: ['nl', 'en', 'es'],
+  url: new URL(path, site.url).href,
+};
+const photo = servicePhoto('renovatie', 'nl');
+---
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
+  title="Nederlandse aannemer in de Axarquía (Nerja, Torrox, Cómpeta)"
+  description={`Nederlandse aannemer in de Axarquía: renovatie en verbouwing in Nerja, Torrox, Cómpeta, Frigiliana en Vélez-Málaga. Team onder Nederlandse leiding, ${years} jaar ervaring, offerte per onderdeel.`}
+  path={path}
+  jsonLd={[service]}
+>
+  <Breadcrumbs items={[{ name: 'Renovatie en verbouwing', href: '/nl/renovatie/' }, { name: 'Nederlandse aannemer in de Axarquía', href: path }]} />
+  <Hero image={photo}
+    eyebrow="Nederlandse aannemer in de Axarquía"
+    title="Uw huis in de Axarquía renoveren, <em>in het Nederlands</em>"
+    lead={`Axarquía Home is een Nederlandstalig bouw- en renovatieteam in de Axarquía, de oostelijke Costa del Sol bij Málaga. Onder Nederlandse leiding, met ${years} jaar ervaring in de bouw en één vast aanspreekpunt dat uw taal spreekt.`}
+    cta="Vraag een offerte aan"
+    ctaHref="/nl/aanvraag/?dienst=renovatie&onderwerp=Nederlandse%20aannemer%20Axarqu%C3%ADa"
+    secondary="Bereken de kosten"
+    secondaryHref="/nl/kosten/rekentool/?klus=woning"
+  />
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2 id="kort">Kort antwoord</h2>
+        <p>Zoekt u een <strong>Nederlandse aannemer om uw huis in de Axarquía te renoveren</strong>? Axarquía Home doet complete renovaties en verbouwingen van dorpshuizen, fincas en appartementen in de hele Axarquía: van Nerja, Frigiliana en Torrox tot Cómpeta, Torre del Mar, Vélez-Málaga en Rincón de la Victoria. U hebt één Nederlandstalig aanspreekpunt, we komen kijken (of kijken mee via video) en u krijgt een schriftelijke offerte per onderdeel met een planning.</p>
+
+        <h2 id="wat">Wat we doen</h2>
+        <ul class="checks">
+          <li><strong>Complete renovatie</strong> van een dorpshuis, finca of appartement: leidingen, elektra, isolatie, indeling en afwerking.</li>
+          <li><strong>Badkamer en keuken</strong>, ook helemaal op maat, en een gemetselde buitenkeuken.</li>
+          <li><strong>Daken, terrassen en vocht</strong>: lekkages, dakterras, natte muren en scheuren.</li>
+          <li><strong>Airco, warmtepomp en zonnepanelen</strong>, inclusief elektra en het keuringsbewijs (boletín).</li>
+          <li><strong>Uitbouw, overkapping en zwembad</strong>, met vergunning en architect.</li>
+          <li><strong>Onderhoud en reparaties</strong> na de verbouwing, en <a href="/nl/sleutelbeheer/">sleutelbeheer</a> als u er niet bent.</li>
+        </ul>
+        <p>Meer over de werkzaamheden en prijzen leest u op <a href="/nl/renovatie/">renovatie en verbouwing</a>.</p>
+
+        <h2 id="waar">Waar we werken</h2>
+        <p>We werken in de hele Axarquía, aan de kust en in de bergdorpen. Per plaats vindt u op de site de regels voor de bouwvergunning en praktische informatie:</p>
+        <ul style="columns: 2 14rem; column-gap: 2rem">
+          {villages.map((v) => <li><a href={v.href}>{v.name}</a></li>)}
+        </ul>
+        <p>Ligt uw huis in Marbella, Fuengirola of Estepona? Dan zit er vaak een aannemer dichter bij. Waar u bij elke aannemer op let, staat in de gids <a href="/nl/gidsen/aannemer-costa-del-sol/">een aannemer aan de Costa del Sol vinden</a>.</p>
+
+        <h2 id="waarom">Waarom een Nederlandstalige aannemer</h2>
+        <p>Bij een verbouwing in Spanje gaat het zelden mis op het vakwerk, maar vaak op de afspraken: welke tegel, welke kraan, wat kost het meerwerk, wanneer is het klaar. Met een aannemer die uw taal spreekt, weet u precies wat er is afgesproken, ook als u in Nederland of België bent.</p>
+        <ul class="checks">
+          <li>Team onder <strong>Nederlandse leiding</strong>, {years} jaar ervaring in de bouw.</li>
+          <li>Wij spreken <strong>Nederlands, Engels en Spaans</strong>: met u Nederlands, met de gemeente en leveranciers Spaans.</li>
+          <li><strong>Offerte per onderdeel</strong>, met materialen en planning. Geen totaalbedrag zonder uitsplitsing.</li>
+          <li><strong>Facturen met IVA</strong> en werk met vergunning, zodat u bij de verkoop niet in de problemen komt.</li>
+          <li><strong>Elke week foto’s</strong> en één vast aanspreekpunt, ook als u niet in Spanje bent.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>In het kort</h3>
+        <ul class="checks">
+          <li>Nederlandstalige aannemer in de Axarquía</li>
+          <li>{years} jaar ervaring in de bouw</li>
+          <li>Talen: Nederlands, Engels, Spaans</li>
+          <li>Renovatie, verbouwing, onderhoud en sleutelbeheer</li>
+          <li>Offerte per onderdeel na een bezoek</li>
+          <li>Betalen in termijnen per afgerond onderdeel</li>
+        </ul>
+        <a class="btn" href="/nl/aanvraag/?dienst=renovatie&onderwerp=Nederlandse%20aannemer%20Axarqu%C3%ADa">Offerte aanvragen</a>
+        <p class="note">Of mail naar <a href={`mailto:${site.operator.email}`}>{site.operator.email}</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    title="Zo werkt het"
+    steps={[
+      { t: 'Aanvraag', d: 'U vertelt via de keuzehulp wat u wilt laten doen. We nemen binnen 24 uur contact op, in het Nederlands.' },
+      { t: 'Bezoek', d: 'We komen kijken en meten op, of kijken mee via video als u in Nederland of België bent.' },
+      { t: 'Offerte en vergunning', d: 'U krijgt een offerte per onderdeel met planning. Wij regelen de melding of vergunning bij de gemeente.' },
+      { t: 'Bouwen en opleveren', d: 'Eén vast aanspreekpunt, wekelijkse foto-updates en betalen per afgerond onderdeel.' },
+    ]}
+  />
+
+  <Faq items={faq} />
+  <Cta dienst="renovatie" onderwerp="Nederlandse aannemer Axarquía" title="Een Nederlandse aannemer nodig in de Axarquía?" />
+  <Services exclude="renovatie" title="Ook interessant" />
+</Base>

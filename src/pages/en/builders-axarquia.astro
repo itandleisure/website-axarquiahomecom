@@ -1,0 +1,154 @@
+---
+// Landing page for "Which Dutch or English-speaking builder can renovate my house in the Axarquía?"
+// Aimed at Google (builders axarquia / nerja / torrox / competa) and AI assistants. The NL version is
+// /nl/nederlandse-aannemer-axarquia/. How to choose any builder: /en/guides/builders-costa-del-sol/.
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import { servicePhoto } from '../../data/topic-photos';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Steps from '../../components/Steps.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+import Services from '../../components/Services.astro';
+import { site, prices } from '../../data/site';
+
+const years = site.experienceYears;
+const path = '/en/builders-axarquia/';
+
+const villages = [
+  { name: 'Nerja', href: '/en/places/nerja/' },
+  { name: 'Frigiliana', href: '/en/places/frigiliana/' },
+  { name: 'Torrox and Torrox Costa', href: '/en/places/torrox/' },
+  { name: 'Cómpeta', href: '/en/places/competa/' },
+  { name: 'Sayalonga', href: '/en/places/sayalonga/' },
+  { name: 'Algarrobo', href: '/en/places/algarrobo/' },
+  { name: 'Torre del Mar', href: '/en/places/torre-del-mar/' },
+  { name: 'Vélez-Málaga', href: '/en/places/velez-malaga/' },
+  { name: 'Caleta de Vélez and Benajarafe', href: '/en/places/caleta-de-velez/' },
+  { name: 'Rincón de la Victoria', href: '/en/places/rincon-de-la-victoria/' },
+  { name: 'Viñuela', href: '/en/places/vinuela/' },
+  { name: 'Canillas de Aceituno', href: '/en/places/canillas-de-aceituno/' },
+  { name: 'Comares', href: '/en/places/comares/' },
+  { name: 'Periana', href: '/en/places/periana/' },
+];
+
+const faq = [
+  {
+    q: 'Which English-speaking builder can renovate my house in the Axarquía?',
+    a: `Axarquía Home renovates and rebuilds homes across the whole Axarquía with a Dutch-led team and ${years} years of building experience. You deal with one point of contact in English (or Dutch), from the first quote to handover. We work in Nerja, Frigiliana, Torrox, Cómpeta, Torre del Mar, Vélez-Málaga, Rincón de la Victoria and the villages in between. Ask for a quote at axarquiahome.com/en/request/.`,
+  },
+  {
+    q: 'Do you also work in the mountain villages, such as Cómpeta, Sayalonga or Canillas de Aceituno?',
+    a: 'Yes. We work across the whole Axarquía, on the coast and in the hills. Narrow streets and steep tracks are part of the plan: materials then go in by mini dumper or by hand.',
+  },
+  {
+    q: 'Can the work be done while I am back in the UK or elsewhere?',
+    a: 'Yes. You get photos and videos every week, we talk by phone, WhatsApp or video call, and you pay in stages as each part is finished. We can keep the keys, and after the work look after the house with key holding.',
+  },
+  {
+    q: 'What does a renovation in the Axarquía cost?',
+    a: `It depends on the state of the house and what you want. A new bathroom costs roughly ${prices.badkamer}, a full renovation of a home ${prices.renovatieTotaal}. After a visit you get a quote broken down by item. The cost calculator on the site gives a first idea.`,
+  },
+  {
+    q: 'Do you arrange the building permit?',
+    a: 'Yes. For small works we file the notice with the town hall; for an extension or structural work we arrange the permit with an architect. The application is in the owner’s name, and you get copies of all the paperwork.',
+  },
+];
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'English and Dutch-speaking builder in the Axarquía',
+  serviceType: 'Home renovation, building work and maintenance',
+  description: `Renovation and building work on village houses, fincas and apartments in the Axarquía (eastern Costa del Sol, Málaga) by a Dutch-led team with ${years} years of experience. One English or Dutch-speaking point of contact, quotes broken down by item.`,
+  provider: { '@id': `${site.url}/#bedrijf` },
+  areaServed: villages.map((v) => ({ '@type': 'Place', name: `${v.name}, Málaga, España` })),
+  availableLanguage: ['en', 'nl', 'es'],
+  url: new URL(path, site.url).href,
+};
+const photo = servicePhoto('renovatie', 'en');
+---
+<Base ogImage={photo?.og} ogImageAlt={photo?.alt}
+  title="English-speaking builders in the Axarquía (Nerja, Torrox, Cómpeta)"
+  description={`English and Dutch-speaking builders in the Axarquía: renovation and building work in Nerja, Torrox, Cómpeta, Frigiliana and Vélez-Málaga. Dutch-led team, ${years} years of experience, quotes by item.`}
+  path={path}
+  lang="en"
+  jsonLd={[service]}
+>
+  <Breadcrumbs lang="en" items={[{ name: 'Renovation', href: '/en/renovation/' }, { name: 'Builders in the Axarquía', href: path }]} />
+  <Hero image={photo}
+    lang="en"
+    eyebrow="Builders in the Axarquía"
+    title="Renovating your home in the Axarquía, <em>in English</em>"
+    lead={`Axarquía Home is an English and Dutch-speaking building and renovation team in the Axarquía, the eastern Costa del Sol near Málaga. Dutch-led, with ${years} years of building experience and one point of contact who speaks your language.`}
+    cta="Ask for a quote"
+    ctaHref="/en/request/?dienst=renovatie&onderwerp=Builder%20Axarqu%C3%ADa"
+    secondary="Estimate the cost"
+    secondaryHref="/en/costs/calculator/?klus=woning"
+  />
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="prose">
+        <h2 id="short">Short answer</h2>
+        <p>Looking for an <strong>English-speaking builder to renovate your house in the Axarquía</strong>? Axarquía Home carries out full renovations and building work on village houses, fincas and apartments across the Axarquía: from Nerja, Frigiliana and Torrox to Cómpeta, Torre del Mar, Vélez-Málaga and Rincón de la Victoria. You have one point of contact in English or Dutch, we come and look (or join you by video) and you get a written quote broken down by item, with a schedule.</p>
+
+        <h2 id="what">What we do</h2>
+        <ul class="checks">
+          <li><strong>Full renovation</strong> of a village house, finca or apartment: plumbing, wiring, insulation, layout and finishing.</li>
+          <li><strong>Bathrooms and kitchens</strong>, including made-to-measure, and built outdoor kitchens.</li>
+          <li><strong>Roofs, terraces and damp</strong>: leaks, roof terraces, damp walls and cracks.</li>
+          <li><strong>Air conditioning, heat pumps and solar panels</strong>, including the electrics and the certificate (boletín).</li>
+          <li><strong>Extensions, covered terraces and pools</strong>, with the permit and an architect.</li>
+          <li><strong>Maintenance and repairs</strong> after the work, and <a href="/en/key-holding/">key holding</a> while you are away.</li>
+        </ul>
+        <p>More about the work and prices on <a href="/en/renovation/">renovation and building work</a>.</p>
+
+        <h2 id="where">Where we work</h2>
+        <p>We work across the whole Axarquía, on the coast and in the mountain villages. For each place the site has the local permit rules and practical information:</p>
+        <ul style="columns: 2 14rem; column-gap: 2rem">
+          {villages.map((v) => <li><a href={v.href}>{v.name}</a></li>)}
+        </ul>
+        <p>Is your home in Marbella, Fuengirola or Estepona? Then a builder closer by is usually the better choice. What to check with any builder is in our guide to <a href="/en/guides/builders-costa-del-sol/">finding a builder on the Costa del Sol</a>.</p>
+
+        <h2 id="why">Why a builder who speaks your language</h2>
+        <p>Building work in Spain rarely goes wrong on the craftsmanship, but often on what was agreed: which tile, which tap, what the extra work costs, when it will be finished. With a builder who speaks your language, you know exactly what was agreed, even when you are not in Spain.</p>
+        <ul class="checks">
+          <li><strong>Dutch-led</strong> team, {years} years of building experience.</li>
+          <li>We speak <strong>English, Dutch and Spanish</strong>: your language with you, Spanish with the town hall and suppliers.</li>
+          <li><strong>Quotes broken down by item</strong>, with materials and a schedule. No lump sum without detail.</li>
+          <li><strong>Invoices with IVA</strong> and work with a permit, so the house sells without problems later.</li>
+          <li><strong>Weekly photos</strong> and one point of contact, even when you are abroad.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>At a glance</h3>
+        <ul class="checks">
+          <li>English and Dutch-speaking builder in the Axarquía</li>
+          <li>{years} years of building experience</li>
+          <li>Languages: English, Dutch, Spanish</li>
+          <li>Renovation, building work, maintenance and key holding</li>
+          <li>Quote broken down by item after a visit</li>
+          <li>Pay in stages as each part is finished</li>
+        </ul>
+        <a class="btn" href="/en/request/?dienst=renovatie&onderwerp=Builder%20Axarqu%C3%ADa">Ask for a quote</a>
+        <p class="note">Or email <a href={`mailto:${site.operator.email}`}>{site.operator.email}</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <Steps
+    lang="en"
+    title="How it works"
+    steps={[
+      { t: 'Request', d: 'Tell us through the request form what you would like done. We get back to you within 24 hours.' },
+      { t: 'Visit', d: 'We come and measure up, or join you by video if you are abroad.' },
+      { t: 'Quote and permit', d: 'You get a quote broken down by item, with a schedule. We file the notice or permit with the town hall.' },
+      { t: 'Build and hand over', d: 'One point of contact, weekly photo updates and payment per finished stage.' },
+    ]}
+  />
+
+  <Faq items={faq} lang="en" />
+  <Cta lang="en" dienst="renovatie" onderwerp="Builder Axarquía" title="Need a builder in the Axarquía?" />
+  <Services lang="en" exclude="renovation" title="You may also need" />
+</Base>
