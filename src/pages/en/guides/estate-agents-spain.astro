@@ -1,0 +1,70 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'how', label: 'How Spanish estate agents work' },
+  { id: 'commission', label: 'Who pays the commission?' },
+  { id: 'english', label: 'An English-speaking agent' },
+  { id: 'questions', label: 'Questions to ask first' },
+  { id: 'checks', label: 'What to check yourself' },
+  { id: 'deposit', label: 'Reserving and paying a deposit' },
+];
+
+const faq = [
+  {
+    q: 'Do estate agents in Spain need a licence?',
+    a: 'Not in Andalucía. In principle anyone can sell property. Membership of a professional body, such as the API or GIPE, is voluntary. So ask about experience, references and professional indemnity insurance.',
+  },
+  {
+    q: 'How much commission do Spanish estate agents charge?',
+    a: 'Usually between 3% and 6% of the sale price plus 21% VAT, and sometimes more for rural properties. The seller normally pays and the commission is built into the asking price. Always get in writing who pays what.',
+  },
+  {
+    q: 'Why is the same house listed at different prices?',
+    a: 'Sellers in Spain often list with several agents at once, and each agent adds their own commission. So keep looking: the same house may be thousands of euros cheaper with another agent.',
+  },
+  {
+    q: 'Do I still need a lawyer if I use an estate agent?',
+    a: 'Yes. The agent normally works for the seller and is not a lawyer. Your own independent lawyer checks ownership, debts, permits and the contract. Choose one yourself rather than on the agent’s recommendation.',
+  },
+];
+---
+<Guide lang="en" slug="estate-agents-spain" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Found a house through an agent?" ctaText="We survey it independently of the agent and the seller. You get a clear report and a price for any work, in English.">
+  <p>Most Britons find their Spanish home through an estate agent. A good agent knows the area, the prices and the pitfalls and saves you a lot of searching. But a Spanish agent works differently from what you may be used to in the UK. If you know how, you make better choices and know when to have things checked yourself.</p>
+
+  <h2 id="how">How Spanish estate agents work</h2>
+  <ul>
+    <li><strong>They work for the seller.</strong> The seller pays the agent, so the agent’s interest is a sale at a good price. Buying agents who work only for you are rare in Spain.</li>
+    <li><strong>No licence required.</strong> In Andalucía an agent needs no qualification or registration. There are excellent agents, and people doing it on the side.</li>
+    <li><strong>Houses are listed with several agents.</strong> Sole agency is less common, so the same house can appear at different prices.</li>
+    <li><strong>No survey.</strong> The agent usually does not check the condition or the permits. You arrange that yourself.</li>
+  </ul>
+
+  <h2 id="commission">Who pays the commission?</h2>
+  <p>Commission is usually 3% to 6% of the sale price plus VAT and is built into the asking price, so as the buyer you pay for it indirectly. When two agents work together, they share it. Have the reservation and purchase contracts state that commission is the seller’s cost. What you do pay as a buyer is in <a href="/en/guides/buying-costs-in-spain/">buying costs in Spain</a>.</p>
+
+  <h2 id="english">An English-speaking agent</h2>
+  <p>In the Axarquía and on the Costa del Sol many agents are British or speak fluent English. That makes communication easy, and they know the questions British buyers ask. But an English-speaking agent also normally works for the seller and does not necessarily know Spanish law better. Choose on local knowledge and honesty, not on language alone.</p>
+
+  <h2 id="questions">Questions to ask first</h2>
+  <ol>
+    <li>How long have you worked in this area, and how many houses do you sell a year in this village?</li>
+    <li>Are you a member of a professional body and do you have professional indemnity insurance?</li>
+    <li>Do you act for the seller, for me, or for both? Who pays your commission?</li>
+    <li>Have you seen the nota simple, the building permits and the cadastral record for this house?</li>
+    <li>Does the floor area in the registry match reality? Are there extensions without permits?</li>
+    <li>How long has the house been on the market, and why is the owner selling?</li>
+    <li>Can you give me references from previous buyers?</li>
+  </ol>
+  <p>A good agent answers these honestly. If questions about permits or paperwork are dodged, be careful.</p>
+
+  <h2 id="checks">What to check yourself</h2>
+  <ul>
+    <li><strong>Legal</strong>: your own lawyer checks ownership, debts, permits and the contract. In the countryside, unpermitted extensions are common; see <a href="/en/guides/afo-legalisation-andalusia/">AFO and legalisation in Andalucía</a>.</li>
+    <li><strong>Condition</strong>: damp, roof, foundations, wiring, water and drainage. Have a <a href="/en/property-survey/">property survey</a> done before you pay a deposit.</li>
+    <li><strong>Work needed</strong>: get a price for what needs doing in advance. It gives you a strong basis to negotiate. See <a href="/en/costs/">our prices per job</a>.</li>
+  </ul>
+
+  <h2 id="deposit">Reserving and paying a deposit</h2>
+  <p>The agent often asks for a small reservation fee to take the house off the market. Then comes the private purchase contract with a deposit (<em>contrato de arras</em>), usually 10%. If you pull out after that, you lose the deposit. So only pay once your lawyer and the survey give the green light, and preferably into your lawyer’s client account. The full process step by step is in <a href="/en/guides/buying-a-house-in-spain/">buying a house in Spain</a>.</p>
+</Guide>

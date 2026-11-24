@@ -1,0 +1,91 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'wie', label: 'Wie betaalt Spaanse erfbelasting?' },
+  { id: 'andalusie', label: 'Hoeveel in Andalusië?' },
+  { id: 'nederland-belgie', label: 'Samen met Nederland of België' },
+  { id: 'testament', label: 'Een Spaans testament' },
+  { id: 'erfgenamen', label: 'Wat uw erfgenamen moeten doen' },
+  { id: 'plusvalia', label: 'Plusvalía en andere kosten' },
+  { id: 'schenken', label: 'Schenken bij leven' },
+];
+
+const faq = [
+  {
+    q: 'Betaal ik Spaanse erfbelasting als ik in Nederland of België woon?',
+    a: 'Ja, over het huis en ander bezit dat in Spanje ligt, zoals een Spaanse bankrekening. Woont u in Spanje, dan betalen uw erfgenamen Spaanse erfbelasting over alles wat u nalaat. Als niet-inwoner van Spanje mag u sinds een uitspraak van het Europees Hof dezelfde regionale kortingen gebruiken als een inwoner.',
+  },
+  {
+    q: 'Moet ik een Spaans testament laten maken?',
+    a: 'Het is niet verplicht, maar wel sterk aan te raden als u een huis in Spanje hebt. Uw erfgenamen hoeven dan geen Nederlands of Belgisch testament te laten vertalen en legaliseren, en de afwikkeling bij de Spaanse notaris gaat veel sneller. Een Spaans testament bij de notaris kost meestal tussen de € 50 en € 150.',
+  },
+  {
+    q: 'Binnen welke termijn moet de erfbelasting worden betaald?',
+    a: 'Binnen zes maanden na het overlijden. Uitstel van nog eens zes maanden kunt u aanvragen binnen de eerste vijf maanden. Wie te laat is, betaalt een toeslag en rente.',
+  },
+  {
+    q: 'Wordt er dan twee keer belasting betaald?',
+    a: 'Nederland en België verrekenen de Spaanse erfbelasting over het Spaanse huis in de regel met hun eigen erfbelasting, zodat u niet twee keer volledig betaalt. Hoe dat precies uitpakt, verschilt per situatie. Laat het berekenen door een adviseur die beide landen kent.',
+  },
+];
+---
+<Guide slug="erfbelasting-testament-spanje" toc={toc} faq={faq} ctaTitle="Wilt u het huis in goede staat doorgeven?" ctaText="Wij houden uw huis in Spanje bij, ook als u er niet bent. Zo erven uw kinderen geen achterstallig onderhoud.">
+  <p>Een huis in Spanje is fijn om te hebben en om later door te geven. Maar wat gebeurt er met de belasting als u overlijdt? En hoe zorgt u ervoor dat uw partner of kinderen het huis zonder gedoe kunnen overnemen? Deze gids zet het op een rij voor Nederlanders en Belgen met een huis in Andalusië. Erfrecht en belasting veranderen regelmatig en hangen sterk af van uw situatie: gebruik deze gids als oriëntatie en laat uw eigen situatie altijd nakijken door een notaris of fiscalist.</p>
+
+  <h2 id="wie">Wie betaalt Spaanse erfbelasting?</h2>
+  <p>In Spanje betaalt niet de overledene, maar <strong>elke erfgenaam</strong> zelf erfbelasting (<em>Impuesto sobre Sucesiones y Donaciones</em>) over wat hij of zij krijgt. Welke regels gelden, hangt af van waar de overledene woonde:</p>
+  <ul>
+    <li><strong>Woonde de overledene in Spanje?</strong> Dan valt alles wat hij of zij nalaat onder de Spaanse erfbelasting, ook bezit in Nederland of België.</li>
+    <li><strong>Woonde de overledene niet in Spanje?</strong> Dan betalen de erfgenamen alleen over wat in Spanje ligt: het huis, een auto, een Spaanse bankrekening.</li>
+  </ul>
+  <p>Vroeger betaalden niet-inwoners veel meer, omdat ze de regionale kortingen niet mochten gebruiken. Na een uitspraak van het Europees Hof van Justitie in 2014 mag dat wel. Voor een huis in de Axarquía gelden daarom de regels van Andalusië.</p>
+
+  <h2 id="andalusie">Hoeveel in Andalusië?</h2>
+  <p>Andalusië is voor erfgenamen een van de gunstigste regio’s van Spanje. Partners, kinderen, kleinkinderen en ouders (de zogenoemde groepen I en II) krijgen een korting van 99% op de te betalen belasting. In de praktijk betalen zij over een gewoon vakantiehuis dus vrijwel niets. Voor broers, zussen, neven, nichten en mensen zonder familieband geldt die korting niet: zij kunnen flink betalen, met tarieven die bij grote bedragen oplopen tot boven de 30%.</p>
+  <table class="prices">
+    <thead><tr><th>Erfgenaam</th><th>Erfbelasting in Andalusië</th></tr></thead>
+    <tbody>
+      <tr><td>Partner (getrouwd of geregistreerd)</td><td>99% korting, vrijwel niets</td></tr>
+      <tr><td>Kinderen en kleinkinderen</td><td>99% korting, vrijwel niets</td></tr>
+      <tr><td>Ouders</td><td>99% korting, vrijwel niets</td></tr>
+      <tr><td>Broers, zussen, neven en nichten</td><td>gewoon tarief met een kleine vrijstelling</td></tr>
+      <tr><td>Geen familie (bijvoorbeeld samenwonende partner zonder registratie)</td><td>hoogste tarief</td></tr>
+    </tbody>
+  </table>
+  <p>Let op als u samenwoont zonder huwelijk of geregistreerd partnerschap. In Spanje telt een samenwonende partner dan vaak als vreemde. Laat u in dat geval adviseren over een registratie of andere oplossing.</p>
+
+  <h2 id="nederland-belgie">Samen met Nederland of België</h2>
+  <p>Woont u in Nederland, dan heft ook Nederland erfbelasting over uw hele nalatenschap, inclusief het Spaanse huis. Nederland verrekent de Spaanse belasting over het huis met de Nederlandse, zodat er niet twee keer volledig wordt geheven. Bent u als Nederlander naar Spanje verhuisd, dan blijft Nederland nog tien jaar na uw vertrek erfbelasting heffen alsof u er woont.</p>
+  <p>Woont u in België, dan gelden de Vlaamse, Waalse of Brusselse regels voor de erfbelasting (successierechten). Ook daar wordt buitenlandse belasting op een huis in het buitenland in de regel verrekend.</p>
+  <p>Omdat er tussen Spanje en Nederland of België geen apart verdrag voor erfbelasting is, werkt de verrekening via de eigen regels van elk land. Een adviseur die beide landen kent, kan u precies voorrekenen wat uw erfgenamen betalen.</p>
+
+  <h2 id="testament">Een Spaans testament</h2>
+  <p>Sinds 2015 geldt in de hele EU (behalve Denemarken en Ierland) de Europese erfrechtverordening. Daardoor geldt in principe het erfrecht van het land waar u op het moment van overlijden woont. U kunt in uw testament ook kiezen voor het recht van uw nationaliteit, bijvoorbeeld Nederlands recht. Dat is handig, want het Spaanse erfrecht kent een verplicht deel voor de kinderen (<em>legítima</em>), wat het lastig maakt om alles aan uw partner na te laten.</p>
+  <p>Voor uw Spaanse huis raden wij een <strong>apart Spaans testament</strong> aan, alleen voor uw bezit in Spanje:</p>
+  <ul>
+    <li>U laat het opstellen bij een Spaanse notaris (<em>testamento abierto</em>), in het Spaans met een vertaling. U hebt uw paspoort en NIE-nummer nodig; lees <a href="/nl/gidsen/nie-nummer-aanvragen-spanje/">NIE-nummer aanvragen</a>.</li>
+    <li>Het wordt automatisch ingeschreven in het centrale testamentenregister in Madrid.</li>
+    <li>Laat de notaris vermelden dat het testament alleen over Spaans bezit gaat, zodat het uw Nederlandse of Belgische testament niet herroept.</li>
+    <li>Kies in beide testamenten voor hetzelfde recht, zodat ze elkaar niet tegenspreken.</li>
+  </ul>
+  <p>Zonder Spaans testament moeten uw erfgenamen het buitenlandse testament en een verklaring van erfrecht laten vertalen en voorzien van een apostille. Dat kost tijd en geld, terwijl het huis zolang niet verkocht of overgeschreven kan worden.</p>
+
+  <h2 id="erfgenamen">Wat uw erfgenamen moeten doen</h2>
+  <ol>
+    <li>Een overlijdensakte en een verklaring uit het Spaanse testamentenregister (<em>certificado de últimas voluntades</em>) aanvragen.</li>
+    <li>Allemaal een eigen NIE-nummer aanvragen.</li>
+    <li>Bij de notaris de erfenis aanvaarden en verdelen (<em>escritura de aceptación y adjudicación de herencia</em>).</li>
+    <li>Binnen zes maanden de erfbelasting aangeven en betalen bij de Junta de Andalucía.</li>
+    <li>De plusvalía bij de gemeente betalen en het huis op hun naam laten zetten in het eigendomsregister.</li>
+    <li>Contracten voor stroom, water, verzekering en eventueel <a href="/nl/sleutelbeheer/">sleutelbeheer</a> op hun naam zetten.</li>
+  </ol>
+  <p>Een Spaanse advocaat of gestor kan dit alles met een volmacht regelen, zodat uw erfgenamen niet naar Spanje hoeven.</p>
+
+  <h2 id="plusvalia">Plusvalía en andere kosten</h2>
+  <p>Naast de erfbelasting rekent de gemeente de <em>plusvalía municipal</em>: een belasting op de waardestijging van de grond sinds de vorige overdracht. Die geldt ook bij erven. Sommige gemeenten geven korting aan partners en kinderen. Verder betalen de erfgenamen de notaris, het register en eventueel een advocaat. Reken voor een gewone erfenis van een vakantiehuis op enkele duizenden euro’s aan bijkomende kosten. Welke belastingen u als eigenaar elk jaar betaalt, leest u in de <a href="/nl/gidsen/belastingkalender-spanje/">belastingkalender voor Spanje</a>.</p>
+
+  <h2 id="schenken">Schenken bij leven</h2>
+  <p>Ook bij schenken van partners aan kinderen geeft Andalusië een korting van 99%, onder voorwaarden: de schenking moet bij de notaris en het geld moet aantoonbaar via de bank gaan. Bij schenken van een huis betaalt de schenker in Spanje wel inkomstenbelasting over de waardestijging, en de gemeente rekent plusvalía. Schenken is dus niet altijd voordeliger dan erven. Laat het vooraf doorrekenen.</p>
+  <p>Wilt u het huis verkopen in plaats van doorgeven? Lees dan <a href="/nl/gidsen/huis-verkopen-spanje/">huis verkopen in Spanje</a>.</p>
+</Guide>

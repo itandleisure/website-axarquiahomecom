@@ -149,7 +149,7 @@ export const guides: GuideMeta[] = [
     short: 'Voor gepensioneerden',
     description: 'Met pensioen naar de Axarquía? Vergelijk finca, appartement en dorpshuis op zorg, trappen, onderhoud, rijden op latere leeftijd en later weer verkopen.',
     lead: 'Na uw pensioen woont u misschien twintig jaar of langer in hetzelfde huis. Het huis dat nu perfect voelt, moet ook passen als autorijden of traplopen minder vanzelf gaat.',
-    keyword: 'met pensioen naar spanje',
+    keyword: 'welk huis met pensioen spanje',
     minutes: 7,
     published: '2026-11-05',
   },
@@ -614,11 +614,12 @@ export const guidesEn: GuideMeta[] = [
     slug: 'finca-apartment-or-village-house-retirees',
     path: '/en/guides/finca-apartment-or-village-house/retirees/',
     parent: 'finca-apartment-or-village-house',
-    title: 'Retiring to Spain: finca, apartment or village house?',
+    title: 'Finca, apartment or village house: the best home for retirees',
+    seoTitle: 'Retiring to the Axarquía: which home suits you?',
     short: 'For retirees',
     description: 'Retiring to the Axarquía? Compare a finca, apartment and village house on healthcare, stairs, upkeep, driving in later years and selling up later.',
     lead: 'After retiring, you may live in the same house for twenty years or more. The home that feels perfect now also has to work when driving or climbing stairs gets harder.',
-    keyword: 'retiring to spain',
+    keyword: 'best home for retirees in spain',
     minutes: 7,
     published: '2026-11-05',
   },
@@ -1534,13 +1535,14 @@ import { dienstenNl, dienstenEn, dienstenDe } from './guides-diensten';
 import { energieNl, energieEn, energieDe } from './guides-energie';
 import { praktischNl, praktischEn, praktischDe } from './guides-praktisch';
 import { wonenNl, wonenEn, wonenDe } from './guides-wonen';
+import { gatenNl, gatenEn, gatenDe, gatenEnOnly } from './guides-gaten';
 import { guidesSvExtra } from './guides-sv';
 import { guidesEs } from './guides-es';
 // Gidsen uit eigen bestanden komen achter de lijsten hierboven, in elke taal op dezelfde positie.
 export const guidesBy: Record<Lang, GuideMeta[]> = {
-  nl: [...guides, ...huisEnTuinNl, ...ontwerpNl, ...wegenNl, ...dienstenNl, ...energieNl, ...praktischNl, ...wonenNl],
-  en: [...guidesEn, ...huisEnTuinEn, ...ontwerpEn, ...wegenEn, ...dienstenEn, ...energieEn, ...praktischEn, ...wonenEn],
-  de: [...guidesDe, ...huisEnTuinDe, ...ontwerpDe, ...wegenDe, ...dienstenDe, ...energieDe, ...praktischDe, ...wonenDe],
+  nl: [...guides, ...huisEnTuinNl, ...ontwerpNl, ...wegenNl, ...dienstenNl, ...energieNl, ...praktischNl, ...wonenNl, ...gatenNl],
+  en: [...guidesEn, ...huisEnTuinEn, ...ontwerpEn, ...wegenEn, ...dienstenEn, ...energieEn, ...praktischEn, ...wonenEn, ...gatenEn, ...gatenEnOnly],
+  de: [...guidesDe, ...huisEnTuinDe, ...ontwerpDe, ...wegenDe, ...dienstenDe, ...energieDe, ...praktischDe, ...wonenDe, ...gatenDe],
   sv: [...guidesSv, ...guidesSvExtra],
   es: guidesEs,
 };

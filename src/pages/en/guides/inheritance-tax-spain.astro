@@ -1,0 +1,90 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'who', label: 'Who pays Spanish inheritance tax?' },
+  { id: 'andalucia', label: 'How much in Andalucía?' },
+  { id: 'uk', label: 'Spanish and UK inheritance tax' },
+  { id: 'will', label: 'Making a Spanish will' },
+  { id: 'heirs', label: 'What your heirs need to do' },
+  { id: 'plusvalia', label: 'Plusvalía and other costs' },
+  { id: 'gifts', label: 'Gifting during your lifetime' },
+];
+
+const faq = [
+  {
+    q: 'Do I pay Spanish inheritance tax if I live in the UK?',
+    a: 'Yes, on the house and other assets located in Spain, such as a Spanish bank account. If you live in Spain, your heirs pay Spanish inheritance tax on everything you leave. Non-residents can now use the same regional allowances as residents, which in Andalucía means close relatives pay very little.',
+  },
+  {
+    q: 'Do I need a Spanish will?',
+    a: 'It is not compulsory, but it is strongly recommended if you own a house in Spain. Your heirs then do not need to have a UK will and grant of probate translated and apostilled, and the process at the Spanish notary is much quicker. A Spanish will at a notary usually costs between €50 and €150.',
+  },
+  {
+    q: 'How long do heirs have to pay Spanish inheritance tax?',
+    a: 'Six months from the date of death. A further six months’ extension can be requested within the first five months. Late payment means surcharges and interest.',
+  },
+  {
+    q: 'Will my family pay inheritance tax twice?',
+    a: 'Usually not in full. If UK inheritance tax is also due, the UK normally gives credit for Spanish tax paid on the Spanish property. There is no inheritance tax treaty between the UK and Spain, so the details depend on your situation. Have it worked out by an adviser who knows both systems.',
+  },
+];
+---
+<Guide lang="en" slug="inheritance-tax-spain" toc={toc} faq={faq} ctaTitle="Want to pass on the house in good shape?" ctaText="We look after your house in Spain while you are away. So your children do not inherit years of neglected maintenance.">
+  <p>A house in Spain is lovely to own and to pass on. But what happens with tax when you die? And how do you make sure your spouse or children can take over the house without trouble? This guide sets it out for British owners of a house in Andalucía. Inheritance law and tax change regularly and depend heavily on your circumstances, so treat this guide as an overview and always have your own situation checked by a notary or tax adviser.</p>
+
+  <h2 id="who">Who pays Spanish inheritance tax?</h2>
+  <p>In Spain it is not the estate but <strong>each heir</strong> who pays inheritance tax (<em>Impuesto sobre Sucesiones y Donaciones</em>) on what they receive. Which rules apply depends on where the person who died lived:</p>
+  <ul>
+    <li><strong>Lived in Spain?</strong> Then everything they leave falls under Spanish inheritance tax, including assets in the UK.</li>
+    <li><strong>Lived outside Spain?</strong> Then the heirs only pay on what is in Spain: the house, a car, a Spanish bank account.</li>
+  </ul>
+  <p>Non-residents used to pay much more because they could not use the regional allowances. After a ruling by the EU Court of Justice in 2014 and later Spanish court rulings and changes in the law, that now applies to residents of non-EU countries such as the UK as well. For a house in the Axarquía, the rules of Andalucía therefore apply.</p>
+
+  <h2 id="andalucia">How much in Andalucía?</h2>
+  <p>Andalucía is one of the most generous regions in Spain for heirs. Spouses, children, grandchildren and parents (the so-called groups I and II) get a 99% reduction on the tax due. In practice they pay almost nothing on an ordinary holiday home. Brothers, sisters, nephews, nieces and people who are not related do not get this reduction and can pay a lot, with rates rising above 30% on large amounts.</p>
+  <table class="prices">
+    <thead><tr><th>Heir</th><th>Inheritance tax in Andalucía</th></tr></thead>
+    <tbody>
+      <tr><td>Spouse or registered partner</td><td>99% reduction, almost nothing</td></tr>
+      <tr><td>Children and grandchildren</td><td>99% reduction, almost nothing</td></tr>
+      <tr><td>Parents</td><td>99% reduction, almost nothing</td></tr>
+      <tr><td>Brothers, sisters, nephews and nieces</td><td>normal rates with a small allowance</td></tr>
+      <tr><td>Unrelated (for example an unmarried, unregistered partner)</td><td>highest rates</td></tr>
+    </tbody>
+  </table>
+  <p>Take care if you live together without being married or in a civil partnership. In Spain an unmarried partner is often treated as a stranger. Get advice on registering as a couple or another solution.</p>
+
+  <h2 id="uk">Spanish and UK inheritance tax</h2>
+  <p>Since April 2025, UK inheritance tax depends on residence rather than domicile. If you have been UK resident for at least 10 of the last 20 tax years, UK inheritance tax applies to your worldwide estate, including the Spanish house, and that can continue for several years after you move abroad. Spouses and civil partners inherit free of UK inheritance tax, and the nil-rate bands apply as usual.</p>
+  <p>Where both countries tax the Spanish house, the UK normally gives a credit for the Spanish tax paid. Because Andalucía charges close relatives so little, the UK tax is often the bigger one. An adviser who knows both systems can tell you exactly what your heirs will pay.</p>
+
+  <h2 id="will">Making a Spanish will</h2>
+  <p>Under the EU Succession Regulation, which Spain applies to everyone, the law of the country where you live at death normally governs your estate. You can choose the law of your nationality in your will instead, such as English law. That matters, because Spanish law reserves a compulsory share for children (<em>legítima</em>), which makes it hard to leave everything to your spouse.</p>
+  <p>For your Spanish home we recommend a <strong>separate Spanish will</strong> covering only your assets in Spain:</p>
+  <ul>
+    <li>It is made at a Spanish notary (<em>testamento abierto</em>), in Spanish with a translation. You need your passport and <a href="/en/guides/nie-number-spain/">NIE number</a>.</li>
+    <li>It is automatically recorded in the central wills registry in Madrid.</li>
+    <li>Ask the notary to state that it only covers Spanish assets, so it does not revoke your UK will.</li>
+    <li>Make sure both wills choose the same law, so they do not contradict each other.</li>
+  </ul>
+  <p>Without a Spanish will, your heirs have to get the UK will and grant of probate translated and apostilled. That takes time and money, while the house cannot be sold or transferred.</p>
+
+  <h2 id="heirs">What your heirs need to do</h2>
+  <ol>
+    <li>Obtain the death certificate and a certificate from the Spanish wills registry (<em>certificado de últimas voluntades</em>).</li>
+    <li>Each apply for their own NIE number.</li>
+    <li>Accept and divide the inheritance at the notary (<em>escritura de aceptación y adjudicación de herencia</em>).</li>
+    <li>File and pay the inheritance tax with the Junta de Andalucía within six months.</li>
+    <li>Pay the plusvalía to the town hall and register the house in their names at the land registry.</li>
+    <li>Move the electricity, water, insurance and any <a href="/en/key-holding/">key holding</a> contracts into their names.</li>
+  </ol>
+  <p>A Spanish lawyer or gestor can handle all of this with a power of attorney, so your heirs do not need to travel.</p>
+
+  <h2 id="plusvalia">Plusvalía and other costs</h2>
+  <p>Besides inheritance tax, the town hall charges the <em>plusvalía municipal</em>, a tax on the increase in land value since the last transfer. It also applies to inheritances. Some councils give a discount to spouses and children. Heirs also pay the notary, the registry and possibly a lawyer. For an ordinary holiday home, allow a few thousand euros in extra costs. The taxes you pay each year as an owner are listed in the <a href="/en/guides/spanish-property-tax-calendar/">Spanish property tax calendar</a>.</p>
+
+  <h2 id="gifts">Gifting during your lifetime</h2>
+  <p>Andalucía also gives a 99% reduction on gifts from parents to children, on conditions: the gift must be made at the notary and money must be traceable through a bank. When you give away a house, however, you pay Spanish tax on the capital gain, and the town hall charges plusvalía. Your UK position matters too. Gifting is therefore not always cheaper than inheriting. Have it worked out first.</p>
+  <p>Thinking of selling instead? Read <a href="/en/guides/selling-a-house-in-spain/">selling a house in Spain</a>.</p>
+</Guide>

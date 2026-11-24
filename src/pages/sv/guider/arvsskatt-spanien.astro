@@ -1,0 +1,71 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'vem', label: 'Vem betalar spansk arvsskatt?' },
+  { id: 'andalusien', label: 'Hur mycket i Andalusien?' },
+  { id: 'sverige', label: 'Och i Sverige?' },
+  { id: 'testamente', label: 'Ett spanskt testamente' },
+  { id: 'arvingar', label: 'Vad dina arvingar ska göra' },
+  { id: 'plusvalia', label: 'Plusvalía och andra kostnader' },
+];
+
+const faq = [
+  {
+    q: 'Betalar jag spansk arvsskatt om jag bor i Sverige?',
+    a: 'Ja, på huset och annat som finns i Spanien, till exempel ett spanskt bankkonto. Bor du i Spanien betalar dina arvingar spansk arvsskatt på allt du lämnar efter dig. Som icke bosatt får du sedan ett avgörande från EU-domstolen använda samma regionala avdrag som en invånare.',
+  },
+  {
+    q: 'Sverige har ju ingen arvsskatt. Spelar det någon roll?',
+    a: 'Det betyder att det inte blir någon dubbelbeskattning, men den spanska skatten finns kvar. I Andalusien betalar make, maka och barn nästan ingenting, men syskon, syskonbarn och sambor utan registrering kan betala mycket.',
+  },
+  {
+    q: 'Behöver jag ett spanskt testamente?',
+    a: 'Det är inte obligatoriskt men starkt rekommenderat om du har hus i Spanien. Dina arvingar slipper då översätta och legalisera det svenska testamentet och bouppteckningen, och processen hos den spanska notarien går mycket fortare. Ett spanskt testamente hos notarie kostar oftast mellan 50 och 150 €.',
+  },
+  {
+    q: 'Inom vilken tid ska arvsskatten betalas?',
+    a: 'Inom sex månader efter dödsfallet. Ytterligare sex månaders anstånd kan sökas inom de första fem månaderna. Den som betalar för sent får tillägg och ränta.',
+  },
+];
+---
+<Guide lang="sv" slug="arvsskatt-spanien" toc={toc} faq={faq} ctaTitle="Vill du lämna över huset i gott skick?" ctaText="Vi sköter tillsynen av ditt hus i Spanien när du inte är där. Kontakt på engelska eller nederländska.">
+  <p>Sverige tog bort arvsskatten 2005, men Spanien har den kvar. Har du ett hus i Andalusien kan dina arvingar därför behöva betala spansk arvsskatt. Den här guiden visar vad som gäller och hur du gör det enkelt för dina närmaste. Regler ändras och beror på din situation; använd guiden som orientering och låt alltid en notarie eller skatterådgivare se över ditt fall.</p>
+
+  <h2 id="vem">Vem betalar spansk arvsskatt?</h2>
+  <p>I Spanien är det <strong>varje arvinge</strong> som betalar arvsskatt (<em>Impuesto sobre Sucesiones y Donaciones</em>) på det han eller hon får. Vilka regler som gäller beror på var den avlidne bodde:</p>
+  <ul>
+    <li><strong>I Spanien?</strong> Då omfattas allt den avlidne lämnar, även tillgångar i Sverige.</li>
+    <li><strong>Utanför Spanien?</strong> Då betalar arvingarna bara för det som finns i Spanien: huset, en bil, ett spanskt konto.</li>
+  </ul>
+  <p>Efter ett avgörande från EU-domstolen 2014 får icke bosatta använda de regionala avdragen. För ett hus i Axarquía gäller därför Andalusiens regler.</p>
+
+  <h2 id="andalusien">Hur mycket i Andalusien?</h2>
+  <p>Andalusien är en av de förmånligaste regionerna i Spanien. Make, maka, registrerad partner, barn, barnbarn och föräldrar får 99% nedsättning av skatten och betalar alltså nästan ingenting för ett vanligt fritidshus. För syskon, syskonbarn och personer utan släktband gäller inte nedsättningen; de kan betala mycket, med skattesatser över 30% på stora belopp.</p>
+  <p>Var uppmärksam om du är sambo. I Spanien räknas en sambo ofta som utomstående. Be om råd om registrering som par eller en annan lösning.</p>
+
+  <h2 id="sverige">Och i Sverige?</h2>
+  <p>Sverige har ingen arvsskatt, så den spanska skatten blir den enda. Men svensk arvsrätt och bouppteckning gäller fortfarande om du bor i Sverige. Enligt EU:s arvsförordning gäller i princip lagen i det land där du bor när du dör. I testamentet kan du i stället välja lagen i ditt medborgarskapsland, alltså svensk lag. Det är viktigt, eftersom spansk lag ger barn en laglig del (<em>legítima</em>) som skiljer sig från den svenska laglotten.</p>
+
+  <h2 id="testamente">Ett spanskt testamente</h2>
+  <ul>
+    <li>Du upprättar det hos en spansk notarie (<em>testamento abierto</em>), på spanska med översättning. Du behöver pass och <a href="/sv/guider/nie-nummer-spanien/">NIE-nummer</a>.</li>
+    <li>Det registreras automatiskt i det centrala testamentsregistret i Madrid.</li>
+    <li>Låt notarien skriva att det bara gäller tillgångar i Spanien, så att det inte upphäver ditt svenska testamente.</li>
+    <li>Välj samma lag i båda testamentena, så att de inte motsäger varandra.</li>
+  </ul>
+
+  <h2 id="arvingar">Vad dina arvingar ska göra</h2>
+  <ol>
+    <li>Begära dödsbevis och ett intyg från det spanska testamentsregistret (<em>certificado de últimas voluntades</em>).</li>
+    <li>Var och en ansöka om eget NIE-nummer.</li>
+    <li>Hos notarien godta och fördela arvet (<em>escritura de aceptación y adjudicación de herencia</em>).</li>
+    <li>Inom sex månader deklarera och betala arvsskatten hos Junta de Andalucía.</li>
+    <li>Betala plusvalía till kommunen och skriva in huset på sig i fastighetsregistret.</li>
+    <li>Flytta över avtal för el, vatten, försäkring och eventuell <a href="/sv/tillsyn/">tillsyn</a>.</li>
+  </ol>
+  <p>En spansk advokat eller gestor kan sköta allt med fullmakt, så att arvingarna inte behöver resa.</p>
+
+  <h2 id="plusvalia">Plusvalía och andra kostnader</h2>
+  <p>Utöver arvsskatten tar kommunen ut <em>plusvalía municipal</em>, en skatt på markens värdeökning sedan förra överlåtelsen. Den gäller även vid arv. Dessutom betalar arvingarna notarie, register och eventuellt advokat. Räkna med några tusen euro för ett vanligt fritidshus. Vilka skatter du betalar varje år som ägare finns i <a href="/sv/guider/skattekalender-spanien/">skattekalendern för Spanien</a>. Funderar du på att sälja i stället? Läs <a href="/sv/guider/salja-hus-i-spanien/">sälja hus i Spanien</a>.</p>
+</Guide>

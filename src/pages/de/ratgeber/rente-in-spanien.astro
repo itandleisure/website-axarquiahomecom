@@ -1,0 +1,81 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'auszahlung', label: 'Ihre Rente in Spanien' },
+  { id: 'steuern', label: 'Wo zahlen Sie Steuern?' },
+  { id: 'spanien-steuer', label: 'Steuern in Spanien' },
+  { id: 'versicherung', label: 'Krankenversicherung' },
+  { id: 'anmelden', label: 'Als Einwohner anmelden' },
+  { id: 'haus', label: 'Ein Haus, das mitwächst' },
+  { id: 'rechtzeitig', label: 'Was Sie rechtzeitig regeln' },
+];
+
+const faq = [
+  {
+    q: 'Bekomme ich meine volle deutsche Rente in Spanien?',
+    a: 'Ja. Die Deutsche Rentenversicherung zahlt Ihre Altersrente in voller Höhe nach Spanien, auf ein deutsches oder spanisches Konto. Einmal im Jahr müssen Sie eine Lebensbescheinigung einreichen.',
+  },
+  {
+    q: 'Muss ich meine Rente in Deutschland versteuern, wenn ich in Spanien wohne?',
+    a: 'Für die gesetzliche Rente oft ja: Nach dem Doppelbesteuerungsabkommen darf Deutschland sie weiter besteuern, zuständig ist das Finanzamt Neubrandenburg. Spanien rechnet die deutsche Steuer an. Beamtenpensionen werden in Deutschland besteuert. Für Betriebs- und Privatrenten gelten eigene Regeln. Lassen Sie Ihren Fall prüfen.',
+  },
+  {
+    q: 'Ab wann bin ich in Spanien steuerpflichtig?',
+    a: 'Wenn Sie mehr als 183 Tage im Kalenderjahr in Spanien verbringen oder Ihr Lebensmittelpunkt in Spanien liegt. Dann geben Sie jedes Frühjahr in Spanien eine Einkommensteuererklärung (IRPF) für Ihr weltweites Einkommen ab.',
+  },
+  {
+    q: 'Muss ich mich als Rentner in Spanien anmelden?',
+    a: 'Ja, wenn Sie länger als drei Monate dort wohnen. Sie melden sich bei der Gemeinde (padrón) und im Register der EU-Bürger an. Dafür weisen Sie ausreichendes Einkommen, etwa Ihre Rente, und eine Krankenversicherung nach, zum Beispiel mit dem Formular S1.',
+  },
+];
+---
+<Guide lang="de" slug="rente-in-spanien" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Das Haus fit fürs Alter machen?" ctaText="Wir bauen Ihr Haus so um, dass Sie lange und gern darin wohnen: eine bodengleiche Dusche, weniger Stufen, bessere Dämmung. Mit Festpreis vorab.">
+  <p>Immer mehr Deutsche verbringen ihren Ruhestand ganz oder teilweise in Spanien. Sonne, ein ruhigeres Tempo und viele Deutschsprachige an der Küste machen die Axarquía beliebt. Ihre Rente kommt mit, aber einiges ändert sich: wo Sie Steuern zahlen, wie Sie krankenversichert sind und welche Papiere Sie brauchen. Dieser Ratgeber hilft beim Start. Steuerregeln ändern sich regelmäßig; lassen Sie Ihre Situation immer von einem Berater durchrechnen, der beide Länder kennt.</p>
+
+  <h2 id="auszahlung">Ihre Rente in Spanien</h2>
+  <p>Die Deutsche Rentenversicherung zahlt Ihre Rente in voller Höhe nach Spanien. Teilen Sie den Umzug rechtzeitig mit, damit die Zahlung nicht unterbrochen wird. Einmal im Jahr schickt Ihnen der Renten Service eine Lebensbescheinigung, die Sie bei einer Behörde in Spanien bestätigen lassen. Auch Betriebsrenten und private Renten werden in der Regel ins Ausland gezahlt.</p>
+
+  <h2 id="steuern">Wo zahlen Sie Steuern?</h2>
+  <p>Wohnen Sie dauerhaft in Spanien, sind Sie dort mit Ihrem weltweiten Einkommen steuerpflichtig. Nach dem Doppelbesteuerungsabkommen zwischen Deutschland und Spanien gilt grob:</p>
+  <ul>
+    <li><strong>Gesetzliche Rente</strong>: Deutschland darf sie weiter besteuern. Sie sind dann in Deutschland beschränkt steuerpflichtig; zuständig ist das Finanzamt Neubrandenburg. Spanien rechnet die deutsche Steuer an.</li>
+    <li><strong>Beamtenpension</strong>: wird in Deutschland besteuert.</li>
+    <li><strong>Betriebs- und Privatrenten</strong>: werden meist in Spanien besteuert; für bestimmte Renten behält Deutschland ein begrenztes Besteuerungsrecht.</li>
+  </ul>
+  <p>Weil der deutsche Grundfreibetrag für beschränkt Steuerpflichtige nur eingeschränkt gilt, kann sich die Steuerlast verschieben. Lassen Sie vor dem Umzug ausrechnen, was netto übrig bleibt.</p>
+
+  <h2 id="spanien-steuer">Steuern in Spanien</h2>
+  <ul>
+    <li>Die spanische Einkommensteuer (<em>IRPF</em>) ist progressiv, mit Sätzen von etwa 19% bis 47%.</li>
+    <li>Die Erklärung geben Sie jedes Jahr zwischen April und Ende Juni ab (<em>modelo 100</em>).</li>
+    <li>Haben Sie außerhalb Spaniens mehr als 50.000 € auf Konten, in Wertpapieren oder Immobilien, melden Sie das einmalig mit dem <em>modelo 720</em> und erneut bei größeren Änderungen.</li>
+    <li>Andalusien gewährt 100% Ermäßigung auf die Vermögensteuer. Nur bei Vermögen über 3 Millionen € fällt noch eine landesweite Solidaritätssteuer an.</li>
+  </ul>
+  <p>Die Steuern auf Ihr Haus, etwa die IBI, stehen im <a href="/de/ratgeber/steuerkalender-spanien/">Steuerkalender für Spanien</a>. Was beim Erbfall passiert, lesen Sie unter <a href="/de/ratgeber/erbschaftssteuer-spanien/">Erbschaftssteuer in Spanien</a>.</p>
+
+  <h2 id="versicherung">Krankenversicherung</h2>
+  <p>Als gesetzlich versicherter Rentner bleiben Sie mit dem Formular S1 bei Ihrer Krankenkasse und nutzen die spanische öffentliche Versorgung. Die Beiträge werden weiter von der Rente abgezogen. Privat Versicherte prüfen ihren Tarif. Alles dazu finden Sie unter <a href="/de/ratgeber/krankenversicherung-spanien/">Krankenversicherung in Spanien</a>.</p>
+
+  <h2 id="anmelden">Als Einwohner anmelden</h2>
+  <ol>
+    <li>Beantragen Sie eine <a href="/de/ratgeber/nie-nummer-spanien/">NIE-Nummer</a>, falls Sie noch keine haben.</li>
+    <li>Melden Sie sich in Ihrer Gemeinde an (<em>empadronamiento</em>).</li>
+    <li>Lassen Sie sich im Register der EU-Bürger eintragen, mit Nachweis von Einkommen und Krankenversicherung. Sie erhalten die grüne Bescheinigung.</li>
+    <li>Melden Sie sich in Deutschland ab und informieren Sie Rentenversicherung, Krankenkasse und Finanzamt.</li>
+  </ol>
+  <p>Den ganzen Ablauf finden Sie unter <a href="/de/ratgeber/auswandern-nach-spanien/">Auswandern nach Spanien</a>. Wollen Sie es erst ausprobieren, kommen Sie einen Winter: siehe <a href="/de/ratgeber/ueberwintern-in-spanien/">Überwintern in Spanien</a>.</p>
+
+  <h2 id="haus">Ein Haus, das mitwächst</h2>
+  <p>Im Ruhestand wohnen Sie vielleicht zwanzig Jahre oder länger im selben Haus. Das Haus, das sich heute perfekt anfühlt, muss auch passen, wenn Autofahren oder Treppensteigen schwerer fällt. Eine abgelegene Finca am steilen Hang ist schön, aber weit von Arzt und Geschäften. Eine Wohnung mit Aufzug oder ein Haus am Dorfrand ist später oft einfacher. Vergleichen Sie die Möglichkeiten unter <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/rentner/">als Rentner nach Spanien</a>, oder lesen Sie <a href="/de/ratgeber/wohnung-kaufen-spanien/">Wohnung kaufen in Spanien</a>.</p>
+  <p>Haben Sie schon ein Haus? Mit bodengleicher Dusche, weniger Schwellen, Haltegriffen und besserer Dämmung machen Sie es fit fürs Alter. Siehe <a href="/de/ratgeber/barrierefrei-umbauen-spanien/">barrierefrei umbauen in Spanien</a>.</p>
+
+  <h2 id="rechtzeitig">Was Sie rechtzeitig regeln</h2>
+  <ul>
+    <li>Lassen Sie einen Steuerberater Ihr Nettoeinkommen in Spanien und Deutschland vergleichen.</li>
+    <li>Errichten Sie ein spanisches Testament für Ihr spanisches Vermögen.</li>
+    <li>Behalten Sie ein deutsches Konto für Rente und Lastschriften, oder lassen Sie die Rente direkt auf ein spanisches Konto zahlen.</li>
+    <li>Tauschen Sie Ihren Führerschein nicht um: Ein deutscher EU-Führerschein gilt in Spanien weiter.</li>
+    <li>Oft unterwegs? Lassen Sie das Haus mit unserer <a href="/de/hausbetreuung/">Hausbetreuung</a> kontrollieren.</li>
+  </ul>
+</Guide>

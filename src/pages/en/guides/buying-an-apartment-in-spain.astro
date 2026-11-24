@@ -1,0 +1,85 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'why', label: 'Why an apartment?' },
+  { id: 'community', label: 'The community of owners' },
+  { id: 'checks', label: 'What to check before you sign' },
+  { id: 'costs', label: 'Buying costs' },
+  { id: 'letting', label: 'Letting to holidaymakers' },
+  { id: 'beach', label: 'Frontline beach apartments' },
+  { id: 'renovating', label: 'Renovating after you buy' },
+];
+
+const faq = [
+  {
+    q: 'What does buying an apartment in Spain cost on top of the price?',
+    a: 'For a resale apartment in Andalucía you pay 7% transfer tax (ITP), plus around 1 to 2% for the notary, land registry, lawyer and possibly a gestor. For a new build from a developer you pay 10% VAT and 1.2% stamp duty (AJD). In total, allow 10 to 13% on top of the price.',
+  },
+  {
+    q: 'What is a derrama?',
+    a: 'A one-off levy that the community of owners charges for a large expense, such as a new roof, a lift or repairing the facade. If it was agreed before the sale, settle in the contract who pays it. Otherwise it often falls to the new owner.',
+  },
+  {
+    q: 'Can I let my apartment to tourists?',
+    a: 'Only with a registration with the Junta de Andalucía and a national registration number. Since April 2025, new holiday lets in an apartment building also need the approval of three fifths of the owners, unless the statutes already allow it. Some buildings ban it altogether.',
+  },
+  {
+    q: 'Do the parking space and storeroom come with the apartment?',
+    a: 'Not always. A parking space (plaza de garaje) or storeroom (trastero) is often a separate property in the land registry. Check the nota simple to see whether they are included and whether they are transferred separately.',
+  },
+];
+---
+<Guide lang="en" slug="buying-an-apartment-in-spain" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Got your eye on an apartment?" ctaText="We survey it before you sign: damp, roof terrace, plumbing, wiring and what it will cost to update. So you can negotiate on facts.">
+  <p>For many Britons an apartment is the easiest way to own a place in Spain: little upkeep, often a communal pool and everything within walking distance. But buying an apartment is slightly different from buying a detached house. You also buy part of a building and a seat in the community of owners. Here is what you need to know before you sign.</p>
+
+  <h2 id="why">Why an apartment?</h2>
+  <ul>
+    <li><strong>Few worries while you are away</strong>: the community looks after the facade, roof, gardens and pool.</li>
+    <li><strong>Safer</strong> than a remote finca: neighbours, a gated complex and sometimes a caretaker.</li>
+    <li><strong>Everything close by</strong>: beach, shops, restaurants and public transport, also for when you would rather drive less.</li>
+    <li><strong>Lower entry price</strong> than a villa in the same spot.</li>
+  </ul>
+  <p>Torn between an apartment, a village house and a finca? Read <a href="/en/guides/finca-apartment-or-village-house/">finca, apartment or village house</a>.</p>
+
+  <h2 id="community">The community of owners</h2>
+  <p>Every apartment building has a community of owners (<em>comunidad de propietarios</em>). It manages the shared areas and decides on maintenance, rules and spending. You pay a fixed monthly or quarterly fee based on your share (<em>cuota de participación</em>) in the building.</p>
+  <ul>
+    <li>Ask for the <strong>statutes</strong> and house rules: they say, for example, whether pets are allowed, whether letting is permitted and what you may change on the outside.</li>
+    <li>Ask for the <strong>minutes</strong> of recent meetings. They show whether major works or a <em>derrama</em> are coming, whether there are disputes and whether owners are in arrears.</li>
+    <li>Ask for this year’s <strong>budget</strong>, so you know what you will pay each month.</li>
+  </ul>
+  <p>At the notary, the seller must show a certificate from the community that there are no arrears (<em>certificado de deuda</em>). Without it, unpaid fees can pass to the new owner.</p>
+
+  <h2 id="checks">What to check before you sign</h2>
+  <ol>
+    <li><strong>Ownership and charges</strong>: the land registry extract (<em>nota simple</em>) shows the owner, any mortgage or embargo, and whether the parking space and storeroom are included.</li>
+    <li><strong>Legal status</strong>: do the floor area in the registry and the cadastre match reality? An enclosed terrace or extra room on the roof terrace is often built without a permit.</li>
+    <li><strong>Condition</strong>: damp, leaking roof terraces, old plumbing and wiring, single glazing. These are common in buildings over thirty years old. Have a <a href="/en/property-survey/">property survey</a> done.</li>
+    <li><strong>Energy certificate</strong>: the seller must have a valid one. See <a href="/en/guides/energy-certificate-spain/">energy certificates in Spain</a>.</li>
+    <li><strong>Running costs</strong>: ask for the latest IBI, rubbish tax, water and electricity bills.</li>
+  </ol>
+  <p>Have the legal checks done by your own independent lawyer, not one recommended by the agent. How to choose an agent is covered in <a href="/en/guides/estate-agents-spain/">estate agents in Spain</a>.</p>
+
+  <h2 id="costs">Buying costs</h2>
+  <table class="prices">
+    <thead><tr><th>Cost</th><th>Resale apartment</th><th>New build</th></tr></thead>
+    <tbody>
+      <tr><td>Tax</td><td>7% transfer tax (ITP)</td><td>10% VAT + 1.2% stamp duty (AJD)</td></tr>
+      <tr><td>Notary and registry</td><td>around 0.5 to 1%</td><td>around 0.5 to 1%</td></tr>
+      <tr><td>Lawyer</td><td>usually 1% (often with a minimum)</td><td>usually 1%</td></tr>
+      <tr><td>Survey</td><td>fixed fee</td><td>recommended at handover</td></tr>
+    </tbody>
+  </table>
+  <p>Every item and a worked example are in <a href="/en/guides/buying-costs-in-spain/">buying costs in Spain</a>. The full process, from NIE to notary, is in <a href="/en/guides/buying-a-house-in-spain/">buying a house in Spain</a>, and your <a href="/en/guides/nie-number-spain/">NIE number</a> is the first step.</p>
+
+  <h2 id="letting">Letting to holidaymakers</h2>
+  <p>Want to let the apartment while you are away? You need a registration with the Junta de Andalucía (<em>Registro de Turismo de Andalucía</em>) and, since July 2025, a national registration number as well. Since April 2025, new tourist lets in an apartment building also need the approval of three fifths of the owners. If the statutes ban letting, it cannot be done. So check this before you buy if letting matters to you. More in <a href="/en/guides/renting-out-property-in-spain/">renting out property in Spain</a> and on our <a href="/en/holiday-rental-management/">holiday rental management</a> page.</p>
+
+  <h2 id="beach">Frontline beach apartments</h2>
+  <p>An apartment right on the beach is wonderful, but watch out for Spain’s coastal law (<em>Ley de Costas</em>). Within the protection zone along the coast there are limits on extending and renovating, and for older buildings very close to the beach the ownership can be restricted. Ask your lawyer to check. Buildings by the sea also suffer more from salt and damp: balconies, window frames and the steel in concrete wear faster.</p>
+
+  <h2 id="renovating">Renovating after you buy</h2>
+  <p>Many apartments on the Costa del Sol and in the Axarquía were built between the 1970s and the 1990s. A new bathroom and kitchen, better windows and air conditioning often transform them. Interior work only needs a notification to the town hall. For anything visible from outside, such as windows, awnings, an air conditioning unit on the facade or enclosing a terrace, you also need the community’s approval.</p>
+  <p>We renovate apartments while you are in the UK, with weekly photos. Read more about <a href="/en/renovation/">renovation</a> or see <a href="/en/costs/">our prices per job</a>.</p>
+</Guide>

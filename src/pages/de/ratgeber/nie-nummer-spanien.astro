@@ -1,0 +1,89 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'was', label: 'Was ist die NIE-Nummer?' },
+  { id: 'wofuer', label: 'Wofür brauchen Sie sie?' },
+  { id: 'deutschland', label: 'Beantragen von Deutschland aus' },
+  { id: 'spanien', label: 'Beantragen in Spanien' },
+  { id: 'vollmacht', label: 'Beantragen per Vollmacht' },
+  { id: 'unterlagen', label: 'Unterlagen und Kosten' },
+  { id: 'unterschied', label: 'NIE, grüne Karte und TIE' },
+];
+
+const faq = [
+  {
+    q: 'Wie lange dauert es, eine NIE-Nummer zu bekommen?',
+    a: 'Über ein spanisches Konsulat in Deutschland meist einige Wochen bis zwei Monate. In Spanien erhalten Sie die Nummer oft am Tag des Termins, aber einen freien Termin (cita previa) zu finden, kann in der Hochsaison Wochen dauern.',
+  },
+  {
+    q: 'Läuft die NIE-Nummer ab?',
+    a: 'Nein. Die Nummer bleibt Ihr Leben lang gleich. Auf der Bescheinigung steht manchmal ein Datum, das betrifft aber nicht die Nummer selbst. Bewahren Sie die Bescheinigung gut auf: Notar und Bank fragen oft danach.',
+  },
+  {
+    q: 'Brauche ich eine NIE, wenn ich nur ein Ferienhaus kaufen will?',
+    a: 'Ja. Ohne NIE können Sie beim Notar nicht unterschreiben, kein spanisches Konto eröffnen und die Grunderwerbsteuer nicht zahlen. Auch Ihr Partner braucht eine eigene NIE, wenn das Haus auf beide Namen eingetragen wird.',
+  },
+  {
+    q: 'Kann jemand anderes die NIE für mich beantragen?',
+    a: 'Ja, mit einer notariellen Vollmacht (poder notarial). Ein Anwalt oder Gestor in Spanien beantragt sie dann in Ihrem Namen. Das ist praktisch, wenn Sie weder nach Spanien noch zum Konsulat reisen können.',
+  },
+];
+---
+<Guide lang="de" slug="nie-nummer-spanien" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Ein Haus in der Axarquía kaufen?" ctaText="Mit der NIE in der Tasche können Sie unterschreiben. Lassen Sie das Haus vorher von uns prüfen, damit Sie wissen, was Sie kaufen und was die Renovierung kostet.">
+  <p>Wer in Spanien ein Haus kauft, ein Konto eröffnet oder dort leben will, braucht eine Nummer: die NIE. Hier lesen Sie, wie Sie sie beantragen, von Deutschland aus oder in Spanien, welche Unterlagen Sie brauchen und was es kostet. Vorschriften und Gebühren ändern sich gelegentlich; prüfen Sie die aktuellen Anforderungen beim Konsulat oder bei der Polizei, bevor Sie hingehen.</p>
+
+  <h2 id="was">Was ist die NIE-Nummer?</h2>
+  <p>NIE steht für <em>Número de Identidad de Extranjero</em>, die Steuer- und Identifikationsnummer für Ausländer. Sie beginnt mit einem Buchstaben (meist X, Y oder Z), dann folgen sieben Ziffern und ein Prüfbuchstabe, zum Beispiel Y1234567A. Sie bekommen sie einmal, und sie bleibt Ihr Leben lang gleich, auch wenn Sie später in Spanien wohnen oder wieder wegziehen.</p>
+  <p>Die NIE ist keine Aufenthaltserlaubnis und kein Ausweis. Es ist die Nummer, unter der Behörden, Finanzamt und Bank Sie kennen.</p>
+
+  <h2 id="wofuer">Wofür brauchen Sie sie?</h2>
+  <ul>
+    <li>Ein Haus beim Notar kaufen oder verkaufen und die Grunderwerbsteuer zahlen. Siehe auch <a href="/de/ratgeber/kaufnebenkosten-spanien/">Kaufnebenkosten in Spanien</a>.</li>
+    <li>Ein spanisches Bankkonto eröffnen und eine Hypothek aufnehmen.</li>
+    <li>Verträge für Strom, Wasser, Internet und Versicherungen auf Ihren Namen abschließen.</li>
+    <li>Jährlich die Steuer für Nichtresidenten und die IBI für Ihr Haus zahlen.</li>
+    <li>Ein Auto kaufen oder auf spanische Kennzeichen ummelden.</li>
+    <li>Arbeiten, ein Unternehmen gründen oder sich als Einwohner anmelden.</li>
+  </ul>
+  <p>Wenn Sie ein Haus kaufen wollen, beantragen Sie die NIE, sobald Sie ernsthaft suchen. Es ist ärgerlich, wenn der Kauf auf die Nummer warten muss.</p>
+
+  <h2 id="deutschland">Beantragen von Deutschland aus</h2>
+  <p>Sie können die NIE beim spanischen Generalkonsulat beantragen, das für Ihren Wohnort zuständig ist, etwa in Düsseldorf, Frankfurt, Hamburg, München oder Stuttgart, oder bei der Konsularabteilung der Botschaft in Berlin. Das ist der ruhigste Weg, wenn Sie noch nicht in Spanien sind.</p>
+  <ol>
+    <li>Vereinbaren Sie einen Termin über die Website des Konsulats.</li>
+    <li>Füllen Sie das Formular <strong>EX-15</strong> aus und bringen Sie Ihren Personalausweis oder Reisepass mit Kopie mit.</li>
+    <li>Bringen Sie einen Nachweis mit, wofür Sie die Nummer brauchen, etwa einen Reservierungsvertrag oder ein Schreiben von Notar oder Bank.</li>
+    <li>Zahlen Sie die Gebühr. Das Konsulat leitet den Antrag nach Spanien weiter; die Bescheinigung erhalten Sie per Post oder im Konsulat.</li>
+  </ol>
+  <p>Rechnen Sie mit einigen Wochen bis zwei Monaten.</p>
+
+  <h2 id="spanien">Beantragen in Spanien</h2>
+  <p>In Spanien beantragen Sie die NIE bei einer Polizeidienststelle mit Ausländerabteilung (<em>Policía Nacional, extranjería</em>) oder bei der Ausländerbehörde (<em>Oficina de Extranjería</em>). Für die Axarquía ist das zum Beispiel Vélez-Málaga oder Málaga.</p>
+  <ol>
+    <li>Buchen Sie einen Termin (<em>cita previa</em>) auf der Website der spanischen Verwaltung für Ausländerangelegenheiten. Wählen Sie die Provinz Málaga und das Verfahren zur Vergabe einer NIE. Sind keine Termine frei, schauen Sie früh morgens wieder nach; es kommen regelmäßig neue hinzu.</li>
+    <li>Zahlen Sie vorab die Gebühr mit Formular <strong>790, Code 012</strong> bei einer spanischen Bank oder online.</li>
+    <li>Gehen Sie mit dem ausgefüllten EX-15, Ausweis mit Kopie, dem Zahlungsbeleg und dem Nachweis zum Termin.</li>
+  </ol>
+  <p>Oft erhalten Sie die Bescheinigung am selben Tag oder nach wenigen Tagen.</p>
+
+  <h2 id="vollmacht">Beantragen per Vollmacht</h2>
+  <p>Wenn Sie nicht nach Spanien oder zum Konsulat können, beantragt ein Anwalt oder <em>Gestor</em> die NIE für Sie. Dafür unterschreiben Sie eine notarielle Vollmacht (<em>poder notarial</em>), bei einem spanischen Notar oder bei einem deutschen Notar mit Apostille und beglaubigter Übersetzung. Mit derselben Vollmacht kann Ihr Anwalt oft auch das Konto eröffnen und beim Notar unterschreiben. Legen Sie vorher genau fest, was die Vollmacht erlaubt.</p>
+  <p>Ein Gestor berechnet für die NIE allein meist einige Dutzend bis ein paar hundert Euro, plus die Gebühr.</p>
+
+  <h2 id="unterlagen">Unterlagen und Kosten</h2>
+  <table class="prices">
+    <thead><tr><th>Was</th><th>Hinweis</th></tr></thead>
+    <tbody>
+      <tr><td>Formular EX-15</td><td>Antrag auf die NIE, ausgefüllt und unterschrieben</td></tr>
+      <tr><td>Personalausweis oder Reisepass</td><td>Original und Kopie</td></tr>
+      <tr><td>Grund des Antrags</td><td>Zum Beispiel ein Reservierungsvertrag oder ein Schreiben von Notar oder Bank</td></tr>
+      <tr><td>Gebühr (Formular 790-012)</td><td>Rund 12 € (wird jährlich angepasst), in Spanien vorab zu zahlen</td></tr>
+    </tbody>
+  </table>
+  <p>Das Konsulat kann andere oder zusätzliche Unterlagen verlangen und erhebt manchmal eigene Gebühren. Die aktuelle Liste steht auf seiner Website.</p>
+
+  <h2 id="unterschied">NIE, grüne Karte und TIE</h2>
+  <p>Ziehen Sie nach Spanien, kommt nach der NIE ein weiterer Schritt. Als EU-Bürger lassen Sie sich nach drei Monaten im Register der EU-Bürger eintragen. Sie erhalten dann eine grüne Bescheinigung (<em>certificado de registro de ciudadano de la Unión</em>) mit derselben NIE-Nummer. Dafür brauchen Sie unter anderem einen Nachweis über Einkommen oder Arbeit und eine Krankenversicherung; siehe <a href="/de/ratgeber/krankenversicherung-spanien/">Krankenversicherung in Spanien</a>.</p>
+  <p>Die TIE (<em>Tarjeta de Identidad de Extranjero</em>) ist eine Karte mit Foto für Nicht-EU-Bürger. Für Deutsche genügt die grüne Bescheinigung. Alle Schritte für den Umzug finden Sie unter <a href="/de/ratgeber/auswandern-nach-spanien/">Auswandern nach Spanien</a>, den Kauf selbst unter <a href="/de/ratgeber/haus-kaufen-spanien/">Haus kaufen in Spanien</a>.</p>
+</Guide>

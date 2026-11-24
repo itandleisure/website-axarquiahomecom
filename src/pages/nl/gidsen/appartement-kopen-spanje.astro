@@ -1,0 +1,85 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'waarom', label: 'Waarom een appartement?' },
+  { id: 'comunidad', label: 'De vereniging van eigenaars' },
+  { id: 'controleren', label: 'Wat u controleert vóór u tekent' },
+  { id: 'kosten', label: 'Kosten bij de koop' },
+  { id: 'verhuren', label: 'Verhuren aan vakantiegasten' },
+  { id: 'kust', label: 'Eerste lijn aan zee' },
+  { id: 'opknappen', label: 'Opknappen na de koop' },
+];
+
+const faq = [
+  {
+    q: 'Wat kost een appartement kopen in Spanje bovenop de koopprijs?',
+    a: 'Bij een bestaand appartement in Andalusië betaalt u 7% overdrachtsbelasting (ITP), plus ongeveer 1 tot 2% voor notaris, register, advocaat en eventueel een gestor. Bij nieuwbouw van een projectontwikkelaar betaalt u 10% btw en 1,2% zegelbelasting (AJD). Reken in totaal op 10 tot 13% bovenop de prijs.',
+  },
+  {
+    q: 'Wat is een derrama?',
+    a: 'Een extra heffing die de vereniging van eigenaars oplegt voor een grote uitgave, zoals een nieuw dak, een lift of herstel van de gevel. Is die al besloten vóór de koop, spreek dan in het koopcontract af wie hem betaalt. Anders komt hij vaak voor de nieuwe eigenaar.',
+  },
+  {
+    q: 'Mag ik mijn appartement verhuren aan toeristen?',
+    a: 'Alleen met een registratie bij de Junta de Andalucía en een landelijk registratienummer. Sinds april 2025 is voor nieuwe vakantieverhuur in een appartementencomplex ook de instemming van drie vijfde van de eigenaren nodig, tenzij de statuten het al toestaan. Sommige complexen verbieden het helemaal.',
+  },
+  {
+    q: 'Horen de parkeerplaats en de berging bij het appartement?',
+    a: 'Niet altijd. Een parkeerplaats (plaza de garaje) of berging (trastero) staat in het register vaak als apart perceel. Controleer in de nota simple of ze bij de koop horen, en of ze apart worden overgedragen.',
+  },
+];
+---
+<Guide slug="appartement-kopen-spanje" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Een appartement op het oog?" ctaText="Wij keuren het vóór u tekent: vocht, dakterras, leidingen, elektra en wat het opknappen kost. Zo onderhandelt u op basis van feiten.">
+  <p>Een appartement is voor veel Nederlanders en Belgen de makkelijkste manier om een eigen plek in Spanje te hebben: weinig onderhoud, vaak een zwembad in het complex en alles op loopafstand. Maar een appartement kopen is net iets anders dan een vrijstaand huis. U koopt ook een stuk van een gebouw en een plek in de vereniging van eigenaars. Dit moet u weten voordat u tekent.</p>
+
+  <h2 id="waarom">Waarom een appartement?</h2>
+  <ul>
+    <li><strong>Weinig zorgen als u weg bent</strong>: gevel, dak, tuin en zwembad onderhoudt de vereniging van eigenaars.</li>
+    <li><strong>Veiliger</strong> dan een afgelegen finca: buren, een afgesloten complex en soms een conciërge.</li>
+    <li><strong>Voorzieningen dichtbij</strong>: strand, winkels, restaurants en het openbaar vervoer, ook als u later minder wilt autorijden.</li>
+    <li><strong>Lagere instapprijs</strong> dan een villa op dezelfde plek.</li>
+  </ul>
+  <p>Twijfelt u tussen een appartement, een dorpshuis of een finca? Lees dan <a href="/nl/gidsen/finca-appartement-of-dorpshuis/">finca, appartement of dorpshuis</a>.</p>
+
+  <h2 id="comunidad">De vereniging van eigenaars</h2>
+  <p>Elk appartementencomplex heeft een vereniging van eigenaars (<em>comunidad de propietarios</em>). Die beheert de gemeenschappelijke delen en beslist over onderhoud, regels en uitgaven. U betaalt een vaste bijdrage per maand of kwartaal, afhankelijk van uw aandeel (<em>cuota de participación</em>) in het gebouw.</p>
+  <ul>
+    <li>Vraag de <strong>statuten</strong> en het huishoudelijk reglement: daarin staat bijvoorbeeld of u huisdieren mag houden, of verhuur is toegestaan en wat u aan de gevel mag veranderen.</li>
+    <li>Vraag de <strong>notulen</strong> van de laatste vergaderingen. Daar ziet u of er grote werken of een <em>derrama</em> aankomen, of er ruzie is, en of er eigenaren met een betalingsachterstand zijn.</li>
+    <li>Vraag de <strong>begroting</strong> voor dit jaar: dan weet u wat u maandelijks gaat betalen.</li>
+  </ul>
+  <p>Bij de notaris moet de verkoper een verklaring van de vereniging laten zien dat er geen achterstand is (<em>certificado de deuda</em>). Zonder die verklaring kan een openstaande schuld op de nieuwe eigenaar overgaan.</p>
+
+  <h2 id="controleren">Wat u controleert vóór u tekent</h2>
+  <ol>
+    <li><strong>Eigendom en lasten</strong>: in het eigendomsregister (<em>nota simple</em>) staat wie de eigenaar is, of er een hypotheek of beslag op rust en of parkeerplaats en berging erbij horen.</li>
+    <li><strong>Legaliteit</strong>: komt de oppervlakte in het register en het kadaster overeen met de werkelijkheid? Een dichtgemaakt terras of een extra kamer op het dakterras is vaak zonder vergunning gebouwd.</li>
+    <li><strong>Bouwkundige staat</strong>: vocht, lekkende dakterrassen, oude leidingen en elektra, enkel glas. In complexen van dertig jaar en ouder komen die vaak voor. Laat een <a href="/nl/aankoopkeuring/">aankoopkeuring</a> doen.</li>
+    <li><strong>Energielabel</strong>: de verkoper moet een geldig energielabel hebben. Lees <a href="/nl/gidsen/energielabel-spanje/">energielabel in Spanje</a>.</li>
+    <li><strong>Vaste lasten</strong>: vraag de laatste rekeningen van IBI, afvalheffing, water en stroom.</li>
+  </ol>
+  <p>Laat de juridische controle doen door een eigen, onafhankelijke advocaat, niet door iemand die de makelaar aanbeveelt. Hoe u een makelaar kiest, leest u in <a href="/nl/gidsen/makelaar-spanje-kiezen/">een makelaar in Spanje kiezen</a>.</p>
+
+  <h2 id="kosten">Kosten bij de koop</h2>
+  <table class="prices">
+    <thead><tr><th>Kostenpost</th><th>Bestaand appartement</th><th>Nieuwbouw</th></tr></thead>
+    <tbody>
+      <tr><td>Belasting</td><td>7% overdrachtsbelasting (ITP)</td><td>10% btw + 1,2% zegelbelasting (AJD)</td></tr>
+      <tr><td>Notaris en register</td><td>ongeveer 0,5 tot 1%</td><td>ongeveer 0,5 tot 1%</td></tr>
+      <tr><td>Advocaat</td><td>meestal 1% (vaak met een minimum)</td><td>meestal 1%</td></tr>
+      <tr><td>Aankoopkeuring</td><td>vast bedrag</td><td>bij oplevering aan te raden</td></tr>
+    </tbody>
+  </table>
+  <p>Alle posten en een rekenvoorbeeld staan in <a href="/nl/gidsen/kosten-koper-spanje/">kosten koper in Spanje</a>. Het hele koopproces, van NIE tot notaris, leest u in <a href="/nl/gidsen/huis-kopen-in-spanje/">huis kopen in Spanje</a>.</p>
+
+  <h2 id="verhuren">Verhuren aan vakantiegasten</h2>
+  <p>Wilt u het appartement verhuren als u er niet bent? Dan hebt u een registratie nodig bij de Junta de Andalucía (<em>Registro de Turismo de Andalucía</em>) en sinds juli 2025 ook een landelijk registratienummer. Sinds april 2025 is voor nieuwe toeristische verhuur in een appartementencomplex bovendien de instemming van drie vijfde van de eigenaren nodig. Staat in de statuten dat verhuur verboden is, dan gaat het niet. Vraag dit dus vóór de koop na als verhuur voor u belangrijk is. Meer in <a href="/nl/gidsen/woning-verhuren-spanje/">woning verhuren in Spanje</a> en bij ons <a href="/nl/verhuurbeheer/">verhuurbeheer</a>.</p>
+
+  <h2 id="kust">Eerste lijn aan zee</h2>
+  <p>Een appartement met de voeten in het zand is prachtig, maar let op de Spaanse kustwet (<em>Ley de Costas</em>). Binnen de beschermingszone langs de kust gelden beperkingen voor uitbreiden en verbouwen, en bij oudere gebouwen heel dicht op het strand kan het eigendom beperkt zijn. Laat uw advocaat dit controleren. Daarnaast hebben gebouwen aan zee meer last van zout en vocht: balkons, kozijnen en wapening in beton slijten sneller.</p>
+
+  <h2 id="opknappen">Opknappen na de koop</h2>
+  <p>Veel appartementen aan de Costa del Sol en in de Axarquía zijn in de jaren zeventig tot negentig gebouwd. Een nieuwe badkamer en keuken, betere ramen en een airco maken er vaak een ander appartement van. Werk aan de binnenkant regelt u met een melding bij de gemeente. Voor alles wat van buiten zichtbaar is, zoals ramen, zonwering, een airco-unit op de gevel of het dichtmaken van een terras, hebt u ook toestemming van de vereniging nodig.</p>
+  <p>Wij renoveren appartementen ook als u niet in Spanje bent, met foto’s per week. Lees meer over <a href="/nl/renovatie/">renovatie</a> of kijk wat het kost in <a href="/nl/kosten/">onze prijzen per onderdeel</a>.</p>
+</Guide>
