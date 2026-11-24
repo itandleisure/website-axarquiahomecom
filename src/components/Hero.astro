@@ -5,22 +5,27 @@ interface Props { lang?: Lang; eyebrow?: string; title: string; lead: string; ct
 const { lang = 'nl', eyebrow, title, lead, secondary, secondaryHref, image } = Astro.props;
 const cta = Astro.props.cta ?? ui[lang].cta;
 const ctaHref = Astro.props.ctaHref ?? path(lang, 'request');
+// Vierkante foto's worden licht bijgesneden. Zonder eigen focuspunt houden we de onderkant
+// in beeld, zodat het merkje rechtsonder op de stockfoto's zichtbaar blijft.
+const focus = image && image.focus && image.focus !== 'center' ? image.focus : '50% 100%';
 ---
 <section class:list={['hero', { 'hero-photo': image }]}>
   <div class="wrap">
-    {image && (
-      <figure class="hero-img">
-        <img src={image.src} srcset={image.srcset} sizes="(min-width: 1120px) 1080px, calc(100vw - 40px)" alt={image.alt} width="1200" height="1200" loading="eager" fetchpriority="high" decoding="async" style={`object-position: ${image.focus}`} />
-      </figure>
-    )}
-    <div class="hero-text">
-      {eyebrow && <p class="eyebrow">{eyebrow}</p>}
-      <h1 set:html={title} />
-      <p class="lead">{lead}</p>
-      <div class="hero-actions">
-        <a class="btn" href={ctaHref}>{cta}</a>
-        {secondary && secondaryHref && <a class="btn btn-ghost" href={secondaryHref}>{secondary}</a>}
+    <div class="hero-grid">
+      <div class="hero-text">
+        {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+        <h1 set:html={title} />
+        <p class="lead">{lead}</p>
+        <div class="hero-actions">
+          <a class="btn" href={ctaHref}>{cta}</a>
+          {secondary && secondaryHref && <a class="btn btn-ghost" href={secondaryHref}>{secondary}</a>}
+        </div>
       </div>
+      {image && (
+        <figure class="hero-img">
+          <img src={image.src} srcset={image.srcset} sizes="(min-width: 960px) 55vw, 100vw" alt={image.alt} width="1200" height="1200" loading="eager" fetchpriority="high" decoding="async" style={`object-position: ${focus}`} />
+        </figure>
+      )}
     </div>
     <slot />
   </div>

@@ -4,7 +4,7 @@ interface Props { title?: string; steps: { t: string; d: string }[]; lang?: Lang
 const { steps, lang = 'nl' } = Astro.props;
 const title = Astro.props.title ?? ui[lang].stepsTitle;
 ---
-<section class="section alt">
+<section class="section">
   <div class="wrap">
     <h2>{title}</h2>
     <ol class="steps">
