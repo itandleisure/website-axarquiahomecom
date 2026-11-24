@@ -1,0 +1,89 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'what', label: 'What is an NIE number?' },
+  { id: 'why', label: 'What do you need it for?' },
+  { id: 'uk', label: 'Applying from the UK' },
+  { id: 'spain', label: 'Applying in Spain' },
+  { id: 'lawyer', label: 'Applying through a lawyer' },
+  { id: 'documents', label: 'Documents and fees' },
+  { id: 'tie', label: 'NIE, TIE and residency' },
+];
+
+const faq = [
+  {
+    q: 'How long does it take to get an NIE number?',
+    a: 'Through the Spanish consulate in the UK it usually takes a few weeks to two months. In Spain you often get the number on the day of your appointment, but finding a free appointment (cita previa) can take weeks in busy periods.',
+  },
+  {
+    q: 'Does an NIE number expire?',
+    a: 'No. The number stays the same for life. The paper certificate sometimes shows a date, but that does not affect the number itself. Keep the certificate safe: notaries and banks often ask for it.',
+  },
+  {
+    q: 'Do I need an NIE if I only want to buy a holiday home?',
+    a: 'Yes. Without an NIE you cannot sign at the notary, open a Spanish bank account or pay the transfer tax. Your partner also needs their own NIE if the house will be in both names.',
+  },
+  {
+    q: 'Is the NIE the same as residency?',
+    a: 'No. The NIE is only a tax identification number. It does not give you the right to stay in Spain for more than 90 days in every 180. For that, British citizens need a visa and then a TIE card.',
+  },
+];
+---
+<Guide lang="en" slug="nie-number-spain" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Buying a house in the Axarquía?" ctaText="With your NIE in hand you can sign. Have the house surveyed by us first, so you know what you are buying and what it will cost to put right.">
+  <p>Anyone buying a house, opening a bank account or moving to Spain needs one number: the NIE. Below you will find how to apply from the UK or in Spain, which documents you need and what it costs. Rules and fees change from time to time, so check the current requirements with the consulate or the police before you go.</p>
+
+  <h2 id="what">What is an NIE number?</h2>
+  <p>NIE stands for <em>Número de Identidad de Extranjero</em>, the tax identification number for foreigners. It starts with a letter (usually X, Y or Z), followed by seven digits and a check letter, for example Y1234567A. You get it once and it stays the same for life, whether you later live in Spain or leave again.</p>
+  <p>The NIE is not a residence permit and not an identity document. It is simply the number by which the Spanish government, the tax office and your bank recognise you.</p>
+
+  <h2 id="why">What do you need it for?</h2>
+  <ul>
+    <li>Buying or selling a property at the notary and paying the transfer tax. See also <a href="/en/guides/buying-costs-in-spain/">buying costs in Spain</a>.</li>
+    <li>Opening a Spanish bank account and taking out a mortgage.</li>
+    <li>Putting electricity, water, internet and insurance contracts in your name.</li>
+    <li>Paying non-resident income tax and the IBI on your home every year.</li>
+    <li>Buying a car or registering it on Spanish plates.</li>
+    <li>Working, starting a business or applying for residency.</li>
+  </ul>
+  <p>If you are buying a house, apply as soon as you are seriously looking. It is frustrating when a purchase has to wait for the number.</p>
+
+  <h2 id="uk">Applying from the UK</h2>
+  <p>You can apply at a Spanish consulate in the UK, in London or Edinburgh. That is the calmest route if you are not yet in Spain.</p>
+  <ol>
+    <li>Book an appointment through the consulate’s website.</li>
+    <li>Fill in form <strong>EX-15</strong> and bring your passport and a copy.</li>
+    <li>Bring proof of why you need the number, such as a reservation contract for a house or a letter from a notary or bank.</li>
+    <li>Pay the fee. The consulate sends the application to Spain; you receive the certificate with your number by post or at the consulate.</li>
+  </ol>
+  <p>Allow a few weeks to two months, so go in good time if a purchase is already planned.</p>
+
+  <h2 id="spain">Applying in Spain</h2>
+  <p>In Spain you apply at a police station with a foreigners’ department (<em>Policía Nacional, extranjería</em>) or at the immigration office (<em>Oficina de Extranjería</em>). For the Axarquía that means, for example, Vélez-Málaga or Málaga.</p>
+  <ol>
+    <li>Book an appointment (<em>cita previa</em>) on the Spanish government’s immigration website. Choose the province of Málaga and the procedure for assigning an NIE. If nothing is free, check again early in the morning; new slots appear regularly.</li>
+    <li>Pay the fee in advance with form <strong>790, code 012</strong>, at a Spanish bank or online.</li>
+    <li>Attend with the completed EX-15, your passport and a copy, the proof of payment and the reason for your application.</li>
+  </ol>
+  <p>You often receive the certificate the same day or within a few days.</p>
+
+  <h2 id="lawyer">Applying through a lawyer</h2>
+  <p>If you cannot travel to Spain or the consulate, a lawyer or <em>gestor</em> can apply for you. You sign a power of attorney (<em>poder notarial</em>), at a Spanish notary or at a UK notary public with an apostille and a sworn translation. With the same power of attorney your lawyer can often also open your bank account and sign at the notary. Agree in advance exactly what the power of attorney covers.</p>
+  <p>A gestor usually charges somewhere between a few tens and a few hundred euros for the NIE alone, plus the official fee.</p>
+
+  <h2 id="documents">Documents and fees</h2>
+  <table class="prices">
+    <thead><tr><th>What</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Form EX-15</td><td>The NIE application, completed and signed</td></tr>
+      <tr><td>Passport</td><td>Original and a copy of the photo page</td></tr>
+      <tr><td>Reason for the application</td><td>For example a reservation contract or a letter from a notary or bank</td></tr>
+      <tr><td>Fee (form 790-012)</td><td>Around €12 (updated each year), paid in advance in Spain</td></tr>
+    </tbody>
+  </table>
+  <p>The consulate may ask for other or extra documents and sometimes charges its own fee. Check its website for the current list.</p>
+
+  <h2 id="tie">NIE, TIE and residency</h2>
+  <p>If you move to Spain, the NIE is only the first step. Since Brexit, British citizens can stay for 90 days in every 180 without a visa. To live in Spain you need a visa, for example the non-lucrative visa for retirees or the digital nomad visa for remote workers; see <a href="/en/guides/non-lucrative-visa-spain/">non-lucrative and digital nomad visas</a>. Once in Spain you collect the <strong>TIE</strong> (<em>Tarjeta de Identidad de Extranjero</em>), a photo card with your NIE on it.</p>
+  <p>Britons who were already legally resident before 2021 have a TIE under the Withdrawal Agreement. The full move is covered in <a href="/en/guides/moving-to-spain-from-the-uk/">moving to Spain from the UK</a>, and the purchase itself in <a href="/en/guides/buying-a-house-in-spain/">buying a house in Spain</a>.</p>
+</Guide>

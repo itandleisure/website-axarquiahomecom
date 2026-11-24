@@ -412,7 +412,7 @@ export const costsNl: Topic[] = [
     short: 'Buitenkeuken',
     description: 'Wat kost een gemetselde buitenkeuken met barbecue in de Axarquía? Prijzen van eenvoudig tot compleet met overkapping, water en stroom, plus de vergunning.',
     lead: 'In de Axarquía leeft u een groot deel van het jaar buiten. Een buitenkeuken bij het zwembad of op het terras is daarom een populaire verbouwing. Dit kost het.',
-    keyword: 'buitenkeuken spanje',
+    keyword: 'buitenkeuken kosten',
     dienst: 'renovatie',
     onderwerp: 'Ik wil graag een prijs voor een buitenkeuken.',
     answer: 'Een eenvoudige gemetselde buitenkeuken met barbecue en werkblad kost in de Axarquía <strong>€ 2.500 tot € 5.000</strong>. Met spoelbak, water, stroom en koelkast rekent u op <strong>€ 6.000 tot € 12.000</strong>. Met overkapping en premium apparatuur <strong>€ 12.000 tot € 25.000</strong>. Bedragen exclusief btw.',

@@ -1,0 +1,90 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'wer', label: 'Wer zahlt spanische Erbschaftssteuer?' },
+  { id: 'andalusien', label: 'Wie viel in Andalusien?' },
+  { id: 'deutschland', label: 'Zusammen mit der deutschen Steuer' },
+  { id: 'testament', label: 'Ein spanisches Testament' },
+  { id: 'erben', label: 'Was Ihre Erben tun müssen' },
+  { id: 'plusvalia', label: 'Plusvalía und weitere Kosten' },
+  { id: 'schenken', label: 'Schenken zu Lebzeiten' },
+];
+
+const faq = [
+  {
+    q: 'Zahle ich spanische Erbschaftssteuer, wenn ich in Deutschland wohne?',
+    a: 'Ja, auf das Haus und anderes Vermögen in Spanien, etwa ein spanisches Konto. Wohnen Sie in Spanien, zahlen Ihre Erben spanische Erbschaftssteuer auf alles, was Sie hinterlassen. Als Nichtresident dürfen Sie seit einem Urteil des Europäischen Gerichtshofs dieselben regionalen Vergünstigungen nutzen wie ein Einwohner.',
+  },
+  {
+    q: 'Brauche ich ein spanisches Testament?',
+    a: 'Es ist keine Pflicht, aber sehr zu empfehlen, wenn Sie ein Haus in Spanien besitzen. Ihre Erben müssen dann kein deutsches Testament oder keinen Erbschein übersetzen und apostillieren lassen, und die Abwicklung beim spanischen Notar geht viel schneller. Ein spanisches Testament beim Notar kostet meist zwischen 50 und 150 €.',
+  },
+  {
+    q: 'Bis wann muss die Erbschaftssteuer bezahlt werden?',
+    a: 'Innerhalb von sechs Monaten nach dem Todesfall. Eine Verlängerung um weitere sechs Monate können Sie innerhalb der ersten fünf Monate beantragen. Wer zu spät zahlt, zahlt Zuschläge und Zinsen.',
+  },
+  {
+    q: 'Wird dann doppelt Steuer gezahlt?',
+    a: 'Meist nicht in voller Höhe. Deutschland rechnet die spanische Erbschaftssteuer auf das spanische Haus in der Regel auf die deutsche Steuer an. Ein Doppelbesteuerungsabkommen für die Erbschaftssteuer gibt es zwischen Deutschland und Spanien nicht. Lassen Sie es von einem Berater berechnen, der beide Länder kennt.',
+  },
+];
+---
+<Guide lang="de" slug="erbschaftssteuer-spanien" toc={toc} faq={faq} ctaTitle="Das Haus in gutem Zustand weitergeben?" ctaText="Wir betreuen Ihr Haus in Spanien, auch wenn Sie nicht da sind. So erben Ihre Kinder keinen Sanierungsstau.">
+  <p>Ein Haus in Spanien ist schön zu besitzen und später weiterzugeben. Aber was passiert steuerlich, wenn Sie sterben? Und wie sorgen Sie dafür, dass Ihr Ehepartner oder Ihre Kinder das Haus ohne Ärger übernehmen können? Dieser Ratgeber fasst es für Deutsche mit einem Haus in Andalusien zusammen. Erbrecht und Steuern ändern sich regelmäßig und hängen stark von Ihrer Situation ab: Nutzen Sie diesen Ratgeber zur Orientierung und lassen Sie Ihren Fall immer von einem Notar oder Steuerberater prüfen.</p>
+
+  <h2 id="wer">Wer zahlt spanische Erbschaftssteuer?</h2>
+  <p>In Spanien zahlt nicht der Nachlass, sondern <strong>jeder Erbe</strong> selbst Erbschaftssteuer (<em>Impuesto sobre Sucesiones y Donaciones</em>) auf das, was er erhält. Welche Regeln gelten, hängt davon ab, wo der Verstorbene wohnte:</p>
+  <ul>
+    <li><strong>Wohnte er in Spanien?</strong> Dann unterliegt alles, was er hinterlässt, der spanischen Erbschaftssteuer, auch Vermögen in Deutschland.</li>
+    <li><strong>Wohnte er nicht in Spanien?</strong> Dann zahlen die Erben nur auf das, was in Spanien liegt: das Haus, ein Auto, ein spanisches Konto.</li>
+  </ul>
+  <p>Früher zahlten Nichtresidenten deutlich mehr, weil sie die regionalen Vergünstigungen nicht nutzen durften. Nach einem Urteil des Europäischen Gerichtshofs von 2014 ist das anders. Für ein Haus in der Axarquía gelten deshalb die Regeln Andalusiens.</p>
+
+  <h2 id="andalusien">Wie viel in Andalusien?</h2>
+  <p>Andalusien ist für Erben eine der günstigsten Regionen Spaniens. Ehepartner, Kinder, Enkel und Eltern (die Gruppen I und II) erhalten eine Ermäßigung von 99% auf die Steuer. Auf ein gewöhnliches Ferienhaus zahlen sie praktisch nichts. Für Geschwister, Neffen, Nichten und Nichtverwandte gilt diese Ermäßigung nicht: Sie können viel zahlen, mit Sätzen, die bei hohen Beträgen über 30% steigen.</p>
+  <table class="prices">
+    <thead><tr><th>Erbe</th><th>Erbschaftssteuer in Andalusien</th></tr></thead>
+    <tbody>
+      <tr><td>Ehepartner oder eingetragener Partner</td><td>99% Ermäßigung, praktisch nichts</td></tr>
+      <tr><td>Kinder und Enkel</td><td>99% Ermäßigung, praktisch nichts</td></tr>
+      <tr><td>Eltern</td><td>99% Ermäßigung, praktisch nichts</td></tr>
+      <tr><td>Geschwister, Neffen und Nichten</td><td>normaler Tarif mit kleinem Freibetrag</td></tr>
+      <tr><td>Nichtverwandte (etwa ein unverheirateter Lebensgefährte)</td><td>höchster Tarif</td></tr>
+    </tbody>
+  </table>
+  <p>Vorsicht, wenn Sie ohne Trauschein zusammenleben: In Spanien gilt ein Lebensgefährte dann oft als Fremder. Lassen Sie sich zu einer Eintragung als Paar oder einer anderen Lösung beraten.</p>
+
+  <h2 id="deutschland">Zusammen mit der deutschen Steuer</h2>
+  <p>Wohnt der Verstorbene oder der Erbe in Deutschland, erhebt auch Deutschland Erbschaftsteuer auf den gesamten Erwerb, einschließlich des spanischen Hauses. Deutsche Staatsangehörige, die nach Spanien gezogen sind, bleiben noch fünf Jahre nach dem Wegzug unbeschränkt steuerpflichtig. Die deutschen Freibeträge gelten wie gewohnt, etwa 500.000 € für Ehepartner und 400.000 € je Kind.</p>
+  <p>Ein Doppelbesteuerungsabkommen für Erbschaften gibt es zwischen Deutschland und Spanien nicht. Deutschland rechnet die spanische Steuer auf das spanische Haus aber in der Regel an. Weil Andalusien nahe Angehörige kaum besteuert, ist die deutsche Steuer oft die höhere. Ein Berater, der beide Länder kennt, kann genau ausrechnen, was Ihre Erben zahlen.</p>
+
+  <h2 id="testament">Ein spanisches Testament</h2>
+  <p>Seit 2015 gilt in der EU (außer Dänemark und Irland) die Europäische Erbrechtsverordnung. Danach gilt grundsätzlich das Erbrecht des Landes, in dem Sie beim Tod Ihren gewöhnlichen Aufenthalt haben. Sie können im Testament aber das Recht Ihrer Staatsangehörigkeit wählen, also deutsches Recht. Das ist wichtig, denn das spanische Recht kennt einen festen Pflichtteil für Kinder (<em>legítima</em>), der es schwer macht, alles dem Ehepartner zu hinterlassen.</p>
+  <p>Für Ihr spanisches Haus empfehlen wir ein <strong>eigenes spanisches Testament</strong> nur für Ihr Vermögen in Spanien:</p>
+  <ul>
+    <li>Sie lassen es bei einem spanischen Notar errichten (<em>testamento abierto</em>), auf Spanisch mit Übersetzung. Sie brauchen Ihren Ausweis und Ihre <a href="/de/ratgeber/nie-nummer-spanien/">NIE-Nummer</a>.</li>
+    <li>Es wird automatisch im zentralen Testamentsregister in Madrid eingetragen.</li>
+    <li>Lassen Sie festhalten, dass es nur das spanische Vermögen betrifft, damit es Ihr deutsches Testament nicht widerruft.</li>
+    <li>Wählen Sie in beiden Testamenten dasselbe Recht, damit sie sich nicht widersprechen.</li>
+  </ul>
+  <p>Ohne spanisches Testament müssen Ihre Erben das deutsche Testament und den Erbschein oder ein Europäisches Nachlasszeugnis übersetzen lassen. Das kostet Zeit und Geld, und solange kann das Haus nicht verkauft oder umgeschrieben werden.</p>
+
+  <h2 id="erben">Was Ihre Erben tun müssen</h2>
+  <ol>
+    <li>Sterbeurkunde und eine Bescheinigung des spanischen Testamentsregisters (<em>certificado de últimas voluntades</em>) beantragen.</li>
+    <li>Jeder eine eigene NIE-Nummer beantragen.</li>
+    <li>Beim Notar das Erbe annehmen und aufteilen (<em>escritura de aceptación y adjudicación de herencia</em>).</li>
+    <li>Innerhalb von sechs Monaten die Erbschaftssteuer bei der Junta de Andalucía erklären und zahlen.</li>
+    <li>Die Plusvalía bei der Gemeinde zahlen und das Haus im Grundbuch auf ihren Namen eintragen lassen.</li>
+    <li>Verträge für Strom, Wasser, Versicherung und eventuell die <a href="/de/hausbetreuung/">Hausbetreuung</a> umschreiben.</li>
+  </ol>
+  <p>Ein spanischer Anwalt oder Gestor kann das alles mit Vollmacht erledigen, sodass Ihre Erben nicht nach Spanien reisen müssen.</p>
+
+  <h2 id="plusvalia">Plusvalía und weitere Kosten</h2>
+  <p>Neben der Erbschaftssteuer erhebt die Gemeinde die <em>Plusvalía municipal</em>, eine Steuer auf den Wertzuwachs des Bodens seit der letzten Übertragung. Sie fällt auch beim Erben an. Manche Gemeinden gewähren Ehepartnern und Kindern einen Nachlass. Außerdem zahlen die Erben Notar, Register und eventuell einen Anwalt. Rechnen Sie bei einem gewöhnlichen Ferienhaus mit einigen tausend Euro Nebenkosten. Welche Steuern Sie als Eigentümer jedes Jahr zahlen, steht im <a href="/de/ratgeber/steuerkalender-spanien/">Steuerkalender für Spanien</a>.</p>
+
+  <h2 id="schenken">Schenken zu Lebzeiten</h2>
+  <p>Auch bei Schenkungen von Eltern an Kinder gewährt Andalusien 99% Ermäßigung, unter Bedingungen: Die Schenkung muss notariell erfolgen und Geld nachweisbar über die Bank fließen. Wer ein Haus verschenkt, zahlt in Spanien allerdings Einkommensteuer auf den Wertzuwachs, und die Gemeinde erhebt Plusvalía. Schenken ist also nicht immer günstiger als Erben. Lassen Sie es vorher durchrechnen.</p>
+  <p>Möchten Sie das Haus lieber verkaufen? Lesen Sie <a href="/de/ratgeber/haus-verkaufen-spanien/">Haus in Spanien verkaufen</a>.</p>
+</Guide>

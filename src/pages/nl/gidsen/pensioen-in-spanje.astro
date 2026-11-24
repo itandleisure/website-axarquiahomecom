@@ -1,0 +1,81 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'aow', label: 'Uw AOW in Spanje' },
+  { id: 'pensioen', label: 'Uw aanvullend pensioen' },
+  { id: 'belasting', label: 'Waar betaalt u belasting?' },
+  { id: 'zorg', label: 'Zorg en verzekering' },
+  { id: 'inschrijven', label: 'Inschrijven als inwoner' },
+  { id: 'huis', label: 'Een huis dat meegroeit' },
+  { id: 'regelen', label: 'Wat u op tijd regelt' },
+];
+
+const faq = [
+  {
+    q: 'Krijg ik mijn volledige AOW als ik in Spanje woon?',
+    a: 'Ja. Binnen de EU wordt de AOW gewoon uitbetaald, ook in Spanje. Wel bouwt u geen AOW meer op voor de jaren dat u vóór uw AOW-leeftijd in Spanje woont. Per jaar mist u 2%. Binnen een jaar na vertrek kunt u bij de SVB een vrijwillige verzekering afsluiten om dat te voorkomen.',
+  },
+  {
+    q: 'Betaal ik belasting over mijn pensioen in Nederland of in Spanje?',
+    a: 'Volgens het huidige belastingverdrag tussen Nederland en Spanje wordt een particulier pensioen en de AOW in de regel belast in het land waar u woont, dus in Spanje. Een overheidspensioen, zoals een ABP-pensioen uit werk bij de overheid, blijft meestal in Nederland belast. Laat uw eigen situatie nakijken, want de regels kunnen veranderen.',
+  },
+  {
+    q: 'Wanneer ben ik belastingplichtig in Spanje?',
+    a: 'Als u meer dan 183 dagen per jaar in Spanje verblijft, of als het centrum van uw leven en inkomsten in Spanje ligt. U doet dan elk jaar in het voorjaar aangifte inkomstenbelasting (IRPF) in Spanje over uw inkomen uit de hele wereld.',
+  },
+  {
+    q: 'Moet ik me als gepensioneerde inschrijven in Spanje?',
+    a: 'Ja, als u er langer dan drie maanden woont. U schrijft zich in bij de gemeente (padrón) en in het register van EU-burgers. Daarvoor laat u zien dat u voldoende inkomen hebt, zoals uw AOW en pensioen, en dat u verzekerd bent voor zorg, bijvoorbeeld met een S1-formulier.',
+  },
+];
+---
+<Guide slug="pensioen-in-spanje" toc={toc} faq={faq} dienst="renovatie" ctaTitle="Het huis klaarmaken voor later?" ctaText="Wij passen uw huis aan zodat u er lang en prettig kunt blijven wonen: een inloopdouche, minder drempels, betere isolatie. Met een vaste prijs vooraf.">
+  <p>Steeds meer Nederlanders en Belgen kiezen ervoor om na hun pensioen (een deel van het jaar) in Spanje te wonen. De zon, het lagere tempo en een groeiende Nederlandstalige gemeenschap maken de Axarquía populair. Uw AOW en pensioen gaan mee naar Spanje, maar er verandert wel iets: waar u belasting betaalt, hoe u verzekerd bent voor zorg en welke papieren u nodig hebt. Deze gids helpt u op weg. Belastingregels veranderen geregeld; laat uw eigen situatie altijd doorrekenen door een adviseur die beide landen kent.</p>
+
+  <h2 id="aow">Uw AOW in Spanje</h2>
+  <p>De SVB betaalt uw AOW gewoon uit op een Nederlandse of Spaanse rekening. Binnen de EU blijft de hoogte gelijk. Twee dingen om op te letten:</p>
+  <ul>
+    <li><strong>Opbouw stopt</strong>: verhuist u vóór uw AOW-leeftijd, dan bouwt u voor elk jaar in Spanje 2% minder AOW op. Met een vrijwillige verzekering bij de SVB, aan te vragen binnen een jaar na vertrek, kunt u dat voorkomen.</li>
+    <li><strong>Leefsituatie</strong>: woont u samen in Spanje, dan krijgt u net als in Nederland het bedrag voor samenwonenden. Geef wijzigingen door aan de SVB.</li>
+  </ul>
+  <p>Voor Belgen betaalt de Federale Pensioendienst het wettelijk pensioen ook in Spanje uit.</p>
+
+  <h2 id="pensioen">Uw aanvullend pensioen</h2>
+  <p>Ook uw pensioen van het pensioenfonds of de verzekeraar wordt in Spanje uitbetaald. Geef uw nieuwe adres en eventueel uw Spaanse rekening door. Vraag het fonds om geen Nederlandse loonheffing meer in te houden als het pensioen in Spanje belast wordt; daarvoor hebt u meestal een verklaring van de Spaanse belastingdienst nodig dat u in Spanje woont (<em>certificado de residencia fiscal</em>).</p>
+
+  <h2 id="belasting">Waar betaalt u belasting?</h2>
+  <p>Woont u meer dan 183 dagen per jaar in Spanje, dan bent u daar belastingplichtig over uw inkomen uit de hele wereld. Volgens het belastingverdrag tussen Nederland en Spanje wordt een particulier pensioen in de regel in Spanje belast. Een overheidspensioen, bijvoorbeeld van het ABP voor werk bij de overheid, blijft meestal in Nederland belast. Aan een nieuw verdrag wordt al jaren gewerkt; dat kan deze verdeling veranderen. Voor Belgen hangt het af van het soort pensioen.</p>
+  <ul>
+    <li>De Spaanse inkomstenbelasting (<em>IRPF</em>) is progressief, met tarieven van ongeveer 19% tot 47%. Bij een gemiddeld pensioen kan dat meer zijn dan u in Nederland betaalde. Reken het vooraf door.</li>
+    <li>U doet elk jaar tussen april en eind juni aangifte (<em>modelo 100</em>).</li>
+    <li>Hebt u buiten Spanje meer dan € 50.000 aan bankrekeningen, beleggingen of onroerend goed, dan geeft u dat eenmalig op met het <em>modelo 720</em>, en opnieuw bij grote wijzigingen.</li>
+    <li>Andalusië geeft 100% korting op de vermogensbelasting. Alleen bij een vermogen boven de € 3 miljoen geldt nog een landelijke solidariteitsheffing.</li>
+  </ul>
+  <p>De belastingen voor uw huis zelf, zoals de IBI, vindt u in de <a href="/nl/gidsen/belastingkalender-spanje/">belastingkalender voor Spanje</a>. Wat er gebeurt als u overlijdt, leest u in <a href="/nl/gidsen/erfbelasting-testament-spanje/">erfbelasting en testament in Spanje</a>.</p>
+
+  <h2 id="zorg">Zorg en verzekering</h2>
+  <p>Met AOW blijft u via Nederland verzekerd met een S1-formulier van het CAK. Daarmee gebruikt u de Spaanse publieke zorg en betaalt u een verdragsbijdrage, die van uw AOW of pensioen wordt ingehouden. Bent u vervroegd gestopt en hebt u nog geen AOW, dan hebt u meestal een Spaanse privéverzekering nodig. Alles hierover leest u in <a href="/nl/gidsen/zorgverzekering-spanje/">zorgverzekering in Spanje</a>.</p>
+
+  <h2 id="inschrijven">Inschrijven als inwoner</h2>
+  <ol>
+    <li>Vraag een <a href="/nl/gidsen/nie-nummer-aanvragen-spanje/">NIE-nummer</a> aan, als u dat nog niet hebt.</li>
+    <li>Schrijf u in bij de gemeente waar u woont (<em>empadronamiento</em>).</li>
+    <li>Schrijf u in het register van EU-burgers in, met bewijs van inkomen en zorgverzekering. U krijgt het groene inschrijvingsbewijs.</li>
+    <li>Schrijf u uit in Nederland of België, en meld het bij de SVB, uw pensioenfonds en de Belastingdienst.</li>
+  </ol>
+  <p>Het hele stappenplan staat in <a href="/nl/gidsen/emigreren-naar-spanje/">emigreren naar Spanje</a>. Wilt u eerst proberen, kom dan een winter: lees <a href="/nl/gidsen/overwinteren-in-spanje/">overwinteren in Spanje</a>.</p>
+
+  <h2 id="huis">Een huis dat meegroeit</h2>
+  <p>Na uw pensioen woont u misschien twintig jaar of langer in hetzelfde huis. Het huis dat nu perfect voelt, moet ook passen als autorijden of traplopen minder vanzelf gaat. Een afgelegen finca op een steile berghelling is prachtig, maar ver van dokter en winkel. Een appartement met lift of een huis aan de rand van een dorp is later vaak makkelijker. Vergelijk de opties in <a href="/nl/gidsen/finca-appartement-of-dorpshuis/gepensioneerden/">welk huis kiest u met pensioen</a>, of lees <a href="/nl/gidsen/appartement-kopen-spanje/">appartement kopen in Spanje</a>.</p>
+  <p>Hebt u al een huis? Met een inloopdouche, minder drempels, steunbeugels en betere isolatie maakt u het geschikt voor later. Zie <a href="/nl/gidsen/levensloopbestendig-maken-spanje/">uw huis levensloopbestendig maken</a>.</p>
+
+  <h2 id="regelen">Wat u op tijd regelt</h2>
+  <ul>
+    <li>Laat een belastingadviseur uw netto-inkomen in Spanje en Nederland vergelijken voordat u verhuist.</li>
+    <li>Regel een Spaans testament voor uw Spaanse bezit.</li>
+    <li>Houd een Nederlandse bankrekening aan voor uw AOW en pensioen, of laat het rechtstreeks op een Spaanse rekening storten.</li>
+    <li>Zorg voor DigiD met de app, zodat u vanuit Spanje bij de SVB en de Belastingdienst kunt.</li>
+    <li>Bent u vaker weg? Laat het huis controleren met <a href="/nl/sleutelbeheer/">sleutelbeheer</a>.</li>
+  </ul>
+</Guide>

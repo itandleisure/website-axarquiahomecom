@@ -1,0 +1,87 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'vad', label: 'Vad är ett NIE-nummer?' },
+  { id: 'varfor', label: 'Vad behöver du det till?' },
+  { id: 'sverige', label: 'Ansöka från Sverige' },
+  { id: 'spanien', label: 'Ansöka i Spanien' },
+  { id: 'fullmakt', label: 'Ansöka med fullmakt' },
+  { id: 'handlingar', label: 'Handlingar och avgifter' },
+  { id: 'skillnad', label: 'NIE, gröna kortet och TIE' },
+];
+
+const faq = [
+  {
+    q: 'Hur lång tid tar det att få ett NIE-nummer?',
+    a: 'Via Spaniens ambassad i Stockholm tar det oftast några veckor till två månader. I Spanien får du ofta numret samma dag som besöket, men det kan ta veckor att hitta en ledig tid (cita previa) under högsäsong.',
+  },
+  {
+    q: 'Går ett NIE-nummer ut?',
+    a: 'Nej. Numret är detsamma hela livet. På intyget står ibland ett datum, men det gäller inte själva numret. Spara intyget väl: notarie och bank frågar ofta efter det.',
+  },
+  {
+    q: 'Behöver jag NIE om jag bara ska köpa ett fritidshus?',
+    a: 'Ja. Utan NIE kan du inte skriva under hos notarien, öppna ett spanskt bankkonto eller betala överlåtelseskatten. Även din partner behöver ett eget NIE om huset ska stå på er båda.',
+  },
+  {
+    q: 'Kan någon annan ansöka om NIE åt mig?',
+    a: 'Ja, med en notariell fullmakt (poder notarial). En advokat eller gestor i Spanien ansöker då i ditt namn. Det är praktiskt om du inte kan resa till Spanien eller ambassaden.',
+  },
+];
+---
+<Guide lang="sv" slug="nie-nummer-spanien" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Ska du köpa hus i Axarquía?" ctaText="Med NIE kan du skriva under. Låt oss besiktiga huset först, så att du vet vad du köper och vad renoveringen kostar. Kontakt på engelska eller nederländska.">
+  <p>Den som köper hus, öppnar bankkonto eller flyttar till Spanien behöver ett nummer: NIE. Här läser du hur du ansöker, från Sverige eller i Spanien, vilka handlingar du behöver och vad det kostar. Regler och avgifter ändras ibland, så kontrollera de aktuella kraven hos ambassaden eller polisen innan du går dit.</p>
+
+  <h2 id="vad">Vad är ett NIE-nummer?</h2>
+  <p>NIE står för <em>Número de Identidad de Extranjero</em>, identifikationsnumret för utlänningar i Spanien. Det börjar med en bokstav (oftast X, Y eller Z), följt av sju siffror och en kontrollbokstav, till exempel Y1234567A. Du får det en gång och det är detsamma hela livet, även om du senare bor i Spanien eller flyttar därifrån.</p>
+  <p>NIE är inget uppehållstillstånd och ingen id-handling. Det är numret som myndigheter, skatteverket och banken känner igen dig på.</p>
+
+  <h2 id="varfor">Vad behöver du det till?</h2>
+  <ul>
+    <li>Köpa eller sälja bostad hos notarien och betala överlåtelseskatten. Läs även <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">kostnader vid husköp i Spanien</a>.</li>
+    <li>Öppna spanskt bankkonto och ta ett bolån.</li>
+    <li>Teckna avtal för el, vatten, internet och försäkringar i ditt namn.</li>
+    <li>Betala skatt som icke bosatt och fastighetsskatten IBI varje år.</li>
+    <li>Köpa bil eller registrera den på spanska skyltar.</li>
+    <li>Arbeta, starta företag eller skriva dig som invånare.</li>
+  </ul>
+  <p>Ska du köpa hus, ansök om NIE så fort du letar på allvar. Det är tråkigt om köpet måste vänta på numret.</p>
+
+  <h2 id="sverige">Ansöka från Sverige</h2>
+  <p>Du kan ansöka på konsulatavdelningen vid Spaniens ambassad i Stockholm. Det är den lugnaste vägen om du ännu inte är i Spanien.</p>
+  <ol>
+    <li>Boka tid via ambassadens webbplats.</li>
+    <li>Fyll i blankett <strong>EX-15</strong> och ta med pass eller nationellt id-kort och en kopia.</li>
+    <li>Ta med ett bevis på varför du behöver numret, till exempel ett reservationsavtal eller ett brev från notarie eller bank.</li>
+    <li>Betala avgiften. Ambassaden skickar ansökan till Spanien; intyget med ditt nummer får du med post eller på ambassaden.</li>
+  </ol>
+  <p>Räkna med några veckor till två månader.</p>
+
+  <h2 id="spanien">Ansöka i Spanien</h2>
+  <p>I Spanien ansöker du på en polisstation med utlänningsavdelning (<em>Policía Nacional, extranjería</em>) eller på migrationskontoret (<em>Oficina de Extranjería</em>). För Axarquía är det till exempel Vélez-Málaga eller Málaga.</p>
+  <ol>
+    <li>Boka tid (<em>cita previa</em>) på den spanska förvaltningens webbplats för utlänningsärenden. Välj provinsen Málaga och förfarandet för tilldelning av NIE. Finns inga lediga tider, titta igen tidigt på morgonen; nya tider dyker upp regelbundet.</li>
+    <li>Betala avgiften i förväg med blankett <strong>790, kod 012</strong> på en spansk bank eller online.</li>
+    <li>Gå till besöket med ifylld EX-15, pass med kopia, betalningsbeviset och skälet till ansökan.</li>
+  </ol>
+  <p>Ofta får du intyget samma dag eller efter några dagar.</p>
+
+  <h2 id="fullmakt">Ansöka med fullmakt</h2>
+  <p>Kan du inte resa till Spanien eller ambassaden, kan en advokat eller <em>gestor</em> ansöka åt dig. Du skriver då under en notariell fullmakt (<em>poder notarial</em>), hos en spansk notarie eller hos en svensk notarius publicus med apostille och auktoriserad översättning. Med samma fullmakt kan advokaten ofta även öppna bankkonto och skriva under hos notarien. Bestäm i förväg exakt vad fullmakten får omfatta.</p>
+
+  <h2 id="handlingar">Handlingar och avgifter</h2>
+  <table class="prices">
+    <thead><tr><th>Vad</th><th>Kommentar</th></tr></thead>
+    <tbody>
+      <tr><td>Blankett EX-15</td><td>Ansökan om NIE, ifylld och underskriven</td></tr>
+      <tr><td>Pass eller id-kort</td><td>Original och kopia</td></tr>
+      <tr><td>Skäl till ansökan</td><td>Till exempel ett reservationsavtal eller ett brev från notarie eller bank</td></tr>
+      <tr><td>Avgift (blankett 790-012)</td><td>Cirka 12 € (justeras varje år), betalas i förväg i Spanien</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="skillnad">NIE, gröna kortet och TIE</h2>
+  <p>Flyttar du till Spanien kommer ett steg till. Som EU-medborgare registrerar du dig efter tre månader i registret över EU-medborgare och får ett grönt intyg (<em>certificado de registro de ciudadano de la Unión</em>) med samma NIE-nummer. För det behöver du bland annat bevis på inkomst eller arbete och en sjukförsäkring; läs <a href="/sv/guider/sjukforsakring-spanien/">sjukförsäkring i Spanien</a>. TIE är ett kort med foto för medborgare utanför EU; för svenskar räcker det gröna intyget.</p>
+  <p>Alla steg för flytten finns i <a href="/sv/guider/flytta-till-spanien/">flytta till Spanien</a>, och själva köpet i <a href="/sv/guider/kopa-hus-i-spanien/">köpa hus i Spanien</a>.</p>
+</Guide>

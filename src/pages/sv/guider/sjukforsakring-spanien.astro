@@ -1,0 +1,57 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'vilken', label: 'Vilken situation gäller dig?' },
+  { id: 'overvintra', label: 'Övervintra: försäkrad i Sverige' },
+  { id: 'arbeta', label: 'Arbeta i Spanien' },
+  { id: 'pension', label: 'Med pension: blankett S1' },
+  { id: 'privat', label: 'Privat försäkring och convenio especial' },
+  { id: 'lokalt', label: 'Vård i Axarquía' },
+];
+
+const faq = [
+  {
+    q: 'Behåller jag rätten till svensk vård om jag flyttar till Spanien?',
+    a: 'Inte på samma sätt. När du flyttar och avregistreras från folkbokföringen blir du i regel försäkrad i Spanien. Får du svensk pension och har inte rätt till vård i Spanien på annat sätt, kan Försäkringskassan utfärda en blankett S1 så att Sverige betalar din offentliga vård i Spanien.',
+  },
+  {
+    q: 'Vad är convenio especial?',
+    a: 'En frivillig anslutning till den spanska offentliga vården för den som inte har rätt via arbete eller pension. Du måste ha varit skriven i kommunen (padrón) i minst ett år. I Andalusien kostar det cirka 60 € i månaden under 65 år och cirka 157 € i månaden från 65. Beloppen kan ändras.',
+  },
+  {
+    q: 'Räcker EU-kortet när jag övervintrar?',
+    a: 'Bara för nödvändig vård under en tillfällig vistelse. Det europeiska sjukförsäkringskortet från Försäkringskassan ger tillgång till offentlig vård på samma villkor som för spanjorer. Det täcker inte privata kliniker eller hemtransport, så komplettera med en reseförsäkring.',
+  },
+];
+---
+<Guide lang="sv" slug="sjukforsakring-spanien" toc={toc} faq={faq} ctaTitle="Kommer du för att övervintra eller bo?" ctaText="Vi ser till att huset är klart när du kommer och har tillsyn när du är borta. Kontakt på engelska eller nederländska.">
+  <p>Den som flyttar till Spanien eller övervintrar länge måste vara ordentligt försäkrad för vård. Spanien har bra offentlig vård, men du har inte automatiskt rätt till den. Vilken väg som gäller beror på om du arbetar, har pension eller ingetdera. Regler och belopp ändras, så kontrollera alltid med Försäkringskassan vad som gäller för dig.</p>
+
+  <h2 id="vilken">Vilken situation gäller dig?</h2>
+  <table class="prices">
+    <thead><tr><th>Din situation</th><th>Hur du är försäkrad</th></tr></thead>
+    <tbody>
+      <tr><td>Du övervintrar och är fortfarande folkbokförd i Sverige</td><td>EU-kortet plus reseförsäkring</td></tr>
+      <tr><td>Du arbetar i Spanien</td><td>Spansk offentlig vård via Seguridad Social</td></tr>
+      <tr><td>Du bor i Spanien med svensk pension</td><td>Offentlig vård med blankett S1, betald av Sverige</td></tr>
+      <tr><td>Du bor i Spanien utan arbete eller pension</td><td>Privat försäkring, efter ett år eventuellt convenio especial</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="overvintra">Övervintra: försäkrad i Sverige</h2>
+  <p>Är du kvar som folkbokförd i Sverige tar du med det europeiska sjukförsäkringskortet. Med det får du nödvändig vård i den spanska offentliga vården. Privata kliniker och hemtransport täcks inte, så ha alltid en reseförsäkring. Kontrollera hur länge din hemförsäkrings reseskydd gäller per resa. Mer i <a href="/sv/guider/overvintra-i-spanien/">övervintra i Spanien</a>.</p>
+
+  <h2 id="arbeta">Arbeta i Spanien</h2>
+  <p>Arbetar du i Spanien som anställd eller egenföretagare (<em>autónomo</em>) betalar du avgifter till den spanska socialförsäkringen och har rätt till offentlig vård. Du skriver in dig på vårdcentralen (<em>centro de salud</em>) i din kommun och får ett andalusiskt vårdkort (<em>tarjeta sanitaria</em>).</p>
+
+  <h2 id="pension">Med pension: blankett S1</h2>
+  <p>Har du svensk allmän pension och flyttar till Spanien utan att arbeta där, kan du ansöka om blankett S1 hos Försäkringskassan. Du registrerar den hos den spanska socialförsäkringen (<em>INSS</em>) och sedan på vårdcentralen. Därefter använder du den spanska offentliga vården som en spanjor, och Sverige betalar. S1 är också ett bevis på sjukförsäkring när du registrerar dig som invånare och får det gröna intyget; läs <a href="/sv/guider/nie-nummer-spanien/">NIE-nummer i Spanien</a> och <a href="/sv/guider/flytta-till-spanien/">flytta till Spanien</a>.</p>
+
+  <h2 id="privat">Privat försäkring och convenio especial</h2>
+  <p>Har du slutat arbeta före pensionen behöver du oftast en spansk privat sjukförsäkring, bland annat för registreringen som invånare. Stora försäkringsbolag är Sanitas, Adeslas, DKV och Asisa. Välj en försäkring utan egenavgifter (<em>sin copagos</em>) och utan karenstid (<em>sin carencias</em>). Över 65 eller 70 år tar vissa bolag inte emot nya kunder, och tidigare sjukdomar undantas ofta. För en 60-åring kan du räkna med ungefär 100 till 250 € i månaden.</p>
+  <p>Efter ett år som skriven i kommunen kan du ansluta dig till den offentliga vården via <em>convenio especial</em>. I Andalusien kostar det cirka 60 € i månaden under 65 år och cirka 157 € från 65.</p>
+
+  <h2 id="lokalt">Vård i Axarquía</h2>
+  <p>Nästan varje by i Axarquía har en vårdcentral eller en mindre mottagning. Länssjukhuset är Hospital Comarcal de la Axarquía i Vélez-Málaga; för specialistvård åker du till Málaga. Det finns även privata kliniker i Vélez-Málaga, Torre del Mar, Nerja och Málaga, ofta med engelsktalande läkare. Bor du högt upp i bergen tar ambulansen längre tid, något att väga in när du väljer mellan <a href="/sv/guider/finca-lagenhet-eller-byhus/">finca, lägenhet eller byhus</a>.</p>
+</Guide>

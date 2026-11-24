@@ -508,6 +508,7 @@ const topicPlacements: Record<string, Placement> = {
 
 /** Gidsen, per slug. De tweede foto staat in de gidspagina zelf (component ArticlePhoto). */
 const guidePlacements: Record<string, string> = {
+  'non-lucrative-visa-spain': 'verhuisdozen-terras-zeezicht',
   'placas-solares': 'zonnepanelen-pannendak',
   'baterias-para-placas-solares': 'zonnepanelen-pannendak',
   'subvenciones-placas-solares': 'zonnepanelen-pannendak',
@@ -608,6 +609,12 @@ const nlGuidePlacements: Record<string, string> = {
   'autoverzekering-spanje': 'auto-bergweg-axarquia',
   'met-huisdier-naar-spanje': 'hond-terras-wit-huis',
   'wonen-in-spanje': 'dorp-vallei-axarquia',
+  'nie-nummer-aanvragen-spanje': 'notaris-sleutels-koopcontract',
+  'appartement-kopen-spanje': 'barbecue-balkon-appartement',
+  'erfbelasting-testament-spanje': 'notaris-sleutels-koopcontract',
+  'zorgverzekering-spanje': 'overwinteren-terras-winterzon',
+  'pensioen-in-spanje': 'witte-steeg-dorp-axarquia',
+  'makelaar-spanje-kiezen': 'te-koop-bord-dorpshuis',
 };
 
 let guideIndex: Map<string, string> | undefined;

@@ -1,0 +1,83 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'varfor', label: 'Varför en lägenhet?' },
+  { id: 'comunidad', label: 'Ägarföreningen' },
+  { id: 'kontrollera', label: 'Vad du kontrollerar innan du skriver under' },
+  { id: 'kostnader', label: 'Kostnader vid köpet' },
+  { id: 'hyra-ut', label: 'Hyra ut till turister' },
+  { id: 'kusten', label: 'Första raden mot havet' },
+  { id: 'renovera', label: 'Renovera efter köpet' },
+];
+
+const faq = [
+  {
+    q: 'Vad kostar det att köpa lägenhet i Spanien utöver priset?',
+    a: 'För en begagnad lägenhet i Andalusien betalar du 7% överlåtelseskatt (ITP), plus ungefär 1 till 2% för notarie, register, advokat och eventuellt en gestor. För nyproduktion från en byggherre betalar du 10% moms och 1,2% stämpelskatt (AJD). Räkna totalt med 10 till 13% utöver priset.',
+  },
+  {
+    q: 'Vad är en derrama?',
+    a: 'En extra avgift som ägarföreningen tar ut för en stor utgift, till exempel ett nytt tak, en hiss eller renovering av fasaden. Är den beslutad före köpet, avtala i köpekontraktet vem som betalar. Annars hamnar den ofta på den nya ägaren.',
+  },
+  {
+    q: 'Får jag hyra ut lägenheten till turister?',
+    a: 'Bara med en registrering hos Junta de Andalucía och ett nationellt registreringsnummer. Sedan april 2025 krävs för ny turistuthyrning i ett flerbostadshus även att tre femtedelar av ägarna godkänner det, om inte stadgarna redan tillåter det. Vissa föreningar förbjuder det helt.',
+  },
+  {
+    q: 'Ingår parkeringsplats och förråd i lägenheten?',
+    a: 'Inte alltid. En parkeringsplats (plaza de garaje) eller ett förråd (trastero) är ofta en egen fastighet i registret. Kontrollera i nota simple om de ingår och om de överlåts separat.',
+  },
+];
+---
+<Guide lang="sv" slug="kopa-lagenhet-i-spanien" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Har du en lägenhet i sikte?" ctaText="Vi besiktigar den innan du skriver under: fukt, takterrass, rör, el och vad en renovering kostar. Kontakt på engelska eller nederländska.">
+  <p>För många svenskar är en lägenhet det enklaste sättet att få en egen plats i Spanien: lite underhåll, ofta pool i området och allt på gångavstånd. Men att köpa lägenhet är lite annorlunda än att köpa ett fristående hus. Du köper också en del av ett hus och en plats i ägarföreningen. Det här bör du veta innan du skriver under.</p>
+
+  <h2 id="varfor">Varför en lägenhet?</h2>
+  <ul>
+    <li><strong>Få bekymmer när du är borta</strong>: fasad, tak, trädgård och pool sköts av ägarföreningen.</li>
+    <li><strong>Tryggare</strong> än en avlägsen finca: grannar, ett inhägnat område och ibland en vaktmästare.</li>
+    <li><strong>Allt nära</strong>: strand, affärer, restauranger och kollektivtrafik.</li>
+    <li><strong>Lägre pris</strong> än en villa på samma plats.</li>
+  </ul>
+  <p>Funderar du mellan lägenhet, byhus och finca? Läs <a href="/sv/guider/finca-lagenhet-eller-byhus/">finca, lägenhet eller byhus</a>.</p>
+
+  <h2 id="comunidad">Ägarföreningen</h2>
+  <p>Varje flerbostadshus har en ägarförening (<em>comunidad de propietarios</em>), ungefär som en samfällighet. Den sköter de gemensamma delarna och beslutar om underhåll, regler och utgifter. Du betalar en fast avgift per månad eller kvartal efter din andel (<em>cuota de participación</em>). Till skillnad från en svensk bostadsrätt äger du lägenheten direkt, med egen lagfart.</p>
+  <ul>
+    <li>Begär <strong>stadgarna</strong> och ordningsreglerna: där står till exempel om husdjur är tillåtna, om uthyrning är tillåten och vad du får ändra på fasaden.</li>
+    <li>Begär <strong>protokollen</strong> från de senaste stämmorna. Där ser du om stora arbeten eller en <em>derrama</em> är på väg och om ägare ligger efter med betalningarna.</li>
+    <li>Begär <strong>budgeten</strong> för året, så att du vet vad du ska betala.</li>
+  </ul>
+  <p>Hos notarien ska säljaren visa ett intyg från föreningen om att inga skulder finns (<em>certificado de deuda</em>). Annars kan obetalda avgifter gå över på den nya ägaren.</p>
+
+  <h2 id="kontrollera">Vad du kontrollerar innan du skriver under</h2>
+  <ol>
+    <li><strong>Ägande och belastningar</strong>: i registerutdraget (<em>nota simple</em>) ser du ägaren, eventuella lån eller utmätning och om parkeringsplats och förråd ingår.</li>
+    <li><strong>Laglighet</strong>: stämmer ytan i registret och i fastighetsregistret med verkligheten? En inglasad terrass eller ett extra rum på takterrassen är ofta byggt utan tillstånd.</li>
+    <li><strong>Skick</strong>: fukt, läckande takterrasser, gamla rör och el, enkelglas. Vanligt i hus som är äldre än trettio år. Låt göra en <a href="/sv/besiktning/">besiktning</a>.</li>
+    <li><strong>Energideklaration</strong>: säljaren måste ha en giltig.</li>
+    <li><strong>Löpande kostnader</strong>: begär de senaste räkningarna för IBI, sophämtning, vatten och el.</li>
+  </ol>
+  <p>Låt en egen, oberoende advokat göra den juridiska granskningen, inte någon som mäklaren rekommenderar.</p>
+
+  <h2 id="kostnader">Kostnader vid köpet</h2>
+  <table class="prices">
+    <thead><tr><th>Kostnad</th><th>Begagnad lägenhet</th><th>Nyproduktion</th></tr></thead>
+    <tbody>
+      <tr><td>Skatt</td><td>7% överlåtelseskatt (ITP)</td><td>10% moms + 1,2% stämpelskatt (AJD)</td></tr>
+      <tr><td>Notarie och register</td><td>cirka 0,5 till 1%</td><td>cirka 0,5 till 1%</td></tr>
+      <tr><td>Advokat</td><td>oftast 1% (ofta med ett minimibelopp)</td><td>oftast 1%</td></tr>
+    </tbody>
+  </table>
+  <p>Alla poster med räkneexempel finns i <a href="/sv/guider/kopa-hus-i-spanien-kostnader/">kostnader vid husköp i Spanien</a>, och hela processen från <a href="/sv/guider/nie-nummer-spanien/">NIE-nummer</a> till notarie i <a href="/sv/guider/kopa-hus-i-spanien/">köpa hus i Spanien</a>.</p>
+
+  <h2 id="hyra-ut">Hyra ut till turister</h2>
+  <p>Vill du hyra ut lägenheten när du inte är där? Då behöver du en registrering hos Junta de Andalucía (<em>Registro de Turismo de Andalucía</em>) och sedan juli 2025 även ett nationellt registreringsnummer. Sedan april 2025 krävs för ny turistuthyrning i ett flerbostadshus dessutom att tre femtedelar av ägarna godkänner det. Förbjuder stadgarna uthyrning går det inte. Kontrollera det alltså före köpet. Mer i <a href="/sv/guider/hyra-ut-hus-i-spanien/">hyra ut hus i Spanien</a>.</p>
+
+  <h2 id="kusten">Första raden mot havet</h2>
+  <p>En lägenhet direkt vid stranden är underbar, men tänk på den spanska kustlagen (<em>Ley de Costas</em>). I skyddszonen längs kusten finns begränsningar för till- och ombyggnad, och för äldre hus mycket nära stranden kan äganderätten vara begränsad. Låt din advokat kontrollera det. Hus vid havet slits också fortare av salt och fukt.</p>
+
+  <h2 id="renovera">Renovera efter köpet</h2>
+  <p>Många lägenheter på Costa del Sol och i Axarquía byggdes mellan 1970- och 1990-talet. Nytt badrum och kök, bättre fönster och luftkonditionering gör ofta stor skillnad. Arbete inomhus anmäler du till kommunen. För allt som syns utifrån, som fönster, markiser eller en luftkonditionering på fasaden, behöver du även föreningens godkännande. Läs mer om <a href="/sv/renovering/">renovering</a> eller se <a href="/sv/kostnader/">våra priser per arbete</a>.</p>
+</Guide>

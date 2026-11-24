@@ -1,0 +1,90 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'wat', label: 'Wat is een NIE-nummer?' },
+  { id: 'waarvoor', label: 'Waarvoor hebt u het nodig?' },
+  { id: 'nederland', label: 'Aanvragen vanuit Nederland of België' },
+  { id: 'spanje', label: 'Aanvragen in Spanje' },
+  { id: 'machtiging', label: 'Laten aanvragen met een machtiging' },
+  { id: 'stukken', label: 'Welke stukken en wat het kost' },
+  { id: 'verschil', label: 'NIE, groene kaart en TIE' },
+];
+
+const faq = [
+  {
+    q: 'Hoe lang duurt het om een NIE-nummer te krijgen?',
+    a: 'Bij het Spaanse consulaat in Nederland of België duurt het meestal een paar weken tot twee maanden. In Spanje krijgt u het nummer vaak op de dag van de afspraak zelf, maar het vinden van een vrije afspraak (cita previa) kan in drukke periodes weken duren.',
+  },
+  {
+    q: 'Verloopt een NIE-nummer?',
+    a: 'Nee. Het nummer blijft uw hele leven hetzelfde. Op het papieren bewijs staat soms een datum, maar dat zegt niets over het nummer zelf. Bewaar het bewijs goed: notaris en bank vragen er vaak naar.',
+  },
+  {
+    q: 'Heb ik een NIE nodig als ik alleen een huis wil kopen en niet in Spanje woon?',
+    a: 'Ja. Zonder NIE kunt u bij de notaris niet tekenen, geen Spaanse bankrekening openen en de overdrachtsbelasting niet betalen. Ook uw partner heeft een eigen NIE nodig als het huis op beide namen komt.',
+  },
+  {
+    q: 'Kan iemand anders het NIE-nummer voor mij aanvragen?',
+    a: 'Ja, met een notariële volmacht (poder notarial). Een advocaat of gestor in Spanje vraagt het dan namens u aan. Dat is handig als u niet naar Spanje of naar het consulaat kunt.',
+  },
+];
+---
+<Guide slug="nie-nummer-aanvragen-spanje" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Een huis kopen in de Axarquía?" ctaText="Met uw NIE op zak kunt u tekenen. Laat het huis vóór die tijd door ons keuren, zodat u weet wat u koopt en wat het opknappen kost.">
+  <p>Wie in Spanje een huis koopt, een bankrekening opent of er gaat wonen, heeft één nummer nodig: het NIE. Hieronder leest u hoe u het aanvraagt, vanuit Nederland of België of in Spanje zelf, welke stukken u nodig hebt en wat het kost. Regels en tarieven kunnen veranderen; controleer de actuele eisen bij het consulaat of de politie voordat u gaat.</p>
+
+  <h2 id="wat">Wat is een NIE-nummer?</h2>
+  <p>NIE staat voor <em>Número de Identidad de Extranjero</em>: het fiscale identificatienummer voor buitenlanders. Het begint met een letter (meestal X, Y of Z), dan zeven cijfers en een controleletter, bijvoorbeeld Y1234567A. U krijgt het één keer en het blijft uw hele leven hetzelfde, ook als u later in Spanje gaat wonen of weer vertrekt.</p>
+  <p>Het NIE is geen verblijfsvergunning en geen identiteitsbewijs. Het is een nummer waarmee de Spaanse overheid, de belastingdienst en de bank u herkennen.</p>
+
+  <h2 id="waarvoor">Waarvoor hebt u het nodig?</h2>
+  <ul>
+    <li>Een huis kopen of verkopen bij de notaris, en de overdrachtsbelasting betalen. Lees ook <a href="/nl/gidsen/kosten-koper-spanje/">kosten koper in Spanje</a>.</li>
+    <li>Een Spaanse bankrekening openen en een hypotheek afsluiten.</li>
+    <li>Contracten voor stroom, water, internet en verzekeringen op uw naam zetten.</li>
+    <li>Jaarlijks belasting betalen als niet-resident en de IBI van uw huis.</li>
+    <li>Een auto kopen of op Spaans kenteken zetten.</li>
+    <li>Werken, een bedrijf beginnen of u inschrijven als inwoner.</li>
+  </ul>
+  <p>Gaat u een huis kopen, vraag het NIE dan aan zodra u serieus zoekt. Het is vervelend als de koop moet wachten omdat het nummer er nog niet is.</p>
+
+  <h2 id="nederland">Aanvragen vanuit Nederland of België</h2>
+  <p>U kunt het NIE aanvragen bij het Spaanse consulaat: voor Nederland het consulaat-generaal in Amsterdam, voor België het consulaat-generaal in Brussel. Dat is de rustigste route als u nog niet in Spanje bent.</p>
+  <ol>
+    <li>Maak een afspraak via de website van het consulaat.</li>
+    <li>Vul het formulier <strong>EX-15</strong> in en neem uw paspoort en een kopie mee.</li>
+    <li>Neem een bewijs mee van waarom u het nummer nodig hebt, bijvoorbeeld een reserveringscontract voor een huis of een brief van de notaris of bank.</li>
+    <li>Betaal de leges. Het consulaat stuurt de aanvraag naar Spanje; het bewijs met uw nummer krijgt u daarna per post of bij het consulaat.</li>
+  </ol>
+  <p>Reken op een paar weken tot twee maanden. Ga dus op tijd, zeker als de koop al gepland is.</p>
+
+  <h2 id="spanje">Aanvragen in Spanje</h2>
+  <p>In Spanje vraagt u het NIE aan bij een politiebureau met een afdeling voor buitenlanders (<em>Policía Nacional, extranjería</em>) of bij het immigratiekantoor (<em>Oficina de Extranjería</em>). In de Axarquía en omgeving gaat dat bijvoorbeeld in Vélez-Málaga of Málaga.</p>
+  <ol>
+    <li>Boek een afspraak (<em>cita previa</em>) via de website van de Spaanse overheid voor vreemdelingenzaken. Kies de provincie Málaga en de procedure voor de toekenning van een NIE. Zijn er geen afspraken vrij, kijk dan vroeg in de ochtend opnieuw; er komen regelmatig plekken bij.</li>
+    <li>Betaal vooraf de leges met formulier <strong>790, code 012</strong> bij een Spaanse bank of online.</li>
+    <li>Ga op de afspraak met het ingevulde EX-15, uw paspoort met kopie, het betaalbewijs en de reden voor de aanvraag.</li>
+  </ol>
+  <p>Vaak krijgt u het bewijs met uw nummer dezelfde dag of na een paar dagen.</p>
+
+  <h2 id="machtiging">Laten aanvragen met een machtiging</h2>
+  <p>Kunt u niet naar Spanje of het consulaat, dan kan een advocaat of <em>gestor</em> het NIE voor u aanvragen. U tekent daarvoor een notariële volmacht (<em>poder notarial</em>), bij een Spaanse notaris of bij een notaris in Nederland of België met apostille en beëdigde vertaling. Met dezelfde volmacht kan uw advocaat vaak ook de bankrekening openen en bij de notaris tekenen. Spreek vooraf af wat de volmacht wel en niet mag.</p>
+  <p>Een gestor rekent voor alleen het NIE meestal enkele tientallen tot een paar honderd euro, plus de leges.</p>
+
+  <h2 id="stukken">Welke stukken en wat het kost</h2>
+  <table class="prices">
+    <thead><tr><th>Wat</th><th>Toelichting</th></tr></thead>
+    <tbody>
+      <tr><td>Formulier EX-15</td><td>Aanvraag van het NIE, ingevuld en ondertekend</td></tr>
+      <tr><td>Paspoort</td><td>Origineel en kopie van alle pagina’s met gegevens</td></tr>
+      <tr><td>Reden van de aanvraag</td><td>Bijvoorbeeld een reserveringscontract, een brief van notaris of bank</td></tr>
+      <tr><td>Leges (formulier 790-012)</td><td>Ongeveer € 12 (wordt jaarlijks bijgesteld), in Spanje vooraf te betalen</td></tr>
+    </tbody>
+  </table>
+  <p>Het consulaat kan andere of extra stukken vragen en rekent soms eigen leges. Kijk op de website van het consulaat voor de actuele lijst.</p>
+
+  <h2 id="verschil">NIE, groene kaart en TIE</h2>
+  <p>Gaat u in Spanje wonen, dan komt er naast het NIE nog een stap. Als burger van de EU laat u zich na drie maanden inschrijven in het register van EU-burgers. U krijgt dan een groen bewijs (<em>certificado de registro de ciudadano de la Unión</em>), vaak de groene kaart genoemd, met hetzelfde NIE-nummer erop. Daarvoor hebt u onder meer een bewijs van inkomen of werk en een zorgverzekering nodig; lees <a href="/nl/gidsen/zorgverzekering-spanje/">zorgverzekering in Spanje</a>.</p>
+  <p>De TIE (<em>Tarjeta de Identidad de Extranjero</em>) is een pasje met foto voor burgers van buiten de EU, zoals Britten. Voor Nederlanders en Belgen is de groene kaart genoeg. Alle stappen voor wie verhuist, leest u in <a href="/nl/gidsen/emigreren-naar-spanje/">emigreren naar Spanje</a>.</p>
+  <p>Gaat u een huis kopen? Dan helpt onze gids <a href="/nl/gidsen/huis-kopen-in-spanje/">huis kopen in Spanje</a> u verder, van het NIE tot de notaris.</p>
+</Guide>

@@ -412,7 +412,7 @@ export const costsDe: Topic[] = [
     short: 'Außenküche',
     description: 'Was kostet eine gemauerte Außenküche mit Grill in der Axarquía? Preise von einfach bis komplett mit Dach, Wasser und Strom, dazu die Genehmigung.',
     lead: 'In der Axarquía lebt man einen großen Teil des Jahres draußen. Eine Außenküche am Pool oder auf der Terrasse ist deshalb ein beliebter Umbau. Das kostet sie.',
-    keyword: 'außenküche spanien',
+    keyword: 'außenküche kosten',
     dienst: 'renovatie',
     onderwerp: 'Ich hätte gern ein Angebot für eine Außenküche.',
     answer: 'Eine einfache gemauerte Außenküche mit Grill und Arbeitsfläche kostet in der Axarquía <strong>2.500 bis 5.000 €</strong>. Mit Spüle, Wasser, Strom und Kühlschrank rechnen Sie mit <strong>6.000 bis 12.000 €</strong>. Mit Überdachung und Premium-Geräten <strong>12.000 bis 25.000 €</strong>. Beträge ohne MwSt.',

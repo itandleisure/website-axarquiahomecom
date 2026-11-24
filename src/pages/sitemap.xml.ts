@@ -5,6 +5,7 @@ import { places, placeBase, placeHref, type PlacePage } from '../data/places';
 import { placeContent } from '../data/place-content';
 import { fiestas, fiestaHref, fiestaSub } from '../data/fiestas';
 import { hasMunicipalPages } from '../data/place-tabs';
+import { isMunicipalIndexed } from '../data/municipal-local';
 import { topicPaths } from '../data/topics';
 import { weatherLangs, weatherMonthHref, weatherPlaceHref, weatherPlaces } from '../data/weather';
 
@@ -21,7 +22,8 @@ const placePaths = places
       const c = (placeContent[p.slug] as Partial<Record<PlaceLang, { see?: unknown; living?: unknown }>> | undefined)?.[lang];
       if (!c) return [];
       const subs: PlacePage[] = ['overview', ...(c.see ? (['see'] as const) : []), ...(c.living ? (['living'] as const) : [])];
-      if (hasMunicipalPages(lang, p)) subs.push('permit', 'practical');
+      // Bouwvergunning en Praktisch alleen in de sitemap voor gemeenten met eigen lokale tekst (de rest staat op noindex)
+      if (hasMunicipalPages(lang, p) && isMunicipalIndexed(p.slug)) subs.push('permit', 'practical');
       return subs.map((page) => placeHref(lang, p, page));
     }),
   );

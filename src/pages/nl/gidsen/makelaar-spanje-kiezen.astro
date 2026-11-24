@@ -1,0 +1,70 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'anders', label: 'Hoe een Spaanse makelaar werkt' },
+  { id: 'courtage', label: 'Wie betaalt de courtage?' },
+  { id: 'nederlands', label: 'Een Nederlandstalige makelaar' },
+  { id: 'vragen', label: 'Vragen die u vooraf stelt' },
+  { id: 'zelf', label: 'Wat u zelf laat controleren' },
+  { id: 'reserveren', label: 'Reserveren en aanbetalen' },
+];
+
+const faq = [
+  {
+    q: 'Is makelaar in Spanje een beschermd beroep?',
+    a: 'Nee. In Andalusië kan in principe iedereen huizen verkopen. Lidmaatschap van een beroepsvereniging, zoals de API of het Colegio de Agentes de la Propiedad Inmobiliaria, is vrijwillig. Vraag daarom naar ervaring, referenties en een verzekering voor beroepsaansprakelijkheid.',
+  },
+  {
+    q: 'Hoeveel courtage rekent een makelaar in Spanje?',
+    a: 'Meestal tussen 3% en 6% van de verkoopprijs, plus 21% btw, en in afgelegen gebieden soms meer. In de regel betaalt de verkoper de courtage en zit die in de vraagprijs. Vraag altijd schriftelijk wie wat betaalt.',
+  },
+  {
+    q: 'Waarom staat hetzelfde huis bij verschillende makelaars voor verschillende prijzen?',
+    a: 'In Spanje geven verkopers hun huis vaak aan meerdere makelaars tegelijk. Elke makelaar zet er zijn eigen courtage bovenop. Zoek dus door: hetzelfde huis kan bij een andere makelaar duizenden euro’s goedkoper zijn.',
+  },
+  {
+    q: 'Heb ik naast een makelaar nog een advocaat nodig?',
+    a: 'Ja. De makelaar werkt in de regel voor de verkoper en is geen jurist. Een eigen, onafhankelijke advocaat controleert eigendom, schulden, vergunningen en het koopcontract. Kies die zelf, niet op aanraden van de makelaar.',
+  },
+];
+---
+<Guide slug="makelaar-spanje-kiezen" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Een huis gevonden via de makelaar?" ctaText="Wij keuren het onafhankelijk, los van makelaar en verkoper. U krijgt een helder rapport en een prijs voor het opknappen, in het Nederlands.">
+  <p>De meeste Nederlanders en Belgen vinden hun huis in Spanje via een makelaar. Een goede makelaar kent de streek, de prijzen en de valkuilen en scheelt u veel zoekwerk. Maar een Spaanse makelaar werkt anders dan u gewend bent. Wie dat weet, maakt betere keuzes en laat op de juiste momenten zelf iets controleren.</p>
+
+  <h2 id="anders">Hoe een Spaanse makelaar werkt</h2>
+  <ul>
+    <li><strong>Hij werkt voor de verkoper.</strong> De verkoper betaalt de makelaar, dus die heeft belang bij een verkoop tegen een goede prijs. Een aankoopmakelaar die alleen voor de koper werkt, zoals in Nederland, is in Spanje zeldzaam.</li>
+    <li><strong>Geen beschermd beroep.</strong> In Andalusië hoeft een makelaar geen diploma of registratie te hebben. Er zijn uitstekende makelaars, maar ook mensen die het erbij doen.</li>
+    <li><strong>Huizen staan bij meerdere makelaars.</strong> Exclusieve opdrachten zijn minder gewoon. Hetzelfde huis kan daardoor bij verschillende kantoren voor verschillende prijzen staan.</li>
+    <li><strong>Geen bouwkundig onderzoek.</strong> De makelaar laat de bouwkundige staat en de vergunningen meestal niet onderzoeken. Dat doet u zelf.</li>
+  </ul>
+
+  <h2 id="courtage">Wie betaalt de courtage?</h2>
+  <p>De courtage ligt meestal tussen 3% en 6% van de verkoopprijs, plus btw, en zit doorgaans in de vraagprijs. U als koper betaalt dus indirect mee. Twee makelaars die samenwerken, delen de courtage. Laat in het reserveringscontract en het koopcontract vastleggen dat de courtage voor rekening van de verkoper is. Wat u als koper wel betaalt, staat in <a href="/nl/gidsen/kosten-koper-spanje/">kosten koper in Spanje</a>.</p>
+
+  <h2 id="nederlands">Een Nederlandstalige makelaar</h2>
+  <p>In de Axarquía en aan de Costa del Sol werken meerdere Nederlandse en Belgische makelaars. Voordelen: u bespreekt alles in uw eigen taal, ze kennen de vragen die Nederlanders en Belgen stellen en ze kunnen u in contact brengen met andere Nederlandstaligen. Maar ook een Nederlandstalige makelaar werkt in de regel voor de verkoper en kent de Spaanse regels niet per se beter. Kies op kennis van de streek en eerlijkheid, niet op taal alleen.</p>
+
+  <h2 id="vragen">Vragen die u vooraf stelt</h2>
+  <ol>
+    <li>Hoe lang werkt u al in deze streek, en hoeveel huizen verkoopt u per jaar in dit dorp?</li>
+    <li>Bent u lid van een beroepsvereniging en hebt u een verzekering voor beroepsaansprakelijkheid?</li>
+    <li>Werkt u voor de verkoper, voor mij, of voor beiden? Wie betaalt uw courtage?</li>
+    <li>Hebt u de nota simple, de bouwvergunningen en het kadasteroverzicht van dit huis al gezien?</li>
+    <li>Klopt de oppervlakte in het register met de werkelijkheid? Zijn er uitbreidingen zonder vergunning?</li>
+    <li>Hoe lang staat het huis al te koop, en waarom verkoopt de eigenaar?</li>
+    <li>Kunt u mij referenties geven van eerdere kopers?</li>
+  </ol>
+  <p>Een goede makelaar geeft hier eerlijk antwoord op. Ontwijkt hij vragen over vergunningen of papieren, wees dan voorzichtig.</p>
+
+  <h2 id="zelf">Wat u zelf laat controleren</h2>
+  <ul>
+    <li><strong>Juridisch</strong>: een eigen advocaat controleert eigendom, schulden, vergunningen en het contract. Op het platteland gaat het vaak om uitbreidingen zonder vergunning; lees <a href="/nl/gidsen/afo-legaliseren-andalusie/">AFO en legaliseren in Andalusië</a>.</li>
+    <li><strong>Bouwkundig</strong>: vocht, dak, fundering, elektra, water en afvoer. Laat een <a href="/nl/aankoopkeuring/">aankoopkeuring</a> doen voordat u aanbetaalt.</li>
+    <li><strong>Opknappen</strong>: vraag vooraf een prijs voor wat er moet gebeuren. Dat geeft u een sterke basis om te onderhandelen. Kijk in <a href="/nl/kosten/">onze prijzen per onderdeel</a>.</li>
+  </ul>
+
+  <h2 id="reserveren">Reserveren en aanbetalen</h2>
+  <p>Vaak vraagt de makelaar een kleine reserveringsaanbetaling om het huis van de markt te halen. Daarna volgt het koopcontract met aanbetaling (<em>contrato de arras</em>), meestal 10%. Trekt u zich daarna terug, dan bent u die aanbetaling kwijt. Betaal daarom pas als uw advocaat en de keuring groen licht geven, en betaal bij voorkeur op de derdenrekening van uw advocaat. Het hele koopproces, stap voor stap, leest u in <a href="/nl/gidsen/huis-kopen-in-spanje/">huis kopen in Spanje</a>.</p>
+</Guide>

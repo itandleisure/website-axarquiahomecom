@@ -1,0 +1,84 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'rule', label: 'The 90/180-day rule' },
+  { id: 'which', label: 'Which visa suits you?' },
+  { id: 'nlv', label: 'The non-lucrative visa' },
+  { id: 'nomad', label: 'The digital nomad visa' },
+  { id: 'apply', label: 'How to apply' },
+  { id: 'arrival', label: 'After you arrive: TIE and padrón' },
+  { id: 'other', label: 'Other routes' },
+];
+
+const faq = [
+  {
+    q: 'How much income do I need for the non-lucrative visa?',
+    a: 'At least 400% of Spain’s IPREM index: around €2,400 a month or €28,800 a year for the main applicant, plus around €600 a month for each family member (2025 figures). The amounts change with the IPREM each year. The income must be passive, such as pensions, rent or savings, not from work.',
+  },
+  {
+    q: 'Can I work on a non-lucrative visa?',
+    a: 'No. The non-lucrative visa does not allow any work in Spain, including remote work for a UK employer or clients. If you want to keep working remotely, the digital nomad visa is the right route.',
+  },
+  {
+    q: 'Does the time on a non-lucrative visa count towards permanent residency?',
+    a: 'Yes. After five years of legal residence you can apply for long-term residency. You must not be away from Spain for long periods; in principle you should spend at least 183 days a year there to renew.',
+  },
+  {
+    q: 'Does Spain still have a golden visa?',
+    a: 'No. Spain ended the golden visa for property investment on 3 April 2025. Buying a house no longer gives you a right to residency.',
+  },
+];
+---
+<Guide lang="en" slug="non-lucrative-visa-spain" toc={toc} faq={faq} ctaTitle="Planning your move to the Axarquía?" ctaText="While you sort out the visa, we can survey the house you want to buy or renovate the one you own, so it is ready when you arrive.">
+  <p>Since Brexit, British citizens can spend 90 days in every 180 in Spain without a visa. To stay longer, you need a visa. For retirees and people living off savings the usual choice is the non-lucrative visa; for people who keep working remotely it is the digital nomad visa. Below you will find the requirements, the steps and the pitfalls. Requirements and amounts change regularly, so always check the latest list with the Spanish consulate before you apply.</p>
+
+  <h2 id="rule">The 90/180-day rule</h2>
+  <p>In any rolling period of 180 days, you may spend up to 90 days in the Schengen area. Days in France or Portugal count too. Since 12 October 2025 the EU’s Entry/Exit System records your entries and exits at the border, so overstaying is noticed automatically. Overstays can lead to a fine and an entry ban. Owning a house in Spain does not change this. Many owners split their time into two stays of three months; see <a href="/en/guides/wintering-in-spain/">wintering in Spain</a>.</p>
+
+  <h2 id="which">Which visa suits you?</h2>
+  <table class="prices">
+    <thead><tr><th></th><th>Non-lucrative visa</th><th>Digital nomad visa</th></tr></thead>
+    <tbody>
+      <tr><td>For whom</td><td>Retirees and people living off savings or rental income</td><td>Remote employees and freelancers with mainly non-Spanish clients</td></tr>
+      <tr><td>Minimum income (2025)</td><td>about €2,400 a month, +€600 per family member</td><td>about €2,760 a month (200% of the minimum wage), more with family</td></tr>
+      <tr><td>Work allowed</td><td>No</td><td>Yes, remote work for foreign employers or clients</td></tr>
+      <tr><td>Where to apply</td><td>Spanish consulate in the UK</td><td>Consulate in the UK, or in Spain while legally there</td></tr>
+      <tr><td>Health insurance</td><td>Private, no co-payments</td><td>Private, or covered through social security</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="nlv">The non-lucrative visa</h2>
+  <p>The non-lucrative visa (<em>visado de residencia no lucrativa</em>) lets you live in Spain without working. The main requirements:</p>
+  <ul>
+    <li><strong>Income or savings</strong> of at least 400% of the IPREM: around €28,800 a year for the main applicant and €7,200 for each family member. Pensions, rental income and investments count; savings in the bank can too.</li>
+    <li><strong>Private health insurance</strong> from an insurer authorised in Spain, with full cover, no co-payments and no waiting periods; see <a href="/en/guides/health-insurance-spain/">health insurance in Spain</a>.</li>
+    <li><strong>A criminal record certificate</strong> (ACRO police certificate) covering the last five years, apostilled and translated.</li>
+    <li><strong>A medical certificate</strong> stating that you have no disease that could pose a public health risk.</li>
+    <li>A valid passport, the national visa application form and the fee.</li>
+  </ul>
+  <p>The first residence permit is valid for one year, then you renew for two years and again for two. After five years you can apply for long-term residency.</p>
+
+  <h2 id="nomad">The digital nomad visa</h2>
+  <p>The digital nomad visa, introduced with Spain’s Startup Law in 2023, is for people who work remotely for employers or clients outside Spain. You need at least three months with your current employer or clients, a degree or three years’ experience in your field, and an income of at least 200% of the Spanish minimum wage: about €2,760 a month on 2025 figures, plus 75% of the minimum wage for a partner and 25% for each further family member. Up to 20% of your work may be for Spanish clients. Under some conditions you can opt for a special tax regime with a flat rate.</p>
+
+  <h2 id="apply">How to apply</h2>
+  <ol>
+    <li>Gather your documents: income evidence, insurance, criminal record and medical certificates. Have UK documents apostilled and translated by a sworn translator.</li>
+    <li>Book an appointment at the Spanish consulate responsible for where you live in the UK (London or Edinburgh), or apply through an authorised visa service.</li>
+    <li>Submit your application in person. The decision normally takes up to a few months.</li>
+    <li>Once approved, collect the visa and travel to Spain within its validity.</li>
+  </ol>
+  <p>Many people use a Spanish immigration lawyer for this. It costs money, but reduces the risk of a rejected application.</p>
+
+  <h2 id="arrival">After you arrive: TIE and padrón</h2>
+  <p>Within a month of arrival, register at your town hall (<em>empadronamiento</em>) and apply for your <strong>TIE</strong> card at the police. You need your <a href="/en/guides/nie-number-spain/">NIE number</a>, which you often already receive with the visa. From then on, Spanish tax residency usually applies; see <a href="/en/guides/retiring-to-spain/">retiring to Spain</a> for pensions and tax.</p>
+
+  <h2 id="other">Other routes</h2>
+  <ul>
+    <li><strong>Golden visa</strong>: abolished for new applications from 3 April 2025.</li>
+    <li><strong>Work visa or self-employment</strong>: for jobs with a Spanish employer or setting up a business in Spain.</li>
+    <li><strong>Family of an EU citizen</strong>: if your spouse has an EU passport, a different and often easier route applies.</li>
+  </ul>
+  <p>Everything else about the move, from removals to driving licences, is in <a href="/en/guides/moving-to-spain-from-the-uk/">moving to Spain from the UK</a>.</p>
+</Guide>

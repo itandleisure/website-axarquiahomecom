@@ -1,0 +1,70 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'anders', label: 'So arbeitet ein spanischer Makler' },
+  { id: 'provision', label: 'Wer zahlt die Provision?' },
+  { id: 'deutsch', label: 'Ein deutschsprachiger Makler' },
+  { id: 'fragen', label: 'Fragen, die Sie vorher stellen' },
+  { id: 'selbst', label: 'Was Sie selbst prüfen lassen' },
+  { id: 'reservieren', label: 'Reservieren und anzahlen' },
+];
+
+const faq = [
+  {
+    q: 'Ist Makler in Spanien ein geschützter Beruf?',
+    a: 'Nein. In Andalusien darf grundsätzlich jeder Immobilien vermitteln. Die Mitgliedschaft in einem Berufsverband wie API oder GIPE ist freiwillig. Fragen Sie deshalb nach Erfahrung, Referenzen und einer Berufshaftpflichtversicherung.',
+  },
+  {
+    q: 'Wie hoch ist die Maklerprovision in Spanien?',
+    a: 'Meist zwischen 3% und 6% des Kaufpreises zuzüglich 21% Mehrwertsteuer, bei abgelegenen Objekten manchmal mehr. In der Regel zahlt der Verkäufer, und die Provision steckt im Angebotspreis. Lassen Sie sich immer schriftlich geben, wer was zahlt.',
+  },
+  {
+    q: 'Warum wird dasselbe Haus zu unterschiedlichen Preisen angeboten?',
+    a: 'In Spanien geben Verkäufer ihr Haus oft mehreren Maklern gleichzeitig. Jeder Makler schlägt seine eigene Provision auf. Suchen Sie also weiter: Dasselbe Haus kann bei einem anderen Makler tausende Euro günstiger sein.',
+  },
+  {
+    q: 'Brauche ich neben dem Makler noch einen Anwalt?',
+    a: 'Ja. Der Makler arbeitet in der Regel für den Verkäufer und ist kein Jurist. Ein eigener, unabhängiger Anwalt prüft Eigentum, Schulden, Genehmigungen und den Kaufvertrag. Wählen Sie ihn selbst, nicht auf Empfehlung des Maklers.',
+  },
+];
+---
+<Guide lang="de" slug="immobilienmakler-spanien" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Ein Haus über den Makler gefunden?" ctaText="Wir prüfen es unabhängig von Makler und Verkäufer. Sie erhalten einen klaren Bericht und einen Preis für die Renovierung.">
+  <p>Die meisten Deutschen finden ihr Haus in Spanien über einen Makler. Ein guter Makler kennt die Gegend, die Preise und die Fallen und erspart Ihnen viel Sucherei. Ein spanischer Makler arbeitet aber anders als ein deutscher. Wer das weiß, entscheidet besser und lässt im richtigen Moment selbst etwas prüfen.</p>
+
+  <h2 id="anders">So arbeitet ein spanischer Makler</h2>
+  <ul>
+    <li><strong>Er arbeitet für den Verkäufer.</strong> Der Verkäufer zahlt den Makler, also hat dieser ein Interesse an einem Verkauf zu einem guten Preis. Käufermakler, die nur für Sie arbeiten, sind in Spanien selten.</li>
+    <li><strong>Kein geschützter Beruf.</strong> In Andalusien braucht ein Makler weder Ausbildung noch Zulassung. Es gibt hervorragende Makler, aber auch Leute, die es nebenher machen.</li>
+    <li><strong>Häuser stehen bei mehreren Maklern.</strong> Alleinaufträge sind seltener. Dasselbe Haus kann deshalb bei verschiedenen Büros zu verschiedenen Preisen stehen.</li>
+    <li><strong>Kein Gutachten.</strong> Der Makler lässt Bauzustand und Genehmigungen meist nicht prüfen. Das machen Sie selbst.</li>
+  </ul>
+
+  <h2 id="provision">Wer zahlt die Provision?</h2>
+  <p>Die Provision liegt meist zwischen 3% und 6% des Kaufpreises plus Mehrwertsteuer und steckt im Angebotspreis. Als Käufer zahlen Sie also indirekt mit. Arbeiten zwei Makler zusammen, teilen sie die Provision. Lassen Sie im Reservierungs- und im Kaufvertrag festhalten, dass die Provision zulasten des Verkäufers geht. Was Sie als Käufer zahlen, steht unter <a href="/de/ratgeber/kaufnebenkosten-spanien/">Kaufnebenkosten in Spanien</a>.</p>
+
+  <h2 id="deutsch">Ein deutschsprachiger Makler</h2>
+  <p>An der Costa del Sol und in der Axarquía arbeiten mehrere deutsche und deutschsprachige Makler. Vorteile: Sie besprechen alles in Ihrer Sprache, und sie kennen die Fragen, die Deutsche stellen. Aber auch ein deutschsprachiger Makler arbeitet in der Regel für den Verkäufer und kennt das spanische Recht nicht unbedingt besser. Wählen Sie nach Ortskenntnis und Ehrlichkeit, nicht nur nach Sprache.</p>
+
+  <h2 id="fragen">Fragen, die Sie vorher stellen</h2>
+  <ol>
+    <li>Wie lange arbeiten Sie schon in dieser Gegend, und wie viele Häuser verkaufen Sie pro Jahr in diesem Ort?</li>
+    <li>Sind Sie Mitglied eines Berufsverbands und haben Sie eine Berufshaftpflichtversicherung?</li>
+    <li>Arbeiten Sie für den Verkäufer, für mich oder für beide? Wer zahlt Ihre Provision?</li>
+    <li>Haben Sie die Nota simple, die Baugenehmigungen und den Katasterauszug dieses Hauses gesehen?</li>
+    <li>Stimmt die Fläche im Grundbuch mit der Wirklichkeit überein? Gibt es Anbauten ohne Genehmigung?</li>
+    <li>Wie lange steht das Haus schon zum Verkauf, und warum verkauft der Eigentümer?</li>
+    <li>Können Sie mir Referenzen früherer Käufer geben?</li>
+  </ol>
+  <p>Ein guter Makler beantwortet das ehrlich. Weicht er Fragen zu Genehmigungen oder Papieren aus, seien Sie vorsichtig.</p>
+
+  <h2 id="selbst">Was Sie selbst prüfen lassen</h2>
+  <ul>
+    <li><strong>Rechtlich</strong>: Ein eigener Anwalt prüft Eigentum, Schulden, Genehmigungen und den Vertrag. Auf dem Land geht es oft um Anbauten ohne Genehmigung; siehe <a href="/de/ratgeber/afo-legalisierung-andalusien/">AFO und Legalisierung in Andalusien</a>.</li>
+    <li><strong>Bautechnisch</strong>: Feuchtigkeit, Dach, Fundament, Elektrik, Wasser und Abwasser. Lassen Sie ein <a href="/de/immobiliengutachten/">Immobiliengutachten</a> erstellen, bevor Sie anzahlen.</li>
+    <li><strong>Renovierung</strong>: Holen Sie vorab einen Preis für die nötigen Arbeiten ein. Das ist eine starke Verhandlungsbasis. Siehe <a href="/de/kosten/">unsere Preise pro Arbeit</a>.</li>
+  </ul>
+
+  <h2 id="reservieren">Reservieren und anzahlen</h2>
+  <p>Oft verlangt der Makler eine kleine Reservierungsgebühr, um das Haus vom Markt zu nehmen. Danach folgt der private Kaufvertrag mit Anzahlung (<em>contrato de arras</em>), meist 10%. Treten Sie danach zurück, verlieren Sie die Anzahlung. Zahlen Sie deshalb erst, wenn Anwalt und Gutachten grünes Licht geben, und am besten auf das Anderkonto Ihres Anwalts. Den ganzen Ablauf Schritt für Schritt lesen Sie unter <a href="/de/ratgeber/haus-kaufen-spanien/">Haus kaufen in Spanien</a>.</p>
+</Guide>

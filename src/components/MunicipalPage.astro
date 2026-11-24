@@ -12,6 +12,7 @@ import { placeTabs, tabLabels } from '../data/place-tabs';
 import { municipalText, type MunicipalPageKind, type MunicipalLang } from '../data/municipal-text';
 import { services, path as route } from '../i18n';
 import { guidesBy, guideHref } from '../data/guides';
+import { localFor, isMunicipalIndexed } from '../data/municipal-local';
 
 interface Props { lang: MunicipalLang; place: Place; kind: MunicipalPageKind; }
 const { lang, place, kind } = Astro.props;
@@ -34,6 +35,13 @@ const t = municipalText(kind, lang, place.slug, {
     permitGuide: guideHref(lang, g.find((x) => permitGuideSlugs.includes(x.slug))!),
   },
 });
+
+// Eigen lokale tekst (alleen de grootste gemeenten). Zonder lokale tekst staat de pagina op noindex, follow.
+const local = localFor(lang, kind, place.slug, place.name);
+const indexed = isMunicipalIndexed(place.slug);
+// Lokale secties na de eerste twee algemene secties (regels en kosten), lokale vragen bovenaan de FAQ
+const sections = local ? [...t.sections.slice(0, 2), ...local.sections, ...t.sections.slice(2)] : t.sections;
+const faq = local?.faq ? [...local.faq, ...t.faq] : t.faq;
 
 const T = {
   nl: { places: 'Plaatsen', cta: 'Vraag advies aan', servicesTitle: 'Hiermee helpen we u', ctaPermit: `Verbouwen in ${place.name}?`, ctaPractical: `Een huis in ${place.name}?`,
@@ -61,7 +69,7 @@ const crumbs = [
 const svcOrder = kind === 'permit' ? [0, 3, 2] : [1, 4, 2];
 const dienst = kind === 'permit' ? 'renovatie' : 'sleutelbeheer';
 ---
-<Base title={t.title} description={t.description} path={self} lang={lang}>
+<Base title={t.title} description={t.description} path={self} lang={lang} noindex={!indexed} follow>
   <Breadcrumbs lang={lang} items={crumbs} />
   <Hero lang={lang} eyebrow={`${place.name} · Axarquía`} title={t.h1} lead={t.lead} cta={T.cta} ctaHref={`${request}?dienst=${kind === 'permit' ? 'legalisatie' : dienst}&plaats=${place.slug}`}>
     <nav class="place-tabs" aria-label={place.name}>
@@ -72,7 +80,7 @@ const dienst = kind === 'permit' ? 'renovatie' : 'sleutelbeheer';
   <section class="section">
     <div class="wrap split">
       <div class="prose">
-        {t.sections.map((s) => (
+        {sections.map((s) => (
           <>
             <h2>{s.h}</h2>
             {s.p.map((p) => <p set:html={p} />)}
@@ -104,7 +112,7 @@ const dienst = kind === 'permit' ? 'renovatie' : 'sleutelbeheer';
     </div>
   </section>
 
-  <Faq items={t.faq} lang={lang} />
+  <Faq items={faq} lang={lang} />
 
   <Cta lang={lang} title={kind === 'permit' ? T.ctaPermit : T.ctaPractical} text={kind === 'permit' ? T.ctaPermitText : T.ctaPracticalText} dienst={dienst} plaats={place.slug} />
 </Base>

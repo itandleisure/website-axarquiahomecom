@@ -14,6 +14,7 @@ import { placeContent } from '../data/place-content';
 import { services, path as route, type Lang } from '../i18n';
 import { site } from '../data/site';
 import { guidesBy, guideHref, guideAt } from '../data/guides';
+import { placeOverview } from '../data/place-overview';
 import { placeTabs } from '../data/place-tabs';
 import { fiestaHref, fiestaSlugFor } from '../data/fiestas';
 
@@ -115,6 +116,7 @@ if (heroPhoto) placeLd.image = new URL(heroPhoto.og, site.url).href;
       <div class="wrap split">
         <div class="prose">
           {c.intro.map((p) => <p set:html={p} />)}
+          {(placeOverview[place.slug]?.[lang] ?? []).map((s) => (<><h2>{s.h}</h2>{s.p.map((p) => <p set:html={p} />)}</>))}
           {c.forWhom && (<><h2>{T.forWhom} {place.name}?</h2><p set:html={c.forWhom} /></>)}
           {c.repairs && (<><h2>{c.repairs.h}</h2>{c.repairs.p.map((p) => <p set:html={p} />)}</>)}
           {parent && <p class="note">{place.name} {T.partOf} <a href={placeHref(lang, parent)}>{parent.name}</a>.</p>}

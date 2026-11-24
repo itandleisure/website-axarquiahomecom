@@ -1,0 +1,85 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'warum', label: 'Warum eine Wohnung?' },
+  { id: 'comunidad', label: 'Die Eigentümergemeinschaft' },
+  { id: 'pruefen', label: 'Was Sie vor der Unterschrift prüfen' },
+  { id: 'kosten', label: 'Kosten beim Kauf' },
+  { id: 'vermieten', label: 'An Urlauber vermieten' },
+  { id: 'meer', label: 'Erste Meereslinie' },
+  { id: 'renovieren', label: 'Renovieren nach dem Kauf' },
+];
+
+const faq = [
+  {
+    q: 'Was kostet der Kauf einer Wohnung in Spanien zusätzlich zum Kaufpreis?',
+    a: 'Bei einer Bestandswohnung in Andalusien zahlen Sie 7% Grunderwerbsteuer (ITP), dazu etwa 1 bis 2% für Notar, Register, Anwalt und eventuell einen Gestor. Bei einem Neubau vom Bauträger zahlen Sie 10% Mehrwertsteuer und 1,2% Stempelsteuer (AJD). Rechnen Sie insgesamt mit 10 bis 13% zusätzlich zum Preis.',
+  },
+  {
+    q: 'Was ist eine Derrama?',
+    a: 'Eine Sonderumlage, die die Eigentümergemeinschaft für eine große Ausgabe erhebt, etwa ein neues Dach, einen Aufzug oder die Sanierung der Fassade. Wurde sie vor dem Kauf beschlossen, regeln Sie im Kaufvertrag, wer sie zahlt. Sonst trifft sie oft den neuen Eigentümer.',
+  },
+  {
+    q: 'Darf ich meine Wohnung an Touristen vermieten?',
+    a: 'Nur mit einer Registrierung bei der Junta de Andalucía und einer landesweiten Registriernummer. Seit April 2025 braucht neue Ferienvermietung in einer Wohnanlage außerdem die Zustimmung von drei Fünfteln der Eigentümer, sofern die Satzung sie nicht schon erlaubt. Manche Anlagen verbieten sie ganz.',
+  },
+  {
+    q: 'Gehören Stellplatz und Abstellraum zur Wohnung?',
+    a: 'Nicht immer. Ein Stellplatz (plaza de garaje) oder Abstellraum (trastero) ist im Grundbuch oft eine eigene Einheit. Prüfen Sie in der Nota simple, ob sie zum Kauf gehören und ob sie separat übertragen werden.',
+  },
+];
+---
+<Guide lang="de" slug="wohnung-kaufen-spanien" toc={toc} faq={faq} dienst="aankoopkeuring" ctaTitle="Eine Wohnung im Blick?" ctaText="Wir prüfen sie, bevor Sie unterschreiben: Feuchtigkeit, Dachterrasse, Leitungen, Elektrik und was die Renovierung kostet. So verhandeln Sie auf Basis von Fakten.">
+  <p>Für viele Deutsche ist eine Wohnung der einfachste Weg zu einem eigenen Platz in Spanien: wenig Unterhalt, oft ein Pool in der Anlage und alles zu Fuß erreichbar. Eine Wohnung zu kaufen ist aber etwas anderes als ein freistehendes Haus. Sie kaufen auch einen Anteil am Gebäude und einen Platz in der Eigentümergemeinschaft. Das sollten Sie wissen, bevor Sie unterschreiben.</p>
+
+  <h2 id="warum">Warum eine Wohnung?</h2>
+  <ul>
+    <li><strong>Wenig Sorgen, wenn Sie weg sind</strong>: Fassade, Dach, Garten und Pool pflegt die Eigentümergemeinschaft.</li>
+    <li><strong>Sicherer</strong> als eine abgelegene Finca: Nachbarn, eine geschlossene Anlage und manchmal ein Hausmeister.</li>
+    <li><strong>Alles in der Nähe</strong>: Strand, Geschäfte, Restaurants und öffentlicher Verkehr, auch wenn Sie später weniger Auto fahren möchten.</li>
+    <li><strong>Niedrigerer Einstiegspreis</strong> als eine Villa am selben Ort.</li>
+  </ul>
+  <p>Sie schwanken zwischen Wohnung, Dorfhaus und Finca? Lesen Sie <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/">Finca, Wohnung oder Dorfhaus</a>.</p>
+
+  <h2 id="comunidad">Die Eigentümergemeinschaft</h2>
+  <p>Jede Wohnanlage hat eine Eigentümergemeinschaft (<em>comunidad de propietarios</em>). Sie verwaltet die Gemeinschaftsflächen und entscheidet über Instandhaltung, Regeln und Ausgaben. Sie zahlen ein festes Hausgeld pro Monat oder Quartal, abhängig von Ihrem Anteil (<em>cuota de participación</em>) am Gebäude.</p>
+  <ul>
+    <li>Fordern Sie die <strong>Satzung</strong> und die Hausordnung an: Dort steht etwa, ob Haustiere erlaubt sind, ob vermietet werden darf und was Sie an der Fassade ändern dürfen.</li>
+    <li>Fordern Sie die <strong>Protokolle</strong> der letzten Versammlungen an. Daraus sehen Sie, ob große Arbeiten oder eine <em>Derrama</em> anstehen, ob es Streit gibt und ob Eigentümer im Rückstand sind.</li>
+    <li>Fordern Sie den <strong>Wirtschaftsplan</strong> für dieses Jahr an, damit Sie wissen, was Sie monatlich zahlen.</li>
+  </ul>
+  <p>Beim Notar muss der Verkäufer eine Bescheinigung der Gemeinschaft vorlegen, dass keine Rückstände bestehen (<em>certificado de deuda</em>). Ohne sie können offene Beträge auf den neuen Eigentümer übergehen.</p>
+
+  <h2 id="pruefen">Was Sie vor der Unterschrift prüfen</h2>
+  <ol>
+    <li><strong>Eigentum und Lasten</strong>: Der Grundbuchauszug (<em>nota simple</em>) zeigt, wem die Wohnung gehört, ob eine Hypothek oder Pfändung besteht und ob Stellplatz und Abstellraum dazugehören.</li>
+    <li><strong>Legalität</strong>: Stimmen die Flächen im Grundbuch und im Kataster mit der Wirklichkeit überein? Eine geschlossene Terrasse oder ein zusätzliches Zimmer auf der Dachterrasse ist oft ohne Genehmigung gebaut.</li>
+    <li><strong>Bauzustand</strong>: Feuchtigkeit, undichte Dachterrassen, alte Leitungen und Elektrik, Einfachverglasung. In Anlagen ab dreißig Jahren ist das häufig. Lassen Sie ein <a href="/de/immobiliengutachten/">Immobiliengutachten</a> erstellen.</li>
+    <li><strong>Energieausweis</strong>: Der Verkäufer muss einen gültigen haben. Siehe <a href="/de/ratgeber/energieausweis-spanien/">Energieausweis in Spanien</a>.</li>
+    <li><strong>Laufende Kosten</strong>: Fordern Sie die letzten Rechnungen für IBI, Müllgebühr, Wasser und Strom an.</li>
+  </ol>
+  <p>Lassen Sie die rechtliche Prüfung von einem eigenen, unabhängigen Anwalt machen, nicht von jemandem, den der Makler empfiehlt. Wie Sie einen Makler wählen, lesen Sie unter <a href="/de/ratgeber/immobilienmakler-spanien/">Immobilienmakler in Spanien</a>.</p>
+
+  <h2 id="kosten">Kosten beim Kauf</h2>
+  <table class="prices">
+    <thead><tr><th>Posten</th><th>Bestandswohnung</th><th>Neubau</th></tr></thead>
+    <tbody>
+      <tr><td>Steuer</td><td>7% Grunderwerbsteuer (ITP)</td><td>10% MwSt. + 1,2% Stempelsteuer (AJD)</td></tr>
+      <tr><td>Notar und Register</td><td>etwa 0,5 bis 1%</td><td>etwa 0,5 bis 1%</td></tr>
+      <tr><td>Anwalt</td><td>meist 1% (oft mit Mindestbetrag)</td><td>meist 1%</td></tr>
+      <tr><td>Gutachten</td><td>Festpreis</td><td>bei Übergabe empfehlenswert</td></tr>
+    </tbody>
+  </table>
+  <p>Alle Posten mit Rechenbeispiel finden Sie unter <a href="/de/ratgeber/kaufnebenkosten-spanien/">Kaufnebenkosten in Spanien</a>, den ganzen Ablauf von der <a href="/de/ratgeber/nie-nummer-spanien/">NIE-Nummer</a> bis zum Notar unter <a href="/de/ratgeber/haus-kaufen-spanien/">Haus kaufen in Spanien</a>.</p>
+
+  <h2 id="vermieten">An Urlauber vermieten</h2>
+  <p>Möchten Sie die Wohnung vermieten, wenn Sie nicht da sind? Dann brauchen Sie eine Registrierung bei der Junta de Andalucía (<em>Registro de Turismo de Andalucía</em>) und seit Juli 2025 auch eine landesweite Registriernummer. Seit April 2025 braucht neue touristische Vermietung in einer Wohnanlage zudem die Zustimmung von drei Fünfteln der Eigentümer. Verbietet die Satzung die Vermietung, geht es nicht. Klären Sie das also vor dem Kauf, wenn Vermietung für Sie wichtig ist. Mehr unter <a href="/de/ratgeber/immobilie-in-spanien-vermieten/">Immobilie in Spanien vermieten</a> und bei unserem <a href="/de/vermietungsservice/">Vermietungsservice</a>.</p>
+
+  <h2 id="meer">Erste Meereslinie</h2>
+  <p>Eine Wohnung direkt am Strand ist wunderbar, aber beachten Sie das spanische Küstengesetz (<em>Ley de Costas</em>). In der Schutzzone entlang der Küste gelten Einschränkungen für Erweiterungen und Umbauten, und bei älteren Gebäuden sehr nah am Strand kann das Eigentum eingeschränkt sein. Lassen Sie das von Ihrem Anwalt prüfen. Gebäude am Meer leiden außerdem stärker unter Salz und Feuchtigkeit: Balkone, Fensterrahmen und die Bewehrung im Beton altern schneller.</p>
+
+  <h2 id="renovieren">Renovieren nach dem Kauf</h2>
+  <p>Viele Wohnungen an der Costa del Sol und in der Axarquía stammen aus den Siebziger- bis Neunzigerjahren. Ein neues Bad und eine neue Küche, bessere Fenster und eine Klimaanlage machen daraus oft eine ganz andere Wohnung. Arbeiten im Inneren melden Sie bei der Gemeinde an. Für alles, was von außen sichtbar ist, etwa Fenster, Markisen, ein Klimagerät an der Fassade oder das Schließen einer Terrasse, brauchen Sie auch die Zustimmung der Gemeinschaft.</p>
+  <p>Wir renovieren Wohnungen auch, wenn Sie in Deutschland sind, mit Fotos jede Woche. Mehr zur <a href="/de/renovierung/">Renovierung</a> oder zu <a href="/de/kosten/">unseren Preisen pro Arbeit</a>.</p>
+</Guide>

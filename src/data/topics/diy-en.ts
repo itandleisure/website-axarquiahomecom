@@ -468,7 +468,7 @@ export const diyEn: Topic[] = [
     short: 'Installing a water tank',
     description: 'A water tank (depósito or aljibe) at your finca? Where your water comes from, what to check in a water contract and how to install and connect the tank.',
     lead: 'Many houses outside the villages of the Axarquía are not on mains water. They get water from a comunidad de regantes or a water tanker, or have their own well. Your own water tank is then the heart of the house.',
-    keyword: 'water tank finca spain',
+    keyword: 'installing a water tank finca',
     dienst: 'onderhoud',
     onderwerp: 'I would like a water tank installed and connected.',
     answer: 'A <strong>water tank</strong> (<em>depósito</em> or <em>aljibe</em>) stores the water you receive, and a <strong>pressure pump</strong> takes it to the taps. Outside the village you often sign a <strong>contract for a fixed amount of water per week</strong>, for example with the comunidad de regantes. A <strong>float valve</strong> stops the supply once the tank is full. If you have <strong>your own well</strong>, you do not need such a contract. Water that does not come from the mains you make drinkable with <strong>filters and a UV lamp</strong>.',

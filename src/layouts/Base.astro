@@ -18,6 +18,8 @@ interface Props {
   alternates?: Partial<Record<Lang, string>>;
   jsonLd?: object[];
   noindex?: boolean;
+  /** Bij noindex: links op de pagina wel volgen (noindex, follow) */
+  follow?: boolean;
   /** Deelafbeelding (1200 x 630), pad vanaf de root; standaard /og-image.png */
   ogImage?: string;
   ogImageAlt?: string;
@@ -25,7 +27,7 @@ interface Props {
   cluster?: boolean;
 }
 
-const { title, description, path, lang = 'nl', alternates = {}, jsonLd = [], noindex = false, ogImageAlt, cluster = true } = Astro.props;
+const { title, description, path, lang = 'nl', alternates = {}, jsonLd = [], noindex = false, follow = false, ogImageAlt, cluster = true } = Astro.props;
 const canonical = new URL(path, site.url).href;
 const allAlternates: Partial<Record<string, string>> = { ...alternatesFor(path), ...alternates, [lang]: path };
 const t = ui[lang];
@@ -43,7 +45,7 @@ const nav = navs[lang];
 const others = langs
   .filter((l) => l !== lang)
   .map((l) => ({ l, href: allAlternates[l] ?? route(l, 'home') }));
-const robots = !site.indexable || noindex ? 'noindex, nofollow' : 'index, follow';
+const robots = !site.indexable ? 'noindex, nofollow' : noindex ? (follow ? 'noindex, follow' : 'noindex, nofollow') : 'index, follow';
 // Google toont ongeveer 60 tekens. De merknaam alleen toevoegen als die er nog bij past.
 const isHome = langs.some((l) => path === `/${l}/`);
 const withBrand = `${title} | ${site.brand}`;

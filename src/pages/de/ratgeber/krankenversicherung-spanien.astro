@@ -1,0 +1,75 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'welche', label: 'Welche Situation gilt für Sie?' },
+  { id: 'ueberwintern', label: 'Überwintern: in Deutschland versichert bleiben' },
+  { id: 'arbeiten', label: 'Arbeiten in Spanien' },
+  { id: 'rente', label: 'Mit Rente: das Formular S1' },
+  { id: 'frueh', label: 'Früh aufgehört oder ohne Erwerbseinkommen' },
+  { id: 'privat', label: 'Eine spanische Privatversicherung' },
+  { id: 'vor-ort', label: 'Ärzte und Kliniken in der Axarquía' },
+];
+
+const faq = [
+  {
+    q: 'Kann ich meine deutsche Krankenversicherung behalten, wenn ich nach Spanien ziehe?',
+    a: 'Als gesetzlich versicherter Rentner ja, über das Formular S1: Sie bleiben bei Ihrer Krankenkasse, nutzen aber die spanische öffentliche Versorgung. Als Arbeitnehmer in Spanien wechseln Sie in das spanische System. Privat Versicherte sollten prüfen, ob ihr Tarif einen dauerhaften Wohnsitz in Spanien abdeckt.',
+  },
+  {
+    q: 'Was ist der Convenio especial?',
+    a: 'Ein freiwilliger Beitritt zur spanischen öffentlichen Gesundheitsversorgung für alle, die keinen Anspruch über Arbeit oder Rente haben. Sie müssen mindestens ein Jahr in der Gemeinde gemeldet sein (padrón). In Andalusien kostet er etwa 60 € im Monat unter 65 und etwa 157 € im Monat ab 65. Die Beträge können sich ändern; fragen Sie im Gesundheitszentrum nach dem aktuellen Tarif.',
+  },
+  {
+    q: 'Brauche ich eine Krankenversicherung, um mich als Einwohner anzumelden?',
+    a: 'Ja. Als EU-Bürger ohne Arbeit in Spanien müssen Sie bei der Anmeldung eine umfassende Krankenversicherung und ausreichendes Einkommen nachweisen. Das kann ein Formular S1 sein oder eine spanische Privatversicherung ohne Zuzahlungen (sin copagos) und ohne Wartezeiten.',
+  },
+  {
+    q: 'Reicht die Europäische Krankenversicherungskarte (EHIC)?',
+    a: 'Nur für einen vorübergehenden Aufenthalt. Die EHIC auf der Rückseite Ihrer Gesundheitskarte gibt Zugang zu notwendiger Behandlung in der öffentlichen Versorgung während Urlaub oder Überwinterung. Für einen Wohnsitz in Spanien ist sie nicht gedacht.',
+  },
+];
+---
+<Guide lang="de" slug="krankenversicherung-spanien" toc={toc} faq={faq} ctaTitle="Kommen Sie zum Überwintern oder für immer?" ctaText="Wir sorgen dafür, dass das Haus bereit ist, wenn Sie kommen, und behalten es im Blick, wenn Sie weg sind. Sie klären die Versicherung, wir kümmern uns um das Haus.">
+  <p>Wer nach Spanien zieht oder dort lange überwintert, muss gut krankenversichert sein. Spanien hat eine gute öffentliche Versorgung, aber Sie haben nicht automatisch Anspruch darauf. Welcher Weg für Sie gilt, hängt von Ihrer Situation ab: Arbeiten Sie, beziehen Sie Rente oder keines von beiden? Regeln und Beträge ändern sich regelmäßig. Prüfen Sie daher immer bei Ihrer Krankenkasse oder Versicherung, was für Sie gilt.</p>
+
+  <h2 id="welche">Welche Situation gilt für Sie?</h2>
+  <table class="prices">
+    <thead><tr><th>Ihre Situation</th><th>Wie sind Sie versichert?</th></tr></thead>
+    <tbody>
+      <tr><td>Sie überwintern und bleiben in Deutschland gemeldet</td><td>Ihre deutsche Versicherung plus EHIC und Auslandsreiseversicherung</td></tr>
+      <tr><td>Sie arbeiten in Spanien (angestellt oder selbstständig)</td><td>Spanische öffentliche Versorgung über die Seguridad Social</td></tr>
+      <tr><td>Sie wohnen in Spanien und beziehen eine deutsche Rente (GKV)</td><td>Öffentliche Versorgung mit Formular S1, über Ihre Krankenkasse</td></tr>
+      <tr><td>Sie wohnen in Spanien ohne Arbeit und ohne Rente</td><td>Privatversicherung, nach einem Jahr eventuell Convenio especial</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="ueberwintern">Überwintern: in Deutschland versichert bleiben</h2>
+  <p>Bleiben Sie in Deutschland gemeldet und versichert, nehmen Sie die Europäische Krankenversicherungskarte (EHIC) mit: Sie steht auf der Rückseite Ihrer Gesundheitskarte. Damit gehen Sie in Spanien in die öffentliche Versorgung. In Privatkliniken zahlt die gesetzliche Kasse höchstens den deutschen Satz, oft weniger. Eine Auslandsreisekrankenversicherung deckt den Rest und den Rücktransport. Achten Sie auf die maximale Reisedauer pro Reise. Mehr dazu unter <a href="/de/ratgeber/ueberwintern-in-spanien/">Überwintern in Spanien</a>.</p>
+
+  <h2 id="arbeiten">Arbeiten in Spanien</h2>
+  <p>Arbeiten Sie in Spanien als Angestellter oder Selbstständiger (<em>autónomo</em>), zahlen Sie Beiträge zur spanischen Sozialversicherung und haben Anspruch auf die öffentliche Versorgung. Sie melden sich im Gesundheitszentrum (<em>centro de salud</em>) Ihrer Gemeinde an und erhalten eine andalusische Gesundheitskarte (<em>tarjeta sanitaria</em>). Arbeiten Sie aus Spanien für einen deutschen Arbeitgeber, kann es komplizierter sein: Klären Sie mit der Deutschen Verbindungsstelle Krankenversicherung Ausland (DVKA), wo Sie versichert sind.</p>
+
+  <h2 id="rente">Mit Rente: das Formular S1</h2>
+  <p>Beziehen Sie eine deutsche gesetzliche Rente und sind in der Krankenversicherung der Rentner, bleiben Sie bei Ihrer Krankenkasse. Sie beantragen dort das <strong>Formular S1</strong>. Damit melden Sie sich bei der spanischen Sozialversicherung (<em>INSS</em>) und danach im Gesundheitszentrum an. Sie nutzen die spanische öffentliche Versorgung wie ein Spanier; Ihre Kasse erstattet Spanien die Kosten. Die Beiträge werden weiter von Ihrer Rente abgezogen. Pflegeleistungen der deutschen Pflegekasse sind im Ausland eingeschränkt; das Pflegegeld wird in der EU aber gezahlt.</p>
+  <p>Privat Versicherte prüfen, ob ihr Tarif in Spanien gilt; viele Tarife decken die EU ab. Alles zu Rente, Steuern und Wohnen finden Sie unter <a href="/de/ratgeber/rente-in-spanien/">Rente in Spanien</a>.</p>
+
+  <h2 id="frueh">Früh aufgehört oder ohne Erwerbseinkommen</h2>
+  <p>Haben Sie vor der Rente aufgehört zu arbeiten und arbeiten Sie nicht in Spanien, haben Sie keinen Anspruch über Arbeit oder Rente. Dann gibt es zwei Wege:</p>
+  <ol>
+    <li><strong>Eine spanische Privatversicherung</strong>. Sie brauchen sie auch für die Anmeldung als Einwohner und die grüne Bescheinigung; siehe <a href="/de/ratgeber/nie-nummer-spanien/">NIE-Nummer beantragen</a> und <a href="/de/ratgeber/auswandern-nach-spanien/">Auswandern nach Spanien</a>.</li>
+    <li><strong>Der Convenio especial</strong>: Nach einem Jahr Meldung in der Gemeinde können Sie freiwillig der öffentlichen Versorgung beitreten. In Andalusien kostet das etwa 60 € im Monat unter 65 und etwa 157 € im Monat ab 65. Medikamente zahlen Sie teilweise selbst.</li>
+  </ol>
+
+  <h2 id="privat">Eine spanische Privatversicherung</h2>
+  <p>Große spanische Versicherer sind unter anderem Sanitas, Adeslas, DKV und Asisa. Eine Privatversicherung bietet schnelleren Zugang zu Fachärzten und Privatkliniken. Achten Sie auf:</p>
+  <ul>
+    <li><strong>Keine Zuzahlungen</strong> (<em>sin copagos</em>) und <strong>keine Wartezeiten</strong> (<em>sin carencias</em>), wenn Sie sie für die Anmeldung brauchen.</li>
+    <li><strong>Alter</strong>: Ab 65 oder 70 nehmen manche Versicherer keine neuen Kunden mehr auf, oder nur zu hohen Beiträgen.</li>
+    <li><strong>Vorerkrankungen</strong>: werden oft ausgeschlossen. Lesen Sie die Bedingungen genau.</li>
+    <li><strong>Beitrag</strong>: für jemanden mit 60 grob 100 bis 250 € im Monat, steigend mit dem Alter.</li>
+  </ul>
+
+  <h2 id="vor-ort">Ärzte und Kliniken in der Axarquía</h2>
+  <p>Fast jedes Dorf in der Axarquía hat ein Gesundheitszentrum oder ein kleineres Consultorio. Das Kreiskrankenhaus ist das Hospital Comarcal de la Axarquía in Vélez-Málaga; für Fachbehandlungen fahren Sie nach Málaga. Es gibt auch Privatkliniken in Vélez-Málaga, Torre del Mar, Nerja und Málaga, oft mit Ärzten, die Englisch oder Deutsch sprechen. Wohnen Sie hoch in den Bergen, braucht der Rettungswagen länger. Auch das gehört zur Wahl zwischen <a href="/de/ratgeber/finca-wohnung-oder-dorfhaus/">Finca, Wohnung oder Dorfhaus</a>.</p>
+</Guide>

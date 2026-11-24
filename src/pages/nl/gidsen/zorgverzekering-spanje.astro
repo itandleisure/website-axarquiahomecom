@@ -1,0 +1,76 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'welke', label: 'Welke situatie geldt voor u?' },
+  { id: 'overwinteren', label: 'Overwinteren: Nederlands verzekerd blijven' },
+  { id: 'werken', label: 'Werken in Spanje' },
+  { id: 'pensioen', label: 'Met AOW of pensioen: het S1-formulier' },
+  { id: 'vroeg', label: 'Vroeg gestopt of geen inkomen uit werk' },
+  { id: 'prive', label: 'Een Spaanse privéverzekering' },
+  { id: 'praktisch', label: 'Zorg in de Axarquía' },
+];
+
+const faq = [
+  {
+    q: 'Kan ik mijn Nederlandse zorgverzekering houden als ik naar Spanje verhuis?',
+    a: 'Nee, niet als u zich uitschrijft uit Nederland. De Nederlandse basisverzekering is gekoppeld aan wonen of werken in Nederland. Gaat u met AOW of pensioen in Spanje wonen, dan blijft u wel via Nederland verzekerd met een S1-formulier (verdragsverzekering). Overwintert u korter dan acht maanden per jaar en blijft u ingeschreven in Nederland, dan houdt u uw gewone Nederlandse zorgverzekering.',
+  },
+  {
+    q: 'Wat is de convenio especial?',
+    a: 'Een vrijwillige aansluiting bij de Spaanse publieke zorg voor wie geen recht heeft via werk of pensioen. U moet minstens een jaar ingeschreven staan in de gemeente (padrón). In Andalusië kost het ongeveer € 60 per maand onder de 65 en ongeveer € 157 per maand vanaf 65. Bedragen kunnen veranderen; vraag het actuele tarief na bij het gezondheidscentrum.',
+  },
+  {
+    q: 'Heb ik een zorgverzekering nodig om me in te schrijven als inwoner?',
+    a: 'Ja. Als EU-burger zonder werk in Spanje moet u bij de inschrijving als inwoner een volledige zorgverzekering laten zien, plus voldoende inkomen. Dat kan een S1-formulier zijn of een Spaanse privéverzekering zonder eigen bijdragen (sin copagos) en zonder wachttijden.',
+  },
+  {
+    q: 'Is de Europese gezondheidskaart (EHIC) genoeg?',
+    a: 'Alleen voor een tijdelijk verblijf. De EHIC geeft toegang tot noodzakelijke zorg in de publieke zorg tijdens een vakantie of overwintering, op dezelfde voorwaarden als voor Spanjaarden. Voor wie in Spanje woont, is hij niet bedoeld.',
+  },
+];
+---
+<Guide slug="zorgverzekering-spanje" toc={toc} faq={faq} ctaTitle="Komt u overwinteren of wonen?" ctaText="Wij zorgen dat het huis klaarstaat als u komt en houden het in de gaten als u weg bent. U regelt de verzekering, wij het huis.">
+  <p>Wie in Spanje gaat wonen of er lang overwintert, moet goed verzekerd zijn voor zorg. Spanje heeft een goede publieke zorg, maar u hebt er niet zomaar recht op. Welke route voor u geldt, hangt af van uw situatie: werkt u, hebt u AOW of pensioen, of geen van beide? De regels en bedragen veranderen geregeld. Controleer daarom altijd bij uw zorgverzekeraar, het CAK of uw mutualiteit wat voor u geldt.</p>
+
+  <h2 id="welke">Welke situatie geldt voor u?</h2>
+  <table class="prices">
+    <thead><tr><th>Uw situatie</th><th>Hoe bent u verzekerd?</th></tr></thead>
+    <tbody>
+      <tr><td>U overwintert en blijft ingeschreven in Nederland of België</td><td>Uw eigen zorgverzekering plus de EHIC</td></tr>
+      <tr><td>U werkt in Spanje (in loondienst of als zelfstandige)</td><td>Spaanse publieke zorg via de Seguridad Social</td></tr>
+      <tr><td>U woont in Spanje met AOW of een Belgisch pensioen</td><td>Publieke zorg met een S1-formulier, betaald via uw land</td></tr>
+      <tr><td>U woont in Spanje zonder werk en zonder AOW</td><td>Spaanse privéverzekering, na een jaar eventueel convenio especial</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="overwinteren">Overwinteren: Nederlands verzekerd blijven</h2>
+  <p>Blijft u ingeschreven in Nederland en verblijft u minder dan acht maanden per jaar in Spanje, dan houdt u uw Nederlandse basisverzekering. Neem de Europese gezondheidskaart (EHIC, op de achterkant van uw zorgpas) mee: daarmee gaat u in Spanje naar de publieke zorg. Gaat u naar een privékliniek, dan vergoedt de basisverzekering meestal tot het Nederlandse tarief, en de rest alleen met een aanvullende verzekering. Een goede reisverzekering dekt ook vervoer terug naar huis. Meer over lang verblijven leest u in <a href="/nl/gidsen/overwinteren-in-spanje/">overwinteren in Spanje</a>.</p>
+  <p>Voor Belgen geldt hetzelfde: u blijft aangesloten bij uw ziekenfonds zolang u in België ingeschreven bent. Vraag uw mutualiteit hoe lang u per jaar weg mag zijn.</p>
+
+  <h2 id="werken">Werken in Spanje</h2>
+  <p>Werkt u in Spanje in loondienst of als zelfstandige (<em>autónomo</em>), dan betaalt u premie aan de Spaanse sociale zekerheid en hebt u recht op de publieke zorg. U schrijft zich in bij het gezondheidscentrum (<em>centro de salud</em>) van uw gemeente en krijgt een Andalusische zorgpas (<em>tarjeta sanitaria</em>). Werkt u op afstand voor een Nederlandse werkgever, dan kan het ingewikkelder zijn: vraag de SVB of u in Nederland of in Spanje verzekerd bent.</p>
+
+  <h2 id="pensioen">Met AOW of pensioen: het S1-formulier</h2>
+  <p>Gaat u met AOW in Spanje wonen, dan blijft u verzekerd via Nederland. Dat heet de <strong>verdragsverzekering</strong>. U meldt zich bij het CAK, dat u een S1-formulier stuurt. Daarmee schrijft u zich in bij de Spaanse sociale zekerheid (<em>INSS</em>) en daarna bij het gezondheidscentrum. U gebruikt dan de Spaanse publieke zorg alsof u Spanjaard bent. In plaats van een Nederlandse zorgpremie betaalt u een verdragsbijdrage aan het CAK, die van uw AOW of pensioen wordt ingehouden.</p>
+  <p>Ook Belgische gepensioneerden krijgen via hun ziekenfonds een S1-formulier. Alles over AOW, belasting en wonen na uw pensioen leest u in <a href="/nl/gidsen/pensioen-in-spanje/">pensioen in Spanje</a>.</p>
+
+  <h2 id="vroeg">Vroeg gestopt of geen inkomen uit werk</h2>
+  <p>Bent u gestopt met werken voordat u AOW krijgt, en werkt u niet in Spanje? Dan hebt u geen recht op de Spaanse publieke zorg via werk of pensioen. U hebt dan twee mogelijkheden:</p>
+  <ol>
+    <li><strong>Een Spaanse privéverzekering</strong>. Die is ook nodig om u als inwoner te laten inschrijven en het groene inschrijvingsbewijs te krijgen; lees <a href="/nl/gidsen/nie-nummer-aanvragen-spanje/">NIE-nummer aanvragen</a> en <a href="/nl/gidsen/emigreren-naar-spanje/">emigreren naar Spanje</a>.</li>
+    <li><strong>De convenio especial</strong>: na een jaar inschrijving in de gemeente kunt u zich vrijwillig aansluiten bij de publieke zorg. In Andalusië kost dat ongeveer € 60 per maand onder de 65 en ongeveer € 157 per maand vanaf 65. Medicijnen betaalt u wel zelf voor een deel.</li>
+  </ol>
+
+  <h2 id="prive">Een Spaanse privéverzekering</h2>
+  <p>Grote Spaanse verzekeraars zijn onder meer Sanitas, Adeslas, DKV en Asisa. Een privéverzekering geeft snellere toegang tot specialisten en privéziekenhuizen. Let bij het afsluiten op:</p>
+  <ul>
+    <li><strong>Geen eigen bijdragen</strong> (<em>sin copagos</em>) en <strong>geen wachttijden</strong> (<em>sin carencias</em>) als u hem nodig hebt voor uw inschrijving.</li>
+    <li><strong>Leeftijd</strong>: boven de 65 of 70 nemen sommige verzekeraars geen nieuwe klanten aan, of alleen met hoge premies.</li>
+    <li><strong>Bestaande aandoeningen</strong>: die worden vaak uitgesloten. Lees de voorwaarden goed.</li>
+    <li><strong>Premie</strong>: voor iemand van 60 reken op ruwweg € 100 tot € 250 per maand, en die stijgt met de leeftijd.</li>
+  </ul>
+
+  <h2 id="praktisch">Zorg in de Axarquía</h2>
+  <p>In bijna elk dorp in de Axarquía is een gezondheidscentrum of een kleiner consultorio. Het regionale ziekenhuis is het Hospital Comarcal de la Axarquía in Vélez-Málaga; voor specialistische zorg gaat u naar Málaga. Er zijn ook privéklinieken in Vélez-Málaga, Torre del Mar, Nerja en Málaga, vaak met artsen die Engels spreken. Woont u hoog in de bergen, houd er dan rekening mee dat de ambulance er langer over doet. Dat is een van de punten om mee te wegen bij <a href="/nl/gidsen/finca-appartement-of-dorpshuis/">de keuze tussen finca, appartement of dorpshuis</a>.</p>
+</Guide>

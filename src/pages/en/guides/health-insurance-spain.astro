@@ -1,0 +1,71 @@
+---
+import Guide from '../../../components/Guide.astro';
+
+const toc = [
+  { id: 'which', label: 'Which situation applies to you?' },
+  { id: 'visits', label: 'Visiting and wintering: the GHIC' },
+  { id: 'work', label: 'Working in Spain' },
+  { id: 's1', label: 'With a UK State Pension: the S1' },
+  { id: 'visa', label: 'Private cover for your visa' },
+  { id: 'convenio', label: 'The convenio especial' },
+  { id: 'local', label: 'Healthcare in the Axarquía' },
+];
+
+const faq = [
+  {
+    q: 'Can I use the NHS if I live in Spain?',
+    a: 'Not directly. Once you live in Spain you use Spanish healthcare. If you receive a UK State Pension, the UK pays for your Spanish public healthcare through an S1 form. Otherwise you need Spanish public healthcare through work, private insurance or the convenio especial.',
+  },
+  {
+    q: 'What is the convenio especial?',
+    a: 'A voluntary scheme that lets you join Spanish public healthcare if you have no right to it through work or a pension. You must have been registered at the town hall (padrón) for at least a year. In Andalucía it costs around €60 a month under 65 and around €157 a month from 65. Amounts can change, so check the current rate at your health centre.',
+  },
+  {
+    q: 'What health insurance do I need for a Spanish visa?',
+    a: 'For the non-lucrative visa and most other long-stay visas you need private health insurance from an insurer authorised in Spain, with full cover, no co-payments (sin copagos) and no waiting periods (sin carencias). A travel insurance policy is not enough.',
+  },
+  {
+    q: 'Is the GHIC enough for a long winter in Spain?',
+    a: 'Only for necessary treatment during a temporary stay. The GHIC gives access to Spanish public healthcare on the same terms as Spaniards, but it does not cover private clinics or repatriation. Take out good travel insurance as well.',
+  },
+];
+---
+<Guide lang="en" slug="health-insurance-spain" toc={toc} faq={faq} ctaTitle="Coming for the winter or for good?" ctaText="We get the house ready before you arrive and keep an eye on it while you are away. You sort the insurance, we look after the house.">
+  <p>If you move to Spain or spend long winters there, you need proper healthcare cover. Spain has good public healthcare, but you are not automatically entitled to it. Which route applies depends on your situation: do you work, receive a UK State Pension, or neither? Rules and amounts change regularly, so always check with the NHS Overseas Healthcare Services or the Spanish social security office what applies to you.</p>
+
+  <h2 id="which">Which situation applies to you?</h2>
+  <table class="prices">
+    <thead><tr><th>Your situation</th><th>How you are covered</th></tr></thead>
+    <tbody>
+      <tr><td>You visit or winter in Spain and stay UK resident</td><td>GHIC plus travel insurance</td></tr>
+      <tr><td>You work in Spain (employed or self-employed)</td><td>Spanish public healthcare through the Seguridad Social</td></tr>
+      <tr><td>You live in Spain and receive a UK State Pension</td><td>Spanish public healthcare with an S1, paid by the UK</td></tr>
+      <tr><td>You live in Spain without work or State Pension</td><td>Private insurance, after a year possibly the convenio especial</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="visits">Visiting and wintering: the GHIC</h2>
+  <p>As long as you are UK resident, take your Global Health Insurance Card (GHIC) with you. It gives access to necessary treatment in Spanish public healthcare. It does not cover private clinics, ongoing treatment you travel for or flights home, so always add travel insurance. Bear in mind that without a visa you can stay no more than 90 days in every 180; see <a href="/en/guides/wintering-in-spain/">wintering in Spain</a>.</p>
+
+  <h2 id="work">Working in Spain</h2>
+  <p>If you work in Spain as an employee or as a self-employed <em>autónomo</em>, you pay Spanish social security contributions and are entitled to public healthcare. You register at the health centre (<em>centro de salud</em>) in your municipality and receive an Andalusian health card (<em>tarjeta sanitaria</em>). Working remotely for a UK employer on the digital nomad visa can be different: check whether you stay covered by UK National Insurance or must join the Spanish system.</p>
+
+  <h2 id="s1">With a UK State Pension: the S1</h2>
+  <p>If you receive a UK State Pension and live in Spain, you can register an <strong>S1 form</strong>. You request it from the NHS Overseas Healthcare Services, register it with the Spanish social security (<em>INSS</em>) and then with your health centre. You then use Spanish public healthcare like a Spaniard, and the UK pays. This continues under the UK–EU agreement after Brexit. Everything about pensions, tax and residency is in <a href="/en/guides/retiring-to-spain/">retiring to Spain</a>.</p>
+
+  <h2 id="visa">Private cover for your visa</h2>
+  <p>Most early retirees and remote workers moving from the UK need private health insurance, both for the visa and until they qualify for public healthcare. Large Spanish insurers include Sanitas, Adeslas, DKV and Asisa. Check:</p>
+  <ul>
+    <li><strong>No co-payments</strong> (<em>sin copagos</em>) and <strong>no waiting periods</strong> (<em>sin carencias</em>): required for the visa.</li>
+    <li><strong>Age limits</strong>: above 65 or 70 some insurers do not accept new customers, or only at high premiums.</li>
+    <li><strong>Pre-existing conditions</strong>: these are often excluded. Read the terms carefully.</li>
+    <li><strong>Premium</strong>: for someone aged 60, allow roughly €100 to €250 a month, rising with age.</li>
+  </ul>
+  <p>The visa requirements are set out in <a href="/en/guides/non-lucrative-visa-spain/">the non-lucrative visa and digital nomad visa</a>.</p>
+
+  <h2 id="convenio">The convenio especial</h2>
+  <p>After a year of registration at the town hall, you can join Spanish public healthcare voluntarily through the <em>convenio especial</em>. In Andalucía it costs around €60 a month under 65 and around €157 a month from 65. Prescriptions are partly paid by you. For many residents it is an affordable alternative to private cover, or a good addition to it.</p>
+
+  <h2 id="local">Healthcare in the Axarquía</h2>
+  <p>Almost every village in the Axarquía has a health centre or a smaller consultorio. The regional hospital is the Hospital Comarcal de la Axarquía in Vélez-Málaga; for specialist care you go to Málaga. There are also private clinics in Vélez-Málaga, Torre del Mar, Nerja and Málaga, often with English-speaking doctors. If you live high in the mountains, remember that an ambulance takes longer to reach you. That is one of the things to weigh up in <a href="/en/guides/finca-apartment-or-village-house/">choosing a finca, apartment or village house</a>.</p>
+</Guide>

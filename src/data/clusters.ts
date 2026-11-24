@@ -56,7 +56,8 @@ export const clusters: Cluster[] = [
     members: [
       g('huis-kopen-in-spanje'), g('finca-kopen-in-spanje'), g('kosten-koper-spanje'), g('huis-kopen-malaga-andalusie'),
       g('finca-appartement-of-dorpshuis'), g('afo-legaliseren-andalusie'), g('toegangsweg-finca-spanje'), '/nl/toegangsweg/',
-      g('huis-flippen-spanje'), '/nl/checklist-finca-kopen/',
+      g('huis-flippen-spanje'), g('appartement-kopen-spanje'), g('nie-nummer-aanvragen-spanje'), g('makelaar-spanje-kiezen'),
+      g('erfbelasting-testament-spanje'), '/nl/checklist-finca-kopen/',
     ],
   },
   {
@@ -154,6 +155,7 @@ export const clusters: Cluster[] = [
     checklist: 'emigreren',
     members: [
       g('emigreren-naar-spanje'), '/nl/wonen/', g('wonen-in-spanje'), g('overwinteren-in-spanje'), g('met-huisdier-naar-spanje'),
+      g('pensioen-in-spanje'), g('zorgverzekering-spanje'),
       g('belastingkalender-spanje'), g('autoverzekering-spanje'), g('off-grid-wonen-spanje'), '/nl/plaatsen/',
       '/nl/checklist-emigreren-spanje/',
     ],
