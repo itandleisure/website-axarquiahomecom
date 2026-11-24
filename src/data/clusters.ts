@@ -115,7 +115,7 @@ export const clusters: Cluster[] = [
     calc: 'woning',
     dienst: 'renovatie',
     members: [
-      g('kosten-huis-renoveren-spanje'), '/nl/kosten/', k('rekentool'), g('dorpshuis-renoveren-spanje'), g('verbouwen-op-afstand-spanje'),
+      '/nl/nederlandse-aannemer-axarquia/', g('kosten-huis-renoveren-spanje'), '/nl/kosten/', k('rekentool'), g('dorpshuis-renoveren-spanje'), g('verbouwen-op-afstand-spanje'),
       g('vergunning-verbouwen-andalusie'), g('aannemer-costa-del-sol'), g('renovatie-factuur-of-cash-spanje'),
       g('3d-ontwerp-verbouwing'), k('badkamer-renoveren'), g('badkamer-douche-of-bad'), k('keuken-renoveren'), k('buitenkeuken'),
       k('elektra-vernieuwen'), g('leidingen-en-boiler-vervangen-spanje'), k('ramen-en-kozijnen'), k('dak-en-dakterras'),
@@ -215,6 +215,13 @@ const calcText: Tx = {
 };
 
 const extraPages: Record<string, { title: Tx; text: Tx }> = {
+  '/nl/nederlandse-aannemer-axarquia/': {
+    title: { nl: 'Nederlandse aannemer in de Axarquía', en: 'English-speaking builders in the Axarquía' },
+    text: {
+      nl: 'Renovatie en verbouwing in Nerja, Torrox, Cómpeta en omgeving, met een Nederlandstalig team.',
+      en: 'Renovation and building work in Nerja, Torrox, Cómpeta and nearby, with an English-speaking team.',
+    },
+  },
   '/nl/plaatsen/': {
     title: { nl: 'Plaatsen in de Axarquía', en: 'Places in the Axarquía', de: 'Orte in der Axarquía', sv: 'Orter i Axarquía' },
     text: {
