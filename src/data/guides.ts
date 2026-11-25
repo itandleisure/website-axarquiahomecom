@@ -641,6 +641,7 @@ export const guidesEn: GuideMeta[] = [
     path: '/en/guides/finca-apartment-or-village-house/holiday-home/',
     parent: 'finca-apartment-or-village-house',
     title: 'Holiday home in the Axarquía: finca, apartment or village?',
+    seoTitle: 'Buying a holiday home in Spain: finca, flat or village?',
     short: 'For a holiday home',
     description: 'Buying a second home in the Axarquía? Compare a finca, apartment and village house on supervision while you are away, upkeep, rental licence and running costs.',
     lead: 'A holiday home stands empty for much of the year. So the question is not just where you love to be, but what happens while you are not there.',

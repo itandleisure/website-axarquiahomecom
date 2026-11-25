@@ -289,7 +289,7 @@ export const bouwenDe: GuideMeta[] = [
     short: 'Außenküche',
     description: 'Außenküche mit Grill an Ihrer Finca oder Villa in der Axarquía: welche Genehmigung, das Grillverbot in der Brandsaison und Optionen von einfach bis luxuriös.',
     lead: 'Zu einer Finca oder Villa gehört eigentlich eine Außenküche. Der Bau ist meist gut zu regeln. Woran viele Eigentümer nicht denken: In der Waldbrandsaison ist Feuer machen in großen Teilen der Axarquía verboten.',
-    keyword: 'außenküche spanien',
+    keyword: 'außenküche bauen',
     minutes: 6,
     published,
   },

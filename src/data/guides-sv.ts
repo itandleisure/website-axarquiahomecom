@@ -38,7 +38,7 @@ export const guidesSvExtra: GuideMeta[] = [
     short: 'Renovera på distans',
     description: 'Du bor i Sverige och huset står i Axarquía. Så väljer du byggfirma, jämför offerter, betalar säkert i etapper och håller dig informerad hela vägen.',
     lead: 'De flesta ägare är inte i Spanien medan huset renoveras. Det behöver inte vara något problem, så länge du kommer överens om rätt saker kring pris, betalning och kommunikation i förväg.',
-    keyword: 'renovera hus i spanien',
+    keyword: 'renovera på distans',
     minutes: 9,
     published,
   },
